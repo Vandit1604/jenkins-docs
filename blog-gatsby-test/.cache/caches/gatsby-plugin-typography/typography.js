@@ -1,0 +1,1 @@
+module.exports = require("/home/vandit/gsoc-project-demo/antora-jenkins/blog-gatsby-test/src/utils/typography")
