@@ -1,4 +1,4 @@
-= Jenkins Documentation
+# Jenkins Documentation
 
 This repository hosts the documentation source for Jenkins.
 
