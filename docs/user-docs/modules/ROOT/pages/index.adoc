@@ -1,16 +1,24 @@
-image::https://raw.githubusercontent.com/jenkins-infra/jenkins.io/d64ddebd0a7d02772c10a77f1f4890b93b6961e7/content/images/logos/jenkins/Jenkins-stop-the-war.svg["Stop the war",200px,float=left]
-= Jenkins
+= User Handbook Overview
+:description: A description of the page stored in an HTML meta tag. 
+:sectanchors: 
+:url-repo: https://github.com/jenkins-infra/jenkins.io.git
+:page-tags: name of a tag, name of a tag 
 
-== This is user docs
+This page provides an overview of the documentation in the Jenkins User
+Handbook.
 
-Build great things at any scale
+If you want to get up and running with Jenkins, see
+link:../installing[Installing Jenkins] for procedures on how to install Jenkins
+on your supported platform of choice.
 
-The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
+If you are a typical Jenkins user (of any skill level) who wants to know more
+about Jenkins usage, see link:../using[Using Jenkins]. Also refer to the
+separate link:../pipeline[Pipeline] and link:../blueocean[Blue Ocean] chapters
+for more information about these core Jenkins features.
 
-Ukraine We stand with the people of Ukraine. Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the 
-link:https://www.icrc.org/[International Committee of the Red Cross]
+If you are a Jenkins administrator and want to know more about managing Jenkins
+nodes and instances, see link:../managing[Managing Jenkins].
 
-+++
-<button>Documentation</button> <button>Download</button>
-+++
-
+If you are a system administrator and want to learn how to back-up, restore,
+maintain as Jenkins servers and nodes, see
+link:../system-administration[Jenkins System Administration].
