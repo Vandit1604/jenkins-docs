@@ -5,7 +5,7 @@ a link:https://www.eclipse.org/jetty/[Jetty] servlet container wrapper,
 and can be started on any operating system or platform with a version of Java supported by Jenkins.
 See the link:/doc/administration/requirements/java[Java Requirements] page for details.
 
-include::doc/book/installing/_installation_requirements.adoc[]
+include::partial$_installation_requirements.adoc[]
 
 == Run the WAR file
 
@@ -49,4 +49,4 @@ JENKINS_HOME=my-jenkins-config java -jar jenkins.war
 For more details of command line arguments that can adjust Jenkins startup, use the command: +
 `java -jar jenkins.war --help`
 
-include::doc/book/installing/_setup-wizard.adoc[]
+include::partial$_setup-wizard.adoc[]

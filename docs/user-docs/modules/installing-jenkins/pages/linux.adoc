@@ -6,7 +6,7 @@ Jenkins installers are available for several Linux distributions.
 * <<Fedora>>
 * <<red-hat-centos,Red Hat/Alma/Rocky>>
 
-include::doc/book/installing/_installation_requirements.adoc[]
+include::partial$_installation_requirements.adoc[]
 
 == Debian/Ubuntu
 
@@ -283,4 +283,4 @@ firewall-cmd --reload
 
 ====
 
-include::doc/book/installing/_setup-wizard.adoc[]
+include::partial$_setup-wizard.adoc[]

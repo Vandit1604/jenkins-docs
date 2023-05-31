@@ -357,9 +357,9 @@ kubectl exec -it jenkins-559d8cd85c-cfcgk cat /var/jenkins_home/secrets/initialA
 Once you enter the password, proceed to install the suggested plugin and create an admin user. 
 All of these steps are self-explanatory from the Jenkins dashboard.
 
-include::doc/book/installing/_kubernetes.adoc[]
+include::partial$_kubernetes.adoc[]
 
-include::doc/book/installing/_setup-wizard.adoc[]
+include::partial$_setup-wizard.adoc[]
 
 == Conclusion
 

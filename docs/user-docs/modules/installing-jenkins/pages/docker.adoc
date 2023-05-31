@@ -23,7 +23,7 @@ image (for any given application like Jenkins) can be run on any supported
 operating system (macOS, Linux and Windows) or cloud service (AWS and Azure)
 which is also running Docker.
 
-=== Installing Docker
+== Installing Docker
 
 To install Docker on your operating system, follow "prerequisites" section of the
 link:/doc/pipeline/tour/getting-started/#prerequisites[Guided Tour page]
@@ -44,7 +44,7 @@ steps for Linux] page of their documentation. This page also contains
 information about how to configure Docker to start on boot.
 ====
 
-include::doc/book/installing/_installation_requirements.adoc[]
+include::partial$_installation_requirements.adoc[]
 
 === Downloading and running Jenkins in Docker
 
@@ -66,6 +66,6 @@ You can see a list of previously published versions of the `jenkins/jenkins` ima
 link:https://hub.docker.com/r/jenkins/jenkins/tags/[tags] page.
 ====
 
-include::doc/book/installing/_docker.adoc[]
+include::partial$_docker.adoc[]
 
-include::doc/book/installing/_setup-wizard.adoc[]
+include::partial$_setup-wizard.adoc[]
