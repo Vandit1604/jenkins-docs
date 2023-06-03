@@ -74,13 +74,13 @@ Additional environment variables are listed in the
 Multibranch Pipelines can be used for validating pull/change requests with the appropriate plugin.
 This functionality is provided by the following plugins:
 
-* plugin:github-branch-source[GitHub Branch Source]
-* plugin:cloudbees-bitbucket-branch-source[Bitbucket Branch Source]
-* plugin:gitlab-branch-source[GitLab Branch Source]
-* plugin:gitea[Gitea]
-* plugin:tuleap-git-branch-source[Tuleap Git Branch Source]
-* plugin:aws-codecommit-jobs[AWS CodeCommit Jobs]
-* plugin:dagshub-branch-source[DAGsHub Branch Source]
+* {plugin}github-branch-source[GitHub Branch Source]
+* {plugin}cloudbees-bitbucket-branch-source[Bitbucket Branch Source]
+* {plugin}gitlab-branch-source[GitLab Branch Source]
+* {plugin}gitea[Gitea]
+* {plugin}tuleap-git-branch-source[Tuleap Git Branch Source]
+* {plugin}aws-codecommit-jobs[AWS CodeCommit Jobs]
+* {plugin}dagshub-branch-source[DAGsHub Branch Source]
 
 Please consult their documentation for further information on how to
 use those plugins.
@@ -96,10 +96,10 @@ containing a `Jenkinsfile`.
 
 Organization folders are implemented for:
 
-* GitHub in the plugin:github-branch-source[GitHub Branch Source] plugin
-* Bitbucket in the plugin:cloudbees-bitbucket-branch-source[Bitbucket Branch Source] plugin
-* GitLab in the plugin:gitlab-branch-source[GitLab Branch Source] plugin
-* Gitea in the plugin:gitea[Gitea] plugin
+* GitHub in the {plugin}github-branch-source[GitHub Branch Source] plugin
+* Bitbucket in the {plugin}cloudbees-bitbucket-branch-source[Bitbucket Branch Source] plugin
+* GitLab in the {plugin}gitlab-branch-source[GitLab Branch Source] plugin
+* Gitea in the {plugin}gitea[Gitea] plugin
 
 // Hints of possible implementations mentioned in link:/doc/developer/extensions/scm-api/#scmnavigator[]
 // AWS Code Commit Jobs Plugin - not really an organization folder, but discovers repositories in AWS CodeCommit

@@ -2,7 +2,7 @@
 
 Multiple features of Jenkins, and many more in plugins, serve files that can be viewed or downloaded from Jenkins.
 Some built-in examples of that are the workspace browser, archived artifacts, file parameters to builds, or the `/userContent/` directory.
-Plugins like plugin:javadoc[Javadoc], plugin:htmlpublisher[HTML Publisher], or plugin:maven-plugin[Maven Integration] (when publishing the Maven site) prominently feature functionality that serves HTML controlled by users from Jenkins.
+Plugins like {plugin}javadoc[Javadoc], {plugin}htmlpublisher[HTML Publisher], or {plugin}maven-plugin[Maven Integration] (when publishing the Maven site) prominently feature functionality that serves HTML controlled by users from Jenkins.
 
 This can be a risk, as https://owasp.org/www-community/attacks/xss/[Cross-Site Scripting] attacks could be put into those HTML files by people with influence over builds who may not be fully trusted.
 

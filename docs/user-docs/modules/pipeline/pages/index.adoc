@@ -119,7 +119,7 @@ video::IOUm1lw7F58[youtube,width=800,height=420]
 Building on the core Jenkins value of extensibility, Pipeline is also extensible
 both by users with link:shared-libraries[Pipeline Shared Libraries] and by
 plugin developers.
-footnote:ghof[plugin:github-organization-folder[GitHub Organization Folder plugin]]
+footnote:ghof[{plugin}github-organization-folder[GitHub Organization Folder plugin]]
 
 The flowchart below is an example of one CD scenario easily modeled in Jenkins
 Pipeline:
@@ -159,7 +159,7 @@ through the entire Pipeline (e.g. "Build", "Test" and "Deploy" stages),
 which is used by many plugins to visualize or present Jenkins Pipeline
 status/progress.
 footnote:blueocean[link:../blueocean[Blue Ocean],
-plugin:pipeline-stage-view[Pipeline: Stage View plugin]]
+{plugin}pipeline-stage-view[Pipeline: Stage View plugin]]
 
 
 === Step
@@ -328,12 +328,12 @@ optional in Scripted Pipeline syntax.
 <4> link:syntax#steps[`steps`] is Declarative Pipeline-specific syntax that
 describes the steps to be run in this `stage`.
 <5> `sh` is a Pipeline link:syntax#steps[step] (provided by the
-plugin:workflow-durable-task-step[Pipeline: Nodes and Processes plugin]) that
+{plugin}workflow-durable-task-step[Pipeline: Nodes and Processes plugin]) that
 executes the given shell command.
 <6> `junit` is another Pipeline link:syntax#steps[step] (provided by the
-plugin:junit[JUnit plugin]) for aggregating test reports.
+{plugin}junit[JUnit plugin]) for aggregating test reports.
 <7> `sh` is a Pipeline link:syntax#steps[step] (provided by the
-plugin:workflow-durable-task-step[Pipeline: Nodes and Processes plugin]) that
+{plugin}workflow-durable-task-step[Pipeline: Nodes and Processes plugin]) that
 executes the given shell command.
 
 Read more about Pipeline syntax on the link:syntax[Pipeline Syntax] page.

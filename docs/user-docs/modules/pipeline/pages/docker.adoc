@@ -316,7 +316,7 @@ have a "clean" container provisioned for each Pipeline run.
 
 Consider a hypothetical integration test suite which relies on a local MySQL
 database to be running. Using the `withRun` method, implemented in the
-plugin:docker-workflow[Docker Pipeline] plugin's support for Scripted Pipeline,
+{plugin}docker-workflow[Docker Pipeline] plugin's support for Scripted Pipeline,
 a `Jenkinsfile` can run MySQL as a sidecar:
 
 [source,groovy]
@@ -380,7 +380,7 @@ sh "docker logs ${c.id}"
 === Building containers
 
 
-In order to create a Docker image, the plugin:docker-workflow[Docker Pipeline]
+In order to create a Docker image, the {plugin}docker-workflow[Docker Pipeline]
 plugin also provides a `build()` method for creating a new image, from a
 `Dockerfile` in the repository, during a Pipeline run.
 
@@ -471,7 +471,7 @@ node {
 
 === Using a remote Docker server
 
-By default, the plugin:docker-workflow[Docker Pipeline] plugin will communicate
+By default, the {plugin}docker-workflow[Docker Pipeline] plugin will communicate
 with a local Docker daemon, typically accessed through `/var/run/docker.sock`.
 
 
@@ -526,7 +526,7 @@ Additionally some versions of Docker Swarm do not support custom Registries.
 [[custom-registry]]
 === Using a custom registry
 
-By default the plugin:docker-workflow[Docker Pipeline] integrates assumes the
+By default the {plugin}docker-workflow[Docker Pipeline] integrates assumes the
 default Docker Registry of
 link:https://hub.docker.com[Docker Hub].
 

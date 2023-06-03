@@ -34,7 +34,7 @@ Select _Built-In Node_ in the list, then select _Configure_ in the menu.
 Set the number of executors to 0 and save.
 Make sure to also set up clouds or build agents to run builds on, otherwise builds won't be able to start.
 
-Alternatively, use a plugin such as plugin:job-restrictions[Job Restrictions Plugin] to limit which jobs can be run on certain nodes (like the built-in node), independent of what your less trusted users may use as label expression in their jobs' configurations.
+Alternatively, use a plugin such as {plugin}job-restrictions[Job Restrictions Plugin] to limit which jobs can be run on certain nodes (like the built-in node), independent of what your less trusted users may use as label expression in their jobs' configurations.
 
 [NOTE]
 ====
