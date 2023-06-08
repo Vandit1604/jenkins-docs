@@ -2,5 +2,30 @@ name: dev-docs
 title: Jenkins Developer docs
 version: ~
 nav:
-  - modules/ROOT/nav.adoc
+  - modules/handling-requests/nav.adoc
+  - modules/crowdin/nav.adoc
+  - modules/persistence/nav.adoc
+  - modules/architecture/nav.adoc
+  - modules/internationalization/nav.adoc
+  - modules/development-enviorment/nav.adoc
+  - modules/scheduling/nav.adoc
+  - modules/extensibility/nav.adoc
   - modules/plugin-tutorial/nav.adoc
+  - modules/plugin-development/nav.adoc
+  - modules/plugin-governance/nav.adoc
+  - modules/publishing/nav.adoc
+  - modules/building/nav.adoc
+  - modules/ROOT/nav.adoc
+  - modules/tutorial-improve/nav.adoc
+  - modules/views/nav.adoc
+  - modules/distributed-builds/nav.adoc
+  - modules/security/nav.adoc
+  - modules/model/nav.adoc
+  - modules/blueocean-plugin-development/nav.adoc
+  - modules/cli/nav.adoc
+  - modules/testing/nav.adoc
+  - modules/initialization/nav.adoc
+  - modules/template/nav.adoc
+  - modules/reference/nav.adoc
+  - modules/telemetry/nav.adoc
+  - modules/forms/nav.adoc
