@@ -1,16 +1,30 @@
-image::https://raw.githubusercontent.com/jenkins-infra/jenkins.io/d64ddebd0a7d02772c10a77f1f4890b93b6961e7/content/images/logos/jenkins/Jenkins-stop-the-war.svg["Stop the war",200px,float=left]
-= Jenkins
+= Extend Jenkins
 
-== This is developer docs one of the page will contain the landing page of jenkins
+Jenkins is an extensible automation server with more than 1800 plugins providing integrations for hundreds of tools and services. The resources below will teach you how to extend Jenkins with new features.
 
-Build great things at any scale
+If you want to use Jenkins's existing functionality and plugin features only, please refer to the link:doc[+Jenkins User Documentation+] instead.
 
-The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
+[%hardbreaks]
 
-Ukraine We stand with the people of Ukraine. Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the 
-link:https://www.icrc.org/[International Committee of the Red Cross]
+Jenkins Developer Documentation:
+// Add images as links to increase page UI and UX
+====
+.Create a Plugin - Tutorial
+// image:images/tutorial.png[link="tutorial"]
+Get started with Jenkins development by writing a simple plugin.
 
-+++
-<button>Documentation</button> <button>Download</button>
-+++
+.Improve a Plugin - Tutorial
+// image:images/tutorial-improve.png[link="tutorial-improve"]
+Improve a Jenkins plugin to make it easier to maintain.
 
+.How-To Guides
+// image:images/guides.png[link="guides"]
+These guides explain how to solve a specific problem.
+
+.Reference Documentation
+// image:images/book.png[link="book"]
+The Jenkins developer reference documentation is organized by topics.
+
+.Extensions Index
+// image:images/extensions.png[link="extensions"]
+An index of all extension points available in core and plugins and their implementations.

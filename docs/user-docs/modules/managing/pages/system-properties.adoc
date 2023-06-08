@@ -1,28 +1,43 @@
----
-layout: systemproperties
-references:
-- url: https://wiki.jenkins.io/display/JENKINS/Administering+Jenkins
-  title: Administering Jenkins
-- url: http://jenkins.io/doc/book/installing/#configuring-http
-  title: Configuring HTTP in Jenkins
-- url: https://github.com/jenkinsci/remoting/blob/master/docs/configuration.md
-  title: Remoting configuration
-properties:
-# Style guide:
-# - Prefer literal blocks over quoted blocks when necessary
-# - Format literal default values in `backticks` and descriptive parts of values outside backticks
-# - Use sentence-per-line formatting for descriptions
+// # Style guide:
+// # - Prefer literal blocks over quoted blocks when necessary
+// # - Format literal default values in `backticks` and descriptive parts of values outside backticks
+// # - Use sentence-per-line formatting for descriptions
 
-# Tags:
-# - development: Mostly or only useful during development and debugging. While in rare cases these may help troubleshoot an instance, primary use is development.
-# - escape hatch: Disables a behavior that is not generally expected to be disabled, such as security fixes. Intended to address unexpected compatibility problems.
-# - feature: Enables (or rarely disables) a feature. Distinction to escape hatches is fuzzy when it disables.
-# - internal: Not intended to be set by administrators, developers, or packaging scripts at all. Very rare.
-# - obsolete: This option no longer has an effect or a different option should be used instead.
-# - packaging: Options generally only useful when customizing the Jenkins packaging.
-# - security: Related to security, both security fixes, and hardening. Usually also escape hatches.
-# - tuning: Adjust thresholds, durations, and values of a similar nature that don't substantially alter behavior.
-# - ui: User interface related.
+// # Tags:
+// # - development: Mostly or only useful during development and debugging. While in rare cases these may help troubleshoot an instance, primary use is development.
+// # - escape hatch: Disables a behavior that is not generally expected to be disabled, such as security fixes. Intended to address unexpected compatibility problems.
+// # - feature: Enables (or rarely disables) a feature. Distinction to escape hatches is fuzzy when it disables.
+// # - internal: Not intended to be set by administrators, developers, or packaging scripts at all. Very rare.
+// # - obsolete: This option no longer has an effect or a different option should be used instead.
+// # - packaging: Options generally only useful when customizing the Jenkins packaging.
+// # - security: Related to security, both security fixes, and hardening. Usually also escape hatches.
+// # - tuning: Adjust thresholds, durations, and values of a similar nature that don't substantially alter behavior.
+// # - ui: User interface related.
+= Jenkins Features Controlled with System Properties 
+
+Jenkins has several "hidden" features that can be enabled with system properties. This page documents many of them and explain how to configure them on your instance.
+
+Some system properties related to the Remoting library used for communication between controller and agents are documented in that component’s repository.
+== Usage
+
+System properties are defined by passing `-Dproperty=value` to the `java` command line to start Jenkins. Make sure to pass all of these arguments before the `-jar` argument, otherwise they will be ignored. Example:
+
+```
+java -Dhudson.footerURL=http://example.org -jar jenkins.war
+```
+
+The following lists the properties and the version of Jenkins they were introduced in.
+
+- Property - Java property name
+- Default - Default value if not explicitly set
+- Since - The version of Jenkins the property was introduced in
+- Description - Other notes
+
+== Compatibility
+We do *NOT* guarantee that system properties will remain unchanged and functional indefinitely. These switches are often experimental in nature, and subject to change without notice. If you find these useful, please file a ticket to promote it to an official feature.
+
+== Properties in Jenkins Core
+NOTE: Due to the very large number of system properties used, often just added as a "safety valve" or "escape hatch" in case a change causes problems, this list is not expected to be complete.
 
 - name: debug.YUI
   tags:

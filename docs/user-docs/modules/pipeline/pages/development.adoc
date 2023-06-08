@@ -1,21 +1,3 @@
----
-layout: section
-title: Pipeline Development Tools
----
-ifdef::backend-html5[]
-:description:
-:author:
-:sectanchors:
-:toc:
-ifdef::env-github[:imagesdir: ../resources]
-ifndef::env-github[:imagesdir: ../../resources]
-:hide-uri-scheme:
-endif::[]
-ifdef::basebackend-dockbook[:imagesdir: doc/book/resources]
-// Show 2/3 of the Blue ocean admonitions
-// :pipeline-visualization-admonition: true
-:pipeline-creation-admonition: true
-
 = Pipeline Development Tools
 
 Jenkins Pipeline includes

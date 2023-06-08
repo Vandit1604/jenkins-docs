@@ -1,0 +1,12 @@
+= Extensions
+
+WARNING: This section is a work in progress. Want to help? Check out the (https://app.gitter.im/#/room/#jenkins/docs:matrix.org)[jenkinsci/docs gitter channel]. For other ways to contribute to the Jenkins project, see (https://www.jenkins.io/participate)[this page about participating and contributing].
+
+Jenkins defines extension points, which are interfaces or abstract classes that model an aspect of its behavior.
+The interface or class defines contracts of what needs implementation, and Jenkins allows plugins to contribute those implementations.
+
+To register an implementation, make sure you mark it with `@Extension`.
+
+link:/doc/developer/extensions/[The extensions index] is a useful list of the extension points used in Jenkins and Jenkins plugins.
+
+More information can be found in the link:/doc/developer/extensibility/[Extensibility section].
