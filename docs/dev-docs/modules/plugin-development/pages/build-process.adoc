@@ -1,4 +1,4 @@
-== Plugin Build Process
+= Plugin Build Process
 
 Most Jenkins plugins are built with link:https://maven.apache.org[Maven].
 They typically use the link:https://github.com/jenkinsci/plugin-pom/[Jenkins plugin POM] as their parent link:https://maven.apache.org/pom.html[POM], which provides a sensible default configuration for the plugin build.

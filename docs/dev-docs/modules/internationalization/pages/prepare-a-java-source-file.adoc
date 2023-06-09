@@ -120,4 +120,5 @@ public FormValidation doCheckName(@QueryParameter String value)
 If your IDE doesn't offer autocompletion even after building the project once, make sure the output folder of the localizer, `target/generated-sources/localizer`, is configured and recognized as a directory containing generated source code.
 
 == References:
+
 - link:https://en.wikipedia.org/wiki/.properties[properties file format on Wikipedia]

@@ -152,7 +152,8 @@ The principle is to create a sort of session between the login command and the l
 The authentication is checked using the same classes that we use for the Web UI or the REST API with password.
 Once the authentication is verified, the credentials are stored in a local cache that will enable future calls to be authenticated automatically.
 
-The second way put the username and the password as additional parameters of the command (`--username` and `--password`).
+The second way put the username and the password as additional parameters of the command
+(`--username` and `--password`).
 
 For the third and fourth ways, we pass the parameters to connect like in an HTTP call in the header.
 The authentication is checked exactly the same way as for the REST API depending on the provided password or token.
