@@ -1,0 +1,14 @@
+= Extension Points defined in Chroot Plugin
+
+plugin:chroot[Chroot Plugin]
+
+== ChrootWorker
+`jenkinsdoc:chroot:org.jenkinsci.plugins.chroot.extensions.ChrootWorker[]`
+
+_This extension point has no Javadoc documentation._
+
+**Implementations:**
+
+* plugin:chroot[Chroot Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++chroot.+++<wbr/>+++extensions.+++<wbr/>+++**MockWorker** (link:https://github.com/jenkinsci/chroot-plugin/search?q=MockWorker&type=Code[view on GitHub])
+* plugin:chroot[Chroot Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++chroot.+++<wbr/>+++extensions.+++<wbr/>+++**PBuilderWorker** (link:https://github.com/jenkinsci/chroot-plugin/search?q=PBuilderWorker&type=Code[view on GitHub])
+

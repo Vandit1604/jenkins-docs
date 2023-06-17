@@ -1,0 +1,25 @@
+= Extension Points defined in Keychains and Provisioning Profiles Management Plugin
+
+plugin:kpp-management-plugin[Keychains and Provisioning Profiles Management Plugin]
+
+== KPPBaseKeychainsProvider
+`jenkinsdoc:kpp-management-plugin:com.sic.plugins.kpp.provider.KPPBaseKeychainsProvider[]`
+
++++ An extension point for providing+++ jenkinsdoc:KPPKeychain[] +++.+++
+
+
+**Implementations:**
+
+* plugin:kpp-management-plugin[Keychains and Provisioning Profiles Management Plugin]: com.+++<wbr/>+++sic.+++<wbr/>+++plugins.+++<wbr/>+++kpp.+++<wbr/>+++provider.+++<wbr/>+++**KPPKeychainsProvider** (link:https://github.com/jenkinsci/kpp-management-plugin/search?q=KPPKeychainsProvider&type=Code[view on GitHub])
+
+
+== KPPBaseProvisioningProfilesProvider
+`jenkinsdoc:kpp-management-plugin:com.sic.plugins.kpp.provider.KPPBaseProvisioningProfilesProvider[]`
+
++++ An extension point for providing+++ jenkinsdoc:KPPProvisioningProfile[] ++++++
+
+
+**Implementations:**
+
+* plugin:kpp-management-plugin[Keychains and Provisioning Profiles Management Plugin]: com.+++<wbr/>+++sic.+++<wbr/>+++plugins.+++<wbr/>+++kpp.+++<wbr/>+++provider.+++<wbr/>+++**KPPProvisioningProfilesProvider** (link:https://github.com/jenkinsci/kpp-management-plugin/search?q=KPPProvisioningProfilesProvider&type=Code[view on GitHub])
+

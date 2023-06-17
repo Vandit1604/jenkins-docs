@@ -1,0 +1,14 @@
+= Extension Points defined in Extreme Notification Plugin
+
+plugin:extreme-notification[Extreme Notification Plugin]
+
+== NotificationEndpoint
+`jenkinsdoc:extreme-notification:org.jenkinsci.plugins.extremenotification.NotificationEndpoint[]`
+
+_This extension point has no Javadoc documentation._
+
+**Implementations:**
+
+* plugin:extreme-notification[Extreme Notification Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++extremenotification.+++<wbr/>+++**LoggingNotificationEndpoint** (link:https://github.com/jenkinsci/extreme-notification-plugin/search?q=LoggingNotificationEndpoint&type=Code[view on GitHub])
+* plugin:extreme-notification[Extreme Notification Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++extremenotification.+++<wbr/>+++**WebHookNotificationEndpoint** (link:https://github.com/jenkinsci/extreme-notification-plugin/search?q=WebHookNotificationEndpoint&type=Code[view on GitHub])
+

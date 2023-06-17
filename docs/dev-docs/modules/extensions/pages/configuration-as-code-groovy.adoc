@@ -1,0 +1,16 @@
+= Extension Points defined in Configuration as Code Plugin - Groovy Scripting Extension Plugin
+
+plugin:configuration-as-code-groovy[Configuration as Code Plugin - Groovy Scripting Extension Plugin]
+
+== GroovyScriptSource
+`jenkinsdoc:configuration-as-code-groovy:io.jenkins.plugins.cascgroovy.GroovyScriptSource[]`
+
+_This extension point has no Javadoc documentation._
+
+**Implementations:**
+
+* plugin:configuration-as-code-groovy[Configuration as Code Plugin - Groovy Scripting Extension Plugin]: io.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++cascgroovy.+++<wbr/>+++**ConfigurableGroovyScriptSource** (link:https://github.com/jenkinsci/configuration-as-code-groovy-plugin/search?q=ConfigurableGroovyScriptSource&type=Code[view on GitHub])
+* plugin:configuration-as-code-groovy[Configuration as Code Plugin - Groovy Scripting Extension Plugin]: io.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++cascgroovy.+++<wbr/>+++**FromFileGroovyScriptSource** (link:https://github.com/jenkinsci/configuration-as-code-groovy-plugin/search?q=FromFileGroovyScriptSource&type=Code[view on GitHub])
+* plugin:configuration-as-code-groovy[Configuration as Code Plugin - Groovy Scripting Extension Plugin]: io.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++cascgroovy.+++<wbr/>+++**FromUrlGroovyScriptSource** (link:https://github.com/jenkinsci/configuration-as-code-groovy-plugin/search?q=FromUrlGroovyScriptSource&type=Code[view on GitHub])
+* plugin:configuration-as-code-groovy[Configuration as Code Plugin - Groovy Scripting Extension Plugin]: io.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++cascgroovy.+++<wbr/>+++**InlinePureGroovyScriptSource** (link:https://github.com/jenkinsci/configuration-as-code-groovy-plugin/search?q=InlinePureGroovyScriptSource&type=Code[view on GitHub])
+

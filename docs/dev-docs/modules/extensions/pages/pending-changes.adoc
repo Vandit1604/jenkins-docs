@@ -1,0 +1,14 @@
+= Extension Points defined in Pending Changes Plugin
+
+plugin:pending-changes[Pending Changes Plugin]
+
+== ScmPendingChangesProvider
+`jenkinsdoc:pending-changes:org.jenkinsci.plugins.pendingChanges.ScmPendingChangesProvider[]`
+
++++ Provide pluggable access to the change logs of a SCM.+++
+
+
+**Implementations:**
+
+* plugin:pending-changes[Pending Changes Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++pendingChanges.+++<wbr/>+++**SubversionScmPendingChangesProvider** (link:https://github.com/jenkinsci/pendingchanges-plugin/search?q=SubversionScmPendingChangesProvider&type=Code[view on GitHub])
+

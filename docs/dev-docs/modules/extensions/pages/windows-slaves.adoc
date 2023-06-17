@@ -1,0 +1,16 @@
+= Extension Points defined in WMI Windows Agents Plugin
+
+plugin:windows-slaves[WMI Windows Agents Plugin]
+
+== ManagedWindowsServiceAccount
+`jenkinsdoc:windows-slaves:hudson.os.windows.ManagedWindowsServiceAccount[]`
+
++++ Encapsulates how to login (a part of+++ jenkinsdoc:ManagedWindowsServiceLauncher[] +++).+++
+
+
+**Implementations:**
+
+* plugin:windows-slaves[WMI Windows Agents Plugin]: hudson.+++<wbr/>+++os.+++<wbr/>+++windows.+++<wbr/>+++**ManagedWindowsServiceAccount.+++<wbr/>+++Administrator** (link:https://github.com/jenkinsci/windows-slaves-plugin/search?q=ManagedWindowsServiceAccount.Administrator&type=Code[view on GitHub])
+* plugin:windows-slaves[WMI Windows Agents Plugin]: hudson.+++<wbr/>+++os.+++<wbr/>+++windows.+++<wbr/>+++**ManagedWindowsServiceAccount.+++<wbr/>+++AnotherUser** (link:https://github.com/jenkinsci/windows-slaves-plugin/search?q=ManagedWindowsServiceAccount.AnotherUser&type=Code[view on GitHub])
+* plugin:windows-slaves[WMI Windows Agents Plugin]: hudson.+++<wbr/>+++os.+++<wbr/>+++windows.+++<wbr/>+++**ManagedWindowsServiceAccount.+++<wbr/>+++LocalSystem** (link:https://github.com/jenkinsci/windows-slaves-plugin/search?q=ManagedWindowsServiceAccount.LocalSystem&type=Code[view on GitHub])
+
