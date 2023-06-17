@@ -1,0 +1,35 @@
+= Extension Points defined in Helix QAC Plugin
+
+plugin:prqa-plugin[Helix QAC Plugin]
+
+== AbstractThreshold
+`jenkinsdoc:prqa-plugin:net.praqma.jenkins.plugin.prqa.threshold.AbstractThreshold[]`
+
+_This extension point has no Javadoc documentation._
+
+**Implementations:**
+
+* plugin:prqa-plugin[Helix QAC Plugin]: net.+++<wbr/>+++praqma.+++<wbr/>+++jenkins.+++<wbr/>+++plugin.+++<wbr/>+++prqa.+++<wbr/>+++threshold.+++<wbr/>+++**FileComplianceThreshold** (link:https://github.com/jenkinsci/prqa-plugin/search?q=FileComplianceThreshold&type=Code[view on GitHub])
+* plugin:prqa-plugin[Helix QAC Plugin]: net.+++<wbr/>+++praqma.+++<wbr/>+++jenkins.+++<wbr/>+++plugin.+++<wbr/>+++prqa.+++<wbr/>+++threshold.+++<wbr/>+++**MessageComplianceThreshold** (link:https://github.com/jenkinsci/prqa-plugin/search?q=MessageComplianceThreshold&type=Code[view on GitHub])
+* plugin:prqa-plugin[Helix QAC Plugin]: net.+++<wbr/>+++praqma.+++<wbr/>+++jenkins.+++<wbr/>+++plugin.+++<wbr/>+++prqa.+++<wbr/>+++threshold.+++<wbr/>+++**ProjectComplianceThreshold** (link:https://github.com/jenkinsci/prqa-plugin/search?q=ProjectComplianceThreshold&type=Code[view on GitHub])
+
+
+== PRQAFileProjectSource
+`jenkinsdoc:prqa-plugin:net.praqma.jenkins.plugin.prqa.notifier.PRQAFileProjectSource[]`
+
+_This extension point has no Javadoc documentation._
+
+**Implementations:**
+
+_(no known implementations)_
+
+
+== PostBuildActionSetup
+`jenkinsdoc:prqa-plugin:net.praqma.jenkins.plugin.prqa.notifier.PostBuildActionSetup[]`
+
+_This extension point has no Javadoc documentation._
+
+**Implementations:**
+
+* plugin:prqa-plugin[Helix QAC Plugin]: net.+++<wbr/>+++praqma.+++<wbr/>+++jenkins.+++<wbr/>+++plugin.+++<wbr/>+++prqa.+++<wbr/>+++notifier.+++<wbr/>+++**QAFrameworkPostBuildActionSetup** (link:https://github.com/jenkinsci/prqa-plugin/search?q=QAFrameworkPostBuildActionSetup&type=Code[view on GitHub])
+

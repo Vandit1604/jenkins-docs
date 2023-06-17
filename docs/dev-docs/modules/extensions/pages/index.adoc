@@ -1,0 +1,473 @@
+---
+title: Extensions Index
+layout: developerextension
+uneditable: true
+---
+:toc:
+:compat-mode!:
+
+Jenkins defines extension points, which are interfaces or abstract classes that model an aspect of its behavior.
+Those interfaces define contracts of what need to be implemented, and Jenkins allows plugins to contribute those implementations.
+In general, all you need to do to register an implementation is to mark it with `@Extension`.
+Creating a new extension point is quite easy too, see link:https://wiki.jenkins-ci.org/display/JENKINS/Defining+a+new+extension+point[defining a new extension point] for details.
+
+This index has been generated automatically. Javadoc excerpts are taken from core and plugin source code, and may have been improperly converted to HTML, so some may appear broken.
+
+
+* link:jenkins-core[Extension points defined in Jenkins Core]
+
+* link:onepassword-secrets[Extension points defined in 1Password Secrets Plugin]
+
+* link:adobe-cloud-manager[Extension points defined in Adobe Cloud Manager Plugin]
+
+* link:alauda-devops-credentials-provider[Extension points defined in Alauda DevOps Credentials Provider Plugin]
+
+* link:alauda-devops-pipeline[Extension points defined in Alauda DevOps Pipeline Plugin]
+
+* link:alauda-kubernetes-support[Extension points defined in Alauda Kubernetes Suport Plugin]
+
+* link:alibabacloud-ecs[Extension points defined in Alibaba Cloud ECS Plugin]
+
+* link:all-changes[Extension points defined in All changes Plugin]
+
+* link:android-signing[Extension points defined in Android Signing Plugin]
+
+* link:ApicaLoadtest[Extension points defined in Apica Loadtest Plugin]
+
+* link:appdome-build-2secure[Extension points defined in Appdome Build-2secure Plugin]
+
+* link:artifact-manager-s3[Extension points defined in Artifact Manager on S3 Plugin]
+
+* link:attention[Extension points defined in Attention Plugin]
+
+* link:audit2db[Extension points defined in Audit to Database Plugin]
+
+* link:audit-trail[Extension points defined in Audit Trail Plugin]
+
+* link:authorize-project[Extension points defined in Authorize Project Plugin]
+
+* link:aws-kinesis-consumer[Extension points defined in AWS Kinesis Consumer Plugin]
+
+* link:cloudbees-bitbucket-branch-source[Extension points defined in Bitbucket Branch Source Plugin]
+
+* link:blueocean-bitbucket-pipeline[Extension points defined in Bitbucket Pipeline for Blue Ocean Plugin]
+
+* link:block-queued-job[Extension points defined in Block Queued Job Plugin]
+
+* link:blueocean-pipeline-editor[Extension points defined in Blue Ocean Pipeline Editor Plugin]
+
+* link:branch-api[Extension points defined in Branch API Plugin]
+
+* link:build-alias-setter[Extension points defined in Build Alias Setter Plugin]
+
+* link:build-cause-run-condition[Extension points defined in Build Cause Run Condition Plugin]
+
+* link:build-failure-analyzer[Extension points defined in Build Failure Analyzer Plugin]
+
+* link:build-keeper-plugin[Extension points defined in Build Keeper Plugin]
+
+* link:build-pipeline-plugin[Extension points defined in Build Pipeline Plugin]
+
+* link:environment-filter-utils[Extension points defined in Build Step Environment Filter Utilities Plugin]
+
+* link:buildtriggerbadge[Extension points defined in Build Trigger Badge Plugin]
+
+* link:build-view-column[Extension points defined in Build View Column Plugin]
+
+* link:buildcontext-capture[Extension points defined in BuildContext Capture Plugin]
+
+* link:buildgraph-view[Extension points defined in buildgraph-view Plugin]
+
+* link:cas-plugin[Extension points defined in CAS Plugin]
+
+* link:categorized-view[Extension points defined in categorized-view Plugin]
+
+* link:checks-api[Extension points defined in Checks API Plugin]
+
+* link:chroot[Extension points defined in Chroot Plugin]
+
+* link:clearcase[Extension points defined in ClearCase Plugin]
+
+* link:clearcase-ucm-plugin[Extension points defined in ClearCase UCM Plugin]
+
+* link:electricflow[Extension points defined in CloudBees CD Plugin]
+
+* link:docker-custom-build-environment[Extension points defined in CloudBees Docker Custom Build Environment Plugin]
+
+* link:docker-traceability[Extension points defined in CloudBees Docker Traceability Plugin]
+
+* link:codecover[Extension points defined in CodeCover Plugin]
+
+* link:codesonar[Extension points defined in CodeSonar Plugin]
+
+* link:blueocean-commons[Extension points defined in Common API for Blue Ocean Plugin]
+
+* link:conditional-buildstep[Extension points defined in Conditional BuildStep Plugin]
+
+* link:config-file-provider[Extension points defined in Config File Provider Plugin]
+
+* link:configuration-as-code-groovy[Extension points defined in Configuration as Code Plugin - Groovy Scripting Extension Plugin]
+
+* link:configurationslicing[Extension points defined in Configuration Slicing Plugin]
+
+* link:consul[Extension points defined in Consul Plugin]
+
+* link:csp[Extension points defined in Content Security Policy Plugin]
+
+* link:copyartifact[Extension points defined in Copy Artifact Plugin]
+
+* link:credentials[Extension points defined in Credentials Plugin]
+
+* link:custom-build-properties[Extension points defined in Custom Build Properties Plugin]
+
+* link:CustomHistory[Extension points defined in CustomHistory Plugin]
+
+* link:cvs[Extension points defined in CVS Plugin]
+
+* link:dashboard-view[Extension points defined in Dashboard View Plugin]
+
+* link:database[Extension points defined in Database Plugin]
+
+* link:defensics[Extension points defined in Defensics Plugin]
+
+* link:delivery-pipeline-plugin[Extension points defined in Delivery Pipeline Plugin]
+
+* link:depgraph-view[Extension points defined in Dependency Graph Viewer Plugin]
+
+* link:deploy[Extension points defined in Deploy to container Plugin]
+
+* link:deployer-framework[Extension points defined in Deployer Framework Plugin]
+
+* link:deployhub[Extension points defined in DeployHub Plugin]
+
+* link:deployment-notification[Extension points defined in deployment-notification Plugin]
+
+* link:design-library[Extension points defined in Design Library Plugin]
+
+* link:diagnostics[Extension points defined in Diagnostics Plugin]
+
+* link:display-url-api[Extension points defined in Display URL API Plugin]
+
+* link:docker-commons[Extension points defined in Docker Commons Plugin]
+
+* link:docker-workflow[Extension points defined in Docker Pipeline Plugin]
+
+* link:docker-slaves[Extension points defined in Docker Slaves Plugin]
+
+* link:docker-build-step[Extension points defined in docker-build-step Plugin]
+
+* link:dtkit-api[Extension points defined in DTKit 2 API Plugin]
+
+* link:durable-task[Extension points defined in Durable Task Plugin]
+
+* link:elasticbox[Extension points defined in ElasticBox CI Plugin]
+
+* link:envinject[Extension points defined in Environment Injector Plugin]
+
+* link:Exclusion[Extension points defined in Exclusion Plugin]
+
+* link:extensible-choice-parameter[Extension points defined in Extensible Choice Parameter Plugin]
+
+* link:external-workspace-manager[Extension points defined in External Workspace Manager Plugin]
+
+* link:extreme-notification[Extension points defined in Extreme Notification Plugin]
+
+* link:favorite[Extension points defined in Favorite Plugin]
+
+* link:fstrigger[Extension points defined in Filesystem Trigger Plugin]
+
+* link:flexible-publish[Extension points defined in Flexible Publish Plugin]
+
+* link:cloudbees-folder[Extension points defined in Folders Plugin]
+
+* link:forensics-api[Extension points defined in Forensics API Plugin]
+
+* link:fortify[Extension points defined in Fortify Plugin]
+
+* link:GatekeeperPlugin[Extension points defined in Gatekeeper Plugin]
+
+* link:gating-core[Extension points defined in Gating Core Plugin]
+
+* link:gcp-secrets-manager-credentials-provider[Extension points defined in GCP Secrets Manager Credentials Provider Plugin]
+
+* link:gerrit-trigger[Extension points defined in Gerrit Trigger Plugin]
+
+* link:git-client[Extension points defined in Git client Plugin]
+
+* link:git[Extension points defined in Git Plugin]
+
+* link:git-server[Extension points defined in Git server Plugin]
+
+* link:gitee[Extension points defined in Gitee Plugin]
+
+* link:github-oauth[Extension points defined in GitHub Authentication Plugin]
+
+* link:github-pullrequest[Extension points defined in GitHub Integration Plugin]
+
+* link:github[Extension points defined in GitHub Plugin]
+
+* link:gitlab-oauth[Extension points defined in GitLab Authentication Plugin]
+
+* link:gnat[Extension points defined in GNAT Plugin]
+
+* link:google-cloud-backup[Extension points defined in Google Cloud Backup Plugin]
+
+* link:google-cloudbuild[Extension points defined in Google Cloud Build Plugin]
+
+* link:google-storage-plugin[Extension points defined in Google Cloud Storage Plugin]
+
+* link:google-deployment-manager[Extension points defined in Google Deployment Manager Plugin]
+
+* link:google-cloud-health-check[Extension points defined in Google Health Check Plugin]
+
+* link:hashicorp-vault-plugin[Extension points defined in HashiCorp Vault Plugin]
+
+* link:cloudbees-jenkins-advisor[Extension points defined in Health Advisor by CloudBees Plugin]
+
+* link:prqa-plugin[Extension points defined in Helix QAC Plugin]
+
+* link:hipchat[Extension points defined in HipChat Plugin]
+
+* link:hubot-steps[Extension points defined in Hubot Pipeline Steps Plugin]
+
+* link:hyper-slaves[Extension points defined in Hyper.sh Slaves Plugin]
+
+* link:instant-messaging[Extension points defined in instant-messaging Plugin]
+
+* link:ivy[Extension points defined in Ivy Plugin]
+
+* link:jacoco[Extension points defined in JaCoCo Plugin]
+
+* link:jira[Extension points defined in Jira Plugin]
+
+* link:jira-ext[Extension points defined in jira-ext Plugin]
+
+* link:JiraTestResultReporter[Extension points defined in JiraTestResultReporter Plugin]
+
+* link:ownership[Extension points defined in Job and Node ownership Plugin]
+
+* link:github-autostatus[Extension points defined in Job and Stage monitoring Plugin]
+
+* link:jobcacher[Extension points defined in Job Cacher Plugin]
+
+* link:jobConfigHistory[Extension points defined in Job Configuration History Plugin]
+
+* link:job-dsl[Extension points defined in Job DSL Plugin]
+
+* link:job-restrictions[Extension points defined in Job Restrictions Plugin]
+
+* link:jobcopy-builder[Extension points defined in Jobcopy Builder Plugin]
+
+* link:junit[Extension points defined in JUnit Plugin]
+
+* link:blueocean-jwt[Extension points defined in JWT for Blue Ocean Plugin]
+
+* link:jwt-support[Extension points defined in JWT Support Plugin]
+
+* link:kpp-management-plugin[Extension points defined in Keychains and Provisioning Profiles Management Plugin]
+
+* link:kubernetes-credentials-provider[Extension points defined in Kubernetes Credentials Provider Plugin]
+
+* link:label-verifier[Extension points defined in Label Verifier Plugin]
+
+* link:localization-support[Extension points defined in Localization Support Plugin]
+
+* link:logstash[Extension points defined in Logstash Plugin]
+
+* link:lucene-search[Extension points defined in Lucene-Search Plugin]
+
+* link:mailer[Extension points defined in Mailer Plugin]
+
+* link:ca-mat-performance-benchmarking-by-broadcom[Extension points defined in MAT Performance Benchmarking by Broadcom Plugin]
+
+* link:matlab[Extension points defined in MATLAB Plugin]
+
+* link:matrix-auth[Extension points defined in Matrix Authorization Strategy Plugin]
+
+* link:matrix-combinations-parameter[Extension points defined in Matrix Combinations Plugin]
+
+* link:matrix-project[Extension points defined in Matrix Project Plugin]
+
+* link:maven-artifact-choicelistprovider[Extension points defined in Maven Artifact ChoiceListProvider (Nexus) Plugin]
+
+* link:maven-plugin[Extension points defined in Maven Integration Plugin]
+
+* link:repository[Extension points defined in Maven Repository Server Plugin]
+
+* link:mercurial[Extension points defined in Mercurial Plugin]
+
+* link:metrics-aggregation[Extension points defined in Metrics Aggregation Plugin]
+
+* link:metrics[Extension points defined in Metrics Plugin]
+
+* link:hp-application-automation-tools-plugin[Extension points defined in Micro Focus Application Automation Tools Plugin]
+
+* link:misra-compliance-report-generator[Extension points defined in MISRA Compliance Report Plugin]
+
+* link:mock-load-builder[Extension points defined in Mock Load Builder Plugin]
+
+* link:mq-notifier[Extension points defined in MQ Notifier Plugin]
+
+* link:multi-module-tests-publisher[Extension points defined in multi-module-tests-publisher Plugin]
+
+* link:nirmata[Extension points defined in Nirmata Plugin]
+
+* link:nodelabelparameter[Extension points defined in Node and Label parameter Plugin]
+
+* link:node-iterator-api[Extension points defined in Node Iterator API Plugin]
+
+* link:node-sharing-executor[Extension points defined in Node sharing executor Plugin]
+
+* link:nodejs[Extension points defined in NodeJS Plugin]
+
+* link:oauth-credentials[Extension points defined in OAuth Credentials Plugin]
+
+* link:octoperf[Extension points defined in OctoPerf Load Testing Plugin]
+
+* link:oki-docki[Extension points defined in oki-docki Plugin]
+
+* link:one-shot-executor[Extension points defined in One-Shot Executor Plugin]
+
+* link:oidc-provider[Extension points defined in OpenID Connect Provider Plugin]
+
+* link:openid[Extension points defined in OpenID Plugin]
+
+* link:openstack-cloud[Extension points defined in OpenStack Cloud Plugin]
+
+* link:macstadium-orka[Extension points defined in Orka by MacStadium Plugin]
+
+* link:parameterized-trigger[Extension points defined in Parameterized Trigger Plugin]
+
+* link:pending-changes[Extension points defined in Pending Changes Plugin]
+
+* link:performance[Extension points defined in Performance Plugin]
+
+* link:periodicbackup[Extension points defined in Periodic Backup Plugin]
+
+* link:hudson-pview-plugin[Extension points defined in Personal View Plugin]
+
+* link:blueocean-pipeline-api-impl[Extension points defined in Pipeline implementation for Blue Ocean Plugin]
+
+* link:pipeline-input-notification[Extension points defined in Pipeline Input Step Notification Plugin]
+
+* link:pipeline-maven[Extension points defined in Pipeline Maven Integration Plugin]
+
+* link:workflow-api[Extension points defined in Pipeline: API Plugin]
+
+* link:workflow-cps-global-lib[Extension points defined in Pipeline: Deprecated Groovy Libraries Plugin]
+
+* link:workflow-step-api[Extension points defined in Pipeline: Step API Plugin]
+
+* link:pom2config[Extension points defined in pom2config Plugin]
+
+* link:port-allocator[Extension points defined in Port Allocator Plugin]
+
+* link:pretested-integration[Extension points defined in Pretested Integration Plugin]
+
+* link:PrioritySorter[Extension points defined in Priority Sorter Plugin]
+
+* link:proc-cleaner-plugin[Extension points defined in Process cleaner Plugin]
+
+* link:project-inheritance[Extension points defined in Project Inheritance Plugin]
+
+* link:promoted-builds[Extension points defined in promoted builds Plugin]
+
+* link:protecode-sc[Extension points defined in Protecode SC Plugin]
+
+* link:pubsub-light[Extension points defined in Pub-Sub "light" Bus Plugin]
+
+* link:publish-over-cifs[Extension points defined in Publish Over CIFS Plugin]
+
+* link:publish-over-ftp[Extension points defined in Publish Over FTP Plugin]
+
+* link:publish-over-ssh[Extension points defined in Publish Over SSH Plugin]
+
+* link:pull-request-monitoring[Extension points defined in Pull Request Monitoring Plugin]
+
+* link:puppet[Extension points defined in Puppet Plugin]
+
+* link:rabbitmq-consumer[Extension points defined in RabbitMQ Consumer Plugin]
+
+* link:rebuild[Extension points defined in Rebuilder Plugin]
+
+* link:recipe[Extension points defined in Recipe Plugin]
+
+* link:blueocean-rest[Extension points defined in REST API for Blue Ocean Plugin]
+
+* link:blueocean-rest-impl[Extension points defined in REST Implementation for Blue Ocean Plugin]
+
+* link:run-condition[Extension points defined in Run Condition Plugin]
+
+* link:run-selector[Extension points defined in Run Selector Plugin]
+
+* link:saltstack[Extension points defined in SaltStack Plugin]
+
+* link:scm-api[Extension points defined in SCM API Plugin]
+
+* link:scm-manager[Extension points defined in SCM-Manager Plugin]
+
+* link:scoring-load-balancer[Extension points defined in Scoring Load Balancer Plugin]
+
+* link:script-security[Extension points defined in Script Security Plugin]
+
+* link:scriptler[Extension points defined in Scriptler Plugin]
+
+* link:sectioned-view[Extension points defined in Sectioned View Plugin]
+
+* link:security-inspector[Extension points defined in Security Inspector Plugin]
+
+* link:sematext[Extension points defined in Sematext Plugin]
+
+* link:shared-objects[Extension points defined in Shared Objects Plugin]
+
+* link:simple-theme-plugin[Extension points defined in Simple Theme Plugin]
+
+* link:skytap[Extension points defined in Skytap Cloud CI Plugin]
+
+* link:slack[Extension points defined in Slack Notification Plugin]
+
+* link:ssh-agent[Extension points defined in SSH Agent Plugin]
+
+* link:ssh-slaves[Extension points defined in SSH Build Agents Plugin]
+
+* link:ssh-credentials[Extension points defined in SSH Credentials Plugin]
+
+* link:sshd[Extension points defined in SSH server Plugin]
+
+* link:subversion[Extension points defined in Subversion Plugin]
+
+* link:suite-test-groups-publisher[Extension points defined in suite-test-groups-publisher Plugin]
+
+* link:sumologic-publisher[Extension points defined in Sumologic Publisher Plugin]
+
+* link:support-core[Extension points defined in Support Core Plugin]
+
+* link:theme-manager[Extension points defined in Theme Manager Plugin]
+
+* link:thycotic-vault[Extension points defined in Thycotic DevOps Secrets Vault Plugin]
+
+* link:token-macro[Extension points defined in Token Macro Plugin]
+
+* link:unique-id[Extension points defined in Unique ID Library Plugin]
+
+* link:update-sites-manager[Extension points defined in UpdateSites Manager Plugin]
+
+* link:urltrigger[Extension points defined in URLTrigger Plugin]
+
+* link:vectorcast-coverage[Extension points defined in VectorCAST Coverage Plugin]
+
+* link:vectorcast-execution[Extension points defined in VectorCAST Execution Plugin]
+
+* link:vsphere-cloud[Extension points defined in vSphere Plugin]
+
+* link:warnings-ng[Extension points defined in Warnings Next Generation Plugin]
+
+* link:blueocean-web[Extension points defined in Web for Blue Ocean Plugin]
+
+* link:windows-slaves[Extension points defined in WMI Windows Agents Plugin]
+
+* link:xunit[Extension points defined in xUnit Plugin]
+
+* link:yet-another-docker-plugin[Extension points defined in Yet Another Docker Plugin]
+
+* link:zscaler-iac-scan[Extension points defined in Zscaler IaC Scanner Plugin]

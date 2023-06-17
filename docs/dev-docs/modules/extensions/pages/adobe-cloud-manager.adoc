@@ -1,0 +1,16 @@
+= Extension Points defined in Adobe Cloud Manager Plugin
+
+plugin:adobe-cloud-manager[Adobe Cloud Manager Plugin]
+
+== CloudManagerEventSubscriber
+`jenkinsdoc:adobe-cloud-manager:io.jenkins.plugins.adobe.cloudmanager.webhook.subscriber.CloudManagerEventSubscriber[]`
+
++++ Abstract subscriber for Cloud Manager events. Provides standard logic for looking up concrete extensions.+++
+
+
+**Implementations:**
+
+* plugin:adobe-cloud-manager[Adobe Cloud Manager Plugin]: io.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++adobe.+++<wbr/>+++cloudmanager.+++<wbr/>+++webhook.+++<wbr/>+++subscriber.+++<wbr/>+++**PipelineEndEventSubscriber** (link:https://github.com/jenkinsci/adobe-cloud-manager-plugin/search?q=PipelineEndEventSubscriber&type=Code[view on GitHub])
+* plugin:adobe-cloud-manager[Adobe Cloud Manager Plugin]: io.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++adobe.+++<wbr/>+++cloudmanager.+++<wbr/>+++webhook.+++<wbr/>+++subscriber.+++<wbr/>+++**PipelineStartEventSubscriber** (link:https://github.com/jenkinsci/adobe-cloud-manager-plugin/search?q=PipelineStartEventSubscriber&type=Code[view on GitHub])
+* plugin:adobe-cloud-manager[Adobe Cloud Manager Plugin]: io.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++adobe.+++<wbr/>+++cloudmanager.+++<wbr/>+++webhook.+++<wbr/>+++subscriber.+++<wbr/>+++**PipelineStepEventSubscriber** (link:https://github.com/jenkinsci/adobe-cloud-manager-plugin/search?q=PipelineStepEventSubscriber&type=Code[view on GitHub])
+

@@ -1,0 +1,15 @@
+= Extension Points defined in ClearCase Plugin
+
+plugin:clearcase[ClearCase Plugin]
+
+== ViewStorage
+`jenkinsdoc:clearcase:hudson.plugins.clearcase.viewstorage.ViewStorage[]`
+
+_This extension point has no Javadoc documentation._
+
+**Implementations:**
+
+* plugin:clearcase[ClearCase Plugin]: hudson.+++<wbr/>+++plugins.+++<wbr/>+++clearcase.+++<wbr/>+++viewstorage.+++<wbr/>+++**DefaultViewStorage** (link:https://github.com/jenkinsci/clearcase-plugin/search?q=DefaultViewStorage&type=Code[view on GitHub])
+* plugin:clearcase[ClearCase Plugin]: hudson.+++<wbr/>+++plugins.+++<wbr/>+++clearcase.+++<wbr/>+++viewstorage.+++<wbr/>+++**ServerViewStorage** (link:https://github.com/jenkinsci/clearcase-plugin/search?q=ServerViewStorage&type=Code[view on GitHub])
+* plugin:clearcase[ClearCase Plugin]: hudson.+++<wbr/>+++plugins.+++<wbr/>+++clearcase.+++<wbr/>+++viewstorage.+++<wbr/>+++**SpecificViewStorage** (link:https://github.com/jenkinsci/clearcase-plugin/search?q=SpecificViewStorage&type=Code[view on GitHub])
+
