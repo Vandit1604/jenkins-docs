@@ -2,25 +2,23 @@
 
 Jenkins is an extensible automation server with more than 1800 plugins providing integrations for hundreds of tools and services. The resources below will teach you how to extend Jenkins with new features.
 
-If you want to use Jenkins's existing functionality and plugin features only, please refer to the xref:user-docs::ROOT:index.adoc[Jenkins User Documentation] instead.
-
-[%hardbreaks]
-
 .Jenkins Developer Documentation
 ****
 This page provides an overview of the documentation in the Jenkins Developer Documentation.
 
 TIP: If you're using Jenkins as a user this is where you should look.
 
-xref:dev-docs::ROOT:index.adoc[Check Out]
-
 ****
+
+If you want to use Jenkins's existing functionality and plugin features only, please refer to the xref:user-docs::ROOT:index.adoc[Jenkins User Documentation] instead.
+
+[%hardbreaks]
 
 .Create a Plugin - Tutorial
 ****
 Get started with Jenkins development by writing a simple plugin.
 
-xref:dev-docs::plugin-tutorial:index.adoc[Check Out]
+xref:plugin-development:index.adoc[Check Out]
 
 ****
 
@@ -28,7 +26,7 @@ xref:dev-docs::plugin-tutorial:index.adoc[Check Out]
 ****
 Improve a Jenkins plugin to make it easier to maintain.
 
-xref:dev-docs::tutorial-improve:index.adoc[Check Out]
+xref:tutorial-improve:index.adoc[Check Out]
 
 ****
 
@@ -36,7 +34,7 @@ xref:dev-docs::tutorial-improve:index.adoc[Check Out]
 ****
 These guides explain how to solve a specific problem.
 
-xref:dev-docs::guides:index.adoc[Check Out]
+xref:guides:index.adoc[Check Out]
 
 ****
 
@@ -44,7 +42,7 @@ xref:dev-docs::guides:index.adoc[Check Out]
 ****
 The Jenkins developer reference documentation is organized by topics.
 
-xref:dev-docs::reference:index.adoc[Check Out]
+xref:reference:index.adoc[Check Out]
 
 ****
 
