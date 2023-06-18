@@ -15,14 +15,13 @@ Testing changes to the script below locally without major changes is difficult d
 Starting Chrome with the arguments --disable-web-security --user-data-dir=<some dir> seems to be the easiest option.
 ////
 ++++
-    <style type="text/css">
-    @import url(https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css);
-    </style>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript">
 $(document).ready(function() {
     $('#permissions').DataTable( {
         ajax: {
+            type: 'get',
             url: 'https://reports.jenkins.io/github-jenkinsci-permissions-report.json',
             dataSrc: ''
         },
@@ -44,7 +43,7 @@ $(document).ready(function() {
     } );
 } );
     </script>
-    <table id="permissions" class="display" cellspacing="0" width="100%">
+    <table id="permissions" class="display">
       <thead>
         <tr>
           <th>Repository</th>
@@ -60,5 +59,4 @@ $(document).ready(function() {
           </tr>
       </tfoot>
     </table>
-
 ++++
