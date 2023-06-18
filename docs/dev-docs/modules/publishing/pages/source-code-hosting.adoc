@@ -44,20 +44,10 @@ window.fetch("https://reports.jenkins.io/github-jenkinsci-permissions-report.jso
         });
 
         table.appendChild(tableBody);
-        return table;
+        document.body.appendChild(table);
     }
 
-    const permissionsTable = createTable(response);
-
-    const iframe = document.getElementById('permissions');
-    iframe.onload = function(){
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';}
-    iframe.contentWindow.document.open();
-    iframe.contentWindow.document.append(permissionsTable);
-    iframe.contentWindow.document.close();
+    createTable(JSON.parse(response));
 });
     </script>
-
-    <iframe title='permissions' id='permissions'>
-    </iframe>
 ++++
