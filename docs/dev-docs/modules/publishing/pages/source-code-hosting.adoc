@@ -15,39 +15,49 @@ Testing changes to the script below locally without major changes is difficult d
 Starting Chrome with the arguments --disable-web-security --user-data-dir=<some dir> seems to be the easiest option.
 ////
 ++++
-    <style>
-        @import url("https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css");
-    </style>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript">
-window.fetch("https://reports.jenkins.io/github-jenkinsci-permissions-report.json", {
-    method: 'GET',
-    accept: "text/html",
-    mode: "cors"
-}).then(async (data) => {
-    const response = await data.text();
-
-    function createTable(tableData) {
-        let table = document.createElement('table');
-        let tableBody = document.createElement('tbody');
-
-        tableData.forEach(function(rowData) {
-            let row = document.createElement('tr');
-
-            rowData.forEach(function(cellData) {
-                let cell = document.createElement('td');
-                cell.appendChild(document.createTextNode(cellData));
-                row.appendChild(cell);
-            });
-
-            tableBody.appendChild(row);
-        });
-
-        table.appendChild(tableBody);
-        document.body.appendChild(table);
-    }
-
-    createTable(JSON.parse(response));
-});
+$(function () {
+    $('#permissions').DataTable( {
+        ajax: {
+            url: 'https://reports.jenkins.io/github-jenkinsci-permissions-report.json',
+            dataSrc: ''
+        },
+        columns: [
+            {
+                data: "Repository",
+                render: function(data, type, row, metadata) {
+                    return '<a href="https://github.com/jenkinsci/' + data + '" target="_blank" rel="noreferrer noopener">' + data + '</a>';
+                }
+            },
+            {
+                data: "User",
+                render: function(data, type, row, metadata) {
+                    return '<a href="https://github.com/' + data + '" target="_blank" rel="noreferrer noopener">' + data + '</a>';
+                }
+            },
+            {
+                data: "Access"
+            }
+        ]
+    } );
+} );
     </script>
+    <table id="permissions" class="display" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th>Repository</th>
+          <th>User</th>
+          <th>Access</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Repository</th>
+          <th>User</th>
+          <th>Access</th>
+          </tr>
+      </tfoot>
+    </table>
 ++++
