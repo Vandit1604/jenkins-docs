@@ -15,6 +15,58 @@ Testing changes to the script below locally without major changes is difficult d
 Starting Chrome with the arguments --disable-web-security --user-data-dir=<some dir> seems to be the easiest option.
 ////
 ++++
-<table class="table table-sm table-striped" id="permissions">
-</table>
+    <link href="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
+
+    <script
+        src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.js"></script>
+
+    <script>
+        $(function () {
+            $('#permissions').DataTable({
+                ajax: {
+                    method: 'GET',
+                    url: 'https://reports.jenkins.io/github-jenkinsci-permissions-report.json',
+                    dataSrc: '',
+                    dataType: 'json',
+                },
+                columns: [
+                    {
+                        title: "Repository",
+                        render: function (data, type, row, metadata) {
+                            return '<a href="https://github.com/jenkinsci/' + data + '" target="_blank" rel="noreferrer noopener">' + data + '</a>';
+                        }
+                    },
+                    {
+                        title: "User",
+                        render: function (data, type, row, metadata) {
+                            return '<a href="https://github.com/' + data + '" target="_blank" rel="noreferrer noopener">' + data + '</a>';
+                        }
+                    },
+                    {
+                        title: "Access"
+                    }
+                ]
+            });
+        });
+    </script>
+
+    <table id="permissions" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Repository</th>
+                <th>User</th>
+                <th>Access</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Repository</th>
+                <th>User</th>
+                <th>Access</th>
+            </tr>
+        </tfoot>
+    </table>
 ++++
