@@ -15,20 +15,6 @@ Testing changes to the script below locally without major changes is difficult d
 Starting Chrome with the arguments --disable-web-security --user-data-dir=<some dir> seems to be the easiest option.
 ////
 ++++
-<table id="permissions" className="display" style="width:100%">
-  <thead>
-  <tr>
-    <th>Repository</th>
-    <th>User</th>
-    <th>Access</th>
-  </tr>
-  </thead>
-  <tfoot>
-  <tr>
-    <th>Repository</th>
-    <th>User</th>
-    <th>Access</th>
-  </tr>
-  </tfoot>
+<table class="table table-sm table-striped" id="permissions">
 </table>
 ++++
