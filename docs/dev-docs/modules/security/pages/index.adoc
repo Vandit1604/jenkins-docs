@@ -130,7 +130,7 @@ By flow we mean the involved classes that will check your credentials for validi
 
 ==== Web UI and REST API
 
-image:web_rest_flow.svg["Web UI and REST API flow", role=center]
+image::web_rest_flow.svg["Web UI and REST API flow", role=center]
 
 In the diagram above, each arrow indicates a way to authenticate.
 
@@ -145,7 +145,7 @@ For the login / apiToken calls, the `BasicHeaderApiTokenAuthenticator` manages t
 
 For the CLI part, the things become a bit more complicated, not by the complexity but more by the multiplicity of way to connect.
 
-image:cli_flow.svg["CLI flow", role=center]
+image::cli_flow.svg["CLI flow", role=center]
 
 The first case (remoting) is deprecated but explained as potentially it's still used.
 The principle is to create a sort of session between the login command and the logout one.

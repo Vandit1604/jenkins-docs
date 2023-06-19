@@ -71,7 +71,7 @@ For example, `Descriptor#<init>` calls `Class#getMethod("getDescriptor")` and of
 
 ### Example case
 
-image::/images/developer/optional-dependency-example.png[]
+image::optional-dependency-example.png[]
 
 * dependee-plugin and depender-plugin both depend on base-plugin.
 * depender-plugin optionally depends on dependee-plugin.
