@@ -12,7 +12,7 @@ include::partial$_blue-ocean-status.adoc[]
 
 The Activity view includes the <<getting-started#navigation-bar, standard navigation bar>> at the top and a local navigation bar below it.
 
-image:blueocean/activity/navigation-bars.png[Navigation bars from the Activity view, role=center]
+image::activity/navigation-bars.png[Navigation bars from the Activity view, role=center]
 
 The local navigation bar includes:
 
@@ -25,14 +25,14 @@ The local navigation bar includes:
 The default tab of the Activity view shows a list of the latest completed or active runs.
 Each line represents the <<dashboard#run-status, status>> of a run, run ID, commit information, and when the run completed.
 
-image:blueocean/activity/overview.png[Default activity tab view of the Activity view, role=center]
+image::activity/overview.png[Default activity tab view of the Activity view, role=center]
 
 * Selecting a run will bring up the <<pipeline-run-details#, Pipeline run details>> to provide Pipeline visualization.
 * Active runs can be aborted from this list by selecting the *stop* icon, which is represented by a &#9726; within a circle.
 * Runs that have been completed can be re-run by selecting the
 *re-run* icon &#8634;.
 * The list can be filtered by branch using the "Branch" drop-down in the list header.
-image:blueocean/activity/branch-filter.png[Branch filter in Blue Ocean activity view, width=17% role=center]
+image::activity/branch-filter.png[Branch filter in Blue Ocean activity view, width=17% role=center]
 
 This view does not allow runs to be edited or marked as favorites.
 To perform these actions, select the *Branches* tab.
@@ -42,7 +42,7 @@ To perform these actions, select the *Branches* tab.
 The *Branches* tab shows a list of all branches that have a completed or active run in the current Pipeline.
 Each line in the list corresponds to a branch in source control, displaying the <<dashboard#pipeline-health, overall health of the branch>> based on the status of the most recent run, branch name, commit information, and when the run completed.
 
-image:blueocean/activity/branches.png[Branches tab of Activity view, role=center]
+image::activity/branches.png[Branches tab of Activity view, role=center]
 
 Selecting a branch brings up the <<pipeline-run-details#, Pipeline run details>> for the latest completed or active run of that branch.
 
@@ -60,7 +60,7 @@ Deselecting the star removes the branch from the favorites list.
 The Pull Requests tab displays a list of all pull requests for the current Pipeline, that have a completed or active run.
 Each line in the list corresponds to a pull request in source control, which displays the status of the most recent run, run ID, summary, author, and when the run completed.
 
-image:blueocean/activity/pull-requests.png[Activity Pull Requests view, role=center]
+image::activity/pull-requests.png[Activity Pull Requests view, role=center]
 
 Blue Ocean displays pull requests and branches separately, but the lists behave similarly.
 Selecting a pull request in this list will bring up the <<pipeline-run-details#, Pipeline run details>> for the latest completed or active run of that pull request.

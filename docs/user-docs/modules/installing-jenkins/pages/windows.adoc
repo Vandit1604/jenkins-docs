@@ -22,13 +22,13 @@ Step 1: Setup wizard::
 On opening the Windows Installer, an *Installation Setup Wizard* appears,
 Click *Next* on the Setup Wizard to start your installation.
 
-image:tutorials/windows-installation-setup-wizard.png[alt="Windows Installation Setup Wizard",width=80%]
+image::windows-installation-setup-wizard.png[alt="Windows Installation Setup Wizard",width=80%]
 
 Step 2: Select destination folder::
 
 Select the destination folder to store your Jenkins Installation and click *Next* to continue.
 
-image:tutorials/windows-installation-destination.png[alt="Jenkins Installation Destination",width=80%]
+image::windows-installation-destination.png[alt="Jenkins Installation Destination",width=80%]
 
 Step 3: Service logon credentials::
 
@@ -41,7 +41,7 @@ To run Jenkins service using a *local or domain user*, specify the domain user n
 password with which you want to run Jenkins,
 click on *Test Credentials* to test your domain credentials and click on *Next*.
 
-image:tutorials/windows-jenkins-logon-credentials.jpg[alt="Jenkins Service Logon Credentials",width=80%]
+image::windows-jenkins-logon-credentials.jpg[alt="Jenkins Service Logon Credentials",width=80%]
 
 NOTE: If you get *Invalid Logon* Error pop-up while trying to test your credentials,
 follow the steps explained <<invalid-service-logon-credentials,here>> to resolve it.
@@ -53,7 +53,7 @@ Specify the port on which Jenkins will be running,
 Consequently, if the port is free, it will show a green tick mark as shown below,
 then click on *Next*.
 
-image:tutorials/windows-select-port.png[alt="Jenkins Select Port",width=80%]
+image::windows-select-port.png[alt="Jenkins Select Port",width=80%]
 
 Step 5: Select Java home directory::
 
@@ -63,24 +63,24 @@ If the needed Java version is not installed on your machine, you will be prompte
 
 Once your Java home directory has been selected, click on *Next* to continue.
 
-image:tutorials/windows-select-jdk-installation.png[alt="Select Java Home Directory",width=80%]
+image::windows-select-jdk-installation.png[alt="Select Java Home Directory",width=80%]
 
 Step 6: Custom setup::
 
 Select other services that need to be installed with Jenkins and click on *Next*.
 
-image:tutorials/windows-select-features-to-install.png[alt="Jenkins Custom Setup",width=80%]
+image::windows-select-features-to-install.png[alt="Jenkins Custom Setup",width=80%]
 
 Step 7: Install Jenkins::
 
 Click on the *Install* button to start the installation of Jenkins.
 
-image:tutorials/windows-install.png[alt="Windows Install Jenkins",width=80%]
+image::windows-install.png[alt="Windows Install Jenkins",width=80%]
 
 Additionally, clicking on the *Install* button will show the progress bar of installation,
 as shown below:
 
-image:tutorials/windows-installation-progress.png[alt="Windows Installation Progress",width=80%]
+image::windows-installation-progress.png[alt="Windows Installation Progress",width=80%]
 
 Step 8: Finish Jenkins installation::
 
@@ -89,7 +89,7 @@ Once the installation completes, click on *Finish* to complete the installation.
 Jenkins will be installed as a *Windows Service*. You can validate this by browsing
 the *services* section, as shown below:
 
-image:tutorials/windows-jenkins-service.png[alt="Windows Jenkins Service",width=80%]
+image::windows-jenkins-service.png[alt="Windows Jenkins Service",width=80%]
 
 NOTE: See the link:/blog/2020/08/12/windows-installers-upgrade/#next-steps[upgrade steps] when you upgrade to a new release.
 
@@ -158,7 +158,7 @@ Browse to `\http://localhost:8080` (or whichever port you configured for
 Jenkins when installing it) and wait until the *Unlock Jenkins* page appears.
 
 [.boxshadow]
-image:tutorials/setup-jenkins-02-unlock-jenkins-page.png[alt="Unlock Jenkins page",width=80%]
+image::setup-jenkins-02-unlock-jenkins-page.png[alt="Unlock Jenkins page",width=80%]
 
 Step 2::
 
@@ -171,13 +171,13 @@ For default installation location to C:\Program Files\Jenkins, a file called
 However, If a custom path for Jenkins installation was selected, then you should check
 that location for *initialAdminPassword* file.
 
-image:tutorials/windows-initial-password-location.png[alt="Jenkins Initial Password Location",width=80%]
+image::windows-initial-password-location.png[alt="Jenkins Initial Password Location",width=80%]
 
 Step 3::
 
 Open the highlighted file and copy the content of the *initialAdminPassword* file.
 
-image:tutorials/windows-initial-password-file.png[alt="Jenkins Initial Password File",width=80%]
+image::windows-initial-password-file.png[alt="Jenkins Initial Password File",width=80%]
 
 Step 4::
 
@@ -188,7 +188,7 @@ On the *Unlock Jenkins* page, paste this password into the *Administrator passwo
   where the initial password can also be obtained.
 
 +
-image:tutorials/windows-jenkins-log.png[alt="Windows Jenkins Log File",width=80%]
+image::windows-jenkins-log.png[alt="Windows Jenkins Log File",width=80%]
 
 This password must be entered in the
 setup wizard on new Jenkins installations before you can access Jenkins's main
@@ -244,7 +244,7 @@ plugins>>, Jenkins asks you to create your first administrator user.
 
 === Invalid service logon credentials
 
-image:tutorials/windows-invalid-service-logon-credentials.png[alt="Invalid Service Logon Credentials",width=80%]
+image::windows-invalid-service-logon-credentials.png[alt="Invalid Service Logon Credentials",width=80%]
 
 When installing a service to run under a domain user account, the account must have the right to logon as a service. This logon permission applies strictly to the local computer and must be granted in the Local Security Policy.
 

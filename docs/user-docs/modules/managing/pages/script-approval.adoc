@@ -19,7 +19,7 @@ the "In-process Script Approval" action appears in *Manage Jenkins*
 to allow the unsafe method.
 Unsafe methods should not be enabled without careful consideration of the impact.
 
-image::managing/manage-inprocess-script-approval.png["Entering the In-process Script Approval configuration", role=center]
+image::manage-inprocess-script-approval.png["Entering the In-process Script Approval configuration", role=center]
 
 == Getting Started
 
@@ -65,7 +65,7 @@ When a script attempts to use features or methods unauthorized by the sandbox,
 a script is halted immediately, as shown below with Jenkins Pipeline
 
 .Unauthorized method signature rejected at runtime via Blue Ocean
-image::managing/script-sandbox-rejection.png["Sandbox method rejection", role=center]
+image::script-sandbox-rejection.png["Sandbox method rejection", role=center]
 
 The Pipeline above will not execute until an Administrator
 <<approving-method-signature, approves the method signature>> via the
@@ -77,7 +77,7 @@ that the **entire** script must be reviewed and
 <<approving-unsandboxed-pipeline, manually approved>> by an administrator.
 
 .Disabling the Groovy Sandbox for a Pipeline
-image::managing/unchecked-groovy-sandbox-on-pipeline.png["Creating a Scripted Pipeline and unchecking 'Use Groovy Sandbox'", role=center]
+image::unchecked-groovy-sandbox-on-pipeline.png["Creating a Scripted Pipeline and unchecking 'Use Groovy Sandbox'", role=center]
 
 [[script-approval]]
 == Script Approval
@@ -102,7 +102,7 @@ Approval* page:
 
 [[approving-unsandboxed-pipeline]]
 .Approving an unsandboxed Scripted Pipeline
-image::managing/inprocess-script-approval-pipeline.png["Approving an unsandboxed Scripted Pipeline", role=center]
+image::inprocess-script-approval-pipeline.png["Approving an unsandboxed Scripted Pipeline", role=center]
 
 
 For scripts which use the <<groovy-sandbox>>, but wish to execute an currently
@@ -112,7 +112,7 @@ allowed to execute:
 
 [[approving-method-signature]]
 .Approving a new method signature
-image::managing/inprocess-script-approval-method.png["Approving a new method signature", role=center]
+image::inprocess-script-approval-method.png["Approving a new method signature", role=center]
 
 === Approve assuming permissions check
 

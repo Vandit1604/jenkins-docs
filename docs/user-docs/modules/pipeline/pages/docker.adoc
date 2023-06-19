@@ -273,7 +273,7 @@ level, for specifying which agents (by
 link:../../glossary/#label[Label])
 to use for running Docker-based Pipelines.
 
-image::pipeline/configure-docker-label.png[Configuring the Pipeline Docker Label]
+image::configure-docker-label.png[Configuring the Pipeline Docker Label]
 
 === Path setup for mac OS users
 
@@ -393,7 +393,7 @@ calls, for example:
 node {
     checkout scm
 
-    def customImage = docker.build("my-image:${env.BUILD_ID}")
+    def customImage = docker.build("my-image::${env.BUILD_ID}")
 
     customImage.inside {
         sh 'make test'
@@ -411,7 +411,7 @@ via the `push()` method, for example:
 ----
 node {
     checkout scm
-    def customImage = docker.build("my-image:${env.BUILD_ID}")
+    def customImage = docker.build("my-image::${env.BUILD_ID}")
     customImage.push()
 }
 ----
@@ -425,7 +425,7 @@ different tags, for example:
 ----
 node {
     checkout scm
-    def customImage = docker.build("my-image:${env.BUILD_ID}")
+    def customImage = docker.build("my-image::${env.BUILD_ID}")
     customImage.push()
 
     customImage.push('latest')
@@ -463,11 +463,11 @@ flag:
 node {
     checkout scm
     def dockerfile = 'Dockerfile.test'
-    def customImage = docker.build("my-image:${env.BUILD_ID}",
+    def customImage = docker.build("my-image::${env.BUILD_ID}",
                                    "-f ${dockerfile} ./dockerfiles") // <1>
 }
 ----
-<1> Builds `my-image:${env.BUILD_ID}` from the Dockerfile found at `./dockerfiles/Dockerfile.test`. 
+<1> Builds `my-image::${env.BUILD_ID}` from the Dockerfile found at `./dockerfiles/Dockerfile.test`. 
 
 === Using a remote Docker server
 
@@ -559,7 +559,7 @@ node {
 
     docker.withRegistry('https://registry.example.com', 'credentials-id') {
 
-        def customImage = docker.build("my-image:${env.BUILD_ID}")
+        def customImage = docker.build("my-image::${env.BUILD_ID}")
 
         /* Push the container to the custom Registry */
         customImage.push()

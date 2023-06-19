@@ -120,7 +120,7 @@ may upload the file from within the web UI:
 . Choose the `.hpi` file from your system or enter a URL to the archive file under the *Deploy Plugin* section.
 . *Deploy* the plugin file.
 
-image::managing/plugin-manager-upload.png["Advanced tab in the Plugin Manager", role=center]
+image::plugin-manager-upload.png["Advanced tab in the Plugin Manager", role=center]
 
 Once a plugin file has been uploaded, the Jenkins controller must be manually
 restarted in order for the changes to take effect.
@@ -153,7 +153,7 @@ Updates are listed in the *Updates* tab of the *Plugins* page and can be
 installed by checking the checkboxes of the desired plugin updates and clicking
 the *Download now and install after restart* button.
 
-image::managing/plugin-manager-update.png["Updates tab in the Plugin Manager", role=center]
+image::plugin-manager-update.png["Updates tab in the Plugin Manager", role=center]
 By default, the Jenkins controller will check for updates from the Update Center
 once every 24 hours. To manually trigger a check for updates, simply click on
 the *Check now* button in the *Updates* tab.
@@ -177,7 +177,7 @@ the *Plugins* page. From there, Jenkins will automatically determine
 which plugins are safe to uninstall, those which are not dependencies of other
 plugins, and present a button for doing so.
 
-image::managing/plugin-manager-uninstall.png["Installed tab in the Plugin Manager", role=center]
+image::plugin-manager-uninstall.png["Installed tab in the Plugin Manager", role=center]
 
 
 A plugin may also be uninstalled by removing the corresponding `.jpi`
@@ -213,7 +213,7 @@ no extensions contributed from this plugin will be visible.
 A Jenkins administrator may disable a plugin by unchecking the box on the
 *Installed* tab of the *Plugins* page (see below).
 
-image::managing/plugin-manager-disable.png["Installed tab in the Plugin Manager", role=center]
+image::plugin-manager-disable.png["Installed tab in the Plugin Manager", role=center]
 
 
 A systems administrator may also disable a plugin by creating a file on the
@@ -346,7 +346,7 @@ This creates an implied dependency.
 As a Jenkins administrator, you can see the plugins that have an implied dependency from the plugin manager page. 
 Hover over the "uninstall" button and a list of plugins with an implied dependency is displayed.
 
-image::managing/hover-for-implied-dependencies.png["Hover over the uninstall button to see Implied Dependencies", role=center]
+image::hover-for-implied-dependencies.png["Hover over the uninstall button to see Implied Dependencies", role=center]
 
 === How can the implied dependency be removed?
 
