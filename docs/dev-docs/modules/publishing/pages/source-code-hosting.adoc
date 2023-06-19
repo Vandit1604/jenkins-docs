@@ -15,49 +15,60 @@ Testing changes to the script below locally without major changes is difficult d
 Starting Chrome with the arguments --disable-web-security --user-data-dir=<some dir> seems to be the easiest option.
 ////
 ++++
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-    <script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript">
-$(function () {
-    $('#permissions').DataTable( {
-        ajax: {
-            url: 'https://reports.jenkins.io/github-jenkinsci-permissions-report.json',
-            dataSrc: ''
-        },
-        columns: [
-            {
-                data: "Repository",
-                render: function(data, type, row, metadata) {
-                    return '<a href="https://github.com/jenkinsci/' + data + '" target="_blank" rel="noreferrer noopener">' + data + '</a>';
-                }
-            },
-            {
-                data: "User",
-                render: function(data, type, row, metadata) {
-                    return '<a href="https://github.com/' + data + '" target="_blank" rel="noreferrer noopener">' + data + '</a>';
-                }
-            },
-            {
-                data: "Access"
-            }
-        ]
-    } );
-} );
-    </script>
-    <table id="permissions" class="display" cellspacing="0" width="100%">
-      <thead>
-        <tr>
-          <th>Repository</th>
-          <th>User</th>
-          <th>Access</th>
-        </tr>
-      </thead>
-      <tfoot>
-        <tr>
-          <th>Repository</th>
-          <th>User</th>
-          <th>Access</th>
-          </tr>
-      </tfoot>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
+
+    <table class="table table-sm table-striped" id="permissions">
     </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        initiateTable();
+    });
+
+    async function initiateTable() {
+        const jsonFileData = await fetch("https://reports.jenkins.io/github-jenkinsci-permissions-report.json");
+        const jsonBody = await jsonFileData.json();
+
+        const convertedObject = convertObject(jsonBody);
+
+        const dataTable = new simpleDatatables.DataTable("#permissions", {
+            data: convertedObject,
+            searchable: true,
+            fixedHeight: true,
+        });
+
+        dataTable.columns().remove([]);
+    }
+
+    function convertObject(dataObject) {
+        if (dataObject.length === 0) return {
+            headings: [],
+            data: []
+        };
+
+        let obj = {
+            // Get the headings
+            headings: ["Repository", "User", "Access"],
+
+            // Data array
+            data: []
+        };
+
+        const len = dataObject.length;
+        // Loop over the objects to get the values
+        for (let i = 0; i < len; i++) {
+            obj.data[i] = [];
+
+            for (let p in dataObject[i]) {
+                if (dataObject[i].hasOwnProperty(p)) {
+                    obj.data[i].push(dataObject[i][p]);
+                }
+            }
+        }
+
+        return obj
+    }
+    </script>
 ++++
