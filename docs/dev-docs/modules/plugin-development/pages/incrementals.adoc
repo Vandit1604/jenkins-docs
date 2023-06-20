@@ -35,7 +35,7 @@ Next step is to link:https://github.com/jenkinsci/jenkins/pulls[create a PR on g
 Request" button and push the changes (your new API) to Jenkins core.
 If instead you are developing the API inside an upstream plugin, then do the above in the upstream plugin repository.
 
-image::/images/developer/plugin-development/incrementals/create-pr.png[]
+image::incrementals/create-pr.png[]
 
 Note: Make sure that your branch has the latest changes from master, otherwise incrementals version
 will NOT be created.
@@ -49,7 +49,7 @@ Wait for Jenkins to perform checks.
 
 After the checks are completed, you should get a message like below:
 
-image::/images/developer/plugin-development/incrementals/checks.png[]
+image::incrementals/checks.png[]
 
 Click on 'Details' adjacent to 'continuous-integration/jenkins/incrementals — Deployed to Incrementals.'
 
@@ -62,7 +62,7 @@ You can click on 'Details' adjacent to it to investigate this error from the log
 
 You should be redirected to a page like below:
 
-image::/images/developer/plugin-development/incrementals/incrementals.png[]
+image::incrementals/incrementals.png[]
 
 Copy the version ID, which in this example would be `2.238-rc29961.5c3c5871cca6`.
 
