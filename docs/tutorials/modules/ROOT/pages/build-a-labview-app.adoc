@@ -7,8 +7,8 @@ If you are a LabVIEW developer who is new to CI/CD concepts, or you might be fam
 We’ll walk through setting up Jenkins as our CI server and using it to automate graphical diffing and testing of our project (which you'll obtain from http://www.ni.com/example/lv-ci[this example page] on ni.com). Jenkins will monitor GitHub Pull Requests for changes and will comment and check if the LabVIEW project can build successfully. Unit test results will be saved to a JUnit XML report.
 
 *Duration:* This tutorial takes 20-40 minutes to complete (assuming you've
-already met the <<prerequisites,prerequisites>> below). The exact duration will
-depend on the speed of your machine and whether or not you've already link:/doc/book/installing/[installed Jenkins] from link:..[another tutorial].
+already met the include::partial$_prerequisites[prerequisites] below). The exact duration will
+depend on the speed of your machine and whether or not you've already link:/doc/book/installing/[installed Jenkins] from xref::tutorials:ROOT:index.adoc[another tutorial].
 
 You can stop this tutorial at any point in time and continue from where you left off.
 
@@ -362,7 +362,8 @@ To learn more about what Jenkins can do, check out:
 
 '''
 ++++
-include::docs/partial/_feedback-footer.html[]
+include::partial:partial$_feedback-footer.html[]
+include::partial-2:_feedback-footer.html[]
 ++++
 
 ////

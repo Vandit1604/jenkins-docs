@@ -13,7 +13,7 @@ tests to check that the main application works as expected. The results of these
 tests are saved to a JUnit XML report.
 
 *Duration:* This tutorial takes 20-40 minutes to complete (assuming you've
-already met the <<prerequisites,prerequisites>> below). The exact duration will
+already met the xref::partial$_prerequisites.adoc[prerequisites] below). The exact duration will
 depend on the speed of your machine and whether or not you've already
 <<run-jenkins-in-docker,run Jenkins in Docker>> from link:..[another tutorial].
 
@@ -21,9 +21,9 @@ You can stop this tutorial at any point in time and continue from where you left
 off.
 
 If you've already run through link:..[another tutorial], you can skip the
-<<prerequisites,Prerequisites>> and <<run-jenkins-in-docker,Run Jenkins in
-Docker>> sections below and proceed on to <<fork-sample-repository,forking the
-sample repository>>. (Just ensure you have
+xref::partial$_prerequisites.adoc[prerequisites] and <<run-jenkins-in-docker,Run Jenkins in
+Docker>> sections below and proceed on to xref::partial$_fork-sample-repository.adoc[forking the
+sample repository]. (Just ensure you have
 link:https://git-scm.com/downloads[Git] installed locally.) If you need to
 restart Jenkins, simply follow the restart instructions in
 <<stopping-and-restarting-jenkins,Stopping and restarting Jenkins>> and then
