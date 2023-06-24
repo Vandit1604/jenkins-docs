@@ -33,7 +33,7 @@ Docker>> sections below and proceed on to xref::partial$_fork-sample-repository.
 sample repository]. (Just ensure you have
 link:https://git-scm.com/downloads[Git] installed locally.) If you need to
 restart Jenkins, simply follow the restart instructions in
-<<stopping-and-restarting-jenkins,Stopping and restarting Jenkins>> and then
+xref:user-docs:installing-jenkins:_partials$_setup-wizard-for-tutorials.adoc[run Jenkins in Docker] and then
 proceed on.
 
 include::partial$_prerequisites[prerequisites].adoc[]
