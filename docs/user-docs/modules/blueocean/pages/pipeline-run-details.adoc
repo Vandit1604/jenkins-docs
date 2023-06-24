@@ -9,7 +9,7 @@ Below is a detailed overview of the parts of the Run Details view.
 
 include::partial$_blue-ocean-status.adoc[]
 
-image:blueocean/pipeline-run-details/overview.png[Overview of the Pipeline Run Details, role=center]
+image::pipeline-run-details/overview.png[Overview of the Pipeline Run Details, role=center]
 
 . *Run Status* - An icon indicating the status of this Pipeline run.
 The color of the navigation bar matches the status icon.
@@ -72,13 +72,13 @@ The overview image above shows a successful Pipeline run.
 If a particular step during the run fails, this tab automatically defaults to showing the console log from the failed step.
 The image below shows a failed Run.
 
-image:blueocean/pipeline-run-details/pipeline-failed.png[Failed Run, role=center]
+image::pipeline-run-details/pipeline-failed.png[Failed Run, role=center]
 
 === Changes
 The *Changes* tab displays the information of any changes made between the most recently completed and current runs.
 This includes the commit id for the change, change author, message, and date completed.
 
-image:blueocean/pipeline-run-details/changes-one-change.png[List of Changes for a Run, role=center]
+image::pipeline-run-details/changes-one-change.png[List of Changes for a Run, role=center]
 
 === Tests
 
@@ -88,11 +88,11 @@ If no results are recorded, this table displays a message.
 If all tests pass, this tab will report the total number of passing tests.
 If there are failures, the tab will display log details from the failures as shown below.
 
-image:blueocean/pipeline-run-details/tests-unstable.png[Test Results for Unstable Run, role=center]
+image::pipeline-run-details/tests-unstable.png[Test Results for Unstable Run, role=center]
 
 When a previous run has failures, and the current run fixes those failures, this tab notes the fixes and displays their logs.
 
-image:blueocean/pipeline-run-details/tests-fixed.png[Test Results for Fixed Run, role=center]
+image::pipeline-run-details/tests-fixed.png[Test Results for Fixed Run, role=center]
 
 === Artifacts
 
@@ -100,4 +100,4 @@ The *Artifacts* tab shows a list of any artifacts saved using the "Archive Artif
 Selecting an item in the list downloads it.
 The full output log from the Run can be downloaded from this list.
 
-image:blueocean/pipeline-run-details/artifacts-list.png[List of Artifacts from a Run, role=center]
+image::pipeline-run-details/artifacts-list.png[List of Artifacts from a Run, role=center]

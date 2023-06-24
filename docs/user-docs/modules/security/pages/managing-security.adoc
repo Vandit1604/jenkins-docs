@@ -39,7 +39,7 @@ The "Security" section of the web UI allows a Jenkins administrator to
 enable, configure, or disable key security features which apply to the entire
 Jenkins environment.
 
-image::security/configure-global-security.png["Security", role=center]
+image::configure-global-security.png["Security", role=center]
 
 === TCP Port
 
@@ -176,7 +176,7 @@ and flexibility so it is recommended as a starting point for "production"
 environments.
 
 .Matrix-based security
-image::security/configure-global-security-matrix-authorization.png["Security - Matrix authorization", role=center]
+image::configure-global-security-matrix-authorization.png["Security - Matrix authorization", role=center]
 
 
 The table shown above can get quite wide as each column represents a permission

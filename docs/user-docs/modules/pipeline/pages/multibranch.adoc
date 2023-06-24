@@ -21,7 +21,7 @@ To create a Multibranch Pipeline:
 
 * Click *New Item* on Jenkins home page.
 
-image::pipeline/classic-ui-left-column.png[alt="Classic UI left column",width=30%]
+image::classic-ui-left-column.png[alt="Classic UI left column",width=30%]
 
 * Enter a name for your Pipeline, select *Multibranch Pipeline* and click *OK*.
 
@@ -32,13 +32,13 @@ names which include spaces may uncover bugs in scripts which do not expect
 paths to contain spaces.
 ====
 
-image::pipeline/new-item-multibranch-creation.png["Enter a name, select *Multibranch Pipeline*, and click *OK*", role=center]
+image::new-item-multibranch-creation.png["Enter a name, select *Multibranch Pipeline*, and click *OK*", role=center]
 
 * Add a *Branch Source* (for example, Git) and enter the location of the
   repository.
 
-image::pipeline/multibranch-branch-source.png["Add a Branch Source", role=center]
-image::pipeline/multibranch-branch-source-configuration.png["Add the URL to the project repository", role=center]
+image::multibranch-branch-source.png["Add a Branch Source", role=center]
+image::multibranch-branch-source-configuration.png["Add the URL to the project repository", role=center]
 
 
 * *Save* the Multibranch Pipeline project.
@@ -52,7 +52,7 @@ additions or deletions (unless using an <<organization-folders,Organization Fold
 so it is often useful to configure a Multibranch Pipeline to periodically
 re-index in the configuration:
 
-image::pipeline/multibranch-branch-indexing.png["Setting up branch re-indexing", role=center]
+image::multibranch-branch-indexing.png["Setting up branch re-indexing", role=center]
 
 
 === Additional Environment Variables

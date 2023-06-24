@@ -83,7 +83,7 @@ To build a docker image based on the dockerfile you created, all you need is to 
 
 [source,bash]
 ----
-docker build -t my-jenkins-image:1.1 .
+docker build -t my-jenkins-image::1.1 .
 ----
 
 After the build process is finished, let’s verify that the newly created image is there:

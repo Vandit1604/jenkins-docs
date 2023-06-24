@@ -60,7 +60,7 @@ In Jenkins 2.325 and earlier, it is enabled by default, but can be disabled in t
 
 IMPORTANT: It is strongly recommended that you not disable the Agent &rarr; Controller Access Control system.
 
-image::security/configure-global-security-agent-controller-toggle.png["Security - Enable Agent => Controller Access Control", role=center]
+image::configure-global-security-agent-controller-toggle.png["Security - Enable Agent => Controller Access Control", role=center]
 
 As an alternative to disabling Agent &rarr; Controller Access Control, in Jenkins 2.325 and earlier, administrators can selectively allow greater access.
 See link:/doc/book/security/controller-isolation/agent-to-controller/[the documentation] for details.

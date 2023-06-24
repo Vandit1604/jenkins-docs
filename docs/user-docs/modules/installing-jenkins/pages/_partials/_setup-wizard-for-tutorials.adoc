@@ -24,7 +24,7 @@ an automatically-generated password.
   browse to `\http://localhost:8080` and wait until the *Unlock Jenkins* page
   appears.
 [.boxshadow]
-image:tutorials/setup-jenkins-01-unlock-jenkins-page.jpg[alt="Unlock Jenkins
+image::setup-jenkins-01-unlock-jenkins-page.jpg[alt="Unlock Jenkins
 page",width=100%]
 . Display the Jenkins console log with the command:
 +
@@ -36,7 +36,7 @@ docker logs jenkins-blueocean
   automatically-generated alphanumeric password (between the 2 sets of
   asterisks).
 [.boxshadow]
-image:tutorials/setup-jenkins-02-copying-initial-admin-password.png[alt="Copying
+image::setup-jenkins-02-copying-initial-admin-password.png[alt="Copying
 initial admin password",width=100%]
 . On the *Unlock Jenkins* page, paste this password into the *Administrator
   password* field and click *Continue*.

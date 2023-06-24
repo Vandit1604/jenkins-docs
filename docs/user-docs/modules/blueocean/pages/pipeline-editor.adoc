@@ -64,7 +64,7 @@ This is the same process as the <<../pipeline/syntax#environment, environment di
 
 The left pane displays the stage editor UI, which allows users to create or add stages of a Pipeline.
 
-image:blueocean/editor/stage-editor-basic.png[Stage editor view of new pipeline., role=center]
+image::editor/stage-editor-basic.png[Stage editor view of new pipeline., role=center]
 
 * To add a stage to the Pipeline, select the icon:plus[] icon to the right of an existing stage.
 Selecting the icon:plus[] icon below an existing stage adds a parallel stage.
@@ -74,27 +74,27 @@ After setting the stage name and saving, the name displays above the stage.
 Stages that contain incomplete or invalid information display a icon:warning[].
 Pipelines can have validation errors during editing, but saving is blocked until the errors are fixed.
 
-image:blueocean/editor/stage-editor-error.png[Stage editor with error displayed., role=center]
+image::editor/stage-editor-error.png[Stage editor with error displayed., role=center]
 
 == Stage configuration
 
 Selecting a stage in the editor displays the *Stage Configuration* pane on the right side of the screen.
 Here, you can modify the name of the stage, delete the stage, and add steps to a stage.
 
-image:blueocean/editor/stage-configuration.png[Stage configuration pane, role=center]
+image::editor/stage-configuration.png[Stage configuration pane, role=center]
 
 The name of the stage can be set at the top of the stage configuration pane.
 The more menu, represented by three dots to the right of the stage name, allows users to delete the currently selected stage.
 Selecting *Add step* displays the list of available step types.
 After selecting a step type, the page displays the step configuration pane.
 
-image:blueocean/editor/step-list.png[Step list filtered by 'file', role=center]
+image::editor/step-list.png[Step list filtered by 'file', role=center]
 
 == Step configuration
 
 This pane display is based on the step type selected, and contains the necessary fields or controls.
 
-image:blueocean/editor/step-configuration.png[Step configuration for JUnit step, role=center]
+image::editor/step-configuration.png[Step configuration for JUnit step, role=center]
 
 Be sure to provide a strong name for the step, as the name retains its original configuration.
 Deleting the step and recreating it is the only way to provide a different name.
@@ -102,7 +102,7 @@ The more menu, represented by three dots to the right of the step name, allows u
 Fields that contain incomplete or invalid information display a icon:exclamation[].
 Any validation errors must be addressed before saving.
 
-image:blueocean/editor/step-error.png[Step configuration with error, role=center]
+image::editor/step-error.png[Step configuration with error, role=center]
 
 
 == Save Pipeline dialog
@@ -110,7 +110,7 @@ image:blueocean/editor/step-error.png[Step configuration with error, role=center
 Changes to a Pipeline must be saved in source control before running.
 The *Save Pipeline* dialog controls the saving of changes to source control.
 
-image:blueocean/editor/save-pipeline.png[Save Pipeline dialog, role=center]
+image::editor/save-pipeline.png[Save Pipeline dialog, role=center]
 
 You can optionally enter a description of the changes before saving.
 The dialog also provides options for saving changes to the same branch or creating a new branch to save to.
