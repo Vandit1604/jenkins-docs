@@ -1,15 +1,15 @@
 = Extension Points defined in OpenID Plugin
 
-plugin:openid[OpenID Plugin]
+https://plugins.jenkins.io/openid[OpenID Plugin]
 
 == OpenIdExtension
-`jenkinsdoc:openid:hudson.plugins.openid.OpenIdExtension[]`
+`jenkinsdoc:openid:hudson.plugins.openid.OpenIdExtension]`
 
 +++ An OpenID extension for extending an authentication request and processing an authentication success.+++
 
 
 **Implementations:**
 
-* plugin:openid[OpenID Plugin]: hudson.+++<wbr/>+++plugins.+++<wbr/>+++openid.+++<wbr/>+++impl.+++<wbr/>+++**TeamsExtension** (link:https://github.com/jenkinsci/openid-plugin/search?q=TeamsExtension&type=Code[view on GitHub])
-* plugin:openid[OpenID Plugin]: hudson.+++<wbr/>+++plugins.+++<wbr/>+++openid.+++<wbr/>+++impl.+++<wbr/>+++**UserInfoExtension** (link:https://github.com/jenkinsci/openid-plugin/search?q=UserInfoExtension&type=Code[view on GitHub])
+* https://plugins.jenkins.io/openid[OpenID Plugin]: hudson.+++<wbr/>+++plugins.+++<wbr/>+++openid.+++<wbr/>+++impl.+++<wbr/>+++**TeamsExtension** (link:https://github.com/jenkinsci/openid-plugin/search?q=TeamsExtension&type=Code[view on GitHub])
+* https://plugins.jenkins.io/openid[OpenID Plugin]: hudson.+++<wbr/>+++plugins.+++<wbr/>+++openid.+++<wbr/>+++impl.+++<wbr/>+++**UserInfoExtension** (link:https://github.com/jenkinsci/openid-plugin/search?q=UserInfoExtension&type=Code[view on GitHub])
 

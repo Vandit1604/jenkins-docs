@@ -1,9 +1,9 @@
 = Extension Points defined in Docker Pipeline Plugin
 
-plugin:docker-workflow[Docker Pipeline Plugin]
+https://plugins.jenkins.io/docker-workflow[Docker Pipeline Plugin]
 
 == DockerLabelProvider
-`jenkinsdoc:docker-workflow:org.jenkinsci.plugins.docker.workflow.declarative.DockerLabelProvider[]`
+`jenkinsdoc:docker-workflow:org.jenkinsci.plugins.docker.workflow.declarative.DockerLabelProvider]`
 
 +++ Provider of label expressions to use for {@code agent: docker} when no other label is provided.+++
 
@@ -14,13 +14,13 @@ _(no known implementations)_
 
 
 == DockerPropertiesProvider
-`jenkinsdoc:docker-workflow:org.jenkinsci.plugins.docker.workflow.declarative.DockerPropertiesProvider[]`
+`jenkinsdoc:docker-workflow:org.jenkinsci.plugins.docker.workflow.declarative.DockerPropertiesProvider]`
 
 +++ Provider of configuration options to use for {@code agent docker}.+++
 
 
 **Implementations:**
 
-* plugin:docker-workflow[Docker Pipeline Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++docker.+++<wbr/>+++workflow.+++<wbr/>+++declarative.+++<wbr/>+++**FolderConfig.+++<wbr/>+++FolderDockerPropertiesProvider** (link:https://github.com/jenkinsci/docker-workflow-plugin/search?q=FolderConfig.FolderDockerPropertiesProvider&type=Code[view on GitHub])
-* plugin:docker-workflow[Docker Pipeline Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++docker.+++<wbr/>+++workflow.+++<wbr/>+++declarative.+++<wbr/>+++**GlobalConfig.+++<wbr/>+++GlobalConfigDockerPropertiesProvider** (link:https://github.com/jenkinsci/docker-workflow-plugin/search?q=GlobalConfig.GlobalConfigDockerPropertiesProvider&type=Code[view on GitHub])
+* https://plugins.jenkins.io/docker-workflow[Docker Pipeline Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++docker.+++<wbr/>+++workflow.+++<wbr/>+++declarative.+++<wbr/>+++**FolderConfig.+++<wbr/>+++FolderDockerPropertiesProvider** (link:https://github.com/jenkinsci/docker-workflow-plugin/search?q=FolderConfig.FolderDockerPropertiesProvider&type=Code[view on GitHub])
+* https://plugins.jenkins.io/docker-workflow[Docker Pipeline Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++docker.+++<wbr/>+++workflow.+++<wbr/>+++declarative.+++<wbr/>+++**GlobalConfig.+++<wbr/>+++GlobalConfigDockerPropertiesProvider** (link:https://github.com/jenkinsci/docker-workflow-plugin/search?q=GlobalConfig.GlobalConfigDockerPropertiesProvider&type=Code[view on GitHub])
 

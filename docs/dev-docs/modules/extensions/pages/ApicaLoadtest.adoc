@@ -1,14 +1,14 @@
 = Extension Points defined in Apica Loadtest Plugin
 
-plugin:ApicaLoadtest[Apica Loadtest Plugin]
+https://plugins.jenkins.io/ApicaLoadtest[Apica Loadtest Plugin]
 
 == LoadtestEnvironment
-`jenkinsdoc:ApicaLoadtest:com.apica.apicaloadtest.environment.LoadtestEnvironment[]`
+`https://javadoc.jenkins.io/plugin/ApicaLoadtest/com/apica/apicaloadtest/environment/LoadtestEnvironment.html[jenkinsdoc:ApicaLoadtest:com.apica.apicaloadtest.environment.LoadtestEnvironment]`
 
 _This extension point has no Javadoc documentation._
 
 **Implementations:**
 
-* plugin:ApicaLoadtest[Apica Loadtest Plugin]: com.+++<wbr/>+++apica.+++<wbr/>+++apicaloadtest.+++<wbr/>+++environment.+++<wbr/>+++**LoadtestProductionEnvironment** 
-* plugin:ApicaLoadtest[Apica Loadtest Plugin]: com.+++<wbr/>+++apica.+++<wbr/>+++apicaloadtest.+++<wbr/>+++environment.+++<wbr/>+++**LoadtestTrialEnvironment** 
+* https://plugins.jenkins.io/ApicaLoadtest[Apica Loadtest Plugin]: com.+++<wbr/>+++apica.+++<wbr/>+++apicaloadtest.+++<wbr/>+++environment.+++<wbr/>+++**LoadtestProductionEnvironment** 
+* https://plugins.jenkins.io/ApicaLoadtest[Apica Loadtest Plugin]: com.+++<wbr/>+++apica.+++<wbr/>+++apicaloadtest.+++<wbr/>+++environment.+++<wbr/>+++**LoadtestTrialEnvironment** 
 

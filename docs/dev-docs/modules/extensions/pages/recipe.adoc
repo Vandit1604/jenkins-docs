@@ -1,30 +1,30 @@
 = Extension Points defined in Recipe Plugin
 
-plugin:recipe[Recipe Plugin]
+https://plugins.jenkins.io/recipe[Recipe Plugin]
 
 == ExportMechanism
-`jenkinsdoc:recipe:org.jenkinsci.plugins.recipe.mechanisms.ExportMechanism[]`
+`jenkinsdoc:recipe:org.jenkinsci.plugins.recipe.mechanisms.ExportMechanism]`
 
 +++ The code that exports a recipe to somewhere.+++
 
 
 **Implementations:**
 
-* plugin:recipe[Recipe Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++recipe.+++<wbr/>+++mechanisms.+++<wbr/>+++**CommunityMechanism** (link:https://github.com/jenkinsci/recipe-plugin/search?q=CommunityMechanism&type=Code[view on GitHub])
-* plugin:recipe[Recipe Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++recipe.+++<wbr/>+++mechanisms.+++<wbr/>+++**DownloadMechanism** (link:https://github.com/jenkinsci/recipe-plugin/search?q=DownloadMechanism&type=Code[view on GitHub])
-* plugin:recipe[Recipe Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++recipe.+++<wbr/>+++mechanisms.+++<wbr/>+++**GistMechanism** (link:https://github.com/jenkinsci/recipe-plugin/search?q=GistMechanism&type=Code[view on GitHub])
+* https://plugins.jenkins.io/recipe[Recipe Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++recipe.+++<wbr/>+++mechanisms.+++<wbr/>+++**CommunityMechanism** (link:https://github.com/jenkinsci/recipe-plugin/search?q=CommunityMechanism&type=Code[view on GitHub])
+* https://plugins.jenkins.io/recipe[Recipe Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++recipe.+++<wbr/>+++mechanisms.+++<wbr/>+++**DownloadMechanism** (link:https://github.com/jenkinsci/recipe-plugin/search?q=DownloadMechanism&type=Code[view on GitHub])
+* https://plugins.jenkins.io/recipe[Recipe Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++recipe.+++<wbr/>+++mechanisms.+++<wbr/>+++**GistMechanism** (link:https://github.com/jenkinsci/recipe-plugin/search?q=GistMechanism&type=Code[view on GitHub])
 
 
 == Ingredient
-`jenkinsdoc:recipe:org.jenkinsci.plugins.recipe.Ingredient[]`
+`jenkinsdoc:recipe:org.jenkinsci.plugins.recipe.Ingredient]`
 
 +++ An unit of a configured item in Jenkins that gets transported to another Jenkins instance.+++
 
 
 **Implementations:**
 
-* plugin:recipe[Recipe Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++recipe.+++<wbr/>+++ingredients.+++<wbr/>+++**JobIngredient** (link:https://github.com/jenkinsci/recipe-plugin/search?q=JobIngredient&type=Code[view on GitHub])
-* plugin:recipe[Recipe Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++recipe.+++<wbr/>+++ingredients.+++<wbr/>+++**Parameter** (link:https://github.com/jenkinsci/recipe-plugin/search?q=Parameter&type=Code[view on GitHub])
-* plugin:recipe[Recipe Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++recipe.+++<wbr/>+++ingredients.+++<wbr/>+++**PluginIngredient** (link:https://github.com/jenkinsci/recipe-plugin/search?q=PluginIngredient&type=Code[view on GitHub])
-* plugin:recipe[Recipe Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++recipe.+++<wbr/>+++ingredients.+++<wbr/>+++**ViewIngredient** (link:https://github.com/jenkinsci/recipe-plugin/search?q=ViewIngredient&type=Code[view on GitHub])
+* https://plugins.jenkins.io/recipe[Recipe Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++recipe.+++<wbr/>+++ingredients.+++<wbr/>+++**JobIngredient** (link:https://github.com/jenkinsci/recipe-plugin/search?q=JobIngredient&type=Code[view on GitHub])
+* https://plugins.jenkins.io/recipe[Recipe Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++recipe.+++<wbr/>+++ingredients.+++<wbr/>+++**Parameter** (link:https://github.com/jenkinsci/recipe-plugin/search?q=Parameter&type=Code[view on GitHub])
+* https://plugins.jenkins.io/recipe[Recipe Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++recipe.+++<wbr/>+++ingredients.+++<wbr/>+++**PluginIngredient** (link:https://github.com/jenkinsci/recipe-plugin/search?q=PluginIngredient&type=Code[view on GitHub])
+* https://plugins.jenkins.io/recipe[Recipe Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++recipe.+++<wbr/>+++ingredients.+++<wbr/>+++**ViewIngredient** (link:https://github.com/jenkinsci/recipe-plugin/search?q=ViewIngredient&type=Code[view on GitHub])
 

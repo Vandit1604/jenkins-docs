@@ -66,7 +66,7 @@ This access token has the appropriate permissions pre-selected that Blue Ocean r
 . Back in Blue Ocean, paste the access token into the *Your GitHub access token* field, and select *Connect*.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-01-connecting-to-github.png[alt="Connecting to GitHub",width=80%]
+image:pipeline-in-blueocean-01-connecting-to-github.png[alt="Connecting to GitHub",width=80%]
 +
 [[choose-github-account]]Jenkins now has access to your GitHub account, using your access token.
 . In *Which organization does the repository belong to?*, select your GitHub account where you forked the repository <<fork-sample-repository,above>>.
@@ -83,11 +83,11 @@ Therefore, Jenkins looks for the presence of at least one Jenkinsfile in any bra
 . Following on from creating your Pipeline project <<create-your-pipeline-project-in-blue-ocean,above>>, in the Pipeline editor, select *Docker* from the *Agent* dropdown in the *Pipeline Settings* panel on the right side of the page.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-11-initial-pipeline-editor-page.png[alt="Initial to GitHub",width=100%]
+image:pipeline-in-blueocean-11-initial-pipeline-editor-page.png[alt="Initial to GitHub",width=100%]
 . In the *Image* and *Args* fields that appear, specify `node:lts-alpine` and `-p 3000:3000` respectively.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-12-agent-section.png[alt="Configuring the agent",width=50%]
+image:pipeline-in-blueocean-12-agent-section.png[alt="Configuring the agent",width=50%]
 +
 NOTE: For an explanation of these values, refer to annotations *1* and *2* of the Declarative Pipeline in the
 link:../build-a-node-js-and-react-app-with-npm/#create-your-initial-pipeline-as-a-jenkinsfile["Create your initial Pipeline..."] section of the build a Node.js and React app tutorial.
@@ -95,19 +95,19 @@ link:../build-a-node-js-and-react-app-with-npm/#create-your-initial-pipeline-as-
 . In the main Pipeline editor, select the *+* icon, to open the new stage panel on the right side of the icon.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-13-add-build-stage.png[alt="Add 'Build' stage",width=30%]
+image:pipeline-in-blueocean-13-add-build-stage.png[alt="Add 'Build' stage",width=30%]
 
 . In this panel, enter `Build` in the *Name your stage* field, and then select the *Add Step* button below.
 The *Choose step type* panel opens.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-14-adding-the-build-stage.png[alt="Adding the Build stage",width=50%]
+image:pipeline-in-blueocean-14-adding-the-build-stage.png[alt="Adding the Build stage",width=50%]
 
 . In this panel, select *Shell Script* near the top of the list to configure that step type, which opens the *Build / Shell Script* panel. 
 Here you can enter this step's values.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-15-choosing-a-step-type.png[alt="Choosing a step type",width=50%]
+image:pipeline-in-blueocean-15-choosing-a-step-type.png[alt="Choosing a step type",width=50%]
 +
 TIP: The most commonly used step types appear closest to the top of this list. 
 To find other steps further down this list, you can filter this list using the *Find steps by name* option.
@@ -115,16 +115,16 @@ To find other steps further down this list, you can filter this list using the *
 . In the *Build / Shell Script* panel, specify `npm install`.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-16-specifying-a-shell-step-value.png[alt="Specifying a shell step value",width=80%]
+image:pipeline-in-blueocean-16-specifying-a-shell-step-value.png[alt="Specifying a shell step value",width=80%]
 +
 NOTE: For an explanation of this step, refer to annotation *4* of the Declarative Pipeline in the link:../build-a-node-js-and-react-app-with-npm/#create-your-initial-pipeline-as-a-jenkinsfile["Create your initial Pipeline..."] section of the build a Node.js and React app tutorial.
 
-. ( _Optional_ ) Select the back arrow icon image:tutorials/pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] in the upper left to return to the main Pipeline editor.
+. ( _Optional_ ) Select the back arrow icon image:pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] in the upper left to return to the main Pipeline editor.
 . Select *Save* in the upper right side of the screen to begin saving your new Pipeline with its "Build" stage.
 . In the *Save Pipeline* dialog box, enter the commit message in the *Description* field, for example `Add initial Pipeline (Jenkinsfile)`.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-18-save-pipeline-dialog-box.png[alt="Save Pipeline dialog box",width=70%]
+image:pipeline-in-blueocean-18-save-pipeline-dialog-box.png[alt="Save Pipeline dialog box",width=70%]
 . Leave all other options set to their default, and then select *Save & run*.
 Jenkins proceeds to build your Pipeline.
 . When the main Blue Ocean interface appears, select the row to see Jenkins build your Pipeline project.
@@ -138,15 +138,15 @@ During this time, Jenkins does the following:
 NOTE: During this time, `npm` downloads the dependencies necessary to run your Node.js and React application, which will be stored in the local `node_modules` directory in the Jenkins home directory.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-19-initial-pipeline-downloading-npm-dependencies.png[alt="Downloading 'npm' dependencies",width=100%]
+image:pipeline-in-blueocean-19-initial-pipeline-downloading-npm-dependencies.png[alt="Downloading 'npm' dependencies",width=100%]
 The Blue Ocean interface turns green if Jenkins built your application successfully.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-19a-initial-pipeline-runs-successfully.png[alt="Initial Pipeline runs successfully",width=100%]
+image:pipeline-in-blueocean-19a-initial-pipeline-runs-successfully.png[alt="Initial Pipeline runs successfully",width=100%]
 . Select the *X* in the upper right corner to return to the main Blue Ocean interface.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-19b-main-blue-ocean-interface.png[alt="Main Blue Ocean interface",width=100%]
+image:pipeline-in-blueocean-19b-main-blue-ocean-interface.png[alt="Main Blue Ocean interface",width=100%]
 
 WARNING: Before continuing on, verify that Jenkins has created a `Jenkinsfile` for you at the root of your forked GitHub repository, in the repository's sole `master` branch.
 
@@ -156,24 +156,24 @@ WARNING: Before continuing on, verify that Jenkins has created a `Jenkinsfile` f
 . From the main Blue Ocean interface, select *Branches* in the upper right to access your repository's branches page, where you can access the `master` branch.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-21-repository-branches-page.png[alt="Repository branches page",width=100%]
-. Select the `master` branch's "Edit Pipeline" icon image:tutorials/pipeline-in-blueocean-21a-edit-pipeline-on-branch.png[alt="Edit Pipeline on branch",width=3%] to open the Pipeline editor for this branch.
+image:pipeline-in-blueocean-21-repository-branches-page.png[alt="Repository branches page",width=100%]
+. Select the `master` branch's "Edit Pipeline" icon image:pipeline-in-blueocean-21a-edit-pipeline-on-branch.png[alt="Edit Pipeline on branch",width=3%] to open the Pipeline editor for this branch.
 . In the main Pipeline editor, select the *+* icon to the right of the *Build* stage you created <<create-your-initial-pipeline,above>> to open the new stage panel on the right.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-22-add-test-stage.png[alt="Add 'Test' stage",width=45%]
+image:pipeline-in-blueocean-22-add-test-stage.png[alt="Add 'Test' stage",width=45%]
 . In this panel, enter `Test` in the *Name your stage* field, and then select the *Add Step* button below to open the *Choose step type* panel.
 . In this panel, select *Shell Script* near the top of the list.
-. In the resulting *Test / Shell Script* panel, specify `./jenkins/scripts/test.sh` and then select the back arrow icon image:tutorials/pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] in the upper left to return to the Pipeline stage editor.
+. In the resulting *Test / Shell Script* panel, specify `./jenkins/scripts/test.sh` and then select the back arrow icon image:pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] in the upper left to return to the Pipeline stage editor.
 . At the lower right of the panel, select *Settings* to reveal this section of the panel.
 . Select the *+* icon at the right of the *Environment* heading where you'll configure an environment directive.
 . In the *Name* and *Value* fields that appear, specify `CI` and `true`, respectively.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-23-environment-directive.png[alt="Environment directive",width=50%]
+image:pipeline-in-blueocean-23-environment-directive.png[alt="Environment directive",width=50%]
 +
 NOTE: For an explanation of this directive and its step, refer to annotations *1* and *3* of the Declarative Pipeline in the link:../build-a-node-js-and-react-app-with-npm/#add-a-test-stage-to-your-pipeline["Add a test stage..." section of the Build a Node.js and React app] tutorial.
-. ( _Optional_ ) Select the back arrow icon image:tutorials/pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] in the upper left to return to the main Pipeline editor.
+. ( _Optional_ ) Select the back arrow icon image:pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] in the upper left to return to the main Pipeline editor.
 . Select *Save* in the top-right corner to begin saving your Pipeline with with its new "Test" stage.
 . In the *Save Pipeline* dialog box, specify the commit message in the *Description* field, for example `Add 'Test' stage`.
 . Leave all other options set to their default, and then select *Save & run*.
@@ -183,7 +183,7 @@ Jenkins proceeds to build your amended Pipeline.
 * If your amended Pipeline ran successfully, here's what the Blue Ocean interface should look like, notice the additional "Test" stage.
 You can select the previous "Build" stage circle to access the output from that stage.
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-24-test-stage-runs-successfully-with-output.png[alt="Test stage runs successfully (with output)",width=100%]
+image:pipeline-in-blueocean-24-test-stage-runs-successfully-with-output.png[alt="Test stage runs successfully (with output)",width=100%]
 +
 TIP: You'll notice during this run that Jenkins no longer needs to download the Node Docker image.
 Instead, Jenkins only needs to run a new container from the Node image downloaded previously.
@@ -195,29 +195,29 @@ Subsequent runs of your Pipeline should be much faster.
 === Add a final deliver stage to your Pipeline
 
 . From the main Blue Ocean interface, select *Branches* in the upper right to access your repository's `master` branch.
-. Select the `master` branch's "Edit Pipeline" icon image:tutorials/pipeline-in-blueocean-21a-edit-pipeline-on-branch.png[alt="Edit Pipeline on branch",width=3%] to open the Pipeline editor for this branch.
+. Select the `master` branch's "Edit Pipeline" icon image:pipeline-in-blueocean-21a-edit-pipeline-on-branch.png[alt="Edit Pipeline on branch",width=3%] to open the Pipeline editor for this branch.
 . In the main Pipeline editor, select the *+* icon to the right of the *Test* stage you created <<add-a-test-stage-to-your-pipeline,above>> to open the new stage panel.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-31-add-deliver-stage.png[alt="Add 'Deliver' stage",width=60%]
+image:pipeline-in-blueocean-31-add-deliver-stage.png[alt="Add 'Deliver' stage",width=60%]
 . In this panel, enter `Deliver` in the *Name your stage* field, and then select *Add Step* below to open the *Choose step type* panel.
 . In this panel, select *Shell Script*.
-. In the resulting *Deliver / Shell Script* panel, specify `./jenkins/scripts/deliver.sh`, and then select the back arrow icon image:tutorials/pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] to return to the Pipeline stage editor.
+. In the resulting *Deliver / Shell Script* panel, specify `./jenkins/scripts/deliver.sh`, and then select the back arrow icon image:pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] to return to the Pipeline stage editor.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-32-add-next-step.png[alt="Add next step",width=50%]
+image:pipeline-in-blueocean-32-add-next-step.png[alt="Add next step",width=50%]
 +
 NOTE: For an explanation of this step, refer to the `deliver.sh` file itself located in the `jenkins/scripts` of your forked repository on GitHub.
 
 . Select *Add Step* again.
 . In the *Choose step type* panel, enter `input` in the *Find steps by name* field.
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-33-choosing-input-step-type.png[alt="Choosing the input step type",width=50%]
+image:pipeline-in-blueocean-33-choosing-input-step-type.png[alt="Choosing the input step type",width=50%]
 . Select the filtered *Wait for interactive input* step type.
-. In the resulting *Deliver / Wait for interactive input* panel, enter `Finished using the web site? (Select "Proceed" to continue)` in the *Message* field, and then select the back arrow icon image:tutorials/pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] to return to the Pipeline stage editor.
+. In the resulting *Deliver / Wait for interactive input* panel, enter `Finished using the web site? (Select "Proceed" to continue)` in the *Message* field, and then select the back arrow icon image:pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] to return to the Pipeline stage editor.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-34-specifying-input-step-message-value.png[alt="Specifying input step message value",width=55%]
+image:pipeline-in-blueocean-34-specifying-input-step-message-value.png[alt="Specifying input step message value",width=55%]
 +
 NOTE: For an explanation of this step, refer to annotation *4* of the Declarative Pipeline in the link:../build-a-node-js-and-react-app-with-npm/#add-a-final-deliver-stage-to-your-pipeline["Add a final deliver stage..." section of the Build a Node.js and React app] tutorial.
 
@@ -227,7 +227,7 @@ NOTE: For an explanation of this step, refer to annotation *4* of the Declarativ
 +
 NOTE: For an explanation of this step, refer to the `kill.sh` file itself located in the `jenkins/scripts` of your forked repository on GitHub.
 
-. ( _Optional_ ) Select the back arrow icon image:tutorials/pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] to return to the main Pipeline editor.
+. ( _Optional_ ) Select the back arrow icon image:pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] to return to the main Pipeline editor.
 . Select *Save* in the top-right corner to begin saving your Pipeline with with its new "Deliver" stage.
 . In the *Save Pipeline* dialog box, enter the commit message in the *Description* field, for example `Add 'Deliver' stage`.
 . Leave all other options set to their default, and then select *Save & run*.
@@ -237,21 +237,21 @@ Jenkins proceeds to build your amended Pipeline.
 Notice the additional "Deliver" stage.
 Selecting the previous "Test" and "Build" stage circles provides access to the outputs from those stages.
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-35-deliver-stage-pauses-for-user-input.png[alt="Deliver stage pauses for user input",width=100%]
+image:pipeline-in-blueocean-35-deliver-stage-pauses-for-user-input.png[alt="Deliver stage pauses for user input",width=100%]
 . Ensure you are viewing the "Deliver" stage, then select the green *`./jenkins/scripts/deliver.sh`* step to expand its content and scroll down until you see the `\http://localhost:3000` link.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-36-deliver-stage-opened-deliver-sh-step.png[alt="Deliver stage output only",width=100%]
+image:pipeline-in-blueocean-36-deliver-stage-opened-deliver-sh-step.png[alt="Deliver stage output only",width=100%]
 . Select the `\http://localhost:3000` link to view your Node.js and React application running in development mode in a new web browser tab.
 You should see a page/site with the title *Welcome to React*.
 . When you are finished viewing the page/site, select *Proceed* to complete the Pipeline's execution.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-37-deliver-stage-runs-successfully.png[alt="Deliver stage runs successfully",width=100%]
+image:pipeline-in-blueocean-37-deliver-stage-runs-successfully.png[alt="Deliver stage runs successfully",width=100%]
 . Select the *X* in the top-right corner to return to the main Blue Ocean interface, which lists your previous Pipeline runs in reverse chronological order.
 +
 [.boxshadow]
-image:tutorials/pipeline-in-blueocean-38-main-blue-ocean-interface-with-all-previous-runs-displayed.png[alt="Main Blue Ocean interface with all previous runs displayed",width=100%]
+image:pipeline-in-blueocean-38-main-blue-ocean-interface-with-all-previous-runs-displayed.png[alt="Main Blue Ocean interface with all previous runs displayed",width=100%]
 
 === Follow up (optional)
 
@@ -264,11 +264,11 @@ This is also configured in the link:../build-a-node-js-and-react-app-with-npm/[b
 To do this:
 
 . From the main Blue Ocean interface, select *Branches* in the upper right to access your repository's `master` branch.
-. Select the `master` branch's "Edit Pipeline" icon image:tutorials/pipeline-in-blueocean-21a-edit-pipeline-on-branch.png[alt="Edit Pipeline on branch",width=3%] to open the Pipeline editor for this branch.
+. Select the `master` branch's "Edit Pipeline" icon image:pipeline-in-blueocean-21a-edit-pipeline-on-branch.png[alt="Edit Pipeline on branch",width=3%] to open the Pipeline editor for this branch.
 . In the main Pipeline editor, select the *Test* stage you created <<add-a-test-stage-to-your-pipeline,above>> to begin editing it.
 . In the stage panel, select *Settings* to reveal this section of the panel.
 . Select the minus (*-*) icon associated with the `CI` environment directive you created earlier to delete it.
-. Select the back arrow icon image:tutorials/pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] to return to the main Pipeline editor.
+. Select the back arrow icon image:pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] to return to the main Pipeline editor.
 . In the *Pipeline Settings* panel, select the *+* icon to the right side of the *Environment* heading.
 Here, you'll configure a _global_ environment directive.
 . In the *Name* and *Value* fields, specify `CI` and `true`, respectively.
@@ -297,5 +297,5 @@ To learn more about what Jenkins can do, check out:
 
 '''
 ++++
-include::_partials/_feedback-footer.html[]
+include::docs/partial/_feedback-footer.html[]
 ++++

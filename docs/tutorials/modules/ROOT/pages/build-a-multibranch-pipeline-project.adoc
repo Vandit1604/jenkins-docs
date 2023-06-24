@@ -146,7 +146,7 @@ project as a "Multibranch Pipeline" project.
   interface.
 +
 [.boxshadow]
-image:tutorials/multibranch-pipeline-01-main-blueocean-interface.png[alt="Main
+image:multibranch-pipeline-01-main-blueocean-interface.png[alt="Main
 Blue Ocean interface",width=100%]
 
 [NOTE]
@@ -245,10 +245,10 @@ with npm] tutorial.
 . Click *Branches* at the top right to access the list of your Pipeline
   project's branches.
 [.boxshadow]
-image:tutorials/multibranch-pipeline-11-branches-page.png[alt="Branches
+image:multibranch-pipeline-11-branches-page.png[alt="Branches
 page",width=100%]
 . Click the run icon
-  image:tutorials/multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
+  image:multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
   of the `master` branch of your Pipeline project, then quickly click the *OPEN*
   link that appears briefly at the lower-right to see Jenkins building the
   `master` branch with the amended `Jenkinsfile`. If you weren't able to click
@@ -257,7 +257,7 @@ page",width=100%]
   Within a few minutes, the Blue Ocean interface turns green if Jenkins built
   your Node.js and React application successfully from your `master` branch.
 [.boxshadow]
-image:tutorials/multibranch-pipeline-13-build-and-test-stages-run-successfully-with-output.png[alt="Build
+image:multibranch-pipeline-13-build-and-test-stages-run-successfully-with-output.png[alt="Build
 and test stages run successfully with output",width=100%]
 . Click the *X* at the top-right to return to the *Activity* page of the Blue
   Ocean interface.
@@ -378,7 +378,7 @@ matches the name of the branch that Jenkins is running the build from, then the
 . Click *Branches* at the top right to access the list of your Pipeline
   project's branches.
 . Click the run icon
-  image:tutorials/multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
+  image:multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
   of the `master` branch of your Pipeline project, then quickly click the *OPEN*
   link that appears briefly at the lower-right to see Jenkins building the
   `master` branch with the amended `Jenkinsfile`. If you weren't able to click
@@ -388,7 +388,7 @@ matches the name of the branch that Jenkins is running the build from, then the
   are running the build from (`master`) does not meet the `when` directives'
   `branch` conditions in these stages.
 [.boxshadow]
-image:tutorials/multibranch-pipeline-21-complete-pipeline-runs-successfully-on-master-branch.png[alt="Complete
+image:multibranch-pipeline-21-complete-pipeline-runs-successfully-on-master-branch.png[alt="Complete
 Pipeline runs successfully on the 'master' branch",width=100%]
 . Click the *X* at the top-right to return to the *Activity* page of the Blue
   Ocean interface.
@@ -425,7 +425,7 @@ Your `development` and `production` branches should now have all your
 . Click *Branches* at the top right to access the list of your Pipeline
   project's branches.
 . Click the run icon
-  image:tutorials/multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
+  image:multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
   of the `development` branch of your Pipeline project, then quickly click the
   *OPEN* link that appears briefly at the lower-right to see Jenkins building
   the `development` branch with the amended `Jenkinsfile`. If you weren't able
@@ -436,7 +436,7 @@ Your `development` and `production` branches should now have all your
   green *Shell Script* step to expand its contents and scroll down until you see
   the `\http://localhost:3000` link.
 [.boxshadow]
-image:tutorials/multibranch-pipeline-31-deliver-for-development-stage-opened.png[alt="Shell
+image:multibranch-pipeline-31-deliver-for-development-stage-opened.png[alt="Shell
 Script step 'Deliver for development' stage opened",width=100%] +
   *Note:* Since you are building the application on a different branch, the `npm
   install` step will require a few minutes for `npm` to download the many
@@ -457,7 +457,7 @@ Script step 'Deliver for development' stage opened",width=100%] +
   *Deliver for development* stage was executed but the *Deploy for production*
   stage was not.
 [.boxshadow]
-image:tutorials/multibranch-pipeline-32-complete-pipeline-runs-successfully-on-development-branch.png[alt="Complete
+image:multibranch-pipeline-32-complete-pipeline-runs-successfully-on-development-branch.png[alt="Complete
 Pipeline runs successfully on the 'development' branch",width=100%]
 . Click the *X* at the top-right to return to the *Activity* page of the Blue
   Ocean interface.
@@ -468,7 +468,7 @@ Pipeline runs successfully on the 'development' branch",width=100%]
 . Click *Branches* at the top right to access the list of your Pipeline
   project's branches.
 . Click the run icon
-  image:tutorials/multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
+  image:multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
   of the `production` branch of your Pipeline project, then quickly click the
   *OPEN* link that appears briefly at the lower-right to see Jenkins building
   the `production` branch with the amended `Jenkinsfile`. If you weren't able to
@@ -479,7 +479,7 @@ Pipeline runs successfully on the 'development' branch",width=100%]
   green *Shell Script* step to expand its contents and scroll down until you see
   the `\http://localhost:5000` link.
 [.boxshadow]
-image:tutorials/multibranch-pipeline-41-deploy-for-production-stage-opened.png[alt="Shell
+image:multibranch-pipeline-41-deploy-for-production-stage-opened.png[alt="Shell
 Script step 'Deploy for production' stage opened",width=100%] +
 . Click the `\http://localhost:5000` link to view your Node.js and React
   application in a new web browser tab. This will be running in production mode
@@ -495,7 +495,7 @@ Script step 'Deploy for production' stage opened",width=100%] +
   *Deploy for production* stage was executed but the *Deliver for development*
   stage was skipped.
 [.boxshadow]
-image:tutorials/multibranch-pipeline-42-complete-pipeline-runs-successfully-on-production-branch.png[alt="Complete
+image:multibranch-pipeline-42-complete-pipeline-runs-successfully-on-production-branch.png[alt="Complete
 Pipeline runs successfully on the 'production' branch",width=100%]
 . Click the *X* at the top-right to return to the *Activity* page of the Blue
   Ocean interface. +
@@ -638,5 +638,5 @@ To learn more about what Jenkins can do, check out:
 
 '''
 ++++
-include::_partials/_feedback-footer.html[]
+include::docs/partial/_feedback-footer.html[]
 ++++

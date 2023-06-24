@@ -1,27 +1,27 @@
 = Extension Points defined in Google Cloud Backup Plugin
 
-plugin:google-cloud-backup[Google Cloud Backup Plugin]
+https://plugins.jenkins.io/google-cloud-backup[Google Cloud Backup Plugin]
 
 == AbstractStorageProvider
-`jenkinsdoc:google-cloud-backup:com.google.jenkins.plugins.persistentmaster.storage.AbstractStorageProvider[]`
+`jenkinsdoc:google-cloud-backup:com.google.jenkins.plugins.persistentmaster.storage.AbstractStorageProvider]`
 
-+++ Provides a+++ jenkinsdoc:Storage[] +++instance that can be used to perform backups.+++
++++ Provides a+++ jenkinsdoc:Storage] +++instance that can be used to perform backups.+++
 
 
 **Implementations:**
 
-* plugin:google-cloud-backup[Google Cloud Backup Plugin]: com.+++<wbr/>+++google.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++persistentmaster.+++<wbr/>+++storage.+++<wbr/>+++**GcloudGcsStorageProvider** (link:https://github.com/jenkinsci/google-cloud-backup-plugin/search?q=GcloudGcsStorageProvider&type=Code[view on GitHub])
-* plugin:google-cloud-backup[Google Cloud Backup Plugin]: com.+++<wbr/>+++google.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++persistentmaster.+++<wbr/>+++storage.+++<wbr/>+++**LocalFileStorageProvider** (link:https://github.com/jenkinsci/google-cloud-backup-plugin/search?q=LocalFileStorageProvider&type=Code[view on GitHub])
+* https://plugins.jenkins.io/google-cloud-backup[Google Cloud Backup Plugin]: com.+++<wbr/>+++google.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++persistentmaster.+++<wbr/>+++storage.+++<wbr/>+++**GcloudGcsStorageProvider** (link:https://github.com/jenkinsci/google-cloud-backup-plugin/search?q=GcloudGcsStorageProvider&type=Code[view on GitHub])
+* https://plugins.jenkins.io/google-cloud-backup[Google Cloud Backup Plugin]: com.+++<wbr/>+++google.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++persistentmaster.+++<wbr/>+++storage.+++<wbr/>+++**LocalFileStorageProvider** (link:https://github.com/jenkinsci/google-cloud-backup-plugin/search?q=LocalFileStorageProvider&type=Code[view on GitHub])
 
 
 == ConfigurableScope
-`jenkinsdoc:google-cloud-backup:com.google.jenkins.plugins.persistentmaster.scope.ConfigurableScope[]`
+`jenkinsdoc:google-cloud-backup:com.google.jenkins.plugins.persistentmaster.scope.ConfigurableScope]`
 
-+++ Defines a+++ jenkinsdoc:Scope[] +++that can be configured from form data and/or config+++ +++ files.+++
++++ Defines a+++ jenkinsdoc:Scope] +++that can be configured from form data and/or config+++ +++ files.+++
 
 
 **Implementations:**
 
-* plugin:google-cloud-backup[Google Cloud Backup Plugin]: com.+++<wbr/>+++google.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++persistentmaster.+++<wbr/>+++scope.+++<wbr/>+++**CustomScope** (link:https://github.com/jenkinsci/google-cloud-backup-plugin/search?q=CustomScope&type=Code[view on GitHub])
-* plugin:google-cloud-backup[Google Cloud Backup Plugin]: com.+++<wbr/>+++google.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++persistentmaster.+++<wbr/>+++scope.+++<wbr/>+++**DefaultBackupScope** (link:https://github.com/jenkinsci/google-cloud-backup-plugin/search?q=DefaultBackupScope&type=Code[view on GitHub])
+* https://plugins.jenkins.io/google-cloud-backup[Google Cloud Backup Plugin]: com.+++<wbr/>+++google.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++persistentmaster.+++<wbr/>+++scope.+++<wbr/>+++**CustomScope** (link:https://github.com/jenkinsci/google-cloud-backup-plugin/search?q=CustomScope&type=Code[view on GitHub])
+* https://plugins.jenkins.io/google-cloud-backup[Google Cloud Backup Plugin]: com.+++<wbr/>+++google.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++persistentmaster.+++<wbr/>+++scope.+++<wbr/>+++**DefaultBackupScope** (link:https://github.com/jenkinsci/google-cloud-backup-plugin/search?q=DefaultBackupScope&type=Code[view on GitHub])
 

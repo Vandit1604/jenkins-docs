@@ -1,27 +1,27 @@
 = Extension Points defined in Yet Another Docker Plugin
 
-plugin:yet-another-docker-plugin[Yet Another Docker Plugin]
+https://plugins.jenkins.io/yet-another-docker-plugin[Yet Another Docker Plugin]
 
 == DockerCloudOrder
-`jenkinsdoc:yet-another-docker-plugin:com.github.kostyasha.yad.other.cloudorder.DockerCloudOrder[]`
+`jenkinsdoc:yet-another-docker-https://plugins.jenkins.io/com.github.kostyasha.yad.other.cloudorder.DockerCloudOrder]`
 
 _This extension point has no Javadoc documentation._
 
 **Implementations:**
 
-* plugin:yet-another-docker-plugin[Yet Another Docker Plugin]: com.+++<wbr/>+++github.+++<wbr/>+++kostyasha.+++<wbr/>+++yad.+++<wbr/>+++other.+++<wbr/>+++cloudorder.+++<wbr/>+++**AsIsDockerCloudOrder** 
-* plugin:yet-another-docker-plugin[Yet Another Docker Plugin]: com.+++<wbr/>+++github.+++<wbr/>+++kostyasha.+++<wbr/>+++yad.+++<wbr/>+++other.+++<wbr/>+++cloudorder.+++<wbr/>+++**RandomLeastLoadedDockerCloudOrder** 
+* https://plugins.jenkins.io/yet-another-docker-plugin[Yet Another Docker Plugin]: com.+++<wbr/>+++github.+++<wbr/>+++kostyasha.+++<wbr/>+++yad.+++<wbr/>+++other.+++<wbr/>+++cloudorder.+++<wbr/>+++**AsIsDockerCloudOrder** 
+* https://plugins.jenkins.io/yet-another-docker-plugin[Yet Another Docker Plugin]: com.+++<wbr/>+++github.+++<wbr/>+++kostyasha.+++<wbr/>+++yad.+++<wbr/>+++other.+++<wbr/>+++cloudorder.+++<wbr/>+++**RandomLeastLoadedDockerCloudOrder** 
 
 
 == YADockerConnector
-`jenkinsdoc:yet-another-docker-plugin:com.github.kostyasha.yad.connector.YADockerConnector[]`
+`jenkinsdoc:yet-another-docker-https://plugins.jenkins.io/com.github.kostyasha.yad.connector.YADockerConnector]`
 
 +++ Different connectors to docker.+++ +++ DockerConnector appeared first so can't rename and YAD become parent.+++
 
 
 **Implementations:**
 
-* plugin:yet-another-docker-plugin[Yet Another Docker Plugin]: com.+++<wbr/>+++github.+++<wbr/>+++kostyasha.+++<wbr/>+++yad.+++<wbr/>+++connector.+++<wbr/>+++**CloudNameDockerConnector** 
-* plugin:yet-another-docker-plugin[Yet Another Docker Plugin]: com.+++<wbr/>+++github.+++<wbr/>+++kostyasha.+++<wbr/>+++yad.+++<wbr/>+++connector.+++<wbr/>+++**CredentialsYADockerConnector** 
-* plugin:yet-another-docker-plugin[Yet Another Docker Plugin]: com.+++<wbr/>+++github.+++<wbr/>+++kostyasha.+++<wbr/>+++yad.+++<wbr/>+++**DockerConnector** 
+* https://plugins.jenkins.io/yet-another-docker-plugin[Yet Another Docker Plugin]: com.+++<wbr/>+++github.+++<wbr/>+++kostyasha.+++<wbr/>+++yad.+++<wbr/>+++connector.+++<wbr/>+++**CloudNameDockerConnector** 
+* https://plugins.jenkins.io/yet-another-docker-plugin[Yet Another Docker Plugin]: com.+++<wbr/>+++github.+++<wbr/>+++kostyasha.+++<wbr/>+++yad.+++<wbr/>+++connector.+++<wbr/>+++**CredentialsYADockerConnector** 
+* https://plugins.jenkins.io/yet-another-docker-plugin[Yet Another Docker Plugin]: com.+++<wbr/>+++github.+++<wbr/>+++kostyasha.+++<wbr/>+++yad.+++<wbr/>+++**DockerConnector** 
 
