@@ -140,7 +140,7 @@ First, we need to go back to the `HelloWorldAction` and define an icon, title, a
 
 With these changes, the action will show in the build's side panel, and link to the URL `\http://_JENKINS_/job/_JOBNAME_/_BUILDNUMBER_/greeting/`.
 
-image::developer/tutorial/sidepanel-item.png[]
+image::sidepanel-item.png[]
 
 Next, the page appearing at that URL needs to be defined.
 To create such _views_ in Jenkins, link:https://commons.apache.org/proper/commons-jelly/[Apache Commons Jelly] is typically used.
@@ -185,7 +185,7 @@ Add the following content:
 
 The resulting page will look similar to this:
 
-image::developer/tutorial/view1.png[]
+image::view1.png[]
 
 == Add the side panel for the build to the view
 
@@ -245,7 +245,7 @@ Once this is done, we need to extend the view to _include_ the side panel view f
 
 With these changes, the view we created properly integrates with the Jenkins UI, appearing no different from built-in pages related to a build:
 
-image::developer/tutorial/view2.png[]
+image::view2.png[]
 
 Congratulations, you've successfully created and substantially extended a Jenkins plugin!
 
