@@ -32,7 +32,7 @@ Create a new freestyle project in Jenkins, and give it any name.
 
 Then add the "Say hello world" build step. It will look like this:
 
-image::developer/tutorial/job-config.png[Freestyle job configuration]
+image::job-config.png[Freestyle job configuration]
 
 Enter a name, save the project, and start a new build. Navigate to the build on the UI, and click _Console Output_ to view the build log.
 It will contain a message written by the build step that was just configured:

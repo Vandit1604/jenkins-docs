@@ -49,5 +49,5 @@ api_token_env: CROWDIN_PERSONAL_TOKEN
 Replace `/path/to/your/translations/` with the appropriate folder structure of your plugin, take a look at the link:https://github.com/jenkinsci/design-library-plugin/blob/master/crowdin.yml[design-library] for a practice example. +
 Leave the `_env` variables untouched.
 
-=== References
+== References
 Read on link:../../crowdin/[how to use the crowdin web interface] to translate plugins.
