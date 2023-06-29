@@ -1,0 +1,14 @@
+---
+layout: simplepage
+title: "Jenkins Use-cases"
+noanchors: true
+---
+
+.app-use-cases
+  - site.solutions.sort.each do |key, solution|
+  - link = expand_link("solutions/#{key}")
+  - cssClass = solution["dark"] ? "dark" : "light"
+    %a.app-use-cases__card{:style => "background-color:#{solution["color"]}", :href => link, :class => cssClass}
+      %h3
+        = solution["usecase"]
+      %img{:src => "/images/solution-images/#{key}.svg"}

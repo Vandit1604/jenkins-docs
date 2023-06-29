@@ -4,7 +4,7 @@ This tutorial shows you how to use LabVIEW to orchestrate building a simple http
 
 If you are a LabVIEW developer who is new to CI/CD concepts, or you might be familiar with these concepts but don't know how to implement building your application using Jenkins, then this tutorial is for you.
 
-We’ll walk through setting up Jenkins as our CI server and using it to automate graphical diffing and testing of our project (which you'll obtain from http://www.ni.com/example/lv-ci[this example page] on ni.com). Jenkins will monitor GitHub Pull Requests for changes and will comment and check if the LabVIEW project can build successfully. Unit test results will be saved to a JUnit XML report.
+We'll walk through setting up Jenkins as our CI server and using it to automate graphical diffing and testing of our project (which you'll obtain from http://www.ni.com/example/lv-ci[this example page] on ni.com). Jenkins will monitor GitHub Pull Requests for changes and will comment and check if the LabVIEW project can build successfully. Unit test results will be saved to a JUnit XML report.
 
 *Duration:* This tutorial takes 20-40 minutes to complete (assuming you've
 already met the include::partial$_prerequisites[prerequisites] below). The exact duration will
@@ -12,7 +12,7 @@ depend on the speed of your machine and whether or not you've already link:/doc/
 
 You can stop this tutorial at any point in time and continue from where you left off.
 
-=== Prerequisites ===
+== Prerequisites
 
 For this tutorial, you will require:
 
@@ -29,22 +29,22 @@ For this tutorial, you will require:
 *Note*: This tutorial uses Jenkins on a Windows machine. This means that file paths may be Windows-specific. Please modify any file paths and/or commands to your specific Operating System.
 
 [[labview-cli-setup]]
-=== LabVIEW CLI Setup
+== LabVIEW CLI Setup
 
 The link:https://zone.ni.com/reference/en-XX/help/371361R-01/lvhowto/cli_running_operations/[LabVIEW Command Line Interface (LabVIEWCLI)] is installed alongside LabVIEW 2018+ and is used to run LabVIEW commands, such as unit testing, through the Command Line. To use the LabVIEWCLI, you must enable VI Server: *Tools >> Options >> VI Server*. Make sure the TCP/IP checkbox is enabled and leave the Port as 3363. 
 
 [.boxshadow]
 image:labview-01-labviewcli-setup.png[alt="LabVIEWCLI setup",width=100%]
 
-=== Python Setup
+== Python Setup
 
 The Python link:https://pypi.org/project/requests/[requests] library must be installed in order for Jenkins to post results to GitHub. One way to do this is by opening a command prompt and running the following command:
 
     pip install requests
 
-=== GitHub Setup
+== GitHub Setup
 
-==== Repository Setup
+=== Repository Setup
 
 We’ll create three GitHub repositories. Each of these repositories will be used for one of the following:
 
@@ -121,7 +121,7 @@ image:labview-10-edit-jenkinsfile.png[alt="edit jenkinsfile",width=100%]
 
 Now, your files are set up and in place for Jenkins to use.
 
-==== Personal Access Token
+=== Personal Access Token
 
 For Jenkins to access your GitHub information, it will need a Personal Access Token. We will generate Personal Access token through GitHub:
 
@@ -143,9 +143,9 @@ image:labview-12-post-access-token-gen.png[alt="post access token",width=100%]
 
 Congrats! You’ve set up the GitHub repositories you’ll need for this example, and you have the personal access token so Jenkins can access your GitHub information. Next, we’ll configure Jenkins to use these items. 
 
-=== Jenkins Setup
+== Jenkins Setup
 
-==== Jenkins Initial Setup
+=== Jenkins Initial Setup
 
 *Note*: This tutorial uses the classic Jenkins view, with minimal plugins to get the example running. You can use additional plugins such as link:/doc/book/blueocean/[Blue Ocean] for an enhanced UI experience.
 
@@ -168,7 +168,7 @@ image:labview-14-create-first-user.png[alt="create first user",width=100%]
 . On the following Instance Configuration page, leave the Jenkins URL as-is.
 . Click *Start using Jenkins* to begin your Jenkins configuration.
 
-==== Setting up Environment Variables and Credentials
+=== Setting up Environment Variables and Credentials
 
 Environment variables can be accessed across Jenkins jobs. We will want certain values accessible when Jenkins tries to build, test and diff your application. Since the GitHub organization name, access token, and picture repository will likely be the same across Jenkins jobs, we will set them in our Jenkins configuration.
 
@@ -188,7 +188,7 @@ image:labview-16-final-env-vars.png[alt="Final environment vars",width=100%]
 [.boxshadow]
 image:labview-17-github-secret-text.png[alt="add github secret text",width=100%]
 
-==== Setting Up the Global Library 
+=== Setting Up the Global Library 
 
 The Global Library contains the script files and other components that will be used each time Jenkins tries to build. In this example, we are hosting them in the myBuildSystem repository. We will link Jenkins to that repository so it can use those files for each job.
 
@@ -224,7 +224,7 @@ image:labview-23-final-global-pipeline-lib-settings.png[alt="final global pipeli
 
 We’ve successfully linked Jenkins to the global library – this means that the files hosted on the myBuildSystem repository can be accessed and used by Jenkins!
 
-==== Setting up the Jenkins Pipeline
+=== Setting up the Jenkins Pipeline
 
 Finally, we’ll set up Jenkins to scan and automate testing and diffing of your myApplication repository.
 
@@ -251,7 +251,7 @@ image:labview-26-scan-org-trigger-set.png[alt="set scan organization triggers",w
 . Click *Save* to save your changes. Through this pipeline, Jenkins will now scan your repository based on the interval you just configured.
 
 
-=== Confirmation
+== Confirmation
 
 Let’s confirm that everything works. We’ll do this by configuring our LabVIEW project, making changes to the VIs in our myApplication directory, and creating a Pull Request on GitHub.
 
@@ -341,7 +341,7 @@ image:labview-39-jenkins-pr-details.png[alt="jenkins pr details",width=100%]
 [.boxshadow]
 image:labview-40-jenkins-console-output.png[alt="jenkins console output",width=100%]
 
-=== Wrapping Up
+== Wrapping Up
 
 Congrats! You’ve just set up Jenkins to automate LabVIEW builds. The "Build", "Test" and "Deliver" stages you created above are the basis for
 building more complex LabVIEW in Jenkins, as well as LabVIEW applications that integrate with other technology stacks. When doing so, there are some https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000001De1JSAS&l=en-US[Best Practices] you should follow. In case you would like additional command line functionality, we have examples on how to extend the LabVIEWCLI https://github.com/ni/niveristand-custom-device-build-tools/[here]. 

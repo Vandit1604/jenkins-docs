@@ -1,6 +1,6 @@
 == Install Jenkins with Helm v3
 
-A typical Jenkins deployment consists of a controller node and, optionally, one or more agents. To simplify the deployment of Jenkins, we’ll use link:https://helm.sh/[Helm] to deploy Jenkins.
+A typical Jenkins deployment consists of a controller node and, optionally, one or more agents. To simplify the deployment of Jenkins, we'll use link:https://helm.sh/[Helm] to deploy Jenkins.
 Helm is a package manager for Kubernetes and its package format is called a chart.
 Many community-developed charts are available on link:https://github.com/helm/charts[GitHub].
 
@@ -9,12 +9,14 @@ Helm Charts provide “push button” deployment and deletion of apps, making ad
 === Prerequisites
 
 Helm command line interface::
-If you don't have Helm command line interface installed and configured locally, see the sections below to <<Install Helm>> and <<Configure Helm>>.
+If you don't have Helm command line interface installed and configured locally, see the sections below to <<install-helm,Install Helm>> and <<configure-helm,Configure Helm>>.
 
+[#install-helm]
 === Install Helm
 
 To install Helm CLI, follow the instructions from the link:https://helm.sh/docs/intro/install/[Installing Helm] page.
 
+[#configure-helm]
 === Configure Helm
 Once Helm is installed and set up properly, add the Jenkins repo as follows:
 
