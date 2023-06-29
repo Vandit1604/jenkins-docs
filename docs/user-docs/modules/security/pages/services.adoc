@@ -23,8 +23,7 @@ It can be enabled, disabled, and configured in _Manage Jenkins » Security_.
 
 The two supported modes (while enabled) are:
 
-. *Random*: The TCP port is chosen at random to avoid collisions on the Jenkins xref:/home/vandit/gsoc-project-demo/antora-jenkins/docs/user-docs/modules/glossary/pages/index.adoc#controller[]
-<<../glossary#controller,>>.
+. *Random*: The TCP port is chosen at random to avoid collisions on the Jenkins xref:user-docs:glossary:index.adoc[].
   The downside to randomized ports is that they are chosen during the boot of the Jenkins controller, making it difficult to manage firewall rules allowing TCP traffic.
 . *Fixed*: The port is chosen by the Jenkins administrator and is consistent across reboots of the Jenkins controller.
   This makes it easier to manage firewall rules allowing TCP-based agents to connect to the controller.
