@@ -343,7 +343,7 @@ image:labview-40-jenkins-console-output.png[alt="jenkins console output",width=1
 
 == Wrapping Up
 
-Congrats! You’ve just set up Jenkins to automate LabVIEW builds. The "Build", "Test" and "Deliver" stages you created above are the basis for
+Congrats! You've just set up Jenkins to automate LabVIEW builds. The "Build", "Test" and "Deliver" stages you created above are the basis for
 building more complex LabVIEW in Jenkins, as well as LabVIEW applications that integrate with other technology stacks. When doing so, there are some https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000001De1JSAS&l=en-US[Best Practices] you should follow. In case you would like additional command line functionality, we have examples on how to extend the LabVIEWCLI https://github.com/ni/niveristand-custom-device-build-tools/[here]. 
 
 Because Jenkins is extremely extensible, it can be modified and configured to handle practically any aspect of build orchestration and automation.
