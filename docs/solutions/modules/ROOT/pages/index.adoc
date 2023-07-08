@@ -66,147 +66,147 @@
     gap: 1rem;
 }
 
-.data .android{
+.android{
     background-color: #3DDC84;
 }
 
-.data .php{
+.php{
     background-color: #777BB4;
 }
 
-.data .docker{
+.docker{
     background-color: #2496ED;
 }
 
-.data .python{
+.python{
     background-color: #4786BB;
 }
 
-.data .ruby{
+.ruby{
     background-color: #C2322D;
 }
 
-.data .pipeline{
+.pipeline{
     background-color: #FEAA2D;
 }
 
-.data .github{
+.github{
     background-color: #181817;
 }
 
-.data .embedded{
+.embedded{
     background-color: #EE7272;
 }
 
-.data .bit-bucket{
+.bit-bucket{
     background-color: #0052CC;
 }
 
-.data .c{
+.c{
     background-color: #00599C;
 }
 
-.data .java{
+.java{
     background-color: #0093A6;
 }
 </style>
 
 <div class="flex-container">
+<div class="card android">
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/android.html">
-<div class="card">
-    <div class="data android">
+    <div class="data">
         <p>
             Android 
         </p>
         <img src="./assets/images/android.svg">
     </div>
 </div>
+<div class="card php">
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/php.html">
-<div class="card">
-    <div class="data php">
+    <div class="data ">
         <p>
             PHP 
         </p>
         <img src="./assets/images/php.svg">
     </div>
 </div>
+<div class="card docker">
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/docker.html">
-<div class="card">
-    <div class="data docker">
+    <div class="data ">
         <p>
             Docker 
         </p>
         <img src="./assets/images/docker.svg">
     </div>
 </div>
+<div class="card python">
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/python.html">
-<div class="card">
-    <div class="data python">
+    <div class="data ">
         <p>
             Python 
         </p>
         <img src="./assets/images/python.svg">
     </div>
 </div>
+<div class="card ruby">
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/ruby.html">
-<div class="card">
-    <div class="data ruby">
+    <div class="data ">
         <p>
             Ruby 
         </p>
         <img src="./assets/images/ruby.svg">
     </div>
 </div>
+<div class="card pipeline">
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/pipeline.html">
-<div class="card">
-    <div class="data pipeline">
+    <div class="data ">
         <p>
             Pipeline 
         </p>
         <img src="./assets/images/pipeline.svg">
     </div>
 </div>
+<div class="card github">
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/github.html">
-<div class="card">
-    <div class="data github">
+    <div class="data ">
         <p>
             Github 
         </p>
         <img src="./assets/images/github.svg">
     </div>
 </div>
+<div class="card embedded">
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/embedded.html">
-<div class="card">
-    <div class="data embedded">
+    <div class="data ">
         <p>
             Embedded 
         </p>
         <img src="./assets/images/embedded.svg">
     </div>
 </div>
+<div class="card bit-bucket">
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/bitbucketserver.html">
-<div class="card">
-    <div class="data bit-bucket">
+    <div class="data ">
         <p>
             Bit Bucket 
         </p>
         <img src="./assets/images/bitbucketserver.svg">
     </div>
 </div>
+<div class="card c">
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/c.html">
-<div class="card">
-    <div class="data c">
+    <div class="data ">
         <p>
             C/C++ 
         </p>
         <img src="./assets/images/c.svg">
     </div>
 </div>
+<div class="card java">
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/Java.html">
-<div class="card">
-    <div class="data java">
+    <div class="data ">
         <p>
-            Java 
+            Java
         </p>
         <img src="./assets/images/java.svg">
     </div>
