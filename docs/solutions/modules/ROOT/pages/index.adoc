@@ -57,101 +57,158 @@
   justify-content: center;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
     gap: 1rem;
-    margin-bottom: 1rem;
+}
+
+.data .android{
+    background-color: #3DDC84;
+}
+
+.data .php{
+    background-color: #777BB4;
+}
+
+.data .docker{
+    background-color: #2496ED;
+}
+
+.data .python{
+    background-color: #4786BB;
+}
+
+.data .ruby{
+    background-color: #C2322D;
+}
+
+.data .pipeline{
+    background-color: #FEAA2D;
+}
+
+.data .github{
+    background-color: #181817;
+}
+
+.data .embedded{
+    background-color: #EE7272;
+}
+
+.data .bit-bucket{
+    background-color: #0052CC;
+}
+
+.data .c{
+    background-color: #00599C;
+}
+
+.data .java{
+    background-color: #0093A6;
 }
 </style>
 
 <div class="flex-container">
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/android.html">
 <div class="card">
-    <div class="data">
+    <div class="data android">
         <p>
             Android 
         </p>
+        <img src="./assets/images/android.svg">
     </div>
 </div>
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/php.html">
 <div class="card">
-    <div class="data">
+    <div class="data php">
         <p>
             PHP 
         </p>
+        <img src="./assets/images/php.svg">
     </div>
 </div>
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/docker.html">
 <div class="card">
-    <div class="data">
+    <div class="data docker">
         <p>
             Docker 
         </p>
+        <img src="./assets/images/docker.svg">
     </div>
 </div>
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/python.html">
 <div class="card">
-    <div class="data">
+    <div class="data python">
         <p>
             Python 
         </p>
+        <img src="./assets/images/python.svg">
     </div>
 </div>
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/ruby.html">
 <div class="card">
-    <div class="data">
+    <div class="data ruby">
         <p>
             Ruby 
         </p>
+        <img src="./assets/images/ruby.svg">
     </div>
 </div>
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/pipeline.html">
 <div class="card">
-    <div class="data">
+    <div class="data pipeline">
         <p>
             Pipeline 
         </p>
+        <img src="./assets/images/pipeline.svg">
     </div>
 </div>
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/github.html">
 <div class="card">
-    <div class="data">
+    <div class="data github">
         <p>
             Github 
         </p>
+        <img src="./assets/images/github.svg">
     </div>
 </div>
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/embedded.html">
 <div class="card">
-    <div class="data">
+    <div class="data embedded">
         <p>
             Embedded 
         </p>
+        <img src="./assets/images/embedded.svg">
     </div>
 </div>
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/bitbucketserver.html">
 <div class="card">
-    <div class="data">
+    <div class="data bit-bucket">
         <p>
             Bit Bucket 
         </p>
+        <img src="./assets/images/bitbucketserver.svg">
     </div>
 </div>
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/c.html">
 <div class="card">
-    <div class="data">
+    <div class="data c">
         <p>
             C/C++ 
         </p>
+        <img src="./assets/images/c.svg">
     </div>
 </div>
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/Java.html">
 <div class="card">
-    <div class="data">
+    <div class="data java">
         <p>
             Java 
         </p>
+        <img src="./assets/images/java.svg">
     </div>
 </div>
 </a>
