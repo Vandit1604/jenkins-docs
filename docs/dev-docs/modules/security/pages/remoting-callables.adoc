@@ -1,7 +1,7 @@
 = Remoting Callables
 
 Remoting is the library implementing communication between Jenkins processes using Java serialization.
-This applies to controller/agent communications and agents communicating with the Maven process in plugin:maven-plugin[Maven Integration Plugin].
+This applies to controller/agent communications and agents communicating with the Maven process in {plugin}/maven-plugin[Maven Integration Plugin].
 
 `hudson.remoting.Callable` is the basic building block of this communication channel, representing a message and corresponding response.
 Objects implementing this interface get serialized and sent to the other end of the channel.

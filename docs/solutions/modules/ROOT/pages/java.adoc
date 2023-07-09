@@ -24,7 +24,7 @@ image::jenkins-maven-step.png['Jenkins Maven step', role=center]
 == Gradle
 
 As the associated plugin is not installed by default, first install the
-plugin:gradle[Gradle plugin].
+{plugin}/gradle[Gradle plugin].
 Once done, you should be able to add a Gradle step.
 
 
