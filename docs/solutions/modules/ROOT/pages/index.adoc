@@ -11,11 +11,11 @@
   height:200px
 }
 
-.card .github .data p{
+.github .data p {
     filter: invert(1);
 }
 
-.card .github .data img{
+.github-image {
     filter: invert(1);
     opacity: 50%;
 }
@@ -177,11 +177,11 @@
 </div>
 <div class="card github">
 <a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.1/github.html">
-    <div class="data ">
+    <div class="data">
         <p>
             Github 
         </p>
-        <img src="../assets/images/github.svg">
+        <img class="github-image" src="../assets/images/github.svg">
     </div>
 </div>
 <div class="card embedded">
