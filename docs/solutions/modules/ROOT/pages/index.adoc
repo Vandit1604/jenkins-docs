@@ -11,6 +11,12 @@
   height:200px
 }
 
+.card .data img{
+    height: 96px;
+    opacity: .55;
+    margin: auto;
+}
+
 .github .data p {
     filter: invert(1);
 }
