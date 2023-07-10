@@ -32,8 +32,8 @@ environments, a few of the following approaches can be considered:
   Variables_ section. Once the variable is modified, the build agent should be
   reconnected.
 . In order to integrate setup the tool environment, consider
-  plugin:custom-tools-plugin[Custom Tools Plugin].
-. plugin:envinject[EnvInject Plugin] allows to setup custom environments at the job level.
+  {plugin}/custom-tools-plugin[Custom Tools Plugin].
+. {plugin}/envinject[EnvInject Plugin] allows to setup custom environments at the job level.
 
 === Working with FPGA boards and hardware peripherals
 
@@ -43,9 +43,9 @@ attempting to access the same shared external peripherals at the same time.
 There are a few plugins which can help manage concurrent peripherals access
 such as the:
 
-. plugin:throttle-concurrents[Throttle Concurrent Builds Plugin] allows preventing hardware and license usage conflicts.
-. plugin:build-timeout[Build Timeout Plugin] helps prevent tools (e.g. cable drives) which might hang for whatever reason, blocking a Jenkins build indefinitely.
-. plugin:naginator[Naginator Plugin] enables conditional restarting of builds in case of flakey hardware issues.
+. {plugin}/throttle-concurrents[Throttle Concurrent Builds Plugin] allows preventing hardware and license usage conflicts.
+. {plugin}/build-timeout[Build Timeout Plugin] helps prevent tools (e.g. cable drives) which might hang for whatever reason, blocking a Jenkins build indefinitely.
+. {plugin}/naginator[Naginator Plugin] enables conditional restarting of builds in case of flakey hardware issues.
 
 
 === Working with computing grids
@@ -79,11 +79,11 @@ supported by existing Jenkins plugins.
 For tools which generate some form of XML-based reports, formatting of those
 reports can be implemented with an XSLT converter. Consider the following plugins for incorporating generated reports into Jenkins:
 
-* Unit testing results: plugin:xunit[xUnit Plugin], which
+* Unit testing results: {plugin}/xunit[xUnit Plugin], which
   provides a "Custom report" handler to convert any XML to JUnit formatted reports for Jenkins
-* Timing analysis reports: plugin:performance[Performance plugin]
+* Timing analysis reports: {plugin}/performance[Performance plugin]
   (support JMeter-alike reports)
-* Code coverage: plugin:cobertura[Cobertura Plugin] or plugin:emma[Emma Plugin]
+* Code coverage: {plugin}/cobertura[Cobertura Plugin] or {plugin}/emma[Emma Plugin]
 
 
 == Presentations
