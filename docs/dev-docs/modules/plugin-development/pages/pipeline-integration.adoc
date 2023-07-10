@@ -565,7 +565,7 @@ need to start dealing with `Job`/`Run` but may also need to refer to `Parameteri
 Future improvements to Pipeline may well require yet more implementation code to be extracted from `AbstractProject`/`AbstractBuild`.
 The main constraint is the need to retain binary compatibility.
 
-== References:
+== References
 - link:https://github.com/jenkinsci/workflow-step-api-plugin/blob/master/README.md[Writing Pipeline steps]
 - link:https://github.com/jenkinsci/workflow-basic-steps-plugin/blob/master/CORE-STEPS.md[Additional info about core Pipeline steps]
 - link:https://github.com/jenkinsci/workflow-scm-step-plugin/blob/master/README.md[SCM steps and Pipeline]
