@@ -1,7 +1,7 @@
 = Using a Jenkinsfile
 
 This section builds on the information covered in
-link:../getting-started[Getting started with Pipeline]
+xref:getting-started:index.adoc[Getting started with Pipeline]
 and introduces more useful steps, common patterns, and demonstrates some
 non-trivial `Jenkinsfile` examples.
 
@@ -25,7 +25,7 @@ create a `Jenkinsfile` and check the file into the source control repository.
 == Creating a Jenkinsfile
 
 As discussed in the
-link:../getting-started#defining-a-pipeline-in-scm[Defining a Pipeline in SCM],
+xref:getting-started:index.adoc#defining-a-pipeline-in-scm[Defining a Pipeline in SCM],
 a `Jenkinsfile` is a text file that contains the definition of a Jenkins
 Pipeline and is checked into source control. Consider the following Pipeline
 which implements a basic three-stage continuous delivery pipeline.

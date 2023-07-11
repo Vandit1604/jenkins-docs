@@ -35,7 +35,7 @@
 Some references to dive deeper:
 
  - https://github.com/jenkinsci/remoting/blob/master/README.md[Remoting]
- - link:../../handling-requests/[Stapler, request handling and routing]
- - link:../../views/[Jelly and Groovy views]
- - link:../../persistence/[Persistence]
- - link:../../cli/writing-cli-commands/[Writing CLI commands]
+ - xref:handling-requests:index.adoc[Stapler, request handling and routing]
+ - xref:views:index.adoc[Jelly and Groovy views]
+ - xref:persistence:index.adoc[Persistence]
+ - xref:cli:writing-cli-commands.adoc[Writing CLI commands]
