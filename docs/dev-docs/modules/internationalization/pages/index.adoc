@@ -11,28 +11,28 @@ Plugin developers internationalize a plugin by modifying the Java files and the 
 They can significantly improve the translation experince by enabling Crowdin translation support for the plugin.
 The steps include:
 
-. link:/doc/developer/internationalization/i18n-source-code/[Internationalize messages in Java source code]
-. link:/doc/developer/internationalization/i18n-jelly-views/[Internationalize messages in Jelly views]
-. link:/doc/developer/crowdin/translating-plugins/[Enable Crowdin translation support for the plugin] (Optional)
+. xref:internationalization:i18n-source-code.adoc[Internationalize messages in Java source code]
+. xref:internationalization:i18n-jelly-views.adoc[Internationalize messages in Jelly views]
+. xref:crowdin:translating-plugins.adoc[Enable Crowdin translation support for the plugin] (Optional)
 
-link:/doc/developer/internationalization/prepare-a-java-source-file/[Prepare a Java source file for localization] shows the detailed internationalization steps for Java source files.
-link:/doc/developer/internationalization/advanced-localization/[Advanced localization] provides guidance for additional internationalization, like date formatting, time formatting, and number formatting.
+xref:internationalization:prepare-a-java-source-file.adoc[Prepare a Java source file for localization] shows the detailed internationalization steps for Java source files.
+xref:internationalization:advanced-localization.adoc[Advanced localization] provides guidance for additional internationalization, like date formatting, time formatting, and number formatting.
 
 == Translator tasks
 
 The Jenkins project welcomes translations.
 
-Translators can contribute to plugin localizations through link:https://crowdin.jenkins.io/[Crowdin translations] after the plugin has link:/doc/developer/crowdin/translating-plugins/[enabled Crowdin translation support].
+Translators can contribute to plugin localizations through link:https://crowdin.jenkins.io/[Crowdin translations] after the plugin has xref:crowdin:translating-plugins.adoc[enabled Crowdin translation support].
 Crowdin simplifies translation work so that it focuses on the translation rather than the mechanics of pull requests and source files.
 Translators perform the following tasks with Crowdin:
 
-. link:/doc/developer/crowdin/translating-plugins/[Translate messages in Crowdin]
+. xref:crowdin:translating-plugins.adoc[Translate messages in Crowdin]
 
 Translators can contribute to Jenkins core and plugins that are not registered with Crowdin by filing pull requests on GitHub.
 Translators need to perform the following tasks for Jenkins core and plugins that are not registered with Crowdin:
 
-. link:/doc/developer/internationalization/translate-a-properties-file/[Generate properties files and translate messages in properties files]
-. link:/doc/developer/internationalization/translate-a-help-file/[Translate help in HTML files]
+. xref:internationalization:translate-a-properties-file.adoc[Generate properties files and translate messages in properties files]
+. xref:internationalization:translate-a-help-file.adoc[Translate help in HTML files]
 . link:https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request[Submit a pull request]
 
 == Chinese localization

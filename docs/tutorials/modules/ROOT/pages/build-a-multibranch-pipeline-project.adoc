@@ -7,14 +7,13 @@ application with the https://www.npmjs.com/[Node Package Manager (npm)], _as
 well as_ deliver different outcomes for development and production purposes.
 
 Before starting this tutorial, it is recommended that you run through at least
-one of the initial set of link:../#introductory-tutorials[Introductory
-tutorials] from the link:..[Tutorials overview] page first to familiarize
+one of the initial set of Introductory tutorials from the xref:tutorials:index.adoc[Tutorials overview] page first to familiarize
 yourself with CI/CD concepts (relevant to a technology stack you're most
 familiar with), how these concepts are implemented in Jenkins and the
 fundamentals of Jenkins Pipelines.
 
 In this tutorial, you'll use the same application that the
-link:../build-a-node-js-and-react-app-with-npm[Build a Node.js and React app
+xref:tutorials:build-a-node-js-and-react-app-with-npm.adoc[Build a Node.js and React app
 with npm] tutorial is based on. Therefore, you'll be building and testing the
 same application but this time, its delivery will be different depending on the
 Git branch that Jenkins builds from. That is, the branch being built determines
@@ -23,12 +22,12 @@ which delivery stage of your Pipeline is executed.
 *Duration:* This tutorial takes 30-50 minutes to complete (assuming you've
 already met the include::partial$_prerequisites[prerequisites] below). The exact duration will
 depend on the speed of your machine and whether or not you've already
-xref:user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[run Jenkins in Docker] from xref:tutorials:ROOT:index.adoc[another tutorial].
+xref:user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[run Jenkins in Docker] from xref:tutorials:index.adoc[another tutorial].
 
 You can stop this tutorial at any point in time and continue from where you left
 off.
 
-If you've already run though xref:tutorials:ROOT:index.adoc[another tutorial], you can skip the
+If you've already run though xref:tutorials:index.adoc[another tutorial], you can skip the
 include::partial$_prerequisites[prerequisites] and <<run-jenkins-in-docker,Run Jenkins in
 Docker>> sections below and proceed on to xref:partial$_fork-sample-repository.adoc[forking the
 sample repository]. (Just ensure you have
@@ -229,11 +228,11 @@ are covered in subsequent sections of this tutorial.
 +
 *Note:* For an explanation of the other components of this `Jenkinsfile`, refer
 to the annotations of the Declarative Pipeline in the
-link:../build-a-node-js-and-react-app-with-npm/#create-your-initial-pipeline-as-a-jenkinsfile[``Create
+xref:tutorials:build-a-node-js-and-react-app-with-npm.adoc#create-your-initial-pipeline-as-a-jenkinsfile[``Create
 your initial Pipeline...''] and
-link:../build-a-node-js-and-react-app-with-npm/#add-a-test-stage-to-your-pipeline[``Add
+xref:tutorials:build-a-node-js-and-react-app-with-npm.adoc#add-a-test-stage-to-your-pipeline[``Add
 a test stage...''] sections of the
-link:../build-a-node-js-and-react-app-with-npm/[Build a Node.js and React app
+xref:tutorials:build-a-node-js-and-react-app-with-npm.adoc[Build a Node.js and React app
 with npm] tutorial.
 . Save your edited `Jenkinsfile` and commit it to your local
   `building-a-multibranch-pipeline-project` Git repository. E.g. Within the
@@ -361,7 +360,7 @@ matches the name of the branch that Jenkins is running the build from, then the
 *Notes:*
 * For an explanation of the `input message` steps, refer to annotation *4* of
   the Declarative Pipeline at the
-  link:../build-a-node-js-and-react-app-with-npm/#add-a-final-deliver-stage-to-your-pipeline[``Add
+  xref:tutorials:build-a-node-js-and-react-app-with-npm.adoc#add-a-final-deliver-stage-to-your-pipeline[``Add
   a final deliver stage...'' section of the Build a Node.js and React app]
   tutorial.
 * For an explanation of the `deliver-for-development.sh`,

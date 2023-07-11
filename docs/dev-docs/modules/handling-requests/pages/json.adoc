@@ -225,8 +225,8 @@ Then, if you need a user and a token:
 
 For additional documentation on the token, please visit:
 
-* link:../../../book/system-administration/authenticating-scripted-clients[Authenticating scripted clients]
-* link:../../../book/security/csrf-protection[CSRF Protection]
+* xref:user-docs:system-administration:authenticating-scripted-clients.adoc[Authenticating scripted clients]
+* xref:user-docs:security:csrf-protection.adoc[CSRF Protection]
 
 And then send the POST request:
 [source,bash]
@@ -279,11 +279,11 @@ For people that are familiar with REST/JSON concept you may want to use other HT
 You may also want to use several HTTP status code, following HTTP convention like `201` for created. It will also work, and the examples above are returning explicit `200` status to show how to manage the HTTP status that is return.
 Some statuses are managed by Jenkins Core and may be returned automatically, like `403` when the user in the request does not have the required permission or is anonymous, or `404` when the HTTP API is not found.
 
-If you are not familiar with Jenkins architecture, you can have a look to link:../../architecture/model[High level view of Jenkins application] and at link:../../architecture[Architecture]
+If you are not familiar with Jenkins architecture, you can have a look to xref:architecture:model.adoc[High level view of Jenkins application] and at xref:architecture:model.adoc[Architecture]
 
 For more advanced reading on the HTTP layer of Jenkins, it's managed by link:https://github.com/jenkinsci/stapler[Stapler].
 
 == References
 - link:https://github.com/stapler/stapler/blob/master/docs/reference.adoc[Stapler URL Binding Reference]
-- link:../routing[How requests in Jenkins are routed]
-- link:../../testing[Testing Jenkins]
+- xref:handling-requests:routing.adoc[How requests in Jenkins are routed]
+- xref:testing:index.adoc[Testing Jenkins]

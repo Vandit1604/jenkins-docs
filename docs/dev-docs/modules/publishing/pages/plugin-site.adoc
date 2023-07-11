@@ -18,7 +18,7 @@ All plugins published to the current (weekly) update center are listed.
 This uses the monthly data from https://stats.jenkins.io as gathered
 from Jenkins instances that have not opted out of reporting data.
 
-Learn more on the link:../usage-statistics[usage statistics page].
+Learn more on the xref:publishing:usage-statistics.adoc[usage statistics page].
 
 === What does "most installed" mean?
 
@@ -51,18 +51,18 @@ descending order.
 Categories are based on link:https://github.com/jenkins-infra/update-center2/blob/master/src/main/resources/label-definitions.properties[label-definitions.properties]
  in the link:https://github.com/jenkins-infra/update-center2/#categorizing-plugins[update-center2] GitHub repository.
 
-See link:../requesting-hosting/#categorize-the-plugin[categorize the plugin] for further documentation.
+See xref:publishing:requesting-hosting.adoc#categorize-the-plugin[categorize the plugin] for further documentation.
 
 === How are plugins labeled?
 
 Plugin labels are assigned to plugin repositories by their maintainers as link:https://help.github.com/en/github/administering-a-repository/classifying-your-repository-with-topics[GitHub topics].
 GitHub topics that match entries from the link:https://github.com/jenkins-infra/update-center2/blob/master/resources/allowed-github-topics.properties[plugin label allowlist] are displayed on the plugin site.
-The link:../documentation[plugin documentation guide] includes instructions for link:../documentation#documenting-plugins[documenting], categorizing, and link:../documentation#labeling-plugins[labeling] plugins.
+The xref:publishing:documentation.adoc[plugin documentation guide] includes instructions for xref:publishing:documentation.adoc#documenting-plugins[documenting], categorizing, and xref:publishing:documentation.adoc#labeling-plugins[labeling] plugins.
 
 === Where does the description of the plugin come from?
 
 The plugin site will pull content from a specified Markdown or AsciiDoc file in plugin's GitHub repository, defaulting to the README file.
-See link:../documentation/#using-github-as-a-source-of-documentation[documentation] for
+See xref:publishing:documentation.adoc#using-github-as-a-source-of-documentation[documentation] for
 how to configure GitHub documentation.
 
 NOTE: In the past it was possible to use Jenkins Wiki as the source of documentation.

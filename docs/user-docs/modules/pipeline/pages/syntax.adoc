@@ -1,7 +1,7 @@
 = Pipeline Syntax
 
 This section builds on the information introduced in
-link:../getting-started[Getting started with Pipeline] and should be treated
+xref:getting-started:index.adoc[Getting started with Pipeline] and should be treated
 solely as a reference. For more information on how to use Pipeline syntax in
 practical examples, refer to the
 link:../jenkinsfile[Using a Jenkinsfile] section of this chapter. As of version
@@ -52,7 +52,7 @@ with the following exceptions:
   example, `input` is treated as `input()`.
 
 You can use the
-link:../getting-started/#directive-generator[Declarative Directive Generator]
+xref:getting-started:index.adoc#directive-generator[Declarative Directive Generator]
 to help you get started with configuring the directives and sections in your
 Declarative Pipeline.
 

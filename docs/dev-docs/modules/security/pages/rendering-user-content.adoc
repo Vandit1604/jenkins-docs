@@ -23,4 +23,4 @@ Plugins that directly show report information on the Jenkins UI without going th
 jenkinsdoc:hudson.Util#xmlEscape-java.lang.String-[Util#xmlEscape] is a good way to escape content.
 Otherwise, a dependency on a library such as https://github.com/OWASP/java-html-sanitizer[OWASP/java-html-sanitizer] could be used to sanitize HTML and only allow a known subset.
 
-The advice on link:../xss-prevention[Preventing Cross-Site Scripting in Jelly views] may apply here too, depending on implementation.
+The advice on xref:security:xss-prevention.adoc[Preventing Cross-Site Scripting in Jelly views] may apply here too, depending on implementation.

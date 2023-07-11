@@ -5,7 +5,7 @@ references:
   title: SECURITY-595 security fix
 ---
 
-Before Jenkins 2.138.4 and 2.154, most objects in Jenkins were accessible through the basic Stapler routing rules discussed in link:../routing[Routing Requests].
+Before Jenkins 2.138.4 and 2.154, most objects in Jenkins were accessible through the basic Stapler routing rules discussed in xref:handling-requests:routing.adoc[Routing Requests].
 Starting in Jenkins 2.138.4 and 2.154, this is further restricted to address several security issues.
 
 ## Identifying problems

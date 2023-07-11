@@ -164,7 +164,7 @@ See some of the Descriptor implementations in Jenkins core as an example.
 === Databinding
 StaplerRequest provides several data-binding methods from JSONObject, which greatly simplifies the object instantiation from form data. See the javadoc of the `StaplerRequest.bindJSONXXX` methods for details.
 
-Normally you don't need to implement anything on the server side if you are using the link:/doc/developer/plugin-development/pipeline-integration/#constructor-vs-setters[standard data binding conventions].
+Normally you don't need to implement anything on the server side if you are using the xref:plugin-development:pipeline-integration.adoc#constructor-vs-setters[standard data binding conventions].
 
 You may override the configure method of your `GlobalConfiguration` to bind all the fields at once and save it.
 

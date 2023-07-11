@@ -2,13 +2,13 @@
 
 Blue Ocean makes it easy to create a Pipeline project in Jenkins.
 
-You can generate a Pipeline from an existing `Jenkinsfile` in source control, or you can use the link:../pipeline-editor[Blue Ocean Pipeline editor] to create a Pipeline as a `Jenkinsfile` that is committed to source control.
+You can generate a Pipeline from an existing `Jenkinsfile` in source control, or you can use the xref:blueocean:pipeline-editor.adoc[Blue Ocean Pipeline editor] to create a Pipeline as a `Jenkinsfile` that is committed to source control.
 
 include::partial$_blue-ocean-status.adoc[]
 
 == Setting up your Pipeline project
 
-To start setting up your Pipeline project in Blue Ocean, select the *New Pipeline* button at the top-right of the link:../dashboard[Blue Ocean Dashboard].
+To start setting up your Pipeline project in Blue Ocean, select the *New Pipeline* button at the top-right of the xref:blueocean:dashboard.adoc[Blue Ocean Dashboard].
 
 [.boxshadow]
 image::creating-pipelines/new-pipeline-button.png['New Pipeline Button',width=50%]
@@ -82,7 +82,7 @@ NOTE: This process allows your Jenkins user to access the repositories that your
 Select the *Create Pipeline* option.
 
 Blue Ocean scans your local repository's branches for a `Jenkinsfile` and starts a Pipeline run for each branch containing a `Jenkinsfile`.
-If Blue Ocean does not find a `Jenkinsfile` you are prompted to create one through the link:../pipeline-editor[Pipeline editor].
+If Blue Ocean does not find a `Jenkinsfile` you are prompted to create one through the xref:blueocean:pipeline-editor.adoc[Pipeline editor].
 
 
 === For a repository on GitHub
@@ -144,7 +144,7 @@ image::creating-pipelines/choose-a-repository.png['Choose a repository',width=70
 . Click *Create Pipeline*.
 
 Blue Ocean scans your local repository's branches for a `Jenkinsfile` and starts a Pipeline run for each branch containing a `Jenkinsfile`.
-If Blue Ocean does not find a `Jenkinsfile`, you are prompted to create one through the link:../pipeline-editor[Pipeline editor].
+If Blue Ocean does not find a `Jenkinsfile`, you are prompted to create one through the xref:blueocean:pipeline-editor.adoc[Pipeline editor].
 
 NOTE: Under the hood, a Pipeline project created through Blue Ocean is actually a "multibranch Pipeline."
 Therefore, Jenkins looks for the presence of at least one Jenkinsfile in any branch of your repository.
@@ -196,7 +196,7 @@ image::creating-pipelines/choose-a-repository.png['Choose a repository',width=70
 . Click *Create Pipeline*. +
 
 Blue Ocean scans your local repository's branches for a `Jenkinsfile` and starts a Pipeline run for each branch containing a `Jenkinsfile`.
-If Blue Ocean does not find a `Jenkinsfile`, you are prompted to create one through the link:../pipeline-editor[Pipeline editor].
+If Blue Ocean does not find a `Jenkinsfile`, you are prompted to create one through the xref:blueocean:pipeline-editor.adoc[Pipeline editor].
 
 NOTE: Under the hood, a Pipeline project created through Blue Ocean is actually a "multibranch Pipeline."
 Therefore, Jenkins looks for the presence of at least one Jenkinsfile in any branch of your repository.

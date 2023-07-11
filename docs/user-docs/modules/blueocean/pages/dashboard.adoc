@@ -15,7 +15,7 @@ image::dashboard/overview.png[Overview of the Blue Ocean Dashboard,role=center,w
 
 == Navigation bar
 
-The Dashboard includes the blue link:../getting-started#navigation-bar[navigation bar] along the top of the interface.
+The Dashboard includes the blue xref:getting-started:index.adoc#navigation-bar[navigation bar] along the top of the interface.
 
 The bar is divided into two sections:
 
@@ -26,7 +26,7 @@ The bar is divided into two sections:
 When viewing the Dashboard, the navigation bar's contextual section includes:
 
 * *Search pipelines*: This field allows users to filter the link:#pipelines-list[Pipelines list] to match the text you enter into this field.
-* *New Pipeline*: This option begins the process of link:../creating-pipelines[creating a Pipeline].
+* *New Pipeline*: This option begins the process of xref:blueocean:creating-pipelines.adoc[creating a Pipeline].
 
 == Pipelines list
 
@@ -47,7 +47,7 @@ Selecting an item's &#9734; will toggle between:
 * Adding the default branch of the item's repository to your Favorites list, which is indicated by a solid &#9733;.
 * Removing the item's default branch from this list, which is indicated by an outlined &#9734;.
 
-Selecting an item in the Pipelines list will display that item's link:../activity[Activity View].
+Selecting an item in the Pipelines list will display that item's xref:blueocean:activity.adoc[Activity View].
 
 
 == Favorites list
@@ -59,7 +59,7 @@ This key information includes the current link:#run-status[run status] for an it
 This list also includes options to run or re-run the item on the indicated branch.
 
 You should only add an item or branch to your Favorites list if it needs regular monitoring.
-Adding an item's specific branch to your Favorites list can be done through the item's link:../activity[Activity View].
+Adding an item's specific branch to your Favorites list can be done through the item's xref:blueocean:activity.adoc[Activity View].
 
 Blue Ocean automatically adds branches and PRs to this list when they include a run that contains any modifications you have performed.
 
@@ -67,7 +67,7 @@ You can also manually remove items from your Favorites list by deselecting the s
 When there are no longer items in this list, the list is removed from the Dashboard.
 Selecting the favorite &#9733; for any item will bring the list back to your Dashboard.
 
-Selecting an item in the Favorites list opens the link:../pipeline-run-details[Pipeline run details] for the latest run on the branch or PR indicated.
+Selecting an item in the Favorites list opens the xref:blueocean:pipeline-run-details.adoc[Pipeline run details] for the latest run on the branch or PR indicated.
 
 [[pipeline-health]]
 === Health icons
@@ -75,7 +75,7 @@ Selecting an item in the Favorites list opens the link:../pipeline-run-details[P
 Blue Ocean represents the overall health of a Pipeline/item or one of its branches using weather icons. 
 These icons change depending on the number of recent builds that have passed.
 
-Health icons on the Dashboard represent overall Pipeline health, whereas the health icons in the link:../activity#branches[Branches tab of the Activity View] represent the overall health for each branch.
+Health icons on the Dashboard represent overall Pipeline health, whereas the health icons in the xref:blueocean:activity.adoc#branches[Branches tab of the Activity View] represent the overall health for each branch.
 
 .Health icons (best to worst)
 |===

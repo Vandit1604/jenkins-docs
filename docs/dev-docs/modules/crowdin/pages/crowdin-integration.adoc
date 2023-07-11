@@ -5,12 +5,12 @@ Crowdin is an agile translation tool, which provides a modern web interface to p
 
 This guide aims to provide guidance for project maintainers, how to prepare and setup their project, in order to use crowdin.jenkins.io.
 This guide is not needed for people, who want to translate plugins only and aren't plugin maintainers.
-Refer to link:../[this document] if you want to learn more about using Crowdin as a translator.
+Refer to xref:crowdin:index.adoc[this document] if you want to learn more about using Crowdin as a translator.
 
 == Prerequisites
 === Your plugin is internationalized
 Before integrating your project with Crowdin, you should have internationalized it.
-Internationalization documentation for Jelly, Java and Groovy can be found link:../../internationalization/[here].
+Internationalization documentation for Jelly, Java and Groovy can be found xref:internationalization:index.adoc[here].
 
 == Setting up a new project
 === Request the creation of a new project
@@ -50,4 +50,4 @@ Replace `/path/to/your/translations/` with the appropriate folder structure of y
 Leave the `_env` variables untouched.
 
 == References
-Read on link:../../crowdin/[how to use the crowdin web interface] to translate plugins.
+Read on xref:crowdin:index.adoc[how to use the crowdin web interface] to translate plugins.

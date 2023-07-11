@@ -8,7 +8,7 @@ You can find an overview of existing plugins on https://plugins.jenkins.io. Feel
 
 == Naming Convention
 
-Make sure your plugin follows link:../style-guides/#plugin-naming-convention[the naming conventions].
+Make sure your plugin follows xref:publishing:style-guides.adoc#plugin-naming-convention[the naming conventions].
 
 
 == License
@@ -24,7 +24,7 @@ We recommend use of the MIT license which is used for Jenkins core and most plug
 We recommend that plugins include user documentation so users understand quickly what the plugin does and how to use it.
 We recommend following the documentation-as-code approach and keeping the documentation directly in the plugin repository.
 
-See link:../documentation[Documentation] for more information.
+See xref:publishing:documentation.adoc[Documentation] for more information.
 
 == Signup Required
 
