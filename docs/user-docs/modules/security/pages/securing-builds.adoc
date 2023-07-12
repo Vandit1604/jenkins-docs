@@ -7,7 +7,7 @@ The following sections discuss potential issues and strategies to deal with them
 
 == Isolating Distributed Builds
 
-As discussed in link:../controller-isolation[Controller Isolation], Jenkins should be set up for _distributed builds_ to ensure build scripts are not executing on the controller, where they could access the Jenkins home directory or otherwise interfere with the operation of Jenkins.
+As discussed in xref:security:controller-isolation.adoc[Controller Isolation], Jenkins should be set up for _distributed builds_ to ensure build scripts are not executing on the controller, where they could access the Jenkins home directory or otherwise interfere with the operation of Jenkins.
 
 An additional concern is that builds need to be isolated from each other:
 While simple Jenkins instances building a single project may be able to operate securely with a single static agent, administrators of more complex instances need to consider whether builds need to be isolated from each other.
@@ -22,7 +22,7 @@ Even not assuming malicious intent, badly set up build scripts can accidentally 
 Solutions to this issue include the following:
 
 - Use https://plugins.jenkins.io/ui/search/?labels=cloud[cloud providers] that create a new agent for every build.
-- Plugins such as {plugin}job-restrictions[Job Restrictions Plugin] limit which jobs can be run on certain nodes.
+- Plugins such as {plugin}/job-restrictions[Job Restrictions Plugin] limit which jobs can be run on certain nodes.
 
 
 == Pull Request Abuse
@@ -47,4 +47,4 @@ Strategies for dealing with this include:
 Build scripts and tools invoked during the build may change behavior depending on environment variables defined for the build.
 These variables can come from various sources, such as build parameters, predefined agent environment variables, files read from the workspace and injected into the environment, etc.
 
-link:../environment-variables[Handling Environment Variables] discusses this topic in detail, including solutions.
+xref:security:environment-variables.adoc[Handling Environment Variables] discusses this topic in detail, including solutions.

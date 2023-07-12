@@ -7,35 +7,35 @@ This feature is not a part of the Jenkins core, but it is supported through plug
 
 There are several plugins that provide built-in themes, the most popular are
 
-* {plugin}dark-theme[Dark Theme Plugin] -
+* {plugin}/dark-theme[Dark Theme Plugin] -
   provides a dark theme for Jenkins.
   Supports configuration as code to select the theme configuration.
-* {plugin}material-theme[Material Theme Plugin] -
+* {plugin}/material-theme[Material Theme Plugin] -
   port of Afonso F's link:http://afonsof.com/jenkins-material-theme/[Jenkins material theme] to use Theme Manager.
-* {plugin}solarized-theme[Solarized Theme Plugin] -
+* {plugin}/solarized-theme[Solarized Theme Plugin] -
   provides Solarized (light and dark) themes.
 
-Installing any of these will also install their common dependency: the {plugin}theme-manager[Theme Manager Plugin].
+Installing any of these will also install their common dependency: the {plugin}/theme-manager[Theme Manager Plugin].
 This plugin allows administrators to set the default theme for a Jenkins installation via _Manage Jenkins > System > Built-in Themes_
 and users can set their preferred theme in their personal settings.
-You can also configure this plugin using {plugin}configuration-as-code[Configuration-as-Code Plugin].
+You can also configure this plugin using {plugin}/configuration-as-code[Configuration-as-Code Plugin].
 See the plugin documentation for more details.
 
 == Using custom themes
 
-To be able to fully customize Jenkins appearance you can install the {plugin}simple-theme-plugin[Simple Theme Plugin].
+To be able to fully customize Jenkins appearance you can install the {plugin}/simple-theme-plugin[Simple Theme Plugin].
 It allows customizing the Jenkins UI by providing custom CSS and Javascript files.
 It also supports replacing the Favicon.
 
 To configure a theme, you can go to _Manage Jenkins > System > Theme_ and enter the URL of your stylesheet and/or Javascript file.
-You can also configure this plugin using {plugin}configuration-as-code[Configuration-as-Code Plugin].
+You can also configure this plugin using {plugin}/configuration-as-code[Configuration-as-Code Plugin].
 See the plugin documentation for the detailed usage guidelines and links to sample themes.
 
 === Customizing the login screen
 
 Since Jenkins 2.128 themes configured using Simple Theme Plugin do not allow you to customize the login screen
 (link:/blog/2018/06/27/new-login-page/[announcement]).
-To customize the login screen you can install the {plugin}login-theme[Login Theme Plugin].
+To customize the login screen you can install the {plugin}/login-theme[Login Theme Plugin].
 
 
 == Themes support policy

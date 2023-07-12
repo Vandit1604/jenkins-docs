@@ -48,7 +48,7 @@ correctly if you configured the response rewriting correctly), which then return
 
 This error message indicates that this test is failing - and the most
 likely cause is that the response rewriting is misconfigured.
-See the  link:../reverse-proxy-configuration-with-jenkins/[configuration examples] for additional tips about
+See the  xref:system-administration:reverse-proxy-configuration.adoc[configuration examples] for additional tips about
 configuring a reverse proxy.
 
 Be sure to set the `+X-Forwarded-Proto+` header if your reverse proxy is

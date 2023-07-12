@@ -12,7 +12,7 @@ By default, Jenkins serves files that could come from less trusted sources with 
 This default prevents all JavaScript and other active elements, and only allows CSS and images served from other files in Jenkins.
 
 While this is safe, it also prevents a lot of useful functionality from working, such as rich, dynamic HTML reports created during builds.
-It is possible to link:../configuring-content-security-policy/[configure Content-Security-Policy].
+It is possible to xref:security:configuring-content-security-policy.adoc[configure Content-Security-Policy].
 This is often a difficult tradeoff between functionality and security, so should only be done with great care.
 
 == Resource Root URL

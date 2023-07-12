@@ -1,6 +1,6 @@
 = Getting started with Pipeline
 
-As mentioned link:../[previously], Jenkins Pipeline is a suite of
+As mentioned xref:pipeline:index.adoc[previously], Jenkins Pipeline is a suite of
 plugins that supports implementing and integrating continuous delivery pipelines
 into Jenkins. Pipeline provides an extensible set of tools for modeling
 simple-to-complex delivery pipelines "as code" via the Pipeline DSL.
@@ -20,8 +20,8 @@ To use Jenkins Pipeline, you will need:
 * Pipeline plugin,
   footnote:pipeline[link:https://plugins.jenkins.io/workflow-aggregator[Pipeline plugin]]
   which is installed as part of the "suggested plugins" (specified when running
-  through the link:../../installing/linux/#setup-wizard[Post-installation setup wizard]
-  after link:../../installing[installing Jenkins]).
+  through the xref:installing-jenkins:linux.adoc#setup-wizard[Post-installation setup wizard]
+  after xref:installing-jenkins:index.adoc[installing Jenkins]).
 
 Read more about how to install and manage plugins in
 xref:managing:plugins.adoc[Managing Plugins].
@@ -30,7 +30,7 @@ xref:managing:plugins.adoc[Managing Plugins].
 == Defining a Pipeline
 
 Both
-link:../#declarative-versus-scripted-pipeline-syntax[Declarative and Scripted Pipeline]
+xref:pipeline:index.adoc#declarative-versus-scripted-pipeline-syntax[Declarative and Scripted Pipeline]
 are DSLs footnote:dsl[] to describe portions of your software delivery
 pipeline. Scripted Pipeline is written in a limited form of
 link:http://groovy-lang.org/semantics.html[Groovy syntax].
@@ -63,7 +63,7 @@ video::TiTrcFEsj7A[youtube,width=800,height=420]
 === Through Blue Ocean
 
 If you are new to Jenkins Pipeline, the Blue Ocean UI helps you
-link:../../blueocean/creating-pipelines[set up your Pipeline project], and
+xref:blueocean:creating-pipelines.adoc[set up your Pipeline project], and
 automatically creates and writes your Pipeline (i.e. the `Jenkinsfile`) for you
 through the graphical Pipeline editor.
 
@@ -73,10 +73,10 @@ control repository. Therefore, any changes you make to the `Jenkinsfile` via
 Blue Ocean's Pipeline editor are automatically saved and committed to source
 control.
 
-Read more about Blue Ocean in the link:../../blueocean[Blue Ocean] chapter and
-link:../../blueocean/getting-started[Getting started with Blue Ocean] page.
+Read more about Blue Ocean in the xref:blueocean:index.adoc[Blue Ocean] chapter and
+xref:blueocean:getting-started.adoc[Getting started with Blue Ocean] page.
 
-include::./blueocean/_blue-ocean-status.adoc[]
+include::blueocean:partial$_blue-ocean-status.adoc[]
 
 === Through the classic UI
 
@@ -319,8 +319,8 @@ video::gcUORgHuna4[youtube,width=800,height=420]
 
 While the Snippet Generator helps with generating steps for a Scripted
 Pipeline or for the `steps` block in a `stage` in a Declarative Pipeline, it
-does not cover the link:../syntax#declarative-sections[sections] and
-link:../syntax#declarative-directives[directives] used to define a Declarative Pipeline.
+does not cover the xref:pipeline:syntax.adoc#sections[sections] and
+xref:pipeline:syntax.adoc#directives[directives] used to define a Declarative Pipeline.
 The "Declarative Directive Generator" utility helps with that.
 Similar to the <<snippet-generator>>, the Directive Generator allows you
 to choose a Declarative directive, configure it in a form, and generate the

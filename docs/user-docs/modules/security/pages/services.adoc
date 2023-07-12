@@ -11,7 +11,7 @@ Only very commonly installed plugins are considered below.
 The web UI served via HTTP (or HTTPS), by default on port 8080.
 Sometimes Jenkins is running behind a reverse proxy that may customize or filter requests and responses.
 
-For an overview of the URLs accessible to users without any permissions in Jenkins, see link:../access-control[Access Control].
+For an overview of the URLs accessible to users without any permissions in Jenkins, see xref:security:access-control.adoc[Access Control].
 // TODO that should be moved here.
 
 == TCP Agent Listener Port
@@ -68,7 +68,7 @@ For the latter, the public keys can be stored in Jenkins users' profiles.
 This SSH server does not provide a regular OS shell once logged in.
 Instead, it provides a shell-like interface for the link:/doc/book/managing/cli/[Jenkins CLI].
 
-Additionally, some plugins may provide features that require the SSH server to be enabled, like the {plugin}git-server[GIT server] Plugin.
+Additionally, some plugins may provide features that require the SSH server to be enabled, like the {plugin}/git-server[GIT server] Plugin.
 
 This service is disabled by default.
 
