@@ -41,7 +41,7 @@ Since plugin POM 1.596, Jelly files are required to escape variables by default,
 Therefore it is strongly recommended to use at least that version of the plugin parent POM to prevent accidental XSS vulnerabilities.
 
 It's recommended to always use the newest available 2.x or newer plugin parent POM.
-link:../../plugin-development/updating-parent[Learn more.]
+xref:plugin-development:updating-parent.adoc[Learn more.]
 
 === Escaping and Localized Expressions
 

@@ -81,7 +81,7 @@ Plugins with the `pipeline` label should be significant contributors to the Jenk
 
 link:https://wiki.jenkins.io[Jenkins Wiki] became read-only in November, 2019.
 Requests to plugin documentation pages on the wiki now redirect to the https://plugins.jenkins.io[plugins site].
-See link:../wiki-page[this page] for more information.
+See xref:publishing:wiki-page.adoc[this page] for more information.
 It also include Wiki=>GitHub migration guidelines.
 
 === Referencing the documentation page from the project file
@@ -168,4 +168,4 @@ See the link:https://github.com/jenkinsci/git-plugin/blob/master/README.adoc#int
 == References
 
 - link:https://plugins.jenkins.io/[Plugin site]
-- link:../plugin-site/[Plugin site documentation]
+- xref:publishing:plugin-site.adoc[Plugin site documentation]

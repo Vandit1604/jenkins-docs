@@ -18,7 +18,7 @@ link:https://docs.docker.com/get-started/[Docker Getting Started Guide].
 Pipeline is designed to easily use
 link:https://docs.docker.com/[Docker]
 images as the execution environment for a single
-link:../../glossary/#stage[Stage]
+xref:glossary:index.adoc#stage[Stage]
 or the entire Pipeline. Meaning that a user can define the tools required for
 their Pipeline, without having to manually configure agents.
 Practically any tool which can be
@@ -121,7 +121,7 @@ Pipeline supports adding custom arguments which are passed
 to Docker, allowing users to specify custom
 link:https://docs.docker.com/engine/tutorials/dockervolumes/[Docker Volumes]
 to mount, which can be used for caching data on the
-link:../../glossary/#agent[agent]
+xref:glossary:index.adoc#agent[agent]
 between Pipeline runs. The following example will cache `~/.m2` between
 Pipeline runs utilizing the
 link:https://hub.docker.com/_/maven/[`maven` container],
@@ -263,14 +263,14 @@ video::Pi2kJ2RJS50[youtube, width=852, height=480]
 === Specifying a Docker Label
 
 By default, Pipeline assumes that _any_ configured
-link:../../glossary/#agent[agent] is capable of running Docker-based Pipelines.
+xref:glossary:index.adoc#agent[agent] is capable of running Docker-based Pipelines.
 For Jenkins environments which have macOS, Windows, or other agents, which are
 unable to run the Docker daemon, this default setting may be problematic.
 Pipeline provides a global option in the **Manage Jenkins** page, and on
 the
-link:../../glossary/#folder[Folder]
+xref:glossary:index.adoc#folder[Folder]
 level, for specifying which agents (by
-link:../../glossary/#label[Label])
+xref:glossary:index.adoc#label[Label])
 to use for running Docker-based Pipelines.
 
 image::configure-docker-label.png[Configuring the Pipeline Docker Label]
