@@ -5,15 +5,15 @@ Groovy scripts _in_ Jenkins. These scripting capabilities are provided by:
 
 * <<script-console#, Script Console>>.
 * <<../pipeline#, Jenkins Pipeline>>.
-* The {plugin}email-ext[Extended Email plugin].
-* The {plugin}groovy[Groovy plugin] - when using the "Execute system Groovy
+* The {plugin}/email-ext[Extended Email plugin].
+* The {plugin}/groovy[Groovy plugin] - when using the "Execute system Groovy
   script" step.
-* The {plugin}job-dsl[JobDSL plugin] as of version 1.60 and later.
+* The {plugin}/job-dsl[JobDSL plugin] as of version 1.60 and later.
 
 To protect Jenkins from execution of malicious scripts,
 these plugins execute user-provided scripts in a <<groovy-sandbox>>
 that limits the internal APIs that are accessible.
-This protection is provided by the {plugin}script-security[Script Security plugin].
+This protection is provided by the {plugin}/script-security[Script Security plugin].
 As soon as an unsafe method is used in any of the scripts, the administrator can use
 the "In-process Script Approval" action appears in *Manage Jenkins*
 to allow the unsafe method.
@@ -23,16 +23,16 @@ image::manage-inprocess-script-approval.png["Entering the In-process Script Appr
 
 == Getting Started
 
-The {plugin}script-security[Script Security plugin] is installed automatically
+The {plugin}/script-security[Script Security plugin] is installed automatically
 by the
-link:../../getting-started/installing#post-install-setup-wizard[Post-install Setup Wizard],
+xref:installing-jenkins:linux.adoc#setup-wizard[Post-install Setup Wizard],
 although initially no additional scripts or operations are approved for use.
 
 [IMPORTANT]
 ====
 Older versions of this plugin may not be safe to use. Please review the
-security warnings listed on {plugin}script-security[the Script Security plugin page]
-in order to ensure that the {plugin}script-security[Script Security plugin] is
+security warnings listed on {plugin}/script-security[the Script Security plugin page]
+in order to ensure that the {plugin}/script-security[Script Security plugin] is
 up to date.
 ====
 

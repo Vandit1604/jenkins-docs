@@ -15,7 +15,7 @@ provides a number of immediate benefits:
   footnote:[https://en.wikipedia.org/wiki/Single_Source_of_Truth]
   for the Pipeline, which can be viewed and edited by multiple members of the project.
 
-Pipeline supports link:../syntax[two syntaxes], Declarative (introduced in
+Pipeline supports xref:pipeline:syntax.adoc[two syntaxes], Declarative (introduced in
 Pipeline 2.5) and Scripted Pipeline. Both of which support building continuous
 delivery pipelines. Both may be used to define a Pipeline in either the web UI
 or with a `Jenkinsfile`, though it's generally considered a best practice to
@@ -183,7 +183,7 @@ link:https://plugins.jenkins.io/?labels=report[number of plugins].
 At a fundamental level, when there are test failures, it is useful to have
 Jenkins record the failures for reporting and visualization in the web UI.  The
 example below uses the `junit` step, provided by the
-{plugin}junit[JUnit plugin].
+{plugin}/junit[JUnit plugin].
 
 In the example below, if tests fail, the Pipeline is marked "unstable", as
 denoted by a yellow ball in the web UI. Based on the recorded test reports,
@@ -421,9 +421,9 @@ pipeline {
 === Handling credentials
 
 Credentials
-link:../../using/using-credentials#configuring-credentials[configured in
+xref:using-jenkins:using-credentials.adoc#configuring-credentials[configured in
 Jenkins] can be handled in Pipelines for immediate use. Read more about using
-credentials in Jenkins on the link:../../using/using-credentials[Using
+credentials in Jenkins on the xref:using-jenkins:using-credentials.adoc[Using
 credentials] page.
 
 .The correct way to handle credentials in Jenkins

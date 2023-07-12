@@ -26,7 +26,7 @@ important information for your Jenkins instance in its _$JENKINS_HOME_ folder
 (configurations, build histories and plugins).
 
 More information on sizing controllers based on organizational needs can be found in
-the link:../architecting-for-scale[Architecting for Scale] section.
+the xref:scaling:architecting-for-scale.adoc[Architecting for Scale] section.
 
 [[memory-requirements-for-the-controller]]
 === Memory Requirements for the Controller
@@ -53,9 +53,9 @@ The backbone of Jenkins is its ability to orchestrate builds, but installations
 which do not leverage Jenkins' distributed builds architecture are artificially
 limiting the number of builds that their controllers can orchestrate. More
 information on
-link:../architecting-for-scale#distributed-builds-architecture[a more distributed architecture]
+xref:scaling:architecting-for-scale.adoc#distributed-builds-architecture[a more distributed architecture]
 can be found in the
-link:../architecting-for-scale[Architecting for Scale] section.
+xref:scaling:architecting-for-scale.adoc[Architecting for Scale] section.
 
 === Requirements for a Machine to be an agent
 
@@ -82,4 +82,4 @@ Containers and virtualization are also popular tools for creating generic agent
 environments.
 
 More information on estimating the number of executors needed in a given
-environment can be found in the link:../architecting-for-scale[Architecting for Scale] section.
+environment can be found in the xref:scaling:architecting-for-scale.adoc[Architecting for Scale] section.
