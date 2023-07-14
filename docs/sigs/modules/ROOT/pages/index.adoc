@@ -1,16 +1,60 @@
-image::https://raw.githubusercontent.com/jenkins-infra/jenkins.io/d64ddebd0a7d02772c10a77f1f4890b93b6961e7/content/images/logos/jenkins/Jenkins-stop-the-war.svg["Stop the war",200px,float=left]
-= Jenkins
+= Jenkins Special Interest Groups
 
-== This is tutorial
+This page lists active Jenkins Special Interest Groups (SIGs).
+See https://github.com/jenkinsci/jep/tree/master/jep/4[JEP-4] for more information about SiGs and the process for creating new ones.
 
-Build great things at any scale
+== Advocacy and Outreach
 
-The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
+This special interest group offers a venue for discussions around advocacy and outreach in the Jenkins community. Topics covered in this sig may include jenkins.io, events, processes, how to attract new people to the Jenkins project, and how to make the Jenkins community an open and inclusive organization that people want to be part of.
 
-Ukraine We stand with the people of Ukraine. Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the 
-link:https://www.icrc.org/[International Committee of the Red Cross]
+* https://groups.google.com/g/jenkins-advocacy-and-outreach-sig[Mailist List]
+image:https://img.shields.io/gem/v/jekyll-asciidoc.svg[Gitter | Join Chat, link=https://app.gitter.im/#/room/#jenkinsci_advocacy-and-outreach-sig:gitter.im]
+++++
+<a href="https://app.gitter.im/#/room/#jenkinsci_advocacy-and-outreach-sig:gitter.im" alt="Gitter Chat">
+        <img src="https://img.shields.io/github/Gitter/badges/shields" /></a>
+++++
 
-+++
-<button>Documentation</button> <button>Download</button>
-+++
+== Documentation
 
+This special interest group improves Jenkins use and adoption through documentation. The SIG encourages, creates, and reviews documentation contributions and improves documentation with contributors and external communities.
+
+* https://app.gitter.im/#/room/#jenkins/docs:matrix.org[Gitter | Join Chat]
+++++
+<a href="https://app.gitter.im/#/room/#jenkins/docs:matrix.org" alt="Gitter Chat">
+        <img src="https://img.shields.io/github/Gitter/badges/shields" /></a>
+++++
+
+xref:docs:index.adoc[*Learn More*]
+
+== Google Summer of Code
+
+This special interest group organizes Google Summer of Code program within the Jenkins organization. The scope of work includes coordinating GSoC activities and working with potentials mentors and contributors in order to form GSoC project teams.
+
+* https://app.gitter.im/#/room/#jenkinsci_gsoc-sig:gitter.im[Gitter | Join Chat]
+++++
+<a href="https://app.gitter.im/#/room/#jenkinsci_gsoc-sig:gitter.im" alt="Gitter Chat">
+        <img src="https://img.shields.io/github/Gitter/badges/shields" /></a>
+++++
+xref:gsoc:index.adoc[*Learn More*]
+
+== Platform
+
+This special interest group offers a venue for all kinds of platform support discussions: Java, Operating Systems, Architectures, Docker, Packaging, Web Containers, etc. The SIG works on defining platform support policies, coordinating platform support efforts with contributors and external communities, and reviewing proposals in the area.
+
+* https://app.gitter.im/#/room/#jenkinsci_platform-sig:gitter.im[Gitter | Join Chat]
+++++
+<a href="https://app.gitter.im/#/room/#jenkinsci_platform-sig:gitter.im" alt="Gitter Chat">
+        <img src="https://img.shields.io/github/Gitter/badges/shields" /></a>
+++++
+xref:platform:index.adoc[*Learn More*]
+
+== User Experience
+
+The User Experience SIG focuses on improving the Jenkins' user interface and user experience. The SIG seeks regular feedback from the community on the current UI and UX and new designs proposed by SIG members and others. We will discuss alternatives, identify compromises, and test implementations to improve the Jenkins UI / UX.
+
+* https://app.gitter.im/#/room/#jenkinsci/ux-sig:matrix.org[Gitter | Join Chat]
+++++
+<a href="https://app.gitter.im/#/room/#jenkinsci/ux-sig:matrix.org" alt="Gitter Chat">
+        <img src="https://img.shields.io/github/Gitter/badges/shields" /></a>
+++++
+xref:ux:index.adoc[*Learn More*]

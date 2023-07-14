@@ -16,6 +16,8 @@ links:
   draft: https://docs.google.com/document/d/1Gqz4LyU5sw6I50OdAVsQSW_WPNDlvXg4Ic9NdcYj4Ts
 ---
 
+= Multibranch Pipeline support for GitLab SCM
+
 Currently GitLab Plugin does not support Multibranch Pipeline jobs. The underlying API does
 not implement calls to fetch Merge Requests during builds. Other problems with this plugin is
 doesn't follow conventional SCM plugin design, doesn't support folder org, doesn't have separate

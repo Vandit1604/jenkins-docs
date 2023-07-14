@@ -15,18 +15,20 @@ links:
   github: "jenkinsci/code-coverage-api-plugin"
 ---
 
-=== Overview
+= GSoC 2018. Code Coverage API Plugin
+
+== Overview
 
 There are a lot of plugins which currently implement code coverage, however, they all use similar config, charts, and content. So it will be much better if we can have an API plugin which does the most repeated work for those plugins and offers a unified APIs which can be consumed by other plugins and external tools.
 
-=== Supported Tools
+== Supported Tools
 * Embedded tools
 ** JaCoCo
 * Other plugins as an Extension of Code Coverage API plugin
 ** Cobertura (https://github.com/jenkinsci/cobertura-plugin[Cobertura Plugin])
 ** llvm-cov (https://github.com/jenkinsci/llvm-cov-plugin[llvm-cov Plugin])
 
-=== Architecture
+== Architecture
 
 This API plugin will mainly do these things:
 
@@ -42,7 +44,7 @@ So, we can implement code coverage publishing by simply writing an adapter, and 
 image:/images/post-images/code-coverage-api/architecture.png[title="Code Coverage API Plugin Architecture" role="center"]
 
 
-=== Features
+== Features
 
 * Modernized coverage chart
 * Coverage trend
@@ -55,7 +57,7 @@ image:/images/post-images/code-coverage-api/architecture.png[title="Code Coverag
 
 You can see more details in our link:/blog/2018/08/17/code-coverage-api-plugin-1/[1.0 release blog post]
 
-=== First Phase Summary
+== First Phase Summary
 
 * Prototype based on Cobertura plugin data model.
 * Integrate other Java code coverage tools.
@@ -66,7 +68,7 @@ You can see more details in our link:/blog/2018/08/17/code-coverage-api-plugin-1
 * Modernize report.(https://issues.jenkins.io/browse/JENKINS-51368[JENKINS-51386])
 * Unit tests.(https://issues.jenkins.io/browse/JENKINS-51611[JENKINS-51611])
 
-=== Second Phase Summary
+== Second Phase Summary
 
 * Add source code navigation(https://issues.jenkins.io/browse/JENKINS-51988[JENKINS-51988])
 * Prototype integration between Code Coverage API and Cobertura plugin(https://issues.jenkins.io/browse/JENKINS-51424[JENKINS-51424])
@@ -76,7 +78,7 @@ You can see more details in our link:/blog/2018/08/17/code-coverage-api-plugin-1
 * Refactoring the configuration page to make it more user-friendly.(https://issues.jenkins.io/browse/JENKINS-51927[JENKINS-51927])
 * Add support of llvm-cov Report converter.(https://issues.jenkins.io/browse/JENKINS-51736[JENKINS-51736])
 
-=== Third Phase Summary
+== Third Phase Summary
 
 * Supporting combining reports within a build(e.g. after parallel() execution in Pipeline). (https://issues.jenkins.io/browse/JENKINS-51926[JENKINS-51926])
 * Make Code Coverage API plugin more generic. (https://issues.jenkins.io/browse/JENKINS-52839[JENKINS-52839])
@@ -87,12 +89,12 @@ You can see more details in our link:/blog/2018/08/17/code-coverage-api-plugin-1
 * Writing documentation.
 * Releasing the plugin.
 
-=== Future tasks
+== Future tasks
 * Implement more coverage tools (https://issues.jenkins.io/browse/JENKINS-52467[JENKINS-52467], https://issues.jenkins.io/browse/JENKINS-51469[JENKINS-52469] and etc.)
 * Make the UI extensible (https://issues.jenkins.io/browse/JENKINS-51738[JENKINS-51738])
 * Improve performance (https://issues.jenkins.io/browse/JENKINS-52982[JENKINS-52982])
 
-=== Phase 3 Presentation Slides
+== Phase 3 Presentation Slides
 ++++
 <center>
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vThjuFZCChtXhHOKINDxuC4Sfbv0JtHDN9GqWZFe7DfmbEOPZOk-t8DYZJSDEMeMWFpLeTqOAZgj0pB/embed?start=false&loop=false&delayms=3000" frameborder="0" width="720" height="434" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
@@ -101,14 +103,14 @@ You can see more details in our link:/blog/2018/08/17/code-coverage-api-plugin-1
 
 ++++
 
-=== Phase 3 Presentation Video
+== Phase 3 Presentation Video
 ++++
 <center>
   <iframe width="720" height="434" src="https://www.youtube.com/embed/GGEtN4nbtng" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </center>
 ++++
 
-=== Useful Links
+== Useful Links
 
 * link:https://docs.google.com/document/d/10ko6W07pIpRqgYcv2Eq6tZwSg1UUybzJ9AsMZszfiXA/edit#heading=h.jv1f2icy8a5j[Project Proposal]
 * link:/blog/2018/06/13/code-coverage-api-plugin/[Introduction Blogpost]

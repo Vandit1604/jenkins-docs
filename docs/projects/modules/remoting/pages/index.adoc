@@ -11,14 +11,13 @@ links:
   googlegroup: 'jenkinsci-dev'
 ---
 
+= Jenkins Remoting
+
 Jenkins Remoting is a library, and executable Java archive, which implements the communication layer in Jenkins. 
 This includes the TCP-based communication protocols, remote procedure calls, class loading, data streaming, etc. 
 Currently Remoting is primarily used in communications between the Jenkins controller and Jenkins agents.
 
 The Remoting sub-project includes the Remoting library itself, package for agents, and a number of Remoting-specific plugins and core modules.
-
-
-:toc:
 
 == Remoting Usage in Jenkins
 
