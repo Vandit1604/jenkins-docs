@@ -1,31 +1,22 @@
----
-layout: sig
-title: "Google Summer of Code"
-section: sigs
-sigId: "platform"
-logo: /images/gsoc/jenkins-gsoc-logo_small.png
-opengraph:
-  image: /images/gsoc/jenkins-gsoc-logo_small.png
-tags:
-  - gsoc
-leads:
-- "alyssat"
-- "jmMeessen"
-- "krisstern"
-participants:
-- "kwhetstone"
-- "markewaite"
-links:
-  gitter: "jenkinsci_gsoc-sig:gitter.im"
-  forum: "gsoc"
-overview: >
-  This special interest group organizes Google Summer of Code program within the Jenkins organization.
-  The scope of work includes coordinating GSoC activities and working with potentials mentors and contributors
-  in order to form GSoC project teams.
----
+= Google Summer of Code
 
 == Overview
 This special interest group organizes Google Summer of Code program within the Jenkins organization. The scope of work includes coordinating GSoC activities and working with potentials mentors and contributors in order to form GSoC project teams.
+
+xref:ROOT:index.adoc[(Back to List of Jenkins Special Interest Groups )]
+
+== Members
+
+[avatar]
+* Leads:
+image:images:avatars:alyssat.jpg[,width=30,height=30] Alyssa Tong
+image:images:avatars:jmMeessen.jpg[,width=30,height=30] Jean-Marc Meessen
+image:images:avatars:krisstern.png[,width=30,height=30] Kris Stern
+
+[avatar]
+* Participants:
+image:images:avatars:markewaite.jpg[,width=30,height=30] Mark Waite
+image:images:avatars:no-image.svg[,width=30,height=30] Kristin Whetstone
 
 This SIG focuses on link:https://summerofcode.withgoogle.com/[Google Summer of Code] and other similar events.
 The group drives the link:/projects/gsoc[GSoC sub-project] within the Jenkins organization.

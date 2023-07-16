@@ -1,27 +1,21 @@
----
-layout: gsodproject
-title: "Document Jenkins on Kubernetes"
-goal: "Create a new Kubernetes Volume which would describe the concepts, techniques, and choices for Kubernetes users running Jenkins."
-category: Documentation
-year: 2020
-sig: jenkins-documentation
-status: "Active"
-technicalWriter: zaycodes
-mentors:
-- oleg_nenashev
-- markewaite
-- kwhetstone
-- markyjackson-taulia
-links:
-  gitter: jenkins/docs:matrix.org
-  draft: https://docs.google.com/document/d/1zTEKtOp2i1K2fw5RQ_a_KVOB2z0gz9987NYzTnIS6G8/edit?usp=sharing
-  idea: /sigs/docs/#jenkins-on-kubernetes
-tags:
-- gsod2020
-- kubernetes
-- documentation
-- guide
----
+= Document Jenkins on Kubernetes
+
+*Goal*: Create a new Kubernetes Volume which would describe the concepts, techniques, and choices for Kubernetes users running Jenkins.
+
+*Status*: Active
+
+== Team
+
+[avatar]
+* Technical Writer:
+image:images:avatars:zaycodes.jpg[,width=30,height=30] Zainab Daodu
+
+[avatar]
+* Mentor(s):
+image:images:avatars:oleg_nenashev.png[,width=30,height=30] Oleg Nenashev
+image:images:avatars:markewaite.jpg[,width=30,height=30] Mark Waite
+image:images:avatars:no-image.svg[,width=30,height=30] Kristin Whetstone
+image:images:avatars:markyjackson-taulia.png[,width=30,height=30] Marky Jackson
 
 === Abstract
 
@@ -48,7 +42,7 @@ Hence fewer integration issues.
 This saves both time and money over the lifespan of a project.
 
 The following reasons have made Jenkins on Kubernetes a popular theme for Jenkins users, 
-however, there’s currently no central location for documentation describing Jenkins on Kubernetes, 
+however, there`s currently no central location for documentation describing Jenkins on Kubernetes, 
 thereby making it difficult for Jenkins on Kubernetes users to navigate and find information. 
 This project would create a new Kubernetes Solutions page which would describe the concepts, 
 techniques, and choices for Kubernetes users running Jenkins.
@@ -56,7 +50,7 @@ techniques, and choices for Kubernetes users running Jenkins.
 === Current State
 
 There are a lot of presentations and articles about running Jenkins on Kubernetes, 
-however, there’s no central location for describing Jenkins on Kubernetes. 
+however, there`s no central location for describing Jenkins on Kubernetes. 
 This makes it difficult for:
 Jenkins on Kubernetes users to navigate and find informationTrack, 
 update and maintain information on Jenkins on Kubernetes. 

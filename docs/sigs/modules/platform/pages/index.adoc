@@ -1,19 +1,4 @@
----
-layout: sig
-title: "Platform"
-section: sigs
-sigId: "platform"
-logo: /images/logos/formal/256.png
-opengraph:
-  image: /images/logos/formal/formal.png
-tags:
-  - java
-  - windows
-  - docker
-  - linux
-  - platform_sig
-  - platform-sig
-  - platform
+= Platform
 leads:
 - "oleg_nenashev"
 - "markewaite"
@@ -30,20 +15,36 @@ participants:
 - "davidcurrie"
 - "alecharp"
 - "mramonleon"
-links:
-  gitter: "jenkinsci_platform-sig:gitter.im"
-  meetings: "/sigs/platform/#meetings"
-overview: >
-  This special interest group offers a venue for all kinds of platform support discussions:
-  Java, Operating Systems, Architectures, Docker, Packaging, Web Containers, etc.
-  The SIG works on defining platform support policies,
-  coordinating platform support efforts with contributors and external communities,
-  and reviewing proposals in the area.
----
 
 == Overview
 This special interest group offers a venue for all kinds of platform support discussions:
 Java, Operating Systems, Architectures, Docker, Packaging, Web Containers, etc. The SIG works on defining platform support policies, coordinating platform support efforts with contributors and external communities, and reviewing proposals in the area.
+
+xref:ROOT:index.adoc[(Back to List of Jenkins Special Interest Groups )]
+
+== Members
+
+[avatar]
+* Leads:
+image:images:avatars:oleg_nenashev.png[,width=30,height=30] Oleg Nenashev
+image:images:avatars:markewaite.jpg[,width=30,height=30] Mark Waite
+image:images:avatars:batmat.jpg[,width=30,height=30] Baptiste Mathus
+
+[avatar]
+* Participants:
+image:images:avatars:alecharp.jpg[,width=30,height=30] Adrien Lecharpentier
+image:images:avatars:slide_o_mix.jpg[,width=30,height=30] Alex Earl
+image:images:avatars:no-image.svg[,width=30,height=30] David Currie
+image:images:avatars:no-image.svg[,width=30,height=30] Devin Nusbaum
+image:images:avatars:no-image.svg[,width=30,height=30] Durgadas Kamath
+image:images:avatars:lnewman.jpeg[,width=30,height=30] Liam Newman\
+image:images:avatars:no-image.svg[,width=30,height=30] Nicolas De Loof
+image:images:avatars:no-image.svg[,width=30,height=30] Ramon Leon
+image:images:avatars:no-image.svg[,width=30,height=30] Robert Sandell
+image:images:avatars:no-image.svg[,width=30,height=30] Sam Van Oort
+image:images:avatars:tracymiranda.jpg[,width=30,height=30] Tracy Miranda
+
+== Description
 
 The special interest group offers a venue for all kinds of platform support discussions:
 Java, Operating Systems, Architectures, Docker, Packaging, Web Containers, etc.

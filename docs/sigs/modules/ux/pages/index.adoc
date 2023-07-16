@@ -1,33 +1,21 @@
----
-layout: sig
-title: "User Experience"
-section: sigs
-sigId: "ux"
-logo: /images/sigs/ux/logo.svg
-opengraph:
-  image: /images/sigs/ux/opengraph.svg
-tags:
-  - ux
-  - ui
-  - user_experience
-  - user_interface
-leads:
-- "notmyfault"
-- "janfaracik"
-- "uhafner"
-- "timja"
-links:
-  gitter: "jenkinsci/ux-sig:matrix.org"
-  meetings: "https://docs.google.com/document/d/1QttPwdimNP_120JukigKsRuBvMr34KZhVfsbgq1HFLM/edit?usp=sharing"
-  forum: "ux-sig"
-overview: >
-  The User Experience SIG focuses on improving the Jenkins' user interface and user experience.
-  The SIG seeks regular feedback from the community on the current UI and UX and new designs proposed by SIG members and others.
-  We will discuss alternatives, identify compromises, and test implementations to improve the Jenkins UI / UX.
----
+= User Experience
 
 == Overview
+
 The User Experience SIG focuses on improving the Jenkins' user interface and user experience. The SIG seeks regular feedback from the community on the current UI and UX and new designs proposed by SIG members and others. We will discuss alternatives, identify compromises, and test implementations to improve the Jenkins UI / UX.
+
+xref:ROOT:index.adoc[(Back to List of Jenkins Special Interest Groups )]
+
+== Members
+
+[avatar]
+* Leads:
+image:images:avatars:no-image.svg[,width=30,height=30] Alexander Brandes
+image:images:avatars:janfaracik.jpg[,width=30,height=30] Jan Faracik
+image:images:avatars:uhafner.jpg[,width=30,height=30] Ullrich Hafner
+image:images:avatars:timja.jpg[,width=30,height=30] Tim Jacomb
+
+== Description
 
 An overview of previous results of the Jenkins UX SIG is available in an link:https://docs.google.com/document/d/1J3HsxYdNPDZpFzCz6HWGcIhsY3urOXOZmiMiGR1D-ew/edit?usp=sharing[external document].
 Most of these results have been integrated into Jenkins core in the meantime.
