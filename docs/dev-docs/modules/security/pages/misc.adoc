@@ -10,7 +10,7 @@ This lets Jenkins plugins execute complex computations on the other end of such 
 
 Care needs to be taken to prevent users able to control agent processes from exploiting this and sending a malicious `Callable` to the controller for execution.
 
-Follow the instructions in the link:/doc/developer/security/remoting-callables/[Remoting Callables developer documentation] to implement `Callable` safely.
+Follow the instructions in the xref:security:remoting-callables.adoc[Remoting Callables developer documentation] to implement `Callable` safely.
 
 
 === `CrumbExclusion`

@@ -84,7 +84,7 @@ This is typically done with `<script>` tags, like so:
 alert("Hello, world!");
 </script>
 
-The guidelines in link:/doc/developer/security/xss-prevention/#passing-values-to-javascript[the documentation on XSS prevention] can be useful to pass arguments to JavaScript, or otherwise control its behavior dynamically.
+The guidelines in xref:xss-prevention.adoc#passing-values-to-javascript[the documentation on XSS prevention] can be useful to pass arguments to JavaScript, or otherwise control its behavior dynamically.
 
 You can generally use https://github.com/jenkinsci/stapler/blob/master/docs/jelly-taglib-ref.adoc#adjunct[Stapler adjuncts] to load files related to UI views and ensure they are loaded only once.
 

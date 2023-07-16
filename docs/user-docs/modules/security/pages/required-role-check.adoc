@@ -41,7 +41,7 @@ As of 2021-11-04, no plugins are known to be affected by this security hardening
 ====
 Not all plugins that implement an empty role check are negatively impacted by this security hardening.
 They may not require these callables to be sent from an agent to the controller for execution as part of their regular functionality.
-In those cases, it is still recommended to update the plugin as described link:/doc/developer/security/remoting-callables[in the developer documentation].
+In those cases, it is still recommended to update the plugin as described xref:security:remoting-callables.adoc[in the developer documentation].
 ====
 
 
@@ -53,7 +53,7 @@ While fixes for affected plugins are not yet available, administrators can allow
 ====
 Doing either will potentially allow attackers able to control an agent process to execute unsafe code on the Jenkins controller.
 It is recommended that individual callables are only allowed after careful review of their code to ensure they're not unsafe to execute.
-link:/doc/developer/security/remoting-callables[See the developer documentation] for considerations what constitutes unsafe `Callable` behavior.
+xref:security:remoting-callables.adoc[See the developer documentation] for considerations what constitutes unsafe `Callable` behavior.
 ====
 
 === Allow specific callables
@@ -91,4 +91,4 @@ hudson.remoting.ChannelBuilder.CALLABLES_CAN_IGNORE_ROLECHECKER = true
 
 == Fixing Plugins
 
-link:/doc/developer/security/remoting-callables[See the developer documentation] for advice how to change plugins to be compatible with this change while not creating a security vulnerability.
+xref:security:remoting-callables.adoc[See the developer documentation] for advice how to change plugins to be compatible with this change while not creating a security vulnerability.

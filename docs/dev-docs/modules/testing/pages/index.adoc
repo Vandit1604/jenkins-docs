@@ -71,7 +71,7 @@ The following list covers typical integration tests:
 (You will also need to specify ``<version>``s, unless you are using the link:https://github.com/jenkinsci/bom/blob/master/README.md[BOM].)
 
 ==== Depending on Other Plugins
-Any Jenkins plugins that you add as dependencies to your POM with `<scope>test</scope>` will be available in the Jenkins installations created while running test cases, or when using link:/doc/developer/tutorial/run/[`mvn hpi:run`].
+Any Jenkins plugins that you add as dependencies to your POM with `<scope>test</scope>` will be available in the Jenkins installations created while running test cases, or when using xref:plugin-tutorial:run.adoc[`mvn hpi:run`].
 
 You can also apply the link:https://javadoc.jenkins.io/component/jenkins-test-harness/?org/jvnet/hudson/test/recipes/WithPlugin.html[`@WithPlugin`] annotation to individual test cases, but this is rarely required.
 

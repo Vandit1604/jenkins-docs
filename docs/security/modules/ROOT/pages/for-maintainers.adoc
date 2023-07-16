@@ -156,8 +156,8 @@ In this case, three separate releases are now needed to cover users of Jenkins 2
 
 First, prepare the release branch:
 If there are unrelated, unreleased changes on the default branch, create a new branch based on the previous release.
-For plugins with link:/doc/developer/publishing/releasing-manually/[manual release process] this is the `prepare for next development iteration` commit.
-For plugins delivered with link:/doc/developer/publishing/releasing-cd/[JEP-229 CD automated releases]), it is the commit that got tagged as a release.
+For plugins with xref:publishing:releasing-manually/[manual release process] this is the `prepare for next development iteration` commit.
+For plugins delivered with xref:publishing:releasing-cd.adoc[JEP-229 CD automated releases]), it is the commit that got tagged as a release.
 
 [NOTE]
 If all unreleased changes are unlikely to introduce regressions, e.g., minor documentation fixes or similar, it's also reasonable to include those changes in the security fix.
@@ -184,8 +184,8 @@ Similar to when there are unreleased changes on the default branch, a new branch
 
 Create a new branch based on the release that the fix should be backported to:
 
-* For plugins with link:/doc/developer/publishing/releasing-manually/[manual release process] this is the `prepare for next development iteration` commit.
-* For plugins delivered with link:/doc/developer/publishing/releasing-cd/[JEP-229 CD automated releases]), it is the commit that got tagged as a release.
+* For plugins with xref:publishing:releasing-manually/[manual release process] this is the `prepare for next development iteration` commit.
+* For plugins delivered with xref:publishing:releasing-cd.adoc[JEP-229 CD automated releases]), it is the commit that got tagged as a release.
 
 IMPORTANT: If the plugin recently switched from manual releases to JEP-229 CD automated releases (or vice versa), each branch may require different procedures.
 
@@ -193,7 +193,7 @@ The branch is conventionally named something like `2.18.x` (if it's based on 2.1
 
 ====== Plugins with manual releases
 
-For plugins with link:/doc/developer/publishing/releasing-manually/[manual release process], you could set the version number used for releases from the backport branch at this point, for example:
+For plugins with xref:publishing:releasing-manually.adoc[manual release process], you could set the version number used for releases from the backport branch at this point, for example:
 
 [source]
 mvn versions:set -DnewVersion=2.18.1-SNAPSHOT -DgenerateBackupPoms=false
@@ -202,7 +202,7 @@ This is optional, as the version number can still be specified when staging.
 
 ====== Plugins with JEP-229 CD
 
-For plugins delivered with link:/doc/developer/publishing/releasing-cd/[JEP-229 CD automated releases], you also need to manually specify a custom version number for the backport branch.
+For plugins delivered with xref:publishing:releasing-cd.adoc[JEP-229 CD automated releases], you also need to manually specify a custom version number for the backport branch.
 Otherwise, the automatically generated, linearly increasing version number would not indicate the existence of a backport branch.
 
 Edit all applicable `pom.xml` files (usually just one) and add a prefix corresponding to the baseline version prefix to the `<version>`.footnote:[`mvn versions:set` does not work, it really needs to be done manually.]
@@ -301,4 +301,4 @@ Documentation (outside the plugin source code, e.g. in the Jenkins wiki or in Gi
 * link:/doc/developer/security/[Security Chapter in the Jenkins Developer Documentation]
 ** link:/doc/developer/security/secrets/[Storing Secrets]
 ** link:/doc/developer/security/form-validation/[Form Validation] (permission checks and CSRF protection)
-** link:/doc/developer/security/xss-prevention/[Preventing Cross-Site Scripting in Jelly views]
+** xref:xss-prevention.adoc[Preventing Cross-Site Scripting in Jelly views]

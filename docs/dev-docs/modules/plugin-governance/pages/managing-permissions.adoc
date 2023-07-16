@@ -6,7 +6,7 @@ There are 2 main permissions available to plugin contributors:
 * **GitHub permissions**. 
   It includes merging pull requests, push to the repositories, managing GitHub applications, etc.
   The effective list of permissions depends on the link:https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization[permission levels], see below.
-* **Release Permissions** which are needed to deploy releases to the link:/doc/developer/publishing/artifact-repository/[Jenkins artifact repository].
+* **Release Permissions** which are needed to deploy releases to the xref:publishing:artifact-repository.adoc[Jenkins artifact repository].
   Snapshots can be deployed by contributors without this permission.
 
 NOTE: If you want to adopt a plugin, please see xref:plugin-governance:adopt-a-plugin.adoc[Adopt a Plugin] instead.
@@ -52,7 +52,7 @@ Other types of approval (emails from different addresses, email forwards by requ
 
 == Release Permissions
 
-Release Permissions are needed to deploy releases to the link:/doc/developer/publishing/artifact-repository/[Jenkins artifact repository].
+Release Permissions are needed to deploy releases to the xref:publishing:artifact-repository.adoc[Jenkins artifact repository].
 Permissions to upload plugin releases are independent of GitHub push access and maintained in the link:https://github.com/jenkins-infra/repository-permissions-updater[Repository Permissions Updater] repository.
 
 To request upload permissions for a new maintainer:

@@ -65,7 +65,7 @@ The group focuses on documentation for Jenkins, including:
 ** References like link:/doc/book/pipeline/syntax/[Pipeline Syntax] and link:/doc/pipeline/steps/[Pipeline Steps]
 ** link:/participate/how-to-guides/[How-to Guides]
 * link:/doc/developer/[Developer documentation] - Extending Jenkins
-** link:/doc/developer/tutorial/[Tutorials]
+** xref:plugin-tutorial:index.adoc[Tutorials]
 ** link:/doc/developer/book/[Developer Reference]
 ** link:/doc/developer/guides/[How-To Guides]
 * link:/solutions[Solution documentation] - using Jenkins with specific technologies (e.g. Java, PHP, or Docker).
@@ -105,7 +105,7 @@ See our link:/sigs/docs/gsod[Google Season of Docs status page] for documentatio
 
 === Plugin documentation on GitHub
 
-Currently the SIG is link:/doc/developer/publishing/wiki-page/#migrating-from-wiki-to-github[migrating plugin documentation from Jenkins Wiki to GitHub].
+Currently the SIG is xref:publishing:wiki-page.adoc#migrating-from-wiki-to-github[migrating plugin documentation from Jenkins Wiki to GitHub].
 Documentation in the plugin GitHub repository provides a good user experience for Jenkins users seeking documentation. 
 At the same time, plugin maintainers now can follow the documentation-as-code approach and make documentation changes a part of the pull requests. 
 It also gives an opportunity to review the documentation changes and to add documentation contributor recognition, 
@@ -121,7 +121,7 @@ Useful links:
 * link:/blog/2019/10/21/plugin-docs-on-github/[Documentation migration guidelines blog post]
 * jira:JENKINS-59467[Template issue for plugin documentation migration to GitHub]
 * link:https://groups.google.com/forum/#!topic/jenkinsci-dev/VSdfVMDIW-A[Announcement in the developer mailing list]
-* link:/doc/developer/publishing/documentation/#plugin-pages[Using GitHub as a source of plugin documentation]
+* xref:publishing:documentation.adoc#plugin-pages[Using GitHub as a source of plugin documentation]
 
 === Plugin site integration with GitHub
 
@@ -132,7 +132,7 @@ This project is tracked in the jira:WEBSITE-637[] EPIC.
 
 Useful links:
 
-* link:/doc/developer/publishing/documentation/[Publishing Plugin Documentation]
+* xref:publishing:documentation.adoc[Publishing Plugin Documentation]
 * link:https://github.com/jenkins-infra/plugin-site[Plugin Site Frontend]
 * link:https://github.com/jenkins-infra/update-center2[Jenkins Update Center] (serves plugin metadata)
 * link:https://github.com/jenkins-infra/plugin-site/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22[Newbie-friendly issues for the plugin site]

@@ -25,7 +25,7 @@ There are the following migration steps:
 . Copy the README.md file and all docs/images to the plugin repository
 ** You can merge the copied file with the existing README file or create a new one.
 . Copy-edit the documentation, see below
-. Modify the URL documentation page reference in the project file so that it points to GitHub (link:/doc/developer/publishing/documentation/#referencing-the-documentation-page-from-the-project-file[documentation]).
+. Modify the URL documentation page reference in the project file so that it points to GitHub (xref:publishing:documentation.adoc#referencing-the-documentation-page-from-the-project-file[documentation]).
 . Commit changes, push them to your fork and create a pull request against the repository.
 
 === Reviewing the documentation
