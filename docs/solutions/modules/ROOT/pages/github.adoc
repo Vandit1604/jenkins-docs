@@ -1,9 +1,38 @@
-// ---
-// layout: solution
-// title: "Jenkins with GitHub"
-// ---
-
 = Jenkins with GitHub
+
+.Jenkins ♥ GitHub Articles
+****
+https://www.cloudbees.com/blog/better-integration-between-jenkins-and-github-github-jenkins-plugin[Better Integration Between Jenkins and GitHub (with the GitHub Jenkins Plugin)]
+
+www.cloudbees.com
+
+https://orangejuiceliberationfront.com/setting-up-jenkins-for-github-and-xcode-with-nightlies/[Setting up Jenkins for Github and Xcode, with Nightlies]
+
+orangejuiceliberationfront.com
+****
+
+.GitHub plugins for Jenkins
+****
+{plugin}github[GitHub plugin]
+
+integrates Jenkins jobs with GitHub repositories for triggering builds and reporting commit status
+
+{plugin}github-oauth[GitHub Authentication plugin]
+
+use GitHub as the authentication provider for your Jenkins instance
+
+{plugin}git[Git plugin]
+
+use Git repositories as the source of code for a Jenkins job
+
+{plugin}github-sqs-plugin[GitHub SQS plugin]
+
+trigger builds via the GitHub SQS (AWS) service hook
+
+{plugin}github-issues[GitHub Issues plugin]
+
+create a GitHub issue whenever your build fails, and automatically close it once the build starts passing again
+****
 
 Jenkins, itself link:https://github.com/jenkinsci[located on GitHub], has a
 number of plugins for integrating into link:https://github.com[GitHub]. 

@@ -1,9 +1,31 @@
-// ---
-// layout: solution
-// title: "Jenkins and Java"
-// ---
-
 = Jenkins and Java
+
+.Java plugins for Jenkins
+****
+{plugin}junit[JUnit plugin]
+
+publishes JUnit XML formatted test reports for trending and analysis
+
+{plugin}gradle[Gradle plugin]
+
+support invoking Gradle as a build step and listing executing tasks per build
+
+{plugin}warnings-ng[Warnings Next Generation plugin]
+
+collects compiler warnings and issues from static analysis tools such as SpotBugs and PMD
+
+{plugin}cobertura[Cobertura plugin]
+
+publish and trend code coverage reports from Cobertura
+
+{plugin}sonar[SonarQube plugin]
+
+integrate reporting from the SonarQube code quality/inspection platform
+
+{plugin}repository-connector[Repository Connector plugin]
+
+adds features for resolving artifacts from a Maven repository such as Nexus or Artifactory.
+****
 
 Jenkins supports building Java projects since its inception, and for a reason!
 It's both the language Jenkins is written in, plus the language in use by many if not all the
@@ -19,13 +41,13 @@ dedicated step. One advantage is, as for all Jenkins tools, that you can select 
 Maven version and have Jenkins automatically install it on the build node it's going to run on.
 
 
-image::jenkins-maven-step.png['Jenkins Maven step', role=center]
+image::jenkins-maven-step.png{plugin}['Jenkins Maven step', role=center]
 
 == Gradle
 
 As the associated plugin is not installed by default, first install the
-{plugin}/gradle[Gradle plugin].
+{plugin}/gradle{plugin}[Gradle plugin].
 Once done, you should be able to add a Gradle step.
 
 
-image::jenkins-gradle-step.png['Jenkins Gradle step', role=center]
+image::jenkins-gradle-step.png{plugin}['Jenkins Gradle step', role=center]
