@@ -4,6 +4,15 @@ Combining Jenkins and link:https://www.docker.io[Docker] together can bring
 improved speed and consistency to your automation tasks, which is why we've
 collected some helpful resources on this page to get you started!
 
+.Videos related to Docker
+****
+* video::https://youtu.be/C00AmRN9BbU[youtube]
+* video::https://youtu.be/Pi2kJ2RJS50[youtube]
+* video::https://youtu.be/6tcoRIPBd8s[youtube]
+* video::https://youtu.be/HxoF7x48Uvc[youtube]
+* video::https://youtu.be/e7N3jX2b1i0[youtube]
+****
+
 == What's Docker?
 
 [quote, Wikipedia]
@@ -30,3 +39,45 @@ What this offers to Jenkins users is a means to isolate different jobs from one 
 == Resources
 
 * link:https://github.com/jenkinsci/workflow-aggregator-plugin/blob/master/demo/README.md[Docker image for the Jenkins Workflow demo]
+
+.Jenkins ♥ Docker Articles
+****
+* https://engineering.riotgames.com/news/taking-control-your-docker-image* {plugin}[Taking control of your Docker image]
+
+engineering.riotgames.com
+* https://engineering.riotgames.com/news/thinking-inside-container* {plugin}[Thinking inside the container]
+
+engineering.riotgames.com
+* https://engineering.riotgames.com/news/jenkins-docker-proxies-and-compose* {plugin}[Using Jenkins, Docker, Proxies and Compose]
+
+engineering.riotgames.com
+* https://blog.codecentric.de/en/2015/10/continuous-integration-platform-using-docker-container-jenkins-sonarqube-nexus-gitlab/* {plugin}[Continuous Integration Platform using Docker with Jenkins, SonarQube, Nexus and GitLab]
+
+blog.codecentric.de
+* https://www.cloudbees.com/blog/triggering-docker-pipelines-jenkins* {plugin}[Triggering Docker pipelines with Jenkins]
+
+www.cloudbees.com
+****
+
+.Docker plugins for Jenkins
+****
+* {plugin}docker-plugin[Docker plugin]
+
+dynamically provision agents with Docker
+
+* {plugin}docker-workflow[Docker Pipeline plugin]
+
+build and use Docker containers in Pipelines
+
+* {plugin}kubernetes[Kubernetes plugin]
+
+dynamically allocate and schedule Docker agents on a Kubernetes cluster
+
+* {plugin}docker-build-step[Docker build step plugin]
+
+add Docker commands as build steps
+
+* https://github.com/jenkinsci/dockerhub-notification-plugin/blob/master/README.md[CloudBees Docker Hub Notification plugin]
+
+allows Jenkins to receive webhooks from hub.docker.com to drive pipelines based on Docker in Jenkins
+****
