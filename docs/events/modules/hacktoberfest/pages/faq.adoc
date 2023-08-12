@@ -1,21 +1,4 @@
----
-layout: project
-title: "Hacktoberfest in Jenkins. FAQ"
-sigId: "advocacy-and-outreach"
-tags:
-  - outreach-programs
-  - community
-  - outreach
-  - programs
-  - hacktoberfest
-links:
-  gitter: jenkinsci_hacktoberfest:gitter.im
-  discourse: https://community.jenkins.io/t/hacktoberfest-2022/3805
-opengraph:
-  image: /images/hacktoberfest/hacktoberfest_2022_social.png
----
-
-= Hacktoberfest in Jenkins. FAQ
+= FAQ - Hacktoberfest in Jenkins
 
 NOTE: You can find Hacktoberfest FAQ link:https://hacktoberfest.com/about/[here].
 Below you can find answers to some Jenkins-specific questions.
@@ -29,7 +12,7 @@ to submit pull requests to the Jenkins project.
 
 If you are new to Jenkins,
 you could start by fixing some small and well described issues in the featured projects.
-There are lists of such newbie-friendly issues, see the links in our link:/events/hacktoberfest#featured-projects[featured project list].
+There are lists of such newbie-friendly issues, see the links in our xref:hacktoberfest:index.adoc#featured_projects[featured project list].
 You can also submit your own issue and propose a fix.
 
 === How do I mark my pull requests?
@@ -138,3 +121,9 @@ These metrics apply to `link:https://github.com/jenkinsci/[jenkinsci]` and `http
 * link:https://jenkins.devstats.cd.foundation/d/1/activity-repository-groups?orgId=1&from=1662032035000&to=1669852800000[Activity in GitHub repos, from Sep 01 to Dec 01]
 * link:https://jenkins.devstats.cd.foundation/d/61/documentation-committers-in-repository-groups?orgId=1&from=1662032035000&to=1669852800000[Documentation committers, from Sep 01 to Dec 01] (comment: not sure what are the filtering conditions)
 * link:https://jenkins.devstats.cd.foundation/d/10/pr-time-to-engagement?orgId=1&from=1662032035000&to=1669852800000[PR Time to Engagement, from Sep 01 to Dec 01]
+
+=== Discuss
+
+++++
+<iframe src="https://community.jenkins.io/t/hacktoberfest-2022/3805" title="Discourse Hacktoberfest"></iframe>
+++++
