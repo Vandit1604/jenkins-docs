@@ -1,16 +1,3 @@
----
-layout: project
-title: "Jenkins Remoting"
-section: projects
-tags:
-- remoting
-- agent
-- agents
-links:
-  gitter: 'jenkinsci/remoting'
-  googlegroup: 'jenkinsci-dev'
----
-
 = Jenkins Remoting
 
 Jenkins Remoting is a library, and executable Java archive, which implements the communication layer in Jenkins. 
@@ -48,7 +35,7 @@ Although Remoting library is a standalone component,
 Jenkins core includes some extensions and modules for working with Remoting.
 Core extensions also allow implementing custom protocols on-demand (e.g. for Jenkins CLI).
 There is ongoing activity on detaching these core components to Jenkins plugins 
-(see jira:JENKINS-44099[]),
+(see {jira}JENKINS-44099[]),
 but in the meantime upgrading of Jenkins core may be required to fix Remoting issues.
 
 Jenkins core extensions:

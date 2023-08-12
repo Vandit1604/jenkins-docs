@@ -107,7 +107,7 @@ See our link:/sigs/docs/gsod[Google Season of Docs status page] for documentatio
 
 === Plugin documentation on GitHub
 
-Currently the SIG is xref:publishing:wiki-page.adoc#migrating-from-wiki-to-github[migrating plugin documentation from Jenkins Wiki to GitHub].
+Currently the SIG is xref:dev-docs:publishing:wiki-page.adoc#migrating-from-wiki-to-github[migrating plugin documentation from Jenkins Wiki to GitHub].
 Documentation in the plugin GitHub repository provides a good user experience for Jenkins users seeking documentation. 
 At the same time, plugin maintainers now can follow the documentation-as-code approach and make documentation changes a part of the pull requests. 
 It also gives an opportunity to review the documentation changes and to add documentation contributor recognition, 
@@ -121,7 +121,7 @@ It is also a great opportunity to update and copy-edit the documentation.
 Useful links:
 
 * link:/blog/2019/10/21/plugin-docs-on-github/[Documentation migration guidelines blog post]
-* jira:JENKINS-59467[Template issue for plugin documentation migration to GitHub]
+* {jira}JENKINS-59467[Template issue for plugin documentation migration to GitHub]
 * link:https://groups.google.com/forum/#!topic/jenkinsci-dev/VSdfVMDIW-A[Announcement in the developer mailing list]
 * xref:publishing:documentation.adoc#plugin-pages[Using GitHub as a source of plugin documentation]
 

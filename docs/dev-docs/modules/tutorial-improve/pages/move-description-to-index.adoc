@@ -9,7 +9,7 @@ recent versions of the parent POM require the preferred location and will fail t
 
 Copy the contents of the `description` tag from the POM file to `src/main/resources/index.jelly`.
 
-NOTE: Some plugins do not currently provide description at all or use description copied from the `hello-world` sample plugin. For such plugins you have to write the description yourself. Such plugins are listed in jira:JENKINS-68300[].
+NOTE: Some plugins do not currently provide description at all or use description copied from the `hello-world` sample plugin. For such plugins you have to write the description yourself. Such plugins are listed in {jira}JENKINS-68300[].
 
 When such a conversion is needed, the Maven build process will frequently output a message like:
 

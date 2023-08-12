@@ -106,7 +106,7 @@ a| We want to modernize the Jenkins Web interface styling and appearance.
   It includes updating and restyling the commonly used layouts like main page, job pages,
   build console outputs, etc.
 
-* Jira EPIC with tasks: jira:JENKINS-60919[]
+* Jira EPIC with tasks: {jira}JENKINS-60919[]
 * Other related newcomer-friendly issues: link:https://issues.jenkins.io/issues/?jql=labels%20in%20(ui%2C%20ux%2C%20ux-sig%2C%20frontend%2C%20user-experience)%20AND%20labels%20%3D%20newbie-friendly%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)[Jira query]
   
 | Web UI Accessibility (link:/sigs/ux/#project-ui-accessibility[project page])
@@ -114,11 +114,11 @@ a| We would like to make Jenkins usable by as many people as possible.
   It includes multiple groups of users: people with disabilities, ones using mobile devices, or those with slow network connections.
   In general, all Jenkins users would benefit from better navigation and layouts.
 
-* Contribute to jira:JENKINS-62437[Change Jenkins configuration UI from tables to divs] and improve visualization on mobile devices.
+* Contribute to {jira}JENKINS-62437[Change Jenkins configuration UI from tables to divs] and improve visualization on mobile devices.
 ** Due to the potentially breaking changes, crowd testing is needed!
 ** Submit patches to plugins which use table configuration layouts.
 ** link:/doc/developer/views/table-to-div-migration/[HOWTO: Migrating layouts from tables to divs].
-* Work on minor accessibility issues listed in jira:JENKINS-62268[].
+* Work on minor accessibility issues listed in {jira}JENKINS-62268[].
 
 | jep:224[System Read permission]
 a| A read-only view of Jenkins configurations, jobs and agents is important to plugin:configuration-as-code[Jenkins Configuration-as-Code] users.
@@ -128,14 +128,14 @@ a| A read-only view of Jenkins configurations, jobs and agents is important to p
 
 * Try out the new feature for plugins, report the testing results, discovered issues and limitations.
 * Add support for read-only mode to plugins (link:/doc/developer/views/read-only/[guidelines]).
-* Some stories: jira:JENKINS-12548[] EPIC and a link:https://github.com/orgs/jenkinsci/projects/4[GitHub project] with more issues for grabs.
+* Some stories: {jira}JENKINS-12548[] EPIC and a link:https://github.com/orgs/jenkinsci/projects/4[GitHub project] with more issues for grabs.
 
 | UI Themes
 a| Jenkins UI themes are widely used in Jenkins instances, and they contribute to better user experience.
   We invite users to improve the existing themes and to create new ones.
   link:/doc/book/managing/ui-themes/[UI Themes Documentation].
 
-* Create a new Dark theme for Jenkins (jira:JENKINS-61480[])
+* Create a new Dark theme for Jenkins ({jira}JENKINS-61480[])
 * Blue Ocean Theme - apply Blue Ocean styling to the Jenkins UI
 * Improve existing themes and adapt them to recent Jenkins versions (e.g. link:https://github.com/TobiX/jenkins-neo2-theme[Neo2 theme])
 * Document managing themes in the plugin:/simple-theme-plugin[Simple Theme Plugin] documentation.
@@ -149,7 +149,7 @@ a| We would like to improve the built-in Pipeline visualization in Jenkins.
 
 * Embeddable Pipeline Browser (maybe based on the Blue Ocean code)
 * Add support for providing Pipeline examples within Jenkins
-* jira:JENKINS-56377[]: Improve performance of large Pipeline console outputs
+* {jira}JENKINS-56377[]: Improve performance of large Pipeline console outputs
 
 | Credentials Management UX
 a| plugin:credentials[Credentials Plugin] User interface is often reported as overly complicated.
@@ -222,7 +222,7 @@ a| We are moving plugin documentation from Jenkins Wiki to Documentation as Code
 * Migrate plugin documentation as documented in these link:/blog/2019/10/21/plugin-docs-on-github/[guidelines]).
   List of plugins for grabs can be found in the link:https://reports.jenkins.io/jenkins-plugin-migration.html[plugin migration progress report].
 * Review and renew the existing plugin documentation,
-  e.g. cleanup the agent terminology usage as suggested in the jira:JENKINS-42816[] EPIC
+  e.g. cleanup the agent terminology usage as suggested in the {jira}JENKINS-42816[] EPIC
 * Work on other documentation issues reported to plugins and other components:
 ** All issues: link:https://issues.jenkins.io/issues/?jqllabels%20in%20(docs-sig%2C%20documentation)%20AND%20status%20in%20(Open%2C%20"In%20Progress"%2C%20Reopened)%20AND%20project%20%3D%20JENKINS%20and%20component%20!%3D%20core)[Jira], link:https://github.com/search?q=org%3Ajenkinsci+is%3Aissue+is%3Aopen+label%3Adocumentation[GitHub Issues] 
 ** Newcomer-friendly issues: link:https://issues.jenkins.io/issues/?jql=labels%20in%20(docs-sig%2C%20documentation)%20AND%20labels%20%3D%20newbie-friendly%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)[Jira],

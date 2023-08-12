@@ -137,8 +137,8 @@ a| The plugin site is used to find information about 1800+ plugins available in 
 
 | link:/artwork[Jenkins Artwork]
 | Design
-| Create new images and logos for link:/projects/jam/[Jenkins area meetups],
-  link:/projects/[subprojects], and plugins.
+| Create new images and logos for xref:projects:ROOT:index.adoc/jam/[Jenkins area meetups],
+  xref:projects:ROOT:index.adoc/[subprojects], and plugins.
   You can also contribute new graphics to plugins.
 
   link:https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc#adding-a-logo[Adding a logo]
@@ -169,7 +169,7 @@ a| We are moving plugin documentation from Jenkins Wiki to GitHub,
   * Migrate plugin documentation as documented in these link:/blog/2019/10/21/plugin-docs-on-github/[guidelines]).
   Plugins to convert can be found in the link:https://reports.jenkins.io/jenkins-plugin-migration.html[plugin migration progress report].
   * Move or improve existing documentation based on link:https://github.com/search?q=org%3Ajenkinsci+is%3Aissue+is%3Aopen+label%3Adocumentation[GitHub issues]
-  * Review and renew the existing plugin documentation.  For example, cleanup the agent terminology usage as suggested in the jira:JENKINS-42816[] EPIC
+  * Review and renew the existing plugin documentation.  For example, cleanup the agent terminology usage as suggested in the {jira}JENKINS-42816[] EPIC
 
 link:https://issues.jenkins.io/issues/?jql=labels%20in%20(docs-sig%2C%20documentation)%20AND%20labels%20%3D%20newbie-friendly%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)[Jira newcomer-friendly issues],
 link:https://github.com/search?q=org%3Ajenkinsci+is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+label%3Adocumentation&type=Issues[GitHub good first issues]
@@ -186,7 +186,7 @@ The same is possible for other languages, let us know if you are interested!
   * If you want to participate to other language than French you are welcome ! However it would be great if you can find some other person speaking the target language for reviews.
   * Add terms for controller/agent/.. (and previous naming) in a speaking language you are mastering in tables https://github.com/jenkinsci/jep/blob/master/jep/16/README.adoc#translations
 
-| link:/projects/infrastructure/#pick-up-a-task[Jenkins Infrastructure]
+| xref:projects:ROOT:index.adoc/infrastructure/#pick-up-a-task[Jenkins Infrastructure]
 | Asciidoctor, Docker, Github Actions, Jenkins Pipeline, Kubernetes, Markdown, Packer, Puppet, Python, Shell, YAML
 a| An infrastructure is constantly moving forward: there are always dependencies to update,
 security issues to fix, new feature to release, tools to improve, etc.
@@ -195,7 +195,7 @@ Any kind of contribution is welcome: from documentation to real life code.
 Either you are a beginner in this area, or a veteran of system administration,
 you are welcome to pick an issue and contribute!
 
-* You might want to read the Jenkins Infrastructure's link:/projects/infrastructure/#contributing[Contributing Guide]
+* You might want to read the Jenkins Infrastructure's xref:projects:ROOT:index.adoc/infrastructure/#contributing[Contributing Guide]
 * Ready for action? Look at the good first issues we have on the infrastructure help desk at link:https://github.com/jenkins-infra/helpdesk/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22[good first issues]
 * You can also browse the link:https://github.com/jenkins-infra[`https://github.com/jenkins-infra`] GitHub organization and check for repositories and code.
 

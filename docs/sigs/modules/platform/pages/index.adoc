@@ -89,7 +89,7 @@ Scope of interest:
 * link:https://github.com/jenkinsci/docker#preinstalling-plugins[Plugin management in Jenkins Docker images]
 * link:https://github.com/jenkinsci/plugin-installation-manager-tool[Plugin Installation Manager CLI Tool]
 * link:https://github.com/jenkinsci/custom-war-packager[Custom Jenkins WAR/Docker packager]
-* link:/projects/gsoc/2020/project-ideas/jenkins-distribution-customize-service/[Custom Jenkins distribution build service]
+* xref:projects:ROOT:index.adoc/gsoc/2020/project-ideas/jenkins-distribution-customize-service/[Custom Jenkins distribution build service]
 * link:https://github.com/jenkinsci/bom[Bill of Materials for Jenkins plugins]
 
 === Java support
@@ -115,7 +115,7 @@ Scope of interest:
 * Official Docker images for Windows controllers and agents
 * Installation of controllers and agents as Windows services
 * Official link:https://chocolatey.org/packages/jenkins[Jenkins Chocolatey package]
-* jira:JENKINS-61865[New Windows support policy]
+* {jira}JENKINS-61865[New Windows support policy]
 
 == Meetings
 
