@@ -1,24 +1,16 @@
----
-layout: project
-title: Testing
-section: participate
-tags:
-  - developer
-  - testing
-  - contributing
----
+= Testing
 
 NOTE: This page is under development, there will be more content added soon.
 See the jira:WEBSITE-662[] EPIC for tasks related to this page, contributions are welcome!
 
-=== Automated Testing
+== Automated Testing
 
-==== Jenkins Code
+=== Jenkins Code
  - https://github.com/jenkinsci/jenkins/blob/master/CONTRIBUTING.md#testing-changes[Unit Tests and Integration Tests]
  
  - https://github.com/jenkinsci/acceptance-test-harness/blob/master/README.md[Acceptance Test Harness]
 
-==== Jenkins Plugins
+=== Jenkins Plugins
 
 - Unit and integration tests with the link:/doc/developer/testing/[Jenkins Test Harness]
 
@@ -26,11 +18,11 @@ See the jira:WEBSITE-662[] EPIC for tasks related to this page, contributions ar
 
 - Performance comparison tests with the link:/doc/developer/testing/#performance-testing[Java Microbenchmark Harness]
 
-=== Manual Testing
+== Manual Testing
 
 -  xref:ROOT:how-to-guides.adoc[How-To guides]
 
-==== Jenkins Code
+=== Jenkins Code
 
 - Pull Requests - link:https://ci.jenkins.io/job/Core/job/jenkins/view/change-requests/[https://ci.jenkins.io/job/Core/job/jenkins/view/change-requests/]
 
@@ -40,5 +32,5 @@ See the jira:WEBSITE-662[] EPIC for tasks related to this page, contributions ar
 
 - Quarterly Long Term Support Release - link:/download/[LTS downloads]
 
-==== Jenkins Plugins
+=== Jenkins Plugins
 - Pull request builds from link:https://ci.jenkins.io/job/Plugins/[ci.jenkins.io]
