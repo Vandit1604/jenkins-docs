@@ -50,27 +50,27 @@ If we consider it necessary to provide a statement in response to incidents such
 
 == Learn More
 
-link:plugins[How We Handle Vulnerabilities in Plugins]::
+xref:plugins.adoc[How We Handle Vulnerabilities in Plugins]::
 We strive to fix all security vulnerabilities in Jenkins and plugins in a timely manner.
 However the number and diversity of plugins and maintainers' autonomy make this impossible to guarantee.
 
-link:scheduling[How We Schedule Security Advisories]::
+xref:scheduling.adoc[How We Schedule Security Advisories]::
 Information about how we schedule security advisories and security updates.
 
-link:fixing[How We Fix Security Issues]::
+xref:fixing.adoc[How We Fix Security Issues]::
 Guidelines for developing security fixes in the Jenkins project.
 
-link:for-maintainers[Information for Plugin Maintainers]::
+xref:for-maintainers.adoc[Information for Plugin Maintainers]::
 The Jenkins security team contacted me about a security vulnerability. Now what?
 
-link:for-administrators[Information for Administrators]::
+xref:for-administrators.adoc[Information for Administrators]::
 This page explains everything Jenkins users and administrators need to know about the Jenkins security process.
 
-link:cna[Jenkins CVE Numbers Authority]::
+xref:cna.adoc[Jenkins CVE Numbers Authority]::
 The Jenkins project is a CVE Numbers Authority (CNA) for Jenkins and Jenkins plugins published by the Jenkins project.
 
-link:team[About the Jenkins Security Team]::
+xref:team.adoc[About the Jenkins Security Team]::
 The Jenkins Security Team is a group of volunteers led by the Jenkins Security Officer who triage and fix security vulnerabilities.
 
-link:improvements[Improvements by the Security Team]::
+xref:improvements.adoc[Improvements by the Security Team]::
 These are some contributions by members of the Jenkins security team that weren't delivered as security fixes, but still are security-related.

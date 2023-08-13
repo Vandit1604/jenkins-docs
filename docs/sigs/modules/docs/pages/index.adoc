@@ -61,16 +61,16 @@ The SIG offers a venue for all kinds of documentation creation, improvement, and
 
 The group focuses on documentation for Jenkins, including:
 
-* link:/doc/[User documentation] - Using Jenkins
+* xref:user-docs:ROOT:index.adoc[User documentation] - Using Jenkins
 ** link:/doc/tutorials[Tutorials]
 ** link:/doc/book/[User Handbook]
 ** References like link:/doc/book/pipeline/syntax/[Pipeline Syntax] and link:/doc/pipeline/steps/[Pipeline Steps]
-** link:/participate/how-to-guides/[How-to Guides]
+** xref:ROOT:how-to-guides.adoc[How-to Guides]
 * link:/doc/developer/[Developer documentation] - Extending Jenkins
 ** xref:plugin-tutorial:index.adoc[Tutorials]
 ** link:/doc/developer/book/[Developer Reference]
 ** link:/doc/developer/guides/[How-To Guides]
-* link:/solutions[Solution documentation] - using Jenkins with specific technologies (e.g. Java, PHP, or Docker).
+* xref:solutions:ROOT:index.adoc[Solution documentation] - using Jenkins with specific technologies (e.g. Java, PHP, or Docker).
   Also, implementation solutions like link:/solutions/pipeline[Pipeline]
 
 Documentation SIG may cooperate with other groups.
@@ -161,11 +161,11 @@ This project is tracked in the jira:WEBSITE-738[] EPIC.
 [[solution-pages]]
 === Solution Pages
 
-Jenkins link:/solutions/[solution pages] highlight specific use cases for Jenkins users.
+Jenkins xref:solutions:ROOT:index.adoc[solution pages] highlight specific use cases for Jenkins users.
 Those solutions include SCM provider solutions (link:/solutions/github[GitHub], link:/solutions/bitbucketserver[Bitbucket]),
 programming language solutions (link:/solutions/python[Python], link:/solutions/ruby[Ruby], link:/solutions/c[C/C++], link:/solutions/java[Java], and link:/solutions/php[PHP]),
 and execution environment solutions (link:/solutions/python[Pipeline], link:/solutions/docker[Docker], link:/solutions/embedded[Embedded], and link:/solutions/android[Android]).
-An excellent link:/solutions/[opening page] has been provided by link:https://github.com/zbynek[Zbynek Konecny].
+An excellent xref:solutions:ROOT:index.adoc[opening page] has been provided by link:https://github.com/zbynek[Zbynek Konecny].
 Additional use cases and user stories are being collected by link:https://github.com/alyssat[Alyssa Tong].
 
 The appearance and navigation of those solution pages needs improvement.

@@ -120,7 +120,7 @@ a| We would like to make Jenkins usable by as many people as possible.
 ** link:/doc/developer/views/table-to-div-migration/[HOWTO: Migrating layouts from tables to divs].
 * Work on minor accessibility issues listed in {jira}JENKINS-62268[].
 
-| jep:224[System Read permission]
+| {jep}224/README.adoc[System Read permission]
 a| A read-only view of Jenkins configurations, jobs and agents is important to plugin:configuration-as-code[Jenkins Configuration-as-Code] users.
   Soon we will release a new feature which extends support for read-only views
   (link:https://github.com/jenkins-infra/jenkins.io/pull/3279[announcement draft]).
@@ -174,7 +174,7 @@ a| Development tools could help developers to create better user interfaces in J
 We have several projects which are specifically related to user documentation.
 It includes user and administrator guides, and also tutorials and installation guidelines
 which are referenced from link:/doc/book/[this page].
-This track is coordinated by the link:/sigs/docs/[Documentation] special interest group.
+This track is coordinated by the xref:sigs:docs:index.adoc[Documentation] special interest group.
 
 link:/participate/document/[Contributing to user documentation].
 
@@ -185,7 +185,7 @@ link:/participate/document/[Contributing to user documentation].
 | Improve User and Administrator Documentation
   (link:/sigs/docs/#user-guide[project page])
 a| Let's improve the documentation for Jenkins end users and administrators.
-   Located link:/doc/[on the Jenkins website], it follows the Documentation-as-Code approach.
+   Located xref:user-docs:ROOT:index.adoc[on the Jenkins website], it follows the Documentation-as-Code approach.
   We would like to extend this documentation and to also make it more accessible and discoverable.
 
 * Review and renew the user documentation.
@@ -208,9 +208,9 @@ a| If you are interested to do UX testing, Jenkins installation guidelines could
   (link:/sigs/docs/#solution-pages[project page])
 a| Help us to improve documentation for real-world Jenkins use-cases!
 
-* Review and refresh the existing link:/solutions/[solution pages]: add links to plugins and articles, extend the overview sections, improve the rendering. 
+* Review and refresh the existing xref:solutions:ROOT:index.adoc[solution pages]: add links to plugins and articles, extend the overview sections, improve the rendering. 
   See jira:WEBSITE-742[] for the issue links.
-* **Advanced:** Create new link:/solutions/[solution pages] for various use-cases (e.g. Documentation as code, Continuous Deployment, Static Analysis) or technologies (Git, Gitlab, Kubernetes, etc.).
+* **Advanced:** Create new xref:solutions:ROOT:index.adoc[solution pages] for various use-cases (e.g. Documentation as code, Continuous Deployment, Static Analysis) or technologies (Git, Gitlab, Kubernetes, etc.).
 * **Advanced:** Create new link:/doc/tutorials/[Tutorials], e.g. how to use a Jenkins feature or how to implement a common automation use-case with Jenkins
 
 | Improve Plugin Documentation
@@ -244,7 +244,7 @@ Below you can find some ideas about how you could contribute:
 * Create new demos for Jenkins features.
 * Present UX-related stories at our online meetups.
 
-This track is coordinated by the link:/sigs/advocacy-and-outreach/[Jenkins Advocacy & Outreach] special interest group.
+This track is coordinated by the xref:sigs:advocacy-and-outreach:index.adoc[Jenkins Advocacy & Outreach] special interest group.
 
 == Online events
 
@@ -332,7 +332,7 @@ and it may lead to other actions defined in the Code of Conduct.
 
 We thank all contributors who participate in this event as committers!
 We especially thank all reviewers, organizers and those who participated in the initial program reviews and provided invaluable feedback.
-In particular, we thank link:/sigs/ux/[User Experience], link:/sigs/docs/[Documentation] and link:/sigs/advocacy-and-outreach/[Advocacy and Outreach] SIG members who heavily contributed to this event.
+In particular, we thank link:/sigs/ux/[User Experience], xref:sigs:docs:index.adoc[Documentation] and xref:sigs:advocacy-and-outreach:index.adoc[Advocacy and Outreach] SIG members who heavily contributed to this event.
 
 We also thank sponsors of the event who make the swag and prizes possible:
 link:https://www.cloudbees.com/[CloudBees, Inc.] and 

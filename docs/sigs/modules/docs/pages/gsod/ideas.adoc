@@ -5,12 +5,12 @@ image:images:gsod:gsod.png[Google Season of Docs, role=center, float=right]
 The https://developers.google.com/season-of-docs/[Google Season of Docs (GSoD)]
 program brings together open source and technical writers communities for the benefit of both.
 The program raises awareness of open source, of docs, and of technical writing.
-GSoD in Jenkins is organized by the link:/sigs/docs[Documentation special interest group].
+GSoD in Jenkins is organized by the xref:sigs:docs:index.adoc[Documentation special interest group].
 
 == Project ideas
 
-We invite technical writers to contribute to a major documentation update effort being coordinated in the link:/sigs/docs/[Documentation SIG].
-It includes a number of link:/sigs/docs/#ongoing-projects[ongoing projects].
+We invite technical writers to contribute to a major documentation update effort being coordinated in the xref:sigs:docs:index.adoc[Documentation SIG].
+It includes a number of xref:sigs:docs:index.adoc#ongoing-projects[ongoing projects].
 Technical writers are welcome to make their proposals in any area of the Jenkins documentation.
 We encourage proposals based on a technical writer's expertise and interests.
 
@@ -28,7 +28,7 @@ We encourage proposals based on a technical writer's expertise and interests.
 
 | Create new solution pages for Jenkins use-cases
 | AsciiDoc, Guide
-| Jenkins project has several link:/solutions/[solution pages] for various use-cases.
+| Jenkins project has several xref:solutions:ROOT:index.adoc[solution pages] for various use-cases.
   We invite technical writers to create new solution pages for various use-cases (e.g. Documentation as code, Continuous Deployment, Static Analysis)
   or technologies (Git, GitLab, Kubernetes, etc.).
   Existing pages were created several years ago, and they could also be updated.

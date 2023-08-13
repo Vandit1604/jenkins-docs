@@ -51,12 +51,12 @@ The group focuses on technologies used in Jenkins:
 * Architectures and platforms
 * Web Containers
 
-Platform SIG cooperates with other groups like the link:/sigs/docs/[Documentation SIG].
+Platform SIG cooperates with other groups like the xref:sigs:docs:index.adoc[Documentation SIG].
 
 == Topics
 
 * Defining platform support policies (e.g. “defining Windows support policy”)
-* Coordinating effort on new platform support (e.g. jep:211[Java 11 Support in Jenkins])
+* Coordinating effort on new platform support (e.g. {jep}211/README.adoc[Java 11 Support in Jenkins])
 * Working with external communities on better platform support and packaging
 (e.g. ARM architecture support, adapting RedHat packaging to best practices, using systemd, etc.)
 * Reviewing JEPs submitted in the area
@@ -77,7 +77,7 @@ Scope of interest:
 * Official controller and agent images for Windows
 * Support Multi-architecture Docker images
 * Enabling continuous delivery for Jenkins packaging
-** Experimental DockerHub organization and deployments from ci.jenkins.io (jep:217[])
+** Experimental DockerHub organization and deployments from ci.jenkins.io ({jep}217/README.adoc[])
 
 === Plugin management
 

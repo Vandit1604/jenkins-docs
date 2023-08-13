@@ -844,7 +844,7 @@ NOTE: Due to the very large number of system properties used, often just added a
   description: |
     Allow or disallow the deserialization of specified types.
     Comma-separated class names, entries are whitelisted unless prefixed with `!`.
-    See jep:200#backwards-compatibility[JEP-200] and https://issues.jenkins.io/browse/JENKINS-47736[JENKINS-47736].
+    See {jep}200#backwards-compatibility[JEP-200] and https://issues.jenkins.io/browse/JENKINS-47736/README.adoc[JENKINS-47736].
 
 - name: hudson.scheduledRetention
   tags:

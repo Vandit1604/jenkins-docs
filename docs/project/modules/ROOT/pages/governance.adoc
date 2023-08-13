@@ -142,22 +142,22 @@ Users use Jenkins and its plugins. They contribute to the project by providing f
 
 The communication among people in the community is crucial to the oneness of the project.
 People in the Jenkins project communicate with each other in several different places.
-There is an link:/sigs/advocacy-and-outreach/[Advocacy and Outreach] special interest group which focuses on public communications.
+There is an xref:sigs:advocacy-and-outreach:index.adoc[Advocacy and Outreach] special interest group which focuses on public communications.
 Some of the communication channels are listed below.
 
 Mailing lists::
-We encourage mailing lists as the primary means of developer & user discussion, because of their asynchrony and ability to search the archive. The project website lists link:/mailing-lists[the active mailing lists and their purposes].
+We encourage mailing lists as the primary means of developer & user discussion, because of their asynchrony and ability to search the archive. The project website lists xref:community:mailing-lists:index.adoc[the active mailing lists and their purposes].
 
 Chats::
 Jenkins project uses link:/chat[IRC and Gitter channels] for real time interactive communications. This is also the place where active members bond with each other.
 
 Twitter::
-link:https://twitter.com/jenkinsci[@jenkinsci] is the official Twitter account of the Jenkins project, run by the team of contributors (jep:10[]).
+link:https://twitter.com/jenkinsci[@jenkinsci] is the official Twitter account of the Jenkins project, run by the team of contributors ({jep}10/README.adoc[]).
 There are also a link:https://twitter.com/jenkins_release[@jenkins_release] account for automatic plugin release announcements,
 and other accounts being run by sub-communities like meetup groups.
 
 Special interest group channels::
-There are multiple link:/sigs/[Special Interest Groups] in the community.
+There are multiple xref:sigs:ROOT:index.adoc[Special Interest Groups] in the community.
 These groups focus on particular topics and organize dedicated communication channels including chats, mailing lists and regular meetings.
 
 == Infrastructure
@@ -194,7 +194,7 @@ All initiatives depend on contributions,
 and we invite all interested parties to join us and to contribute towards the roadmap goals.
 
 * link:/project/roadmap[Public Jenkins Roadmap]
-* jep:14[Public Jenkins Roadmap Process]
+* {jep}14/README.adoc[Public Jenkins Roadmap Process]
 
 [[meeting]]
 == Decision making
