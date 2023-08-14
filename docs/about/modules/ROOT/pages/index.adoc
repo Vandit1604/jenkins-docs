@@ -16,10 +16,10 @@ you may have, or you're seeking comment, please reach out to our <<Press Contact
 === Governance
 
 Our
-link:/project/governance/[Governance
+xref:project:governance-meeting:index.adoc[Governance
 Document] outlines the project's philosophy, structure and guidelines. This
 also includes information on the
-link:/project/board[Governance
+xref:project:board:index.adoc[Governance
 Board], which is the group with acting executive authority. While board members
 are available for comment, we encourage you to reach out to our <<Press Contact>>
 as an initial point of contact for press inquiries.
@@ -32,7 +32,7 @@ held by LF CHARITIES, Inc. (a 501(c)(3) nonprofit charity associated with the Li
 
 The name "Jenkins" is a registered trademark in the USA (link:https://trademarks.justia.com/854/47/jenkins-85447465.html[#4664929],
 held by link:https://spi-inc.org[Software in the Public Interest, Inc.]) in order to protect the project and users from confusing use of the term.
-For more info about trademark and its usage see the link:/project/governance/#trademark[Trademark] and link:/project/governance/#trademark-attribution[Trademark Attribution] sections of the Governance document.
+For more info about trademark and its usage see the xref:project:governance-meeting:index.adoc#trademark[Trademark] and xref:project:governance-meeting:index.adoc#trademark-attribution[Trademark Attribution] sections of the Governance document.
 
 === Branding
 
@@ -53,7 +53,7 @@ writing about the Jenkins project:
 
 ==== Artwork
 
-image::/images/logo_128.png[title="Jenkins", float=right]
+image::images:ROOT:logo_128.png[title="Jenkins", float=right]
 
 On our link:https://wiki.jenkins.io/display/JENKINS/Logo[Logo] page we have
 documented some versions of our logo, including the color palette our branding
@@ -69,7 +69,7 @@ If you have any questions about artwork, please ask our <<Press Contact>>.
 
 == About the Continuous Delivery Foundation
 
-image::/images/cdf/logo/cdf-logo-color-knockout.png[alt="CDF Logo", float=right, width="164px"]
+image::images:ROOT:cdf/logo/cdf-logo-color-knockout.png[alt="CDF Logo", float=right, width="164px"]
 
 // https://cd.foundation/about/
 The link:https://cd.foundation[Continuous Delivery Foundation (CDF)] serves as the vendor-neutral home of many of the fastest-growing projects for continuous integration/continuous delivery (CI/CD).
@@ -85,4 +85,4 @@ Please post your inquiries in the link:https://community.jenkins.io/c/press/24[P
 
 === Security related contacts
 
-If your press request involves any security related matter, please contact the link:../security/cna[Security Team] directly.
+If your press request involves any security related matter, please contact the xref:security:ROOT:cna.adoc[Security Team] directly.
