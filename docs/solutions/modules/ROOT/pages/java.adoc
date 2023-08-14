@@ -14,7 +14,7 @@ dedicated step. One advantage is, as for all Jenkins tools, that you can select 
 Maven version and have Jenkins automatically install it on the build node it's going to run on.
 
 
-image::images:images:solution-images:jenkins-maven-step.png['Jenkins Maven step', role=center]
+image::images:solutions:ROOT:jenkins-maven-step.png['Jenkins Maven step', role=center]
 
 == Gradle
 
@@ -22,7 +22,7 @@ As the associated plugin is not installed by default, first install the
 {plugin}gradle[Gradle plugin].
 Once done, you should be able to add a Gradle step.
 
-image::images:images:solution-images:jenkins-gradle-step.png['Jenkins Gradle step', role=center]
+image::images:ROOT:solution-images:jenkins-gradle-step.png['Jenkins Gradle step', role=center]
 
 .Java plugins for Jenkins
 ****
