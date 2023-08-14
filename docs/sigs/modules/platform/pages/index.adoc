@@ -20,13 +20,15 @@ xref:ROOT:index.adoc[(Back to List of Jenkins Special Interest Groups )]
 == Members
 
 [avatar]
-* Leads:
+*Leads*:
+
 image:images:ROOT:avatars/oleg_nenashev.png[,width=30,height=30] Oleg Nenashev
 image:images:ROOT:avatars/markewaite.jpg[,width=30,height=30] Mark Waite
 image:images:ROOT:avatars/batmat.jpg[,width=30,height=30] Baptiste Mathus
 
 [avatar]
-* Participants:
+*Participants*:
+
 image:images:ROOT:avatars/alecharp.jpg[,width=30,height=30] Adrien Lecharpentier
 image:images:ROOT:avatars/slide_o_mix.jpg[,width=30,height=30] Alex Earl
 image:images:ROOT:avatars/no_image.svg[,width=30,height=30] David Currie
@@ -67,7 +69,7 @@ This section lists the key initiatives being handled by the Platform SIG.
 See the link:https://docs.google.com/document/d/1bDfUdtjpwoX0HO2PRnfqns_TROBOK8tmP6SgVhubr2Y/edit?usp=sharing[SIG meeting notes] for more information about the ongoing projects.
 See the link:/project/roadmap[Jenkins Project roadmap] for a 
 
-=== Docker images
+== Docker images
 
 Jenkins project ships official controller and agent images,
 and we would like to offer Wide support of platforms and architectures there.
@@ -79,20 +81,20 @@ Scope of interest:
 * Enabling continuous delivery for Jenkins packaging
 ** Experimental DockerHub organization and deployments from ci.jenkins.io ({jep}217/README.adoc[])
 
-=== Plugin management
+== Plugin management
 
 We are interested to improve plugin management experience in Jenkins.
 To do that, we work on new tools for Jenkins users and maintainers.
 Scope of interest:
 
-* link:/doc/book/managing/plugins/[Plugin management in Jenkins Web UI]
+* xref:user-docs:managing:plugins.adoc[Plugin management in Jenkins Web UI]
 * link:https://github.com/jenkinsci/docker#preinstalling-plugins[Plugin management in Jenkins Docker images]
 * link:https://github.com/jenkinsci/plugin-installation-manager-tool[Plugin Installation Manager CLI Tool]
 * link:https://github.com/jenkinsci/custom-war-packager[Custom Jenkins WAR/Docker packager]
-* xref:projects:ROOT:index.adoc/gsoc/2020/project-ideas/jenkins-distribution-customize-service/[Custom Jenkins distribution build service]
+* xref:projects:gsoc:2020/project-ideas/jenkins-distribution-customize-service.adoc[Custom Jenkins distribution build service]
 * link:https://github.com/jenkinsci/bom[Bill of Materials for Jenkins plugins]
 
-=== Java support
+== Java support
 
 In our SIG we are interested to offer a wide range of supported JVMs.
 See the current list of supported versions link:/doc/administration/requirements/java/[here].
@@ -104,7 +106,7 @@ Scope of interest:
 * Support for future mainstream JVM versions (Java 17)
 * Support for perspective virtual machines like link:https://www.graalvm.org/[GraalVM] or link:https://quarkus.io/[Quarkus], including native executable packaging
 
-=== Windows support
+== Windows support
 
 Many Jenkins users run controller or agents on Windows.
 We are interested to support modern Windows platforms and to offer official distributions for the platform.
@@ -125,7 +127,7 @@ At these meetings we discuss projects, share presentations, and demonstrate new 
 Meetings are conducted and recorded via Zoom and archived to the link:https://www.youtube.com/user/jenkinsci[Jenkins YouTube channel] in the link:https://www.youtube.com/playlist?list=PLN7ajX_VdyaO3VROIfVsobTciEkLnVtSM[Platform SIG play list].
 Participant links are posted in the link:https://app.gitter.im/#/room/#jenkinsci_platform-sig:gitter.im[SIG Gitter Chat] 10 minutes before the meeting starts.
 
-=== Meeting Agendas
+== Meeting Agendas
 
 Meeting agendas and meeting notes for the SIG are posted in link:https://docs.google.com/document/d/1bDfUdtjpwoX0HO2PRnfqns_TROBOK8tmP6SgVhubr2Y[this Google Document].
 Anyone is welcome to add a topic for an upcoming meeting by suggesting a change in the link:https://docs.google.com/document/d/1bDfUdtjpwoX0HO2PRnfqns_TROBOK8tmP6SgVhubr2Y[agenda].

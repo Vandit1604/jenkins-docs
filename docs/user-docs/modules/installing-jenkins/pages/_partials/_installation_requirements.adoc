@@ -5,7 +5,7 @@ There is a version of this file for the general 'Installing Jenkins' page
 This file is for the index.adoc page used in the general 'Installing Jenkins'
 page.
 ////
-
+[[prerequisites]]
 == Prerequisites
 
 Minimum hardware requirements:
@@ -27,6 +27,6 @@ Software requirements:
 
 * Java: see the xref:administration:requirements/java.adoc[Java Requirements] page
 * Web browser: see the xref:administration:requirements/web-browsers.adoc[Web Browser Compatibility] page
-* For Windows operating system: xref:administration:requirements/windows.adoc[Windows Support Policy]
-* For Linux operating system: xref:administration:requirements/linux.adoc[Linux Support Policy]
+* For Windows operating system: xref:administration:windows.adoc[Windows Support Policy]
+* For Linux operating system: xref:administration:linux.adoc[Linux Support Policy]
 * For servlet containers: xref:administration:requirements/servlet-containers.adoc[Servlet Container Support Policy]

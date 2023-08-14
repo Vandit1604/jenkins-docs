@@ -20,7 +20,7 @@ This setup wizard takes you through a few quick "one-off" steps to unlock
 Jenkins, customize it with plugins and create the first administrator user
 through which you can continue accessing Jenkins.
 
-
+[[unlocking-jenkins]]
 === Unlocking Jenkins
 
 When you first access a new Jenkins instance, you are asked to unlock it using
@@ -47,7 +47,7 @@ image::setup-jenkins-02-copying-initial-admin-password.png[alt="Copying initial 
   (with username "admin") if you happen to skip the subsequent user-creation
   step in the setup wizard.
 
-
+[[customizing-jenkins-with-plugins]]
 === Customizing Jenkins with plugins
 
 After <<unlocking-jenkins,unlocking Jenkins>>, the *Customize Jenkins* page
@@ -64,10 +64,8 @@ Click one of the two options shown:
 
 NOTE: If you are not sure what plugins you need, choose **Install suggested
 plugins**.
-You can install (or remove) additional Jenkins plugins at a later point in time
-via the
-link:/doc/book/managing[**Manage Jenkins**] >
-link:/doc/book/managing/plugins/[**Plugins**] page in Jenkins.
+
+You can install (or remove) additional Jenkins plugins at a later point in time via the xref:managing:index.adoc[**Manage Jenkins**] > xref:managing:plugins.adoc[**Plugins**] page in Jenkins.
 
 The setup wizard shows the progression of Jenkins being configured and your
 chosen set of Jenkins plugins being installed. This process may take a few
