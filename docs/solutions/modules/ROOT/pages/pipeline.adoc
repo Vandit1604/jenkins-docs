@@ -11,7 +11,7 @@ best practices to the job configurations themselves.
 
 == Pipeline
 
-With the introduction of the {plugin}/workflow-aggregator[Pipeline plugin],
+With the introduction of the {plugin}workflow-aggregator[Pipeline plugin],
 users now can implement a project's entire build/test/deploy pipeline
 in a `Jenkinsfile` and store that alongside their code, treating their
 pipeline as another piece of code checked into source control.
@@ -28,14 +28,14 @@ features like:
   "link:/doc/book/pipeline/shared-libraries/[Shared Libraries]" feature.
 
 In an adjacent space is the
-{plugin}/job-dsl[Job DSL plugin]
+{plugin}job-dsl[Job DSL plugin]
 which is worth mentioning as well.
 
 
 == Getting Started
 
-* link:/doc/pipeline[Getting Started with Pipeline]
-* The {plugin}/workflow-aggregator[Pipeline plugin]
+* xref:user-docs:pipeline:getting-started.adocGetting Started with Pipeline]
+* The {plugin}workflow-aggregator[Pipeline plugin]
   has a fairly comprehensive
   link:https://github.com/jenkinsci/pipeline-plugin/blob/master/TUTORIAL.md[tutorial]
   checked into its source tree too.
@@ -45,10 +45,10 @@ which is worth mentioning as well.
 
 Pipeline tutorials you can run locally.
 
-* link:/doc/tutorials/build-a-java-app-with-maven/[Build a Java app with Maven]
-* link:/doc/tutorials/build-a-node-js-and-react-app-with-npm/[Build a Node.js and React appl with npm]
-* link:/doc/tutorials/build-a-python-app-with-pyinstaller/[Python application with PyInstaller]
-* link:/doc/tutorials/build-a-labview-app/[Build a LabVIEW app]
+* xref:tutorials:ROOT:build-a-java-app-with-maven.adoc[Build a Java app with Maven]
+* xref:tutorials:ROOT:build-a-node-js-and-react-app-with-npm.adoc[Build a Node.js and React appl with npm]
+* xref:tutorials:ROOT:build-a-python-app-with-pyinstaller.adoc[Python application with PyInstaller]
+* xref:tutorials:ROOT:build-a-labview-app.adoc[Build a LabVIEW app]
 
 Demonstrations of Pipeline functionality you can run locally.
 
@@ -58,7 +58,7 @@ Demonstrations of Pipeline functionality you can run locally.
 
 == Additional resources
 
-* {plugin}/workflow-aggregator[Pipeline Plugin page]
+* {plugin}workflow-aggregator[Pipeline Plugin page]
 * link:https://github.com/jenkinsci/workflow-plugin/blob/master/COMPATIBILITY.md[Plugins compatible with Pipeline]
 * link:https://stackoverflow.com/questions/tagged/jenkins-pipeline[Stack Overflow "jenkins-pipeline" tag]
 * link:https://github.com/jenkinsci/pipeline-examples[Examples/snippets repository]
@@ -74,7 +74,7 @@ A presentation by link:https://github.com/kohsuke[Kohsuke Kawaguchi], link:https
 </center>
 ++++
 
-The presentations below were given by link:https://github.com/jglick[Jesse Glick], author of the {plugin}/workflow-aggregator[Pipeline Plugin]
+The presentations below were given by link:https://github.com/jglick[Jesse Glick], author of the {plugin}workflow-aggregator[Pipeline Plugin]
 
 ++++
 <center>

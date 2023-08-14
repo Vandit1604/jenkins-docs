@@ -8,8 +8,8 @@ Jenkins access control is split into two parts:
   This controls whether a user (directly or through group memberships) has a permission.
 
 These can be independent, or work in combination.
-An independent configuration would be {plugin}/active-directory[Active Directory] or {plugin}/ldap[LDAP] as security realm, and something like {plugin}/matrix-auth[Matrix Authorization Strategy] as authorization strategy.
-An example for related security realm and authorization strategy configuration is {plugin}/github-oauth[GitHub Authentication]:
+An independent configuration would be {plugin}active-directory[Active Directory] or {plugin}ldap[LDAP] as security realm, and something like {plugin}matrix-auth[Matrix Authorization Strategy] as authorization strategy.
+An example for related security realm and authorization strategy configuration is {plugin}github-oauth[GitHub Authentication]:
 While its security realm can be used with a generic authorization strategy, it also provides an authorization strategy that looks up a user's repository permissions on GitHub, and grants or denies permissions to related jobs in Jenkins based on that.
 
 [NOTE]
@@ -42,7 +42,7 @@ Switching to an authentication realm that allows untrusted users to have an acco
 Examples include enabling account signup for _Jenkins' own user database_, or various other authorization realms, many of which (GitHub, Google, GitLab, etc.) allow anyone to sign up for an account.
 
 Anonymous and authenticated users::
-Similar to the previous items, you should generally not grant significant permissions to `anonymous` (the anonymous user) or authenticated (any authenticated user) when using an authorization strategy that allows finer-grained control (like {plugin}/matrix-auth[Matrix Authorization Strategy]).
+Similar to the previous items, you should generally not grant significant permissions to `anonymous` (the anonymous user) or authenticated (any authenticated user) when using an authorization strategy that allows finer-grained control (like {plugin}matrix-auth[Matrix Authorization Strategy]).
 Granting Overall/Administer permission to _anonymous_ is similar to _Anyone can do anything_, while granting that permission to _authenticated_ is essentially the same as _Logged-in users can do anything_.
 
 Built-in node::
@@ -66,7 +66,7 @@ Permissions in Jenkins have a _scope_: They can be granted globally, on an item 
 Whenever a user attempts to do something that is protected by permissions, the authorization strategy is checked for whether the current user has the specific permission (e.g., _Job/Read_) on the specific object (e.g., a job).
 Exactly how permissions are assigned and whether and how they're inherited is controlled by the specific authorization strategy.
 
-As an example, {plugin}/matrix-auth[Matrix Authorization Strategy] provides two different authorization strategies:
+As an example, {plugin}matrix-auth[Matrix Authorization Strategy] provides two different authorization strategies:
 
 * One provides a single global configuration of all permissions.
   A user granted _Item/Read_ will be granted that permission everywhere.

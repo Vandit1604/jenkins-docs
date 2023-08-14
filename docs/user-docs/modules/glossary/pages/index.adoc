@@ -45,9 +45,9 @@ To ensure it is rendered appropriately.
 === Cloud:: [[cloud]]
     A System Configuration which provides dynamic <<agent,Agent>>
     provisioning and allocation, such as that provided by the
-    {plugin}/azure-vm-agents[Azure VM Agents]
+    {plugin}azure-vm-agents[Azure VM Agents]
     or
-    {plugin}/ec2[Amazon EC2] plugins.
+    {plugin}ec2[Amazon EC2] plugins.
 === Controller::
     The central, coordinating process which stores configuration, loads plugins,
     and renders the various user interfaces for Jenkins.

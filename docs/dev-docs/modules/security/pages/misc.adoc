@@ -76,7 +76,7 @@ Ignoring SSL/TLS errors is only permitted if the following constraints are both 
 1. Ignoring SSL/TLS errors is limited to the specific connections opened by the plugin.
    Plugins should never cause SSL/TLS errors to be ignored for the entire Jenkins instance.
    As a consequence, APIs like `HttpsURLConnection#setDefaultHostnameVerifier` or `HttpsURLConnection#setDefaultSSLSocketFactory` must not be called by plugins.
-   The only exceptions to this rule are dedicated plugins with only this purpose, like {plugin}/skip-certificate-check[skip-certificate-check].
+   The only exceptions to this rule are dedicated plugins with only this purpose, like {plugin}skip-certificate-check[skip-certificate-check].
 2. Ignoring SSL/TLS problems for specific connections (e.g. `HttpsURLConnection#setHostnameVerifier` or `HttpsURLConnection#setSSLSocketFactory`) is allowed, but users need to opt in to this behavior.
    By default, SSL/TLS problems must not be ignored.
 
@@ -121,12 +121,12 @@ It needs to be configured to prevent the instantiation of arbitrary types.
 
 When using SnakeYAML, make sure to never use the parameterless `new Yaml()` constructor, but to pass a `SafeConstructor` as argument (or otherwise restrict what can be deserialized).
 Additionally, use at least version 1.26 to get denial-of-service protection ("billion laughs").
-Consider depending on the {plugin}/snakeyaml-api[SnakeYAML API Plugin] instead of bundling SnakeYAML with your plugin.
+Consider depending on the {plugin}snakeyaml-api[SnakeYAML API Plugin] instead of bundling SnakeYAML with your plugin.
 
 
 === Groovy Scripting
 
 Many Jenkins plugins allow the use of Groovy to extend their capabilities.
-For example, the {plugin}/email-ext[Email Extension Plugin] allows executing a script to determine whether an email should be sent.
+For example, the {plugin}email-ext[Email Extension Plugin] allows executing a script to determine whether an email should be sent.
 
-All such functionality, if available to users without Overall/Administer, must integrate with {plugin}/script-security[Script Security Plugin].
+All such functionality, if available to users without Overall/Administer, must integrate with {plugin}script-security[Script Security Plugin].

@@ -1,6 +1,6 @@
 = Referencing another project by name
 
-In many places throughout Jenkins, you can refer to another project/job by name. For example, in a Pipeline Script, you might want to {plugin}/copyartifact/[copy artifacts] from another project:
+In many places throughout Jenkins, you can refer to another project/job by name. For example, in a Pipeline Script, you might want to {plugin}copyartifact/[copy artifacts] from another project:
 
 ....
 copyArtifacts projectName: 'myproject'
@@ -10,7 +10,7 @@ That's all you need to do if your target project's name is simply alphanumeric, 
 
 == Differentiating between multiple projects with the same name
 
-If you're using the {plugin}/cloudbees-folder[Folders Plugin] and you have multiple projects with the same name that are in different folders, you can differentiate between them using a path, similar to a Unix filesystem path. There are two types of paths:
+If you're using the {plugin}cloudbees-folder[Folders Plugin] and you have multiple projects with the same name that are in different folders, you can differentiate between them using a path, similar to a Unix filesystem path. There are two types of paths:
 
 === Absolute paths
 

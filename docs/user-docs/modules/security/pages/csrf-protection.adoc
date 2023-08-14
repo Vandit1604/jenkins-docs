@@ -35,7 +35,7 @@ NOTE: The web session ID was added in Jenkins 2.176.2 and 2.186 to cause crumb t
 See link:/security/advisory/2019-07-17/#SECURITY-626[security advisory] and link:/doc/upgrade-guide/2.176/#SECURITY-626[upgrade guide].
 
 Plugins may provide other crumb issuers that use other criteria to determine whether a crumb is valid.
-The {plugin}/strict-crumb-issuer[Strict Crumb Issuer] provides an alternative crumb issuer implementation that is more customizable.
+The {plugin}strict-crumb-issuer[Strict Crumb Issuer] provides an alternative crumb issuer implementation that is more customizable.
 
 
 ## Working with Scripted Clients

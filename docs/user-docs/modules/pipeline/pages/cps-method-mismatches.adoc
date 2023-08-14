@@ -3,7 +3,7 @@
 Jenkins Pipeline uses a library called Groovy CPS to run Pipeline scripts.
 While Pipeline uses the Groovy parser and compiler, unlike a regular Groovy environment it runs most of the program inside a special interpreter.
 This uses a continuation-passing style (CPS) transform to turn your code into a version that can save its current state to disk (a file called `+program.dat+`  inside your build directory) and continue running even after Jenkins has restarted.
-(You can get some more technical background on the {plugin}/workflow-cps[Pipeline: Groovy plugin page] and the https://github.com/cloudbees/groovy-cps/blob/master/README.md[library page].)
+(You can get some more technical background on the {plugin}workflow-cps[Pipeline: Groovy plugin page] and the https://github.com/cloudbees/groovy-cps/blob/master/README.md[library page].)
 
 While the CPS transform is usually transparent to users, there are limitations to what Groovy language constructs can be supported, and in some circumstances it can lead to counterintuitive behavior.
 https://issues.jenkins.io/browse/JENKINS-31314[JENKINS-31314] makes the runtime try to detect the most common mistake: calling CPS-transformed code from non-CPS-transformed code.

@@ -22,7 +22,7 @@ Even not assuming malicious intent, badly set up build scripts can accidentally 
 Solutions to this issue include the following:
 
 - Use https://plugins.jenkins.io/ui/search/?labels=cloud[cloud providers] that create a new agent for every build.
-- Plugins such as {plugin}/job-restrictions[Job Restrictions Plugin] limit which jobs can be run on certain nodes.
+- Plugins such as {plugin}job-restrictions[Job Restrictions Plugin] limit which jobs can be run on certain nodes.
 
 
 == Pull Request Abuse

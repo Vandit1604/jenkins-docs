@@ -39,7 +39,7 @@ Make sure you have a backup, to be able to restore the configuration to as close
 
 == Using Configuration as Code
 
-If you configure Jenkins using {plugin}/configuration-as-code[Configuration as Code Plugin] (JCasC), choose this approach.
+If you configure Jenkins using {plugin}configuration-as-code[Configuration as Code Plugin] (JCasC), choose this approach.
 
 Locate your JCasC configuration file.
 The default location is `jenkins.yaml` in the Jenkins home directory, but it can be located in a number of places.

@@ -40,7 +40,7 @@ The experimental update center only offers the latest version of each plugin, ev
 
 === In Jenkins Configuration-as-Code plugin
 
-{plugin}/configuration-as-code[Jenkins Configuration-as-Code plugin] allows configuring update centers in configuration YAMLs.
+{plugin}configuration-as-code[Jenkins Configuration-as-Code plugin] allows configuring update centers in configuration YAMLs.
 Once configured, it will be possible to install experimenta plugins and versions from the _Plugin Manager_ Web UI.
 
 ```yml

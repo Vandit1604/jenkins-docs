@@ -272,7 +272,7 @@ when such troubleshooting is required.
 
 === Using the Jenkins Metrics Plugin
 
-The {plugin}/metrics[metrics plugin] is an open-source plugin that exposed Jenkins metrics.
+The {plugin}metrics[metrics plugin] is an open-source plugin that exposed Jenkins metrics.
 Metrics are exposed using the link:https://dropwizard.github.io/metrics/3.1.0[Dropwizard Metrics API]
 
 .Metrics exposed
@@ -292,7 +292,7 @@ for (j in Jenkins.instance.getExtensionList(jenkins.metrics.api.MetricProvider.c
 }
 ----
 
-The {plugin}/metrics[metrics plugin] documentation describes the available metrics.
+The {plugin}metrics[metrics plugin] documentation describes the available metrics.
 
 .Metrics Usage
 

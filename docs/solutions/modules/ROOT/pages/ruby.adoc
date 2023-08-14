@@ -19,13 +19,13 @@ image::images:images:solution-images:junit-rspec-postbuild-action.png[Configured
 
 By integrating the test reports into Jenkins, you can generate trends and
 reports. There are other plugins, such as the
-{plugin}/email-ext[Email Ext plugin]
+{plugin}email-ext[Email Ext plugin]
 which can also make use of these machine-readable test reports to send
 email notifications with only the failing test cases listed.
 
 image::images:images:solution-images:junit-rspec-trend.png[Trending RSpec test reports, role=center]
 
-Using plugins such as the {plugin}/cucumber-testresult-plugin[Cucumber Test Result plugin]
+Using plugins such as the {plugin}cucumber-testresult-plugin[Cucumber Test Result plugin]
 improve the integration and discoverability of successful/unsuccessful
 Cucumber scenarios.
 
