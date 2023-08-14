@@ -15,7 +15,7 @@ and is accompanied by a test to check that the application renders
 satisfactorily.
 
 *Duration:* This tutorial takes 20-40 minutes to complete (assuming you've
-already met the include::partial$_prerequisites[prerequisites] below). The exact duration will
+already met the <<prerequisites,prerequisites>> below). The exact duration will
 depend on the speed of your machine and whether or not you've already
 xref:user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[run Jenkins in Docker] from xref:tutorials:index.adoc[another tutorial].
 
@@ -23,7 +23,7 @@ You can stop this tutorial at any point in time and continue from where you left
 off.
 
 If you've already run though xref:tutorials:index.adoc[another tutorial], you can skip the
-include::partial$_prerequisites[prerequisites] and <<run-jenkins-in-docker,Run Jenkins in
+<<prerequisites,prerequisites>> and <<run-jenkins-in-docker,Run Jenkins in
 Docker>> sections below and proceed on to xref:partial$_fork-sample-repository.adoc[forking the
 sample repository]. (Just ensure you have
 link:https://git-scm.com/downloads[Git] installed locally.) If you need to
@@ -31,7 +31,9 @@ restart Jenkins, simply follow the restart instructions in
 xref:user-docs:installing-jenkins:partials_setup-wizard-for-tutorials.adoc[run Jenkins in Docker] and then
 proceed on.
 
+[[prerequisites]]
 include::partial$_prerequisites.adoc[prerequisites]
+
 ** link:https://git-scm.com/downloads[Git] and optionally
    link:https://desktop.github.com/[GitHub Desktop].
 
@@ -436,7 +438,7 @@ To learn more about what Jenkins can do, check out:
 * The link:/doc/book[User Handbook] for more detailed information about using
   Jenkins, such as link:/doc/book/pipeline[Pipelines] (in particular
   link:/doc/book/pipeline/syntax[Pipeline syntax]) and the
-  link:/doc/book/blueocean[Blue Ocean] interface.
+  xref:user-docs:blueocean:index.adoc[Blue Ocean] interface.
 * The link:/node[Jenkins blog] for the latest events, other tutorials and
   updates.
 

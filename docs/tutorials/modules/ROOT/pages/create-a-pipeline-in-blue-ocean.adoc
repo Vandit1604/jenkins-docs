@@ -1,7 +1,7 @@
 = Create a Pipeline in Blue Ocean
 :page-aliases: creating-a-pipeline-in-blue-ocean.adoc
 
-This tutorial shows you how to use the link:/doc/book/blueocean/[Blue Ocean] feature of Jenkins to create a Pipeline that orchestrates building a simple application.
+This tutorial shows you how to use the xref:user-docs:blueocean:index.adoc[Blue Ocean] feature of Jenkins to create a Pipeline that orchestrates building a simple application.
 
 Before you start this tutorial, be sure to run through at least one of the initial tutorials from the xref:tutorials:index.adoc[tutorials overview] page.
 This will help you learn about CI/CD concepts, relevant to the technology stack you're most familiar with, and how these concepts are implemented in Jenkins.
@@ -10,15 +10,16 @@ This tutorial uses the same application that the xref:tutorials:build-a-node-js-
 Therefore, you're building the same application, but this time, completely through Blue Ocean.
 Since Blue Ocean provides a simplified Git-handling experience, you'll be interacting directly with the repository on GitHub, as opposed to a local clone.
 
-*Duration:* This tutorial takes 20-40 minutes to complete if you've already met the include::partial$_prerequisites[prerequisites] below.
+*Duration:* This tutorial takes 20-40 minutes to complete if you've already met the <<prerequisites,prerequisites>> below.
+
 The exact duration depends on the speed of your machine and whether or not you've already xref:user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[run Jenkins in Docker] from xref:tutorials:index.adoc[another tutorial].
 
-include::user-docs:blueocean:partials$_blue-ocean-status.adoc[]
+include::user-docs:blueocean:partial$_blue-ocean-status.adoc[]
 
 You can stop this tutorial at any point in time and continue from where you left
 off.
 
-If you've already run though xref:tutorials:index.adoc[another tutorial], you can skip the include::partial$_prerequisites[prerequisites] and xref:user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[run Jenkins in Docker] sections below and proceed to <<fork-sample-repository,forking the sample repository>>.
+If you've already run though xref:tutorials:index.adoc[another tutorial], you can skip the <<prerequisites,prerequisites>> and xref:user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[run Jenkins in Docker] sections below and proceed to <<fork-sample-repository,forking the sample repository>>.
 If you need to restart Jenkins, follow the restart instructions in xref:user-docs:installing-jenkins:partials_setup-wizard-for-tutorials.adoc[run Jenkins in Docker] and then proceed.
 
 include::partial$_prerequisites.adoc[prerequisites]
@@ -279,7 +280,7 @@ Because Jenkins is extremely extensible, it can be modified and configured to ha
 To learn more about what Jenkins can do, check out:
 
 * The link:/doc/tutorials[Tutorials overview] page for other introductory tutorials.
-* The link:/doc/book[User Handbook] for more detailed information about using Jenkins, such as link:/doc/book/pipeline[Pipelines], link:/doc/book/pipeline/syntax[Pipeline syntax], and the link:/doc/book/blueocean[Blue Ocean] interface.
+* The link:/doc/book[User Handbook] for more detailed information about using Jenkins, such as link:/doc/book/pipeline[Pipelines], link:/doc/book/pipeline/syntax[Pipeline syntax], and the xref:user-docs:blueocean:index.adoc[Blue Ocean] interface.
 * The link:/node[Jenkins blog] for the latest events, other tutorials, and updates.
 
 

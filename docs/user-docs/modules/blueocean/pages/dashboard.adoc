@@ -6,7 +6,7 @@
 Blue Ocean's "Dashboard" is the default view when opening Blue Ocean.
 It displays an overview of all Pipeline projects configured on a Jenkins instance.
 
-include::doc/book/blueocean/_blue-ocean-status.adoc[]
+include::partial$_blue-ocean-status.adoc[]
 
 The Dashboard consists of a blue link:#navigation-bar[navigation bar] at the top, the link:#pipelines-list[Pipelines list], and the link:#favorites-list[Favorites list].
 

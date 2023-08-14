@@ -7,9 +7,9 @@ modern design that allows users to graphically create, visualize and diagnose
 Continuous Delivery (CD) Pipelines
 ""
 
-include::doc/book/blueocean/_blue-ocean-status.adoc[]
+include::user-docs:blueocean:partial$_blue-ocean-status.adoc[]
 
-=== Screenshots
+== Screenshots
 
 .Pipeline Editor
 
@@ -45,7 +45,7 @@ Pipelines are run for all feature branches and pull requests, with their status 
 ""
 image:/images/blueocean/press/github-status.png[Github integration, role=center]
 
-=== Video
+== Video
 
 Also available for download in link:https://www.dropbox.com/s/1824kdeh0czdgna/Blue_Ocean_01_End_Bumper.mov?dl=0[full high definition].
 ++++

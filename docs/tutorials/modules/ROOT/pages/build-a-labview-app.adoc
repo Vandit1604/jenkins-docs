@@ -7,11 +7,12 @@ If you are a LabVIEW developer who is new to CI/CD concepts, or you might be fam
 We'll walk through setting up Jenkins as our CI server and using it to automate graphical diffing and testing of our project (which you'll obtain from http://www.ni.com/example/lv-ci[this example page] on ni.com). Jenkins will monitor GitHub Pull Requests for changes and will comment and check if the LabVIEW project can build successfully. Unit test results will be saved to a JUnit XML report.
 
 *Duration:* This tutorial takes 20-40 minutes to complete (assuming you've
-already met the include::partial$_prerequisites[prerequisites] below). The exact duration will
+already met the <<prerequisites,prerequisites>> below). The exact duration will
 depend on the speed of your machine and whether or not you've already link:/doc/book/installing/[installed Jenkins] from xref:tutorials:index.adoc[another tutorial].
 
 You can stop this tutorial at any point in time and continue from where you left off.
 
+[[prerequisites]]
 == Prerequisites
 
 For this tutorial, you will require:
@@ -162,7 +163,7 @@ image:labview-13-unlocking-jenkins.png[alt="unlocking jenkins",width=100%]
 
 . Click *Install* at the bottom of the page to install the plugins.
 
-. Once plugins are complete, you’ll be prompted to create a user. Enter your credentials and click Save and Continue.
+. Once plugins are complete, you'll be prompted to create a user. Enter your credentials and click Save and Continue.
 [.boxshadow]
 image:labview-14-create-first-user.png[alt="create first user",width=100%]
 . On the following Instance Configuration page, leave the Jenkins URL as-is.
@@ -355,7 +356,7 @@ To learn more about what Jenkins can do, check out:
 * The link:/doc/book[User Handbook] for more detailed information about using
   Jenkins, such as link:/doc/book/pipeline[Pipelines] (in particular
   link:/doc/book/pipeline/syntax[Pipeline syntax]) and the
-  link:/doc/book/blueocean[Blue Ocean] interface.
+  xref:user-docs:blueocean:index.adoc[Blue Ocean] interface.
 * The link:/node[Jenkins blog] for the latest events, other tutorials and
   updates.
 

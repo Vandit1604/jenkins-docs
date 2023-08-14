@@ -31,6 +31,7 @@ xref:user-docs:installing-jenkins:partials_setup-wizard-for-tutorials.adoc[run J
 proceed on.
 
 include::partial$_prerequisites.adoc[]
+
 ** link:https://git-scm.com/downloads[Git] and optionally
    link:https://desktop.github.com/[GitHub Desktop].
 
@@ -430,7 +431,7 @@ To learn more about what Jenkins can do, check out:
 * The link:/doc/book[User Handbook] for more detailed information about using
   Jenkins, such as link:/doc/book/pipeline[Pipelines] (in particular
   link:/doc/book/pipeline/syntax[Pipeline syntax]) and the
-  link:/doc/book/blueocean[Blue Ocean] interface.
+  xref:user-docs:blueocean:index.adoc[Blue Ocean] interface.
 * The link:/node[Jenkins blog] for the latest events, other tutorials and
   updates.
 
