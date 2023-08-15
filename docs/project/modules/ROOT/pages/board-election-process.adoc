@@ -1,10 +1,4 @@
----
-layout: simplepage
-title: "Board and Officer election process"
-section: project
-description: >
-  This page describes the election process for Jenkins Governance Board and Officer roles.
----
+= Board and Officer election process
 
 The board positions and officer roles are an essential part of Jenkins' community governance and well-being. 
 This document outlines the xref:project:ROOT:governance.adoc#governance-board[Jenkins Governance Board] and link:/project/team-leads/[Jenkins officer] election process.
@@ -23,7 +17,7 @@ A board comprised fully of write-in candidates runs the risk of being overweighe
 . Make sure that the board reflects the balance of different viewpoints and needs of users, committers, organizations of any size, and commercial interests.
 . Maintain stability and avoid sudden direction changes.
 
-=== Elections Committee
+== Elections Committee
 
 The elections are coordinated by the Jenkins Governance Board members who are not up for re-election this year.
 These contributors are responsible for managing the process, preparing the nominee list for elections, forming and verifying the voter list, and processing/announcing the election results.
@@ -44,18 +38,18 @@ The board will meet in private to select final candidates
 * If a board member gets employed by a company and the limitation gets violated, somebody must step down and the board will follow the link:/project/board-election-process/#interim-procedures[#Interim Procedures]
 . Use the link:https://civs.cs.cornell.edu/[Condorcet Internet Voting Service (CIVS)] as the method to elect multiple people in one vote.
 
-=== Preparation
+== Preparation
 
 The election committee is responsible for preparing and running the election process. This includes various preparation steps within the CIVS and discourse.
 
-==== Discourse
+=== Discourse
 
 The election committee creates the `election-voter-20XX` group in the link:https://community.jenkins.io/[Jenkins community forum].
 As template, the group from the past year can be used, to set permissions and the group profile.
 
 The election committee from the previous year adds the new election committee members to the link:https://community.jenkins.io/g/election-committee[election-committee] as group owner, and removes themselves from the group.
 
-==== CIVS
+=== CIVS
 
 The poll is created using a designated email address, all election committee members have access to.
 The election committee from the previous year adds the new election committee members to link:https://groups.google.com/g/jenkinsci-elections[the Google group] as group manager, and removes themselves from the group afterwards.
@@ -76,7 +70,7 @@ Tick `Present choices on voting page in exactly the given order.` at the bottom 
 The radio button `Private` is selected.
 The list of email addresses of eligible voters from the `election-voter-20XX` discourse group is supplied in the next step, after poll creation and activation.
 
-=== Nominations
+== Nominations
 
 The opinion of members of the community at large is highly valued, and the board welcomes additional nominations beyond who we might consider.
 If you feel that a particular person is well suited to help guide Jenkins, please submit a name and the reason for your nomination to the link:https://community.jenkins.io/g/election-committee[Jenkins Election Committee].
@@ -90,7 +84,7 @@ After receiving and vetting the nominations, the election committee is responsib
 The candidates should also provide their statements, list of affiliations (see <<Corporate Disclosure>>), any account/social media links which may help voters to get more information about them, and plans if they are elected to the role.
 This information is published by the election committee before the voting starts.
 
-=== Voter sign-up and eligibility
+== Voter sign-up and eligibility
 
 Any Jenkins project and/or community contributor is eligible to vote in the election if there is a contribution made before September 01 of the election year.
 Contributing does not only mean a _code contribution_, as xref:community:ROOT:index.adoc[contributions] could be:
@@ -117,7 +111,7 @@ You can use your existing GitHub account, or create a new account specifically f
 Once voter registration is over, the election committee will process the form submissions and prepare a list of the registered voters.
 In the case of rejection, one of the election committee members will send a rejection email.
 
-=== Voting
+== Voting
 
 Voting happens through the link:https://civs.cs.cornell.edu/[Condorcet Internet Voting Service].
 Once the voting period begins, all voters will receive a notification to the email used for your link:https://community.jenkins.io[Jenkins community account].
@@ -134,7 +128,7 @@ Refer to link:https://civs.cs.cornell.edu/[this page] for more information about
 Once voting is over, the election committee will process the results, notify the elected candidates, and prepare the announcement.
 The results should be announced shortly after the elections, in the Jenkins mailing lists, blog, and social accounts.
 
-=== Post-announcement
+== Post-announcement
 
 Voting results take effect immediately after the announcement.
 Board members and former officers are responsible to organize knowledge and permission transfers for the newly elected contributors.
@@ -143,7 +137,7 @@ with an expectation that the transition concludes within one month after the res
 
 The election committee is responsible to hold a retrospective for the elections and to make the results of it public.
 
-=== Publicity
+== Publicity
 
 The election committee is encouraged to post about phase changes (nomination phase, voting phase, etc.) on the Jenkins blog and social media accounts.
 The LinkedIn and Twitter posts from the past years can be used as a template.

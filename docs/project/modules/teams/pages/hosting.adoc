@@ -1,7 +1,7 @@
 = Hosting Team
 
-  // mailinglist: "/mailing-lists/#jenkinsci-dev-googlegroups-com"
-  // chat: "/project/teams/hosting/#chat"
+// mailinglist: "/mailing-lists/#jenkinsci-dev-googlegroups-com"
+// chat: "/project/teams/hosting/#chat"
 
 The Jenkins Hosting Team handles various requests related to hosting of open-source plugins and other components (forking and transferring plugins, managing permissions and update centers, etc.).
 There are multiple contributors involved in this activity on a regular basis.
@@ -11,7 +11,7 @@ There are multiple contributors involved in this activity on a regular basis.
 * Triage and processing of new plugin link:https://github.com/jenkins-infra/repository-permissions-updater/issues?q=is%3Aissue+is%3Aopen++label%3Ahosting-request+[Hosting] requests.
   There is some automation around this process, but human reviews are needed too...
 ** Ensure that xref:dev-docs:publishing:preparation.adoc[plugin publishing requirements] are followed:
-naming conventions and `artifactId`s, `groupId`s, documentation, duplication of existing plugins, license compliance, etc.]
+naming conventions and `artifactId`s, `groupId`s, documentation, duplication of existing plugins, license compliance, etc.
 ** Check plugin compliance with security best practices and recommendations.
 * Managing plugin developer and release permissions (xref:dev-docs:plugin-governance:managing-permissions.adoc[documentation]).
 * Processing xref:dev-docs:plugin-governance:adopt-a-plugin.adoc[plugin adoption] requests in the developer mailing list
