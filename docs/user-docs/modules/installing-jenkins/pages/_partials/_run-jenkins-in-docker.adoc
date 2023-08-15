@@ -14,10 +14,9 @@ image.
 To run Jenkins in Docker, follow the relevant instructions below for either
 <<on-macos-and-linux,macOS and Linux>> or <<on-windows,Windows>>.
 
-You can read more about Docker container and image concepts in the
-xref:installing-jenkins:docker.adoc[Docker]
+You can read more about Docker container and image concepts in the xref:docker.adoc[Docker]
 section of the xref:installing-jenkins:index.adoc[Installing Jenkins] page.
 
-xref:partial$_docker-for-tutorials.adoc[]
+xref::partial$_docker-for-tutorials.adoc[]
 
 xref:partial$_setup-wizard-for-tutorials.adoc[]

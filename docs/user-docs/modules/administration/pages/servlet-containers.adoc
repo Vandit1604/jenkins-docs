@@ -27,7 +27,7 @@ We define multiple support levels for servlet containers.
 
 | **Level 1:** Supported
 | We run automated testing for these servlet containers, and we intend to fix reported issues in a timely manner.
-a|The versions of Winstone and Jetty bundled in the Jenkins xref:installing-jenkins:index.adocwar-file/[WAR file].
+a|The versions of Winstone and Jetty bundled in the Jenkins xref:installing-jenkins:war-file.adoc[WAR file].
 
 | **Level 2:** Patches considered
 | Support may have limitations and extra requirements.
@@ -50,7 +50,7 @@ a|
 
 == References
 
-* xref:installing-jenkins:index.adocservlet-containers/[Installation instructions]
+* xref:installing-jenkins:servlet-containers.adoc[Installation instructions]
 * link:https://www.eclipse.org/jetty/[Jetty versions]
 * link:https://tomcat.apache.org/whichversion.html[Tomcat versions]
 * link:https://www.wildfly.org/news/2022/11/09/WildFly27-Final-Released/[WildFly 27 release announcement]

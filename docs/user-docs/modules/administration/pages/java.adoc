@@ -16,7 +16,7 @@ Refer to the link:/doc/administration/requirements/upgrade-java-guidelines[upgra
 
 ## Running Jenkins on Java 11 in Docker
 
-Java 11 Docker installation instructions are included in xref:installing-jenkins:index.adocdocker/#downloading-and-running-jenkins-in-docker["Downloading and running Jenkins in Docker"].
+Java 11 Docker installation instructions are included in xref:installing-jenkins:docker.adoc#downloading-and-running-jenkins-in-docker["Downloading and running Jenkins in Docker"].
 Alternatively, the `jenkins/jenkins:jdk17` Docker image allows you to run the Jenkins controller on Java 17.
 
 All other Java versions are not supported.

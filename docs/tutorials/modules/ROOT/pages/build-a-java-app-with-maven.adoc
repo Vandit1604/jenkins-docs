@@ -23,11 +23,11 @@ off.
 
 If you've already run through xref:index.adoc[another tutorial], you can skip the
 <<Prerequisites>> and <<run-jenkins-in-docker,Run Jenkins in
-Docker>> sections below and proceed on to xref:partial$_fork-sample-repository.adoc[forking the
+Docker>> sections below and proceed on to xref:partial$fork-sample-repository.adoc[forking the
 sample repository]. (Just ensure you have
 link:https://git-scm.com/downloads[Git] installed locally.) If you need to
 restart Jenkins, simply follow the restart instructions in
-xref:user-docs:installing-jenkins:partials_setup-wizard-for-tutorials.adoc[run Jenkins in Docker] and then
+xref:user-docs:installing-jenkins:partial$_setup-wizard-for-tutorials.adoc[run Jenkins in Docker] and then
 proceed on.
 
 include::partial$prerequisites.adoc[]
