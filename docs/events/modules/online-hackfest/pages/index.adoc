@@ -183,7 +183,7 @@ xref:community:ROOT:document.adoc[Contributing to user documentation].
 |Project idea and Keywords | Description and links
 
 | Improve User and Administrator Documentation
-  (link:/sigs/docs/#user-guide[project page])
+  (xref:sigs:docs:index.adoc#user-guide[project page])
 a| Let's improve the documentation for Jenkins end users and administrators.
    Located xref:user-docs:ROOT:index.adoc[on the Jenkins website], it follows the Documentation-as-Code approach.
   We would like to extend this documentation and to also make it more accessible and discoverable.
@@ -205,7 +205,7 @@ a| If you are interested to do UX testing, Jenkins installation guidelines could
 * **Advanced:** Rewrite the link:/doc/book/installing/#docker[Docker installation guide] to use the `jenkins/jenkins` image instead of the Blue Ocean images.
 
 | Document Jenkins use-cases
-  (link:/sigs/docs/#solution-pages[project page])
+  (xref:sigs:docs:index.adoc#solution-pages[project page])
 a| Help us to improve documentation for real-world Jenkins use-cases!
 
 * Review and refresh the existing xref:solutions:ROOT:index.adoc[solution pages]: add links to plugins and articles, extend the overview sections, improve the rendering. 
@@ -217,7 +217,7 @@ a| Help us to improve documentation for real-world Jenkins use-cases!
 a| We are moving plugin documentation from Jenkins Wiki to Documentation as Code so that it is stored directly in plugin repositories.
    There are hundreds of plugins that need to be migrated.
    We invite contributors to help with migrating plugin pages and improving existing ones.
-   link:/sigs/docs/#plugin-documentation-on-github[More info].
+   xref:sigs:docs:index.adoc#plugin-documentation-on-github[More info].
 
 * Migrate plugin documentation as documented in these link:/blog/2019/10/21/plugin-docs-on-github/[guidelines]).
   List of plugins for grabs can be found in the link:https://reports.jenkins.io/jenkins-plugin-migration.html[plugin migration progress report].
