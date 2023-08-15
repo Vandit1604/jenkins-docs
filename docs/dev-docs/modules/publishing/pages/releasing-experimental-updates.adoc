@@ -1,6 +1,6 @@
 = Publishing Experimental Plugin Releases
 
-One of the methods to release experimental updates is using the link:https://github.com/jenkinsci/plugin-installation-manager-tool[Plugin Installation Manager Tool] combined with link:/doc/developer/plugin-development/incrementals/[incremental] builds:
+One of the methods to release experimental updates is using the link:https://github.com/jenkinsci/plugin-installation-manager-tool[Plugin Installation Manager Tool] combined with xref:dev-docs:plugin-development:incrementals.adoc[incremental] builds:
 
 - The plugin installation manager tool enables easier import into an instance of Jenkins by downloading plugins and their respective dependencies into a folder.
 - It allows the administrator to use incremental builds without requiring a "beta" release.

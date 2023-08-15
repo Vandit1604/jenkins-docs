@@ -298,7 +298,7 @@ Documentation (outside the plugin source code, e.g. in the Jenkins wiki or in Gi
 
 == Resources
 
-* link:/doc/developer/security/[Security Chapter in the Jenkins Developer Documentation]
-** link:/doc/developer/security/secrets/[Storing Secrets]
-** link:/doc/developer/security/form-validation/[Form Validation] (permission checks and CSRF protection)
+* xref:dev-docs:security:index.adoc[Security Chapter in the Jenkins Developer Documentation]
+** xref:dev-docs:security:secrets.adoc[Storing Secrets]
+** xref:dev-docs:security:form-validation.adoc[Form Validation] (permission checks and CSRF protection)
 ** xref:xss-prevention.adoc[Preventing Cross-Site Scripting in Jelly views]

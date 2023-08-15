@@ -6,7 +6,7 @@ Stapler now tries to access a field first and only if it gets access denied then
 
 This behavior is not recommended anymore, and will trigger `IllegalReflectiveAccess` warnings when running Jenkins on Java 11.
 
-If you see a warning message about this then you should link:/participate/report-issue/[report an issue] to the respective plugin.
+If you see a warning message about this then you should xref:community:ROOT:report-issue.adoc[report an issue] to the respective plugin.
 
 ----
 Dec 15, 2020 9:22:33 PM org.kohsuke.stapler.lang.FieldRef$1 get

@@ -34,7 +34,7 @@ These resources are available to any user without authentication, not requiring 
 
 `Messages_??.properties` (including `Messages.properties`) files contain localized message strings.
 
-For the classic Jenkins UI, they are generally used directly as described in link:/doc/developer/internationalization/[Internationalization and Localization].
+For the classic Jenkins UI, they are generally used directly as described in xref:dev-docs:internationalization:index.adoc[Internationalization and Localization].
 
 Additionally for modern web UIs, localized resources are exposed at `/i18n/resourceBundle/`, at URLs like `https://ci.jenkins.io/i18n/resourceBundle?baseName=hudson.Messages`.
 See jenkinsdoc:jenkins.I18n[I18n] for details.

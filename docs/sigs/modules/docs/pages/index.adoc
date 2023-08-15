@@ -142,7 +142,7 @@ Useful links:
 [[user-guide]]
 === User Guide Rework
 
-Jenkins user topics are included in the current link:/doc/book[Jenkins Handbook].
+Jenkins user topics are included in the current xref:user-docs:ROOT:index.adoc[Jenkins Handbook].
 link:https://docs.google.com/spreadsheets/d/1nA8xVOkyKmZ8oTYSLdwjborT0w-BpBNNZT0nxR9deZ8/edit#gid=1087292709[Feedback requests] are frequently received to improve user documentation.
 Common improvement themes include adding migration of the documentation from Wiki, pipeline examples with each of the pipeline steps, additional tutorials for new users, better search and navigation.
 
@@ -153,7 +153,7 @@ Links:
 [[administrator-guide]]
 === Administrator Guide
 
-Jenkins administration topics are included in the current link:/doc/book[Jenkins Handbook].
+Jenkins administration topics are included in the current xref:user-docs:ROOT:index.adoc[Jenkins Handbook].
 Navigation can be improved for administrators by separating the administration topics into a separate volume.
 This project will create a separate Jenkins Administrator Guide with content specific for administrators.
 This project is tracked in the {jira}WEBSITE-738[] EPIC.

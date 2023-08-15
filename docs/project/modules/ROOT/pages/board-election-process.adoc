@@ -7,7 +7,7 @@ description: >
 ---
 
 The board positions and officer roles are an essential part of Jenkins' community governance and well-being. 
-This document outlines the link:/project/governance/#governance-board[Jenkins Governance Board] and link:/project/team-leads/[Jenkins officer] election process.
+This document outlines the xref:project:ROOT:governance.adoc#governance-board[Jenkins Governance Board] and link:/project/team-leads/[Jenkins officer] election process.
 The election process is driven by the Jenkins Governance board members who are not up for reelection (aka the _election committee_).
 More contributors might be added to the election committee if approved by the link:/project/governance-meeting/[regular governance meeting].
 
@@ -93,17 +93,17 @@ This information is published by the election committee before the voting starts
 === Voter sign-up and eligibility
 
 Any Jenkins project and/or community contributor is eligible to vote in the election if there is a contribution made before September 01 of the election year.
-Contributing does not only mean a _code contribution_, as link:/participate[contributions] could be:
+Contributing does not only mean a _code contribution_, as xref:community:ROOT:index.adoc[contributions] could be:
 
-* link:/participate/connect/[Connecting with the community]
-* link:/participate/meet/[Joining or organizing a meetup]
-* link:/participate/code/[Contributing code to Jenkins]
-* link:/participate/help/[Helping Jenkins users]
-* link:/doc/developer/internationalization/[Translating Jenkins resources]
-* link:/participate/test/[Testing Jenkins core and plugins]
-* link:/participate/document/[Contributing to Jenkins documentation]
-* link:/participate/design/[Creating art or updating the Jenkins UI]
-* link:/participate/review-changes/[Reviewing open pull requests]
+* xref:community:ROOT:connect.adoc[Connecting with the community]
+* xref:community:ROOT:meet.adoc[Joining or organizing a meetup]
+* xref:community:ROOT:code.adoc[Contributing code to Jenkins]
+* xref:community:ROOT:help.adoc[Helping Jenkins users]
+* xref:dev-docs:internationalization:index.adoc[Translating Jenkins resources]
+* xref:community:ROOT:test.adoc[Testing Jenkins core and plugins]
+* xref:community:ROOT:document.adoc[Contributing to Jenkins documentation]
+* xref:community:ROOT:design.adoc[Creating art or updating the Jenkins UI]
+* xref:community:ROOT:review-changes.adoc[Reviewing open pull requests]
 * link:/donate/[Donating to Jenkins]
 
 As long as you are contributing to the Jenkins project or community, you are eligible to register for voting. 
@@ -159,7 +159,7 @@ If a board member resigns, the board is allowed to appoint an interim board memb
 As an independent community, it is important to us that the Jenkins board does not become overly influenced by any one single corporate entity.
 It is also important that the board members are actively involved in the project.
 No more than two of the four elected members of the governing board may be affiliated with a single corporate entity.
-You can find out more about our philosophy in the link:/project/governance[Governance Document].
+You can find out more about our philosophy in the xref:project:ROOT:governance.adoc[Governance Document].
 
 To handle this within the election cycle, we do not wish to limit the candidacy for employees of any given company.
 
@@ -222,7 +222,7 @@ With this change, the 2020 election will have only one board member elected unle
 
 Related decisions:
 
-* Introduce a new link:/project/team-leads/#documentation[Documentation officer position] (content officer from the 2015 Proposal).
+* Introduce a new xref:project:ROOT:team-leads.adoc#documentation[Documentation officer position] (content officer from the 2015 Proposal).
 * All link:/project/team-leads/[officer positions] will be voted on in 2019 and then in 2020.
 
 === 2015-12-09

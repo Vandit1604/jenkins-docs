@@ -5,7 +5,7 @@ WARNING: This section is a work in progress. Want to help? Check out the (https:
 == Overview
 Writing automated tests for Jenkins and its plugins is important to ensure that everything works as expected — in various scenarios, with multiple Java versions, and on different operating systems — while helping to prevent regressions from being introduced in later releases.
 
-Whether you're writing a new Jenkins plugin, or just looking to link:/participate/[participate in the Jenkins project], this guide aims to cover everything you should need to get started writing various types of automated tests.
+Whether you're writing a new Jenkins plugin, or just looking to xref:community:ROOT:index.adoc[participate in the Jenkins project], this guide aims to cover everything you should need to get started writing various types of automated tests.
 Basic experience of writing Java-based tests with the link:https://junit.org/[JUnit test framework] is assumed.
 
 To make the development of tests simpler, Jenkins comes with a link:https://github.com/jenkinsci/jenkins-test-harness/[test harness], based on the JUnit test framework.

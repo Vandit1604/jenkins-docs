@@ -199,7 +199,7 @@ NOTE: Due to the very large number of system properties used, often just added a
     automatically determined based on environment, see `hudson.lifecycle.Lifecycle`
   description: |
     Specify full class name for Lifecycle implementation to override default.
-    See link:/doc/developer/extensions/jenkins-core/#lifecycle[documentation] for class names.
+    See xref:dev-docs:extensions:jenkins-core.adoc#lifecycle[documentation] for class names.
 
 - name: hudson.logging.LogRecorderManager.skipPermissionCheck
   tags:
@@ -2130,7 +2130,7 @@ NOTE: Due to the very large number of system properties used, often just added a
   description: |
     `true` to enable the new experimental UX on Jenkins.
     See https://issues.jenkins.io/browse/JENKINS-60920[JENKINS-60920].
-    Also see link:/sigs/ux/[Jenkins UX SIG].
+    Also see xref:sigs:ux:index.adoc[Jenkins UX SIG].
     Has no effect since https://github.com/jenkinsci/jenkins/commit/51e7142d5705c10833e0959fdf2534a32b0e7d86[2.344] as the feature has been removed.
 
 - name: jenkins.websocket.idleTimeout

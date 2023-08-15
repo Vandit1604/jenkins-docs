@@ -61,7 +61,7 @@ issues:
 
     The Stapler web framework has been extended with a Service Provider Interface (SPI) that allows preventing views from being rendered.
     The implementation of that SPI in Jenkins now prevents view fragments from being rendered.
-    Further details are available in the link:/doc/developer/views/SECURITY-534[developer documentation].
+    Further details are available in the xref:dev-docs:views:SECURITY-534.adoc[developer documentation].
 
     Most views in Jenkins and Jenkins plugins should be compatible with this change.
     We track known affected plugins and their status in link:https://wiki.jenkins.io/display/JENKINS/Plugins+affected+by+the+SECURITY-534+fix[the Jenkins wiki].

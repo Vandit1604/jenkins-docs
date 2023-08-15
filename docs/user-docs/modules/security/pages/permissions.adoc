@@ -69,7 +69,7 @@ In addition to the above, a user granted _Overall/Read_ can do all of the follow
 To support various features available to legitimate users of Jenkins, the following not as obvious URLs are accessible as well:
 
 * Further path prefixes (in addition to `adjuncts/`, `assets/`, and core webapp resources) providing static assets, both by Jenkins core and by plugins.
-  See link:/doc/developer/views/exposing-bundled-resources/[the developer documentation].
+  See xref:dev-docs:views:exposing-bundled-resources.adoc[the developer documentation].
 * Path prefixes providing access to all URLs implemented in extension lists of all extension points implemented in Jenkins.
   These URLs are typically used to support form validation and form autocompletion, and the way they're organized means that some basic access is granted to any user with _Overall/Read_ access.
 

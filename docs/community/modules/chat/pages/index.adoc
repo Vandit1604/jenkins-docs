@@ -20,7 +20,7 @@ General discussions about Jenkins.
 
 Q&A channel for newcomer contributors to Jenkins.
 Use this channel if you are not sure where to ask, and other contributors will help you.
-link:/participate/[More about contributing to Jenkins].
+xref:community:ROOT:index.adoc[More about contributing to Jenkins].
 
 == Internet Relay Chat (IRC)
 
@@ -49,7 +49,7 @@ It is used by the Release Team when planning and rolling out the new releases an
 
 === `#jenkins-hosting`
 
-Chat of the Jenkins link:/project/teams/hosting/[Hosting team] that manages permissions and handles plugin hosting requests.
+Chat of the Jenkins xref:project:teams:hosting.adoc[Hosting team] that manages permissions and handles plugin hosting requests.
 We use the *jenkins-admin* bot to automate common administrative operations.
 Its use is limited to users with _voice_ or _op_ in this channel.
 xref:projects:ROOT:index.adoc/infrastructure/ircbot/[Learn more about the IRC Bot].
