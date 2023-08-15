@@ -37,7 +37,7 @@
 
 [.float-group]
 --
-image::images:logos/needs-you/Jenkins_Needs_You-02.png[Logo,width=192,float=right,role=float-gap]
+image::images:ROOT:logos/needs-you/Jenkins_Needs_You-02.png[Logo,width=192,float=right,role=float-gap]
 This special interest group improves Jenkins use and adoption through documentation. The SIG encourages, creates, and reviews documentation contributions and improves documentation with contributors and external communities.
 --
 
@@ -62,20 +62,20 @@ The SIG offers a venue for all kinds of documentation creation, improvement, and
 The group focuses on documentation for Jenkins, including:
 
 * xref:user-docs:ROOT:index.adoc[User documentation] - Using Jenkins
-** link:/doc/tutorials[Tutorials]
-** link:/doc/book/[User Handbook]
+** xref:tutorials:ROOT:index.adoc[Tutorials]
+** xref:user-docs:ROOT:index.adoc[User Handbook]
 ** References like link:/doc/book/pipeline/syntax/[Pipeline Syntax] and link:/doc/pipeline/steps/[Pipeline Steps]
 ** xref:ROOT:how-to-guides.adoc[How-to Guides]
-* link:/doc/developer/[Developer documentation] - Extending Jenkins
+* xref:dev-docs:ROOT:index.adoc[Developer documentation] - Extending Jenkins
 ** xref:plugin-tutorial:index.adoc[Tutorials]
-** link:/doc/developer/book/[Developer Reference]
-** link:/doc/developer/guides/[How-To Guides]
+** xref:dev-docs:reference:index.adoc[Developer Reference]
+** xref:dev-docs:guides:index.adoc[How-To Guides]
 * xref:solutions:ROOT:index.adoc[Solution documentation] - using Jenkins with specific technologies (e.g. Java, PHP, or Docker).
-  Also, implementation solutions like link:/solutions/pipeline[Pipeline]
+  Also, implementation solutions like xref:solutions:ROOT:pipeline.adoc[Pipeline]
 
 Documentation SIG may cooperate with other groups.
-For example, we cooperate with the link:/sigs/platform[Platform SIG] on platform topics.
-
+For example, we cooperate with the xref:sigs:platform:index.adoc[Platform SIG] on platform topics.
+s
 == Topics
 
 * Reviewing link:/changelog/[weekly changelogs]
@@ -88,7 +88,7 @@ For example, we cooperate with the link:/sigs/platform[Platform SIG] on platform
 
 == Contributing
 
-See link:/participate/document[this page] for information about contributing to Jenkins documentation.
+See xref:community:ROOT:document.adoc[this page] for information about contributing to Jenkins documentation.
 It contains links for newcomers and seasoned contributors.
 If you have any questions or ideas, please feel free to reach out to us using the channels listed on the right panel.
 
@@ -103,7 +103,7 @@ See the link:https://docs.google.com/document/d/1ygRZnVtoIvuEKpwNeF_oVRVCV5NKcZD
 Google Season of Docs brings together open source communities and technical writers for the benefit of both.
 The program raises awareness of open source, of documentation, and of technical writing.
 
-See our link:/sigs/docs/gsod[Google Season of Docs status page] for documentation project ideas, contact information, and more.
+See our xref:sigs:docs:gsod/index.adoc[Google Season of Docs status page] for documentation project ideas, contact information, and more.
 
 === Plugin documentation on GitHub
 
