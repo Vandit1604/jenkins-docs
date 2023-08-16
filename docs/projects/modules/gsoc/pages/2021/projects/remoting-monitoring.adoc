@@ -33,7 +33,7 @@ Therefore, this plugin will help to provide a better monitoring experience for s
 
 == Goal
 
-image:/images/gsoc/2021/remoting-monitoring/goal.png[]
+image:images:ROOT:gsoc/2021/remoting-monitoring/goal.png[]
 
 The goal of this project:
 
@@ -55,9 +55,9 @@ Proof of Concept::
 How to deliver the monitoring program to the agents:::
 We tried two approaches
 . Send the monitoring program to the agent over Remoting +
-image:/images/post-images/2021-07-31-remoting-monitoring-phase-1/sending-monitoring-program-via-remoting.png[]
+image:images:ROOT:post-images/2021-07-31-remoting-monitoring-phase-1/sending-monitoring-program-via-remoting.png[]
 . Install the monitoring engine when provisioning a new agent +
-image:/images/post-images/2021-07-31-remoting-monitoring-phase-1/install-monitoring-engine-when-provisioning.png[]
+image:images:ROOT:post-images/2021-07-31-remoting-monitoring-phase-1/install-monitoring-engine-when-provisioning.png[]
 
 +
 Then, I decided to take the second approach.
@@ -145,8 +145,8 @@ Demo snapshot::
 
 *_Click to open in new tab_*
 
-image:/images/gsoc/2021/remoting-monitoring/demo-loki.png[logging demo snapshot, width=40%, link=/images/gsoc/2021/remoting-monitoring/demo-loki.png, window=_blank ]
-image:/images/gsoc/2021/remoting-monitoring/demo-prometheus.png[logging demo snapshot, width=40%, link=/images/gsoc/2021/remoting-monitoring/demo-prometheus.png, window=_blank ]
+image:images:ROOT:gsoc/2021/remoting-monitoring/demo-loki.png[logging demo snapshot, width=40%, link=/images/gsoc/2021/remoting-monitoring/demo-loki.png, window=_blank ]
+image:images:ROOT:gsoc/2021/remoting-monitoring/demo-prometheus.png[logging demo snapshot, width=40%, link=/images/gsoc/2021/remoting-monitoring/demo-prometheus.png, window=_blank ]
 
 == Future work
 

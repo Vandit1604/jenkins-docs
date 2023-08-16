@@ -21,7 +21,7 @@ links:
 ---
 
 === Abstract
-image:/images/post-images/gsoc-git-cache-maintenance/maintenance.png[title='Git Maintenance']
+image:images:ROOT:post-images/gsoc-git-cache-maintenance/maintenance.png[title='Git Maintenance']
 
 The project aims to add https://git-scm.com/docs/git-maintenance[git-maintenance] to improve performance of the Jenkins controller. Git-maintenance optimizes caches, thereby executing the git commands faster.
 
@@ -37,10 +37,10 @@ Git caches that exist on the controller can become slower and larger than necess
 * Testing the software (Unit tests).
 
 === Architecture Diagram
-image:/images/post-images/gsoc-git-cache-maintenance/architecture-diagram.png[title='Architecture Diagram']
+image:images:ROOT:post-images/gsoc-git-cache-maintenance/architecture-diagram.png[title='Architecture Diagram']
 
 === Evaluation Phase 1
-image:/images/post-images/gsoc-git-cache-maintenance/maintenance-config.png[title="Config UI"]
+image:images:ROOT:post-images/gsoc-git-cache-maintenance/maintenance-config.png[title="Config UI"]
 
 1. Added git maintenance api in Git Client Plugin.
 2. Created simple UI to configure maintenance tasks.
@@ -55,7 +55,7 @@ video::loLSNdCv6K4[youtube,start=1791,width=800,height=420]
 
 
 === Evaluation Phase 2
-image:/images/post-images/gsoc-git-cache-maintenance/maintenance-records.png[title="Maintenance Records"]
+image:images:ROOT:post-images/gsoc-git-cache-maintenance/maintenance-records.png[title="Maintenance Records"]
 
 1. Created a table to display maintenance execution results.
 2. Persist maintenance data in xml file.

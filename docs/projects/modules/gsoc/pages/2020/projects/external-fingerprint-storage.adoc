@@ -115,7 +115,7 @@ link:https://docs.google.com/presentation/d/1QL5m-7QGtep_G1ysEYKRauAHzDq8nTtOdcn
 This section explains the external fingerprint storage API that was created in Jenkins core.
 For further details, please refer to {jep}226/README.adoc[] which explains the design decisions in detail.
 
-image:/images/post-images/gsoc-external-fingerprint-storage-for-jenkins/overview.png[title="External Fingerprint
+image:images:ROOT:post-images/gsoc-external-fingerprint-storage-for-jenkins/overview.png[title="External Fingerprint
 Storage for Jenkins Overview" role="center" width=700 height=400 ]
 
 We created the `FingerprintStorage` class which defines the API for allowing building of custom storage plugins.
@@ -225,7 +225,7 @@ Once the plugin has been installed, you can configure the Redis server details b
 . Scroll to the section `Redis Fingerprint Storage Configuration` and fill in the required details:
 
 +
-image:/images/post-images/gsoc-external-fingerprint-storage-for-jenkins/config_page.png[Configure Redis]
+image:images:ROOT:post-images/gsoc-external-fingerprint-storage-for-jenkins/config_page.png[Configure Redis]
 +
 
 * `Host` - Enter hostname where Redis is running

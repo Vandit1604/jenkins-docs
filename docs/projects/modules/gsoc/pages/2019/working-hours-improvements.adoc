@@ -36,32 +36,32 @@ link:https://docs.google.com/presentation/d/1txLbDliqsZhbKvKR7RBFLue0kvLIcoRpXpB
 
 Exclude Dates
 
-image:/images/post-images/working-hours/working-hours-exmaple-excluded-date.png[Excluded Dates Example]
+image:images:ROOT:post-images/working-hours/working-hours-exmaple-excluded-date.png[Excluded Dates Example]
 
 Time Ranges
 
-image:/images/post-images/working-hours/working-hours-example-time-range.png[Time Ranges Example]
+image:images:ROOT:post-images/working-hours/working-hours-example-time-range.png[Time Ranges Example]
 
 
 ==== Added features
 
 We use react-datepicker to help pick a date, rather than input a hard-coded string.
-image:/images/post-images/working-hours/datepicker.png[]
+image:images:ROOT:post-images/working-hours/datepicker.png[]
 
 Provide holiday presets to help user select excluded dates
-image:/images/post-images/working-hours/presets.png[]
+image:images:ROOT:post-images/working-hours/presets.png[]
 
 Support repeat on excluded dates
-image:/images/post-images/working-hours/repeat.png[]
+image:images:ROOT:post-images/working-hours/repeat.png[]
 
 Support dynamic date
-image:/images/post-images/working-hours/dynamic-date.png[]
+image:images:ROOT:post-images/working-hours/dynamic-date.png[]
 
 Slider to help select time ranges
-image:/images/post-images/working-hours/slider.png[]
+image:images:ROOT:post-images/working-hours/slider.png[]
 
 Set timezone to allow setting the excluded date to a different timezone from the jenkins instance. 
-image:/images/post-images/working-hours/timezone.png[]
+image:images:ROOT:post-images/working-hours/timezone.png[]
 
 ===== Useful Links
 

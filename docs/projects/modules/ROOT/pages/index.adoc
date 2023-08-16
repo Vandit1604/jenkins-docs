@@ -8,7 +8,7 @@ Jenkins project which grow or expand the project in new ways.
 
 == Blue Ocean
 
-image:/images/sunnyblueocean.png["Blue Ocean", role=right]
+image:images:ROOT:sunnyblueocean.png["Blue Ocean", role=right]
 
 Blue Ocean is a project that rethinks the user experience of Jenkins, modelling
 and presenting the process of software delivery by surfacing information that's
@@ -21,18 +21,16 @@ standardized set of components and a style guide that help developers create
 plugins which effortlessly retain the look and feel of the Blue Ocean user
 experience.
 
+include::user-docs:blueocean:partial$_blue-ocean-status.adoc[]
 
-include::blueocean:partial$_blue-ocean-status.adoc[]
-
-
-link:blueocean[*Learn more*]
+xref:user-docs:blueocean:getting-started.adoc[*Learn more*]
 
 ---
 
 
 == Document Jenkins on Kubernetes
 
-image:images:gsod:gsod.png["Google Season of Docs", role=left]
+image:images:ROOT:gsod/gsod.png["Google Season of Docs", role=left]
 
 Kubernetes is a platform-agnostic container orchestration tool created 
 by Google and heavily supported by the open-source community as a project 
@@ -43,20 +41,20 @@ in Kubernetes and update applications with no downtime.
 
 Jenkins on Kubernetes is a popular theme for Jenkins users. There are a lot 
 of presentations and articles about running Jenkins on Kubernetes, however, 
-there’s currently no central location for documentation describing Jenkins 
+there's currently no central location for documentation describing Jenkins 
 on Kubernetes. This project would create a new Kubernetes Volume which would 
 describe the concepts, techniques, and choices for Kubernetes users running Jenkins.
 
 
 
-link:document-jenkins-on-kubernetes[*Learn more*]
+xref:other:document-jenkins-on-kubernetes.adoc[*Learn more*]
 
 ---
 
 
 == Google Summer of Code
 
-image:/images/gsoc/jenkins-gsoc-logo_small.png["Summer of Code", role=right, width=128]
+image:images:ROOT:gsoc/jenkins-gsoc-logo_small.png["Summer of Code", role=right, width=128]
 
 The
 link:https://summerofcode.withgoogle.com/archive/[Google Summer of Code]
@@ -75,7 +73,7 @@ link:gsoc[*Learn more*]
 
 == Infrastructure
 
-image:/images/network-workgroup.png["Infrastructure', role=left]
+image:images:ROOT:network-workgroup.png["Infrastructure', role=left]
 
 As an independent open source project, Jenkins maintains most of its own
 infrastructure including services which help keep the project running.
@@ -93,7 +91,7 @@ link:infrastructure[*Learn more*]
 
 == Jenkins Area Meetups
 
-image:/images/user.svg["Social Jenkins events", role=right]
+image:images:ROOT:user.svg["Social Jenkins events", role=right]
 
 Jenkins Area Meetups (JAMs) are local meetups intended to bring Jenkins users
 and contributors together for socializing and learning.
@@ -112,7 +110,7 @@ link:jam[*Learn more*]
 
 == Jenkins Remoting
 
-image:/images/network-workgroup.png["Infrastructure', role=left]
+image:images:ROOT:network-workgroup.png["Infrastructure', role=left]
 
 Jenkins Remoting is a library, and executable Java archive, which implements the communication layer in Jenkins.
 This includes the TCP-based communication protocols, remote procedure calls, class loading, data streaming, etc.
@@ -128,7 +126,7 @@ link:remoting[*Learn more*]
 
 == Jenkins Configuration as Code
 
-image:/images/logos/JCasC/JCasC.svg["Jenkins Configuration as Code", role=right, height=180]
+image:images:ROOT:logos/JCasC/JCasC.svg["Jenkins Configuration as Code", role=right, height=180]
 
 Setting up Jenkins is a complex process, as both Jenkins and its plugins require some tuning and configuration,
 with dozens of parameters to set within the web UI manage section.
@@ -141,7 +139,7 @@ link:jcasc[*Learn more*]
 
 == Jenkins Operator for Kubernetes
 
-image:/images/logos/kubernetes-operator/256.png["Jenkins Operator", role=left]
+image:images:ROOT:logos/kubernetes-operator/256.png["Jenkins Operator", role=left]
 
 The Jenkins Operator is a link:https://kubernetes.io/docs/concepts/extend-kubernetes/operator/[*Kubernetes Native Operator*] which manages operations for Jenkins on Kubernetes.
 It has been built with Immutability and declarative Configuration as Code in mind.
