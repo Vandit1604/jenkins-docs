@@ -174,7 +174,7 @@ We have a calendar which lists events related to Jenkins, including regular SIG 
 
 ++++
 <!-- Using JSTZ time zone detection library -->
-<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.7/jstz.min.js"></script>-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.6/jstz.min.js"></script>
 
 <script type="text/javascript">
   const deviceTimeZone = jstz.determine().name();
@@ -195,6 +195,7 @@ We have a calendar which lists events related to Jenkins, including regular SIG 
   });
 
 </script>
+
 
 <div class="row">
     <div class="col">
