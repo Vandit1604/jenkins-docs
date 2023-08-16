@@ -30,6 +30,7 @@ There are many online and local Jenkins-related events: including conferences, m
 // - next unless event_time > now
 // - no_events = false
 // - raise ArgumentError.new("No 'location' specified: #{name}") unless data.location
+
 // .col-md-3.text-center
 //   %ul.ji-item-list
 //     %li.post.event.floating
@@ -63,6 +64,42 @@ There are many online and local Jenkins-related events: including conferences, m
 //   const htmlCode = Haml.render(hamlCode);
 // document.body.innerHTML = htmlCode;
 </script>
+<div class="col-md-3 text-center">
+    <ul class="ji-item-list">
+        <li class="post event floating">
+        <a class="body" href="https://www.devopsworldjenkins.com/" target="_blank" rel="noreferrer noopener">
+            <div class="header time">
+            <div class="date-time">
+                <div class="date">
+                <div class="month">Sep</div>
+                <div class="day">28</div>
+                <div class="dow">Tue</div>
+                </div>
+                <div class="time">9:00 AM</div>
+            </div>
+            </div>
+            <h5 class="title">DevOps World | Jenkins World 2021</h5>
+            Online
+        </a>
+        <p class="teaser collapsed" onclick="this.classList.toggle('collapsed')">
+            DevOps World | Jenkins World is the largest gathering of Jenkins users in the world, including Jenkins experts, continuous delivery thought leaders and companies offering complementary technologies for Jenkins. Join us online September 28-30, 2021.
+            <div class="more"></div>
+        </p>
+        <div class="attrs">
+            <span class="location">Online</span>
+        </div>
+        </li>
+    </ul>
+</div>
+<div>
+    <p>
+        There are no upcoming major events registered in the database.
+        If you see that your event is missing, please submit a change to our website.
+    </p>
+    <p>
+        <a href="https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc#adding-an-event" target="_blank" rel="noreferrer noopener">| How to add an event to the Jenkins website?</a>
+    </p>
+</div>
 ++++
 
 == Event Calendar
@@ -73,6 +110,7 @@ We have a calendar which lists events related to Jenkins, including regular SIG 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.7/jstz.min.js"></script>
 
 <script type="text/javascript">
+  const jstz = require('jstz');
   const deviceTimeZone = jstz.determine().name();
   const calendarSrc = 'https://calendar.google.com/calendar/b/1/embed'
       + '?showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;mode=WEEK'
@@ -110,5 +148,4 @@ We have a calendar which lists events related to Jenkins, including regular SIG 
         </p>
     </div>
 </div>
-
 ++++
