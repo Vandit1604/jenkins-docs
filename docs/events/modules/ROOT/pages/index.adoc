@@ -174,7 +174,28 @@ We have a calendar which lists events related to Jenkins, including regular SIG 
 
 ++++
 <!-- Using JSTZ time zone detection library -->
-<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.7/jstz.min.js"></script>-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.6/jstz.min.js"></script>
+
+<script type="text/javascript">
+  const deviceTimeZone = jstz.determine().name();
+  const calendarSrc = 'https://calendar.google.com/calendar/b/1/embed'
+      + '?showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;mode=WEEK'
+      + '&amp;src=4ss12f0mqr3tbp1t2fe369slf4%40group.calendar.google.com&amp;color=%2329527A'
+      + '&amp;ctz='
+  const calendarSrcPrefix = '<iframe src="' + calendarSrc;
+  const calendarSrcSuffix = '" style="border:0;overflow:hidden;" width="1024" height="600" scrolling="no"></iframe>';
+
+  function set_calendar(timezone) {
+    timezone = timezone || deviceTimeZone;
+    document.getElementById('calendar-container').innerHTML = calendarSrcPrefix + encodeURIComponent(timezone) + calendarSrcSuffix;
+  }
+
+  $(function () {
+    set_calendar(deviceTimeZone);
+  });
+
+</script>
+
 
 <div class="row">
     <div class="col">
@@ -195,23 +216,4 @@ We have a calendar which lists events related to Jenkins, including regular SIG 
         </p>
     </div>
 </div>
-
-<script type="text/javascript">
-  const deviceTimeZone = jstz.determine().name();
-  const calendarSrc = 'https://calendar.google.com/calendar/b/1/embed'
-      + '?showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;mode=WEEK'
-      + '&amp;src=4ss12f0mqr3tbp1t2fe369slf4%40group.calendar.google.com&amp;color=%2329527A'
-      + '&amp;ctz='
-  const calendarSrcPrefix = '<iframe src="' + calendarSrc;
-  const calendarSrcSuffix = '" style="border:0;overflow:hidden;" width="1024" height="600" scrolling="no"></iframe>';
-
-  function set_calendar(timezone) {
-    timezone = timezone || deviceTimeZone;
-    document.getElementById('calendar-container').innerHTML = calendarSrcPrefix + encodeURIComponent(timezone) + calendarSrcSuffix;
-  }
-
-  $(function () {
-    set_calendar();
-  });
-</script>
 ++++
