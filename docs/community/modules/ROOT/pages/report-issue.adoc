@@ -19,7 +19,7 @@ whose use is explained on this page:
 * *Bug*: Something does not work as intended.
 * *Improvement*: Either a current functionality should be improved or new 
 functionality should be added.
-* *Vulnerabilities*: link:/security/reporting/[Security related issues in Jenkins]
+* *Vulnerabilities*: xref:security:ROOT:reporting.adoc[Security related issues in Jenkins]
 
 Other types (_Patch_, _Task_) are not used in JIRA.
 Neither will be explained here.
@@ -89,8 +89,8 @@ However *if the issue you're reporting is in one of Jenkins' plugins*, you'll ha
 * Search for the Plugin and open its page.
 * Click the *Report an issue* link in the *Links* section on the right side of the
 plugin page.
-** After selecting the link, if you end up on JIRA follow the instructions on xref:community:ROOT:report-issue.adoc#reporting-issue-on-jira[Reporting an Issue in JIRA].
-** After selecting the link, if you end up on Github follow the instructions on xref:community:ROOT:report-issue.adoc#reporting-issue-on-github[Reporting an Issue on Github].
+** After selecting the link, if you end up on JIRA follow the instructions on <<Reporting an Issue in JIRA>>.
+** After selecting the link, if you end up on Github follow the instructions on <<Reporting an Issue on Github>>.
 
 
 == Reporting an issue on JIRA
@@ -118,12 +118,12 @@ link:https://docs.github.com/en/get-started/onboarding/getting-started-with-your
 * If you are redirected to the Github issue tracker from the link:https://plugins.jenkins.io/[Plugin Site], you will see something like this:
 +
 [.boxshadow]
-image:/images/participate/github-issues.png[alt="Github Issue Page",width=80%]
+image:image:ROOT:participate/github-issues.png[alt="Github Issue Page",width=80%]
 
 * Select *Get started* next to the type of issue you'd like to open.
 +
 [.boxshadow]
-image:/images/participate/get-started.png[alt="Get Started Button",width=40%,align="center"]
+image:image:ROOT:participate/get-started.png[alt="Get Started Button",width=40%,align="center"]
 
 * After that, fill in the details of the issue according to the Github issue template provided for each type of issue.
 * Don't forget to subscribe to the issue so you'll get notifications regarding any updates on the issue.
@@ -168,7 +168,7 @@ it configured?)
 *how you're launching any involved agents* (via SSH, web browser,
 command line, ...)
 * *Your web browser* (+ version). Make sure the issue occurs on
-link:/doc/administration/requirements/web-browsers/[supported
+xref:user-docs:administration:web-browsers.adoc[supported
 web browsers].
 
 If this is too much information for the Environment field, just put some

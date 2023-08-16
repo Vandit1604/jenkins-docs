@@ -1,24 +1,9 @@
----
-layout: gsocprojectidea
-title: "Automatic Specification Generator for Jenkins REST API"
-goal: "Find and implement the extraction of the REST APIs from the sources and generate and publish the REST APIs respective documentation"
-category: Plugins
-year: 2021
-status: published
-sig: docs
-skills:
-- Java
-- REST API
-- OpenAPI / Swagger
-mentors:
-- "kwhetstone"
-- "oleg_nenashev"
-- "linuxsuren"
-- "stellargo"
-links:
-  draft: https://docs.google.com/document/d/1CYzV_w5SrA-npXEMwTkJ4E2QyJdd2cJm7eDpwhg4XPk
----
+= Automatic Specification Generator for Jenkins REST API"
+*Project Goal*:Find and implement the extraction of the REST APIs from the sources and generate and publish the REST APIs respective documentation
+// *Status*: Published
+*Skills to study/improve:* Java, REST API, OpenAPI / Swagger
 
+== Details
 === Background
 Developers need to know what to expect in terms of responses for each REST API endpoint, so external tools like jenkins-rest can be developed with confidence, and possibly with the help of some REST specification automation.
 For example, this could be done using the link:https://www.openapis.org/[OpenAPI Specification] (formerly known as Swagger Specification).
@@ -31,7 +16,7 @@ Jenkins does not have automated REST API documentation at all at this time.
 A lot of APIs are contributed from extensions, so there are multiple REST APIs (core and plugins) of varying versions.
 The goal of this project is to find and implement the extraction of the REST APIs from the sources and generate and publish the REST APIs respective documentation.
 
-==== Project Details
+=== Project Details
 Generating the expected HTTP responses is a difficult task.
 The student is expected to study Jenkins core to identify ways to extract them.
 For example, they could be extracted from Javadocs and annotations.
@@ -91,3 +76,10 @@ There are many examples of such documentation on the web:
 * REST API
 * OpenAPI specification details and automatic generators
 * link:http://github.com/stapler/[Stapler] (more info:https://github.com/jenkins-infra/jenkins.io/pull/2157#issuecomment-471230609)
+
+== Potential Mentors 
+
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Kristin Whetstone
+image:images:ROOT:avatars/oleg_nenashev.png[,width=30,height=30] Oleg Nenashev
+image:images:ROOT:avatars/linuxsuren.jpg[,width=30,height=30] 赵晓杰(Rick)
+image:images:ROOT:avatars/stellargo.jpeg[,width=30,height=30] Sumit Sarin
