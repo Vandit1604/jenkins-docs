@@ -63,7 +63,8 @@ project: gsoc
               = item.goal
             %br
             %b
-              Potential Mentor(s):
+              
+Potential Mentor(s):
             - item.mentors.each do |mentor|
               = display_user(mentor)
           %td.pi_table_category
@@ -101,7 +102,8 @@ project: gsoc
               = succeed '.' do
                 = item.goal
             %b
-              Potential Mentor(s):
+              
+Potential Mentor(s):
             - item.mentors.each do |mentor|
               = display_user(mentor)
           %td.pi_table_category

@@ -18,6 +18,7 @@ Below you can see the list of project ideas that fully match the Jenkins' projec
 |*Automatic Specification Generator for Jenkins REST API*
 
 Find and implement the extraction of the REST APIs from the sources and generate and publish the REST APIs respective documentation.
+
 Potential Mentor(s): 
 Kristin Whetstone
 Oleg Nenashev
@@ -27,6 +28,7 @@ Oleg Nenashev
 |*Polling Docker Registries for Image Changes*
 
 Create a new Jenkins plugin to automate polling of image changes and security scans.
+
 Potential Mentor(s): 
 Justin Harringa
 Andrey Falko
@@ -37,6 +39,7 @@ Michael Cirioli
 |*EDA Coverage Adapters*
 
 Create Jenkins plugins for various Electronic Design Automation coverage reports.
+
 Potential Mentor(s): 
 Oleg Nenashev
 Shenyu Zheng
@@ -46,6 +49,7 @@ Shenyu Zheng
 |*Plugin(s) for Electronic Design Automation tools*
 
 Create a new Jenkins plugin for one of widely used EDA tools.
+
 Potential Mentor(s): 
 Oleg Nenashev
 Ayush Agarwal
@@ -55,6 +59,7 @@ Ayush Agarwal
 |*External Fingerprint Storage for Jenkins*
 
 Extend Jenkins to support storing artifact usage history in external databases.
+
 Potential Mentor(s): 
 Oleg Nenashev
 Michael Cirioli
@@ -64,6 +69,7 @@ Michael Cirioli
 |*Git repository caching on agents*
 
 Cache git repositories on agents for faster checkout.
+
 Potential Mentor(s): 
 Mark Waite
 Francisco Fernandez
@@ -74,6 +80,7 @@ Parichay Barpanda
 |*Git plugin performance improvements*
 
 Improve git plugin performance.
+
 Potential Mentor(s): 
 Mark Waite
 Francisco Fernandez
@@ -86,6 +93,7 @@ Justin Harringa
 |*GitHub Checks API for Jenkins Plugins*
 
 Create a new plugin API so that plugins can publish GitHub checks status messages.
+
 Potential Mentor(s): 
 Ullrich Hafner
 Tim Jacomb
@@ -98,6 +106,7 @@ Ayush Agarwal
 |*Custom Jenkins distribution build service*
 
 Provide an out of the box solution for packaging Jenkins distributions as WAR files or Docker images.
+
 Potential Mentor(s): 
 赵晓杰(Rick)
 Jeff Pearce
@@ -107,6 +116,7 @@ Jeff Pearce
 |*Jenkins X: Consolidate the use of Apps / Addons*
 
 Consolidate Apps and Addons inside Jenkins X.
+
 Potential Mentor(s): 
 James Strachan
 Neha Gupta
@@ -119,6 +129,7 @@ Sahil Kalra
 |*Jenkins X: Consolidate the use of Apps / Addons*
 
 Consolidate Apps and Addons inside Jenkins X.
+
 Potential Mentor(s): 
 James Strachan
 Neha Gupta
@@ -134,6 +145,7 @@ Sahil Kalra
 |*Jenkins X: Create Boot Apps*
 
 Create a simple canonical way to install any Helm chart in any namespace.
+
 Potential Mentor(s): 
 James Strachan
 Oscar Medina
@@ -146,6 +158,7 @@ Nikhil Da Rocha
 |*Jenkins and Machine Learning Plugins for Data Science*
 
 Create a new plugin for integrating Jenkins with one of Machine Learning tools (e.g. Jupyter Python, TensorBoard, or Sacred).
+
 Potential Mentor(s): 
 Ioannis Moutsatsos
 Bruno P. Kinoshita
@@ -157,6 +170,7 @@ Shivay Lamba
 |*Jenkins Pipeline as YAML: experimental plugin*
 
 Add out-of-the-box support of Jenkins Pipeline definitions in YAML.
+
 Potential Mentor(s): 
 Oleg Nenashev
 Jeff Pearce
@@ -167,6 +181,7 @@ Aytunc Beken
 |*Plugin Installation Manager Tool Improvements*
 
 Update the plugin installation manager to integrate with the docker image and Configuration as Code projects.
+
 Potential Mentor(s): 
 Kristin Whetstone
 Tim Jacomb
@@ -176,6 +191,7 @@ Tim Jacomb
 |*Jenkins Windows Services: YAML Configuration Support*
 
 Enhance Jenkins controller and agent service management on Windows by offering new configuration file formats and improving settings validation.
+
 Potential Mentor(s): 
 Oleg Nenashev
 Michael Cirioli
@@ -195,6 +211,7 @@ Below you can see draft project ideas, which are currently under review. The sco
 |*Code Coverage API Plugin Improvements*
 
 Improve the new Jenkins Code Coverage API plugin and enhance its performance and extensibility.
+
 Potential Mentor(s): 
 Shenyu Zheng
 Jeff Pearce
@@ -204,6 +221,7 @@ Jeff Pearce
 |*Jenkins REST Plugin*
 
 Create a new plugin to give Jenkins users the ability to make calls to other Jenkins instances via their REST API.
+
 Potential Mentor(s): 
 Sagar Utekar
 |Plugin	
@@ -212,6 +230,7 @@ Sagar Utekar
 |*Personal Package Archive platform for OpenWrt*
 
 Create a platform to build and host packages for OpenWrt (PPA, or Personal Package Archive) using Jenkins X.
+
 Potential Mentor(s): 
 Benjamin Henrion
 Sahil Kalra
@@ -222,6 +241,7 @@ Nikhil Da Rocha
 |*Pipeline Step Documentation Generator improvements*
 
 Enhance the Jenkins Pipeline documentation generator to produce better documentation for thousands of Pipeline developers.
+
 Potential Mentor(s): 
 Kristin Whetstone
 Michael Cirioli
@@ -231,6 +251,7 @@ Michael Cirioli
 |*Jenkins Remoting Monitoring*
 
 Support monitoring of Jenkins remoting networking with open source monitoring tools such as Prometheus, Grafana, etc..
+
 Potential Mentor(s): 
 Oleg Nenashev
 赵晓杰(Rick)

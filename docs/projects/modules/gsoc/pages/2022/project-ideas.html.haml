@@ -74,7 +74,8 @@ opengraph:
               = item.goal
             %br
             %b
-              Potential Mentor(s):
+              
+Potential Mentor(s):
             - item.mentors.each do |mentor|
               = display_user_optional(mentor)
           %td.pi_table_category
@@ -114,7 +115,8 @@ opengraph:
               = succeed '.' do
                 = item.goal
             %b
-              Potential Mentor(s):
+              
+Potential Mentor(s):
             - item.mentors.each do |mentor|
               = display_user_optional(mentor)
           %td.pi_table_category
