@@ -1,22 +1,10 @@
----
-layout: gsocprojectidea
-title: "CloudEvents plugin for Jenkins"
-goal: "Be able to listen to and emit cloudevents from Jenkins."
-category: Plugins
-year: 2021
-status: published
-sig: cloud-native
-skills:
-- Java
-- Cloudevents sdk
-- Networking
-mentors:
-- "waveywaves"
-- "salaboy"
-links:
-  draft: https://docs.google.com/document/d/1xsI6nkEPzXId5npXLrjz3Ydj7jx9Rf8g7SWnTldpeQc/edit#heading=h.f09or9ek462l
----
+= CloudEvents plugin for Jenkins
 
+*Project Goal:* Be able to listen to and emit cloudevents from Jenkins.
+
+*Skills to study/improve:* Java, Cloudevents sdk, Networking
+
+== Details
 === Background
 As the CI/CD world is moving more towards interoperability between multiple platforms, Jenkins should also be compatible with the same interoperability standards. Some of these standards with respect to communication between different CI/CD platforms are put forth by the cloudevents specification. This spec outlines the structure of cloudevents, which are produced or consumed by entities which support it, hence making those entities compatible with other CI/CD platforms which also support them allowing them to work together.
 
@@ -40,7 +28,6 @@ There are many examples of such documentation on the web:
 * link:https://en.wikipedia.org/wiki/Event-driven_architecture[Event driven architecture]
 * link:https://www.youtube.com/watch?v=STKCRSUsyP0&t=944s[The many meanings of event driven architecture by Martin Fowler]
 
-
 === Quick-start
 
 The project requires the student to start with plugin development from scratch and then work with understanding how to use the Cloudevents Java SDK to create and read events.
@@ -56,3 +43,18 @@ In the beginning, the student can work on understanding the Jenkins plugin devel
 * Go
 * Networking
 * Jenkins
+
+== Potential Mentors 
+* image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Vibhav Bobade
+* image:images:ROOT:avatars/no_image.svg[,width=30,height=30]Mauricio Salatino
+
+== Project Links 
+* {gitter}#jenkinsci_gsoc-sig:gitter.im
+* xref:gsoc:index.adoc#office-hours[Office Hours]
+* https://docs.google.com/document/d/1xsI6nkEPzXId5npXLrjz3Ydj7jx9Rf8g7SWnTldpeQc/edit#heading=h.f09or9ek462l[Project idea draft]
+
+== Organization Links 
+* xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
+* xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
+* https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
+> xref:gsoc/2021/project-ideas[Go back to other GSoC 2021 project ideas]
