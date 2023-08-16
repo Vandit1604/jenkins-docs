@@ -64,29 +64,29 @@ There are many online and local Jenkins-related events: including conferences, m
 //   const htmlCode = Haml.render(hamlCode);
 // document.body.innerHTML = htmlCode;
 </script>
-<div className="col-md-3 text-center">
-    <ul className="ji-item-list">
-        <li className="post event floating">
-        <a className="body" href="https://www.devopsworldjenkins.com/" target="_blank" rel="noreferrer noopener">
-            <div className="header time">
-            <div className="date-time">
-                <div className="date">
-                <div className="month">Sep</div>
-                <div className="day">28</div>
-                <div className="dow">Tue</div>
+<div class="col-md-3 text-center">
+    <ul class="ji-item-list">
+        <li class="post event floating">
+        <a class="body" href="https://www.devopsworldjenkins.com/" target="_blank" rel="noreferrer noopener">
+            <div class="header time">
+            <div class="date-time">
+                <div class="date">
+                <div class="month">Sep</div>
+                <div class="day">28</div>
+                <div class="dow">Tue</div>
                 </div>
-                <div className="time">9:00 AM</div>
+                <div class="time">9:00 AM</div>
             </div>
             </div>
-            <h5 className="title">DevOps World | Jenkins World 2021</h5>
+            <h5 class="title">DevOps World | Jenkins World 2021</h5>
             Online
         </a>
-        <p className="teaser collapsed" onclick="this.classList.toggle('collapsed')">
+        <p class="teaser collapsed" onclick="this.classList.toggle('collapsed')">
             DevOps World | Jenkins World is the largest gathering of Jenkins users in the world, including Jenkins experts, continuous delivery thought leaders and companies offering complementary technologies for Jenkins. Join us online September 28-30, 2021.
-            <div className="more"></div>
+            <div class="more"></div>
         </p>
-        <div className="attrs">
-            <span className="location">Online</span>
+        <div class="attrs">
+            <span class="location">Online</span>
         </div>
         </li>
     </ul>
