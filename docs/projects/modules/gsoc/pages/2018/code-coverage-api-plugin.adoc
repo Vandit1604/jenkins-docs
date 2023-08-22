@@ -1,7 +1,5 @@
----
-layout: gsocproject
-title: "GSoC 2018. Code Coverage API Plugin"
-status: "Completed"
+= GSoC 2018. Code Coverage API Plugin"
+*Status*: Completed
 tags:
 - gsoc2018
 student: shenyu_zheng
@@ -14,9 +12,6 @@ links:
   {gitter}jenkinsci_code-coverage-api-plugin:gitter.im
   github: "jenkinsci/code-coverage-api-plugin"
 ---
-
-= GSoC 2018. Code Coverage API Plugin
-
 == Overview
 
 There are a lot of plugins which currently implement code coverage, however, they all use similar config, charts, and content. So it will be much better if we can have an API plugin which does the most repeated work for those plugins and offers a unified APIs which can be consumed by other plugins and external tools.

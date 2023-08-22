@@ -1,7 +1,5 @@
----
-layout: gsocproject
-title: "Security validator for Jenkins Kubernetes Operator"
-goal: "Improve security aspects of installing Jenkins plugins in Kubernetes environment."
+= Security validator for Jenkins Kubernetes Operator
+*Goal:*  Improve security aspects of installing Jenkins plugins in Kubernetes environment."
 category: Plugins
 year: 2021
 sig: cloud-native
@@ -10,7 +8,7 @@ tags:
 - kubernetes
 - cloudnative
 - operator
-status: "Completed"
+*Status*: Completed
 student: sharmapulkit04
 mentors:
 - "sylwiabrant"

@@ -26,10 +26,10 @@ project: gsoc
 
 
 %p
-  = succeed '.' do
+ =succeed '.' do
     This page aggregates project ideas for Google Summer of Code
-    = page.year
-  = succeed '.' do
+   =page.year
+ =succeed '.' do
     See more information about this project and applications
     %a{:href => expand_link("/projects/gsoc/")}
       on the Jenkins Google Summer of Code page
@@ -39,7 +39,7 @@ project: gsoc
   Such project applications will be considered though applicants may need to work
   with the community and GSoC org admins to find potential mentors.
   More info:
-  = succeed '.' do
+ =succeed '.' do
     %a{:href => expand_link("/projects/gsoc/proposing-project-ideas/")}
       proposing project ideas
 
@@ -50,30 +50,30 @@ project: gsoc
       %th Category
       %th Skills to study/improve
   %tbody
-    - ideas = site.pages.select { |p| p.source_path =~ /\/content\/projects\/gsoc\/2019\/project-ideas\/[^\/]+.adoc/ }
+    - ideas=site.pages.select { |p| p.source_path =~ /\/content\/projects\/gsoc\/2019\/project-ideas\/[^\/]+.adoc/ }
     - ideas.each do |item|
       - if item.status == "published"
         %tr
           %td
             %a{:href => item.url}
               %strong
-                = item.title
+               =item.title
             %br
-            = succeed '.' do
-              = item.goal
+           =succeed '.' do
+             =item.goal
             %br
             %b
               
 Potential Mentor(s):
             - item.mentors.each do |mentor|
-              = display_user(mentor)
+             =display_user(mentor)
           %td.pi_table_category
             - if item.category
-              = item.category
+             =item.category
             - else
               Undefined
           %td.pi_table_skills
-            = item.skills.join(", ")
+           =item.skills.join(", ")
 
 %h3
   Draft project ideas
@@ -90,26 +90,26 @@ Potential Mentor(s):
       %th Project
       %th Category
       %th Skills to study/improve
-    - ideas = site.pages.select { |p| p.source_path =~ /\/content\/projects\/gsoc\/2019\/project-ideas\/[^\/]+.adoc/ }
+    - ideas=site.pages.select { |p| p.source_path =~ /\/content\/projects\/gsoc\/2019\/project-ideas\/[^\/]+.adoc/ }
     - ideas.each do |item|
       - if item.status != "published"
         %tr
           %td
             %a{:href => item.url}
               %strong
-                = item.title
+               =item.title
             %br
-              = succeed '.' do
-                = item.goal
+             =succeed '.' do
+               =item.goal
             %b
               
 Potential Mentor(s):
             - item.mentors.each do |mentor|
-              = display_user(mentor)
+             =display_user(mentor)
           %td.pi_table_category
             - if item.category
-              = item.category
+             =item.category
             - else
               Undefined
           %td.pi_table_skills
-            = item.skills.join(", ")
+           =item.skills.join(", ")
