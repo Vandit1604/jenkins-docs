@@ -1,13 +1,4 @@
----
-layout: project
-title: "Jenkins GSoC Application 2022"
-description: "This page is Jenkins application form for Google Summer of Code"
-tags:
-- gsoc
-project: gsoc
-opengraph:
-    image: /images/gsoc/opengraph.png
----
+= Jenkins GSoC Application 2022"
 
 //https://docs.google.com/document/d/1gVO2XT_7m8kf5aJJS00G05f5zBBf1eaFZPcoWl8W0m0/edit#heading=h.pj9miykzw86z
 
@@ -57,7 +48,7 @@ _link:https://summerofcode.withgoogle.com/terms/org[Click the link] to review th
 {nbsp} +
 
 
-=== Organization Profile
+== Organization Profile
 
 * **Website url:** https://jenkins.io/
 * **Organization logo**
@@ -80,7 +71,7 @@ _link:https://summerofcode.withgoogle.com/terms/org[Click the link] to review th
 {nbsp} +
 
 
-=== Organization Categories
+== Organization Categories
 _Select which categories fit your organization best. You may select up to 2 categories. This helps GSoC contributors filter the large list of organizations by their interests._
 _Select at least 1_
 
@@ -97,7 +88,7 @@ _Select at least 1_
 * Web (tools and frameworks)
 * Other
 
-=== Organization Technologies
+== Organization Technologies
 _Enter up to 5 keywords for the primary specific technologies your organization uses._
 
 * java
@@ -106,7 +97,7 @@ _Enter up to 5 keywords for the primary specific technologies your organization 
 * kubernetes
 * go
 
-=== Organization Topics
+== Organization Topics
 _Enter keywords for general topics that describe your organization. Examples: Robotics, Cloud,_
 
 * continuous integration
@@ -120,7 +111,7 @@ _Enter keywords for general topics that describe your organization. Examples: Ro
 {nbsp} +
  
 
-=== Organization Description
+== Organization Description
 _Describe what it is your organization does. This information will also be included in the archive once the program has ended._
 
 {nbsp} +
@@ -154,7 +145,7 @@ The Jenkins project is a part of link:https://cd.foundation/[Continuous Delivery
 {nbsp} +
  
 
-=== Contributor Guidance
+== Contributor Guidance
 
 _Provide your potential contributors with a page containing tips on how to write a successful proposal for your organization. Let them know what you want included, how you want it structured, and how to best get in touch. link:https://developers.google.com/open-source/gsoc/help/contributor-guidance[Examples]._
 
@@ -168,7 +159,7 @@ If you have any questions about the application process, please feel free to con
 {nbsp} +
 {nbsp} +
 
-=== Communication Methods
+== Communication Methods
 
 _How do you want potential contributors to interact with your organization? Select methods that your community uses daily as you will receive many inquiries if your org is selected._
 
@@ -181,7 +172,7 @@ Jenkins GSoC communication channels: link:https://community.jenkins.io/c/contrib
 
 == Organization Questionnaire
 
-=== Why does your organization want to participate in GSoC?
+== Why does your organization want to participate in GSoC?
 
 In our community we are interested to have more contributors in both the Jenkins core and 1,800+ existing plugins. GSoC is an opportunity to find new contributors interested in software development automation (continuous integration and continuous delivery).
 It also helps to get existing contributors more involved in community work. We have previously participated in GSoC 2016-2021.
@@ -194,7 +185,7 @@ We are confident that we can host a successful Google Summer of Code 2022 in the
 {nbsp} +
 
 
-=== What would your organization consider to be a successful GSoC program?
+== What would your organization consider to be a successful GSoC program?
 
 A successful Jenkins GSoC program consists of:
 
@@ -205,7 +196,7 @@ A successful Jenkins GSoC program consists of:
 {nbsp} +
 {nbsp} +
 
-=== How will you keep mentors engaged with their GSoC contributors?
+== How will you keep mentors engaged with their GSoC contributors?
 
 * We have explicit expectations from mentors, they are documented in our xref:projects:ROOT:index.adoc/gsoc/mentors[mentor guidelines].
   All mentors commit to these expectations during the project selection.
@@ -221,7 +212,7 @@ A successful Jenkins GSoC program consists of:
 {nbsp} +
 
 
-=== How will you keep your GSoC contributors on schedule to complete their projects?
+== How will you keep your GSoC contributors on schedule to complete their projects?
 
 * During the Application phase and Community Bonding phase mentors will share their expertise to define realistic project plans.
 * The GSoC contributor project milestones will be discussed and confirmed between mentors and GSoC contributors. Milestones will be aligned with GSoC contributor evaluations and will have clear expectations defined.
@@ -236,7 +227,7 @@ A successful Jenkins GSoC program consists of:
 {nbsp} +
 
 
-=== How will you get your GSoC contributors involved in your community during GSoC?
+== How will you get your GSoC contributors involved in your community during GSoC?
 
 * GSoC contributors will cooperate with the Jenkins community during the project. Community Bonding will be a critical phase for us.
 * Projects will handled under an umbrella of SIGs or sub-projects so that non-mentor stakeholders and early adopters are included in the projects
@@ -251,7 +242,7 @@ A successful Jenkins GSoC program consists of:
 {nbsp} +
 
 
-=== Is your organization part of any government?
+== Is your organization part of any government?
 
 No
 

@@ -23,7 +23,7 @@ On Windows machines, Jenkins controller and agents can be installed as Windows S
 This is a functionality bundled into the Jenkins core directly.
 When installed as a service, Jenkins uses the Windows Service Wrapper executable (.NET, written in C#) which is being configured by XML config files.
 Currently, there are only a few configuration checks there (no XML Schema, limited validation, etc.),
-and it’s often that the service wrapper is misconfigured by Jenkins users.
+and it`s often that the service wrapper is misconfigured by Jenkins users.
 
 In this project, we propose to update Windows Service Wrapper to support YAML files as configuration inputs and to introduce better configuration validation during the service installation and startup.
 The usage of YAML should simplify configuration management in Jenkins, especially when automated tools are used.
@@ -39,19 +39,19 @@ The usage of YAML should simplify configuration management in Jenkins, especiall
 ** Sample-alloption.yaml
 ** Sample-minimal.yaml
 
-=== Phase 1
+== Phase 1
 * YAML service Descriptor
 * Start implementing configurations verification on startup
 * Project Guideline documentation
 * Blog Post 1
 
-=== Phase 2
+== Phase 2
 * Finish implementation of configurations verification on startup
 * Start implementing YAML schema validation
 * Minimal Viable Product will be released
 * Blog Post 2
 
-=== Phase 3
+== Phase 3
 * Finish implementation of YAML schema validation
 * Sample YAML config files
 * Blog Post 3
@@ -76,14 +76,14 @@ https://github.com/winsw/winsw/releases/tag/v2.10.0[MVP has been released]. This
 
 == Key Pull Requests
 
-=== Merged
+== Merged
 
 * https://github.com/winsw/winsw/pull/596[YAML configuration support]
 * https://github.com/winsw/winsw/pull/638[YAML configuration support for extensions]
 * https://github.com/winsw/winsw/pull/647[YAML configuration support unit test coverage]
 * https://github.com/winsw/winsw/pull/655[YAML Configuration support - Documentation]
 
-=== Remaining tasks
+== Remaining tasks
 
 * https://github.com/winsw/winsw/pull/547[New CLI]
 ** New CLI is almost done. Have to merge with V3.

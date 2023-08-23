@@ -1,24 +1,13 @@
-=Building iOS Apps with Jenkins
-*Goal:*  Describe best practices and provide architectural templates for building iOS applications with Jenkins"
-category: Tools
-year: 2023
-status: draft
-sig: platform
-skills:
-- Java
-- YAML
-- iOS development
-- Command line tools
-- Package management tool theory
-mentors:
-- "gounthar"
-links:
-    emailThread: https://community.jenkins.io/t/gsoc-2023-project-idea-building-ios-apps-with-jenkins/4799
----
-//   {gitter}jenkinsci_plugin-installation-manager-cli-tool:gitter.im
-//   draft: https://docs.google.com/document/d/1s-dLUfU1OK-88bCj-GKaNuFfJQlQNLTWtacKkVMVmHc
+= Building iOS Apps with Jenkins
 
-=== Background
+*Project goal:* Describe best practices and provide architectural templates for building iOS applications with Jenkins
+
+*Skills to study/improve:* Java, YAML, iOS development, Command line tools, Package management tool theory
+
+NOTE: This idea is published as a draft under active discussion, but it is confirmed in principle. It is FINE to apply to it. The scope and the suggested implementation may change significantly before the final version is published. Sections like quickstart guide and newbie-friendly issues may be also missing. As a contributor, you are welcome to request additional information and to join the discussions using channels linked on this page.
+
+== Details
+== Background
 
 Applying CI principles when building iOS applications brings its own challenges, different from those of more classical applications.
 How to proceed, what are the successful patterns, what are the pitfalls is poorly documented. 
@@ -28,24 +17,24 @@ The project idea is to have a clear status of what can be done with Jenkins for 
 There are only a few articles here and there about iOS.
 
 //
-// === Quick Start
+// == Quick Start
 // TBD
 //
-=== Skills to Study and Improve
+== Skills to Study and Improve
 
 - Jenkins technical architecture
 - iOS application development
 - CI principle and practice
 
-=== Project Difficulty Level
+== Project Difficulty Level
 
 Beginner to Intermediate
 
-=== Project Size
+== Project Size
 
 175 hours
 
-=== Expected outcomes
+== Expected outcomes
 
 * A working iOS application CI build with Jenkins from a public GitHub public repository (Proof of Concept).
 * A proposed architecture that would work for almost anyone (so Docker whenever it’s possible, or virtual machines) using a public GitHub repo.
@@ -55,4 +44,16 @@ Beginner to Intermediate
 
 Details to be clarified interactively, together with the mentors, during the Contributor Application drafting phase. 
 // 
-// === Newbie Friendly Issues
+// == Newbie Friendly Issues
+
+== Potential Mentors 
+image:images:ROOT:avatars/gounthar.png[,width=30,height=30] Bruno Verachten
+
+== Project Links
+* image:https://img.shields.io/badge/gitter-join_chat-green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_gsoc-sig%3Agitter.im[Static Badge]
+* https://www.jenkins.io/projects/gsoc/#office-hours[Meetings]
+== Organization Links 
+* xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
+* xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
+* https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
+> xref:gsoc/2021/project-ideas[Go back to other GSoC 2021 project ideas]

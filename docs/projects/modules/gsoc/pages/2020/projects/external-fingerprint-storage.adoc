@@ -21,7 +21,7 @@ tags:
 - PostgreSQL
 ---
 
-=== Abstract
+== Abstract
 
 File fingerprinting is a way to track which version of a file is being used by a job/build, making dependency tracking
 easy.
@@ -36,7 +36,7 @@ The project led to the creation of two plugins, backed by Redis and PostgreSQL.
 The link:https://www.youtube.com/watch?v=yzd-y5ByXg8&feature=emb_logo[demo] shows the Redis fingerprint storage plugin
 in action.
 
-=== Deliverables
+== Deliverables
 
 * Creating the External Fingerprint Storage API in core with support for migration and cleanup
 
@@ -58,7 +58,7 @@ link:https://github.com/jenkinsci/postgresql-fingerprint-storage-plugin/releases
 
 * Documentation and testing
 
-=== Getting the Code
+== Getting the Code
 
 All the links mentioned below correspond to code which has been merged. There is no unmerged code.
 
@@ -101,14 +101,14 @@ storage plugin.
 *** Exposes fingerprint methods for plugins
 *** Released in link:/changelog/#v2.253[Jenkins-2.253] 🚀
 
-=== Demo
+== Demo
 
 .External Fingerprint Storage Demo
 video::HvbbsoljLyg[youtube,width=800,height=420]
 
 link:https://docs.google.com/presentation/d/1QL5m-7QGtep_G1ysEYKRauAHzDq8nTtOdcnE1t4aYE8/edit?usp=sharing[Slide deck]
 
-=== The External Fingerprint Storage API
+== The External Fingerprint Storage API
 
 This section explains the external fingerprint storage API that was created in Jenkins core.
 For further details, please refer to {jep}226/README.adoc[] which explains the design decisions in detail.
@@ -142,7 +142,7 @@ For more details, please refer to the Javadoc:
 
 * link:https://javadoc.jenkins.io/jenkins/fingerprints/FingerprintStorageDescriptor.html[FingerprintStorageDescriptor]
 
-==== Fingerprint Cleanup
+=== Fingerprint Cleanup
 
 Fingerprint cleanup thread works by periodically iterating over the fingerprints and editing the job and build
 information of the ones based on whether they are still present in the system.
@@ -173,7 +173,7 @@ Finally, we introduced the option to turn off fingerprint cleanup.
 This was done because it may be the case that storing extra data may be cheaper than performing cleanups,
 especially with external storages.
 
-==== Fingerprint Migration
+=== Fingerprint Migration
 
 We implemented a lazy migration strategy to transfer the fingerprints from local storage to the newly
 configured external storage.
@@ -189,12 +189,12 @@ cleanup is triggered.
 Migration was introduced as part of this project in link:/changelog/#v2.242[Jenkins-2.251].
 Both, the Redis and PostgreSQL, fingerprint storage plugins support migration.
 
-=== Redis Fingerprint Storage Plugin
+== Redis Fingerprint Storage Plugin
 
 The plugin:redis-fingerprint-storage[Redis fingerprint storage plugin] uses the external fingerprint storage API to store the fingerprints as blobs
 inside Redis instances.
 
-==== Installation
+=== Installation
 
 The plugin can be installed using the Jenkins Update Center.
 
@@ -212,7 +212,7 @@ Follow along the following steps after running Jenkins to download and install t
 
 The plugin should now be installed on your system.
 
-==== Configuring the plugin using Web UI
+=== Configuring the plugin using Web UI
 
 Once the plugin has been installed, you can configure the Redis server details by following the steps below:
 
@@ -247,7 +247,7 @@ instance.
 
 Now, all the fingerprints produced by this Jenkins instance should be saved in the configured Redis server!
 
-=== PostgreSQL Fingerprint Storage Plugin
+== PostgreSQL Fingerprint Storage Plugin
 
 The link:https://github.com/jenkinsci/postgresql-fingerprint-storage-plugin[PostgreSQL fingerprint storage plugin]
 defines a relational structure for storing the fingerprints, and allows fingerprint metadata to be easily queried.
@@ -257,7 +257,7 @@ The usage is not explained here for the sake of brevity.
 The project link:https://github.com/jenkinsci/postgresql-fingerprint-storage-plugin/blob/master/README.adoc[README]
 and link:/blog/2020/08/25/external-fingerprint-storage-phase-3/[phase-3 post] have more information about this plugin.
 
-=== Further Details
+== Further Details
 
 The phase wise progress can be found in the following posts:
 
@@ -267,14 +267,14 @@ The phase wise progress can be found in the following posts:
 
 * link:/blog/2020/08/25/external-fingerprint-storage-phase-3/[Phase-3 Post]
 
-=== Trying it Out!
+== Trying it Out!
 
 If you are a Jenkins user, consider trying out the link:https://plugins.jenkins.io/redis-fingerprint-storage/[Redis
 Fingerprint Storage Plugin] and the link:https://github.com/jenkinsci/postgresql-fingerprint-storage-plugin[PostgreSQL
 Fingerprint Storage Plugin].
 We appreciate you trying out the plugins, and welcome any suggestions, feature requests, bug reports, etc.
 
-=== Future Directions
+== Future Directions
 
 The relational structure of the plugin allows some performance improvements that can be made when implementing cleanup,
 as well as improving the performance of `Fingerprint#add(String job, int buildNumber)`.
@@ -286,14 +286,14 @@ This opens up the possibility of developing traceability plugins which can track
 Please consider reaching out to us if you feel any of the use cases would benefit you, or if you would like to share
 some new use cases.
 
-=== Acknowledgements
+== Acknowledgements
 
 Special thanks to link:https://github.com/oleg-nenashev[Oleg Nenashev],
 link:https://github.com/afalko[Andrey Falko], link:https://github.com/mikecirioli[Mike Cirioli],
 link:https://github.com/timja[Tim Jacomb], link:https://github.com/jglick[Jesse Glick] and the entire Jenkins community
 for all the contribution to this project.
 
-=== Reaching Out
+== Reaching Out
 
 Feel free to reach out to us for any questions, feedback, etc. on the project's
 link:https://app.gitter.im/#/room/#jenkinsci_external-fingerprint-storage:gitter.im[Gitter Channel] or the
@@ -302,7 +302,7 @@ We use Jenkins link:https://issues.jenkins.io/[Jira] to track issues.
 Feel free to file issues under `redis-fingerprint-storage-plugin` or `postgresql-fingerprint-storage-plugin`
 components.
 
-=== Other Links
+== Other Links
 
 * https://docs.google.com/document/d/10f3IXTA6UMLUOFMTH_atQ3XlyWB3S7KGNCtTZmOUGdM/edit#[GSoC Proposal] +
 * https://docs.google.com/document/d/1_LhdsOdvxUDLgyo8vAB1PJ5-85csr7YVI3WkEyNv42w/edit#[Design Document] +

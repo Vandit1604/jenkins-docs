@@ -22,7 +22,7 @@ links:
 
 The main goal of this project is integrating Machine Learning workflow including Data preprocessing, Model Training, Evaluation and Prediction with Jenkins build tasks. This plugin will be capable of executing code fragments via IPython kernel as currently supported by Jupyter Notebook. Version control will be handled as an added advantage of this project.
 
-=== Deliverables
+== Deliverables
 
 * An IPython plugin with pipeline compatible
 * Improved config.jelly for the plugin
@@ -31,14 +31,14 @@ The main goal of this project is integrating Machine Learning workflow including
 * Implement a code editor
 * Output console with static visual components
 
-=== Community Bonding
+== Community Bonding
 
 The community bonding period is all about, well, community bonding. Rather than jumping straight into coding, I've got some time to learn about Jenkins's processes - release and otherwise - developer interactions, codes of conduct, etc.
 
 - Blog post 
 ** link:/blog/2020/06/03/machine-learning-plugin-community-bonding/[Community Bonding summary]
 
-=== Phase 1
+== Phase 1
 
 * Implement the configuration part of Ipython kernel interpreter
 * Implement file parser
@@ -52,7 +52,7 @@ The community bonding period is all about, well, community bonding. Rather than 
 * Change log
 ** link:https://github.com/jenkinsci/machine-learning-plugin/blob/master/CHANGELOG.md#machine-learning-01-alpha-1-2020-06-30[Change log for alpha 1 release]
 
-=== Phase 2
+== Phase 2
 
 * Implement code editor 
 * Extend the editor for test purposes with pre-tested codelets
@@ -66,7 +66,7 @@ The community bonding period is all about, well, community bonding. Rather than 
 * Change log
 ** link:https://github.com/jenkinsci/machine-learning-plugin/blob/master/CHANGELOG.md#machine-learning-01-alpha-2-2020-07-24[Change log for alpha 2 release]
 
-=== Phase 3
+== Phase 3
 
 * Design and implement code extractor
 * Multiple language kernel support
@@ -81,7 +81,7 @@ The community bonding period is all about, well, community bonding. Rather than 
 * Change log
 ** link:https://github.com/jenkinsci/machine-learning-plugin/blob/master/CHANGELOG.md#machine-learning-101-2020-08-24[Change log for v1.0.1 release]
 
-=== Future Improvements
+== Future Improvements
 
 * Improving performance of the plugin
 * Try to implement {jira}JENKINS-63377[]
@@ -89,22 +89,22 @@ The community bonding period is all about, well, community bonding. Rather than 
 * Increasing testing code coverage
 * Implementing Interactive visualizer for data sets and results.
 
-=== Final Demo Presentation Slides and Video
+== Final Demo Presentation Slides and Video
 
 https://docs.google.com/presentation/d/10ai1DNsMroEr-QeZfIarp0_oDzhgONGnq6BsAciBwb0/edit?usp=sharing[Final Machine Learning Plugin slides]
 
 https://www.youtube.com/watch?v=IL4a_uQNV5o&t=229s[Final GSoC Demo]
 
-=== Articles
+== Articles
 
 https://medium.com/analytics-vidhya/embed-jupyter-notebook-into-static-webpages-locally-79e8a6f9f987[Jupyter Notebook Integration ] +
 
-=== Weekly Meeting Sync
+== Weekly Meeting Sync
 
   * Monday
   * Time - 03:00 am (UTC)
 
-=== Other links
+== Other links
 https://github.com/jenkinsci/machine-learning-plugin.git[Github] +
 https://plugins.jenkins.io/machine-learning/[Plugin page] +
 https://docs.google.com/document/d/1Y-BDKJHRCo5OvmAdiwgCqUsqZoxsh6Vsw8i-Ps2mb8E/edit?usp=sharing_eil&ts=5eb5cfb0[Meeting Notes] +

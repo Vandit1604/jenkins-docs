@@ -1,22 +1,11 @@
-=Plugin Installation Manager Tool Improvements
-*Goal:*  Introduce new features and improvements in the plugin installation manager"
-category: Tools
-year: 2023
-status: published
-sig: platform
-skills:
-- Java
-- YAML
-- Command line tools
-- Package management tool theory
-mentors:
-- "markewaite"
-- "freyam"
-links:
-  {gitter}jenkinsci_plugin-installation-manager-cli-tool:gitter.im
-  draft: https://docs.google.com/document/d/1s-dLUfU1OK-88bCj-GKaNuFfJQlQNLTWtacKkVMVmHc
----
-=== Background
+= Plugin Installation Manager Tool Improvements
+
+*Project goal:* Introduce new features and improvements in the plugin installation manager
+
+*Skills to study/improve:* Java, YAML, Command line tools, Package management tool theory
+
+== Details
+== Background
 
 In 2019 there was a Jenkins xref:projects:ROOT:index.adoc/gsoc/2019/plugin-installation-manager-tool-cli/[Google Summer of Code project] to create a tool to link:https://github.com/jenkinsci/plugin-installation-manager-tool/#readme[automatically install plugins] from the command line based on a provided input.
 This is meant to help with creating reproducible environments and other places where you would want to install a certain set of plugins.
@@ -87,3 +76,16 @@ Some candidate ideas from the mentors include:
 
 Some good first issues are available in the link:https://github.com/jenkinsci/plugin-installation-manager-tool/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22[issue tracker].
 For information about how to contribute to and what to work on, please use the link:https://app.gitter.im/#/room/#jenkinsci_plugin-installation-manager-cli-tool:gitter.im[gitter channel].
+
+== Potential Mentors
+image:images:ROOT:avatars/markewaite.jpg[,width=30,height=30] Mark Waite
+image:images:ROOT:avatars/freyam.jpg[,width=30,height=30] Freyam Mehta
+
+== Project Links
+* image:https://img.shields.io/badge/gitter-join_chat-green?logoColor=green&link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_plugin-installation-manager-cli-tool%3Agitter.im[Static Badge]
+* https://www.jenkins.io/projects/gsoc/#office-hours[Meetings]
+== Organization Links 
+* xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
+* xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
+* https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
+> xref:gsoc/2021/project-ideas[Go back to other GSoC 2021 project ideas]

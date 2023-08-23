@@ -1,28 +1,18 @@
----
-layout: gsocproject2
-title: "Plugin Health Scoring system
-*Goal:*  Provide a 'plugin health indicator' for plugin maintainers and Jenkins administrators"
-category: tools
-year: 2022
-sig: platform
-tags:
-- gsoc2022
-- plugins
-status: "Selected"
-student: dheerajodha
-mentors:
-- "alecharp"
-- "adi10hero"
-- "jleon"
-links:
-  {gitter}jenkinsci_GSoC-Plugin_Health_Score:gitter.im
-  draft: https://docs.google.com/document/d/1HTbcWh5C1KrCgEzgqeVEPyfr1H5fH5eTj8KpbWrWsSY/edit#
-  idea: /projects/gsoc/2022/project-ideas/plugin-health-scoring-system
-  meetings: "/projects/gsoc/2022/projects/plugin-health-scoring-system/#office-hours"
----
+= Plugin Health Scoring system
 
-//above links must be updated
+*Goal:* Provide a 'plugin health indicator' for plugin maintainers and Jenkins administrators
 
+*Status:* Selected
+
+== Team 
+[.avatar]
+*Contributor*: 
+image:images:ROOT:avatars/dheerajodha.jpg[,width=30,height=30] Dheeraj Singh Jodha
+[.avatar]
+*Mentor(s)*: 
+image:images:ROOT:avatars/alecharp.jpg[,width=30,height=30] Adrien Lecharpentier
+image:images:ROOT:avatars/adi10hero.png[,width=30,height=30] Aditya Srivastava
+image:images:ROOT:avatars/jleon.jpg[,width=30,height=30] Jake Leon
 
 === Abstract
 This project aims to introduce a metric system to calculate the health score of each plugin within the Jenkins ecosystem and reflect the final scores on the Plugin Site for the plugin maintainers and users.
@@ -52,3 +42,9 @@ A separate section on the Jenkins Plugin Site which displays the detailed report
 
 * link:https://github.com/jenkins-infra/plugin-site[Jenkins Plugin Site]
 * link:https://docs.google.com/document/d/1PKYIpPlRVGsBqrz0Ob1Cv3cefOZ5j2xtGZdWs27kLuw/edit#[Contributing to Open Source]
+
+=== links:
+* image:https://img.shields.io/badge/gitter%20-%20join_chat%20-%20green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_GSoC-Plugin_Health_Score%3Agitter.im[Static Badge]
+* xref:projects/gsoc/2022/projects/plugin-health-scoring-system/#office-hours[Meetings]
+* xref:projects/gsoc/2022/project-ideas/plugin-health-scoring-system[Original GSoC project idea]
+* Jenkins GSoC page

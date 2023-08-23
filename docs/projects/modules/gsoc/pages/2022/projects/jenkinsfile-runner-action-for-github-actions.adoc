@@ -1,25 +1,14 @@
----
-layout: gsocproject2
-title: "Jenkinsfile Runner Action for GitHub Actions
-*Goal:*  Implement a (near) feature-complete version of Jenkinsfile Runner Action for GitHub Actions"
-category: tools
-year: 2022
-sig: platform
-tags:
-- gsoc2022
-- plugins
-status: "Selected"
-student: "YimingGong"
-mentors:
-- "krisstern"
-- "abhyudayasharma"
-links:
-  chat: "/projects/gsoc/2022/projects/jenkinsfile-runner-action-for-github-actions/#chat"
-  draft: "https://docs.google.com/document/d/1SC__C6V8LFZvs99uR4fqoraJPcF_-JG5QhvBdaYaVFo/edit?usp=sharing"
-  idea: "/projects/gsoc/2022/project-ideas/jenkinsfile-runner-action-for-github-actions"
-  meetings: "/projects/gsoc/2022/projects/jenkinsfile-runner-action-for-github-actions/#office-hours"
----
+= Jenkinsfile Runner Action for GitHub Actions
+*Goal:* Implement a (near) feature-complete version of Jenkinsfile Runner Action for GitHub Actions
 
+*Status:* Selected
+
+== Team 
+*Contributor:* 
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Yiming Gong
+*Mentor(s):*
+image:images:ROOT:avatars/krisstern.png[,width=30,height=30] Kris Stern
+image:images:ROOT:avatars/abhyudayasharma.jpg[,width=30,height=30] Abhyudaya Sharma
 
 === Abstract
 
@@ -161,6 +150,7 @@ jobs:
           jenkinsfile: Jenkinsfile
 ----
 
+[#chat]
 === Chat
 
 We use the `#gsoc-jenkinsfile-runner` channel in the CDF Slack workspace.
@@ -187,3 +177,10 @@ Here come some useful links:
 * link:https://github.com/jenkinsci/jenkinsfile-runner/[Jenkinsfile runner]
 * link:https://github.com/jenkinsci/configuration-as-code-plugin/[Configuration as code plugin]
 * link:https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action#introduction/[GitHub Docker container action]
+
+== Links
+* <<Chat>>
+chat: "/projects/gsoc/2022/projects/jenkinsfile-runner-action-for-github-actions/#chat"
+draft: "https://docs.google.com/document/d/1SC__C6V8LFZvs99uR4fqoraJPcF_-JG5QhvBdaYaVFo/edit?usp=sharing"
+idea: "/projects/gsoc/2022/project-ideas/jenkinsfile-runner-action-for-github-actions"
+meetings: "/projects/gsoc/2022/projects/jenkinsfile-runner-action-for-github-actions/#office-hours"

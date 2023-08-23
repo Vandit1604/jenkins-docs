@@ -24,13 +24,13 @@ tags:
 
 The main idea behind the project is to build a customizable Jenkins distribution service that could be used to build tailor-made Jenkins distributions. The service would provide users with a simple interface to select the configurations they want to build the instance with eg: plugins, authorization matrices etc. Furthermore it would include a section for sharing community created distros so that users can find and download already built Jenkins war/configuration files to use out of the box.
 
-=== Key Deliverables
+== Key Deliverables
 * A backend service built on spring boot having a modern Restful API support for constructing a  customized WAR package and configuration files.
 * A configuration constructing engine that can convert UI fields into a configuration file.
 * Front End application in the form of a website with a simple user interface for the users to interact with and customize the distribution.
 * Repository sharing community built most commonly used Jenkins configuration files.
 
-=== Plan for Phase 1 
+== Plan for Phase 1 
 
 * Develop a simple workflow(Spring Boot Application) from UI bindings to the generation of the JCasC YAML file.
   ** Reuse concepts from the JCasC Plugin to generate this JCasC file. 
@@ -41,7 +41,7 @@ The main idea behind the project is to build a customizable Jenkins distribution
 * Blog Post for Phase 1.
 
 
-=== Evaluation Phase 1
+== Evaluation Phase 1
 
   - Features:
   ** War Generation
@@ -53,7 +53,7 @@ The main idea behind the project is to build a customizable Jenkins distribution
   ** Front-end support to generate custom packages.
   - Repo - https://github.com/jenkinsci/custom-distribution-service
 
-==== Resources
+=== Resources
 
   . Blogs
   - https://sladyn98.netlify.app/blog/gsoc_week3/[Third week]
@@ -63,7 +63,7 @@ The main idea behind the project is to build a customizable Jenkins distribution
   . Demo: https://www.youtube.com/watch?v=HQLhakpx5mk
   . link:https://docs.google.com/presentation/d/1qjlpiabrRrYANHcCU9xwUZCfMuv5g0hbilAjglu98O0/edit?usp=sharing[Slides]
 
-=== Plan for Phase 2
+== Plan for Phase 2
 
 * Utilize the link:https://github.com/jenkinsci/custom-war-packager[Custom War Packager (CWP)] tool for heavy lifting and converting the configuration file to a WAR package.
 * If necessary, implement a new wrapper around CWP so some logic can be reused from here
@@ -75,7 +75,7 @@ UI -> Config -> War Package
 * Blog Post for Phase 2.
 
 
-=== Evaluation Phase 2
+== Evaluation Phase 2
 
   - Features:
   ** War Download Feature.
@@ -87,7 +87,7 @@ UI -> Config -> War Package
   ** Caching support for plugin list which improved performance
   - Repo - https://github.com/jenkinsci/custom-distribution-service
 
-==== Resources
+=== Resources
 
   . Blogs
   - link:/blog/2020/07/27/custom-distribution-service/[Mid-term report]
@@ -95,7 +95,7 @@ UI -> Config -> War Package
   . Demo: https://www.youtube.com/watch?v=oSBvJwSXOVQ&t=360s
   . link:https://docs.google.com/presentation/d/1qjlpiabrRrYANHcCU9xwUZCfMuv5g0hbilAjglu98O0/edit?usp=sharing[Slides]
 
-=== Plan for Phase 3
+== Plan for Phase 3
 
 * Work on community hosted repositories for most used configuration files.
 * Set up a github repository(Source of Truth) with the configs, allowing users to share their configs either via the service
@@ -107,7 +107,7 @@ UI -> Config -> War Package
 ** Add the Database to the service and introduce this feature as a Beta Release
 * Accomplish any remaining goals like tests cases and publish releases of a new plugin if necessary
 
-=== Evaluation Phase 3
+== Evaluation Phase 3
 
   - Features:
   ** Hosting on a jenkins.io link:https://customize.jenkins.io/[subdomain].
@@ -117,31 +117,31 @@ UI -> Config -> War Package
   ** User guide.
   - Repo - https://github.com/jenkinsci/custom-distribution-service.
 
-==== Resources
+=== Resources
 
   . link:https://docs.google.com/presentation/d/1f7dtFCEtYYMkJkSX2LRvIKExTCWOPL47MgJhRljLxTo/edit?usp=sharing[Slides]
   . link:/blog/2020/08/31/custom-distribution-service/[Blog Post]
 
-=== Roadmap 
+== Roadmap 
 
 The roadmap for the future can be found link:https://github.com/jenkinsci/custom-distribution-service/issues?q=is%3Aissue+is%3Aopen+label%3Aroadmap[here].
 
-=== Sequence Diagram
+== Sequence Diagram
 
 The below diagram is the overview of the proposed sequence Diagram:
 
 image:images:ROOT:post-images/gsoc-custom-jenkins-service-distribution/cds-sequence-diagram.png[title="Jenkins Custom Distribution Service Sequence Diagram" role="center" width=1000,height=600]
 
-=== Meetings
+== Meetings
 
 Office hours are scheduled every Tuesday at 13:00 UTC, and every Thursday at 12:00 UTC
  The link:https://docs.google.com/document/d/1vMiU1kmtmKh1QC_9fwe7nc1LvAGk7gj4tf4GjB5i5vU/edit?usp=sharing[meeting notes] available for anyone to read.
 
-=== Getting the Code
+== Getting the Code
 
 The Custom Distribution Service was created from scratch during GSoC and can be found link:https://github.com/jenkinsci/custom-distribution-service[here on Github].
 
-=== Other links
+== Other links
 
 https://docs.google.com/document/d/1C7VQJ92Yhr0KRDcNVHYxn4ri7OL9IGZmgxY6UFON6-g/edit?usp=sharing[GSoC Proposal] +
 https://docs.google.com/document/d/1-ujWVJ2a5VYkUF6UA7m4bEpSDxmb3mJZhCbmoKO716U/edit?usp=sharing[Design Document] +
