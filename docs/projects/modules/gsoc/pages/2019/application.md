@@ -1,10 +1,4 @@
----
-:layout: simplepage
-:title: "Jenkins GSoC application draft, 2019"
-:tags:
-- gsoc
-- gsoc2019
----
+# Jenkins GSoC application draft, 2019
 
 <!-- This file uses Markdown intentionally.
      Google's GSoC site uses Markdown as an engine, using Markdown here allows copy-pasting

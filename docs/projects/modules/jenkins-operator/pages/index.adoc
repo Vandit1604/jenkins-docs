@@ -1,18 +1,3 @@
----
-layout: project
-title: "Jenkins Operator"
-section: projects
-tags:
-- kubernetes
-- infrastructure
-links:
-  github: 'jenkinsci/kubernetes-operator'
-  slack: 'https://virtuslab-oss.slack.com/'
-  chat: 'https://github.com/jenkinsci/kubernetes-operator#community'
-opengraph:
-  image: /images/logos/kubernetes-operator/kubernetes-operator.png
----
-
 = Jenkins Operator
 
 The Jenkins Operator is a link:https://kubernetes.io/docs/concepts/extend-kubernetes/operator/[*Kubernetes Native Operator*] which manages operations for Jenkins on Kubernetes. It has been built with Immutability and declarative Configuration as Code in mind.
@@ -46,3 +31,7 @@ Also see link:https://github.com/jenkinsci/kubernetes-operator#community[this pa
 === Roadmap and Future Plans
 
 This link:https://github.com/jenkinsci/kubernetes-operator/blob/master/ROADMAP.md[*document*] outlines the vision and technical roadmap for link:https://github.com/jenkinsci/kubernetes-operator[*jenkinsci/kubernetes-operator*] project.
+
+=== Connect
+* https://github.com/jenkinsci/kubernetes-operator[Github]
+* https://github.com/jenkinsci/kubernetes-operator#community[Chat]
