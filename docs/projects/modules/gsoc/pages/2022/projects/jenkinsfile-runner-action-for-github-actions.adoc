@@ -10,7 +10,7 @@ image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Yiming Gong
 image:images:ROOT:avatars/krisstern.png[,width=30,height=30] Kris Stern
 image:images:ROOT:avatars/abhyudayasharma.jpg[,width=30,height=30] Abhyudaya Sharma
 
-=== Abstract
+== Abstract
 
 Jenkinsfile Runner Action for GitHub Actions provides the customized containerized environment and useful GitHub Actions for users to run the Jenkins pipeline inside GitHub Actions. 
 In more detail, if using these actions, any GitHub project which has a `Jenkinsfile` can execute its workflow in the GitHub Actions runner.
@@ -19,7 +19,7 @@ This feature is based on the Jenkinsfile Runner, which is a command line tool fo
 The user can define the Jenkins pipeline environment by extending several Vanilla images and configuring the Jenkins Configuration-as-Code plugin.
 You can check the link:https://jenkinsci.github.io/jfr-action-doc[central documentation page] for more details about these actions.
 
-=== Deliverables
+== Deliverables
 
 To meet the potential needs of users and balance the design trade-off,
 this project provides five actions.
@@ -41,13 +41,13 @@ It's useful for users to get started easier and learn their underlying principle
 
 * link:/blog/2022/09/07/jenkinsfile-runner-as-github-actions/[A near Feature-complete version of Jenkinsfile Runner Actions as GitHub Actions]
 
-=== Rationale
+== Rationale
 
 The Jenkins pipeline environment includes the Jenkins core war package, the Jenkinsfile Runner, and at a minimum a required set of plugins to run the pipeline.
 All the dependencies are incorporated into the containers.
 As the GitHub Actions support using the predefined containers and building custom images, the containers - which include the Jenkins runtime - are able to start inside the GitHub Actions.
 
-=== Implementation
+== Implementation
 
 Jenkinsfile Runner Action for GitHub Actions defines the dependencies in the prebuilt container or download at the runtime, 
 and wraps the entrypoint in one GitHub Action so that the users can call the running environment and the related GitHub Action in their workflow definitions. 
@@ -59,7 +59,7 @@ how to use the Jenkins secrets and environmental variables, how to use the cache
 By providing these examples and iterating the current actions,
 we want the Jenkins pipeline to fit into the Cloud Native model gradually in the GitHub Actions context.
 
-=== Examples
+== Examples
 
 We recommend using either of Jenkinsfile Runner Actions based on the container idea or actions based on the runtime downloading idea.
 
@@ -151,18 +151,18 @@ jobs:
 ----
 
 [#chat]
-=== Chat
+== Chat
 
 We use the `#gsoc-jenkinsfile-runner` channel in the CDF Slack workspace.
 
 xref:community:chat:index.adoc#continuous-delivery-foundation[Explanations about the CDF Slack] (the invitation link is at the end of the paragraph).
 
-=== Office hours
+== Office hours
 
 * (General) Official weekly Jenkins office hours: Thursdays 3pm to 3:30pm UTC
 * (Project-based) link:https://us05web.zoom.us/j/81912236313?pwd=WGtHTHZnSHFhS3dYTmVHUXdrK05Sdz09[Weekly project-specific office hours]: Mondays 12pm to 12:30pm UTC
 
-=== Project Links
+== Project Links
 
 Here come some useful links:
 

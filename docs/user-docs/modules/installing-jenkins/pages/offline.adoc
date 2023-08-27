@@ -8,7 +8,7 @@ transfer it to your machine.
 
 include::partial$_installation_requirements.adoc[]
 
-=== Offline plugin installation
+== Offline plugin installation
 
 Offline plugin installations require additional effort due to dependency requirements.
 
@@ -16,7 +16,7 @@ The link:https://github.com/jenkinsci/plugin-installation-manager-tool[Plugin In
 It downloads user specified plugins and all dependencies of the user specified plugins.
 The link:https://github.com/jenkinsci/plugin-installation-manager-tool[Plugin Installation Manager Tool] also reports available plugin updates and plugin security warnings.
 It is included in the official link:https://github.com/jenkinsci/docker/blob/master/README.md#plugin-installation-manager-cli-preview[Jenkins Docker images].
-It is also used to install plugins as part of the link:/doc/book/installing/docker/[Docker install instructions].
+It is also used to install plugins as part of the xref:docker.adoc[Docker install instructions].
 Refer to the link:https://app.gitter.im/#/room/#jenkinsci_plugin-installation-manager-cli-tool:gitter.im[Gitter chat channel] for questions and answers
 
 If you want to transfer the individual plugins, you'll need to retrieve

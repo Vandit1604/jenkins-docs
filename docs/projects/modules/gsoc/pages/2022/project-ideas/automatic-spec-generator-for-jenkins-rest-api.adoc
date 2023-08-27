@@ -1,8 +1,8 @@
 = Automatic Specification Generator for Jenkins REST API
 
-Project goal: Find and implement the extraction of the REST APIs from the sources and generate and publish the REST APIs respective documentation
+*Project goal:* Find and implement the extraction of the REST APIs from the sources and generate and publish the REST APIs respective documentation
 
-Skills to study/improve: Java, REST API, OpenAPI / Swagger
+*Skills to study/improve:* Java, REST API, OpenAPI / Swagger
 
 == Details 
 == Background
@@ -17,7 +17,7 @@ Jenkins does not have automated REST API documentation at all at this time.
 A lot of APIs are contributed from extensions, so there are multiple REST APIs (core and plugins) of varying versions.
 The goal of this project is to find and implement the extraction of the REST APIs from the sources and generate and publish the REST APIs respective documentation.
 
-=== Project Details
+== Project Details
 Generating the expected HTTP responses is a difficult task.
 The student is expected to study Jenkins core to identify ways to extract them.
 For example, they could be extracted from Javadocs and annotations.
@@ -95,9 +95,8 @@ Details to be clarified interactively, together with the mentors, during the Con
 
 == Potential Mentors
 [.avatar]
-* image:images:ROOT:avatars/[,width=30,height=30] 
-* image:images:ROOT:avatars/[,width=30,height=30] 
-* image:images:ROOT:avatars/[,width=30,height=30] 
+* image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Kristin Whetstone
+* image:images:ROOT:avatars/abhyudayasharma.jpg[,width=30,height=30] Abhyudaya Sharma
 
 == Project Links
 * image:https://img.shields.io/badge/gitter%20-%20join_chat%20-%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_gsoc-sig%3Agitter.im[Static Badge]
@@ -108,4 +107,4 @@ Details to be clarified interactively, together with the mentors, during the Con
 * xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
 * xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
 * https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
-> xref:gsoc/2021/project-ideas[Go back to other GSoC 2021 project ideas]
+> xref:2022/project-ideas[Go back to other GSoC 2022 project ideas]
