@@ -1,19 +1,10 @@
 = Security validator for Jenkins Kubernetes Operator
 *Goal:*  Improve security aspects of installing Jenkins plugins in Kubernetes environment."
-s
 
-
-tags:
-- gsoc2021
-- kubernetes
-- cloudnative
-- operator
 *Status*: Completed
-student: sharmapulkit04
 
 
-
-=== Project Details
+== Project Details
 
 The link:https://github.com/jenkinsci/kubernetes-operator[Jenkins Operator] is a Kubernetes Native Operator which manages operations for Jenkins on Kubernetes.
 It enables  community to run Jenkins in cloud-native environments like Kubernetes, OpenShift and others. Also, supports most of the public cloud providers (AWS, Azure, GCP) in terms of additional capabilities like backups, observability and cloud security.
@@ -23,7 +14,7 @@ It enables  community to run Jenkins in cloud-native environments like Kubernete
 
 If you are interested in exploring Kubernetes and software-defined operators ecosystem more in-depth, as well as enhance your Go coding skill - this is definitely an interesting opportunity to consider.
 
-=== Problem Statement
+== Problem Statement
 
 Some of the plugins have security warnings which are not properly presented to the end users. This may result in introducing security risk in existing CI/CD infrastructure.
 
@@ -32,11 +23,11 @@ It can be implemented by taking an advantage of built-in security check mechanis
 
 Additionally, in case a security warning is detected, user should be able to choose if Jenkins Operator should continue with installation process.
 
-=== Office hours
+== Office hours
 
 TODO
 
-=== References
+== References
 
 * link:https://github.com/jenkinsci/kubernetes-operator[Jenkins Operator] 
 * link:https://book.kubebuilder.io/cronjob-tutorial/webhook-implementation.html[Webhook implementation cron tutorial]

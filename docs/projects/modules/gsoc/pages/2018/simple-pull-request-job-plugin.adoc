@@ -1,24 +1,19 @@
-= GSoC 2018. Simple Pull-Request Job Plugin"
-*Status*: Completed
-tags:
-- gsoc2018
-student: abhishek_gautam
+= GSoC 2018. Simple Pull-Request Job Plugin 
+*Goal:*
 
-
+*Status:* Completed
 
 //to fix
 == Team
 [.avatar]
 *Student*: 
-image:images:ROOT:avatars/[,width=30,height=30] 
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Abhishek Gautam
 
 [.avatar]
 *Mentor(s):*
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Kristin Whetstone
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Jeff Knurek
+image:images:ROOT:avatars/martinda.png[,width=30,height=30] Martin d'Anjou
 
 This project aims to develop a Job Plugin which can interact with Bitbucket Server, Bitbucket Cloud, and Github whenever a pull request is created or updated. Users should be able to configure job type using YAML file which will be placed in root directory of the Git repository being the subject of the PR.
 
@@ -109,6 +104,13 @@ to see it in your local time.
 == References
 
 * link:https://github.com/jenkinsci/simple-pull-request-job-plugin[Project repository]
-* link:https://app.gitter.im/#/room/#jenkinsci_simple-pull-request-job-plugin:gitter.im[Gitter chat]
+* image:https://img.shields.io/badge/gitter%20-%20join_chat%20-%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_simple-pull-request-job-plugin%3Agitter.im[Static Badge]
 * link:https://issues.jenkins.io/issues/?jql=project%20%3D%20Jenkins%20AND%20component%20%3D%20simple-pull-request-job-plugin[Bug Tracker]
 * link:https://github.com/gautamabhishek46/dummy[Demo Repository]
+
+== Links 
+* image:https://img.shields.io/badge/gitter%20-%20join_chat%20-%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_simple-pull-request-job-plugin%3Agitter.im[Static Badge]
+* https://github.com/jenkinsci/simple-pull-request-job-plugin[Github]
+* xref:projects:gsoc:index.adoc#office-hours[Meetings]
+* https://community.jenkins.io/c/contributing/gsoc[Forum]
+* xref:index.adoc[Jenkins GSoC page]

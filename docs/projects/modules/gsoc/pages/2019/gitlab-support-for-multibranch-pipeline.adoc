@@ -1,13 +1,21 @@
-= Multibranch Pipeline support for GitLab SCM
-*Goal:*  Add Multibranch Pipeline support for GitLab SCM private and SaaS instances so that Jenkins can automatically build branches and pull requests with Jenkinsfile"
+= Multibranch Pipeline support for GitLab SCM 
 
+*Goal:* Add Multibranch Pipeline support for GitLab SCM private and SaaS instances so that Jenkins can automatically build branches and pull requests with Jenkinsfile
 
+*Status:* Completed
 
-showGoogleDoc: false
-student: baymac
+== Team
+[.avatar]
+*Student*: 
+image:images:ROOT:avatars/baymac.jpg[,width=30,height=30] Parichay Barpanda
 
+[.avatar]
+*Mentor(s):*
+image:images:ROOT:avatars/markyjackson-taulia.png[,width=30,height=30] Marky Jackson
+image:images:ROOT:avatars/justinharringa.jpeg[,width=30,height=30] Justin Harringa
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Joseph Petersen
 
-
+== Details
 Currently GitLab Plugin does not support Multibranch Pipeline jobs. The underlying API does
 not implement calls to fetch Merge Requests during builds. Other problems with this plugin is
 doesn't follow conventional SCM plugin design, doesn't support folder org, doesn't have separate
@@ -121,3 +129,9 @@ https://drive.google.com/file/d/1tk_8221juDRF2-k2hByYt4LdztNtcZtm/view[GSoC Prop
 https://docs.google.com/document/d/12sICOnFXJXHEkqWV8yq6dy_ZcVs-5gL_zeDae8gnWdo/edit?usp=sharing[Daily Notes] +
 https://docs.google.com/document/d/12elprUjiou80z2W7SSbNTZiyguJ6LEj4Z718MdoA2_c/edit?usp=sharing[GSoC Process] +
 https://docs.google.com/document/d/1r_zQy5KpNNAO4KerFJrowWvGfFIU7xdEdqKgFenS3lI/edit?usp=sharing[Design Document] +
+
+== Links 
+* image:https://img.shields.io/badge/gitter%20-%20join_chat%20-%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_gitlab-branch-source-plugin%3Agitter.im[Static Badge]
+* xref:projects:gsoc:index.adoc#office-hours[Meetings]
+* https://community.jenkins.io/c/contributing/gsoc[Forum]
+* xref:index.adoc[Jenkins GSoC page]

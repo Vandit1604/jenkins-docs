@@ -16,7 +16,7 @@ image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Allan Burdajewicz
 
 
 == Details
-=== Background
+== Background
 
 As the CI/CD world is moving more towards automation and minimal human interaction, the ability to fully automate a release, including the determination of the "next" release version becomes desirable.
 
@@ -24,7 +24,7 @@ Semantic/Conventional commits is one way of programmatically understanding the c
 
 For an existing project released at `1.0.0`, the following commit messages would bump the version as follows:
 
-|===
+|==
 |Commit Message|Next Version 
 
 |`chore: improve logging`
@@ -35,9 +35,9 @@ For an existing project released at `1.0.0`, the following commit messages would
 |`1.1.0`
 |`BREAKING CHANGE: reimplement`
 |`2.0.0`
-|===
+|==
 
-=== Project Details
+== Project Details
 
 The conventional commits plugin is a Jenkins plugin to automatically determine the next semantic version for a git repository using the Conventional Commits (C.C) system.
 
