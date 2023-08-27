@@ -1,20 +1,12 @@
 =Tekton Pipelines DSL for Jenkins with the Tekton Client Plugin
 *Goal:*  Manage Tekton resources via Pipeline Steps / Jenkinsfile"
-category: Plugins
-year: 2021
-status: published
-sig: cloud-native
-skills:
-- Java
-- Kubernetes
-- Tekton Pipelines
-mentors:
-- "waveywaves"
-- "garethjevans"
-links:
-  draft: https://docs.google.com/document/d/1_mS0gLgM7oz7PanE0X_SkJ8iUo-BPVCixXMSDO7-VMk/edit#
-  design doc: https://docs.google.com/document/d/10n3vgYrjS_M1571OUOYLw4tK2QmxY7kp_wyUT3ke4gY/edit#
----
+s
+
+
+
+
+
+
 
 === Background
 With the movement of traditional software architecture to microservices, there has been a growth in usage of container orchestration infrastructure (Kubernetes) and tooling around it. To adapt to this there have been plugins developed for Jenkins like the kubernetes-plugin which allow this transition to be smooth for the users to keep the same CI/CD platform and migrate their workloads.

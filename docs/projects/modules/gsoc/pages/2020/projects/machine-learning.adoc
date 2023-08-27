@@ -1,24 +1,16 @@
 = Machine Learning Plugins for Data Science
 *Goal:*  Create a new plugin for integrating Jenkins with one of Machine Learning tools (e.g. Jupyter Python, TensorBoard, or Sacred)"
-category: Plugins
-year: 2020
+s
+
 *Status*: Completed
-sig: pipeline-authoring
+
 student: loghijiaha
-mentors:
-- "kinow"
-- "imoutsatsos"
-- "markyjackson-taulia"
-- "shivaylamba"
+
 tags:
 - gsoc2020
 - machine-learning
 - data-science
-links:
-  {gitter}jenkinsci_gsoc-machine-learning-project:gitter.im
-  draft: https://docs.google.com/document/d/1YaQfzvYV2G-wby2jcOzITKveaowTXMN77fkMq5hBe6E/edit?usp=sharing
-  idea: /projects/gsoc/2020/project-ideas/machine-learning
----
+
 
 The main goal of this project is integrating Machine Learning workflow including Data preprocessing, Model Training, Evaluation and Prediction with Jenkins build tasks. This plugin will be capable of executing code fragments via IPython kernel as currently supported by Jupyter Notebook. Version control will be handled as an added advantage of this project.
 

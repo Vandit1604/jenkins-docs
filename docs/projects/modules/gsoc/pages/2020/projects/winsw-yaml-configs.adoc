@@ -1,23 +1,16 @@
 = Jenkins Windows Services: YAML Configuration Support
 *Goal:*  Enhance Jenkins controller and agent service management on Windows by offering new configuration file formats and improving settings validation"
 category: Core, Tools
-year: 2020
+
 *Status*: Completed
-sig: platform
+
 student: buddhikac96
-mentors:
-- "oleg_nenashev"
-- "mikecirioli"
-- "nextturn"
+
 tags:
 - gsoc2020
 - windows
 - windows-services
-links:
-  draft: https://drive.google.com/file/d/1G2cOaRb-Mle_Fl7YVAzlVITDgrN6eCbE/view?usp=sharing
-  gitter: winsw/winsw
-  idea: /projects/gsoc/2020/project-ideas/winsw-yaml-config-support
----
+
 
 On Windows machines, Jenkins controller and agents can be installed as Windows Services to get better robustness and manageability within the system.
 This is a functionality bundled into the Jenkins core directly.

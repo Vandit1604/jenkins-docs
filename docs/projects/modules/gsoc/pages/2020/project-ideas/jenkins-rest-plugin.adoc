@@ -1,18 +1,11 @@
 =Jenkins REST Plugin
 *Goal:*  Create a new plugin to give Jenkins users the ability to make calls to other Jenkins instances via their REST API"
-category: Plugin
-year: 2020
-status: draft
-skills:
-- Java
-- REST API
-- Jenkins Pipeline
-mentors:
-- "Sagar2366"
-links:
-  emailThread: https://groups.google.com/forum/#!topic/jenkinsci-gsoc-all-public/elEudjY_09w
-  Draft: https://docs.google.com/document/d/1Xz3I02T-QxlJW-1nt_CofF2I6se3hztF9ZsHqxu55nU
----
+
+
+
+
+
+
 
 === Project Idea
 A Jenkins plugin to wrap the https://github.com/cdancy/jenkins-rest library, allowing Pipeline scripts to interact easily with other (or the self) Jenkins instances via the Jenkins REST API, and eliminating the need to parse responses, making pipeline scripts more concise.

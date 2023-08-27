@@ -1,16 +1,12 @@
 =Automating plugin build metadata updates
 *Goal:*  Apply generic transformations across the Jenkins ecosystem"
 category: Tools
-year: 2022
-status: draft
-sig: platform
-skills:
-- Java
-mentors:
-- "basil"
-links:
-  emailThread: https://community.jenkins.io/t/google-summer-of-code-gsoc-2022-call-for-organizers-mentors-and-project-ideas/1010/8
----
+
+
+
+
+
+
 
 The Jenkins ecosystem combines a monolithic core with a modular plugin system.
 True, this design provides a great degree of flexibility and robustness, yet also it poses challenges to propagating large-scale changes throughout the ecosystem.

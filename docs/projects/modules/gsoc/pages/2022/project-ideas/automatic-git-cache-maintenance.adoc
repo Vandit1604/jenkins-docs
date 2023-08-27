@@ -4,17 +4,6 @@
 
 *Skills to study/improve:* Java
 
-sig: platform
-skills:
-- Java
-mentors:
-- "markewaite"
-- "rishabhbudhouliya"
-- "krisstern"
-links:
-  emailThread: https://community.jenkins.io/t/google-summer-of-code-gsoc-2022-call-for-organizers-mentors-and-project-ideas/1010/7
----
-
 == Details 
 
 Recent versions of command line git (since 2.30.0) have a set of commands for "git maintenance" that can be used to regularly update and maintain the contents of a git repository.
@@ -57,13 +46,14 @@ Administrators will be able to control the git maintenance operations that are p
 * link:https://issues.jenkins.io/issues/?jql=labels%20%3D%20newbie-friendly%20AND%20status%20not%20in%20(Closed%2C%20Done%2C%20Resolved%2C%20%22Fixed%20but%20Unreleased%22)%20AND%20component%20%3D%20git-plugin%20AND%20project%20%3D%20JENKINS[Git plugin issues] friendly to a new contributor
 * link:https://issues.jenkins.io/issues/?jql=labels%20%3D%20newbie-friendly%20AND%20status%20not%20in%20(Closed%2C%20Done%2C%20Resolved%2C%20%22Fixed%20but%20Unreleased%22)%20AND%20component%20%3D%20git-client-plugin%20AND%20project%20%3D%20JENKINS[Git client plugin issues] friendly to a new contributor
 
-== Potential Mentors 
+== Potential Mentors
+[.avatar]
 * image:images:ROOT:avatars/markewaite.jpg[,width=30,height=30] Mark Waite
 * image:images:ROOT:avatars/rishabhbudhouliya.jpg[,width=30,height=30] Rishabh Budhouliya
 * image:images:ROOT:avatars/krisstern.png[,width=30,height=30] Kris Stern
 
 == Project Links
-* image:https://img.shields.io/badge/gitter%20-%20join_chat%20-%20green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_gsoc-sig%3Agitter.im[Static Badge]
+* image:https://img.shields.io/badge/gitter%20-%20join_chat%20-%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_gsoc-sig%3Agitter.im[Static Badge]
 * https://www.jenkins.io/projects/gsoc/#office-hours[Meetings]
 
 == Organization Links 

@@ -1,14 +1,10 @@
 =Plugin Installation Manager Tool Improvements
 *Goal:*  Introduce new features and improvements in the plugin installation manager"
 category: Tools
-year: 2021
-status: published
-sig: platform
-skills:
-- Java
-- YAML
-- Command line tools
-- Package management tool theory
+
+
+
+
 mentors:
 # TBC
 #- "kwhetstone"
@@ -16,10 +12,7 @@ mentors:
 - "oleg_nenashev"
 - "sladyn98"
 
-links:
-  {gitter}jenkinsci_plugin-installation-manager-cli-tool:gitter.im
-  draft: https://docs.google.com/document/d/1s-dLUfU1OK-88bCj-GKaNuFfJQlQNLTWtacKkVMVmHc
----
+
 === Background
 In 2019 there was a Jenkins Google Summer of Code project to create a tool to automatically install plugins from the command line based on a provided input.
 This is meant to help with creating reproducible environments and other places where you would want to install a certain set of plugins.

@@ -3,14 +3,22 @@
 tags:
 - gsoc2018
 student: abhishek_gautam
-mentors:
-- "kwhetstone"
-- "jeff-knurek"
-- "martinda"
-links:
-  {gitter}jenkinsci_simple-pull-request-job-plugin:gitter.im
-  github: "jenkinsci/simple-pull-request-job-plugin"
----
+
+
+
+//to fix
+== Team
+[.avatar]
+*Student*: 
+image:images:ROOT:avatars/[,width=30,height=30] 
+
+[.avatar]
+*Mentor(s):*
+image:images:ROOT:avatars/[,width=30,height=30] 
+image:images:ROOT:avatars/[,width=30,height=30] 
+image:images:ROOT:avatars/[,width=30,height=30] 
+image:images:ROOT:avatars/[,width=30,height=30] 
+image:images:ROOT:avatars/[,width=30,height=30] 
 
 This project aims to develop a Job Plugin which can interact with Bitbucket Server, Bitbucket Cloud, and Github whenever a pull request is created or updated. Users should be able to configure job type using YAML file which will be placed in root directory of the Git repository being the subject of the PR.
 

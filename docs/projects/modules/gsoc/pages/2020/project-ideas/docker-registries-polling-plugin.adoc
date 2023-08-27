@@ -1,19 +1,11 @@
 =Polling Docker Registries for Image Changes
 *Goal:*  Create a new Jenkins plugin to automate polling of image changes and security scans"
-category: Plugins
-year: 2020
-status: published
-skills:
-- Java
-- Docker
-mentors:
-- "justinharringa"
-- "afalko"
-- "mikecirioli"
-links:
-  gitter: jenkinsci_docker:gitter.im
-  draft: https://docs.google.com/document/d/1r_wOqtzmiIyiNWri6U3FKINWdnyHWEMF_lbSCa4jPiw
----
+s
+
+
+
+
+
 
 Keeping Docker images up-to-date is important to keep systems patched from known security vulnerabilities. Today, there isn’t a good way to subscribe to public docker images and update any of your own that depend on them. When depending on public images, Jenkins users are faced with several less-than-ideal choices: Build at a time cadence or manually trigger their Docker image builds. 
 

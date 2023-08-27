@@ -1,20 +1,12 @@
 =Git repository caching on agents
 *Goal:*  Cache git repositories on agents for faster checkout"
-category: Plugins
-year: 2020
-status: published
-sig: platform
-mentors:
-- "markewaite"
-- "fcojfernandez"
-- "baymac"
-skills:
-- Java
-- Git
-links:
-  {gitter}jenkinsci_git-plugin:gitter.im
-  draft: https://docs.google.com/document/d/1M9Na1eJxwGZ7fY1L-PsBGv62jL_pPBtqmGePpwogUBw
----
+s
+
+
+
+
+
+
 
 The Jenkins git plugin clones remote git repositories into Jenkins workspaces on agents.
 The Jenkins agents frequently have other copies of the remote git repository which could be used as a local cache to reduce network data transfer from the remote git server to the local workspace.

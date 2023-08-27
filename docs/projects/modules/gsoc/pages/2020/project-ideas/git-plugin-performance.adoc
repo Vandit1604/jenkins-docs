@@ -1,24 +1,12 @@
 =Git plugin performance improvements
 *Goal:*  Improve git plugin performance"
-category: Plugins
-year: 2020
-status: published
-sig: platform
-mentors:
-- "markewaite"
-- "fcojfernandez"
-- "oleg_nenashev"
-- "baymac"
-- "justinharringa"
-skills:
-- Java
-- Git
-- Benchmarking
-- JMH
-links:
-  {gitter}jenkinsci_git-plugin:gitter.im
-  draft: https://docs.google.com/document/d/1bmpgW_8cg38ulp0uFdn2BRfVlIrZ03FFhWpe0MVHyyI
----
+s
+
+
+
+
+
+
 
 Improve Jenkins git plugin performance by fixing known issues in performance critical areas.
 Implement performance comparisons between the command line git and JGit implementations using the Java Microbenchmark Harness.

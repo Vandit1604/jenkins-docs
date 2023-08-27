@@ -1,23 +1,12 @@
 =GitHub Checks API for Jenkins Plugins
 *Goal:*  Create a new plugin API so that plugins can publish GitHub checks status messages"
-category: Plugins
-year: 2020
-status: published
-sig: platform
-mentors:
-- "uhafner"
-- "timja"
-- "jeffpearce"
-- "jonbrohauge"
-- "ayush_agarwal"
-skills:
-- Java
-- REST API
-- GitHub
-links:
-  {gitter}jenkinsci_gsoc-sig:gitter.im
-  draft: https://docs.google.com/document/d/1fl3sF0mArtv2THOjPSZvNufGme4P24BtT0BirHMeMRY
----
+s
+
+
+
+
+
+
 
 Many projects use pull requests (in GitHub) or similar concepts (in GitLab, Bitbucket, etc.) in their development process.
 Typically, those pull requests are automatically built and verified with Jenkins. For each build of such a pull request

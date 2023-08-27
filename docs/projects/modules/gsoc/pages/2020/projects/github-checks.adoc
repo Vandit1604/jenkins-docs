@@ -1,23 +1,17 @@
 = GitHub Checks API for Jenkins Plugins
 *Goal:*  Create a new plugin API so that plugins can publish GitHub checks status messages"
-category: Plugins
-year: 2020
+s
+
 *Status*: Completed
-sig: platform
+
 student: XiongKezhi
-mentors:
-- "uhafner"
-- "timja"
+
 advisors:
 - "jeffpearce"
 tags:
 - gsoc2020
 - github
-links:
-  {gitter}jenkinsci_github-checks-api:gitter.im
-  draft: https://docs.google.com/document/d/1gpG7jeQmb9zz46t0ewNNRUrYbl7iHGScp5vgkn7MCXs/edit?usp=sharing
-  idea: /projects/gsoc/2020/project-ideas/github-checks
----
+
 
 The link:https://developer.github.com/v3/checks/[GitHub Checks API] allows developers to report the CI integrations’ detail information rather than the binary pass/fail build status on GitHub pages. 
 This project is about implementing this API as a new Jenkins plugin. 

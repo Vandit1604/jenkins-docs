@@ -1,20 +1,15 @@
 =Custom Jenkins distribution service improvements
 *Goal:*  Improve the out of the box solution for packaging Jenkins distributions as WAR files or Docker images"
 category: Tools
-year: 2021
-status: published
-skills:
-- Java
-- Web Development
-- Docker
+
+
+
 mentors:
 #To check on the channel post reviews
 #- "martinda"
 - "sladyn98"
 - "kwhetstone"
-links:
-  {gitter}jenkinsci_platform-sig:gitter.im
----
+
 
 Many users will download Jenkins and spend a great deal of time customizing their environment to be exactly what they need.
 Often this is done through trial and error.

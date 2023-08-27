@@ -1,26 +1,17 @@
 = Git Plugin Performance Improvements
 *Goal:*  Enhance user experience by enabling faster checkouts
-category: Plugins
-year: 2020
+s
+
 *Status*: Completed
-sig: platform
+
 tags:
 - gsoc2020
 - git
 - performance
 - plugins
 student: rishabhbudhouliya
-mentors:
-- "markewaite"
-- "fcojfernandez"
-- "justinharringa"
-- "omkar_dsd"
-links:
-  draft: https://docs.google.com/document/d/1vy9tkFbhl5KX7QcjH3QbzFzbKEONw6gaLZSmNXgB06Y/edit?usp=sharing
-  gitter: jenkinsci_git-plugin:gitter.im
-  idea: /projects/gsoc/2020/project-ideas/git-plugin-performance
-  meetings: "/projects/gsoc/2020/projects/git-plugin-performance/#office-hours"
----
+
+
 
 The aim of the project is to find and improve potential areas in the git plugin for performance enhancement. The process of doing that was to find differences in performance between the two co-existing implementations for git, `CLI git` and `JGit`.
 It is logical to leverage those differences by creating a feature which would automatically switch git implementations optimally adjusting to a certain scenario or a use-case.

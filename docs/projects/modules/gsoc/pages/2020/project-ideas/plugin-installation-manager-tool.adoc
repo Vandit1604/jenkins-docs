@@ -1,21 +1,12 @@
 =Plugin Installation Manager Tool Improvements
 *Goal:*  Update the plugin installation manager to integrate with the docker image and Configuration as Code projects"
 category: Tools
-year: 2020
-status: published
-sig: platform
-skills:
-- Java
-- JSON
-- Command line tools
-- Package management tool theory
-mentors:
-- "kwhetstone"
-- "timja"
-links:
-  {gitter}jenkinsci_plugin-installation-manager-cli-tool:gitter.im
-  draft: https://docs.google.com/document/d/1s-dLUfU1OK-88bCj-GKaNuFfJQlQNLTWtacKkVMVmHc
----
+
+
+
+
+
+
 === Background
 Last summer, there was a Jenkins Google Summer of Code project to create a tool to automatically install plugins from the command line based on a provided input.
 This is meant to help with creating reproducible environments and other places where you would want to install a certain set of plugins.

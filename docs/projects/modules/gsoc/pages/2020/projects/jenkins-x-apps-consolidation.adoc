@@ -1,24 +1,14 @@
 = Jenkins X: Consolidate the use of Apps / Addons
 *Goal:*  Consolidate Apps and Addons inside Jenkins X"
 category: Jenkins X
-year: 2020
+
 *Status*: Completed
 student: nodece
-mentors:
-- "marckk"
-- "jstrachan"
-- "nehagup"
-- "sharepointoscar"
-- "nikhildarocha"
-- "sahilrkalra"
+
 tags:
 - gsoc2020
 - jenkins-x
-links:
-  chat: https://jenkins-x.io/community/#slack
-  draft: https://docs.google.com/document/d/1Ph-Jo8KGYzTLMXLIDJQB6XbVcnILETfXEMXXczrxb4s/edit?usp=sharing
-  idea: /projects/gsoc/2020/project-ideas/jenkins-x-apps-consolidation
----
+
 
 The current CLI supports `apps` and `addons`. `Addons` were either generic helm charts or a combination of helm chart plus some custom go code to install and integrate them with the Jenkins X platform. `Apps` framework which provided a more generic way of adding charts chatting to Jenkins X such that anybody could create an app without having to modify the underlying jx code. But now left developers with confusion over what an APP is. Developers think the `apps` is they are developing.
 
