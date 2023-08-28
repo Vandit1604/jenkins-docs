@@ -14,7 +14,7 @@ image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Mauricio Salatino
 image:images:ROOT:avatars/jeffpearce.png[,width=30,height=30] Jeff Pearce
 image:images:ROOT:avatars/marckk.jpg[,width=30,height=30] Kara de la Marck
 
-== Details
+
 == Background
 As the CI/CD world is moving more towards interoperability between multiple platforms, Jenkins should also be compatible with the same interoperability standards. Some of these standards with respect to communication between different CI/CD platforms are put forth by the cloudevents specification. This spec outlines the structure of cloudevents, which are produced or consumed by entities which support it, hence making those entities compatible with other CI/CD platforms which also support them allowing them to work together.
 
@@ -115,7 +115,7 @@ There are many examples of such documentation on the web:
 - link:https://docs.google.com/document/d/1K9P_GSyPY4Y1om0_6Hk2alvqWqX8Dxly5kfVODjGW4A/edit?usp=sharing[Progress Tracker]
 
 == links
-https://docs.google.com/document/d/1MvdocqnKLOj2Sf8pqAsd4-GGhd9kl_VXGRPffBFNUOI/edit?usp=sharing[Meeting Document]
-xref:cloudevents-plugin.adoc#chat[Chat]
-xref:gsoc:2021/project-ideas/cloudevents-plugin.adoc[Project Idea Page]
-xref:cloudevents-plugin.adoc#office-hours[Meetings]
+* https://docs.google.com/document/d/1MvdocqnKLOj2Sf8pqAsd4-GGhd9kl_VXGRPffBFNUOI/edit?usp=sharing[Meeting Document]
+* xref:projects:gsoc:2021/project-ideas/cloudevents-plugin.adoc#chat[Chat]
+* xref:gsoc:2021/project-ideas/cloudevents-plugin.adoc[Project Idea Page]
+* xref:cloudevents-plugin.adoc#office-hours[Meetings]

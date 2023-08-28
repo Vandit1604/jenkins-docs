@@ -1,12 +1,10 @@
-=Role Strategy Plugin: user experience
-*Goal:*  Improve UI and REST APIs using new technologies to make it more user-friendly"
-s
+= Role Strategy Plugin: user experience 
 
+*Project goal:* Improve UI and REST APIs using new technologies to make it more user-friendly
 
+*Skills to study/improve:* Java, JavaScript, REST/GraphQL
 
-
-
-
+ 
 link:https://plugins.jenkins.io/role-strategy[Role Strategy Plugin] is widely used in Jenkins as an authorization engine,
 but it has a pretty legacy Web UI which could be significantly improved.
 The plugin's existing APIs are also very limited, and they could be redesigned.
@@ -40,14 +38,12 @@ please do not hesitate to ask in the task.
 
 == Potential Mentors
 [.avatar]
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
+image:images:ROOT:avatars/oleg_nenashev.png[,width=30,height=30] Oleg Nenashev
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Supun Wanniarachchi
+image:images:ROOT:avatars/runzexia.jpg[,width=30,height=30] 夏润泽(RunZe Xia)
 
 == Project Links
-* gitter
+* image:https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_role-strategy-plugin%3Agitter.im[Static Badge]
 * xref:projects:gsoc:index.adoc#office-hours[Meetings]
 * https://community.jenkins.io/c/contributing/gsoc[Forum]
 * [Project Idea Draft]

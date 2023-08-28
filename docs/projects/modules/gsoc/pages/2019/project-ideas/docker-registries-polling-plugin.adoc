@@ -1,24 +1,19 @@
-=Polling Docker Registries for Image Changes
-*Goal:*  Create a new Jenkins plugin to automate polling of image changes and security scans"
-s
+= Polling Docker Registries for Image Changes 
 
-++++
-<iframe src="" width="100%" height="600px"></iframe>
-++++
+*Project goal:* Create a new Jenkins plugin to automate polling of image changes and security scans
 
-
-
+*Skills to study/improve:* Java, Docker
 
 
 Keeping Docker images up-to-date is important to keep systems patched from known security vulnerabilities.
-Today, there isn’t a good way to subscribe to public docker images and update any of your own that depend on them.
+Today, there isn`t a good way to subscribe to public docker images and update any of your own that depend on them.
 When depending on public images,
 Jenkins users are faced with several less-than-ideal choices:
 Build at a time cadence or manually trigger their Docker image builds.
 
 Today, a plugin:dockerhub-notification[Dockerhub Notification Plugin] exists which can help, but it requires a webhook.
 You can only use it if you own the images or the registry.
-The goal of this project is to be able to kick off your own Jenkins jobs when images that you don’t own change.
+The goal of this project is to be able to kick off your own Jenkins jobs when images that you don`t own change.
 For example, when link:https://hub.docker.com/_/debian/[debian:latest] has an update,
 we want to detect when it changes by polling. 
 The source registry should not matter.
@@ -37,17 +32,15 @@ The plugin:docker-traceability[Docker Traceability Plugin] can be reused to prov
 
 == Potential Mentors
 [.avatar]
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
+image:images:ROOT:avatars/afalko.jpg[,width=30,height=30] Andrey Falko
+image:images:ROOT:avatars/justinharringa.jpeg[,width=30,height=30] Justin Harringa
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Ankit Jain
 
 == Project Links
-* image:https://img.shields.io/badge/gitter%20-%20join_chat%20-%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_gsoc-sig%3Agitter.im[Static Badge]
+* image:https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_docker%3Agitter.im[Static Badge]
 * xref:projects:gsoc:index.adoc#office-hours[Meetings]
 * https://community.jenkins.io/c/contributing/gsoc[Forum]
-* [Project Idea Draft]
+* https://docs.google.com/document/d/1r_wOqtzmiIyiNWri6U3FKINWdnyHWEMF_lbSCa4jPiw[Project Idea Draft]
 
 == Organization Links 
 * xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines

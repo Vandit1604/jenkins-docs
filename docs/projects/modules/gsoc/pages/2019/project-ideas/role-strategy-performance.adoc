@@ -1,13 +1,11 @@
-=Role Strategy Plugin performance
-*Goal:*  Improve performance of one of the most popular authorization plugins in Jenkins"
-s
+= Role Strategy Plugin performance 
 
+*Project goal:* Improve performance of one of the most popular authorization plugins in Jenkins
 
+*Skills to study/improve:* Java, Performance Testing
 
-
-
-
-link:https://plugins.jenkins.io/role-strategy[Role Strategy Plugin] is widely used in Jenkins as an authorization engine,
+ 
+{plugin}role-strategy[Role Strategy Plugin] is widely used in Jenkins as an authorization engine,
 but it has known performance limitations for large-scale setups.
 In this project the proposal is to improve the plugin's performance and to create a proper testing framework for Jenkins security plugins.
 
@@ -41,14 +39,12 @@ please do not hesitate to ask in the task.
 
 == Potential Mentors
 [.avatar]
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
-image:images:ROOT:avatars/[,width=30,height=30] 
+image:images:ROOT:avatars/oleg_nenashev.png[,width=30,height=30] Oleg Nenashev
+image:images:ROOT:avatars/runzexia.jpg[,width=30,height=30] 夏润泽(RunZe Xia)
+image:images:ROOT:avatars/pvtuan10.jpeg[,width=30,height=30] Pham Vu Tuan
 
 == Project Links
-* gitter
+* image:https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_role-strategy-plugin%3Agitter.im[Static Badge]
 * xref:projects:gsoc:index.adoc#office-hours[Meetings]
 * https://community.jenkins.io/c/contributing/gsoc[Forum]
 * [Project Idea Draft]

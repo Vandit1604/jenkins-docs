@@ -1,17 +1,20 @@
 = GitHub Checks API for Jenkins Plugins
-*Goal:*  Create a new plugin API so that plugins can publish GitHub checks status messages"
-s
 
-*Status*: Completed
+*Goal:* Create a new plugin API so that plugins can publish GitHub checks status messages
 
-student: XiongKezhi
+*Status:* Completed
 
-advisors:
-- "jeffpearce"
-tags:
-- gsoc2020
-- github
+== Team
+[.avatar]
+*Student*: 
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Sladyn Nunes
 
+[.avatar]
+*Mentor(s):*
+image:images:ROOT:avatars/linuxsuren.jpg[,width=30,height=30] 赵晓杰(Rick)
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Kristin Whetstone
+image:images:ROOT:avatars/baymac.jpg[,width=30,height=30] Parichay Barpanda
+image:images:ROOT:avatars/martinda.png[,width=30,height=30] Martin d'Anjou
 
 The link:https://developer.github.com/v3/checks/[GitHub Checks API] allows developers to report the CI integrations’ detail information rather than the binary pass/fail build status on GitHub pages. 
 This project is about implementing this API as a new Jenkins plugin. 
@@ -54,3 +57,10 @@ video::S-pEgT3lzpk[youtube,width=800,height=420]
 
 == Meeting
 * We hosted 14 meetings during the whole GSoC 2020, you can find the details in the link:https://docs.google.com/document/d/1TZLmu3nBPbwUjzLVYGnV_YtYvmzxzw6A4eEVYpbmi3Y/edit?usp=sharing[meeting notes].
+
+== Links 
+* image:https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_github-checks-api%3Agitter.im[Static Badge]
+* xref:projects:gsoc:index.adoc#office-hours[Meetings]
+* https://community.jenkins.io/c/contributing/gsoc[Forum]
+* xref:gsoc:2020/project-ideas/github-checks.adoc[Original GSoC project idea]
+* xref:index.adoc[Jenkins GSoC page]

@@ -1,23 +1,26 @@
-= Custom Jenkins distribution build service
-*Goal:*  Provide an out of the box solution for packaging Jenkins distributions as WAR files or Docker images"
-category: Tools
+= Custom Jenkins distribution build service 
 
-*Status*: Completed
-student: sladyn98
+*Goal:* Provide an out of the box solution for packaging Jenkins distributions as WAR files or Docker images
 
-advisors:
-- "oleg_nenashev"
-links:
-  {gitter}jenkinsci_jenkins-custom-distribution-service:gitter.im
-  draft: https://docs.google.com/document/d/1C7VQJ92Yhr0KRDcNVHYxn4ri7OL9IGZmgxY6UFON6-g/edit?usp=sharing
-  idea: /projects/gsoc/2020/project-ideas/jenkins-distribution-customize-service
-  meetings:  /projects/gsoc/2020/project-ideas/jenkins-distribution-customize-service#meetings
-tags:
-- gsoc2020
-- packaging
-- tools
----
+*Status:* Completed
 
+== Team
+[.avatar]
+*Student*: 
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Sladyn Nunes
+
+[.avatar]
+*Mentor(s):*
+image:images:ROOT:avatars/linuxsuren.jpg[,width=30,height=30] 赵晓杰(Rick)
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Kristin Whetstone
+image:images:ROOT:avatars/baymac.jpg[,width=30,height=30] Parichay Barpanda
+image:images:ROOT:avatars/martinda.png[,width=30,height=30] Martin d'Anjou
+
+[.avatar]
+*Advisor(s):*: 
+image:images:ROOT:avatars/oleg_nenashev.png[,width=30,height=30] Oleg Nenashev
+
+ 
 The main idea behind the project is to build a customizable Jenkins distribution service that could be used to build tailor-made Jenkins distributions. The service would provide users with a simple interface to select the configurations they want to build the instance with eg: plugins, authorization matrices etc. Furthermore it would include a section for sharing community created distros so that users can find and download already built Jenkins war/configuration files to use out of the box.
 
 == Key Deliverables
@@ -142,3 +145,10 @@ The Custom Distribution Service was created from scratch during GSoC and can be 
 https://docs.google.com/document/d/1C7VQJ92Yhr0KRDcNVHYxn4ri7OL9IGZmgxY6UFON6-g/edit?usp=sharing[GSoC Proposal] +
 https://docs.google.com/document/d/1-ujWVJ2a5VYkUF6UA7m4bEpSDxmb3mJZhCbmoKO716U/edit?usp=sharing[Design Document] +
 https://docs.google.com/document/d/1DSCH-3wh6uV9Rm_j8PcBzq2lvQPhZ31AIwmWkEaLxvc/edit?usp=sharing[Daily Notes] +
+
+== Links 
+* image:https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_jenkins-custom-distribution-service%3Agitter.im[Static Badge]
+* xref:gsoc:2020/project-ideas/jenkins-distribution-customize-service.adoc#meetings[Meetings]
+* https://community.jenkins.io/c/contributing/gsoc[Forum]
+* xref:gsoc:2020/project-ideas/jenkins-distribution-customize-service[Original GSoC project idea]
+* xref:index.adoc[Jenkins GSoC page]

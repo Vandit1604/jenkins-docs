@@ -16,7 +16,7 @@ image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Jon Brohauge
 image:images:ROOT:avatars/oleg_nenashev.png[,width=30,height=30] Oleg Nenashev
 image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Mads Nielsen
 
-== Details 
+ 
 The popular promoted-builds-plugin in Jenkins currently supports Freestyle/Abstract Projects but however is incompatible with the
 Pipeline structure. The existing plugin was developed before the introduction of pipelines which makes the current design archaic enough
 to not support the pipeline builds. Thus, this project aims at reviving Promotion into the pipelines by introducing a new plugin which

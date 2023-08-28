@@ -1,21 +1,12 @@
-=Custom Jenkins distribution service improvements
-*Goal:*  Improve the out of the box solution for packaging Jenkins distributions as WAR files or Docker images"
-category: Tools
-
-
-
-mentors:
-#To check on the channel post reviews
-#- "martinda"
-- "sladyn98"
-- "kwhetstone"
+= Custom Jenkins distribution service improvements
+*Goal:*  Improve the out of the box solution for packaging Jenkins distributions as WAR files or Docker images
 
 
 Many users will download Jenkins and spend a great deal of time customizing their environment to be exactly what they need.
 Often this is done through trial and error.
 It would not only be nice to create common configurations to share with team members, but with the wider community.
 
-Last summer, a project (link:https://github.com/jenkinsci/custom-distribution-service[custom-distribution-service]) created the base application with a UI and support for uploading configurations.
+Last summer, a project ( https://github.com/jenkinsci/custom-distribution-service[custom-distribution-service] ) created the base application with a UI and support for uploading configurations.
 There were a lot of suggestions over the course of the summer, to the point where it would make sense to continue the work over another summer.
 The project is currently hibernating though would be useful after issues are addressed.
 

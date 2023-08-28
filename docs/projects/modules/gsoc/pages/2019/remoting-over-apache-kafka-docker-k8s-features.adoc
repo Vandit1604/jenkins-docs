@@ -16,7 +16,7 @@ image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Ankit Jain
 image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Supun Wanniarachchi
 image:images:ROOT:avatars/oleg_nenashev.png[,width=30,height=30] Oleg Nenashev
 
-== Details 
+ 
 == Motivation
 
 Previous version of Remoting over Apache Kafka plugin requires users to manually configure the entire system which includes Zookeeper, Apache Kafka and Remoting agents. It also didn't support dynamic agent provisioning so scalability was harder to achieve. This project aims to solve two problems:
