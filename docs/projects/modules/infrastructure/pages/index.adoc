@@ -127,6 +127,7 @@ Jenkins infrastructure also hosts some services for sub-projects and special int
 | link:/download/verify/[Code and Repository Signing] | xref:project:ROOT:team-leads.adoc#release[Release Team] | https://github.com/jenkins-infra/helpdesk/labels/release[release] | https://www.digicert.com/[DigiCert]
 |===
 
+[#contributing]
 == Contributing
 Our infrastructure is an open infrastructure project made by and for the Jenkins community.
 In other words, it's a contributors driven project.
@@ -151,6 +152,7 @@ In order to contribute to infrastructure project, we ask people to follow the ne
 Pick up a task => Communicate => Implement => Deploy => Review
 ----
 
+[#pick-up-a-task]
 === Pick Up A Task
 To keep track of the work that needs to be done on the Jenkins infrastructure project, we use the link:https://github.com/jenkins-infra/helpdesk/issues[Github help desk repository].
 If you want to contribute, the first step is to find the issue in this project that you want to work on, assign it to you,

@@ -23,7 +23,7 @@ The project may include:
 See link:https://issues.jenkins.io/issues/?jql=labels%20%3D%20performance%20and%20component%20%3D%20role-strategy-plugin%20and%20labels%20%3D%20gsoc-2019-project-idea%20[this JIRA query]
 for more potential tasks for performance improvements.
 
-==== Quickstart
+== Quickstart
 
 1. Create a Jenkins instance with many projects and user roles defined by the plugin
 ** link:https://github.com/oleg-nenashev/demo-jenkins-config-as-code[oleg-nenashev/demo-jenkins-config-as-code]
@@ -33,8 +33,28 @@ because it may be needed to automate generation of roles, users and projects for
 2. Setup complex roles with heavy regular expressions,
    try to get visible performance degradation of the plugin
 
-==== Newbie-friendly tasks
+== Newbie-friendly tasks
 
 See link:https://issues.jenkins.io/issues/?jql=component%20%3D%20role-strategy-plugin%20and%20labels%20%3D%20newbie-friendly%20[this JIRA query].
 More issues can be added to the list if needed,
 please do not hesitate to ask in the task.
+
+== Potential Mentors
+[.avatar]
+image:images:ROOT:avatars/[,width=30,height=30] 
+image:images:ROOT:avatars/[,width=30,height=30] 
+image:images:ROOT:avatars/[,width=30,height=30] 
+image:images:ROOT:avatars/[,width=30,height=30] 
+image:images:ROOT:avatars/[,width=30,height=30] 
+
+== Project Links
+* gitter
+* xref:projects:gsoc:index.adoc#office-hours[Meetings]
+* https://community.jenkins.io/c/contributing/gsoc[Forum]
+* [Project Idea Draft]
+
+== Organization Links 
+* xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
+* xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
+* https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
+> xref:2019/project-ideas[Go back to other GSoC 2021 project ideas]
