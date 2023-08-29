@@ -1,16 +1,22 @@
 = Jenkins Windows Services: YAML Configuration Support
+
 *Goal:*  Enhance Jenkins controller and agent service management on Windows by offering new configuration file formats and improving settings validation"
 category: Core, Tools
 
 *Status*: Completed
 
-student: buddhikac96
+== Team
+[.avatar]
+*Student*: 
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Buddhika Chathuranga
 
-tags:
-- gsoc2020
-- windows
-- windows-services
+[.avatar]
+*Mentor(s):*
+image:images:ROOT:avatars/oleg_nenashev.png[,width=30,height=30] Oleg Nenashev
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Michael Cirioli
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Next Turn
 
+== Details
 
 On Windows machines, Jenkins controller and agents can be installed as Windows Services to get better robustness and manageability within the system.
 This is a functionality bundled into the Jenkins core directly.
@@ -100,3 +106,10 @@ Office hours are scheduled every Tuesday at *13:30 UTC* in the project's Gitter 
 Meeting notes are available https://docs.google.com/document/d/1eq1M1buaEMmRQ3XLFRFnTbJpRnHu1fnqxmTHPKm8WjU/edit?usp=sharing[here] to read.
 
 See the link:https://drive.google.com/file/d/1G2cOaRb-Mle_Fl7YVAzlVITDgrN6eCbE/view?usp=sharingp[GSoC Project application draft] for more details.
+
+== Links 
+* image:https://img.shields.io/badge/gitter%20-%20join_chat%20-%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23winsw%2Fwinsw[Static Badge]
+* xref:gsoc:index.adoc#office-hours[Meetings]
+* https://community.jenkins.io/c/contributing/gsoc[Forum]
+* xref:gsoc:2020/project-ideas/winsw-yaml-configs.adoc[Original GSoC project idea]
+* xref:index.adoc[Jenkins GSoC page]

@@ -96,7 +96,7 @@ The governance board consists of five people who act as public representatives o
 
 The board also acts as the ultimate decision-making authority in case disputes cannot be resolved via the regular project community meeting. The decision-making ability of the board is more symbolic and honorific, and it “rules” like British royalty rather than a dictatorship.
 
-The xref:project:board:index.adoc[Governance Board] page provides further information, including a list of current board members, and how to contact the board.
+The xref:board:index.adoc[Governance Board] page provides further information, including a list of current board members, and how to contact the board.
 
 The process by which the Governance Board is elected can be reviewed in the link:/project/board-election-process[Board Election Process]
 
@@ -107,8 +107,8 @@ Infrastructure administrators have root access to the various servers and build 
 
 Because of the sensitive nature of this work, infrastructure admins are by invitation only, and some of the activity happen behind closed doors. Infrastructure admins often appoint others to delegate some partial access to the system to complete some tasks.
 
-Infrastructure components are maintained by the xref:projects:infrastructure:index.adoc[infrastructure project].
-See the xref:projects:infrastructure:index.adoc#contributing[contributing guidelines] for more information.
+Infrastructure components are maintained by the xrefs:infrastructure:index.adoc[infrastructure project].
+See the xrefs:infrastructure:index.adoc#contributing[contributing guidelines] for more information.
 Open a link:https://github.com/jenkins-infra/helpdesk[help desk issue] for infrastructure problems.
 
 === Core committers
@@ -155,7 +155,7 @@ These groups focus on particular topics and organize dedicated communication cha
 == Infrastructure
 
 This section summarizes the key infrastructure services we run in the project.
-See the xref:projects:infrastructure:index.adoc[Jenkins Infrastructure] page for the full list of services and more details.
+See the xrefs:infrastructure:index.adoc[Jenkins Infrastructure] page for the full list of services and more details.
 
 Website::
 Jenkins website (jenkins.io) is self-hosted by the Jenkins project.
@@ -191,14 +191,14 @@ and we invite all interested parties to join us and to contribute towards the ro
 [[meeting]]
 == Decision making
 
-The Jenkins project uses xref:project:governance-meeting:index.adoc[biweekly project meetings] as the primary forum of decision making for matters that need consensus.
+The Jenkins project uses xref:governance-meeting:index.adoc[biweekly project meetings] as the primary forum of decision making for matters that need consensus.
 The meeting is conducted using a video call or xref:community:chat:index.adoc#meeting[IRC].
 These meetings are open to anyone, and everyone is welcome to provide their feedback and vote on decisions at the meeting.
-Agenda items can be added by anyone by simply adding your topic to xref:project:governance-meeting:index.adoc[the Governance Meeting Agenda].
+Agenda items can be added by anyone by simply adding your topic to xref:governance-meeting:index.adoc[the Governance Meeting Agenda].
 
 The meeting minutes are public:
 
-* xref:project:governance-meeting:index.adoc[Governance Meeting Agenda] for meetings held in as video calls
+* xref:governance-meeting:index.adoc[Governance Meeting Agenda] for meetings held in as video calls
 * link:http://meetings.jenkins-ci.org/jenkins-meeting/[September 2015 to today]
 * link:http://meetings.jenkins-ci.org/jenkins/[2011 to September 2015]
 

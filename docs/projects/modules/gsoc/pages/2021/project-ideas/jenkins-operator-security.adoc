@@ -8,7 +8,7 @@ s
 
 
 
-=== Project Details
+== Project Details
 
 The link:https://github.com/jenkinsci/kubernetes-operator[Jenkins Operator] is a Kubernetes Native Operator which manages operations for Jenkins on Kubernetes.
 It enables  community to run Jenkins in cloud-native environments like Kubernetes, OpenShift and others. Also, supports most of the public cloud providers (AWS, Azure, GCP) in terms of additional capabilities like backups, observability and cloud security.
@@ -18,7 +18,7 @@ It enables  community to run Jenkins in cloud-native environments like Kubernete
 
 If you are interested in exploring Kubernetes and software-defined operators ecosystem more in-depth, as well as enhance your Go coding skill - this is definitely an interesting opportunity to consider.
 
-=== Problem Statement
+== Problem Statement
 
 Some of the plugins have security warnings which are not properly presented to the end users. This may result in introducing security risk in existing CI/CD infrastructure.
 
@@ -30,11 +30,11 @@ Additionally, in case a security warning is detected, user should be able to cho
 * link:https://book.kubebuilder.io/cronjob-tutorial/webhook-implementation.html[Webhook implementation cron tutorial]
 * link:https://sdk.operatorframework.io/docs/building-operators/ansible/reference/webhooks/[Operator SDK  Ansible webhooks reference]
 
-=== Newbie Friendly Issues
+== Newbie Friendly Issues
 
 For information about how to contribute to and what to work on, please use the slack channel. Since the project is in active development, these issues could be closed by the time you are looking at them.
 
-=== Skills to improve/study
+== Skills to improve/study
 
 * Go
 * Kubernetes

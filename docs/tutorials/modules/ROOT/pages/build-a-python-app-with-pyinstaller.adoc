@@ -19,17 +19,17 @@ The delivery of the "add2vals" tool through PyInstaller converts this tool into
 a standalone executable file for Linux, which you can download through Jenkins
 and execute at the command line on Linux machines without Python.
 
-*Note:* Unlike the xref:tutorials:ROOT:index.adoc[other tutorials] in this documentation, this tutorial
+*Note:* Unlike the xref:ROOT:index.adoc[other tutorials] in this documentation, this tutorial
 requires approximately 500 MB more Docker image data to be downloaded.
 
 *Duration:* This tutorial takes 20-40 minutes to complete (assuming you've
 already met the <<prerequisites,prerequisites>> below). The exact duration will
-depend on the speed of your machine and whether or not you've already xref:user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[run Jenkins in Docker] from xref:tutorials:ROOT:index.adoc[another tutorial].
+depend on the speed of your machine and whether or not you've already xref:user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[run Jenkins in Docker] from xref:ROOT:index.adoc[another tutorial].
 
 You can stop this tutorial at any point in time and continue from where you left
 off.
 
-If you've already run though xref:tutorials:ROOT:index.adoc[another tutorial], you can skip the <<prerequisites, prerequisites >> and <<run-jenkins-in-docker, Run Jenkins in Docker>> sections below and proceed on to xref:partial$fork-sample-repository.adoc[forking the sample repository]. (Just ensure you have link:https://git-scm.com/downloads[Git] installed locally.) If you need to restart Jenkins, simply follow the restart instructions in xref:user-docs:installing-jenkins:partial$_setup-wizard-for-tutorials.adoc[run Jenkins in Docker] and then proceed on.
+If you've already run though xref:ROOT:index.adoc[another tutorial], you can skip the <<prerequisites, prerequisites >> and <<run-jenkins-in-docker, Run Jenkins in Docker>> sections below and proceed on to xref:partial$fork-sample-repository.adoc[forking the sample repository]. (Just ensure you have link:https://git-scm.com/downloads[Git] installed locally.) If you need to restart Jenkins, simply follow the restart instructions in xref:user-docs:installing-jenkins:partial$_setup-wizard-for-tutorials.adoc[run Jenkins in Docker] and then proceed on.
 
 [[prerequisites]]
 include::partial$prerequisites.adoc[prerequisites]
@@ -540,7 +540,7 @@ handle practically any aspect of build orchestration and automation.
 
 To learn more about what Jenkins can do, check out:
 
-* The xref:tutorials:ROOT:index.adoc[Tutorials overview] page for other introductory
+* The xref:ROOT:index.adoc[Tutorials overview] page for other introductory
   tutorials.
 * The xref:user-docs:ROOT:index.adoc[User Handbook] for more detailed information about using
   Jenkins, such as link:/doc/book/pipeline[Pipelines] (in particular

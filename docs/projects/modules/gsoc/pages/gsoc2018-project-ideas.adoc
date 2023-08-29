@@ -2,12 +2,12 @@
 
 WARNING: This is an archived page about Jenkins project participation in Google Summer of Code 2016.
 
-See xref:projects:gsoc:index.adoc[the main GSoC project] page of the information about the current and previous years.
+See xref:gsoc:index.adoc[the main GSoC project] page of the information about the current and previous years.
 
 image:images:ROOT:gsoc/jenkins-gsoc-logo_small.png[Jenkins GSoC, role=center, float=right,role=float-gap]
 
 This page aggregates project ideas for Google Summer of Code 2018.
-See more information about this project and applications at xref:projects:ROOT:index.adoc/gsoc/[the project's page].
+See more information about this project and applications at xref:ROOT:index.adoc/gsoc/[the project's page].
 
 Below you can find project ideas proposed by potential mentors.
 Other ideas may be proposed by students (e.g. new features in the core, "write a plugin for MY_TOOL_OR_SERVICE", etc.).
@@ -36,7 +36,7 @@ link:https://github.com/hoegertn[Thorsten Höger]
 
 == Jenkins Remoting over Message Bus/Queue
 
-Current versions of xref:projects:ROOT:index.adoc/remoting[Jenkins Remoting] are based on the TCP protocol.
+Current versions of xref:ROOT:index.adoc/remoting[Jenkins Remoting] are based on the TCP protocol.
 If it fails, the agent connection and the build fails as well.
 There are also issues with traffic prioritization and multi-agent communications,
 which impact Jenkins stability and scalability.
@@ -239,15 +239,15 @@ In order to propose a new project idea, create a draft description and start a n
 Need some hints? Here are examples of project ideas:
 
 * New plugin for integration with various external tools or services
-(e.g. xref:projects:ROOT:index.adoc/gsoc/gsoc2018-project-ideas/#plugin-s-for-electronic-design-automation-tools[plugins for Electronic Design Automation Tool] proposal)
+(e.g. xref:ROOT:index.adoc/gsoc/gsoc2018-project-ideas/#plugin-s-for-electronic-design-automation-tools[plugins for Electronic Design Automation Tool] proposal)
 * xref:dev-docs:plugin-governance:adopt-a-plugin.adoc[Adopting an existing plugin],
-extending it by adding new features like link:/doc/book/pipeline/[Jenkins Pipeline]
+extending it by adding new features like xref:user-docs:pipeline:index.adoc[Jenkins Pipeline]
 * Working on major feature requests from the link:https://issues.jenkins.io/secure/Dashboard.jspa[Jenkins bugtracker]
 * Creating new demo and reference setups,
-powered by various "-as-Code" engines (e.g. Jenkins Pipeline, JobDSL, Docker, xref:projects:ROOT:index.adoc/gsoc/gsoc2018-project-ideas/#jenkins-configuration-as-code[Configuration-as-Code plugin], etc.)
+powered by various "-as-Code" engines (e.g. Jenkins Pipeline, JobDSL, Docker, xref:ROOT:index.adoc/gsoc/gsoc2018-project-ideas/#jenkins-configuration-as-code[Configuration-as-Code plugin], etc.)
 
 Once the project idea is proposed in the mailing list,
-xref:projects:ROOT:index.adoc/gsoc/#mentors-and-org-admins[GSoC org admins] will help to finalize the idea and to reach out to potential mentors/co-mentors.
+xref:ROOT:index.adoc/gsoc/#mentors-and-org-admins[GSoC org admins] will help to finalize the idea and to reach out to potential mentors/co-mentors.
 
 [NOTE]
 ====

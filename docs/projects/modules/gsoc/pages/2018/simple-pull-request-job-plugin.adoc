@@ -38,7 +38,7 @@ Plugin will start above steps if and only if the pull request is will be
 mergeable to avoid merge conflicts while merging the source branch to target
 branch. The pull request is mergebale or not can also be decided by the webhook also.
 
-Internally, it converts the user written YAML file into Declarative link:/doc/book/pipeline/[Pipeline DSL] code which is then executed by the declarative engine.
+Internally, it converts the user written YAML file into Declarative xref:user-docs:pipeline:index.adoc[Pipeline DSL] code which is then executed by the declarative engine.
 
 == Work done
 
@@ -111,6 +111,6 @@ to see it in your local time.
 == Links 
 * image:https://img.shields.io/badge/gitter%20-%20join_chat%20-%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_simple-pull-request-job-plugin%3Agitter.im[Static Badge]
 * https://github.com/jenkinsci/simple-pull-request-job-plugin[Github]
-* xref:projects:gsoc:index.adoc#office-hours[Meetings]
+* xref:gsoc:index.adoc#office-hours[Meetings]
 * https://community.jenkins.io/c/contributing/gsoc[Forum]
 * xref:index.adoc[Jenkins GSoC page]

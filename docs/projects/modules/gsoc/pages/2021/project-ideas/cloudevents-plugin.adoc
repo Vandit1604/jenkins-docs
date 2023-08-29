@@ -9,7 +9,7 @@ As the CI/CD world is moving more towards interoperability between multiple plat
 
 Jenkins currently does not support cloudevents, making it hard for users to use it with other platforms which support them.
 
-=== Project Details
+== Project Details
 This project idea proposes to implement a Jenkins plugin which extends the Jenkins to make cloudevents both discoverable and subscribable. Users should be able to set a global configuration to allow users to subscribe and discover cloudevents.
 
 The project requires the student to start with plugin development from scratch and then work with understanding how to use the Cloudevents Java SDK to create and read events.

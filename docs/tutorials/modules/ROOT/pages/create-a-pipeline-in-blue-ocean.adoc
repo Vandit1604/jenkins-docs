@@ -3,23 +3,23 @@
 
 This tutorial shows you how to use the xref:user-docs:blueocean:index.adoc[Blue Ocean] feature of Jenkins to create a Pipeline that orchestrates building a simple application.
 
-Before you start this tutorial, be sure to run through at least one of the initial tutorials from the xref:tutorials:ROOT:index.adoc[tutorials overview] page.
+Before you start this tutorial, be sure to run through at least one of the initial tutorials from the xref:ROOT:index.adoc[tutorials overview] page.
 This will help you learn about CI/CD concepts, relevant to the technology stack you're most familiar with, and how these concepts are implemented in Jenkins.
 
-This tutorial uses the same application that the xref:tutorials:build-a-node-js-and-react-app-with-npm.adoc[build a Node.js and React app with npm] tutorial is based on.
+This tutorial uses the same application that the xref:build-a-node-js-and-react-app-with-npm.adoc[build a Node.js and React app with npm] tutorial is based on.
 Therefore, you're building the same application, but this time, completely through Blue Ocean.
 Since Blue Ocean provides a simplified Git-handling experience, you'll be interacting directly with the repository on GitHub, as opposed to a local clone.
 
 *Duration:* This tutorial takes 20-40 minutes to complete if you've already met the <<prerequisites,prerequisites>> below.
 
-The exact duration depends on the speed of your machine and whether or not you've already xref:user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[run Jenkins in Docker] from xref:tutorials:ROOT:index.adoc[another tutorial].
+The exact duration depends on the speed of your machine and whether or not you've already xref:user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[run Jenkins in Docker] from xref:ROOT:index.adoc[another tutorial].
 
 include::user-docs:blueocean:partial$_blue-ocean-status.adoc[]
 
 You can stop this tutorial at any point in time and continue from where you left
 off.
 
-If you've already run though xref:tutorials:ROOT:index.adoc[another tutorial], you can skip the <<prerequisites,prerequisites>> and xref:user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[run Jenkins in Docker] sections below and proceed to <<fork-sample-repository,forking the sample repository>>.
+If you've already run though xref:ROOT:index.adoc[another tutorial], you can skip the <<prerequisites,prerequisites>> and xref:user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[run Jenkins in Docker] sections below and proceed to <<fork-sample-repository,forking the sample repository>>.
 If you need to restart Jenkins, follow the restart instructions in xref:user-docs:installing-jenkins:partial$_setup-wizard-for-tutorials.adoc[run Jenkins in Docker] and then proceed.
 
 include::partial$prerequisites.adoc[prerequisites]
@@ -79,7 +79,7 @@ image:pipeline-in-blueocean-11-initial-pipeline-editor-page.png[alt="Initial to 
 image:pipeline-in-blueocean-12-agent-section.png[alt="Configuring the agent",width=50%]
 +
 NOTE: For an explanation of these values, refer to annotations *1* and *2* of the Declarative Pipeline in the
-xref:tutorials:build-a-node-js-and-react-app-with-npm.adoc#create-your-initial-pipeline-as-a-jenkinsfile["Create your initial Pipeline..."] section of the build a Node.js and React app tutorial.
+xref:build-a-node-js-and-react-app-with-npm.adoc#create-your-initial-pipeline-as-a-jenkinsfile["Create your initial Pipeline..."] section of the build a Node.js and React app tutorial.
 
 . In the main Pipeline editor, select the *+* icon, to open the new stage panel on the right side of the icon.
 +
@@ -106,7 +106,7 @@ To find other steps further down this list, you can filter this list using the *
 [.boxshadow]
 image:pipeline-in-blueocean-16-specifying-a-shell-step-value.png[alt="Specifying a shell step value",width=80%]
 +
-NOTE: For an explanation of this step, refer to annotation *4* of the Declarative Pipeline in the xref:tutorials:build-a-node-js-and-react-app-with-npm.adoc#create-your-initial-pipeline-as-a-jenkinsfile["Create your initial Pipeline..."] section of the build a Node.js and React app tutorial.
+NOTE: For an explanation of this step, refer to annotation *4* of the Declarative Pipeline in the xref:build-a-node-js-and-react-app-with-npm.adoc#create-your-initial-pipeline-as-a-jenkinsfile["Create your initial Pipeline..."] section of the build a Node.js and React app tutorial.
 
 . ( _Optional_ ) Select the back arrow icon image:pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] in the upper left to return to the main Pipeline editor.
 . Select *Save* in the upper right side of the screen to begin saving your new Pipeline with its "Build" stage.
@@ -161,7 +161,7 @@ image:pipeline-in-blueocean-22-add-test-stage.png[alt="Add 'Test' stage",width=4
 [.boxshadow]
 image:pipeline-in-blueocean-23-environment-directive.png[alt="Environment directive",width=50%]
 +
-NOTE: For an explanation of this directive and its step, refer to annotations *1* and *3* of the Declarative Pipeline in the xref:tutorials:build-a-node-js-and-react-app-with-npm.adoc#add-a-test-stage-to-your-pipeline["Add a test stage..." section of the Build a Node.js and React app] tutorial.
+NOTE: For an explanation of this directive and its step, refer to annotations *1* and *3* of the Declarative Pipeline in the xref:build-a-node-js-and-react-app-with-npm.adoc#add-a-test-stage-to-your-pipeline["Add a test stage..." section of the Build a Node.js and React app] tutorial.
 . ( _Optional_ ) Select the back arrow icon image:pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] in the upper left to return to the main Pipeline editor.
 . Select *Save* in the top-right corner to begin saving your Pipeline with with its new "Test" stage.
 . In the *Save Pipeline* dialog box, specify the commit message in the *Description* field, for example `Add 'Test' stage`.
@@ -208,7 +208,7 @@ image:pipeline-in-blueocean-33-choosing-input-step-type.png[alt="Choosing the in
 [.boxshadow]
 image:pipeline-in-blueocean-34-specifying-input-step-message-value.png[alt="Specifying input step message value",width=55%]
 +
-NOTE: For an explanation of this step, refer to annotation *4* of the Declarative Pipeline in the xref:tutorials:build-a-node-js-and-react-app-with-npm.adoc#add-a-final-deliver-stage-to-your-pipeline["Add a final deliver stage..." section of the Build a Node.js and React app] tutorial.
+NOTE: For an explanation of this step, refer to annotation *4* of the Declarative Pipeline in the xref:build-a-node-js-and-react-app-with-npm.adoc#add-a-final-deliver-stage-to-your-pipeline["Add a final deliver stage..." section of the Build a Node.js and React app] tutorial.
 
 . Select *Add Step*.
 . Select *Shell Script*.
@@ -248,7 +248,7 @@ If you check the contents of the `Jenkinsfile` that Blue Ocean created at the ro
 This directive's location within the "Test" stage means that the environment variable `CI`, with its value of `true`, is only available within the scope of this "Test" stage.
 
 You can set this directive in Blue Ocean, so that its environment variable is available globally throughout Pipeline.
-This is also configured in the xref:tutorials:build-a-node-js-and-react-app-with-npm.adoc[build a Node.js and React app with npm] tutorial.
+This is also configured in the xref:build-a-node-js-and-react-app-with-npm.adoc[build a Node.js and React app with npm] tutorial.
 
 To do this:
 
@@ -279,7 +279,7 @@ Because Jenkins is extremely extensible, it can be modified and configured to ha
 
 To learn more about what Jenkins can do, check out:
 
-* The xref:tutorials:ROOT:index.adoc[Tutorials overview] page for other introductory tutorials.
+* The xref:ROOT:index.adoc[Tutorials overview] page for other introductory tutorials.
 * The xref:user-docs:ROOT:index.adoc[User Handbook] for more detailed information about using Jenkins, such as link:/doc/book/pipeline[Pipelines], link:/doc/book/pipeline/syntax[Pipeline syntax], and the xref:user-docs:blueocean:index.adoc[Blue Ocean] interface.
 * The link:/node[Jenkins blog] for the latest events, other tutorials, and updates.
 

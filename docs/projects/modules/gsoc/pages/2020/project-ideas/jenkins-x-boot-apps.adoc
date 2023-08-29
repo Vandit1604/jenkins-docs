@@ -1,24 +1,21 @@
-=Jenkins X: Create Boot Apps
-*Goal:*  Create a simple canonical way to install any Helm chart in any namespace"
-category: Jenkins X
+= Jenkins X: Create Boot Apps 
 
+*Project goal:* Create a simple canonical way to install any Helm chart in any namespace
 
+*Skills to study/improve:* Go, Kubernetes, Helm
 
-
-
-
-=== Background
+== Background
 
 Find out more about the Jenkins X project here: https://jenkins-x.io/
 
 Issue: https://github.com/jenkins-x/jx/issues/6442
 Old design doc: https://docs.google.com/document/d/1DL1oEeAZtWFfpJOWk5UVO54D88BnlqZDf5IDaOkGxCk/edit?usp=sharing
 
-==== Current Implementation
+== Current Implementation
 
 See the Implementation Documentation for an overview of how to use helmfile and helm 3: https://github.com/jenkins-x/enhancements/blob/master/proposals/2/docs/README.md
 
-==== Requirements
+== Requirements
 
 We want a simple canonical way to install any helm chart in any namespace without having to manually hack the `jx boot` pipeline file: `jenkins-x.yml`.
 
@@ -38,15 +35,15 @@ jx delete app knative
 
 And for it to just work and generically add those to the right namespace.
 
-==== Current Apps Model 
+== Current Apps Model 
 
 The current apps model lets you add/remove charts fine - but there are a number of limitations:
 
-===== Only works in 1 namespace
+=== Only works in 1 namespace
 
 Currently apps can only work inside the dev namespace - we can’t support things like knative, gloo, cert-manager, nginx, velero which tend to be installed in separate namespaces.
 
-===== Does not handle boot phases
+=== Does not handle boot phases
 
 This is not surprising as we created the App extension model before boot. But right now boot has a number of distinct phases with pipeline steps between them where we may want to add apps:
 
@@ -61,20 +58,20 @@ So rather than adding steps at the right point in a list of steps in the jenkins
 
 E.g. we need a new YAML file with list of charts to be installed along with metadata for which phase to install them. We also want to invoke a selection of those appss to be installed at the different phases of the boot pipeline.
 
-=====  Limitations of the current deploy model
+===  Limitations of the current deploy model
 
 We have some issues with the current way we deploy apps in Staging / Production:
 
-=====  Composite charts hide the individual versions
+===  Composite charts hide the individual versions
 
 Right now we deploy all charts in Staging/Production as a single chart. That means if you use `helm list` we don't show any actual versions of the dependent charts - its just 1 chart (with no version).
 
-===== Removing Apps on Dev doesn't work
+=== Removing Apps on Dev doesn't work
 
 If you remove a chart from `env/requirements.yaml`  in the Dev repository the pipeline does not remove the chart. e.g. if you add `lighthouse` and remove `prow` you need to manually delete the prow resources yourself.
 
 
-===== Limitation of boot
+=== Limitation of boot
 
 We currently manually configure in the boot pipeline the install of multiple systems usually in separate namespaces:
 
@@ -96,12 +93,32 @@ We'd also like to make it easy to add a number of other systems in order in sepa
 
 so it'd be nice to have a simple app model where anyone can add any systems/charts to any namespace at any point in the flow before we setup the dev/staging/production environment in the traditional way.
 
-=== Newbie Friendly issues
+== Newbie Friendly issues
 
 The Jenkins X issue tracker is located in github. We also provide a list of issues that are good first issues for people looking to contribute to the project: https://github.com/jenkins-x/jx/labels/good%20first%20issue
 
 We welcome your contributions.
 
-=== Quick start
+== Quick start
 
 If you're looking to build from source or get started hacking on jx, please see the CONTRIBUTING.MD or our Contributing Guide on the Jenkins X website: https://jenkins-x.io/docs/contributing/code/
+
+== Potential Mentors 
+[.avatar]
+image:images:ROOT:avatars/jstrachan.jpeg[,width=30,height=30] James Strachan
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Oscar Medina
+image:images:ROOT:avatars/marckk.jpg[,width=30,height=30] Kara de la Marck
+image:images:ROOT:avatars/sahilrkalra.png[,width=30,height=30] Sahil Kalra
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Nikhil Da Rocha
+
+== Project Links 
+* https://jenkins-x.io/community/#slack[Chat]
+* xref:gsoc:index.adoc#office-hours[Meetings]
+* https://community.jenkins.io/c/contributing/gsoc[Forum]
+* https://github.com/jenkins-x/enhancements/blob/master/proposals/2/README.md[Project Idea Draft]
+
+== Organization Links 
+* xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
+* xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
+* https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
+> xref:2020/project-ideas[Go back to other GSoC 2020 project ideas]

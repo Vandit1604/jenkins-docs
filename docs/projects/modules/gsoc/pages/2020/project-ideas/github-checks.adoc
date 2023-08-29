@@ -1,13 +1,10 @@
-=GitHub Checks API for Jenkins Plugins
-*Goal:*  Create a new plugin API so that plugins can publish GitHub checks status messages"
-s
+= GitHub Checks API for Jenkins Plugins 
 
+*Project goal:* Create a new plugin API so that plugins can publish GitHub checks status messages
 
+*Skills to study/improve:* Java, REST API, GitHub
 
-
-
-
-
+== Details 
 Many projects use pull requests (in GitHub) or similar concepts (in GitLab, Bitbucket, etc.) in their development process.
 Typically, those pull requests are automatically built and verified with Jenkins. For each build of such a pull request
 Jenkins creates several reports that can be analyzed in corresponding Jenkins view: compile errors, test results,
@@ -88,3 +85,23 @@ GitHub API, GItHub Branch Source:
 12. Pull Request to provide support for GitHub app authentication https://github.com/jenkinsci/github-branch-source-plugin/pull/269
 13. Provide Jenkins as a GitHub App, https://issues.jenkins.io/browse/JENKINS-57351
 14. Integration of CI tests with checks api https://developer.github.com/apps/quickstart-guides/creating-ci-tests-with-the-checks-api/
+
+== Potential Mentors 
+[.avatar]
+image:images:ROOT:avatars/uhafner.jpg[,width=30,height=30] Ullrich Hafner
+image:images:ROOT:avatars/timja.jpg[,width=30,height=30] Tim Jacomb
+image:images:ROOT:avatars/jeffpearce.png[,width=30,height=30] Jeff Pearce
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Jon Brohauge
+image:images:ROOT:avatars/ayush_agarwal.png[,width=30,height=30] Ayush Agarwal
+
+== Project Links 
+* image:https://img.shields.io/badge/gitter%20-%20join_chat%20-%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_gsoc-sig%3Agitter.im[Static Badge]
+* xref:gsoc:index.adoc#office-hours[Meetings]
+* https://community.jenkins.io/c/contributing/gsoc[Forum]
+* https://docs.google.com/document/d/1fl3sF0mArtv2THOjPSZvNufGme4P24BtT0BirHMeMRY[Project Idea Draft]
+
+== Organization Links 
+* xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
+* xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
+* https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
+> xref:2020/project-ideas[Go back to other GSoC 2020 project ideas]

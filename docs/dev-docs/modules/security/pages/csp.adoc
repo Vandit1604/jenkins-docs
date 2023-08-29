@@ -67,7 +67,7 @@ Run the following script in the script console:
 [source]
 org.kohsuke.stapler.jelly.JellyFacet.TRACE = true
 
-This property is documented on xref:dev-docs:views:index.adoc[Views] and emits comments in the rendered HTML of Jelly views that allow you to better understand how the views are composed, and potentially more easily identify which component is responsible for contributing code that violates the CSP rules.
+This property is documented on xref:views:index.adoc[Views] and emits comments in the rendered HTML of Jelly views that allow you to better understand how the views are composed, and potentially more easily identify which component is responsible for contributing code that violates the CSP rules.
 
 
 == Development Guidelines

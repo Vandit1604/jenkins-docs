@@ -7,7 +7,7 @@
 
 == Background
 
-In 2019 there was a Jenkins xref:projects:ROOT:index.adoc/gsoc/2019/plugin-installation-manager-tool-cli/[Google Summer of Code project] to create a tool to link:https://github.com/jenkinsci/plugin-installation-manager-tool/#readme[automatically install plugins] from the command line based on a provided input.
+In 2019 there was a Jenkins xref:ROOT:index.adoc/gsoc/2019/plugin-installation-manager-tool-cli/[Google Summer of Code project] to create a tool to link:https://github.com/jenkinsci/plugin-installation-manager-tool/#readme[automatically install plugins] from the command line based on a provided input.
 This is meant to help with creating reproducible environments and other places where you would want to install a certain set of plugins.
 The project was successful in creating a useable tool to install plugins with a 1.0 release.
 Over time, the plugin installation manager was improved and added to other components like official link:https://github.com/jenkinsci/docker#preinstalling-plugins[Jenkins container images].

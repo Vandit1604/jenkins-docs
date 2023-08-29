@@ -1,14 +1,22 @@
 = Jenkins X: Consolidate the use of Apps / Addons
-*Goal:*  Consolidate Apps and Addons inside Jenkins X"
-category: Jenkins X
+
+*Goal:*  Consolidate Apps and Addons inside Jenkins X
 
 *Status*: Completed
-student: nodece
 
-tags:
-- gsoc2020
-- jenkins-x
+== Team
+[.avatar]
+*Student*: 
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Zixuan Liu
 
+[.avatar]
+*Mentor(s):*
+image:images:ROOT:avatars/marckk.jpg[,width=30,height=30] Kara de la Marck
+image:images:ROOT:avatars/jstrachan.jpeg[,width=30,height=30] James Strachan
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Neha Gupta
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Oscar Medina
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Nikhil Da Rocha
+image:images:ROOT:avatars/sahilrkalra.png[,width=30,height=30] Sahil Kalra
 
 The current CLI supports `apps` and `addons`. `Addons` were either generic helm charts or a combination of helm chart plus some custom go code to install and integrate them with the Jenkins X platform. `Apps` framework which provided a more generic way of adding charts chatting to Jenkins X such that anybody could create an app without having to modify the underlying jx code. But now left developers with confusion over what an APP is. Developers think the `apps` is they are developing.
 
@@ -148,8 +156,8 @@ Meeting notes are available https://docs.google.com/document/d/1I8HrGtasH3p6XRVg
 * https://jenkins-x.io/blog/2020/07/27/gsoc2020/[Coding Phase 2 Blog Post]
 
 == Links 
-* image:https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_github-checks-api%3Agitter.im[Static Badge]
-* xref:projects:gsoc:index.adoc#office-hours[Meetings]
+* https://jenkins-x.io/community/#slack[Chat]
+* xref:gsoc:index.adoc#office-hours[Meetings]
 * https://community.jenkins.io/c/contributing/gsoc[Forum]
 * xref:gsoc:2020/project-ideas/jenkins-x-apps-consolidation.adoc[Original GSoC project idea]
 * xref:index.adoc[Jenkins GSoC page]

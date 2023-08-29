@@ -12,7 +12,7 @@ mentors:
 #  draft: todo
 ---
 
-=== Background
+== Background
 
 As the CI/CD world is moving more towards automation and minimal human interaction, the ability to full automate a release, including the determination of the "next" release version becomes desirable.
 
@@ -20,7 +20,7 @@ Semantic/Conventional commits is one way of programmatically understanding the c
 
 For a existing project released at `1.0.0`, the following commit messages would bump the version as follows:
 
-|===
+|==
 |Commit Message|Next Version 
 
 |`chore: improve logging`
@@ -31,9 +31,9 @@ For a existing project released at `1.0.0`, the following commit messages would 
 |`1.1.0`
 |`BREAKING CHANGE: reimplement`
 |`2.0.0`
-|===
+|==
 
-==== Project Details
+=== Project Details
 
 This project idea proposes to implement a Jenkins plugin which will allow the `nextVersion` to be determined from the commit log.
 
@@ -43,7 +43,7 @@ In the beginning, the student can work on understanding the Jenkins plugin devel
 
 This can be extended in the future to support other methods of determining the version e.g. `Chart.yaml` / `pom.xml` / `build.gradle` or `package.json`
 
-=== Links
+== Links
 
 There are many examples of such documentation on the web:
 
@@ -51,17 +51,23 @@ There are many examples of such documentation on the web:
 * link:https://www.conventionalcommits.org/en/v1.0.0/[Conventional Commits]
 * link:https://github.com/jenkins-x-plugins/jx-release-version[JX Release Version]
 
-=== Study Links
+== Study Links
 
 
-=== Quick-start
+== Quick-start
 
 The project requires the student to start with plugin development from scratch and then work with understanding the conventional commits messages.
 
-=== Newbie-friendly issues
+== Newbie-friendly issues
 
 
-=== Skills to improve/study
+== Skills to improve/study
 * Java
 * Semantic Versioning
 * Jenkins
+
+== Organization Links 
+* xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
+* xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
+* https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
+> xref:2021/project-ideas[Go back to other GSoC 2021 project ideas]

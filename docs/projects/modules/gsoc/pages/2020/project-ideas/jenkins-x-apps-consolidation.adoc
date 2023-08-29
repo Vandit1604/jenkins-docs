@@ -1,10 +1,10 @@
 = Jenkins X: Consolidate the use of Apps / Addons
 
-*Goal:*  Consolidate Apps and Addons inside Jenkins X"
-category: Jenkins X
+*Project goal:* Consolidate Apps and Addons inside Jenkins X
+
+*Skills to study/improve:* Go, Kubernetes
 
 == Background
-
 Find out more about the Jenkins X project here: https://jenkins-x.io/
 
 This proposal tries to conslidate Apps and Addons inside Jenkins X to avoid confusion.
@@ -55,3 +55,25 @@ We welcome your contributions.
 == Quick start
 
 If you're looking to build from source or get started hacking on jx, please see the CONTRIBUTING.MD or our Contributing Guide on the Jenkins X website: https://jenkins-x.io/docs/contributing/code/
+
+== Potential Mentors 
+[.avatar]
+image:images:ROOT:avatars/jstrachan.jpeg[,width=30,height=30] James Strachan
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Neha Gupta
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Michael Cirioli
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Oscar Medina
+image:images:ROOT:avatars/marckk.jpg[,width=30,height=30] Kara de la Marck
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Nikhil Da Rocha
+image:images:ROOT:avatars/sahilrkalra.png[,width=30,height=30] Sahil Kalra
+
+== Project Links 
+* https://jenkins-x.io/community/#slack[Chat]
+* xref:gsoc:index.adoc#office-hours[Meetings]
+* https://community.jenkins.io/c/contributing/gsoc[Forum]
+* https://github.com/jenkins-x/enhancements/blob/master/proposals/1/README.md[Project Idea Draft]
+
+== Organization Links 
+* xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
+* xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
+* https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
+> xref:2020/project-ideas[Go back to other GSoC 2020 project ideas]
