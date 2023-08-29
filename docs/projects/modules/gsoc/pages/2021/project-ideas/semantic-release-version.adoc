@@ -1,16 +1,10 @@
-=Semantic Versioning plugin for Jenkins
-*Goal:*  Automatically determine the next semantic version for a repository"
-s
+= Semantic Versioning plugin for Jenkins 
 
+*Project goal:* Automatically determine the next semantic version for a repository
 
+*Skills to study/improve:* Java, Semver
 
-
-mentors:
-# To be confirmed
-- "garethjevans"
-#links:
-#  draft: todo
----
+NOTE: This idea is published as a draft under active discussion, but it is confirmed in principle. It is FINE to apply to it. The scope and the suggested implementation may change significantly before the final version is published. Sections like quickstart guide and newbie-friendly issues may be also missing. As a contributor, you are welcome to request additional information and to join the discussions using channels linked on this page.
 
 == Background
 
@@ -65,6 +59,13 @@ The project requires the student to start with plugin development from scratch a
 * Java
 * Semantic Versioning
 * Jenkins
+
+== Potential Mentors 
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Gareth Evans
+
+== Links
+* image:https://img.shields.io/badge/gitter%20-%20join_chat%20-%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_gsoc-sig%3Agitter.im[Static Badge]
+* xref:gsoc:index.adoc#office-hours[Office Hours]
 
 == Organization Links 
 * xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
