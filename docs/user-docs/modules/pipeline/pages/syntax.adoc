@@ -172,7 +172,7 @@ node:: `agent { node { label 'labelName' } }` behaves the same as
 as `customWorkspace`).
 
 docker:: Execute the Pipeline, or stage, with the given container which will be
-dynamically provisioned on a <<../glossary#node, node>> pre-configured to
+dynamically provisioned on a xref:user-docs:glossary:index.adoc#node[ node] pre-configured to
 accept Docker-based Pipelines, or on a node matching the optionally defined
 `label` parameter.  `docker` also optionally accepts an `args` parameter
 which may contain arguments to pass directly to a `docker run` invocation, and
@@ -386,7 +386,7 @@ pipeline {
 }
 ----
 <1> Defining `agent none` at the top-level of the Pipeline ensures that
-<<../glossary#executor, an Executor>> will not be assigned unnecessarily.
+xref:user-docs:glossary:index.adoc#executor[ an Executor] will not be assigned unnecessarily.
 Using `agent none` also forces each `stage` section to contain its own `agent` section.
 <2> Execute the steps in this stage in a newly created container using this image.
 <3> Execute the steps in this stage in a newly created container using a different image
@@ -2119,7 +2119,7 @@ The `script` step takes a block of <<scripted-pipeline>> and executes that in
 the Declarative Pipeline. For most use-cases, the `script` step should be
 unnecessary in Declarative Pipelines, but it can provide a useful "escape
 hatch." `script` blocks of non-trivial size and/or complexity should be moved
-into <<shared-libraries#, Shared Libraries>> instead.
+into xref:user-docs:glossary:index.adoc#shared-libraries[Shared Libraries] instead.
 
 [[script-example]]
 .Script Block in Declarative Pipeline
@@ -2227,7 +2227,7 @@ https://issues.jenkins.io/browse/WEBSITE-289
 ////
 
 In order to provide _durability_, which means that running Pipelines can
-survive a restart of the Jenkins <<../glossary#controller, controller>>, Scripted
+survive a restart of the Jenkins xref:user-docs:glossary:index.adoc#controller[ controller], Scripted
 Pipeline must serialize data back to the controller. Due to this design
 requirement, some Groovy idioms such as `collection.each { item -> /* perform
 operation */ }` are not fully supported.  See
@@ -2262,7 +2262,7 @@ opinionated syntax for authoring Jenkins Pipeline.
 Both are fundamentally the same Pipeline sub-system underneath. They
 are both durable implementations of "Pipeline as code." They are both able to
 use steps built into Pipeline or provided by plugins. Both are able to utilize
-<<shared-libraries#, Shared Libraries>>
+xref:user-docs:glossary:index.adoc#shared-libraries[Shared Libraries]
 
 
 Where they differ however is in syntax and flexibility. Declarative limits

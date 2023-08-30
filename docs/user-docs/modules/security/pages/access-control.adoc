@@ -59,7 +59,7 @@ This permission is a prerequisite for more substantial access to Jenkins.
 Without this permission, only very few features explicitly intended to be used without authentication are available.
 
 The highest level of permissions is _Overall/Administer_.
-With this permission, users can upload and install plugins and have access to the link:/doc/book/managing/script-console/[Script Console].
+With this permission, users can upload and install plugins and have access to the xref:user-docs:managing:script-console.adoc[Script Console].
 
 Between these two extremes is finer-grained permission control involving other permissions.
 Permissions in Jenkins have a _scope_: They can be granted globally, on an item (like a folder or job), on a build, etc.

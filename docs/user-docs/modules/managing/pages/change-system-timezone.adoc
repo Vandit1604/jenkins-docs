@@ -62,7 +62,7 @@ On windows, edit `%INSTALL_PATH%/jenkins/jenkins.xml`. Put `-Dargs` before `-jar
 <arguments>-Duser.timezone="Europe/Minsk" -jar "%BASE%\jenkins.war"</arguments>
 ----
 
-You can also set it from the link:/doc/book/managing/script-console/[Jenkins Script Console] on a live system without the need for a restart.
+You can also set it from the xref:user-docs:managing:script-console.adoc[Jenkins Script Console] on a live system without the need for a restart.
 This can also be included in a link:/doc/book/managing/groovy-hook-scripts/[Post-initialization script] to make it permanent.
 
 [source,groovy]

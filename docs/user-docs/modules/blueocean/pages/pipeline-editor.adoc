@@ -114,4 +114,4 @@ image::editor/save-pipeline.png[Save Pipeline dialog, role=center]
 
 You can optionally enter a description of the changes before saving.
 The dialog also provides options for saving changes to the same branch or creating a new branch to save to.
-Selecting *Save & run* saves any changes to the Pipeline as a new commit, starts a new Pipeline run based on those changes, and navigates to the <<activity#, Activity view>> for this pipeline.
+Selecting *Save & run* saves any changes to the Pipeline as a new commit, starts a new Pipeline run based on those changes, and navigates to the xref:user-docs:glossary:index.adoc#activity[Activity view] for this pipeline.

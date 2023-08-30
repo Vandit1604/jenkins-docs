@@ -166,7 +166,7 @@ https://hub.docker.com/_/python/[`python:2-alpine` Docker image] (if it's not
 already available on your machine) and runs this image as a separate container.
 This means that:
 * You'll have separate Jenkins and Python containers running locally in Docker.
-* The Python container becomes the link:/doc/book/glossary/#agent[agent] that
+* The Python container becomes the xref:user-docs:glossary:index.adoc#agent[agent] that
   Jenkins uses to run the `Build` stage of your Pipeline project. However,
   this container is short-lived - its lifespan is only that of the duration of
   your `Build` stage's execution.
@@ -286,7 +286,7 @@ https://hub.docker.com/r/qnib/pytest/[`qnib:pytest` Docker image] (if it's not
 already available on your machine) and runs this image as a separate container.
 This means that:
 * You'll have separate Jenkins and pytest containers running locally in Docker.
-* The pytest container becomes the link:/doc/book/glossary/#agent[agent] that
+* The pytest container becomes the xref:user-docs:glossary:index.adoc#agent[agent] that
   Jenkins uses to run the `Test` stage of your Pipeline project. This
   container's lifespan lasts the duration of your `Test` stage's execution.
 <3> This
@@ -435,7 +435,7 @@ image (if it's not already available on your machine) and runs this image as a
 separate container. This means that:
 * You'll have separate Jenkins and PyInstaller (for Linux) containers running
   locally in Docker.
-* The PyInstaller container becomes the link:/doc/book/glossary/#agent[agent]
+* The PyInstaller container becomes the xref:user-docs:glossary:index.adoc#agent[agent]
   that Jenkins uses to run the `Deliver` stage of your Pipeline project. This
   container's lifespan lasts the duration of your `Deliver` stage's execution.
 <5> This

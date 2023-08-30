@@ -38,7 +38,7 @@ As of Jenkins 2.290, the following extensions are provided as part of Jenkins (c
   See link:/doc/book/security/configuring-content-security-policy[its documentation].
 // TODO: This link isn't quite correct yet, because this feature is barely covered, will be fixed in the future.
 
-A list of all these extensions is provided on the UI when selecting (but not saving) the _Delegate to Servlet container_ security realm, or can be obtained via the link:/doc/book/managing/script-console/[Script Console] using:
+A list of all these extensions is provided on the UI when selecting (but not saving) the _Delegate to Servlet container_ security realm, or can be obtained via the xref:user-docs:managing:script-console.adoc[Script Console] using:
 
 [source,groovy]
 ----

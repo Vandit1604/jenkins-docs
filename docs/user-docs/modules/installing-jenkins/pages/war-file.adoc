@@ -21,7 +21,7 @@ The Jenkins Web application ARchive (WAR) file can be started from the command l
 
 * This process does not automatically install any specific plugins.
   They need to installed separately via the
-  xref:managing:ROOT:index.adoc[**Manage Jenkins**] >
+  xref:user-docs:managing:index.adoc[**Manage Jenkins**] >
   xref:managing:plugins.adoc[**Plugins**] page in Jenkins.
 * You can change the port by specifying the `--httpPort` option when you run the
   `java -jar jenkins.war` command. For example, to make Jenkins accessible
