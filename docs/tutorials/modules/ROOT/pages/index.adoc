@@ -33,7 +33,7 @@ processes to build your applications:
 == Blue Ocean
 
 * link:/blog/2017/04/05/welcome-to-blue-ocean/[Getting Started with Blue Ocean]
-* Getting Started with Blue Ocean's Visual Pipeline Editor (link:create-a-pipeline-in-blue-ocean[guide], link:/blog/2017/04/06/welcome-to-blue-ocean-editor/[video guide])
+* Getting Started with Blue Ocean's Visual Pipeline Editor (xref:create-a-pipeline-in-blue-ocean.adoc[guide], link:/blog/2017/04/06/welcome-to-blue-ocean-editor/[video guide])
 * link:/blog/2017/04/11/welcome-to-blue-ocean-pipeline-activity/[Getting Started with Blue Ocean's Activity View ]
 * link:/blog/2017/04/12/welcome-to-blue-ocean-dashboard/[Getting Started with the Blue Ocean Dashboard]
 
@@ -46,18 +46,18 @@ concepts based on specific technology stacks.
 Choose the tutorial that's relevant to your technology stack or one that you're
 most familiar with:
 
-* link:build-a-java-app-with-maven[Build a Java app with Maven]
-* link:build-a-node-js-and-react-app-with-npm[Build a Node.js and React app with npm]
-* link:build-a-python-app-with-pyinstaller[Build a Python app with PyInstaller]
-* link:build-a-labview-app[Build a LabVIEW app]
-* link:using-jenkinsfile-runner-github-action-to-build-jenkins-pipeline[Build a Jenkins pipeline by using Jenkinsfile Runner GitHub Actions]
+* xref:build-a-java-app-with-maven.adoc[Build a Java app with Maven]
+* xref:build-a-node-js-and-react-app-with-npm.adoc[Build a Node.js and React app with npm]
+* xref:build-a-python-app-with-pyinstaller.adoc[Build a Python app with PyInstaller]
+* xref:build-a-labview-app.adoc[Build a LabVIEW app]
+* xref:using-jenkinsfile-runner-github-action-to-build-jenkins-pipeline.adoc[Build a Jenkins pipeline by using Jenkinsfile Runner GitHub Actions]
 
 == More tutorials
 
 Cloud tutorials are available including:
 
-* link:tutorials-for-installing-jenkins-on-Google-Cloud[Jenkins on Google Cloud]
-* link:tutorial-for-installing-jenkins-on-AWS[Jenkins on AWS]
+* xref:tutorials-for-installing-jenkins-on-Google-Cloud.adoc[Jenkins on Google Cloud]
+* xref:tutorial-for-installing-jenkins-on-AWS.adoc[Jenkins on AWS]
 
 You may find more tutorials in link:/node/tags/tutorial[Tutorial blogposts].
 

@@ -55,7 +55,7 @@ So while not building on the built-in node is a good general practice to protect
 To prevent this, the Agent &rarr; Controller Access Control system prevents agent processes from being able to send malicious commands to the Jenkins controller.
 
 // TODO Also mention first LTS once it's known
-This system is always enabled since Jenkins 2.326 (see link:jep-235[Agent &rarr; Controller Security Changes in 2.326]).
+This system is always enabled since Jenkins 2.326 (see xref:jep-235.adoc[ Agent → Controller Security Changes in 2.326]).
 In Jenkins 2.325 and earlier, it is enabled by default, but can be disabled in the web UI by un-checking the box on the _Manage Jenkins » Security_ page.
 
 IMPORTANT: It is strongly recommended that you not disable the Agent &rarr; Controller Access Control system.

@@ -4,11 +4,11 @@
 This chapter covers all aspects of Blue Ocean's functionality, including how to:
 
 * xref:getting-started.adoc[get started with Blue Ocean], which covers how to set up Blue Ocean in Jenkins and access the Blue Ocean interface.
-* link:creating-pipelines[create a new Pipeline] project in Blue Ocean.
+* xref:creating-pipelines.adoc[create a new Pipeline] project in Blue Ocean.
 * use Blue Ocean's xref:dashboard.adoc[dashboard].
-* use the link:activity[Activity view], where you can access link:activity#activity[your current and historic run data], your Pipeline's link:activity#branches[branches], and any open link:activity#pull-requests[pull requests].
-* use the link:pipeline-run-details[Pipeline run details view] to access details such as console output, for a particular Pipeline or item run.
-* use the link:pipeline-editor[Pipeline editor] to modify Pipelines as code, which you can then commit to source control.
+* use the xref:activity.adoc[Activity view], where you can access xref:activity.adoc#activity[your current and historic run data], your Pipeline's xref:activity.adoc#branches[branches], and any open xref:activity.adoc#pull-requests[pull requests].
+* use the xref:pipeline-run-details.adoc[Pipeline run details view] to access details such as console output, for a particular Pipeline or item run.
+* use the xref:pipeline-editor.adoc[Pipeline editor] to modify Pipelines as code, which you can then commit to source control.
 
 This chapter is intended for Jenkins users of all skill levels, but beginners may need to refer to the <<pipeline#,Pipeline>> chapter to understand some topics covered here.
 
@@ -38,7 +38,7 @@ To sum up, Blue Ocean's main features include:
 Blue Ocean shows where attention is needed, facilitating exception handling and increasing productivity.
 * *Native integration for branches and pull requests*, which enables maximum developer productivity when collaborating on code in GitHub and Bitbucket.
 
-If you would like to start using Blue Ocean, please refer to link:getting-started/[getting started with Blue Ocean].
+If you would like to start using Blue Ocean, please refer to xref:getting-started.adoc[getting started with Blue Ocean].
 
 ifdef::backend-html5[]
 ++++
@@ -83,7 +83,7 @@ Blue Ocean was created to meet such demands of its time.
 However, as time passed, more modern tools have cropped up to replace it.
 Now, the time has come for the rise of other plugins of similar functionality.
 Therefore, any new development or enhancement of Blue Ocean has ceased.
-If you are interested in contributing to a plugin which serves a similar purpose, you should consider the alternative options as suggested in *link:#blue-ocean-overview[What is Blue Ocean?]* section on above.
+If you are interested in contributing to a plugin which serves a similar purpose, you should consider the alternative options as suggested in *xref:#blue-ocean-overview[What is Blue Ocean?]* section on above.
 
 
 ifdef::backend-html5[]

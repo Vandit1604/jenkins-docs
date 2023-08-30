@@ -8,19 +8,19 @@ This page provides some links to pages describing the project structure and its 
 == Project governance
 
 * xref:governance.adoc[Jenkins Governance Document] - overview of the project's governance model, philosophy, project roles, decision making process, etc.
-* link:./governance-meeting[Jenkins Governance Meetings]
+* xref:governance-meeting:index.adoc[Jenkins Governance Meetings]
 * link:./roadmap[Jenkins Project Roadmap]
-* link:./trademark[Jenkins Trademark and Attribution]
+* xref:trademark:index.adoc[Jenkins Trademark and Attribution]
 * xref:conduct.adoc[Code of Conduct]
-* xref:board-election-process.adoc[Jenkins Board election process] and link:./election-walkthrough[election walkthrough]
+* xref:board-election-process.adoc[Jenkins Board election process] and xref:election-walkthrough.adoc[election walkthrough]
 * link:https://github.com/jenkinsci/jep/[Jenkins Enhancement Proposals]
 
 == Project structure
 
-* link:./board[Governance Board members and current officers]
-* link:./team-leads[Team leaders]
+* xref:project:ROOT:board[Governance Board members and current officers]
+* xref:project:ROOT:team-leads[Team leaders]
 * Teams:
-** link:/security/#team[Security]
+** xref:project:ROOT:security/#team[Security]
 ** xrefs:infrastructure:index.adoc[Infrastructure]
 ** xref:teams:hosting.adoc[Hosting]
 ** link:https://github.com/jenkinsci/jenkins/blob/master/docs/MAINTAINERS.adoc#team[Release]
