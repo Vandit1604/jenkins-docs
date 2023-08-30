@@ -22,7 +22,7 @@ If `it.name` evaluates to a string containing HTML tags, those will be placed ve
 In old versions of Jenkins, use of the `<st:out>` tag allowed escaping specific expressions.
 This document discusses the much safer escape by default approach (below).
 
-=== Escaping by Default
+== Escaping by Default
 
 Since Jenkins 1.339, it is possible to instruct the Jelly processor to escape `+${...}+` expressions like the above by default.
 To do that, place the following XML processing instruction in the first line of the Jelly document:
@@ -35,7 +35,7 @@ To do that, place the following XML processing instruction in the first line of 
 
 Note that this only affects the use of `+${...}+` among PCDATA, and not in attribute values, so that Jelly tag invocations don't result in surprising behavior.
 
-==== Keep Your Your Toolchain Updated
+=== Keep Your Your Toolchain Updated
 
 Since plugin POM 1.596, Jelly files are required to escape variables by default, and the build fails if such problems are found.
 Therefore it is strongly recommended to use at least that version of the plugin parent POM to prevent accidental XSS vulnerabilities.
@@ -43,7 +43,7 @@ Therefore it is strongly recommended to use at least that version of the plugin 
 It's recommended to always use the newest available 2.x or newer plugin parent POM.
 xref:plugin-development:updating-parent.adoc[Learn more.]
 
-=== Escaping and Localized Expressions
+== Escaping and Localized Expressions
 
 Localized expressions of the form `+${%expression}+` are also affected by the above in the following ways:
 
@@ -65,7 +65,7 @@ This means the following works as expected (rendering the `a` tag), and still pr
 blurb=<a href="https://jenkins.io/">{0}</a>
 ----
 
-=== Rendering Pre-Escaped Content
+== Rendering Pre-Escaped Content
 
 In rare cases, it might be necessary to render content that has previously been escaped or otherwise processed, without further escaping.
 A common reason to do this is to support formatting using the jenkinsdoc:MarkupFormatter[markup formatter configured for the current Jenkins instance], with might support a {plugin}antisamy-markup-formatter[safe subset of HTML], or other markup languages, like {plugin}pegdown-formatter[Markdown].
@@ -94,9 +94,9 @@ To pass arguments to localized expressions without escaping them in escaped-by-d
 [WARNING]
 If the source of the argument to `j:out` or `Functions#rawHtml` isn't completely trusted, these might result in an XSS vulnerability.
 
-=== Passing values to JavaScript
+== Passing values to JavaScript
 
-==== The bad way
+=== The bad way
 
 In a situation where you need to pass information to JavaScript, you might inject the value directly inside the script like in the following snippet. 
 
@@ -127,7 +127,7 @@ var textToInsert = "";alert(123);"";
 Within the payload, we close the existing double quote, then execute our code and finally open a double quote to match the existing one.
 That will result in a script without any format error.
 
-==== The good way
+=== The good way
 
 If you need to pass a variable to your JavaScript, we strongly recommend to use this approach instead:
 
