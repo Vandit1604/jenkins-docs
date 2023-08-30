@@ -76,7 +76,7 @@ creation and execution of a simple Pipeline in a test installation of Jenkins.
 ====
 It is assumed that there is already a source control repository set up for
 the project and a Pipeline has been defined in Jenkins following
-<<getting-started#defining-a-pipeline-in-scm, these instructions>>.
+xref:./getting-started.adoc#defining-a-pipeline-in-scm[these instructions].
 ====
 
 Using a text editor, ideally one which supports
@@ -93,7 +93,7 @@ Declarative Pipeline not valid, it would not be capable of doing any work! By
 default the `agent` directive ensures that the source repository is checked out
 and made available for steps in the subsequent stages.
 
-The <<syntax#stages, stages directive>>, and <<syntax#steps, steps directives>>
+The xref:./syntax#stages, stages directive>>, and <<syntax.adoc#steps[steps directives]
 are also required for a valid Declarative Pipeline as they instruct Jenkins
 what to execute and in which stage it should be executed.
 
@@ -341,7 +341,7 @@ node {
 Setting an environment variable within a Jenkins Pipeline is accomplished
 differently depending on whether Declarative or Scripted Pipeline is used.
 
-Declarative Pipeline supports an <<syntax#environment, environment>>
+Declarative Pipeline supports an xref:./syntax.adoc#environment[environment]
 directive, whereas users of Scripted Pipeline must use the `withEnv` step.
 
 [pipeline]
@@ -1082,7 +1082,7 @@ node {
 === Handling failure
 
 Declarative Pipeline supports robust failure handling by default via its
-<<syntax#post, post section>> which allows declaring a number of different
+xref:./syntax.adoc#post[post section] which allows declaring a number of different
 "post conditions" such as: `always`, `unstable`, `success`, `failure`, and
 `changed`. The <<syntax, Pipeline Syntax>> section provides more detail on
 how to use the various post conditions.

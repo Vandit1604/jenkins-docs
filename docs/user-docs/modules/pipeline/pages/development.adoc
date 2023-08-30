@@ -1,8 +1,8 @@
 = Pipeline Development Tools
 
 Jenkins Pipeline includes
-<<getting-started#built-in-documentation, built-in documentation>> and the
-<<getting-started#snippet-generator, Snippet Generator>> which are key resources
+xref:./getting-started.adoc#built-in-documentation[built-in documentation] and the
+xref:./getting-started.adoc#snippet-generator[Snippet Generator] which are key resources
 when developing Pipelines. They provide detailed help and information that is customized
 to the currently installed version of Jenkins and related plugins.
 In this section, we'll discuss other tools and resources
@@ -18,7 +18,7 @@ This can be done using a Jenkins CLI command or by making an
 HTTP POST
 request with appropriate parameters.
 We recommended using the
-<<../managing/cli#ssh, SSH interface>>
+xref:./../managing/cli.adoc#ssh[SSH interface]
 to run the linter. See the xref:user-docs:glossary:index.adoc#../managing/cli[Jenkins CLI documentation] for details on how to properly configure
 Jenkins for secure command-line access.
 

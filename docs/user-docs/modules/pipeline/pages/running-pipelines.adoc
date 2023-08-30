@@ -8,7 +8,7 @@ See xref:user-docs:glossary:index.adoc#multibranch[the Multibranch documentation
 
 == Parameters
 
-See <<jenkinsfile#handling-parameters, the Jenkinsfile documentation>> for more information
+See xref:./jenkinsfile.adoc#handling-parameters[the Jenkinsfile documentation] for more information
 
 == Restarting or Rerunning a Pipeline
 
@@ -16,7 +16,7 @@ There are a number of ways to rerun or restart a completed Pipeline.
 
 == Replay
 
-See <<development#replay, the Replay documentation>> for more information.
+See xref:./development.adoc#replay[the Replay documentation] for more information.
 
 == Restart from a Stage
 

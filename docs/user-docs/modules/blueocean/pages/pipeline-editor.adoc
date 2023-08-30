@@ -35,7 +35,7 @@ The editor can be launched through the:
 
 == Navigation bar
 
-The Pipeline editor includes the <<getting-started#navigation-bar, standard navigation bar>> at the top, with a local navigation bar below it.
+The Pipeline editor includes the xref:./getting-started.adoc#navigation-bar[standard navigation bar] at the top, with a local navigation bar below it.
 The local navigation bar includes:
 
 * *Pipeline Name* - This also includes the branch name.
@@ -52,13 +52,13 @@ Within the Pipeline Settings pane, there are two sections that are configurable.
 === Agent
 
 The *Agent* section controls which agent the Pipeline uses.
-This performs the same process as the <<../pipeline/syntax#agent, agent directive>>.
+This performs the same process as the xref:./../pipeline/syntax.adoc#agent[agent directive].
 The *Image* field allows users to configure which container image runs when the Pipeline is active.
 
 === Environment
 
 The *Environment* section allows users to configure environment variables for the Pipeline.
-This is the same process as the <<../pipeline/syntax#environment, environment directive>>.
+This is the same process as the xref:./../pipeline/syntax.adoc#environment[environment directive].
 
 == Stage editor
 
