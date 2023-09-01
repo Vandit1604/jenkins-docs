@@ -1,0 +1,1 @@
+module.exports = require("/home/vandit/gsoc-project-demo/jenkins-docs/blog/src/utils/typography")
