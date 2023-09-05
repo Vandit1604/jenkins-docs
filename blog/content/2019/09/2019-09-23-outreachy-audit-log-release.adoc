@@ -1,14 +1,10 @@
 = Audit Log Plugin for Jenkins Releases 1.0
 opengraph:
   image: /images/logos/audit-log/jenkins-apache-logging.png
-tags:
-- outreachy
-- logging
-- security
-- plugin
-- community
+:page-tags: outreachy, logging, security, plugin, community
+
 :page-author: jvz
----
+
 
 Thanks to our Outreachy interns over the past year, I'm proud to announce the initial release of the https://plugins.jenkins.io/audit-log[Audit Log plugin for Jenkins].
 This plugin is the first major project completed related to https://www.outreachy.org/[Outreachy], and I'd like to give a brief overview of the functionality that was developed for this release.

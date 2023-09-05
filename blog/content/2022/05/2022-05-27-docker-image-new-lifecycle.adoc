@@ -1,10 +1,7 @@
 = Docker Image: new Exit and Restart Behavior for Controllers
-tags:
-- platform
-- docker
-authors:
-- dduportal
-- basil
+:page-tags: platform, docker
+
+:page-author: dduportal, basil
 :sig: platform
 description: >
   The restart behavior of the Docker image for Jenkins controllers changed with the weekly 2.344 and the LTS 2.332.3. Container Engine should control this lifecycle (instead of the jenkins process in the container).

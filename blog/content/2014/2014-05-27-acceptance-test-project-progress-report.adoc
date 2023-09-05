@@ -1,15 +1,7 @@
 = Acceptance test project progress report
-:nodeid: 469
-:created: 1401239454
-:tags:
-  - development
-  - feedback
-  - news
-  - tutorial
-  - lts
-  - video
-::page-author: kohsuke
----
+:page-tags: development , feedback ,news ,tutorial ,lts , video
+:page-author: kohsuke
+
 Over the past 30 days or so, https://github.com/jenkinsci/acceptance-test-harness/[the acceptance test project] has made a great progress. +
 
 This project consists of a reusable harness that can be used by plugin developers and users to write functional test cases. These tests can be run against Jenkins instances that are deployed in https://github.com/jenkinsci/acceptance-test-harness/blob/master/docs/CONTROLLER.md[all sorts of different ways], and can interact with https://github.com/jenkinsci/acceptance-test-harness/blob/master/docs/FIXTURES.md[complex real fixtures]. These tests can be also run with specific version of Jenkins core and a combination of plugins. +

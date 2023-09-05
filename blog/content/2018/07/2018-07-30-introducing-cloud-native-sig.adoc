@@ -1,11 +1,8 @@
 = Introducing Jenkins Cloud Native SIG
-tags:
-- community
-- sig
-- cloud-native
-- cloud-native-sig
+:page-tags: community, sig, cloud-native
+
 :page-author: oleg_nenashev
----
+
 
 On large-scale Jenkins instances controller disk and network I/O become bottlenecks in particular cases.
 Build logging and artifact storage were one for the most intensive I/O consumers,

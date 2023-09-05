@@ -1,11 +1,9 @@
----
-layout: post
+
 title: Pipeline 2.x plugins
-tags:
-- pipeline
-- jenkins2
+:page-tags: pipeline, jenkins2
+
 :page-author: jglick
----
+
 
 Those of you who routinely apply all plugin updates may already have noticed that the version numbers of the plugins in the Pipeline suite have switched to a 2.x scheme. Besides aligning better with the upcoming Jenkins 2.0 core release, the plugins are now being released with independent lifecycles.
 

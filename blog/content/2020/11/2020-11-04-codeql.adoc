@@ -1,9 +1,8 @@
 = First results from using GitHub CodeQL to discover security vulnerabilities in Jenkins plugins
-tags:
-- jenkins
-- security
+:page-tags: jenkins, security
+
 :page-author: daniel-beck
----
+
 
 A little over a month ago, https://github.blog/2020-09-30-code-scanning-is-now-available/[GitHub announced the general availability of its code scanning solution].
 It's based on https://github.com/github/codeql[CodeQL], which makes it pretty easy to write queries for it and run them using the CodeQL GitHub action, CodeQL command line tools, or on https://lgtm.com[lgtm.com].

@@ -1,12 +1,7 @@
 = Updated Chrome Extension
-:nodeid: 227
-:created: 1278942000
-:tags:
-  - general
-  - just for fun
-  - releases
-::page-author: rtyler
----
+:page-tags: general , just for fun ,releases
+:page-author: rtyler
+
 The developer for the Hudson extension for Google Chrome, https://github.com/sanitz[Sebastian Sanitz], emailed the `users@` list today to inform the community of an update to his *https://chrome.google.com/extensions/detail/hfncndbfmjmafoodaigpoicpbdfhhgdo[fantastic extension]*.
 
 Sebastian's extension monitors https://ci.hudson-labs.org[ci.hudson-labs.org] by default, but the URL and polling interval are both trivial to change. When any of the builds in the configured URL fail, you'll see a red "Fail" indicator, otherwise green "Ok".

@@ -1,11 +1,7 @@
 = This Week in Plugins
-:nodeid: 166
-:created: 1269693900
-:tags:
-  - infrastructure
-  - feedback
-::page-author: rtyler
----
+:page-tags: infrastructure , feedback
+:page-author: rtyler
+
 I apologize for the lack of posts this week, I've been quite pre-occupied and a quirk in the https://github.com/rtyler/continuous-blog-tools/blob/master/twipFromSvn.py[twipFromSvn.py] script prevented the generation of this post's contents earlier; thanks to https://twitter.com/rpetti[rpetti] it works again!
 
 This week was an interesting week in plugin development, a slight regression in the release of https://wiki.jenkins.io/display/JENKINS/Jabber+Plugin[Jabber notifier plugin] 1.7 resulted in the rapid release of a 1.8 release by `kutzi`. The https://wiki.jenkins.io/display/JENKINS/Fitnesse+Plugin[Fitnesse plugin] saw multiple releases again this week, along with the https://wiki.jenkins.io/display/JENKINS/Libvirt+Slaves+Plugin[Libvirt Slaves plugin] which has seen an amazing number of releases since it burst onto the plugin scene link:/content/week-plugins-4[two weeks ago].

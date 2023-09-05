@@ -1,11 +1,7 @@
 = Juseppe, a custom update site for Jenkins
-:nodeid: 574
-:created: 1436891798
-:tags:
-  - general
-  - guest post
-::page-author: daniel-beck
----
+:page-tags: general , guest post
+:page-author: daniel-beck
+
 _This is a guest post by Kirill Merkushev at Yandex. I met him at JUC Europe where he showed me the project he was working on: Juseppe. It looked really interesting, so I asked him to write this guest post._
 
 When you write your first custom Jenkins plugin for internal use, it's easy enough to deploy it on one or maybe two Jenkins instances. You can save it on your local drive and upload the HPI file via the Jenkins Plugin Manager as needed. It's easy to do this for a few releases. But as your experience grows, the number of plugins and their releases grows as well. The plugins directory on your local drive soon looks like a garbage dump, and it's difficult to find that most recent version of any plugin. And if you have a lot of Jenkins instances coordinating updates of your plugins may cause a lot of pain.

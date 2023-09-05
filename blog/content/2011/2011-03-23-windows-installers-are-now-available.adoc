@@ -1,12 +1,7 @@
 = Windows installers are now available
-:nodeid: 296
-:created: 1300919533
-:tags:
-  - general
-  - releases
-  - jenkinsci
-::page-author: kohsuke
----
+:page-tags: general , releases ,jenkinsci
+:page-author: kohsuke
+
 Good portion of Java developers use Windows, so we tend to think the opposite is true, that a good portion of Windows folks use Java. But this is not true. +
 
 As Jenkins gains traction among .NET developers, it's becoming increasingly clear that Java is very alien to them. They naturally have no idea of what a war file means, and often don't even have Java installed, and so it was _just not easy enough_ for them to start using Jenkins. +

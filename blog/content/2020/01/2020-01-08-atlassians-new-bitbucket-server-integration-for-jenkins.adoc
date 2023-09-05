@@ -1,10 +1,8 @@
 = Atlassian's new Bitbucket Server integration for Jenkins
-tags:
-- bitbucket
-- pipeline
-- plugins
+:page-tags: bitbucket, pipeline, plugins
+
 :page-author: dkjellin
----
+
 
 We know that for many of our customers Jenkins is incredibly important and its integration with link:https://www.atlassian.com/software/bitbucket/enterprise/data-center[Bitbucket Server] is a key part of their development workflow. 
 Unfortunately, we also know that integrating Bitbucket Server with Jenkins wasn’t always easy – it may have required multiple plugins and considerable time. 

@@ -1,14 +1,7 @@
 = JRuby Branch merged!
-:nodeid: 330
-:created: 1312872249
-:tags:
-  - development
-  - core
-  - jenkinsci
-  - ruby
-  - jruby
-::page-author: cowboyd
----
+:page-tags: development , core ,jenkinsci ,ruby ,jruby
+:page-author: cowboyd
+
 image:https://web.archive.org/web/*/https://agentdero.cachefly.net/continuousblog/jruby.png[,150] Yesterday, https://twitter.com/kohsukekawa[Kohsuke] https://groups.google.com/group/jenkinsrb/msg/32815b1ea917355d[announced] that the 'jruby' branch of jenkins-core had been https://github.com/jenkinsci/jenkins/commit/f6373f7ada14a7914f4ae08b6af4c1b27d343c21[merged to master].
 
 This doesn't mean that we're done and that you can go forth and write pure ruby plugins... not by any stretch of the imagination. Instead, what it _does_ mean, is that the Jenkins mainline is much more friendly to runtime analysis of classes with which it is not familiar.

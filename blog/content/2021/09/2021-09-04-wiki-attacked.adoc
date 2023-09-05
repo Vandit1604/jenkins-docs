@@ -1,10 +1,7 @@
 = "Jenkins project Confluence instance attacked"
-:tags:
-- infrastructure
-- security
-authors:
-- markewaite
-- rtyler
+::page-tags: infrastructure, security
+
+:page-author: markewaite, rtyler
 description: >
   The Jenkins infrastructure team identified a successful attack against our deprecated Confluence service.
   This blog post describes our responses.

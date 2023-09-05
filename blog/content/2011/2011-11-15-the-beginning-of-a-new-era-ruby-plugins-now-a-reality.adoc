@@ -1,13 +1,7 @@
 = "The beginning of a new era: Ruby plugins now a reality"
-:nodeid: 353
-:created: 1321369200
-:tags:
-  - general
-  - core
-  - plugins
-  - jruby
-::page-author: rtyler
----
+:page-tags: general , core ,plugins ,jruby
+:page-author: rtyler
+
 image:https://web.archive.org/web/*/https://agentdero.cachefly.net/continuousblog/jruby.png[Yay JRuby!,180] It's not often that I get to use _that_ much hyperbole in a Jenkins blog post, but I think in this case it's allowable. A journey that started over a year ago by https://twitter.com/cowboyd[Charles Lowell] has reached a new level, thanks to lots of help from https://twitter.com/kohsukekawa[Kohsuke] along with https://twitter.com/nahi[Hiroshi Nakamura] and https://twitter.com/jorgenpt[J&oslash;rgen Tjern&oslash;].
 
 As of today, with Jenkins 1.438, you can now *download and install Ruby plugins from the update center* (the https://wiki.jenkins.io/display/JENKINS/Pathignore+Plugin[Path Ignore plugin] being the first).

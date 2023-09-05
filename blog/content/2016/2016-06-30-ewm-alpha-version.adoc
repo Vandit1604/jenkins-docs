@@ -1,11 +1,8 @@
 = GSoC: External Workspace Manager Plugin alpha version
-tags:
-- pipeline
-- plugins
-- external-workspace-manager
-- gsoc
+:page-tags: pipeline, plugins, external-workspace-manager
+
 :page-author: alexsomai
----
+
 
 Currently it's quite difficult to share and reuse the same workspace between multiple jobs and across nodes.
 There are some possible workarounds for achieving this, but each of them has its own drawback,

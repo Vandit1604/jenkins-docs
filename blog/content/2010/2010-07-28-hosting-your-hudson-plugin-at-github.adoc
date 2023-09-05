@@ -1,14 +1,7 @@
 = Hosting your Hudson plugin at Github
-:nodeid: 232
-:created: 1280325600
-:tags:
-  - development
-  - meta
-  - plugins
-  - tutorial
-  - jenkinsci
-::page-author: abayer
----
+:page-tags: development , meta ,plugins ,tutorial ,jenkinsci
+:page-author: abayer
+
 For as long as Hudson's had a plugin model and development community, we've provided https://wiki.jenkins.io/display/JENKINS/Hosting+Plugins[source code and binary hosting] through our Subversion repo at https://java.net[java.net]. But what if you're a plugin developer and you don't want to use Subversion? Well, we have an alternative for your source code: host it with https://github.com/hudson[Hudson on GitHub].
 
 image:/sites/default/files/octocat.png[Octocat!,width=180]

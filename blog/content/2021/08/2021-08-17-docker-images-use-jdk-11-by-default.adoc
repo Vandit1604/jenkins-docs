@@ -1,11 +1,7 @@
 = "Docker images use Java 11 by default"
-:tags:
-- java
-- platform
-- docker
-authors:
-- markewaite
-- dheerajodha
+::page-tags: java, platform, docker
+
+:page-author: markewaite, dheerajodha
 links:
   discourse: https://community.jenkins.io/t/java-11-as-default-in-docker-images/315
 description: >

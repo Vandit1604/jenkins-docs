@@ -1,11 +1,7 @@
 = Java.net migration status update
-:nodeid: 266
-:created: 1290522314
-:tags:
-  - infrastructure
-  - core
-::page-author: kohsuke
----
+:page-tags: infrastructure , core
+:page-author: kohsuke
+
 Monday morning I came into work and discovered that I cannot commit to the Hudson Subversion repository. Initially I wasn't worried — I thought it was just another java.net outage that will resolve itself in a few hours — but a little research a bit later revealed that Hudson was locked down and being https://weblogs.java.net/blog/communitymanager/archive/2010/11/03/javanet-begins-migration-collabnet-kenai-infrastructure[migrated to new java.net infrastructure]. +
 
 I and the whole community was quite surprised by this, as we are supposed to be "notified as soon as we assign a date for [our] projects to move." But by the time the developer community noticed, the project was already locked down, repository is read-only, and mailing lists can stop functioning any time. My immediate action was to contact the folks who are doing migration to get Hudson out of this cycle of the migration, but I was told that the ship has sailed and it was too late. +

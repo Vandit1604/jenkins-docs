@@ -1,13 +1,7 @@
 = Hudson 1.347 Released
-:nodeid: 196
-:created: 1266849000
-:tags:
-  - development
-  - feedback
-  - just for fun
-  - links
-::page-author: rtyler
----
+:page-tags: development , feedback ,just for fun ,links
+:page-author: rtyler
+
 The release of Hudson 1.347 last friday, February 19th, was a relatively "minor" one insofar that it contained an assortment of smaller fixes instead of fixes to major regressions (they weren't any to be fixed) or major features added. There were however some notable commits in this release cycle that didn't make the changelog just yet, for example https://twitter.com/_godin_[godin] committed an https://en.wikipedia.org/wiki/Ebuild[ebuild] which will allow for a native package of Hudson for https://en.wikipedia.org/wiki/Gentoo%20Linux[Gentoo Linux], joining the ranks of the existing packages for Debian/Ubuntu, FreeBSD, OpenSolaris, openSUSE and RedHat/Fedora Linux. The bundled Subversion plugin was updated and thanks to https://twitter.com/ssogabe[sogabe] and https://twitter.com/wyukawa[wyukawa] the Japanese translations for Hudson got some updates as well.
 
 For Hudson developers, both plugin and core, this release contains some notable changes from https://blogs.sun.com/mindless[mindless] (a.k.a Alan Harder), a number of calls which have been deprecated for over *two years* have finally been pruned from the code base:

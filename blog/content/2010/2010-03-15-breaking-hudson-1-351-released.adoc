@@ -1,13 +1,7 @@
 = Breaking! Hudson 1.351 Released
-:nodeid: 175
-:created: 1268685728
-:tags:
-  - development
-  - feedback
-  - just for fun
-  - links
-::page-author: rtyler
----
+:page-tags: development , feedback ,just for fun ,links
+:page-author: rtyler
+
 Rush delivery from Hudson HQ! Hudson 1.351 just rolled out with a *very* important regression fix:
 
 * Regression in 1.350 that can delete old build artifacts. (https://n4.nabble.com/Warning-about-Hudson-1-350-Could-delete-your-artifacts-td1593483.html[mailing list thread], https://issues.jenkins.io/browse/JENKINS-5937[issue 5937])

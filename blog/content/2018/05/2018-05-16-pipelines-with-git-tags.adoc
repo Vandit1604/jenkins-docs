@@ -1,9 +1,8 @@
 = When using tags in Jenkins Pipeline
-tags:
-- pipeline
-- git
+:page-tags: pipeline, git
+
 :page-author: rtyler
----
+
 
 One common pattern for automated releases I have seen and used relies on Git
 tags as the catalyst for a release process. The immutable nature of releases

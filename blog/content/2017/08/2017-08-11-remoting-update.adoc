@@ -1,11 +1,8 @@
 = Remoting Update. Protocols deprecation, Java 8 requirement and plans
-tags:
-- remoting
-- agents
-- upgrade
-- core
+:page-tags: remoting, agents, upgrade
+
 :page-author: oleg_nenashev
----
+
 
 NOTE: Updated on Jan 10, 2019: The deprecated protocols were removed in Remoting 3.40+ and Jenkins 2.214+. 
 See jira:JENKINS-60381[Remove old, deprecated Remoting protocols] for more information and links.

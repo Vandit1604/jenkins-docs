@@ -1,12 +1,7 @@
 = Quiet Period Feature
-:nodeid: 236
-:created: 1281590640
-:tags:
-  - general
-  - core
-  - tutorial
-::page-author: kohsuke
----
+:page-tags: general , core ,tutorial
+:page-author: kohsuke
+
 Commits often come in a burst. This seems to happen mainly for two reasons -- people sometimes forget to commit some files, and in the tranquility of waiting for your SCM to finish a commit, people sometimes realize the problems in the commit and they quickly make follow-up changes. The conventional wisdom is that the CI server should wait for the burst to finish before attempting a build. This is said to reduce the chance of having broken build, and it is also sometimes useful in reducing the average turn-around time for builds that take longer.
 
 As such, Hudson is capable of waiting for a commit burst to be over before it triggers a new build, and this feature is called "quiet period." There are two parts in Hudson that interacts with the quiet period. One is the SCM polling behavior and the other is the queue.

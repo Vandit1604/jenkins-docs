@@ -1,13 +1,8 @@
 = Jenkins macOS native installer deprecation
-tags:
-- announcement
-- deprecation
-- macos
-- platform-sig
-- platforms
-authors:
-- oleg_nenashev
----
+:page-tags: announcement, deprecation, macos, platform-sig, platforms
+
+:page-author: oleg_nenashev
+
 
 In addition to WAR files and Docker images, the Jenkins project provides native installers for each weekly and LTS release. 
 There are installers available for Linux distributions, Windows, macOS and other operating systems.

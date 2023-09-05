@@ -1,13 +1,7 @@
 = Hudson 1.352 Released
-:nodeid: 168
-:created: 1269263700
-:tags:
-  - development
-  - feedback
-  - just for fun
-  - links
-::page-author: rtyler
----
+:page-tags: development , feedback ,just for fun ,links
+:page-author: rtyler
+
 After an exciting week that saw the rushed release of link:/content/breaking-hudson-1351-released[Hudson 1.351] on Monday following a fairly serious regression, Hudson 1.352 was released mid-Friday with a good mix bug fixes and enhancements. Bundled with this release was another localizations drop including translations for ca, es, fi, fr, hi_IN, it, nl, ru, and sv_SE locales.image:https://web.archive.org/web/*/https://agentdero.cachefly.net/continuousblog/hudson_neon.jpg[] In addition to the nice fancy new community contributed translations, which you can help with by installing the https://wiki.jenkins.io/display/JENKINS/Translation+Assistance+Plugin[Translation Assistance plugin], the 1.352 release includes the subtle enhancement of hyperlinking URLs in the console output.
 
 In general, 1.352 is looking like a very solid release, that said, here's the breakdown for this release:

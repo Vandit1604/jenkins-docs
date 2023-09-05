@@ -1,10 +1,7 @@
 = Performance improvements in 1.346
-:nodeid: 199
-:created: 1266333900
-:tags:
-  - development
-::page-author: rtyler
----
+:page-tags: development
+:page-author: rtyler
+
 From time to time, we get a report of out of memory problems in Hudson. It's frequent enough that https://wiki.jenkins.io/display/JENKINS/I'm+getting+OutOfMemoryError[we have a dedicated Wiki page] that talks about how to obtain information to help devs work on the problem.
 
 So https://n4.nabble.com/Restarting-hudson-every-day-memory-leaks-td1311161.html[the latest thread] from https://www.linkedin.com/in/davidwoon[David Woon] was assumed to be one of those ordinary trouble-shooting sessions, but thanks to Gustaf Lundh, it turned out to be a very interesting exercise.

@@ -1,10 +1,8 @@
 = First successful use of Jenkins telemetry
-:tags:
-- core
-- security
-- telemetry
-::page-author: daniel-beck
----
+::page-tags: core, security, telemetry
+
+:page-author: daniel-beck
+
 
 Half a year ago we delivered a security fix for Jenkins that had the potential to break the entire Jenkins UI.
 We needed to change how Jenkins, through the Stapler web framework, handled HTTP requests, tightening the rules around what requests would be processed by Jenkins.

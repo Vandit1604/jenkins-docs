@@ -1,12 +1,7 @@
 = Hudson 1.363 Released!
-:nodeid: 216
-:created: 1277215200
-:tags:
-  - general
-  - releases
-  - jenkinsci
-::page-author: rtyler
----
+:page-tags: general , releases ,jenkinsci
+:page-author: rtyler
+
 image:/sites/default/files/images/Hudson_coatofarms.gif[] Last Friday the Hudson team released release *1.363* which is yet another mixed bag of enhancements and bug fixes. Along with the usual bunch of fixes, this release includes a number of localization updates courtesy of a team of Hudson community volunteers participating in the Hudson https://wiki.jenkins.io/display/JENKINS/Internationalization[Internationalization project].
 
 It is also worth noting that this post is being published on Tuesday, contrary to the schedule that I operated on with Continuous Blog, I will no longer be posting release updates on Monday morning. Traditionally Hudson is released Friday afternoon (PST), meaning any potential regressions are reported early on Monday morning after our European users start to upgrade. Publishing this release announcement on Tuesday gives me more time to test out the release so I can report with greater confidence in the reliability of the update. (_Note_: This may change in the future as we push for easier RC testing capabilities within Hudson)

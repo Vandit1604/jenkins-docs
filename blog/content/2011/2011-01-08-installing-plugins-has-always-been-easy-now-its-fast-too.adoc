@@ -1,12 +1,7 @@
 = Installing plugins has always been easy, now it's fast too!
-:nodeid: 272
-:created: 1294530206
-:tags:
-  - general
-  - core
-  - news
-::page-author: rtyler
----
+:page-tags: general , core ,news
+:page-author: rtyler
+
 As one of the "men behind the scenes" of the Hudson project, a lot of my contributions tend to be in writing articles or handling infrastructure, anything to ensure folks like https://twitter.com/kohsukekawa[Kohsuke] can continue to make Hudson great without being distracted by inane system administration tasks. This past week, one of my long-running infrastructure projects has finally "gone live," making downloads of plugins and packages faster than ever!
 
 Some number of months ago I became frustrated with the download speeds reported by our international users, while the majority of Hudson's infrastructure is all colocated inside of the United States, there is a *huge* number of Hudson users and developers who are both in Europe and Asia.

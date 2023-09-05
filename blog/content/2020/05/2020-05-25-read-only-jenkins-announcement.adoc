@@ -1,11 +1,8 @@
 = Read-only Jenkins Configuration
-tags:
-- system-read
-- extended-read
-- configuration-as-code
-- announcement
+:page-tags: system-read, extended-read, configuration-as-code
+
 :page-author: timja
----
+
 
 I'm excited to announce that the 'read-only' Jenkins feature is now available for preview.
 This feature allows restricting configuration UIs and APIs while providing access to essential Jenkins system configuration, diagnostics, and self-monitoring tools through Web UI.

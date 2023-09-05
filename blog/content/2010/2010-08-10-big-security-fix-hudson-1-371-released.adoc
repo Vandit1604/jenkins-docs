@@ -1,14 +1,7 @@
 = Big Security Fix! Hudson 1.371 Released
-:nodeid: 235
-:created: 1281441600
-:tags:
-  - general
-  - core
-  - news
-  - releases
-  - jenkinsci
-::page-author: rtyler
----
+:page-tags: general , core ,news ,releases ,jenkinsci
+:page-author: rtyler
+
 Hot on the heels of Hudson 1.370, which was released last Friday, the Hudson team released 1.371 which addresses a *critical vulnerability* in *all* Hudson versions prior to 1.371. The vulnerability was disclosed by https://infradna.com[InfraDNA] in the https://infradna.com/content/security-advisory-2010-08-09[following security advisory], which details the issue:
 
 ____

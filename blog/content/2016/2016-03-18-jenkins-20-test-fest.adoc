@@ -1,8 +1,8 @@
 = Jenkins 2.0 community test fest!
-tags:
-- jenkins2
+:page-tags: jenkins2
+
 :page-author: omehegan
----
+
 
 The beta release of https://jenkins-ci.org/2.0/[Jenkins 2.0] is rapidly approaching! The development team is working hard to find and squash as many bugs as possible, but do you know what would make that effort even more successful? You! A big part of Jenkins's power lies in its extensive flexibility, but that flexibility poses challenges to testing. In short, it's difficult for the core team to test in all the myriad environments and with all the different workflows that Jenkins users have. To give just one example, users of Jenkins on Windows often uncover Windows-specific issues that are missed during development.
 

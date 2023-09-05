@@ -1984,7 +1984,7 @@ class DefaultLayout extends (react__WEBPACK_IMPORTED_MODULE_0___default().Compon
         margin: `0 auto`,
         marginTop: rhythm(1.5),
         marginBottom: rhythm(1.5),
-        maxWidth: 650,
+        maxWidth: 900,
         paddingLeft: rhythm(3 / 4),
         paddingRight: rhythm(3 / 4)
       }
@@ -1995,10 +1995,10 @@ class DefaultLayout extends (react__WEBPACK_IMPORTED_MODULE_0___default().Compon
       to: "/"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
       style: {
-        color: `tomato`,
+        color: `black`,
         marginBottom: rhythm(1.5)
       }
-    }, "Example of using Asciidoc with a Gatsby site")), this.props.children);
+    }, "Jenkins Blog")), this.props.children);
   }
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DefaultLayout);

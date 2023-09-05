@@ -1,11 +1,7 @@
 = "Plugin Spotlight: Version Column Plugin"
-:nodeid: 620
-:created: 1441069108
-:tags:
-  - general
-  - plugins
-::page-author: daniel-beck
----
+:page-tags: general , plugins
+:page-author: daniel-beck
+
 Most Jenkins controllers with a https://wiki.jenkins.io/display/JENKINS/Distributed+builds[distributed build] configuration will leverage nodes that run a `agent.jar` to start an agent. Regardless of whether the `agent.jar` is launched through a Java Web Start or SSH launcher, the jar will be copied from `++https://yourserver:port/jnlpJars/agent.jar++` to the build node. Keeping this jar up to date ensures that it picks up the newest features in a more recent release, such as the https://jenkins-ci.org/content/your-java-web-start-slaves-will-be-always-clean[self-restart feature] to keep agent JVMs "`clean`" and to automatically reconnect to their controller. Additionally, newer versions of this component may fix bugs or implement newer protocol versions with various improvements.
 
 == What is the Version Column Plugin?

@@ -12,14 +12,14 @@ class DefaultLayout extends React.Component {
           margin: `0 auto`,
           marginTop: rhythm(1.5),
           marginBottom: rhythm(1.5),
-          maxWidth: 650,
+          maxWidth: 900,
           paddingLeft: rhythm(3 / 4),
           paddingRight: rhythm(3 / 4),
         }}
       >
         <Link style={{ textDecoration: `none` }} to="/">
-          <h3 style={{ color: `tomato`, marginBottom: rhythm(1.5) }}>
-            Example of using Asciidoc with a Gatsby site
+          <h3 style={{ color: `black`, marginBottom: rhythm(1.5) }}>
+            Jenkins Blog
           </h3>
         </Link>
         {this.props.children}

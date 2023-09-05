@@ -1,11 +1,8 @@
 = Making your own DSL with plugins, written in Pipeline script
-tags:
-- jenkins
-- dsl
-- pipeline
-- plugins
+:page-tags: jenkins, dsl, pipeline
+
 :page-author: michaelneale
----
+
 
 In this post I will show how you can make your own DSL extensions and distribute
 them as a plugin, using link:/doc/pipeline[Pipeline] Script.

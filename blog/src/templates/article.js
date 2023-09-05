@@ -12,7 +12,6 @@ class Article extends React.Component {
           <table>
             <tbody>
               <tr>
-                <th>author.fullName</th>
                 <td>{this.props.data.asciidoc.author.fullName}</td>
               </tr>
             </tbody>

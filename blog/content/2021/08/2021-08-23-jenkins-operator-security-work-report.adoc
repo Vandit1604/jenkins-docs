@@ -1,11 +1,7 @@
 = "Security Validator for Jenkins Operator for Kubernetes"
-:tags:
-- gsoc21
-- kubernetes
-- security
-- plugins
-authors:
-- sharmapulkit04
+::page-tags: gsoc21, kubernetes, security
+
+:page-author: sharmapulkit04
 description: >
   Security validator adds an extra step of validation to detect potential security vulnerabilities in the plugins before creating a Jenkins custom resource.
 opengraph:

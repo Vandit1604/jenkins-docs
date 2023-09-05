@@ -1,10 +1,7 @@
 = Enforced HTTPS for 'mirrors.jenkins.io' and consolidation of the Jenkins Mirrors
-tags:
-- infrastructure
-- mirrors
-- jenkins
-authors:
-- dduportal
+:page-tags: infrastructure, mirrors, jenkins
+
+:page-author: dduportal
 :sig: infra
 description: >
   The 19th of May 2022, the domain `mirrors.jenkins.io` will be forced to HTTPS and consolidated into the same system as `get.jenkins.io`.

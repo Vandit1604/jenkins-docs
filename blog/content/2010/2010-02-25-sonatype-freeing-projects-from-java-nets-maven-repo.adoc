@@ -1,11 +1,7 @@
 = Sonatype freeing projects from java.net's Maven repo
-:nodeid: 191
-:created: 1267130700
-:tags:
-  - core
-  - just for fun
-::page-author: rtyler
----
+:page-tags: core , just for fun
+:page-author: rtyler
+
 Are you working on a project which uses java.net's https://en.wikipedia.org/wiki/Apache%20Maven[Maven] repository for deploying its artifacts?
 
 Well, if so, there's a great opportunity opening up for you to get off that problematic repository: https://www.sonatype.com/[Sonatype] is https://www.sonatype.com/people/2010/02/java-net-maven-repository-rescue-mission-on-march-5th/[helping java.net projects move to Sonatype's hosted OSS Nexus repository], starting March 5th. We're looking into moving Hudson over but for most smaller projects, this should be a no-brainer. Problems with the java.net Maven repository are legendary and Sonatype's OSS Nexus repository is a great alternative.

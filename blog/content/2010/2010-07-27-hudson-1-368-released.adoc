@@ -1,14 +1,7 @@
 = Hudson 1.368 Released!
-:nodeid: 231
-:created: 1280239200
-:tags:
-  - general
-  - core
-  - news
-  - releases
-  - jenkinsci
-::page-author: rtyler
----
+:page-tags: general , core ,news ,releases ,jenkinsci
+:page-author: rtyler
+
 Regular readers will recognize that I've been slacking off quite a bit lately with my release announcements, my apologies. With the release of 1.368 on Sunday, which fixed a few fairly important bugs, I figured I'd dusty off my blogging fedora and give this a shot.
 
 This release has three bug fixes in it which were causing some issues for some users, particularly those deploying Hudson inside the recently released https://tomcat.apache.org/tomcat-7.0-doc/changelog.html[Tomcat 7.0] (see https://issues.jenkins.io/browse/JENKINS-6738[issue 6738]).
