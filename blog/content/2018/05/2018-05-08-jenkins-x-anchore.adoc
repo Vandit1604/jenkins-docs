@@ -1,11 +1,9 @@
----
-layout: post
-title: "Jenkins X: Announcing CVE docker image analysis with Anchore"
+= Jenkins X: Announcing CVE docker image analysis with Anchore
 tags:
 - jenkins-x
 - kubernetes
 - pipeline
-author: jrawlings
+:page-author: jrawlings
 ---
 
 link:https://anchore.io/[Anchore] provides docker image analysis for user defined acceptance policies to allow automated image validation and acceptance.

@@ -1,13 +1,11 @@
----
-layout: post
-title: "Apache Commons Digester library removal (breaking changes!)"
+= Apache Commons Digester library removal (breaking changes!)
 tags:
 - jenkins
 - core
 - developer
 - announcement
 
-author: batmat
+:page-author: batmat
 opengraph:
   image: /images/post-images/2021-06-digester-removal/commons-digester-2.1-removal.jpg
 description: "The Apache Commons Digester library v.2.1 has been removed from Jenkins Core. A few plugins will be affected in the upcoming release, check the article for upgrade guidelines."

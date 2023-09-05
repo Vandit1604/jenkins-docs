@@ -6,7 +6,7 @@
   - feedback
   - jobs
   - tutorial
-:author: rtyler
+::page-author: rtyler
 ---
 At the first https://wiki.jenkins.io/display/JENKINS/BayAreaMeetup[Bay Area Hackathon] in mid-2009, the topic du jour was "https://wiki.jenkins.io/display/JENKINS/Designing+pre-tested+commit[pre-tested commits]." As potential implementations of the concept were discussed over burgers from https://www.brickhousesf.com/[Brickhouse] in downtown San Francisco, we realized as a group a few things: first, those burgers were _delicious_, but more importantly: pre-testing commits is very-SCM dependent and involves a lot of moving parts. One of the positive changes that came out shortly after the meet up was the support for "Concurrent Builds", allowing a job to be executed concurrently on different agents, a precursor to pre-tested commit support. Fervor for the pre-tested commit feature lowered as time went on, the feature being too dependent on the SCM itself was generally accepted as the reasoning behind the feature languishing.
 

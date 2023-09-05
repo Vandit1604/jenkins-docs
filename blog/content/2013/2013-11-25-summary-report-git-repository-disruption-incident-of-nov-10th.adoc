@@ -4,7 +4,7 @@
 :tags:
   - infrastructure
   - news
-:author: kohsuke
+::page-author: kohsuke
 ---
 As https://news.ycombinator.com/item?id=6713742[reported] in https://www.reddit.com/r/programming/comments/1qefox/jenkins_developers_accidentally_do_git_push_force/[various places], there was an incident in early November where commits in our Git repositories have become misplaced temporarily by accident. By the mid next week we were able to resurrect all the commits and things are back to normal now.
 

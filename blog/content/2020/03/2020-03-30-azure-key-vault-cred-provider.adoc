@@ -1,6 +1,4 @@
----
-layout: post
-title: "Introducing the Azure Key Vault Credentials Provider for Jenkins"
+= Introducing the Azure Key Vault Credentials Provider for Jenkins
 tags:
 - jenkins
 - pipeline
@@ -9,7 +7,7 @@ tags:
 - credentials
 - credential-provider
 - configuration-as-code
-author: timja
+:page-author: timja
 description: "Tightly integrate Jenkins and Azure Key Vault"
 opengraph:
   image: /images/post-images/azure-key-vault/jenkins-on-azure.png

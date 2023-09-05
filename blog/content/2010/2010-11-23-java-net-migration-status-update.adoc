@@ -4,7 +4,7 @@
 :tags:
   - infrastructure
   - core
-:author: kohsuke
+::page-author: kohsuke
 ---
 Monday morning I came into work and discovered that I cannot commit to the Hudson Subversion repository. Initially I wasn't worried — I thought it was just another java.net outage that will resolve itself in a few hours — but a little research a bit later revealed that Hudson was locked down and being https://weblogs.java.net/blog/communitymanager/archive/2010/11/03/javanet-begins-migration-collabnet-kenai-infrastructure[migrated to new java.net infrastructure]. +
 

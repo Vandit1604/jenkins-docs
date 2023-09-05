@@ -1,6 +1,4 @@
----
-layout: post
-title: "Audit Log Plugin for Jenkins Releases 1.0"
+= Audit Log Plugin for Jenkins Releases 1.0
 opengraph:
   image: /images/logos/audit-log/jenkins-apache-logging.png
 tags:
@@ -9,7 +7,7 @@ tags:
 - security
 - plugin
 - community
-author: jvz
+:page-author: jvz
 ---
 
 Thanks to our Outreachy interns over the past year, I'm proud to announce the initial release of the https://plugins.jenkins.io/audit-log[Audit Log plugin for Jenkins].

@@ -1,10 +1,8 @@
----
-layout: post
-title: "Jenkins Pipeline Stage Result Visualization Improvements"
+= Jenkins Pipeline Stage Result Visualization Improvements
 tags:
 - pipeline
 - blueocean
-author: dwnusbaum
+:page-author: dwnusbaum
 ---
 
 Some changes have recently been released to give Pipeline authors some new tools to improve Pipeline visualizations in Blue Ocean, in particular to address the highly-voted issue link:https://issues.jenkins.io/browse/JENKINS-39203[JENKINS-39203], which causes all non-failing stages to be visualized as though they were unstable if the overall build result of the Pipeline was unstable. This issue made it difficult to quickly identify why a build was unstable, and forced users to read through builds logs and the Jenkinsfile to figure out what actually happened.

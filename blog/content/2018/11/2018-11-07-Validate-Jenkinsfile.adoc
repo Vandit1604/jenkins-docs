@@ -1,6 +1,4 @@
----
-layout: post
-title: "Validate your Jenkinsfile from within VS Code"
+= Validate your Jenkinsfile from within VS Code
 tags:
 - jenkinsfile
 - validation
@@ -8,7 +6,7 @@ tags:
 - pipeline
 - pipeline authoring
 - development
-author: janjoerke
+:page-author: janjoerke
 ---
 In my daily work I often have to create or modify Jenkinsfiles and more often than I would like, I make mistakes. It is a very tedious workflow when you make a change to your Jenkinsfile, create a commit, push the commit and wait for your Jenkins Server to tell you, that you have missed a bracket.
 

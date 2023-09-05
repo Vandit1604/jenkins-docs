@@ -6,7 +6,7 @@
   - news
   - plugins
   - releases
-:author: kohsuke
+::page-author: kohsuke
 ---
 As the usage of Jenkins expands, we started seeing users who run multiple 100s of agents on one controller, and thus it became a lot more important for us to scale well to even larger number of agents. +
 

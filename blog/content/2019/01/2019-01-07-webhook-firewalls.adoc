@@ -1,11 +1,9 @@
----
-layout: post
-title: "Triggering builds with webhooks behind a secure firewall"
+= Triggering builds with webhooks behind a secure firewall
 tags:
 - jenkins
 - webhooks
 - security
-author: michaelneale
+:page-author: michaelneale
 ---
 
 In this post I wanted to show how you can run Jenkins behind a firewall (which could be a corporate firewall, a NAT’ed network like you have at home) but still receive webhooks in real time from GitHub.com. You can generalise this to other services too - such as BitBucket or DockerHub, or anything really that emits webhooks, but the instructions will be for GitHub projects hosted on github.com. 

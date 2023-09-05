@@ -4,7 +4,7 @@
 :tags:
   - infrastructure
   - just for fun
-:author: rtyler
+::page-author: rtyler
 ---
 As I had mentioned in https://jenkins-ci.org/content/installing-plugins-has-always-been-easy-now-its-fast-too[a previous post] back when Jenkins was called something else, who can remember what anymore, I spent a lot of time working on a mirroring network. With our departure from any and all Oracle infrastructure, this mirroring network has now become our sole distribution mechanism for pushing out *all* releases and *all* plugins, in short, *lots and lots of bits*.
 

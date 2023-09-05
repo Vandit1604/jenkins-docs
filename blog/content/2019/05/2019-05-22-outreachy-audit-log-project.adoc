@@ -3,7 +3,7 @@
 - community
 - logging
 - outreachy
-:author: jvz
+::page-author: jvz
 ---
 The https://github.com/jenkinsci/audit-log-plugin[Audit Log Plugin] for Jenkins is an in development project to integrate standardized audit logging trails to various core actions in Jenkins.
 This project integrates the recently released https://logging.apache.org/log4j-audit/latest/[Apache Log4j Audit] library to allow for a vast array of possible audit logging destinations and configuration.

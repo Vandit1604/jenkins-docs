@@ -6,7 +6,7 @@
   - feedback
   - just for fun
   - links
-:author: rtyler
+::page-author: rtyler
 ---
 Finishing off the second week in March, the Hudson team rolled Hudson 1.350 off the assembly line last Friday, bringing a *slew* of fixes. Of particular interest to users of Hudson's various native packages for https://www.crunchbase.com/company/red-hat[Red Hat], https://www.opensuse.org/[openSuSE], https://www.ubuntu.com/[Ubuntu/Debian] and https://en.wikipedia.org/wiki/Solaris%20%28operating%20system%29[Solaris], was a change that suppress the "self-upgrade" functionality in the "Manage Hudson" page. On the enhancements side of the fence, the team added authentication support to the https://wiki.jenkins.io/display/JENKINS/Hudson+CLI[Hudson CLI] (https://issues.jenkins.io/browse/JENKINS-3796[issue 3796]) allowing Hudson users with locked down installations to take advantage of everything the CLI has to offer.
 

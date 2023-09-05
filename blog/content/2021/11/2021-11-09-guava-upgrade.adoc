@@ -1,12 +1,10 @@
----
-layout: post
-title: "Guava library upgrade (breaking changes!)"
+= Guava library upgrade (breaking changes!)
 tags:
 - jenkins
 - core
 - developer
 - announcement
-author: basil
+:page-author: basil
 description: >
   Jenkins has upgraded the Guava library to the latest version.
   As a result, plugins must be upgraded for compatibility.

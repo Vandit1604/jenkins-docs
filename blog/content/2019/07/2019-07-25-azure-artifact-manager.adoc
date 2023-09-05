@@ -1,11 +1,9 @@
----
-layout: post
-title: "Managing Jenkins Artifacts with the Azure Artifact Manager Plugin"
+= Managing Jenkins Artifacts with the Azure Artifact Manager Plugin
 tags:
 - general
 - azure
 - plugin
-author: jshen
+:page-author: jshen
 ---
 
 Jenkins stores all generated artifacts on the controller server filesystem. This presents a couple of challenges especially when you try to run Jenkins in the cloud:

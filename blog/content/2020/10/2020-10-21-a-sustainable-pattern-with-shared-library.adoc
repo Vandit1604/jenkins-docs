@@ -1,6 +1,4 @@
----
-layout: post
-title: "A sustainable pattern with shared library"
+= A sustainable pattern with shared library
 description: "How to manage an infinite amount of repositories with shared library."
 opengraph:
   image: /images/full-pipeline.jpg
@@ -9,7 +7,7 @@ tags:
 - scalability
 - sharedlibrary
 - infrastructure
-author: tomasbjerre
+:page-author: tomasbjerre
 ---
 
 :toc:
