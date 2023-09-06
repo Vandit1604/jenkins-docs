@@ -21,8 +21,15 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               id
               html
+              document {
+                title
+              }
               fields {
                 slug
+              }
+              pageAttributes{
+                author
+                tags
               }
             }
           }

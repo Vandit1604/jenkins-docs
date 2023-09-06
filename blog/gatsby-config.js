@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby with Drupal`,
+    title: `Jenkins Gatsby Blog`,
   },
   plugins: [
     {

@@ -5,6 +5,7 @@ import Layout from "../layouts"
 
 class Article extends React.Component {
   render() {
+    console.log(this.props.data.asciidoc.document.title)
     return (
       <Layout>
         <h1>{this.props.data.asciidoc.document.title} </h1>
@@ -12,7 +13,7 @@ class Article extends React.Component {
           <table>
             <tbody>
               <tr>
-                <td>{this.props.data.asciidoc.author.fullName}</td>
+                <th>{this.props.data.asciidoc.pageAttributes.author}</th>
               </tr>
             </tbody>
           </table>
@@ -37,6 +38,10 @@ export const pageQuery = graphql`
       }
       author {
         fullName
+      }
+       pageAttributes {
+        author
+        tags
       }
     }
   }
