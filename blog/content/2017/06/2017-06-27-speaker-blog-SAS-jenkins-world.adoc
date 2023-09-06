@@ -36,7 +36,7 @@ Among them:
 To understand how to use shared libraries in Pipeline, we first need to understand how they are constructed.
 A shared library for Jenkins consists of a source code repository with a structure like the one below:
 
-image:/images/post-images/2017-06-27/jw-speaker-blog-sas-1.png[role=center]
+image:/post-images/2017-06-27/jw-speaker-blog-sas-1.png[role=center]
 
 Each of the top-level directories has its own purpose.
 
@@ -92,13 +92,13 @@ We first tell Jenkins what we want to call the library and define some default b
 such as whether we wanted it loaded implicitly for all pipelines.
 This is done in the *Global Pipeline Libraries* section of the *Configure System* page.
 
-image:/images/post-images/2017-06-27/jw-speaker-blog-sas-2.png[role=center, width=800]
+image:/post-images/2017-06-27/jw-speaker-blog-sas-2.png[role=center, width=800]
 
 For the second part, we need to tell Jenkins where the actual source repository for the shared library is located.
 SCM plugins that have been modified to understand how to work with shared libraries are called "*Modern SCM*".
 The git plugin in one of these updated plugin, so we just supply the information in the same *Configure System* page.
 
-image:/images/post-images/2017-06-27/jw-speaker-blog-sas-3.png[role=center]
+image:/post-images/2017-06-27/jw-speaker-blog-sas-3.png[role=center]
 
 After configuring Jenkins so that it can find the shared library repository, we can load the shared library into our pipeline using the `@Library('<library name>')` annotation.
 Since link:https://docs.oracle.com/javase/1.5.0/docs/guide/language/annotations.html[Annotations]

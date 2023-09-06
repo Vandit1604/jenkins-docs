@@ -45,7 +45,7 @@ Or have you ever experienced NoDev, the variant of DevOps where features are sud
 Conceptually, container inspection is now part of the delivery pipeline and Twistlock processing is now triggered once we have produced our Docker images, see below, in order to get
 fast feedback.
 
-image:/images/post-images/jenkins-devsecops/01.png[role=center, title="The delivery pipeline, failing the quality gate of inspecting Docker image."]
+image:/post-images/jenkins-devsecops/01.png[role=center, title="The delivery pipeline, failing the quality gate of inspecting Docker image."]
 
 
 Software is staged over different environments by configuration, without rebuilding. All changes go through the entire staging process, although defined
@@ -105,17 +105,17 @@ of vulnerabilities, and we need to fix those of severity _critical_ in order to 
 type _jar_, that is a finding in a binary as part of the Docker image, in our case the WAR file we've deployed to a web container (Tomcat), and of type _OS_, those are issues of the underlying image itself, the
 operating system, either part of the base image, or as a package added/changed in our Dockerfile.
 
-image:/images/post-images/jenkins-devsecops/02.png[role=center, title="Twistlock findings: overview."]
+image:/post-images/jenkins-devsecops/02.png[role=center, title="Twistlock findings: overview."]
 
 We can now easily zoom in and examine the vulnerabilities of the Docker layers. This really helps to structure work and identify root causes. Since, typically,
 a Docker image extends a Docker base image, the findings in the base image are shown on the top, see next screenshot, grouped by severity.
 
-image:/images/post-images/jenkins-devsecops/03.png[role=center, title="Twistlock also displays the vulnerabilities according to Docker layers. Findings based on the base image are listed at the top."]
+image:/post-images/jenkins-devsecops/03.png[role=center, title="Twistlock also displays the vulnerabilities according to Docker layers. Findings based on the base image are listed at the top."]
 
 Other Docker layers were added to the base image, and those can add vulnerabilities too. In our case, the packaged WAR file obviously contains a vulnerability. The next image shows how we examine that finding, while this time
 expanding the Twistlock wizard (that is the plus sign) to directly see the list of found vulnerabilities.
 
-image:/images/post-images/jenkins-devsecops/04.png[role=center, title="Twistlock recursively inspects embedded binaries auch as the WAR with its libraries. Here the wizard is expanded showing all vulnerabilities of this layer.
+image:/post-images/jenkins-devsecops/04.png[role=center, title="Twistlock recursively inspects embedded binaries auch as the WAR with its libraries. Here the wizard is expanded showing all vulnerabilities of this layer.
 On the right side, we can move over the different sections of our Dockerfile."]
 
 Finding and visualizing the issues are a very good first step, and we've even made those findings actionable, so we now have to take action and address them.
@@ -205,7 +205,7 @@ based project. We now see that jetty-io is transitively referenced by _org.selen
 dependency and the libraries are shipped as part of the WAR, but let's consider this to be given according to requirements, thus we must take special attention now
 to version 2.29.0 of the specific library.
 
-image:/images/post-images/jenkins-devsecops/05.png[role=center, title="Inspecting the dependency structure, with the used build tool"]
+image:/post-images/jenkins-devsecops/05.png[role=center, title="Inspecting the dependency structure, with the used build tool"]
 
 Also here we can browse release notes and content (particularly how those libs are built themselves), and come to the conclusion to
 switch from the used version, that is _2.29.0_, to a newer version of _htmlunit-driver_, that is _2.31.1_.
@@ -236,12 +236,12 @@ switch from the used version, that is _2.29.0_, to a newer version of _htmlunit-
 OK, now we are done. We push the changes to GitHub, and our GitHub webhook directly triggers the workflow. This time the quality gate passes, so it
 looks like our fixes did address the root causes and eliminated those with the configured threshold severity.
 
-image:/images/post-images/jenkins-devsecops/06.png[role=center, title="Part of the delivery pipeline, showing the quality gate passed and Docker image inspected without findings of severity CRITICAL"]
+image:/post-images/jenkins-devsecops/06.png[role=center, title="Part of the delivery pipeline, showing the quality gate passed and Docker image inspected without findings of severity CRITICAL"]
 
 Finally, after running through our entire workflow, that is made up of different pipelines, our inspected and quality assured container does successfully
 run in our production runtime environment, that is on Oracle Cloud.
 
-image:/images/post-images/jenkins-devsecops/07.png[role=center, title="The quality assured Docker container runs in the Oracle Cloud."]
+image:/post-images/jenkins-devsecops/07.png[role=center, title="The quality assured Docker container runs in the Oracle Cloud."]
 
 Crisp, isn't it?
 

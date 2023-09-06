@@ -7,7 +7,7 @@
 I use macOS day to day, and often struggle to keep my devtools up to date.
 This isn't any fault of packaging or tools, more just that I get tired of seeing the beachball:
 
-image:/images/post-images/2018-06-21-devpods/beachball.png[title="beachball", role="center"]
+image:/post-images/2018-06-21-devpods/beachball.png[title="beachball", role="center"]
 
 The demands on dev machines grow, developers are now working across a more diverse
 set of technologies than just a JVM or a single scripting language these days.
@@ -58,7 +58,7 @@ but it runs locally (Visual Studio Code is my personal favourite at the moment),
 in fact Visual Studio Code has a Jenkins X extension (but you don’t have to use it):
 
 
-image:/images/post-images/2018-06-21-devpods/jx-tools.png[title="jx tools", role="center"]
+image:/post-images/2018-06-21-devpods/jx-tools.png[title="jx tools", role="center"]
 
 To get your changes up to the Dev Pod, in a fresh shell run (and leave it running):
 
@@ -91,7 +91,7 @@ You can have many DevPods running (jx get devpods), and you could stop them at t
 
 So bringing it all together, let me show a very wide (you may need to zoom out) screen shot of this workflow:
 
-image:/images/post-images/2018-06-21-devpods/end-end.png[title="end to end", role="center"]
+image:/post-images/2018-06-21-devpods/end-end.png[title="end to end", role="center"]
 
 
 From `Left` to `Right`:
@@ -114,7 +114,7 @@ _On visual studio code: The Jenkins X extension for visual studio code can autom
 
 To give a big picture of how this hangs together:
 
-image:/images/post-images/2018-06-21-devpods/picture.png[title="big picture", role="center"]
+image:/post-images/2018-06-21-devpods/picture.png[title="big picture", role="center"]
 
 In my example, GitHub is still involved, but I don’t push any changes back to it until I am happy with the state of my “edit app” and changes.
 I run the editor on my local workstation and jx takes care of the rest.

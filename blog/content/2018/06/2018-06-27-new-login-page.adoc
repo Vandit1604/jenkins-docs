@@ -22,17 +22,17 @@ The following pages have given a new design:
 
 - Jenkins is (re)starting pages
 
-image:/images/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_1_a.png[role="center"]
+image:/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_1_a.png[role="center"]
 
-image:/images/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_1_b.png[role="center"]
+image:/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_1_b.png[role="center"]
 
 - Login
 
-image:/images/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_2.png[role="center"]
+image:/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_2.png[role="center"]
 
 - Sign up
 
-image:/images/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_3.png[role="center"]
+image:/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_3.png[role="center"]
 
 
 == UX enhancement
@@ -41,11 +41,11 @@ Form validation has changed to give inline feedback about data validation errors
 
 - Login
 
-image:/images/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_4.png[role="center"]
+image:/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_4.png[role="center"]
 
 - Sign up
 
-image:/images/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_5.png[role="center"]
+image:/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_5.png[role="center"]
 
 The above image shows that the validation is now done on all input fields instead of before breaking on the
 first error found, which should lead to fewer retry cycles.
@@ -53,7 +53,7 @@ first error found, which should lead to fewer retry cycles.
 Instead of forcing the user to repeat the password, the new UX introduces the possibility to display the password in
 clear text. Further a basic password strength meter indicates password strength to the user while she enters the password.
 
-image:/images/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_6.png[role="center"]
+image:/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_6.png[role="center"]
 
 == Customizing the UI
 
@@ -166,7 +166,7 @@ To customize the login page further, create a `simple-header.jelly` like this:
 
 For example, I used this technique to create a prototype of a login page for a CloudBees product I am working on:
 
-image:/images/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_7.png[role="center"]
+image:/post-images/2018-06-27-JENKINS-50447/JENKINS-50447_7.png[role="center"]
 
 == Conclusion
 

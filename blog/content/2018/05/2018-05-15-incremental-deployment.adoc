@@ -145,7 +145,7 @@ If it has not, the function uses the Artifactory REST API to atomically upload t
 and uses the GitHub Status API to associate a message with the commit
 so that you can see right in your pull request that it got deployed:
 
-image:/images/post-images/2018-05-15/incrementals-status.png[width="1104",float="left"]
+image:/post-images/2018-05-15/incrementals-status.png[width="1104",float="left"]
 
 One more bit of caution was required.
 Just because we successfully published some bits from some PR does not mean they should be _used_!

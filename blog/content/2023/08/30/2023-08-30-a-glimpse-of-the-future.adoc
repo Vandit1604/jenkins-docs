@@ -3,11 +3,11 @@
 
 :page-author: gounthar
 :page-opengraph:
-  image: /images/post-images/2023/08/30/2023-08-30-a-glimpse-of-the-future/a-glimpse-of-the-future.png
+  image: /post-images/2023/08/30/2023-08-30-a-glimpse-of-the-future/a-glimpse-of-the-future.png
 discourse: true
 ---
 
-image:/images/post-images/2023/08/30/2023-08-30-a-glimpse-of-the-future/image2.png[image,width=839]
+image:/post-images/2023/08/30/2023-08-30-a-glimpse-of-the-future/image2.png[image,width=839]
 
 You've all seen it before: the bitter sting of botched predictions.
 Flying cars, nuclear ovens in the kitchen, killer robot dogs, and lunar living - all expected to be part of our daily lives by now.
@@ -59,7 +59,7 @@ There'll be more detailed blog posts down the line when the final decision is ma
 * Java 17 adoption is increasing in Jenkins.
 The Jenkins documentation now recommends Java 17 in the installation guides and in the tutorials.
 
-image:/images/post-images/2023/08/30/2023-08-30-a-glimpse-of-the-future/image3.png[Java adoption rates based on Java version.,width=839]
+image:/post-images/2023/08/30/2023-08-30-a-glimpse-of-the-future/image3.png[Java adoption rates based on Java version.,width=839]
 
 == Java 21:
 
@@ -406,7 +406,7 @@ Once you've done that, fire off `sudo systemctl daemon-reload` and `sudo systemc
 For those of you still hanging in there, yes, there's a quicker workaround... +
 Just stick the `Environment="JENKINS_OPTS=--enable-future-java"` line back in the `override.conf` file, and you'll have a Jenkins instance up and running with JDK21 faster than you can say "compile".
 
-image:/images/post-images/2023/08/30/2023-08-30-a-glimpse-of-the-future/image1.png[image,width=839]
+image:/post-images/2023/08/30/2023-08-30-a-glimpse-of-the-future/image1.png[image,width=839]
 
 == What’s next?
 

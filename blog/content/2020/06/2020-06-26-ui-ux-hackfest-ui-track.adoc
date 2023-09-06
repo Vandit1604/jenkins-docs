@@ -5,7 +5,7 @@
 links:
   gitter: jenkinsci_hackfest:gitter.im
 :page-opengraph:
-  image: /images/post-images/jenkins-is-the-way/uiux-hackfest-results/ui-:page-opengraph.png
+  image: /post-images/jenkins-is-the-way/uiux-hackfest-results/ui-:page-opengraph.png
 ---
 
 In this article, I would like to share some highlights from the User Interface track of the 
@@ -67,7 +67,7 @@ Read the announcement by Tim Jacomb link:/blog/2020/05/25/read-only-jenkins-anno
 During the hackfest we kept testing the change and fixing compatibility in the Jenkins plugins,
 including the Cloud Stats Plugin, Role Strategy Plugin, Simple Disk Usage Plugin and others.
 
-image:/images/post-images/2020/05-read-only-jenkins-announcement/build-discarder-read.png[Read-only build discarder configuration]
+image:/post-images/2020/05-read-only-jenkins-announcement/build-discarder-read.png[Read-only build discarder configuration]
 
 We would appreciate feedback and testing from the Jenkins users!
 See the link:/blog/2020/05/25/read-only-jenkins-announcement/[blogpost] for the guidelines.
@@ -97,7 +97,7 @@ You can try out this theme starting from Jenkins 2.239.
 It is available as a plugin:dark-theme[plugin] from the Jenkins Update Center.
 An example screenshot of the main page:
 
-image:/images/post-images/jenkins-is-the-way/uiux-hackfest-results/dark-theme-main.png[Dark Theme - Main page]
+image:/post-images/jenkins-is-the-way/uiux-hackfest-results/dark-theme-main.png[Dark Theme - Main page]
 
 If you discover any Dark theme compatibility issues,
 please report them link:https://github.com/jenkinsci/dark-theme-plugin/issues[here].
@@ -131,7 +131,7 @@ Our progress:
 
 Here is an example of a job configuration page using the new layout:
 
-image:/images/post-images/jenkins-is-the-way/uiux-hackfest-results/tables-to-divs-job-config.png[Tables to Divs - Job configuration example]
+image:/post-images/jenkins-is-the-way/uiux-hackfest-results/tables-to-divs-job-config.png[Tables to Divs - Job configuration example]
 
 We will keep working on this change in the coming weeks,
 and we invite Jenkins users and Contributors to help us with testing the change!
@@ -149,7 +149,7 @@ Before, it was not possible to do it from the Web interface.
 Once link:https://github.com/jenkinsci/script-security-plugin/pull/300[the pull request] is released,
 the feature will become available to Jenkins users.
 
-image:/images/post-images/jenkins-is-the-way/uiux-hackfest-results/script-security-expanded.png[New Script Security approvals management UI]
+image:/post-images/jenkins-is-the-way/uiux-hackfest-results/script-security-expanded.png[New Script Security approvals management UI]
 
 == Other UI improvements
 
@@ -163,7 +163,7 @@ some important improvements:
 * UI Improvements in the plugin:folder-auth[Folder-based Authorization Strategy] plugin.
 * Improved Fingerprint listing in the Jenkins core
 
-image:/images/post-images/jenkins-is-the-way/uiux-hackfest-results/auto-grading-xl-screens.png[Auto-grading plugin - XL Screens]
+image:/post-images/jenkins-is-the-way/uiux-hackfest-results/auto-grading-xl-screens.png[Auto-grading plugin - XL Screens]
 
 == Contributing
 

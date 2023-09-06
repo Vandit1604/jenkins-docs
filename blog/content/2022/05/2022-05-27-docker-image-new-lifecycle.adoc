@@ -13,7 +13,7 @@ description: >
 // - Add any other reviewer as co-authors
 // - Add :page-opengraph
 
-// image::/images/post-images/2022-05-TBD.png[Docker Image: new Exit and Restart Behavior for Controllers, role=center, link="https://hub.docker.com/r/jenkins/jenkins/tags"]
+// image::/post-images/2022-05-TBD.png[Docker Image: new Exit and Restart Behavior for Controllers, role=center, link="https://hub.docker.com/r/jenkins/jenkins/tags"]
 
 The Jenkins project provides Docker images for controllers (and more).
 Beginning with link:/changelog/#v2.344[Jenkins 2.344] released April 18, 2022 and link:/changelog-stable/#v2.332.3[Jenkins 2.332.3] released May 04, 2022, the behavior of the "Exit" and "Restart" lifecycle of the controller image `jenkins/jenkins` changed.

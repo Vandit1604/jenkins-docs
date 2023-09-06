@@ -3,7 +3,7 @@
 
 :page-author: oleg_nenashev
 :page-opengraph:
-  image: /images/post-images/2019-github-documentation/thumbnail.png
+  image: /post-images/2019-github-documentation/thumbnail.png
 ---
 
 In September 2019 we link:https://groups.google.com/forum/#!msg/jenkinsci-dev/VSdfVMDIW-A/vqXxJiI7AQAJ[announced]
@@ -14,7 +14,7 @@ now it is possible to store plugin documentation right inside plugin repositorie
 This blogpost may be interesting to plugin maintainers and to those who want to contribute to the Jenkins documentation.
 I will describe how to migrate plugin documentation to GitHub and to get pages like this one:
 
-image:/images/post-images/2019-github-documentation/thumbnail.png[GitHub Documentation example, role=center]
+image:/post-images/2019-github-documentation/thumbnail.png[GitHub Documentation example, role=center]
 
 == Why? 
 
@@ -46,7 +46,7 @@ Few examples:
 * plugin:gradle[Gradle Plugin]
 * plugin:role-strategy[Role Strategy Plugin]
 
-image:/images/post-images/2019-github-documentation/role-strategy-screenshot.png[Role Strategy example, role=center]
+image:/post-images/2019-github-documentation/role-strategy-screenshot.png[Role Strategy example, role=center]
 
 == How to enable GitHub documentation for your plugin? 
 

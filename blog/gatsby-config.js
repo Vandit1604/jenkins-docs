@@ -10,7 +10,14 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
-    `gatsby-transformer-asciidoc`,
+    {
+      resolve: `gatsby-transformer-asciidoc`,
+      options: {
+        attributes: {
+          imagesdir: `${__dirname}/content/post-images`,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {

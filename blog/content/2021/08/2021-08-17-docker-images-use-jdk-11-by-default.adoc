@@ -7,10 +7,10 @@ links:
 description: >
   We announce the change from Java 8 to Java 11 in the default Docker images provided by the Jenkins project.
 :page-opengraph:
-  image: /images/post-images/2021-08-docker-images-use-jdk-11-by-default/docker-images-use-jdk-11-by-default.png
+  image: /post-images/2021-08-docker-images-use-jdk-11-by-default/docker-images-use-jdk-11-by-default.png
 ---
 
-image:/images/post-images/2021-08-docker-images-use-jdk-11-by-default/docker-images-use-jdk-11-by-default.png[Docker images use Java 11 by default, role=center, link="https://hub.docker.com/r/jenkins/jenkins/tags"]
+image:/post-images/2021-08-docker-images-use-jdk-11-by-default/docker-images-use-jdk-11-by-default.png[Docker images use Java 11 by default, role=center, link="https://hub.docker.com/r/jenkins/jenkins/tags"]
 
 The Jenkins project provides Docker images for controllers, inbound agents, outbound agents, and more.
 Beginning with link:/changelog/#v2.307[Jenkins 2.307] released August 17, 2021 and link:/changelog-stable/#v2.303.1[Jenkins 2.303.1] released August 25, 2021, the Docker images provided by the Jenkins project will use Java 11 instead of Java 8.

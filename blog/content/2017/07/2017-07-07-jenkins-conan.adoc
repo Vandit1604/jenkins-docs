@@ -24,7 +24,7 @@ link:https://conan.io[Conan] was born to mitigate these pains.
 Conan uses python recipes, describing how to build a library by explicitly calling any build system, and also describing the needed information for the consumers (include directories, library names etc.).
 To manage the different configurations and the ABI compatibility, Conan uses "settings" (os, architecture, compiler…). When a setting is changed, Conan generates a different binary version for the same library:
 
-image:/images/post-images/2017-07-07/diagram1.png[role=center]
+image:/post-images/2017-07-07/diagram1.png[role=center]
 
 The built binaries can be uploaded to link:https://www.jfrog.com/artifactory/[JFrog Artifactory] or link:https://www.jfrog.com/bintray/[Bintray], to be shared with your team or the whole community. The developers in your team won’t need to rebuild the libraries again, Conan will fetch only the needed Binary packages matching the user’s configuration from the configured remotes (distributed model).
 But there are still some more challenges to solve:
@@ -43,7 +43,7 @@ The Conan ecosystem is growing fast, and DevOps with C/C{plus}{plus} is now a re
 * *JFrog Bintray* is the universal distribution hub.
 * *Jenkins* automates the project testing, generates different binary configurations of your Conan packages, and automates the rebuilt libraries.
 
-image:/images/post-images/2017-07-07/diagram2.png[role=center]
+image:/post-images/2017-07-07/diagram2.png[role=center]
 
 ## Jenkins Artifactory plugin
 
@@ -51,7 +51,7 @@ image:/images/post-images/2017-07-07/diagram2.png[role=center]
 * Manages the remote configuration with your Artifactory instance, hiding the authentication details.
 * Collects from any Conan operation (installing/uploading packages) all the involved artifacts to generate and publish the buildInfo to Artifactory. The link:https://www.jfrog.com/confluence/display/RTF/Build+Integration#BuildIntegration-Build-levelInformation[buildInfo] object is very useful, for example, to promote the created Conan packages to a different repository and to have full traceability of the Jenkins build:
 
-image:/images/post-images/2017-07-07/JFrogArtifactoryBuildBrowser.png[role=center]
+image:/post-images/2017-07-07/JFrogArtifactoryBuildBrowser.png[role=center]
 
 Here’s an example of the Conan DSL with the Artifactory plugin.  First we configure the Artifactory repository, then retrieve the dependencies and finally build it:
 
@@ -103,7 +103,7 @@ As we saw at the beginning of this blog post, it’s crucial to save time when b
 
 Let’s see an example using Jenkins Pipeline feature
 
-image:/images/post-images/2017-07-07/diagram3.png[role=center]
+image:/post-images/2017-07-07/diagram3.png[role=center]
 
 The above graph represents our project P and its dependencies (A-G). We want to distribute the project for two different architectures, x86 and x86_64.
 
@@ -185,21 +185,21 @@ Eventually, this is what will happen:
 
 * Two *SimpleBuild* tasks will be  triggered, both for building library B, one for x86 and another for x86_64 architectures
 +
-image:/images/post-images/2017-07-07/diagram4.png[role=center]
+image:/post-images/2017-07-07/diagram4.png[role=center]
 +
 * Once "A" and "B" are built, "F" and "D" will be triggered, 4 workers will run the "SimpleBuild" task in parallel, (x86, x86_64)
 +
-image:/images/post-images/2017-07-07/diagram5.png[role=center]
+image:/post-images/2017-07-07/diagram5.png[role=center]
 +
 * Finally "G" will be built. So 2 workers will run in parallel.
 +
 The Jenkins Stage View for the will looks similar to the figures below:
 +
 .MultiBuild
-image:/images/post-images/2017-07-07/MultiBuild.png[role=center]
+image:/post-images/2017-07-07/MultiBuild.png[role=center]
 +
 .SimpleBuild
-image:/images/post-images/2017-07-07/SimpleBuild.png[role=center]
+image:/post-images/2017-07-07/SimpleBuild.png[role=center]
 
 We can configure the "*SimpleBuild*" task within different nodes (Windows, OSX, Linux…), and control the number of executors available in our Jenkins configuration.
 

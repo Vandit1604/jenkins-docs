@@ -14,7 +14,7 @@ I hope this plugin adds value to you and your team. If you are interested in con
 == Better collaboration between teams
 
 
-image::/images/post-images/introducing-the-jira-software-plugin-for-jenkins/dev-tools-ticketview.png["Use Jenkins build information in Jira Software to create a workflow between QA and developers and create a rapid feedback loop for testing at any point in your development process.", 800, role=center]
+image::/post-images/introducing-the-jira-software-plugin-for-jenkins/dev-tools-ticketview.png["Use Jenkins build information in Jira Software to create a workflow between QA and developers and create a rapid feedback loop for testing at any point in your development process.", 800, role=center]
 
 This new information view is so powerful because historically it was dispersed across multiple tools only accessible to a few members of your team. Now anyone involved in the software delivery process can self-serve this information. For example, product managers, QA, and support teams can view which features have been deployed to customers and which are still waiting in staging environments.
 
@@ -22,7 +22,7 @@ With better information sharing between tools in your delivery stack, you can al
 
 == Use Jira’s Querying Language for advanced views
 
-image::/images/post-images/introducing-the-jira-software-plugin-for-jenkins/jql.png["Build powerful views into your development pipeline with support for JQL.", 800, role=center]
+image::/post-images/introducing-the-jira-software-plugin-for-jenkins/jql.png["Build powerful views into your development pipeline with support for JQL.", 800, role=center]
 
 In addition to building better ways to collaborate, these integrations also give your team deeper insight into the development pipeline from within Jira Software. You can now create powerful views into your delivery pipeline link:https://confluence.atlassian.com/jirasoftwarecloud/advanced-searching-developer-reference-967312910.html[with JQL queries across multiple connected tools]. For example, you can write a custom JQL query to report all Jira issues that have been deployed to production but still have an open PR.
 

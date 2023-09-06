@@ -103,7 +103,7 @@ The plugin offers two alternatives for doing this:
 
 This can be defined in the Jenkins global config, __External Workspace Definitions__ section.
 
-image:/images/post-images/ewm/global-custom-workspace-path.png[title="Global Custom Workspace Path", role="center"]
+image:/post-images/ewm/global-custom-workspace-path.png[title="Global Custom Workspace Path", role="center"]
 
 * by defining a custom workspace path in the Pipeline script
 
@@ -128,11 +128,11 @@ link:https://github.com/jenkinsci/job-restrictions-plugin[Job Restrictions Plugi
 For example, we can restrict a Disk Pool to be allocated only if the Jenkins job in which it's allocated was triggered
 by a specific user:
 
-image:/images/post-images/ewm/restriction-by-user.png[title="Disk Pool Restriction By User", role="center"]
+image:/post-images/ewm/restriction-by-user.png[title="Disk Pool Restriction By User", role="center"]
 
 Or, we can restrict the Disk Pool to be allocated only for those jobs whose name matches a well defined pattern:
 
-image:/images/post-images/ewm/restriction-by-job-name.png[title="Disk Pool Restriction By Job Name", role="center"]
+image:/post-images/ewm/restriction-by-job-name.png[title="Disk Pool Restriction By Job Name", role="center"]
 
 == What's next
 
@@ -140,7 +140,7 @@ Currently there is ongoing work for providing flexible disk allocation strategie
 The user will be able to define a default disk allocation strategy in the Jenkins global config.
 So for example, we want to select the disk with the most usable space as default allocation strategy:
 
-image:/images/post-images/ewm/global-disk-allocation-strategy.png[title="Global Disk Allocation Strategy", role="center"]
+image:/post-images/ewm/global-disk-allocation-strategy.png[title="Global Disk Allocation Strategy", role="center"]
 
 If needed, this allocation strategy may be overridden in the Pipeline code.
 Let's suppose that for a specific job, we want to allocate the disk with the highest read speed.

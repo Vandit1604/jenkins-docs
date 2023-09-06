@@ -23,7 +23,7 @@ this makes the JUnit plugin ideal for reporting results in Jenkins.
 It will consume results from a specified file or path, create a report,
 and if it finds test failures it will set the the job state to "unstable" or "failed".
 
-image::/images/post-images/2016-10-27/job-7-report.png[Test reporting with JUnit, width=800, role="center"]
+image::/post-images/2016-10-27/job-7-report.png[Test reporting with JUnit, width=800, role="center"]
 
 There are also plenty of scenarios where the JUnit plugin is not enough.
 If your project has some failing tests that will take some time to fix,
@@ -96,7 +96,7 @@ node {
 }
 ----
 
-image::/images/post-images/2016-10-27/job-7-console.png[JUnit plugin console output, width=800, role="center"]
+image::/post-images/2016-10-27/job-7-console.png[JUnit plugin console output, width=800, role="center"]
 
 == Switching from JUnit to xUnit
 
@@ -158,9 +158,9 @@ node {
 }
 ----
 
-image::/images/post-images/2016-10-27/job-8-summary.png[Test reporting with xUnit, width=800, role="center"]
+image::/post-images/2016-10-27/job-8-summary.png[Test reporting with xUnit, width=800, role="center"]
 
-image::/images/post-images/2016-10-27/job-8-console.png[xUnit plugin console output, width=800, role="center"]
+image::/post-images/2016-10-27/job-8-console.png[xUnit plugin console output, width=800, role="center"]
 
 
 == Accept a Baseline
@@ -182,7 +182,7 @@ step([$class: 'XUnitBuilder',
     tools: [[$class: 'JUnitType', pattern: 'reports/**']]])
 ----
 
-image::/images/post-images/2016-10-27/job-9-summary.png[Accept a baseline of failing tests., width=800, role="center"]
+image::/post-images/2016-10-27/job-9-summary.png[Accept a baseline of failing tests., width=800, role="center"]
 
 
 Next, I can also check that the plugin reports the job as failed if more failures occur.
@@ -209,7 +209,7 @@ reports as failed.
 // ... snip ...
 ----
 
-image::/images/post-images/2016-10-27/job-10-summary.png[All tests pass!, width=800, role="center"]
+image::/post-images/2016-10-27/job-10-summary.png[All tests pass!, width=800, role="center"]
 
 
 In a real project, we'd make fixes over a number of commits bringing the number of failures down and adjusting our baseline.
@@ -262,7 +262,7 @@ step([$class: 'XUnitBuilder',
 ----
 
 
-image::/images/post-images/2016-10-27/job-12-summary.png[All tests pass!, width=800, role="center"]
+image::/post-images/2016-10-27/job-12-summary.png[All tests pass!, width=800, role="center"]
 
 
 == Allow for Flakiness
@@ -315,7 +315,7 @@ module.exports = {
 };
 ----
 
-image::/images/post-images/2016-10-27/job-17-summary.png[The pain of flaky tests failing the build, width=800, role="center"]
+image::/post-images/2016-10-27/job-17-summary.png[The pain of flaky tests failing the build, width=800, role="center"]
 
 I can almost hear my teammates screaming in frustration just looking at this report.
 To allow specific tests to be unstable but not others,
@@ -379,9 +379,9 @@ the test.  When they were confident they had stabilized the test the could add
 a "suite completed" test after it to enforce it passing without changes to other
 tests or framework.
 
-image::/images/post-images/2016-10-27/job-19-summary.png[Flaky tests don't have to fail the build, width=800, role="center"]
+image::/post-images/2016-10-27/job-19-summary.png[Flaky tests don't have to fail the build, width=800, role="center"]
 
-image::/images/post-images/2016-10-27/job-18-report.png[Results from flaky test, width=800, role="center"]
+image::/post-images/2016-10-27/job-18-report.png[Results from flaky test, width=800, role="center"]
 
 == Conclusion
 

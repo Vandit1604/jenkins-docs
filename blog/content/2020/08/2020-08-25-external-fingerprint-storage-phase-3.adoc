@@ -3,7 +3,7 @@
 
 :page-author: stellargo
 :page-opengraph:
-  image: /images/post-images/2020/08-external-fingerprint-storage-phase-3/:page-opengraph.png
+  image: /post-images/2020/08-external-fingerprint-storage-phase-3/:page-opengraph.png
 ---
 
 The final phase for the link:/projects/gsoc/2020/projects/external-fingerprint-storage/[External Fingerprint Storage
@@ -74,7 +74,7 @@ Once the plugin has been installed, you can configure the PostgreSQL server deta
 . Configure the following parameters to connect to your PostgreSQL instance:
 
 +
-image:/images/post-images/2020/08-external-fingerprint-storage-phase-3/configure.png[Configure Redis]
+image:/post-images/2020/08-external-fingerprint-storage-phase-3/configure.png[Configure Redis]
 +
 
 * `Host` - Enter hostname where PostgreSQL is running

@@ -60,7 +60,7 @@ The same field can also be specified by the Kubernetes plugin when you are speci
 
 
 .Specifying `.spec.activeDeadlineSeconds` in the Kubernetes plugin
-image::/images/post-images/2018-08-30/time-deadline.png[width=800]
+image::/post-images/2018-08-30/time-deadline.png[width=800]
 
 Same configuration is available in the `Jenkinsfile` as well if you don't like static configurations.
 

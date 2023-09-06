@@ -4,7 +4,7 @@
 :page-author: XiongKezhi
 description: "Google Summer of Code 2020 - GitHub Checks API Plugin project update for Coding Phase 3"
 :page-opengraph:
-  image: /images/post-images/2020/08-github-checks-api-plugin-coding-phase-3/:page-opengraph.png
+  image: /post-images/2020/08-github-checks-api-plugin-coding-phase-3/:page-opengraph.png
 ---
 
 This blog post is about our phase 3 progress on link:/projects/gsoc/2020/projects/github-checks/[GitHub Checks API Project], you can find our previous blog posts for link:/blog/2020/07/09/github-checks-api-plugin-coding-phase-1[phase 1] and link:/blog/2020/08/03/github-checks-api-plugin-coding-phase-2[phase 2].
@@ -26,7 +26,7 @@ video::S-pEgT3lzpk[youtube,width=800,height=420]
 
 The pipeline support allows users to directly publish checks in their pipeline script without depending on any other consumers.
 
-image::/images/post-images/2020/08-github-checks-api-plugin-coding-phase-3/pipeline-check.png[Pipeline Checks]
+image::/post-images/2020/08-github-checks-api-plugin-coding-phase-3/pipeline-check.png[Pipeline Checks]
 
 The check in the above screenshot is published by script:
 
@@ -45,7 +45,7 @@ This feature can be useful when many stages exist in your pipeline script and ea
 
 The rerun request allows GitHub users to rerun the failed builds. When a build failed (which leads to a failed check), a `Re-run` button will be added automatically by GitHub.
 
-image::/images/post-images/2020/08-github-checks-api-plugin-coding-phase-3/failed-checks.png[Failed Checks]
+image::/post-images/2020/08-github-checks-api-plugin-coding-phase-3/failed-checks.png[Failed Checks]
 
 By clicking the `Re-run` button, Jenkins will reschedule a build for the last commit of this branch.
 

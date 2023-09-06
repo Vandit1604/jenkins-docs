@@ -3,7 +3,7 @@
 
 :page-author: rishabhbudhouliya
 :page-opengraph:
-  image: /images/post-images/2020/07-git-plugin-performance-improvement/gsoc-git-:page-opengraph.png
+  image: /post-images/2020/07-git-plugin-performance-improvement/gsoc-git-:page-opengraph.png
 ---
 
 The second phase of the link:/blog/2020/07/09/git-performance-improvement-phase1/[Git Plugin Performance Improvement project] has been great in terms of the progress we have achieved in implementing performance improvement insights
@@ -51,7 +51,7 @@ Running git fetch operation for a 400 MiB sized repository on:
 
 The result of running this experiment is given below:
 
-image:/images/post-images/2020/07-git-plugin-performance-improvement/git-multiple-platforms.png[Performance on multiple platforms]
+image:/post-images/2020/07-git-plugin-performance-improvement/git-multiple-platforms.png[Performance on multiple platforms]
 
 Observations:
 

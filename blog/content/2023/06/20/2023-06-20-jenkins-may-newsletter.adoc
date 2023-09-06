@@ -3,12 +3,12 @@
 
 :page-author: alyssat, dduportal, markewaite ,gounthar , wadeck
 :page-opengraph:
-  image: /images/post-images/2023/02/07/2023-02-07-jenkins-newsletter/centered-newsletter.png
+  image: /post-images/2023/02/07/2023-02-07-jenkins-newsletter/centered-newsletter.png
 links:
 discourse: true
 ---
 
-image:/images/post-images/2023/02/07/2023-02-07-jenkins-newsletter/centered-newsletter.png[Jenkins May Newsletter]
+image:/post-images/2023/02/07/2023-02-07-jenkins-newsletter/centered-newsletter.png[Jenkins May Newsletter]
 
 == Key Takeaways
 
@@ -17,7 +17,7 @@ image:/images/post-images/2023/02/07/2023-02-07-jenkins-newsletter/centered-news
 * Ssh-agent release 5.0.0 introduces breaking changes.
 
 [[security-fixes]]
-image:/images/post-images/2023/01/12/jenkins-newsletter/security.png[Security Update]
+image:/post-images/2023/01/12/jenkins-newsletter/security.png[Security Update]
 
 Contributed by: author:wadeck[Wadeck Follonier]
 
@@ -29,7 +29,7 @@ Contributed by: author:wadeck[Wadeck Follonier]
 
 
 [[Governance]]
-image:/images/post-images/2023/01/12/jenkins-newsletter/governance.png[Governance Update]
+image:/post-images/2023/01/12/jenkins-newsletter/governance.png[Governance Update]
 
 Contributed by: author:markewaite[Mark Waite]
 
@@ -50,7 +50,7 @@ We're also excited to have additional efforts in:
 * Using GitHub autolink for easier references to Jenkins Jira tickets.
 
 [[infrastructure]]
-image:/images/post-images/2023/01/12/jenkins-newsletter/infrastructure.png[Infrastructure Update]
+image:/post-images/2023/01/12/jenkins-newsletter/infrastructure.png[Infrastructure Update]
 Contributed by: author:dduportal[Damien Duportal]
 
 * The Cloud Cost Controls effort has continued by optimizing resource usage, resulting in:
@@ -62,7 +62,7 @@ Contributed by: author:dduportal[Damien Duportal]
 * Build workload migration to `ARM64`: internal tools.
 
 [[modern-ui]]
-image:/images/post-images/2023/01/12/jenkins-newsletter/ui_ux.png[User Experience Update]
+image:/post-images/2023/01/12/jenkins-newsletter/ui_ux.png[User Experience Update]
 
 Contributed by: author:markewaite[Mark Waite]
 
@@ -75,7 +75,7 @@ Cristina Pizzagalli and Jan Faracik have both been working on improving accessib
 We particularly thank the usability and accessibility team at Deutsche Telekom IT GmbH for their jira:JENKINS-71153[accessibility assessment report].
 
 [[platform]]
-image:/images/post-images/2023/01/12/jenkins-newsletter/platform-modernization.png[Platform Modernization Update]
+image:/post-images/2023/01/12/jenkins-newsletter/platform-modernization.png[Platform Modernization Update]
 
 Contributed by: author:gounthar[Bruno Verachten]
 
@@ -105,7 +105,7 @@ Thank you, link:https://github.com/ksalerno99[Kenneth], for your valuable contri
 **** JDK8 support has been dropped in favor of JDK11 as the default for running Jenkins agents.
 
 [[documentation]]
-image:/images/post-images/2023/02/07/2023-02-07-jenkins-newsletter/documentation.png[Documentation Update]
+image:/post-images/2023/02/07/2023-02-07-jenkins-newsletter/documentation.png[Documentation Update]
 Contributed by: author:markewaite[Mark Waite]
 
 We're pleased to welcome several new documentation contributions, including our Google Summer of Code contributors:
@@ -121,11 +121,11 @@ We also welcomed first-time documentation contributors in May and are pleased to
 Thanks so much to our documentation contributors.
 
 [[outreach]]
-image:/images/post-images/2023/01/12/jenkins-newsletter/outreach-and-advocacy.png[Outreach and advocacy Update]
+image:/post-images/2023/01/12/jenkins-newsletter/outreach-and-advocacy.png[Outreach and advocacy Update]
 
 Contributed by: author:alyssat[Alyssa Tong]
 
-image:/images/post-images/2023/06/20/2023-06-20-jenkins-may-newsletter/image2.png[image,width=839,Jenkins Contributor Awards 2023]
+image:/post-images/2023/06/20/2023-06-20-jenkins-may-newsletter/image2.png[image,width=839,Jenkins Contributor Awards 2023]
 
 Every year, the community nominates and votes for three outstanding difference makers in the Jenkins community: Most Valuable Advocate, Security MVP, and Most Valuable Contributor.
 Congratulations go to:
@@ -138,7 +138,7 @@ Read what makes them link:/blog/2023/05/16/jenkins-2023-award-winners/[outstandi
 
 Many THANKS and congratulations to all award nominees!
 
-image:/images/post-images/2023/06/20/2023-06-20-jenkins-may-newsletter/image1.jpg[image,width=839,cdCon + GitOpsCon 2023]
+image:/post-images/2023/06/20/2023-06-20-jenkins-may-newsletter/image1.jpg[image,width=839,cdCon + GitOpsCon 2023]
 
 The link:https://cd.foundation/[Continuous Delivery Foundation (CDF)] hosted its fourth flagship event, cdCon, on May 8 – 9, 2023 in Vancouver, Canada as link:https://events.linuxfoundation.org/cdcon-gitopscon/[cdCon + GitOpsCon], co-organized with the link:https://cncf.io/[Cloud Native Computing Foundation (CNCF)].
 
@@ -151,7 +151,7 @@ In case you missed it, below are the recorded Jenkins sessions at cdCon:
 * link:https://youtu.be/9QBORPTbkaY[Intentional and Unintentional Compromises in Test Automation] - Mark Waite, Jenkins.
 * link:https://youtu.be/vz7_rAQz_9c[The Graduated Panel] https://cdcongitopscon2023.sched.com/?iframe=yes&w=100%&sidebar=yes&bg=no#[- Dan Garfield, Codefresh; Priyanka Ravi, Weaveworks; Mark Waite, CloudBees; Andrea Frittoli, IBM & Moderated by Lori Lorusso, JFrog].
 
-image:/images/post-images/2023/06/20/2023-06-20-jenkins-may-newsletter/image3.png[image,width=839,Google Summer of Code 2023]
+image:/post-images/2023/06/20/2023-06-20-jenkins-may-newsletter/image3.png[image,width=839,Google Summer of Code 2023]
 
 Jenkins welcomed four Google Summer of Code contributors to the family.
 Each contributor will be working hand in hand with their dedicated mentors.

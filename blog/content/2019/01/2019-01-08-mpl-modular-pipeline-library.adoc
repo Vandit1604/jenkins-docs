@@ -93,14 +93,14 @@ for their projects. They can also override and inherit the core MPL modules in a
 number of ways, or prepare custom modules which are easy to share with other
 teams. Check out the infographic below to see how modules fit in:
 
-image::/images/post-images/2019-01-08-mpl/fig01-layers-of-the-mpl.png["Fig 1. Layers of the MPL", 800, role=center]
+image::/post-images/2019-01-08-mpl/fig01-layers-of-the-mpl.png["Fig 1. Layers of the MPL", 800, role=center]
 
 You can also specify certain pipeline required poststeps in a module. For
 example, a dynamic deployment module creates the test environment, which needs
 to be destroyed when the pipeline ends. To take a closer look at the MPL calling
 process, check out the infographic below:
 
-image::/images/post-images/2019-01-08-mpl/fig02-the-mpl-process.png["Fig 2. The MPL process", 800, role=center]
+image::/post-images/2019-01-08-mpl/fig02-the-mpl-process.png["Fig 2. The MPL process", 800, role=center]
 
 This infographic shows how calls are executed in the MPL. First, you need a job
 on your Jenkins, which will call a Jenkinsfile (for example, when the source
@@ -155,7 +155,7 @@ them we can find Groovy files with the actual logic for the stages. This
 infographic is a good example of a simplified https://github.com/griddynamics/mpl/[MPL repository]
 structure:
 
-image::/images/post-images/2019-01-08-mpl/fig03-a-simplified-mpl-repository-structure.png["Fig 3. A simplified MPL repository structure", 800, role=center]
+image::/post-images/2019-01-08-mpl/fig03-a-simplified-mpl-repository-structure.png["Fig 3. A simplified MPL repository structure", 800, role=center]
 
 When the Checkout stage starts, `MPLModule` loads the module by name (by default
 a stage name), and runs the https://github.com/griddynamics/mpl/blob/master/resources/com/griddynamics/devops/mpl/modules/Checkout/Checkout.groovy[Checkout/Checkout.groovy]
@@ -277,14 +277,14 @@ somewhat standard pipeline, which creates extra work. The MPL solves such
 problems by introducing nested libraries. This infographic displays how a nested
 library compares to just using the main library:
 
-image::/images/post-images/2019-01-08-mpl/fig04-ways-to-use-the-mpl.png["Fig 4. Ways to use the MPL", 800, role=center]
+image::/post-images/2019-01-08-mpl/fig04-ways-to-use-the-mpl.png["Fig 4. Ways to use the MPL", 800, role=center]
 
 A nested library is the same as a shared library that imports the MPL and uses
 its functionality, modules, and pipelines. Also, it allows the separation of
 some team-related logic from the company common logic. Here is the structure of
 the MPL with nested libraries:
 
-image::/images/post-images/2019-01-08-mpl/fig05-example-of-a-companys-libraries-tree-structure.png["Fig 5. Example of company's libraries tree structure", 800, role=center]
+image::/post-images/2019-01-08-mpl/fig05-example-of-a-companys-libraries-tree-structure.png["Fig 5. Example of company's libraries tree structure", 800, role=center]
 
 You can import the MPL in the overridden pipeline, specify the path of some
 additional modules, override module logic, and use Jenkins power moves: there
@@ -312,7 +312,7 @@ good way to override the logic - you can just replace Build/Build.groovy with
 your own - as the functional module will be executed instead of the upper-level
 module. For example, this infographic shows module overriding:
 
-image::/images/post-images/2019-01-08-mpl/fig06-mpl-modules-overriding.png["Fig 6. MPL modules overriding", 800, role=center]
+image::/post-images/2019-01-08-mpl/fig06-mpl-modules-overriding.png["Fig 6. MPL modules overriding", 800, role=center]
 
 Even better, one of the strengths of the MPL is that you still can use the
 upper-level module! The MPL has mechanisms to prevent loops, so the same module
@@ -320,7 +320,7 @@ can’t be executed in the same executing branch again. However, you can easily
 call the original module a name from another module to use the upper-level
 logic.
 
-image::/images/post-images/2019-01-08-mpl/fig07-petclinic-selenium-example-pipeline-structure.png["Fig 7. Petclinic-Selenium example pipeline structure", 800, role=center]
+image::/post-images/2019-01-08-mpl/fig07-petclinic-selenium-example-pipeline-structure.png["Fig 7. Petclinic-Selenium example pipeline structure", 800, role=center]
 
 The Petclinic-Selenium example above uses the default `MPLPipeline` (you can
 find it on the https://github.com/griddynamics/mpl/wiki[MPL Wiki-page]), and

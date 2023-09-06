@@ -36,8 +36,8 @@ automatically "Clean after checkout".
 This time we already have a Pipeline checked in.
 I'll run it a few times to get a baseline.
 
-image::/images/post-images/2017-02-10/scripted-build.png[Stage view, role="center"]
-image::/images/post-images/2017-02-10/scripted-rcov.png[RCov Report, role="center"]
+image::/post-images/2017-02-10/scripted-build.png[Stage view, role="center"]
+image::/post-images/2017-02-10/scripted-rcov.png[RCov Report, role="center"]
 
 == Converting to Declarative
 
@@ -116,7 +116,7 @@ node { // <1>
 This overrides the default behavior from the Multibranch parent of this Pipeline.
 <4> Run the "Build" stage.
 
-image::/images/post-images/2017-02-10/declarative-build.png[Stage view, role="center"]
+image::/post-images/2017-02-10/declarative-build.png[Stage view, role="center"]
 
 Now that we have this Pipeline in Declarative form, let's take a minute to do a
 little clean up.  We'll split out the `bundle` actions a little more and move
@@ -171,7 +171,7 @@ pipeline {
 // Scripted //
 ----
 
-image::/images/post-images/2017-02-10/declarative-stages.png[Blue Ocean View, role="center"]
+image::/post-images/2017-02-10/declarative-stages.png[Blue Ocean View, role="center"]
 
 == Using `post` sections
 
@@ -296,7 +296,7 @@ this works as is.
 As you can see below, the Docker container spins up at the start of the run
 and the pipeline runs inside it.  Simple!
 
-image::/images/post-images/2017-02-10/declarative-docker.png[Docker Container Started, role="center"]
+image::/post-images/2017-02-10/declarative-docker.png[Docker Container Started, role="center"]
 
 
 == Conclusion

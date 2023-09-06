@@ -17,7 +17,7 @@ and presenting the process of software delivery by surfacing information that's
 important to development teams with as few clicks as possible, while still
 staying true to the extensibility that is core to Jenkins.
 
-image:/images/post-images/blueocean/pipeline-run.png[Pipeline execution, role=center]
+image:/post-images/blueocean/pipeline-run.png[Pipeline execution, role=center]
 
 
 While this project is in the alpha stage of development, the intent is that
@@ -50,7 +50,7 @@ the user experience very concise. A modern visual design gives developers much
 needed relief throughout their daily usage and screens respond instantly to
 changes on the server making manual page refreshes a thing of the past.
 
-image:/images/post-images/blueocean/pipeline-dashboard.png[Project dashboard, role=center]
+image:/post-images/blueocean/pipeline-dashboard.png[Project dashboard, role=center]
 
 
 === Advanced Pipeline visualisations with built-in failure diagnosis
@@ -62,7 +62,7 @@ pipeline – from the simple to the most sophisticated scenarios.
 Scrolling through 10,000 line log files is a thing of the past. Blue Ocean
 breaks down your log per step and calls out where your build failed.
 
-image:/images/post-images/blueocean/failing-pipeline.png[Failing Pipeline, role=center]
+image:/post-images/blueocean/failing-pipeline.png[Failing Pipeline, role=center]
 
 === Branch and Pull Request awareness
 
@@ -74,7 +74,7 @@ and start automating any  Branches and validating Pull Requests.
 Jenkins will report the status of your pipeline right inside Github or
 Bitbucket on all your commits, branches or pull requests.
 
-image:/images/post-images/blueocean/pr-view.png[Pull request view, role=center]
+image:/post-images/blueocean/pr-view.png[Pull request view, role=center]
 
 
 === Personalised View
@@ -85,7 +85,7 @@ that need your attention, say a Pipeline waiting for approval or a failing job
 that you have recently changed, appear on the top of the dashboard.
 
 
-image:/images/post-images/blueocean/personalized-dashboard.png[Personalized dashboard, role=center]
+image:/post-images/blueocean/personalized-dashboard.png[Personalized dashboard, role=center]
 
 
 You can read more about Blue Ocean and its goals on the

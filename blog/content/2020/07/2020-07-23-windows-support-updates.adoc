@@ -7,7 +7,7 @@ description: >
     We also discuss .NET Framework 2.0 support removal in Jenkins 2.248,
     and new Windows service management features introduced by this release.
 :page-opengraph:
-  image: /images/post-images/2020/07-windows-support-updates/:page-opengraph.png
+  image: /post-images/2020/07-windows-support-updates/:page-opengraph.png
 ---
 
 In this article, I would like to announce the new link:/doc/administration/requirements/windows/[Windows support policy] 
@@ -16,7 +16,7 @@ This policy sets an expectation about how we handle issues and patches related t
 We will also talk about .NET Framework 2.0 support removal in link:/changelog/#v2.248[Jenkins 2.248],
 and about new Windows service management features and fixes Jenkins users get with this release.
 
-image::/images/post-images/2020/07-windows-support-updates/header_image.png[title="Jenkins on Windows", align="center"]
+image::/post-images/2020/07-windows-support-updates/header_image.png[title="Jenkins on Windows", align="center"]
 
 == Why?
 
@@ -82,7 +82,7 @@ Please contact us via link:/sigs/platform/[Platform SIG] channels if you are int
 
 == Windows Service Management changes in Jenkins 2.248
 
-image::/images/post-images/2020/07-windows-support-updates/winsw-logo.png[title="WinSW Logo", float=right, width="224px"]
+image::/post-images/2020/07-windows-support-updates/winsw-logo.png[title="WinSW Logo", float=right, width="224px"]
 
 Although the policy was introduced more than 1 month ago,
 link:/changelog/#v2.248[Jenkins 2.248] is the first release where the new policy is applied.

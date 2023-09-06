@@ -40,11 +40,11 @@ enable this. A few examples:
 * We leveraged the Pipeline Remote File Loader plugin to write shared common
   code and sought and received community enhancements to these functions.
 
-image:/images/post-images/jw-speaker-blog-aquient/jw-speaker-blog-aquilent-1-1.png[role=center]
+image:/post-images/jw-speaker-blog-aquient/jw-speaker-blog-aquilent-1-1.png[role=center]
 
 _Jenkinsfile, loading a shared AWS utilities function library_
 
-image:/images/post-images/jw-speaker-blog-aquient/jw-speaker-blog-aquilent-2.png[role=center]
+image:/post-images/jw-speaker-blog-aquient/jw-speaker-blog-aquilent-2.png[role=center]
 
 _awsUtils.groovy, snippets of some AWS functions_
 
@@ -52,7 +52,7 @@ _awsUtils.groovy, snippets of some AWS functions_
   Elastic Container Service, allowing us to spin up new executors in seconds
   and for teams to own their own executor definitions.
 
-image:/images/post-images/jw-speaker-blog-aquient/jw-speaker-blog-aquilent-3.png[role=center]
+image:/post-images/jw-speaker-blog-aquient/jw-speaker-blog-aquilent-3.png[role=center]
 
 Pipeline run #1 using standard EC2 executors, spinning up EC2 instance for each
 node; Pipeline run #2 using shared ECS cluster with near-instant instantiation
@@ -82,7 +82,7 @@ a pipeline full of many 'input' steps at first, and then used the data we
 collected around the longest delays to bring management focus to them and unite
 everyone around the goal of strategically removing them, one by one.
 
-image:/images/post-images/jw-speaker-blog-aquient/jw-speaker-blog-aquilent-4.png[role=center]
+image:/post-images/jw-speaker-blog-aquient/jw-speaker-blog-aquilent-4.png[role=center]
 
 
 image:/images/conferences/Jenkins-World_125x125.png[role=right]

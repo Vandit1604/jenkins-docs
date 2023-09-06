@@ -4,7 +4,7 @@
 :page-author: romenrg
 description: "From ticket to PR to release - fixing an issue in Jenkins core"
 :page-opengraph:
-  image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
+  image: /post-images/2019-05-30-becoming-contributor/pr-merged.png
 ---
 
 Two months ago I published an link:/blog/2019/03/29/becoming-contributor-intro/[introductory article] on
@@ -34,7 +34,7 @@ https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20i
 the best idea.
 
 .Screenshot displaying the list of newbie-friendly tickets in the Jenkins Jira
-image::/images/post-images/2019-05-30-becoming-contributor/list-newbie-tickets.png[]
+image::/post-images/2019-05-30-becoming-contributor/list-newbie-tickets.png[]
 
 == Selecting a ticket
 
@@ -42,7 +42,7 @@ In my case, I spent some time reviewing the `newbie-friendly` tickets, until htt
 that seemed interesting to me and also looked like something I would be able to fix:
 
 .Screenshot of the ticket I decided to work on
-image::/images/post-images/2019-05-30-becoming-contributor/jenkins-newbie-jira-ticket-selected.png[]
+image::/post-images/2019-05-30-becoming-contributor/jenkins-newbie-jira-ticket-selected.png[]
 
 == Processes
 
@@ -125,7 +125,7 @@ that was supposed to be failing.
 When I clicked on the “Select all” option at the bottom, this is what I got:
 
 .Screenshot showing the error, reproduced locally, after clicking “Select All”
-image::/images/post-images/2019-05-30-becoming-contributor/jenkins-plugin-manager-updates-selected-bottom.png[]
+image::/post-images/2019-05-30-becoming-contributor/jenkins-plugin-manager-updates-selected-bottom.png[]
 
 As it had been reported in the ticket, the behavior was inconsistent. In a previous version, the behavior of the “_All_”
 selector had been changed (with the best intent), aiming to only check the compatible plugins. However, as can be seen
@@ -174,7 +174,7 @@ After the changes described above, the resulting UI includes a new option, and t
 selectors work as expected:
 
 .Screenshot of the new version, displaying the behavior achieved by clicking the new “Compatible” selector
-image::/images/post-images/2019-05-30-becoming-contributor/fixed-select-compatible.png[]
+image::/post-images/2019-05-30-becoming-contributor/fixed-select-compatible.png[]
 
 == Publishing the change
 
@@ -194,7 +194,7 @@ checklist and added three desired reviewers (explaining why I thought their revi
 the original PR that was referenced in the ticket, to provide further context.
 
 .Screenshot of the PR I submitted
-image::/images/post-images/2019-05-30-becoming-contributor/pr-created.png[]
+image::/post-images/2019-05-30-becoming-contributor/pr-created.png[]
 
 == The approve and merge process
 
@@ -214,7 +214,7 @@ to which Daniel’s final approval was added, leading the PR to be labeled `read
 day (April 26th).
 
 .Screenshot of the final state of the PR, after being merged
-image::/images/post-images/2019-05-30-becoming-contributor/pr-merged.png[]
+image::/post-images/2019-05-30-becoming-contributor/pr-merged.png[]
 
 == Release
 

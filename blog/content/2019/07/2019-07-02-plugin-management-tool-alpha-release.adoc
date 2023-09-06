@@ -29,15 +29,15 @@ and/or urls from which to download the plugins, and downloads the requested plug
 to a specified directory, and can then be loaded into Jenkins. Currently, the plugins to be downloaded can be specified via a plugins.txt file and/or the -plugins cli option, but we plan to further expand the input formats that can be accepted.
 link:https://github.com/jenkinsci/docker#plugin-version-format[Custom version specifiers] for different update centers are also supported.
 
-image::/images/post-images/gsoc-plugin-management-tool/pluginstxt.png[Example plugins.txt File]
+image::/post-images/gsoc-plugin-management-tool/pluginstxt.png[Example plugins.txt File]
 
 The library will first check if any of the requested plugins are currently either installed in the user-specified download location or user-specified Jenkins war file.
 Already installed plugins will be ignored or upgraded if a higher version is requested or required as a dependency.  After determining the plugin download URL, the library
 will download the plugins and resolve and download their dependencies.
 
-image::/images/post-images/gsoc-plugin-management-tool/downloadexample.png[Example of Downloading Plugins]
+image::/post-images/gsoc-plugin-management-tool/downloadexample.png[Example of Downloading Plugins]
 
-image::/images/post-images/gsoc-plugin-management-tool/downloadedplugins.png[Plugin Download Directory]
+image::/post-images/gsoc-plugin-management-tool/downloadedplugins.png[Plugin Download Directory]
 
 This is just the beginning: the plugin manager library and cli tool are very much still a work in progress.
 For the most up-to-date information on CLI options and how to run the tool, see the https://github.com/jenkinsci/plugin-installation-manager-tool/blob/master/README.md[repository README.md].

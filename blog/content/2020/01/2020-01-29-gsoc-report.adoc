@@ -3,7 +3,7 @@
 
 :page-author: martinda, jeffpearce, oleg_nenashev ,markyjackson-taulia
 :page-opengraph:
-  image: /images/post-images/2020/01-gsoc2019-report/gsoc2019-highlights.png
+  image: /post-images/2020/01-gsoc2019-report/gsoc2019-highlights.png
 ---
 
 Google Summer of Code is much more than a summer internship program, it is a year-round effort for the organization and some community members.
@@ -23,7 +23,7 @@ link:/projects/gsoc/2019/remoting-over-apache-kafka-docker-k8s-features[Remoting
 link:/projects/gsoc/2019/gitlab-support-for-multibranch-pipeline[Multi-branch Pipeline support for Gitlab SCM].
 We will talk about the projects a little later in the document.
 
-image::/images/post-images/2020/01-gsoc2019-report/gsoc2019-highlights.png[Highlights, role=center]
+image::/post-images/2020/01-gsoc2019-report/gsoc2019-highlights.png[Highlights, role=center]
 
 == Project details
 
@@ -57,7 +57,7 @@ During his project Abhyudaya also fixed the Jenkins Configuration-as-Code suppor
 * Final evaluation:  link:https://drive.google.com/file/d/1lAXDljWXypCq6noiqPHI-eZJqBqaSYue/view?usp=sharing[slides], link:https://youtu.be/g19o24uzy6c?t=1234[video]
 * Source code: link:https://github.com/jenkinsci/role-strategy-plugin[Role Strategy Plugin], link:https://github.com/jenkinsci/folder-auth-plugin[Folder Authorization Plugin]
 
-image:/images/post-images/role-strategy-performance/benchmarks2.png[Role strategy performance improvements, role=center]
+image:/post-images/role-strategy-performance/benchmarks2.png[Role strategy performance improvements, role=center]
 
 == Plugins Installation Manager CLI Tool/Library
 
@@ -75,7 +75,7 @@ link:/blog/2019/07/30/plugin-management-tool-phase2-updates/[coding phase 2 upda
 link:https://youtu.be/g19o24uzy6c?t=431[video]
 * Source code: link:https://github.com/jenkinsci/plugin-installation-manager-tool[Plugin installation manager tool]
 
-image::/images/post-images/gsoc-plugin-management-tool/yamlexample.png[Plugin Manager Tool YAML file, role=center]
+image::/post-images/gsoc-plugin-management-tool/yamlexample.png[Plugin Manager Tool YAML file, role=center]
 
 == Working Hours Plugin - UI Improvements
 
@@ -91,7 +91,7 @@ link:/blog/2019/08/23/introduce-react-plugin-template/[React Plugin Template]
 * Final evaluation: link:https://docs.google.com/presentation/d/1txLbDliqsZhbKvKR7RBFLue0kvLIcoRpXpB1MthWonI/edit#slide=id.p1[slides], link:https://youtu.be/g19o24uzy6c?t=2493[video]
 * Source code: link:https://github.com/jenkinsci/working-hours-plugin[Working Hours Plugin], link:https://github.com/jenkinsci/react-plugin-template[Template for Jenkins plugins with React-based UI]
 
-image::/images/post-images/working-hours/working-hours-example-time-range.png[Web UI controls in React, role=center]
+image::/post-images/working-hours/working-hours-example-time-range.png[Web UI controls in React, role=center]
 
 == Remoting over Apache Kafka with Kubernetes features
 
@@ -107,7 +107,7 @@ All these features were released in link:/blog/2019/08/19/remoting-kafka-kuberne
 * Final evaluation: link:https://docs.google.com/presentation/d/1QMjeAt6on3RPQdjlz4SiFg8YgpJ2xNOQhfzXDWgn2AY/[slides], link:https://youtu.be/g19o24uzy6c?t=3685[video]
 * link:https://github.com/jenkinsci/remoting-kafka-plugin[Plugin source code]
 
-image::/images/post-images/remoting-kafka/helm-chart.png[Jenkins in Kubernetes with Apache Kafka, role=center]
+image::/post-images/remoting-kafka/helm-chart.png[Jenkins in Kubernetes with Apache Kafka, role=center]
 
 == Multi-branch Pipeline support for Gitlab SCM
 
@@ -126,7 +126,7 @@ read more about this project in the link:/blog/2019/08/23/introducing-gitlab-bra
 * link:https://docs.google.com/presentation/d/1avMoEPMf5Ksc99106fv7bGikAh17GQZJZdwUWKOzYBY/[Coding phase 3 presentation]
 * link:https://github.com/jenkinsci/gitlab-branch-source-plugin/[Gitlab Branch Source Plugin], link:https://github.com/jenkinsci/gitlab-api-plugin[Gitlab API plugin]
 
-image::/images/post-images/gsoc-gitlab-branch-source-plugin/multibranch-folder.png[Gitlab Multi-branch Pipeline support, role=center]
+image::/post-images/gsoc-gitlab-branch-source-plugin/multibranch-folder.png[Gitlab Multi-branch Pipeline support, role=center]
 
 == Projects which were not completed
 
@@ -227,7 +227,7 @@ This year, we collected all the mailing addresses we could and sent to everyone 
 This was a great feel good moment.
 I want to personally thank Alyssa Tong her help on setting aside the t-shirt and stickers.
 
-image:/images/post-images/2020/01-gsoc2019-report/swag-before-shipping.jpg[width=400]
+image:/post-images/2020/01-gsoc2019-report/swag-before-shipping.jpg[width=400]
 
 == Mentor summit
 
@@ -239,7 +239,7 @@ and we sent link:https://github.com/markyjackson-taulia[Marky Jackson] and link:
 Apart from discussing projects and sharing chocolate, we also presented Jenkins there, conducted a lightning talk and hosted the unconference session about automation bots for GitHub.
 We did not make a team photo there, so try to find Oleg and Marky on this photo:
 
-image:/images/post-images/2020/01-gsoc2019-report/gsoc2019-mentor-summit.jpg[GSoC2019 Mentor summit, role=center]
+image:/post-images/2020/01-gsoc2019-report/gsoc2019-mentor-summit.jpg[GSoC2019 Mentor summit, role=center]
 
 == GSoC Team at DevOps World | Jenkins World
 
@@ -252,8 +252,8 @@ Thanks a lot to Google and CloudBees who made these trips possible.
 You can find a travel report from Natasha Stopa link:/blog/2019/08/22/devops-world/[here],
 more travel reports are coming soon.
 
-image:/images/post-images/2020/01-gsoc2019-report/gsoc2019-team-jw-us.jpg[width=500]
-image:/images/post-images/2020/01-gsoc2019-report/gsoc2019-team-jw-lisbon.jpg[width=500]
+image:/post-images/2020/01-gsoc2019-report/gsoc2019-team-jw-us.jpg[width=500]
+image:/post-images/2020/01-gsoc2019-report/gsoc2019-team-jw-lisbon.jpg[width=500]
 
 == Conclusion
 

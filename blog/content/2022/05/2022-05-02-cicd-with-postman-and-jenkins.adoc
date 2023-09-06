@@ -5,7 +5,7 @@
 description: >
   This blogpost highlights the new Jenkins CICD integration in Postman.
 :page-opengraph:
-  image: /images/post-images/2022-05-02-cicd-with-postman-and-jenkins/jenkinspostman.jpg
+  image: /post-images/2022-05-02-cicd-with-postman-and-jenkins/jenkinspostman.jpg
   note: "Guest blog post"
 ---
 
@@ -23,7 +23,7 @@ With the Jenkins Integration, the build information can now be seen within Postm
 This allows you to actively monitor your API builds along with the other components of the API.
 You can also trigger a build from Postman itself, allowing you to quickly test any changes in the API.
 
-image:/images/post-images/2022-05-02-cicd-with-postman-and-jenkins/jenkinsbuilds.png[pluginView]
+image:/post-images/2022-05-02-cicd-with-postman-and-jenkins/jenkinsbuilds.png[pluginView]
 
 == Get automation test reports from anywhere in Postman
 
@@ -36,6 +36,6 @@ With the latest release, you now get the reports of automation tests running any
 The link:https://www.npmjs.com/package/newman-reporter-postman-cloud[Newman reporter] posts the results as a link:https://learning.postman.com/docs/running-collections/intro-to-collection-runs/[collection run] in the link:https://learning.postman.com/docs/getting-started/navigating-postman/#history[History].
 The results can also be seen combined with your build reports from the CI/CD, giving you a single place to analyze your builds and associated tests.
 
-image:/images/post-images/2022-05-02-cicd-with-postman-and-jenkins/newmanruns.gif[pluginView]
+image:/post-images/2022-05-02-cicd-with-postman-and-jenkins/newmanruns.gif[pluginView]
 
 A version of this post appeared on the link:https://blog.postman.com/stay-on-top-of-your-api-builds-witih-postmans-jenkins-integration/[Postman Blog].

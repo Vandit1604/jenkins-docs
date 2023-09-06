@@ -15,7 +15,7 @@ continuous integration, deployment and testing pipelines by up to 90% on Spot in
 the current savings on Spot instances over EC2 On-demand instances using the
 https://aws.amazon.com/ec2/spot/bid-advisor/[Spot Bid Advisor^]:
 
-image:/images/post-images/aws/bidadvisor.png[role=center]
+image:/post-images/aws/bidadvisor.png[role=center]
 
 AWS Spot instances are spare EC2 instances that you can bid on. While your Spot instances may be
 terminated when EC2’s spare capacity declines, you can automatically replenish these instances and
@@ -41,7 +41,7 @@ provisions the most cost-effective EC2 Spot instances, and replenishes them if i
 target capacity, choose an AMI, and select multiple instance types to automatically provision the lowest priced
 instances available.
 
-image:/images/post-images/aws/wDW63sm.jpg[role=center]
+image:/post-images/aws/wDW63sm.jpg[role=center]
 
 On the next page, ensure that you have selected a key pair, complete the launch wizard, and note the Spot
 fleet request ID.
@@ -57,32 +57,32 @@ Install the Plugin
 From the Jenkins dashboard, select *Manage Jenkins*, and then click *Manage Plugins*. On the *Available* tab,
 search for and select the _EC2 Fleet Jenkins Plugin_. Then click the *Install* button.
 
-image:/images/post-images/aws/iOfvSD8.jpg[role=center]
+image:/post-images/aws/iOfvSD8.jpg[role=center]
 
 After the plugin installation is completed, select *Manage Jenkins* from the Jenkins dashboard, and
 click *Configure System*. In the *Cloud* section, select _Amazon Spot Fleet_ to add a new Cloud.
 
-image:/images/post-images/aws/MtvaRLU.jpg[role=center]
+image:/post-images/aws/MtvaRLU.jpg[role=center]
 
 Configure AWS Credentials
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 Next, we will configure the AWS and agent node credentials. Click the *Add* button next to AWS Credentials,
 select Jenkins, and enter your AWS Access Key, secret, and ID.
 
-image:/images/post-images/aws/oCkHRu5.jpg[role=center]
-image:/images/post-images/aws/Mh9TabQ.jpg[role=center]
+image:/post-images/aws/oCkHRu5.jpg[role=center]
+image:/post-images/aws/Mh9TabQ.jpg[role=center]
 
 Next, click the *Add* button in the Spot fleet launcher to configure your agents with an SSH key.
 Select Jenkins, and enter the username and private key (from the key pair you configured in your Spot fleet request)
 as shown below.
 
-image:/images/post-images/aws/EuPvQdU.jpg[role=center]
+image:/post-images/aws/EuPvQdU.jpg[role=center]
 
 Confirm that the AWS and SSH credentials you just added are selected. Then choose the region, and the Spot fleet
 request ID from the drop-down. You can also enter the maximum idle time before your cluster automatically scales
 down, and the maximum cluster size that it can scale up to.
 
-image:/images/post-images/aws/fk65vh7.jpg[role=center]
+image:/post-images/aws/fk65vh7.jpg[role=center]
 
 Submit Jobs and View Status
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -92,7 +92,7 @@ nodes. You can view these new nodes executing jobs under the Build Executor Stat
 After the jobs are done, if the nodes remain free for the specified idle time (configured in the previous step),
 then Jenkins releases the nodes, automatically scaling down your Spot fleet nodes.
 
-image:/images/post-images/aws/P2eIB08.jpg[role=center]
+image:/post-images/aws/P2eIB08.jpg[role=center]
 
 
 Build faster and cheaper

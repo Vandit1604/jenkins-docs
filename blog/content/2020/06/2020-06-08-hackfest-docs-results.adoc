@@ -5,7 +5,7 @@
 links:
   gitter: jenkins/docs:matrix.org
 :page-opengraph:
-  image: /images/post-images/2020-06-08-docs-from-hackfest/docs-from-hackfest-:page-opengraph.png
+  image: /post-images/2020-06-08-docs-from-hackfest/docs-from-hackfest-:page-opengraph.png
 ---
 
 > Documentation is not glamorous, but it is goodness.
@@ -19,7 +19,7 @@ In the recent Jenkins UI/UX hackfest, documentation was a specific track to impr
 We received many improvements from experienced Jenkins contributors and newcomers alike.
 Contributors from all around the world submitted pull requests for documentation on installing, managing, administering, and operating Jenkins.
 
-image:/images/post-images/2020-06-08-docs-from-hackfest/contributions-by-country.png[Contributors to Docs by country]
+image:/post-images/2020-06-08-docs-from-hackfest/contributions-by-country.png[Contributors to Docs by country]
 
 == Documentation migration from Wiki
 
@@ -43,7 +43,7 @@ New contributors used the "good first issue" label very effectively.
 We started the Hackfest with most of the 25 "good first issues" unassigned and completed the Hackfest with 14 closed and 10 others in progress.
 We'll provide more "good first issues" as we use the Jenkins Wiki migration to welcome new documentation contributors.
 
-image:/images/post-images/2020-06-08-docs-from-hackfest/sample-pages.png[Sample Hackfest documentation pages]
+image:/post-images/2020-06-08-docs-from-hackfest/sample-pages.png[Sample Hackfest documentation pages]
 
 == Migrating plugin documentation
 
@@ -61,7 +61,7 @@ Hackfest participants submitted pull requests to migrate plugin documentation to
 In the spirit of fun and adventure, Oleg Nenashev migrated the "Chuck Norris plugin" to GitHub documentation as code in a link:https://www.youtube.com/watch?v=BaEJ8v7INNQ[live Hackfest presentation May 26, 2020].
 Links to the recording, the plugin migration guide, and the export tool are available from link:https://github.com/jenkinsci/ui-ux-hackfest-2020/tree/master/presentations/04-migrating-plugin-docs["Migrating plugins to documentation-as-code"].
 
-image:/images/post-images/2020-06-08-docs-from-hackfest/chuck-norris-docs-as-code.png[Chuck Norris plugin uses documentation-as-code]
+image:/post-images/2020-06-08-docs-from-hackfest/chuck-norris-docs-as-code.png[Chuck Norris plugin uses documentation-as-code]
 
 == Documentation updates
 
@@ -72,7 +72,7 @@ As part of the Hackfest, we've started a series of improvements to the solution 
 The link:/solutions/[Docker solutions page] now includes updated videos and a better page layout for easier reading and better navigation.
 Other solution pages will receive similar improvements in the future.
 
-image:/images/post-images/2020-06-08-docs-from-hackfest/jenkins-and-docker.png[Jenkins and Docker]
+image:/post-images/2020-06-08-docs-from-hackfest/jenkins-and-docker.png[Jenkins and Docker]
 
 == System properties
 
@@ -82,7 +82,7 @@ System properties can change system defaults and can provide compatibility "esca
 Daniel Beck has improved the navigation and user experience of the system properties page as part of the Hackfest.
 It is now much easier to read and to reference, with embeddable links available with a mouse-over to the right of every property and labels that categorize and classify each property.
 
-image:/images/post-images/2020-06-08-docs-from-hackfest/system-properties.png[System Properties]
+image:/post-images/2020-06-08-docs-from-hackfest/system-properties.png[System Properties]
 
 == Plugin site improvements
 
@@ -91,7 +91,7 @@ Once this pull request is merged, it will greatly improve the experience of thos
 
 Example of the incoming UI for the Jira plugin:
 
-image:/images/post-images/2020-06-08-docs-from-hackfest/plugins-site.png[Plugins Site]
+image:/post-images/2020-06-08-docs-from-hackfest/plugins-site.png[Plugins Site]
 
 == What's next?
 

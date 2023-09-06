@@ -11,15 +11,15 @@ This blog post is about our coding phase 1 progress on GSoC project: link:/proje
 The GitHub Checks API is a highly customized way to integrate CI tools to make reports for pull-requests (PRs). 
 It allows users to see CI reports on GitHub pages directly.
 
-image::/images/post-images/2020/07-github-checks-api-plugin-coding-phase-1/github-check-run.png[title="GitHub Check Run Screenshot from GitHub Docs"]
+image::/post-images/2020/07-github-checks-api-plugin-coding-phase-1/github-check-run.png[title="GitHub Check Run Screenshot from GitHub Docs"]
 
 What's more exciting is that it can leave annotations on specific lines of code, just as the comments people left while reviewing.
 
-image::/images/post-images/2020/07-github-checks-api-plugin-coding-phase-1/github-check-annotations.png[title="Check Run Annotation Screenshot from GitHub Docs"]
+image::/post-images/2020/07-github-checks-api-plugin-coding-phase-1/github-check-annotations.png[title="Check Run Annotation Screenshot from GitHub Docs"]
 
 While on Jenkins' side, the source code view provided by link:https://plugins.jenkins.io/warnings-ng/[Warnings Next Generation Plugin] does pretty much the same thing.
 
-image::/images/post-images/2020/07-github-checks-api-plugin-coding-phase-1/source-view.png[title="Source Code View from Warnings Next Generation Plugin"]
+image::/post-images/2020/07-github-checks-api-plugin-coding-phase-1/source-view.png[title="Source Code View from Warnings Next Generation Plugin"]
 
 Utilizing such features through GitHub Checks API, it would make Jenkins more convenient to GitHub users.
 
@@ -43,7 +43,7 @@ After the release, Jenkins developers (especially publisher plugin ones) can cre
 
 **Example:** To create a check run like:
 
-image:/images/post-images/2020/07-github-checks-api-plugin-coding-phase-1/created-check-run.png[Created Check Run]
+image:/post-images/2020/07-github-checks-api-plugin-coding-phase-1/created-check-run.png[Created Check Run]
 
 Consumers need to use our API in this way:
 

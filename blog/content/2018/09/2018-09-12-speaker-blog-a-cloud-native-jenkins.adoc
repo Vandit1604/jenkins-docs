@@ -77,7 +77,7 @@ Standard event handlers like Prow can invoke the builds on webhooks and report r
 so that the single-shot controller can be used to build pull requests or to run Continuous Delivery flows.
 Extra agents could also be connected to the controller on-demand, using the Kubernetes plugin or sidecar containers.
 
-image::/images/post-images/2018-09-12-cloud-native-jenkins/single-shot-master-schema.png[Single-shot controller concept, link="https://www.cloudbees.com/devops-world"]
+image::/post-images/2018-09-12-cloud-native-jenkins/single-shot-master-schema.png[Single-shot controller concept, link="https://www.cloudbees.com/devops-world"]
 
 == Tools
 

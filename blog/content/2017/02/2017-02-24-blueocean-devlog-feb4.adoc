@@ -31,14 +31,14 @@ embedded below.
 * You can now create Pipelines from GitHub in Blue Ocean. Either one
   Pipeline at a time, or let it discover all your Pipelines for a GitHub Organization.
 
-image:/images/post-images/blueocean-dev-log/creating-pipeline-from-github.png["Creating a Pipeline from GitHub", role=center]
+image:/post-images/blueocean-dev-log/creating-pipeline-from-github.png["Creating a Pipeline from GitHub", role=center]
 
 * When you press the "Create" button, it will open the new creation flow
   by default now; the feature was previously hidden behind a feature switch.
 * You can filter the activity screen by branch! That way you can see a
   history of Pipeline runs for just one branch.
 
-image::/images/post-images/blueocean-dev-log/branch-filtering.png["Filtering a branch", role=center]
+image::/post-images/blueocean-dev-log/branch-filtering.png["Filtering a branch", role=center]
 
 * If you like long names for stages - it now won't pollute the screen
   when space is at a premium (truncated names on screen).

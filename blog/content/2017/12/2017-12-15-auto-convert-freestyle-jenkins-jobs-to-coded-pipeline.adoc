@@ -44,12 +44,12 @@ Now, let’s take a look at how to get started:
 
 . Click on a link at Root level or Folder level or Job level.
 +
-image::/images/post-images/freestyle-converter/Image01-Jenkins-Pipeline-Infostretch.png[role=middle]
+image::/post-images/freestyle-converter/Image01-Jenkins-Pipeline-Infostretch.png[role=middle]
 +
 . Select the job from the drop-down list that is the beginning point of the
 "chain". If job level link is clicked, this drop-down list will not be visible.
 +
-image::/images/post-images/freestyle-converter/Image02-Jenkins-Pipeline-Infostretch.png[role=middle]
+image::/post-images/freestyle-converter/Image02-Jenkins-Pipeline-Infostretch.png[role=middle]
 +
 Provide the new pipeline job name. If this is not specified, the plugin will
 attempt to create a new pipeline job with the naming convention of

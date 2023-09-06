@@ -34,7 +34,7 @@ branch of
 link:https://github.com/bitwiseman/junit-plugin[my fork] of the JUnit plugin.
 I'm going to set up a Multi-branch Pipeline and point it at my repository.
 
-image::/images/post-images/2017-02-07/junit-config.png[JUnit Multi-branch Pipeline Configuration, role="center"]
+image::/post-images/2017-02-07/junit-config.png[JUnit Multi-branch Pipeline Configuration, role="center"]
 
 I've also set this Pipeline's Git configuration to automatically "clean after
 checkout" and to only keep the ten most recent runs.
@@ -83,7 +83,7 @@ Once I add the Pipeline above to my `Jenkinsfile` and run "Branch Indexing", my
 Jenkins will pick it up and run run it.  We see that the Declarative Pipeline
 has added stage called "Declarative: Checkout SCM":
 
-image::/images/post-images/2017-02-07/junit-minimal.png[Minimal Declarative Pipeline, role="center"]
+image::/post-images/2017-02-07/junit-minimal.png[Minimal Declarative Pipeline, role="center"]
 
 This a "dynamic stage", one of several the kinds that Declarative Pipeline adds
 as needed for clearer reporting.  In this case, it is a stage in which the
@@ -172,7 +172,7 @@ the Declarative Pipeline has added another stage called "Declarative: Tool
 Install": In the console output, we see that during this particular stage "Maven 3.3.9" gets installed,
 and the `PATH` and `M2_HOME` environment variables are set:
 
-image::/images/post-images/2017-02-07/junit-tools.png[Declarative Pipeline with Tools Section, role="center"]
+image::/post-images/2017-02-07/junit-tools.png[Declarative Pipeline with Tools Section, role="center"]
 
 .Console Output
 [source]

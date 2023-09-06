@@ -68,7 +68,7 @@ Then, the user can click on a button to have Jenkins automatically generate the 
 The DSL code can be copied from there and pasted into the pipeline script.
 
 .The Snippet Generator
-image::/images/post-images/2018-08-17/figure1.png[The Snippet Generator, 800]
+image::/post-images/2018-08-17/figure1.png[The Snippet Generator, 800]
 
 
 A second type of syntax is called “declarative syntax.”  We won’t go into detail on it here.
@@ -86,7 +86,7 @@ Immediately below the box for the generated pipeline script is a section titled 
 There, within the small print, is a link to get to the actual section (figure 2).
 
 .Link to Global Variables Reference section.
-image::/images/post-images/2018-08-17/figure2.png[Link to Global Variables Reference section]
+image::/post-images/2018-08-17/figure2.png[Link to Global Variables Reference section]
 
 
 Clicking on that link takes us to a list of currently available Global Variables.
@@ -94,7 +94,7 @@ If you have the Docker Pipeline Plugin installed, you will see one at the top fo
 
 
 .Docker global variable specifics.
-image::/images/post-images/2018-08-17/figure3.png[Docker global variable specifics, 800]
+image::/post-images/2018-08-17/figure3.png[Docker global variable specifics, 800]
 
 
 Broadly, the docker global variable includes methods that can be applied to the Docker application, Docker images, and Docker containers.
@@ -102,7 +102,7 @@ Broadly, the docker global variable includes methods that can be applied to the 
 We’ll focus first on a couple of the Docker image methods as shown in figure 4.
 
 .Key methods for getting a Docker image.
-image::/images/post-images/2018-08-17/figure4.png[Key methods for getting a Docker image]
+image::/post-images/2018-08-17/figure4.png[Key methods for getting a Docker image]
 
 
 There are multiple ways you can use these methods to create a new image.
@@ -144,7 +144,7 @@ Figure 5 shows the actual output from running that “Build image” stage.
 Note that the docker.build step was translated into an actual Docker build command.
 
 .Actual Docker output from running the download and build
-image::/images/post-images/2018-08-17/figure5.png[Actual Docker output from running the download and build]
+image::/post-images/2018-08-17/figure5.png[Actual Docker output from running the download and build]
 
 
 == The Inside Command
@@ -191,7 +191,7 @@ Listing 5: Example inside method usage.
 
 
 .Example inside method Docker command output.
-image::/images/post-images/2018-08-17/figure6.png[Example inside method Docker command output, 800]
+image::/post-images/2018-08-17/figure6.png[Example inside method Docker command output, 800]
 
 Once completed, the inside step will stop the container,
 get rid of the storage, and create a record that this image was used for the build.

@@ -4,7 +4,7 @@
 :page-author: asavanchuk
 description: Report code coverage changes in pull requests
 :page-opengraph:
-  image: /images/post-images/2019-07-21-Jenkins-code-coverage-diff-for-pull-request/increase.png
+  image: /post-images/2019-07-21-Jenkins-code-coverage-diff-for-pull-request/increase.png
 ---
 
 Hello.
@@ -20,10 +20,10 @@ When you build a PR in Jenkins, using plugins like link:https://plugins.jenkins.
 That it how it looks like:
 
 .Decreased coverage
-image:/images/post-images/2019-07-21-Jenkins-code-coverage-diff-for-pull-request/decrease.png[]
+image:/post-images/2019-07-21-Jenkins-code-coverage-diff-for-pull-request/decrease.png[]
 
 .Increased coverage
-image:/images/post-images/2019-07-21-Jenkins-code-coverage-diff-for-pull-request/increase.png[]
+image:/post-images/2019-07-21-Jenkins-code-coverage-diff-for-pull-request/increase.png[]
 
 == How to enable code coverage diff for pull requests
 

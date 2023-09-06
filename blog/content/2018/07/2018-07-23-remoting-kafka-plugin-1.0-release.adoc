@@ -39,7 +39,7 @@ The project consists of multiple components:
 * All the components are packaged together with Docker Compose.
 
 The below diagram is the overview of the current architecture:
-image:/images/post-images/remoting-kafka/remoting-kafka-architecture.png[title="Remoting Kafka Plugin Current Architecture", role="center"]
+image:/post-images/remoting-kafka/remoting-kafka-architecture.png[title="Remoting Kafka Plugin Current Architecture", role="center"]
 
 With this design, controller is not communicating with agent using direct TCP communication anymore, all the communication commands are transferred with Kafka.
 
@@ -47,19 +47,19 @@ With this design, controller is not communicating with agent using direct TCP co
 The project is now under the third coding phase and we have some features available in 1.0 release.
 
 === 1. Kafka Global Configuration with support of credentials plugin to store secrets.
-image:/images/post-images/remoting-kafka/remoting-kafka-configuration.png[title="Remoting Kafka Plugin Global Configuration", role="center"]
+image:/post-images/remoting-kafka/remoting-kafka-configuration.png[title="Remoting Kafka Plugin Global Configuration", role="center"]
 
 === 2. Launch agent with Kafka Launcher.
-image:/images/post-images/remoting-kafka/launch-agent-kafka.png[title="Launch agent with Kafka Launcher", role="center"]
+image:/post-images/remoting-kafka/launch-agent-kafka.png[title="Launch agent with Kafka Launcher", role="center"]
 
 === 3. Launch agent from CLI using agent JAR with secret provided to ensure security.
-image:/images/post-images/remoting-kafka/agent-cli.png[title="Command to run agent in CLI", role="center"]
+image:/post-images/remoting-kafka/agent-cli.png[title="Command to run agent in CLI", role="center"]
 
 === 4. Run jobs, pipeline using Kafka agent.
-image:/images/post-images/remoting-kafka/demo-jobs.png[title="Run jobs, pipeline using Kafka agent", role="center"]
+image:/post-images/remoting-kafka/demo-jobs.png[title="Run jobs, pipeline using Kafka agent", role="center"]
 
 === 5. Kafka communication between controller and agent.
-image:/images/post-images/remoting-kafka/kafka-commands.png[title="Kafka communication between controller and agent", role="center"]
+image:/post-images/remoting-kafka/kafka-commands.png[title="Kafka communication between controller and agent", role="center"]
 
 Remoting operations are being executed over Kafka. In the log you may see:
 

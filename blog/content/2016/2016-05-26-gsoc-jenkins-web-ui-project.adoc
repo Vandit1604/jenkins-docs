@@ -37,7 +37,7 @@ time name check for invalid characters.
 
 *Popup window*
 
-image:/images/post-images/gsoc-job-config/popup-window.gif[Popup window, role=center]
+image:/post-images/gsoc-job-config/popup-window.gif[Popup window, role=center]
 
 Jenkins has a lot of windows reloads that may time consuming. The creation of
 new job is a simple process requiring only job name and job type. This way UI
@@ -50,7 +50,7 @@ sending a POST request to create the job.
 
 *Changing help information*
 
-image:/images/post-images/gsoc-job-config/changing-help.gif[Changing help information, role=center]
+image:/post-images/gsoc-job-config/changing-help.gif[Changing help information, role=center]
 
 As reported by some users, it would be useful to have the functionality to
 change help information. Installation administrators would be able to change the
@@ -79,7 +79,7 @@ navigation.
 
 *[Optional] Removing "My Views" page*
 
-image:/images/post-images/gsoc-job-config/removing-views.jpg[Removing My Views, role=center]
+image:/post-images/gsoc-job-config/removing-views.jpg[Removing My Views, role=center]
 
 "My Views" page may unnecessary complicate essential sidepanel navigation. Since
 it contains very small functionality, the functions may be moved to the home
@@ -99,7 +99,7 @@ new UI elements through plugins.
 
 *[Optional] Grouping credentials and their domains*
 
-image:/images/post-images/gsoc-job-config/credentials-grouping.jpg[Grouping credentials, role=center]
+image:/post-images/gsoc-job-config/credentials-grouping.jpg[Grouping credentials, role=center]
 
 Credentials page has too many reloads and requires many clicks to get to a
 required credentials page. That may be improved by removing the last page and
@@ -118,7 +118,7 @@ working on the first project:
 * I also made a New Job Popup with using existing interface.
 
 
-link:/images/post-images/gsoc-job-config/current-popup.gif[*View the current
+link:/post-images/gsoc-job-config/current-popup.gif[*View the current
 pop-up progress*]
 
 I used https://github.com/VodkaBears/Remodal[Remodal] library for popup and put

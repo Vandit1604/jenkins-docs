@@ -21,7 +21,7 @@ One common use case is running build and tests on multiple platforms. You could 
 but now you can run multiple stages in each `parallel` branch giving you more visibility into the progress of your
 Pipeline without having to check the logs to see exactly which step is currently running where, etc.
 
-image:/images/post-images/2018-07-02/sequential_stages.png[role="center"]
+image:/post-images/2018-07-02/sequential_stages.png[role="center"]
 
 You can also
 use stage directives, including `post`, `when`, `agent`, and all the others covered in the

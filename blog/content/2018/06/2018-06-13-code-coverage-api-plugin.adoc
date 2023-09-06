@@ -28,7 +28,7 @@ I have developed an alpha version for this plugin. It currently integrates two d
 
 === Configuration Page
 *config plugin*
-image:/images/post-images/2018-06-13-code-coverage-api-plugin/configuration-page.png[title="Code Coverage API Plugin Configuration", role="center"]
+image:/post-images/2018-06-13-code-coverage-api-plugin/configuration-page.png[title="Code Coverage API Plugin Configuration", role="center"]
 
 We can input the path pattern for auto detect, so that plugin will automatically find reports and group them using a corresponding converter. That makes config simpler and the user doesn’t need to fully specify the report name. Also, if we want, we can manually specify each coverage report.
 
@@ -47,10 +47,10 @@ node {
 As we can see in Configuration page, we can set healthy threshold and stable threshold for each metric. The Code Coverage API plugin will report healthy score according to the healthy threshold we set.
 
 *threshold config*
-image:/images/post-images/2018-06-13-code-coverage-api-plugin/threshold-config.png[title="Threshold Config", role="center"]
+image:/post-images/2018-06-13-code-coverage-api-plugin/threshold-config.png[title="Threshold Config", role="center"]
 
 *result*
-image:/images/post-images/2018-06-13-code-coverage-api-plugin/health-report.png[title="Result", role="center"]
+image:/post-images/2018-06-13-code-coverage-api-plugin/health-report.png[title="Result", role="center"]
 
 Also, we have a group of options which can fail the build if coverage falls below a particular threshold.
 
@@ -60,16 +60,16 @@ The result page includes three parts - Trend chart, Summary chart, Child Summary
 
 ==== Trend Chart
 In the Trend chart, we can see the coverage trend of the selected coverage metrics.
-image:/images/post-images/2018-06-13-code-coverage-api-plugin/trend-chart.gif[title="Trend Chart", role="center"]
+image:/post-images/2018-06-13-code-coverage-api-plugin/trend-chart.gif[title="Trend Chart", role="center"]
 
 ==== Summary Chart
 In the summary chart we can see the coverage summary of current coverage metric.
-image:/images/post-images/2018-06-13-code-coverage-api-plugin/summary-chart.gif[title="Summary Chart", role="center"]
+image:/post-images/2018-06-13-code-coverage-api-plugin/summary-chart.gif[title="Summary Chart", role="center"]
 
 
 ==== Child Summary Chart
 In the Child summary chart, we can see the coverage summary of each child, also, we can use the range handler to filter item we want to see to reduce the chart size.
-image:/images/post-images/2018-06-13-code-coverage-api-plugin/child-summary-chart.gif[title="Child Summary Chart", role="center"]
+image:/post-images/2018-06-13-code-coverage-api-plugin/child-summary-chart.gif[title="Child Summary Chart", role="center"]
 
 By using those more modernized chart components, we can easily focus on the information we want to know.
 
