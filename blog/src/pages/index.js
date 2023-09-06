@@ -5,6 +5,8 @@ import Layout from "../layouts"
 
 class IndexPage extends React.Component {
   render() {
+    console.log(this.props.data.allAsciidoc.edges)
+
     return (
       <Layout>
         <ul>
