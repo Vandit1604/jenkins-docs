@@ -1,5 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+
+import IndexPageLayout from "../layouts"
 import IndexPageLayout from "../layouts"
 import { bloglisting } from "../css/blogpost.module.css"
 
@@ -42,6 +44,11 @@ export const pageQuery = graphql`
             title
           }
           pageAttributes {
+            author
+            tags
+            opengraph
+          }
+          pageAttributes{
             author
             tags
             opengraph

@@ -1,11 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import BlogPost from "../components/BlogPost"
+
 class Article extends React.Component {
   render() {
     console.log(this.props.data.asciidoc.document.title)
     return (
-      <BlogPost >
+      <BlogPost>
         <h1>{this.props.data.asciidoc.document.title} </h1>
         {this.props.data.asciidoc.author && (
           <table>
