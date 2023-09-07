@@ -13,7 +13,8 @@ class Article extends React.Component {
           <table>
             <tbody>
               <tr>
-                <th>{this.props.data.asciidoc.pageAttributes.author}</th>
+                <th style={{width: "20px"}}>{this.props.data.asciidoc.pageAttributes.author}</th>
+                <tr>TODO: Add Authors Image</tr>
               </tr>
             </tbody>
           </table>
@@ -22,7 +23,7 @@ class Article extends React.Component {
           dangerouslySetInnerHTML={{ __html: this.props.data.asciidoc.html }}
         />
       </BlogPost>
-    )
+    );
   }
 }
 

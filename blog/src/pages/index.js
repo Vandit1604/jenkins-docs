@@ -2,16 +2,16 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import IndexPageLayout from "../layouts"
+import IndexPageLayout from "../layouts"
+import { bloglisting } from "../css/blogpost.module.css"
 
 class IndexPage extends React.Component {
   render() {
-    console.log(this.props.data.allAsciidoc.edges)
-
     return (
       <IndexPageLayout>
-        <ul>
+        <ul className={bloglisting}>
           {this.props.data.allAsciidoc.edges.map(({ node }) => (
-            <li key={node.id}>
+            <li key={node.id} className={bloglisting}>
               <Link to={node.fields.slug}>
                 <img src={node.opengraph} alt="." width="200px" height="200px"></img>
                 {node.document.title}</Link>
@@ -31,13 +31,22 @@ export const pageQuery = graphql`
     allAsciidoc {
       edges {
         node {
-          id
+          fields {
+            slug
+          }
           html
+          revision {
+            date
+            number
+            remark
+          }
           document {
             title
           }
-          fields {
-            slug
+          pageAttributes {
+            author
+            tags
+            opengraph
           }
           pageAttributes{
             author
@@ -48,4 +57,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
