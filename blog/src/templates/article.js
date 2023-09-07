@@ -1,19 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../layouts"
-
 class Article extends React.Component {
   render() {
     console.log(this.props.data.asciidoc.document.title)
     return (
-      <Layout>
+      <BlogPost >
         <h1>{this.props.data.asciidoc.document.title} </h1>
         {this.props.data.asciidoc.author && (
           <table>
             <tbody>
               <tr>
-                <th>{this.props.data.asciidoc.pageAttributes.author}</th>
+                <th style={{width: "20px"}}>{this.props.data.asciidoc.pageAttributes.author}</th>
+                <tr>TODO: Add Authors Image</tr>
               </tr>
             </tbody>
           </table>
@@ -21,15 +20,15 @@ class Article extends React.Component {
         <div
           dangerouslySetInnerHTML={{ __html: this.props.data.asciidoc.html }}
         />
-      </Layout>
-    )
+      </BlogPost>
+    );
   }
 }
 
 export default Article
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     asciidoc(id: { eq: $id }) {
       html
       document {
@@ -39,10 +38,11 @@ export const pageQuery = graphql`
       author {
         fullName
       }
-       pageAttributes {
+      pageAttributes {
         author
         tags
+        opengraph
       }
     }
   }
-`
+`;
