@@ -1,3 +1,4 @@
+import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
 import React from "react"
 import { Link } from "gatsby"
 
@@ -19,11 +20,11 @@ class IndexPageLayout extends React.Component {
       >
         <Link style={{ textDecoration: `none` }} to="/">
           <img
-            src="..././docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
+            src={jenkinsLogo}
             alt="Jenkins Logo"
-            width="200px"
+            width="150px"
             height="200px"
-          ></img>
+          />
           <h3 style={{ color: `black`, marginBottom: rhythm(1.5) }}>
             Jenkins Blog
           </h3>

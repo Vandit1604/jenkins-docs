@@ -1,13 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding-left: unset;
+  margin-left: unset;
+}
+
+li {
+  margin-bottom: unset;
+}
+
 .bloglisting {
   display: grid;
   gap: 1.5rem;
-  row-gap: 3rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(30% , 1fr));
   box-sizing: border-box;
   padding: 0;
   list-style-type: none;
   transition: 0.2s ease;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .blogpost {
