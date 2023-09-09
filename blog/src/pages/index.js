@@ -13,9 +13,8 @@ class IndexPage extends React.Component {
             <li key={node.id} className={blogpost}>
               <Link to={node.fields.slug}>
                 <img
-                  src={node.opengraph}
-                  alt="."
-                  width="200px"
+                  src={node.pageAttributes.opengraph}
+                  alt={node.document.title}
                   height="200px"
                   display="block"
                 ></img>
@@ -31,6 +30,7 @@ class IndexPage extends React.Component {
                   "border-radius": "50%",
                 }}
               ></img><p>{node.pageAttributes.author}</p>
+              <p>{node.fields.slug}</p>
             </li>
           ))}
         </ul>
@@ -63,3 +63,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+

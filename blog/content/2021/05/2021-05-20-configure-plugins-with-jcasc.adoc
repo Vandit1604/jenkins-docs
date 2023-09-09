@@ -2,9 +2,8 @@
 ::page-tags: jcasc, tutorial, plugins
 
 :page-author: dheerajodha
-description: >
-  This post is a Step-by-Step Guide to configure your plugins with the Jenkins Configuration as a Code (JCasC) plugin  
 :page-opengraph: /post-images/2021-05-15-configure-plugins-with-jcasc/:page-opengraph-image.png
+description:   This post is a Step-by-Step Guide to configure your plugins with the Jenkins Configuration as a Code (JCasC) plugin  
 ---
 
 This blog post is for anyone interested to know how to configure a plugin using the Jenkins Configuration as a Code (JCasC) plugin, more specifically, this blog will guide you to get the YAML equivalent of a plugin’s configuration and use it to do some changes to the plugin without using the Jenkins UI.

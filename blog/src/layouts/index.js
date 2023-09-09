@@ -22,11 +22,10 @@ class IndexPageLayout extends React.Component {
           <img
             src={jenkinsLogo}
             alt="Jenkins Logo"
-            width="150px"
-            height="200px"
+            height="75px"
           />
           <h3 style={{ color: `black`, marginBottom: rhythm(1.5) }}>
-            Jenkins Blog
+            The Jenkins Blog
           </h3>
         </Link>
         {this.props.children}
