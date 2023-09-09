@@ -8,18 +8,23 @@ class IndexPage extends React.Component {
   render() {
     return (
       <IndexPageLayout>
-        <ul className={bloglisting}>
+        <ul className={bloglisting} key={bloglisting}>
           {this.props.data.allAsciidoc.edges.map(({ node }) => (
             <li key={node.id} className={blogpost}>
               <Link to={node.fields.slug}>
-                {node.pageAttributes.opengraph &&
+                <div
+                  style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}>
                   <img
-                    src={require(node.pageAttributes.opengraph)}
+                    src={require('../../images/gsoc/opengraph.png').default}
                     alt={node.document.title}
                     height="200px"
-                    display="block"
                   />
-                }
+                </div>
                 {node.document.title}
               </Link>
               <br></br>
