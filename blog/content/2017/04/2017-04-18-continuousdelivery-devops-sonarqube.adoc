@@ -5,11 +5,11 @@
 
 
 [NOTE]
-===
+==
 This is a guest post by link:https://github.com/michaelhuettermann[Michael Hüttermann]. Michael is an expert
 in Continuous Delivery, DevOps and SCM/ALM. More information about him at link:http://huettermann.net[huettermann.net], or
 follow him on Twitter: link:https://twitter.com/huettermann[@huettermann].
-===
+==
 
 Continuous Delivery and DevOps are well known and widely spread practices nowadays. It is commonly accepted that it
 is crucial to form great teams and define shared goals first and then choose and integrate the tools fitting best to
@@ -71,9 +71,9 @@ But the interesting extract here in regard of the inspection is the following _s
 <3> Running and configuring the scanner, many options available, check the docs.
 
 [TIP]
-===
+==
 Many options are available to integrate and configure SonarQube. Please consult the documentation for alternatives. Same applies to the other covered tools.
-===
+==
 
 == SonarQube Quality Gate
 As part of a Jenkins pipeline stage, SonarQube is configured to run and inspect the code. But this is just the first part,
@@ -97,9 +97,9 @@ pipeline until SonarQube analysis is completed and returns the quality gate stat
 <3> Here we wait for the OK. Underlying implementation is done with SonarQube's _webhooks_ feature.
 
 [NOTE]
-===
+==
 This blog post is an appetizer, and scripts are excerpts. For more information, please consult the respective documentation, or a good book, or the great community, or ask your local expert.
-===
+==
 
 Since they all work in a wonderful Agile team, the next available colleague just promptly fixes the issue. After checking in
 the fixed code, the build pipeline runs again.

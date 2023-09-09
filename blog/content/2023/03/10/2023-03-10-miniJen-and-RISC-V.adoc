@@ -125,14 +125,14 @@ I managed to get Ethernet on it so that my board got an IP address from my route
 
 == Linux and Java installation
 
-=== Linux
+== Linux
 
 I could then link:https://www.youtube.com/live/xtI1nwwe70A?feature=share&t=969[log in] thanks to `ssh`, create an admin user, and so on.
 I then link:https://www.youtube.com/live/xtI1nwwe70A?feature=share&t=1239[removed] packages linked to `X11` that I didn't need for my use case.
 Later on, I link:https://www.youtube.com/live/xtI1nwwe70A?feature=share&t=2111[configured] a Wi-Fi connection, and link:https://www.youtube.com/live/xtI1nwwe70A?feature=share&t=2220[created] a `jenkins` user.
 The next step logically, was to link:https://www.youtube.com/live/xtI1nwwe70A?feature=share&t=2391[install] the default OpenJDK 17 build provided by Ubuntu.
 
-=== Java
+== Java
 
 I now know the default OpenJDK 17 build is a Zero VM build, so I also link:https://www.youtube.com/live/xtI1nwwe70A?feature=share&t=2551[installed] a nightly build of Temurin's link:https://github.com/adoptium/temurin19-binaries/releases[OpenJDK 19] and link:https://github.com/adoptium/temurin20-binaries/releases[OpenJDK 20].
 By the way, do you know what https://twitter.com/adoptium/status/1435519863091564547[Temurin] is?
@@ -145,7 +145,7 @@ ____
 
 image:/post-images/2023/03/10/2023-03-10-miniJen-and-RISC-V/temurin.png[Temurin is almost caffeine,500]
 
-==== Zero VM
+=== Zero VM
 
 You may wonder what a Zero VM build is, and why I want to use something else.
 Zero VM builds come with pros and cons:
@@ -163,7 +163,7 @@ In other words, the board is already so slow that using a Zero VM will make it u
 There, I said it.
 The default OpenJDK implementation is there just in case I need to use it for some reason, but I plan to only use Temurin's builds.
 
-==== OpenJDK 19
+=== OpenJDK 19
 
 As you may already know, JDK19 is almost link:https://endoflife.date/java[end of life] (21st of March 2023), so I'm not going to use it for long, and Temurin does not provide steady `RISC-V` nightly builds.
 Speaking of end-of-life, I could not recommend enough link:https://endoflife.date/[endoflife.date] which is an link:https://github.com/endoflife-date/endoflife.date[open-source] project that aims to provide a simple way to find the end-of-life dates of software and operating systems.
@@ -178,11 +178,11 @@ Please note that your libc should be at least link:https://sourceware.org/piperm
 
 == The `RISC-V` Jenkins agent
 
-=== Installation
+== Installation
 
 I then link:https://www.youtube.com/live/xtI1nwwe70A?feature=share&t=3174[added an `ssh` key] on the `RISC-V` machine that would become an agent, link:https://www.youtube.com/live/xtI1nwwe70A?feature=share&t=3125[created] a new node within the Jenkins UI, and installed the link:https://www.youtube.com/watch?v=4KghHJEz5no&t=115s[agent] on it.
 
-=== Testing
+== Testing
 
 The last thing to do before confirming that Jenkins works on `RISC-V` was to launch a link:https://www.youtube.com/live/xtI1nwwe70A?feature=share&t=3383[simple `RISC-V` job].
 Spoiler alert, it did work!

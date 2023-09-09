@@ -45,14 +45,14 @@ statistics and generating new ones discussed above.
 This project covers wide-range of the use-cases that has been derived from the
 problems mentioned above.
 
-=== Use Case 1: Upgrade/Downgrade Analysis
+== Use Case 1: Upgrade/Downgrade Analysis
 
 Understanding the trend in upgrades and downgrades have lots of utilities, some
 of them have already been explained earlier which includes measuring the
 popularity, spotting downgrades, giving warning about the wrong versions quickly
 etc.
 
-==== Use Case 1.1: Plugin versions installation trends
+=== Use Case 1.1: Plugin versions installation trends
 
 Here we are analysing the trend in the different version installations for a
 given plugin. This use-case will help us to know about:
@@ -61,7 +61,7 @@ given plugin. This use-case will help us to know about:
 * Trend in the popularity decrement of the previous versions after new version release.
 * Find the most popular plugin version at any given point of time.
 
-==== Use Case 1.2: Spotting dowgrades
+=== Use Case 1.2: Spotting dowgrades
 
 Here we are interested to know, how many installations are downgraded from any
 given version to previously used version. Far fetched goal of this analysis is
@@ -70,7 +70,7 @@ can be sensed using downgrades performed by users. This analysis can be
 accomplished by studying the monotonic property of the version number vs.
 timestamp graph for a given plugin.
 
-==== Use Case 1.3: Correlation with the perceived quality of Jenkins release
+=== Use Case 1.3: Correlation with the perceived quality of Jenkins release
 
 To correlate what users are saying to what users are doing, we have community
 ratings which tells us about the ratings and reviews of the releases and has
@@ -85,14 +85,14 @@ parameter is basically spotting downgrades(use case 1.2). But the second
 parameter is basically an expression which is not possible to calculate. This
 analysis is just to get a subjective idea about the correlation.
 
-=== Use Case 2: Plugin Recommendation System
+== Use Case 2: Plugin Recommendation System
 
 This section involves setting up ground work for the plugin recommendation
 system. The idea is to find out the set of plugins which are most likely to be
 used together. Here we will be following both content based filtering as well as
 collaborative filtering approach.
 
-==== link:https://en.wikipedia.org/wiki/Recommender_system#Collaborative_filtering[Collaborative Filtering]
+=== link:https://en.wikipedia.org/wiki/Recommender_system#Collaborative_filtering[Collaborative Filtering]
 
 This approach is based upon analysing large amount of information on
 installation's behaviours and activities. We have implicit form of the data
@@ -101,7 +101,7 @@ installed. We can use this information to construct plugin usage graph where
 nodes are the plugins and the edges between them is the number of installations
 in which both plugins are installed together.
 
-==== link:https://recommender-systems.org/content-based-filtering/[Content-based Filtering]
+=== link:https://recommender-systems.org/content-based-filtering/[Content-based Filtering]
 
 This method is based on a properties or the content of the item for example
 recommending items that are similar to the those that a user liked in the past

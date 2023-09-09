@@ -15,17 +15,17 @@ Over the past couple months, a group within the Hudson community, "infra" (short
 // break
 
 [discrete]
-==== Builds
+=== Builds
 
 One of the first tasks we set upon when building out Hudson Labs was to start improving the build and release process of Hudson by moving as much of it into a https://ci.hudson-labs.org[public Hudson instance]. Building Hudson itself, plugins and dependencies of the Hudson project, the Hudson Labs instance will help improve the reliability of the Hudson ecosystem across the board, and should serve as a useful tool for core and plugin developers.
 
 [discrete]
-==== Mirroring
+=== Mirroring
 
 Thanks to the great team over at the https://www.osuosl.org[Oregon State University Open Source Lab] (https://twitter.com/osuosl[OSUOSL]), we've been able to build out https://ftp.osuosl.org/pub/hudson/[mirroring infrastructure] for Hudson to provide fast access to native packages and wars alike. Currently the OSUOSL only has mirrors inside the continental United States, so we're reaching out to friends in Asia and Europe to extend the mirroring system.
 
 [discrete]
-==== Information
+=== Information
 
 I'm currently working on re-working some of the blog posts you may have read over four months as more structured tutorials. I hope to provide an easily accessible knowledge-base for developing Hudson along with configuring Hudson for various platforms and development environments; this is a more difficult task so all the pieces aren't entirely in place for this just yet.
 

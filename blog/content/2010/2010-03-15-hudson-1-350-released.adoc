@@ -7,7 +7,7 @@ Finishing off the second week in March, the Hudson team rolled Hudson 1.350 off 
 image:https://web.archive.org/web/*/https://agentdero.cachefly.net/continuousblog/garbageman.jpg[]Internal to Hudson, some more changes from Alan Harder (a.k.a https://blogs.sun.com/mindless[mindless], a.k.a The Garbage Man), deprecating or otherwise removing deprecated APIs. Alan's been doing some great work on Hudson's internals, if you're coming out to link:/content/meet-and-hack-alongside-kohsuke-and-co[this weekend's hackathon], but sure to pat him on the back for his tireless efforts.
 // break
 
-=== Bug fixes
+== Bug fixes
 
 * Fix handling of relative paths in alternate settings.xml path for Maven projects. (https://issues.jenkins.io/browse/JENKINS-4693[issue 4693])
 * Alternate settings, private repository, profiles, etc were not used in embedded Maven for deploy publisher. (https://issues.jenkins.io/browse/JENKINS-4939[issue 4939])
@@ -22,7 +22,7 @@ image:https://web.archive.org/web/*/https://agentdero.cachefly.net/continuousblo
 
 {blank} +
 
-=== Enhancements
+== Enhancements
 
 * Added advanced option to LogRotator to allow for removing artifacts from old builds without removing the logs, history, etc. (https://issues.jenkins.io/browse/JENKINS-834[issue 834])
 * Authentication support in Hudson CLI. (https://issues.jenkins.io/browse/JENKINS-3796[issue 3796])
@@ -30,7 +30,7 @@ image:https://web.archive.org/web/*/https://agentdero.cachefly.net/continuousblo
 
 {blank} +
 
-=== Contributors
+== Contributors
 
 The 1.350 release of Hudson contains 54 commits from 6 different contributors,
 

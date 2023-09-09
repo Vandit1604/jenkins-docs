@@ -30,7 +30,7 @@ Plugin detects the presence of certain types of the report at conventional locat
 and publish them automatically. If the reports are not present at conventional location,
 can specify the location using the YAML file.
 
-=== Benefits to the community
+== Benefits to the community
 
 * Project administrators will be able to handle builds for pull requests more easily.
 * Build specifications for pull request can be written in a concise declarative format.
@@ -85,7 +85,7 @@ decided by the payload of webhook also.
 See link:https://github.com/Jenkinsci/simple-pull-request-job-plugin/blob/master/README.md[How to run the demo]
 and set credentials, owner and repository on your own and you will be good to go.
 
-=== Example branch-source configuration.
+== Example branch-source configuration.
 image:/post-images/gsoc-simple-pull-request-plugin/branch-source-configuration.png[title="Jenkinsfile.yaml", role="center"]
 
 
@@ -171,7 +171,7 @@ archiveArtifacts:
     - scripts/hello.sh
 ----
 
-=== From the yaml file shown above, the plugin generates the following pipeline code:
+== From the yaml file shown above, the plugin generates the following pipeline code:
 [source, groovy]
 ----
 pipeline {
@@ -235,7 +235,7 @@ pipeline {
   }
 }
 ----
-=== Pipeline view in Jenkins instance
+== Pipeline view in Jenkins instance
 
 image:/post-images/gsoc-simple-pull-request-plugin/pipeline-view.png[title="Jenkinsfile.yaml", role="center"]
 

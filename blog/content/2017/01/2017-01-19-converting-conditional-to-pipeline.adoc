@@ -175,7 +175,7 @@ along with the rest of our code.
 The previous example showed the "Strings match" condition and its Pipeline equivalent.
 Let's look at couple more interesting conditions and their Jenkins Pipeline equivalents.
 
-=== Boolean condition
+== Boolean condition
 
 You might think that a boolean condition would be the simplest condition, but it isn't.
 Since it works with string values from tokens, the Conditional BuildStep plugin offers
@@ -205,7 +205,7 @@ if (token ==~ /(?i)(Y|YES|T|TRUE|ON|RUN)/) {
 }
 ----
 
-=== Logical "OR" of conditions
+== Logical "OR" of conditions
 
 This condition wraps other conditions.
 It takes their results as inputs and performs a logical "or" of the results.
@@ -243,7 +243,7 @@ So, determining how to migrate tokens needs to be done on case-by-case basis.
 
 Let's look at a few examples.
 
-=== "FILE" token
+== "FILE" token
 
 *Expands to the contents of a file. The file path is relative to the build workspace root.*
 
@@ -272,7 +272,7 @@ if (readFile('pom.xml').contains('mycomponent')) {
 ----
 
 
-=== GIT_BRANCH
+== GIT_BRANCH
 
 *Expands to the name of the branch that was built.*
 
@@ -296,7 +296,7 @@ executing a shell to get the information we need.
 GIT_BRANCH = sh(returnStdout: true, script: 'git rev-parse --abbrev-ref HEAD').trim()
 ----
 
-=== CHANGES_SINCE_LAST_SUCCESS
+== CHANGES_SINCE_LAST_SUCCESS
 
 *Displays the changes since the last successful build.*
 
@@ -330,7 +330,7 @@ Here's the configuration for Freestyle version.
 (It's pretty long.  Feel free to <<longer-pipeline, skip down to the Pipeline version>>):
 
 [NOTE]
-===
+==
 The Pipeline version of this job determines the `GIT_BRANCH` branch by
 running a shell script that returns the current local branch name.
 This means that the Pipeline version must checkout to a local branch (not a detached head).
@@ -338,7 +338,7 @@ This means that the Pipeline version must checkout to a local branch (not a deta
 Freestyle version of this job does not require a local branch, `GIT_BRANCH` is set automatically.
 However, to maintain functional parity, the Freestyle version of this job includes
 "Checkout to Specific Local Branch" as well.
-===
+==
 
 image::/post-images/2017-01-19/freestyle-conditional-long-full.png[Longer Freestyle Job, role="center", width=800]
 
@@ -349,14 +349,14 @@ image::/post-images/2017-01-19/freestyle-conditional-long-full.png[Longer Freest
 Here's the equivalent Pipeline:
 
 [NOTE]
-===
+==
 Freestyle version of this job is not stored in source control.
 
 In general, the Pipeline version of this job would be stored in source control,
 would `checkout scm`, and would run that same repository.
 However, to maintain functional parity, the Pipeline version shown does a checkout
 from source control but is not stored in that repository.
-===
+==
 
 .Pipeline
 [pipeline]

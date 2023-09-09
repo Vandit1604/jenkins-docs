@@ -1,5 +1,5 @@
 = "Accelerate with Jenkins X"
-::page-tags: jenkinsx, developer, kubernetes
+:page-tags: jenkinsx, developer, kubernetes
 
 :page-author: jrawlings
 
@@ -34,7 +34,7 @@ _Related Accelerate capability:  Use version control for all production artifact
 
 == Automate your deployment process
 
-=== Environments
+== Environments
 
 Jenkins X will automatically create Git backed environments during installation and makes it easy to add new ones using 
 `jx create environment`.  Additionally when creating new applications via a quickstart (`jx create quickstart`), Java based 
@@ -44,7 +44,7 @@ CI / CD pipelines and setup the jobs, git repos and webhooks to enable an automa
 Out of the box Jenkins X creates Staging and Production (this is customisable) permanent environments as well as temporary 
 environments for preview applications from Pull Requests.
 
-==== Previews Environments
+=== Previews Environments
 
 We are trying to move as much testing, security, validation and experimentation for a change before it's merged to master.  
 With the use of temporary dynamically created Preview Environments any pull request can have a preview version built and 
@@ -69,7 +69,7 @@ starts ok and Kubernetes liveness check pass for an amount of time. This relates
 _Related Accelerate capability: Implement Test Automation_
 _Related Accelerate capability: Automate your deployment process_
 
-==== Permanent Environments
+=== Permanent Environments
 
 In software development we're used to working with multiple environments in the lead up to a change being promoted to a live 
 production environment.  Whilst this seems business as usual it can cause significant delays to other changes if for any 

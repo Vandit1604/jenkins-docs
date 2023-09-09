@@ -69,21 +69,21 @@ Jenkins selects a random available port number and shares that port number with 
 
 image::/post-images/2020/2020-09-09-new-jenkins-release-observations/tcp-port-for-inbound-agents.png[TCP port for inbound agents]
 
-=== Configure the agent
+== Configure the agent
 
 Once the Jenkins TCP port is open for inbound agents, a new agent is configured from the Jenkins "Nodes" menu
 This creates an "inbound Jenkins agent" that uses the Jenkins `agent.jar` to initiate the connection to the Jenkins controller.
 
 image::/post-images/2020/2020-09-09-new-jenkins-release-observations/inbound-agent-configuration.png[Inbound agent configuration]
 
-=== Download the agent
+== Download the agent
 
 The agent starts the first time by clicking the "Launch" button on the agent configuration page (only available with Java 8).
 That downloads the "slave-agent.jnlp" file from the web browser.
 
 image::/post-images/2020/2020-09-09-new-jenkins-release-observations/launch-inbound-agent-from-jenkins.png[Launch inbound agent from Jenkins]
 
-=== Start the agent
+== Start the agent
 
 The downloaded file needs to be opened from a command prompt using the `javaws` command that is included with the bundled JRE:
 
@@ -98,7 +98,7 @@ Java web start (javaws.exe) prompts for permission to run the program with this 
 
 image::/post-images/2020/2020-09-09-new-jenkins-release-observations/javaws-prompt-for-remoting-agent.png[Java Web Start prompt for remoting agent]
 
-=== Install the agent as a service
+== Install the agent as a service
 
 The agent runs and displays a window on the desktop with a single menu entry, "Install as a service".
 
@@ -141,7 +141,7 @@ Jenkins selects a random available port number and shares that port number with 
 
 image::/post-images/2020/2020-09-09-new-jenkins-release-observations/tcp-port-for-inbound-agents.png[TCP port for inbound agents]
 
-=== Configure the agent
+== Configure the agent
 
 Once the Jenkins TCP port is open for inbound agents, a new agent is configured from the Jenkins "Nodes" menu
 This creates an "inbound Jenkins agent" that uses the Jenkins `agent.jar` to initiate the connection to the Jenkins controller.
@@ -152,14 +152,14 @@ This creates an "inbound Jenkins agent" that uses the Jenkins `agent.jar` to ini
 
 image::/post-images/2020/2020-09-09-new-jenkins-release-observations/inbound-agent-configuration.png[Inbound agent configuration]
 
-=== Download the agent
+== Download the agent
 
 The agent was started the first time by clicking the "Launch" button on the agent configuration page (only available with Java 8).
 That downloads the "slave-agent.jnlp" file from the web browser.
 
 image::/post-images/2020/2020-09-09-new-jenkins-release-observations/launch-inbound-agent-from-jenkins.png[Launch inbound agent from Jenkins]
 
-=== Start the agent with IcedTea-Web
+== Start the agent with IcedTea-Web
 
 Recent versions of Java 8 and all versions of Java 11 have removed the `javaws` command.
 Jenkins agents for Java 8 can still be started with the `javaws` command, but it needs to be downloaded separately from the JVM.
@@ -173,7 +173,7 @@ Java web start (javaws.exe) prompts for permission to run the program with this 
 
 image::/post-images/2020/2020-09-09-new-jenkins-release-observations/javaws-prompt-for-remoting-agent.png[Java Web Start prompt for remoting agent]
 
-=== Install the agent as a service
+== Install the agent as a service
 
 The agent runs and displays a window on the desktop with a single menu entry, "Install as a service".
 
@@ -216,21 +216,21 @@ Jenkins selects a random available port number and shares that port number with 
 
 image::/post-images/2020/2020-09-09-new-jenkins-release-observations/tcp-port-for-inbound-agents.png[TCP port for inbound agents]
 
-=== Configure the agent
+== Configure the agent
 
 After opening the Jenkins TCP port for inbound agents, we configured a new agent from the "Nodes" menu
 This created an "inbound Jenkins agent" that uses the Jenkins `agent.jar` to initiate the connection to the Jenkins controller.
 
 image::/post-images/2020/2020-09-09-new-jenkins-release-observations/inbound-agent-configuration.png[Inbound agent configuration]
 
-=== Download the agent
+== Download the agent
 
 The agent was started the first time by clicking the "Launch" button on the agent configuration page (only available with Java 8).
 That downloads the "slave-agent.jnlp" file from the web browser.
 
 image::/post-images/2020/2020-09-09-new-jenkins-release-observations/launch-inbound-agent-from-jenkins.png[Launch inbound agent from Jenkins]
 
-=== Start the agent with IcedTea-Web
+== Start the agent with IcedTea-Web
 
 Recent versions of Java 8 and all versions of Java 11 have removed the `javaws` command.
 Jenkins agents for Java 8 can still be started with the `javaws` command, but it needs to be downloaded separately from the JVM.
@@ -244,7 +244,7 @@ Java web start (javaws.exe) prompts for permission to run the program with this 
 
 image::/post-images/2020/2020-09-09-new-jenkins-release-observations/javaws-prompt-for-remoting-agent.png[Java Web Start prompt for remoting agent]
 
-=== Install the agent as a service
+== Install the agent as a service
 
 The agent runs and displays a window on the desktop with a single menu entry, "Install as a service".
 

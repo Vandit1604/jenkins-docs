@@ -130,7 +130,7 @@ I loaded a snapshot version of Debian onto the board after giving the firmware a
 
 == RISC-V and JDK
 
-=== JDK17
+== JDK17
 
 The logical first step would be to install a version of the JDK, then follow the official documentation to get Jenkins up and running on Debian, right?
 
@@ -175,7 +175,7 @@ Let's say I let it run for a good while, and nothing else happened. +
 A Zero VM is about as useful for running a server as a chocolate teapot. +
 Let's switch gears and go with something that's got a bit more pep in its step.
 
-=== JDK21
+== JDK21
 
 As I'm penning this article, there's no official JDK21 release we can snag from the link:https://adoptium.net/temurin/releases/[Eclipse Temurin Latest Releases] page. +
 We'll have to scrounge up a nightly build from the Adoptium link:https://github.com/adoptium/temurin21-binaries/releases[Temurin 21 binaries repo.] +
@@ -234,7 +234,7 @@ java -version
 
 == Jenkins and JDK21
 
-=== On the command line
+== On the command line
 
 Let’s try to launch Jenkins with JDK21 now, and see if it gets any better than with JDK17:
 
@@ -298,7 +298,7 @@ See link:https://jenkins.io/redirect/java-support/ for more information.
 
 As you can see, the current LTS does not support JDK 21 yet.
 
-=== Jenkins standard package installation
+== Jenkins standard package installation
 
 As we’re using Debian, let’s go with the link:/doc/book/installing/linux/#weekly-release[standard installation of the weekly release] now. +
 Unfortunately, we get an error when installing the Jenkins package the official way.
@@ -324,7 +324,7 @@ Now it's clear as day: we've installed a JDK21 version that plays nice with the 
 They're still checking if we're using JDK11, 17 or 21, but they're not ready for prime time, hence the failure. +
 So, how do we fix this mess?
 
-=== Tweaking the package installation
+== Tweaking the package installation
 
 The link:/doc/book/system-administration/systemd-services/#overriding-service-configurations[official documentation] tells us we can override systemd service configurations thanks to
 

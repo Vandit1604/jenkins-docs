@@ -6,11 +6,11 @@
 
 
 [NOTE]
-===
+==
 This is a guest post by link:https://github.com/ccaum[Carl Caum],
 who works at link:https://puppet.com[Puppet] and created the
 plugin:puppet-enterprise-pipeline[Puppet Enterprise Pipeline plugin].
-===
+==
 
 
 During PuppetConf 2016, myself and Brian Dawson from CloudBees announced the
@@ -128,7 +128,7 @@ Finally, restart the pe-puppetserver process to pick up the new configs:
 /opt/puppetlabs/bin/puppet resource service pe-puppetserver ensure=running
 ----
 
-=== Hiera HTTP Authentication
+== Hiera HTTP Authentication
 
 If Jenkins' Global Security is configured to allow unauthenticated read-only
 access, the 'use_auth', 'auth_pass', and 'auth_user' parameters are

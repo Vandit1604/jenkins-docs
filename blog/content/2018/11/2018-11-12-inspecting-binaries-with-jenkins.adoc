@@ -34,13 +34,13 @@ how running applications are affected if a new CVE is discovered.
 
 
 [TIP]
-===
+==
 The term DevSecOps was coined to explicitly add security concerns to DevOps.
 In my opinion, security is already inherent part of DevOps.
 Thus, there is no strong reason to introduce a new word. Surely, new words are catchy.
 But they have limits.
 Or have you ever experienced NoDev, the variant of DevOps where features are suddenly falling from the sky and deployed to production automatically?
-===
+==
 
 Conceptually, container inspection is now part of the delivery pipeline and Twistlock processing is now triggered once we have produced our Docker images, see below, in order to get
 fast feedback.
@@ -54,12 +54,12 @@ make up the release, consistently, including the business application, test case
 that in a self-contained way, for details see Michael Hüttermann, _DevOps for Developers_ (Apress, 2012).
 
 [NOTE]
-===
+==
 This blog post covers sample tools. Please note, that there are also alternative tools available, and the best target architecture is aligned with concrete requirements and given basic
 conditions. Besides that, the sample toolchain is derived from couple of real world success stories, designed and implemented in the field. However, this blog post
 simplifies and abstracts them in order to stay focussed while discussing the primitives of delivery units. For example, aggregating multiple Docker images with ASCII files, does not change the
 underlying primitives and their handlings. For more information on all parts of the blog post, please consult the respective documentation, good books or attend fine conferences. Or go to the extremes: talk to your colleagues.
-===
+==
 
 In our sample process, we produce a web application that is packaged in a Docker image. The produced Docker images are distributed only if the dedicated quality gate passes.
 A quality gate is a stage in the overall pipeline and a sum of defined commitments, often
@@ -130,11 +130,11 @@ To address the findings, we need to split our initiative into two parts:
 Let's proceed bottom up, first coping with the Docker base image.
 
 [NOTE]
-===
+==
 This is an easy example covering multiple scenarios particularly identifying and fixing vulnerabilities in transitive binaries, i.e. binaries contained in
 other binaries, e.g. a Docker image containing a WAR file that in turn contains libraries. To expand this vertical feasibility spike, you can easily add
 more units of each layer, or add more abstractions, however, the idea can always be nailed down to the primitives, covered in this blog post.
-===
+==
 
 Let's now have a look at the used Docker image by looking at the used Dockerfile.
 

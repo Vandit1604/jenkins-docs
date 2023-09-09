@@ -5,11 +5,11 @@
 
 
 [NOTE]
-===
+==
 This is a guest post by link:https://github.com/michaelneale[Michael Neale], long time open
 source developer and contributor to the link:/projects/blueocean[Blue Ocean]
 project.
-===
+==
 
 If you are running parts of your pipeline on Linux, possibly the easiest way to
 get a clean reusable environment is to use:
@@ -140,7 +140,7 @@ This creates a pipeline that developers can tweak on a pull-request basis,
 along with any changes to the environment needed to support it, without having
 to install any packages on the agent.
 
-=== Why not use docker commands directly?
+== Why not use docker commands directly?
 
 You could of course just use shell commands to do things with Docker directly,
 however, Jenkins Pipeline keeps track of Docker images used in a `Dockerfile`

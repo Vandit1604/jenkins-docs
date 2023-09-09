@@ -22,7 +22,7 @@ critical parts of the plugins and to measure the improvements of a change.
 This blog post summarizes the changes that were made and performance improvements
 measured.
 
-=== Caching matching roles
+== Caching matching roles
 
 A couple of major changes were made to the Role Strategy Plugin to improve its
 performance. First, we started collection of roles that matched a given
@@ -43,7 +43,7 @@ More information is available at pull request on GitHub:
 https://github.com/jenkinsci/role-strategy-plugin/pull/81
 
 
-=== Calculating Implying Permissions when plugin is loaded
+== Calculating Implying Permissions when plugin is loaded
 
 Jenkins' permission model allows one permissions to imply other permissions.
 When a permission check is made, we need to check if the user has any of
@@ -64,7 +64,7 @@ Both of these changes were integrated into the Role Strategy Plugin and the
 improvements can be experienced starting with version
 link:https://github.com/jenkinsci/role-strategy-plugin/releases/tag/role-strategy-2.13[2.13].
 
-=== Bonus: Configuration-as-Code export now works for Role Strategy
+== Bonus: Configuration-as-Code export now works for Role Strategy
 
 With plugin:configuration-as-code[Configuration-as-Code plugin] version
 link:https://github.com/jenkinsci/configuration-as-code-plugin/releases/tag/configuration-as-code-1.24[1.24]
@@ -77,7 +77,7 @@ Role Strategy Plugin, I also created the brand new plugin:folder-auth[Folder Aut
 You can check out the link:/blog/2019/08/16/folder-auth-plugin/[blog post] for
 more information about the plugin.
 
-=== Links and Feedback
+== Links and Feedback
 I would love to hear your comments and suggestions. Please feel free to reach
 out to me through either the
 link:https://app.gitter.im/#/room/#jenkinsci_role-strategy-plugin:gitter.im[Role Strategy Plugin Gitter chat] or through

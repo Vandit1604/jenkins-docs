@@ -7,7 +7,7 @@ image:https://web.archive.org/web/*/https://agentdero.cachefly.net/continuousblo
 One of the infrastructure issues that's half-way resolved is the question of Debian/Ubuntu packages. Kohuske has packages uploaded in an experimental https://hudson-labs.org/debian/[apt repository on hudson-labs.org] which you can try out. That said, it's not entirely clear whether this is going to be the preferred means of distributing native Debian/Ubuntu packages in the future (your mileage may vary).
 // break
 
-=== Bugs fixed
+== Bugs fixed
 
 * POM parsing was still using the module root as the base for relative paths for alternate settings files. (https://issues.jenkins.io/browse/JENKINS-6080[issue 6080])
 * Fix dynamic updates of build history table when https://en.wikipedia.org/wiki/Cross-site%20request%20forgery[CSRF] protection is turned on. (https://issues.jenkins.io/browse/JENKINS-6072[issue 6072])

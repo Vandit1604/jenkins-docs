@@ -49,24 +49,24 @@ Hudson will automatically keep track of jar files/war files, so enable the "Disc
 
 Desktop build notifiers are quite useful, email can tend to get clutter/lost in the mess with everything else coming into your inbox.
 
-=== Test results integration
+== Test results integration
 
 Going into the test results dashboard per-build and the test-result and build time trends for a specific job.
 
 Why is the build time trend useful? If the build suddenly takes a _huge_ amount of time to run, you've likely got performance issues that need fixing.
 
-=== Publishing HTML reports
+== Publishing HTML reports
 
 Starring the HTML Publisher plugin! Using the plugin to publish HTML reports generated from easyb for publishing acceptance test results for more wide-spread consumption.
 
 Bouncing from HTML reports to integrating with Sonar for code quality metrics
 
-=== Build Promotion
+== Build Promotion
 
 Starring the Promoted Builds plugin! Covering some similar concepts to Kohsuke's talk yesterday but literally going into the Hudson configuration and setting it up.
 
 Time is running out, John's flipping back and forth between the M2 release plugin and his automatic deployment to his local Tomcat environment.
 
-=== Q&A
+== Q&A
 
 "Can Hudson be used for other environments". Yes! Supports a number of build plugins, MSBuild, NAnt, CMake, in addition to the freestyle build. "Maven 3 support" Sonatype is apparently working on an integrated version of Hudson with Maven 3, Hudson core planning support "eventually."

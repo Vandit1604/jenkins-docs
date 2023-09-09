@@ -137,7 +137,7 @@ Shared Libraries take on a vital role.  They are the only supported way within
 Declarative Pipeline to define methods or classes that we want to use in more than one stage.
 
 [NOTE]
-===
+==
 The lack of support for defining methods that are accessible in multiple stages,
 is a known issue, with at least two JIRA tickets:
 link:https://issues.jenkins.io/browse/JENKINS-41335[JENKINS-41335] and
@@ -146,7 +146,7 @@ For this series, I chose to stick to using features that are fully supported
 in Declarative Pipeline at this time.
 The internet has plenty of hacked together solutions that *happen to work today*,
 but I wanted to highlight current best practices and dependable solutions.
-===
+==
 
 == Setting up a Shared Library
 

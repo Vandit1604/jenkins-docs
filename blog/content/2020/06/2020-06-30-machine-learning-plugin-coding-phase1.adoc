@@ -17,13 +17,13 @@ After a fresh introduction of community bonding, On June 1st, coding of GSoC had
 == Quick review
 
 [width="25%",cols="20,^4"]
-|=====
+|====
 |Pull Requests |21
 |Jira Issues |11
 |Major Tasks |3
 |Completed |3
 |In progress |0
-|=====
+|====
 
 == Week 1
 
@@ -39,7 +39,7 @@ All the base classes were implemented this week.
 
 More than these changes, repo was updated with pull request template and licence header. Readme was extended a little at the end of the week.
 
-=== Issues and Challenges
+== Issues and Challenges
 
 - Git rebase and squash
 - Tests invokes ipython client in the server failed during the CI build
@@ -54,7 +54,7 @@ Form validations and helper html will be a great help in the user point of view 
 .Server Configuration
 image:https://raw.githubusercontent.com/jenkinsci/machine-learning-plugin/master/docs/images/global_config.png[global_config]
 
-=== Issues and challenges
+== Issues and challenges
 
 - Backend depends on Apache zeppelin-python API to connect IPython
 - Find relevant extension points to extend the plugin
@@ -64,7 +64,7 @@ image:https://raw.githubusercontent.com/jenkinsci/machine-learning-plugin/master
 
 Earlier in this week, we were trying to merge our IPython builder PR without any memory leaks or bugs that will cause the system to be devastating while running this plugin. Later, this whole week I was implementing a file parser that could copy the necessary files and had the ability to accomplish the file conversion.
 
-=== Supported file types
+== Supported file types
 
 - Python (.py)
 - JSON (Zeppelin notebooks format)
@@ -74,7 +74,7 @@ IPython builder was able to run Jupyter Notebooks and Zeppelin formatted JSON fi
 .Copying and converting Jupyter Notebook
 image:https://raw.githubusercontent.com/jenkinsci/machine-learning-plugin/master/docs/images/file_parser.png[file_convert]
 
-=== Issues and Challenges
+== Issues and Challenges
 
 Python error messages could not be displayed in rich format
 If a job is running at user level, but if the python code access file/file path which is not authorized to the user, it returns a permission denied message.
@@ -85,19 +85,19 @@ Artifacts should be maintained/reachable from controller after build.
 
 As all the major tasks has done, the demo preparation and plan for a experimental release was carried during the last week. There were lots of research on how to connect to a existing kernel in remote. Demo and presentation were prepared along the week.
 
-=== Issues and Challenges
+== Issues and Challenges
 
 - Releasing the first version was bit late
 
 == Knowledge transfer
 
-=== How to debug the code through IntelliJ
+== How to debug the code through IntelliJ
 
 - Edit configuration → Add new Configuration → Maven
 - Command line → type `hpi:run`
 - Click the debug icon on the toolbar or go to `Run` menu then `Debug`
 
-=== How to setup to test the plugin
+== How to setup to test the plugin
 
 - Setup JDK 8 and Maven 3.5.*
 - Create a directory `mkdir machine-learning-plugin`
@@ -112,7 +112,7 @@ As all the major tasks has done, the demo preparation and plan for a experimenta
 - Write python code like print(“plugin works”)
 - Build the job
 
-=== Issues and bugs
+== Issues and bugs
 
 - link:https://issues.jenkins.io/browse/JENKINS-62528[JENKINS-62528] Issues on Jenkins build in the plugin repository
 - link:https://issues.jenkins.io/browse/JENKINS-[JENKINS-62621] Global configuration for IPython servers

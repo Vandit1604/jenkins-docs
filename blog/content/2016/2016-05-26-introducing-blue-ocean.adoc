@@ -43,7 +43,7 @@ allowfullscreen></iframe>
 Blue Ocean will provide development teams:
 
 
-=== New modern user experience
+== New modern user experience
 
 The UI aims to improve clarity, reduce clutter and navigational depth to make
 the user experience very concise. A modern visual design gives developers much
@@ -53,7 +53,7 @@ changes on the server making manual page refreshes a thing of the past.
 image:/post-images/blueocean/pipeline-dashboard.png[Project dashboard, role=center]
 
 
-=== Advanced Pipeline visualisations with built-in failure diagnosis
+== Advanced Pipeline visualisations with built-in failure diagnosis
 
 link:/solutions/pipeline[Pipelines] are visualised on screen along with the
 steps and logs to allow simplified comprehension of the continuous delivery
@@ -64,7 +64,7 @@ breaks down your log per step and calls out where your build failed.
 
 image:/post-images/blueocean/failing-pipeline.png[Failing Pipeline, role=center]
 
-=== Branch and Pull Request awareness
+== Branch and Pull Request awareness
 
 Modern pipelines make use of multiple Git branches, and Blue Ocean is designed
 with this in mind. Drop a link:/doc/pipeline[`Jenkinsfile` into your Git
@@ -77,7 +77,7 @@ Bitbucket on all your commits, branches or pull requests.
 image:/post-images/blueocean/pr-view.png[Pull request view, role=center]
 
 
-=== Personalised View
+== Personalised View
 
 Favourite any pipelines, branches or pull requests and see them appear on your
 personalised dashboard. Intelligence is being built into the dashboard. Jobs
@@ -96,14 +96,14 @@ link:/content/mailing-lists[Developers list] for more information.
 
 For Jenkins developers and plugin authors:
 
-=== Jenkins Design “Language”
+== Jenkins Design “Language”
 
 The Jenkins Design Language (JDL) is a set of standardised React components and
 a style guide that help developers create plugins that retain the look and feel
 of Blue Ocean in an effortless way. We will be publishing more on the JDL,
 including the style guide and developer documentation, over the next few weeks.
 
-=== Modern JavaScript toolchain
+== Modern JavaScript toolchain
 
 The Jenkins plugin tool chain has been extended so that developers can use
 link:https://medium.com/@rajaraodv/5-javascript-bad-parts-that-are-fixed-in-es6-c7c45d44fd81[ES6],
@@ -112,7 +112,7 @@ in their plugins without endless yak-shaving. Jenkins
 link:https://github.com/jenkinsci/js-modules[js-modules] are already in use in
 Jenkins today, and this builds on this, using the same tooling.
 
-=== Client side Extension points
+== Client side Extension points
 
 Client Side plugins use Jenkins plugin infrastructure. The Blue Ocean libraries
 built on ES6 and React.js provide an extensible client side component model
@@ -120,7 +120,7 @@ that looks familiar to developers who have built Jenkins plugins before. Client
 side extension points can help isolate failure, so one bad plugin doesn’t take
 a whole page down.
 
-=== Server Sent Events
+== Server Sent Events
 
 link:https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events[Server Sent Events]
 (SSE) allow plugin developers to tap into changes of state on the server and make

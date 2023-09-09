@@ -144,7 +144,7 @@ I try to use it only when I really need it.
 In my sample pipeline below, I specifically exclude the `linux, safari` combination and I also exclude any platform that is *not* `windows` with the `edge` browser.
 
 [IMPORTANT]
-===
+==
 This pipeline uses two axes but there is *no limit* on the number of `axis` directives. 
 
 Also, in this pipeline each `exclude` specifies values for both axes, but that is not required.
@@ -158,7 +158,7 @@ exclude {
     }
 }
 ----
-===
+==
 
 [source, groovy]
 ----

@@ -79,11 +79,11 @@ tunnel to Sauce Labs
 <6> Link result details from Sauce Labs
 
 [NOTE]
-===
+==
 This pipeline expects to be run from a `Jenkinsfile` in SCM.
 To copy and paste it directly into a Jenkins Pipeline job, replace the `checkout scm` step with
 `git url:'https://github.com/bitwiseman/JS-Nightwatch.js', branch: 'sauce-pipeline'`.
-===
+==
 
 I ran this job a few times to get the JUnit report to show a trend graph.
 
@@ -161,14 +161,14 @@ sauceconnect(options: '', useGeneratedTunnelIdentifier: false, verboseLogging: f
 <2> Changed from single-quoted string to double-quoted to support variable substitution.
 
 [WARNING]
-===
+==
 Test frameworks have bugs too. Nightwatch.js (v0.9.8) generates incomplete JUnit files,
 reporting results without enough information in them to distinguish between platforms.
 I implemented a fix for it and
 link:https://github.com/nightwatchjs/nightwatch/pull/1160[submitted a PR] to Nightwatch.js.
 This blog shows output with that fix applied locally.
 
-===
+==
 
 As expected, Jenkins picked up the new pipeline and ran Nightwatch.js on four platforms.
 Sauce Labs of course recorded the results and correctly linked them into this build.
@@ -207,7 +207,7 @@ link:https://wiki.jenkins.io/display/JENKINS/AnsiColor+Plugin[AnsiColor Plugin]
 to support Nightwatch.js' default ANSI color output.
 --
 
-=== Freestyle
+== Freestyle
 image::/post-images/2016-08-29/freestyle-1.png[Freestyle Job Configuration - SCM, role="center"]
 
 image::/post-images/2016-08-29/freestyle-2.png[Freestyle Job Configuration - Wrappers and Sauce, role="center"]
@@ -215,7 +215,7 @@ image::/post-images/2016-08-29/freestyle-2.png[Freestyle Job Configuration - Wra
 image::/post-images/2016-08-29/freestyle-3.png[Freestyle Job Configuration - Build and Publish, role="center"]
 
 
-=== Pipeline
+== Pipeline
 
 [source,groovy]
 ----
@@ -257,11 +257,11 @@ node {
 }
 ----
 [NOTE]
-===
+==
 This pipeline expects to be run from a `Jenkinsfile` in SCM.
 To copy and paste it directly into a Jenkins Pipeline job, replace the `checkout scm` step with
 `git url:'https://github.com/bitwiseman/JS-Nightwatch.js', branch: 'sauce-pipeline'`.
-===
+==
 
 Not only is the pipeline as code more compact,
 it also allows for comments to further clarify what is being done.

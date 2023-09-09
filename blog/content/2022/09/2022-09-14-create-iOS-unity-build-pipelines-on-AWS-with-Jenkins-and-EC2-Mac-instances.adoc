@@ -71,7 +71,7 @@ https://catalog.us-east-1.prod.workshops.aws/workshops/43e96ac6-6d4f-4d99-af97-3
 a repository with code and a sample project can be found
 https://github.com/aws-samples/unity-aws-ec2-mac-build-farm[here].
 
-=== Networking template
+== Networking template
 
 To setup the whole solution, I have created the following
 https://static.us-east-1.prod.workshops.aws/public/b40b1644-6805-40c7-888e-7a5b080112ab/static/templates/template_full.yaml[CloudFormation
@@ -91,7 +91,7 @@ availability zones to reduce inter-AZ traffic costs.
 
 image:/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image4.png[image,width=624,height=295]
 
-=== Unity container and build server
+== Unity container and build server
 
 The demonstration
 https://github.com/aws-samples/unity-aws-ec2-mac-build-farm[repository]
@@ -156,7 +156,7 @@ License server DNS name can be stored in Secrets Manager.
 
 **End of Unity Part**
 
-=== EC2 Mac and Secrets Manager
+== EC2 Mac and Secrets Manager
 
 In order to build and sign iOS applications, we need an EC2 Mac
 instance. To launch an Amazon EC2 Mac instance, you must first allocate
@@ -190,7 +190,7 @@ In our case, the instance also needs to have Java and Xcode installed,
 as well as an IAM role to call to other services, such as Amazon Secrets
 Manager.
 
-=== Build signing and AWS Secrets Manager
+== Build signing and AWS Secrets Manager
 
 To sign the build for the App Store, we need to have a signing
 certificate and a provisioning profile. It is possible to also generate
@@ -206,7 +206,7 @@ To set up a temporary keychain with signature files, you can use either
 https://fastlane.tools/[Fastlane] or create the temporary keychain
 manually.
 
-=== Linux worker instances
+== Linux worker instances
 
 In order for Linux workers to be able to run build instructions from
 Jenkins, several features have to be enabled for Linux worker instances:
@@ -218,7 +218,7 @@ docker images
 Manager node port 22 (Manager node uses ssh to connect to the worker and
 setup agent)
 
-=== Jenkins setup
+== Jenkins setup
 
 Jenkins uses a manager node to orchestrate builds. Build jobs will run
 either on EC2 Mac or on EC2 Spot instances managed by the EC2 Fleet
@@ -263,7 +263,7 @@ image:/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image9.png[image,
 Also, labels can be used in order to separate kinds of workers within a
 pipeline. Note that on a screenshot above I use label “mac”.
 
-=== Build pipeline and running a build
+== Build pipeline and running a build
 
 Every Jenkins pipeline can be described using a *Jenkinsfile* file. It
 is a YAML-formatted document which describes all the steps for the
@@ -274,7 +274,7 @@ following:
 
 .Click to reveal the Jenkinsfile
 [%collapsible]
-===
+==
 [source,groovy]
 ----
 pipeline {
@@ -537,7 +537,7 @@ base64 -d -o /tmp/priv.p12 &&
     }
 }
 ----
-===
+==
 
 The key pieces of the file:
 

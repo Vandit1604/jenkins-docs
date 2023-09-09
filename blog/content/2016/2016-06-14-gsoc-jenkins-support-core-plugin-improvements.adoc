@@ -38,7 +38,7 @@ image:/post-images/gsoc-support-core-plugin/generate-bundle.png[Popup window, ro
 == Tasks and Deliverables
 
 
-=== Ease the bundles management by the administrator.
+== Ease the bundles management by the administrator.
 
 Under this task, the following functions are going to be implemented.
 
@@ -51,14 +51,14 @@ Under this task, the following functions are going to be implemented.
 image:/post-images/gsoc-support-core-plugin/downloadBundles.png[Popup window, role=center]
 image:/post-images/gsoc-support-core-plugin/config.png[Popup window, role=center]
 
-=== Enabling user to create an issue and submit a bundle into the OSS tracker
+== Enabling user to create an issue and submit a bundle into the OSS tracker
 
 When a Jenkins user sees an issue, he/she commonly contacts his support contacts (Jenkins instance admins) and then Jenkins admins troubleshoot the issue.
 The objective of this task is to implement a feature which enables the user to report an issue to a admin through support core plugin.
 
 When creating bundles to attach with the ticket, it is important to protect the privacy of the user who creates the ticket. When considering doing that, anonymizing user created labels (texts) comes to the front.
 
-=== Adding  an option to anonymize customer labels
+== Adding  an option to anonymize customer labels
 
 The following functions will be implemented under this task.
 

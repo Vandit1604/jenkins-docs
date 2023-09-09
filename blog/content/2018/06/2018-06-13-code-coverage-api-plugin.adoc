@@ -26,7 +26,7 @@ So, we can implement code coverage publishing by simply writing an adapter, and 
 == Current Progress - Alpha Version
 I have developed an alpha version for this plugin. It currently integrates two different coverage tools - Cobertura and Jacoco. Also, it implements many basic functionalities like threshold, auto-detect, trend chart and so on.
 
-=== Configuration Page
+== Configuration Page
 *config plugin*
 image:/post-images/2018-06-13-code-coverage-api-plugin/configuration-page.png[title="Code Coverage API Plugin Configuration", role="center"]
 
@@ -34,7 +34,7 @@ We can input the path pattern for auto detect, so that plugin will automatically
 
 We also have global and per-report threshold configurations, which makes the plugin more flexible than existing plugins (e.g. global threshold for a multi-language project that has several reports).
 
-=== Pipeline Support
+== Pipeline Support
 In addition to configuring the Code Coverage API plugin from the UI page, we also have pipeline support.
 [source, groovy]
 ----
@@ -42,7 +42,7 @@ node {
    publishCoverage(autoDetectPath: '**/*.xml', adapters: [jacoco(path: 'jacoco.xml')], globalThresholds: [[thresholdTarget: 'GROUPS', unhealthyThreshold: 20.0, unstableThreshold: 0.0]])
 }
 ----
-=== Report Defects
+== Report Defects
 
 As we can see in Configuration page, we can set healthy threshold and stable threshold for each metric. The Code Coverage API plugin will report healthy score according to the healthy threshold we set.
 
@@ -54,29 +54,29 @@ image:/post-images/2018-06-13-code-coverage-api-plugin/health-report.png[title="
 
 Also, we have a group of options which can fail the build if coverage falls below a particular threshold.
 
-=== Coverage Result Page
+== Coverage Result Page
 The coverage result page now has a modernized UI which shows coverage results more clearly.
 The result page includes three parts - Trend chart, Summary chart, Child Summary chart. 
 
-==== Trend Chart
+=== Trend Chart
 In the Trend chart, we can see the coverage trend of the selected coverage metrics.
 image:/post-images/2018-06-13-code-coverage-api-plugin/trend-chart.gif[title="Trend Chart", role="center"]
 
-==== Summary Chart
+=== Summary Chart
 In the summary chart we can see the coverage summary of current coverage metric.
 image:/post-images/2018-06-13-code-coverage-api-plugin/summary-chart.gif[title="Summary Chart", role="center"]
 
 
-==== Child Summary Chart
+=== Child Summary Chart
 In the Child summary chart, we can see the coverage summary of each child, also, we can use the range handler to filter item we want to see to reduce the chart size.
 image:/post-images/2018-06-13-code-coverage-api-plugin/child-summary-chart.gif[title="Child Summary Chart", role="center"]
 
 By using those more modernized chart components, we can easily focus on the information we want to know.
 
-=== Extensibility
+== Extensibility
 We provide several extension points to make our plugin more extensible and flexible. Also, we have a series of abstract layers to help us implementing these extension points much easier.
 
-==== CoverageReportAdapter
+=== CoverageReportAdapter
 We can implement a coverage tool by implementing CoverageReportAdapter extension point. For example, by using the provided abstract layer, we can implement Jacoco simple like this:
 
 [source, java]
@@ -111,7 +111,7 @@ public final class JacocoReportAdapter extends JavaXMLCoverageReportAdapter {
 
 All we need is to extend an abstract layer for XML-based Java report and provide an XSL file to convert the report to our Java standard format. There are also other extension points which are under development.
 
-==== Other Extension points
+=== Other Extension points
 We also plan to provide extension points for coverage threshold and report detector. Once it completed, we can have more control over our coverage report process.
 
 == Next Phase Plan
@@ -131,7 +131,7 @@ The Alpha version now has many parts which still need to be implemented before t
 Also, I have released the Alpha version in the link:/doc/developer/publishing/releasing-experimental-updates/#configuring-jenkins-to-use-experimental-update-center[Experimental Update Center]. If you can give me some of your valuable advice about it, I will very appreciate.
 
 == Links
-- https://app.gitter.im/#/room/#jenkinsci_code-coverage-api-plugin:gitter.im[image:https://badges.gitter.im/jenkinsci/code-coverage-api-plugin.svg[title: "Gitter"]]
+- https://app.gitter.im/#/room/#jenkinsci_code-coverage-api-plugin:gitter.im[image:https://badges.gitter.im/jenkinsci/code-coverage-api-plugin.svg[= "Gitter"]]
 - https://issues.jenkins.io/issues/?jql=project+%3D+JENKINS+AND+component+%3D+code-coverage-api-plugin[JIRA Component]
 - link:/projects/gsoc/2018/code-coverage-api-plugin/[Project Page]
 - https://github.com/jenkinsci/code-coverage-api-plugin[Project Repository]

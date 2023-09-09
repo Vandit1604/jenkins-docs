@@ -91,7 +91,7 @@ We introduced the `when` section a couple releases ago, but have made some
 changes to its syntax here in 0.8.1. We wanted to add some simpler ways to
 specify common conditions, and that required we re-work the syntax accordingly.
 
-=== Branch
+== Branch
 One of the most common conditions is running a stage only if you're on a
 specific branch. You can also use wildcards like "*/master".
 [pipeline]
@@ -103,7 +103,7 @@ when {
 // Script //
 ----
 
-=== Environment
+== Environment
 Another built-in condition is the environment condition, which checks to see
 if a given environment variable is set to a given value.
 [pipeline]
@@ -115,7 +115,7 @@ when {
 // Script //
 ----
 
-=== Expression
+== Expression
 Lastly, there's the expression condition, which resolves an arbitrary
 Pipeline expression. If the return value of that expression isn't false or
 null, the stage will execute.

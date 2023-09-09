@@ -35,7 +35,7 @@ My mentors are https://github.com/christ66[Steven Christou], https://github.com/
 * Failed conditions and flexible threshold setting
 * Other small features
 
-=== Modernized Coverage Chart
+== Modernized Coverage Chart
 
 In the summary chart we can see the coverage summary of current coverage metric.
 image:/post-images/2018-06-13-code-coverage-api-plugin/summary-chart.gif[title="Summary Chart", role="center"]
@@ -48,14 +48,14 @@ image:/post-images/2018-06-13-code-coverage-api-plugin/child-summary-chart.gif[t
 We also support coverage trend to show coverage metrics changing between builds.
 image:/post-images/2018-06-13-code-coverage-api-plugin/trend-chart.gif[title="Trend Chart", role="center"]
 
-=== Source Code Navigation
+== Source Code Navigation
 You can enable source code navigation by specifying Source File Storing Level to save last build source files (enable source files navigation in current and last build) or save all build source files (enable source files navigation in all builds).
 image:/post-images/code-coverage-api/source-files-config.png[title="Source File Navigation Configuration" role="center"]
 
 You can see source file with coverage information on File level coverage page.
 image:/post-images/code-coverage-api/source-files-result.png[title="Source File Navigation Result" role="center"]
 
-=== Parallel Pipeline Support
+== Parallel Pipeline Support
 
 We support parallel pipeline. You can call the Code Coverage API plugin in different branches like this:
 [source, groovy]
@@ -69,7 +69,7 @@ node {
 }
 ----
 
-=== Reports Combining
+== Reports Combining
 You can add tag on `publishCoverage` and Code Coverage API plugin will combine reports have same tag
 
 ----
@@ -82,7 +82,7 @@ node {
 }
 ----
 
-=== REST API
+== REST API
 We provide a REST API to retrieve coverage data:
 
 * Coverage result: `.../\{buildNumber\}/coverage/.../result/api/\{json|xml\}`
@@ -90,14 +90,14 @@ We provide a REST API to retrieve coverage data:
 * Coverage result of last build: `.../\{buildNumber\}/coverage/.../last/result/api/\{json|xml\}`
 * Trend result of last build: `.../\{buildNumber\}/coverage/.../last/trend/api/\{json|xml\}`
 
-=== Failed Conditions and Flexible Threshold Setting
+== Failed Conditions and Flexible Threshold Setting
 You can set different failed conditions and threholds to control build result.
 image:/post-images/code-coverage-api/thresholds-config.png[title="Thresholds Configuration" role="center"]
 
 If the thresholds satisfy the failed conditions, it will fail the build. 
 image:/post-images/code-coverage-api/thresholds-result.png[title="Thresholds Result" role="center"]
 
-=== Other Small Features
+== Other Small Features
 
 We also have other small features like auto detecting reports, coverage filters, etc. You can find more information about these features in the plugin documentation.
 
@@ -187,7 +187,7 @@ If you want implement a new coverage format that we did not provide abstract lay
 ++++
 
 == Links
-- https://app.gitter.im/#/room/#jenkinsci_code-coverage-api-plugin:gitter.im[image:https://badges.gitter.im/jenkinsci/code-coverage-api-plugin.svg[title: "Gitter"]]
+- https://app.gitter.im/#/room/#jenkinsci_code-coverage-api-plugin:gitter.im[image:https://badges.gitter.im/jenkinsci/code-coverage-api-plugin.svg[= "Gitter"]]
 - https://issues.jenkins.io/issues/?jql=project+%3D+JENKINS+AND+component+%3D+code-coverage-api-plugin[JIRA Component]
 - link:/projects/gsoc/2018/code-coverage-api-plugin/[Project Page]
 - https://github.com/jenkinsci/code-coverage-api-plugin[Project Repository]

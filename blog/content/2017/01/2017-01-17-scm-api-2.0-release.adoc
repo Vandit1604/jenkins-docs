@@ -1,16 +1,16 @@
 = SCM API turns 2.0 and what that means for you
-::page-tags: development, plugins
+:page-tags: development, plugins
 
 :page-author: stephenc
 
 
 [NOTE]
-===
+==
 The link:https://issues.jenkins.io/browse/JENKINS-41121[regressions
 discovered after release] have now been resolved and this post has been updated with the correct plugin version numbers.
 
 See link:/blog/2017/02/06/scm-api-2-take2/[this post] for more details.
-===
+==
 
 We are announcing the
 plugin:scm-api[SCM API]
@@ -48,10 +48,10 @@ plugins installed then you *must* upgrade them *all* to 2.0.x at the same time o
 ____
 
 [WARNING]
-===
+==
 Do NOT upgrade some of these plugins but not others!
 Doing so may cause your jobs to fail to load.
-===
+==
 
 If you don't care about the hows and whys, you can just skip down to <<tldr,this section>> but if you are curious... here we go!
 
@@ -161,16 +161,16 @@ Technically, the 2.0.x line of this plugin is both API and on-disk compatible wi
 However, the 1.x lines of both the GitHub Branch Source and BitBucket Branch Source plugins have hard-coded assumptions about internal implementation of the SCM API that are no longer valid in the 2.0.x line.
 +
 [WARNING]
-===
+==
 If you upgrade to SCM API 2.0.x and you have either the GitHub Branch Source or the BitBucket Branch Source plugins *and* you do not upgrade those instances to the 2.0.x line then your Jenkins instance will fail to start-up correctly.
 
 The solution is just to upgrade the GitHub Branch Source or the BitBucket Branch Source plugin (as appropriate) to the 2.0.x line.
-===
+==
 +
 [TIP]
-===
+==
 If you upgrade the SCM API plugin to the 2.0.x line and do not upgrade the Branch API plugin to the 2.0.x line then you will not get any of the benefits of the new version of the SCM API plugin.
-===
+==
 
 Branch API Plugin::
 The 2.0.x line of this plugin makes on-disk file format changes that mean you will be unable to roll back to the 1.x line after an upgrade without restoring the old data files from a back-up.
@@ -182,11 +182,11 @@ The Pipeline Multibranch plugin made a few minor invalid assumptions about how t
 For example, if you do not upgrade the Pipeline Multibranch plugin in tandem then you will be unable to manually delete an orphaned item before the orphaned item retention strategy runs, which should be significantly less frequently with the new event support.
 +
 [WARNING]
-===
+==
 If you upgrade to Branch API 2.0.x and you have either the GitHub Branch Source or the BitBucket Branch Source plugins *and* you do not upgrade those instances to the 2.0.x line then your Jenkins instance will fail to start-up correctly.
 
 The solution is just to upgrade the GitHub Branch Source or the BitBucket Branch Source plugin (as appropriate) to the 2.0.x line.
-===
+==
 
 Git Plugin::
 The new releases of this plugin are both API and on-disk compatible with plugins compiled against the previous releases.
@@ -207,20 +207,20 @@ GitHub Branch Source Plugin::
 The 2.0.x line of this plugin makes on-disk file format changes that mean you will be unable to roll back to the 1.x line after an upgrade without restoring the old data files from a back-up.
 +
 [WARNING]
-===
+==
 If you upgrade to GitHub Branch Source 2.0.x and you have the GitHub Organization Folders plugin installed, you must upgrade that plugin to the tombstone release.
-===
+==
 
 GitHub Organization Folders Plugin::
 The functionality of this plugin has been migrated to the GitHub Branch Source plugin.
 You will need to upgrade to the tombstone release in order to ensure all the data has been migrated to the classes in the GitHub Branch Source plugin.
 +
 [TIP]
-===
+==
 Once you have upgraded to the tombstone version and all GitHub Organization Folders have had a full scan completed successfully, you can disable and uninstall the GitHub Organization Folders plugin.
 There will be no more releases of this plugin after the tombstone.
 The tombstone is only required for data migration.
-===
+==
 
 [[tldr]]
 == Summary for busy Jenkins Administrators

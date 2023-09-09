@@ -29,30 +29,30 @@ link:https://github.com/martinda[Martin d'Anjou],
 link:https://github.com/kwhetstone[Kristin Whetstone],
 link:https://github.com/grandvizier[Jeff Knurek]
 
-=== Project Repository
+== Project Repository
 link:https://github.com/jenkinsci/simple-pull-request-job-plugin[Project repository]
 
-=== Code changes
+== Code changes
 
 All the pull requests made can be found link:https://github.com/jenkinsci/simple-pull-request-job-plugin/pulls?q=is%3Apr+is%3Aclosed[here]
 
-=== List of major pull requests.
+== List of major pull requests.
 
-==== Phase 1
+=== Phase 1
 * link:https://github.com/jenkinsci/simple-pull-request-job-plugin/pull/5[PR-5]: Git wrappers like clone, pull, checkout,
 pullChangesOfPullrequest, merge, deleteBranch and merge added.
 * link:https://github.com/jenkinsci/simple-pull-request-job-plugin/pull/6[PR-6]: Yaml to Declarative Pipeline code generation.
 
 Please see link:/blog/2018/06/15/simple-pull-request-plugin/[Phase 1 blog post]
 
-==== Phase 2
+=== Phase 2
 * link:https://github.com/jenkinsci/simple-pull-request-job-plugin/pull/11[PR-11]: Implemented StepConfigurator
 using Jenkins configuration as code plugin.
 * link:https://github.com/jenkinsci/simple-pull-request-job-plugin/pull/19[PR-19]: Unit tests created for agent and yaml to pipeline generation.
 
 Please see link:/blog/2018/07/17/simple-pull-request-plugin/[Phase 2 blog post]
 
-==== Phase 3
+=== Phase 3
 * link:https://github.com/jenkinsci/simple-pull-request-job-plugin/pull/25[PR-25]: Declarative pipeline code generator code
 exported to extensions for extensibility and support of custom sections
 

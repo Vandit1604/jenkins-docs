@@ -1,6 +1,6 @@
 
 :page-author: rtyler
-title: "Jenkins 2.0 Online JAM Wrap-up"
+= "Jenkins 2.0 Online JAM Wrap-up"
 :page-tags: jenkins2, jam, meetup
 
 
@@ -44,7 +44,7 @@ Below are a collection of questions and answers, that were posed during the
 Virtual JAM. Many of these were answered during the course of the sessions, but
 for posterity all are included below.
 
-=== Pipeline
+== Pipeline
 
 ____
 What kind of DSL is used behind pipeline as code? Groovy or allow freely use
@@ -273,7 +273,7 @@ This can be done by wrapping a step invocation with a Groovy `try/catch` block.
 See also link:https://issues.jenkins.io/browse/JENKINS-28119[JENKINS-28119]
 
 
-=== User Interface/Experience
+== User Interface/Experience
 ____
 Is the user experience same as before when we replace the Jenkins.war(1.x to
 2.x) in an existing (with security in place) installation?
@@ -302,7 +302,7 @@ Blue Ocean is the name of user experience an design project, unfortunately at
 this point in time there is not more information available on it.
 
 
-=== General
+== General
 ____
 How well this integrate with cloud environment?
 ____

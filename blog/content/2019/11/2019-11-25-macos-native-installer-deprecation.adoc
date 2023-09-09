@@ -35,14 +35,14 @@ So we discussed it in the link:https://groups.google.com/forum/#!topic/jenkinsci
 In the case of macOS, there are two main alternatives available: managing the service manually or migrating to Homebrew packages.
 Before doing a migration, we highly recommend backing up your instance.
 
-=== Managing Jenkins with WAR file on macOS
+== Managing Jenkins with WAR file on macOS
 
 If your Jenkins instance was previously set up with a native installer,
 to update Jenkins it will be enough to replace the `jenkins.war` file in the installation directory and restart the instance.
 The services will keep running as it was configured before the migration.
 The default installation directory is `/Applications/Jenkins/jenkins.war`
 
-=== Managing Jenkins with Homebrew
+== Managing Jenkins with Homebrew
 
 Installing Jenkins with link:https://brew.sh/[Homebrew] is a way to go for those who want to install Jenkins using a package manager.
 There are two Homebrew formulas for Jenkins: link:https://formulae.brew.sh/formula/jenkins[jenkins] for Weekly releases and link:https://formulae.brew.sh/formula/jenkins-lts[jenkins-lts] for LTS ones.

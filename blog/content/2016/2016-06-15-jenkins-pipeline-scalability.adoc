@@ -16,7 +16,7 @@ This is the story of a journey to get out of the jungle of jobs...
 
 image::/post-images/jenkins-pipeline-scalability/journey.png[Journey out of the jungle of jobs, role=center]
 
-=== Start of the journey
+== Start of the journey
 
 At the beginning of the journey there were several projects using roughly the same
 technologies. Those projects had several
@@ -37,7 +37,7 @@ of the story, we had more than 3500 jobs.
 
 image::/post-images/jenkins-pipeline-scalability/thousands.png[Thousands of jobs for a small team, role=center]
 
-=== Preparing the journey
+== Preparing the journey
 
 How did we deal with this load?
 
@@ -75,7 +75,7 @@ same pipelines, give or take a few configurable items. Going this way would
 have lead to a terrible duplication of code, transforming a job maintenance
 nightmare into a code maintenance nightmare.
 
-=== Pipeline as configuration
+== Pipeline as configuration
 
 Our trick was to transform this vision of "pipeline as code" into a "pipeline
 as configuration":
@@ -89,7 +89,7 @@ as configuration":
 
 image::/post-images/jenkins-pipeline-scalability/properties.png[Property file, role=center]
 
-=== Piloting the pipeline from the SCM
+== Piloting the pipeline from the SCM
 
 Once this was done, the only remaining trick was to automate the creation,
 update, start and deletion of the pipelines using SCM events. By enabling SCM
@@ -113,7 +113,7 @@ running.
 
 image::/post-images/jenkins-pipeline-scalability/jobs.png[Jobs, role=center]
 
-=== Configuration _and_ code
+== Configuration _and_ code
 
 Mixing the use of strong pipeline libraries configured by properties and the
 direct use of the Jenkins Job DSL is still possible. The Seed plugin
@@ -130,7 +130,7 @@ allowed some teams to develop their own pipeline script.
 
 image::/post-images/jenkins-pipeline-scalability/modes.png[Mixed modes, role=center]
 
-=== End of the journey
+== End of the journey
 
 In the end, what did we achieve?
 
@@ -156,7 +156,7 @@ In the end, what did we achieve?
 
 image::/post-images/jenkins-pipeline-scalability/responsibilities.png[Responsibilities, role=center]
 
-=== Seed and Pipeline plugin
+== Seed and Pipeline plugin
 
 Now, what about the link:/doc/pipeline/[Pipeline plugin]? Both
 this plugin and the Seed plugin have common functionalities:
@@ -181,7 +181,7 @@ what makes the strength of the Seed plugin:
 
 image::/post-images/jenkins-pipeline-scalability/seed-pipeline.png[Seed and Pipeline, role=center]
 
-=== Links
+== Links
 
 You can find additional information about the Seed plugin and its usage at the
 following links:

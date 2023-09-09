@@ -1,12 +1,11 @@
 = Validating JCasC configuration files using Visual Studio Code
 :page-opengraph: /images/logos/JCasC/JCasC.png
 :page-tags: community-bridge, JCasC, VSCode
-
 :page-author: sladyn98
 
 
 
-=== Configuration-as-code plugin
+== Configuration-as-code plugin
 
 Problem Statement: Convert the existing schema validation workflow from the current scripting language in the link:https://plugins.jenkins.io/configuration-as-code[Jenkins Configuration as Code Plugin] to a Java based rewrite thereby enhancing its readablity and testability supported by a testing framework for the same. Enhance developer experience by developing a VSCode Plugin to facilitate autocompletion and validation which would help the developer write correct yaml files before application to a Jenkins Instance.
 

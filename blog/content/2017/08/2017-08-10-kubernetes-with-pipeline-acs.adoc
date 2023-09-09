@@ -5,12 +5,12 @@
 
 
 [NOTE]
-===
+==
 This is a guest post by link:https://github.com/puicchan[Pui Chee Chen],
 Product Manager at Microsoft working on
 link:https://jenkinsworld20162017.sched.com/event/AK4K/azure-devops-open-source-integrations[Azure
 DevOps open source integrations].
-===
+==
 
 Recently, we improved the plugin:azure-credentials[Azure Credential plugin] by
 adding a custom binding for Azure Credentials which allows you to use an
@@ -47,11 +47,11 @@ node {
 ----
 
 [WARNING]
-===
+==
 `azureServicePrincipal()` cannot be used in Declarative Pipeline until
 link:https://issues.jenkins.io/browse/JENKINS-46103[JENKINS-46103] is
 resolved.
-===
+==
 
 Once a Pipeline can interact with Azure, there are countless ways one could
 implement continuous delivery with Jenkins and Azure. From a deploying a simple
@@ -147,8 +147,8 @@ See you at
 link:https://www.cloudbees.com/jenkinsworld[Jenkins World 2017]!
 
 [WARNING]
-===
+==
 Join the Azure DevOps team at
 link:https://www.cloudbees.com/jenkinsworld/home[Jenkins World] in August,
 register with the code `JWFOSS` for a 30% discount off your pass.
-===
+==

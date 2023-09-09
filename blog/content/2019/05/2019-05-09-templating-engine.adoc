@@ -1,5 +1,5 @@
 = "Introducing the Jenkins Templating Engine!"
-::page-tags: general, pipeline, plugin
+:page-tags: general, pipeline, plugin
 
 :page-author: steven-terrana
 :sig: pipeline-authoring
@@ -53,7 +53,7 @@ Implementing a shareable pipeline with the Templating Engine requires a few key 
 . **Libraries**: __Provide technical implementations of the steps of the workflow__ +
 . **Configuration Files**: __Specify which libraries to use and their configuration__ 
 
-=== Step 1: Create a Pipeline Configuration Repository
+== Step 1: Create a Pipeline Configuration Repository
 
 A __Pipeline Configuration Repository__ is used to store common configurations and pipeline templates inherited by teams. 
 
@@ -69,7 +69,7 @@ NOTE: The pipeline templates and the configuration file for a Governance Tier ar
 
 When configuring the Governance Tier in Jenkins, you will provide a source code management location for a repository that contains the above components as well as the base directory where these artifacts can be found. 
 
-=== Step 2: Create the Pipeline Template
+== Step 2: Create the Pipeline Template
 
 Next, we'll create a ``Jenkinsfile`` for the Governance Tier.  In JTE, the ``Jenkinsfile`` is the default pipeline template that an execution will use. 
 
@@ -81,7 +81,7 @@ build()
 static_code_analysis() 
 ----
 
-=== Step 3: Create the Libraries
+== Step 3: Create the Libraries
 
 The Templating Engine Plugin has implemented a version of Jenkins Shared Libraries to enhance the reusability of libraries.  A library is a root directory within a source code repository that has been configured as a Library Source on a Governance Tier.  
 
@@ -102,7 +102,7 @@ In this scenario, we should create ``gradle``, ``maven``, and ``sonarqube`` libr
   \-- static_code_analysis.groovy 
 ----
 
-=== Step 4: Implement the Steps
+== Step 4: Implement the Steps
 
 Implementing a library step is exactly the same as just writing regular global variables as part of the default Jenkins Shared Libraries. 
 
@@ -118,7 +118,7 @@ void call(){
 
 TIP: Read more about link:https://boozallen.github.io/jenkins-templating-engine/pages/Library_Development/index.html[Library Development within JTE].
 
-=== Step 5: Create the Configuration Files
+== Step 5: Create the Configuration Files
 
 The configuration file for JTE is named ``pipeline_config.groovy``.  
 
@@ -153,7 +153,7 @@ libraries{
 }
 ----
 
-=== Step 6: Configure the Governance Tier in Jenkins
+== Step 6: Configure the Governance Tier in Jenkins
 
 Now that we have a link:https://github.com/steven-terrana/example-jte-configuration[Pipeline Configuration Repository] and a link:https://github.com/steven-terrana/example-jte-libraries[Library Source Repository], we can configure a link:https://boozallen.github.io/jenkins-templating-engine/pages/Governance/index.html#governance-tier[Governance Tier] in Jenkins:
 
@@ -163,7 +163,7 @@ NOTE: This configuration shown in the image above can be found under ``Manage Je
 
 TIP: Through the Templating Engine, you can create a pipeline governance hierarchy matching your organization's taxonomy by representing this structure via Folders in Jenkins. 
 
-=== Step 7: Create a Multibranch Pipeline for Both Applications
+== Step 7: Create a Multibranch Pipeline for Both Applications
 
 When creating Multibranch Pipeline Projects for each app, the Templating Engine plugin supplies a new ``Project Recognizer`` 
 called **Jenkins Templating Engine**.  This sets the project to use the Templating Engine framework for all branches within the
@@ -173,7 +173,7 @@ image:/post-images/2019-05-09-templating-engine/project_recognizer.png[role=cent
 
 NOTE: You can also set the **Jenkins Templating Engine** project recognizer for a GitHub Organization project, enabling you to easily share the same pipeline across an entire Github Organization! 
 
-=== Step 8: Run the Pipelines
+== Step 8: Run the Pipelines
 
 That's it!  Now, both applications will leverage the exact same pipeline template while having the flexibility to select which 
 tools should be used during each phase of the workflow. 

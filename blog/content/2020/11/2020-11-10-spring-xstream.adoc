@@ -46,13 +46,13 @@ Also please add a `JEP-227` or `JEP-228` label as appropriate, for ease of track
 * link:https://issues.jenkins.io/issues/?jql=resolution%20%3D%20Unresolved%20and%20labels%20in%20(JEP-228)[Open JEP-228 issues]
 
 [NOTE]
-===
+==
 It is a good idea to update all your plugins _before_ upgrading Jenkins core.
 In the case of the Spring Security update, some security realm plugins including LDAP and Active Directory must be updated in advance.
 (You can safely run the new plugin versions on Jenkins releases _prior_ to this change.)
 Otherwise, you risk being unable to log in to Jenkins—and thus unable to update those plugins from the GUI!
 The LDAP plugin additionally has a new version available only after the core upgrade, but there is no rush in switching to that.
-===
+==
 
 If you *maintain a Jenkins plugin* then please check whether it is marked anything less than _compatible_.
 In some cases, there are already pull requests awaiting merge.

@@ -1,5 +1,5 @@
 
-title: Linux installation packages migrated from System V init to systemd
+= Linux installation packages migrated from System V init to systemd
 :page-tags: announcement, community, core
 
 :page-author: basil
@@ -68,7 +68,7 @@ The following section describes some of the changes in more detail and explains 
 For up-to-date information, refer to the link:/doc/book/system-administration/systemd-services/[Managing `systemd` services] page in the documentation.
 See also the link:https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units[DigitalOcean community `systemd(1)` tutorial] to better understand the benefits of `systemd(1)` and the `systemctl(1)` command.
 
-=== Package configuration
+== Package configuration
 
 Users who run Jenkins 2.335 or later and 2.332.1 LTS or later through the official Debian, Red Hat, or openSUSE packages are affected by this migration.
 
@@ -131,7 +131,7 @@ The drop-in unit does not perform shell expansion.
 Specifiers can insert contextual information (like system hostname, unit name, and operating system kernel release) into the drop-in unit.
 The `systemd(1)` documentation contains link:https://www.freedesktop.org/software/systemd/man/systemd.unit.html#id-1.13.3[a table of specifiers available in unit files].
 
-=== Migration
+== Migration
 
 The Jenkins project ships logic to automatically migrate the System V `init(8)` configuration file to the new `systemd(1)` `override.conf` format.
 This migration logic does nothing if an `override.conf` file already exists,
@@ -139,7 +139,7 @@ which would be an indication that the migration script already ran
 or that the user has made their own customizations that should be preserved.
 If `override.conf` does not exist, package installation migrates the old System V `init(8)` configuration file to `override.conf`.
 
-=== Logging
+== Logging
 
 The `systemd(1)` package also uses `systemd-journald(8)` for logging by default.
 Rather than creating a log file in `/var/log/jenkins/jenkins.log`,
@@ -149,7 +149,7 @@ This is perhaps the most noticeable user-visible change in this migration.
 
 See the link:https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs[DigitalOcean log management tutorial] for more detailed information.
 
-=== Startup notifications
+== Startup notifications
 
 The System V `init(8)` logic was asynchronous; i.e., running `/etc/init.d/jenkins start` would return prior to the completion of Jenkins startup.
 The `systemd(1)` logic is synchronous; i.e., running `systemctl start jenkins` will block until Jenkins signals successful startup.

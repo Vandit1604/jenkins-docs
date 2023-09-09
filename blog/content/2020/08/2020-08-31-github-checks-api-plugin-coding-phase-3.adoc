@@ -31,7 +31,7 @@ The check in the above screenshot is published by script:
 
 [source, groovy]
 ----
-publishChecks name: 'pipeline check', title: 'pipeline ', summary: '# A pipeline check example',
+publishChecks name: 'pipeline check', = 'pipeline ', summary: '# A pipeline check example',
         text: "## This check is published through the pipeline script",
         detailsURL: 'https://ci.jenkins.io'
 ----

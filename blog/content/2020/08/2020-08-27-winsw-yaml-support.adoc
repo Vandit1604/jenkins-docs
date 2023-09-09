@@ -21,27 +21,27 @@ I would recommend reading link:/blog/2020/07/08/winsw-yaml-support/[this blog po
 
 Under WinSW - YAML configurations support, these tasks will be done.
 
-=== YAML to Object mapping
+== YAML to Object mapping
 
 At the moment YAML object mapping is finished and merged. 
 You can find all the implementations in this https://github.com/winsw/winsw/pull/543[Pull Request].
 
-=== Extend WinSW to support both XML and YAML
+== Extend WinSW to support both XML and YAML
 
 This task is already done and merged. Find the implementation in this https://github.com/winsw/winsw/pull/543[Pull Request].
 
-=== YAML Configuration support for Extensions
+== YAML Configuration support for Extensions
 
 At the moment there are 2 internal plugins in WinSW. RunAwayProcessKiller and SharedDirectoryMapper. 
 We allow users to provide configurations for those plugins in the same XML and YAML configuration file which is used to configure WinSW. This task is merged as well.
 https://github.com/winsw/winsw/pull/638[Pull Request]
 
-=== YAML schema validation
+== YAML schema validation
 
 Users can validate YAML configuration file against https://github.com/winsw/winsw/blob/master/doc/yamlConfigurationSchema.json[JSON schema file.]
 Users can use https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml[YAML utility tool from Visual Studio market place] to validate YAML config file against JSON schema.
 
-=== Key updates in Phase 2 and Phase 3
+== Key updates in Phase 2 and Phase 3
 
 * YAML Configuration structure
 
@@ -61,7 +61,7 @@ Users can use https://marketplace.visualstudio.com/items?itemName=redhat.vscode-
 
 * https://github.com/winsw/winsw/blob/master/doc/yamlConfigurationSchema.json[YAML schema validation against JSON schema]
 
-=== Sample YAML Configuration File
+== Sample YAML Configuration File
 
 ```yaml
 id: jenkins
@@ -113,7 +113,7 @@ Also, we want to let the user skip the schema validation as well.
 So We decided to move into new CLI which is more structured with commands and options. 
 Please read my link:/blog/2020/07/08/winsw-yaml-support/[previous blog post] to learn more about commands and options in the new CLI.
 
-=== Key updates in Phase 2 and Phase 3
+== Key updates in Phase 2 and Phase 3
 
 * Remove the /redirect command
 

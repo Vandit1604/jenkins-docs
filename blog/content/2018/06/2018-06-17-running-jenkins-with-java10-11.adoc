@@ -62,7 +62,7 @@ e.g. you can use `plugins.txt` to install plugins, mount volumes and pass extra 
 
 == Running Jenkins without Docker
 
-=== Java 10
+== Java 10
 
 1. Download Jenkins WAR for 2.127 or above
 (or build the link:https://github.com/jenkinsci/jenkins/tree/java10-support[experimental branch])
@@ -73,7 +73,7 @@ ${JAVA10_HOME}/bin/java --add-modules java.xml.bind -jar jenkins.war \
     --enable-future-java --httpPort=8080 --prefix=/jenkins
 ```
 
-=== Java 11
+== Java 11
 
 1. Download Jenkins WAR for 2.127 or above
 (or build the link:https://github.com/jenkinsci/jenkins/tree/java11-support[experimental branch])

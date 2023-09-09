@@ -96,18 +96,18 @@ image::/post-images/2019-03-29-becoming-contributor/awestruct-site.png[]
 
 This was the opportunity I chose to show other newcomers how easy it can be to start contributing.
 
-=== Forking the repository
+== Forking the repository
 
 The first step, as usual, would be to fork the repository and clone it to my machine.
 
-=== Applying the change
+== Applying the change
 
 The next step would be to apply the change to the corresponding file. To do so, I created a new branch
 “alternative-awestruct-link” and applied the change there:
 
 image::/post-images/2019-03-29-becoming-contributor/making-change.png[]
 
-=== Making sure everything builds correctly and tests pass
+== Making sure everything builds correctly and tests pass
 
 Even though in this case my contribution was not to the actual website, but to the contributing guidelines (and for
 that reason was unlikely to break anything), it is a best practice to get used to the regular process every
@@ -120,7 +120,7 @@ image::/post-images/2019-03-29-becoming-contributor/executing-make.png[]
 
 Once the command execution finishes, if everything looks good, we are ready to go to the next step: creating the PR.
 
-=== Creating the PR
+== Creating the PR
 
 Once my change had been committed and pushed to my repository, I just had to create the PR. We have an easy way to do so
 by just clicking the link that we get in our git logs once the push is completed, although we can create the PR directly
@@ -143,7 +143,7 @@ And if we want to see the details of the execution, we can follow the “Show al
 
 image::/post-images/2019-03-29-becoming-contributor/pr-checks-jenkins.png[]
 
-=== PR Review
+== PR Review
 
 Now that the PR has been created and all automated checks are passing, we only have to wait for peer code reviews.
 

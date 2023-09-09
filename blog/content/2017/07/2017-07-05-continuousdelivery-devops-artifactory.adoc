@@ -5,11 +5,11 @@
 
 
 [NOTE]
-===
+==
 This is a guest post by link:https://github.com/michaelhuettermann[Michael Hüttermann]. Michael is an expert
 in Continuous Delivery, DevOps and SCM/ALM. More information about him at link:http://huettermann.net[huettermann.net], or
 follow him on Twitter: link:https://twitter.com/huettermann[@huettermann].
-===
+==
 
 In a past blog post link:/blog/2017/04/18/continuousdelivery-devops-sonarqube/[Delivery Pipelines,
 with Jenkins 2, SonarQube, and Artifactory], we talked about pipelines which result in binaries for development versions. Now, in this blog post, I zoom in to different parts of the
@@ -36,9 +36,9 @@ for details see Michael Hüttermann, _Agile ALM_ (Manning, 2012).
 
 
 [NOTE]
-===
+==
 To make concepts clearer, this blog post covers sample tools. Please note, that there are also alternative tools available. As one example: Sonatype Nexus is also able to host the covered binaries and also offers scripting functionality.
-===
+==
 
 We nowadays often talk about _delivery pipelines_. A pipeline is just a set of stages and transition rules between those stages. From a DevOps perspective, a pipeline bridges multiple
 functions in organizations, above all development and operations. A pipeline is a staging ladder. A change enters the pipeline at the beginning and leaves it at the end. The processing
@@ -64,10 +64,10 @@ manager must underpin corresponding quality gates, while managing the binaries, 
 
 
 [TIP]
-===
+==
 This blog post illustrates typical concepts and sample toolchains. For more information, please consult the respective documentation, good books or attend top notch conferences, e.g.
 link:https://www.cloudbees.com/jenkinsworld/home[Jenkins World, powered by CloudBees].
-===
+==
 
 == Binary repository manager
 A central backbone of the staging ladder is the binary repository manager, e.g. JFrog Artifactory. The binary repository manager manages all binaries including the self-produced
@@ -107,10 +107,10 @@ if you have strong requirements for scalability and worldwide coverage including
  the Docker image, and the concrete version that will be processed is 1.0.0.
 
 [NOTE]
-===
+==
 Some tool features covered in this blog post are available as part of commercial offerings of tool vendors. Examples include the Docker support of JFrog Artifactory or the Firehose Event API of JFrog Bintray.
 Please consult the respective documentation for more information.
-===
+==
 
 Now it is time to have a deeper look at the pipelines.
 

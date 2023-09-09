@@ -47,17 +47,17 @@ With this design, controller is not communicating with agent using direct TCP co
 
 == Features
 
-=== 1. Kafka Global Configuration
+== 1. Kafka Global Configuration
 image:/post-images/remoting-kafka-intro/kafka-global-config.png[title="Remoting Kafka Global Configuration", role="center"]
 
-=== 2. Custom agent start up as a JAR
+== 2. Custom agent start up as a JAR
 User can start running an agent with the following command:
 image:/post-images/remoting-kafka-intro/start-agent.png[title="Command to start an agent", role="center"]
 
-=== 3. Launch agents with Kafka
+== 3. Launch agents with Kafka
 image:/post-images/remoting-kafka-intro/launch-agent-kafka.png[title="Launch agent with Kafka", role="center"]
 
-=== 4. Commands transferred between controller and agent over Kafka
+== 4. Commands transferred between controller and agent over Kafka
 image:/post-images/remoting-kafka-intro/kafka-commands.png[title="controller-agent communication with Kafka", role="center"]
 
 Remoting operations are being executed over Kafka. In the log you may see:
@@ -65,7 +65,7 @@ Remoting operations are being executed over Kafka. In the log you may see:
 * Classloading (Classloader.fetch())
 * Log streaming (Pipe.chunk())
 
-=== 5. Run jobs with remoting Kafka
+== 5. Run jobs with remoting Kafka
 It is possible to run jobs on Agents connected over Kafka
 image:/post-images/remoting-kafka-intro/remoting-kafka-run-job.png[title="Job run with Remoting Kafka Plugin", role="center"]
 
@@ -84,7 +84,7 @@ You can try to run a demo of the plugin by following the https://github.com/jenk
 
 == Links
 
-* https://app.gitter.im/#/room/#jenkinsci_remoting:gitter.im[image:https://badges.gitter.im/jenkinsci/remoting.svg[title: "Gitter"]]
+* https://app.gitter.im/#/room/#jenkinsci_remoting:gitter.im[image:https://badges.gitter.im/jenkinsci/remoting.svg[= "Gitter"]]
 * https://github.com/jenkinsci/remoting-kafka-plugin[GitHub Repository]
 * link:/projects/gsoc/2018/remoting-over-message-bus/[Project Page]
 * https://youtu.be/qWHM8S0fzUw[Phase 1 Presentation Video]

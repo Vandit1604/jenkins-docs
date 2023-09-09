@@ -8,7 +8,7 @@ Some number of months ago I became frustrated with the download speeds reported 
 
 After discussing things with some of the folks that run https://download.opensuse.org[download.opensuse.org], a https://mirrorbrain.org[MirrorBrain] powered redirector, I set out to build something similar. A mirroring network which could be easily managed and help direct users' downloads to the geographically closest and fastest mirror available.
 
-=== Where are we mirrored?
+== Where are we mirrored?
 
 Currently we have mirrors in a few locations within the United States, and one overseas:
 
@@ -17,7 +17,7 @@ Currently we have mirrors in a few locations within the United States, and one o
 * Northeast U.S. (New York City) - _Thanks to the https://www.osuosl.org[OSUOSL]_
 * Germany - _Thanks to https://www.aragost.com/[aragost Trifork ag]_
 
-=== Using the mirrors
+== Using the mirrors
 
 If you've updated or installed plugins from within Hudson lately, guess what! You're already using mirrors! In fact, since we flipped the switch on January 7th, over *800* plugins and *600* `hudson.war` updates have been downloaded from the mirroring network!
 // break

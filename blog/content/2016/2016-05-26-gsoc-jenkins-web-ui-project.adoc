@@ -26,7 +26,7 @@ https://github.com/michaelneale[Michael Neale]
 
 == Deliverables
 
-=== New job creation
+== New job creation
 
 *New job name validation*
 
@@ -46,7 +46,7 @@ in a dialog window. Such popup would likely consist of three steps of
 implementation: rendering a dialog window, receiving JSON with job types,
 sending a POST request to create the job.
 
-=== Configuration page
+== Configuration page
 
 *Changing help information*
 
@@ -75,7 +75,7 @@ to read configuration page. It is still open to discussion, but I may approach
 it by better division of configuration parts such as an accordion based
 navigation.
 
-=== Home page
+== Home page
 
 *[Optional] Removing "My Views" page*
 
@@ -95,7 +95,7 @@ used. This way elements "enable auto refresh", “edit description”, “icon s
 or an upper menu. It is also possible to create new extension points to support
 new UI elements through plugins.
 
-=== Credentials store page
+== Credentials store page
 
 *[Optional] Grouping credentials and their domains*
 

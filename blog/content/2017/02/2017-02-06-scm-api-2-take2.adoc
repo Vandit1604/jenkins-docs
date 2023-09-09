@@ -1,5 +1,5 @@
 = SCM API 2.0 Release Take 2
-::page-tags: development, plugins
+:page-tags: development, plugins
 
 :page-author: stephenc
 
@@ -48,11 +48,11 @@ GitHub API Plugin:: 1.84 or newer
 GitHub Plugin:: 1.25.0 or newer
 
 [WARNING]
-===
+==
 If you upgrade to Branch API 2.0.x and you have either the GitHub Branch Source or the BitBucket Branch Source plugins *and* you do not upgrade those instances to the 2.0.x line then your Jenkins instance will fail to start-up correctly.
 
 The solution is just to upgrade the GitHub Branch Source or the BitBucket Branch Source plugin (as appropriate) to the 2.0.x line.
-===
+==
 
 After an upgrade you will see the data migration warning (see the screenshot in
 link:https://issues.jenkins.io/browse/JENKINS-41608[JENKINS-41608] for an

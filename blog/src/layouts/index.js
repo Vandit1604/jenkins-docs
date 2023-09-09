@@ -2,6 +2,7 @@ import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/j
 import React from "react"
 import { Link } from "gatsby"
 
+
 import typography from "../utils/typography"
 const { rhythm } = typography
 
@@ -22,9 +23,11 @@ class IndexPageLayout extends React.Component {
           <img
             src={jenkinsLogo}
             alt="Jenkins Logo"
-            height="75px"
+            style={{
+              height: "80px",
+            }}
           />
-          <h3 style={{ color: `black`, marginBottom: rhythm(1.5) }}>
+          <h3 style={{ color: `black`, marginBottom: rhythm(1.5), "font-family":"Georgia,serif" }}>
             The Jenkins Blog
           </h3>
         </Link>

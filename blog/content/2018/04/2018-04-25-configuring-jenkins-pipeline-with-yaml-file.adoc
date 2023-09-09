@@ -321,13 +321,13 @@ will run all the specified commands inside the container.
 
 == Woloxci config.yml
 
-=== Config
+== Config
 
 The first part of the config.yml file specifies some basic
 configuration: project’s name and Dockerfile location. The Dockerfile is
 used to build the image where the commands will be run.
 
-=== Services
+== Services
 
 This section describes which services will be exposed to the container.
 Out of the box, WoloxCI has support for _postgresql_, _mssql_ and
@@ -341,14 +341,14 @@ and modify how the services are parsed
 
 https://github.com/Wolox/wolox-ci/blob/development/src/com/wolox/parser/ConfigParser.groovy#L76
 
-=== Steps
+== Steps
 
 The listed commands in this section will run inside the Docker
 container. As a result, you’ll see each of the steps on the Jenkins UI.
 
 image:https://cdn-images-1.medium.com/max/2000/0*SlHf1JHAAvEvZQ74.[image]
 
-=== Environment
+== Environment
 
 If you need some environment variables during your build, you can
 specify them here. Whatever variable you set will be available inside

@@ -85,7 +85,7 @@ There were discussions about migrating to other base images,
 but we decided to exclude it from the Preview Availability scope.
 Similarly, we do not provide Alpine images for now.
 
-=== Jenkins controller image
+== Jenkins controller image
 
 Java 11 support is now provided as a part of the official
 link:https://hub.docker.com/r/jenkins/jenkins/[jenkins/jenkins] image.
@@ -104,7 +104,7 @@ The image is fully compatible with
 link:https://github.com/jenkinsci/docker/blob/master/README.md[jenkins/jenkins documentation],
 e.g. you can use `plugins.txt` to install plugins, mount volumes and pass extra options via environment variables.
 
-=== Agent images
+== Agent images
 
 If you use containerized agents via Docker or Kubernetes plugins,
 we have also released official Docker images for Jenkins agents:
@@ -116,7 +116,7 @@ we have also released official Docker images for Jenkins agents:
 All images use the `latest-jdk11` image tag for JDK11 bundles.
 And sorry for the obsolete names!
 
-=== Experimental Jenkins controller images
+== Experimental Jenkins controller images
 
 In order to simplify testing, we also provide some experimental images on DockerHub.
 We set up a continuous delivery flow for them,

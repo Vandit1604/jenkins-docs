@@ -31,7 +31,7 @@ b. Most installed
 c. Relevance
 d. Trending
 
-=== Filter implementation
+== Filter implementation
 
 The major heavy lifting is done by the plugin api which takes in the necessary parameters 
 and returns the relevant plugins in the form of a json object, 
@@ -56,14 +56,14 @@ The major design decision taken here was whether to include the configurations i
 the repository or to have them in a completely new repository. 
 Let us talk about both these approaches.
 
-=== Having the configurations in the current repository:
+== Having the configurations in the current repository:
 
 This allows us to have all of the relevant configurations inside the repository itself,
 and so users would not have to go fetch this in different repositories.
 We could have issues with the release cycle and dependencies since,
 it would have to happen along with the custom distribution service project releases.
 
-=== Having the configurations in a different repository:
+== Having the configurations in a different repository:
 
 This allows us to manage all of the configurations and the relevant dependencies separately and easily,
 thus avoiding any release conflict with the current repository.
@@ -89,7 +89,7 @@ the reason this feature took so long to complete is because we had some difficul
 in implementing the war generation and its tests. However this has been completed
 and can now be tested successfully.
 
-=== Things to take care while generating war files
+== Things to take care while generating war files
 
 In its current state the war generation cannot include **casc.yml** or **groovy** files
 if they are included in the configuration they would have to be added externally.
@@ -114,7 +114,7 @@ For details, see:
 * Issue link:https://github.com/jenkinsci/custom-distribution-service/issues/59[#59]
 * Pull Request link:https://github.com/jenkinsci/custom-distribution-service/pull/72[#72]
 
-=== Disclaimer: 
+== Disclaimer: 
 
 This feature has however been put on the back-burner for now because
 we are focusing on getting the project to be self hosted and therefore

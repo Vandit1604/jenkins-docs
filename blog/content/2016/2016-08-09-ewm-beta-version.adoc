@@ -24,7 +24,7 @@ link:https://github.com/jenkinsci/external-workspace-manager-plugin/blob/master/
 == What's new
 Bellow is a summary of the features added so far, since the alpha version.
 
-=== Multiple upstream run selection strategies
+== Multiple upstream run selection strategies
 It has support for the
 link:https://github.com/jenkinsci/run-selector-plugin[Run Selector Plugin] (which is still in beta),
 so you can provide different run selection strategies when allocating a disk from the upstream job.
@@ -67,7 +67,7 @@ used by that run.
 The Run Selector Plugin has several run selection strategies that are briefly explained
 link:https://github.com/jenkinsci/run-selector-plugin/blob/master/README.md[here].
 
-=== Automatic workspace cleanup
+== Automatic workspace cleanup
 
 Provides an automatic workspace cleanup by integrating the
 link:https://github.com/jenkinsci/ws-cleanup-plugin[Workspace Cleanup Plugin].
@@ -94,7 +94,7 @@ node ('linux') {
 More workspace cleanup examples can be found at this
 link:https://github.com/jenkinsci/external-workspace-manager-plugin/blob/master/doc/WORKSPACE_CLEANUP.md[link].
 
-=== Custom workspace path
+== Custom workspace path
 
 Allows the user to specify a custom workspace path to be used when allocating workspace on the disk.
 The plugin offers two alternatives for doing this:
@@ -119,7 +119,7 @@ def extWorkspace = exwsAllocate diskPoolId: 'diskpool1', path: customPath
 For more details see the afferent
 link:https://github.com/jenkinsci/external-workspace-manager-plugin/blob/master/doc/CUSTOM_WORKSPACE_PATH.md[documentation page].
 
-=== Disk Pool restrictions
+== Disk Pool restrictions
 
 The plugin comes with Disk Pool restriction strategies.
 It does this by using the restriction capabilities provided by the
@@ -159,7 +159,7 @@ link:https://issues.jenkins.io[Jira] by using the __external-workspace-manager-p
 
 == Links
 
-link:https://app.gitter.im/#/room/#jenkinsci_external-workspace-manager-plugin:gitter.im[image:https://badges.gitter.im/jenkinsci/external-workspace-manager-plugin.svg[title: "Gitter"]]
+link:https://app.gitter.im/#/room/#jenkinsci_external-workspace-manager-plugin:gitter.im[image:https://badges.gitter.im/jenkinsci/external-workspace-manager-plugin.svg[= "Gitter"]]
 
 * link:https://github.com/jenkinsci/external-workspace-manager-plugin[Project repository]
 * link:/blog/2016/05/23/external-workspace-manager-plugin/[Project intro blog post]

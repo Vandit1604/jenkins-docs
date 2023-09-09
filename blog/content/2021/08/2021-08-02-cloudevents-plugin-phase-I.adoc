@@ -1,5 +1,5 @@
 = "CloudEvents Plugin for Jenkins: Interoperability between Jenkins and other CI/CD Tools"
-::page-tags: gsoc, gsoc2021, cloudevents, interoperability, cloud-native
+:page-tags: gsoc, gsoc2021, cloudevents, interoperability, cloud-native
 
 :page-author: ShrutiC-git
 :page-opengraph: /post-images/2021-08-cloudevents-plugin/jcdevents.JPG
@@ -47,7 +47,7 @@ With this plugin, Jenkins can send and receive CloudEvents-compliant events to a
 
 This plugin allows Jenkins to be configured as a source and sink, which can emit and consume CloudEvents from a range of tools simultaneously. 
 
-=== Jenkins as a Source
+== Jenkins as a Source
 Configuring Jenkins as a Source enables Jenkins to send CloudEvents to a CloudEvents sink. For Phase-I of this project, there is support for HTTP Sinks, however CloudEvents supports various link:https://github.com/cloudevents/spec#cloudevents-documents[protocol bindings]. Moving forward, there will also be support for other protocol bindings supported by CloudEvents. 
 
 To use Jenkins as a Source, the following configuration is needed:
@@ -70,7 +70,7 @@ image:/post-images/2021-08-cloudevents-plugin/sink-type.png[Configure Sink to Re
 
 With Jenkins as a Source configured, Jenkins will send a POST request to the configured sink right as the selected event occurs inside Jenkins. Each event has a different payload specific to the type of the event emitted. 
 
-=== Event Types, Payload and Metadata
+== Event Types, Payload and Metadata
 
 CloudEvents emitted by Jenkins follow the Binary-structure supported by CloudEvents, where the CloudEvents metadata is present inside the header, and the event-data is serialized as JSON, and present under request-body. This is the HTTP Protocol Binding for CloudEvents. Each protocol binding for CloudEvents follows a definition specific to the binding protocol. 
 

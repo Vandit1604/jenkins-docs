@@ -229,7 +229,7 @@ node('docker') {
 <3> When the closure completes, the container will be destroyed.
 
 
-=== Running the tests
+== Running the tests
 
 Combining these two snippets of Jenkins Pipeline is, in my opinion, where the
 power of the link:https://en.wikipedia.org/wiki/Domain-specific_language[DSL]

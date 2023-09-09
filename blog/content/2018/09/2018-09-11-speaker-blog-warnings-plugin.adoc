@@ -69,7 +69,7 @@ Requirements for using the Warnings plugin in Jenkins Pipeline can be complex an
 In order to be as flexible as possible I decided to split the main step into two individual parts,
 which could then be used independently from each other.
 
-=== Simple pipeline configuration
+== Simple pipeline configuration
 
 The simple pipeline configuration is provided by the step `recordIssues`. This step is automatically derived from the
 FreeStyle job recorder: it scans for issues in a given set of files (or in the console log) and reports these issues
@@ -89,7 +89,7 @@ pattern 'MyFile.*.java' are included. Issues with category 'WHITESPACE' will be 
 step will be executed even if the build failed. The recorded report of warnings will be published under the fixed
 URL 'https://[_your-jenkins_]/job/[_your-job_]/java'. URL or name of the report can be changed if required.
 
-=== Advanced Pipeline Configuration
+== Advanced Pipeline Configuration
 
 Sometimes publishing and reporting issues using a single step is not sufficient. For instance, if you build your
 product using several parallel steps and you want to combine the issues from all of these steps into
@@ -229,13 +229,13 @@ image::/post-images/2018-09-11/details.png[Details]
 
 The plugin provides two REST API endpoints.
 
-=== Summary of the analysis result
+== Summary of the analysis result
 
 You can obtain a summary of a particular analysis report by using the URL `[tool-id]/api/xml`
 (or `[tool-id]/api/json`). The summary contains the number of issues, the quality gate status, and all
 info and error messages.
 
-=== Details of the analysis result
+== Details of the analysis result
 
 The reported issues are also available as REST API. You can either query all issues or only the
 new, fixed, or outstanding issues. The corresponding URLs are:

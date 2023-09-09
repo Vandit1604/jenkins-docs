@@ -46,19 +46,19 @@ With this design, controller is not communicating with agent using direct TCP co
 == Features
 The project is now under the third coding phase and we have some features available in 1.0 release.
 
-=== 1. Kafka Global Configuration with support of credentials plugin to store secrets.
+== 1. Kafka Global Configuration with support of credentials plugin to store secrets.
 image:/post-images/remoting-kafka/remoting-kafka-configuration.png[title="Remoting Kafka Plugin Global Configuration", role="center"]
 
-=== 2. Launch agent with Kafka Launcher.
+== 2. Launch agent with Kafka Launcher.
 image:/post-images/remoting-kafka/launch-agent-kafka.png[title="Launch agent with Kafka Launcher", role="center"]
 
-=== 3. Launch agent from CLI using agent JAR with secret provided to ensure security.
+== 3. Launch agent from CLI using agent JAR with secret provided to ensure security.
 image:/post-images/remoting-kafka/agent-cli.png[title="Command to run agent in CLI", role="center"]
 
-=== 4. Run jobs, pipeline using Kafka agent.
+== 4. Run jobs, pipeline using Kafka agent.
 image:/post-images/remoting-kafka/demo-jobs.png[title="Run jobs, pipeline using Kafka agent", role="center"]
 
-=== 5. Kafka communication between controller and agent.
+== 5. Kafka communication between controller and agent.
 image:/post-images/remoting-kafka/kafka-commands.png[title="Kafka communication between controller and agent", role="center"]
 
 Remoting operations are being executed over Kafka. In the log you may see:
@@ -91,7 +91,7 @@ Features in the demo:
 ++++
 
 == Links
-* https://app.gitter.im/#/room/#jenkinsci_remoting:gitter.im[image:https://badges.gitter.im/jenkinsci/remoting.svg[title: "Gitter"]]
+* https://app.gitter.im/#/room/#jenkinsci_remoting:gitter.im[image:https://badges.gitter.im/jenkinsci/remoting.svg[= "Gitter"]]
 * https://github.com/jenkinsci/remoting-kafka-plugin[GitHub Repository]
 * https://wiki.jenkins.io/display/JENKINS/Remoting+Kafka+Plugin[Wiki]
 * https://plugins.jenkins.io/remoting-kafka[Plugin Site]

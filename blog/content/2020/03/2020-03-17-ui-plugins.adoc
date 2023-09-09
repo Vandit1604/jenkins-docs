@@ -419,7 +419,7 @@ In order to use https://datatables.net[DataTables] in a view there are two optio
 static HTML tables (see <<tables-static>>) or populate the table content using Ajax (see <<tables-dynamic>>).
 
 [#tables-static]
-=== Tables with static HTML content
+== Tables with static HTML content
 
 The easiest way of using DataTables is by creating a static HTML table that will be decorated by simply calling the
 constructor of the datatable. This approach involves no special handling on the Java and Jelly side, so I think it is
@@ -456,7 +456,7 @@ https://github.com/jenkinsci/warnings-ng-plugin/blob/master/plugin/src/main/reso
 in the warnings plugin to see how such a table can be decorated.
 
 [#tables-dynamic]
-=== Tables with dynamic model based content
+== Tables with dynamic model based content
 
 While static HTML tables are easy to implement, they have several limitations. So it makes sense to follow a more
 sophisticated approach. Typically, tables in user interfaces are defined by using a corresponding table (and row) model.
@@ -484,7 +484,7 @@ In <<forensics-table-model>> a diagram of the corresponding classes in the Foren
 .Table model of the Forensics plugin
 image::table-model.png[Table model]
 
-==== Table column model
+=== Table column model
 
 This first thing a table model class defines is a model of the available columns by creating corresponding
  `TableColumn` instances. For each column you need to specify a header label and the name of the bean property that
@@ -493,7 +493,7 @@ show one distinct property of such a bean, see next section). You can
 use any of the https://datatables.net/reference/option/columns.type[supported column types] by simply providing a
 `String` or `Integer` based column.
 
-==== Table rows content
+=== Table rows content
 
 Additionally, a table model class provides the content of the rows. This `getRows()` method
 will be invoked asynchronously using an Ajax call. Typically, this method simply returns a list of Java Bean instances,
@@ -585,7 +585,7 @@ Those charts can be used as trend chart in the project page (see <<img-job>>) or
 view of a plugin (see <<reporter-detail>>).
 
 [#pie-charts]
-=== Pie charts
+== Pie charts
 
 A simple but still informative chart is a pie chart that illustrates numerical proportions of plugin data. In the Forensics
 plugin I am using this chart to show the numerical proportions of the number of authors or commits for the
@@ -631,7 +631,7 @@ representation of a corresponding `PieChartModel` instance. Such a model can be 
 ----
 
 [#trend-charts]
-=== Trend charts on the job level view
+== Trend charts on the job level view
 
 In order to show a trend that renders a line chart on the job page (see <<img-job>>) you need to provide a so called
 floating box (stored in the file `floatingBox.jelly` of your job action (see <<reporter-structure>>)).

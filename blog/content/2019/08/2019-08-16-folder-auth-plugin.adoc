@@ -27,7 +27,7 @@ in Jenkins.
 
 image::/post-images/gsoc-folder-auth-plugin/folder-auth.png[Screenshot of the Folder Auth Plugin]
 
-=== Performance Improvements over Role Strategy Plugin
+== Performance Improvements over Role Strategy Plugin
 
 This plugin, unlike the Role Strategy plugin, does not use regular expressions
 for finding matching projects and agents giving us performance improvements
@@ -50,7 +50,7 @@ organized in two-level deep folders on an instance with 150 users. You can see
 the benchmarks and the result comparisons
 link:https://github.com/jenkinsci/folder-auth-plugin/pull/13[here].
 
-=== Jenkins Configuration as Code Support
+== Jenkins Configuration as Code Support
 
 The plugin supports Jenkins Configuration-as-Code so you can configure permissions
 without going through the Web UI. A YAML configuration looks like this:
@@ -91,7 +91,7 @@ jenkins:
             - "user1"
 ----
 
-=== REST APIs with Swagger support
+== REST APIs with Swagger support
 
 The plugin provides REST APIs for managing roles with OpenAPI specifications
 through Swagger.json. You can check out the Swagger API on
@@ -104,7 +104,7 @@ image::/post-images/gsoc-folder-auth-plugin/swagger.png[alt=Screenshot of the AP
 
 image::/post-images/gsoc-folder-auth-plugin/swagger2.png[Another Screenshot of the APIs on SwaggerHub, height=400]
 
-=== What's next
+== What's next
 
 In the (not-too-distant) future, I would like to work on improving the UI and
 make the plugin easier to work with. I would also like to work on improving the

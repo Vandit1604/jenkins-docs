@@ -1,5 +1,5 @@
 = "Remoting Monitoring with OpenTelemetry - Coding Phase 1"
-::page-tags: gsoc, gsoc2021, remoting
+:page-tags: gsoc, gsoc2021, remoting
 
 :page-author: aki-7
 :page-opengraph: /post-images/2021-07-31-remoting-monitoring-phase-1/remoting-monitoring-phase-1-:page-opengraph.png
@@ -80,9 +80,9 @@ experience to Jenkins community.
 
 == Proof of Concept
 
-=== How to deliver the monitoring program to agents
+== How to deliver the monitoring program to agents
 
-==== 1. Sending monitoring program to the agent over remoting
+=== 1. Sending monitoring program to the agent over remoting
 
 image:/post-images/2021-07-31-remoting-monitoring-phase-1/sending-monitoring-program-via-remoting.png[Sending monitoring program via remoting]
 
@@ -101,16 +101,16 @@ established.
 
 So we decided to take the next approach.
 
-==== 2. Install monitoring engine when provisioning a new agent
+=== 2. Install monitoring engine when provisioning a new agent
 
 image:/post-images/2021-07-31-remoting-monitoring-phase-1/install-monitoring-engine-when-provisioning.png[Installing monitoring engine when provisioning]
 
 In this approach, user will download the monitoring program called monitoring
 engine, which is a JAR file, and place it in the agent node when provisioning.
 
-=== How to instrument remoting to produce remoting trace
+== How to instrument remoting to produce remoting trace
 
-==== Add instrumentation extension point to remoting
+=== Add instrumentation extension point to remoting
 
 Pull Request: https://github.com/jenkinsci/remoting/pull/471
 
@@ -120,7 +120,7 @@ and we have to overcome this problem.
 
 == Current State
 
-=== Metrics
+== Metrics
 
 We currently support the following metrics and planning to support more.
 
@@ -178,13 +178,13 @@ Report 0% if no swap memory is discovered by the JVM.
 
 |==
 
-=== Traces
+== Traces
 
 We tried several approaches to instrument remoting module, but good approach is not established yet.
 
 Here is a draft documentation of the spans to collect. link:https://docs.google.com/document/d/1gjRamLWz3NwenVifC5pYyBMmxsUjl9MjspZF0mRYeaI/edit#heading=h.6xn68iwvd7gz[Google Doc]
 
-=== Logs
+== Logs
 
 Coming soon!
 

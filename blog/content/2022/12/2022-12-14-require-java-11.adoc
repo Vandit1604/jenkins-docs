@@ -74,7 +74,7 @@ At a high level, three actions need to be taken, the third of which depends on t
 
 We will elaborate on each of these three points below.
 
-=== Adjust the `Jenkinsfile` to use Java 11 or newer
+== Adjust the `Jenkinsfile` to use Java 11 or newer
 
 First, consult the matrix of build configurations in the plugin's `Jenkinsfile`.
 The goal is to ensure the plugin is building on Java 11 and 17 and not on Java 8,
@@ -94,11 +94,11 @@ Note the explicit `configurations` entry with two versions: Java 11 and 17.
 If there is an explicit configuration for Java 8, remove it -- Java 8 is no longer supported as of plugin parent POM 4.52.
 
 [NOTE]
-===
+==
 If you are not already using container agents, we recommend adding `useContainerAgent: true` (but this is not mandatory).
 Doing so results in `ci.jenkins.io` spawning a link:https://github.com/jenkins-infra/documentation/blob/main/ci.adoc#container-agents[container agent] for executing the build instead of a virtual machine,
 which is usually faster to start and reduces costs for the Jenkins project.
-===
+==
 
 Some older ``Jenkinsfile``s may not have an explicit list of configurations:
 
@@ -124,7 +124,7 @@ Pending https://issues.jenkins.io/browse/JENKINS-46795[JENKINS-46795],
 the pull request will need to be refiled by someone with write access
 to ensure the `Jenkinsfile` changes take effect.
 
-=== Update the baseline to 2.361 or newer
+== Update the baseline to 2.361 or newer
 
 The process for updating the baseline is described in link:/doc/developer/plugin-development/choosing-jenkins-baseline/[the developer documentation].
 To summarize, set the `jenkins.version` property in `pom.xml` to 2.361 or newer:
@@ -161,7 +161,7 @@ At the time of this writing, the latest version is 1750.v0071fa_4c4a_e3:
 
 For more information about the plugin BOM, see its https://github.com/jenkinsci/bom[`README`].
 
-=== Update the plugin parent POM to 4.52 or newer
+== Update the plugin parent POM to 4.52 or newer
 
 Having completed the above prerequisites,
 the plugin parent POM can be successfully upgraded to 4.52 or newer.
@@ -178,7 +178,7 @@ At the time of this writing, the latest version is 4.53:
 </parent>
 ----
 
-=== Java level
+== Java level
 
 Some plugins may have a `Jenkinsfile` with an older `javaLevel` property,
 and some plugins may have a `pom.xml` file with a `java.level` property.
@@ -188,7 +188,7 @@ At the time of this writing, their presence will log a warning.
 
 WARNING: At some point in the future, this warning will be changed to an error and will fail the build.
 
-=== Other flag days
+== Other flag days
 
 When updating the plugin parent POM from a version older than 4.39,
 you may run into an error like the following:
