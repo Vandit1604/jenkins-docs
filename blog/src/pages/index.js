@@ -36,7 +36,7 @@ class IndexPage extends React.Component {
                   height: "20px",
                   "border-radius": "50%",
                 }}
-              ></img><p>{node.pageAttributes.author}</p>
+              /><p>{node.pageAttributes.author}</p>
               <p>{node.fields.slug}</p>
             </li>
           ))}
