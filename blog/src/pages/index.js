@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import IndexPageLayout from "../layouts"
 import { bloglisting, blogpost } from "../css/blogpost.module.css"
 
@@ -11,7 +10,7 @@ class IndexPage extends React.Component {
         <ul className={bloglisting}>
           {this.props.data.allAsciidoc.edges.map(({ node }) =>(
            <li key={node.fields.slug} className={blogpost}>
-             <div to={node.fields.slug}>
+             <Link to={node.fields.slug}>
                <div
                  style={{
                    display: "flex",
@@ -28,7 +27,7 @@ class IndexPage extends React.Component {
                  />
                </div>
                {node.document.title}
-             </div>
+             </Link>
              <br></br>
              <img
                src="https://www.jenkins.io/images/avatars/markewaite.jpg"
