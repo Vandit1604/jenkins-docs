@@ -10,15 +10,21 @@ class IndexPage extends React.Component {
       <IndexPageLayout>
         <ul className={bloglisting}>
           {this.props.data.allAsciidoc.edges.map(({ node }) => (
-            <li key={node.id} className={blogpost}>
+            <li key={node.fields.slug} className={blogpost}>
               <Link to={node.fields.slug}>
-                <img
-                  src={node.opengraph}
-                  alt="."
-                  width="200px"
-                  height="200px"
-                  display="block"
-                ></img>
+                <div
+                  style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}>
+                  <img
+                    src={require('../../images/gsoc/opengraph.png').default}
+                    alt={node.document.title}
+                    height="200px"
+                  />
+                </div>
                 {node.document.title}
               </Link>
               <br></br>
@@ -28,9 +34,10 @@ class IndexPage extends React.Component {
                 style={{
                   width: "20px",
                   height: "20px",
-                  "border-radius": "50%",
+                  borderRadius: "50%",
                 }}
-              ></img><p>{node.pageAttributes.author}</p>
+              /><p>{node.pageAttributes.author}</p>
+              <p>{node.fields.slug}</p>
             </li>
           ))}
         </ul>
@@ -63,3 +70,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+

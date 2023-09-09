@@ -1,6 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Jenkins Gatsby Blog`,
+    title: "Jenkins",
+    description:
+      "Jenkins - an open source automation server which enables developers around the world to reliably build, test, and deploy their software",
+    author: "@jenkinsci",
+    // siteUrl: "TBD",
+    twitterUsername: "@JenkinsCI",
+    buildDate: new Date(),
   },
   plugins: [
     {
@@ -8,13 +14,21 @@ module.exports = {
       options: {
         name: `pages`,
         path: `${__dirname}/content`,
+        imagesdir: `${__dirname}/content/post-images/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `post-images`,
+        path: `${__dirname}/content/post-images`,
       },
     },
     {
       resolve: `gatsby-transformer-asciidoc`,
       options: {
         attributes: {
-          imagesdir: `${__dirname}/content/post-images`,
+          imagesdir: `/images@`,
         },
       },
     },
@@ -25,4 +39,4 @@ module.exports = {
       },
     },
   ],
-}
+};
