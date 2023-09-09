@@ -8,9 +8,9 @@ class IndexPage extends React.Component {
   render() {
     return (
       <IndexPageLayout>
-        <ul className={bloglisting} key={bloglisting}>
+        <ul className={bloglisting}>
           {this.props.data.allAsciidoc.edges.map(({ node }) => (
-            <li key={node.id} className={blogpost}>
+            <li key={node.fields.slug} className={blogpost}>
               <Link to={node.fields.slug}>
                 <div
                   style={{
@@ -34,7 +34,7 @@ class IndexPage extends React.Component {
                 style={{
                   width: "20px",
                   height: "20px",
-                  "border-radius": "50%",
+                  borderRadius: "50%",
                 }}
               /><p>{node.pageAttributes.author}</p>
               <p>{node.fields.slug}</p>
