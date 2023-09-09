@@ -12,12 +12,14 @@ class IndexPage extends React.Component {
           {this.props.data.allAsciidoc.edges.map(({ node }) => (
             <li key={node.id} className={blogpost}>
               <Link to={node.fields.slug}>
-                <img
-                  src={node.pageAttributes.opengraph}
-                  alt={node.document.title}
-                  height="200px"
-                  display="block"
-                ></img>
+                {node.pageAttributes.opengraph &&
+                  <img
+                    src={require(node.pageAttributes.opengraph)}
+                    alt={node.document.title}
+                    height="200px"
+                    display="block"
+                  />
+                }
                 {node.document.title}
               </Link>
               <br></br>
