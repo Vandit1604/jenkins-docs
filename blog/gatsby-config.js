@@ -14,14 +14,6 @@ module.exports = {
       options: {
         name: `pages`,
         path: `${__dirname}/content`,
-        imagesdir: `${__dirname}/content/post-images/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `post-images`,
-        path: `${__dirname}/content/post-images`,
       },
     },
     {
@@ -41,5 +33,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 };
