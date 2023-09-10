@@ -21,7 +21,7 @@ class IndexPage extends React.Component {
                  }}
                >
                  <img 
-                   src={node.pageAttributes.opengraph /* ?? "../../images/gsoc/opengraph.png" */}
+                   src={node.pageAttributes.opengraph ?? "../../images/gsoc/opengraph.png"}
                    alt={node.document.title}
                    height="250px"
                    width="100%"
