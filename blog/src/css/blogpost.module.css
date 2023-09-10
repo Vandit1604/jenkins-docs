@@ -25,8 +25,6 @@ li {
 
 .blogpost {
   border-radius: 5px;
-  /* background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227); */
   list-style: none;
   cursor: pointer;
   font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
@@ -35,7 +33,7 @@ li {
     "Noto Sans", sans-serif;
 }
 
-.blogpost:hover{
+.blogpost:hover span{
   text-decoration: underline;
 }
 
@@ -52,6 +50,7 @@ li {
   -moz-transition: 0.3s ease;
   -ms-transition: 0.3s ease;
   -o-transition: 0.3s ease;
+  margin-bottom: 1rem;
 }
 
 .blogpost img:hover {
@@ -77,9 +76,6 @@ li {
 }
 
 .blogauthor{
-  color:#005B3B;
+  color:hsl(212, 100%, 42%);
 }
 
-.blogauthor:hover{
-  text-decoration: underline;
-}

@@ -27,7 +27,7 @@ class IndexPage extends React.Component {
                    width="100%"
                  />
                </div>
-               <p className={blogtitle}>{node.document.title}</p>
+               <span className={blogtitle}>{node.document.title}</span>
              </Link>
              <br></br>
              <img
