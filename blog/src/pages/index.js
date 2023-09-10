@@ -21,7 +21,7 @@ class IndexPage extends React.Component {
                  }}
                >
                  <img 
-                   src={node.pageAttributes.opengraph ?? "../../images/gsoc/opengraph.png"}
+                   src={node.pageAttributes.opengraph /* ?? "../../images/gsoc/opengraph.png" */}
                    alt={node.document.title}
                    height="250px"
                    width="100%"
@@ -51,23 +51,22 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    allAsciidoc {
-      edges {
-        node {
-          html
-          fields {
-            slug
-          }
-          document {
-            title
-          }
-          pageAttributes {
-            author
-            tags
-            opengraph
-          }
+  allAsciidoc(sort: {fields: {slug: DESC}}) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        document {
+          title
+        }
+        pageAttributes {
+          author
+          tags
+          opengraph
         }
       }
     }
   }
+}
 `;
