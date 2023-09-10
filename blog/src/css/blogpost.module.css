@@ -48,8 +48,19 @@ li {
   flex-shrink: 0;
   box-shadow: 0 30px 70px -50px rgba(0, 0, 40, 0.3);
   transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
 }
 
+.blogpost img:hover {
+  transform: scale(1.06);
+  -webkit-transform: scale(1.06);
+  -moz-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  -o-transform: scale(1.06);
+}
 .blogarticle {
   width: 900vh;
   background-color: red;
