@@ -53,7 +53,7 @@ class IndexPage extends React.Component {
 export default IndexPage
 
 export const pageQuery = graphql`
-{
+query{
   allAsciidoc(sort: {fields: {slug: DESC}}) {
     edges {
       node {
@@ -74,4 +74,4 @@ export const pageQuery = graphql`
     }
   }
 }
-`
+`;
