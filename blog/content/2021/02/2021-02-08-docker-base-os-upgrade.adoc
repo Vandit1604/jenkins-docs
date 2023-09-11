@@ -1,9 +1,7 @@
 = Docker image updates
 :page-tags: announcement, docker, platform-sig
-
 :page-author: markewaite
-:page-opengraph: /images/docker/dockerJenkins-updated-os-2021-02.png
----
+:page-opengraph: ../../images/images/docker/dockerJenkins-updated-os-2021-02.png
 
 Beginning with Jenkins 2.279 and Jenkins 2.263.4, the Jenkins project is upgrading the base operating system and Java version used in the `jenkins/jenkins:latest` and `jenkins/jenkins:lts` images.
 The update replaces OpenJDK 8u242 with AdoptOpenJDK 8u282 and replaces Debian 9 (link:https://www.debian.org/releases/stretch/["Stretch"]) with Debian 10 (link:https://www.debian.org/releases/buster/["Buster"]).

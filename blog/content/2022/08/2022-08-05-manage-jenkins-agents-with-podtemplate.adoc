@@ -1,8 +1,6 @@
 = "Manage Jenkins agents with Kubernetes native PodTemplate"
 :page-tags: casc
-
 :page-author: linuxsuren
-
 
 Jenkins has great integration with Kubernetes. No matter the controller or agents, they all work well in Kubernetes Pods. 
 link:https://github.com/jenkinsci/configuration-as-code-plugin[Configuration as Code] is an awesome idea.

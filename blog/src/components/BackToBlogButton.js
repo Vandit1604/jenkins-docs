@@ -23,7 +23,6 @@ export const BackToBlogButton = styled.button`
   width: fit-content;
   word-break: break-word;
   border: 0;
-  margin-bottom: 2rem;
   &:hover {
     background: #005bc3;
     box-shadow: #005bc3 0 10px 20px -10px;

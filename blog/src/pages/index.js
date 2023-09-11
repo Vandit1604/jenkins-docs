@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
 import { bloglisting, blogpost } from "../css/blogpost.module.css"
+import { blogtitle, blogauthor } from "../css/blogpost.module.css"
 
 class IndexPage extends React.Component {
   render() {
@@ -10,7 +11,7 @@ class IndexPage extends React.Component {
         <ul className={bloglisting}>
           {this.props.data.allAsciidoc.edges.map(({ node }) =>(
            <li key={node.fields.slug} className={blogpost}>
-             <Link to={node.fields.slug}>
+             <Link to={node.fields.slug} style={{"text-decoration":"none"}}>
                <div
                  style={{
                    display: "flex",
@@ -19,14 +20,14 @@ class IndexPage extends React.Component {
                    justifyContent: "center",
                  }}
                >
-                 <img
+                 <img 
                    src={node.pageAttributes.opengraph ?? "../../images/gsoc/opengraph.png"}
                    alt={node.document.title}
-                   height="200px"
+                   height="250px"
                    width="100%"
                  />
                </div>
-               {node.document.title}
+               <span className={blogtitle}>{node.document.title}</span>
              </Link>
              <br></br>
              <img
@@ -38,8 +39,7 @@ class IndexPage extends React.Component {
                  borderRadius: "50%",
                }}
              />
-             <p>{node.pageAttributes.author}</p>
-             <p>{node.fields.slug}</p>
+             <p className={blogauthor}>{node.pageAttributes.author}</p>
            </li>))}
         </ul>
       </IndexPageLayout>
@@ -51,25 +51,22 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    allAsciidoc {
-      edges {
-        node {
-          html
-          fields {
-            slug
-          }
-          document {
-            title
-          }
-          pageAttributes {
-            author
-            tags
-            opengraph
-          }
+  allAsciidoc(sort: {fields: {slug: DESC}}) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        document {
+          title
+        }
+        pageAttributes {
+          author
+          tags
+          opengraph
         }
       }
     }
   }
+}
 `;
-
-

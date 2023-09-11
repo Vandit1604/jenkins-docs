@@ -1,14 +1,7 @@
 = Jenkins 2.235.3: New Linux Repository Signing Keys
 :page-tags: announcement, linux, platform
-
 :page-author: markewaite
-description: >
-    This article announces new Linux repository signing keys.
-    Repository signing keys will change with the release of Jenkins LTS 2.235.3.
-    The previous repository signing keys will not be used after the release of Jenkins LTS 2.235.3.
-    The repository signing keys will be changed for Debian/Ubuntu and CentOS/Red Hat repositories.
-:page-opengraph: ../../images/post-images/2020/07-repository-signing-keys-change/:page-opengraph.png
----
+:page-opengraph: ../../images/post-images/2020/07-repository-signing-keys-change/opengraph.png
 
 The Jenkins core release automation project has been delivering Jenkins weekly releases since link:/changelog/#v2.232[Jenkins 2.232], April 16, 2020.
 The Linux repositories that deliver the weekly release were updated with new GPG keys with the release of Jenkins 2.232.
