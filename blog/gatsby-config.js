@@ -17,6 +17,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/authors/`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-asciidoc`,
       options: {
         attributes: {

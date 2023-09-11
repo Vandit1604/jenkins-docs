@@ -9,28 +9,29 @@ class IndexPage extends React.Component {
     return (
       <IndexPageLayout>
         <ul className={bloglisting}>
-          {this.props.data.allAsciidoc.edges.map(({ node }) =>(
-           <li key={node.fields.slug} className={blogpost}>
-             <Link to={node.fields.slug} style={{"text-decoration":"none"}}>
-               <div
-                 style={{
-                   display: "flex",
-                   flexDirection: "column",
-                   alignItems: "center",
-                   justifyContent: "center",
-                 }}
-               >
-                 <img 
-                   src={node.pageAttributes.opengraph ?? "../../images/gsoc/opengraph.png"}
-                   alt={node.document.title}
-                   height="250px"
-                   width="100%"
-                 />
-               </div>
-               <span className={blogtitle}>{node.document.title}</span>
-             </Link>
-             <br></br>
-             <img
+          {this.props.data.allAsciidoc.edges.map(({ node }) => {
+            if (node.document.title == "Author") {
+              <li key={node.fields.slug} className={blogpost}>
+                <Link to={node.fields.slug} style={{ "text-decoration": "none" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <img
+                      src={node.pageAttributes.opengraph ?? "../../images/gsoc/opengraph.png"}
+                      alt={node.document.title}
+                      height="250px"
+                      width="100%"
+                    />
+                  </div>
+                  <span className={blogtitle}>{node.document.title}</span>
+                </Link>
+                <br></br>
+                {/* <img
                src="https://www.jenkins.io/images/avatars/markewaite.jpg"
                alt="Mark Waite"
                style={{
@@ -38,9 +39,11 @@ class IndexPage extends React.Component {
                  height: "20px",
                  borderRadius: "50%",
                }}
-             />
-             <p className={blogauthor}>{node.pageAttributes.author}</p>
-           </li>))}
+             /> */}
+                <p className={blogauthor}>{node.pageAttributes.author}</p>
+              </li>
+            }
+          })}
         </ul>
       </IndexPageLayout>
     );
@@ -50,7 +53,7 @@ class IndexPage extends React.Component {
 export default IndexPage
 
 export const pageQuery = graphql`
-  query {
+{
   allAsciidoc(sort: {fields: {slug: DESC}}) {
     edges {
       node {
@@ -61,12 +64,14 @@ export const pageQuery = graphql`
           title
         }
         pageAttributes {
-          author
           tags
+          author
+          author_name
+          github
           opengraph
         }
       }
     }
   }
 }
-`;
+`
