@@ -9,8 +9,8 @@ class IndexPage extends React.Component {
     return (
       <IndexPageLayout>
         <ul className={bloglisting}>
-          {this.props.data.allAsciidoc.edges.map(({ node }) => {
-            if (node.document.title == "Author") {
+          {this.props.data.allAsciidoc.edges.map(({ node }) => 
+          // { if (node.document.title == "Author") {
               <li key={node.fields.slug} className={blogpost}>
                 <Link to={node.fields.slug} style={{ "text-decoration": "none" }}>
                   <div
@@ -40,10 +40,10 @@ class IndexPage extends React.Component {
                  borderRadius: "50%",
                }}
              /> */}
-                <p className={blogauthor}>{node.pageAttributes.author}</p>
+                <p className={blogauthor}>{node.pageAttributes.author_name}</p>
               </li>
-            }
-          })}
+            // }}
+            )}
         </ul>
       </IndexPageLayout>
     );
@@ -69,9 +69,10 @@ query{
           author_name
           github
           opengraph
+          linkedin
         }
       }
     }
   }
 }
-`;
+`

@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding-left: unset;
+  margin-left: unset;
+}
+
+li {
+  margin-bottom: unset;
+}
+
+.authorlisting {
+  display: grid;
+  gap: 1.5rem;
+  row-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  box-sizing: border-box;
+  padding: 0;
+  list-style-type: none;
+  transition: 0.2s ease;
+  margin-bottom: 3rem;
+}
+
+.authorpost {
+  border-radius: 5px;
+  list-style: none;
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+}
+
+.authorpost img{
+  border-radius: 20px;
+}
+
