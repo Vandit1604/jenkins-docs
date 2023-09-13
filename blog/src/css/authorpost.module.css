@@ -24,6 +24,7 @@ li {
 }
 
 .authorpost {
+  border: solid black 1px;
   border-radius: 5px;
   list-style: none;
   cursor: pointer;
@@ -33,7 +34,15 @@ li {
     "Noto Sans", sans-serif;
 }
 
+.authorname {
+  font-weight: 700;
+}
+
 .authorpost img{
   border-radius: 20px;
 }
 
+.authorinfo{
+  display: flex;
+  justify-content: space-around;
+}

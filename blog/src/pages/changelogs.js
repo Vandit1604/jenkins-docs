@@ -5,7 +5,7 @@ import {
   authorpost,
   authorlisting,
   authorname,
-  authorinfo,
+  authorinfo
 } from "../css/authorpost.module.css"
 
 class IndexPage extends React.Component {
@@ -33,10 +33,8 @@ class IndexPage extends React.Component {
 
                   />
                 </div>
-                <center>
-                  <span className={authorname}>{node.pageAttributes.author_name}</span>
-                </center>
                 <div className={authorinfo}>
+                  <span className={authorname}>{node.pageAttributes.author_name}</span>
                   <br></br>
                   <a href={"https://github.com/" + node.pageAttributes.github}> Github </a>
                   <br></br>
@@ -56,18 +54,18 @@ class IndexPage extends React.Component {
 export default IndexPage
 
 export const pageQuery = graphql`
-          query{
-            allAsciidoc(sort: {fields: {slug: DESC}}) {
-            edges {
-            node {
-            fields {
-            slug
-          }
-          document {
-            title
-          }
-          pageAttributes {
-            tags
+query{
+  allAsciidoc(sort: {fields: {slug: DESC}}) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        document {
+          title
+        }
+        pageAttributes {
+          tags
           author
           author_name
           github
@@ -77,4 +75,4 @@ export const pageQuery = graphql`
     }
   }
 }
-          `
+`

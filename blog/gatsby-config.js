@@ -9,6 +9,13 @@ module.exports = {
     buildDate: new Date(),
   },
   plugins: [
+    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/data`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
