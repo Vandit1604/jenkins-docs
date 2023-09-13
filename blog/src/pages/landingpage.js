@@ -10,7 +10,7 @@ class IndexPage extends React.Component {
   render() {
     return (
       <>
-        <img src="../../images/images/logos/jenkins/Jenkins-stop-the-war.svg" style={{ width: "356px", "float": "left" }}></img>
+        <img src="../..../../images/images/images/logos/jenkins/Jenkins-stop-the-war.svg" style={{ width: "356px", "float": "left" }}></img>
         <h1>Jenkins</h1>
         <h2>Build great things at any scale</h2>
         <p>The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
@@ -20,7 +20,7 @@ class IndexPage extends React.Component {
         <button>Download</button>
         <div style={{
           background: "#4799d6",
-          backgroundImage: "../../images/images/cdf/cdf-background-wide.jpg" ? "url(../../images/images/cdf/cdf-background-wide.jpg)" : "inherit",
+          backgroundImage: "../..../../images/images/images/cdf/cdf-background-wide.jpg" ? "url(../../images/images/cdf/cdf-background-wide.jpg)" : "inherit",
           backgroundSize: 'cover',
           margin: "2rem 0rem",
         }}
@@ -34,7 +34,7 @@ class IndexPage extends React.Component {
             {/* showThumbs={true}> */}
             <div>
               <a href="">
-                <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png" style={{ height: "320px" }} />
+                <img src="../..../../images/images/images/gsoc/gsoc_projects_contributors_selected.png" style={{ height: "320px" }} />
                 <h2 className="legend">Welcome to GSoC 2023!
                   Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.
                 </h2>
@@ -44,7 +44,7 @@ class IndexPage extends React.Component {
             </div>
             <div>
               <a href="">
-                <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png" style={{ height: "320px" }} />
+                <img src="../..../../images/images/images/gsoc/gsoc_projects_contributors_selected.png" style={{ height: "320px" }} />
                 <h2 className="legend">Welcome to GSoC 2023!
                   Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.
                 </h2>
@@ -54,7 +54,7 @@ class IndexPage extends React.Component {
             </div>
             <div>
               <a href="">
-                <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png" style={{ height: "320px" }} />
+                <img src="../..../../images/images/images/gsoc/gsoc_projects_contributors_selected.png" style={{ height: "320px" }} />
                 <h2 className="legend">Welcome to GSoC 2023!
                   Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.
                 </h2>
@@ -162,7 +162,7 @@ class IndexPage extends React.Component {
                     }}
                   >
                     <img
-                      src={node.pageAttributes.opengraph ?? "../../images/gsoc/opengraph.png"}
+                      src={node.pageAttributes.opengraph ?? "../..../../images/images/gsoc/opengraph.png"}
                       alt={node.document.title}
                       height="250px"
                       width="100%"
@@ -172,7 +172,7 @@ class IndexPage extends React.Component {
                 </Link>
                 <br></br>
                 {/* <img
-               src="https://www.jenkins.io/images/avatars/markewaite.jpg"
+               src="https://www.jenkins.io../../images/images/avatars/markewaite.jpg"
                alt="Mark Waite"
                style={{
                  width: "20px",
@@ -186,74 +186,77 @@ class IndexPage extends React.Component {
             )}
           </ul>
         </IndexPageLayout>
-        <div className="jumbotron" id="sponsorsblock">
-          <div className="sponsors">
+        <div>
+          <div>
             <p>
-              <strong>
-                We thank the following organizations for their major commitments to
-                support the Jenkins project.
-              </strong>
+              <center>
+                <strong>
+                  We thank the following organizations for their major commitments to
+                  support the Jenkins project.
+                </strong>
+              </center>
             </p>
-            <ul>
+            <ul style={{ display: "flex", justifyContent: "space-evenly", listStyle: "none", padding: "0rem 5rem" }}>
               <li>
-                <a >
-                  <img src="../../images/images/sponsors/cloudbees.png" />
+                <a href="https://cloudbees.com" rel="noreferrer noopener" target="_blank">
+                  <img alt="CloudBees, Inc." src="../../images/images/sponsors/cloudbees.png" title="CloudBees, Inc."/>
                 </a>
               </li>
               <li>
-                <a >
-                  <img src="../../images/images/sponsors/cloudbees.png" />
+                <a href="https://osuosl.org" rel="noreferrer noopener" target="_blank">
+                  <img alt="Oregon State University Open Source Lab" src="../../images/images/sponsors/osuosl.png" title="Oregon State University Open Source Lab"/>
                 </a>
               </li>
               <li>
-                <a >
-                  <img src="../../images/images/sponsors/cloudbees.png" />
+                <a href="https://cd.foundation/" rel="noreferrer noopener" target="_blank">
+                  <img alt="Continuous Delivery Foundation" src="../../images/images/sponsors/cdf.png" title="Continuous Delivery Foundation"/>
                 </a>
               </li>
               <li>
-                <a >
-                  <img src="../../images/images/sponsors/cloudbees.png" />
+                <a href="https://redhat.com" rel="noreferrer noopener" target="_blank">
+                  <img alt="Red Hat, Inc." src="../../images/images/sponsors/redhat.png" title="Red Hat, Inc."/>
                 </a>
               </li>
               <li>
-                <a >
-                  <img src="../../images/images/sponsors/cloudbees.png" />
+                <a href="https://aws.amazon.com/" rel="noreferrer noopener" target="_blank">
+                  <img alt="AWS" src="../../images/images/sponsors/aws.png" title="AWS"/>
                 </a>
               </li>
               <li>
-                <a >
-                  <img src="../../images/images/sponsors/cloudbees.png" />
+                <a href="https://github.com" rel="noreferrer noopener" target="_blank">
+                  <img alt="GitHub, Inc." src="../../images/images/sponsors/github.png" title="GitHub, Inc."/>
                 </a>
               </li>
               <li>
-                <a >
-                  <img src="../../images/images/sponsors/cloudbees.png" />
+                <a href="https://jfrog.com" rel="noreferrer noopener" target="_blank">
+                  <img alt="JFrog" src="../../images/images/sponsors/jfrog.png" title="JFrog"/>
                 </a>
               </li>
             </ul>
           </div>
           <div className="supporters">
             <p>
-              <strong>
-                We thank the following organizations for their support of the Jenkins
-                project through free and/or open source licensing programs.
-              </strong>
+              <center>
+                <strong>
+                  We thank the following organizations for their support of the Jenkins project through free and/or open source licensing programs.
+                </strong>
+              </center>
             </p>
-            <ul>
+            <ul style={{ fontWeight: "bold", display: "flex", justifyContent: "space-evenly", listStyle: "none", padding: "0rem 10rem" }}>
               <li><a href="https://atlassian.com/">Atlassian</a></li>
               <li><a href="https://www.datadoghq.com/">Datadog</a></li>
               <li><a href="https://www.digitalocean.com/">Digital Ocean</a></li>
               <li><a href="https://www.discourse.org/">Discourse</a></li>
               <li><a href="https://www.fastly.com/">Fastly</a></li>
-              <li><a href="https://www.ibm.com/"></a>IBM</li>
+              <li><a href="https://www.ibm.com/">IBM</a></li>
               <li><a href="https://www.netlify.com/">Netlify</a></li>
               <li><a href="https://pagerduty.com/">Pagerduty</a></li>
               <li><a href="https://sentry.io/">Sentry</a></li>
               <li><a href="https://www.tsinghua.edu.cn/">Tsinghua University</a></li>
               <li><a href="https://xmission.com/">XMission</a></li>
-           </ul>
+            </ul>
           </div>
-        </div>
+        </div >
       </>
     );
   }
