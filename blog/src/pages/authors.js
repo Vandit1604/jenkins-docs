@@ -8,46 +8,110 @@ import {
   authorinfo,
 } from "../css/authorpost.module.css"
 
+import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
+import typography from "../utils/typography"
+const { rhythm } = typography
+
 class IndexPage extends React.Component {
   render() {
     return (
       <IndexPageLayout>
+        <h3
+          style={{
+            color: `black`,
+            marginBottom: rhythm(1.5),
+            "font-family": "Georgia,serif",
+            "font-size": "40px",
+            display: "flex",
+            "flex-direction": "row",
+            "flex-wrap": "nowrap",
+            "justify-content": "center",
+            gap: "15px",
+          }}
+        >
+          <img
+            src={jenkinsLogo}
+            alt="Jenkins Logo"
+            style={{
+              height: "80px",
+            }}
+          />{" "}
+          Jenkins Community Blog Contributors
+        </h3>
         <ul className={authorlisting}>
-          {this.props.data.allAsciidoc.edges.map(({ node }) =>
-            <li key={node.fields.slug} className={authorpost}>
-              <Link to={node.fields.slug} style={{ "text-decoration": "none" }}>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <img
-                    // src={("../../images/avatars/" + node.pageAttributes.github + ".png") ?? "../../images/gsoc/opengraph.png"}
-                    src={"../../images/gsoc/opengraph.png"}
-                    alt={node.document.title}
-                  // height="250px"
-                  // width="100%"
-
-                  />
-                </div>
-                <center>
-                  <span className={authorname}>{node.pageAttributes.author_name}</span>
-                </center>
-                <div className={authorinfo}>
-                  <br></br>
-                  <a href={"https://github.com/" + node.pageAttributes.github}> Github </a>
-                  <br></br>
-                  <a href={"https://linkedin.com/in/" + node.pageAttributes.linkedin}> LinkedIn </a>
-                  <br></br>
-                  <a href={"https://twitter.com/" + node.pageAttributes.twitter}> Twitter </a>
-                </div>
-              </Link>
-              <br></br></li >
-          )}
-        </ul >
+          {this.props.data.allAsciidoc.edges.map(({ node }) => {
+            if (node.document.title === "Author") {
+              return (
+                <li key={node.fields.slug} className={authorpost}>
+                  <Link to={node.fields.slug} style={{ textDecoration: "none" }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <img
+                        src={"../../images/gsoc/opengraph.png"}
+                        alt={node.document.title}
+                      />
+                    </div>
+                    <center>
+                      <span className={authorname}>{node.pageAttributes.author_name}</span>
+                    </center>
+                    <div className={authorinfo}>
+                      <br />
+                      <a href={"https://github.com/" + node.pageAttributes.github}>Github</a>
+                      <br />
+                      <a href={"https://linkedin.com/in/" + node.pageAttributes.linkedin}>LinkedIn</a>
+                      <br />
+                      <a href={"https://twitter.com/" + node.pageAttributes.twitter}>Twitter</a>
+                    </div>
+                  </Link>
+                  <br />
+                </li>
+              );
+            } else {
+              return null; // Skip rendering cards with title other than "Author"
+            }
+          })}
+        </ul>
+        <ul className={authorlisting}>
+          {this.props.data.allAsciidoc.edges.map(({ node }) => {
+            return (
+              <li key={node.fields.slug} className={authorpost}>
+                <Link to={node.fields.slug} style={{ textDecoration: "none" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <img
+                      src={"../../images/gsoc/opengraph.png"}
+                      alt={node.document.title}
+                    />
+                  </div>
+                  <center>
+                    <span className={authorname}>{node.pageAttributes.author_name}</span>
+                  </center>
+                  <div className={authorinfo}>
+                    <br />
+                    <br />
+                    <a href={"https://github.com/" + node.pageAttributes.github}>Github</a>
+                    <a href={"https://linkedin.com/in/" + node.pageAttributes.linkedin}>LinkedIn</a>
+                    <br />
+                    <a href={"https://twitter.com/" + node.pageAttributes.twitter}>Twitter</a>
+                  </div>
+                </Link>
+                <br />
+              </li>
+            );
+          })}
+        </ul>
       </IndexPageLayout >
     );
   }
@@ -56,25 +120,29 @@ class IndexPage extends React.Component {
 export default IndexPage
 
 export const pageQuery = graphql`
-          query{
-            allAsciidoc(sort: {fields: {slug: DESC}}) {
-            edges {
-            node {
-            fields {
-            slug
-          }
-          document {
-            title
-          }
-          pageAttributes {
-            tags
-          author
+{
+  allAsciidoc(filter: {document: {title: {eq: "Author"}}}) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        document {
+          title
+        }
+        pageAttributes {
           author_name
           github
           opengraph
+          linkedin
+          blog
+          twitter
+          medium
+          irc
+          description
         }
       }
     }
   }
 }
-          `
+`

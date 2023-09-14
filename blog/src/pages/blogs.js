@@ -60,7 +60,7 @@ class IndexPage extends React.Component {
                     <span className={blogtitle}>{node.document.title}</span>
                   </Link>
                   <br />
-                  {/* <p className={blogauthor}>{node.pageAttributes.author_name}</p> */}
+                  <p className={blogauthor}>{node.pageAttributes.authors}</p>
                 </li>
               );
             }

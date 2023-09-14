@@ -26,8 +26,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/authors/`,
+        name: `authors`,
+        path: `${__dirname}/content/authors`,
       },
     },
     {

@@ -18,7 +18,7 @@ return (
       paddingRight: rhythm(3 / 4),
     }}
   >
-    <Link to="/">
+    <Link to="/blogs">
       <BackToBlogButton>Back to Blogs</BackToBlogButton>
     </Link>
     {children}
