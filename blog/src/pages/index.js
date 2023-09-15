@@ -10,15 +10,15 @@ class IndexPage extends React.Component {
   render() {
     return (
       <>
-        <section style={{padding:"1rem 4rem"}}>
-        <img src="../../images/images/logos/jenkins/Jenkins-stop-the-war.svg" style={{ width: "356px", "float": "left" }}></img>
-        <h1>Jenkins</h1>
-        <h2>Build great things at any scale</h2>
-        <p>The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
-          We stand with the people of Ukraine. Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the <a href="https://redcross.org.ua/en/donate/">Ukrainian Red Cross</a>
-        </p>
-        <button>Documentation</button>
-        <button>Download</button>
+        <section style={{ padding: "1rem 4rem" }}>
+          <img src="../../images/images/logos/jenkins/Jenkins-stop-the-war.svg" style={{ width: "356px", "float": "left" }}></img>
+          <h1>Jenkins</h1>
+          <h2>Build great things at any scale</h2>
+          <p>The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
+            We stand with the people of Ukraine. Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the <a href="https://redcross.org.ua/en/donate/">Ukrainian Red Cross</a>
+          </p>
+          <button>Documentation</button>
+          <button>Download</button>
         </section>
         <div style={{
           background: "#4799d6",
@@ -145,45 +145,38 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </div>
-       <Video />
+        <Video />
         <IndexPageLayout>
-        <h2 style={{display:"flex",justifyContent:"left",padding:"2rem 4rem",textDecoration:"underline"}}>Recent Posts</h2>
+          <h2>Related Post</h2>
           <ul className={bloglisting}>
-            {this.props.data.allAsciidoc.edges.map(({ node }) =>
-              // { if (node.document.title == "Author") {
-              <li key={node.fields.slug} className={blogpost}>
-                <Link to={node.fields.slug} style={{ "text-decoration": "none" }}>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <img
-                      src={node.pageAttributes.opengraph ?? "../..../../images/images/gsoc/opengraph.png"}
-                      alt={node.document.title}
-                      height="250px"
-                      width="100%"
-                    />
-                  </div>
-                  <span className={blogtitle}>{node.document.title}</span>
-                </Link>
-                <br></br>
-                {/* <img
-               src="https://www.jenkins.io../../images/images/avatars/markewaite.jpg"
-               alt="Mark Waite"
-               style={{
-                 width: "20px",
-                 height: "20px",
-                 borderRadius: "50%",
-               }}
-             /> */}
-                <p className={blogauthor}>{node.pageAttributes.author_name}</p>
-              </li>
-              // }}
-            )}
+            {this.props.data.allAsciidoc.edges.map(({ node }) => {
+              if (node.document.title !== "Author") {
+                return (
+                  <li key={node.fields.slug} className={blogpost}>
+                    <Link to={node.fields.slug} style={{ textDecoration: "none" }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          src={node.pageAttributes.opengraph ?? "../../images/gsoc/opengraph.png"}
+                          alt={node.document.title}
+                          height="250px"
+                          width="100%"
+                        />
+                      </div>
+                      <span className={blogtitle}>{node.document.title}</span>
+                    </Link>
+                    <br />
+                    <p className={blogauthor}>{node.pageAttributes.authors}</p>
+                  </li>
+                );
+              }
+            })}
           </ul>
         </IndexPageLayout>
         <div>
@@ -266,7 +259,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
 query{
-  allAsciidoc(limit: 9, sort: {fields: {slug: DESC}}) {
+  allAsciidoc(limit: 9) {
     edges {
       node {
         fields {
@@ -286,4 +279,4 @@ query{
       }
     }
   }
-}`
+}` 
