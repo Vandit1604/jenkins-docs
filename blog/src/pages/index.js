@@ -2,16 +2,20 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
 import Video from "../components/Video"
-import { Carousel } from 'react-responsive-carousel';
-import { bloglisting, blogpost } from "../css/blogpost.module.css"
-import { blogtitle, blogauthor } from "../css/blogpost.module.css"
+import { blogauthor, bloglisting, blogpost, blogtitle } from "../css/blogpost.module.css"
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
 
 class IndexPage extends React.Component {
   render() {
     return (
       <>
         <section style={{ padding: "1rem 4rem" }}>
-          <img src="../../images/images/logos/jenkins/Jenkins-stop-the-war.svg" style={{ width: "356px", "float": "left" }}></img>
+          <img src="../../images/images/logos/jenkins/Jenkins-stop-the-war.svg" style={{ width: "356px", "float": "left" }} />
           <h1>Jenkins</h1>
           <h2>Build great things at any scale</h2>
           <p>The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
@@ -25,52 +29,65 @@ class IndexPage extends React.Component {
           backgroundImage: "../../images/images/cdf/cdf-background-wide.jpg" ? "url(../../images/images/cdf/cdf-background-wide.jpg)" : "inherit",
           backgroundSize: 'cover',
           margin: "2rem 0rem",
+          padding: 36,
         }}
         >
-          <Carousel>
-            {/* autoPlay */}
-            {/* interval={5000} */}
-            {/* useKeyboardArrows */}
-            {/* infiniteLoop */}
-            {/* swipeable */}
-            {/* showThumbs={true}> */}
-            <div>
-              <a href="">
-                <img src="../..../../images/images/images/gsoc/gsoc_projects_contributors_selected.png" style={{ height: "320px" }} />
-                <h2 className="legend">Welcome to GSoC 2023!
-                  Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.
-                </h2>
-                <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
-                <a href=""><button>More Info</button></a>
-              </a>
-            </div>
-            <div>
-              <a href="">
-                <img src="../..../../images/images/images/gsoc/gsoc_projects_contributors_selected.png" style={{ height: "320px" }} />
-                <h2 className="legend">Welcome to GSoC 2023!
-                  Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.
-                </h2>
-                <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
-                <a href=""><button>More Info</button></a>
-              </a>
-            </div>
-            <div>
-              <a href="">
-                <img src="../..../../images/images/images/gsoc/gsoc_projects_contributors_selected.png" style={{ height: "320px" }} />
-                <h2 className="legend">Welcome to GSoC 2023!
-                  Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.
-                </h2>
-                <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
-                <a href=""><button>More Info</button></a>
-              </a>
-            </div>
-          </Carousel>
+          <Swiper
+            spaceBetween={36}
+            slidesPerView={3}
+            onSlideChange={() => console.log('Slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <SwiperSlide>
+              <div>
+                <a href="">
+                  <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
+                       style={{ height: "300px", objectFit: "cover" }}
+                  />
+                  <h2 className="legend">Welcome to GSoC 2023!
+                    Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.
+                  </h2>
+                  <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
+                  <a href=""><button>More Info</button></a>
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <a href="">
+                  <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
+                       style={{ height: "300px", objectFit: "cover" }}
+                  />
+                  <h2 className="legend">Welcome to GSoC 2023!
+                    Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.
+                  </h2>
+                  <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
+                  <a href=""><button>More Info</button></a>
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <a href="">
+                  <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
+                       style={{ height: "300px", objectFit: "cover" }}
+                  />
+                  <h2 className="legend">Welcome to GSoC 2023!
+                    Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.
+                  </h2>
+                  <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
+                  <a href=""><button>More Info</button></a>
+                </a>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
-        <div>
-          <div class="row chunks features uniform-height">
-            <div class="col-md-6 col-lg-4">
-              <div class="box cicd">
-                <ion-icon name="git-pull-request-outline" role="img" class="md hydrated"></ion-icon>
+        <div
+          style={{ padding: 36 }}>
+          <div className="row chunks features uniform-height">
+            <div className="col-md-6 col-lg-4">
+              <div className="box cicd">
+                <ion-icon name="git-pull-request-outline" role="img" className="md hydrated"></ion-icon>
                 <h5>
                   Continuous Integration and Continuous Delivery
                 </h5>
@@ -80,9 +97,9 @@ class IndexPage extends React.Component {
                 </p>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="box install">
-                <ion-icon name="download-outline" role="img" class="md hydrated"></ion-icon>
+            <div className="col-md-6 col-lg-4">
+              <div className="box install">
+                <ion-icon name="download-outline" role="img" className="md hydrated"></ion-icon>
                 <h5>
                   Easy installation
                 </h5>
@@ -93,9 +110,9 @@ class IndexPage extends React.Component {
                 </p>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="box settings">
-                <ion-icon name="options-outline" role="img" class="md hydrated"></ion-icon>
+            <div className="col-md-6 col-lg-4">
+              <div className="box settings">
+                <ion-icon name="options-outline" role="img" className="md hydrated"></ion-icon>
                 <h5>
                   Easy configuration
                 </h5>
@@ -105,9 +122,9 @@ class IndexPage extends React.Component {
                 </p>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="box ecosystem">
-                <ion-icon name="apps-outline" role="img" class="md hydrated"></ion-icon>
+            <div className="col-md-6 col-lg-4">
+              <div className="box ecosystem">
+                <ion-icon name="apps-outline" role="img" className="md hydrated"></ion-icon>
                 <h5>
                   Plugins
                 </h5>
@@ -118,9 +135,9 @@ class IndexPage extends React.Component {
                 </p>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="box extend">
-                <ion-icon name="extension-puzzle-outline" role="img" class="md hydrated"></ion-icon>
+            <div className="col-md-6 col-lg-4">
+              <div className="box extend">
+                <ion-icon name="extension-puzzle-outline" role="img" className="md hydrated"></ion-icon>
                 <h5>
                   Extensible
                 </h5>
@@ -130,9 +147,9 @@ class IndexPage extends React.Component {
                 </p>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="box distributed">
-                <ion-icon name="git-network-outline" role="img" class="md hydrated"></ion-icon>
+            <div className="col-md-6 col-lg-4">
+              <div className="box distributed">
+                <ion-icon name="git-network-outline" role="img" className="md hydrated"></ion-icon>
                 <h5>
                   Distributed
                 </h5>
@@ -167,6 +184,7 @@ class IndexPage extends React.Component {
                           alt={node.document.title}
                           height="250px"
                           width="100%"
+                          style={{ objectFit: "cover" }}
                         />
                       </div>
                       <span className={blogtitle}>{node.document.title}</span>
