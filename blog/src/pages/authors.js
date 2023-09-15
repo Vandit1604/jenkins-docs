@@ -1,16 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
-import {
-  authorpost,
-  authorlisting,
-  authorname,
-  authorinfo,
-} from "../css/authorpost.module.css"
-
-import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
-import typography from "../utils/typography"
-const { rhythm } = typography
 
 class IndexPage extends React.Component {
   render() {
@@ -36,8 +26,9 @@ class IndexPage extends React.Component {
               height: "80px",
             }}
           />{" "}
-          Jenkins Community Blog Contributors
+          Jenkins download and deployment
         </h3>
+        <p>The Jenkins project produces two release lines: Stable (LTS) and regular (Weekly). Depending on your organization's needs, one may be preferred over the other. See the links below for more information and recommendations about the release lines.</p>
         <ul className={authorlisting}>
           {this.props.data.allAsciidoc.edges.map(({ node }) => {
             if (node.document.title === "Author") {
@@ -77,7 +68,7 @@ class IndexPage extends React.Component {
             }
           })}
         </ul>
-     </IndexPageLayout >
+      </IndexPageLayout >
     );
   }
 }
