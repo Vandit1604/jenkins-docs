@@ -259,7 +259,11 @@ export default IndexPage
 
 export const pageQuery = graphql`
 query{
-  allAsciidoc(limit: 9) {
+  allAsciidoc(
+    limit: 9
+    sort: {fields: {slug: DESC}}
+    filter: {document: {title: {ne: "Author"}}}
+  ) {
     edges {
       node {
         fields {
@@ -279,4 +283,6 @@ query{
       }
     }
   }
-}` 
+}
+` 
+
