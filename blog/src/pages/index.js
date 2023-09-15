@@ -48,7 +48,6 @@ class IndexPage extends React.Component {
                     Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.
                   </h2>
                   <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
-                  <a href=""><button>More Info</button></a>
                 </a>
               </div>
             </SwiperSlide>
@@ -62,7 +61,6 @@ class IndexPage extends React.Component {
                     Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.
                   </h2>
                   <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
-                  <a href=""><button>More Info</button></a>
                 </a>
               </div>
             </SwiperSlide>
@@ -76,7 +74,6 @@ class IndexPage extends React.Component {
                     Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.
                   </h2>
                   <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
-                  <a href=""><button>More Info</button></a>
                 </a>
               </div>
             </SwiperSlide>
@@ -199,14 +196,14 @@ class IndexPage extends React.Component {
         </IndexPageLayout>
         <div>
           <div>
-            <p>
+            <div>
               <center>
                 <strong>
                   We thank the following organizations for their major commitments to
                   support the Jenkins project.
                 </strong>
               </center>
-            </p>
+            </div>
             <ul style={{ display: "flex", justifyContent: "space-evenly", listStyle: "none", padding: "0rem 5rem" }}>
               <li>
                 <a href="https://cloudbees.com" rel="noreferrer noopener" target="_blank">
@@ -246,13 +243,13 @@ class IndexPage extends React.Component {
             </ul>
           </div>
           <div className="supporters">
-            <p>
+            <div>
               <center>
                 <strong>
                   We thank the following organizations for their support of the Jenkins project through free and/or open source licensing programs.
                 </strong>
               </center>
-            </p>
+            </div>
             <ul style={{ fontWeight: "bold", display: "flex", justifyContent: "space-evenly", listStyle: "none", padding: "0rem 10rem" }}>
               <li><a href="https://atlassian.com/">Atlassian</a></li>
               <li><a href="https://www.datadoghq.com/">Datadog</a></li>
