@@ -77,42 +77,7 @@ class IndexPage extends React.Component {
             }
           })}
         </ul>
-        <ul className={authorlisting}>
-          {this.props.data.allAsciidoc.edges.map(({ node }) => {
-            return (
-              <li key={node.fields.slug} className={authorpost}>
-                <Link to={node.fields.slug} style={{ textDecoration: "none" }}>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <img
-                      src={"../../images/gsoc/opengraph.png"}
-                      alt={node.document.title}
-                    />
-                  </div>
-                  <center>
-                    <span className={authorname}>{node.pageAttributes.author_name}</span>
-                  </center>
-                  <div className={authorinfo}>
-                    <br />
-                    <br />
-                    <a href={"https://github.com/" + node.pageAttributes.github}>Github</a>
-                    <a href={"https://linkedin.com/in/" + node.pageAttributes.linkedin}>LinkedIn</a>
-                    <br />
-                    <a href={"https://twitter.com/" + node.pageAttributes.twitter}>Twitter</a>
-                  </div>
-                </Link>
-                <br />
-              </li>
-            );
-          })}
-        </ul>
-      </IndexPageLayout >
+     </IndexPageLayout >
     );
   }
 }
