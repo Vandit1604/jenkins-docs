@@ -61,7 +61,7 @@ class IndexPage extends React.Component {
                   </Link>
                   <br />
                   <div style={{ display: "flex" }}>
-                    <img src={"../../images/images/avatars/" + node.pageAttributes.author + ".jpg" ?? "../../images/images/avatars/" + node.pageAttributes.author + ".png"} style={{ height: "1rem", width: "1rem", borderRadius: "50%", display: "inline", position: "relative", top: ".3rem" }} />
+                    <img src={("../../images/images/avatars/" + node.pageAttributes.author + ".jpg" ?? "../../images/images/avatars/" + node.pageAttributes.author + ".png")?? "../../images/images/avatars/" + node.pageAttributes.author + ".jpeg"} style={{ height: "1rem", width: "1rem", borderRadius: "50%", display: "inline", position: "relative", top: ".3rem" }} />
                     <p className={blogauthor}>{node.pageAttributes.author}</p>
                     <span>{node.fields.slug}</span>
                   </div>
