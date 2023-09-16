@@ -1,8 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
-import { bloglisting, blogpost } from "../css/blogpost.module.css"
-import { blogtitle, blogauthor } from "../css/blogpost.module.css"
+import { blogauthor, bloglisting, blogpost, blogtitle } from "../css/blogpost.module.css"
 
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
 import typography from "../utils/typography"
@@ -61,13 +60,14 @@ class IndexPage extends React.Component {
                   </Link>
                   <br />
                   <div style={{ display: "flex" }}>
-                    <img src={("../../images/images/avatars/" + node.pageAttributes.author + ".jpg" ?? "../../images/images/avatars/" + node.pageAttributes.author + ".png")?? "../../images/images/avatars/" + node.pageAttributes.author + ".jpeg"} style={{ height: "1rem", width: "1rem", borderRadius: "50%", display: "inline", position: "relative", top: ".3rem" }} />
+                    <img src={("../../images/images/avatars/" + node.pageAttributes.author + ".jpg" ?? "../../images/images/avatars/" + node.pageAttributes.author + ".png")?? "../../images/images/avatars/" + node.pageAttributes.author + ".jpeg"} style={{ height: "1rem", width: "1rem", borderRadius: "50%", display: "inline", position: "relative", top: ".3rem" }} alt={""} />
                     <p className={blogauthor}>{node.pageAttributes.author}</p>
                     <span>{node.fields.slug}</span>
                   </div>
                 </li>
               );
             }
+            return null;
           })}
         </ul>
       </IndexPageLayout>

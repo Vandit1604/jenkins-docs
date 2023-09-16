@@ -7,7 +7,7 @@ const NotFound = () => {
   return (
     <Layout>
       <center>
-        <img src="../../images/images/fire-jenkins.svg"></img>
+        <img src="../../images/images/fire-jenkins.svg" alt={""} />
         <p style={{ "fontSize": "2rem", "fontWeight": "700" }}>The page you requested could not be found.</p>
         <p>
           <Link to="/">Back to Home page</Link>

@@ -9,13 +9,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+// import required modules
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 class IndexPage extends React.Component {
   render() {
     return (
       <>
         <section style={{ padding: "1rem 4rem" }}>
-          <img src="../../images/images/logos/jenkins/Jenkins-stop-the-war.svg" style={{ width: "356px", "float": "left" }} />
+          <img src="../../images/images/logos/jenkins/Jenkins-stop-the-war.svg" style={{ width: "356px", "float": "left" }} alt={""} />
           <h1>Jenkins</h1>
           <h2>Build great things at any scale</h2>
           <p>The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
@@ -29,51 +34,80 @@ class IndexPage extends React.Component {
           backgroundImage: "../../images/images/cdf/cdf-background-wide.jpg" ? "url(../../images/images/cdf/cdf-background-wide.jpg)" : "inherit",
           backgroundSize: 'cover',
           margin: "2rem 0rem",
-          padding: 36,
+          padding: 56,
         }}
         >
           <Swiper
             spaceBetween={36}
-            slidesPerView={3}
+            slidesPerView={1}
             onSlideChange={() => console.log('Slide change')}
             onSwiper={(swiper) => console.log(swiper)}
+            pagination={true}
+            modules={[Autoplay, Navigation, Pagination]}
+            loop={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: true,
+            }}
+            style={{
+              "--swiper-pagination-color": "#FFFFFF",
+              "--swiper-pagination-bullet-inactive-color": "#999999",
+              "--swiper-pagination-bullet-inactive-opacity": "1",
+              "--swiper-pagination-bullet-size": "8px",
+              "--swiper-pagination-bullet-horizontal-gap": "8px"
+            }}
           >
             <SwiperSlide>
               <div>
-                <a href="">
-                  <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
-                       style={{ height: "300px", objectFit: "cover" }}
-                  />
-                  <h2 className="legend">Welcome to GSoC 2023!
-                    Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.
-                  </h2>
-                  <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
+                <a href={"#"}>
+                  <div style={{display: "flex", gap: "32px", alignItems: 'center', justifyContent: 'center', padding: "16px" }}>
+                    <div style={{color: "#FFFFFF"}}>
+                      <h2 className="legend">Welcome to GSoC 2023!</h2>
+                      <p>Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.</p>
+                      <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
+                    </div>
+                    <div>
+                      <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
+                           style={{ height: "320px", maxWidth: "unset" }}
+                      />
+                    </div>
+                  </div>
                 </a>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <a href="">
-                  <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
-                       style={{ height: "300px", objectFit: "cover" }}
-                  />
-                  <h2 className="legend">Welcome to GSoC 2023!
-                    Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.
-                  </h2>
-                  <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
+                <a href="#">
+                  <div style={{display: "flex", gap: "32px", alignItems: 'center', justifyContent: 'center', padding: "16px"}}>
+                    <div style={{color: "#FFFFFF"}}>
+                      <h2 className="legend">Welcome to GSoC 2023!</h2>
+                      <p>Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.</p>
+                        <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
+                    </div>
+                    <div>
+                      <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
+                           style={{ height: "320px", maxWidth: "unset" }}
+                      />
+                    </div>
+                  </div>
                 </a>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <a href="">
-                  <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
-                       style={{ height: "300px", objectFit: "cover" }}
-                  />
-                  <h2 className="legend">Welcome to GSoC 2023!
-                    Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.
-                  </h2>
-                  <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
+                <a href="#">
+                  <div style={{display: "flex", gap: "32px", alignItems: 'center', justifyContent: 'center', padding: "16px"}}>
+                    <div style={{color: "#FFFFFF"}}>
+                      <h2 className="legend">Welcome to GSoC 2023!</h2>
+                      <p>Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.</p>
+                      <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
+                    </div>
+                    <div>
+                      <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
+                           style={{ height: "320px", maxWidth: "unset" }}
+                      />
+                    </div>
+                  </div>
                 </a>
               </div>
             </SwiperSlide>
@@ -159,7 +193,9 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </div>
-        <Video />
+        <div style={{paddingLeft: "32px", paddingRight: "32px "}}>
+          <Video />
+        </div>
         <IndexPageLayout>
           <h2>Related Post</h2>
           <ul className={bloglisting}>

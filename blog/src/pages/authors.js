@@ -1,6 +1,10 @@
+import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
+import { authorlisting, authorpost, authorname, authorinfo } from "../css/authorpost.module.css"
 import React from "react"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
+import typography from "../utils/typography";
+const { rhythm } = typography
 
 class IndexPage extends React.Component {
   render() {

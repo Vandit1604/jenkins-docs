@@ -1,5 +1,6 @@
 import React from "react"
 import IndexPageLayout from "../layouts"
+import { graphql } from 'gatsby'
 
 class IndexPage extends React.Component {
   render() {
@@ -7,7 +8,7 @@ class IndexPage extends React.Component {
       <IndexPageLayout>
         <ul>
           {this.props.data.allWeeklyYaml.edges.map(({ node }) => {
-
+            return null;
           })}
         </ul >
       </IndexPageLayout >

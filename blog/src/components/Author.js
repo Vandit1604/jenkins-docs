@@ -12,7 +12,7 @@ const Author = () => {
       style={{ float: "left", width: "90px", height: "90px", "border-radius": "50%" }}
     ></img>
     <p>TODO: Add author description</p>
-    <a to="TODO: Author's Github">
+    <a href={"#"}>
       <FontAwesomeIcon icon="fa-brands fa-github" />
     </a>
   </section>
