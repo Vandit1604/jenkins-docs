@@ -5,7 +5,7 @@ import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/j
 import typography from "../utils/typography"
 const { rhythm } = typography
 
-class IndexPage extends React.Component {
+class UpgradeGuide extends React.Component {
   render() {
     return (
       < IndexPageLayout >
@@ -30,30 +30,16 @@ class IndexPage extends React.Component {
                 height: "80px",
               }}
             />{" "}
-            LTS Changelog
+            Upgrade Guide
           </h3>
         </Link>
-        <div style={{ margin: "10px", padding: "10px", backgroundColor: "#FFFFCE" }}>
-          See the <Link to="/upgrade-guide">LTS upgrade guide</Link> advice on upgrading Jenkins.
-        </div>
-        <h2>What's new in </h2>
-        {this.props.data.allLtsYaml.edges.map(({ node }) => {
-          <>
-            <h1>What's new in {node.version}{node.date} </h1>
-            <p>Community reported issues : </p>
-            <h4>Changes since {node.lts_baseline}:</h4>
-            <ul>
-              {node.lts_changes}
-            </ul>
-          </>
 
-        })}
       </IndexPageLayout >
     );
   }
 }
 
-export default IndexPage
+export default UpgradeGuide
 
 export const pageQuery = graphql`
 query{
