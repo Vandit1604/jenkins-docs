@@ -15,7 +15,7 @@ li {
   display: grid;
   gap: 1.5rem;
   row-gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(14%, 1fr));
   box-sizing: border-box;
   padding: 0;
   list-style-type: none;
@@ -45,4 +45,17 @@ li {
 .authorinfo{
   display: flex;
   justify-content: space-around;
+  margin: 0.7rem;
+}
+
+.github{
+  color: black;
+}
+
+.linkedin{
+   color: #0E4Eb5;
+}
+
+.twitter{
+  color: rgb(29, 161, 242); 
 }

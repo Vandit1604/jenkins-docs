@@ -1,4 +1,8 @@
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
+import { BsGithub } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
+import { BsBook } from "react-icons/bs";
 import { authorlisting, authorpost, authorname, authorinfo } from "../css/authorpost.module.css"
 import React from "react"
 import { Link, graphql } from "gatsby"
@@ -30,9 +34,8 @@ class IndexPage extends React.Component {
               height: "80px",
             }}
           />{" "}
-          Jenkins download and deployment
+          Jenkins Community Blog Contributors
         </h3>
-        <p>The Jenkins project produces two release lines: Stable (LTS) and regular (Weekly). Depending on your organization's needs, one may be preferred over the other. See the links below for more information and recommendations about the release lines.</p>
         <ul className={authorlisting}>
           {this.props.data.allAsciidoc.edges.map(({ node }) => {
             if (node.document.title === "Author") {
@@ -45,23 +48,26 @@ class IndexPage extends React.Component {
                         flexDirection: "column",
                         alignItems: "center",
                         justifyContent: "center",
+                        padding: "1rem",
                       }}
                     >
+                      <center>
+                        <span className={authorname}>{node.pageAttributes.author_name}</span>
+                      </center>
                       <img
                         src={"../../images/gsoc/opengraph.png"}
                         alt={node.document.title}
                       />
                     </div>
-                    <center>
-                      <span className={authorname}>{node.pageAttributes.author_name}</span>
-                    </center>
                     <div className={authorinfo}>
                       <br />
-                      <a href={"https://github.com/" + node.pageAttributes.github}>Github</a>
+                      <a href={"https://github.com/" + node.pageAttributes.github} className="github"> <BsGithub /></a>
                       <br />
-                      <a href={"https://linkedin.com/in/" + node.pageAttributes.linkedin}>LinkedIn</a>
+                      <a href={"https://linkedin.com/in/" + node.pageAttributes.linkedin} className="linkedin"><BsLinkedin /></a>
                       <br />
-                      <a href={"https://twitter.com/" + node.pageAttributes.twitter}>Twitter</a>
+                      <a href={"https://twitter.com/" + node.pageAttributes.twitter} className="twitter"><BsTwitter /></a>
+                      <br />
+                      <a href={node.pageAttributes.blog} className="blog"><BsBook /></a>
                     </div>
                   </Link>
                   <br />
