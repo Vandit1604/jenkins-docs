@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
 import { blogauthor, bloglisting, blogpost, blogtitle } from "../css/blogpost.module.css"
-
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
 import typography from "../utils/typography"
 const { rhythm } = typography
@@ -10,18 +9,18 @@ const { rhythm } = typography
 class IndexPage extends React.Component {
   render() {
     return (
-      <IndexPageLayout>
+      < IndexPageLayout >
         <Link style={{ textDecoration: `none` }} to="/">
           <h3
             style={{
               color: `black`,
               marginBottom: rhythm(1.5),
-              "font-family": "Georgia,serif",
-              "font-size": "40px",
+              fontFamily: "Georgia,serif",
+              fontSize: "40px",
               display: "flex",
-              "flex-direction": "row",
-              "flex-wrap": "nowrap",
-              "justify-content": "center",
+              flexDirection: "row",
+              flexWrap: "nowrap",
+              justifyContent: "center",
               gap: "15px",
             }}
           >
@@ -36,6 +35,7 @@ class IndexPage extends React.Component {
           </h3>
         </Link>
         <ul className={bloglisting}>
+          {console.log(this.props.data.allAsciidoc)}
           {this.props.data.allAsciidoc.edges.map(({ node }) => {
             if (node.document.title !== "Author") {
               return (
@@ -60,7 +60,7 @@ class IndexPage extends React.Component {
                   </Link>
                   <br />
                   <div style={{ display: "flex" }}>
-                    <img src={("../../images/images/avatars/" + node.pageAttributes.author + ".jpg" ?? "../../images/images/avatars/" + node.pageAttributes.author + ".png")?? "../../images/images/avatars/" + node.pageAttributes.author + ".jpeg"} style={{ height: "1rem", width: "1rem", borderRadius: "50%", display: "inline", position: "relative", top: ".3rem" }} alt={""} />
+                    <img src={("../../images/images/avatars/" + node.pageAttributes.author + ".jpg" ?? "../../images/images/avatars/" + node.pageAttributes.author + ".png") ?? "../../images/images/avatars/" + node.pageAttributes.author + ".jpeg"} style={{ height: "1rem", width: "1rem", borderRadius: "50%", display: "inline", position: "relative", top: ".3rem" }} alt={""} />
                     <p className={blogauthor}>{node.pageAttributes.author}</p>
                     <span>{node.fields.slug}</span>
                   </div>
@@ -70,7 +70,7 @@ class IndexPage extends React.Component {
             return null;
           })}
         </ul>
-      </IndexPageLayout>
+      </IndexPageLayout >
     );
   }
 }
@@ -79,13 +79,17 @@ export default IndexPage
 
 export const pageQuery = graphql`
 query{
-  allAsciidoc(sort: {fields: {slug: DESC}}) {
+  allAsciidoc(
+    sort: {fields: {slug: DESC}}
+    filter: {document: {main: {ne: "Jenkins Changelog Styleguide"}}}
+  ) {
     edges {
       node {
         fields {
           slug
         }
         document {
+          main
           title
         }
         pageAttributes {
@@ -99,5 +103,4 @@ query{
       }
     }
   }
-}
-`
+}`

@@ -13,9 +13,11 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/data/`,
+        name: `changelogs`,
+        path: `${__dirname}/data/changelogs`,
       },
     },
+    `gatsby-transformer-asciidoc`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -23,6 +25,15 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
+    `gatsby-transformer-asciidoc`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `upgrades`,
+        path: `${__dirname}/data/upgrades`,
+      },
+    },
+    `gatsby-transformer-asciidoc`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
