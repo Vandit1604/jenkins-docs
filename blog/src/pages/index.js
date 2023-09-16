@@ -193,7 +193,7 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </div>
-        <div style={{paddingLeft: "32px", paddingRight: "32px "}}>
+        <div style={{paddingLeft: "32px", paddingRight: "32px"}}>
           <Video />
         </div>
         <IndexPageLayout>
