@@ -25,7 +25,7 @@ class IndexPage extends React.Component {
   render() {
     return (
       <>
-        <section style={{ padding: "0rem 25rem", display: "flex" }}>
+        <section style={{ padding: "0rem 25rem",display:"flex" }}>
           <img src="../../images/images/logos/jenkins/Jenkins-stop-the-war.svg" style={{ width: "356px" }} alt={"Jenkins Logo"} />
           <div >
             <h1>Jenkins</h1>
