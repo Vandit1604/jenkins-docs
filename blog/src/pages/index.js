@@ -8,6 +8,7 @@ import { RiAppsFill } from "react-icons/ri";
 import { AiOutlineControl } from "react-icons/ai";
 import { box, container, featureInfo } from "../css/index.module.css"
 import { blogauthor, bloglisting, blogpost, blogtitle } from "../css/blogpost.module.css"
+import { BackToBlogButton } from "../components/BackToBlogButton"
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -24,15 +25,23 @@ class IndexPage extends React.Component {
   render() {
     return (
       <>
-        <section style={{ padding: "1rem 4rem" }}>
-          <img src="../../images/images/logos/jenkins/Jenkins-stop-the-war.svg" style={{ width: "356px", "float": "left" }} alt={""} />
-          <h1>Jenkins</h1>
-          <h2>Build great things at any scale</h2>
-          <p>The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
-            We stand with the people of Ukraine. Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the <a href="https://redcross.org.ua/en/donate/">Ukrainian Red Cross</a>
-          </p>
-          <button>Documentation</button>
-          <button>Download</button>
+        <section style={{ padding: "0rem 25rem",display:"flex" }}>
+          <img src="../../images/images/logos/jenkins/Jenkins-stop-the-war.svg" style={{ width: "356px" }} alt={"Jenkins Logo"} />
+          <div >
+            <h1>Jenkins</h1>
+            <h2>Build great things at any scale</h2>
+            <p>The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
+              <br />
+              <br />
+              We stand with the people of Ukraine. Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the <a href="https://redcross.org.ua/en/donate/">Ukrainian Red Cross</a>
+            </p>
+            <div style={{ display: "flex", width: "fit-content", justifyContent: "space-between", gap: "2rem" }}>
+              <Link to="/download">
+                <BackToBlogButton>Download</BackToBlogButton>
+              </Link>
+              <a href="add to link"><BackToBlogButton>Documentation</BackToBlogButton></a>
+            </div>
+          </div>
         </section>
         <div style={{
           background: "#4799d6",
