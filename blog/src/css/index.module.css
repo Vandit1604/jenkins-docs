@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+.container{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.box {
+  margin: 0 4rem;
+}
+
+.featureInfo{
+  display: flex;
+  margin-bottom:1rem;
+}
+
+.featureInfo h4{
+  margin: minmax(1fr,15%);
+}
+/* .featureInfo::before(){ */
+/*   content: ""; */
+/*   background-color: blue; */
+/*   border-radius: 50%; */
+/* } */

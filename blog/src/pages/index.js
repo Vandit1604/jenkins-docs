@@ -2,6 +2,11 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
 import Video from "../components/Video"
+import { VscGitPullRequest, VscGitMerge } from "react-icons/vsc";
+import { GoDownload, GoRepoForked } from "react-icons/go";
+import { RiAppsFill } from "react-icons/ri";
+import { AiOutlineControl } from "react-icons/ai";
+import { box, container, featureInfo } from "../css/index.module.css"
 import { blogauthor, bloglisting, blogpost, blogtitle } from "../css/blogpost.module.css"
 
 // Import Swiper React components
@@ -60,15 +65,15 @@ class IndexPage extends React.Component {
             <SwiperSlide>
               <div>
                 <a href={"#"}>
-                  <div style={{display: "flex", gap: "32px", alignItems: 'center', justifyContent: 'center', padding: "16px" }}>
-                    <div style={{color: "#FFFFFF"}}>
+                  <div style={{ display: "flex", gap: "32px", alignItems: 'center', justifyContent: 'center', padding: "16px" }}>
+                    <div style={{ color: "#FFFFFF" }}>
                       <h2 className="legend">Welcome to GSoC 2023!</h2>
                       <p>Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.</p>
                       <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
                     </div>
                     <div>
                       <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
-                           style={{ height: "320px", maxWidth: "unset" }}
+                        style={{ height: "320px", maxWidth: "unset" }}
                       />
                     </div>
                   </div>
@@ -78,15 +83,15 @@ class IndexPage extends React.Component {
             <SwiperSlide>
               <div>
                 <a href="#">
-                  <div style={{display: "flex", gap: "32px", alignItems: 'center', justifyContent: 'center', padding: "16px"}}>
-                    <div style={{color: "#FFFFFF"}}>
+                  <div style={{ display: "flex", gap: "32px", alignItems: 'center', justifyContent: 'center', padding: "16px" }}>
+                    <div style={{ color: "#FFFFFF" }}>
                       <h2 className="legend">Welcome to GSoC 2023!</h2>
                       <p>Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.</p>
-                        <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
+                      <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
                     </div>
                     <div>
                       <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
-                           style={{ height: "320px", maxWidth: "unset" }}
+                        style={{ height: "320px", maxWidth: "unset" }}
                       />
                     </div>
                   </div>
@@ -96,15 +101,15 @@ class IndexPage extends React.Component {
             <SwiperSlide>
               <div>
                 <a href="#">
-                  <div style={{display: "flex", gap: "32px", alignItems: 'center', justifyContent: 'center', padding: "16px"}}>
-                    <div style={{color: "#FFFFFF"}}>
+                  <div style={{ display: "flex", gap: "32px", alignItems: 'center', justifyContent: 'center', padding: "16px" }}>
+                    <div style={{ color: "#FFFFFF" }}>
                       <h2 className="legend">Welcome to GSoC 2023!</h2>
                       <p>Google Summer of Code 2023 includes 4 Jenkins projects. Congratulations to the selected GSoC contributors.</p>
                       <p>Jenkins is a community-driven project. We invite everyone to join us and move it forward. Any contribution matters: code, documentation, localization, blog posts, artwork, meetups, and anything else. If you have five minutes or a few hours, you can help!</p>
                     </div>
                     <div>
                       <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
-                           style={{ height: "320px", maxWidth: "unset" }}
+                        style={{ height: "320px", maxWidth: "unset" }}
                       />
                     </div>
                   </div>
@@ -115,25 +120,29 @@ class IndexPage extends React.Component {
         </div>
         <div
           style={{ padding: 36 }}>
-          <div className="row chunks features uniform-height">
-            <div className="col-md-6 col-lg-4">
-              <div className="box cicd">
-                <ion-icon name="git-pull-request-outline" role="img" className="md hydrated"></ion-icon>
-                <h5>
-                  Continuous Integration and Continuous Delivery
-                </h5>
+          <div className={container}>
+            <div className={box}>
+              <div>
+                <div className={featureInfo}>
+                  <VscGitPullRequest style={{ fontSize: "2rem", }} />
+                  <h4>
+                    Continuous Integration and Continuous Delivery
+                  </h4>
+                </div>
                 <p>
                   As an extensible automation server, Jenkins can be used as a simple
                   CI server or turned into the continuous delivery hub for any project.
                 </p>
               </div>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <div className="box install">
-                <ion-icon name="download-outline" role="img" className="md hydrated"></ion-icon>
-                <h5>
-                  Easy installation
-                </h5>
+            <div className={box}>
+              <div>
+                <div className={featureInfo}>
+                  <GoDownload style={{ fontSize: "2rem", }} />
+                  <h4>
+                    Easy installation
+                  </h4>
+                </div>
                 <p>
                   Jenkins is a self-contained Java-based program, ready to run
                   out-of-the-box, with packages for Windows, Linux, macOS and other
@@ -141,24 +150,28 @@ class IndexPage extends React.Component {
                 </p>
               </div>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <div className="box settings">
-                <ion-icon name="options-outline" role="img" className="md hydrated"></ion-icon>
-                <h5>
-                  Easy configuration
-                </h5>
+            <div className={box}>
+              <div>
+                <div className={featureInfo}>
+                  <AiOutlineControl style={{ fontSize: "2rem", }} />
+                  <h4>
+                    Easy configuration
+                  </h4>
+                </div>
                 <p>
                   Jenkins can be easily set up and configured via its web interface,
                   which includes on-the-fly error checks and built-in help.
                 </p>
               </div>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <div className="box ecosystem">
-                <ion-icon name="apps-outline" role="img" className="md hydrated"></ion-icon>
-                <h5>
-                  Plugins
-                </h5>
+            <div className={box}>
+              <div>
+                <div className={featureInfo}>
+                  <RiAppsFill style={{ fontSize: "2rem", }} />
+                  <h4>
+                    Plugins
+                  </h4>
+                </div>
                 <p>
                   With hundreds of plugins in the Update Center, Jenkins integrates
                   with practically every tool in the continuous integration and
@@ -166,24 +179,30 @@ class IndexPage extends React.Component {
                 </p>
               </div>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <div className="box extend">
-                <ion-icon name="extension-puzzle-outline" role="img" className="md hydrated"></ion-icon>
-                <h5>
-                  Extensible
-                </h5>
+            <div className={box}>
+              <div>
+                <div className={featureInfo}>
+                  <VscGitMerge style={{ fontSize: "2rem", }} />
+                  <ion-icon name="extension-puzzle-outline" role="img" className="md hydrated"></ion-icon>
+                  <h4>
+                    Extensible
+                  </h4>
+                </div>
                 <p>
                   Jenkins can be extended via its plugin architecture, providing
                   nearly infinite possibilities for what Jenkins can do.
                 </p>
               </div>
             </div>
-            <div className="col-md-6 col-lg-4">
-              <div className="box distributed">
-                <ion-icon name="git-network-outline" role="img" className="md hydrated"></ion-icon>
-                <h5>
-                  Distributed
-                </h5>
+            <div className={box}>
+              <div>
+                <div className={featureInfo}>
+                  <GoRepoForked style={{ fontSize: "2rem", }} />
+                  <ion-icon name="git-network-outline" role="img" className="md hydrated"></ion-icon>
+                  <h4>
+                    Distributed
+                  </h4>
+                </div>
                 <p>
                   Jenkins can easily distribute work across multiple machines,
                   helping drive builds, tests and deployments across multiple
@@ -193,11 +212,11 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </div>
-        <div style={{paddingLeft: "32px", paddingRight: "32px"}}>
+        <div style={{ paddingLeft: "32px", paddingRight: "32px" }}>
           <Video />
         </div>
         <IndexPageLayout>
-          <h2>Related Post</h2>
+          <h2>Recent Post</h2>
           <ul className={bloglisting}>
             {this.props.data.allAsciidoc.edges.map(({ node }) => {
               if (node.document.title !== "Author") {
@@ -232,7 +251,7 @@ class IndexPage extends React.Component {
         </IndexPageLayout>
         <div>
           <div>
-            <div>
+            <div style={{ marginBottom: "3rem" }}>
               <center>
                 <strong>
                   We thank the following organizations for their major commitments to
@@ -279,7 +298,7 @@ class IndexPage extends React.Component {
             </ul>
           </div>
           <div className="supporters">
-            <div>
+            <div >
               <center>
                 <strong>
                   We thank the following organizations for their support of the Jenkins project through free and/or open source licensing programs.
@@ -309,15 +328,15 @@ class IndexPage extends React.Component {
 export default IndexPage
 
 export const pageQuery = graphql`
-query{
-  allAsciidoc(
-    limit: 9
-    sort: {fields: {slug: DESC}}
-    filter: {document: {title: {ne: "Author"}}}
-  ) {
-    edges {
-      node {
-        fields {
+        query{
+          allAsciidoc(
+            limit: 9
+        sort: {fields: {slug: DESC}}
+        filter: {document: {title: {ne: "Author"}}}
+        ) {
+          edges {
+          node {
+          fields {
           slug
         }
         document {
@@ -326,14 +345,14 @@ query{
         pageAttributes {
           tags
           author
-          author_name
-          github
-          opengraph
-          linkedin
+        author_name
+        github
+        opengraph
+        linkedin
         }
       }
     }
   }
 }
-` 
+        `
 
