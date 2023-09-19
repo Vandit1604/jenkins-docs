@@ -73,7 +73,22 @@ ul.image li.security {
 }
 
 /* For community ratings */
-img.rate { vertical-align: middle; margin-right: 2em; width: 36px; height: 36px; }
-img.rate:hover { cursor: pointer; }
-div.rate-offset { padding-left: 2em; margin-bottom: 5px; }
-span.related-issues { display: block; }
+img.rateoffset { 
+  vertical-align: middle; 
+  margin-right: 2em; 
+  width: 80px; 
+  height: 80px; 
+}
+
+img.rateoffset:hover { 
+  cursor: pointer;
+}
+
+.rateoffset {
+  padding-left: 2em; 
+  margin-bottom: 5px; 
+}
+
+span .related-issues { 
+  display: block; 
+}

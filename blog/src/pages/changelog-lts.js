@@ -35,26 +35,28 @@ class IndexPage extends React.Component {
             LTS Changelog
           </h3>
         </Link>
-        <div className={iconlegend}>
-          Legend:
-          <ul className={image}>
-            <li className={security}>security fix</li>
-            <li className={bug} >major bug fix</li>
-            <li className={bug}>bug fix</li>
-            <li className={rfe}>major enhancement</li>
-            <li className={rfe}>enhancement</li>
-          </ul>
-        </div >
-        <div style={{ margin: "10px 0", width: "100%" }}>
+        <div style={{ textAlign: "end" }}>
           <div className={iconlegend}>
-            Community feedback:
-            <ul className={feedback}>
-              <li className={sunny}>no major issues</li>
-              <li className={cloudy}>notable issues</li>
-              <li className={storm}>required rollback</li>
+            Legend:
+            <ul className={image}>
+              <li className={security}>security fix</li>
+              <li className={bug} >major bug fix</li>
+              <li className={bug}>bug fix</li>
+              <li className={rfe}>major enhancement</li>
+              <li className={rfe}>enhancement</li>
             </ul>
-          </div>
-        </div >
+          </div >
+          <div style={{ margin: "10px 0", width: "100%" }}>
+            <div className={iconlegend}>
+              Community feedback:
+              <ul className={feedback}>
+                <li className={sunny}>no major issues</li>
+                <li className={cloudy}>notable issues</li>
+                <li className={storm}>required rollback</li>
+              </ul>
+            </div>
+          </div >
+        </div>
         <div style={{ margin: "10px", padding: "10px", backgroundColor: "#FFFFCE" }}>
           See the <Link to="/upgrade-guide">LTS upgrade guide</Link> advice on upgrading Jenkins.
         </div>
