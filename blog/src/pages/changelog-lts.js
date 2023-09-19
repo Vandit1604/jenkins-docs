@@ -7,9 +7,6 @@ const { rhythm } = typography
 
 class IndexPage extends React.Component {
   render() {
-    console.log("lts_baseline:", this.props.data.allLtsYaml.edges);
-    console.log("lts_baseline:", this.props.data.allLtsYaml.edges.lts_baseline);
-    console.log("lts_changes:", this.props.data.allLtsYaml.edges.lts_changes);
     return (
       < IndexPageLayout >
         <Link style={{ textDecoration: `none` }} to="/">
@@ -49,7 +46,6 @@ class IndexPage extends React.Component {
               {node.lts_changes?.map((change) => {
                 return (
                   <li>
-                    {/*{change.message} {change.pull ?? ""}*/}
                     <span dangerouslySetInnerHTML={{ __html: change.message }} />
                     (Pull #{change.pull ?? ""})
                   </li>
