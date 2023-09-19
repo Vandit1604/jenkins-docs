@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
+import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm } from "../css/changelog.module.css";
 import typography from "../utils/typography"
 const { rhythm } = typography
 
@@ -34,10 +35,29 @@ class IndexPage extends React.Component {
             LTS Changelog
           </h3>
         </Link>
+        <div className={iconlegend}>
+          Legend:
+          <ul className={image}>
+            <li className={security}>security fix</li>
+            <li className={bug} >major bug fix</li>
+            <li className={bug}>bug fix</li>
+            <li className={rfe}>major enhancement</li>
+            <li className={rfe}>enhancement</li>
+          </ul>
+        </div >
+        <div style={{ margin: "10px 0", width: "100%" }}>
+          <div className={iconlegend}>
+            Community feedback:
+            <ul className={feedback}>
+              <li className={sunny}>no major issues</li>
+              <li className={cloudy}>notable issues</li>
+              <li className={storm}>required rollback</li>
+            </ul>
+          </div>
+        </div >
         <div style={{ margin: "10px", padding: "10px", backgroundColor: "#FFFFCE" }}>
           See the <Link to="/upgrade-guide">LTS upgrade guide</Link> advice on upgrading Jenkins.
         </div>
-        <h2>What's new in </h2>
         {this.props.data.allLtsYaml.edges.map(({ node }) =>
           <>
             <h3>What's new in {node.version}({node.date}) </h3>
@@ -86,7 +106,7 @@ query{
     edges {
       node {
         version
-        date
+        date(formatString: "DD-MM-YYYY")
         lts_predecessor
         lts_baseline
         lts_changes {
