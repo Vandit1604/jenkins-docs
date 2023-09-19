@@ -7,6 +7,9 @@ const { rhythm } = typography
 
 class IndexPage extends React.Component {
   render() {
+    console.log("lts_baseline:", this.props.data.allLtsYaml.edges);
+    console.log("lts_baseline:", this.props.data.allLtsYaml.edges.lts_baseline);
+    console.log("lts_changes:", this.props.data.allLtsYaml.edges.lts_changes);
     return (
       < IndexPageLayout >
         <Link style={{ textDecoration: `none` }} to="/">
@@ -37,17 +40,24 @@ class IndexPage extends React.Component {
           See the <Link to="/upgrade-guide">LTS upgrade guide</Link> advice on upgrading Jenkins.
         </div>
         <h2>What's new in </h2>
-        {this.props.data.allLtsYaml.edges.map(({ node }) => {
+        {this.props.data.allLtsYaml.edges.map(({ node }) =>
           <>
             <h1>What's new in {node.version}{node.date} </h1>
             <p>Community reported issues : </p>
-            <h4>Changes since {node.lts_baseline}:</h4>
+            <h4>Changes since {node.lts_baseline ?? ""}:</h4>
             <ul>
-              {node.lts_changes}
+              {node.lts_changes?.map((change) => {
+                return (
+                  <li>
+                    {/*{change.message} {change.pull ?? ""}*/}
+                    <span dangerouslySetInnerHTML={{ __html: change.message }} />
+                    (Pull #{change.pull ?? ""})
+                  </li>
+                );
+              })}
             </ul>
           </>
-
-        })}
+        )}
       </IndexPageLayout >
     );
   }
