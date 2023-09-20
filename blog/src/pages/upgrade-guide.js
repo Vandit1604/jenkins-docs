@@ -30,10 +30,13 @@ class UpgradeGuide extends React.Component {
                 height: "80px",
               }}
             />{" "}
-            Upgrade Guide
+            Jenkins LTS Upgrade Guide
           </h3>
         </Link>
-
+        <p>This section highlights important changes for administrators upgrading Jenkins LTS. Each section covers the upgrade from the previous LTS release, sections on versions x.y.1 cover the upgrade from the last release of the previous LTS line. if you are skipping LTS releases when upgrading, it is recommended to read the sections for all releases in between.
+        </p>
+        <>
+        </>
       </IndexPageLayout >
     );
   }
