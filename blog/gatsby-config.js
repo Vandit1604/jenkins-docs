@@ -9,6 +9,14 @@ module.exports = {
     buildDate: new Date(),
   },
   plugins: [
+    `gatsby-transformer-asciidoc`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `authors`,
+        path: `${__dirname}/authors/authors`,
+      },
+    },
     `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -31,14 +39,6 @@ module.exports = {
       options: {
         name: `upgrades`,
         path: `${__dirname}/data/upgrades`,
-      },
-    },
-    `gatsby-transformer-asciidoc`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `authors`,
-        path: `${__dirname}/authors`,
       },
     },
     {

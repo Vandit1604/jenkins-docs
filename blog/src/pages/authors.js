@@ -73,8 +73,6 @@ class IndexPage extends React.Component {
                   <br />
                 </li>
               );
-            } else {
-              return null; // Skip rendering cards with title other than "Author"
             }
           })}
         </ul>

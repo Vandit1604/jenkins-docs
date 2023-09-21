@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const BackToBlogButton = styled.button`
+export const BackToButton = styled.button`
   background: #0064d6;
   border-radius: 999px;
   box-shadow: #0064d6 0 10px 20px -10px;

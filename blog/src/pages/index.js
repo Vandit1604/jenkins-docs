@@ -8,7 +8,7 @@ import { RiAppsFill } from "react-icons/ri";
 import { AiOutlineControl } from "react-icons/ai";
 import { box, container, featureInfo } from "../css/index.module.css"
 import { blogauthor, bloglisting, blogpost, blogtitle } from "../css/blogpost.module.css"
-import { BackToBlogButton } from "../components/BackToBlogButton"
+import { BackToButton } from "../components/BackToButton"
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -37,9 +37,9 @@ class IndexPage extends React.Component {
             </p>
             <div style={{ display: "flex", width: "fit-content", justifyContent: "space-between", gap: "2rem" }}>
               <Link to="/download">
-                <BackToBlogButton>Download</BackToBlogButton>
+                <BackToButton>Download</BackToButton>
               </Link>
-              <a href="add to link"><BackToBlogButton>Documentation</BackToBlogButton></a>
+              <a href="add to link"><BackToButton>Documentation</BackToButton></a>
             </div>
           </div>
         </section>

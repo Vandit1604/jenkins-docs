@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
+import Author from "./Author"
 
 import typography from "../utils/typography"
-import { BackToBlogButton } from "./BackToBlogButton"
+import { BackToButton } from "./BackToButton"
 const { rhythm } = typography
 
-const AuthorPost = ({ children }) => {
+const BlogPost = ({ children }) => {
   return (
     <div
       style={{
@@ -18,11 +19,12 @@ const AuthorPost = ({ children }) => {
       }}
     >
       <Link to="/authors">
-        <BackToBlogButton>Back to Authors Page</BackToBlogButton>
+        <BackToButton>Back to Author</BackToButton>
       </Link>
       {children}
+      <Author />
     </div>
   );
 }
 
-export default AuthorPost
+export default BlogPost
