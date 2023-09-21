@@ -1,4 +1,6 @@
 import React from "react";
+import { BsGithub } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Author = () => {
@@ -10,6 +12,22 @@ const Author = () => {
         alt="Avatar"
         style={{ float: "left", width: "90px", height: "90px", "border-radius": "50%" }}
       ></img>
+      <>
+        {this.props.data.allAsciidoc.edges.map(({ node }) => {
+          if (node.document.title === "Author") {
+            return (
+              <>
+                <h2>{node.pageAttributes.author_name}</h2>
+                <p><span dangerouslySetInnerHTML={{ __html: node.pageAttributes.description }} /></p>
+                <a href={node.pageAttributes.github}><BsGithub /></a>
+                <a href={node.pageAttributes.twitter}><BsTwitter /></a>
+              </>
+            )
+          } else {
+            return null; // Skip rendering cards with title other than "Author"
+          }
+        })}
+      </>
       <a href={"#"}>
         <FontAwesomeIcon icon="fa-brands fa-github" />
       </a>
@@ -19,7 +37,8 @@ const Author = () => {
 
 export default Author;
 
-export const pageQuery = graphql`query {
+export const pageQuery = graphql`
+query {
   allAsciidoc(filter: {document: {title: {eq: "Author"}}}) {
     edges {
       node {

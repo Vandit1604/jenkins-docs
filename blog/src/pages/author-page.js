@@ -1,11 +1,8 @@
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
 import { BsGithub } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
-import { BsLinkedin } from "react-icons/bs";
-import { BsBook } from "react-icons/bs";
-import { authorlisting, authorpost, authorname, authorinfo } from "../css/authorpost.module.css"
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
 import typography from "../utils/typography";
 const { rhythm } = typography
