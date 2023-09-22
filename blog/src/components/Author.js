@@ -1,19 +1,46 @@
-import React from "react";
-import { BsGithub } from "react-icons/bs";
+import * as React from "react"
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { BsTwitter } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { BsBook } from "react-icons/bs";
 import { authorinfo } from "../css/authorpost.module.css"
-import { Link, graphql } from "gatsby"
+import { Link} from "gatsby"
 import IndexPageLayout from "../layouts"
 import { blogauthor, bloglisting, blogpost, blogtitle } from "../css/blogpost.module.css"
+import { useStaticQuery, graphql } from "gatsby"
 
 const Author = () => {
-  console.log(this.props.data.allAsciidoc);
+  const data = useStaticQuery(graphql`
+    {
+      allAsciidoc(filter: {document: {title: {eq: "Author"}}}) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            document {
+              title
+            }
+            pageAttributes {
+              author_name
+              github
+              opengraph
+              linkedin
+              blog
+              twitter
+              medium
+              irc
+              description
+            }
+          }
+        }
+      }
+    }
+  `)
   return (
     <section>
-      {this.props.data.allAsciidoc.edges.map(({ node }) => {
-        return (<>
+      {data.allAsciidoc.edges.map(({ node }) => {
+        <>
           <h1>About the Author</h1>
           <div style={{ display: "flex" }}>
             <img src={("../../images/images/avatars/" + node.pageAttributes.author + ".jpg" ?? "../../images/images/avatars/" + node.pageAttributes.author + ".png") ?? "../../images/images/avatars/" + node.pageAttributes.author + ".jpeg"} style={{ height: "1rem", width: "1rem", borderRadius: "50%", display: "inline", position: "relative", top: ".3rem" }} alt={""} />
@@ -27,7 +54,7 @@ const Author = () => {
           </div>
           <div className={authorinfo}>
             <br />
-            <a href={"https://github.com/" + node.pageAttributes.github} className="github"> <BsGithub /></a>
+            <a href={"https://github.com/" + node.pageAttributes.github} className="github"><GitHubIcon /></a>
             <br />
             <a href={"https://linkedin.com/in/" + node.pageAttributes.linkedin} className="linkedin"><BsLinkedin /></a>
             <br />
@@ -38,7 +65,8 @@ const Author = () => {
           <BsTwitter />
           < IndexPageLayout >
             <ul className={bloglisting}>
-              {this.props.data.allAsciidoc.edges.map(({ node }) => {
+              {console.log(data.allAsciidoc)}
+              {data.allAsciidoc.edges.map(({ node }) => {
                 if (node.document.title !== "Author") {
                   return (
                     <li key={node.fields.slug} className={blogpost}>
@@ -82,33 +110,6 @@ const Author = () => {
   );
 }
 
-export default Author;
-
-export const pageQuery = graphql`
-query {
-  allAsciidoc(filter: {document: {title: {eq: "Author"}}}) {
-    edges {
-      node {
-        fields {
-          slug
-        }
-        document {
-          title
-        }
-        pageAttributes {
-          author_name
-          github
-          opengraph
-          linkedin
-          blog
-          twitter
-          medium
-          irc
-          description
-        }
-      }
-    }
-  }
-}`
+export default Author
 
 

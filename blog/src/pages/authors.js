@@ -1,8 +1,8 @@
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
-import { BsGithub } from "react-icons/bs";
-import { BsTwitter } from "react-icons/bs";
-import { BsLinkedin } from "react-icons/bs";
-import { BsBook } from "react-icons/bs";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import { authorlisting, authorpost, authorname, authorinfo } from "../css/authorpost.module.css"
 import React from "react"
 import { Link, graphql } from "gatsby"
@@ -61,13 +61,13 @@ class IndexPage extends React.Component {
                     </div>
                     <div className={authorinfo}>
                       <br />
-                      <a href={"https://github.com/" + node.pageAttributes.github} className="github"> <BsGithub /></a>
+                      <a href={"https://github.com/" + node.pageAttributes.github} className="github"> <GitHubIcon /></a>
                       <br />
-                      <a href={"https://linkedin.com/in/" + node.pageAttributes.linkedin} className="linkedin"><BsLinkedin /></a>
+                      <a href={"https://linkedin.com/in/" + node.pageAttributes.linkedin} className="linkedin"><LinkedInIcon /></a>
                       <br />
-                      <a href={"https://twitter.com/" + node.pageAttributes.twitter} className="twitter"><BsTwitter /></a>
+                      <a href={"https://twitter.com/" + node.pageAttributes.twitter} className="twitter"> <TwitterIcon /></a>
                       <br />
-                      <a href={node.pageAttributes.blog} className="blog"><BsBook /></a>
+                      <a href={node.pageAttributes.blog} className="blog"><ImportContactsIcon /></a>
                     </div>
                   </Link>
                   <br />
