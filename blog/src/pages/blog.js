@@ -7,9 +7,25 @@ import typography from "../utils/typography"
 const { rhythm } = typography
 
 class IndexPage extends React.Component {
+formatDate(inputString) {
+  const parts = inputString.split('/');
+  const datePart = parts[parts.length - 2];
+  const dateComponents = datePart.split('-');
+  const year = parseInt(dateComponents[0]);
+  const month = parseInt(dateComponents[1]);
+  const day = parseInt(dateComponents[2]);
+  const formattedDate = new Date(year, month - 1, day);
+  const monthNames = [
+    "January", "February", "March", "April", "May", "June", "July",
+    "August", "September", "October", "November", "December"
+  ];
+
+  return `${monthNames[formattedDate.getMonth()]} ${formattedDate.getDate()}, ${formattedDate.getFullYear()}`;
+}
+
   render() {
     return (
-      < IndexPageLayout >
+      <IndexPageLayout>
         <Link style={{ textDecoration: `none` }} to="/">
           <h3
             style={{
@@ -37,6 +53,7 @@ class IndexPage extends React.Component {
         <ul className={bloglisting}>
           {this.props.data.allAsciidoc.edges.map(({ node }) => {
             if (node.document.title !== "Author") {
+              const formattedDate = this.formatDate(node.fields.slug);
               return (
                 <li key={node.fields.slug} className={blogpost}>
                   <Link to={node.fields.slug} style={{ textDecoration: "none" }}>
@@ -62,7 +79,7 @@ class IndexPage extends React.Component {
                     <img src={("../../images/images/avatars/" + node.pageAttributes.author + ".jpg" ?? "../../images/images/avatars/" + node.pageAttributes.author + ".png") ?? "../../images/images/avatars/" + node.pageAttributes.author + ".jpeg"} style={{ height: "1rem", width: "1rem", borderRadius: "50%", display: "inline", position: "relative", top: ".3rem" }} alt={""} />
                     <p className={blogauthor}>{node.pageAttributes.author}</p>
                     <span>
-                      {node.fields.slug}
+                      {formattedDate}
                     </span>
                   </div>
                 </li>
@@ -71,7 +88,7 @@ class IndexPage extends React.Component {
             return null;
           })}
         </ul>
-      </IndexPageLayout >
+      </IndexPageLayout>
     );
   }
 }
@@ -79,7 +96,7 @@ class IndexPage extends React.Component {
 export default IndexPage
 
 export const pageQuery = graphql`
-query{
+query {
   allAsciidoc(
     sort: {fields: {slug: DESC}}
     filter: {document: {main: {ne: "Jenkins Changelog Styleguide"}}}
