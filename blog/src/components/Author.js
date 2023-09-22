@@ -1,36 +1,82 @@
 import React from "react";
 import { BsGithub } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { BsLinkedin } from "react-icons/bs";
+import { BsBook } from "react-icons/bs";
+import { authorinfo } from "../css/authorpost.module.css"
+import { Link, graphql } from "gatsby"
+import IndexPageLayout from "../layouts"
+import { blogauthor, bloglisting, blogpost, blogtitle } from "../css/blogpost.module.css"
 
 const Author = () => {
   return (
     <section>
-      <h1>About the Author</h1>
-      <img
-        src="https://imgs.search.brave.com/a0XKWpP5aFxCO47ErRXq1jDq966IBNfW6Vu9yKo4SEY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMud2lraWEubm9j/b29raWUubmV0L3Bv/cnRhbHdvcmxkc2dh/bWUvaW1hZ2VzL2Ev/YTcvUmVkX0Jsb2Nr/LnBuZy9yZXZpc2lv/bi9sYXRlc3Qvc2Nh/bGUtdG8td2lkdGgt/ZG93bi8xMjg_Y2I9/MjAxOTA2MTExMTAz/NTQ"
-        alt="Avatar"
-        style={{ float: "left", width: "90px", height: "90px", "border-radius": "50%" }}
-      ></img>
-      <>
-        {this.props.data.allAsciidoc.edges.map(({ node }) => {
-          if (node.document.title === "Author") {
-            return (
-              <>
-                <h2>{node.pageAttributes.author_name}</h2>
-                <p><span dangerouslySetInnerHTML={{ __html: node.pageAttributes.description }} /></p>
-                <a href={node.pageAttributes.github}><BsGithub /></a>
-                <a href={node.pageAttributes.twitter}><BsTwitter /></a>
-              </>
-            )
-          } else {
-            return null; // Skip rendering cards with title other than "Author"
-          }
-        })}
-      </>
-      <a href={"#"}>
-        <FontAwesomeIcon icon="fa-brands fa-github" />
-      </a>
+      {this.props.data.allAsciidoc.edges.map(({ node }) => {
+        <>
+          <h1>About the Author</h1>
+          <div style={{ display: "flex" }}>
+            <img src={("../../images/images/avatars/" + node.pageAttributes.author + ".jpg" ?? "../../images/images/avatars/" + node.pageAttributes.author + ".png") ?? "../../images/images/avatars/" + node.pageAttributes.author + ".jpeg"} style={{ height: "1rem", width: "1rem", borderRadius: "50%", display: "inline", position: "relative", top: ".3rem" }} alt={""} />
+            <p className={blogauthor}>{node.pageAttributes.author}</p>
+            <span>
+              {node.fields.slug}
+            </span>
+          </div>
+          <div>
+            {node.pageAttributes.description}
+          </div>
+          <div className={authorinfo}>
+            <br />
+            <a href={"https://github.com/" + node.pageAttributes.github} className="github"> <BsGithub /></a>
+            <br />
+            <a href={"https://linkedin.com/in/" + node.pageAttributes.linkedin} className="linkedin"><BsLinkedin /></a>
+            <br />
+            <a href={"https://twitter.com/" + node.pageAttributes.twitter} className="twitter"><BsTwitter /></a>
+            <br />
+            <a href={node.pageAttributes.blog} className="blog"><BsBook /></a>
+          </div>
+          <BsTwitter />
+          < IndexPageLayout >
+            <ul className={bloglisting}>
+              {console.log(this.props.data.allAsciidoc)}
+              {this.props.data.allAsciidoc.edges.map(({ node }) => {
+                if (node.document.title !== "Author") {
+                  return (
+                    <li key={node.fields.slug} className={blogpost}>
+                      <Link to={node.fields.slug} style={{ textDecoration: "none" }}>
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <img
+                            src={node.pageAttributes.opengraph ?? "../../images/gsoc/opengraph.png"}
+                            alt={node.document.title}
+                            height="250px"
+                            width="100%"
+                          />
+                        </div>
+                        <span className={blogtitle}>{node.document.title}</span>
+                      </Link>
+                      <br />
+                      <div style={{ display: "flex" }}>
+                        <img src={("../../images/images/avatars/" + node.pageAttributes.author + ".jpg" ?? "../../images/images/avatars/" + node.pageAttributes.author + ".png") ?? "../../images/images/avatars/" + node.pageAttributes.author + ".jpeg"} style={{ height: "1rem", width: "1rem", borderRadius: "50%", display: "inline", position: "relative", top: ".3rem" }} alt={""} />
+                        <p className={blogauthor}>{node.pageAttributes.author}</p>
+                        <span>
+                          {node.fields.slug}
+                        </span>
+                      </div>
+                    </li>
+                  );
+                }
+                return null;
+              })}
+            </ul>
+          </IndexPageLayout >
+        </>
+      })}
     </section>
   );
 }
