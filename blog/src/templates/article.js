@@ -9,12 +9,12 @@ class Article extends React.Component {
     return (
       <BlogPost>
         <h1>{this.props.data.asciidoc.document.title} </h1>
-        {this.props.data.asciidoc.author && (
+        {this.props.data.asciidoc.pageAttributes.author && (
           <table>
             <tbody>
               <tr>
                 <th style={{width: "20px"}}>{this.props.data.asciidoc.pageAttributes.author}</th>
-                <tr>TODO: Add Authors Image</tr>
+                <tr><img href={this.props.data.asciidoc.pageAttributes.author + ".png"} /></tr>
               </tr>
             </tbody>
           </table>
