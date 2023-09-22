@@ -15,12 +15,12 @@ class IndexPage extends React.Component {
           style={{
             color: `black`,
             marginBottom: rhythm(1.5),
-            "font-family": "Georgia,serif",
-            "font-size": "40px",
+            fontFamily: "Georgia,serif",
+            fontSize: "40px",
             display: "flex",
-            "flex-direction": "row",
-            "flex-wrap": "nowrap",
-            "justify-content": "center",
+            flexDirection: "row",
+            flexWrap: "nowrap",
+            justifyContent: "center",
             gap: "15px",
           }}
         >

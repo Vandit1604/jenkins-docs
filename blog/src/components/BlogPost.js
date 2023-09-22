@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { graphql } from 'gatsby'
 import Author from "./Author"
 
 import typography from "../utils/typography"

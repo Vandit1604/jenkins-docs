@@ -9,10 +9,11 @@ import IndexPageLayout from "../layouts"
 import { blogauthor, bloglisting, blogpost, blogtitle } from "../css/blogpost.module.css"
 
 const Author = () => {
+  console.log(this.props.data.allAsciidoc);
   return (
     <section>
       {this.props.data.allAsciidoc.edges.map(({ node }) => {
-        <>
+        return (<>
           <h1>About the Author</h1>
           <div style={{ display: "flex" }}>
             <img src={("../../images/images/avatars/" + node.pageAttributes.author + ".jpg" ?? "../../images/images/avatars/" + node.pageAttributes.author + ".png") ?? "../../images/images/avatars/" + node.pageAttributes.author + ".jpeg"} style={{ height: "1rem", width: "1rem", borderRadius: "50%", display: "inline", position: "relative", top: ".3rem" }} alt={""} />
@@ -37,7 +38,6 @@ const Author = () => {
           <BsTwitter />
           < IndexPageLayout >
             <ul className={bloglisting}>
-              {console.log(this.props.data.allAsciidoc)}
               {this.props.data.allAsciidoc.edges.map(({ node }) => {
                 if (node.document.title !== "Author") {
                   return (
@@ -76,6 +76,7 @@ const Author = () => {
             </ul>
           </IndexPageLayout >
         </>
+        );
       })}
     </section>
   );
@@ -109,3 +110,5 @@ query {
     }
   }
 }`
+
+
