@@ -1,7 +1,7 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link } from "gatsby"
 import IndexPageLayout from "../layouts"
-
+import { vendors, vendorsList } from "../css/download.module.css"
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
 import typography from "../utils/typography"
 const { rhythm } = typography
@@ -43,8 +43,8 @@ class IndexPage extends React.Component {
                 <p>Long-Term Support (LTS) release baselines are chosen every 12 weeks from the stream of regular releases. Every 4 weeks, we release stable releases which include bug and security fix backports.</p>
                 <a href="lts">Learn more…</a>
                 <p>
-                  <a href="">Changelog</a> |
-                  <a href="">Upgrade Guide</a> |
+                  <Link to="/changelog-lts">Changelog</Link> |
+                  <Link to="/upgrade-guide">Upgrade Guide</Link> |
                   <a href="https://get.jenkins.io/war-stable/">Past Releases</a>
                 </p>
               </div>
@@ -78,9 +78,9 @@ class IndexPage extends React.Component {
                   <strong><ion-icon name="download-outline"></ion-icon> Download Jenkins</strong>
                   <a href="https://get.jenkins.io/war-stable/<%= site.jenkins.stable %>/jenkins.war">
                     <span >Generic Java package (.war)</span>
-                    <div style="font-size: x-small;overflow-wrap: break-word; word-wrap: break-word;">
+                    <div style={{ fontSize: "x-small", overflowWrap: "break-word", wordWrap: "break-word" }}>
                       <span>
-                        <button style="border:transparent;padding:6px;" data-toggle="tooltip" data-placement="bottom" title="Click to copy">
+                        <button style={{ border: "transparent", padding: "6px", "data-toggle": "tooltip", "data-placement": "bottom" }} title="Click to copy">
                           <ion-icon name="copy-outline" id="copy-icon"></ion-icon>
                         </button>
                       </span>
@@ -98,8 +98,61 @@ class IndexPage extends React.Component {
         <p>NOTE: Packages with the <ion-icon name="library-outline"></ion-icon> library icon are maintained by third parties. Such packages may not be as frequently updated as packages supported by the Jenkins project directly.</p>
         <section>
           <h2>Deploying Jenkins in public cloud</h2>
-          <p>Many public cloud vendors provide their own Jenkins installation guides and packages. The guides provide instructions to deploy, maintain, and upgrade on the specific public cloud. Such guides may be used to quickly deploy Jenkins and, in many cases, to get an instance preconfigured to be used within the public cloud (e.g. bundled plugins, integrations with public cloud services, etc.).</p>
+          <p style={{ marginBottom: "1cm" }}>Many public cloud vendors provide their own Jenkins installation guides and packages. The guides provide instructions to deploy, maintain, and upgrade on the specific public cloud. Such guides may be used to quickly deploy Jenkins and, in many cases, to get an instance preconfigured to be used within the public cloud (e.g. bundled plugins, integrations with public cloud services, etc.).</p>
           <div>
+            <div className={vendorsList}>
+              <div className={vendors}>
+                <a href="https://aws.amazon.com/blogs/devops/setting-up-a-ci-cd-pipeline-by-integrating-jenkins-with-aws-codebuild-and-aws-codedeploy/">
+                  <img class="vendors-image" src="../../images/images/amazon_web_services.png" width="320" />
+                </a>
+                <p >
+                  Jenkins with AWS CodeBuild and AWS CodeDeploy
+                </p>
+              </div>
+              <div className={vendors}>
+                <a href="https://docs.microsoft.com/en-us/azure/developer/jenkins/">
+                  <img src="../../images/images/microsoft_azure.png" width="320" />
+                </a>
+                <p>
+                  Jenkins quickstarts, tutorials, samples, and resources for Azure
+                </p>
+              </div>
+              <div className={vendors}>
+                <a href="https://cloud.google.com/jenkins">
+                  <img src="../../images/images/google_cloud.png" width="320" />
+                </a>
+                <p>
+                  Jenkins at scale on Google Kubernetes Engine
+                </p>
+              </div>
+              <div className={vendors}>
+                <a href="https://docs.oracle.com/en/solutions/jenkins-master-agent-mode/">
+                  <img src="../../images/images/oracle_cloud_infrastructure.png" width="320" />
+                </a>
+                <p>
+                  Jenkins Reference Architecture and one-click deployment on Oracle Cloud Infrastructure
+                </p>
+              </div>
+              <div className={vendors}>
+                <a href="https://github.com/civo/kubernetes-marketplace/tree/master/jenkins">
+                  <img src="../../images/images/civo.png" width="320" />
+                </a>
+                <p>
+                  Jenkins one-click deployment on <a class="item" href="https://www.civo.com/"> Civo Kubernetes
+                  </a>
+                </p>
+              </div>
+              <div className={vendors}>
+                <a href="https://bitnami.com/stack/jenkins/cloud">
+                  <img src="../../images/images/bitnami.png" width="320" />
+                </a>
+                <p>
+                  Images for <a class="item" href="https://bitnami.com/stack/jenkins/cloud/aws"> Amazon Web Services,
+                  </a> <a class="item" href="https://bitnami.com/stack/jenkins/cloud/azure"> Azure, </a> and <a class="item" href="https://bitnami.com/stack/jenkins/cloud/google"> Google Cloud
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </IndexPageLayout >
@@ -109,30 +162,3 @@ class IndexPage extends React.Component {
 
 export default IndexPage
 
-export const pageQuery = graphql`
-{
-  allAsciidoc(filter: {document: {title: {eq: "Author"}}}) {
-    edges {
-      node {
-        fields {
-          slug
-        }
-        document {
-          title
-        }
-        pageAttributes {
-          author_name
-          github
-          opengraph
-          linkedin
-          blog
-          twitter
-          medium
-          irc
-          description
-        }
-      }
-    }
-  }
-}
-`

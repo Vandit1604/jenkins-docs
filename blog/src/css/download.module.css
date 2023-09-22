@@ -1,0 +1,17 @@
+.vendorsList {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding:0 3rem;
+}
+
+.vendors{
+  padding: 10px;
+}
+
+.vendors p{
+  margin-bottom: 1cm;
+    margin-top: 0.2cm;
+    width: 300px;
+}

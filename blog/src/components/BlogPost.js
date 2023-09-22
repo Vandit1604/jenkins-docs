@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import { graphql } from 'gatsby'
 import Author from "./Author"
 
 import typography from "../utils/typography"
@@ -30,30 +29,3 @@ const BlogPost = ({ children }) => {
 
 export default BlogPost
 
-export const pageQuery = graphql`
-query{
-  allAsciidoc(
-    sort: {fields: {slug: DESC}}
-    filter: {document: {main: {ne: "Jenkins Changelog Styleguide"}}}
-  ) {
-    edges {
-      node {
-        fields {
-          slug
-        }
-        document {
-          main
-          title
-        }
-        pageAttributes {
-          tags
-          author
-          author_name
-          github
-          opengraph
-          linkedin
-        }
-      }
-    }
-  }
-}`
