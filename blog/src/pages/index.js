@@ -2,10 +2,12 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
 import Video from "../components/Video"
-import { VscGitPullRequest, VscGitMerge } from "react-icons/vsc";
-import { GoDownload, GoRepoForked } from "react-icons/go";
-import { RiAppsFill } from "react-icons/ri";
-import { AiOutlineControl } from "react-icons/ai";
+import MergeTypeIcon from '@mui/icons-material/MergeType';
+import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
+import ExtensionOutlinedIcon from '@mui/icons-material/ExtensionOutlined';
+import SocialDistanceOutlinedIcon from '@mui/icons-material/SocialDistanceOutlined';
 import { box, container, featureInfo } from "../css/index.module.css"
 import { blogauthor, bloglisting, blogpost, blogtitle } from "../css/blogpost.module.css"
 import { BackToButton } from "../components/BackToButton"
@@ -25,7 +27,7 @@ class IndexPage extends React.Component {
   render() {
     return (
       <>
-        <section style={{ padding: "0rem 25rem",display:"flex" }}>
+        <section style={{ padding: "0rem 25rem", display: "flex" }}>
           <img src="../../images/images/logos/jenkins/Jenkins-stop-the-war.svg" style={{ width: "356px" }} alt={"Jenkins Logo"} />
           <div >
             <h1>Jenkins</h1>
@@ -133,7 +135,7 @@ class IndexPage extends React.Component {
             <div className={box}>
               <div>
                 <div className={featureInfo}>
-                  <VscGitPullRequest style={{ fontSize: "2rem", }} />
+                  <MergeTypeIcon style={{ fontSize: "2rem", }} />
                   <h4>
                     Continuous Integration and Continuous Delivery
                   </h4>
@@ -147,7 +149,7 @@ class IndexPage extends React.Component {
             <div className={box}>
               <div>
                 <div className={featureInfo}>
-                  <GoDownload style={{ fontSize: "2rem", }} />
+                  <FileDownloadOutlinedIcon style={{ fontSize: "2rem", }} />
                   <h4>
                     Easy installation
                   </h4>
@@ -162,7 +164,7 @@ class IndexPage extends React.Component {
             <div className={box}>
               <div>
                 <div className={featureInfo}>
-                  <AiOutlineControl style={{ fontSize: "2rem", }} />
+                  <SettingsOutlinedIcon style={{ fontSize: "2rem", }} />
                   <h4>
                     Easy configuration
                   </h4>
@@ -176,7 +178,7 @@ class IndexPage extends React.Component {
             <div className={box}>
               <div>
                 <div className={featureInfo}>
-                  <RiAppsFill style={{ fontSize: "2rem", }} />
+                  <AppsOutlinedIcon style={{ fontSize: "2rem", }} />
                   <h4>
                     Plugins
                   </h4>
@@ -191,7 +193,7 @@ class IndexPage extends React.Component {
             <div className={box}>
               <div>
                 <div className={featureInfo}>
-                  <VscGitMerge style={{ fontSize: "2rem", }} />
+                  <ExtensionOutlinedIcon style={{ fontSize: "2rem", }} />
                   <ion-icon name="extension-puzzle-outline" role="img" className="md hydrated"></ion-icon>
                   <h4>
                     Extensible
@@ -206,7 +208,7 @@ class IndexPage extends React.Component {
             <div className={box}>
               <div>
                 <div className={featureInfo}>
-                  <GoRepoForked style={{ fontSize: "2rem", }} />
+                  <SocialDistanceOutlinedIcon style={{ fontSize: "2rem", }} />
                   <ion-icon name="git-network-outline" role="img" className="md hydrated"></ion-icon>
                   <h4>
                     Distributed

@@ -104,7 +104,6 @@ const Author = () => {
             </ul>
           </IndexPageLayout >
         </>
-        );
       })}
     </section>
   );

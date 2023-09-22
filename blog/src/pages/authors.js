@@ -61,13 +61,14 @@ class IndexPage extends React.Component {
                     </div>
                     <div className={authorinfo}>
                       <br />
-                      <a href={"https://github.com/" + node.pageAttributes.github} className="github"> <GitHubIcon /></a>
+                      <a ref={"https://github.com/" + node.pageAttributes.github} className="github"> <GitHubIcon /></a>
                       <br />
                       <a href={"https://linkedin.com/in/" + node.pageAttributes.linkedin} className="linkedin"><LinkedInIcon /></a>
                       <br />
                       <a href={"https://twitter.com/" + node.pageAttributes.twitter} className="twitter"> <TwitterIcon /></a>
                       <br />
                       <a href={node.pageAttributes.blog} className="blog"><ImportContactsIcon /></a>
+                      <br />
                     </div>
                   </Link>
                   <br />
