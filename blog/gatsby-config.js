@@ -9,11 +9,36 @@ module.exports = {
     buildDate: new Date(),
   },
   plugins: [
+    `gatsby-transformer-asciidoc`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
         path: `${__dirname}/content`,
+      },
+    },
+    `gatsby-transformer-asciidoc`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `authors`,
+        path: `${__dirname}/authors/authors`,
+      },
+    },
+    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `changelogs`,
+        path: `${__dirname}/data/changelogs`,
+      },
+    },
+    `gatsby-transformer-asciidoc`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `upgrades`,
+        path: `${__dirname}/data/upgrades`,
       },
     },
     {

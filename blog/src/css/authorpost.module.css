@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding-left: unset;
+  margin-left: unset;
+}
+
+li {
+  margin-bottom: unset;
+}
+
+.authorlisting {
+  display: grid;
+  gap: 1.5rem;
+  row-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(14%, 1fr));
+  box-sizing: border-box;
+  padding: 0;
+  list-style-type: none;
+  transition: 0.2s ease;
+  margin-bottom: 3rem;
+}
+
+.authorpost {
+  border: solid black 1px;
+  border-radius: 5px;
+  list-style: none;
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+}
+
+.authorname {
+  font-weight: 700;
+}
+
+.authorpost img{
+  border-radius: 20px;
+}
+
+.authorinfo{
+  display: flex;
+  justify-content: space-around;
+  margin: 0.7rem;
+}
+
+.github{
+  color: black;
+}
+
+.linkedin{
+   color: #0E4Eb5;
+}
+
+.twitter{
+  color: rgb(29, 161, 242); 
+}

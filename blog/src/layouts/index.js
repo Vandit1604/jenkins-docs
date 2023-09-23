@@ -1,15 +1,15 @@
-import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
 import React from "react"
-import { Link } from "gatsby"
-
+import Navbar from "../../node_modules/@jenkinsci/jenkins-io-components/build/jio-navbar"
+import Footer from "../../node_modules/@jenkinsci/jenkins-io-components/build/jio-footer"
 import typography from "../utils/typography"
 const { rhythm } = typography
 
 class IndexPageLayout extends React.Component {
   render() {
     return (
+      <>
       <div
-        style={{
+          style={{
           margin: `0 auto`,
           marginTop: rhythm(1.5),
           marginBottom: rhythm(1.5),
@@ -17,33 +17,12 @@ class IndexPageLayout extends React.Component {
           paddingLeft: rhythm(3 / 4),
           paddingRight: rhythm(3 / 4),
         }}
-      >
-        <Link style={{ textDecoration: `none` }} to="/">
-          <h3
-            style={{
-              color: `black`,
-              marginBottom: rhythm(1.5),
-              "font-family": "Georgia,serif",
-              "font-size": "40px",
-              display: "flex",
-              "flex-direction": "row",
-              "flex-wrap": "nowrap",
-              "justify-content": "center",
-              gap: "15px",
-            }}
-          >
-            <img
-              src={jenkinsLogo}
-              alt="Jenkins Logo"
-              style={{
-                height: "80px",
-              }}
-            />{" "}
-            The Jenkins Blog
-          </h3>
-        </Link>
+        >
+        <Navbar/>
         {this.props.children}
+        <Footer/>
       </div>
+      </>
     );
   }
 }
