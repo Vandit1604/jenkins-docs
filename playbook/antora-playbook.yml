@@ -1,0 +1,29 @@
+site:
+  title: Jenkins
+  url: https://docs.jenkins.com
+  start_page: user-docs::index.adoc
+content:
+  sources:
+    - url: https://github.com/Vandit1604/jenkins-docs.git
+      branches: [main, 2.401.2, 2.401.3]
+      start_paths: [docs/tutorials, docs/user-docs, docs/solutions]
+      # developer docs are unversioned that's why they are to be fetched indiviually
+    - url: https://github.com/Vandit1604/jenkins-docs.git
+      branches: [main]
+      start_paths: [docs/dev-docs, docs/events, docs/security, docs/sigs, docs/projects, docs/images, docs/books, docs/community, docs/project, docs/about, docs/download]
+runtime:
+  fetch: true
+asciidoc:
+  attributes:
+    page-pagination: ''
+    plugin: https://plugins.jenkins.io/
+    jira: https://issues.jenkins.io/browse/
+    jep: https://github.com/jenkinsci/jep/tree/master/jep/
+    matrix: https://matrix.to/#/#
+    
+ui:
+  bundle:
+    url: https://github.com/Vandit1604/jenkins-ui-project/raw/main/build/ui-bundle.zip
+    snapshot: true
+
+# --ui-bundle-url=/home/vandit/gsoc-project-demo/jenkins-ui-project/build/ui-bundle.zip
