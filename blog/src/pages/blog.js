@@ -81,7 +81,8 @@ class IndexPage extends React.Component {
                 ".png" ??
                 "../../images/images/avatars/" +
                 node.pageAttributes.author +
-                ".jpeg"
+                ".jpeg" ??
+                "../../images"
               );
               const opengraphImageSource =
                 node.pageAttributes.opengraph ||
