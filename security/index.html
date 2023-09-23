@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins Security :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/security/index.html">
+    <link rel="next" href="for-administrators.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="security" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Jenkins Security Advisories</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Adminstrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="for-administrators.html">Overview for Jenkins Administrators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scheduling.html">How We Schedule Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="fixing.html">How We Fix Security Issues</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Reporters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="reporting.html">Reporting Security Vulnerabilities</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cna.html">Jenkins CVE Numbers Authority</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Maintainers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="for-maintainers.html">Overview for Plugin Maintainers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jenkins Security Team</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="team.html">About the Jenkins Security Team</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="improvements.html">Improvements by the Security Team</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Security Advisories</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Jenkins Security Advisories</a></li>
+    <li><a href="index.html">Jenkins Security</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/index.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins Security</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Jenkins project takes security seriously.
+We make every possible effort to ensure users can adequately secure their automation infrastructure.
+To that end, we work with Jenkins core and plugin developers, as well as security researchers, to fix security vulnerabilities in Jenkins in a timely manner, and to improve the security of Jenkins in general.</p>
+</div>
+<div class="paragraph">
+<p>Learn more about <a href="../user-docs/2.401.3/security/index.html" class="xref page">Securing Jenkins</a> in the Jenkins User Handbook.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="advisories"><a class="anchor" href="#advisories"></a>Security Advisories</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Security advisories are the primary way to publicly inform Jenkins users about security issues in Jenkins and Jenkins plugins.
+You can find all past security advisories in our <a href="/security/advisories/">security advisories archive</a>.</p>
+</div>
+<div class="paragraph">
+<p>We announce the publication of a new security advisory through multiple channels:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>We send an email notification to the public <a href="https://groups.google.com/g/jenkinsci-advisories"><code>jenkinsci-advisories</code></a> Google group with a short overview of affected components and a link to the security advisory.</p>
+</li>
+<li>
+<p>We send an email notification to the <a href="https://oss-security.openwall.org/wiki/mailing-lists/oss-security"><code>oss-security</code></a> mailing list with excerpts of the security advisory.</p>
+</li>
+<li>
+<p>We publish an <a href="/security/advisories/rss.xml">RSS feed for the jenkins.io/security/advisories/</a> page.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Additionally, Jenkins administrators are informed about published security issues directly in Jenkins if they have affected versions of Jenkins or plugins installed.</p>
+</div>
+<div class="paragraph">
+<p>Finally, the Jenkins project is a <a href="/security/cna">CVE Numbers Authority</a>, and we submit CVE metadata simultaneously with the publication of security advisories, allowing automated security tools using CVE information to identify vulnerable installations.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Even if you run Jenkins on a private network and trust everyone in your team, security issues in Jenkins can still impact you:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">CSRF vulnerabilities</a> are a risk even if attackers have no direct access to Jenkins.</p>
+</li>
+<li>
+<p>Does Jenkins build source code you haven&#8217;t audited, using build scripts someone else wrote, displaying generated reports on its web UI?
+All of these are potential security concerns.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="reporting-vulnerabilities"><a class="anchor" href="#reporting-vulnerabilities"></a>How to Report a Security Vulnerability</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you find a vulnerability in Jenkins, please report it in the issue tracker under the <a href="https://issues.jenkins.io/browse/SECURITY">SECURITY project</a>.
+This project is configured in such a way that only the reporter, the maintainers, and the Jenkins security team can see the details.
+Restricting access to this potentially sensitive information allows core and plugin maintainers to develop effective security fixes that are safe to apply.
+We provide issue reporting guidelines and an overview of our process on <a href="reporting">Reporting Security Vulnerabilities</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you are unable to report using our issue tracker, you can also send your report to the private Jenkins Security Team mailing list:
+<code>jenkinsci-cert@googlegroups.com</code></p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Do not contact the Jenkins security team asking us for compliance documents, certifications, or to fill out a questionnaire.
+We will not respond to such queries.
+If we consider it necessary to provide a statement in response to incidents such as <a href="/blog/2021/12/10/log4j2-rce-CVE-2021-44228/">log4shell</a> or <a href="/blog/2022/03/31/spring-rce-CVE-2022-22965/">SpringShell</a>, you will find a response in our <a href="/node/">blog</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_learn_more"><a class="anchor" href="#_learn_more"></a>Learn More</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="plugins.html" class="xref page">How We Handle Vulnerabilities in Plugins</a></dt>
+<dd>
+<p>We strive to fix all security vulnerabilities in Jenkins and plugins in a timely manner.
+However the number and diversity of plugins and maintainers' autonomy make this impossible to guarantee.</p>
+</dd>
+<dt class="hdlist1"><a href="scheduling.html" class="xref page">How We Schedule Security Advisories</a></dt>
+<dd>
+<p>Information about how we schedule security advisories and security updates.</p>
+</dd>
+<dt class="hdlist1"><a href="fixing.html" class="xref page">How We Fix Security Issues</a></dt>
+<dd>
+<p>Guidelines for developing security fixes in the Jenkins project.</p>
+</dd>
+<dt class="hdlist1"><a href="for-maintainers.html" class="xref page">Information for Plugin Maintainers</a></dt>
+<dd>
+<p>The Jenkins security team contacted me about a security vulnerability. Now what?</p>
+</dd>
+<dt class="hdlist1"><a href="for-administrators.html" class="xref page">Information for Administrators</a></dt>
+<dd>
+<p>This page explains everything Jenkins users and administrators need to know about the Jenkins security process.</p>
+</dd>
+<dt class="hdlist1"><a href="cna.html" class="xref page">Jenkins CVE Numbers Authority</a></dt>
+<dd>
+<p>The Jenkins project is a CVE Numbers Authority (CNA) for Jenkins and Jenkins plugins published by the Jenkins project.</p>
+</dd>
+<dt class="hdlist1"><a href="team.html" class="xref page">About the Jenkins Security Team</a></dt>
+<dd>
+<p>The Jenkins Security Team is a group of volunteers led by the Jenkins Security Officer who triage and fix security vulnerabilities.</p>
+</dd>
+<dt class="hdlist1"><a href="improvements.html" class="xref page">Improvements by the Security Team</a></dt>
+<dd>
+<p>These are some contributions by members of the Jenkins security team that weren&#8217;t delivered as security fixes, but still are security-related.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="next"><a href="for-administrators.html">Overview for Jenkins Administrators</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

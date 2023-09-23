@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Reverse proxy - Apache :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.401.3/system-administration/reverse-proxy-configuration-apache.html">
+    <link rel="prev" href="reverse-proxy-configuration.html">
+    <link rel="next" href="reverse-proxy-configuration-nginx.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="user-docs" data-version="2.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins User Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/docker.html">Docker</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-credentials.html">Using credentials</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/searchbox.html">Using Search Box</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/referencing-another-project-by-name.html">Referencing another project by name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/aborting-a-build.html">Aborting a build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/fingerprints.html">Fingerprints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-local-language.html">Using local language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/change-time-zone.html">Change time zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/remote-access-api.html">Remote Access API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/executor-starvation.html">Executor Starvation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-agents.html">Using Jenkins agents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/running-pipelines.html">Running a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/development.html">Pipeline Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/syntax.html">Pipeline Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/pipeline-best-practices.html">Pipeline Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/scaling-pipeline.html">Scaling Pipelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/cps-method-mismatches.html">Pipeline CPS Method Mismatches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/dashboard.html">Dashboard</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/activity.html">Activity View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-run-details.html">Pipeline Run Details View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-editor.html">Pipeline Editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../managing/index.html">Managing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-configuration.html">Configuring the System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/casc.html">Configuration as Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/tools.html">Managing Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/about-jenkins.html">About Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-info.html">System Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/cli.html">Jenkins CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-console.html">Script Console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/groovy-hook-scripts.html">Groovy Hook Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/nodes.html">Managing Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-approval.html">In-process Script Approval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/ui-themes.html">Themes for user interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/user-content.html">User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/spawning-processes.html">Spawning Processes From Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Securing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/access-control.html">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-jenkins.html">Securing Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/managing-security.html">Managing Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/controller-isolation.html">Controller Isolation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-builds.html">Securing Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/csrf-protection.html">CSRF Protection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/user-content.html">Rendering User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/build-authorization.html">Access Control for Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/environment-variables.html">Handling Environment Variables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/markup-formatter.html">Markup Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/services.html">Exposed Services and Ports</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">System Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="backing-up.html">Backing-up/Restoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="monitoring.html">Monitoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="administering-jenkins-on-kubernetes.html">Administering Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="with-chef.html">Managing Jenkins with Chef</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="with-puppet.html">Managing Jenkins with Puppet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="viewing-logs.html">Viewing logs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="authenticating-scripted-clients.html">Authenticating scripted clients</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="reverse-proxy-configuration.html">Reverse proxy configuration</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reverse-proxy-configuration-haproxy.html">Reverse proxy - HAProxy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reverse-proxy-configuration-squid.html">Reverse proxy - Squid</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reverse-proxy-configuration-iis.html">Reverse proxy - IIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reverse-proxy-configuration-iptables.html">Reverse proxy - iptables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="systemd-services.html">Managing systemd services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../scaling/index.html">Scaling Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-scale.html">Architecting for Scale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/hardware-recommendations.html">Hardware Recommendations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-manageability.html">Architecting for Manageability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../troubleshooting/index.html">Troubleshooting Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/diagnosing-errors.html">Diagnosing Errors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/obtaining-a-thread-dump.html">Obtaining a thread dump</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins User Documentation</span>
+    <span class="version">2.2</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins User Documentation</a></li>
+    <li><a href="index.html">System Administration</a></li>
+    <li><a href="reverse-proxy-configuration.html">Reverse proxy configuration</a></li>
+    <li><a href="reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.2</button>
+  <div class="version-menu">
+    <a class="version" href="../../2.401.3/system-administration/reverse-proxy-configuration-apache.html">2.401.3</a>
+    <a class="version is-current" href="reverse-proxy-configuration-apache.html">2.2</a>
+    <a class="version" href="../../2.1/system-administration/reverse-proxy-configuration-apache.html">2.1</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/2.401.3/docs/user-docs/modules/system-administration/pages/reverse-proxy-configuration-apache.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Reverse proxy - Apache</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In situations where you have existing web sites on your server,
+you may find it useful to run Jenkins (or the servlet container
+that Jenkins runs in) behind Apache, so that you can bind Jenkins
+to the part of a bigger website that you may have.
+This section discusses some of the approaches for doing this.</p>
+</div>
+<div class="paragraph">
+<p><strong>Make sure that you change the Jenkins httpListenAddress from its
+default of 0.0.0.0 to 127.0.0.1 or any Apache-level restrictions can be
+easily bypassed by accessing the Jenkins port directly.</strong></p>
+</div>
+<div class="paragraph">
+<p>There are several different alternatives to configure Jenkins with Apache.
+Choose the technique that best meets your needs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#mod_proxy">[mod_proxy]</a></p>
+</li>
+<li>
+<p><a href="#_mod_proxy_with_https">mod_proxy with HTTPS</a></p>
+</li>
+<li>
+<p><a href="#mod_rewrite">[mod_rewrite]</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This 6 minute tutorial from Darin Pope configures Apache httpd on Alma Linux as a reverse proxy with <a href="#mod_proxy">[mod_proxy]</a>.</p>
+</div>
+<div class="videoblock">
+<div class="title">Configure Apache HTTP server as a reverse proxy</div>
+<div class="content">
+<iframe width="640" height="360" src="https://www.youtube.com/embed/E3_g5wYZlfk?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mod_proxy"><a class="anchor" href="#_mod_proxy"></a>mod_proxy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="http://httpd.apache.org/docs/2.0/mod/mod_proxy.html">mod_proxy</a> works by
+making Apache perform "reverse proxy" — when a request arrives for
+certain URLs, Apache becomes a proxy and forwards that request to
+Jenkins, then forwards the response from Jenkins back to the client.</p>
+</div>
+<div class="paragraph">
+<p>The following Apache modules must be installed :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">a2enmod proxy
+a2enmod proxy_http
+a2enmod headers</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A typical set up for mod_proxy would look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">ProxyPass         /jenkins  http://localhost:8081/jenkins nocanon
+ProxyPassReverse  /jenkins  http://localhost:8081/jenkins
+ProxyRequests     Off
+AllowEncodedSlashes NoDecode
+
+# Local reverse proxy authorization override
+# Most unix distribution deny proxy by default
+# See /etc/apache2/mods-enabled/proxy.conf in Ubuntu
+&lt;Proxy http://localhost:8081/jenkins*&gt;
+  Order deny,allow
+  Allow from all
+&lt;/Proxy&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This assumes that you run Jenkins on port 8081.</p>
+</div>
+<div class="paragraph">
+<p><a href="#context-path">[context-path]</a> provides more details on reverse proxy requires for the Jenkins context path.</p>
+</div>
+<div class="paragraph">
+<p>When running on a dedicated server and you are using / as context, make
+sure you add a slash at the end of all URLs in proxy params in apache.
+Otherwise you might run into proxy errors. So</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">ProxyPass / http://localhost:8080/ nocanon</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>instead of</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">ProxyPass / http://localhost:8080 nocanon     # wont work</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that this does <strong>not</strong> apply to the <code>ProxyPassMatch</code> directive,
+which behaves differently than <code>ProxyPass</code>.
+Below is an example of <code>ProxyPassMatch</code> to proxy all URLs other than
+<code>/.well-known</code> (a URL required by letsencrypt):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">ProxyPassMatch  ^/(?\!.well-known)  http://localhost:8080 nocanon</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <em>ProxyRequests Off</em> prevents Apache from functioning as a forward
+proxy server (except for <em>ProxyPass</em>), it is advised to include it
+unless the server should function as a proxy.</p>
+</div>
+<div class="paragraph">
+<p>Both the <code>nocanon</code> option to <code>ProxyPass</code>, <em>and</em>
+<code>AllowEncodedSlashes NoDecode</code>, are required for certain Jenkins
+features to work.</p>
+</div>
+<div class="paragraph">
+<p>If you are running Apache on a Security-Enhanced Linux (SE-Linux)
+machine it is essential to make SE-Linux do the right thing by issuing
+as root</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">setsebool -P httpd_can_network_connect true</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If this is not issued Apache will not be allowed to forward proxy
+requests to Jenkins and only an error message will be displayed.</p>
+</div>
+<div class="paragraph">
+<p>Because Jenkins already compress its output, you can not use the normal
+proxy-html filter to modify urls:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">SetOutputFilter proxy-html</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Instead you can use the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">SetOutputFilter INFLATE;proxy-html;DEFLATE
+ProxyHTMLURLMap http://your_server:8080/jenkins /jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>But since Jenkins seems to be well behaved it&#8217;s even better to just not
+use SetOutputFilter and ProxyHTMLURLMap.</p>
+</div>
+<div class="paragraph">
+<p>If there are problems with Jenkins sometimes servicing random garbage
+pages, then the following may help:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">SetEnv proxy-nokeepalive 1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Some plug-ins determine URLs from client requests from Host header, so
+if you experience some problems with wrong URLs, you can try to switch
+on <code>ProxyPreserveHost</code> directive, which is switched off by default:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">ProxyPreserveHost On</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mod_proxy_with_https"><a class="anchor" href="#_mod_proxy_with_https"></a>mod_proxy with HTTPS</h3>
+<div class="paragraph">
+<p>You can add an additional <code>ProxyPassReverse</code> directive
+to redirect non-SSL URLs generated by Jenkins to the SSL side.
+Assuming that your webserver is <code>your.host.com</code>, placing the following within
+the SSL virtual host definition will do the trick:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">ProxyRequests     Off
+ProxyPreserveHost On
+AllowEncodedSlashes NoDecode
+
+&lt;Proxy http://localhost:8081/jenkins*&gt;
+  Order deny,allow
+  Allow from all
+&lt;/Proxy&gt;
+
+ProxyPass         /jenkins  http://localhost:8081/jenkins nocanon
+ProxyPassReverse  /jenkins  http://localhost:8081/jenkins
+ProxyPassReverse  /jenkins  http://your.host.com/jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Yet another option is to rewrite the Location headers that contain
+non-ssl URL&#8217;s generated by Jenkins.
+If you want to access Jenkins from https://www.example.com/jenkins,
+placing the following within the SSL virtual host definition also works:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">ProxyRequests     Off
+ProxyPreserveHost On
+ProxyPass /jenkins/ http://localhost:8081/jenkins/ nocanon
+AllowEncodedSlashes NoDecode
+
+&lt;Location /jenkins/&gt;
+  ProxyPassReverse /
+  Order deny,allow
+  Allow from all
+&lt;/Location&gt;
+
+Header edit Location ^http://www.example.com/jenkins/ https://www.example.com/jenkins/</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>But it may also work fine to just use simple forwarding as above (the
+first HTTPS snippet), and add</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">RequestHeader set X-Forwarded-Proto "https"
+RequestHeader set X-Forwarded-Port "443"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>in the HTTPS site configuration, as the Docker demo (below) does.
+(<code>X-Forwarded-Port</code> is not interpreted by Jenkins prior to
+<a href="https://issues.jenkins.io/browse/JENKINS-23294">JENKINS-23294</a> so it
+may also be desirable to configure the servlet container to specify the
+originating port.)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">NameVirtualHost *:80
+NameVirtualHost *:443
+
+&lt;VirtualHost *:80&gt;
+    ServerAdmin  webmaster@localhost
+    Redirect permanent / https://www.example.com/
+&lt;/VirtualHost&gt;
+
+&lt;VirtualHost *:443&gt;
+    SSLEngine on
+    SSLCertificateFile /etc/ssl/certs/cert.pem
+    ServerAdmin  webmaster@localhost
+    ProxyRequests     Off
+    ProxyPreserveHost On
+    AllowEncodedSlashes NoDecode
+    &lt;Proxy *&gt;
+        Order deny,allow
+        Allow from all
+    &lt;/Proxy&gt;
+    ProxyPass         /  http://localhost:8080/ nocanon
+    ProxyPassReverse  /  http://localhost:8080/
+    ProxyPassReverse  /  http://www.example.com/
+    RequestHeader set X-Forwarded-Proto "https"
+    RequestHeader set X-Forwarded-Port "443"
+&lt;/VirtualHost&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mod_rewrite"><a class="anchor" href="#_mod_rewrite"></a>mod_rewrite</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Apache mod_rewrite module can be used to configure an Apache reverse proxy for Jenkins.</p>
+</div>
+<div class="paragraph">
+<p>The following Apache modules must be installed :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">a2enmod rewrite
+a2enmod proxy
+a2enmod proxy_http</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A typical mod_rewrite configuration would look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs"># Use last flag because no more rewrite can be applied after proxy pass
+# NE makes sure slashes are not re-encoded.
+# Apache does not re-encode spaces though, we ask Apache to encode it again with the B flag
+# BNP tells apache to use %20 instead of + to re-encode the space
+RewriteRule       ^/jenkins(.*)$  http://localhost:8081/jenkins$1 [P,L,NE,B=\,BNP]
+ProxyPassReverse  /jenkins        http://localhost:8081/jenkins
+ProxyRequests     Off
+
+AllowEncodedSlashes NoDecode
+
+# Local reverse proxy authorization override
+# Most unix distribution deny proxy by default
+# See /etc/apache2/mods-enabled/proxy.conf in Ubuntu
+&lt;Proxy http://localhost:8081/jenkins*&gt;
+  Order deny,allow
+  Allow from all
+&lt;/Proxy&gt;
+
+# If using HTTPS, add the following directives
+# RequestHeader set X-Forwarded-Proto "https"
+# RequestHeader set X-Forwarded-Port "443"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This assumes that you run Jenkins on port 8081.
+The context path of Jenkins must be the same between Apache and Jenkins.
+Jenkins can&#8217;t run on http://example.com:8081/ci and be reverse proxied at http://example.com/jenkins .
+<a href="#context-path">[context-path]</a> provides more details on reverse proxy requires for the Jenkins context path.</p>
+</div>
+<div class="paragraph">
+<p>The <em>ProxyRequests Off</em> prevents Apache from functioning as a forward
+proxy server (except for <em>ProxyPass</em>), it is advised to include it
+unless the server should function as a proxy.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_context_path"><a class="anchor" href="#_context_path"></a>Context path</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The context path is the prefix of a URL path.
+The Jenkins controller and the reverse proxy <strong>must use the same context path</strong>.
+For example, if the Jenkins controller URL is https://www.example.com/jenkins/ then the <code>--prefix=/jenkins</code> argument must be included in the Jenkins controller command line arguments.</p>
+</div>
+<div class="paragraph">
+<p>Set the context path when using the Linux packages by running <code>systemctl edit jenkins</code> and adding the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">[Service]
+Environment="JENKINS_PREFIX=/jenkins"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set the context path on Windows controllers by including the <code>--prefix</code> command line argument in the <code>jenkins.xml</code> file in the installation directory.</p>
+</div>
+<div class="paragraph">
+<p>Ensure that Jenkins is running at the context path where your reverse proxy is serving Jenkins.
+You will have the least pain if you keep to this principle.</p>
+</div>
+<div class="paragraph">
+<p>The <code>--prefix</code> command line argument is not needed if the context path is empty.
+For example, the URL https://jenkins.example.com/ has an empty context path.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_proxying_cli_commands_with_the_https_transport"><a class="anchor" href="#_proxying_cli_commands_with_the_https_transport"></a>Proxying CLI commands with the HTTP(S) transport</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using the plain CLI protocol with the HTTP(S) transport to access
+Jenkins through an Apache reverse proxy does not work.
+See <a href="https://issues.jenkins.io/browse/JENKINS-47279">JENKINS-47279 - Full-duplex HTTP(S) transport with plain CLI protocol does not work with Apache reverse proxy</a>
+for more details.
+As a workaround, you can use the <a href="/doc/book/managing/cli/#ssh">CLI over SSH</a>.</p>
+</div>
+<div class="paragraph">
+<p>If using Apache check that <em>nocanon</em> is set on <em>ProxyPass</em> and
+that <em>AllowEncodedSlashes</em> is set.</p>
+</div>
+<div class="paragraph">
+<p><em>AllowEncodedSlashes</em> is not inherited in Apache configs, so this
+directive must be placed inside the <em>VirtualHost</em> definition.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="reverse-proxy-configuration.html">Reverse proxy configuration</a></span>
+  <span class="next"><a href="reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

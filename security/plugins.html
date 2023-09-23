@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Handling Vulnerabilities in Plugins :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/security/plugins.html">
+    <link rel="prev" href="scheduling.html">
+    <link rel="next" href="fixing.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="security" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Jenkins Security Advisories</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Adminstrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="for-administrators.html">Overview for Jenkins Administrators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scheduling.html">How We Schedule Security Advisories</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="fixing.html">How We Fix Security Issues</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Reporters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="reporting.html">Reporting Security Vulnerabilities</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cna.html">Jenkins CVE Numbers Authority</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Maintainers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="for-maintainers.html">Overview for Plugin Maintainers</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jenkins Security Team</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="team.html">About the Jenkins Security Team</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="improvements.html">Improvements by the Security Team</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Security Advisories</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Jenkins Security Advisories</a></li>
+    <li>For Adminstrators</li>
+    <li><a href="plugins.html">Handling Vulnerabilities in Plugins</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/plugins.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Handling Vulnerabilities in Plugins</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>We strive to fix all security vulnerabilities in Jenkins and plugins in a timely manner.
+However, the structure of the Jenkins project, which gives plugin maintainers a lot of autonomy, and the number and diversity of plugins make this impossible to guarantee.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="unresolved"><a class="anchor" href="#unresolved"></a>Announcing Unresolved Vulnerabilities</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In case of a plugin vulnerability, we try to contact the plugin maintainer(s) to inform them of it.
+If they decline (or otherwise fail) to fix the vulnerability, or don&#8217;t respond in a timely manner, and the security team doesn&#8217;t have the capacity to fix it, we follow the process outlined below in the interest of our users:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Publish a security advisory about the plugin, describing the nature of the vulnerability, but noting that there is no fix (other than no longer using the plugin).
+If there are workarounds, explain them.</p>
+</li>
+<li>
+<p>In some cases of particularly severe vulnerabilities, <a href="#suspensions">stop publishing the vulnerable plugin on the Jenkins update sites</a>.</p>
+</li>
+<li>
+<p>Add metadata to update sites to inform administrators on the Jenkins UI about vulnerable plugins they have installed.</p>
+</li>
+<li>
+<p>Display security warnings on <a href="https://plugins.jenkins.io/">the plugins site</a>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This allows Jenkins administrators to make an informed decision about their continued use of plugins with unresolved security vulnerabilities.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="followup"><a class="anchor" href="#followup"></a>Following Up Later</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some maintainers end up fixing security vulnerabilities after we have announced it as unresolved in their plugin.
+This can be any time between hours and years after publication.</p>
+</div>
+<div class="paragraph">
+<p>In those cases, security advisories will <em>not</em> be amended, as the information provided was correct at the time of publication.
+Additionally, the security advisory will be clear that the lack of a fix is only known "<em>as of publication of this advisory</em>".</p>
+</div>
+<div class="paragraph">
+<p>We will update the security warnings metadata that is shown to administrators in Jenkins and on <a href="https://plugins.jenkins.io/">the plugins site</a>.
+Maintainers can inform us through Jira or email about a fix or <a href="https://github.com/jenkins-infra/update-center2/#security-warnings">file a pull request updating the warnings metadata</a> themselves.
+Once we confirm the fix is correct and complete, we will update the published warnings metadata.
+This will remove the active security warning from the plugin entry on the plugins site and from the plugin manager directly in Jenkins.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="suspensions"><a class="anchor" href="#suspensions"></a>Suspended Plugins</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Distribution of the following plugins was suspended in conjunction with the publication of a security advisory announcing unresolved security issues.
+The Jenkins security team believes that most use cases would be negatively impacted by these security vulnerabilities and it is better for the Jenkins ecosystem to no longer distribute these plugins in their current form to prevent harm to users.
+This typically is the case when plugins have particularly severe security vulnerabilities, deliberately bypass or disable protection mechanisms, or offer little benefit to users anyway.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>360 FireLine (<code>fileline</code>): <a href="/security/advisory/2022-10-19/#SECURITY-2866">SECURITY-2866</a></p>
+</li>
+<li>
+<p>Adaptive DSL (<code>AdaptivePlugin</code>): <a href="/security/advisory/2017-04-10/#adaptive-dsl-plugin">SECURITY-457</a></p>
+</li>
+<li>
+<p>Autocomplete Parameter (<code>autocomplete-parameter</code>): <a href="/security/advisory/2022-05-17/">multiple vulnerabilities announced on 2022-05-17</a></p>
+</li>
+<li>
+<p>batch task (<code>batch-task</code>): <a href="/security/advisory/2022-01-12/#SECURITY-1025">SECURITY-1025</a></p>
+</li>
+<li>
+<p>Build Flow (<code>build-flow-plugin</code>): <a href="/security/advisory/2017-04-10/#build-flow-plugin">SECURITY-293</a></p>
+</li>
+<li>
+<p>CAS protocol version 1 (<code>cas1</code>): <a href="/security/advisory/2017-04-10/#cas-protocol-version-1-plugin">SECURITY-491</a></p>
+</li>
+<li>
+<p>Config Rotator (<code>config-rotator</code>): <a href="/security/advisory/2022-11-15/#SECURITY-2842">SECURITY-2842</a></p>
+</li>
+<li>
+<p>Copy To Slave (<code>copy-to-slave</code>): <a href="/security/advisory/2018-03-26/#SECURITY-545">SECURITY-545</a></p>
+</li>
+<li>
+<p>CryptoMove (<code>cryptomove</code>): <a href="/security/advisory/2020-03-09/#SECURITY-1635">SECURITY-1635</a></p>
+</li>
+<li>
+<p>CVS Tagging (<code>cvs-tag</code>): <a href="/security/advisory/2017-04-10/#cvs-tagging-plugin">SECURITY-459</a></p>
+</li>
+<li>
+<p>Debian Package Builder (<code>debian-package-builder</code>): <a href="/security/advisory/2022-01-12/#SECURITY-2546">SECURITY-2546</a></p>
+</li>
+<li>
+<p>DotCi (<code>DotCi</code>): <a href="/security/advisory/2022-09-21/#SECURITY-1737">SECURITY-1737</a></p>
+</li>
+<li>
+<p>Dynamic Parameter (<code>dynamicparameter</code>): <a href="/security/advisory/2017-04-10/#dynamic-parameter-plugin">SECURITY-462</a></p>
+</li>
+<li>
+<p>ElasticBox Jenkins Kubernetes CI/CD (<code>kubernetes-ci</code>): <a href="/security/advisory/2020-07-02/#SECURITY-1738">SECURITY-1738</a></p>
+</li>
+<li>
+<p>Grails (<code>grails</code>): <a href="/security/advisory/2017-04-10/#grails-plugin">SECURITY-458</a></p>
+</li>
+<li>
+<p>GroovyAxis (<code>groovyaxis</code>): <a href="/security/advisory/2017-04-10/#groovyaxis-plugin">SECURITY-460</a></p>
+</li>
+<li>
+<p>JS Games (<code>jsgames</code>): <a href="/security/advisory/2020-09-01/#SECURITY-1905">SECURITY-1905</a></p>
+</li>
+<li>
+<p>Kubernetes Continuous Deploy (<code>kubernetes-cd</code>): <a href="/security/advisory/2022-08-23/#SECURITY-2448">SECURITY-2448</a></p>
+</li>
+<li>
+<p>Kubernetes :: Pipeline :: Arquillian Steps (<code>kubernetes-pipeline-arquillian-steps</code>): <a href="/security/advisory/2019-09-25/#SECURITY-920%20(2)">SECURITY-920 (2)</a></p>
+</li>
+<li>
+<p>Kubernetes :: Pipeline :: Kubernetes Steps (<code>kubernetes-pipeline-steps</code>): <a href="/security/advisory/2019-09-25/#SECURITY-920%20(1)">SECURITY-920 (1)</a></p>
+</li>
+<li>
+<p>Literate (<code>literate</code>): <a href="/security/advisory/2020-03-09/#SECURITY-1750">SECURITY-1750</a></p>
+</li>
+<li>
+<p>Mashup Portlets (<code>mashup-portlets-plugin</code>): <a href="/security/advisory/2023-03-21/#SECURITY-2813">SECURITY-2813</a></p>
+</li>
+<li>
+<p>Nerrvana (<code>nerrvana</code>): <a href="/security/advisory/2020-10-08/#SECURITY-2097">SECURITY-2097</a></p>
+</li>
+<li>
+<p>Persona (<code>persona</code>): <a href="/security/advisory/2020-10-08/#SECURITY-2046">SECURITY-2046</a></p>
+</li>
+<li>
+<p>Pipeline: Classpath Step (<code>pipeline-classpath</code>): <a href="/security/advisory/2017-03-20/#pipeline-classpath-step-plugin-allowed-script-security-sandbox-bypass">SECURITY-336</a></p>
+</li>
+<li>
+<p>Pipeline: Phoenix AutoTest (<code>phoenix-autotest</code>): <a href="/security/advisory/2022-03-29/">multiple vulnerabilities announced on 2022-03-29</a></p>
+</li>
+<li>
+<p>Puppet Enterprise Pipeline (<code>puppet-enterprise-pipeline</code>): <a href="/security/advisory/2019-10-16/#SECURITY-918">SECURITY-918</a></p>
+</li>
+<li>
+<p>Reactor (<code>reactor</code>): <a href="/security/advisory/2017-04-10/#reactor-plugin">SECURITY-487</a></p>
+</li>
+<li>
+<p><code>remote-jobs-view-plugin</code>: <a href="/security/advisory/2023-03-21/#SECURITY-2956">SECURITY-2956</a></p>
+</li>
+<li>
+<p>Script SCM (<code>scriptscm</code>): <a href="/security/advisory/2017-04-10/#script-scm-plugin">SECURITY-461</a></p>
+</li>
+<li>
+<p><code>scripttrigger</code>: <a href="/security/advisory/2017-04-10/#scripttrigger-plugin">SECURITY-456</a></p>
+</li>
+<li>
+<p>Simple Travis Pipeline Runner (<code>simple-travis-runner</code>): <a href="/security/advisory/2019-08-07/#SECURITY-922">SECURITY-922</a></p>
+</li>
+<li>
+<p>Chef Sinatra (<code>sinatra-chef-builder</code>): <a href="/security/advisory/2022-02-15/#SECURITY-1377">SECURITY-1377</a></p>
+</li>
+<li>
+<p>ScreenRecorder (<code>screenrecorder</code>): <a href="/security/advisory/2022-10-19/#SECURITY-2864">SECURITY-2864</a></p>
+</li>
+<li>
+<p>Speaks! (<code>speaks</code>): <a href="/security/advisory/2017-10-11/#arbitrary-code-execution-vulnerability-in-speaks-plugin">SECURITY-623</a></p>
+</li>
+<li>
+<p>Storable Configs (<code>storable-configs-plugin</code>): <a href="/security/advisory/2022-05-17/#SECURITY-1969">SECURITY-1969</a>, <a href="/security/advisory/2020-09-16/">multiple vulnerabilities announced on 2020-09-16</a></p>
+</li>
+<li>
+<p>Subversion Tagging (<code>svn-tag</code>): <a href="/security/advisory/2017-04-10/#subversion-tagging-plugin">SECURITY-298</a></p>
+</li>
+<li>
+<p><code>tcl</code>: <a href="/security/advisory/2017-04-10/#tcl-plugin">SECURITY-379</a></p>
+</li>
+<li>
+<p>Team Views (<code>team-views</code>): <a href="/security/advisory/2022-02-15/">multiple vulnerabilities announced on 2022-02-15</a></p>
+</li>
+<li>
+<p>XFramium Builder (<code>xframium</code>): <a href="/security/advisory/2022-10-19/#SECURITY-2863">SECURITY-2863</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Unless the security issue is inherent to what the plugin does while not making this the sole <em>purpose</em> of the plugin, the Jenkins security team welcomes efforts to fix the vulnerabilities and have plugin distribution restored.</p>
+</div>
+<div class="paragraph">
+<p>In addition to plugins suspended for security reasons, the following plugins that require suspended plugins to run are also suspended, as they would not be installable:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Build Automation Management Tool (<code>build-configurator</code>) depends on <code>copy-to-slave</code></p>
+</li>
+<li>
+<p><code>build-flow-extensions-plugin</code> depends on <code>build-flow-plugin</code></p>
+</li>
+<li>
+<p><code>build-flow-test-aggregator</code> depends on <code>build-flow-plugin</code></p>
+</li>
+<li>
+<p><code>build-flow-toolbox-plugin</code> depends on <code>build-flow-plugin</code></p>
+</li>
+<li>
+<p>DotCi DockerPublish (<code>DotCi-DockerPublish</code>) depends on <code>DotCi</code></p>
+</li>
+<li>
+<p>DotCi Fig template (<code>DotCi-Fig-template</code>) depends on <code>DotCi-InstallPackages</code></p>
+</li>
+<li>
+<p>DotCi InstallPackages (<code>DotCi-InstallPackages</code>) depends on <code>DotCi</code></p>
+</li>
+<li>
+<p>DotCiInstallPackages (<code>DotCiInstallPackages</code>) depends on <code>DotCi</code></p>
+</li>
+<li>
+<p>External Resource Dispatcher (<code>externalresource-dispatcher</code>) depends on <code>build-flow-plugin</code></p>
+</li>
+<li>
+<p>Kubernetes :: Pipeline :: Aggregator (<code>kubernetes-pipeline-aggregator</code>) depends on <code>kubernetes-pipeline-arquillian-steps</code> and <code>kubernetes-pipeline-steps</code></p>
+</li>
+<li>
+<p><code>lsf-cloud</code> depends on <code>copy-to-slave</code></p>
+</li>
+<li>
+<p>SGE Cloud Plugin (<code>sge-cloud-plugin</code>) depends on <code>copy-to-slave</code></p>
+</li>
+<li>
+<p>XTrigger (<code>xtrigger</code>) depends on <code>scripttrigger</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="scheduling.html">How We Schedule Security Advisories</a></span>
+  <span class="next"><a href="fixing.html">How We Fix Security Issues</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

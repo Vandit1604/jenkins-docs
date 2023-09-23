@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Documentation :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/sigs/docs/index.html">
+    <link rel="prev" href="../ux/index.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="sigs" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Special Interest Groups</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../gsoc/index.html">Google Summer of Code</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../advocacy-and-outreach/index.html">Advocacy and Outreach</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../advocacy-and-outreach/outreach-programs/index.html">Outreach programs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../advocacy-and-outreach/outreach-programs/outreach-programs-history.html">Outreach Past Programs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform/index.html">Platform</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ux/index.html">User Experience</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">Documentation</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Special Interest Groups</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins Special Interest Groups</a></li>
+    <li><a href="index.html">Documentation</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/sigs/modules/docs/pages/index.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Connect</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://app.gitter.im/#/room/#jenkins/docs:matrix.org">Gitter</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/document/d/1ygRZnVtoIvuEKpwNeF_oVRVCV5NKcZD1_HMtWlUZguo/edit">Meetings</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Redirect anchor references with Javascript -->
+<!-- This is ONLY for anchor references like installing/#windows. -->
+<!-- Use redirects as described in the contributing guide for page level redirects. -->
+<!-- https://stackoverflow.com/questions/1305211/javascript-to-redirect-from-anchor-to-a-separate-page/21198129#21198129 -->
+<script>
+(function () {
+    var anchorMap = {
+        "ji-toolbar": "/sigs/docs/", /* Algolia search redirect to stay on same page */
+        "jenkins-on-kubernetes": "/sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes/",
+    }
+    /*
+    * Best practice for extracting hashes:
+    * https://stackoverflow.com/a/10076097/151365
+    */
+    var hash = window.location.hash.substring(1);
+    if (hash) {
+        /*
+        * Best practice for javascript redirects:
+        * https://stackoverflow.com/a/506004/151365
+        */
+        window.location.replace(anchorMap[hash]);
+    }
+})();
+</script>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="openblock float-group">
+<div class="content">
+<div class="paragraph">
+<p><span class="image right float-gap"><img src="../../images/_images/logos/needs-you/Jenkins_Needs_You-02.png" alt="Logo" width="192"></span>
+This special interest group improves Jenkins use and adoption through documentation. The SIG encourages, creates, and reviews documentation contributions and improves documentation with contributors and external communities.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="../index.html" class="xref page">(Back to List of Jenkins Special Interest Groups )</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_members"><a class="anchor" href="#_members"></a>Members</h2>
+<div class="sectionbody">
+<div class="paragraph avatar">
+<p><strong>Leads</strong>:
+<span class="image"><img src="../../images/_images/avatars/markewaite.jpg" alt="markewaite" width="30" height="30"></span> Mark Waite</p>
+</div>
+<div class="paragraph avatar">
+<p><strong>Participants</strong>:
+<span class="image"><img src="../../images/_images/avatars/dheerajodha.jpg" alt="dheerajodha" width="30" height="30"></span> Dheeraj Singh Jodha
+<span class="image"><img src="../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Kristin Whetstone
+<span class="image"><img src="../../images/_images/avatars/stackscribe.jpg" alt="stackscribe" width="30" height="30"></span> Meg McRoberts
+<span class="image"><img src="../../images/_images/avatars/oleg_nenashev.png" alt="oleg nenashev" width="30" height="30"></span> Oleg Nenashev
+<span class="image"><img src="../../images/_images/avatars/zaycodes.jpg" alt="zaycodes" width="30" height="30"></span> Zainab Daodu</p>
+</div>
+<div class="paragraph">
+<p>The SIG offers a venue for all kinds of documentation creation, improvement, and delivery.</p>
+</div>
+<div class="paragraph">
+<p>The group focuses on documentation for Jenkins, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../../user-docs/2.401.3/index.html" class="xref page">User documentation</a> - Using Jenkins</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#tutorials:ROOT:index.adoc" class="xref unresolved">Tutorials</a></p>
+</li>
+<li>
+<p><a href="../../user-docs/2.401.3/index.html" class="xref page">User Handbook</a></p>
+</li>
+<li>
+<p>References like <a href="/doc/book/pipeline/syntax/">Pipeline Syntax</a> and <a href="/doc/pipeline/steps/">Pipeline Steps</a></p>
+</li>
+<li>
+<p><a href="#ROOT:how-to-guides.adoc" class="xref unresolved">How-to Guides</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="../../dev-docs/index.html" class="xref page">Developer documentation</a> - Extending Jenkins</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#plugin-tutorial:index.adoc" class="xref unresolved">Tutorials</a></p>
+</li>
+<li>
+<p><a href="../../dev-docs/reference/index.html" class="xref page">Developer Reference</a></p>
+</li>
+<li>
+<p><a href="../../dev-docs/guides/index.html" class="xref page">How-To Guides</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="../../solutions/2.401.3/index.html" class="xref page">Solution documentation</a> - using Jenkins with specific technologies (e.g. Java, PHP, or Docker).
+Also, implementation solutions like <a href="../../solutions/2.401.3/pipeline.html" class="xref page">Pipeline</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Documentation SIG may cooperate with other groups.
+For example, we cooperate with the <a href="../platform/index.html" class="xref page">Platform SIG</a> on platform topics.
+s
+== Topics</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reviewing <a href="/changelog/">weekly changelogs</a></p>
+</li>
+<li>
+<p>Creating and reviewing <a href="/changelog-stable/">LTS changelogs</a> and <a href="/doc/upgrade-guide/">LTS upgrade guides</a></p>
+</li>
+<li>
+<p>Creating new documentation</p>
+</li>
+<li>
+<p>Improving existing documentation</p>
+</li>
+<li>
+<p>Reviewing documentation contributions</p>
+</li>
+<li>
+<p>Coordinating documentation initiatives</p>
+</li>
+<li>
+<p>Reviewing Jenkins Enhancement Proposals (JEPs) related to documentation</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contributing"><a class="anchor" href="#_contributing"></a>Contributing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See <a href="../../community/document.html" class="xref page">this page</a> for information about contributing to Jenkins documentation.
+It contains links for newcomers and seasoned contributors.
+If you have any questions or ideas, please feel free to reach out to us using the channels listed on the right panel.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ongoing-projects"><a class="anchor" href="#ongoing-projects"></a>Projects</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section lists some of the projects working under the direction of this SIG.
+See the <a href="https://docs.google.com/document/d/1ygRZnVtoIvuEKpwNeF_oVRVCV5NKcZD1_HMtWlUZguo/edit?usp=sharing">SIG meeting notes</a> for more information about ongoing projects.</p>
+</div>
+<div class="sect2">
+<h3 id="_google_season_of_docs"><a class="anchor" href="#_google_season_of_docs"></a>Google Season of Docs</h3>
+<div class="paragraph">
+<p>Google Season of Docs brings together open source communities and technical writers for the benefit of both.
+The program raises awareness of open source, of documentation, and of technical writing.</p>
+</div>
+<div class="paragraph">
+<p>See our <a href="gsod/index.html" class="xref page">Google Season of Docs status page</a> for documentation project ideas, contact information, and more.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_plugin_documentation_on_github"><a class="anchor" href="#_plugin_documentation_on_github"></a>Plugin documentation on GitHub</h3>
+<div class="paragraph">
+<p>Currently the SIG is <a href="../../dev-docs/publishing/wiki-page.html#migrating-from-wiki-to-github" class="xref page">migrating plugin documentation from Jenkins Wiki to GitHub</a>.
+Documentation in the plugin GitHub repository provides a good user experience for Jenkins users seeking documentation.
+At the same time, plugin maintainers now can follow the documentation-as-code approach and make documentation changes a part of the pull requests.
+It also gives an opportunity to review the documentation changes and to add documentation contributor recognition,
+especially if the story is combined with <a href="https://github.com/jenkinsci/.github/blob/master/.github/release-drafter.adoc">changelog automation</a>.</p>
+</div>
+<div class="paragraph">
+<p>As of November 2022 we have more than 900 plugins which already use GitHub as a documentation source,
+but there are still hundreds of plugins to migrate.
+We invite contributors to participate in the project and to help us with migrating the docs.
+It is also a great opportunity to update and copy-edit the documentation.</p>
+</div>
+<div class="paragraph">
+<p>Useful links:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/blog/2019/10/21/plugin-docs-on-github/">Documentation migration guidelines blog post</a></p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/browse/JENKINS-59467">Template issue for plugin documentation migration to GitHub</a></p>
+</li>
+<li>
+<p><a href="https://groups.google.com/forum/#!topic/jenkinsci-dev/VSdfVMDIW-A">Announcement in the developer mailing list</a></p>
+</li>
+<li>
+<p><a href="#publishing:documentation.adoc#plugin-pages" class="xref unresolved">Using GitHub as a source of plugin documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_plugin_site_integration_with_github"><a class="anchor" href="#_plugin_site_integration_with_github"></a>Plugin site integration with GitHub</h3>
+<div class="paragraph">
+<p><a href="https://plugins.jenkins.io/">Jenkins Plugin Site</a> currently uses GitHub to get plugin documentation (see above) and tags (using GitHub topics).
+Release information is also pulled from GitHub releases.
+There are still some areas for improvement, such as parsing of CHANGELOG.md files to get release information for plugins that don&#8217;t use GitHub releases.
+This project is tracked in the <a href="https://issues.jenkins.io/browse/WEBSITE-637" class="bare">https://issues.jenkins.io/browse/WEBSITE-637</a> EPIC.</p>
+</div>
+<div class="paragraph">
+<p>Useful links:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#publishing:documentation.adoc" class="xref unresolved">Publishing Plugin Documentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkins-infra/plugin-site">Plugin Site Frontend</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkins-infra/update-center2">Jenkins Update Center</a> (serves plugin metadata)</p>
+</li>
+<li>
+<p><a href="https://github.com/jenkins-infra/plugin-site/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">Newbie-friendly issues for the plugin site</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="user-guide"><a class="anchor" href="#user-guide"></a>User Guide Rework</h3>
+<div class="paragraph">
+<p>Jenkins user topics are included in the current <a href="../../user-docs/2.401.3/index.html" class="xref page">Jenkins Handbook</a>.
+<a href="https://docs.google.com/spreadsheets/d/1nA8xVOkyKmZ8oTYSLdwjborT0w-BpBNNZT0nxR9deZ8/edit#gid=1087292709">Feedback requests</a> are frequently received to improve user documentation.
+Common improvement themes include adding migration of the documentation from Wiki, pipeline examples with each of the pipeline steps, additional tutorials for new users, better search and navigation.</p>
+</div>
+<div class="paragraph">
+<p>Links:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkins-infra/jenkins.io/projects/1">GitHub Project</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="administrator-guide"><a class="anchor" href="#administrator-guide"></a>Administrator Guide</h3>
+<div class="paragraph">
+<p>Jenkins administration topics are included in the current <a href="../../user-docs/2.401.3/index.html" class="xref page">Jenkins Handbook</a>.
+Navigation can be improved for administrators by separating the administration topics into a separate volume.
+This project will create a separate Jenkins Administrator Guide with content specific for administrators.
+This project is tracked in the <a href="https://issues.jenkins.io/browse/WEBSITE-738" class="bare">https://issues.jenkins.io/browse/WEBSITE-738</a> EPIC.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="solution-pages"><a class="anchor" href="#solution-pages"></a>Solution Pages</h3>
+<div class="paragraph">
+<p>Jenkins <a href="../../solutions/2.401.3/index.html" class="xref page">solution pages</a> highlight specific use cases for Jenkins users.
+Those solutions include SCM provider solutions (<a href="/solutions/github">GitHub</a>, <a href="/solutions/bitbucketserver">Bitbucket</a>),
+programming language solutions (<a href="/solutions/python">Python</a>, <a href="/solutions/ruby">Ruby</a>, <a href="/solutions/c">C/C++</a>, <a href="/solutions/java">Java</a>, and <a href="/solutions/php">PHP</a>),
+and execution environment solutions (<a href="/solutions/python">Pipeline</a>, <a href="/solutions/docker">Docker</a>, <a href="/solutions/embedded">Embedded</a>, and <a href="/solutions/android">Android</a>).
+An excellent <a href="../../solutions/2.401.3/index.html" class="xref page">opening page</a> has been provided by <a href="https://github.com/zbynek">Zbynek Konecny</a>.
+Additional use cases and user stories are being collected by <a href="https://github.com/alyssat">Alyssa Tong</a>.</p>
+</div>
+<div class="paragraph">
+<p>The appearance and navigation of those solution pages needs improvement.
+The existing pages should be revisited and improved so that users of specific solutions can find what they need on jenkins.io.
+This project is tracked in the <a href="https://issues.jenkins.io/browse/WEBSITE-742" class="bare">https://issues.jenkins.io/browse/WEBSITE-742</a> EPIC.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_documentation_reviews"><a class="anchor" href="#_documentation_reviews"></a>Documentation Reviews</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Reviewing Jenkins documentation <a href="https://issues.jenkins.io/secure/Dashboard.jspa?selectPageId=18640">bug reports</a></p>
+</li>
+<li>
+<p>Identifying <a href="https://issues.jenkins.io/issues/?jql=project%20%3D%20%22Jenkins%20Website%22%20and%20status%20!%3D%20done%20and%20labels%20%3D%20newbie-friendly%20ORDER%20BY%20%20%20type%20asc%2C%20status%2C%20updatedDate">newbie-friendly documentation bug reports</a></p>
+</li>
+<li>
+<p>Reviewing Jenkins documentation <a href="https://github.com/jenkins-infra/jenkins.io/pulls">pull requests</a></p>
+</li>
+<li>
+<p>Reviewing Jenkins X documentation <a href="https://github.com/jenkins-x/jx-docs/pulls">pull requests</a></p>
+</li>
+<li>
+<p><a href="https://plugins.jenkins.io/">Plugins site</a> improvements</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_office_hours"><a class="anchor" href="#_office_hours"></a>Office Hours</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Documentation office hours are held each Thursday at <strong>18:00 UTC</strong> (Europe and US East) and each Friday at <strong>02:00 UTC</strong> (Asia and US West).
+Office hours are conducted and recorded using Zoom and archived to the <a href="https://www.youtube.com/user/jenkinsci">Jenkins YouTube channel</a> in the <a href="https://www.youtube.com/playlist?list=PLN7ajX_VdyaNp0lk5BmyAgqPS52u_4tC8">Jenkins Docs SIG YouTube playlist</a>.
+Participant links are posted in the <a href="https://app.gitter.im/#/room/#jenkins/docs:matrix.org">SIG Gitter Chat</a> 10 minutes before the meeting starts.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_meetings"><a class="anchor" href="#_meetings"></a>Meetings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Documentation SIG meetings are part of the documentation office hours.
+Meetings are conducted and recorded using Zoom and archived to the <a href="https://www.youtube.com/user/jenkinsci">Jenkins YouTube channel</a> in the <a href="https://www.youtube.com/playlist?list=PLN7ajX_VdyaNp0lk5BmyAgqPS52u_4tC8">Jenkins Docs SIG YouTube playlist</a>.
+Participant links are posted in the <a href="https://app.gitter.im/#/room/#jenkins/docs:matrix.org">SIG Gitter Chat</a> 10 minutes before the meeting starts.</p>
+</div>
+<div class="sect2">
+<h3 id="_meeting_agendas"><a class="anchor" href="#_meeting_agendas"></a>Meeting Agendas</h3>
+<div class="paragraph">
+<p>Meeting agendas and meeting notes for the SIG are posted in <a href="https://docs.google.com/document/d/1ygRZnVtoIvuEKpwNeF_oVRVCV5NKcZD1_HMtWlUZguo/edit">this Google Document</a>.
+Anyone is welcome to add a topic for an upcoming meeting by suggesting a change in the <a href="https://docs.google.com/document/d/1ygRZnVtoIvuEKpwNeF_oVRVCV5NKcZD1_HMtWlUZguo/edit">agenda</a>.</p>
+</div>
+<iframe src="https://docs.google.com/document/d/1ygRZnVtoIvuEKpwNeF_oVRVCV5NKcZD1_HMtWlUZguo?embedded=true" width="100%" height="600px"></iframe>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="../ux/index.html">User Experience</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

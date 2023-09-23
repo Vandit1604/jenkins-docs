@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Google Season of Docs in Jenkins :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/sigs/docs/gsod/index.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="sigs" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Jenkins Special Interest Groups</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../gsoc/index.html">Google Summer of Code</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../advocacy-and-outreach/index.html">Advocacy and Outreach</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../advocacy-and-outreach/outreach-programs/index.html">Outreach programs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../advocacy-and-outreach/outreach-programs/outreach-programs-history.html">Outreach Past Programs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../platform/index.html">Platform</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../ux/index.html">User Experience</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Documentation</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Special Interest Groups</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Jenkins Special Interest Groups</a></li>
+    <li><a href="index.html">Google Season of Docs in Jenkins</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/sigs/modules/docs/pages/gsod/index.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Google Season of Docs in Jenkins</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image right float-gap"><img src="../../../images/_images/gsod/gsod.png" alt="Google Season of Docs"></span></p>
+</div>
+<div class="paragraph">
+<p>The <a href="https://developers.google.com/season-of-docs/">Google Season of Docs (GSoD)</a>
+program brings together open source and technical writers communities for the benefit of both.
+The program raises awareness of open source, of docs, and of technical writing.
+GSoD in Jenkins is organized by the <a href="../index.html" class="xref page">Documentation special interest group</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_project_ideas"><a class="anchor" href="#_project_ideas"></a>Project Ideas</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Significant documentation project opportunities are listed in the <a href="#ideas.adoc" class="xref unresolved">Google Season of Docs project ideas</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_started"><a class="anchor" href="#_getting_started"></a>Getting started</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you are interested to participate in Google Season of Docs as a technical writer, please do the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Join our <a href="https://app.gitter.im/#/room/#jenkins/docs:matrix.org">Gitter Channel</a>.</p>
+</li>
+<li>
+<p>Explore the project ideas listed on this page, find areas which would be interesting to you.</p>
+</li>
+<li>
+<p>Try <a href="../../../community/document.html" class="xref page">contributing to Jenkins documentation</a> to study our documentation tools and contribution process.
+There are some <a href="../../../community/document.html#newcomers" class="xref page">newcomer-friendly documentation tasks</a> you could try.</p>
+</li>
+<li>
+<p>If you start exploring the project before May 29, consider joining our <a href="/events/online-hackfest/2020-uiux/">UI/UX hackfest</a> which includes the <a href="/events/online-hackfest/2020-uiux/#user-documentation">user documentation track</a>.
+It is a good opportunity to get know the community better.</p>
+</li>
+<li>
+<p>Send an introductory email to our mailing list. Please include a short self-introduction and list projects which would be interesting to you.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_team"><a class="anchor" href="#_team"></a>Team</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Org admins:
+<a href="/blog/authors/oleg_nenashev/">Oleg Nenashev</a>,
+<a href="/blog/authors/markewaite/">Mark Waite</a></p>
+</li>
+<li>
+<p>Potential mentors:
+<a href="/blog/authors/markewaite/">Mark Waite</a>,
+<a href="/blog/authors/kwhetstone/">Kristin Whetstone</a>,
+<a href="/blog/authors/oleg_nenashev/">Oleg Nenashev</a>,
+Vivek Sonar</p>
+</li>
+<li>
+<p>Documentation SIG <a href="../index.html#members" class="xref page">members</a> and component maintainers assist as their time allows (<a href="/blog/authors/halkeye/">Gavin Mogan</a> and Meg McRoberts)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_technology_and_tools"><a class="anchor" href="#_technology_and_tools"></a>Technology and tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For all new documentation projects we are using the <a href="https://www.writethedocs.org/guide/docs-as-code/">Documentation as Code approach</a>
+when documentation is developed using markup languages and stored in source control management (SCM) systems.
+Here are the common tools we use:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Markdown languages: <a href="https://asciidoctor.org/">AsciiDoc</a> and <a href="https://github.github.com/gfm/">GitHub Flavored Markdown</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>For example, this page is written in Asciidoc.
+You can find its sources <a href="https://github.com/jenkins-infra/jenkins.io/blob/master/content/sigs/docs/gsod/index.adoc">here</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>SCM: <a href="https://git-scm.com/">Git</a></p>
+</li>
+<li>
+<p>Source Code Hosting: <a href="http://github.com/">github.com</a></p>
+</li>
+<li>
+<p>Text editing: any text editor with AsciiDoc/Markdown support (e.g. <a href="https://code.visualstudio.com/">Visual Studio Code</a>, <a href="https://notepad-plus-plus.org/">Notepad++</a>) or a specialized IDE</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Particular components may also require additional tools for documentation development.
+For example, the jenkins.io website requires Docker for being built and tested locally.
+In such cases we document usage of these tools in <a href="https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc">our contributing guidelines</a> and help newcomer maintainers if needed.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contacts"><a class="anchor" href="#_contacts"></a>Contacts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We use the <a href="../index.html" class="xref page">Documentation SIG</a> communication channels for GSoD project discussions during the application phases.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://app.gitter.im/#/room/#jenkins/docs:matrix.org">Gitter Channel</a></p>
+</li>
+<li>
+<p><a href="../index.html#meetings" class="xref page">Regular SIG meetings</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Once the projects are announced, other project-specific channels may be created as needed.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_information"><a class="anchor" href="#_additional_information"></a>Additional Information</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_technical_writers"><a class="anchor" href="#_technical_writers"></a>Technical writers</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../../../community/document.html" class="xref page">Contributing to Jenkins documentation</a></p>
+</li>
+<li>
+<p><a href="https://developers.google.com/season-of-docs/docs/tech-writer-guide">GSoD Technical Writer guide</a></p>
+</li>
+<li>
+<p><a href="https://developers.google.com/season-of-docs/docs/timeline">GSoD Timeline</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mentors"><a class="anchor" href="#_mentors"></a>Mentors</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://developers.google.com/season-of-docs/docs/timeline">GSoD Timeline</a></p>
+</li>
+<li>
+<p><a href="https://developers.google.com/season-of-docs/docs/project-selection">Selecting projects</a></p>
+</li>
+<li>
+<p><a href="https://developers.google.com/season-of-docs/docs/tech-writer-collaboration">Working with a technical writer</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_office_hours"><a class="anchor" href="#_office_hours"></a>Office Hours</h3>
+<div class="paragraph">
+<p>Documentation office hours are held each Tuesday at <strong>02:00 UTC</strong> (Asia and US West) and each Thursday at <strong>16:00 UTC</strong> (Europe and US East).
+Meetings are conducted and recorded using Zoom and archived to the <a href="https://www.youtube.com/user/jenkinsci">Jenkins YouTube channel</a> in the <a href="https://www.youtube.com/playlist?list=PLN7ajX_VdyaNp0lk5BmyAgqPS52u_4tC8">Jenkins Docs SIG YouTube playlist</a>.
+Participant links are posted in the <a href="https://app.gitter.im/#/room/#jenkins/docs:matrix.org">SIG Gitter Chat</a> 10 minutes before the meeting starts.
+Participant links are also available in the <a href="/events">Jenkins event calendar</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="archive"><a class="anchor" href="#archive"></a>Previous years</h2>
+<div class="sectionbody">
+<div id="GSoD-2021" class="ulist">
+<ul>
+<li>
+<p><strong>GSoD 2021</strong> - not accepted</p>
+<div class="paragraph">
+<p>The Docs SIG <a href="#2021/organization-proposal.adoc" class="xref unresolved">organization proposal</a> as a mentoring organization in Google Season of Docs 2021 was declined.
+See the <a href="https://docs.google.com/document/d/1WaOB2_ekdDzUOGIqi60USCbaV7oNpBtQZtByB7LZwC8/edit?usp=sharing">retrospective</a> for future improvements.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="GSoD-2020" class="ulist">
+<ul>
+<li>
+<p><strong><a href="2020/index.html" class="xref page">GSoD 2020</a></strong> <a href="../../../projects/other/document-jenkins-on-kubernetes.html" class="xref page">Document Jenkins on Kubernetes</a> by <a href="/blog/authors/zaycodes">Zainab Abubakar</a></p>
+<div class="paragraph">
+<p>The Jenkins project was a mentoring organization in Google Season of Docs 2020.
+The writing project started September 14, 2020 and concluded November 30, 2020.
+See the <a href="/blog/2020/12/04/gsod-project-report/">project report</a> by <a href="/blog/authors/zaycodes">Zainab Abubakar</a> for details of
+the writing project and our first experience as a Google Season of Docs mentoring organization.</p>
+</div>
+</li>
+<li>
+<p><strong>GSoD 2019</strong> - not accepted
+(<a href="https://docs.google.com/document/d/1ighqWo7gIDCnLQ-b6FouQKz-fvmHsnTsMfqBh_mVNbI/edit?usp=sharing">application form and project ideas</a>,
+<a href="https://docs.google.com/document/d/1uNNo0QJKPHnNp8PGr_jLI8p3K_94ZYD-M0evZOEZ93c/edit#heading=h.g4afeqolzwpj">retrospective</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

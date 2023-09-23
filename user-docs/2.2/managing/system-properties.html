@@ -1,0 +1,4003 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins Features Controlled with System Properties :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.401.3/managing/system-properties.html">
+    <link rel="prev" href="system-info.html">
+    <link rel="next" href="change-system-timezone.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="user-docs" data-version="2.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins User Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/docker.html">Docker</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-credentials.html">Using credentials</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/searchbox.html">Using Search Box</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/referencing-another-project-by-name.html">Referencing another project by name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/aborting-a-build.html">Aborting a build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/fingerprints.html">Fingerprints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-local-language.html">Using local language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/change-time-zone.html">Change time zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/remote-access-api.html">Remote Access API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/executor-starvation.html">Executor Starvation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-agents.html">Using Jenkins agents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/running-pipelines.html">Running a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/development.html">Pipeline Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/syntax.html">Pipeline Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/pipeline-best-practices.html">Pipeline Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/scaling-pipeline.html">Scaling Pipelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/cps-method-mismatches.html">Pipeline CPS Method Mismatches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/dashboard.html">Dashboard</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/activity.html">Activity View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-run-details.html">Pipeline Run Details View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-editor.html">Pipeline Editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Managing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="system-configuration.html">Configuring the System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="casc.html">Configuration as Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="tools.html">Managing Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="about-jenkins.html">About Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="system-info.html">System Information</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="system-properties.html">Jenkins Features Controlled with System Properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="change-system-timezone.html">Change System Time Zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cli.html">Jenkins CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="script-console.html">Script Console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="groovy-hook-scripts.html">Groovy Hook Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="nodes.html">Managing Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="script-approval.html">In-process Script Approval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ui-themes.html">Themes for user interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="user-content.html">User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="spawning-processes.html">Spawning Processes From Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Securing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/access-control.html">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-jenkins.html">Securing Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/managing-security.html">Managing Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/controller-isolation.html">Controller Isolation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-builds.html">Securing Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/csrf-protection.html">CSRF Protection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/user-content.html">Rendering User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/build-authorization.html">Access Control for Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/environment-variables.html">Handling Environment Variables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/markup-formatter.html">Markup Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/services.html">Exposed Services and Ports</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/index.html">System Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/backing-up.html">Backing-up/Restoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/monitoring.html">Monitoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/administering-jenkins-on-kubernetes.html">Administering Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-chef.html">Managing Jenkins with Chef</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-puppet.html">Managing Jenkins with Puppet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/viewing-logs.html">Viewing logs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/authenticating-scripted-clients.html">Authenticating scripted clients</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration.html">Reverse proxy configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-haproxy.html">Reverse proxy - HAProxy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-squid.html">Reverse proxy - Squid</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-iis.html">Reverse proxy - IIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-iptables.html">Reverse proxy - iptables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../scaling/index.html">Scaling Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-scale.html">Architecting for Scale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/hardware-recommendations.html">Hardware Recommendations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-manageability.html">Architecting for Manageability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../troubleshooting/index.html">Troubleshooting Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/diagnosing-errors.html">Diagnosing Errors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/obtaining-a-thread-dump.html">Obtaining a thread dump</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins User Documentation</span>
+    <span class="version">2.2</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins User Documentation</a></li>
+    <li><a href="index.html">Managing Jenkins</a></li>
+    <li><a href="system-properties.html">Jenkins Features Controlled with System Properties</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.2</button>
+  <div class="version-menu">
+    <a class="version" href="../../2.401.3/managing/system-properties.html">2.401.3</a>
+    <a class="version is-current" href="system-properties.html">2.2</a>
+    <a class="version" href="../../2.1/managing/system-properties.html">2.1</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/2.401.3/docs/user-docs/modules/managing/pages/system-properties.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins Features Controlled with System Properties</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins has several "hidden" features that can be enabled with system properties. This page documents many of them and explain how to configure them on your instance.</p>
+</div>
+<div class="paragraph">
+<p>Some system properties related to the Remoting library used for communication between controller and agents are documented in that component’s repository.
+== Usage</p>
+</div>
+<div class="paragraph">
+<p>System properties are defined by passing <code>-Dproperty=value</code> to the <code>java</code> command line to start Jenkins. Make sure to pass all of these arguments before the <code>-jar</code> argument, otherwise they will be ignored. Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">java -Dhudson.footerURL=http://example.org -jar jenkins.war</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following lists the properties and the version of Jenkins they were introduced in.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Property - Java property name</p>
+</li>
+<li>
+<p>Default - Default value if not explicitly set</p>
+</li>
+<li>
+<p>Since - The version of Jenkins the property was introduced in</p>
+</li>
+<li>
+<p>Description - Other notes</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_compatibility"><a class="anchor" href="#_compatibility"></a>Compatibility</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We do <strong>NOT</strong> guarantee that system properties will remain unchanged and functional indefinitely. These switches are often experimental in nature, and subject to change without notice. If you find these useful, please file a ticket to promote it to an official feature.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties_in_jenkins_core"><a class="anchor" href="#_properties_in_jenkins_core"></a>Properties in Jenkins Core</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Due to the very large number of system properties used, often just added as a "safety valve" or "escape hatch" in case a change causes problems, this list is not expected to be complete.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>name: debug.YUI
+tags:</p>
+</li>
+<li>
+<p>development
+since: December 2006 # <a href="https://github.com/jenkinsci/jenkins/commit/ab68a9fce7672649b797ea6ff46f88c965e2404b" class="bare">https://github.com/jenkinsci/jenkins/commit/ab68a9fce7672649b797ea6ff46f88c965e2404b</a>
+def: |
+  <code>false</code>
+description: |
+  Whether to use the minified (<code>false</code>) or debug (<code>true</code>) JS files for the YUI library.</p>
+</li>
+<li>
+<p>name: executable-war
+def: |
+  Path to <code>jenkins.war</code> when invoked as <code>java -jar jenkins.war</code>, undefined otherwise.
+tags:</p>
+</li>
+<li>
+<p>packaging
+description: |
+  This is the path to <code>jenkins.war</code> and set by the <code>executable-war</code> wrapper when invoked using <code>java -jar jenkins.war</code>.
+  This allows Jenkins to find its own <code>.war</code> file and e.g. replace it to apply an update.
+  If undefined, Jenkins will not e.g. offer to update itself.</p>
+</li>
+<li>
+<p>name: hudson.bundled.plugins
+tags:</p>
+</li>
+<li>
+<p>development
+def: undefined
+description: |
+  Specify a location for additional bundled plugins during plugin development (<code>hpi:run</code>).
+  There is no reason this would be set by an administrator.</p>
+</li>
+<li>
+<p>name: hudson.ClassicPluginStrategy.noBytecodeTransformer
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>obsolete
+def: |
+  <code>false</code>
+since: 1.538 # <a href="https://github.com/jenkinsci/jenkins/commit/f98c4627da3c21e37aff82c75c0ef7240e60b4da" class="bare">https://github.com/jenkinsci/jenkins/commit/f98c4627da3c21e37aff82c75c0ef7240e60b4da</a>
+description: |
+  Disable the bytecode transformer that retains compatibility at runtime after changing public Java APIs.
+  Has no effect since 2.296, as the bytecode transformer has been removed.</p>
+</li>
+<li>
+<p>name: hudson.ClassicPluginStrategy.useAntClassLoader
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code> (until 2.309 and since 2.348), <code>true</code> (from 2.310 to 2.347)
+since: 1.316
+# Unused since <a href="https://github.com/jenkinsci/jenkins/commit/47de54d070f67af95b4fefb6d006a72bb31a5cb8" class="bare">https://github.com/jenkinsci/jenkins/commit/47de54d070f67af95b4fefb6d006a72bb31a5cb8</a>
+# Restored and default in <a href="https://github.com/jenkinsci/jenkins/pull/5698" class="bare">https://github.com/jenkinsci/jenkins/pull/5698</a>
+# Disabled since <a href="https://github.com/jenkinsci/jenkins/pull/6571" class="bare">https://github.com/jenkinsci/jenkins/pull/6571</a>
+description: |
+  Unused between 1.527 and 2.309.
+  Since 2.310, can be set to <code>false</code> to use <code>URLClassLoader</code> instead.
+  This is the default since 2.347.</p>
+</li>
+<li>
+<p>name: hudson.cli.CLI.pingInterval
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>3000</code>
+since: 2.199
+description: |
+  Client-side HTTP CLI ping interval in milliseconds.
+  Set on the CLI client (<code>java -jar jenkins-cli.jar</code>), not Jenkins server process.</p>
+</li>
+<li>
+<p>name: hudson.ConsoleNote.INSECURE
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 2.44 / 2.32.2
+description: |
+  Whether to load unsigned console notes.
+  See SECURITY-382 on <a href="/security/advisory/2017-02-01/#persisted-cross-site-scripting-vulnerability-in-console-notes">Jenkins Security Advisory 2017-02-01</a>.</p>
+</li>
+<li>
+<p>name: hudson.consoleTailKB
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>150</code>
+since: March 2009 # <a href="https://github.com/jenkinsci/jenkins/commit/bf81f96ab3d5e90bca0963c51c40a62d2642548d" class="bare">https://github.com/jenkinsci/jenkins/commit/bf81f96ab3d5e90bca0963c51c40a62d2642548d</a>
+description: |
+  How many KB of console log to show in default console view.
+  This property had no effect from Jenkins 2.4 (inclusive) until 2.98/2.89.3 (exclusive), see JENKINS-48593.</p>
+</li>
+<li>
+<p>name: hudson.diagnosis.HudsonHomeDiskUsageChecker.freeSpaceThreshold
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>1073741824</code> (1 GB, up to 2.39), <code>10737418240</code> (10 GB, from 2.40)
+since: 1.339
+description: |
+  If there&#8217;s less than this amount of free disk space, in bytes, on the disk with the Jenkins home directory, and the disk is 90% or more full, a warning will be shown to administrators.</p>
+</li>
+<li>
+<p>name: hudson.diyChunking
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+since: May 2009 # <a href="https://github.com/jenkinsci/jenkins/commit/703c50cf62dedfb7085d345ec102df7395cf7fca" class="bare">https://github.com/jenkinsci/jenkins/commit/703c50cf62dedfb7085d345ec102df7395cf7fca</a>
+description: |
+  Set to <code>true</code> if the servlet container doesn&#8217;t support chunked encoding.</p>
+</li>
+<li>
+<p>name: hudson.DNSMultiCast.disabled
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>obsolete
+def: |
+  <code>false</code> until 2.218, <code>true</code> in 2.219
+since: 1.359
+description: |
+  Set to <code>true</code> to disable DNS multicast.
+  Has no effect since 2.220 as the feature has been removed.
+  See <a href="/security/advisory/2020-01-29/#SECURITY-1641">SECURITY-1641</a></p>
+</li>
+<li>
+<p>name: hudson.FilePath.VALIDATE_ANT_FILE_MASK_BOUND
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>10000</code>
+since: 1.592
+description: |
+  Max. number of operations to validate a file mask (e.g. pattern to archive artifacts).</p>
+</li>
+<li>
+<p>name: hudson.footerURL
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>https://jenkins.io</code>
+since: 1.416
+description: |
+  Allows tweaking the URL displayed at the bottom of Jenkins' UI</p>
+</li>
+<li>
+<p>name: hudson.Functions.autoRefreshSeconds
+tags:</p>
+</li>
+<li>
+<p>obsolete</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>10</code>
+since: 1.365
+description: |
+  Number of seconds between reloads when Auto Refresh is enabled.
+  Obsolete since the feature was removed in Jenkins 2.223.</p>
+</li>
+<li>
+<p>name: hudson.Functions.hidingPasswordFields
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>true</code>
+since: 2.205
+description: |
+  Jenkins 2.205 and newer attempts to prevent browsers from offering to auto-fill password form fields by using a custom password control.
+  Setting this to <code>false</code> reverts to the legacy behavior of using mostly standard password form fields.</p>
+</li>
+<li>
+<p>name: hudson.lifecycle
+tags:</p>
+</li>
+<li>
+<p>packaging
+def: |
+  automatically determined based on environment, see <code>hudson.lifecycle.Lifecycle</code>
+description: |
+  Specify full class name for Lifecycle implementation to override default.
+  See <a href="/doc/developer/extensions/jenkins-core/#lifecycle">documentation</a> for class names.</p>
+</li>
+<li>
+<p>name: hudson.logging.LogRecorderManager.skipPermissionCheck
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.121.3 and 2.138
+description: |
+  Disable security hardening for LogRecorderManager Stapler access.
+  Possibly unsafe, <a href="/security/advisory/2018-12-05/#SECURITY-595">see 2018-12-05 security advisory</a>.</p>
+</li>
+<li>
+<p>name: hudson.Main.development
+tags:</p>
+</li>
+<li>
+<p>development
+def: |
+  <code>false</code> in production, <code>true</code> in development
+description: |
+  This is set to <code>true</code> by the development tooling to identify when Jenkins is running via <code>jetty:run</code> or <code>hpi:run</code>.
+  Can be used to distinguish between development and production use; most prominently used to bypass the setup wizard when running with an empty Jenkins home directory during development.</p>
+</li>
+<li>
+<p>name: hudson.Main.timeout
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>15000</code>
+description: |
+  When using <code>jenkins-core.jar</code> from the CLI, this is the connection timeout connecting to Jenkins to report a build result.</p>
+</li>
+<li>
+<p>name: hudson.markup.MarkupFormatter.previewsAllowGET
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.263.2 / 2.275
+description: |
+  Controls whether URLs implementing markup formatter previews are accessible via GET.
+  See <a href="/security/advisory/2021-01-13/#SECURITY-2153">2021-01-13 security advisory</a>.</p>
+</li>
+<li>
+<p>name: hudson.markup.MarkupFormatter.previewsSetCSP
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>true</code>
+since: 2.263.2 / 2.275
+description: |
+  Controls whether to set restrictive Content-Security-Policy headers on URLs implementing markup formatter previews.
+  See <a href="/security/advisory/2021-01-13/#SECURITY-2153">2021-01-13 security advisory</a>.</p>
+</li>
+<li>
+<p>name: hudson.matrix.MatrixConfiguration.useShortWorkspaceName
+# TODO move to matrix-project plugin documentation
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+description: |
+  Use shorter but cryptic names in matrix build workspace directories.
+  Avoids problems with 256 character limit on paths in Cygwin, path depths problems on Windows, and shell metacharacter problems with label expressions on most platforms.
+  See <a href="https://issues.jenkins.io/browse/JENKINS-25783">JENKINS-25783</a>.</p>
+</li>
+<li>
+<p>name: hudson.model.AbstractItem.skipPermissionCheck
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.121.3 / 2.138
+description: |
+  Disable security hardening related to Stapler routing for AbstractItem.
+  Possibly unsafe, <a href="/security/advisory/2018-12-05/#SECURITY-595">see 2018-12-05 security advisory</a>.</p>
+</li>
+<li>
+<p>name: hudson.model.Api.INSECURE
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>obsolete
+def: |
+  <code>false</code>
+since: 1.502
+description: |
+  Set to <code>true</code> to permit accessing the Jenkins remote API in an unsafe manner.
+  See SECURITY-47.
+  Deprecated, use e.g. <a href="https://plugins.jenkins.io/secure-requester-whitelist/">Secure Requester Whitelist</a> instead.</p>
+</li>
+<li>
+<p>name: hudson.model.AsyncAperiodicWork.logRotateMinutes
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>1440</code>
+since: 1.651
+description: |
+  The number of minutes after which to try and rotate the log file used by any AsyncAperiodicWork extension.
+  For fine-grained control of a specific extension you can use the <code><em>FullyQualifiedClassName</em>.logRotateMinutes</code> system property to only affect a specific extension.
+  <em>It is not anticipated that you will ever need to change these defaults.</em></p>
+</li>
+<li>
+<p>name: hudson.model.AsyncAperiodicWork.logRotateSize
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>-1</code>
+since: 1.651
+description: |
+  When starting a new run of any AsyncAperiodicWork extension, if this value is non-negative and the existing log file is larger than the specified number of bytes then the log file will be rotated.
+  For fine-grained control of a specific extension you can use the <code><em>FullyQualifiedClassName</em>.logRotateSize</code> system property to only affect a specific extension.
+  <em>It is not anticipated that you will ever need to change these defaults.</em></p>
+</li>
+<li>
+<p>name: hudson.model.AsyncPeriodicWork.logRotateMinutes
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>1440</code>
+since: 1.651
+description: |
+  The number of minutes after which to try and rotate the log file used by any AsyncPeriodicWork extension.
+  For fine-grained control of a specific extension you can use the <code><em>FullyQualifiedClassName</em>.logRotateMinutes</code> system property to only affect a specific extension.
+  <em>It is not anticipated that you will ever need to change these defaults.</em></p>
+<div class="literalblock">
+<div class="content">
+<pre>Some implementations that can be individually configured (see _FullyQualifiedClassName_ above):</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>hudson.model.WorkspaceCleanupThread</code></p>
+</li>
+<li>
+<p><code>hudson.model.FingerprintCleanupThread</code></p>
+</li>
+<li>
+<p><code>hudson.slaves.ConnectionActivityMonitor</code></p>
+</li>
+<li>
+<p><code>jenkins.DailyCheck</code></p>
+</li>
+<li>
+<p><code>jenkins.model.BackgroundGlobalBuildDiscarder</code></p>
+</li>
+<li>
+<p><code>jenkins.telemetry.Telemetry$TelemetryReporter</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>name: hudson.model.AsyncPeriodicWork.logRotateSize
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>-1</code>
+since: 1.651
+description: |
+  When starting a new run of any AsyncPeriodicWork extension, if this value is non-negative and the existing log file is larger than the specified number of bytes then the log file will be rotated.
+  For fine-grained control of a specific extension you can use the <code><em>FullyQualifiedClassName</em>.logRotateSize</code> system property to only affect a specific extension.
+  <em>It is not anticipated that you will ever need to change these defaults</em></p>
+<div class="literalblock">
+<div class="content">
+<pre>Some implementations that can be individually configured (see _FullyQualifiedClassName_ above):</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>hudson.model.WorkspaceCleanupThread</code></p>
+</li>
+<li>
+<p><code>hudson.model.FingerprintCleanupThread</code></p>
+</li>
+<li>
+<p><code>hudson.slaves.ConnectionActivityMonitor</code></p>
+</li>
+<li>
+<p><code>jenkins.DailyCheck</code></p>
+</li>
+<li>
+<p><code>jenkins.model.BackgroundGlobalBuildDiscarder</code></p>
+</li>
+<li>
+<p><code>jenkins.telemetry.Telemetry$TelemetryReporter</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>name: hudson.model.DirectoryBrowserSupport.allowAbsolutePath
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.315 and 2.303.2
+description: |
+  Escape hatch for <a href="/security/advisory/2021-10-06/#SECURITY-2481">SECURITY-2481</a>.
+  Set this to <code>true</code> to allow browsing to absolute paths.</p>
+</li>
+<li>
+<p>name: hudson.model.DirectoryBrowserSupport.allowSymlinkEscape
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.154 and 2.138.4
+description: |
+  Escape hatch for <a href="/security/advisory/2018-12-05/#SECURITY-904">SECURITY-904</a> and <a href="/security/advisory/2021-01-13/#SECURITY-1452">SECURITY-1452</a>.</p>
+</li>
+<li>
+<p>name: hudson.model.DirectoryBrowserSupport.allowTmpEscape
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.394 and 2.375.4
+description: |
+  Escape hatch for <a href="/security/advisory/2023-03-08/#SECURITY-1807">SECURITY-1807</a>.</p>
+</li>
+<li>
+<p>name: hudson.model.DirectoryBrowserSupport.CSP
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>sandbox; default-src 'none'; image-src 'self'; style-src 'self';</code>
+since: 1.625.3, 1.641
+description: |
+  Determines the Content Security Policy header sent for static files served by Jenkins.
+  Only affects instances that don&#8217;t have a resource root URL set up.
+  See <a href="../../system-administration/security/configuring-content-security-policy/">Configuring Content Security Policy</a> for more details.</p>
+</li>
+<li>
+<p>name: hudson.model.DownloadService$Downloadable.defaultInterval
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>86400000</code> (1 day)
+since: '1.500'
+description: |
+  Interval between periodic downloads of <em>Downloadables</em>, typically tool installer metadata.</p>
+</li>
+<li>
+<p>name: hudson.model.DownloadService.never
+tags:</p>
+</li>
+<li>
+<p>obsolete</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 1.319 # <a href="https://github.com/jenkinsci/jenkins/commit/163c08003eb25cbe259fc8a8277bb3e264e36d18" class="bare">https://github.com/jenkinsci/jenkins/commit/163c08003eb25cbe259fc8a8277bb3e264e36d18</a>
+description: |
+  Suppress the periodic download of data files for plugins via browser-based download.
+  Since Jenkins 2.200, this has no effect.</p>
+</li>
+<li>
+<p>name: hudson.model.DownloadService.noSignatureCheck
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 1.482 # <a href="https://github.com/jenkinsci/jenkins/commit/62f66f899c95ccdfdc7a5d3346240988b42a9aad" class="bare">https://github.com/jenkinsci/jenkins/commit/62f66f899c95ccdfdc7a5d3346240988b42a9aad</a>
+description: |
+  Skip the update site signature check.
+  Setting this to <code>true</code> can be unsafe.</p>
+</li>
+<li>
+<p>name: hudson.model.Hudson.flyweightSupport
+tags:</p>
+</li>
+<li>
+<p>obsolete</p>
+</li>
+<li>
+<p>feature</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code> before 1.337; <code>true</code> from 1.337; unused since 1.598
+since: 1.318
+description: |
+  Matrix parent job and other flyweight tasks (e.g. Build Flow plugin) won&#8217;t consume an executor when <code>true</code>.
+  Unused since 1.598, flyweight support is now always enabled.</p>
+</li>
+<li>
+<p>name: hudson.model.Hudson.initLogLevel
+tags:</p>
+</li>
+<li>
+<p>obsolete
+description: |
+  Deprecated: Backward-compatible fallback for <code>jenkins.model.Jenkins.initLogLevel</code>.
+  Removed since 2.272.</p>
+</li>
+<li>
+<p>name: hudson.model.Hudson.killAfterLoad
+tags:</p>
+</li>
+<li>
+<p>obsolete
+description: |
+  Deprecated: Backward-compatible fallback for <code>jenkins.model.Jenkins.killAfterLoad</code>.
+  Removed since 2.272.</p>
+</li>
+<li>
+<p>name: hudson.model.Hudson.logStartupPerformance
+tags:</p>
+</li>
+<li>
+<p>obsolete
+description: |
+  Deprecated: Backward-compatible fallback for <code>jenkins.model.Jenkins.logStartupPerformance</code>.
+  Removed since 2.272.</p>
+</li>
+<li>
+<p>name: hudson.model.Hudson.parallelLoad
+tags:</p>
+</li>
+<li>
+<p>obsolete
+description: |
+  Deprecated: Backward-compatible fallback for <code>jenkins.model.Jenkins.parallelLoad</code>.
+  Removed since 2.272.</p>
+</li>
+<li>
+<p>name: hudson.model.Hudson.workspaceDirName
+tags:</p>
+</li>
+<li>
+<p>obsolete
+description: |
+  Deprecated: Backward-compatible fallback for <code>jenkins.model.Jenkins.workspaceDirName</code>.
+  Removed since 2.272.</p>
+</li>
+<li>
+<p>name: hudson.model.LabelAtom.allowFolderTraversal
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.263.2 / 2.275
+description: |
+  Controls whether label names containing unsafe characters that lead to path traversal can be saved.
+  See <a href="/doc/upgrade-guide/2.263/#labelatom">2.263.2 upgrade guide</a>.</p>
+</li>
+<li>
+<p>name: hudson.model.LoadStatistics.clock
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>10000</code> (10 seconds)
+since: January 2009 # <a href="https://github.com/jenkinsci/jenkins/commit/8d771bc2e335fea5369ba06066c87866494fa5e3" class="bare">https://github.com/jenkinsci/jenkins/commit/8d771bc2e335fea5369ba06066c87866494fa5e3</a>
+description: |
+  Load statistics clock cycle in milliseconds.</p>
+</li>
+<li>
+<p>name: hudson.model.LoadStatistics.decay
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>0.9</code>
+since: January 2009 # <a href="https://github.com/jenkinsci/jenkins/commit/8d771bc2e335fea5369ba06066c87866494fa5e3" class="bare">https://github.com/jenkinsci/jenkins/commit/8d771bc2e335fea5369ba06066c87866494fa5e3</a>
+description: |
+  Decay ratio for every clock cycle in node utilization charts.</p>
+</li>
+<li>
+<p>name: hudson.model.MultiStageTimeSeries.chartFont
+tags:</p>
+</li>
+<li>
+<p>feature</p>
+</li>
+<li>
+<p>ui
+def: |
+  <code>SansSerif-10</code>
+since: 1.562
+description: |
+  Font used for load statistics.
+  See <a href="http://docs.oracle.com/javase/7/docs/api/java/awt/Font.html#decode%28java.lang.String%29">Java documentation</a> on how the value is decoded.</p>
+</li>
+<li>
+<p>name: hudson.model.Node.SKIP_BUILD_CHECK_ON_FLYWEIGHTS
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>true</code>
+since: 2.111 # <a href="https://github.com/jenkinsci/jenkins/commit/036e0ce6bb0f257c1e90d49a0af907adf6bb79f7" class="bare">https://github.com/jenkinsci/jenkins/commit/036e0ce6bb0f257c1e90d49a0af907adf6bb79f7</a>
+description: |
+  Whether to allow building flyweight tasks even if the necessary permission (Computer/Build) is missing.
+  See <a href="https://issues.jenkins.io/browse/JENKINS-46652">JENKINS-46652</a>.</p>
+</li>
+<li>
+<p>name: hudson.model.ParametersAction.keepUndefinedParameters
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: undefined
+since: 1.651.2 / 2.3
+# TODO add advisory reference
+description: |
+  If true, not discard parameters for builds that are not defined on the job.
+  <strong>Enabling this can be unsafe.</strong>
+  Since Jenkins 2.40, if set to false, will not log a warning message that parameters were defined but ignored.</p>
+</li>
+<li>
+<p>name: hudson.model.ParametersAction.safeParameters
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: undefined
+since: 1.651.2 / 2.3
+# TODO add advisory reference
+description: |
+  Comma-separated list of additional build parameter names that should not be discarded even when not defined on the job.</p>
+</li>
+<li>
+<p>name: hudson.model.Queue.cacheRefreshPeriod
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>1000</code>
+since: 1.577 up to 1.647
+description: |
+  Defines the refresh period for the internal queue cache (in milliseconds).
+  The greater period workarounds web UI delays on large installations, which may be caused by locking of the build queue by build executors.
+  Downside: Builds appear in the queue with a noticeable delay.</p>
+</li>
+<li>
+<p>name: hudson.model.Queue.Saver.DELAY_SECONDS
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>60</code>
+since: 2.109
+description: |
+  Maximal delay of a save operation when content of Jenkins queue changes.
+  This works as a balancing factor between queue consistency guarantee in case of Jenkins crash (short delay) and decreasing IO activity based on Jenkins load (long delay).</p>
+</li>
+<li>
+<p>name: hudson.model.Run.ArtifactList.listCutoff
+tags:</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>ui
+def: |
+  <code>16</code>
+since: 1.330
+description: |
+  More artifacts than this will use tree view or simple link rather than listing out artifacts</p>
+</li>
+<li>
+<p>name: hudson.model.Run.ArtifactList.treeCutoff
+tags:</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>ui
+def: |
+  <code>40</code>
+since: 1.330
+description: |
+  More artifacts than this will show a simple link to directory browser rather than showing artifacts in tree view</p>
+</li>
+<li>
+<p>name: hudson.model.Slave.workspaceRoot
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>workspace</code>
+since: 1.341?
+description: |
+  name of the folder within the agent root directory to contain workspaces</p>
+</li>
+<li>
+<p>name: hudson.model.UpdateCenter.className
+tags:</p>
+</li>
+<li>
+<p>packaging
+def: |
+  effectively <code>hudson.model.UpdateCenter</code>
+since: 2.4
+description: |
+  This allows overriding the implementation class for update center when customizing the <code>.war</code> packaging of Jenkins.
+  Cannot be used for plugins.</p>
+</li>
+<li>
+<p>name: hudson.model.UpdateCenter.defaultUpdateSiteId
+def: |
+  <code>default</code>
+since: 2.4
+# TODO figure out what this even does, IIRC Jenkins doesn&#8217;t care about the ID other than distinguish on the UI?
+description: |
+  Configure a different ID for the default update site.
+  Useful for custom war distributions or externally provided UC data files.</p>
+</li>
+<li>
+<p>name: hudson.model.UpdateCenter.never
+def: |
+  <code>false</code>
+description: |
+  When true, don&#8217;t automatically check for new versions</p>
+</li>
+<li>
+<p>name: hudson.model.UpdateCenter.pluginDownloadReadTimeoutSeconds
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>60</code>
+description: |
+  Read timeout in seconds for downloading plugins.</p>
+</li>
+<li>
+<p>name: hudson.model.UpdateCenter.skipPermissionCheck
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.121.3 / 2.138
+description: |
+  Disable security hardening related to Stapler routing for UpdateCenter.
+  Possibly unsafe, <a href="/security/advisory/2018-12-05/#SECURITY-595">see 2018-12-05 security advisory</a>.</p>
+</li>
+<li>
+<p>name: hudson.model.UpdateCenter.updateCenterUrl
+tags:</p>
+</li>
+<li>
+<p>obsolete
+def: |
+  <code>https://updates.jenkins.io/</code>
+description: |
+  Deprecated: Override the default update site URL.
+  May have no effect since Jenkins 1.333.</p>
+</li>
+<li>
+<p>name: hudson.model.UsageStatistics.disabled
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+since: May 2009
+# <a href="https://github.com/jenkinsci/jenkins/commit/49ace47432e473b8f5febb6cc00f177be5854ffb" class="bare">https://github.com/jenkinsci/jenkins/commit/49ace47432e473b8f5febb6cc00f177be5854ffb</a> looks like a rename
+# but it was originally added the same day <a href="https://github.com/jenkinsci/jenkins/commit/10cc0441aeaf7c042dc1ecca674a7cf9b8375863" class="bare">https://github.com/jenkinsci/jenkins/commit/10cc0441aeaf7c042dc1ecca674a7cf9b8375863</a> just a typo
+description: |
+  Set to <code>true</code> to opt out of usage statistics collection, independent of UI option.</p>
+</li>
+<li>
+<p>name: hudson.model.User.allowNonExistentUserToLogin
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 1.602
+description: |
+  When <code>true</code>, does not check auth realm for existence of user if there&#8217;s a record in Jenkins.
+  Unsafe, but may be used on some instances for service accounts</p>
+</li>
+<li>
+<p>name: hudson.model.User.allowUserCreationViaUrl
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.44 / 2.32.2
+description: |
+  Whether admins accessing <code>/user/example</code> creates a user record (see SECURITY-406 on <a href="https://wiki.jenkins.io/display/SECURITY/Jenkins+Security+Advisory+2017-02-01">Jenkins Security Advisory 2017-02-01</a>)</p>
+</li>
+<li>
+<p>name: hudson.model.User.SECURITY_243_FULL_DEFENSE
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>true</code>
+since: 1.651.2 / 2.3
+description: |
+  When false, skips part of the fix that tries to determine whether a given user ID exists, and if so, doesn&#8217;t consider users with the same full name during resolution.</p>
+</li>
+<li>
+<p>name: hudson.model.User.skipPermissionCheck
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.121.3 / 2.138
+description: |
+  Disable security hardening related to Stapler routing for User.
+  Possibly unsafe, <a href="/security/advisory/2018-12-05/#SECURITY-595">see 2018-12-05 security advisory</a>.</p>
+</li>
+<li>
+<p>name: hudson.model.WorkspaceCleanupThread.disabled
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: June 2009 # <a href="https://github.com/jenkinsci/jenkins/commit/ee5cba8fac256580ac30878ed28cf3330cc9d4a4" class="bare">https://github.com/jenkinsci/jenkins/commit/ee5cba8fac256580ac30878ed28cf3330cc9d4a4</a>
+description: |
+  Don&#8217;t clean up old workspaces on agent nodes</p>
+</li>
+<li>
+<p>name: hudson.model.WorkspaceCleanupThread.recurrencePeriodHours
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>24</code>
+since: 1.608
+description: |
+  How frequently workspace cleanup should run, in hours.</p>
+</li>
+<li>
+<p>name: hudson.model.WorkspaceCleanupThread.retainForDays
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>30</code>
+since: 1.608
+description: |
+  Unused workspaces are retained for this many days before qualifying for deletion.</p>
+</li>
+<li>
+<p>name: hudson.node_monitors.AbstractNodeMonitorDescriptor.periodMinutes
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>60</code> (1 hour)
+description: |
+  How frequently to update node monitors by default, in minutes.</p>
+</li>
+<li>
+<p>name: hudson.PluginManager.checkUpdateAttempts
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>1</code>
+since: 2.152
+description: |
+  Number of attempts to check the updates sites.</p>
+</li>
+<li>
+<p>name: hudson.PluginManager.checkUpdateSleepTimeMillis
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>1000</code>
+since: 2.152
+description: |
+  Time (milliseconds) elapsed between retries to check the updates sites.</p>
+</li>
+<li>
+<p>name: hudson.PluginManager.className
+tags:</p>
+</li>
+<li>
+<p>packaging
+def: |
+  effectively <code>hudson.LocalPluginManager</code>
+description: |
+  Can be used to specify a different <code>PluginManager</code> implementation when customizing the <code>.war</code> packaging of Jenkins.
+  Cannot be used for plugins.</p>
+</li>
+<li>
+<p>name: hudson.PluginManager.noFastLookup
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+description: |
+  Disable fast lookup using <code>ClassLoaderReflectionToolkit</code> which reflectively accesses internal methods of <code>ClassLoader</code>.</p>
+</li>
+<li>
+<p>name: hudson.PluginManager.skipPermissionCheck
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.121.3 / 2.138
+description: |
+  Disable security hardening related to Stapler routing for PluginManager.
+  Possibly unsafe, <a href="/security/advisory/2018-12-05/#SECURITY-595">see 2018-12-05 security advisory</a>.</p>
+</li>
+<li>
+<p>name: hudson.PluginManager.workDir
+tags:</p>
+</li>
+<li>
+<p>feature
+def: undefined
+since: 1.649
+description: |
+  Location of the base directory for all exploded .hpi/.jpi plugins.
+  By default the plugins will be extracted under <code>$JENKINS_HOME/plugins/</code>.</p>
+</li>
+<li>
+<p>name: hudson.PluginStrategy
+tags:</p>
+</li>
+<li>
+<p>packaging
+def: |
+  effectively <code>hudson.ClassicPluginStrategy</code>
+description: |
+  Allow plugins to be loaded into a different environment, such as an existing DI container like Plexus.
+  Specify the full class name of a <code>hudson.PluginStrategy</code> implementation to override the default.</p>
+</li>
+<li>
+<p>name: hudson.PluginWrapper.dependenciesVersionCheck.enabled
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>true</code>
+since: 2.0
+description: |
+  Set to <code>false</code> to skip the version check for plugin dependencies.</p>
+</li>
+<li>
+<p>name: hudson.ProxyConfiguration.DEFAULT_CONNECT_TIMEOUT_MILLIS
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>20000</code>
+since: 2.0
+description: |
+  Connection timeout applied to connections e.g. to the update site.</p>
+</li>
+<li>
+<p>name: hudson.remoting.ChannelBuilder.allCallablesCanIgnoreRoleChecker
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>scape hatch
+def: |
+  <code>false</code>
+since: 2.319 and 2.303.3
+description: |
+  Disable requirement for remoting callables to perform a role check.
+  See <a href="/doc/upgrade-guide/2.303/#SECURITY-2458">the description in the upgrade guide</a>.</p>
+</li>
+<li>
+<p>name: hudson.remoting.ChannelBuilder.specificCallablesCanIgnoreRoleChecker
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>scape hatch
+def: undefined
+since: 2.319 and 2.303.3
+description: |
+  Comma-separated list of class names allowed to bypass role check requirement.
+  See <a href="/doc/upgrade-guide/2.303/#SECURITY-2458">the description in the upgrade guide</a>.</p>
+</li>
+<li>
+<p>name: hudson.remoting.ClassFilter
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: undefined
+description: |
+  Allow or disallow the deserialization of specified types.
+  Comma-separated class names, entries are whitelisted unless prefixed with <code>!</code>.
+  See jep:200#backwards-compatibility[JEP-200] and <a href="https://issues.jenkins.io/browse/JENKINS-47736">JENKINS-47736</a>.</p>
+</li>
+<li>
+<p>name: hudson.scheduledRetention
+tags:</p>
+</li>
+<li>
+<p>obsolete
+# TODO figure out what this does
+def: |
+  <code>false</code>
+since: Up to 1.354
+description: |
+  Control a agent based on a schedule</p>
+</li>
+<li>
+<p>name: hudson.scm.SCM.useAutoBrowserHolder
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code> since Jenkins 2.9, <code>true</code> before
+description: |
+  When set to <code>true</code>, Jenkins will guess the repository browser used to render links in the changelog.</p>
+</li>
+<li>
+<p>name: hudson.script.noCache
+tags:</p>
+</li>
+<li>
+<p>development
+def: |
+  <code>false</code> in production, <code>true</code> during development
+description: |
+  When set to true, Jenkins will not reference resource files through the <code>/static/&#8230;&#8203;/</code> URL space, preventing their caching.
+  This is set to <code>true</code> during development by default, and <code>false</code> otherwise.</p>
+</li>
+<li>
+<p>name: hudson.search.Search.MAX_SEARCH_SIZE
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>500</code>
+since: 2.375.4 / 2.394
+description: |
+  Limits the number of results a search can render.</p>
+</li>
+<li>
+<p>name: hudson.search.Search.skipPermissionCheck
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.121.3 / 2.138
+description: |
+  Disable security hardening related to Stapler routing for Search.
+  Possibly unsafe, <a href="/security/advisory/2018-12-05/#SECURITY-595">see 2018-12-05 security advisory</a>.</p>
+</li>
+<li>
+<p>name: hudson.security.AccessDeniedException2.REPORT_GROUP_HEADERS
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.46 / 2.32.3
+description: |
+  If set to true, restore pre-2.46 behavior of sending HTTP headers on "access denied" pages listing group memberships.</p>
+</li>
+<li>
+<p>name: hudson.security.ArtifactsPermission
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 1.374
+description: |
+  The Artifacts permission allows to control access to artifacts; When this property is unset or set to false, access to artifacts is not controlled</p>
+</li>
+<li>
+<p>name: hudson.security.csrf.CrumbFilter.UNPROCESSED_PATHINFO
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.228 and 2.204.6
+description: |
+  Escape hatch for <a href="/security/advisory/2020-03-25/#SECURITY-1774">SECURITY-1774</a>.</p>
+</li>
+<li>
+<p>name: hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.186 and 2.176.2
+description: |
+  Escape hatch for <a href="/security/advisory/2019-07-17/#SECURITY-626">SECURITY-626</a>.</p>
+</li>
+<li>
+<p>name: hudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PROTECTION
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.222
+description: |
+  Restore the ability to disable CSRF protection after the UI for doing so was removed from Jenkins 2.222.</p>
+</li>
+<li>
+<p>name: hudson.security.csrf.requestfield
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>.crumb</code> (Jenkins 1.x), <code>Jenkins-Crumb</code> (Jenkins 2.0)
+since: 1.310
+description: |
+  Parameter name that contains a crumb value on POST requests</p>
+</li>
+<li>
+<p>name: hudson.security.ExtendedReadPermission
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+since: 1.324
+description: |
+  The ExtendedReadPermission allows read-only access to "Configure" pages; can also enable with extended-read-permission plugin</p>
+</li>
+<li>
+<p>name: hudson.security.HudsonPrivateSecurityRealm.ID_REGEX
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>[a-zA-Z0-9_-]+</code>
+since: 2.121 and 2.107.3
+description: |
+  Regex for legal user names in Jenkins user database.
+  See <a href="/security/advisory/2018-05-09/#SECURITY-786">SECURITY-786</a>.</p>
+</li>
+<li>
+<p>name: hudson.security.HudsonPrivateSecurityRealm.maximumBCryptLogRound
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>18</code>
+since: 2.161
+description: |
+  Limits the number of rounds for pre-computed BCrypt hashes of user passwords for the Jenkins user database to prevent excessive computation.</p>
+</li>
+<li>
+<p>name: hudson.security.LDAPSecurityRealm.groupSearch
+# TODO move out, it&#8217;s LDAP plugin
+  # def: TODO recover default that was apparently lost after wiki
+  description: |
+    LDAP filter to look for groups by their names</p>
+</li>
+<li>
+<p>name: hudson.security.SecurityRealm.sessionFixationProtectionMode
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>1</code>
+since: 2.300 and 2.289.2
+description: |
+  Escape hatch for <a href="/security/advisory/2021-06-30/#SECURITY-2371">SECURITY-2371</a>.
+  Set to <code>0</code> to disable the fix or to <code>2</code> to select an alternative implementation.</p>
+</li>
+<li>
+<p>name: hudson.security.TokenBasedRememberMeServices2.skipTooFarExpirationDateCheck
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.160 and 2.150.2
+description: |
+  Escape hatch for <a href="/security/advisory/2019-01-16/#SECURITY-868">SECURITY-868</a></p>
+</li>
+<li>
+<p>name: hudson.security.WipeOutPermission
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+since: 1.416
+description: |
+  The WipeOut permission allows to control access to the "Wipe Out Workspace" action, which is normally available as soon as the Build permission is granted</p>
+</li>
+<li>
+<p>name: hudson.slaves.ChannelPinger.pingInterval
+tags:</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>obsolete
+def: |
+  <code>5</code>
+since: 1.405
+description: |
+  Frequency (in minutes) of <a href="https://wiki.jenkins.io/display/JENKINS/Ping+Thread">pings between the controller and agents</a>.
+  Deprecated since 2.37, use <code>hudson.slaves.ChannelPinger.pingIntervalSeconds</code> instead.</p>
+</li>
+<li>
+<p>name: hudson.slaves.ChannelPinger.pingIntervalSeconds
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>300</code>
+since: 2.37
+description: |
+  Frequency of https://wiki.jenkins.io/display/JENKINS/Ping+Thread[pings between the controller and agents], in seconds</p>
+</li>
+<li>
+<p>name: hudson.slaves.ChannelPinger.pingTimeoutSeconds
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>240</code>
+since: 2.37
+description: |
+  Timeout for each https://wiki.jenkins.io/display/JENKINS/Ping+Thread[ping between the controller and agents], in seconds</p>
+</li>
+<li>
+<p>name: hudson.slaves.ConnectionActivityMonitor.enabled
+tags:</p>
+</li>
+<li>
+<p>feature
+# TODO: This looks like a dead feature? Introduced 2011 and disabled by default?
+  def: |
+    <code>false</code>
+  since: 1.326
+  description: |
+    Whether to enable this feature that checks whether agents are alive and cuts them off if not.</p>
+</li>
+<li>
+<p>name: hudson.slaves.ConnectionActivityMonitor.frequency
+tags:</p>
+</li>
+<li>
+<p>tuning
+# TODO: Actually dual use: Both for timeout (4 minutes) and time to ping (3 minutes). Possibly copy &amp; paste issue and bug in core?
+  def: |
+    <code>10000</code> (10 seconds)
+  since: 1.326
+  description: |
+    How frequently to check for channel activity, in milliseconds.</p>
+</li>
+<li>
+<p>name: hudson.slaves.ConnectionActivityMonitor.timeToPing
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>180000</code> (3 minutes)
+since: 1.326
+description: |
+  How long to wait after startup to start checking agent connections, in milliseconds.</p>
+</li>
+<li>
+<p>name: hudson.slaves.NodeProvisioner.initialDelay
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  10 times <code>hudson.model.LoadStatistics.clock</code>, typically 100 seconds
+description: |
+  How long to wait after startup before starting to provision nodes from clouds.
+  This will allow static agents to start and handle the load first.</p>
+</li>
+<li>
+<p>name: hudson.slaves.NodeProvisioner.MARGIN
+tags:</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>name: hudson.slaves.NodeProvisioner.MARGIN0
+tags:</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>name: hudson.slaves.NodeProvisioner.MARGIN_DECAY
+tags:</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>name: hudson.slaves.NodeProvisioner.recurrencePeriod
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  Equal to <code>hudson.model.LoadStatistics.clock</code>, typically 10 seconds
+description: |
+  How frequently to possibly provision nodes.</p>
+</li>
+<li>
+<p>name: hudson.slaves.SlaveComputer.allowUnsupportedRemotingVersions
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.343
+description: |
+  Allow connection by agents running unsupported remoting versions.</p>
+</li>
+<li>
+<p>name: hudson.slaves.WorkspaceList
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>@</code>
+since: 1.424
+description: |
+  When concurrent builds is enabled, a unique workspace directory name is required for each concurrent build.
+  To create this name, this token is placed between project name and a unique ID, e.g. "my-project@123".</p>
+</li>
+<li>
+<p>name: hudson.tasks.ArtifactArchiver.warnOnEmpty
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+description: |
+  When true, builds don&#8217;t fail when there is nothing to archive</p>
+</li>
+<li>
+<p>name: hudson.tasks.Fingerprinter.enableFingerprintsInDependencyGraph
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+since: 1.430
+description: |
+  When true, jobs associated through fingerprints are added to the dependency graph, even when there is no configured upstream/downstream relationship between them.</p>
+</li>
+<li>
+<p>name: hudson.tasks.MailSender.maxLogLines
+# TODO is this mailer plugin now?
+  def: |
+    <code>250</code>
+  description: |
+    Number of lines of console output to include in emails</p>
+</li>
+<li>
+<p>name: hudson.TcpSlaveAgentListener.hostName
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  Same as the configured Jenkins root URL
+description: |
+  Host name that Jenkins advertises to inbound TCP agents.
+  Especially useful when running Jenkins behind a reverse proxy.</p>
+</li>
+<li>
+<p>name: hudson.TcpSlaveAgentListener.port
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  Same as the configured TCP agent port
+description: |
+  Port that Jenkins advertises to inbound TCP agents.
+  Especially useful when running Jenkins behind a reverse proxy.</p>
+</li>
+<li>
+<p>name: hudson.TreeView
+tags:</p>
+</li>
+<li>
+<p>feature</p>
+</li>
+<li>
+<p>obsolete
+def: |
+  <code>false</code>
+description: |
+  Enables the experimental nested views feature.
+  Has no effect since 2.302, as the experimental nested views feature has been removed.</p>
+</li>
+<li>
+<p>name: hudson.triggers.SafeTimerTask.logsTargetDir
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>$JENKINS_HOME/logs</code>
+since: 2.114
+description: |
+  Allows to move the logs usually found under <code>$JENKINS_HOME/logs</code> to another location.
+  Beware that no migration is handled if you change it on an existing instance.</p>
+</li>
+<li>
+<p>name: hudson.triggers.SCMTrigger.starvationThreshold
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>3600000</code> (1 hour)
+description: |
+  Milliseconds waiting for polling executor before trigger reports it is clogged.</p>
+</li>
+<li>
+<p>name: hudson.udp
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>obsolete</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>33848</code> until 2.218, <code>-1</code> in 2.219
+description: |
+  Port for UDP multicast broadcast.
+  Set to -1 to disable.
+  Has no effect since 2.220 as the feature has been removed.
+  See <a href="/security/advisory/2020-01-29/#SECURITY-1641">SECURITY-1641</a></p>
+</li>
+<li>
+<p>name: hudson.upstreamCulprits
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+since: 1.327
+description: |
+  Pass blame information to downstream jobs.</p>
+</li>
+<li>
+<p>name: hudson.util.AtomicFileWriter.DISABLE_FORCED_FLUSH
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+# The code is really confusing; there are two flags, one is always false, and will be forcibly set to false here, except using a new constructor that was deprecated in the same PR it was introduced in.
+  def: |
+    <code>false</code>
+  since: 2.102
+  description: |
+    Disables the forced flushing when calling <code>#close()</code>.
+    Not expected to be used.</p>
+</li>
+<li>
+<p>name: hudson.util.CharacterEncodingFilter.disableFilter
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+description: |
+  Set to <code>true</code> to disable the filter that sets request encoding to UTF-8 if it&#8217;s undefined and its content type is <code>text/xml</code> or <code>application/xml</code> (API submissions).</p>
+</li>
+<li>
+<p>name: hudson.util.CharacterEncodingFilter.forceEncoding
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+description: |
+  Set to <code>true</code> to force the request encoding to UTF-8 even if a different character set is declared.</p>
+</li>
+<li>
+<p>name: hudson.Util.deletionRetryWait
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>100</code>
+since: 2.2
+description: |
+  The time (in milliseconds) to wait between attempts to delete files when retrying.
+  This has no effect unless <em>hudson.Util.maxFileDeletionRetries</em> is greater than 1.
+  If zero, there will be no delay between attempts.
+  If negative, the delay will be a (linearly) increasing multiple of this value between attempts.</p>
+</li>
+<li>
+<p>name: hudson.util.Digester2.UNSAFE
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>obsolete
+def: |
+  <code>false</code>
+since: 2.263.2 / 2.275
+description: |
+  Opts out of a change in default behavior that disables the processing of XML external entities (XXE) for the <code>Digester2</code> class in Jenkins if set to <code>true</code>.
+  This system property can be changed while Jenkins is running and the change is effective immediately.
+  See <a href="/doc/upgrade-guide/2.263/#digester2">2.263.2 upgrade guide</a>.
+  Has no effect since 2.297, as the <code>Digester2</code> class has been removed.</p>
+</li>
+<li>
+<p>name: hudson.util.FormValidation.applyContentSecurityPolicyHeaders
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>true</code>
+since: 2.263.2 / 2.275
+description: |
+  Controls whether to set restrictive Content-Security-Policy headers on URLs implementing form validation responses.
+  This reduces the impact of cross-site scripting (XSS) vulnerabilities in form validation output.
+  See <a href="/doc/upgrade-guide/2.263/#formvalidation">2.263.2 upgrade guide</a>.</p>
+</li>
+<li>
+<p>name: hudson.util.Graph.maxArea
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>10000000</code> (10 million)
+since: 2.263.2 / 2.275
+description: |
+  Controls the maximum size (area) for requests to render graphs like load statistics.
+  See <a href="/security/advisory/2021-01-13/#SECURITY-2025">2021-01-13 security advisory</a>.</p>
+</li>
+<li>
+<p>name: hudson.Util.maxFileDeletionRetries
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>3</code>
+since: 2.2
+description: |
+  The number of times to attempt to delete files/directory trees before giving up and throwing an exception.
+  Specifying a value less than 1 is invalid and will be treated as if a value of 1 (i.e. one attempt, no retries) was specified.
+  See <a href="https://issues.jenkins.io/browse/JENKINS-10113">JENKINS-10113</a> and <a href="https://issues.jenkins.io/browse/JENKINS-15331">JENKINS-15331</a>.</p>
+</li>
+<li>
+<p>name: hudson.util.MultipartFormDataParser.FILEUPLOAD_MAX_FILES
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>1000</code>
+since: 2.375.4, 2.394
+description: |
+  Limits the number of form fields that can be processed in one <code>multipart/form-data</code> request.
+  Used to set <code>org.apache.commons.fileupload.servlet.ServletFileUpload#setFileCountMax(long)</code>.
+  Despite the name, this applies to all form fields, not just actual file attachments.
+  <code>-1</code> disables this limit.</p>
+</li>
+<li>
+<p>name: hudson.util.MultipartFormDataParser.FILEUPLOAD_MAX_FILE_SIZE
+tags:
+# Not an escape hatch since it&#8217;s disabled by default</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>-1</code>
+since: 2.375.4, 2.394
+description: |
+  Limits the size (in bytes) of individual fields that can be processed in one <code>multipart/form-data</code> request.
+  Despite the name, this applies to all form fields, not just actual file attachments.
+  <code>-1</code> disables this limit.</p>
+</li>
+<li>
+<p>name: hudson.util.MultipartFormDataParser.FILEUPLOAD_MAX_SIZE
+tags:
+  # Not an escape hatch since it&#8217;s disabled by default</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>-1</code>
+since: 2.375.4, 2.394
+description: |
+  Limits the total request size (in bytes) that can be processed in one <code>multipart/form-data</code> request.
+  Used to set <code>org.apache.commons.fileupload.servlet.ServletFileUpload#setSizeMax(long)</code>.
+  <code>-1</code> disables this limit.</p>
+</li>
+<li>
+<p>name: hudson.Util.noSymLink
+tags:</p>
+</li>
+<li>
+<p>feature
+# TODO this is now in a plugin I think?
+def: |
+  <code>false</code>
+description: |
+  True to disable creation of symbolic links in job/builds directories</p>
+</li>
+<li>
+<p>name: hudson.Util.performGCOnFailedDelete
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>false</code>
+since: 2.2
+description: |
+  If this flag is set to <code>true</code> then we will request a garbage collection after a deletion failure before we next retry the delete.
+  It is ignored unless <em>hudson.Util.maxFileDeletionRetries</em> is greater than 1.
+  Setting this flag to <code>true</code> <em>may</em> resolve some problems on Windows, and also for directory trees residing on an NFS share, but it can have a negative impact on performance and may have no effect at all (GC behavior is JVM-specific).
+  <strong>Warning</strong>: This should only ever be used if you find that your builds are failing because Jenkins is unable to delete files, that this failure is because Jenkins itself has those files locked "open", and even then it should only be used on agents with relatively few executors (because the garbage collection can impact the performance of all job executors on that agent).
+  <em>Setting this flag is a act of last resort - it is not recommended, and should not be used on your main Jenkins server unless you can tolerate the performance impact</em>.</p>
+</li>
+<li>
+<p>name: hudson.util.ProcessTree.disable
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+description: |
+  True to disable cleanup of child processes.</p>
+</li>
+<li>
+<p>name: hudson.util.RingBufferLogHandler.defaultSize
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>256</code>
+since: 1.563
+description: |
+  Number of log entries in loggers available on the UI at <code>/log/</code></p>
+</li>
+<li>
+<p>name: hudson.util.RobustReflectionConverter.recordFailuresForAdmins
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.263.2 / 2.275
+description: |
+  If set to <code>true</code>, Old Data Monitor will record some failures to load data submitted by users with Overall/Administer permission, partially disabling a security fix.
+  See <a href="/security/advisory/2021-01-13/#SECURITY-1923">2021-01-13 security advisory</a> and <a href="#hudson-util-robustreflectionconverter-recordfailuresforallauthen"><code>hudson.util.RobustReflectionConverter.recordFailuresForAllAuthentications</code></a>.</p>
+</li>
+<li>
+<p>name: hudson.util.RobustReflectionConverter.recordFailuresForAllAuthentications
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.263.2 / 2.275
+description: |
+  If set to <code>true</code>, Old Data Monitor will record some failures to load data submitted by all authorized users, completely disabling a security fix.
+  See <a href="/security/advisory/2021-01-13/#SECURITY-1923">2021-01-13 security advisory</a> and <a href="#hudson-util-robustreflectionconverter-recordfailuresforadmins"><code>hudson.util.RobustReflectionConverter.recordFailuresForAdmins</code></a>.</p>
+</li>
+<li>
+<p>name: hudson.util.Secret.AUTO_ENCRYPT_PASSWORD_CONTROL
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>true</code>
+since: 2.236
+description: |
+  Jenkins automatically round-trips <code>f:password</code> based form fields as encrypted <code>Secret</code> even if the field is not of type <code>Secret</code>.
+  Set this to <code>false</code> to disable this behavior, doing so is discouraged.</p>
+</li>
+<li>
+<p>name: hudson.util.Secret.BLANK_NONSECRET_PASSWORD_FIELDS_WITHOUT_ITEM_CONFIGURE
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>true</code>
+since: 2.236
+description: |
+  If the user is missing <em>Item/Configure</em> permission, Jenkins 2.236 and newer will blank out the password value automatically even if the form field is not backed by a <code>Secret</code>.
+  Set this to <code>false</code> to disable this behavior, doing so is discouraged.</p>
+</li>
+<li>
+<p>name: hudson.util.Secret.provider
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: system default
+since: 1.360
+description: |
+  Force a particular crypto provider; with Glassfish Enterprise set value to <code>SunJCE</code> to workaround <a href="https://issues.jenkins.io/browse/JENKINS-6459">JENKINS-6459</a> and GLASSFISH-11862.</p>
+</li>
+<li>
+<p>name: hudson.util.StreamTaskListener.AUTO_FLUSH
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+# <a href="https://github.com/jenkinsci/jenkins/pull/3961" class="bare">https://github.com/jenkinsci/jenkins/pull/3961</a>
+  def: |
+    <code>false</code>
+  since: 2.173
+  description: |
+    Jenkins no longer automatically flushes streams for code running remotely on agents for better performance.
+    This may lead to loss of messages for plugins which print to a build log from the agent machine but do not flush their output.
+    Use this flag to restore the previous behavior for freestyle builds.</p>
+</li>
+<li>
+<p>name: hudson.Util.symlinkEscapeHatch
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+description: |
+  True to use exec of "ln" binary to create symbolic links instead of native code</p>
+</li>
+<li>
+<p>name: hudson.Util.useNativeChmodAndMode
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.93
+description: |
+  True to use native (JNA/JNR) implementation to set file permissions instead of NIO.
+  Removed without replacement in 2.304.</p>
+</li>
+<li>
+<p>name: hudson.util.XStream2.collectionUpdateLimit
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>5</code>
+since: 2.334 and 2.319.3
+description: |
+  The maximum number of seconds that adding elements to collections may cumulatively take when loading an XML document using XStream, or <code>-1</code> to disable.
+  See <a href="/security/advisory/2022-02-09/#SECURITY-2602">2022-02-09 security advisory</a> for context.</p>
+</li>
+<li>
+<p>name: hudson.WebAppMain.forceSessionTrackingByCookie
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>true</code>
+since: 2.234
+description: |
+  Set to <code>false</code> to not force session tracking to be done via cookie.
+  Escape hatch for <a href="https://issues.jenkins.io/browse/JENKINS-61738">JENKINS-61738</a>.</p>
+</li>
+<li>
+<p>name: hudson.widgets.HistoryWidget.threshold
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>30</code>
+since: 1.433
+description: |
+  How many builds to show in the build history side panel widget.</p>
+</li>
+<li>
+<p>name: historyWidget.descriptionLimit
+tags:</p>
+</li>
+<li>
+<p>feature</p>
+</li>
+<li>
+<p>UI
+def: |
+  <code>100</code>
+since: 2.223
+description: |
+  Defines a limit for the characters shown in the description field for each build row in the Build History column.
+  A positive integer (e.g. <code>300</code>) will define the limit.
+  After the limit is reached (&#8230;&#8203;) will be shown.
+  The value <code>-1</code> disables the limit and allows unlimited characters in the build description.
+  The value <code>0</code> shows no description.</p>
+</li>
+<li>
+<p>name: HUDSON_HOME
+def: n/a
+tags:</p>
+</li>
+<li>
+<p>obsolete
+description: |
+  Backward compatible fallback name for <code>JENKINS_HOME</code>.
+  See documentation there.</p>
+</li>
+<li>
+<p>name: jenkins.CLI.disabled
+# TODO Understand how this currently (2.138+) works
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+since: 2.32 and 2.19.3
+description: |
+  <code>true</code> to disable Jenkins CLI via JNLP and HTTP (SSHD can still be enabled)</p>
+</li>
+<li>
+<p>name: jenkins.InitReactorRunner.concurrency
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: 2x of CPU
+description: |
+  During start of Jenkins, loading of jobs in parallel have a fixed number of threads by default (twice the CPU).
+  To make Jenkins load time 8x faster (assuming sufficient IO), increase it to 8x.
+  For example, 24 CPU Jenkins controller host use this: <code>-Dhudson.InitReactorRunner.concurrency=192</code></p>
+</li>
+<li>
+<p>name: jenkins.install.runSetupWizard
+tags:</p>
+</li>
+<li>
+<p>feature
+def: undefined
+since: 2.0
+description: |
+  Set to <code>false</code> to skip install wizard.
+  Note that doing so leaves Jenkins unsecured.
+  Development-mode only: Set to <code>true</code> to not skip showing the setup wizard during Jenkins development.
+  This property is only effective the first time you run Jenkins in given <code>JENKINS_HOME</code>.</p>
+</li>
+<li>
+<p>name: jenkins.install.SetupWizard.adminInitialApiToken
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>packaging
+def: The default admin account will not have an API Token unless a value is provided for this system property
+since: "2.260"
+description: |
+  This property determines the behavior during the SetupWizard install phase concerning the API Token creation for the initial admin account.
+  The behavior depends on the provided value:</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>true</code></dt>
+<dd>
+<p>A token is generated using random value at startup and the information is put in the file <code>$JENKINS_HOME/secrets/initialAdminApiToken</code>.</p>
+</dd>
+<dt class="hdlist1">"token" in plain text</dt>
+<dd>
+<p>A fixed API Token will be created for the user with provided value as the token.</p>
+</dd>
+<dt class="hdlist1">"@[file-location]" which contains plain text value of the token</dt>
+<dd>
+<p>A fixed API Token will be created for the user with the value read from the file.
+Jenkins will not delete the file after read, so the script is responsible to remove it when no longer needed.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Token format is `[2-char hash version][32-hex-char of secret]`, where the hash version is currently only 11, e.g., `110123456789abcdef0123456789abcdef`.
+For example can be generated in following ways:</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>manually by prepending <code>11</code> to output of random generator website.
+Ask for 32 hex digits or 16 bytes in hex, e.g. <a href="https://www.browserling.com/tools/random-hex" class="bare">https://www.browserling.com/tools/random-hex</a>, <a href="https://www.random.org/bytes/" class="bare">https://www.random.org/bytes/</a></p>
+</li>
+<li>
+<p>in a shell: <code>echo "11$(openssl rand -hex 16)"</code></p>
+</li>
+<li>
+<p>in JavaScript: <code>const genRanHex = size &#8658; [&#8230;&#8203;Array(size)].map) &#8658; Math.floor(Math.random() * 16).toString(16.join(''); console.log('11' + genRanHex(32));</code></p>
+<div class="literalblock">
+<div class="content">
+<pre>When the API Token is generated using this system property, it should be revoked during the installation script using the other ways at your disposal so that you have a fresh (random) token with less traces for your script.
+See https://javadoc.jenkins.io/jenkins/security/ApiTokenProperty.html#generateNewToken-java.lang.String-[ApiTokenProperty#generateNewToken(String)] and https://javadoc.jenkins.io/jenkins/security/ApiTokenProperty.html#revokeAllTokensExceptOne-java.lang.String-[ApiTokenProperty#revokeAllTokensExceptOne(String)] for scripting methods or using the web API calls:
+`/user/[user-login]/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken` and `/user/[user-login]/descriptorByName/jenkins.security.ApiTokenProperty/revokeAllExcept`</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>name: jenkins.model.Jenkins.additionalReadablePaths
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  undefined
+since: 2.263.2 / 2.275
+description: |
+  A comma-separated list of additional top level path segments that should be accessible to users without Overall/Read permission.
+  See <a href="/security/advisory/2021-01-13/#SECURITY-2047">2021-01-13 security advisory</a>.</p>
+</li>
+<li>
+<p>name: jenkins.model.Jenkins.buildsDir
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>${ITEM_ROOTDIR}/builds</code>
+since: 2.119
+description: |
+  The configuration of a given job is located under <code>$JENKINS_HOME/jobs/[JOB_NAME]/config.xml</code> and its builds are under <code>$JENKINS_HOME/jobs/[JOB_NAME]/builds</code> by default.
+  This option allows you to store builds elsewhere, which can be useful with finer-grained backup policies, or to store the build data on a faster disk such as an SSD.
+  The following placeholders are supported for this value:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>${JENKINS_HOME}</code>  – Resolves to the Jenkins home directory.</p>
+</li>
+<li>
+<p><code>${ITEM_ROOTDIR}</code> – The directory containing the job metadata within Jenkins home.</p>
+</li>
+<li>
+<p><code>${ITEM_FULL_NAME}</code> – The full name of the item, with file system unsafe characters replaced by others.</p>
+</li>
+<li>
+<p><code>${ITEM_FULLNAME}</code> – See above, but does not replace unsafe characters.
+This is a legacy option and should not be used.</p>
+<div class="literalblock">
+<div class="content">
+<pre>For instance, if you would like to store builds outside of Jenkins home, you can use a value like the following: `/some_other_root/builds/${ITEM_FULL_NAME}` This used to be a UI setting, but was removed in 2.119 as it did not support migration of existing build records and could lead to build-related errors until restart.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>To manually migrate existing build records when starting to use this option (`TARGET_DIR` is the value supplied to `jenkins.model.Jenkins.buildsDir`):</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>For link:/doc/book/pipeline/[Pipeline] and Freestyle job types, run this for each `JOB_NAME`:</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>```sh
+mkdir -p [TARGET_DIR]
+mv $JENKINS_HOME/jobs/[JOB_NAME]/builds [TARGET_DIR]/[JOB_NAME]
+```</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>For link:/doc/book/pipeline/multibranch/#creating-a-multibranch-pipeline[Multibranch Pipeline] jobs, run for each `BRANCH_NAME`:</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>```sh
+mkdir -p [TARGET_DIR]/[JOB_NAME]/branches/
+mv $JENKINS_HOME/jobs/[JOB_NAME]/branches/[BRANCH_NAME]/builds \
+    [TARGET_DIR]/[JOB_NAME]/branches/[BRANCH_NAME]
+```</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>For link:/doc/book/pipeline/multibranch/#organization-folders[Organization Folders], run this for each `REPO_NAME` and `BRANCH_NAME`:</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>```sh
+mkdir -p [TARGET_DIR]/[ORG_NAME]/jobs/[REPO_NAME]/branches/
+mv $JENKINS_HOME/jobs/[ORG_NAME]/jobs/[REPO_NAME]/branches/[BRANCH_NAME]/builds \
+    [TARGET_DIR]/[ORG_NAME]/jobs/[REPO_NAME]/branches/[BRANCH_NAME]
+```</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>name: jenkins.model.Jenkins.crumbIssuerProxyCompatibility
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+since: 2.119
+description: |
+  <code>true</code> to enable crumb proxy compatibility when running the Setup Wizard for the first time.</p>
+</li>
+<li>
+<p>name: jenkins.model.Jenkins.disableExceptionOnNullInstance
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.4 <strong>only</strong>, replaced in 2.5+ by jenkins.model.Jenkins.enableExceptionOnNullInstance
+description: |
+  <code>true</code> to disable throwing an <code>IllegalStateException</code> when <code>Jenkins.getInstance()</code> returns <code>null</code></p>
+</li>
+<li>
+<p>name: jenkins.model.Jenkins.enableExceptionOnNullInstance
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.5
+description: |
+  <code>true</code> to enable throwing an <code>IllegalStateException</code> when <code>Jenkins.getInstance()</code> returns <code>null</code></p>
+</li>
+<li>
+<p>name: jenkins.model.Jenkins.exitCodeOnRestart
+tags:</p>
+</li>
+<li>
+<p>packaging
+def: |
+  <code>5</code>
+since: 2.102
+description: |
+  When using the <code>-Dhudson.lifecycle=hudson.lifecycle.ExitLifecycle</code>, exit using this exit code when Jenkins is restarted</p>
+</li>
+<li>
+<p>name: jenkins.model.Jenkins.initLogLevel
+def: |
+  <code>FINE</code>
+description: |
+  Log level for verbose messages from the init reactor listener.</p>
+</li>
+<li>
+<p>name: jenkins.model.Jenkins.killAfterLoad
+def: |
+  <code>false</code>
+description: |
+  Exit Jenkins right after loading.
+  Intended as a development/testing aid only.</p>
+</li>
+<li>
+<p>name: jenkins.model.Jenkins.logStartupPerformance
+def: |
+  <code>false</code>
+description: |
+  Log startup timing info.
+  Note that some messages are not logged on levels visible by default (i.e. INFO and up).</p>
+</li>
+<li>
+<p>name: jenkins.model.Jenkins.nameValidationRejectsTrailingDot
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>true</code>
+since: 2.315 and 2.303.2
+description: |
+  Set to <code>false</code> to allow names to end with a trailing <code>.</code> character, which can cause problems on Windows.
+  Escape hatch for <a href="/security/advisory/2021-10-06/#SECURITY-2424">SECURITY-2424</a>.</p>
+</li>
+<li>
+<p>name: jenkins.model.Jenkins.parallelLoad
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>true</code>
+description: |
+  Loads job configurations in parallel on startup.</p>
+</li>
+<li>
+<p>name: jenkins.model.Jenkins.slaveAgentPort
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>-1</code> (disabled) since 2.0, <code>0</code> in Jenkins 1.x.
+since: 1.643
+description: |
+  Specifies the default TCP agent port unless/until configured differently on the UI.
+  <code>-1</code> to disable, <code>0</code> for random port, other values for fixed port.</p>
+</li>
+<li>
+<p>name: jenkins.model.Jenkins.slaveAgentPortEnforce
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+since: 2.19.4 and 2.24
+description: |
+  If true, enforces the specified <code>jenkins.model.Jenkins.slaveAgentPort</code> on startup and will not allow changing it through the UI</p>
+</li>
+<li>
+<p>name: jenkins.model.Jenkins.workspaceDirName
+tags:</p>
+</li>
+<li>
+<p>obsolete
+def: |
+  <code>workspace</code>
+description: |
+  Obsolete: Was used as the default workspace directory name in the legacy workspace directory layout (workspace directories within job directories).</p>
+</li>
+<li>
+<p>name: jenkins.model.Jenkins.workspacesDir
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>${JENKINS_HOME}/workspace/${ITEM_FULL_NAME}</code>
+since: 2.119
+description: |
+  Allows to change the directory layout for the job workspaces on the controller node.
+  See <code>jenkins.model.Jenkins.buildsDir</code> for supported placeholders.</p>
+</li>
+<li>
+<p>name: jenkins.model.JenkinsLocationConfiguration.disableUrlValidation
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 2.197 / LTS 2.176.4
+description: |
+  Disable URL validation intended to prevent an XSS vulnerability.
+  See <a href="/security/advisory/2019-09-25/#SECURITY-1471">SECURITY-1471</a> for details.</p>
+</li>
+<li>
+<p>name: jenkins.model.lazy.BuildReference.MODE
+tags:</p>
+</li>
+<li>
+<p>development</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>soft</code>
+since: 1.548
+description: |
+  Configure the kind of reference Jenkins uses to hold builds in memory.
+  Choose from among <code>soft</code>, <code>weak</code>, <code>strong</code>, and <code>not</code> (do not hold builds in memory at all).
+  Intended mostly as a debugging aid.
+  See <a href="https://issues.jenkins.io/browse/JENKINS-19400">JENKINS-19400</a>.</p>
+</li>
+<li>
+<p>name: jenkins.model.Nodes.enforceNameRestrictions
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>true</code>
+since: 2.263.2 / 2.275
+description: |
+  Whether to enforce new name restrictions for agent names.
+  See <a href="/security/advisory/2021-01-13/#SECURITY-2021">2021-01-13 security advisory</a>.</p>
+</li>
+<li>
+<p>name: jenkins.model.StandardArtifactManager.disableTrafficCompression
+tags:</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+since: 2.196
+description: |
+  <code>true</code> to disable GZIP compression of artifacts when they&#8217;re transferred from agent nodes to controller.  Uses less CPU at the cost of increased network traffic.</p>
+</li>
+<li>
+<p>name: jenkins.monitor.JavaVersionRecommendationAdminMonitor.disable
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+since: 2.305
+description: |
+  <code>true</code> to disable the monitor that recommends Java 11.</p>
+</li>
+<li>
+<p>name: jenkins.security.ApiTokenProperty.adminCanGenerateNewTokens
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 2.129
+description: |
+  <code>true</code> to allow users with Overall/Administer permission to create API tokens using the new system for any user.
+  Note that the user will not be able to use that token since it&#8217;s only displayed to the creator, once.</p>
+</li>
+<li>
+<p>name: jenkins.security.ApiTokenProperty.showTokenToAdmins
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 1.638
+description: |
+  True to show API tokens for users to administrators on the user configuration page.
+  This was set to <code>false</code> as part of <a href="/security/advisory/2015-11-11/#api-tokens-of-other-users-available-to-admins">SECURITY-200</a></p>
+</li>
+<li>
+<p>name: jenkins.security.ClassFilterImpl.SUPPRESS_ALL
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 2.102
+description: |
+  Do not perform any JEP-200 class filtering when deserializing data.
+  Setting this to <code>true</code> is unsafe.
+  See <a href="/redirect/class-filter/">documentation</a>.</p>
+</li>
+<li>
+<p>name: jenkins.security.ClassFilterImpl.SUPPRESS_WHITELIST
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 2.102
+description: |
+  Do not perform whitelist-based JEP-200 class filtering when deserializing data.
+  With this flag set, only explicitly blacklisted types will be rejected.
+  Setting this to <code>true</code> is unsafe.
+  See <a href="/redirect/class-filter/">documentation</a>.</p>
+</li>
+<li>
+<p>name: jenkins.security.FrameOptionsPageDecorator.enabled
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>true</code>
+since: 1.581
+description: |
+  Whether to send <code>X-Frame-Options: sameorigin</code> header, set to <code>false</code> to disable and make Jenkins embeddable</p>
+</li>
+<li>
+<p>name: jenkins.security.ignoreBasicAuth
+# TODO test whether this actually works
+tags:</p>
+</li>
+<li>
+<p>feature</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 1.421
+description: |
+  When set to <code>true</code>, disable <code>Basic</code> authentication with username and password (rather than API token).</p>
+</li>
+<li>
+<p>name: jenkins.security.ManagePermission
+tags:</p>
+</li>
+<li>
+<p>feature</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 2.222
+description: |
+  Enable the optional Overall/Manage permission that allows limited access to administrative features suitable for a hosted Jenkins environment.
+  See <a href="https://github.com/jenkinsci/jep/tree/master/jep/223">JEP-223</a>.</p>
+</li>
+<li>
+<p>name: jenkins.security.ResourceDomainRootAction.validForMinutes
+tags:</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>30</code>
+since: 2.200
+description: |
+  How long a resource URL served from the resource root URL will be valid for before users are required to reauthenticate to access it.
+  See inline documentation in Jenkins for details.</p>
+</li>
+<li>
+<p>name: jenkins.security.s2m.CallableDirectionChecker.allow
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 1.587 and 1.580.1
+description: |
+  This flag can be set to <code>true</code> to disable the agent-to-controller security system entirely.
+  Since Jenkins 2.326, this is the only way to do that, as the UI option has been removed.</p>
+</li>
+<li>
+<p>name: jenkins.security.s2m.CallableDirectionChecker.allowAnyRole
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>obsolete
+def: |
+  <code>true</code>
+since: 2.319 and 2.303.3
+description: |
+  This flag can be set to <code>false</code> to explicitly reject <code>Callable</code> implementations that do not declare any required role.
+  It is unclear whether this can safely be set to <code>false</code> in Jenkins before 2.335, or whether that would cause problems with some remoting built-in callables.
+  This flag was removed in Jenkins 2.335.</p>
+</li>
+<li>
+<p>name: jenkins.security.s2m.DefaultFilePathFilter.allow
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 1.587 and 1.580.1
+description: |
+  Allow all file paths on the Jenkins controller to be accessed from agents.
+  This disables a big part of <a href="/security/advisory/2014-10-30/">SECURITY-144</a> protections.</p>
+</li>
+<li>
+<p>name: jenkins.security.s2m.RunningBuildFilePathFilter.FAIL
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>true</code>
+since: 2.319 and 2.303.3
+description: |
+  Set to <code>false</code> to not reject attempts to access file paths in build directories of builds not currently being built on the accessing agent.
+  Instead, only a warning is logged.
+  Attempts to access file paths in build directories from other processes will still fail.
+  See <a href="/security/advisory/2021-11-04/#SECURITY-2455">the description of the SECURITY-2458 security fix</a> for context.</p>
+</li>
+<li>
+<p>name: jenkins.security.s2m.RunningBuildFilePathFilter.SKIP
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 2.319 and 2.303.3
+description: |
+  Set to <code>true</code> to disable the additional protection to not reject attempts to access file paths in build directories.
+  This will restore access to any build directories both from agents and from other processes with a remoting channel, like Maven Integration Plugin.
+  See <a href="/security/advisory/2021-11-04/#SECURITY-2455">the description of the SECURITY-2458 security fix</a> for context.</p>
+</li>
+<li>
+<p>name: jenkins.security.seed.UserSeedProperty.disableUserSeed
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 2.160 and 2.105.2
+description: |
+  Disables <em>user seed</em>.
+  Escape hatch for <a href="/security/advisory/2019-01-16/#SECURITY-901">SECURITY-901</a>.</p>
+</li>
+<li>
+<p>name: jenkins.security.seed.UserSeedProperty.hideUserSeedSection
+tags:</p>
+</li>
+<li>
+<p>ui</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 2.160 and 2.105.2
+description: |
+  Hide the UI for <em>user seed</em> introduced for <a href="/security/advisory/2019-01-16/#SECURITY-901">SECURITY-901</a>.</p>
+</li>
+<li>
+<p>name: jenkins.security.stapler.StaplerDispatchValidator.disabled
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 2.186 and 2.176.2
+description: |
+  Escape hatch for <a href="/security/advisory/2019-07-17/#SECURITY-534">SECURITY-534</a>.</p>
+</li>
+<li>
+<p>name: jenkins.security.stapler.StaplerDispatchValidator.whitelist
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>stapler-views-whitelist.txt</code> in <code>JENKINS_HOME</code>
+since: 2.186 and 2.176.2
+description: |
+  Override the location of the user configurable whitelist for stapler view dispatches.
+  This augments the built-in whitelist for <a href="/security/advisory/2019-07-17/#SECURITY-534">SECURITY-534</a> that allows dispatches to views that would otherwise be prohibited.</p>
+</li>
+<li>
+<p>name: jenkins.security.stapler.StaticRoutingDecisionProvider.whitelist
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>stapler-whitelist.txt</code> in <code>JENKINS_HOME</code>
+since: 2.154 and 2.138.4
+description: |
+  Override the location of the user configurable whitelist for stapler request routing.
+  This augments the built-in whitelist for <a href="/security/advisory/2018-12-05/#SECURITY-595">SECURITY-595</a> that allows routing requests through methods that would otherwise be prohibited.</p>
+</li>
+<li>
+<p>name: jenkins.security.stapler.TypedFilter.prohibitStaticAccess
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>true</code>
+since: 2.154 and 2.138.4
+description: |
+  Prohibits access to <code>public static</code> fields when routing requests in Stapler.
+  Escape hatch for <a href="/security/advisory/2018-12-05/#SECURITY-595">SECURITY-595</a>.</p>
+</li>
+<li>
+<p>name: jenkins.security.stapler.TypedFilter.skipTypeCheck
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 2.154 and 2.138.4
+description: |
+  Skip (return) type check when determining whether a method or field should be routable with Stapler (i.e. allow any return type).
+  Escape hatch for <a href="/security/advisory/2018-12-05/#SECURITY-595">SECURITY-595</a>.</p>
+</li>
+<li>
+<p>name: jenkins.security.SuspiciousRequestFilter.allowSemicolonsInPath
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 2.228 and 2.204.6
+description: |
+  Escape hatch for <a href="/security/advisory/2020-03-25/#SECURITY-1774">SECURITY-1774</a>.
+  Allows requests to URLs with semicolon characters (<code>;</code>) in the request path.</p>
+</li>
+<li>
+<p>name: jenkins.security.SystemReadPermission
+tags:</p>
+</li>
+<li>
+<p>feature</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 2.222
+description: |
+  Enable the optional Overall/SystemRead permission that allows read-only access to administrative features suitable for a managed Jenkins Configuration as Code environment.
+  See <a href="https://github.com/jenkinsci/jep/tree/master/jep/224">JEP-224</a>.</p>
+</li>
+<li>
+<p>name: jenkins.security.UserDetailsCache.EXPIRE_AFTER_WRITE_SEC
+tags:</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>120</code> (2 minutes)
+since: 2.15
+description: |
+  How long a cache for <code>UserDetails</code> should be valid for before it is looked up again from the security realm.
+  See <a href="https://issues.jenkins.io/browse/JENKINS-35493">JENKINS-35493</a>.</p>
+</li>
+<li>
+<p>name: jenkins.slaves.DefaultJnlpSlaveReceiver.disableStrictVerification
+tags:</p>
+</li>
+<li>
+<p>security
+  def: |
+    <code>false</code>
+  since: 2.28
+  #description: ''
+# TODO describe</p>
+</li>
+<li>
+<p>name: jenkins.slaves.JnlpSlaveAgentProtocol3.enabled
+tags:</p>
+</li>
+<li>
+<p>obsolete
+# TODO update this
+def: undefined
+since: 1.653
+description: |
+  <code>false</code> to disable the JNLP3 agent protocol, <code>true</code> to enable it.
+  Otherwise it&#8217;s randomly enabled/disabled to A/B test it.
+  Obsolete since the protocol was removed in 2.214.</p>
+</li>
+<li>
+<p>name: jenkins.slaves.NioChannelSelector.disabled
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: 1.560
+description: |
+  <code>true</code> to disable Nio for JNLP agents</p>
+</li>
+<li>
+<p>name: jenkins.slaves.StandardOutputSwapper.disabled
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+# TODO Unsure how this works. References:
+# - <a href="https://github.com/jenkinsci/jenkins/blob/3fd66ff22051a3309b8dc5130d8da0759ee27f48/core/src/main/java/jenkins/slaves/StandardOutputSwapper.java" class="bare">https://github.com/jenkinsci/jenkins/blob/3fd66ff22051a3309b8dc5130d8da0759ee27f48/core/src/main/java/jenkins/slaves/StandardOutputSwapper.java</a>
+# - <a href="https://github.com/jenkinsci/remoting/commit/fad8c38724068dfbd155e64508e5d4c154240b87" class="bare">https://github.com/jenkinsci/remoting/commit/fad8c38724068dfbd155e64508e5d4c154240b87</a>
+  def: |
+    <code>false</code>
+  since: 1.429
+  description: |
+    Some Unix-like agents (e.g. SSH Build Agents) can communicate via stdin/stdout, which is very convenient.
+    Unfortunately, some JVM output (e.g. related to GC) also goes to standard out.
+    This will swap output streams around to prevent stream corruption through unexpected writes to standard out.</p>
+</li>
+<li>
+<p>name: jekins.SoloFilePathFilter.redactErrors
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>true</code>
+since: 2.319 and 2.303.3
+description: |
+  Set to <code>false</code> to not redact error messages when the agent-to-controller file path filters reject a file access.
+  This can give attackers information about files and directories on the Jenkins controller file system.</p>
+</li>
+<li>
+<p>name: jenkins.telemetry.Telemetry.endpoint
+tags:</p>
+</li>
+<li>
+<p>development
+# <a href="https://github.com/jenkinsci/jenkins/pull/3604" class="bare">https://github.com/jenkinsci/jenkins/pull/3604</a>
+  def: |
+    <code>https://uplink.jenkins.io/events</code>
+  since: 2.143
+  description: |
+    Change the endpoint that JEP-214/Uplink telemetry sends data to.
+    Expected to be used for testing only.</p>
+</li>
+<li>
+<p>name: jenkins.ui.refresh
+tags:</p>
+</li>
+<li>
+<p>ui</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+since: 2.222
+description: |
+  <code>true</code> to enable the new experimental UX on Jenkins.
+  See <a href="https://issues.jenkins.io/browse/JENKINS-60920">JENKINS-60920</a>.
+  Also see <a href="/sigs/ux/">Jenkins UX SIG</a>.
+  Has no effect since <a href="https://github.com/jenkinsci/jenkins/commit/51e7142d5705c10833e0959fdf2534a32b0e7d86">2.344</a> as the feature has been removed.</p>
+</li>
+<li>
+<p>name: jenkins.websocket.idleTimeout
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>60</code>
+since: 2.395
+description: |
+  Number of seconds a WebSocket agent connection may stay idle until it expires. <code>0</code> to disable. Must be higher than <code>jenkins.websocket.pingInterval</code>.</p>
+</li>
+<li>
+<p>name: jenkins.websocket.pingInterval
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: |
+  <code>30</code>
+since: 2.217
+description: |
+  Number of seconds between server-sent pings over WebSocket agent connections. <code>0</code> to disable. Must be lower than <code>jenkins.websocket.idleTimeout</code>.</p>
+</li>
+<li>
+<p>name: jenkins.util.ProgressiveRendering.DEBUG_SLEEP
+def: |
+  <code>0</code>
+description: |
+  Debug/development option to slow down the cancelling of progressive rendering when the client fails to send a heartbeat.</p>
+</li>
+<li>
+<p>name: JENKINS_HOME
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>~/.jenkins</code>
+description: |
+  While typically set as an environment variable, Jenkins also looks up the path to its home directory as a system property.
+  <code>JENKINS_HOME</code> set via JNDI context has higher priority than this, but this takes precedence over the environment variable.</p>
+</li>
+<li>
+<p>name: org.jenkinsci.main.modules.sshd.SSHD.idle-timeout
+tags:</p>
+</li>
+<li>
+<p>tuning
+# This is a core module, so this documentation should remain here.
+  def: undefined
+  since: 2.22
+  description: |
+    Allows to configure the SSHD client idle timeout (value in milliseconds).
+    Default value is 10min (600000ms).</p>
+</li>
+<li>
+<p>name: org.jenkinsci.plugins.workflow.steps.durable_task.DurableTaskStep.REMOTE_TIMEOUT
+tags:</p>
+</li>
+<li>
+<p>tuning
+# TODO move to plugin documentation
+  def: 20 seconds
+  since: workflow-durable-task-step-plugin 2.29
+  description: |
+    How long to wait, in seconds, before interrupting remote calls and forcing cleanup when the step is stopped.
+    See <a href="https://issues.jenkins.io/browse/JENKINS-46507">JENKINS-46507</a> for more information.</p>
+</li>
+<li>
+<p>name: org.jenkinsci.plugins.workflow.steps.durable_task.DurableTaskStep.USE_WATCHING
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>false</code>
+since: workflow-durable-task-step-plugin 2.22
+description: |
+  <code>true</code> to enable the experimental push mode for durable task logging.
+  See <a href="https://issues.jenkins.io/browse/JENKINS-52165">JENKINS-52165</a> for more information.</p>
+</li>
+<li>
+<p>name: org.jenkinsci.plugins.workflow.support.pickles.ExecutorPickle.timeoutForNodeMillis
+tags:</p>
+</li>
+<li>
+<p>tuning
+def: 5 minutes (300,000 milliseconds)
+since: workflow-durable-task-step-plugin 2.14
+description: |
+  How long to wait, in milliseconds, before aborting the build if an agent has been removed.
+  See <a href="https://issues.jenkins.io/browse/JENKINS-36013">JENKINS-36013</a> for more information.</p>
+</li>
+<li>
+<p>name: org.jenkinsci.plugins.workflow.support.steps.ExecutorStepExecution.REMOVED_NODE_DETECTION
+tags:</p>
+</li>
+<li>
+<p>feature
+def: |
+  <code>true</code>
+since: workflow-durable-task-step-plugin 2.32
+description: |
+  <code>false</code> to prevent Jenkins from aborting the build if an agent has been removed.
+  See <a href="https://issues.jenkins.io/browse/JENKINS-49707">JENKINS-49707</a> for more information.</p>
+</li>
+<li>
+<p>name: org.kohsuke.stapler.Facet.allowViewNamePathTraversal
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>false</code>
+since: 2.138.2, 2.146
+description: |
+  Allows specifying non-simple names for views, including ones resulting in path traversal.
+  This is an escape hatch for the <a href="/security/advisory/2018-10-10/#SECURITY-867">SECURITY-867</a> fix.</p>
+</li>
+<li>
+<p>name: org.kohsuke.stapler.jelly.IncludeTag.skipLoggingClassSetter
+tags:</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+since: '2.288'
+description: |
+  Do not log attempts to set the <code>class</code> property of <code>st:include</code> tags directly.
+  No log messages should be emitted in regular use, but they can be disabled if they cause unnecessary noise in the system log.</p>
+</li>
+<li>
+<p>name: org.kohsuke.stapler.RequestImpl.ALLOWED_HTTP_VERBS_FOR_FORMS
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>POST</code>
+since: 2.277.2, 2.287
+description: |
+  HTTP verbs of requests that are allowed to provide <code>StaplerRequest#getSubmittedForm</code> or <code>@SubmittedForm</code>.
+  Escape hatch for a security hardening, see <a href="/doc/upgrade-guide/2.277/#submittedform">2.277.2 upgrade guide</a>.</p>
+</li>
+<li>
+<p>name: org.kohsuke.stapler.RequestImpl.FILEUPLOAD_MAX_FILES
+tags:</p>
+</li>
+<li>
+<p>escape hatch</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>1000</code>
+since: 2.375.4, 2.394
+description: |
+  Limits the number of form fields that can be processed in one <code>multipart/form-data</code> request.
+  Used to set <code>org.apache.commons.fileupload.servlet.ServletFileUpload#setFileCountMax(long)</code>.
+  Despite the name, this applies to all form fields, not just actual file attachments.
+  <code>-1</code> disables this limit.</p>
+</li>
+<li>
+<p>name: org.kohsuke.stapler.RequestImpl.FILEUPLOAD_MAX_FILE_SIZE
+tags:
+# Not an escape hatch since it&#8217;s disabled by default</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>-1</code>
+since: 2.375.4, 2.394
+description: |
+  Limits the size (in bytes) of individual fields that can be processed in one <code>multipart/form-data</code> request.
+  Despite the name, this applies to all form fields, not just actual file attachments.
+  <code>-1</code> disables this limit.</p>
+</li>
+<li>
+<p>name: org.kohsuke.stapler.RequestImpl.FILEUPLOAD_MAX_SIZE
+tags:
+# Not an escape hatch since it&#8217;s disabled by default</p>
+</li>
+<li>
+<p>tuning</p>
+</li>
+<li>
+<p>security
+def: |
+  <code>-1</code>
+since: 2.375.4, 2.394
+description: |
+  Limits the total request size (in bytes) that can be processed in one <code>multipart/form-data</code> request.
+  Used to set <code>org.apache.commons.fileupload.servlet.ServletFileUpload#setSizeMax(long)</code>.
+  <code>-1</code> disables this limit.</p>
+</li>
+<li>
+<p>name: stapler.jelly.noCache
+tags:</p>
+</li>
+<li>
+<p>development
+def: |
+  <code>false</code>
+description: |
+  Controls both caching of various cacheable resources (Jelly scripts etc.) as well as the <code>Expires</code> HTTP response header for some static resources.
+  Useful during development to see the effect of changes after reload.</p>
+</li>
+<li>
+<p>name: stapler.jelly.trace
+tags:</p>
+</li>
+<li>
+<p>development
+def: |
+  <code>false</code>
+description: |
+  Enables tracing of Jelly view composition.
+  View the resulting page source to see comments indicating which parts of the view were created from which view fragments.</p>
+</li>
+<li>
+<p>name: stapler.legacyGetterDispatcherMode
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+description: |
+  Do not filter get methods at the Stapler framework level.
+  Escape hatch for <a href="/security/advisory/2018-12-05/#SECURITY-595">SECURITY-595</a>.</p>
+</li>
+<li>
+<p>name: stapler.legacyWebMethodDispatcherMode
+tags:</p>
+</li>
+<li>
+<p>security</p>
+</li>
+<li>
+<p>escape hatch
+def: |
+  <code>false</code>
+description: |
+  Do not filter web methods ("do" actions) at the Stapler framework level.
+  Escape hatch for <a href="/security/advisory/2018-12-05/#SECURITY-595">SECURITY-595</a>.</p>
+</li>
+<li>
+<p>name: stapler.resourcePath
+tags:</p>
+</li>
+<li>
+<p>development
+def: undefined
+description: |
+  Additional debug resource paths.
+  Set by the core development tooling so developers can see the effect of changes immediately after reloading the page.</p>
+</li>
+<li>
+<p>name: stapler.trace
+tags:</p>
+</li>
+<li>
+<p>development
+def: |
+  <code>true</code> when run using <code>mvn jetty:run</code> (core war) or <code>mvn hpi:run</code> (plugins), <code>false</code> otherwise
+description: |
+  Trace request handling and report the result using <code>Stapler-Trace-&#8230;&#8203;</code> response headers.
+  Additionally renders a diagnostic HTTP 404 error page when the request could not be processed.</p>
+</li>
+<li>
+<p>name: stapler.trace.per-request
+tags:</p>
+</li>
+<li>
+<p>development
+def: |
+  <code>false</code>
+description: |
+  Trace request handling (see above) for requests with the <code>X-Stapler-Trace</code> request header set.</p>
+</li>
+<li>
+<p>name: jenkins.util.groovy.GroovyHookScript.ROOT_PATH
+since: 2.273
+tags:</p>
+</li>
+<li>
+<p>packaging
+  def: |
+    <code>$JENKINS_HOME</code>
+  description: |
+    Set the root directory used to load groovy hooks scripts.
+---</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jenkins_features_controlled_with_system_properties"><a class="anchor" href="#_jenkins_features_controlled_with_system_properties"></a>Jenkins Features Controlled with System Properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins has several "hidden" features that can be enabled with system properties.
+This page documents many of them and explain how to configure them on your instance.</p>
+</div>
+<div class="paragraph">
+<p>Some system properties related to the Remoting library used for communication between controller and agents are documented in <a href="https://github.com/jenkinsci/remoting/blob/master/docs/configuration.md">that component&#8217;s repository</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>System properties are defined by passing <code>-Dproperty=value</code> to the <code>java</code> command line to start Jenkins.
+Make sure to pass all of these arguments <strong>before</strong> the <code>-jar</code> argument, otherwise they will be ignored.
+Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">java -Dhudson.footerURL=http://example.org -jar jenkins.war</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following lists the properties and the version of Jenkins they were introduced in.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><strong>Property</strong></code> - Java property name</p>
+</li>
+<li>
+<p><strong>Default</strong> - Default value if not explicitly set</p>
+</li>
+<li>
+<p><strong>Since</strong> - The version of Jenkins the property was introduced in</p>
+</li>
+<li>
+<p><strong>Description</strong> - Other notes</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_compatibility_2"><a class="anchor" href="#_compatibility_2"></a>Compatibility</h3>
+<div class="paragraph">
+<p>We do <strong>NOT</strong> guarantee that system properties will remain unchanged and functional indefinitely.
+These switches are often experimental in nature, and subject to change without notice.
+If you find these useful, please file a ticket to promote it to an official feature.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties_in_jenkins_core_2"><a class="anchor" href="#_properties_in_jenkins_core_2"></a>Properties in Jenkins Core</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Due to the very large number of system properties used, often just added as a "safety valve" or "escape hatch" in case a change causes problems, this list is not expected to be complete.
+</td>
+</tr>
+</table>
+</div>
+<style>
+dd {
+  margin-left: 30px;
+}
+dd div.tag {
+}
+span.tag {
+    display: inline-block;
+    border: 1px solid #666;
+    background-color: #eee;
+    color: #333;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0 0.5rem;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    text-transform: capitalize;
+}
+/* Work around wrapper block elements added for Asciidoctor conversions that would break the layout */
+.def div {
+    display: inline-block;
+}
+.def div p {
+    margin: 0;
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+    anchors.add('dt');
+});
+</script>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="system-info.html">System Information</a></span>
+  <span class="next"><a href="change-system-timezone.html">Change System Time Zone</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pipeline Syntax :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.401.3/pipeline/syntax.html">
+    <link rel="prev" href="development.html">
+    <link rel="next" href="pipeline-best-practices.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="user-docs" data-version="2.401.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins User Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/docker.html">Docker</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-credentials.html">Using credentials</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/searchbox.html">Using Search Box</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/referencing-another-project-by-name.html">Referencing another project by name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/aborting-a-build.html">Aborting a build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/fingerprints.html">Fingerprints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-local-language.html">Using local language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/change-time-zone.html">Change time zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/remote-access-api.html">Remote Access API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/executor-starvation.html">Executor Starvation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-agents.html">Using Jenkins agents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Pipeline</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="jenkinsfile.html">Using a Jenkinsfile</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="running-pipelines.html">Running a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="multibranch.html">Branches and Pull Requests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="docker.html">Using Docker with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shared-libraries.html">Extending with Shared Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="development.html">Pipeline Development Tools</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="syntax.html">Pipeline Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipeline-best-practices.html">Pipeline Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scaling-pipeline.html">Scaling Pipelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cps-method-mismatches.html">Pipeline CPS Method Mismatches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/dashboard.html">Dashboard</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/activity.html">Activity View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-run-details.html">Pipeline Run Details View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-editor.html">Pipeline Editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../managing/index.html">Managing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-configuration.html">Configuring the System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/casc.html">Configuration as Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/tools.html">Managing Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/about-jenkins.html">About Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-info.html">System Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/cli.html">Jenkins CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-console.html">Script Console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/groovy-hook-scripts.html">Groovy Hook Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/nodes.html">Managing Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-approval.html">In-process Script Approval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/ui-themes.html">Themes for user interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/user-content.html">User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/spawning-processes.html">Spawning Processes From Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Securing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/access-control.html">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-jenkins.html">Securing Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/managing-security.html">Managing Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/controller-isolation.html">Controller Isolation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-builds.html">Securing Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/csrf-protection.html">CSRF Protection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/user-content.html">Rendering User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/build-authorization.html">Access Control for Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/environment-variables.html">Handling Environment Variables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/markup-formatter.html">Markup Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/services.html">Exposed Services and Ports</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/index.html">System Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/backing-up.html">Backing-up/Restoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/monitoring.html">Monitoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/administering-jenkins-on-kubernetes.html">Administering Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-chef.html">Managing Jenkins with Chef</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-puppet.html">Managing Jenkins with Puppet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/viewing-logs.html">Viewing logs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/authenticating-scripted-clients.html">Authenticating scripted clients</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration.html">Reverse proxy configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-haproxy.html">Reverse proxy - HAProxy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-squid.html">Reverse proxy - Squid</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-iis.html">Reverse proxy - IIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-iptables.html">Reverse proxy - iptables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../scaling/index.html">Scaling Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-scale.html">Architecting for Scale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/hardware-recommendations.html">Hardware Recommendations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-manageability.html">Architecting for Manageability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../troubleshooting/index.html">Troubleshooting Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/diagnosing-errors.html">Diagnosing Errors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/obtaining-a-thread-dump.html">Obtaining a thread dump</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary/index.html">Glossary</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins User Documentation</span>
+    <span class="version">2.401.3</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins User Documentation</a></li>
+    <li><a href="index.html">Pipeline</a></li>
+    <li><a href="syntax.html">Pipeline Syntax</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.401.3</button>
+  <div class="version-menu">
+    <a class="version is-current" href="syntax.html">2.401.3</a>
+    <a class="version" href="../../2.2/pipeline/syntax.html">2.2</a>
+    <a class="version" href="../../2.1/pipeline/syntax.html">2.1</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/user-docs/modules/pipeline/pages/syntax.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Pipeline Syntax</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section builds on the information introduced in
+<a href="../getting-started/index.html" class="xref page">Getting started with Pipeline</a> and should be treated
+solely as a reference. For more information on how to use Pipeline syntax in
+practical examples, refer to the
+<a href="jenkinsfile.html" class="xref page">Using a Jenkinsfile</a> section of this chapter. As of version
+2.5 of the Pipeline plugin, Pipeline supports two discrete syntaxes which are
+detailed below. For the pros and cons of each, see the <a href="#compare">Syntax Comparison</a>.</p>
+</div>
+<div class="paragraph">
+<p>As discussed at the <a href="syntax.html" class="xref page">start of this chapter</a>, the most fundamental part
+of a Pipeline is the "step". Basically, steps tell Jenkins <em>what</em> to do and
+serve as the basic building block for both Declarative and Scripted Pipeline
+syntax.</p>
+</div>
+<div class="paragraph">
+<p>For an overview of available steps, please refer to the
+<a href="/doc/pipeline/steps">Pipeline Steps reference</a>
+which contains a comprehensive list of steps built into Pipeline as well as
+steps provided by plugins.</p>
+</div>
+</div>
+</div>
+<div class="sect1 syntax">
+<h2 id="_declarative_pipeline"><a class="anchor" href="#_declarative_pipeline"></a>Declarative Pipeline</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Declarative Pipeline is a relatively recent addition to Jenkins Pipeline
+<sup class="footnote" id="_footnote_declarative-version">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>
+which presents a more simplified and opinionated syntax on top of the Pipeline
+sub-systems.</p>
+</div>
+<div class="paragraph">
+<p>All valid Declarative Pipelines must be enclosed within a <code>pipeline</code> block, for
+example:</p>
+</div>
+<div class="listingblock width-min">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    /* insert Declarative Pipeline here */
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The basic statements and expressions which are valid in Declarative Pipeline
+follow the same rules as
+<a href="http://groovy-lang.org/syntax.html">Groovy&#8217;s syntax</a>
+with the following exceptions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The top-level of the Pipeline must be a <em>block</em>, specifically: <code>pipeline { }</code>.</p>
+</li>
+<li>
+<p>No semicolons as statement separators. Each statement has to be on its own
+line.</p>
+</li>
+<li>
+<p>Blocks must only consist of <a href="#declarative-sections">Sections</a>,
+<a href="#declarative-directives">Directives</a>, <a href="#declarative-steps">Steps</a>, or assignment statements.</p>
+</li>
+<li>
+<p>A property reference statement is treated as a no-argument method invocation. So, for
+example, <code>input</code> is treated as <code>input()</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can use the
+<a href="../getting-started/index.html#directive-generator" class="xref page">Declarative Directive Generator</a>
+to help you get started with configuring the directives and sections in your
+Declarative Pipeline.</p>
+</div>
+<div class="sect2">
+<h3 id="_limitations"><a class="anchor" href="#_limitations"></a>Limitations</h3>
+<div class="paragraph">
+<p>There is currently an <a href="https://issues.jenkins.io/browse/JENKINS-37984">open issue</a>
+which limits the maximum size of the code within the <code>pipeline{}</code> block. This limitation
+does not apply to Scripted pipelines.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="declarative-sections"><a class="anchor" href="#declarative-sections"></a>Sections</h3>
+<div class="paragraph">
+<p>Sections in Declarative Pipeline typically contain one or more
+<a href="#declarative-directives">Directives</a> or <a href="#declarative-steps">Steps</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="_agent"><a class="anchor" href="#_agent"></a>agent</h4>
+<div class="paragraph">
+<p>The <code>agent</code> section specifies where the entire Pipeline, or a specific stage,
+will execute in the Jenkins environment depending on where the <code>agent</code>
+section is placed. The section must be defined at the top-level inside the
+<code>pipeline</code> block, but stage-level usage is optional.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch syntax">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 90%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Required</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>Yes</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Parameters</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p><a href="#agent-parameters">Described below</a></p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Allowed</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>In the top-level <code>pipeline</code> block and each <code>stage</code> block.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="differences-between-top-and-stage-level"><a class="anchor" href="#differences-between-top-and-stage-level"></a>Differences between top level agents and stage level agents</h5>
+<div class="paragraph">
+<p>There are some nuances when adding an agent to the top level or a stage level when the <code>options</code> directive is applied.
+Check the section <a href="#options">options</a> for more information.</p>
+</div>
+<div class="sect5">
+<h6 id="top-level-agents"><a class="anchor" href="#top-level-agents"></a>Top Level Agents</h6>
+<div class="paragraph">
+<p>In <code>agents</code> declared at the top level of a Pipeline, an agent is allocated and then the <code>timeout</code> option is applied.
+The time to allocate the agent <strong>is not included</strong> in the limit set by the <code>timeout</code> option.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    options {
+        // Timeout counter starts AFTER agent is allocated
+        timeout(time: 1, unit: 'SECONDS')
+    }
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="stage-level-agents"><a class="anchor" href="#stage-level-agents"></a>Stage Agents</h6>
+<div class="paragraph">
+<p>In <code>agents</code> declared within a stage, the options are invoked <strong>before</strong> allocating the <code>agent</code> and <strong>before</strong> checking any <code>when</code> conditions.
+In this case, when using <code>timeout</code>, it is applied <strong>before</strong> the <code>agent</code> is allocated.
+The time to allocate the agent <strong>is included</strong> in the limit set by the <code>timeout</code> option.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent none
+    stages {
+        stage('Example') {
+            agent any
+            options {
+                // Timeout counter starts BEFORE agent is allocated
+                timeout(time: 1, unit: 'SECONDS')
+            }
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This timeout will include the agent provisioning time.
+Because the timeout includes the agent provisioning time, the Pipeline may fail in cases where agent allocation is delayed.</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="agent-parameters"><a class="anchor" href="#agent-parameters"></a>Parameters</h5>
+<div class="paragraph">
+<p>In order to support the wide variety of use-cases Pipeline authors may have,
+the <code>agent</code> section supports a few different types of parameters. These
+parameters can be applied at the top-level of the <code>pipeline</code> block, or within
+each <code>stage</code> directive.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">any</dt>
+<dd>
+<p>Execute the Pipeline, or stage, on any available agent. For example: <code>agent any</code></p>
+</dd>
+<dt class="hdlist1">none</dt>
+<dd>
+<p>When applied at the top-level of the <code>pipeline</code> block no global agent
+will be allocated for the entire Pipeline run and each <code>stage</code> section will
+need to contain its own <code>agent</code> section. For example: <code>agent none</code></p>
+</dd>
+<dt class="hdlist1">label</dt>
+<dd>
+<p>Execute the Pipeline, or stage, on an agent available in the Jenkins
+environment with the provided label. For example: <code>agent { label 'my-defined-label' }</code></p>
+<div class="paragraph">
+<p>Label conditions can also be used. For example: <code>agent { label 'my-label1 &amp;&amp; my-label2' }</code> or <code>agent { label 'my-label1 || my-label2' }</code></p>
+</div>
+</dd>
+<dt class="hdlist1">node</dt>
+<dd>
+<p><code>agent { node { label 'labelName' } }</code> behaves the same as
+<code>agent { label 'labelName' }</code>, but <code>node</code> allows for additional options (such
+as <code>customWorkspace</code>).</p>
+</dd>
+<dt class="hdlist1">docker</dt>
+<dd>
+<p>Execute the Pipeline, or stage, with the given container which will be
+dynamically provisioned on a <a href="../glossary/index.html#node" class="xref page"> node</a> pre-configured to
+accept Docker-based Pipelines, or on a node matching the optionally defined
+<code>label</code> parameter.  <code>docker</code> also optionally accepts an <code>args</code> parameter
+which may contain arguments to pass directly to a <code>docker run</code> invocation, and
+an <code>alwaysPull</code> option, which will force a <code>docker pull</code> even if the image
+name is already present.
+For example: <code>agent { docker 'maven:3.9.0-eclipse-temurin-11' }</code> or</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">agent {
+    docker {
+        image 'maven:3.9.0-eclipse-temurin-11'
+        label 'my-defined-label'
+        args  '-v /tmp:/tmp'
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>docker</code> also optionally accepts a <code>registryUrl</code> and <code>registryCredentialsId</code> parameters
+which will help to specify the Docker Registry to use and its credentials. The parameter
+<code>registryCredentialsId</code> could be used alone for private repositories within the docker hub.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">agent {
+    docker {
+        image 'myregistry.com/node'
+        label 'my-defined-label'
+        registryUrl 'https://myregistry.com/'
+        registryCredentialsId 'myPredefinedCredentialsInJenkins'
+    }
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">dockerfile</dt>
+<dd>
+<p>Execute the Pipeline, or stage, with a container built from a
+<code>Dockerfile</code> contained in the source repository. In order to use this option,
+the <code>Jenkinsfile</code> must be loaded from either a <strong>Multibranch Pipeline</strong> or a
+<strong>Pipeline from SCM</strong>. Conventionally this is the <code>Dockerfile</code> in the root of the
+source repository: <code>agent { dockerfile true }</code>. If building a <code>Dockerfile</code> in
+another directory, use the <code>dir</code> option: <code>agent { dockerfile { dir 'someSubDir'
+} }</code>. If your <code>Dockerfile</code> has another name, you can specify the file name with
+the <code>filename</code> option. You can pass additional arguments to the <code>docker build &#8230;&#8203;</code>
+command with the <code>additionalBuildArgs</code> option, like <code>agent { dockerfile {
+additionalBuildArgs '--build-arg foo=bar' } }</code>.
+For example, a repository with the file <code>build/Dockerfile.build</code>, expecting
+a build argument <code>version</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">agent {
+    // Equivalent to "docker build -f Dockerfile.build --build-arg version=1.0.2 ./build/
+    dockerfile {
+        filename 'Dockerfile.build'
+        dir 'build'
+        label 'my-defined-label'
+        additionalBuildArgs  '--build-arg version=1.0.2'
+        args '-v /tmp:/tmp'
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>dockerfile</code> also optionally accepts a <code>registryUrl</code> and <code>registryCredentialsId</code> parameters
+which will help to specify the Docker Registry to use and its credentials.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">agent {
+    dockerfile {
+        filename 'Dockerfile.build'
+        dir 'build'
+        label 'my-defined-label'
+        registryUrl 'https://myregistry.com/'
+        registryCredentialsId 'myPredefinedCredentialsInJenkins'
+    }
+}</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">kubernetes</dt>
+<dd>
+<p>Execute the Pipeline, or stage, inside a pod deployed on a Kubernetes cluster. In order to use this option,
+the <code>Jenkinsfile</code> must be loaded from either a <strong>Multibranch Pipeline</strong> or a
+<strong>Pipeline from SCM</strong>. The Pod template is defined inside the kubernetes { } block.
+For example, if you want a pod with a Kaniko container inside it, you would define it as follows:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">agent {
+    kubernetes {
+        defaultContainer 'kaniko'
+        yaml '''
+kind: Pod
+spec:
+  containers:
+  - name: kaniko
+    image:: gcr.io/kaniko-project/executor:debug
+    imagePullPolicy: Always
+    command:
+    - sleep
+    args:
+    - 99d
+    volumeMounts:
+      - name: aws-secret
+        mountPath: /root/.aws/
+      - name: docker-registry-config
+        mountPath: /kaniko/.docker
+  volumes:
+    - name: aws-secret
+      secret:
+        secretName: aws-secret
+    - name: docker-registry-config
+      configMap:
+        name: docker-registry-config
+'''
+   }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You will need to create a secret <code>aws-secret</code> for Kaniko to be able to authenticate with ECR. This secret should contain the contents of <code>~/.aws/credentials</code>. The other volume is a ConfigMap which should contain the endpoint of your ECR registry.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+      "credHelpers": {
+        "&lt;your-aws-account-id&gt;.dkr.ecr.eu-central-1.amazonaws.com": "ecr-login"
+      }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Refer to the following example for reference: <a href="https://github.com/jenkinsci/kubernetes-plugin/blob/master/examples/kaniko.groovy" class="bare">https://github.com/jenkinsci/kubernetes-plugin/blob/master/examples/kaniko.groovy</a></p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_common_options"><a class="anchor" href="#_common_options"></a>Common Options</h5>
+<div class="paragraph">
+<p>These are a few options that can be applied to two or more <code>agent</code> implementations.
+They are not required unless explicitly stated.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">label</dt>
+<dd>
+<p>A string. The label or label condition on which to run the Pipeline or individual <code>stage</code>.</p>
+<div class="paragraph">
+<p>This option is valid for <code>node</code>, <code>docker</code>, and <code>dockerfile</code>, and is required for
+<code>node</code>.</p>
+</div>
+</dd>
+<dt class="hdlist1">customWorkspace</dt>
+<dd>
+<p>A string. Run the Pipeline or individual <code>stage</code> this <code>agent</code>
+is applied to within this custom workspace, rather than the default. It can be
+either a relative path, in which case the custom workspace will be under the
+workspace root on the node, or an absolute path. For example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">agent {
+    node {
+        label 'my-defined-label'
+        customWorkspace '/some/other/path'
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This option is valid for <code>node</code>, <code>docker</code>, and <code>dockerfile</code>.</p>
+</div>
+</dd>
+<dt class="hdlist1">reuseNode</dt>
+<dd>
+<p>A boolean, false by default. If true, run the container on the node
+specified at the top-level of the Pipeline, in the same workspace, rather than
+on a new node entirely.</p>
+<div class="paragraph">
+<p>This option is valid for <code>docker</code> and <code>dockerfile</code>, and only has an effect when
+used on an <code>agent</code> for an individual <code>stage</code>.</p>
+</div>
+</dd>
+<dt class="hdlist1">args</dt>
+<dd>
+<p>A string. Runtime arguments to pass to <code>docker run</code>.</p>
+<div class="paragraph">
+<p>This option is valid for <code>docker</code> and <code>dockerfile</code>.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div id="agent-example" class="exampleblock">
+<div class="title">Example 1. Docker Agent, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent { docker 'maven:3.9.0-eclipse-temurin-11' } <i class="conum" data-value="1"></i><b>(1)</b>
+    stages {
+        stage('Example Build') {
+            steps {
+                sh 'mvn -B clean verify'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Execute all the steps defined in this Pipeline within a newly created container
+of the given name and tag (<code>maven:3.9.0-eclipse-temurin-11</code>).</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. Stage-level Agent Section</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent none <i class="conum" data-value="1"></i><b>(1)</b>
+    stages {
+        stage('Example Build') {
+            agent { docker 'maven:3.9.0-eclipse-temurin-11' } <i class="conum" data-value="2"></i><b>(2)</b>
+            steps {
+                echo 'Hello, Maven'
+                sh 'mvn --version'
+            }
+        }
+        stage('Example Test') {
+            agent { docker 'openjdk:8-jre' } <i class="conum" data-value="3"></i><b>(3)</b>
+            steps {
+                echo 'Hello, JDK'
+                sh 'java -version'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defining <code>agent none</code> at the top-level of the Pipeline ensures that
+<a href="../glossary/index.html#executor" class="xref page"> an Executor</a> will not be assigned unnecessarily.
+Using <code>agent none</code> also forces each <code>stage</code> section to contain its own <code>agent</code> section.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Execute the steps in this stage in a newly created container using this image.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Execute the steps in this stage in a newly created container using a different image
+from the previous stage.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_post"><a class="anchor" href="#_post"></a>post</h4>
+<div class="paragraph">
+<p>The <code>post</code> section defines one or more additional <a href="#declarative-steps">steps</a>
+that are run upon the completion of a Pipeline&#8217;s or stage&#8217;s run (depending on
+the location of the <code>post</code> section within the Pipeline). <code>post</code> can support any
+of the following <a href="#post-conditions">post-condition</a> blocks: <code>always</code>,
+<code>changed</code>, <code>fixed</code>, <code>regression</code>, <code>aborted</code>, <code>failure</code>, <code>success</code>,
+<code>unstable</code>, <code>unsuccessful</code>, and <code>cleanup</code>. These condition blocks allow the execution
+of steps inside each condition depending on the completion status of
+the Pipeline or stage. The condition blocks are executed in the order
+shown below.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch syntax">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 90%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Required</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Parameters</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p><em>None</em></p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Allowed</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>In the top-level <code>pipeline</code> block and each <code>stage</code> block.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="post-conditions"><a class="anchor" href="#post-conditions"></a>Conditions</h5>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>always</code></dt>
+<dd>
+<p>Run the steps in the <code>post</code> section regardless of the completion
+status of the Pipeline&#8217;s or stage&#8217;s run.</p>
+</dd>
+<dt class="hdlist1"><code>changed</code></dt>
+<dd>
+<p>Only run the steps in <code>post</code> if the current Pipeline&#8217;s
+run has a different completion status from its previous run.</p>
+</dd>
+<dt class="hdlist1"><code>fixed</code></dt>
+<dd>
+<p>Only run the steps in <code>post</code> if the current Pipeline&#8217;s
+run is successful and the previous run failed or was unstable.</p>
+</dd>
+<dt class="hdlist1"><code>regression</code></dt>
+<dd>
+<p>Only run the steps in <code>post</code> if the current Pipeline&#8217;s
+or status is failure, unstable, or aborted and the previous run
+was successful.</p>
+</dd>
+<dt class="hdlist1"><code>aborted</code></dt>
+<dd>
+<p>Only run the steps in <code>post</code> if the current Pipeline&#8217;s
+run has an "aborted" status, usually due to the Pipeline being manually aborted.
+This is typically denoted by gray in the web UI.</p>
+</dd>
+<dt class="hdlist1"><code>failure</code></dt>
+<dd>
+<p>Only run the steps in <code>post</code> if the current Pipeline&#8217;s or stage&#8217;s
+run has a "failed" status, typically denoted by red in the web UI.</p>
+</dd>
+<dt class="hdlist1"><code>success</code></dt>
+<dd>
+<p>Only run the steps in <code>post</code> if the current Pipeline&#8217;s or stage&#8217;s
+run has a "success" status, typically denoted by blue or green in the web UI.</p>
+</dd>
+<dt class="hdlist1"><code>unstable</code></dt>
+<dd>
+<p>Only run the steps in <code>post</code> if the current Pipeline&#8217;s
+run has an "unstable" status, usually caused by test failures, code violations,
+etc. This is typically denoted by yellow in the web UI.</p>
+</dd>
+<dt class="hdlist1"><code>unsuccessful</code></dt>
+<dd>
+<p>Only run the steps in <code>post</code> if the current Pipeline&#8217;s or stage&#8217;s
+run has not a "success" status. This is typically denoted in the web UI depending
+on the status previously mentioned (for stages this may fire if the build itself is unstable).</p>
+</dd>
+<dt class="hdlist1"><code>cleanup</code></dt>
+<dd>
+<p>Run the steps in this <code>post</code> condition after every other
+<code>post</code> condition has been evaluated, regardless of the Pipeline or
+stage&#8217;s status.</p>
+</dd>
+</dl>
+</div>
+<div id="post-example" class="exampleblock">
+<div class="title">Example 3. Post Section, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+    post { <i class="conum" data-value="1"></i><b>(1)</b>
+        always { <i class="conum" data-value="2"></i><b>(2)</b>
+            echo 'I will always say Hello again!'
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Conventionally, the <code>post</code> section should be placed at the end of the
+Pipeline.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><a href="#post-conditions">Post-condition</a> blocks contain <a href="#declarative-steps">steps</a>
+the same as the <a href="#steps">[steps]</a> section.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_stages"><a class="anchor" href="#_stages"></a>stages</h4>
+<div class="paragraph">
+<p>Containing a sequence of one or more <a href="#stage">[stage]</a> directives, the <code>stages</code> section is where
+the bulk of the "work" described by a Pipeline will be located. At a minimum, it
+is recommended that <code>stages</code> contain at least one <a href="#stage">[stage]</a> directive for each
+discrete part of the continuous delivery process, such as Build, Test, and
+Deploy.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch syntax">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 90%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Required</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>Yes</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Parameters</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p><em>None</em></p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Allowed</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>Inside the <code>pipeline</code> block, or within a <code>stage</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div id="stages-example" class="exampleblock">
+<div class="title">Example 4. Stages, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    stages { <i class="conum" data-value="1"></i><b>(1)</b>
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>stages</code> section will typically follow the directives such as <code>agent</code>,
+<code>options</code>, etc.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_steps"><a class="anchor" href="#_steps"></a>steps</h4>
+<div class="paragraph">
+<p>The <code>steps</code> section defines a series of one or more <a href="#declarative-steps">steps</a>
+to be executed in a given <code>stage</code> directive.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch syntax">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 90%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Required</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>Yes</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Parameters</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p><em>None</em></p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Allowed</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>Inside each <code>stage</code> block.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div id="steps-example" class="exampleblock">
+<div class="title">Example 5. Single Step, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-grovy hljs" data-lang="grovy">pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps { <i class="conum" data-value="1"></i><b>(1)</b>
+                echo 'Hello World'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>steps</code> section must contain one or more steps.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="declarative-directives"><a class="anchor" href="#declarative-directives"></a>Directives</h3>
+<div class="sect3">
+<h4 id="_environment"><a class="anchor" href="#_environment"></a>environment</h4>
+<div class="paragraph">
+<p>The <code>environment</code> directive specifies a sequence of key-value pairs which will
+be defined as environment variables for all steps, or stage-specific steps,
+depending on where the <code>environment</code> directive is located within the Pipeline.</p>
+</div>
+<div class="paragraph">
+<p>This directive supports a special helper method <code>credentials()</code> which can be
+used to access pre-defined Credentials by their identifier in the Jenkins
+environment.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch syntax">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 90%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Required</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Parameters</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p><em>None</em></p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Allowed</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>Inside the <code>pipeline</code> block, or within <code>stage</code> directives.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_supported_credentials_type"><a class="anchor" href="#_supported_credentials_type"></a>Supported Credentials Type</h5>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Secret Text</dt>
+<dd>
+<p>the environment variable specified will be set to the Secret Text content</p>
+</dd>
+<dt class="hdlist1">Secret File</dt>
+<dd>
+<p>the environment variable specified will be set to the location of the File
+file that is temporarily created</p>
+</dd>
+<dt class="hdlist1">Username and password</dt>
+<dd>
+<p>the environment variable specified will be set to <code>username:password</code> and two
+additional environment variables will be automatically defined: <code>MYVARNAME_USR</code>
+and <code>MYVARNAME_PSW</code> respectively.</p>
+</dd>
+<dt class="hdlist1">SSH with Private Key</dt>
+<dd>
+<p>the environment variable specified will be set to the location of the SSH key
+file that is temporarily created and two additional environment variables will
+be automatically defined: <code>MYVARNAME_USR</code> and <code>MYVARNAME_PSW</code> (holding the
+passphrase).</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Unsupported credentials type causes the pipeline to fail with the message: <code>org.jenkinsci.plugins.credentialsbinding.impl.CredentialNotFoundException: No suitable binding handler could be found for type &lt;unsupportedType&gt;.</code></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="environment-example" class="exampleblock">
+<div class="title">Example 6. Secret Text Credentials, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    environment { <i class="conum" data-value="1"></i><b>(1)</b>
+        CC = 'clang'
+    }
+    stages {
+        stage('Example') {
+            environment { <i class="conum" data-value="2"></i><b>(2)</b>
+                AN_ACCESS_KEY = credentials('my-predefined-secret-text') <i class="conum" data-value="3"></i><b>(3)</b>
+            }
+            steps {
+                sh 'printenv'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>An <code>environment</code> directive used in the top-level <code>pipeline</code> block will
+apply to all steps within the Pipeline.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>An <code>environment</code> directive defined within a <code>stage</code> will only apply the
+given environment variables to steps within the <code>stage</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The <code>environment</code> block has a helper method <code>credentials()</code> defined which
+can be used to access pre-defined Credentials by their identifier in the
+Jenkins environment.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 7. Username and Password Credentials</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    stages {
+        stage('Example Username/Password') {
+            environment {
+                SERVICE_CREDS = credentials('my-predefined-username-password')
+            }
+            steps {
+                sh 'echo "Service user is $SERVICE_CREDS_USR"'
+                sh 'echo "Service password is $SERVICE_CREDS_PSW"'
+                sh 'curl -u $SERVICE_CREDS https://myservice.example.com'
+            }
+        }
+        stage('Example SSH Username with private key') {
+            environment {
+                SSH_CREDS = credentials('my-predefined-ssh-creds')
+            }
+            steps {
+                sh 'echo "SSH private key is located at $SSH_CREDS"'
+                sh 'echo "SSH user is $SSH_CREDS_USR"'
+                sh 'echo "SSH passphrase is $SSH_CREDS_PSW"'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_options"><a class="anchor" href="#_options"></a>options</h4>
+<div class="paragraph">
+<p>The <code>options</code> directive allows configuring Pipeline-specific options from
+within the Pipeline itself. Pipeline provides a number of these options, such
+as <code>buildDiscarder</code>, but they may also be provided by plugins, such as
+<code>timestamps</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch syntax">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 90%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Required</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Parameters</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p><em>None</em></p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Allowed</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>Inside the <code>pipeline</code> block, or (with certain limitations) within <code>stage</code> directives.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_available_options"><a class="anchor" href="#_available_options"></a>Available Options</h5>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">buildDiscarder</dt>
+<dd>
+<p>Persist artifacts and console output for the specific number
+of recent Pipeline runs. For example: <code>options { buildDiscarder(logRotator(numToKeepStr: '1')) }</code></p>
+</dd>
+<dt class="hdlist1">checkoutToSubdirectory</dt>
+<dd>
+<p>Perform the automatic source control checkout
+in a subdirectory of the workspace. For example: <code>options { checkoutToSubdirectory('foo') }</code></p>
+</dd>
+<dt class="hdlist1">disableConcurrentBuilds</dt>
+<dd>
+<p>Disallow concurrent executions of the Pipeline. Can
+be useful for preventing simultaneous accesses to shared resources, etc. For
+example: <code>options { disableConcurrentBuilds() }</code> to queue a build when there&#8217;s already an executing build of the Pipeline, or <code>options { disableConcurrentBuilds(abortPrevious: true) }</code> to abort the running one and start the new build.</p>
+</dd>
+<dt class="hdlist1">disableResume</dt>
+<dd>
+<p>Do not allow the pipeline to resume if the controller restarts.
+For example: <code>options { disableResume() }</code></p>
+</dd>
+<dt class="hdlist1">newContainerPerStage</dt>
+<dd>
+<p>Used with <code>docker</code> or <code>dockerfile</code> top-level
+agent. When specified, each stage will run in a new container instance
+on the same node, rather than all stages running in the same container instance.</p>
+</dd>
+<dt class="hdlist1">overrideIndexTriggers</dt>
+<dd>
+<p>Allows overriding default treatment of branch indexing triggers.
+If branch indexing triggers are disabled at the multibranch or organization label, <code>options { overrideIndexTriggers(true) }</code>
+will enable them for this job only. Otherwise, <code>options { overrideIndexTriggers(false) }</code> will
+disable branch indexing triggers for this job only.</p>
+</dd>
+<dt class="hdlist1">preserveStashes</dt>
+<dd>
+<p>Preserve stashes from completed builds, for use with
+stage restarting. For example: <code>options { preserveStashes() }</code> to
+preserve the stashes from the most recent completed build, or <code>options
+{ preserveStashes(buildCount: 5) }</code> to preserve the stashes from the five most
+recent completed builds.</p>
+</dd>
+<dt class="hdlist1">quietPeriod</dt>
+<dd>
+<p>Set the quiet period, in seconds, for the Pipeline, overriding the global default.
+For example: <code>options { quietPeriod(30) }</code></p>
+</dd>
+<dt class="hdlist1">retry</dt>
+<dd>
+<p>On failure, retry the entire Pipeline the specified number of times.
+For example: <code>options { retry(3) }</code></p>
+</dd>
+<dt class="hdlist1">skipDefaultCheckout</dt>
+<dd>
+<p>Skip checking out code from source control by default in
+the <code>agent</code> directive. For example: <code>options { skipDefaultCheckout() }</code></p>
+</dd>
+<dt class="hdlist1">skipStagesAfterUnstable</dt>
+<dd>
+<p>Skip stages once the build status has gone to UNSTABLE. For example: <code>options { skipStagesAfterUnstable() }</code></p>
+</dd>
+<dt class="hdlist1">timeout</dt>
+<dd>
+<p>Set a timeout period for the Pipeline run, after which Jenkins should
+abort the Pipeline. For example: <code>options { timeout(time: 1, unit: 'HOURS') }</code></p>
+</dd>
+</dl>
+</div>
+<div id="options-example" class="exampleblock">
+<div class="title">Example 8. Global Timeout, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    options {
+        timeout(time: 1, unit: 'HOURS') <i class="conum" data-value="1"></i><b>(1)</b>
+    }
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Specifying a global execution timeout of one hour, after which Jenkins will abort the Pipeline run.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">timestamps</dt>
+<dd>
+<p>Prepend all console output generated by the Pipeline run with the
+time at which the line was emitted. For example: <code>options { timestamps() }</code></p>
+</dd>
+<dt class="hdlist1">parallelsAlwaysFailFast</dt>
+<dd>
+<p>Set failfast true for all subsequent parallel stages in the pipeline.
+For example: <code>options { parallelsAlwaysFailFast() }</code></p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A comprehensive list of available options is pending the completion of
+<a href="https://github.com/jenkins-infra/helpdesk/issues/820">help desk ticket 820</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_stage_options"><a class="anchor" href="#_stage_options"></a>stage options</h5>
+<div class="paragraph">
+<p>The <code>options</code> directive for a <code>stage</code> is similar to the <code>options</code> directive at
+the root of the Pipeline. However, the <code>stage</code>-level <code>options</code> can only contain
+steps like <code>retry</code>, <code>timeout</code>, or <code>timestamps</code>, or Declarative options that are
+relevant to a <code>stage</code>, like <code>skipDefaultCheckout</code>.</p>
+</div>
+<div class="paragraph">
+<p>Inside a <code>stage</code>, the steps in the <code>options</code> directive are invoked before
+entering the <code>agent</code> or checking any <code>when</code> conditions.</p>
+</div>
+<div class="sect5">
+<h6 id="_available_stage_options"><a class="anchor" href="#_available_stage_options"></a>Available Stage Options</h6>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">skipDefaultCheckout</dt>
+<dd>
+<p>Skip checking out code from source control by default in
+the <code>agent</code> directive. For example: <code>options { skipDefaultCheckout() }</code></p>
+</dd>
+<dt class="hdlist1">timeout</dt>
+<dd>
+<p>Set a timeout period for this stage, after which Jenkins should
+abort the stage. For example: <code>options { timeout(time: 1, unit: 'HOURS') }</code></p>
+</dd>
+</dl>
+</div>
+<div id="stage-options-example" class="exampleblock">
+<div class="title">Example 9. Stage Timeout, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            options {
+                timeout(time: 1, unit: 'HOURS') <i class="conum" data-value="1"></i><b>(1)</b>
+            }
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Specifying an execution timeout of one hour for the <code>Example</code> stage, after
+which Jenkins will abort the Pipeline run.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">retry</dt>
+<dd>
+<p>On failure, retry this stage the specified number of times.
+For example: <code>options { retry(3) }</code></p>
+</dd>
+<dt class="hdlist1">timestamps</dt>
+<dd>
+<p>Prepend all console output generated during this stage with the
+time at which the line was emitted. For example: <code>options { timestamps() }</code></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_parameters"><a class="anchor" href="#_parameters"></a>parameters</h4>
+<div class="paragraph">
+<p>The <code>parameters</code> directive provides a list of parameters that a user should
+provide when triggering the Pipeline. The values for these user-specified
+parameters are made available to Pipeline steps via the <code>params</code> object,
+see the <a href="#parameters-example">Parameters, Declarative Pipeline</a> for its specific usage.</p>
+</div>
+<div class="paragraph">
+<p>Each parameter has a <em>Name</em> and <em>Value</em>, depending on the parameter type.
+This information is exported as environment variables when the build starts, allowing subsequent parts of the build configuration to access those values.
+For example, use the <code>${PARAMETER_NAME}</code> syntax with POSIX shells like <code>bash</code> and <code>ksh</code>, the <code>${Env:PARAMETER_NAME}</code> syntax with PowerShell, or the <code>%PARAMETER_NAME%</code> syntax with Windows <code>cmd.exe</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch syntax">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 90%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Required</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Parameters</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p><em>None</em></p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Allowed</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>Only once, inside the <code>pipeline</code> block.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_available_parameters"><a class="anchor" href="#_available_parameters"></a>Available Parameters</h5>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">string</dt>
+<dd>
+<p>A parameter of a string type, for example: <code>parameters { string(name: 'DEPLOY_ENV', defaultValue: 'staging', description: '') }</code></p>
+</dd>
+<dt class="hdlist1">text</dt>
+<dd>
+<p>A text parameter, which can contain multiple lines, for example: <code>parameters { text(name: 'DEPLOY_TEXT', defaultValue: 'One\nTwo\nThree\n', description: '') }</code></p>
+</dd>
+<dt class="hdlist1">booleanParam</dt>
+<dd>
+<p>A boolean parameter, for example: <code>parameters { booleanParam(name: 'DEBUG_BUILD', defaultValue: true, description: '') }</code></p>
+</dd>
+<dt class="hdlist1">choice</dt>
+<dd>
+<p>A choice parameter, for example: <code>parameters { choice(name: 'CHOICES', choices: ['one', 'two', 'three'], description: '') }</code>. The first value is the default.</p>
+</dd>
+<dt class="hdlist1">password</dt>
+<dd>
+<p>A password parameter, for example: <code>parameters { password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'A secret password') }</code></p>
+</dd>
+</dl>
+</div>
+<div id="parameters-example" class="exampleblock">
+<div class="title">Example 10. Parameters, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+
+        text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
+
+        booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
+
+        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+
+        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+    }
+    stages {
+        stage('Example') {
+            steps {
+                echo "Hello ${params.PERSON}"
+
+                echo "Biography: ${params.BIOGRAPHY}"
+
+                echo "Toggle: ${params.TOGGLE}"
+
+                echo "Choice: ${params.CHOICE}"
+
+                echo "Password: ${params.PASSWORD}"
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A comprehensive list of available parameters is pending the completion of
+<a href="https://github.com/jenkins-infra/helpdesk/issues/820">help desk ticket 820</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_triggers"><a class="anchor" href="#_triggers"></a>triggers</h4>
+<div class="paragraph">
+<p>The <code>triggers</code> directive defines the automated ways in which the Pipeline
+should be re-triggered. For Pipelines which are integrated with a source such
+as GitHub or BitBucket, <code>triggers</code> may not be necessary as webhooks-based
+integration will likely already be present. The triggers currently available are
+<code>cron</code>, <code>pollSCM</code> and <code>upstream</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch syntax">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 90%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Required</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Parameters</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p><em>None</em></p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Allowed</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>Only once, inside the <code>pipeline</code> block.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">cron</dt>
+<dd>
+<p>Accepts a cron-style string to define a regular interval at which the
+Pipeline should be re-triggered, for example: <code>triggers { cron('H */4 * * 1-5') }</code></p>
+</dd>
+<dt class="hdlist1">pollSCM</dt>
+<dd>
+<p>Accepts a cron-style string to define a regular interval at which
+Jenkins should check for new source changes. If new changes exist, the Pipeline
+will be re-triggered. For example: <code>triggers { pollSCM('H */4 * * 1-5') }</code></p>
+</dd>
+<dt class="hdlist1">upstream</dt>
+<dd>
+<p>Accepts a comma-separated string of jobs and a threshold. When any
+job in the string finishes with the minimum threshold, the Pipeline will be
+re-triggered. For example:
+<code>triggers { upstream(upstreamProjects: 'job1,job2', threshold: hudson.model.Result.SUCCESS) }</code></p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>pollSCM</code> trigger is only available in Jenkins 2.22 or later.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="triggers-example" class="exampleblock">
+<div class="title">Example 11. Triggers, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">// Declarative //
+pipeline {
+    agent any
+    triggers {
+        cron('H */4 * * 1-5')
+    }
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cron-syntax"><a class="anchor" href="#cron-syntax"></a>Jenkins cron syntax</h4>
+<div class="paragraph">
+<p>The Jenkins cron syntax follows the syntax of the
+<a href="https://en.wikipedia.org/wiki/Cron">cron utility</a> (with minor differences).
+Specifically, each line consists of 5 fields separated by TAB or whitespace:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">MINUTE</th>
+<th class="tableblock halign-left valign-top">HOUR</th>
+<th class="tableblock halign-left valign-top">DOM</th>
+<th class="tableblock halign-left valign-top">MONTH</th>
+<th class="tableblock halign-left valign-top">DOW</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minutes within the hour (0–59)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The hour of the day (0–23)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The day of the month (1–31)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The month (1–12)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The day of the week (0–7) where 0 and 7 are Sunday.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>To specify multiple values for one field, the following operators are
+available. In the order of precedence,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>*</code> specifies all valid values</p>
+</li>
+<li>
+<p><code>M-N</code> specifies a range of values</p>
+</li>
+<li>
+<p><code>M-N/X</code> or <code>*/X</code> steps by intervals of <code>X</code> through the specified range or whole valid range</p>
+</li>
+<li>
+<p><code>A,B,&#8230;&#8203;,Z</code> enumerates multiple values</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To allow periodically scheduled tasks to produce even load on the system,
+the symbol <code>H</code> (for “hash”) should be used wherever possible.
+For example, using <code>0 0 * * *</code> for a dozen daily jobs
+will cause a large spike at midnight.
+In contrast, using <code>H H * * *</code> would still execute each job once a day,
+but not all at the same time, better using limited resources.</p>
+</div>
+<div class="paragraph">
+<p>The <code>H</code> symbol can be used with a range. For example, <code>H H(0-7) * * *</code>
+means some time between 12:00 AM (midnight) to 7:59 AM.
+You can also use step intervals with <code>H</code>, with or without ranges.</p>
+</div>
+<div class="paragraph">
+<p>The <code>H</code> symbol can be thought of as a random value over a range,
+but it actually is a hash of the job name, not a random function, so that
+the value remains stable for any given project.</p>
+</div>
+<div class="paragraph">
+<p>Beware that for the day of month field, short cycles such as <code>*/3</code>
+or <code>H/3</code> will not work consistently near the end of most months,
+due to variable month lengths.  For example, <code>*/3</code> will run on the
+1st, 4th, …31st days of a long month, then again the next day of
+the next month.  Hashes are always chosen in the 1-28 range, so
+<code>H/3</code> will produce a gap between runs of between 3 and 6 days at
+the end of a month.  (Longer cycles will also have inconsistent
+lengths but the effect may be relatively less noticeable.)</p>
+</div>
+<div class="paragraph">
+<p>Empty lines and lines that start with <code>#</code> will be ignored as comments.</p>
+</div>
+<div class="paragraph">
+<p>In addition, <code>@yearly</code>, <code>@annually</code>, <code>@monthly</code>,
+<code>@weekly</code>, <code>@daily</code>, <code>@midnight</code>,
+and <code>@hourly</code> are supported as convenient aliases.
+These use the hash system for automatic balancing.
+For example, <code>@hourly</code> is the same as <code>H * * * *</code> and could mean at any time during the hour.
+<code>@midnight</code> actually means some time between 12:00 AM and 2:59 AM.</p>
+</div>
+<table id="cron-syntax-examples" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Jenkins cron syntax examples</caption>
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">every fifteen minutes (perhaps at :07, :22, :37, :52)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers{ cron('H/15 * * * *') }</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">every ten minutes in the first half of every hour (three times, perhaps at :04, :14, :24)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers{ cron('H(0-29)/10 * * * *') }</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">once every two hours at 45 minutes past the hour starting at 9:45 AM and finishing at 3:45 PM every weekday.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers{ cron('45 9-16/2 * * 1-5') }</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">once in every two hours slot between 9 AM and 5 PM every weekday (perhaps at 10:38 AM, 12:38 PM, 2:38 PM, 4:38 PM)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers{ cron('H H(9-16)/2 * * 1-5') }</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">once a day on the 1st and 15th of every month except December</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>triggers{ cron('H H 1,15 1-11 *') }</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_stage"><a class="anchor" href="#_stage"></a>stage</h4>
+<div class="paragraph">
+<p>The <code>stage</code> directive goes in the <code>stages</code> section and should contain a
+<a href="#steps">[steps]</a> section, an optional <code>agent</code> section, or other stage-specific directives.
+Practically speaking, all of the real work done by a Pipeline will be wrapped
+in one or more <code>stage</code> directives.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch syntax">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 90%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Required</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>At least one</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Parameters</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>One mandatory parameter, a string for the name of the stage.</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Allowed</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>Inside the <code>stages</code> section.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div id="stage-example" class="exampleblock">
+<div class="title">Example 12. Stage, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">// Declarative //
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_tools"><a class="anchor" href="#_tools"></a>tools</h4>
+<div class="paragraph">
+<p>A section defining tools to auto-install and put on the <code>PATH</code>. This is ignored
+if <code>agent none</code> is specified.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch syntax">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 90%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Required</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Parameters</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p><em>None</em></p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Allowed</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>Inside the <code>pipeline</code> block or a <code>stage</code> block.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_supported_tools"><a class="anchor" href="#_supported_tools"></a>Supported Tools</h5>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">maven</dt>
+<dt class="hdlist1">jdk</dt>
+<dt class="hdlist1">gradle</dt>
+</dl>
+</div>
+<div id="tools-example" class="exampleblock">
+<div class="title">Example 13. Tools, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    tools {
+        maven 'apache-maven-3.0.1' <i class="conum" data-value="1"></i><b>(1)</b>
+    }
+    stages {
+        stage('Example') {
+            steps {
+                sh 'mvn --version'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The tool name must be pre-configured in Jenkins under <strong>Manage Jenkins</strong> &#8594;
+<strong>Tools</strong>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_input"><a class="anchor" href="#_input"></a>input</h4>
+<div class="paragraph">
+<p>The <code>input</code> directive on a <code>stage</code> allows you to prompt for input, using the
+<a href="/doc/pipeline/steps/pipeline-input-step/#input-wait-for-interactive-input"><code>input</code> step</a>.
+The <code>stage</code> will pause after any <code>options</code> have been applied, and before
+entering the <code>agent</code> block for that <code>stage</code> or evaluating the <code>when</code> condition of the <code>stage</code>. If the <code>input</code>
+is approved, the <code>stage</code> will then continue. Any parameters provided as part of
+the <code>input</code> submission will be available in the environment for the rest of the
+<code>stage</code>.</p>
+</div>
+<div class="sect4">
+<h5 id="_configuration_options"><a class="anchor" href="#_configuration_options"></a>Configuration options</h5>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">message</dt>
+<dd>
+<p>Required. This will be presented to the user when they go to submit
+the <code>input</code>.</p>
+</dd>
+<dt class="hdlist1">id</dt>
+<dd>
+<p>An optional identifier for this <code>input</code>. The default value is based on the <code>stage</code> name.</p>
+</dd>
+<dt class="hdlist1">ok</dt>
+<dd>
+<p>Optional text for the "ok" button on the <code>input</code> form.</p>
+</dd>
+<dt class="hdlist1">submitter</dt>
+<dd>
+<p>An optional comma-separated list of users or external group names
+who are allowed to submit this <code>input</code>. Defaults to allowing any user.</p>
+</dd>
+<dt class="hdlist1">submitterParameter</dt>
+<dd>
+<p>An optional name of an environment variable to set with
+the <code>submitter</code> name, if present.</p>
+</dd>
+<dt class="hdlist1">parameters</dt>
+<dd>
+<p>An optional list of parameters to prompt the submitter to provide.
+See <a href="#parameters">[parameters]</a> for more information.</p>
+</dd>
+</dl>
+</div>
+<div id="input-example" class="exampleblock">
+<div class="title">Example 14. Input Step, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                }
+            }
+            steps {
+                echo "Hello, ${PERSON}, nice to meet you."
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_when"><a class="anchor" href="#_when"></a>when</h4>
+<div class="paragraph">
+<p>The <code>when</code> directive allows the Pipeline to determine whether the stage should
+be executed depending on the given condition.
+The <code>when</code> directive must contain at least one condition.
+If the <code>when</code> directive contains more than one condition,
+all the child conditions must return true for the stage to execute.
+This is the same as if the child conditions were nested in an <code>allOf</code> condition
+(see the <a href="#when-example">examples</a> below). If an <code>anyOf</code> condition is used, note that the condition skips remaining tests as soon as the first "true" condition is found.</p>
+</div>
+<div class="paragraph">
+<p>More complex conditional structures can be built
+using the nesting conditions: <code>not</code>, <code>allOf</code>, or <code>anyOf</code>.
+Nesting conditions may be nested to any arbitrary depth.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch syntax">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 90%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Required</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>No</p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Parameters</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p><em>None</em></p>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">Allowed</p></th>
+<td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
+<p>Inside a <code>stage</code> directive</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_built_in_conditions"><a class="anchor" href="#_built_in_conditions"></a>Built-in Conditions</h5>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">branch</dt>
+<dd>
+<p>Execute the stage when the branch being built matches the branch
+pattern (ANT style path glob) given, for example: <code>when { branch 'master' }</code>. Note that this only works on
+a multibranch Pipeline.</p>
+<div class="paragraph">
+<p>The optional parameter <code>comparator</code> may be added after an attribute
+to specify how any patterns are evaluated for a match:
+<code>EQUALS</code> for a simple string comparison,
+<code>GLOB</code> (the default) for an ANT style path glob (same as for example <code>changeset</code>), or
+<code>REGEXP</code> for regular expression matching.
+For example: <code>when { branch pattern: "release-\\d+", comparator: "REGEXP"}</code></p>
+</div>
+</dd>
+<dt class="hdlist1">buildingTag</dt>
+<dd>
+<p>Execute the stage when the build is building a tag.
+Example: <code>when { buildingTag() }</code></p>
+</dd>
+<dt class="hdlist1">changelog</dt>
+<dd>
+<p>Execute the stage if the build&#8217;s SCM changelog contains a given regular expression pattern,
+for example: <code>when { changelog '.*^\\[DEPENDENCY\\] .+$' }</code></p>
+</dd>
+<dt class="hdlist1">changeset</dt>
+<dd>
+<p>Execute the stage if the build&#8217;s SCM changeset contains one or more files matching the given pattern.
+Example: <code>when { changeset "**/*.js" }</code></p>
+<div class="paragraph">
+<p>The optional parameter <code>comparator</code> may be added after an attribute
+to specify how any patterns are evaluated for a match:
+<code>EQUALS</code> for a simple string comparison,
+<code>GLOB</code> (the default) for an ANT style path glob case insensitive, this can be turned off with the <code>caseSensitive</code> parameter, or
+<code>REGEXP</code> for regular expression matching.
+For example: <code>when { changeset pattern: ".<strong>TEST\\.java", comparator: "REGEXP" }</code> or <code>when { changeset pattern: "</strong>*/*TEST.java", caseSensitive: true }</code></p>
+</div>
+</dd>
+<dt class="hdlist1">changeRequest</dt>
+<dd>
+<p>Executes the stage if the current build is for a "change request"
+(a.k.a. Pull Request on GitHub and Bitbucket, Merge Request on GitLab, Change in Gerrit, etc.).
+When no parameters are passed the stage runs on every change request,
+for example: <code>when { changeRequest() }</code>.</p>
+<div class="paragraph">
+<p>By adding a filter attribute with parameter to the change request,
+the stage can be made to run only on matching change requests.
+Possible attributes are
+<code>id</code>, <code>target</code>, <code>branch</code>, <code>fork</code>, <code>url</code>, <code>title</code>, <code>author</code>, <code>authorDisplayName</code>, and <code>authorEmail</code>.
+Each of these corresponds to
+a <code>CHANGE_*</code> environment variable, for example: <code>when { changeRequest target: 'master' }</code>.</p>
+</div>
+<div class="paragraph">
+<p>The optional parameter <code>comparator</code> may be added after an attribute
+to specify how any patterns are evaluated for a match:
+<code>EQUALS</code> for a simple string comparison (the default),
+<code>GLOB</code> for an ANT style path glob (same as for example <code>changeset</code>), or
+<code>REGEXP</code> for regular expression matching.
+Example: <code>when { changeRequest authorEmail: "[\\w_-.]+@example.com", comparator: 'REGEXP' }</code></p>
+</div>
+</dd>
+<dt class="hdlist1">environment</dt>
+<dd>
+<p>Execute the stage when the specified environment variable is set
+to the given value, for example: <code>when { environment name: 'DEPLOY_TO', value: 'production' }</code></p>
+</dd>
+<dt class="hdlist1">equals</dt>
+<dd>
+<p>Execute the stage when the expected value is equal to the actual value,
+for example: <code>when { equals expected: 2, actual: currentBuild.number }</code></p>
+</dd>
+<dt class="hdlist1">expression</dt>
+<dd>
+<p>Execute the stage when the specified Groovy expression evaluates
+to true, for example: <code>when { expression { return params.DEBUG_BUILD } }</code> Note that when returning strings from your expressions they must be converted to booleans or return <code>null</code> to evaluate to false. Simply returning "0" or "false" will still evaluate to "true".</p>
+</dd>
+<dt class="hdlist1">tag</dt>
+<dd>
+<p>Execute the stage if the <code>TAG_NAME</code> variable matches the given pattern.
+Example: <code>when { tag "release-*" }</code>.
+If an empty pattern is provided the stage will execute if the <code>TAG_NAME</code> variable exists
+(same as <code>buildingTag()</code>).</p>
+<div class="paragraph">
+<p>The optional parameter <code>comparator</code> may be added after an attribute
+to specify how any patterns are evaluated for a match:
+<code>EQUALS</code> for a simple string comparison,
+<code>GLOB</code> (the default) for an ANT style path glob (same as for example <code>changeset</code>), or
+<code>REGEXP</code> for regular expression matching.
+For example: <code>when { tag pattern: "release-\\d+", comparator: "REGEXP"}</code></p>
+</div>
+</dd>
+<dt class="hdlist1">not</dt>
+<dd>
+<p>Execute the stage when the nested condition is false.
+Must contain one condition.
+For example: <code>when { not { branch 'master' } }</code></p>
+</dd>
+<dt class="hdlist1">allOf</dt>
+<dd>
+<p>Execute the stage when all of the nested conditions are true.
+Must contain at least one condition.
+For example: <code>when { allOf { branch 'master'; environment name: 'DEPLOY_TO', value: 'production' } }</code></p>
+</dd>
+<dt class="hdlist1">anyOf</dt>
+<dd>
+<p>Execute the stage when at least one of the nested conditions is true.
+Must contain at least one condition.
+For example: <code>when { anyOf { branch 'master'; branch 'staging' } }</code></p>
+</dd>
+<dt class="hdlist1">triggeredBy</dt>
+<dd>
+<p>Execute the stage when the current build has been triggered by the param given.
+For example:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>when { triggeredBy 'SCMTrigger' }</code></p>
+</li>
+<li>
+<p><code>when { triggeredBy 'TimerTrigger' }</code></p>
+</li>
+<li>
+<p><code>when { triggeredBy 'BuildUpstreamCause' }</code></p>
+</li>
+<li>
+<p><code>when { triggeredBy  cause: "UserIdCause", detail: "vlinde" }</code></p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_evaluating_when_before_entering_agent_in_a_stage"><a class="anchor" href="#_evaluating_when_before_entering_agent_in_a_stage"></a>Evaluating <code>when</code> before entering <code>agent</code> in a <code>stage</code></h5>
+<div class="paragraph">
+<p>By default, the <code>when</code> condition for a <code>stage</code> will be evaluated after
+entering the <code>agent</code> for that <code>stage</code>, if one is defined. However, this can
+be changed by specifying the <code>beforeAgent</code> option within the <code>when</code>
+block. If <code>beforeAgent</code> is set to <code>true</code>, the <code>when</code> condition will be
+evaluated first, and the <code>agent</code> will only be entered if the <code>when</code>
+condition evaluates to true.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_evaluating_when_before_the_input_directive"><a class="anchor" href="#_evaluating_when_before_the_input_directive"></a>Evaluating <code>when</code> before the <code>input</code> directive</h5>
+<div class="paragraph">
+<p>By default, the when condition for a stage will not be evaluated before the input, if one is defined.
+However, this can be changed by specifying the <code>beforeInput</code> option within the when block. If <code>beforeInput</code> is set to true,
+the when condition will be evaluated first, and the input will only be entered if the when condition evaluates to true.</p>
+</div>
+<div class="paragraph">
+<p><code>beforeInput true</code> takes precedence over <code>beforeAgent true</code>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_evaluating_when_before_the_options_directive"><a class="anchor" href="#_evaluating_when_before_the_options_directive"></a>Evaluating <code>when</code> before the <code>options</code> directive</h5>
+<div class="paragraph">
+<p>By default, the <code>when</code> condition for a <code>stage</code> will be evaluated after
+entering the <code>options</code> for that <code>stage</code>, if any are defined. However, this can
+be changed by specifying the <code>beforeOptions</code> option within the <code>when</code>
+block. If <code>beforeOptions</code> is set to <code>true</code>, the <code>when</code> condition will be
+evaluated first, and the <code>options</code> will only be entered if the <code>when</code>
+condition evaluates to true.</p>
+</div>
+<div class="paragraph">
+<p><code>beforeOptions true</code> takes precedence over <code>beforeInput true</code> and <code>beforeAgent true</code>.</p>
+</div>
+<div id="when-example" class="exampleblock">
+<div class="title">Example 15. Single Condition, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    stages {
+        stage('Example Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Example Deploy') {
+            when {
+                branch 'production'
+            }
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 16. Multiple Condition, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    stages {
+        stage('Example Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Example Deploy') {
+            when {
+                branch 'production'
+                environment name: 'DEPLOY_TO', value: 'production'
+            }
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 17. Nested condition (same behavior as previous example)</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    stages {
+        stage('Example Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Example Deploy') {
+            when {
+                allOf {
+                    branch 'production'
+                    environment name: 'DEPLOY_TO', value: 'production'
+                }
+            }
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 18. Multiple condition and nested condition</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    stages {
+        stage('Example Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Example Deploy') {
+            when {
+                branch 'production'
+                anyOf {
+                    environment name: 'DEPLOY_TO', value: 'production'
+                    environment name: 'DEPLOY_TO', value: 'staging'
+                }
+            }
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 19. Expression condition and nested condition</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    stages {
+        stage('Example Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Example Deploy') {
+            when {
+                expression { BRANCH_NAME ==~ /(production|staging)/ }
+                anyOf {
+                    environment name: 'DEPLOY_TO', value: 'production'
+                    environment name: 'DEPLOY_TO', value: 'staging'
+                }
+            }
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 20. <code>beforeAgent</code></div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent none
+    stages {
+        stage('Example Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Example Deploy') {
+            agent {
+                label "some-label"
+            }
+            when {
+                beforeAgent true
+                branch 'production'
+            }
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 21. <code>beforeInput</code></div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent none
+    stages {
+        stage('Example Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Example Deploy') {
+            when {
+                beforeInput true
+                branch 'production'
+            }
+            input {
+                message "Deploy to production?"
+                id "simple-input"
+            }
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 22. <code>beforeOptions</code></div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent none
+    stages {
+        stage('Example Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Example Deploy') {
+            when {
+                beforeOptions true
+                branch 'testing'
+            }
+            options {
+                lock label: 'testing-deploy-envs', quantity: 1, variable: 'deployEnv'
+            }
+            steps {
+                echo "Deploying to ${deployEnv}"
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 23. <code>triggeredBy</code></div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent none
+    stages {
+        stage('Example Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Example Deploy') {
+            when {
+                triggeredBy "TimerTrigger"
+            }
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sequential_stages"><a class="anchor" href="#_sequential_stages"></a>Sequential Stages</h3>
+<div class="paragraph">
+<p>Stages in Declarative Pipeline may have a <code>stages</code> section containing a list of nested stages to be run in sequential order.
+Note that a stage must have one and only one of <code>steps</code>, <code>stages</code>, <code>parallel</code>, or <code>matrix</code>.
+It is not possible to nest a <code>parallel</code> or <code>matrix</code> block within a <code>stage</code> directive if that <code>stage</code>
+directive is nested within a <code>parallel</code>  or <code>matrix</code> block itself. However, a <code>stage</code>
+directive within a <code>parallel</code> or <code>matrix</code> block can use all other functionality of a <code>stage</code>,
+including <code>agent</code>, <code>tools</code>, <code>when</code>, etc.</p>
+</div>
+<div id="sequential-stages-example" class="exampleblock">
+<div class="title">Example 24. Sequential Stages, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent none
+    stages {
+        stage('Non-Sequential Stage') {
+            agent {
+                label 'for-non-sequential'
+            }
+            steps {
+                echo "On Non-Sequential Stage"
+            }
+        }
+        stage('Sequential') {
+            agent {
+                label 'for-sequential'
+            }
+            environment {
+                FOR_SEQUENTIAL = "some-value"
+            }
+            stages {
+                stage('In Sequential 1') {
+                    steps {
+                        echo "In Sequential 1"
+                    }
+                }
+                stage('In Sequential 2') {
+                    steps {
+                        echo "In Sequential 2"
+                    }
+                }
+                stage('Parallel In Sequential') {
+                    parallel {
+                        stage('In Parallel 1') {
+                            steps {
+                                echo "In Parallel 1"
+                            }
+                        }
+                        stage('In Parallel 2') {
+                            steps {
+                                echo "In Parallel 2"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_parallel"><a class="anchor" href="#_parallel"></a>Parallel</h3>
+<div class="paragraph">
+<p>Stages in Declarative Pipeline may have a <code>parallel</code> section containing a list of nested stages to be run in parallel.
+Note that a stage must have one and only one of <code>steps</code>, <code>stages</code>, <code>parallel</code>, or <code>matrix</code>.
+It is not possible to nest a <code>parallel</code> or <code>matrix</code> block within a <code>stage</code> directive if that <code>stage</code>
+directive is nested within a <code>parallel</code>  or <code>matrix</code> block itself. However, a <code>stage</code>
+directive within a <code>parallel</code> or <code>matrix</code> block can use all other functionality of a <code>stage</code>,
+including <code>agent</code>, <code>tools</code>, <code>when</code>, etc.</p>
+</div>
+<div class="paragraph">
+<p>In addition, you can force your <code>parallel</code> stages to all be aborted when any one
+of them fails, by adding <code>failFast true</code> to the <code>stage</code> containing the
+<code>parallel</code>. Another option for adding <code>failfast</code> is adding an option to the
+pipeline definition: <code>parallelsAlwaysFailFast()</code></p>
+</div>
+<div id="parallel-stages-example" class="exampleblock">
+<div class="title">Example 25. Parallel Stages, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    stages {
+        stage('Non-Parallel Stage') {
+            steps {
+                echo 'This stage will be executed first.'
+            }
+        }
+        stage('Parallel Stage') {
+            when {
+                branch 'master'
+            }
+            failFast true
+            parallel {
+                stage('Branch A') {
+                    agent {
+                        label "for-branch-a"
+                    }
+                    steps {
+                        echo "On Branch A"
+                    }
+                }
+                stage('Branch B') {
+                    agent {
+                        label "for-branch-b"
+                    }
+                    steps {
+                        echo "On Branch B"
+                    }
+                }
+                stage('Branch C') {
+                    agent {
+                        label "for-branch-c"
+                    }
+                    stages {
+                        stage('Nested 1') {
+                            steps {
+                                echo "In stage Nested 1 within Branch C"
+                            }
+                        }
+                        stage('Nested 2') {
+                            steps {
+                                echo "In stage Nested 2 within Branch C"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 26. <code>parallelsAlwaysFailFast</code></div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    options {
+        parallelsAlwaysFailFast()
+    }
+    stages {
+        stage('Non-Parallel Stage') {
+            steps {
+                echo 'This stage will be executed first.'
+            }
+        }
+        stage('Parallel Stage') {
+            when {
+                branch 'master'
+            }
+            parallel {
+                stage('Branch A') {
+                    agent {
+                        label "for-branch-a"
+                    }
+                    steps {
+                        echo "On Branch A"
+                    }
+                }
+                stage('Branch B') {
+                    agent {
+                        label "for-branch-b"
+                    }
+                    steps {
+                        echo "On Branch B"
+                    }
+                }
+                stage('Branch C') {
+                    agent {
+                        label "for-branch-c"
+                    }
+                    stages {
+                        stage('Nested 1') {
+                            steps {
+                                echo "In stage Nested 1 within Branch C"
+                            }
+                        }
+                        stage('Nested 2') {
+                            steps {
+                                echo "In stage Nested 2 within Branch C"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="declarative-matrix"><a class="anchor" href="#declarative-matrix"></a>Matrix</h3>
+<div class="paragraph">
+<p>Stages in Declarative Pipeline may have a <code>matrix</code> section defining a multi-dimensional matrix of name-value combinations to be run in parallel.
+We&#8217;ll refer these combinations as "cells" in a matrix.
+Each cell in a matrix can include one or more stages to be run sequentially using the configuration for that cell.
+Note that a stage must have one and only one of <code>steps</code>, <code>stages</code>, <code>parallel</code>, or <code>matrix</code>.
+It is not possible to nest a <code>parallel</code> or <code>matrix</code> block within a <code>stage</code> directive if that <code>stage</code>
+directive is nested within a <code>parallel</code>  or <code>matrix</code> block itself. However, a <code>stage</code>
+directive within a <code>parallel</code> or <code>matrix</code> block can use all other functionality of a <code>stage</code>,
+including <code>agent</code>, <code>tools</code>, <code>when</code>, etc.</p>
+</div>
+<div class="paragraph">
+<p>In addition, you can force your <code>matrix</code> cells to all be aborted when any one
+of them fails, by adding <code>failFast true</code> to the <code>stage</code> containing the
+<code>matrix</code>. Another option for adding <code>failfast</code> is adding an option to the
+pipeline definition: <code>parallelsAlwaysFailFast()</code></p>
+</div>
+<div class="paragraph">
+<p>The <code>matrix</code> section must include an <code>axes</code> section and a <code>stages</code> section.
+The <code>axes</code> section defines the values for each <code>axis</code> in the matrix.
+The <code>stages</code> section defines a list of <code>stage</code>s to run sequentially in each cell.
+A <code>matrix</code> may have an <code>excludes</code> section to remove invalid cells from the matrix.
+Many of the directives available on  <code>stage</code>, including <code>agent</code>, <code>tools</code>, <code>when</code>, etc.,
+can also be added to <code>matrix</code> to control the behavior of each cell.</p>
+</div>
+<div class="sect3">
+<h4 id="matrix-axes"><a class="anchor" href="#matrix-axes"></a>axes</h4>
+<div class="paragraph">
+<p>The <code>axes</code> section specifies one or more <code>axis</code> directives.
+Each <code>axis</code> consists of a <code>name</code> and a list of <code>values</code>.
+All the values from each axis are combined with the others to produce the cells.</p>
+</div>
+<div id="matrix-axes-example" class="exampleblock">
+<div class="title">Example 27. One-axis with 3 cells</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">matrix {
+    axes {
+        axis {
+            name 'PLATFORM'
+            values 'linux', 'mac', 'windows'
+        }
+    }
+    // ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 28. Two-axis with 12 cells (three by four)</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">matrix {
+    axes {
+        axis {
+            name 'PLATFORM'
+            values 'linux', 'mac', 'windows'
+        }
+        axis {
+            name 'BROWSER'
+            values 'chrome', 'edge', 'firefox', 'safari'
+        }
+    }
+    // ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="three-axes" class="exampleblock">
+<div class="title">Example 29. Three-axis matrix with 24 cells (three by four by two)</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">matrix {
+    axes {
+        axis {
+            name 'PLATFORM'
+            values 'linux', 'mac', 'windows'
+        }
+        axis {
+            name 'BROWSER'
+            values 'chrome', 'edge', 'firefox', 'safari'
+        }
+        axis {
+            name 'ARCHITECTURE'
+            values '32-bit', '64-bit'
+        }
+    }
+    // ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="matrix-stages"><a class="anchor" href="#matrix-stages"></a>stages</h4>
+<div class="paragraph">
+<p>The <code>stages</code> section specifies one or more <code>stage</code>s to be executed sequentially in each cell.
+This section is identical to any other
+<a href="#sequential-stages"><code>stages</code> section</a>.</p>
+</div>
+<div id="matrix-stages-example" class="exampleblock">
+<div class="title">Example 30. One-axis with 3 cells, each cell runs three stages - "build", "test", and "deploy"</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">matrix {
+    axes {
+        axis {
+            name 'PLATFORM'
+            values 'linux', 'mac', 'windows'
+        }
+    }
+    stages {
+        stage('build') {
+            // ...
+        }
+        stage('test') {
+            // ...
+        }
+        stage('deploy') {
+            // ...
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 31. Two-axis with 12 cells (three by four)</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">matrix {
+    axes {
+        axis {
+            name 'PLATFORM'
+            values 'linux', 'mac', 'windows'
+        }
+        axis {
+            name 'BROWSER'
+            values 'chrome', 'edge', 'firefox', 'safari'
+        }
+    }
+    stages {
+        stage('build-and-test') {
+            // ...
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="matrix-excludes"><a class="anchor" href="#matrix-excludes"></a>excludes (optional)</h4>
+<div class="paragraph">
+<p>The optional <code>excludes</code> section lets authors specify one or more <code>exclude</code> filter expressions that select cells to be excluded from the expanded set of matrix cells (aka, sparsening).
+Filters are constructed using a basic directive structure of one or more of exclude <code>axis</code> directives each with a <code>name</code> and <code>values</code> list.</p>
+</div>
+<div class="paragraph">
+<p>The <code>axis</code> directives inside an <code>exclude</code> generate a set of combinations (similar to generating the matrix cells).
+The matrix cells that match all the values from an <code>exclude</code> combination are removed from the matrix.
+If more than one <code>exclude</code> directive is supplied, each is evaluated separately to remove cells.</p>
+</div>
+<div class="paragraph">
+<p>When dealing with a long list of values to exclude, exclude <code>axis</code> directives can use <code>notValues</code> instead of <code>values</code>.
+These will exclude cells that <strong>do not</strong> match one of the values passed to <code>notValues</code>.</p>
+</div>
+<div id="matrix-excludes-example" class="exampleblock">
+<div class="title">Example 32. Three-axis matrix with 24 cells, exclude '32-bit, mac' (4 cells excluded)</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">matrix {
+    axes {
+        axis {
+            name 'PLATFORM'
+            values 'linux', 'mac', 'windows'
+        }
+        axis {
+            name 'BROWSER'
+            values 'chrome', 'edge', 'firefox', 'safari'
+        }
+        axis {
+            name 'ARCHITECTURE'
+            values '32-bit', '64-bit'
+        }
+    }
+    excludes {
+        exclude {
+            axis {
+                name 'PLATFORM'
+                values 'mac'
+            }
+            axis {
+                name 'ARCHITECTURE'
+                values '32-bit'
+            }
+        }
+    }
+    // ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Exclude the <code>linux, safari</code> combination and exclude any platform that is <strong>not</strong> <code>windows</code> with the <code>edge</code> browser.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 33. Three-axis matrix with 24 cells, exclude '32-bit, mac' and invalid browser combinations (9 cells excluded)</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">matrix {
+    axes {
+        axis {
+            name 'PLATFORM'
+            values 'linux', 'mac', 'windows'
+        }
+        axis {
+            name 'BROWSER'
+            values 'chrome', 'edge', 'firefox', 'safari'
+        }
+        axis {
+            name 'ARCHITECTURE'
+            values '32-bit', '64-bit'
+        }
+    }
+    excludes {
+        exclude {
+            // 4 cells
+            axis {
+                name 'PLATFORM'
+                values 'mac'
+            }
+            axis {
+                name 'ARCHITECTURE'
+                values '32-bit'
+            }
+        }
+        exclude {
+            // 2 cells
+            axis {
+                name 'PLATFORM'
+                values 'linux'
+            }
+            axis {
+                name 'BROWSER'
+                values 'safari'
+            }
+        }
+        exclude {
+            // 3 more cells and '32-bit, mac' (already excluded)
+            axis {
+                name 'PLATFORM'
+                notValues 'windows'
+            }
+            axis {
+                name 'BROWSER'
+                values 'edge'
+            }
+        }
+    }
+    // ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="matrix-cell-directives"><a class="anchor" href="#matrix-cell-directives"></a>Matrix cell-level directives (optional)</h4>
+<div class="paragraph">
+<p>Matrix lets users efficiently configure the overall environment for each cell, by adding stage-level directives under <code>matrix</code> itself.
+These directives behave the same as they would on a stage but they can also accept values provided by the matrix for each cell.</p>
+</div>
+<div class="paragraph">
+<p>The <code>axis</code> and <code>exclude</code> directives define the static set of cells that make up the matrix.
+That set of combinations is generated before the start of the pipeline run.
+The "per-cell" directives, on the other hand, are evaluated at runtime.</p>
+</div>
+<div class="paragraph">
+<p>These directives include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#agent">[agent]</a></p>
+</li>
+<li>
+<p><a href="#environment">[environment]</a></p>
+</li>
+<li>
+<p><a href="#input">[input]</a></p>
+</li>
+<li>
+<p><a href="#options">[options]</a></p>
+</li>
+<li>
+<p><a href="#post">[post]</a></p>
+</li>
+<li>
+<p><a href="#tools">[tools]</a></p>
+</li>
+<li>
+<p><a href="#when">[when]</a></p>
+</li>
+</ul>
+</div>
+<div id="matrix-cell-example" class="exampleblock">
+<div class="title">Example 34. Complete Matrix Example, Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    parameters {
+        choice(name: 'PLATFORM_FILTER', choices: ['all', 'linux', 'windows', 'mac'], description: 'Run on specific platform')
+    }
+    agent none
+    stages {
+        stage('BuildAndTest') {
+            matrix {
+                agent {
+                    label "${PLATFORM}-agent"
+                }
+                when { anyOf {
+                    expression { params.PLATFORM_FILTER == 'all' }
+                    expression { params.PLATFORM_FILTER == env.PLATFORM }
+                } }
+                axes {
+                    axis {
+                        name 'PLATFORM'
+                        values 'linux', 'windows', 'mac'
+                    }
+                    axis {
+                        name 'BROWSER'
+                        values 'firefox', 'chrome', 'safari', 'edge'
+                    }
+                }
+                excludes {
+                    exclude {
+                        axis {
+                            name 'PLATFORM'
+                            values 'linux'
+                        }
+                        axis {
+                            name 'BROWSER'
+                            values 'safari'
+                        }
+                    }
+                    exclude {
+                        axis {
+                            name 'PLATFORM'
+                            notValues 'windows'
+                        }
+                        axis {
+                            name 'BROWSER'
+                            values 'edge'
+                        }
+                    }
+                }
+                stages {
+                    stage('Build') {
+                        steps {
+                            echo "Do Build for ${PLATFORM} - ${BROWSER}"
+                        }
+                    }
+                    stage('Test') {
+                        steps {
+                            echo "Do Test for ${PLATFORM} - ${BROWSER}"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="declarative-steps"><a class="anchor" href="#declarative-steps"></a>Steps</h3>
+<div class="paragraph">
+<p>Declarative Pipelines may use all the available steps documented in the
+<a href="/doc/pipeline/steps">Pipeline Steps reference</a>,
+which contains a comprehensive list of steps, with the addition of the steps
+listed below which are <strong>only supported</strong> in Declarative Pipeline.</p>
+</div>
+<div class="sect3">
+<h4 id="_script"><a class="anchor" href="#_script"></a>script</h4>
+<div class="paragraph">
+<p>The <code>script</code> step takes a block of <a href="#scripted-pipeline">[scripted-pipeline]</a> and executes that in
+the Declarative Pipeline. For most use-cases, the <code>script</code> step should be
+unnecessary in Declarative Pipelines, but it can provide a useful "escape
+hatch." <code>script</code> blocks of non-trivial size and/or complexity should be moved
+into <a href="../glossary/index.html#shared-libraries" class="xref page">Shared Libraries</a> instead.</p>
+</div>
+<div id="script-example" class="exampleblock">
+<div class="title">Example 35. Script Block in Declarative Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+
+                script {
+                    def browsers = ['chrome', 'firefox']
+                    for (int i = 0; i &lt; browsers.size(); ++i) {
+                        echo "Testing the ${browsers[i]} browser"
+                    }
+                }
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1 syntax">
+<h2 id="_scripted_pipeline"><a class="anchor" href="#_scripted_pipeline"></a>Scripted Pipeline</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Scripted Pipeline, like <a href="#declarative-pipeline">[declarative-pipeline]</a>, is built on top of the
+underlying Pipeline sub-system. Unlike Declarative, Scripted Pipeline is
+effectively a general-purpose DSL
+<sup class="footnote" id="_footnote_dsl">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> built with
+<a href="http://groovy-lang.org/syntax.html">Groovy</a>.
+Most functionality provided by the Groovy language is made available to users
+of Scripted Pipeline, which means it can be a very expressive and flexible tool
+with which one can author continuous delivery pipelines.</p>
+</div>
+<div class="sect2">
+<h3 id="_flow_control"><a class="anchor" href="#_flow_control"></a>Flow Control</h3>
+<div class="paragraph">
+<p>Scripted Pipeline is serially executed from the top of a <code>Jenkinsfile</code>
+downwards, like most traditional scripts in Groovy or other languages.
+Providing flow control, therefore, rests on Groovy expressions, such as the
+<code>if/else</code> conditionals, for example:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 36. Conditional Statement <code>if</code>, Scripted Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
+    stage('Example') {
+        if (env.BRANCH_NAME == 'master') {
+            echo 'I only execute on the master branch'
+        } else {
+            echo 'I execute elsewhere'
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Another way Scripted Pipeline flow control can be managed is with Groovy&#8217;s
+exception handling support. When <a href="#scripted-steps">Steps</a> fail for whatever reason
+they throw an exception.  Handling behaviors on-error must make use of
+the <code>try/catch/finally</code> blocks in Groovy, for example:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 37. Try-Catch Block, Scripted Pipeline</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
+    stage('Example') {
+        try {
+            sh 'exit 1'
+        }
+        catch (exc) {
+            echo 'Something failed, I should sound the klaxons!'
+            throw
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="scripted-steps"><a class="anchor" href="#scripted-steps"></a>Steps</h3>
+<div class="paragraph">
+<p>As discussed at the <a href="syntax.html" class="xref page">start of this chapter</a>, the most fundamental part
+of a Pipeline is the "step". Fundamentally, steps tell Jenkins <em>what</em> to do and
+serve as the basic building block for both Declarative and Scripted Pipeline
+syntax.</p>
+</div>
+<div class="paragraph">
+<p>Scripted Pipeline does <strong>not</strong> introduce any steps which are specific to its
+syntax;
+<a href="/doc/pipeline/steps">Pipeline Steps reference</a> contains a comprehensive list of steps provided by Pipeline and plugins.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_differences_from_plain_groovy"><a class="anchor" href="#_differences_from_plain_groovy"></a>Differences from plain Groovy</h3>
+<div class="paragraph">
+<p>In order to provide <em>durability</em>, which means that running Pipelines can
+survive a restart of the Jenkins <a href="../glossary/index.html#controller" class="xref page"> controller</a>, Scripted
+Pipeline must serialize data back to the controller. Due to this design
+requirement, some Groovy idioms such as <code>collection.each { item &#8594; /* perform
+operation */ }</code> are not fully supported.  See
+<a href="https://issues.jenkins.io/browse/JENKINS-27421">JENKINS-27421</a>
+and
+<a href="https://issues.jenkins.io/browse/JENKINS-26481">JENKINS-26481</a>
+for more information.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="compare"><a class="anchor" href="#compare"></a>Syntax Comparison</h2>
+<div class="sectionbody">
+<div class="videoblock">
+<div class="content">
+<iframe width="800" height="420" src="https://www.youtube.com/embed/GJBlskiaRrI?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>This video shares some differences between Scripted and Declarative Pipeline syntax.</p>
+</div>
+<div class="paragraph">
+<p>When Jenkins Pipeline was first created, Groovy was selected as the foundation.
+Jenkins has long shipped with an embedded Groovy engine to provide advanced
+scripting capabilities for admins and users alike. Additionally, the
+implementors of Jenkins Pipeline found Groovy to be a solid foundation upon
+which to build what is now referred to as the "Scripted Pipeline" DSL.
+<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p>As it is a fully-featured programming environment, Scripted Pipeline offers a
+tremendous amount of flexibility and extensibility to Jenkins users. The
+Groovy learning-curve isn&#8217;t typically desirable for all members of a given
+team, so Declarative Pipeline was created to offer a simpler and more
+opinionated syntax for authoring Jenkins Pipeline.</p>
+</div>
+<div class="paragraph">
+<p>Both are fundamentally the same Pipeline sub-system underneath. They
+are both durable implementations of "Pipeline as code." They are both able to
+use steps built into Pipeline or provided by plugins. Both are able to utilize
+<a href="../glossary/index.html#shared-libraries" class="xref page">Shared Libraries</a></p>
+</div>
+<div class="paragraph">
+<p>Where they differ however is in syntax and flexibility. Declarative limits
+what is available to the user with a more strict and pre-defined structure,
+making it an ideal choice for simpler continuous delivery pipelines. Scripted
+provides very few limits, insofar that the only limits on structure and syntax
+tend to be defined by Groovy itself, rather than any Pipeline-specific systems,
+making it an ideal choice for power-users and those with more complex
+requirements. As the name implies, Declarative Pipeline encourages a
+declarative programming model.
+<sup class="footnote" id="_footnote_declarative">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>
+Whereas Scripted Pipelines follow a more imperative programming model.
+<sup class="footnote" id="_footnote_imperative">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup></p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. Version 2.5 of the "Pipeline plugin" introduces support for Declarative Pipeline syntax
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. <a href="https://en.wikipedia.org/wiki/Domain-specific_language">Domain-specific language</a>
+</div>
+<div class="footnote" id="_footnotedef_3">
+<a href="#_footnoteref_3">3</a>. <a href="https://en.wikipedia.org/wiki/Declarative_programming">Declarative Programming</a>
+</div>
+<div class="footnote" id="_footnotedef_4">
+<a href="#_footnoteref_4">4</a>. <a href="https://en.wikipedia.org/wiki/Imperative_programming">Imperative Programming</a>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="development.html">Pipeline Development Tools</a></span>
+  <span class="next"><a href="pipeline-best-practices.html">Pipeline Best Practices</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

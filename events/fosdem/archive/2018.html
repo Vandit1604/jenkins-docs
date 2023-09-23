@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins at FOSDEM 2018 :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/events/fosdem/archive/2018.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="events" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Jenkins Events</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../online-meetup/index.html">Jenkins Online Meetup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../online-hackfest/index.html">Jenkins UI/UX Hackfest</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../online-hackfest/faq.html">UI/UX Hackfest. Frequently Asked Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../contributor-summit/index.html">Jenkins Contributor Summit</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../contributor-summit/archive/2021-10.html">Jenkins Contributor Summit 2021</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../contributor-summit/archive/2021-06.html">Jenkins Contributor Summit - June 2021</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../devops-world/index.html">DevOps World 2022</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../hacktoberfest/index.html">Hacktoberfest</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../hacktoberfest/faq.html">FAQ - Hacktoberfest in Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../hacktoberfest/event-kit.html">Hacktoberfest. Jenkins Event Kit</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Events</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Jenkins Events</a></li>
+    <li><a href="2018.html">Jenkins at FOSDEM 2018</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/events/modules/fosdem/pages/archive/2018.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins at FOSDEM 2018</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This is an archive page. See <a href="../index.html" class="xref page">this page</a> for the recent and incoming FOSDEM events.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Jenkins will be at <a href="https://fosdem.org/2018/">FOSDEM 2018, in Brussels, on
+February 3 &amp; 4, 2018</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="FOSDEM2018-Activities"><a class="anchor" href="#FOSDEM2018-Activities"></a>Activities</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Friday, February 2 from 9am - 5pm: Jenkins Office Hours <br></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.meetup.com/jenkinsmeetup/events/245685813/">meetup page</a></p>
+</li>
+<li>
+<p>location: BeCentral sprl/bvba<br>
+Cantersteen 12<br>
+1000 Brussels<br>
+Belgium<br>
++32 488 45 42 62</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Friday, February 2 evening : pre-FOSDEM happy hour (Cafe Le Roy
+d&#8217;Espagne)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.meetup.com/jenkinsmeetup/events/245685813/">meetup page </a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Saturday &amp; Sunday, February 3 &amp; 4:  staffing the Jenkins stand/table</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Stand location K (level 2): https://fosdem.org/2018/stands/</p>
+</li>
+<li>
+<p><a href="https://www.meetup.com/jenkinsmeetup/events/245688007/">meetup page</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Saturday, February 3:  contributors dinner</p>
+</li>
+<li>
+<p>Monday, February 5: all day contributor summit and or hackathon</p>
+</li>
+<li>
+<p>location: BeCentral sprl/bvba<br>
+Cantersteen 12<br>
+1000 Brussels<br>
+Belgium<br>
++32 488 45 42 62<br>
+<br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Who&#8217;s attending:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>@<a href="/blog/authors/kohsuke/">
+(kohsuke)</a> (attendance, organizing)</p>
+</li>
+<li>
+<p><a href="/blog/authors/rtyler/">@R. Tyler Croy</a> (attendance,
+organizing)</p>
+</li>
+<li>
+<p><a href="/blog/authors/alyssat">(atong)</a>
+(attendance, organizing)</p>
+</li>
+<li>
+<p><a href="/blog/authors/markewaite">(markewaite)</a>
+(attendance, organizing)</p>
+</li>
+<li>
+<p><a href="/blog/authors/daniel-beck/">(danielbeck)</a></p>
+</li>
+<li>
+<p><a href="/blog/authors/batmat">(batmat)</a></p>
+</li>
+<li>
+<p><a href="/blog/authors/jglick">(jglick)</a></p>
+</li>
+<li>
+<p><a href="/blog/authors/olblak">
+(olblak)</a> (attendance, organizing)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="FOSDEM2018-Jenkinsmerchandise"><a class="anchor" href="#FOSDEM2018-Jenkinsmerchandise"></a>Jenkins merchandise</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Jenkins hats (60)</p>
+</li>
+<li>
+<p>Jenkins t-shirts (60)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="FOSDEM2018-Demosatthebooth"><a class="anchor" href="#FOSDEM2018-Demosatthebooth"></a>Demos at the booth</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>No demos scheduled so far, please feel free to add items and desired
+hardware to the list</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="FOSDEM2018-PlanningNotes"><a class="anchor" href="#FOSDEM2018-PlanningNotes"></a>Planning Notes</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Hardware:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>32" desktop monitor (1- Olivier will bring)</p>
+</li>
+<li>
+<p>laptop to run demos (1 - Olivier will bring)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Collateral: JAM/Pipeline postcards (200), Jenkins World 2018 post
+cards (200)</p>
+</li>
+<li>
+<p>Swags</p>
+<div class="ulist">
+<ul>
+<li>
+<p>stickers (4,000 pieces)</p>
+</li>
+<li>
+<p>t-shirts always in high demand (60, as many as we can sell)</p>
+</li>
+<li>
+<p>Jenkins caps (60)</p>
+</li>
+<li>
+<p>buttons (small round badges) with Jenkins headshot / weather symbols
+/ blue ball button + happy jenkins, red button + angry jenkins</p>
+</li>
+<li>
+<p>Language-spoken type buttons for people manning the stand as well as
+give away (e.g. Chris would have a Scottish flag, Bobby a Swedish,
+English flag and German flag buttons. We are using what is left over
+from last year&#8217;s event. If there isn&#8217;t a flag button for your specific
+country pls don&#8217;t be discouraged)<br>
+<br></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="FOSDEM2018-Hackathon"><a class="anchor" href="#FOSDEM2018-Hackathon"></a>Hackathon</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Projects will be tracked in
+<a href="https://issues.jenkins.io/browse/JENKINS-49151" class="bare">https://issues.jenkins.io/browse/JENKINS-49151</a> .</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

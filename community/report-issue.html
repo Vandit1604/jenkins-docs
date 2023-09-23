@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Issue Reporting :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/community/report-issue.html">
+    <link rel="prev" href="review-changes.html">
+    <link rel="next" href="test.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="community" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Jenkins Community</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Participate and Contribute</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="review-changes.html">Review Changes</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="report-issue.html">Issue Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="test.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="how-to-guides.html">How-To Guides</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="donate.html">Donate to Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="help.html">Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="code.html">Contribute code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="connect.html">Get connected with the Jenkins community!</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="document.html">Document</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="design.html">Art and Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="track-issue.html">Issue Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="meet.html">Meet</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chat/index.html">Chat</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mailing-lists/index.html">Mailist Lists</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Community</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Jenkins Community</a></li>
+    <li><a href="report-issue.html">Issue Reporting</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/community/modules/ROOT/pages/report-issue.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Issue Reporting</h1>
+<div class="sect1">
+<h2 id="_how_to_report_an_issue"><a class="anchor" href="#_how_to_report_an_issue"></a>How-To Report an Issue</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins JIRA is an issue tracker, not a support site.
+If you need assistance or have general questions, visit us <a href="chat/index.html" class="xref page">in chat</a>, email one of the <a href="mailing-lists/index.html" class="xref page">mailing lists</a>, or post on the <a href="https://community.jenkins.io/">community forum</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Howtoreportanissue-Beforecreatinganissue"><a class="anchor" href="#Howtoreportanissue-Beforecreatinganissue"></a>Before creating an issue</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First, <strong>identify the location of the issue</strong>.
+Are you reporting an issue in Jenkins itself or one of its plugins?
+We document all the issues in Jenkins on <a href="https://issues.jenkins.io/">JIRA</a> and plugin issues are on Github.
+If you are reporting an issue with the jenkins.io site, please create an issue in our <a href="https://github.com/jenkins-infra/jenkins.io/issues">GitHub issue tracker</a>.</p>
+</div>
+<div class="paragraph">
+<p>After that, determine what kind of issue it is. There are three main types:
+whose use is explained on this page:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Bug</strong>: Something does not work as intended.</p>
+</li>
+<li>
+<p><strong>Improvement</strong>: Either a current functionality should be improved or new
+functionality should be added.</p>
+</li>
+<li>
+<p><strong>Vulnerabilities</strong>: <a href="../security/reporting.html" class="xref page">Security related issues in Jenkins</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Other types (<em>Patch</em>, <em>Task</em>) are not used in JIRA.
+Neither will be explained here.
+If you want to propose a patch, create an issue using one of the 3 types above, and then create a <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">pull request in GitHub</a>.
+be explained here. If you want to propose a patch, create an issue of
+one of the 3 types above and then create a <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">pull request in GitHub</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Howtoreportanissue-Beforereportingabug"><a class="anchor" href="#Howtoreportanissue-Beforereportingabug"></a>Before reporting a bug</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>First, <strong>search for the error message or general problem description</strong>.
+This can help you find solutions if it&#8217;s actually e.g. a configuration
+problem, or point you to earlier reports in case you&#8217;re not the first
+one experiencing this problem. You can
+<a href="http://issues.jenkins.io/secure/IssueNavigator.jspa">use the search
+in the issue tracker</a>, or use web search.
+<a href="https://stackoverflow.com/tags/jenkins">Stack Overflow</a> may also be a
+good place to search. Any results will often point you to earlier issue
+reports if it&#8217;s really a bug. You can then <em>watch them</em> and <em>vote for
+<a href="https://stackoverflow.com/tags/jenkins">Stack Overflow</a> may also be a
+good place to search.
+Any results will often point you to earlier issue reports if it&#8217;s really a bug.
+You can then _watch them</em> and <em>vote for them</em> in JIRA, or subscribe to notifications in Github Issues.
+Voting helps us determine the impact of bugs and prioritize them.
+If you have doubts that the problem you&#8217;re experiencing is the exact same one as you found, and prefer to file a new issue, be sure to mention the one(s) you found in the description.
+issue (and mention the one(s) you found in the description)._</p>
+</li>
+<li>
+<p><strong>Make sure that the problem actually is with Jenkins</strong>. If your build
+seems to fail for no reason, try to build your project outside Jenkins,
+but in the same general environment (e.g. same machine, same user
+account, &#8230;&#8203;). If Jenkins interacts with other systems, make sure that
+they&#8217;re working. If the connections between Jenkins controller and agents
+fail, make sure the network is reliable.</p>
+</li>
+<li>
+<p><strong>Check the changelogs</strong> to see whether the issue has been fixed in
+newer versions of the affected component.
+For Jenkins itself, review the <a href="/changelog-stable/">long term support changelog</a>, the <a href="/doc/upgrade-guide/">LTS upgrade guide</a>, and the <a href="/changelog/">weekly changelog</a>.
+If you believe the problem to be in a plugin, review the changelog for the specific plugin on the <a href="https://plugins.jenkins.io/">plugins site</a>.  The plugin documentation can also be reached
+directly by clicking the plugin name in <em>Manage Jenkins</em> » <em>Plugins</em> » <em>Installed</em>.
+If you&#8217;re still unable to resolve the problem and cannot find existing
+issue reports or related fixes in newer versions of Jenkins or the
+If you&#8217;re still unable to resolve the problem, and cannot find existing issue reports or related fixes in newer versions of Jenkins or the plugins, file a <strong>bug</strong>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Howtoreportanissue-Beforerequestinganimprovementorfeature"><a class="anchor" href="#Howtoreportanissue-Beforerequestinganimprovementorfeature"></a>Before requesting an improvement or feature</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Check newer versions of Jenkins or the plugin</strong> for this feature.
+They may have the feature already!</p>
+</li>
+<li>
+<p><strong>Search JIRA or Github Issues for existing requests</strong> for this feature.
+You can then <em>watch and vote for them</em>.
+Voting helps us determine the demand for requests and prioritize them, so it&#8217;s in your interest to actually find these rather than creating a duplicate.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you cannot find anything, file an <strong>improvement</strong> or <strong>new feature</strong> request in the issue tracker for the specific plugin.
+Open the <a href="https://plugins.jenkins.io/">page</a> for the plugin and select the "Report an issue" link in the <strong>Links</strong> section on the right side of the plugin page.</p>
+</div>
+<div class="paragraph">
+<p>Searching for existing issues makes it easier
+for us to deal with issue reports and shows which
+issues are considered important by the community by the number of voters
+and watchers.  It increases the likelihood of related changes.
+It&#8217;s not that obvious when an issue has been reported separately several
+times with only a few watchers each.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Howtoreportanissue-Creatingtheissue"><a class="anchor" href="#Howtoreportanissue-Creatingtheissue"></a>Creating the issue</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you are reporting an issue in Jenkins, then you&#8217;ll have to report it on <a href="https://issues.jenkins.io/">JIRA</a>.
+However <strong>if the issue you&#8217;re reporting is in one of Jenkins' plugins</strong>, you&#8217;ll have to follow these steps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Open the <a href="https://plugins.jenkins.io/">Plugin Site</a>.</p>
+</li>
+<li>
+<p>Search for the Plugin and open its page.</p>
+</li>
+<li>
+<p>Click the <strong>Report an issue</strong> link in the <strong>Links</strong> section on the right side of the
+plugin page.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>After selecting the link, if you end up on JIRA follow the instructions on <a href="#Reporting an Issue in JIRA">[Reporting an Issue in JIRA]</a>.</p>
+</li>
+<li>
+<p>After selecting the link, if you end up on Github follow the instructions on <a href="#Reporting an Issue on Github">[Reporting an Issue on Github]</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reporting_an_issue_on_jira"><a class="anchor" href="#_reporting_an_issue_on_jira"></a>Reporting an issue on JIRA</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You need to <a href="https://accounts.jenkins.io/">register an account</a> if you
+haven&#8217;t already. Then, just select <strong>Create Issue</strong> on
+<a href="https://issues.jenkins.io/secure/Dashboard.jspa">the JIRA home page</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For <strong>Project</strong> select:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Jenkins</em> for general issues with Jenkins,</p>
+</li>
+<li>
+<p><em>Security Issues</em> if you want to report a security issue privately</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>For <em>Infrastructure</em>, if you&#8217;re reporting a bug with <a href="../projects/infrastructure/index.html" class="xref page">a Jenkins service run by the Jenkins project</a>, open an issue in the <a href="https://github.com/jenkins-infra/helpdesk/issues/new/choose">dedicated helpdesk on Github</a>.</p>
+</li>
+<li>
+<p>Enter a short but meaningful description of your problem as <strong>Summary</strong>.</p>
+</li>
+<li>
+<p>For <strong>Priority</strong>, see
+<a href="https://issues.jenkins.io/secure/ShowConstantsHelp.jspa?decorator=popup#PriorityLevels">here</a>
+for descriptions of the levels. <strong>This is not how urgently</strong> <strong><em>you</em></strong> <strong>want
+it fixed</strong>. Try to be realistic: Most bugs should be Minor or Major
+priority. If you found a workaround, reduce the priority, even if it&#8217;s a
+severe problem otherwise.</p>
+</li>
+<li>
+<p>Leave the <strong>Assignee</strong> field to automatic.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reporting_an_issue_on_github"><a class="anchor" href="#_reporting_an_issue_on_github"></a>Reporting an issue on GitHub</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You need to have a Github account.
+<a href="https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account">Register an account</a> if you haven&#8217;t already.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you are redirected to the Github issue tracker from the <a href="https://plugins.jenkins.io/">Plugin Site</a>, you will see something like this:</p>
+<div class="paragraph boxshadow">
+<p><span class="image unresolved"><img src="image:ROOT:participate/github-issues.png" alt="Github Issue Page" width="80%"></span></p>
+</div>
+</li>
+<li>
+<p>Select <strong>Get started</strong> next to the type of issue you&#8217;d like to open.</p>
+<div class="paragraph boxshadow">
+<p><span class="image unresolved"><img src="image:ROOT:participate/get-started.png" alt="Get Started Button" width="40%"></span></p>
+</div>
+</li>
+<li>
+<p>After that, fill in the details of the issue according to the Github issue template provided for each type of issue.</p>
+</li>
+<li>
+<p>Don&#8217;t forget to subscribe to the issue so you&#8217;ll get notifications regarding any updates on the issue.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_information_to_provide_for_environment_and_description"><a class="anchor" href="#_what_information_to_provide_for_environment_and_description"></a>What information to provide for Environment and Description</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Much of the advice on
+<a href="http://www.catb.org/esr/faqs/smart-questions.html#intro">How To Ask Questions
+The Smart Way</a> also helps you write great issue reports.</p>
+</div>
+<div class="paragraph">
+<p><strong>Environment</strong> is mostly relevant for bug reports: What is the
+configuration experiencing the issue? Depending on the type of problem,
+the following are often relevant:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Operating System</strong> (including version, and whether it&#8217;s 32/64 bit) of
+all systems involved (your client&#8217;s, the Jenkins server&#8217;s, all agent
+nodes'),</p>
+</li>
+<li>
+<p>All relevant <strong>JRE/JDK vendors and versions</strong> (e.g. Oracle JRE, OpenJDK,
+&#8230;&#8203;) and the parameters set.</p>
+</li>
+<li>
+<p><strong>Jenkins and plugin versions</strong>, use the below snippet in <strong>Jenkins &gt; Manage Jenkins &gt; Script Console</strong>:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">println("Jenkins: ${Jenkins.instance.getVersion()}")
+println("OS: ${System.getProperty('os.name')} - ${System.getProperty('os.version')}")
+println("Java: ${System.getProperty('java.version')} - ${System.getProperty('java.vm.vendor')} (${System.getProperty('java.vm.name')})")
+println "---"
+
+Jenkins.instance.pluginManager.plugins
+    .collect()
+    .sort { it.getShortName() }
+    .each {
+        plugin -&gt; println("${plugin.getShortName()}:${plugin.getVersion()}")
+    }
+return</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Whether you&#8217;re <strong>running Jenkins directly or in a container</strong> like
+Tomcat (which one, in which version?)</p>
+</li>
+<li>
+<p>Whether Jenkins is accessed through a <strong>reverse proxy</strong> (if so, how is
+it configured?)</p>
+</li>
+<li>
+<p><strong>How you installed Jenkins</strong> (Windows installer, deb/rpm, &#8230;&#8203;), and
+<strong>how you&#8217;re launching any involved agents</strong> (via SSH, web browser,
+command line, &#8230;&#8203;)</p>
+</li>
+<li>
+<p><strong>Your web browser</strong> (+ version). Make sure the issue occurs on
+<a href="../user-docs/2.401.3/administration/web-browsers.html" class="xref page">supported
+web browsers</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If this is too much information for the Environment field, just put some
+of it into the description.</p>
+</div>
+<div class="paragraph">
+<p>Every Jenkins installation has the <code>/systemInfo</code> URL with information
+about Jenkins. If you&#8217;re not sure what information to provide, copying
+everything on that page is a good place to start. Another option would
+be to install the
+<a href="https://plugins.jenkins.io/support-core/">Support Core
+Plugin</a>, which allows downloading zip files from Jenkins that contain
+information relevant for investigating bug reports.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>The <strong>Description</strong> should be comprehensive to allow others to understand
+the problem or improvement request immediately. A few suggestions on
+what to include (again, mostly applicable to bug reports):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Did the issue <strong>occur after an upgrade</strong> of Jenkins or any plugins? If
+so, what was/were the previous version(s), what is/are the current
+version(s)? Does downgrading resolve the issue? For plugins, the
+previous versions can often be seen in Plugin Manager (where it offers
+to downgrade to the previous version).</p>
+</li>
+<li>
+<p>Include <strong>log output and stack traces</strong> of error messages from the UI or
+any client programs.</p>
+</li>
+<li>
+<p>Provide a <strong>complete step-by-step description of how to reproduce the
+problem</strong>. We cannot see your screen, so be comprehensive. Consider
+switching the Jenkins UI to English by changing your web browser&#8217;s
+configuration to get the labels right.</p>
+</li>
+<li>
+<p>If possible, provide information on the <strong>circumstances</strong> the issue
+occurs with (or doesn&#8217;t), e.g. "only when starting the agent via SSH",
+"only when using Tomcat as container", etc. – this may be some work, but
+it&#8217;ll make reproducing and fixing the issue much easier!</p>
+</li>
+<li>
+<p>Does the issue occur with a new Jenkins installation not reusing any
+old configuration or data? <strong>Try to reproduce the problem with a pristine
+Jenkins installation</strong> with as little customization as possible.</p>
+</li>
+<li>
+<p>If the problem occurs in <strong>interaction with other systems</strong> (e.g. SCM),
+include their version and other relevant configuration.</p>
+</li>
+<li>
+<p>If the Jenkins UI no longer responds, <strong>get a thread dump</strong> using e.g.
+(on Linux) <code>kill -3 &lt;Jenkins PID&gt;</code> or <code>jstack -l &lt;Jenkins PID&gt;</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Howtoreportanissue-Aftercreatingtheissue"><a class="anchor" href="#Howtoreportanissue-Aftercreatingtheissue"></a>After creating the issue</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once you&#8217;ve created an issue, make sure to <strong>respond to requests for
+additional information</strong> in a timely manner, otherwise your issue may be
+resolved as Incomplete.</p>
+</div>
+<div class="paragraph">
+<p>If you reported a regression in Jenkins (i.e. a bug that appeared after
+updating Jenkins itself), consider
+<a href="/changelog">leaving <strong>community feedback</strong> on the
+changelog</a> to let others know about it.</p>
+</div>
+<div class="paragraph">
+<p><strong>Keep the issue updated</strong>. This includes, for example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you find additional information that may be relevant to the issue,
+add it to the issue description or write a comment.</p>
+</li>
+<li>
+<p>If it turns out that the bug you reported was actually something else,
+resolve it. (If you only found a workaround, don&#8217;t resolve it yet.)</p>
+</li>
+<li>
+<p>If newer Jenkins versions no longer are affected by the issue, or
+implemented the feature you requested, make sure to mark your issue as
+Fixed. This can happen e.g. if there were other reports on the issue, or
+developers noticed it on their own.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="review-changes.html">Review Changes</a></span>
+  <span class="next"><a href="test.html">Testing</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

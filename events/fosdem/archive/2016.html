@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins at FOSDEM 2016 :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/events/fosdem/archive/2016.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="events" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Jenkins Events</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../online-meetup/index.html">Jenkins Online Meetup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../online-hackfest/index.html">Jenkins UI/UX Hackfest</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../online-hackfest/faq.html">UI/UX Hackfest. Frequently Asked Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../contributor-summit/index.html">Jenkins Contributor Summit</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../contributor-summit/archive/2021-10.html">Jenkins Contributor Summit 2021</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../contributor-summit/archive/2021-06.html">Jenkins Contributor Summit - June 2021</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../devops-world/index.html">DevOps World 2022</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../hacktoberfest/index.html">Hacktoberfest</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../hacktoberfest/faq.html">FAQ - Hacktoberfest in Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../hacktoberfest/event-kit.html">Hacktoberfest. Jenkins Event Kit</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Events</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Jenkins Events</a></li>
+    <li><a href="2016.html">Jenkins at FOSDEM 2016</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/events/modules/fosdem/pages/archive/2016.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins at FOSDEM 2016</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This is an archive page. See <a href="../index.html" class="xref page">this page</a> for the recent and incoming FOSDEM events.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Jenkins was at <a href="http://fosdem.org/2016/">FOSDEM</a>, in Brussels, on January 30-31st, 2016!
+We also had a <a href="http://www.meetup.com/jenkinsmeetup/events/227463345/">Jenkins 2.0 Contributor Summit</a> on February 1st.</p>
+</div>
+<div class="paragraph">
+<p>Join <a href="http://lists.jenkins-ci.org/mailman/listinfo/jenkins-fosdem">the
+mailing list</a> if you&#8217;re interested in helping with coordination</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="FOSDEM2016-Activities"><a class="anchor" href="#FOSDEM2016-Activities"></a>Activities</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.meetup.com/jenkinsmeetup/events/228363236/">Friday night
+happy hour at Cafe LeRoy in Grand Place</a></p>
+</li>
+<li>
+<p>Staffing the Jenkins stand/table</p>
+</li>
+<li>
+<p><a href="http://www.meetup.com/jenkinsmeetup/events/228052834/">Contributors
+Dinner</a></p>
+</li>
+<li>
+<p><a href="http://www.meetup.com/jenkinsmeetup/events/227463345/">Jenkins 2.0
+Contributors Summit</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Who&#8217;s coming?</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/rtyler">Tyler Croy (rtyler)</a>
+(attendance, organizing)</p>
+</li>
+<li>
+<p><a href="https://github.com/daniel-beck">Daniel Beck (danielbeck)</a>
+(attendance, organizing)</p>
+</li>
+<li>
+<p><a href="https://github.com/kohsuke">Kohsuke Kawaguchi (kohsuke)</a>
+(attendance, organizing)</p>
+</li>
+<li>
+<p><a href="https://github.com/alyssat">Alyssa Tong (atong)</a>
+(attendance, organizing)</p>
+</li>
+<li>
+<p><a href="https://github.com/orrc">Christopher Orr (orrc)</a>
+(attendance)</p>
+</li>
+<li>
+<p>(fredg)
+(attendance)</p>
+</li>
+<li>
+<p><a href="https://github.com/aheritier">Arnaud Héritier (aheritier)</a>
+(attendance)</p>
+</li>
+<li>
+<p><a href="https://github.com/alecharp">Adrien Lecharpentier (alecharp)</a>
+(attendance)</p>
+</li>
+<li>
+<p><a href="https://github.com/ydubreuil">Yoann Dubreuil (ydubreuil)</a>
+(attendance)</p>
+</li>
+<li>
+<p>(jgbiii)
+(attendance)</p>
+</li>
+<li>
+<p><a href="https://github.com/fbelzunc">Felix Belzunce Arcos (fbelzunc)</a>
+(attendance)</p>
+</li>
+<li>
+<p><a href="https://github.com/escoem">Emilio Escobar Reyero</a>
+(attendance)</p>
+</li>
+<li>
+<p><a href="https://github.com/olivergondza">Oliver Gondza
+(olivergondza)</a> (attendance)</p>
+</li>
+<li>
+<p><a href="https://github.com/oleg-nenashev">Oleg Nenashev
+(oleg_nenashev)</a> (attendance)</p>
+</li>
+<li>
+<p><a href="https://github.com/jglick">Jesse Glick (jglick)</a>
+(attendance)</p>
+</li>
+<li>
+<p><a href="https://github.com/rsandell">Robert Sandell (rsandell)</a>
+(attendance)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="FOSDEM2016-Jenkinsmerchandise"><a class="anchor" href="#FOSDEM2016-Jenkinsmerchandise"></a>Jenkins merchandise</h3>
+<div class="ulist">
+<ul>
+<li>
+<p> Star Wars t-shirts (50)</p>
+</li>
+</ul>
+</div>
+<hr>
+</div>
+<div class="sect1">
+<h2 id="FOSDEM2016-PlanningMeetingNotes"><a class="anchor" href="#FOSDEM2016-PlanningMeetingNotes"></a>Planning Meeting Notes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="FOSDEM2016-2016-01-13Meeting"><a class="anchor" href="#FOSDEM2016-2016-01-13Meeting"></a>2016-01-13 Meeting</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Jenkins stand is located in building K, level 2</p>
+</li>
+<li>
+<p>Stand setup begins at 9am on Saturday. Attendees will begin to come in
+at 10am</p>
+</li>
+<li>
+<p>There will be wifi in the stand areas</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="FOSDEM2016-2015-10-21Meeting"><a class="anchor" href="#FOSDEM2016-2015-10-21Meeting"></a>2015-10-21 Meeting</h3>
+<div class="sect3">
+<h4 id="FOSDEM2016-Agenda"><a class="anchor" href="#FOSDEM2016-Agenda"></a>Agenda</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Gauge who can participate and at what capacity.</p>
+</li>
+<li>
+<p>Pre-FOSDEM Contributor Summit</p>
+</li>
+<li>
+<p>After-hours meetup/happy hour</p>
+</li>
+<li>
+<p>Plans for a Jenkins stand (assuming we&#8217;re accepted):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What demo materials</p>
+</li>
+<li>
+<p>Schwag</p>
+</li>
+<li>
+<p>Revised Jenkins Flyer</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="FOSDEM2016-Notes"><a class="anchor" href="#FOSDEM2016-Notes"></a>Notes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Who’s coming?</p>
+<div class="ulist">
+<ul>
+<li>
+<p>rtyler (attendance, organizing)</p>
+</li>
+<li>
+<p>danielbeck (attendance, organizing)</p>
+</li>
+<li>
+<p>kohsuke (attendance, organizing)</p>
+</li>
+<li>
+<p>atong (attendance, organizing)</p>
+</li>
+<li>
+<p>orrc (attendance)</p>
+</li>
+<li>
+<p>fredg (attendance)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Contributor Summit Notes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>We need a new moniker for the “Summit” series because the current
+event plan uses it for another purpose</p>
+</li>
+<li>
+<p>Reuse the “Scalability Summit” / “Workflow Summit” format</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A day of unconference with some broad theme</p>
+</li>
+<li>
+<p>Target attendee: 20-40 people</p>
+</li>
+<li>
+<p>Day divided into a fixed time slots and 1-2 tracks</p>
+</li>
+<li>
+<p>The first few sessions are pre-announced to get the juice flowing</p>
+</li>
+<li>
+<p>The rest of the sessions are decided on the fly by people with
+postit notes</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Should be interesting enough for serious users that I expect some
+will come just for this.</p>
+</li>
+<li>
+<p>Pick a date: Friday vs Monday</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Meetup.com has a feature that helps us nail this down</p>
+</li>
+<li>
+<p>Needs to be decided soon to let people book travel soon</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Pick a theme</p>
+<div class="ulist">
+<ul>
+<li>
+<p>User experience?</p>
+</li>
+<li>
+<p>Jenkins as Code?  (pipeline as code, deploy Jenkins via chef/puppet,
+Job DSL, …)</p>
+</li>
+<li>
+<p>Jenkins 2.0?</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>After-hour events notes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>tyler: Cafe Leroy friday before beer event?</p>
+</li>
+<li>
+<p>fred: pre-planned dinner on Saturday night would be ideal</p>
+<div class="ulist">
+<ul>
+<li>
+<p>alyssa: set up a meetup to get RSVPs to make a reservation in
+advance (according to orrc about 15-20 attend. should add ~5 people in
+case people bring a friend)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Stand planning</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Demo Materials</p>
+<div class="ulist">
+<ul>
+<li>
+<p>monitors</p>
+</li>
+<li>
+<p>at least one dedicated PC (with wireless) for demos</p>
+</li>
+<li>
+<p>canned demos around Jenkins 2.0 work?</p>
+<div class="ulist">
+<ul>
+<li>
+<p>“new things that people don’t know”</p>
+</li>
+<li>
+<p>fred: maybe a little showreel (workflow, new UI, etc)</p>
+</li>
+<li>
+<p>a demo presentation, or interactive version of the flyer</p>
+</li>
+<li>
+<p>use-case driven points on the website (domain specific destination
+pages, e.g. mobile development)</p>
+</li>
+<li>
+<p>eitsch: hi there, if you want to be able to cater to different
+ "personas" of jenkins users &#8230;&#8203; you could prepare some
+               sd-cards-images for a raspberry pi and switch around to
+         show a running jenkins on monitor at stand</p>
+</li>
+<li>
+<p>eitsch: i definitely liked the stickers more which were more into
+the badass type ;) like the ninja and the je[di|nkins] master &#8230;&#8203; for
+the t-shirts you might be able to blend in the upcoming 2016 fosdem logo
+(if they are open to letting you use it)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>*
+<strong> chris: people are usually coming to the stand asking for help,
+stickers and t-shirts
+* Schwag
+</strong> stickers (few thousand minimum)
+<strong> t-shirts always in high demand (more than 30, as many as we can sell)
+</strong>* t-shirts maybe also with blended 2016 fosdem logo (need to check if
+possible)
+<strong> buttons (small round badges) with Jenkins headshot / weather symbols
+/ blue balls etc…
+</strong>* tyler: buttons for attendees: blue button + happy jenkins, red
+button + angry jenkins would be fun
+** Jenkins bobble-heads?</p>
+</div>
+<div class="paragraph">
+<p>*
+<strong> Flyer
+</strong>* perhaps this year we create little post-cards with permalinks to
+destination pages on the site “want to do mobile: go here”, etc. So
+stand visitors would have something tangible to remember where to find
+more information
+<strong><strong>* more resilient to being out of date by the next time we have a
+conference than the flyer
+</strong></strong> fredg: flyer is a bonus not a necessity
+<strong>* 18:31 &lt; fredg02&gt; how about a set of "collectible" domain specific
+cards (Android, Java, Ruby, PHP, …)
+* Other
+</strong> Language-spoken type buttons for people manning the stand (e.g. Chris
+would have a Scottish flag, English flag and German flag buttons)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

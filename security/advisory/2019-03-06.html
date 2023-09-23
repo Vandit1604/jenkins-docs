@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/security/advisory/2019-03-06.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="security" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Security Advisories</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Adminstrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-administrators.html">Overview for Jenkins Administrators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../fixing.html">How We Fix Security Issues</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Reporters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../reporting.html">Reporting Security Vulnerabilities</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Maintainers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-maintainers.html">Overview for Plugin Maintainers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jenkins Security Team</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../team.html">About the Jenkins Security Team</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../improvements.html">Improvements by the Security Team</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Security Advisories</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/advisory/2019-03-06.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<hr>
+<div class="paragraph">
+<p>layout: advisory
+title: Jenkins Security Advisory 2019-03-06
+section: security
+kind: plugins
+issues:</p>
+</div>
+<h1 id="_coordinated" class="sect0"><a class="anchor" href="#_coordinated"></a>Coordinated</h1>
+
+<h1 id="_100_000" class="sect0"><a class="anchor" href="#_100_000"></a>100.000+</h1>
+<div class="ulist">
+<ul>
+<li>
+<p>id: SECURITY-1336 (1)
+title: Sandbox bypass in Script Security Plugin
+reporter: &gt;
+  Georgy Noseevich (@webpentest), SolidLab
+cve: CVE-2019-1003029
+cvss:
+  severity: High
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+plugins:</p>
+</li>
+<li>
+<p>name: script-security
+    fixed: "1.54"
+    previous: "1.53"
+description: |
+  Script Security sandbox protection could be circumvented during parsing, compilation, and script instantiation by providing a crafted Groovy script.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Script Security Plugin is now newly applying sandbox protection during these phases.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>This affected both script execution (typically invoked from other plugins) as well as an HTTP endpoint providing script validation and allowed users with Overall/Read permission to bypass the sandbox protection and execute arbitrary code on the Jenkins controller.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>The API `GroovySandbox#run(Script, Whitelist)` has been deprecated and now emits a warning to the system log about potential security problems.
+`GroovySandbox#run(GroovyShell, String, Whitelist)` replaces it.
+`GroovySandbox#checkScriptForCompilationErrors(String, GroovyClassLoader)` has been added as a safer method to implement script validation.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1336 (2)
+title: &gt;
+  Sandbox bypass in Pipeline: Groovy Plugin
+reporter: &gt;
+  Georgy Noseevich (@webpentest), SolidLab
+cve: CVE-2019-1003030
+cvss:
+  severity: High
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+plugins:</p>
+</li>
+<li>
+<p>name: workflow-cps
+    fixed: "2.64"
+    previous: "2.63"
+description: |
+  Pipeline: Groovy sandbox protection could be circumvented during parsing, compilation, and script instantiation by providing a crafted Groovy script.</p>
+<div class="literalblock">
+<div class="content">
+<pre>This allowed users able to control the contents of a pipeline to bypass the sandbox protection and execute arbitrary code on the Jenkins controller.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Pipeline: Groovy Plugin now uses Script Security APIs that apply sandbox protection during these phases.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1339
+title: Script security sandbox bypass in Matrix Project Plugin
+# reporter: Uncredited
+cve: CVE-2019-1003031
+cvss:
+  severity: High
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+plugins:</p>
+</li>
+<li>
+<p>name: matrix-project
+    fixed: "1.14"
+    previous: "1.13"
+description: |
+  Matrix Project Plugin supports a sandboxed Groovy expression to filter matrix combinations.
+  Its sandbox protection could be circumvented during parsing, compilation, and script instantiation by providing a crafted Groovy script.</p>
+<div class="literalblock">
+<div class="content">
+<pre>This allowed users able to configure a Matrix project to bypass the sandbox protection and execute arbitrary code on the Jenkins controller.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Matrix Project Plugin now uses Script Security APIs that apply sandbox protection during these phases.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1340
+title: Script security sandbox bypass in Email Extension Plugin
+# reporter: Uncredited
+cve: CVE-2019-1003032
+cvss:
+  severity: High
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+plugins:</p>
+</li>
+<li>
+<p>name: email-ext
+    fixed: "2.65"
+    previous: "2.64"
+description: |
+  Email Extension Plugin supports sandboxed Groovy expressions for multiple features.
+  Its sandbox protection could be circumvented during parsing, compilation, and script instantiation by providing a crafted Groovy script.</p>
+<div class="literalblock">
+<div class="content">
+<pre>This allowed users able to control the plugin's job-specific configuration to bypass the sandbox protection and execute arbitrary code on the Jenkins controller.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Email Extension Plugin now uses Script Security APIs that apply sandbox protection during these phases.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h1 id="_10000" class="sect0"><a class="anchor" href="#_10000"></a>10,000+</h1>
+<div class="ulist">
+<ul>
+<li>
+<p>id: SECURITY-1338
+title: Script security sandbox bypass in Groovy Plugin
+# reporter: Uncredited
+cve: CVE-2019-1003033
+cvss:
+  severity: High
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+plugins:</p>
+</li>
+<li>
+<p>name: groovy
+    fixed: "2.2"
+    previous: "2.1"
+description: |
+  Groovy Plugin supports sandboxed Groovy expressions for its "System Groovy" functionality.
+  Its sandbox protection could be circumvented during parsing, compilation, and script instantiation by providing a crafted Groovy script.</p>
+<div class="literalblock">
+<div class="content">
+<pre>This affected both System Groovy script execution as well as an HTTP endpoint providing script validation, and allowed users with Overall/Read permission to bypass the sandbox protection and execute arbitrary code on the Jenkins controller.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Groovy Plugin now uses Script Security APIs that apply sandbox protection during these phases.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1342
+title: Script security sandbox bypass in Job DSL Plugin
+# reporter: Uncredited
+cve: CVE-2019-1003034
+cvss:
+  severity: High
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+plugins:</p>
+</li>
+<li>
+<p>name: job-dsl
+    fixed: "1.72"
+    previous: "1.71"
+description: |
+  Job DSL Plugin supports sandboxed Groovy expressions for Job DSL definitions.
+  Its sandbox protection could be circumvented during parsing, compilation, and script instantiation by providing a crafted Groovy script.</p>
+<div class="literalblock">
+<div class="content">
+<pre>This allowed users able to control the Job DSL scripts to bypass the sandbox protection and execute arbitrary code on the Jenkins controller.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Job DSL Plugin now uses Script Security APIs that apply sandbox protection during these phases.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h1 id="_1000" class="sect0"><a class="anchor" href="#_1000"></a>1000+</h1>
+<div class="ulist">
+<ul>
+<li>
+<p>id: SECURITY-1330
+title: Information disclosure in Azure VM Agents Plugin
+reporter: Oleg Nenashev, CloudBees, Inc.
+cve: CVE-2019-1003035
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N
+plugins:</p>
+</li>
+<li>
+<p>name: azure-vm-agents
+    fixed: "0.8.1"
+    previous: "0.8.0"
+description: |
+  A missing permission check in a form validation method in Azure VM Agents Plugin allowed users with Overall/Read access to verify a submitted configuration, obtaining limited information about the Azure account and configuration.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Additionally, this form validation method did not require POST requests, resulting in a potential CSRF vulnerability.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>This form validation method now requires POST requests and Overall/Administer permissions.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1331
+title: Missing permission check in Azure VM Agents Plugin allowed modifying VM configuration
+reporter: Oleg Nenashev, CloudBees, Inc.
+cve: CVE-2019-1003036
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+plugins:</p>
+</li>
+<li>
+<p>name: azure-vm-agents
+    fixed: "0.8.1"
+    previous: "0.8.0"
+description: |
+  A missing permission check in an HTTP endpoint allowed users with Overall/Read access to attach a public IP address to an Azure VM in Azure VM Agents Plugin, making a virtual machine publicly accessible.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Additionally, this form validation method did not require POST requests, resulting in a CSRF vulnerability with more limited impact, as the IP address would not be known.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>This form validation method now requires POST requests and Overall/Administer permissions.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1332
+title: Unprivileged users with Overall/Read access are able to enumerate credential IDs in Azure VM Agents Plugin
+reporter: Daniel Beck, CloudBees, Inc.
+cve: CVE-2019-1003037
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+plugins:</p>
+</li>
+<li>
+<p>name: azure-vm-agents
+    fixed: "0.8.1"
+    previous: "0.8.0"
+description: |
+  Azure VM Agents Plugin provides a list of applicable credential IDs to allow administrators configuring the plugin to select the one to use.</p>
+<div class="literalblock">
+<div class="content">
+<pre>This functionality did not check permissions, allowing any user with Overall/Read permission to get a list of valid credentials IDs.
+Those could be used as part of an attack to capture the credentials using another vulnerability.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>An enumeration of credentials IDs in this plugin now requires Overall/Administer permission.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># TODO The code checks AncestorInPath, but I don't see when that would ever be the case.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h1 id="_previously_released" class="sect0"><a class="anchor" href="#_previously_released"></a>Previously released</h1>
+
+<h1 id="_1000_installs" class="sect0"><a class="anchor" href="#_1000_installs"></a>1000+ installs</h1>
+<div class="ulist">
+<ul>
+<li>
+<p>id: SECURITY-958
+title: Repository Connector Plugin stored password in plain text
+reporter: Viktor Gazdag
+cve: CVE-2019-1003038
+cvss:
+  severity: Low
+  vector: CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+plugins:</p>
+</li>
+<li>
+<p>name: repository-connector
+    fixed: "1.2.5"
+    previous: "1.2.4"
+description: |
+  Repository Connector Plugin stored the username and password in its configuration unencrypted in its global configuration file on the Jenkins controller.
+  This password could be viewed by users with access to the Jenkins controller file system.</p>
+<div class="literalblock">
+<div class="content">
+<pre>The plugin now stores the password encrypted in the configuration files on disk and no longer transfers it to users viewing the configuration form in plain text.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h1 id="_100_installs" class="sect0"><a class="anchor" href="#_100_installs"></a>100+ installs</h1>
+<div class="ulist">
+<ul>
+<li>
+<p>id: SECURITY-1087
+title: AppDynamics Dashboard Plugin stored password in plain text
+reporter: Viktor Gazdag
+cve: CVE-2019-1003039
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+plugins:</p>
+</li>
+<li>
+<p>name: appdynamics-dashboard
+    fixed: "1.0.15"
+    previous: "1.0.14"
+description: |
+  AppDynamics Dashboard Plugin stored username and password in its configuration unencrypted in jobs' <code>config.xml</code> files on the Jenkins controller.
+  This password could be viewed by users with Extended Read permission, or access to the Jenkins controller file system.</p>
+<div class="literalblock">
+<div class="content">
+<pre>While masked from view using a password form field, the password was transferred in plain text to users when accessing the job configuration form.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>AppDynamics Dashboard Plugin now stores the password encrypted in the configuration files on disk and no longer transfers it to users viewing the configuration form in plain text.
+Existing jobs need to have their configuration saved for existing plain text passwords to be overwritten.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h1 id="_10_installs" class="sect0"><a class="anchor" href="#_10_installs"></a>10+ installs</h1>
+<div class="ulist">
+<ul>
+<li>
+<p>id: SECURITY-848
+title: Rabbit-MQ Publisher Plugin stored password in plain text
+reporter: Viktor Gazdag
+cvss:
+  severity: Low
+  vector: CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+plugins:</p>
+</li>
+<li>
+<p>name: rabbitmq-publisher
+    fixed: "1.2.0"
+    previous: "1.0"
+description: |
+  Rabbit-MQ Publisher Plugin stored the username and password in its configuration unencrypted in its global configuration file on the Jenkins controller.
+  This password could be viewed by users with access to the Jenkins controller file system.</p>
+<div class="literalblock">
+<div class="content">
+<pre>The plugin now stores the password encrypted in the configuration files on disk and no longer transfers it to users viewing the configuration form in plain text.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-970
+title: Missing permission check allowed connecting to RabbitMQ in Rabbit-MQ Publisher Plugin
+reporter: Daniel Beck, CloudBees, Inc.
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+plugins:</p>
+</li>
+<li>
+<p>name: rabbitmq-publisher
+    fixed: "1.2.0"
+    previous: "1.0"
+description: |
+  A missing permission check in a form validation method of Rabbit-MQ Publisher Plugin allowed users with Overall/Read access to have Jenkins initiate a RabbitMQ connection to an attacker-specified host and port with an attacker-specified username and password.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Additionally, this form validation method did not require POST requests, resulting in a CSRF vulnerability.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>This form validation method now requires POST requests and Overall/Administer permissions.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1038
+title: &gt;</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">OSF Builder Suite For Salesforce Commerce Cloud </dt>
+<dd>
+<p>Deploy Plugin stored password in plain text
+reporter: Viktor Gazdag
+cvss:
+  severity: Low
+  vector: CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+plugins:</p>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>name: osf-builder-suite-for-sfcc-deploy
+    fixed: "1.0.11"
+    previous: "1.0.10"
+description: |
+  OSF Builder Suite For Salesforce Commerce Cloud : : Deploy Plugin stored the HTTP proxy username and password in its configuration unencrypted in its global configuration file on the Jenkins controller.
+  This password could be viewed by users with access to the Jenkins controller file system.</p>
+<div class="literalblock">
+<div class="content">
+<pre>The plugin now integrates with plugin:credentials[Credentials Plugin] to store the HTTP proxy credentials.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1088
+title: SSRF and data modification vulnerability due to missing permission check in Bitbar Run-in-Cloud
+reporter: Viktor Gazdag
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+plugins:</p>
+</li>
+<li>
+<p>name: testdroid-run-in-cloud
+    fixed: "2.70.0"
+    previous: "2.69.1"
+description: |
+  A missing permission check in a method performing both form validation and saving new configuration in Bitbar Run-in-Cloud Plugin allowed users with Overall/Read permission to have Jenkins connect to an attacker-specified host with attacker-specified credentials, and, if successful, save that as the new configuration for the plugin. This could then potentially result in future builds submitting their data to an unauthorized remote server.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Additionally, this method did not require POST requests, resulting in a CSRF vulnerability.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>This form validation method now requires POST requests and Overall/Administer permissions.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

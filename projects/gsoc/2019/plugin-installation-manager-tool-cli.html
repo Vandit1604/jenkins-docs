@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Plugin Installation Manager CLI Tool / Library :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2019/plugin-installation-manager-tool-cli.html">
+    <link rel="prev" href="role-strategy-performance.html">
+    <link rel="next" href="gitlab-support-for-multibranch-pipeline.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="projects" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Jenkins Projects</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../index.html">Jenkins Sub-projects</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../user-docs/2.401.3/blueocean/getting-started.html">Getting started with Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../blueocean/about.html">About Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../blueocean/contribute.html">Contributing to Blue Ocean</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../jam/index.html">CI/CD and Jenkins Area Meetups</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../remoting/index.html">Jenkins Remoting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Google Summer of Code in Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../2018/index.html">Jenkins in Google Summer of Code 2018</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2018/code-coverage-api-plugin.html">GSoC 2018. Code Coverage API Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2018/eda-plugins.html">GSoC 2018. EDA Plugins for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2018/index.html">Jenkins in Google Summer of Code 2018</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2018/remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2018/simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Jenkins in Google Summer of Code 2019</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="project-ideas.html">GSoC 2021 Project Ideas</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="schedule.html">Jenkins year-round GSoC schedule</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="working-hours-improvements.html">GSoC2019 Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="gitlab-support-for-multibranch-pipeline.html">Multibranch Pipeline support for GitLab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka with Kubernetes features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/eda-coverage-adapters.html">EDA Coverage Adapters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/advanced-build-discard-strategy-plugin.html">Advanced Build Discard Strategy Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/configuration-as-code-compatibility.html">Configuration as Code Plugin Compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/pipeline-step-documentation-generator.html">Pipeline Step Documentation Generator improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/eda-plugins.html">Plugin(s) for Electronic Design Automation tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/bitbucket-rest-plugin.html">Bitbucket REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/working-hours-improvements.html">Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/machine-learning.html">Jenkins and Machine Learning Plugins for Data Science</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/artifactory-rest-plugin.html">Artifactory REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/remoting-monitoring.html">Jenkins Remoting Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/freestyle-to-pipeline-converter.html">Freestyle job to Pipeline job converter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/jenkins-rest-plugin.html">Jenkins REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/role-strategy-ux.html">Role Strategy Plugin: user experience</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/ath-improvements.html">Improvements to the Jenkins Acceptance Test Harness</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/winsw-yaml-config-support.html">Jenkins Windows Services: YAML Configuration Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/external-fingerprint-storage-for-jenkins.html">External Fingerprint Storage for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/gitlab-support-for-multibranch-pipeline.html">Multi-branch Pipeline support for Gitlab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/docker-registries-polling-plugin.html">Polling Docker Registries for Image Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/code-coverage-api-improvements.html">Code Coverage API Plugin Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/automatic-spec-generator-for-jenkins-rest-api.html">Automatic Specification Generator for Jenkins REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka. Docker/K8s Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../sigs/advocacy-and-outreach/outreach-programs/index.html">Outreach programs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../jcasc/index.html">Jenkins Configuration as Code</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../jcasc/dev-tools.html">Dev-Tools for JCasC</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../infrastructure/index.html">Infrastructure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../infrastructure/ircbot.html">IRC Bot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../jenkins-operator/index.html">Jenkins Operator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Other Projects</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes.html">Document Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://jenkins-x.io/">Jenkins X</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Projects</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Jenkins Projects</a></li>
+    <li><a href="schedule.html">Jenkins year-round GSoC schedule</a></li>
+    <li><a href="plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2019/plugin-installation-manager-tool-cli.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Plugin Installation Manager CLI Tool / Library</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Goal:</strong> Create a new library and tools to unify plugin management across the Jenkins ecosystem</p>
+</div>
+<div class="paragraph">
+<p><strong>Status:</strong> Completed</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_team"><a class="anchor" href="#_team"></a>Team</h2>
+<div class="sectionbody">
+<div class="paragraph avatar">
+<p><strong>Student</strong>:
+<span class="image"><img src="../../../images/_images/avatars/stopalopa.jpg" alt="stopalopa" width="30" height="30"></span> Natasha Stopa</p>
+</div>
+<div class="paragraph">
+<p><strong>Mentor(s):</strong>
+<span class="image"><img src="../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Kristin Whetstone
+<span class="image"><img src="../../../images/_images/avatars/batmat.jpg" alt="batmat" width="30" height="30"></span> Baptiste Mathus
+<span class="image"><img src="../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Jon Brohauge
+<span class="image"><img src="../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Arnab Banerjee
+<span class="image"><img src="../../../images/_images/avatars/oleg_nenashev.png" alt="oleg nenashev" width="30" height="30"></span> Oleg Nenashev</p>
+</div>
+<div class="paragraph">
+<p>There are currently many reincarnations of plugin management across Jenkins, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkinsci/docker#preinstalling-plugins">Docker images install-plugins.sh script</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/custom-war-packager">Custom WAR Packager</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkins-infra/jenkins.io/blob/c0ba3cab7a7dfe398ec411d3271922bb98f04f8e/content/projects/evergreen/index.adoc">Jenkins Evergreen</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ndeloof/jenkinsfile-runner-go">A Jenkinsfile Runner implementation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/coreos/jenkins-os/blob/master/init.groovy">coreOS groovy script</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The goal of this project is to create a new Plugin Manager CLI tool and a library which
+would unify the plugin management across different Jenkins implementations and improve plugin tooling.
+Although we looked at extracting plugin management from Jenkins Core into its own module, this proved
+to be a challenging first step (see <a href="https://issues.jenkins.io/browse/JENKINS-57672">JENKINS-57672</a>).</p>
+</div>
+<div class="paragraph">
+<p>The input to the the tool is a list of plugins, either specified via the --plugins CLI option, or using the --plugin-file option
+with a .txt or yaml file. The library finds all recursive dependencies for each requested plugin, replacing every duplicate plugin
+with the highest required version of that plugin. The direct plugin dependencies first try to be resolved using the
+update center metadata. If that fails, they are determined by downloading the plugin to a temporary file and parsing the MANIFEST.MF file.
+The final set of the plugins to be downloaded is found, taking into account any currently installed or bundled plugins, which are ignored.
+The plugins are then downloaded and can be used when Jenkins starts.</p>
+</div>
+<div class="paragraph">
+<p>Below is an example of how the tool can be used with Docker.</p>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="/images/post-images/gsoc-plugin-management-tool/chucknorris.png" alt="Plugin Tool Input">
+</div>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="/images/post-images/gsoc-plugin-management-tool/dockerfile.png" alt="Dockerfile">
+</div>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="/images/post-images/gsoc-plugin-management-tool/chucknorrisdetails.png" alt="Plugin Download Details">
+</div>
+</div>
+<div class="imageblock text-center unresolved">
+<div class="content">
+<img src="/images/post-images/gsoc-plugin-management-tool/plugininjenkins.png" alt="Plugin Installed in Jenkins">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_helpful_links"><a class="anchor" href="#_helpful_links"></a>Helpful Links</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.google.com/document/d/1lMCDqY5TKVXyFl67BmyMkaS9GTjRbueKr7ds395b_10/edit?usp=sharing">Original Project Proposal</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/plugin-installation-manager-tool">Code</a></p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/browse/JENKINS-58199?jql=project%20%3D%20JENKINS%20AND%20component%20%3D%20plugin-installation-manager-tool">Jira tasks and feature requests</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/document/d/1G_s2CFdZcb_TPQuLD4wL99Yy8egTLdQyRULcJFwsr1E/edit?usp=sharing">Meeting notes</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_1"><a class="anchor" href="#_phase_1"></a>Phase 1</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Phase 1 focused on extracting the <a href="https://github.com/jenkinsci/docker/blob/master/install-plugins.sh">docker install-plugins bash script</a> to Java.
+The first alpha version of the library and CLI tool was released. It implemented basic functionality
+of the install-plugins.sh script to take in plugins and download them to a user-specified directory.</p>
+</div>
+<div class="paragraph">
+<p>The alpha release was announced in the following <a href="/blog/2019/07/02/plugin-management-tool-alpha-release/">blog post</a>
+and a live demo can be seen in <a href="https://youtu.be/MDs0Vr7gnnA?t=196">the Phase 1 evaluation recording</a>
+(<a href="https://docs.google.com/presentation/d/12Bo8w9SinrG5n82w-Unjx4MNq0mjkHFEOMc3Jf6rTQQ/edit#slide=id.p1">slides</a>).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_2"><a class="anchor" href="#_phase_2"></a>Phase 2</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Phase 2 focused on improving upon what was written in Phase 1, with particular focus on making parsing more robust,
+adding better Docker compatibility, and creating new CLI options that will make the plugin installation process
+more transparent. Parsing was improved to filter out comments and blank lines, and accept a yaml file listing plugins to install
+ as input. Instead of hard coding the update centers, options were added to allow update centers to be set via environment variables or CLI options.
+Windows compatible defaults for locations to find an existing Jenkins war file and setting the plugin directory were also added.
+To make the plugin installation process more transparent, options were added to view the list of plugins that would be installed prior
+to installation, and view if any of these plugins had available updates or security warnings.  This last step involved re-writing
+some of the plugin download and dependency resolution logic so that all plugins and their recursive dependencies are resolved
+before the time of download.</p>
+</div>
+<div class="paragraph">
+<p>The blog post announcing the new features can be found <a href="/blog/2019/07/30/plugin-management-tool-phase2-updates/">here</a> and the demo
+for this coding phase can be found <a href="https://www.youtube.com/watch?v=HlENuZZq7zc&amp;feature=youtu.be&amp;t=221">here</a>
+(<a href="https://docs.google.com/presentation/d/1wsM09IGgoA7gSsA9tW5fHlFAhl6B9fXlr-4iEP89SCk/edit?usp=sharing">slides</a>)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_3"><a class="anchor" href="#_phase_3"></a>Phase 3</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Most of this phase was dedicated to cleaning up and testing the work done in Phase 1 and 2. Some fixes and optimizations included in
+this coding phase include throwing an exception sooner if there are problems downloading a plugin or resolving its dependencies,
+throwing an exception if the required Jenkins version listed for any of the plugins to be installed is lower than the version
+of the Jenkins war file, and improving plugin download times through a custom IO thread pool and using http HEAD instead of http GET where appropriate.</p>
+</div>
+<div class="paragraph">
+<p>I was also able to attend DevOps World and present the work I&#8217;ve done on this project both during the Continuous Delivery
+Contributor Summit and for the <a href="https://devopsworldjenkinsworld2019.sched.com/event/SQhG/community-lunch-time-demos">Jenkins Community Demos</a>.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="/images/post-images/gsoc-plugin-management-tool/devopsworld.jpeg" alt="DevOps World Demo">
+</div>
+</div>
+<div class="paragraph">
+<p>Here are the <a href="https://docs.google.com/presentation/d/1f8aPNCs-Nxq_yvAnM_epWtP5jXQXQzB6SybxNFFbR_s/edit?usp=sharing">slides</a>
+from my presentation. I detailed my time at DevOps World <a href="/blog/2019/08/22/devops-world/">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>I also presented my Phase 3 work at a Jenkins Online Meetup <a href="https://docs.google.com/presentation/d/14yiudx6uJ_FEyoSnVMsRwYdSr5KqpgXcZKVenp1ebgM/edit?usp=sharing">(slides)</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_future_directions"><a class="anchor" href="#_future_directions"></a>Future Directions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The project is very close to its first official release. After the first release, the goal is to incorporate it into the
+<a href="https://github.com/jenkinsci/docker">official Jenkins Docker Image</a>, the <a href="https://github.com/jenkinsci/custom-war-packager">Custom War Packager</a>, and
+to inject the library into Jenkins to install plugins before the
+<a href="https://github.com/jenkinsci/configuration-as-code-plugin/blob/master/README.md">Configuration as Code plugin</a> runs.
+Other requested features include maven compatibility (<a href="https://issues.jenkins.io/browse/JENKINS-58217">supporting maven as an installation source</a>
+and <a href="https://issues.jenkins.io/browse/JENKINS-59066">sharing a plugin cache with ~/.m2/repository</a>). See
+<a href="https://issues.jenkins.io/browse/JENKINS-58199?jql=project%20%3D%20JENKINS%20AND%20component%20%3D%20plugin-installation-manager-tool">Jira</a>
+to see and create additional requests. To get the most up-to-date changes outside of the release cycle, you can also
+download the <a href="https://repo.jenkins-ci.org/incrementals/io/jenkins/plugin-management/plugin-management-cli/">incrementals binaries</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links"><a class="anchor" href="#_links"></a>Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="https://img.shields.io/badge/gitter%20-%20join_chat%20-%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_plugin-installation-manager-cli-tool%3Agitter.im" alt="Static Badge"></span></p>
+</li>
+<li>
+<p><a href="../index.html#office-hours" class="xref page">Meetings</a></p>
+</li>
+<li>
+<p><a href="https://community.jenkins.io/c/contributing/gsoc">Forum</a></p>
+</li>
+<li>
+<p><a href="../index.html" class="xref page">Jenkins GSoC page</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="role-strategy-performance.html">Role Strategy Plugin performance</a></span>
+  <span class="next"><a href="gitlab-support-for-multibranch-pipeline.html">Multibranch Pipeline support for GitLab SCM</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

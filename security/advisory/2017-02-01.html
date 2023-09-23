@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/security/advisory/2017-02-01.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="security" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Security Advisories</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Adminstrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-administrators.html">Overview for Jenkins Administrators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../fixing.html">How We Fix Security Issues</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Reporters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../reporting.html">Reporting Security Vulnerabilities</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Maintainers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-maintainers.html">Overview for Plugin Maintainers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jenkins Security Team</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../team.html">About the Jenkins Security Team</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../improvements.html">Improvements by the Security Team</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Security Advisories</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/advisory/2017-02-01.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<hr>
+<div class="paragraph">
+<p>layout: simplepage
+title: Jenkins Security Advisory 2017-02-01
+section: security
+kind: core
+---</p>
+</div>
+<div class="paragraph">
+<p>This advisory announces multiple vulnerabilities in Jenkins.</p>
+</div>
+<div class="sect1">
+<h2 id="_description"><a class="anchor" href="#_description"></a>Description</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_use_of_aes_ecb_block_cipher_mode_without_iv_for_encrypting_secrets"><a class="anchor" href="#_use_of_aes_ecb_block_cipher_mode_without_iv_for_encrypting_secrets"></a>Use of AES ECB block cipher mode without IV for encrypting secrets</h3>
+<div class="paragraph">
+<p><strong>SECURITY-304 / CVE-2017-2598</strong></p>
+</div>
+<div class="paragraph">
+<p>Secrets such as passwords are typically stored on disk and sent to users as part of some pages in encrypted form. These were encrypted using AES-128 ECB without IV, which exposes Jenkins and the stored secrets to unnecessary risks. Jenkins now encrypts secrets using AES-128 CBC with random IV.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_items_could_be_created_with_same_name_as_existing_item"><a class="anchor" href="#_items_could_be_created_with_same_name_as_existing_item"></a>Items could be created with same name as existing item</h3>
+<div class="paragraph">
+<p><strong>SECURITY-321 / CVE-2017-2599</strong></p>
+</div>
+<div class="paragraph">
+<p>An insufficient permission check allowed users with the permission to create new items (e.g. jobs) to overwrite existing items they don&#8217;t have access to. After a Jenkins restart, children of the original item, such as builds, were then accessible in some circumstances.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_node_monitor_data_could_be_viewed_by_low_privilege_users"><a class="anchor" href="#_node_monitor_data_could_be_viewed_by_low_privilege_users"></a>Node monitor data could be viewed by low privilege users</h3>
+<div class="paragraph">
+<p><strong>SECURITY-343 / CVE-2017-2600</strong></p>
+</div>
+<div class="paragraph">
+<p>Overall/Read permission was sufficient to access node monitor data via the remote API. These included system configuration and runtime information of these nodes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_possible_cross_site_scripting_vulnerability_in_jquery_bundled_with_timeline_widget"><a class="anchor" href="#_possible_cross_site_scripting_vulnerability_in_jquery_bundled_with_timeline_widget"></a>Possible cross-site scripting vulnerability in jQuery bundled with timeline widget</h3>
+<div class="paragraph">
+<p><strong>SECURITY-349 / CVE-2011-4969</strong></p>
+</div>
+<div class="paragraph">
+<p>The Simile timeline widget used on build history pages bundles an outdated jQuery vulnerable to CVE-2011-4969. We were unable to confirm that Jenkins is vulnerable, but updated the jQuery version bundled with the Simile timeline widget anyway.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_persisted_cross_site_scripting_vulnerability_in_parameter_names_and_descriptions"><a class="anchor" href="#_persisted_cross_site_scripting_vulnerability_in_parameter_names_and_descriptions"></a>Persisted cross-site scripting vulnerability in parameter names and descriptions</h3>
+<div class="paragraph">
+<p><strong>SECURITY-353 / CVE-2017-2601</strong></p>
+</div>
+<div class="paragraph">
+<p>Users with the permission to configure jobs were able to inject JavaScript into parameter names and descriptions.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_outdated_jbcrypt_version_bundled_with_jenkins"><a class="anchor" href="#_outdated_jbcrypt_version_bundled_with_jenkins"></a>Outdated jbcrypt version bundled with Jenkins</h3>
+<div class="paragraph">
+<p><strong>SECURITY-354 / CVE-2015-0886</strong></p>
+</div>
+<div class="paragraph">
+<p>Jenkins bundled an outdated version of jbcrypt that was affected by CVE-2015-0886.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pipeline_metadata_files_not_excluded_in_agent_to_controller_security_subsystem"><a class="anchor" href="#_pipeline_metadata_files_not_excluded_in_agent_to_controller_security_subsystem"></a>Pipeline metadata files not excluded in agent-to-controller security subsystem</h3>
+<div class="paragraph">
+<p><strong>SECURITY-358 / CVE-2017-2602</strong></p>
+</div>
+<div class="paragraph">
+<p>The Pipeline suite of plugins stored build metadata in the file <code>program.dat</code> and the directory <code>workflow/</code>. These were not excluded in the <a href="/security-144">agent-to-controller security subsystem</a> and could therefore be written to by malicious agents.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_user_data_leak_in_disconnected_agents_config_xml_api"><a class="anchor" href="#_user_data_leak_in_disconnected_agents_config_xml_api"></a>User data leak in disconnected agents' config.xml API</h3>
+<div class="paragraph">
+<p><strong>SECURITY-362 / CVE-2017-2603</strong></p>
+</div>
+<div class="paragraph">
+<p>Agents that were disconnected by users contained the disconnecting user&#8217;s <code>User</code> object in serialized form in the <code>config.xml</code> remote API output. This could leak sensitive data such as API tokens.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_low_privilege_users_were_able_to_act_on_administrative_monitors"><a class="anchor" href="#_low_privilege_users_were_able_to_act_on_administrative_monitors"></a>Low privilege users were able to act on administrative monitors</h3>
+<div class="paragraph">
+<p><strong>SECURITY-371 / CVE-2017-2604</strong></p>
+</div>
+<div class="paragraph">
+<p>Administrative monitors are warnings about the system state shown to Jenkins admins. They sometimes provide actions to e.g. automatically address the reported problem, or disable the warning. These actions were not consistently protected by permission checks, thereby allowing low privilege users to act on them.</p>
+</div>
+<div class="paragraph">
+<p>All administrative monitors now require the user accessing them to be an administrator.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_re_key_admin_monitor_leaves_behind_unencrypted_credentials_in_upgraded_installations"><a class="anchor" href="#_re_key_admin_monitor_leaves_behind_unencrypted_credentials_in_upgraded_installations"></a>Re-key admin monitor leaves behind unencrypted credentials in upgraded installations</h3>
+<div class="paragraph">
+<p><strong>SECURITY-376 / CVE-2017-1000362</strong></p>
+</div>
+<div class="paragraph">
+<p>The re-key admin monitor was introduced in Jenkins 1.498 and re-encrypted all secrets in JENKINS_HOME with a new key. It also created a backup directory with all old secrets, and the key used to encrypt them. These backups were world-readable and not removed afterwards.</p>
+</div>
+<div class="paragraph">
+<p>Jenkins now deletes the backup directory, if present. Upgrading from before 1.498 will no longer create a backup directory. <strong>Administrators relying on file access permissions in their manually created backups are advised to check them for the directory <code>$JENKINS_HOME/jenkins.security.RekeySecretAdminMonitor/backups</code>, and delete it if present.</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_internal_api_allowed_access_to_item_names_that_should_not_be_visible"><a class="anchor" href="#_internal_api_allowed_access_to_item_names_that_should_not_be_visible"></a>Internal API allowed access to item names that should not be visible</h3>
+<div class="paragraph">
+<p><strong>SECURITY-380 / CVE-2017-2606</strong></p>
+</div>
+<div class="paragraph">
+<p>The method <code>Jenkins#getItems()</code> included a performance optimization that resulted in all items being returned if the <em>Logged in users can do anything</em> authorization strategy was used, and no access was granted to anonymous users (an option added in Jenkins 2.0). This only affects anonymous users (other users legitimately have access) that were able to get a list of items via an <code>UnprotectedRootAction</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_persisted_cross_site_scripting_vulnerability_in_console_notes"><a class="anchor" href="#_persisted_cross_site_scripting_vulnerability_in_console_notes"></a>Persisted cross-site scripting vulnerability in console notes</h3>
+<div class="paragraph">
+<p><strong>SECURITY-382 / CVE-2017-2607</strong></p>
+</div>
+<div class="paragraph">
+<p>Jenkins allows plugins to annotate build logs, adding new content or changing the presentation of existing content while the build is running. Popular examples include the highlighting of sections by plugin:ant[Ant Plugin], or the timestamp metadata from plugin:timestamper[Timestamper]. Malicious Jenkins users, or users with SCM access, could configure jobs or modify build scripts such that they print serialized console notes that perform cross-site scripting attacks on Jenkins users viewing the build logs.</p>
+</div>
+<div class="paragraph">
+<p>To prevent this, console notes are now signed by Jenkins when created, and Jenkins will only deserialize correctly signed console notes. <strong>As a side effect, console notes created before updating to a release containing this fix will no longer be deserialized.</strong> To restore the previous (unsafe) behavior, set the system property <code>hudson.console.ConsoleNote.INSECURE</code> to <code>true</code> as described on <a href="/doc/book/managing/system-properties/">Features controlled by system properties</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_xstream_remote_code_execution_vulnerability"><a class="anchor" href="#_xstream_remote_code_execution_vulnerability"></a>XStream remote code execution vulnerability</h3>
+<div class="paragraph">
+<p><strong>SECURITY-383 / CVE-2017-2608</strong></p>
+</div>
+<div class="paragraph">
+<p>XStream-based APIs in Jenkins (e.g. <code>/createItem</code> URLs, or <code>POST config.xml</code> remote API) were vulnerable to a remote code execution vulnerability involving the deserialization of various types in <code>javax.imageio</code>.</p>
+</div>
+<div class="paragraph">
+<p>In case this extension of the blocklist results in regressions, the blocklist can be customized as described <a href="/doc/upgrade-guide/2.19/#upgrading-to-jenkins-lts-2-19-3">in the Jenkins LTS upgrade guide for Jenkins 2.19.3</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_information_disclosure_vulnerability_in_search_suggestions"><a class="anchor" href="#_information_disclosure_vulnerability_in_search_suggestions"></a>Information disclosure vulnerability in search suggestions</h3>
+<div class="paragraph">
+<p><strong>SECURITY-385 / CVE-2017-2609</strong></p>
+</div>
+<div class="paragraph">
+<p>The autocompletion for the search box provided the names of views the current user does not have access to in its suggestions. These suggestions were removed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_persisted_cross_site_scripting_vulnerability_in_search_suggestions"><a class="anchor" href="#_persisted_cross_site_scripting_vulnerability_in_search_suggestions"></a>Persisted cross-site scripting vulnerability in search suggestions</h3>
+<div class="paragraph">
+<p><strong>SECURITY-388 / CVE-2017-2610</strong></p>
+</div>
+<div class="paragraph">
+<p>Jenkins allows the creation of users with less-than and greater-than characters in their names. These user names were not escaped when displaying search suggestions, resulting in a cross-site scripting vulnerability.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_insufficient_permission_check_for_periodic_processes"><a class="anchor" href="#_insufficient_permission_check_for_periodic_processes"></a>Insufficient permission check for periodic processes</h3>
+<div class="paragraph">
+<p><strong>SECURITY-389 / CVE-2017-2611</strong></p>
+</div>
+<div class="paragraph">
+<p>The URLs <code>/workspaceCleanup</code> and <code>/fingerprintCleanup</code> did not perform permission checks, allowing users with read access to Jenkins to trigger these background processes (that are otherwise performed daily), possibly causing additional load on Jenkins controller and agents.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_low_privilege_users_were_able_to_override_jdk_download_credentials"><a class="anchor" href="#_low_privilege_users_were_able_to_override_jdk_download_credentials"></a>Low privilege users were able to override JDK download credentials</h3>
+<div class="paragraph">
+<p><strong>SECURITY-392 / CVE-2017-2612</strong></p>
+</div>
+<div class="paragraph">
+<p>Jenkins allows administrators to enter their username and password to the Oracle download site which provides JDKs for download. Users with read access to Jenkins were able to override these credentials, resulting in future builds possibly failing to download a JDK. A permission check has been added.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_user_creation_csrf_using_get_by_admins"><a class="anchor" href="#_user_creation_csrf_using_get_by_admins"></a>User creation CSRF using GET by admins</h3>
+<div class="paragraph">
+<p><strong>SECURITY-406 / CVE-2017-2613</strong></p>
+</div>
+<div class="paragraph">
+<p>When administrators accessed a URL like <code>/user/example</code> via HTTP GET, a user with the ID <code>example</code> was created if it did not exist. While this user record was only retained until restart in most cases, administrators' web browsers could be manipulated to create a large number of user records.</p>
+</div>
+<div class="paragraph">
+<p>Accessing these URLs now no longer results in a user record getting created, Jenkins will respond with 404 Not Found if no such user exists. When using the internal Jenkins user database, new users can be created via <em>Manage Jenkins » Manage Users</em>. To restore the previous (unsafe) behavior, set the system property <code>hudson.model.User.allowUserCreationViaUrl</code> to <code>true</code> as described on <a href="/doc/book/managing/system-properties/">Features controlled by system properties</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_severity"><a class="anchor" href="#_severity"></a>Severity</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>SECURITY-304: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N">medium</a></strong></p>
+</li>
+<li>
+<p>SECURITY-321: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N">medium</a></strong></p>
+</li>
+<li>
+<p>SECURITY-343: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N">medium</a></strong></p>
+</li>
+<li>
+<p>SECURITY-349: <strong><a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-0886">medium</a></strong></p>
+</li>
+<li>
+<p>SECURITY-353: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N">medium</a></strong></p>
+</li>
+<li>
+<p>SECURITY-354: <strong><a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-4969">medium</a></strong></p>
+</li>
+<li>
+<p>SECURITY-358: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N">low</a></strong></p>
+</li>
+<li>
+<p>SECURITY-362: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:N">low</a></strong></p>
+</li>
+<li>
+<p>SECURITY-371: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N">medium</a></strong></p>
+</li>
+<li>
+<p>SECURITY-376: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N">medium</a></strong></p>
+</li>
+<li>
+<p>SECURITY-380: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N">medium</a></strong></p>
+</li>
+<li>
+<p>SECURITY-382: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N">medium</a></strong></p>
+</li>
+<li>
+<p>SECURITY-383: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H">high</a></strong></p>
+</li>
+<li>
+<p>SECURITY-385: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N">medium</a></strong></p>
+</li>
+<li>
+<p>SECURITY-388: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N">medium</a></strong></p>
+</li>
+<li>
+<p>SECURITY-389: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L">medium</a></strong></p>
+</li>
+<li>
+<p>SECURITY-392: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L">medium</a></strong></p>
+</li>
+<li>
+<p>SECURITY-406: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L">medium</a></strong></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_affected_versions"><a class="anchor" href="#_affected_versions"></a>Affected versions</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>All Jenkins main line releases up to and including 2.43</p>
+</li>
+<li>
+<p>All Jenkins LTS releases up to and including 2.32.1</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fix"><a class="anchor" href="#_fix"></a>Fix</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Jenkins main line users should update to 2.44</p>
+</li>
+<li>
+<p>Jenkins LTS users should update to 2.32.2</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These versions include fixes to all the vulnerabilities described above. All prior versions are affected by these vulnerabilities unless otherwise indicated.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_credit"><a class="anchor" href="#_credit"></a>Credit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Jenkins project would like to thank the reporters for discovering and <a href="/security/#reporting-vulnerabilities">reporting</a> these vulnerabilities:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Ben Walding, CloudBees, Inc.</strong> for SECURITY-304</p>
+</li>
+<li>
+<p><strong>Daniel Beck, CloudBees, Inc.</strong> for SECURITY-343, SECURITY-371, SECURITY-385, and SECURITY-392</p>
+</li>
+<li>
+<p><strong>James Dumay, CloudBees, Inc.</strong> for SECURITY-380</p>
+</li>
+<li>
+<p><strong>Jean Marsault, Wavestone</strong> for SECURITY-388 and SECURITY-406</p>
+</li>
+<li>
+<p><strong>Jesse Glick, CloudBees, Inc.</strong> for SECURITY-358 and SECURITY-382</p>
+</li>
+<li>
+<p><strong>Mayuri Gaikwad and Suhas Gaikwad</strong> for SECURITY-353</p>
+</li>
+<li>
+<p><strong>Moritz Bechler of AgNO3</strong> for SECURITY-383</p>
+</li>
+<li>
+<p><strong>Robert Picard, Addepar</strong> for SECURITY-389</p>
+</li>
+<li>
+<p><strong>Robert Pitt, Electronic Arts Inc.</strong> for SECURITY-362</p>
+</li>
+<li>
+<p><strong>Steve Marlowe &lt;<a href="mailto:smarlowe@cisco.com">smarlowe@cisco.com</a>&gt; of Cisco ASIG</strong> for SECURITY-376</p>
+</li>
+<li>
+<p><strong>Taneli Vallo</strong> for SECURITY-321</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_other_resources"><a class="anchor" href="#_other_resources"></a>Other Resources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/blog/2017/02/01/security-updates/">Announcement blog post</a></p>
+</li>
+<li>
+<p><a href="https://www.cloudbees.com/cloudbees-security-advisory-2017-02-01">Corresponding advisory from CloudBees for CloudBees Jenkins Platform</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins Remoting Monitoring :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2021/projects/remoting-monitoring.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="projects" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../index.html">Jenkins Projects</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../index.html">Jenkins Sub-projects</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../../user-docs/2.401.3/blueocean/getting-started.html">Getting started with Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../blueocean/about.html">About Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../blueocean/contribute.html">Contributing to Blue Ocean</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../jam/index.html">CI/CD and Jenkins Area Meetups</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../remoting/index.html">Jenkins Remoting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../2018/index.html">Jenkins in Google Summer of Code 2018</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/code-coverage-api-plugin.html">GSoC 2018. Code Coverage API Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/eda-plugins.html">GSoC 2018. EDA Plugins for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/index.html">Jenkins in Google Summer of Code 2018</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../2019/index.html">Jenkins in Google Summer of Code 2019</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../2019/project-ideas.html">GSoC 2021 Project Ideas</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../2019/schedule.html">Jenkins year-round GSoC schedule</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/working-hours-improvements.html">GSoC2019 Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/gitlab-support-for-multibranch-pipeline.html">Multibranch Pipeline support for GitLab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka with Kubernetes features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../2019/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/eda-coverage-adapters.html">EDA Coverage Adapters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/advanced-build-discard-strategy-plugin.html">Advanced Build Discard Strategy Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/configuration-as-code-compatibility.html">Configuration as Code Plugin Compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/pipeline-step-documentation-generator.html">Pipeline Step Documentation Generator improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/eda-plugins.html">Plugin(s) for Electronic Design Automation tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/bitbucket-rest-plugin.html">Bitbucket REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/working-hours-improvements.html">Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/machine-learning.html">Jenkins and Machine Learning Plugins for Data Science</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/artifactory-rest-plugin.html">Artifactory REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/remoting-monitoring.html">Jenkins Remoting Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/freestyle-to-pipeline-converter.html">Freestyle job to Pipeline job converter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/jenkins-rest-plugin.html">Jenkins REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/role-strategy-ux.html">Role Strategy Plugin: user experience</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/ath-improvements.html">Improvements to the Jenkins Acceptance Test Harness</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/winsw-yaml-config-support.html">Jenkins Windows Services: YAML Configuration Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/external-fingerprint-storage-for-jenkins.html">External Fingerprint Storage for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/gitlab-support-for-multibranch-pipeline.html">Multi-branch Pipeline support for Gitlab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/docker-registries-polling-plugin.html">Polling Docker Registries for Image Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/code-coverage-api-improvements.html">Code Coverage API Plugin Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/automatic-spec-generator-for-jenkins-rest-api.html">Automatic Specification Generator for Jenkins REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka. Docker/K8s Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../sigs/advocacy-and-outreach/outreach-programs/index.html">Outreach programs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../jcasc/index.html">Jenkins Configuration as Code</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../jcasc/dev-tools.html">Dev-Tools for JCasC</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../infrastructure/index.html">Infrastructure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../infrastructure/ircbot.html">IRC Bot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../jenkins-operator/index.html">Jenkins Operator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Other Projects</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes.html">Document Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://jenkins-x.io/">Jenkins X</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Projects</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Jenkins Projects</a></li>
+    <li><a href="remoting-monitoring.html">Jenkins Remoting Monitoring</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2021/projects/remoting-monitoring.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins Remoting Monitoring</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Goal</strong>: Support monitoring and troubleshooting of Jenkins remoting system with OpenTelemetry
+<strong>Status</strong>: Completed</p>
+</div>
+<div class="paragraph">
+<p>student: aki-7</p>
+</div>
+<div class="paragraph">
+<p>links:
+  github: <a href="https://github.com/jenkinsci/remoting-opentelemetry-plugin" class="bare">https://github.com/jenkinsci/remoting-opentelemetry-plugin</a>
+  chat: /projects/gsoc/2021/projects/remoting-monitoring/#chat
+  draft: TODO
+  idea: /projects/gsoc/2021/project-ideas/remoting-monitoring
+  meetings: "/projects/gsoc/2021/projects/remoting-monitoring/#office-hours"
+  discourse: <a href="https://community.jenkins.io/t/gsoc21-remoting-monitoring-end-user-survey/118" class="bare">https://community.jenkins.io/t/gsoc21-remoting-monitoring-end-user-survey/118</a>
+---</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/jenkinsci/remoting-opentelemetry-plugin">🔗 GitHub Repository</a>
+<a href="https://plugins.jenkins.io/remoting-opentelemetry/">🔗 Jenkins plugin page</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_purpose"><a class="anchor" href="#_purpose"></a>Purpose</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In Jenkins, we have a Remoting module, which implements a communication layer in the Jenkins automation server.
+It’s being primarily used for controller ⇔ agent interaction.
+The purpose of this project is to develop a software to support the monitoring and troubleshooting of Remoting systems.</p>
+</div>
+<div class="paragraph">
+<p>This can benefit to system admins who often manage Jenkins on a daily basis.
+Such integration with monitoring tools will help system admins to faster address the issues, bottlenecks when working with Jenkins.
+Therefore, this plugin will help to provide a better monitoring experience for system admins in using Jenkins as their daily automation pipeline.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_goal"><a class="anchor" href="#_goal"></a>Goal</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="../../../../images/_images/gsoc/2021/remoting-monitoring/goal.png" alt="goal"></span></p>
+</div>
+<div class="paragraph">
+<p>The goal of this project:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>collect telemetry data(metrics, traces, logs) of Remoting module with OpenTelemetry.</p>
+</li>
+<li>
+<p>send the telemetry data to OpenTelemetry Protocol endpoint.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Which OpenTelemetry endpoint to use and how to visualize the data are up to users.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_1_summary"><a class="anchor" href="#_phase_1_summary"></a>Phase 1 summary.</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">User survey</dt>
+<dd>
+<p>Our team conducted a user survey to understand the pain point regarding the Jenkins Remoting.
+Please see the <a href="/blog/2021/07/31/remoting-monitoring-phase-1/#user-survey">User survey section</a>
+in the phase 1 blog post for details.</p>
+</dd>
+<dt class="hdlist1">Proof of Concept</dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">How to deliver the monitoring program to the agents</dt>
+<dd>
+<p>We tried two approaches</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Send the monitoring program to the agent over Remoting<br>
+<span class="image"><img src="../../../../images/_images/post-images/2021-07-31-remoting-monitoring-phase-1/sending-monitoring-program-via-remoting.png" alt="sending monitoring program via remoting"></span></p>
+</li>
+<li>
+<p>Install the monitoring engine when provisioning a new agent<br>
+<span class="image"><img src="../../../../images/_images/post-images/2021-07-31-remoting-monitoring-phase-1/install-monitoring-engine-when-provisioning.png" alt="install monitoring engine when provisioning"></span></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Then, I decided to take the second approach.
+Please see <a href="/blog/2021/07/31/remoting-monitoring-phase-1/#how-to-deliver-the-monitoring-program-to-agents">the relevant section</a>
+in the phase 1 blog post for details.</p>
+</div>
+</dd>
+<dt class="hdlist1">How to instrument remoting for tracing</dt>
+<dd>
+<p><strong>Approach 1</strong> Use <a href="https://javadoc.jenkins.io/component/remoting/hudson/remoting/EngineListener.html">EngineListener</a>
+: <a href="https://github.com/jenkinsci/remoting-opentelemetry-plugin/pull/49">Pull Request</a><br>
+↑ This PR was merged once but removed later.</p>
+<div class="paragraph">
+<p><strong>Approach 2</strong> Add instrumentation extension points to Remoting module
+: <a href="https://github.com/jenkinsci/remoting/pull/471">Pull Request</a></p>
+</div>
+<div class="paragraph">
+<p>We tried two approaches above, but I couldn&#8217;t find out a good approach to instrument Remoting.
+Please see the <a href="#_future_work">Future work</a> section and
+<a href="https://github.com/jenkinsci/remoting-opentelemetry-plugin/issues/70">GitHub issue</a> for details.</p>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">Metrics</dt>
+<dd>
+<p>We implemented a feature to collect general metrics (e.g., System CPU load, JVM memory usage)
+and export them to an OTLP endpoint.
+The list of metric types collected in the phase1 is listed
+<a href="/blog/2021/07/31/remoting-monitoring-phase-1/#metrics">here</a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_2_summary"><a class="anchor" href="#_phase_2_summary"></a>Phase 2 summary.</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Log feature</dt>
+<dd>
+<p>Export agent logs to an OTLP/gRPC endpoint: <a href="https://github.com/jenkinsci/remoting-opentelemetry-plugin/pull/67">PR #67</a></p>
+</dd>
+<dt class="hdlist1">Release as Jenkins plugin</dt>
+<dd>
+<p>We released this project as Jenkins plugin🎉</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>🔗 <a href="https://plugins.jenkins.io/remoting-opentelemetry/">Plugin page</a></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Regex metrics filter</dt>
+<dd>
+<p>Filter metrics to collect by the regular expression. <a href="https://github.com/jenkinsci/remoting-opentelemetry-plugin/pull/80">PR #80</a></p>
+</dd>
+<dt class="hdlist1">Additional metrics</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Filesystem metrics: <a href="https://github.com/jenkinsci/remoting-opentelemetry-plugin/pull/82">PR #82</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Configuration</dt>
+<dd>
+<div class="paragraph">
+<p>Users can configure the monitoring engine via environment variables e.g., OTLP endpoint.
+Please see <a href="https://github.com/jenkinsci/remoting-opentelemetry-plugin#configuration-options">README</a> for more options.<br>
+We created a simple configuration framework for this project.
+<a href="https://github.com/jenkinsci/remoting-opentelemetry-plugin/pull/86">PR #86</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Demo Examples</dt>
+<dd>
+<p>We prepared two demo examples so that users can quickly try out the features.</p>
+<div id="docker-compose-demo" class="dlist">
+<dl>
+<dt class="hdlist1">Docker Compose Demo</dt>
+<dd>
+<p>We prepared Docker Compose example, which sets up</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Jenkins controller</p>
+<div class="ulist">
+<ul>
+<li>
+<p>preconfigured with JCasC</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Jenkins inbound agents</p>
+<div class="ulist">
+<ul>
+<li>
+<p>instrumented with our monitoring engine</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>OpenTelemetry Collector</p>
+</li>
+<li>
+<p>Loki for Log aggregation</p>
+</li>
+<li>
+<p>Prometheus for metric backend</p>
+</li>
+<li>
+<p>Grafana for log and metric visualization</p>
+<div class="ulist">
+<ul>
+<li>
+<p>datasource is preconfigured</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Please see the
+<a href="https://github.com/jenkinsci/remoting-opentelemetry-plugin#using-docker-compose">relevant section in README</a>
+for details.</p>
+</div>
+</dd>
+<dt class="hdlist1">Kubernetes Demo</dt>
+<dd>
+<p>We also prepared a demo with Kubernetes.
+It sets up all the component mentioned in the <a href="#docker-compose-demo">Docker Compose Demo</a> section on a Kubernetes cluster,
+and launches agents using <a href="https://plugins.jenkins.io/kubernetes/">Kubernetes plugin</a>.
+Service instance id, by which OpenTelemetry identifies the data producing instance,
+will be automatically set to Jenkins agent name.</p>
+<div class="paragraph">
+<p>Please see
+<a href="https://github.com/Aki-7/remoting-opentelemetry-kubernetes-demo">Demo repository</a> for details.</p>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">Demo snapshot</dt>
+<dd>
+<p><strong><em>Click to open in new tab</em></strong></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><span class="image"><a class="image" href="/images/gsoc/2021/remoting-monitoring/demo-loki.png" target="_blank" rel="noopener"><img src="../../../../images/_images/gsoc/2021/remoting-monitoring/demo-loki.png" alt="logging demo snapshot" width="40%"></a></span>
+<span class="image"><a class="image" href="/images/gsoc/2021/remoting-monitoring/demo-prometheus.png" target="_blank" rel="noopener"><img src="../../../../images/_images/gsoc/2021/remoting-monitoring/demo-prometheus.png" alt="logging demo snapshot" width="40%"></a></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_future_work"><a class="anchor" href="#_future_work"></a>Future work</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>During this GSoC period, I couldn&#8217;t find out a good way to instrument Remoting module for tracing.
+Also, I couldn&#8217;t identify the valuable tracing in Remoting,
+which really helps admins to monitoring and troubleshooting the Remoting system.</p>
+</div>
+<div class="paragraph">
+<p>I summarized what I tried and what I thought during this GSoC in the
+<a href="https://github.com/jenkinsci/remoting-opentelemetry-plugin/issues/70">issue</a>.
+This is the feature work of this project.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_chat"><a class="anchor" href="#_chat"></a>Chat</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We use the <code>#gsoc-jenkins-remoting-monitoring</code> channel in the CDF Slack workspace.
+<a href="../../../../community/chat/index.html#continuous-delivery-foundation" class="xref page">How to join</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references"><a class="anchor" href="#_references"></a>References</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Plugin page: <a href="https://plugins.jenkins.io/remoting-opentelemetry/" class="bare">https://plugins.jenkins.io/remoting-opentelemetry/</a></p>
+</li>
+<li>
+<p>Kubernetes Demo repository: <a href="https://github.com/Aki-7/remoting-opentelemetry-kubernetes-demo/" class="bare">https://github.com/Aki-7/remoting-opentelemetry-kubernetes-demo/</a></p>
+</li>
+<li>
+<p>Remoting library: <a href="https://github.com/jenkinsci/remoting" class="bare">https://github.com/jenkinsci/remoting</a></p>
+</li>
+<li>
+<p>Remoting sub-project: <a href="https://jenkins.io/projects/remoting/" class="bare">https://jenkins.io/projects/remoting/</a></p>
+</li>
+<li>
+<p>OpenTelemetry <a href="https://opentelemetry.io/" class="bare">https://opentelemetry.io/</a></p>
+</li>
+<li>
+<p>Prometheus: <a href="https://prometheus.io/" class="bare">https://prometheus.io/</a></p>
+</li>
+<li>
+<p>Grafana: <a href="https://grafana.com/" class="bare">https://grafana.com/</a></p>
+</li>
+</ul>
+</div>
+<iframe src="https://community.jenkins.io/t/gsoc21-remoting-monitoring-end-user-survey/118" title="Discourse Hacktoberfest"></iframe>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

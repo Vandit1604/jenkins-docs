@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Blue Ocean :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.401.3/blueocean/index.html">
+    <link rel="prev" href="../pipeline/cps-method-mismatches.html">
+    <link rel="next" href="getting-started.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="user-docs" data-version="2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins User Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/docker.html">Docker</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-credentials.html">Using credentials</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/searchbox.html">Using Search Box</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/referencing-another-project-by-name.html">Referencing another project by name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/aborting-a-build.html">Aborting a build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/fingerprints.html">Fingerprints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-local-language.html">Using local language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/change-time-zone.html">Change time zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/remote-access-api.html">Remote Access API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/executor-starvation.html">Executor Starvation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-agents.html">Using Jenkins agents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/running-pipelines.html">Running a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/development.html">Pipeline Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/syntax.html">Pipeline Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/pipeline-best-practices.html">Pipeline Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/scaling-pipeline.html">Scaling Pipelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/cps-method-mismatches.html">Pipeline CPS Method Mismatches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started with Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="creating-pipelines.html">Creating a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="dashboard.html">Dashboard</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="activity.html">Activity View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipeline-run-details.html">Pipeline Run Details View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipeline-editor.html">Pipeline Editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../managing/index.html">Managing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-configuration.html">Configuring the System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/casc.html">Configuration as Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/tools.html">Managing Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/about-jenkins.html">About Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-info.html">System Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/cli.html">Jenkins CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-console.html">Script Console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/groovy-hook-scripts.html">Groovy Hook Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/nodes.html">Managing Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-approval.html">In-process Script Approval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/ui-themes.html">Themes for user interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/user-content.html">User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/spawning-processes.html">Spawning Processes From Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Securing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/access-control.html">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-jenkins.html">Securing Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/managing-security.html">Managing Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/controller-isolation.html">Controller Isolation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-builds.html">Securing Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/csrf-protection.html">CSRF Protection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/user-content.html">Rendering User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/build-authorization.html">Access Control for Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/environment-variables.html">Handling Environment Variables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/markup-formatter.html">Markup Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/services.html">Exposed Services and Ports</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/index.html">System Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/backing-up.html">Backing-up/Restoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/monitoring.html">Monitoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/administering-jenkins-on-kubernetes.html">Administering Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-chef.html">Managing Jenkins with Chef</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-puppet.html">Managing Jenkins with Puppet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/viewing-logs.html">Viewing logs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/authenticating-scripted-clients.html">Authenticating scripted clients</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration.html">Reverse proxy configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-haproxy.html">Reverse proxy - HAProxy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-squid.html">Reverse proxy - Squid</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-iis.html">Reverse proxy - IIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-iptables.html">Reverse proxy - iptables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../scaling/index.html">Scaling Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-scale.html">Architecting for Scale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/hardware-recommendations.html">Hardware Recommendations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-manageability.html">Architecting for Manageability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../troubleshooting/index.html">Troubleshooting Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/diagnosing-errors.html">Diagnosing Errors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/obtaining-a-thread-dump.html">Obtaining a thread dump</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins User Documentation</span>
+    <span class="version">2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../2.2/index.html">2.2</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins User Documentation</a></li>
+    <li><a href="index.html">Blue Ocean</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../2.401.3/blueocean/index.html">2.401.3</a>
+    <a class="version" href="../../2.2/blueocean/index.html">2.2</a>
+    <a class="version is-current" href="index.html">2.1</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/2.401.2/docs/user-docs/modules/blueocean/pages/index.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Blue Ocean</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This chapter covers all aspects of Blue Ocean&#8217;s functionality, including how to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="getting-started">get started with Blue Ocean</a>, which covers how to set up Blue Ocean in Jenkins and access the Blue Ocean interface.</p>
+</li>
+<li>
+<p><a href="creating-pipelines">create a new Pipeline</a> project in Blue Ocean.</p>
+</li>
+<li>
+<p>use Blue Ocean&#8217;s <a href="dashboard">dashboard</a>.</p>
+</li>
+<li>
+<p>use the <a href="activity">Activity view</a>, where you can access <a href="activity#activity">your current and historic run data</a>, your Pipeline&#8217;s <a href="activity#branches">branches</a>, and any open <a href="activity#pull-requests">pull requests</a>.</p>
+</li>
+<li>
+<p>use the <a href="pipeline-run-details">Pipeline run details view</a> to access details such as console output, for a particular Pipeline or item run.</p>
+</li>
+<li>
+<p>use the <a href="pipeline-editor">Pipeline editor</a> to modify Pipelines as code, which you can then commit to source control.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This chapter is intended for Jenkins users of all skill levels, but beginners may need to refer to the <a href="#pipeline.adoc" class="xref unresolved">Pipeline</a> chapter to understand some topics covered here.</p>
+</div>
+<div class="paragraph">
+<p>For an overview of content in the Jenkins User Handbook, refer to
+<a href="getting-started.html" class="xref page">user handbook overview</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Blue Ocean status</div>
+<div class="paragraph">
+<p>Blue Ocean will not receive further functionality updates.
+Blue Ocean will continue to provide easy-to-use Pipeline visualization, but it will not be enhanced further.
+It will only receive selective updates for significant security issues or functional defects.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="blue-ocean-overview"><a class="anchor" href="#blue-ocean-overview"></a>What is Blue Ocean?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Blue Ocean as it stands provides easy-to-use Pipeline visualization.
+It was intended to be a rethink of the Jenkins user experience, designed from the ground up for <a href="../pipeline/">Jenkins Pipeline</a>.
+Blue Ocean was intended to reduce clutter and increases clarity for all users.</p>
+</div>
+<div class="paragraph">
+<p>However, Blue Ocean will not receive further functionality or enhancement updates.
+It will only receive selective updates for significant security issues or functional defects.
+If you are just starting out, you can still use Blue Ocean, or you may want to consider alternative options such as the <a href="https://plugins.jenkins.io/pipeline-stage-view/">Pipeline: Stage View</a> and <a href="https://plugins.jenkins.io/pipeline-graph-view/">Pipeline Graph View</a> plugins.
+These offer some of the same functionality.</p>
+</div>
+<div class="paragraph">
+<p>To sum up, Blue Ocean&#8217;s main features include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Sophisticated visualization</strong> of continuous delivery (CD) Pipelines, allowing for fast and intuitive comprehension of your Pipeline&#8217;s status.</p>
+</li>
+<li>
+<p><strong>Pipeline editor</strong> makes the creation of Pipelines more approachable, by guiding the user through a visual process to create a Pipeline.</p>
+</li>
+<li>
+<p><strong>Personalization</strong> to suit the role-based needs of each member of the team.</p>
+</li>
+<li>
+<p><strong>Pinpoint precision</strong> when intervention is needed or issues arise.
+Blue Ocean shows where attention is needed, facilitating exception handling and increasing productivity.</p>
+</li>
+<li>
+<p><strong>Native integration for branches and pull requests</strong>, which enables maximum developer productivity when collaborating on code in GitHub and Bitbucket.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you would like to start using Blue Ocean, please refer to <a href="getting-started/">getting started with Blue Ocean</a>.</p>
+</div>
+<center>
+<iframe width="853" height="480"
+src="https://www.youtube-nocookie.com/embed/k_fVlU1FwP4?rel=0" frameborder="0"
+allowfullscreen></iframe>
+</center>
+<br/>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_frequently_asked_questions"><a class="anchor" href="#_frequently_asked_questions"></a>Frequently asked questions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_why_does_blue_ocean_exist"><a class="anchor" href="#_why_does_blue_ocean_exist"></a>Why does Blue Ocean exist?</h3>
+<div class="paragraph">
+<p>The DevOps world has transitioned from developer tools that are purely functional, to developer tools being part of a "developer experience."
+It was no longer about a single tool, but the many tools developers use throughout the day, and how they work together to achieve a better workflow for the developer.</p>
+</div>
+<div class="paragraph">
+<p>Developer tool companies like Heroku, Atlassian, and GitHub have raised the bar for what is considered a good developer experience.
+Gradually, developers have become more attracted to tools that are not only functional, but are designed to fit into their existing workflow seamlessly.
+This shift represents a higher standard for design and function, where developers are expecting an exceptional user experience.
+Jenkins needed to rise to meet this higher standard.</p>
+</div>
+<div class="paragraph">
+<p>Creating and visualising continuous delivery Pipelines has always been something valuable for many Jenkins users.
+This has been demonstrated in the plugins that the Jenkins community has created to meet their needs.
+This also indicates a need to revisit how Jenkins currently expresses these concepts, and consider delivery pipelines as a central theme to the Jenkins user experience.</p>
+</div>
+<div class="paragraph">
+<p>It is not just continuous delivery concepts, but the tools that developers use every day such as GitHub, Bitbucket, Slack, Puppet, or Docker.
+It is about more than Jenkins, as it includes the developer workflow surrounding Jenkins, which comprised multiple tools.</p>
+</div>
+<div class="paragraph">
+<p>New teams can encounter challenges when learning how to assemble their own Jenkins experience.
+However, the goal to improve their time to market by shipping better software more consistently is the same.
+Assembling the ideal Jenkins experience is something we, as a community of Jenkins users and contributors, can work together to define.
+As time progresses, developers' expectations of a good user experience change, and the Jenkins project needs to be receptive to these expectations.</p>
+</div>
+<div class="paragraph">
+<p>The Jenkins community has worked constantly to build the most technically capable and extensible software automation tool in existence.
+Not revolutionizing the Jenkins developer experience today could mean that a closed source option attempts to capitalize on this in the future.</p>
+</div>
+<div class="paragraph">
+<p>Blue Ocean was created to meet such demands of its time.
+However, as time passed, more modern tools have cropped up to replace it.
+Now, the time has come for the rise of other plugins of similar functionality.
+Therefore, any new development or enhancement of Blue Ocean has ceased.
+If you are interested in contributing to a plugin which serves a similar purpose, you should consider the alternative options as suggested in <strong><a href="#blue-ocean-overview">What is Blue Ocean?</a></strong> section on above.</p>
+</div>
+<center>
+<iframe width="853" height="480"
+src="https://www.youtube-nocookie.com/embed/mn61VFdScuk?rel=0" frameborder="0"
+allowfullscreen></iframe>
+</center>
+<br/>
+</div>
+<div class="sect2">
+<h3 id="_where_is_the_name_from"><a class="anchor" href="#_where_is_the_name_from"></a>Where is the name from?</h3>
+<div class="paragraph">
+<p>The name Blue Ocean comes from the book <a href="https://en.wikipedia.org/wiki/Blue_Ocean_Strategy">Blue Ocean Strategy</a>.
+This strategy involves looking at problems in the larger uncontested space, instead of strategic problems within a contested space.
+To put this more simply, consider this quote from ice hockey legend Wayne Gretzky: "Skate to where the puck is going to be, not where it has been."</p>
+</div>
+<div class="sect3">
+<h4 id="_does_blue_ocean_support_freestyle_jobs"><a class="anchor" href="#_does_blue_ocean_support_freestyle_jobs"></a>Does Blue Ocean support freestyle jobs?</h4>
+<div class="paragraph">
+<p>Blue Ocean aims to deliver a great experience around Pipeline and compatibility with any freestyle jobs you already have configured in your Jenkins instance.
+However, you will not benefit from the features built for Pipelines, for example Pipeline visualization.</p>
+</div>
+<div class="paragraph">
+<p>Blue Ocean was designed to be extensible, so that the Jenkins community could extend Blue Ocean functionality.
+While there will not be any further functionalities added to Blue Ocean, it still provides Pipeline visualization and other features that users find valuable.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_does_this_mean_for_my_plugins"><a class="anchor" href="#_what_does_this_mean_for_my_plugins"></a>What does this mean for my plugins?</h3>
+<div class="paragraph">
+<p>Extensibility is a core feature of Jenkins and being able to extend the Blue Ocean UI is equally important.
+The <code>&lt;ExtensionPoint name=..&gt;</code> can be used in the markup of Blue Ocean, leaving places for plugins to contribute to the UI.
+This means plugins can have their own Blue Ocean extension points.
+Blue Ocean itself is implemented using these extension points.</p>
+</div>
+<div class="paragraph">
+<p>Extensions are delivered by plugins as usual.
+Plugins must include some additional JavaScript to connect to Blue Ocean&#8217;s extension points.
+Developers that have contributed to the Blue Ocean user experience will have added this JavaScript accordingly.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_technologies_are_currently_in_use"><a class="anchor" href="#_what_technologies_are_currently_in_use"></a>What technologies are currently in use?</h3>
+<div class="paragraph">
+<p>Blue Ocean is built as a collection of Jenkins plugins.
+The key difference is that Blue Ocean provides both its own endpoint for HTTP requests, and it delivers HTML/JavaScript via a different path, without using the existing Jenkins UI markup or scripts.
+React.js and ES6 are used to deliver the JavaScript components of Blue Ocean.
+Inspired by this excellent open-source project, which you can refer to in the <a href="https://nylas.com/blog/react-plugins">building plugins for React apps</a> blog post, an <code>&lt;ExtensionPoint&gt;</code> pattern was established that allows extensions to come from any Jenkins plugin with JavaScript.
+If the extensions fail to load, their failures are isolated.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_where_can_i_find_the_source_code"><a class="anchor" href="#_where_can_i_find_the_source_code"></a>Where can I find the source code?</h3>
+<div class="paragraph">
+<p>The source code can be found on Github:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkinsci/blueocean-plugin">Blue Ocean</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/jenkins-design-language">Jenkins Design Language</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_join_the_blue_ocean_community"><a class="anchor" href="#_join_the_blue_ocean_community"></a>Join the Blue Ocean community</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As the development of Blue Ocean has frozen, we do not anticipate or expect any new contributions made to its codebase for new features.
+However, there are still a few ways you can join the community:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Chat with the community and development team on Gitter image::https://badges.gitter.im/jenkinsci/blueocean-plugin.svg[link="https://app.gitter.im/#/room/#jenkinsci_blueocean-https://plugins.jenkins.io/gitter.im"]</p>
+</li>
+<li>
+<p>Request features or report bugs against the <a href="https://issues.jenkins.io/"><code>blueocean-plugin</code> component in JIRA</a>.</p>
+</li>
+<li>
+<p>Subscribe and ask questions on the <a href="https://groups.google.com/g/jenkinsci-users">Jenkins Users mailing list</a>.</p>
+</li>
+<li>
+<p>Developer? We&#8217;ve <a href="https://issues.jenkins.io/issues/?filter=16142">labeled a few issues</a> that are great for anyone wanting to get started developing Blue Ocean.
+Don&#8217;t forget to drop by the Gitter chat and introduce yourself!</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="../pipeline/cps-method-mismatches.html">Pipeline CPS Method Mismatches</a></span>
+  <span class="next"><a href="getting-started.html">Getting started with Blue Ocean</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

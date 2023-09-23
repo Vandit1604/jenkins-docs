@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Google Summer of Code. Information for GSoC Contributors :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/students.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="projects" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Projects</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Jenkins Sub-projects</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../user-docs/2.401.3/blueocean/getting-started.html">Getting started with Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/about.html">About Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/contribute.html">Contributing to Blue Ocean</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../jam/index.html">CI/CD and Jenkins Area Meetups</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../remoting/index.html">Jenkins Remoting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Google Summer of Code in Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="2018/index.html">Jenkins in Google Summer of Code 2018</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018/code-coverage-api-plugin.html">GSoC 2018. Code Coverage API Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018/eda-plugins.html">GSoC 2018. EDA Plugins for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018/index.html">Jenkins in Google Summer of Code 2018</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018/remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018/simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="2019/index.html">Jenkins in Google Summer of Code 2019</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="2019/project-ideas.html">GSoC 2021 Project Ideas</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="2019/schedule.html">Jenkins year-round GSoC schedule</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/working-hours-improvements.html">GSoC2019 Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/gitlab-support-for-multibranch-pipeline.html">Multibranch Pipeline support for GitLab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka with Kubernetes features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="2019/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/eda-coverage-adapters.html">EDA Coverage Adapters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/advanced-build-discard-strategy-plugin.html">Advanced Build Discard Strategy Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/configuration-as-code-compatibility.html">Configuration as Code Plugin Compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/pipeline-step-documentation-generator.html">Pipeline Step Documentation Generator improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/eda-plugins.html">Plugin(s) for Electronic Design Automation tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/bitbucket-rest-plugin.html">Bitbucket REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/working-hours-improvements.html">Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/machine-learning.html">Jenkins and Machine Learning Plugins for Data Science</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/artifactory-rest-plugin.html">Artifactory REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/remoting-monitoring.html">Jenkins Remoting Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/freestyle-to-pipeline-converter.html">Freestyle job to Pipeline job converter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/jenkins-rest-plugin.html">Jenkins REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/role-strategy-ux.html">Role Strategy Plugin: user experience</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/ath-improvements.html">Improvements to the Jenkins Acceptance Test Harness</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/winsw-yaml-config-support.html">Jenkins Windows Services: YAML Configuration Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/external-fingerprint-storage-for-jenkins.html">External Fingerprint Storage for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/gitlab-support-for-multibranch-pipeline.html">Multi-branch Pipeline support for Gitlab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/docker-registries-polling-plugin.html">Polling Docker Registries for Image Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/code-coverage-api-improvements.html">Code Coverage API Plugin Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/automatic-spec-generator-for-jenkins-rest-api.html">Automatic Specification Generator for Jenkins REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka. Docker/K8s Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../sigs/advocacy-and-outreach/outreach-programs/index.html">Outreach programs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../jcasc/index.html">Jenkins Configuration as Code</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../jcasc/dev-tools.html">Dev-Tools for JCasC</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../infrastructure/index.html">Infrastructure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../infrastructure/ircbot.html">IRC Bot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../jenkins-operator/index.html">Jenkins Operator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Other Projects</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes.html">Document Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://jenkins-x.io/">Jenkins X</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Projects</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins Projects</a></li>
+    <li><a href="students.html">Google Summer of Code. Information for GSoC Contributors</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/students.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Google Summer of Code. Information for GSoC Contributors</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image right float-gap"><img src="../../images/_images/gsoc/jenkins-gsoc-logo_small.png" alt="Jenkins GSoC"></span></p>
+</div>
+<div class="paragraph">
+<p>This page provides information for contributors about participating in Jenkins GSoC program.
+See <a href="index.html" class="xref page">the main GSoC project</a> page for other information and links.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gsoc_contributor_application_process"><a class="anchor" href="#_gsoc_contributor_application_process"></a>GSoC Contributor Application Process</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First of all, take the time to read the <a href="https://google.github.io/gsocguides/student/">Google Summer of Code Guide</a>.</p>
+</div>
+<div class="paragraph">
+<p>Also bookmark the <a href="https://developers.google.com/open-source/gsoc/timeline">timeline</a>.
+Print it and hang it where you can see it every day!</p>
+</div>
+<div class="paragraph">
+<p>The aforementioned documents are the reference and the inspiration for this document.</p>
+</div>
+<div class="sect2">
+<h3 id="_eligibility_steps"><a class="anchor" href="#_eligibility_steps"></a>Eligibility steps</h3>
+<div class="paragraph">
+<p>You must verify that you are eligible to participate in the program.
+We cannot make any exception. Please:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Make sure you are <a href="https://developers.google.com/open-source/gsoc/faq#what_are_the_eligibility_requirements_for_participation">eligible to participate in the program</a></p>
+</li>
+<li>
+<p>If you are an accepted student in the United States of America on an F1 visa, you must obtain an <a href="https://developers.google.com/open-source/gsoc/faq#i_am_an_accepted_student_in_the_united_states_on_an_f1_visa_how_do_i_get_authorization_to_participate">authorization before you can participate</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_application_steps"><a class="anchor" href="#_application_steps"></a>Application steps</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Check out the <a href="#ROOT:index.adoc/gsoc/2023/project-ideas">GSoC 2023 Project ideas</a></p>
+</li>
+<li>
+<p>Select an interesting project idea or draft your own proposal.</p>
+</li>
+<li>
+<p>Use the <a href="https://docs.google.com/document/d/1dIlPLXfLbFsvcaHFuwmH9_lSCVm9m6-SgNYTNAnSZpY/">project proposal template</a> to write your project proposal.</p>
+</li>
+<li>
+<p>If you are not familiar with Jenkins, read the introductory info on the website and try using Jenkins with one of your previous projects.</p>
+</li>
+<li>
+<p>Join the <a href="https://community.jenkins.io/c/contributing/gsoc/">Discourse communication channel</a></p>
+</li>
+<li>
+<p>Join the <a href="https://app.gitter.im/#/room/#jenkinsci_gsoc-sig:gitter.im">Jenkins GSoC Gitter Chat</a></p>
+</li>
+<li>
+<p>Using the Discourse channel or the Gitter chat:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Introduce yourself to the Jenkins GSoC community,</p>
+</li>
+<li>
+<p>Start a discussion about a Jenkins GSoC project.</p>
+</li>
+<li>
+<p>Be patient, there are time zones, and mentors have full time jobs outside of the Jenkins community.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Eventually, you may have to join both the Gitter chat and the Discourse channel, but initially you can reach us either way.</p>
+</li>
+<li>
+<p>Add GSoC office hours to your calendar (to be announced on <a href="index.html" class="xref page">the main GSoC project</a> page).</p>
+</li>
+<li>
+<p>Recommended: Do some contributions in the area of your project idea</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You can find more details about application steps below.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expectations"><a class="anchor" href="#expectations"></a>Expectations</h3>
+<div class="paragraph">
+<p>When you apply to the GSoC program, you are committing to 30..40 hours of coding per week for the duration of the program.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>We expect contributors to get involved into project discussions at the beginning of the GSoC contributor application period in order to have the opportunity to discuss the project with potential mentors and to jointly review the proposal drafts.</p>
+</li>
+<li>
+<p>We expect contributors to attend at least one office hours during the application period.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rules_of_engagement"><a class="anchor" href="#_rules_of_engagement"></a>Rules of Engagement</h3>
+<div class="sect3">
+<h4 id="_communications_are_in_english"><a class="anchor" href="#_communications_are_in_english"></a>Communications are in English</h4>
+<div class="paragraph">
+<p>The official communication language is English, and English is a second
+language to most of us. Learning proper English grammar is key to
+good communications. This is a challenge for mentors and contributors alike.</p>
+</div>
+<div class="paragraph">
+<p>We encourage all contributors to spend some time improving their knowledge of
+the English language to increase their chances of success in open source.
+There are many good videos on youtube that can help you improve written and spoken
+English.</p>
+</div>
+<div class="paragraph">
+<p>Remember that the goal when communicating is to be understood.
+Frequent grammar mistakes include
+<a href="http://guidetogrammar.org/grammar/runons.htm">run-on sentences</a> (they are confusing),
+<a href="http://guidetogrammar.org/grammar/fragments.htm">sentence fragments</a> (they are incomplete),
+or miss constructing <a href="http://guidetogrammar.org/grammar/clauses.htm">clauses</a>
+and <a href="http://guidetogrammar.org/grammar/phrases.htm">phrases</a> (confusing).</p>
+</div>
+<div class="paragraph">
+<p>It is always good to start at the basics,
+that is how to write a sentence, and how to write a paragraph.</p>
+</div>
+<div class="paragraph">
+<p>The following links are suggestions to help you improve your communication skills:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://guidetogrammar.org/grammar/index.htm">Guide to grammar &amp; writing</a></p>
+</li>
+<li>
+<p><a href="http://web.mit.edu/me-ugoffice/communication/technical-writing.pdf">Sentence structure of Techinical Writing</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=4dr5lN1jqRE">Learn English Grammar: The Sentence</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=0IFDuhdB2Hk">Writing Skills: The Paragraph</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_communications_are_public"><a class="anchor" href="#_communications_are_public"></a>Communications are public</h4>
+<div class="paragraph">
+<p>We expect almost all communications to be done in public.</p>
+</div>
+<div class="paragraph">
+<p>Contributors and mentors do not communicate privately regarding the technical
+aspects of the project or the GSoC program. Mentors are not expected to
+respond to such contributors inquiries when made in private.  Contributors will
+get much better answers when they ask in public rather than in private,
+as mentors will collectively complement each other.</p>
+</div>
+<div class="paragraph">
+<p>Contributors please note that mentors do not have "special information",
+or "privileged information" that they would reveal only to you
+privately. Contributors should not ask mentors to hide information from
+other contributors, this is simply not how open-source development works. In
+open-source development, all ideas are presented and debated publicly.
+All the information we have is in the project ideas, or is shared on
+the public channels (for example gitter, Discourse channel, office hours).
+Contributors are expected to find this information on their own using the
+search tools.</p>
+</div>
+<div class="paragraph">
+<p>Contributor proposals are also public. Contributors might be afraid of another
+contributor copying their proposal or stealing their ideas, but there is
+nothing to fear. First, mentors can easily tell when ideas and proposals
+have been copied. Second, Jenkins is a community driven open source
+development organization, where all proposals and ideas are debated
+in public and are visible to the entire community. There is always a
+public debate on ideas and proposals.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="student-proposals"><a class="anchor" href="#student-proposals"></a>GSoC Contributor Proposals</h3>
+<div class="paragraph">
+<p>We expect proposals from contributors to contain all the sections discussed in the
+<a href="https://google.github.io/gsocguides/student/">Google Summer of Code Guide</a>,
+specifically the <a href="https://google.github.io/gsocguides/student/writing-a-proposal#elements-of-a-quality-proposal">Elements of a Quality Proposal</a>.</p>
+</div>
+<div class="paragraph">
+<p>Contributors need to use the <a href="https://docs.google.com/document/d/1dIlPLXfLbFsvcaHFuwmH9_lSCVm9m6-SgNYTNAnSZpY/">project proposal template</a>
+to write their proposals. Contributor proposals should not be confused with <a href="../proposing-project-ideas">project ideas</a>.</p>
+</div>
+<div class="paragraph">
+<p>We strongly encourage contributors to engage with the mentors as early as
+possible. If you wait until the last few days to submit a proposal,
+mentors will not have time to discuss with you, and your chances of
+being accepted are greatly diminished.</p>
+</div>
+<div class="paragraph">
+<p>You can have additional sections or paragraphs if they are applicable:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A contribution history section: if you participated in any open-source projects or proposed any patches in Jenkins, you can definitely list them in this section.</p>
+</li>
+<li>
+<p>An appendix section of detailed design, architecture or implementation. This section could contain code samples, pseudo-code, diagrams, mock UIs, etc.</p>
+</li>
+<li>
+<p>A section related to testing your project: unit tests, integration tests, test automation.</p>
+</li>
+<li>
+<p>A section or paragraph on deliverables: demos, presentations, releases (alpha, official).</p>
+</li>
+<li>
+<p>A section or paragraph on improvements, bug fixes, benefits to the community.</p>
+</li>
+<li>
+<p>Any other section that the contributor deems is applicable and helps the proposal</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In the proposal, we also expect contributors to disclose all known commitments
+that overlap with any of the program phases (community bonding, coding
+periods, evaluation periods, etc.):</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Disclose your vacations periods, part-time or full-time job, school, classes, tests, exams, periods of non-availability, etc.</p>
+</li>
+<li>
+<p>Failure to disclose known commitments may lead to immediate failure,
+especially in the case of another jobs or internship.</p>
+</li>
+<li>
+<p>Unexpected events: we understand there can be unexpected events in life, and those cannot be planned. Please inform us as soon as possible if you need time away from the program. You can use private messaging for sensitive information.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Please note that the <a href="https://community.jenkins.io/c/contributing/gsoc/">Discourse channel</a>
+is publicly visible inside and outside the community.
+It is required to use this channel for the initial review and feedback collection.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_first_begin_a_communication_in_discourse"><a class="anchor" href="#_first_begin_a_communication_in_discourse"></a>First begin a communication in <a href="https://community.jenkins.io/c/contributing/gsoc/">Discourse</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Please use the <em>[GSOC 2023 PROPOSAL] Your Name and Project Title</em> subject in discussion.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If another contributor is interested in the same project idea, you can contribute to their thread, or start your own thread.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Contents. In the first communication we would be interested to see the following information:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A short self-introduction: your area of study, interests, background</p>
+</li>
+<li>
+<p>Motivation letter. Why are you interested in the Jenkins project? Which projects ideas do you want to work on?</p>
+</li>
+<li>
+<p>If you participate in open-source projects, please reference them</p>
+</li>
+<li>
+<p>If you have a GitHub, Twitter account, a blog or technical/scientific publications, please reference them as well</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In GSoC we do not hire you in the common sense.
+Please <strong>DO NOT</strong> send us your CVs/resumes or universal cover letters.
+We are mostly interested to understand your interests and your motivation to work in the project.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_first_contributions"><a class="anchor" href="#_first_contributions"></a>First contributions</h3>
+<div class="paragraph">
+<p>We highly recommend to make some contributions to the project while you work on the application.
+It will help you to polish the proposal,
+and mentors will consider contributions and interactions with the community when processing applications.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="UsefulLinks"><a class="anchor" href="#UsefulLinks"></a>Useful links</h3>
+<div class="paragraph">
+<p>Here are a list of links to help you get started on participating in Jenkins and in coding for the Jenkins project,
+in increasing level of difficulty.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#project:governance-meeting:index.adoc" class="xref unresolved">Project Governance</a></p>
+</li>
+<li>
+<p><a href="../../community/index.html" class="xref page">Participate and Contribute</a></p>
+</li>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Plugin+tutorial">Plugin tutorial</a></p>
+</li>
+<li>
+<p><a href="/blog/2017/08/07/intro-to-plugin-development/">Plugin Development Tutorials, Videos, and More</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/jenkins/blob/master/CONTRIBUTING.md">Contributing to the Jenkins core</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There is also a
+<a href="https://issues.jenkins.io/issues/?jql=labels%20%3D%20newbie-friendly">list of newbie-friendly issues</a>.</p>
+</div>
+<div class="paragraph">
+<p>Feel free to contact potential mentors and org admins if you need help with choosing a newbie friendly issue to tackle.
+See the contact links in project proposals.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gsoc_contributor_selection_process"><a class="anchor" href="#_gsoc_contributor_selection_process"></a>GSoC Contributor Selection Process</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once the application period is over, administrators and mentors make a decision on which proposal to accept
+based on the proposal submitted to the Google Summer of Code website.
+Only proposals submitted before the deadline to the Google Summer of Code website are considered.</p>
+</div>
+<div class="paragraph">
+<p>We understand contributors are anxious to know whether they are selected or not, but admins and mentors are
+bound to secrecy until Google announces the selection results.
+We will not discuss the selection with students until Google makes the announcement.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_congratulations_you_have_been_selected_or_not"><a class="anchor" href="#_congratulations_you_have_been_selected_or_not"></a>Congratulations, you have been selected&#8230;&#8203; or not</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We thank all GSoc contributors who reach out to us during the application period.
+If you have not been selected <a href="https://google.github.io/gsocguides/student/being-turned-down">read this</a>,
+there could be many reasons, and some are even outside of our control.
+Do not feel bad, we encourage you to stay with the community, and apply again next year.</p>
+</div>
+<div class="paragraph">
+<p>If you have been selected, the community bonding period starts within two days after the announcement.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_community_bonding"><a class="anchor" href="#_community_bonding"></a>Community Bonding</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As soon as the GSoC contributors are accepted, the community bounding period starts.
+During this period, contributors are not expected to be coding immediately.
+Instead they are expected to prepare to code.</p>
+</div>
+<div class="paragraph">
+<p>A successful community bonding usually leads to successful coding periods.
+It is our experience that poor community bonding leads to difficult coding periods.</p>
+</div>
+<div class="paragraph">
+<p>Use the community bonding to:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Define the communication channels with your mentors:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If it does not exist, setup a gitter chat room for your project.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Setup the weekly meeting schedule with your mentors:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Two meetings per week is recommended,</p>
+</li>
+<li>
+<p>Announce your meeting schedule to:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The gitter chat of your project.</p>
+</li>
+<li>
+<p>Send a google calendar meeting invite to the mentors, CC the org admins.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Get introduced to the key stakeholders and contributors in the area of the project by your mentors:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For example, an introduction to subject matter experts.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Continue to discuss and plan the project with the community and the mentors:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Work on the design document of the project.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Work on clarifying objectives and expectations,</p>
+</li>
+<li>
+<p>Study, refine and discuss the design and the project plan,</p>
+</li>
+<li>
+<p>Top-level architecture document:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Create diagrams of operation,</p>
+</li>
+<li>
+<p>Answer questions such as "How is the user going to use this?", "What configurations are needed?", etc.,</p>
+</li>
+<li>
+<p>Some people find it useful to write a mini user guide or how-to guide, as if the project was already done. This usually helps define the project.,</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Create an implementation plan with milestones per coding period.</p>
+</li>
+<li>
+<p>At this point it may be appropriate to discuss the project on the <em>jenkinsci-dev@googlegroups.com</em> mailing list or on the relevant SIG mailing list. Talk to the mentor about it.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Setup your computer and your development environment to work on the project (see <a href="#UsefulLinks">Useful links</a>).</p>
+</li>
+<li>
+<p>Learn and discuss the process with the mentors:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Setup the github project,</p>
+</li>
+<li>
+<p>Pull-requests,</p>
+</li>
+<li>
+<p>Code reviews.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>We use <a href="https://issues.jenkins.io/secure/Dashboard.jspa">Jira</a> to track GSoC tasks:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Create an account using <a href="https://accounts.jenkins.io/login">this link</a>.</p>
+</li>
+<li>
+<p>Become familiar with navigating Jira.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_coding_periods"><a class="anchor" href="#_coding_periods"></a>Coding periods</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>GSoC contributors are expected to&#8230;&#8203;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Work on the GSoC project as it is a full-time employment.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>It means 12 weeks of writing good code, about 20..30 hours per week is an <strong>expected</strong> workload though it can be adjusted upon the agreements with mentors.</p>
+</li>
+<li>
+<p>Push code to github almost every day of every coding period.</p>
+</li>
+<li>
+<p>Follow the <a href="#codestyle">Code Style Best Practices</a></p>
+</li>
+<li>
+<p>Chat a line or two about what you are doing, almost every coding day, in your project channel (writing code, writing tests, updating documentation, etc.).</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Just saying "Hi, today I am working on these classes" or "writing tests for &#8230;&#8203;" is good enough, but you can of course interact more as needed.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Write a short summary of the work done each week, published to:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A personal blog, or</p>
+</li>
+<li>
+<p>The relevant SIG mailing list, or</p>
+</li>
+<li>
+<p>A paragraph or two should be enough.</p>
+</li>
+<li>
+<p>It&#8217;s okay to say things like <em>&lt;this&gt; and &lt;that&gt; were challenging because of &lt;reason&gt;</em>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Interact with the community in a timely fashion when you need help (do not stay stuck without telling mentors).</p>
+</li>
+<li>
+<p>Say something when you are stuck, lost in the code, confused about the objectives, etc.</p>
+</li>
+<li>
+<p>Produce good quality code with reasonable amount of testing and documentation.</p>
+</li>
+<li>
+<p>Follow the <a href="https://wiki.jenkins.io/display/JENKINS/Code+Style+Guidelines">Code Style Guidelines</a></p>
+</li>
+<li>
+<p>Have a finalized deliverable at the end of the project.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For plugin development projects, this means releasing a plugin to the alpha or to the official update center.</p>
+</li>
+<li>
+<p>Have documentation on how to use the plugin of the features developed during the project.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Documentation usually starts at the README file of the github repository</p>
+</li>
+<li>
+<p>The format is either <a href="https://guides.github.com/features/mastering-markdown/">Github Markdown</a> or <a href="https://asciidoctor.org/docs/">Asciidoctor</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Take Time off</p>
+<div class="ulist">
+<ul>
+<li>
+<p>You have approximately 5 "vacation days" during the project, do not hesitate to use them if required.</p>
+</li>
+<li>
+<p>Notify your mentors in advance when you take time off.</p>
+</li>
+<li>
+<p>Use weekends to have a rest, avoid significant overwork and enjoy coding</p>
+</li>
+<li>
+<p>Timely notify mentors in the case of emergencies and outages (missing scheduled meetings, etc.).</p>
+</li>
+<li>
+<p>Timely notify mentors and org admins about unexpected time commitments (life goes on, it is normal - mentors will let you know if they can&#8217;t be reached too).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Be present on-line</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Be around in the project chats during the working hours (the <a href="https://app.gitter.im/#/room/#jenkinsci_gsoc-sig:gitter.im">Jenkins GSoC Gitter Chat</a>, and the Gitter Chat of your project)</p>
+</li>
+<li>
+<p>Be proactive; reach out to the community if required</p>
+</li>
+<li>
+<p>Optional: Attend Jenkins governance meetings if the timezone allows</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>GSoC contributors are <strong>not</strong> expected to&#8230;&#8203;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Strictly follow the originally submitted mini-design and the project proposal</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The world is not ideal, and there may be unexpected obstacles or shortcuts</p>
+</li>
+<li>
+<p>Upon the discussion with mentors, any plan can be adjusted</p>
+</li>
+<li>
+<p>We expect contributors to achieve at least some goals in the original proposal</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Investigate and solve <strong>every</strong> issue on your own</p>
+<div class="ulist">
+<ul>
+<li>
+<p>We have mentors and experts, who can help you by answering questions and doing joint investigation if required</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_evaluations"><a class="anchor" href="#_evaluations"></a>Evaluations</h3>
+<div class="paragraph">
+<p>At the end of each coding period, GSoC contributors are expected to:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Do a public on-line presentation,</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The presentation consists of Google Slides and a demo, on recorded broadcast.</p>
+</li>
+<li>
+<p>This event is recorded and made public.</p>
+</li>
+<li>
+<p>Prepare for this presentation approximately one week before the end of the coding period.</p>
+</li>
+<li>
+<p>Mentors will offer to do presentation dry-runs, if they forget, contributors should ask for it as needed.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Publish a summary of your status and the next steps</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>As a blog post published to:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>To the Jenkins website blogs (see <a href="https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc#adding-a-blog-post">adding a blog post</a>)</p>
+</li>
+<li>
+<p>And announce the blog post on the <a href="https://community.jenkins.io">Discourse channel</a>.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>As a part of the Final evaluation, contributors present the project results at the <a href="https://www.meetup.com/Jenkins-online-meetup/">Jenkins Online Meetup</a></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The secret to making excellent presentations is to be ready ahead of time, and practice, practice, practice.
+Write a script, and practice out loud, exaggerate enunciation when you practice, and put on a little smile to lift your voice just enough.
+If you create a slide or two per week on the work you have done that week, you will be ready.
+Repeating a presentation numerous times will help you breeze through it with fluidity.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Past years presentations and blog posts may inspire you. Here are some links:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GSoC 2018 blog posts:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/blog/2018/07/23/remoting-kafka-plugin-1/">Remoting over Kafka</a></p>
+</li>
+<li>
+<p><a href="/blog/2018/08/17/code-coverage-api-plugin-1/">Code Coverage API</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>GSoC 2016 blog post:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/node/tags/external-workspace-manager/">External Workspace Manager</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="codestyle"><a class="anchor" href="#codestyle"></a>Code Style Best Practices</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>GSoC contributors should adopt best practices as soon as possible in their coding career.
+Learn to configure your IDE to have proper spacing and proper indentation is a must.
+By default, the IDE you use may not have the correct settings.</p>
+</div>
+<div class="paragraph">
+<p>Best practices include topics such as space and indentation, naming conventions for
+variables, class members, methods, classes. These are all important when writing code.</p>
+</div>
+<div class="paragraph">
+<p>The best practices can be learned:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>From the <a href="https://wiki.jenkins.io/display/JENKINS/Code+Style+Guidelines">Code Style Guidelines</a></p>
+</li>
+<li>
+<p>By reading existing code</p>
+</li>
+<li>
+<p>By asking mentors or submit a pull-request and ask for review</p>
+</li>
+<li>
+<p>By reading code style guidelines of other organizations found on the internet. Here are some popular ones:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md">Twitter Style Guide</a></p>
+</li>
+<li>
+<p><a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a></p>
+</li>
+<li>
+<p><a href="https://petroware.no/javastyle.html">Petroware Java Programming Style Guidelines</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Documenting code with Javadoc can be learned by imitation, but it is better to read the reference:
+it&#8217;s <a href="https://www.oracle.com/technetwork/articles/java/index-137868.html">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>When it comes to testing, Jenkins projects must come with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Unit+Test">Unit</a> tests,</p>
+</li>
+<li>
+<p>and for plugins, <a href="https://github.com/jenkinsci/acceptance-test-harness">Acceptance Test Harness</a> tests.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If your project is a plugin and you are ready to release it,
+you also need to learn the <a href="https://wiki.jenkins.io/display/JENKINS/Hosting+Plugins">plugin release process</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_in_touch"><a class="anchor" href="#_getting_in_touch"></a>Getting in touch</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_discourse_channel_mailing_list"><a class="anchor" href="#_discourse_channel_mailing_list"></a>Discourse Channel &amp; Mailing List</h3>
+<div class="paragraph">
+<p>Since the Jenkins community is distributed across all time zones,
+and since the gitter chat rooms are more difficult to search,
+we recommend using the Discourse channel for most of the communications.</p>
+</div>
+<div class="paragraph">
+<p>Contributors should join the following Jenkins mailing lists:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em><a href="https://community.jenkins.io" class="bare">https://community.jenkins.io</a></em> - sync-ups on GSoC organizational topics (meeting scheduling, process Q&amp;A).</p>
+</li>
+<li>
+<p><em>jenkinsci-dev@googlegroups.com</em> - for all technical discussions and the project application (<a href="https://groups.google.com/g/jenkinsci-dev">archives</a>).</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Join this list after talking to the org admins and/or the project mentors, and once the project is ready to be discussed with the developers</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Other mailing lists:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#ROOT:index.adoc/gsoc/.adoc#orgadmin" class="xref unresolved">Org admins mailing list</a>- for <strong>private</strong> communications with org admins (escalations, issues with mentors)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Please <strong>DO NOT</strong> use this mailing list for applications and intro emails</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_chat"><a class="anchor" href="#_chat"></a>Chat</h3>
+<div class="paragraph">
+<p>We use the <a href="https://app.gitter.im/#/room/#jenkinsci_gsoc-sig:gitter.im">Jenkins GSoC Gitter Chat</a>
+for office hours and real-time discussions.
+Note that mentors and org-admins may be unavailable in the chat outside the Office Hours slots (see below).</p>
+</div>
+<div class="paragraph">
+<p>Once the projects are announced, mentors and students may switch to another communication channel.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="officehours"><a class="anchor" href="#officehours"></a>Office hours</h3>
+<div class="paragraph">
+<p>In addition to chat, Discourse and mailing lists, we have regular office hours for sync-ups
+between students, org admins and mentors.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="#ROOT:index.adoc/gsoc/.adoc#office-hours" class="xref unresolved">main GSoC page</a> for the schedule.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_post_gsoc"><a class="anchor" href="#_post_gsoc"></a>Post-GSoC</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Congratulations, you have made it to the end!</p>
+</div>
+<div class="paragraph">
+<p>Once GSoC is over, final results are announced by Google. But this is not the end of the road.</p>
+</div>
+<div class="paragraph">
+<p>You can:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Continue to develop your project within the Jenkins community</p>
+</li>
+<li>
+<p>Present your work at a local <a href="../jam/index.html" class="xref page">Jenkins Area Meetup</a></p>
+</li>
+<li>
+<p>Participate in other Jenkins projects</p>
+</li>
+<li>
+<p>Participate again next year</p>
+</li>
+<li>
+<p>Become a mentor in <a href="https://summerofcode.withgoogle.com">Google Summer of Code</a> for next year</p>
+</li>
+<li>
+<p>Become a mentor in <a href="https://codein.withgoogle.com/">Google Code In</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Depending on the project results, and available budget, we may offer a sponsored trip
+to <a href="https://www.cloudbees.com/devops-world/">DevOps World</a> or another Jenkins-related event to contributors
+who successfully finish their projects.
+This sponsorship is not guaranteed though.</p>
+</div>
+<div class="paragraph">
+<p>If contributors agree to go to such event, we expect contributors to present their project and to write a blog-post about the trip.
+In 2018, one of our students, Pham Vu Tuan, attended DevOps World - Jenkins World,
+and wrote <a href="https://pvtuan10.github.io/essays/20181019-DWJW18.html">this blog post</a> about it.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

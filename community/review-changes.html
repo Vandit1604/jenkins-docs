@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Review Changes :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/community/review-changes.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="report-issue.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="community" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Jenkins Community</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Participate and Contribute</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="review-changes.html">Review Changes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="report-issue.html">Issue Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="test.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="how-to-guides.html">How-To Guides</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="donate.html">Donate to Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="help.html">Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="code.html">Contribute code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="connect.html">Get connected with the Jenkins community!</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="document.html">Document</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="design.html">Art and Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="track-issue.html">Issue Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="meet.html">Meet</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chat/index.html">Chat</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mailing-lists/index.html">Mailist Lists</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Community</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Jenkins Community</a></li>
+    <li><a href="review-changes.html">Review Changes</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/community/modules/ROOT/pages/review-changes.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Review Changes</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Help us to review changes to code or documentation!
+All pull requests within Jenkins GitHub organizations are publicly open for reviews and any reviews are much appreciated.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_code_reviews_and_copy_editing"><a class="anchor" href="#_code_reviews_and_copy_editing"></a>Code Reviews and Copy Editing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Contributors and component maintainers may explicitly request reviews from other community members.
+Below there are some queries which can help to find open pull requests where help is needed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/search?q=org%3Ajenkinsci+org%3Ajenkins-infra+is%3Aopen+is%3Apr+team-review-requested%3Ajenkins-infra%2Fcopy-editors">Open pull requests for copy editing</a>, mostly for Jenkins website</p>
+</li>
+<li>
+<p><a href="https://github.com/search?q=org%3Ajenkinsci+org%3Ajenkins-infra+is%3Aopen+is%3Apr+%22jenkinsci%2Fcode-reviewers%22&amp;type=Issues">Open pull requests for code reviews</a> (<a href="https://github.com/orgs/jenkinsci/teams/code-reviewers">@jenkinsci/code-reviewers</a> team is mentioned)</p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/jenkins/pulls?utf8=%E2%9C%93&amp;q=is%3Apr+is%3Aopen+-label%3Astalled+-label%3Awork-in-progress+-label%3Aneeds-fix">Open pull requests for code reviews in the Jenkins Core</a> which would benefit from reviews</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>NOTE:</strong> You will only be able to see the linked teams if you belong to the corresponding GitHub Team.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reviewer_team_membership"><a class="anchor" href="#_reviewer_team_membership"></a>Reviewer team membership</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you are interested to join a reviewers team,
+you can request membership in the <a href="https://groups.google.com/g/jenkinsci-dev">Jenkins Developer mailing list</a>.
+You can also request membership in the GitHub web interface if you are already a member of the respective GitHub organization.</p>
+</div>
+<div class="paragraph">
+<p>Reviewer team links (GitHub permissions required to view teams):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/orgs/jenkins-infra/teams/copy-editors">Copy Editors team</a> - Jenkins website and documentation hosted there</p>
+</li>
+<li>
+<p><a href="https://github.com/orgs/jenkinsci/teams/code-reviewers">Code Reviewers team</a> - Jenkins plugins and other components</p>
+</li>
+<li>
+<p><a href="https://github.com/orgs/jenkinsci/teams/core-pr-reviewers">Core Reviewers team</a> - Jenkins Core and its modules/libraries</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Membership in all teams requires a track of contributions to Jenkins, and also a signed <a href="https://github.com/jenkinsci/infra-cla">Contributor License Agreement</a>.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="index.html">Participate and Contribute</a></span>
+  <span class="next"><a href="report-issue.html">Issue Reporting</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

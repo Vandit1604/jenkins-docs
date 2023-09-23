@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins X: Create Boot Apps :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2020/project-ideas/jenkins-x-boot-apps.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="projects" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../index.html">Jenkins Projects</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../index.html">Jenkins Sub-projects</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../../user-docs/2.401.3/blueocean/getting-started.html">Getting started with Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../blueocean/about.html">About Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../blueocean/contribute.html">Contributing to Blue Ocean</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../jam/index.html">CI/CD and Jenkins Area Meetups</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../remoting/index.html">Jenkins Remoting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../2018/index.html">Jenkins in Google Summer of Code 2018</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/code-coverage-api-plugin.html">GSoC 2018. Code Coverage API Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/eda-plugins.html">GSoC 2018. EDA Plugins for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/index.html">Jenkins in Google Summer of Code 2018</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../2019/index.html">Jenkins in Google Summer of Code 2019</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../2019/project-ideas.html">GSoC 2021 Project Ideas</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../2019/schedule.html">Jenkins year-round GSoC schedule</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/working-hours-improvements.html">GSoC2019 Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/gitlab-support-for-multibranch-pipeline.html">Multibranch Pipeline support for GitLab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka with Kubernetes features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../2019/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/eda-coverage-adapters.html">EDA Coverage Adapters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/advanced-build-discard-strategy-plugin.html">Advanced Build Discard Strategy Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/configuration-as-code-compatibility.html">Configuration as Code Plugin Compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/pipeline-step-documentation-generator.html">Pipeline Step Documentation Generator improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/eda-plugins.html">Plugin(s) for Electronic Design Automation tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/bitbucket-rest-plugin.html">Bitbucket REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/working-hours-improvements.html">Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/machine-learning.html">Jenkins and Machine Learning Plugins for Data Science</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/artifactory-rest-plugin.html">Artifactory REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/remoting-monitoring.html">Jenkins Remoting Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/freestyle-to-pipeline-converter.html">Freestyle job to Pipeline job converter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/jenkins-rest-plugin.html">Jenkins REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/role-strategy-ux.html">Role Strategy Plugin: user experience</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/ath-improvements.html">Improvements to the Jenkins Acceptance Test Harness</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/winsw-yaml-config-support.html">Jenkins Windows Services: YAML Configuration Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/external-fingerprint-storage-for-jenkins.html">External Fingerprint Storage for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/gitlab-support-for-multibranch-pipeline.html">Multi-branch Pipeline support for Gitlab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/docker-registries-polling-plugin.html">Polling Docker Registries for Image Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/code-coverage-api-improvements.html">Code Coverage API Plugin Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/automatic-spec-generator-for-jenkins-rest-api.html">Automatic Specification Generator for Jenkins REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka. Docker/K8s Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../sigs/advocacy-and-outreach/outreach-programs/index.html">Outreach programs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../jcasc/index.html">Jenkins Configuration as Code</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../jcasc/dev-tools.html">Dev-Tools for JCasC</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../infrastructure/index.html">Infrastructure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../infrastructure/ircbot.html">IRC Bot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../jenkins-operator/index.html">Jenkins Operator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Other Projects</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes.html">Document Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://jenkins-x.io/">Jenkins X</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Projects</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Jenkins Projects</a></li>
+    <li><a href="jenkins-x-boot-apps.html">Jenkins X: Create Boot Apps</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2020/project-ideas/jenkins-x-boot-apps.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins X: Create Boot Apps</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Project goal:</strong> Create a simple canonical way to install any Helm chart in any namespace</p>
+</div>
+<div class="paragraph">
+<p><strong>Skills to study/improve:</strong> Go, Kubernetes, Helm</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_background"><a class="anchor" href="#_background"></a>Background</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Find out more about the Jenkins X project here: <a href="https://jenkins-x.io/" class="bare">https://jenkins-x.io/</a></p>
+</div>
+<div class="paragraph">
+<p>Issue: <a href="https://github.com/jenkins-x/jx/issues/6442" class="bare">https://github.com/jenkins-x/jx/issues/6442</a>
+Old design doc: <a href="https://docs.google.com/document/d/1DL1oEeAZtWFfpJOWk5UVO54D88BnlqZDf5IDaOkGxCk/edit?usp=sharing" class="bare">https://docs.google.com/document/d/1DL1oEeAZtWFfpJOWk5UVO54D88BnlqZDf5IDaOkGxCk/edit?usp=sharing</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_current_implementation"><a class="anchor" href="#_current_implementation"></a>Current Implementation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See the Implementation Documentation for an overview of how to use helmfile and helm 3: <a href="https://github.com/jenkins-x/enhancements/blob/master/proposals/2/docs/README.md" class="bare">https://github.com/jenkins-x/enhancements/blob/master/proposals/2/docs/README.md</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_requirements"><a class="anchor" href="#_requirements"></a>Requirements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We want a simple canonical way to install any helm chart in any namespace without having to manually hack the <code>jx boot</code> pipeline file: <code>jenkins-x.yml</code>.</p>
+</div>
+<div class="paragraph">
+<p>This will make it easy for people or software to easily add/remove apps to any git repository for any Environment (dev / staging / production).</p>
+</div>
+<div class="paragraph">
+<p>The boot config repo has become quite complex and hard to manage upgrades to and share common config between different flavours of base boot config repos.  It’s also hard to experiment by adding new helm charts / features / applications that require changes to the boot install pipeline.</p>
+</div>
+<div class="paragraph">
+<p>We want a simpler more modular system that lets us, say, swap out nginx-controller and use gloo/knative/istio for ingress without a deep knowledge of the jenkins-x.yml pipeline for boot.</p>
+</div>
+<div class="paragraph">
+<p>What we’d really like is for folks to type commands like…</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">jx delete app nginx-controller
+jx add app istio
+jx delete app knative</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And for it to just work and generically add those to the right namespace.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_current_apps_model"><a class="anchor" href="#_current_apps_model"></a>Current Apps Model</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The current apps model lets you add/remove charts fine - but there are a number of limitations:</p>
+</div>
+<div class="sect2">
+<h3 id="_only_works_in_1_namespace"><a class="anchor" href="#_only_works_in_1_namespace"></a>Only works in 1 namespace</h3>
+<div class="paragraph">
+<p>Currently apps can only work inside the dev namespace - we can’t support things like knative, gloo, cert-manager, nginx, velero which tend to be installed in separate namespaces.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_does_not_handle_boot_phases"><a class="anchor" href="#_does_not_handle_boot_phases"></a>Does not handle boot phases</h3>
+<div class="paragraph">
+<p>This is not surprising as we created the App extension model before boot. But right now boot has a number of distinct phases with pipeline steps between them where we may want to add apps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>pre/post ingress setup (in the case of nip.io / nginx-controller)</p>
+</li>
+<li>
+<p>pre/post vault setup</p>
+</li>
+<li>
+<p>pre/post vault population of parameters</p>
+</li>
+<li>
+<p>pre/post setup of certmanager/external dns</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There is currently no way for an apps to specify a namespace + specify which phase its to be installed in &amp; have (say) the domain / certs / secrets injected easily.</p>
+</div>
+<div class="paragraph">
+<p>So rather than adding steps at the right point in a list of steps in the jenkins-x.yml it would be nice to have a more declarative YAML file to describe which apps are to be enabled.</p>
+</div>
+<div class="paragraph">
+<p>E.g. we need a new YAML file with list of charts to be installed along with metadata for which phase to install them. We also want to invoke a selection of those appss to be installed at the different phases of the boot pipeline.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_limitations_of_the_current_deploy_model"><a class="anchor" href="#_limitations_of_the_current_deploy_model"></a>Limitations of the current deploy model</h3>
+<div class="paragraph">
+<p>We have some issues with the current way we deploy apps in Staging / Production:</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_composite_charts_hide_the_individual_versions"><a class="anchor" href="#_composite_charts_hide_the_individual_versions"></a>Composite charts hide the individual versions</h3>
+<div class="paragraph">
+<p>Right now we deploy all charts in Staging/Production as a single chart. That means if you use <code>helm list</code> we don&#8217;t show any actual versions of the dependent charts - its just 1 chart (with no version).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_removing_apps_on_dev_doesnt_work"><a class="anchor" href="#_removing_apps_on_dev_doesnt_work"></a>Removing Apps on Dev doesn&#8217;t work</h3>
+<div class="paragraph">
+<p>If you remove a chart from <code>env/requirements.yaml</code>  in the Dev repository the pipeline does not remove the chart. e.g. if you add <code>lighthouse</code> and remove <code>prow</code> you need to manually delete the prow resources yourself.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_limitation_of_boot"><a class="anchor" href="#_limitation_of_boot"></a>Limitation of boot</h3>
+<div class="paragraph">
+<p>We currently manually configure in the boot pipeline the install of multiple systems usually in separate namespaces:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>velero (if enabled)</p>
+</li>
+<li>
+<p>nginx</p>
+</li>
+<li>
+<p>externaldns</p>
+</li>
+<li>
+<p>cert-manager</p>
+</li>
+<li>
+<p>acme certs chart</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ideally those should be modular and optional. e.g it should be really trivial to disable nginx if folks are using, say, istio - without having to hack a pipeline yaml.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;d also like to make it easy to add a number of other systems in order in separate namespaces independently of the <code>Staging / Production</code> environment namespaces:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>knative <a href="https://github.com/jenkins-x/jx/issues/6331" class="bare">https://github.com/jenkins-x/jx/issues/6331</a></p>
+</li>
+<li>
+<p>gloo</p>
+</li>
+<li>
+<p>istio</p>
+</li>
+<li>
+<p>linkerd <a href="https://github.com/jenkins-x/jx/issues/6330" class="bare">https://github.com/jenkins-x/jx/issues/6330</a></p>
+</li>
+<li>
+<p>flagger</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>so it&#8217;d be nice to have a simple app model where anyone can add any systems/charts to any namespace at any point in the flow before we setup the dev/staging/production environment in the traditional way.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_newbie_friendly_issues"><a class="anchor" href="#_newbie_friendly_issues"></a>Newbie Friendly issues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Jenkins X issue tracker is located in github. We also provide a list of issues that are good first issues for people looking to contribute to the project: <a href="https://github.com/jenkins-x/jx/labels/good%20first%20issue" class="bare">https://github.com/jenkins-x/jx/labels/good%20first%20issue</a></p>
+</div>
+<div class="paragraph">
+<p>We welcome your contributions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_quick_start"><a class="anchor" href="#_quick_start"></a>Quick start</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you&#8217;re looking to build from source or get started hacking on jx, please see the CONTRIBUTING.MD or our Contributing Guide on the Jenkins X website: <a href="https://jenkins-x.io/docs/contributing/code/" class="bare">https://jenkins-x.io/docs/contributing/code/</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_potential_mentors"><a class="anchor" href="#_potential_mentors"></a>Potential Mentors</h2>
+<div class="sectionbody">
+<div class="paragraph avatar">
+<p><span class="image"><img src="../../../../images/_images/avatars/jstrachan.jpeg" alt="jstrachan" width="30" height="30"></span> James Strachan
+<span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Oscar Medina
+<span class="image"><img src="../../../../images/_images/avatars/marckk.jpg" alt="marckk" width="30" height="30"></span> Kara de la Marck
+<span class="image"><img src="../../../../images/_images/avatars/sahilrkalra.png" alt="sahilrkalra" width="30" height="30"></span> Sahil Kalra
+<span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Nikhil Da Rocha</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_project_links"><a class="anchor" href="#_project_links"></a>Project Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://jenkins-x.io/community/#slack">Chat</a></p>
+</li>
+<li>
+<p><a href="../../index.html#office-hours" class="xref page">Meetings</a></p>
+</li>
+<li>
+<p><a href="https://community.jenkins.io/c/contributing/gsoc">Forum</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkins-x/enhancements/blob/master/proposals/2/README.md">Project Idea Draft</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_organization_links"><a class="anchor" href="#_organization_links"></a>Organization Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../../index.html" class="xref page">Jenkins GSoC page</a> - documentation, application guidelines</p>
+</li>
+<li>
+<p><a href="../../../../community/index.html" class="xref page">Participate and contribute to Jenkins</a> - landing page for newcomer contributors</p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20">Newbie-friendly issues</a> - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
+&gt; <a href="#2020/project-ideas">Go back to other GSoC 2020 project ideas</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

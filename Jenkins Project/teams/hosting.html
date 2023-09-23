@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hosting Team :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/Jenkins%20Project/teams/hosting.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="Jenkins Project" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Project</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Project structure and governance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../conduct.html">Jenkins Code of Conduct</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../governance.html">Project Governance Document</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../election-walkthrough.html">Board and Officer election walkthrough</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../team-leads.html">Jenkins Team Leads and Officers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../board-election-process.html">Board and Officer election process</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../board.html">Jenkins Board and Officers</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../trademark/index.html">Trademark and Attribution</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../trademark/approved-usage.html">Approved Trademark Usage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../governance-meeting/index.html">Jenkins Governance Meeting</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#2012.adoc">2012.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#2015.adoc">2015.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#2011.adoc">2011.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#2018.adoc">2018.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#2013.adoc">2013.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#2017.adoc">2017.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#2016.adoc">2016.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#2014.adoc">2014.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#2019.adoc">2019.adoc</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Project</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins Project</a></li>
+    <li><a href="hosting.html">Hosting Team</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/project/modules/teams/pages/hosting.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Hosting Team</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Jenkins Hosting Team handles various requests related to hosting of open-source plugins and other components (forking and transferring plugins, managing permissions and update centers, etc.).
+There are multiple contributors involved in this activity on a regular basis.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_team_responsibilities"><a class="anchor" href="#_team_responsibilities"></a>Team Responsibilities</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Triage and processing of new plugin <a href="https://github.com/jenkins-infra/repository-permissions-updater/issues?q=is%3Aissue+is%3Aopen+label%3Ahosting-request">Hosting</a> requests.
+There is some automation around this process, but human reviews are needed too&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ensure that <a href="../../dev-docs/publishing/preparation.html" class="xref page">plugin publishing requirements</a> are followed:
+naming conventions and `artifactId`s, `groupId`s, documentation, duplication of existing plugins, license compliance, etc.</p>
+</li>
+<li>
+<p>Check plugin compliance with security best practices and recommendations.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Managing plugin developer and release permissions (<a href="../../dev-docs/plugin-governance/managing-permissions.html" class="xref page">documentation</a>).</p>
+</li>
+<li>
+<p>Processing <a href="../../dev-docs/plugin-governance/adopt-a-plugin.html" class="xref page">plugin adoption</a> requests in the developer mailing list</p>
+</li>
+<li>
+<p>Processing blacklisting and plugin tagging/doc URL requests in the Update Centers for non-security reasons.</p>
+</li>
+<li>
+<p>Maintaining the <a href="../../dev-docs/publishing/index.html" class="xref page">publishing</a> and <a href="../../dev-docs/plugin-governance/index.html" class="xref page">plugin governance</a> documentation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_key_repositories"><a class="anchor" href="#_key_repositories"></a>Key repositories</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkins-infra/repository-permissions-updater">Repository Permission Updater</a> - Manages release permissions for all components hosted in Jenkins Artifactory</p>
+</li>
+<li>
+<p><a href="https://github.com/jenkins-infra/update-center2">Jenkins Update Center</a> - Jenkins Update Center repository.
+Includes update center generation logic, including plugin blacklists, security labels and documentation metadata.</p>
+</li>
+<li>
+<p><a href="https://github.com/jenkins-infra/ircbot">Jenkins IRC Bot</a> - our ChatOps tool</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_contribute"><a class="anchor" href="#_how_to_contribute"></a>How to contribute?</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_assisting_with_qa_and_request_reviews"><a class="anchor" href="#_assisting_with_qa_and_request_reviews"></a>Assisting with Q&amp;A and request reviews</h3>
+<div class="paragraph">
+<p>A significant part of this team&#8217;s work is helping new plugin maintainers to get their plugins hosted and published.
+Also, we help with permission management when contributors add new developers or adopt plugins.
+There are a lot of channels for these topics, but all of them are public and do not require special permissions to join.
+We invite any interested Jenkins contributor to join the team.</p>
+</div>
+<div class="paragraph">
+<p>How to start contributing?</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Subscribe to the <a href="/mailing-lists/#jenkinsci-dev-googlegroups-com">Jenkins Developer Mailing list</a></p>
+</li>
+<li>
+<p>Subscribe to the <a href="https://github.com/jenkins-infra/repository-permissions-updater/">Repository Permission Updater</a> repository</p>
+</li>
+<li>
+<p>Subscribe to the <a href="https://github.com/jenkins-infra/update-center2">Jenkins Update Center</a> repository.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_joining_the_main_hosting_team"><a class="anchor" href="#_joining_the_main_hosting_team"></a>Joining the main hosting team</h3>
+<div class="sect3">
+<h4 id="_members_of_the_hosting_team"><a class="anchor" href="#_members_of_the_hosting_team"></a>Members of the hosting team:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Adrien Lecharpentier (<a href="https://github.com/alecharp">@alecharp</a>)</p>
+</li>
+<li>
+<p>Alex Earl (<a href="https://github.com/slide">@slide</a>)</p>
+</li>
+<li>
+<p>Alexander Brandes (<a href="https://github.com/NotMyFault">@NotMyFault</a>)</p>
+</li>
+<li>
+<p>Baptiste Mathus (<a href="https://github.com/batmat">@batmat</a>)</p>
+</li>
+<li>
+<p>Oleg Nenashev (<a href="https://github.com/oleg-nenashev">@oleg-nenashev</a>)</p>
+</li>
+<li>
+<p>Tim Jacomb (<a href="https://github.com/timja">@timja</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_requesting_membership"><a class="anchor" href="#_requesting_membership"></a>Requesting membership</h4>
+<div class="paragraph">
+<p>If you are interested in joining the team,
+you can request membership in the <a href="https://groups.google.com/d/forum/jenkinsci-dev">Jenkins Developer mailing list</a>.
+The request will be processed and discussed by the community, and the decision will be made based on consensus among contributors.</p>
+</div>
+<div class="paragraph">
+<p>Eligibility:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Membership in the team requires a track record of contributions to the hosting process.
+Assisting users with Q&amp;A and request reviews does not require special permissions.</p>
+</li>
+<li>
+<p>All applicants should have a signed <a href="https://github.com/jenkinsci/infra-cla">Contributor License Agreement</a> before they apply.</p>
+</li>
+<li>
+<p>Applicants should <a href="https://libera.chat/guides/registration">register</a> their username with NickServ on libera.chat.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A registered username is needed too, if you&#8217;re using matrix clients, such as element, to connect to room bridged to matrix, like <code>jenkins-hosting</code>. Therefore, see <a href="https://matrix-org.github.io/matrix-appservice-irc/latest/usage.html">the starting guide</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration"><a class="anchor" href="#_configuration"></a>Configuration</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Subscribe to all channels and repositories listed in the <em>Assisting with Q&amp;A and request reviews</em> section</p>
+</li>
+<li>
+<p>Join the <a href="../../community/chat/index.html" class="xref page"><code>#jenkins-hosting</code> IRC channel</a> and <a href="../../community/chat/index.html#cloaks" class="xref page">obtain a cloak</a>.
+It will be needed for ChatOps.</p>
+</li>
+<li>
+<p>Request voice permission (<code>+vV</code>) from a channel operator in the <a href="../../community/chat/index.html" class="xref page"><code>#jenkins-hosting</code> IRC channel</a> to get access to the bot commands.
+Current channel operator(s):
+@timja</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_notes"><a class="anchor" href="#_notes"></a>Notes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Some requests require manual changes in GitHub repositories for some requests, e.g. plugin renaming.
+Jenkins GitHub org admins manage such requests.
+Create a Jenkins Jira issue if such assistance is needed (project=INFRA, component=github)</p>
+</li>
+<li>
+<p>Processing repo transfer requests (when maintainers want to transfer plugins instead of forking) also needs actions from Jenkins GitHub org admins.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_chat"><a class="anchor" href="#_chat"></a>Chat</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The team has a dedicated <code>#jenkins-hosting</code> IRC channel on Libera Chat.
+To join it, follow <a href="../../community/chat/index.html" class="xref page">these guidelines</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_meetings"><a class="anchor" href="#_meetings"></a>Meetings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The team has no regular meetings at the moment.
+If needed, you can request a meeting in the developer mailing list.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tools"><a class="anchor" href="#_tools"></a>Tools</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>xrefs:infrastructure:ircbot.adoc[Jenkins IRC Bot] - ChatOps tool for managing the hosting and ownership requests.</p>
+</li>
+<li>
+<p><a href="https://github.com/slide/jenkins-jira-checker">Jenkins Jira Checker</a> - Azure Function for checking hosting requests for Jenkins plugins</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references"><a class="anchor" href="#_references"></a>References</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/orgs/jenkins-infra/teams/hosting">@jenkins-infra/hosting</a> - team alias in the Jenkins Infrastructure GitHub organization</p>
+</li>
+<li>
+<p>Getting Started session:
+<a href="https://docs.google.com/presentation/d/1bf80nEjbllitdzEM-p00tdr521In5u16GwdTQRI7_ag/edit?usp=sharing">slides</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

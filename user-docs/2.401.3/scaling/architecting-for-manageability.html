@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Architecting for Manageability :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.401.3/scaling/architecting-for-manageability.html">
+    <link rel="prev" href="hardware-recommendations.html">
+    <link rel="next" href="scaling-jenkins-on-kubernetes.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="user-docs" data-version="2.401.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins User Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/docker.html">Docker</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-credentials.html">Using credentials</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/searchbox.html">Using Search Box</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/referencing-another-project-by-name.html">Referencing another project by name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/aborting-a-build.html">Aborting a build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/fingerprints.html">Fingerprints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-local-language.html">Using local language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/change-time-zone.html">Change time zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/remote-access-api.html">Remote Access API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/executor-starvation.html">Executor Starvation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-agents.html">Using Jenkins agents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/running-pipelines.html">Running a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/development.html">Pipeline Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/syntax.html">Pipeline Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/pipeline-best-practices.html">Pipeline Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/scaling-pipeline.html">Scaling Pipelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/cps-method-mismatches.html">Pipeline CPS Method Mismatches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/dashboard.html">Dashboard</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/activity.html">Activity View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-run-details.html">Pipeline Run Details View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-editor.html">Pipeline Editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../managing/index.html">Managing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-configuration.html">Configuring the System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/casc.html">Configuration as Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/tools.html">Managing Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/about-jenkins.html">About Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-info.html">System Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/cli.html">Jenkins CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-console.html">Script Console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/groovy-hook-scripts.html">Groovy Hook Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/nodes.html">Managing Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-approval.html">In-process Script Approval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/ui-themes.html">Themes for user interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/user-content.html">User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/spawning-processes.html">Spawning Processes From Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Securing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/access-control.html">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-jenkins.html">Securing Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/managing-security.html">Managing Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/controller-isolation.html">Controller Isolation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-builds.html">Securing Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/csrf-protection.html">CSRF Protection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/user-content.html">Rendering User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/build-authorization.html">Access Control for Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/environment-variables.html">Handling Environment Variables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/markup-formatter.html">Markup Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/services.html">Exposed Services and Ports</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/index.html">System Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/backing-up.html">Backing-up/Restoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/monitoring.html">Monitoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/administering-jenkins-on-kubernetes.html">Administering Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-chef.html">Managing Jenkins with Chef</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-puppet.html">Managing Jenkins with Puppet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/viewing-logs.html">Viewing logs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/authenticating-scripted-clients.html">Authenticating scripted clients</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration.html">Reverse proxy configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-haproxy.html">Reverse proxy - HAProxy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-squid.html">Reverse proxy - Squid</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-iis.html">Reverse proxy - IIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-iptables.html">Reverse proxy - iptables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Scaling Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="architecting-for-scale.html">Architecting for Scale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hardware-recommendations.html">Hardware Recommendations</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="architecting-for-manageability.html">Architecting for Manageability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../troubleshooting/index.html">Troubleshooting Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/diagnosing-errors.html">Diagnosing Errors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/obtaining-a-thread-dump.html">Obtaining a thread dump</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary/index.html">Glossary</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins User Documentation</span>
+    <span class="version">2.401.3</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins User Documentation</a></li>
+    <li><a href="index.html">Scaling Jenkins</a></li>
+    <li><a href="architecting-for-manageability.html">Architecting for Manageability</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.401.3</button>
+  <div class="version-menu">
+    <a class="version is-current" href="architecting-for-manageability.html">2.401.3</a>
+    <a class="version" href="../../2.2/scaling/architecting-for-manageability.html">2.2</a>
+    <a class="version" href="../../2.1/scaling/architecting-for-manageability.html">2.1</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/user-docs/modules/scaling/pages/architecting-for-manageability.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Architecting for Manageability</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With over 1,800 plugins and countless versions of said plugins in the
+open-source community, testing for all possible conflicts before upgrading one
+or more production Jenkins instances is simply not feasible. While Jenkins
+itself will warn of potential incompatibility if it detects that a plugin
+requires a newer version of the Jenkins core, there is no automatic way to
+detect conflicts between plugins or to automatically quantify the impact of
+upgrading a plugin.</p>
+</div>
+<div class="paragraph">
+<p>Jenkins administrators test plugin and core version updates before performing them on the production instance.
+This kind of testing requires a copy or "test instance" of the production server to act as the sandbox for such tests.
+Effective upgrade testing can prevent production downtime.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_test_instances"><a class="anchor" href="#_test_instances"></a>Test Instances</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A test controller is a Jenkins controller used solely for testing configurations and
+plugins in a non-production environment.
+A test controller is highly recommended for organizations with a mission-critical Jenkins instance.</p>
+</div>
+<div class="paragraph">
+<p>Upgrading or downgrading either the Jenkins core or any plugins can sometimes
+have the unintended side effect of crippling another plugin&#8217;s functionality or
+even crashing a controller. As of today, there is no better way to pre-test for
+such catastrophic conflicts than with a test controller.</p>
+</div>
+<div class="paragraph">
+<p>Test controllers should have identical configurations, jobs, and plugins as the
+production controller so that test upgrades  will most closely resemble the
+outcomes of a similar change on your production controller. For example, installing
+the Folders plugin while running a version of the Jenkins core older than
+1.554.1 will cause the instance crash and be inaccessible until the plugin is
+manually uninstalled from the <em>plugin</em> folder.</p>
+</div>
+<div class="sect2">
+<h3 id="setting-up-a-test-instance"><a class="anchor" href="#setting-up-a-test-instance"></a>Configuring a test instance</h3>
+<div class="paragraph">
+<p>There are many methods for setting up a test instance, but the commonality
+between them all is that the <em>$JENKINS_HOME</em> between them is nearly identical.
+Whether this means that most all of the  <em>$JENKINS_HOME</em>
+folders are version controlled in a service like GitHub and mounted manually or
+programmatically to a test server or Docker container, the result is nearly the
+same.</p>
+</div>
+<div class="paragraph">
+<p>It is ideal to first ensure the controller is idle (no running or queued jobs)
+before attempting to create a test controller.</p>
+</div>
+<div class="paragraph">
+<p><strong>With GitHub + manual commands</strong></p>
+</div>
+<div class="paragraph">
+<p>You will simply need to open up your command-line interface and "cd" to the
+folder that contains the <em>$JENKINS_HOME</em> directory for your production controller
+and run the "git init" command. For the location of this folder, please refer
+to section 3.</p>
+</div>
+<div class="paragraph">
+<p>It is recommended that before running the "git add" command that you create a
+good <em>.gitignore</em> file. This file will prevent you from accidentally
+version-controlling large binary files.</p>
+</div>
+<div class="paragraph">
+<p>Here is an example <em>.gitignore</em> file for a Jenkins controller running on OS X:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+*.log
+*.tmp
+*.old
+*.jar
+*.son
+.Xauthority
+.bash_history
+.bash_profile
+.fontconfig
+.gitconfig
+.gem
+.lesshst
+.mysql_history
+.owner
+.ri
+.rvm
+.ssh
+.viminfo
+.vnc
+bin/
+tools/
+**/.owner
+**/queue.xml
+**/fingerprints/
+**/shelvedProjects/
+**/updates/
+**/jobs/*/workspace/
+**/war/
+/tools/
+**/custom_deps/
+**/cache/
+**/caches/
+fingerprints/
+*.log
+*.zip
+*.rrd
+*.gz</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once you have a good <em>.gitignore</em> file, you can run the following git commands to
+commit your <em>$JENKINS_HOME</em> to a git repository like GitHub:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git add -—all
+git commit -m "first commit"
+git push</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now you can install Jenkins to a fresh instance and "git clone" this
+<em>$JENKINS_HOME</em> from the git repository to your new instance. You will need to
+replace the files in the new instance with your version-controlled files to
+complete the migration, whether through scripts or through a drag-and-drop
+process.</p>
+</div>
+<div class="paragraph">
+<p>Once this is done, you will need to restart the new test Jenkins
+service or reload its configuration from the Jenkins UI ("Manage Jenkins" &gt;&gt;
+"Reload Configuration").</p>
+</div>
+<div class="paragraph">
+<p><strong>With GitHub + Docker (Linux-only)</strong></p>
+</div>
+<div class="paragraph">
+<p>When it comes to version controlling your $JENKINS_HOME, just follow the
+instructions in the previous section.</p>
+</div>
+<div class="paragraph">
+<p>The next step will be to create a Docker image with identical configurations to
+your production instance&#8217;s - operating system (Linux-only), installed
+libraries/tools, and open ports. This can be accomplished through Dockerfiles.</p>
+</div>
+<div class="paragraph">
+<p>You will then just need to create mounted storage on your Docker server with a
+clone of your version-controlled <em>$JENKINS_HOME</em> home and a simple image to
+clone the <em>$JENKINS_HOME</em> into.</p>
+</div>
+<div class="paragraph">
+<p>For example, we can create a Docker image called <em>jenkins-storage</em> and version
+control our <em>$JENKINS_HOME</em> in a Github repository known as "demo-joc". The
+"jenkins-storage" Docker image can be built from a Dockerfile similar to this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">FROM eclipse-temurin:11-jdk-jammy
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+RUN apt-get update &amp;&amp; \
+    apt-get -y upgrade &amp;&amp; \
+    apt-get install -y --no-install-recommends \
+    curl \
+    git \
+    git-lfs \
+    gpg \
+    less \
+    maven \
+    ntp \
+    ntpdate \
+    openssh-server \
+    vim &amp;&amp; \
+    mkdir -p /etc/apt/keyrings &amp;&amp; \
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
+        gpg --dearmor -o /etc/apt/keyrings/docker.gpg &amp;&amp; \
+    echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] \
+        https://download.docker.com/linux/ubuntu jammy stable" \
+        &gt;&gt; /etc/apt/sources.list.d/docker.list 2&gt; /dev/null &amp;&amp; \
+    apt-get update &amp;&amp; \
+    apt-get install -y --no-install-recommends \
+    containerd.io \
+    docker-ce \
+    docker-ce-cli \
+    docker-compose-plugin &amp;&amp; \
+    apt-get clean &amp;&amp; \
+    rm -rf /var/lib/apt/lists/*
+RUN printf "AddressFamily inet" &gt;&gt; /etc/ssh/ssh_config
+ENV MAVEN_HOME /usr/bin/mvn
+ENV GIT_HOME /usr/bin/git
+# Create Jenkins user
+RUN useradd jenkins -d /home/jenkins
+RUN echo "jenkins:jenkins" | chpasswd
+# Make directories for JENKINS_HOME, jenkins.war lib
+# and [agents] remote FS root, ssh privilege separation directory
+RUN mkdir /usr/lib/jenkins /var/lib/jenkins /home/jenkins /var/run/sshd
+# Set permissions
+RUN chown -R jenkins:jenkins /usr/lib/jenkins /var/lib/jenkins /home/jenkins
+#create data folder for cloning
+RUN ["mkdir", "/data"]
+RUN ["chown", "-R", "jenkins:jenkins", "/data"]
+RUN usermod -a -G docker jenkins
+USER jenkins
+VOLUME ["/data"]
+WORKDIR /data
+# USER jenkins
+CMD ["git", "clone", "https://github.com/MarkEWaite/docker-jenkins-storage.git", "."]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Creating mounted storage for containers would just require something similar to
+the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker run \
+    --name storage \
+    [your-dockerhub-id]/jenkins-storage \
+    git clone https://github.com/[your-github-id]/docker-jenkins-storage.git .</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And Jenkins images that rely on the mounted storage for their <em>$JENKINS_HOME</em>
+will then need to point to the mounted volume:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">docker run -d \
+       --dns=172.17.42.1 \
+       --name joc-1 \
+       --volumes-from storage \
+       -e JENKINS_HOME=/data/var/lib/jenkins/jenkins \
+       [your-dockerhub-id]/jenkins \
+       --prefix=""</code></pre>
+</div>
+</div>
+<div id="test-master-agents" class="paragraph">
+<div class="title">Test agents</div>
+<p>Test controllers can be connected to test agents, but this will require further
+configurations. Depending on your implementation of a test instance, you will
+either need to create a Jenkins Docker agent image or an agent VM. Of course,
+open-source plugins like the EC2 plugin also the option of spinning up new
+agents on-demand.</p>
+</div>
+<div class="paragraph">
+<p>The agent connection information will also need to be edited in the config.xml
+located in your test <em>$JENKINS_HOME</em>.</p>
+</div>
+<div class="paragraph">
+<div class="title">Rolling back plugins that cause failures</div>
+<p>If you discover that a plugin update is causing conflict within the test
+controller, you can rollback in several ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For bad plugins, you can rollback the plugin from the UI by going to the
+plugin manager ("Manage Jenkins" &gt;&gt; "Plugins") and going to the
+"Available" tab. Jenkins will show a "downgrade" button next to any plugins
+that can be downgraded.</p>
+</li>
+<li>
+<p>If the UI is unavailable, then enter your <em>$JENKINS_HOME</em> folder and go to
+the plugins folder. From there, delete the .hpi or .jpi file for the
+offending plugin, then restart Jenkins. If you need to rollback to an older
+version, you will need to manually copy in an older version of that .jpi or
+.hpi. To do this, go to the plugin&#8217;s page on the
+<a href="https://updates.jenkins.io/download/plugins">Jenkins updates site</a> and download one
+of its archived versions.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting_for_stability"><a class="anchor" href="#_troubleshooting_for_stability"></a>Troubleshooting for Stability</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A Jenkins controller can suffer instability problems when it is not properly
+sized for its hardware or when a buggy plugin wastes resources. To combat this,
+Jenkins administrators should begin their troubleshooting by identifying which
+components are behaving abnormally and which resources are insufficient. The
+administrator can
+<a href="https://wiki.jenkins.io/display/JENKINS/Obtaining+a+thread+dump">take thread
+dumps</a> and heap dumps to get some of this information, but in some cases where
+the instance has become non-operational and taking a thread dump is impossible,
+it is useful to have a persistent record outside of Jenkins itself to reference
+when such troubleshooting is required.</p>
+</div>
+<div class="sect2">
+<h3 id="_using_the_jenkins_metrics_plugin"><a class="anchor" href="#_using_the_jenkins_metrics_plugin"></a>Using the Jenkins Metrics Plugin</h3>
+<div class="paragraph">
+<p>The <a href="https://plugins.jenkins.io/metrics">metrics plugin</a> is an open-source plugin that exposed Jenkins metrics.
+Metrics are exposed using the <a href="https://dropwizard.github.io/metrics/3.1.0">Dropwizard Metrics API</a></p>
+</div>
+<div class="paragraph">
+<div class="title">Metrics exposed</div>
+<p>The exact list of exposed metrics varies depending on your installed plugins.
+To get a full list of available metrics for your controller, run the following
+script on the
+<a href="../managing/script-console.html" class="xref page">Jenkins script console</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">for (j in Jenkins.instance.getExtensionList(jenkins.metrics.api.MetricProvider.class)) {
+     for (m in j.getMetricSet()) {
+          for (i in m.metrics)
+               { println i.getKey() }
+     }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <a href="https://plugins.jenkins.io/metrics">metrics plugin</a> documentation describes the available metrics.</p>
+</div>
+<div class="paragraph">
+<div class="title">Metrics Usage</div>
+<p>Metrics are protected by a set of permissions for viewing, accessing the thread
+dump, and posting a health check. The Metrics Operational Menu can be accessed
+via the web UI by visiting &lt;jenkins-url&gt;/metrics/currentUser, and the 4 menu
+options (Metrics, Ping, Threads, Healthcheck) lead to a JSON string containing
+the requested metrics or thread dump.</p>
+</div>
+<div class="paragraph">
+<p>Access to the Metrics Servlet can also be provided by issuing API keys. API
+keys can be configured from the Jenkins global configuration screen
+(&lt;jenkins-url&gt;/configure) under the "Metrics" section. Multiple access can be
+generated and permissions associated with those keys can also be restricted at
+this level.</p>
+</div>
+<div class="paragraph">
+<p>Additional information on hardware recommendations can be be found on the <a href="hardware-recommendations.html" class="xref page">Hardware Recommendations</a> page</p>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="hardware-recommendations.html">Hardware Recommendations</a></span>
+  <span class="next"><a href="scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

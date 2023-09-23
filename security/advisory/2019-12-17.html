@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/security/advisory/2019-12-17.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="security" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Security Advisories</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Adminstrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-administrators.html">Overview for Jenkins Administrators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../fixing.html">How We Fix Security Issues</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Reporters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../reporting.html">Reporting Security Vulnerabilities</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Maintainers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-maintainers.html">Overview for Plugin Maintainers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jenkins Security Team</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../team.html">About the Jenkins Security Team</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../improvements.html">Improvements by the Security Team</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Security Advisories</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/advisory/2019-12-17.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<hr>
+<div class="paragraph">
+<p>layout: advisory
+title: Jenkins Security Advisory 2019-12-17
+issues:
+- id: SECURITY-1681
+  reporter: Cheng Gao, Alibaba Cloud Intelligence Security Team, <a href="https://www.aliyun.com/" class="bare">https://www.aliyun.com/</a>
+  title: XXE vulnerability in PLUGIN_NAME
+  cve: CVE-2019-16549 (XXE), CVE-2019-16550 (CSRF)
+  cvss:
+    severity: High
+    vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L
+  description: |-
+    PLUGIN_NAME retrieves XML from Nexus repository manager APIs.
+    PLUGIN_NAME 0.16.1 and earlier does not configure the XML parser to prevent XML external entity (XXE) attacks.
+    While Jenkins users without Overall/Administer permission are not allowed to configure a custom Nexus URL, this could still be exploited via man-in-the-middle attacks, especially if it&#8217;s not an HTTPS URL.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Additionally, a connection test form validation method does not require POST requests, resulting in a cross-site request forgery vulnerability.
+Combined, these two vulnerabilities allow attackers to have Jenkins parse crafted XML documents that use external entities for extraction of secrets from the Jenkins controller, server-side request forgery, or denial-of-service attacks.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    PLUGIN_NAME 0.16.2 configures its XML parser to prevent XML external entity (XXE) attacks.
+    It also now requires that requests to the connection test form validation method are done via POST, which protects from cross-site request forgery attacks.
+  plugins:
+  - name: m2release
+    previous: 0.16.1
+    fixed: 0.16.2
+- id: SECURITY-1527
+  reporter: Alex Earl (@alexcearl), Marvell Semiconductor, Inc.
+  title: CSRF vulnerability and missing permission checks in PLUGIN_NAME
+  cve: CVE-2019-16551 (CSRF), CVE-2019-16552 (missing permission check)
+  cvss:
+    severity: Medium
+    vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N
+  description: |-
+    PLUGIN_NAME 2.30.1 and earlier does not perform permission checks in methods performing form validation.
+    This allows users with Overall/Read access to perform connection tests, connecting to an HTTP URL or SSH server using attacker-specified credentials, or determine whether files with an attacker-specified path exist on the Jenkins controller file system.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Additionally, these form validation methods do not require POST requests, resulting in a CSRF vulnerability.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    PLUGIN_NAME 2.30.2 requires POST requests and Overall/Administer permission for the affected form validation methods.
+  plugins:
+  - name: gerrit-trigger
+    previous: 2.30.1
+    fixed: 2.30.2
+- id: SECURITY-1651
+  reporter: Daniel Beck, CloudBees, Inc.
+  title: CSRF vulnerability and missing permission check in PLUGIN_NAME allow ReDoS
+  cve: CVE-2019-16553 (CSRF), CVE-2019-16554 (missing permission check), CVE-2019-16555 (resource consumption)
+  cvss:
+    severity: Medium
+    vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L
+  description: |-
+    PLUGIN_NAME 1.24.1 and earlier does not perform a permission check in a method performing form validation.
+    This allows users with Overall/Read access to supply a computationally expensive regular expression that will hang the request handling thread.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Additionally, this form validation method does not require POST requests, resulting in a CSRF vulnerability.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>PLUGIN_NAME 1.24.2 requires POST requests and implements a permission check for the affected form validation methods so that only authorized users are able to submit regular expressions.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    Additionally, the regular expression is implemented in an interruptible way, so that unintentionally expensive regular expression processing can be interrupted.
+  plugins:
+  - name: build-failure-analyzer
+    previous: 1.24.1
+    fixed: 1.24.2
+- id: SECURITY-1593
+  reporter: Viktor Gazdag NCC Group
+  title: Stored XSS vulnerability in PLUGIN_NAME
+  cve: CVE-2019-16564
+  cvss:
+    severity: Medium
+    vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
+  description: |-
+    PLUGIN_NAME 1.8 and earlier does not escape the information shown on the view it provides, such as stage names or job names.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>This results in a stored cross-site scripting vulnerability exploitable by users able to configure jobs, define pipeline stages, or otherwise affect the information shown by PLUGIN_NAME.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    PLUGIN_NAME 1.9 escapes user-controlled information on the view it provides.
+  plugins:
+  - name: pipeline-aggregator-view
+    previous: '1.8'
+    fixed: '1.9'
+- id: SECURITY-1636
+  reporter: Wadeck Follonier, CloudBees, Inc.
+  title: PLUGIN_NAME stored credentials in plain text
+  cve: CVE-2019-16556
+  cvss:
+    severity: Medium
+    vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+  description: |-
+    PLUGIN_NAME 3.6.5 and earlier stores credentials as part of its global configuration file `org.jenkinsci.plugins.rundeck.RundeckNotifier.xml` and job `config.xml` files on the Jenkins controller.
+    These URLs could be viewed by users with Extended Read permission (in the case of job `config.xml` files) or access to the Jenkins controller file system.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    PLUGIN_NAME 3.6.6 stores credentials in its configuration encrypted once global and/or job configurations are saved again.
+  plugins:
+  - name: rundeck
+    previous: 3.6.5
+    fixed: 3.6.6
+- id: SECURITY-1598
+  reporter: Viktor Gazdag NCC Group
+  title: PLUGIN_NAME stores credentials in plain text
+  cve: CVE-2019-16557
+  cvss:
+    severity: Medium
+    vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+  description: |-
+    PLUGIN_NAME 2.0.3 and earlier stores credentials unencrypted in job `config.xml` files on the Jenkins controller as part of its build step configuration.
+    These credentials can be viewed by users with Extended Read permission or access to the Jenkins controller file system.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    PLUGIN_NAME 2.0.4 stores its credentials encrypted once job configurations are saved again.
+  plugins:
+  - name: redgate-sql-ci
+    previous: 2.0.3
+    fixed: 2.0.4
+- id: SECURITY-1580
+  reporter: Daniel Beck, CloudBees, Inc.
+  title: SSL/TLS certificate validation globally and unconditionally disabled by PLUGIN_NAME
+  cve: CVE-2019-16558
+  cvss:
+    severity: Medium
+    vector: CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N
+  description: |-
+    PLUGIN_NAME 3.2.3 and earlier unconditionally disables SSL/TLS certificate validation for the entire Jenkins controller JVM.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    PLUGIN_NAME 3.2.4 no longer disables SSL/TLS certificate validation.
+  plugins:
+  - name: inflectra-spira-integration
+    previous: 3.2.3
+    fixed: 3.2.4
+- id: SECURITY-1371
+  reporter: Daniel Beck, CloudBees, Inc.
+  title: CSRF vulnerability and missing permission checks in PLUGIN_NAME
+  cve: CVE-2019-16559 (permission check), CVE-2019-16560 (CSRF)
+  cvss:
+    severity: Medium
+    vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N
+  description: |-
+    PLUGIN_NAME 1.6.1 and earlier does not perform permission checks in methods performing form validation.
+    This allows users with Overall/Read access to perform connection tests, determine whether files with an attacker-specified path exist on the Jenkins controller file system, and obtain limited information about the Jenkins and plugin configuration based on the responses.
+    The latter include the ability to set plugin configuration options.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Additionally, these form validation methods do not require POST requests, resulting in a CSRF vulnerability.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    As of publication of this advisory, there is no fix.
+  plugins:
+  - name: websphere-deployer
+    previous: 1.6.1
+- id: SECURITY-1581
+  reporter: Daniel Beck, CloudBees, Inc.
+  title: SSL/TLS certificate validation globally and unconditionally disabled by PLUGIN_NAME
+  cve: CVE-2019-16561
+  cvss:
+    severity: Medium
+    vector: CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:N
+  description: |-
+    PLUGIN_NAME 1.6.1 and earlier allows users with Overall/Read access to disable SSL/TLS certificate and hostname validation for the entire Jenkins controller JVM, or specify a new Java keystore from a file stored on the Jenkins controller filesystem.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    As of publication of this advisory, there is no fix.
+  plugins:
+  - name: websphere-deployer
+    previous: 1.6.1
+- id: SECURITY-1591
+  reporter: Viktor Gazdag NCC Group
+  title: Stored XSS vulnerability in PLUGIN_NAME
+  cve: CVE-2019-16562
+  cvss:
+    severity: Medium
+    vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
+  description: |-
+    PLUGIN_NAME 1.8 and earlier does not escape the description of builds shown in its view.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>This results in a stored cross-site scripting vulnerability that can be exploited by users able to change the build description.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    As of publication of this advisory, there is no fix.
+  plugins:
+  - name: buildgraph-view
+    previous: '1.8'
+- id: SECURITY-1592
+  reporter: Viktor Gazdag NCC Group
+  title: Stored XSS vulnerability in PLUGIN_NAME
+  cve: CVE-2019-16563
+  cvss:
+    severity: Medium
+    vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
+  description: |-
+    PLUGIN_NAME 0.9.16 and earlier does not escape job display names and build names in the view it provides.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>This results in a stored cross-site scripting vulnerability that can be exploited by users able to change these properties.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    As of publication of this advisory, there is no fix.
+  plugins:
+  - name: mission-control-view
+    previous: 0.9.16
+- id: SECURITY-1605 (1)
+  reporter: Viktor Gazdag NCC Group
+  title: CSRF vulnerability and missing permission checks in PLUGIN_NAME allows capturing credentials
+  cve: CVE-2019-16565 (CSRF), CVE-2019-16566 (missing permission check)
+  cvss:
+    severity: High
+    vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N
+  description: |-
+    PLUGIN_NAME 1.3.0 and earlier does not perform permission checks on a method implementing form validation.
+    This allows users with Overall/Read access to Jenkins to connect to an attacker-specified URL using attacker-specified credentials IDs obtained through another method, capturing credentials stored in Jenkins.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Additionally, the form validation method does not require POST requests, resulting in a CSRF vulnerability.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    As of publication of this advisory, there is no fix.
+  plugins:
+  - name: teamconcert
+    previous: 1.3.0
+- id: SECURITY-1605 (2)
+  reporter: Viktor Gazdag NCC Group
+  title: Users with Overall/Read access can enumerate credential IDs in PLUGIN_NAME
+  cve: CVE-2019-16567
+  cvss:
+    severity: Medium
+    vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+  description: |-
+    PLUGIN_NAME 1.3.0 and earlier provides a list of applicable credential IDs to allow users configuring the plugin to select the one to use.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>This functionality does not correctly check permissions, allowing any user with Overall/Read permission to get a list of valid credentials IDs.
+Those can be used as part of an attack to capture the credentials using another vulnerability.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    As of publication of this advisory, there is no fix.
+  plugins:
+  - name: teamconcert
+    previous: 1.3.0
+- id: SECURITY-1521
+  reporter: James Holderness, IB Boost
+  title: PLUGIN_NAME stores credentials in plain text
+  cve: CVE-2019-16568
+  cvss:
+    severity: Low
+    vector: CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N
+  description: |-
+    PLUGIN_NAME 2.2 and earlier stores Silk Central credentials in the global Jenkins configuration and in job `config.xml` files.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>While these credentials are stored encrypted on disk, they are transmitted in plain text as part of the configuration form.
+This can result in exposure of these credentials through browser extensions, cross-site scripting vulnerabilities, and similar situations.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    As of publication of this advisory, there is no fix.
+  plugins:
+  - name: SCTMExecutor
+    previous: '2.2'
+- id: SECURITY-1603
+  reporter: Viktor Gazdag NCC Group
+  title: CSRF vulnerability in PLUGIN_NAME
+  cve: CVE-2019-16569
+  cvss:
+    severity: Medium
+    vector: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
+  description: |-
+    PLUGIN_NAME 0.26 and earlier does not require POST requests on a connection test method, resulting in a CSRF vulnerability.
+    This allows attackers to have Jenkins connect to Mantis-related paths on an attacker-specified web server using attacker-specified credentials.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    As of publication of this advisory, there is no fix.
+  plugins:
+  - name: mantis
+    previous: '0.26'
+- id: SECURITY-1604
+  reporter: Viktor Gazdag NCC Group
+  title: CSRF vulnerability and missing permission checks in PLUGIN_NAME allow SSRF
+  cve: CVE-2019-16570 (CSRF), CVE-2019-16571 (missing permission check)
+  cvss:
+    severity: Medium
+    vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+  description: |-
+    PLUGIN_NAME 4.1 and earlier does not perform a permission check on form validation methods.
+    This allows users with Overall/Read access to Jenkins to connect to RapidDeploy-related paths on an attacker-specified web server.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Additionally, these form validation methods do not require POST requests, resulting in a CSRF vulnerability.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    As of publication of this advisory, there is no fix.
+  plugins:
+  - name: rapiddeploy-jenkins
+    previous: '4.1'
+- id: SECURITY-1597
+  reporter: Viktor Gazdag NCC Group
+  title: PLUGIN_NAME stores credentials in plain text
+  cve: CVE-2019-16572
+  cvss:
+    severity: Low
+    vector: CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+  description: |-
+    PLUGIN_NAME 1.0.1 and earlier stores a credential unencrypted in its global configuration file `org.jenkinsci.plugins.weibo.WeiboNotifier.xml` on the Jenkins controller.
+    This credential can be viewed by users with access to the Jenkins controller file system.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    As of publication of this advisory, there is no fix.
+  plugins:
+  - name: weibo
+    previous: 1.0.1
+- id: SECURITY-1600
+  reporter: Viktor Gazdag NCC Group
+  title: CSRF vulnerability and missing permission checks in PLUGIN_NAME allows capturing credentials
+  cve: CVE-2019-16573 (CSRF), CVE-2019-16574 (missing permission check)
+  cvss:
+    severity: Medium
+    vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N
+  description: |-
+    PLUGIN_NAME 2.3.2 and earlier does not perform permission checks on a method implementing form validation.
+    This allows users with Overall/Read access to Jenkins to connect to Kubernetes-related paths on an attacker-specified web server using attacker-specified credentials IDs obtained through another method, capturing token credentials managed by PLUGIN_NAME.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Additionally, the form validation method does not require POST requests, resulting in a CSRF vulnerability.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    As of publication of this advisory, there is no fix.
+  plugins:
+  - name: alauda-devops-pipeline
+    previous: 2.3.2
+- id: SECURITY-1602
+  reporter: Viktor Gazdag NCC Group
+  title: CSRF vulnerability in PLUGIN_NAME
+  cve: CVE-2019-16575 (CSRF), CVE-2019-16576 (missing permission check)
+  cvss:
+    severity: Medium
+    vector: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
+  description: |-
+    PLUGIN_NAME 2.3.0 and earlier does not require POST requests on a connection test method, resulting in a CSRF vulnerability.
+    This allows attackers to have Jenkins connect to Kubernetes-related paths on an attacker-specified web server using attacker-specified credentials IDs obtained through another method, capturing 'Secret Text' credentials stored in Jenkins.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Additionally, if no credentials ID is specified, the connection uses the default Kubernetes token from `/var/run/secrets/kubernetes.io/serviceaccount/token`.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  As of publication of this advisory, there is no fix.
+plugins:
+- name: alauda-kubernetes-support
+  previous: 2.3.0</pre>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contribute code :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/community/code.html">
+    <link rel="prev" href="help.html">
+    <link rel="next" href="connect.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="community" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Jenkins Community</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Participate and Contribute</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="review-changes.html">Review Changes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="report-issue.html">Issue Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="test.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="how-to-guides.html">How-To Guides</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="donate.html">Donate to Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="help.html">Help</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="code.html">Contribute code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="connect.html">Get connected with the Jenkins community!</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="document.html">Document</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="design.html">Art and Design</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="track-issue.html">Issue Tracking</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="meet.html">Meet</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="chat/index.html">Chat</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mailing-lists/index.html">Mailist Lists</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Community</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Jenkins Community</a></li>
+    <li><a href="code.html">Contribute code</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/community/modules/ROOT/pages/code.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Contribute code</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins project includes a lot of code, and we invite everyone to contribute to the project.
+There is a diverse set of programming languages used in Jenkins,
+including but not limited to: Java, JavaScript, Groovy, Golang, Ruby, Shell scripts.
+And, since Jenkins is an automation server with hundreds of plugins, there is a huge number of technologies involved.
+If you are an expert or just want to study something new while contributing,
+you may find interesting opportunities in our project.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_where_to_contribute"><a class="anchor" href="#_where_to_contribute"></a>Where to contribute?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Jenkins project is spread across multiple organizations on GitHub.
+You are welcome to contribute to <strong>any</strong> repository in <strong>any</strong> of those organizations, or to any other Jenkins-related repository on GitHub.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkinsci">jenkinsci</a> - Main organization.
+Jenkins core, plugins and libraries reside there.
+To aid in classifying our 1000+ Git repositories, some naming conventions have been adopted:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>plugins are named "*-plugin"</p>
+</li>
+<li>
+<p>libraries are named "lib-*"</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://github.com/jenkins-infra">jenkins-infra</a> - Jenkins infrastructure, including the website and other services</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Various components in Jenkins have differing review and delivery policies,
+so please see the repositories for specific contributing guidelines.</p>
+</div>
+<div class="sect2">
+<h3 id="_plugins"><a class="anchor" href="#_plugins"></a>Plugins</h3>
+<div class="paragraph">
+<p>There are more than <a href="https://plugins.jenkins.io">1800 plugins</a> in Jenkins,
+and these plugins implement the majority of Jenkins functionality.
+Every plugin is an isolated component which can be developed independently of other parts of the project,
+with help of the APIs and development tools provided by the project.</p>
+</div>
+<div class="paragraph">
+<p>Most Jenkins contributors work on plugins and it is often the best way to start contributing to the project.
+Here are some documentation links:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../dev-docs/index.html" class="xref page">Jenkins developer documentation</a></p>
+</li>
+<li>
+<p><a href="../dev-docs/plugin-development/index.html" class="xref page">The plugin tutorial will get you started with Jenkins plugin development</a></p>
+</li>
+<li>
+<p><a href="../dev-docs/publishing/requesting-hosting.html" class="xref page">The complete guide to hosting and publishing plugins</a></p>
+</li>
+<li>
+<p><a href="../dev-docs/plugin-governance/adopt-a-plugin.html" class="xref page">Adopt a plugin</a></p>
+</li>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Before+starting+a+new+plugin">Advice before creating a new plugin</a></p>
+</li>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Pull+Request+to+Repositories">How we handle pull requests to plugin repositories</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_jenkins_core"><a class="anchor" href="#_jenkins_core"></a>Jenkins core</h3>
+<div class="paragraph">
+<p>Jenkins core is the heart of any Jenkins installation. It provides the kernel functionality and extension APIs used by Jenkins plugins.
+Written mostly in Java, it includes multiple components and frameworks.
+The core also includes the standard Web container and acts as an executable WAR file which can be run in the instance.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="https://github.com/jenkinsci/jenkins">jenkinsci/jenkins</a> repository for the overview and documentation links.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_infrastructure"><a class="anchor" href="#_infrastructure"></a>Infrastructure</h3>
+<div class="paragraph">
+<p>As an independent open source project, the Jenkins project maintains most of its own infrastructure including services which help to keep the project running.
+The kind of things that fall into "infrastructure" can span from operating virtual machines, containers, configuring network or developing and maintaining project-specific applications to make the development of Jenkins core and plugins more efficient.</p>
+</div>
+<div class="paragraph">
+<p>Because we strongly believe in Open Source principles, we also apply them to our infrastructure.
+As such we consider ourself as an open infrastructure project where everybody is invited to learn, share, contribute.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="../projects/infrastructure/index.html" class="xref page">Infrastructure sub-project</a> for more information and contributing guidelines.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_other_components"><a class="anchor" href="#_other_components"></a>Other components</h3>
+<div class="paragraph">
+<p>There are hundreds of repositories which do not fall under categories below:
+libraries, packaging, developer tools, etc.
+You can discover these components by looking into <a href="../sigs/index.html" class="xref page">special interest groups</a> and <a href="../projects/index.html" class="xref page">sub-projects</a> pages.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_newcomers"><a class="anchor" href="#_newcomers"></a>Newcomers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Jenkins project always welcomes newcomer contributors.
+We maintain lists of newbie-friendly issues and encourage new contributors to work on those issues.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.jenkins.io/issues/?jql=labels%20%3D%20newbie-friendly%20and%20status%20in%20(Open%2C%20%22To%20Do%22%2C%20Reopened)">Newbie-friendly issues in Jenkins JIRA</a></p>
+</li>
+<li>
+<p><a href="https://github.com/search?q=org%3Ajenkinsci+org%3Ajenkins-infra+is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">Good first issues on GitHub</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Useful links:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Beginners+Guide+to+Contributing#BeginnersGuidetoContributing-Areyouinterestedinwritingcode%3F">Beginners Guide to Contributing</a></p>
+</li>
+<li>
+<p>Presentation: Contributing to Jenkins (<a href="https://docs.google.com/presentation/d/1JHgVzWZAx95IsUAZp8OoyCQGGkrCjzUd7eblwd1Y-hA/edit?usp=sharing">slides</a>)</p>
+</li>
+<li>
+<p><a href="../sigs/advocacy-and-outreach/outreach-programs/index.html" class="xref page">Outreach programs</a> - Google Summer of Code, Outreachy, Hacktoberfest may be a good opportunity to start contributing to the project</p>
+</li>
+</ul>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe width="640" height="360" src="https://www.youtube.com/embed/ivMBMuZXdBA?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_experienced_contributors"><a class="anchor" href="#_experienced_contributors"></a>Experienced contributors</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Are you an established contributor to Jenkins and looking for a new challenge?
+The <a href="../security/team.html" class="xref page">Jenkins Security Team</a> is looking for members willing to help improve Jenkins security.
+Also, there are many <a href="../sigs/index.html" class="xref page">special interest groups</a> and <a href="../projects/index.html" class="xref page">sub-projects</a> which are seeking contributors
+in order to push bigger projects forward.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="help.html">Help</a></span>
+  <span class="next"><a href="connect.html">Get connected with the Jenkins community!</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Infrastructure :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/projects/infrastructure/index.html">
+    <link rel="prev" href="../jcasc/dev-tools.html">
+    <link rel="next" href="ircbot.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="projects" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Projects</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Jenkins Sub-projects</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../user-docs/2.401.3/blueocean/getting-started.html">Getting started with Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/about.html">About Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/contribute.html">Contributing to Blue Ocean</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../jam/index.html">CI/CD and Jenkins Area Meetups</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../remoting/index.html">Jenkins Remoting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../gsoc/index.html">Google Summer of Code in Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../gsoc/2018/index.html">Jenkins in Google Summer of Code 2018</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../gsoc/2018/code-coverage-api-plugin.html">GSoC 2018. Code Coverage API Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../gsoc/2018/eda-plugins.html">GSoC 2018. EDA Plugins for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../gsoc/2018/index.html">Jenkins in Google Summer of Code 2018</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../gsoc/2018/remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../gsoc/2018/simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../gsoc/2019/index.html">Jenkins in Google Summer of Code 2019</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../gsoc/2019/project-ideas.html">GSoC 2021 Project Ideas</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../gsoc/2019/schedule.html">Jenkins year-round GSoC schedule</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../gsoc/2019/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../gsoc/2019/working-hours-improvements.html">GSoC2019 Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../gsoc/2019/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../gsoc/2019/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../gsoc/2019/gitlab-support-for-multibranch-pipeline.html">Multibranch Pipeline support for GitLab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../gsoc/2019/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka with Kubernetes features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../gsoc/2019/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/eda-coverage-adapters.html">EDA Coverage Adapters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/advanced-build-discard-strategy-plugin.html">Advanced Build Discard Strategy Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/configuration-as-code-compatibility.html">Configuration as Code Plugin Compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/pipeline-step-documentation-generator.html">Pipeline Step Documentation Generator improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/eda-plugins.html">Plugin(s) for Electronic Design Automation tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/bitbucket-rest-plugin.html">Bitbucket REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/working-hours-improvements.html">Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/machine-learning.html">Jenkins and Machine Learning Plugins for Data Science</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/artifactory-rest-plugin.html">Artifactory REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/remoting-monitoring.html">Jenkins Remoting Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/freestyle-to-pipeline-converter.html">Freestyle job to Pipeline job converter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/jenkins-rest-plugin.html">Jenkins REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/role-strategy-ux.html">Role Strategy Plugin: user experience</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/ath-improvements.html">Improvements to the Jenkins Acceptance Test Harness</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/winsw-yaml-config-support.html">Jenkins Windows Services: YAML Configuration Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/external-fingerprint-storage-for-jenkins.html">External Fingerprint Storage for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/gitlab-support-for-multibranch-pipeline.html">Multi-branch Pipeline support for Gitlab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/docker-registries-polling-plugin.html">Polling Docker Registries for Image Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/code-coverage-api-improvements.html">Code Coverage API Plugin Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/automatic-spec-generator-for-jenkins-rest-api.html">Automatic Specification Generator for Jenkins REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka. Docker/K8s Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../gsoc/2019/project-ideas/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../sigs/advocacy-and-outreach/outreach-programs/index.html">Outreach programs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../jcasc/index.html">Jenkins Configuration as Code</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../jcasc/dev-tools.html">Dev-Tools for JCasC</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Infrastructure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ircbot.html">IRC Bot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../jenkins-operator/index.html">Jenkins Operator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Other Projects</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes.html">Document Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://jenkins-x.io/">Jenkins X</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Projects</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins Projects</a></li>
+    <li><a href="index.html">Infrastructure</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/infrastructure/pages/index.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Infrastructure</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>As an independent open source project, the Jenkins project maintains most of its own
+infrastructure including services which help to keep the project running.
+The kind of things that fall into "infrastructure" can span from operating
+virtual machines, containers, configuring network or developing and maintaining project-specific applications to make the development of Jenkins core and plugins more efficient.</p>
+</div>
+<div class="paragraph">
+<p>Because we strongly believe in Open Source principles, we also apply them to our infrastructure. As such we consider ourself as an open infrastructure project where everybody is invited to learn, share, contribute.</p>
+</div>
+<div class="paragraph">
+<p><span class="image left center"><img src="../../images/_images/projects/infrastructure/infra_overview.png" alt="Overview"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_team"><a class="anchor" href="#_team"></a>Team</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins infrastructure is maintained by the Jenkins Infrastructure team.
+This team consists of Jenkins contributors and volunteers who provide a best-effort support depending on their availability and other commitments.
+We are always looking for contributors who are interested to improve Jenkins services and to help with maintaining them.</p>
+</div>
+<div class="sect2">
+<h3 id="_team_structure"><a class="anchor" href="#_team_structure"></a>Team structure</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This section is under development
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_meetings"><a class="anchor" href="#_meetings"></a>Meetings</h3>
+<div class="paragraph">
+<p>Jenkins Infra team has a weekly meeting on Tuesday, 14:30 UTC.
+This event is a regularly scheduled meeting to sync on the various ongoing infrastructure initiatives within the Jenkins project.
+This meeting is open to everyone who is interested.
+See the <a href="/event-calendar/">Event Calendar</a> for meeting links.</p>
+</div>
+<div class="paragraph">
+<p>You can find Infra team meeting agenda and meeting notes on
+<a href="https://github.com/jenkins-infra/documentation/tree/main/meetings">jenkins-infra/documentation</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_infrastructure"><a class="anchor" href="#_infrastructure"></a>Infrastructure</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_provisioning"><a class="anchor" href="#_provisioning"></a>Provisioning</h3>
+<div class="paragraph">
+<p>The Jenkins project runs the most of its infrastructure on Azure, sponsored by <a href="https://cd.foundation/">Continuous Delivery Foundation</a>.
+This infrastructure is provisioned from the repository <a href="https://github.com/jenkins-infra/azure">jenkins-infra/azure</a> using Terraform and using AKS <a href="https://github.com/jenkins-infra/charts/">charts</a>.</p>
+</div>
+<div class="paragraph">
+<p>While we try to stick to Azure, we still have machines sponsored by different organizations such as OSUOSL, AWS, Rackspace or CloudBees.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_management"><a class="anchor" href="#_configuration_management"></a>Configuration Management</h3>
+<div class="sect3">
+<h4 id="_infrastructure_2"><a class="anchor" href="#_infrastructure_2"></a>Infrastructure</h4>
+<div class="paragraph">
+<p>The Jenkins project&#8217;s infrastructure is managed and orchestrated via a git repository named
+<a href="https://github.com/jenkins-infra/jenkins-infra">jenkins-infra/jenkins-infra</a> using Puppet.
+We are also using a Kubernetes cluster orchestrated with <a href="https://github.com/jenkins-infra/charts">jenkins-infra/charts</a> using Helm &amp; Helmfiles.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_monitoring"><a class="anchor" href="#_monitoring"></a>Monitoring</h4>
+<div class="paragraph">
+<p>Infrastructure is monitored via Datadog.
+Datadog configuration is automated with Terraform on <a href="https://github.com/jenkins-infra/datadog">jenkins-infra/datadog</a></p>
+</div>
+<div class="paragraph">
+<p>We also provide different dashboards to share the health of our systems.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://p.datadoghq.com/sb/0Igb9a-dca9738dbb5048025c005182a8f240c0">Status Page</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://p.datadoghq.com/sb/0Igb9a-e3831323722f931efe38cb02026d1974">Confluence</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_reporting"><a class="anchor" href="#_reporting"></a>Reporting</h4>
+<div class="paragraph">
+<p>Pagerduty is used to report issues detected by Datadog,
+we have a follow the sun policy where we try to only be on call during our "available" hours.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_services"><a class="anchor" href="#_services"></a>Services</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Another major aspect of the Jenkins Infrastructure project, is the maintenance of all services either provided by us or third parties.
+Here is a non-exhaustive list of services that we provide and maintain.</p>
+</div>
+<div class="sect2">
+<h3 id="_self_hosted_services_in_kubernetes"><a class="anchor" href="#_self_hosted_services_in_kubernetes"></a>Self-hosted services in Kubernetes</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Service</th>
+<th class="tableblock halign-left valign-top">Issue tracker</th>
+<th class="tableblock halign-left valign-top">Repository and links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://accounts.jenkins.io">Accounts</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helpdesk/labels/account">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://accounts.jenkins.io">Account App</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helpdesk/labels/account-app">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/account-app">Code</a>,     <a href="https://github.com/jenkins-infra/helm-charts/tree/main/charts/accountapp">helm chart</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="./ircbot">Chatbot</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helpdesk/labels/ircbot">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/ircbot">Code</a>,          <a href="https://github.com/jenkins-infra/helm-charts/tree/main/charts/ircbot">helm chart</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Infra CI - https://infra.ci.jenkins.io/</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helpdesk/labels/infra.ci.jenkins.io">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Release CI - https://release.ci.jenkins.io/</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helpdesk/labels/release.ci.jenkins.io">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/release">Code</a>,         <a href="https://github.com/jenkins-infra/helm-charts/tree/main/charts/jenkins">helm chart</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Private artifacts - https://repo.private.jenkins.io/</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helm-charts/tree/main/charts/nexus">helm chart</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://javadoc.jenkins.io">Javadoc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helpdesk/labels/javadoc">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/javadoc">Code</a>,         <a href="https://github.com/jenkins-infra/helm-charts/tree/main/charts/javadoc">helm chart</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keycloak identity management</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helm-charts/tree/main/charts/keycloak">helm chart</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LDAP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/ldap/issues">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/ldap">Docker</a>,          <a href="https://github.com/jenkins-infra/helm-charts/tree/main/charts/ldap">helm chart</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SSL certificate renewal</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helm-charts/tree/main/charts/acme">helm chart</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="/">Main Website</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/jenkins.io/issues">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/jenkins.io">Code</a>,      <a href="https://github.com/jenkins-infra/helm-charts/tree/main/charts/jenkinsio">helm chart</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://plugins.jenkins.io">Plugin Site</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/plugin-site/issues">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/plugin-site">Code</a>,     <a href="https://github.com/jenkins-infra/helm-charts/tree/main/charts/plugin-site">helm chart</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Plugin Site API Backend</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/plugin-site-api/issues">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/plugin-site-api">Code</a>, <a href="https://github.com/jenkins-infra/helm-charts/tree/main/charts/plugin-site">helm chart</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://reports.jenkins.io">Reports Site</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helm-charts/tree/main/charts/reports">helm chart</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://uplink.jenkins.io">UpLink</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/uplink/issues">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/uplink">Code</a>,          <a href="https://github.com/jenkins-infra/helm-charts/tree/main/charts/uplink">helm chart</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.jenkins.io">Wiki - static pages</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/docker-confluence-data/issues">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/docker-confluence-data">Code</a>, <a href="https://github.com/jenkins-infra/confluence">Docker</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rating metric</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/rating/issues">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/rating/">Code</a>, <a href="https://github.com/jenkins-infra/helm-charts/tree/main/charts/rating">helm chart</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://reports.jenkins.io/jenkins-plugin-migration.html">Plugin migration progress</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/infra-reports/issues">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/infra-reports/tree/main/plugin-migration">Code</a>, <a href="https://github.com/jenkins-infra/kubernetes-management/blob/main/config/reports.yaml">helm config</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_self_hosted_services"><a class="anchor" href="#_self_hosted_services"></a>Self-hosted services</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Service</th>
+<th class="tableblock halign-left valign-top">Issue tracker</th>
+<th class="tableblock halign-left valign-top">Repository and links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://archives.jenkins.io">Archives</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helpdesk/labels/archives">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/jenkins-infra/blob/production/dist/profile/manifests/archives.pp">Puppet Code</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://ci.jenkins.io">Core and Plugin CI</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helpdesk/labels/ci.jenkins.io">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/documentation/blob/main/ci.adoc">User Docs</a>, <a href="https://github.com/jenkins-infra/jenkins-infra">Deployment scripts</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://get.jenkins.io/">Mirrors</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helpdesk/labels/get.jenkins.io">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helm-charts/tree/main/charts/mirrorbits">Mirrorbits helm chart</a>, <a href="https://get.jenkins.io/war-stable/latest/jenkins.war.sha256?mirrorlist">mirror list</a>, <a href="https://get.jenkins.io/war-stable/latest/jenkins.war?mirrorstats">mirror stats</a>, <a href="/download/mirrors/">Running a mirror</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://mirrors.jenkins.io/">Old Mirrors</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mirrors.jenkins.io</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/jenkins-infra">old mirrors.jenkins.io Puppet scripts</a> (search for <code>mirrorbrain</code>), <a href="https://github.com/jenkins-infra/infra-mirror">old mirror scripts</a>, <a href="http://mirrors.jenkins-ci.org/status.html">old status page</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://pkg.jenkins.io">Downloads</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helpdesk/labels/pkg.jenkins.io">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/jenkins-infra/blob/production/dist/profile/manifests/pkgrepo.pp">Puppet scripts</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://stats.jenkins.io/">Stats</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/infra-statistics">Code</a> published with GitHub pages</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://updates.jenkins.io">Update Center</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helpdesk/labels/update-center">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/update-center2">Code</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VPN</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>vpn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/openvpn">Code</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_saas"><a class="anchor" href="#_saas"></a>SaaS</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Service</th>
+<th class="tableblock halign-left valign-top">Provider</th>
+<th class="tableblock halign-left valign-top">Issue tracker</th>
+<th class="tableblock halign-left valign-top">Repository</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://repo.jenkins-ci.org/webapp/#/home">Artifactory</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JFrog</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helpdesk/labels/artifactory">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra">GitHub</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GitHub</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helpdesk/labels/github">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jenkins.datadoghq.com">Monitoring</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datadog</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helpdesk/labels/datadog">GitHub issues</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/jenkins-infra-monitoring">Code</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.pagerduty.com">Pagerduty</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pagerduty</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://app.gitter.im/#/room/#jenkins-ci:matrix.org">Gitter chat system</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GitLab</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://manage.fastly.com/">Content Delivery Network</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fastly</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.namecheap.com/">DNS Registrar</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Namecheap</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://issues.jenkins.io">Jira</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linux Foundation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://support.linuxfoundation.org">Linux Foundation Support</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_sub_projectsig_services"><a class="anchor" href="#_sub_projectsig_services"></a>Sub-project/SIG services</h3>
+<div class="paragraph">
+<p>Jenkins infrastructure also hosts some services for sub-projects and special interest groups:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Service</th>
+<th class="tableblock halign-left valign-top">Owner Sub-project/SIG</th>
+<th class="tableblock halign-left valign-top">Issue tracker component(s)</th>
+<th class="tableblock halign-left valign-top">Repository</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="/download/verify/">Code and Repository Signing</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#project:ROOT:team-leads.adoc#release" class="xref unresolved">Release Team</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkins-infra/helpdesk/labels/release">release</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.digicert.com/">DigiCert</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributing"><a class="anchor" href="#contributing"></a>Contributing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Our infrastructure is an open infrastructure project made by and for the Jenkins community.
+In other words, it&#8217;s a contributors driven project.
+While we can&#8217;t share publicly everything like secrets, certificates,&#8230;&#8203; we still try to be as transparent as possible so that everybody can understand and improve our infrastructure without having privileged accesses.
+If you have any idea that could help the infra or interest the community, feel free to make suggestions.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Before going further, we assume that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You already created a Jenkins account on <a href="https://accounts.jenkins.io">accounts.jenkins.io</a></p>
+</li>
+<li>
+<p>You registered to the Jenkins Infra mailing list <a href="/mailing-lists/#jenkins-infra-googlegroups-com">jenkins-infra@googlegroups.com</a></p>
+</li>
+<li>
+<p>You have access to our ticket system <a href="https://issues.jenkins.io">issues.jenkins.io</a></p>
+</li>
+<li>
+<p>You already said "Hi" on IRC channel: <a href="../../community/chat/index.html#jenkins-infra" class="xref page">#jenkins-infra</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image left center"><img src="../../images/_images/projects/infrastructure/contribution_workflow.png" alt="Contribution Workflow"></span></p>
+</div>
+<div class="paragraph">
+<p>In order to contribute to infrastructure project, we ask people to follow the next steps</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Pick up a task =&gt; Communicate =&gt; Implement =&gt; Deploy =&gt; Review</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="pick-up-a-task"><a class="anchor" href="#pick-up-a-task"></a>Pick Up A Task</h3>
+<div class="paragraph">
+<p>To keep track of the work that needs to be done on the Jenkins infrastructure project, we use the <a href="https://github.com/jenkins-infra/helpdesk/issues">Github help desk repository</a>.
+If you want to contribute, the first step is to find the issue in this project that you want to work on, assign it to you,
+then communicate about it (see <a href="#_communicate">Communicate</a>).</p>
+</div>
+<div class="paragraph">
+<p>If you can&#8217;t find an appropriate issue, please create a new one with a clear description:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Why (what is the problem to solve - high level value)?</p>
+</li>
+<li>
+<p>What (what your proposal to solve the problem)?</p>
+</li>
+<li>
+<p>How (what are the technical changes to do)?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You may also specify components and finally you can communicate about it, using the suggestions from the next section.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Good First Issues</div>
+<div class="paragraph">
+<p>If you want to start contributing on the Jenkins infrastructure,
+you can find a list of "first good issues" to be considered (they all have the label <code>newbie-friendly</code>)
+on the following page:
+<a href="https://github.com/jenkins-infra/helpdesk/labels/good%20first%20issue">good first issues</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_communicate"><a class="anchor" href="#_communicate"></a>Communicate</h3>
+<div class="paragraph">
+<p>Before any implementation, it&#8217;s important to verify that first, there is (still) a need for some implementation and then that no work has been done in the past.
+The best way for that is to either look after similar issues, ask on IRC or on the mailing list.
+You can also join our weekly meetings to discuss and coordinate the changes.</p>
+</div>
+<div class="paragraph">
+<p>When the subject is too broad or hard to explain in few lines, we write an <a href="https://github.com/jenkins-infra/iep/blob/master/README.adoc">IEP</a> document which stand for "Infrastructure Enhancement Proposal", the purpose of this document is to explain why we need something, how we want to solve it, and why we took a final decision.
+Finally, once you have your ticket id, you can start looking for knowledgeable people.</p>
+</div>
+<div class="paragraph">
+<p>Anyway keep in mind that it&#8217;s always better to have too much information than too little and in the end you&#8217;ll probably be the best person who can work on your case.</p>
+</div>
+<div class="listingblock">
+<div class="title">In short</div>
+<div class="content">
+<pre>+----------------------------------+
+|                                  |
+|  Pick up or Create INFRA Ticket  |
+|                                  |
++----+----+------------------------+
+     |    |   If no responses after few days
+     |    |   promote it on
+     |    |                    +------------------------------------------+
+     |    |                    |                                          |
+     |    +--------------------&gt; IRC: Libera Chat #jenkins-infra          &lt;----+
+     |    |                    |                                          |    |
+     |    |                    +------------------------------------------+    |
+     |    |                    +------------------------------------------+    |
+     |    |                    |                                          |    |
+     |    +--------------------&gt; Mail: jenkins-infra@googlegroups.com     &lt;----+
+     |                         |                                          |    |
+     |                         +------------------------------------------+    |
+     | If the topic is too big                                                 |
+     |                                                                         |
+     |                    +-------------------------------------------+        |
+     |                    |                                           |        |
+     +--------------------&gt; IEP: https://github.com/jenkins-infra/iep |--------+
+                          |                                           |
+                          +-------------------------------------------+</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://groups.google.com/g/jenkins-infra">Jenkins Infrastructure Google Group</a>,
+<a href="http://lists.jenkins-ci.org/pipermail/jenkins-infra/">Mail Archive - September 2011 - April 2020</a>, and
+<a href="../../community/chat/index.html#jenkins-infra" class="xref page">IRC</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_implement"><a class="anchor" href="#_implement"></a>Implement</h3>
+<div class="paragraph">
+<p>Once there is an agreement about the approach and before any changes, we ask contributors to respect the following rules.</p>
+</div>
+<div class="paragraph">
+<p>Those rules are just what we consider "best practices" for a contributors driven project and can be adapted depending on specific git repositories.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Rule #1: Everything is in a git repository under the <a href="https://github.com/jenkins-infra">jenkins-infra</a> organization.</dt>
+<dd>
+<p>So it&#8217;s easier for everybody to find/review/audit changes and suggest improvements.</p>
+</dd>
+<dt class="hdlist1">Rule #2: All changes are validated by at least one regular infra contributor via Pull Request.</dt>
+<dd>
+<p>So we always have different people who understand infrastructure changes.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Rem: Non regular contributors are more than welcome to share their expertise or just ask question which also help to spot incoherences.</p>
+</div>
+<div class="paragraph">
+<p>Code Reviews Purpose:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Educate author and the team about the changes in code being made</p>
+</li>
+<li>
+<p>Discover logic or security issues not covered by tests</p>
+</li>
+<li>
+<p>Gather improvement suggestion for code readability or efficiency</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Rule #3: All Changes are tested on <a href="https://ci.jenkins.io/job/Infra/">ci.jenkins.io</a></dt>
+<dd>
+<p>So we feel more comfortable when merging PRs and we avoid regression issues.</p>
+</dd>
+<dt class="hdlist1">Rule #4: Everything is automated.</dt>
+<dd>
+<p>So we only have one source of truth and we don&#8217;t break others people works.
+And if it&#8217;s not possible, then it needs to be well communicated and documented cf. rule #1.</p>
+</dd>
+<dt class="hdlist1">Rule #5: All changes follow the <a href="https://guides.github.com/introduction/flow/">Github</a> workflow.</dt>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Fork project -&gt; Create Feature Branch -&gt; Open Pull Request -&gt; Ask Review -&gt; Merge</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_deployment"><a class="anchor" href="#_deployment"></a>Deployment</h3>
+<div class="paragraph">
+<p>The deployment step is the only moment where we need approval from someone with elevated permission. As already mentioned, even if we try to be as open as possible, we don&#8217;t want to share privileged accesses with every contributors even if we trust them and that mainly for security reasons.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_link"><a class="anchor" href="#_link"></a>Link</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Various link which can helpful when looking at the Jenkins infra project</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/orgs/jenkins-infra">Github Organization</a></p>
+</li>
+<li>
+<p><a href="https://github.com/orgs/jenkins-infra/teams">Github Teams</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkins-infra/helpdesk/issues">Reported Issues</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkins-infra/helpdesk/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">Good first issues</a></p>
+</li>
+<li>
+<p><a href="https://groups.google.com/g/jenkins-infra">Jenkins Infrastructure Google Group</a></p>
+</li>
+<li>
+<p><a href="../../community/chat/index.html#jenkins-infra" class="xref page">IRC</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="../jcasc/dev-tools.html">Dev-Tools for JCasC</a></span>
+  <span class="next"><a href="ircbot.html">IRC Bot</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

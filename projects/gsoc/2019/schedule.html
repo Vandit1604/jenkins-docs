@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins year-round GSoC schedule :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2019/schedule.html">
+    <link rel="prev" href="project-ideas.html">
+    <link rel="next" href="artifact-promotion-plugin-for-jenkins-pipeline.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="projects" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Jenkins Projects</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../index.html">Jenkins Sub-projects</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../user-docs/2.401.3/blueocean/getting-started.html">Getting started with Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../blueocean/about.html">About Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../blueocean/contribute.html">Contributing to Blue Ocean</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../jam/index.html">CI/CD and Jenkins Area Meetups</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../remoting/index.html">Jenkins Remoting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Google Summer of Code in Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../2018/index.html">Jenkins in Google Summer of Code 2018</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2018/code-coverage-api-plugin.html">GSoC 2018. Code Coverage API Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2018/eda-plugins.html">GSoC 2018. EDA Plugins for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2018/index.html">Jenkins in Google Summer of Code 2018</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2018/remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2018/simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Jenkins in Google Summer of Code 2019</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="project-ideas.html">GSoC 2021 Project Ideas</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="schedule.html">Jenkins year-round GSoC schedule</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="working-hours-improvements.html">GSoC2019 Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="gitlab-support-for-multibranch-pipeline.html">Multibranch Pipeline support for GitLab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka with Kubernetes features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/eda-coverage-adapters.html">EDA Coverage Adapters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/advanced-build-discard-strategy-plugin.html">Advanced Build Discard Strategy Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/configuration-as-code-compatibility.html">Configuration as Code Plugin Compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/pipeline-step-documentation-generator.html">Pipeline Step Documentation Generator improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/eda-plugins.html">Plugin(s) for Electronic Design Automation tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/bitbucket-rest-plugin.html">Bitbucket REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/working-hours-improvements.html">Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/machine-learning.html">Jenkins and Machine Learning Plugins for Data Science</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/artifactory-rest-plugin.html">Artifactory REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/remoting-monitoring.html">Jenkins Remoting Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/freestyle-to-pipeline-converter.html">Freestyle job to Pipeline job converter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/jenkins-rest-plugin.html">Jenkins REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/role-strategy-ux.html">Role Strategy Plugin: user experience</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/ath-improvements.html">Improvements to the Jenkins Acceptance Test Harness</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/winsw-yaml-config-support.html">Jenkins Windows Services: YAML Configuration Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/external-fingerprint-storage-for-jenkins.html">External Fingerprint Storage for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/gitlab-support-for-multibranch-pipeline.html">Multi-branch Pipeline support for Gitlab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/docker-registries-polling-plugin.html">Polling Docker Registries for Image Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/code-coverage-api-improvements.html">Code Coverage API Plugin Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/automatic-spec-generator-for-jenkins-rest-api.html">Automatic Specification Generator for Jenkins REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka. Docker/K8s Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="project-ideas/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../sigs/advocacy-and-outreach/outreach-programs/index.html">Outreach programs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../jcasc/index.html">Jenkins Configuration as Code</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../jcasc/dev-tools.html">Dev-Tools for JCasC</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../infrastructure/index.html">Infrastructure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../infrastructure/ircbot.html">IRC Bot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../jenkins-operator/index.html">Jenkins Operator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Other Projects</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes.html">Document Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://jenkins-x.io/">Jenkins X</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Projects</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Jenkins Projects</a></li>
+    <li><a href="schedule.html">Jenkins year-round GSoC schedule</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2019/schedule.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins year-round GSoC schedule</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <a href="https://developers.google.com/open-source/gsoc/timeline">Official Timeline</a> from Google always takes precedence over the
+timeline posted here. The timeline posted here maps the Google Summer of Code Timeline to the GSoC related Jenkins organization events
+and activities. It is not an official timeline for the program.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aug_2018_feb_2019"><a class="anchor" href="#_aug_2018_feb_2019"></a>AUG 2018 - FEB 2019</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Call for GSoC project proposals/mentors</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>period of year where we pro-actively seek for project proposals</p>
+</li>
+<li>
+<p>pre-book SMEs, ask them to make a few hours per coding phase in their schedule (even more so if their SIG participates in GSoC)</p>
+</li>
+<li>
+<p>form mentor groups</p>
+</li>
+<li>
+<p>preplanning meetings</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Mentor and project champion recruitment</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>period of the year when we actively search for mentors from various sources like SIGs and mailing list</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aug_dec"><a class="anchor" href="#_aug_dec"></a>AUG - DEC</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Swag shipping schedule</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sep_16"><a class="anchor" href="#_sep_16"></a>SEP 16</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Presence at DevOps World - Jenkins World conference in San Francisco, California, United States</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_oct_12_14"><a class="anchor" href="#_oct_12_14"></a>OCT 12 - 14</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Mentor Summit at Google campus in Sunnyvale, California, United States</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_oct_22_25"><a class="anchor" href="#_oct_22_25"></a>OCT 22 - 25</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Presence at DevOps World - Jenkins World conference in Nice, France</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jan_15"><a class="anchor" href="#_jan_15"></a>JAN 15</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Mentoring organizations can begin submitting applications to Google</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_feb_6_25"><a class="anchor" href="#_feb_6_25"></a>FEB 6 - 25</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Google program administrators review organization applications</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_feb_6"><a class="anchor" href="#_feb_6"></a>FEB 6</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Mentoring organization application deadline</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_feb_26_mar_25"><a class="anchor" href="#_feb_26_mar_25"></a>FEB 26 - MAR 25</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>A schedule of communications to students and mentors</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>list of what mentors need to discuss with students (e.g. eligibility check such as CPT)</p>
+</li>
+<li>
+<p>when to send deadline reminders</p>
+</li>
+<li>
+<p>when to send expectation reminders</p>
+</li>
+<li>
+<p>when to setup office hours</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Potential student participants discuss application ideas with mentoring</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_feb_26"><a class="anchor" href="#_feb_26"></a>FEB 26</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>List of accepted mentoring organizations published</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mar_25"><a class="anchor" href="#_mar_25"></a>MAR 25</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Student application period begins</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_apr_9_sep_3"><a class="anchor" href="#_apr_9_sep_3"></a>APR 9 - SEP 3</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Personalized thank you letters to all participants schedule (at end of application period, at end of last coding period)</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_apr_9"><a class="anchor" href="#_apr_9"></a>APR 9</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Student application deadline</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_may_6_27"><a class="anchor" href="#_may_6_27"></a>MAY 6 - 27</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Community Bonding Period: Students get to know mentors, read documentation, get up to speed to begin working on their projects</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>have co-mentors agree on project general direction before talking to students</p>
+</li>
+<li>
+<p>explicitly state that design work needs to happen during this phase</p>
+</li>
+<li>
+<p>do pair coding to get student going</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_may_6"><a class="anchor" href="#_may_6"></a>MAY 6</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Accepted student proposals announced</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_may_27"><a class="anchor" href="#_may_27"></a>MAY 27</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Coding officially begins!</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jun_24"><a class="anchor" href="#_jun_24"></a>JUN 24</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Mentors and students can begin submitting Phase 1 evaluations</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jun_28"><a class="anchor" href="#_jun_28"></a>JUN 28</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Phase 1 Evaluation deadline</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Work Period: Students work on their project with guidance from Mentors</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jul_22"><a class="anchor" href="#_jul_22"></a>JUL 22</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Mentors and students can begin submitting Phase 2 evaluations</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jul_26_oct"><a class="anchor" href="#_jul_26_oct"></a>JUL 26 - OCT</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Plan post-GSoC activities schedule</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>create a path for students to become mentors, and see their project continue in next GSoC</p>
+</li>
+<li>
+<p>create epic of remaining work (perhaps do this at end of last coding phase)</p>
+</li>
+<li>
+<p>keeping the student engaged by giving more responsibilities and more ownership</p>
+</li>
+<li>
+<p>review and retrospective</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jul_26"><a class="anchor" href="#_jul_26"></a>JUL 26</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Phase 2 Evaluation deadline</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Work Period: Students continue working on their project with guidance from Mentors</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aug_2019_feb_2020"><a class="anchor" href="#_aug_2019_feb_2020"></a>AUG 2019 - FEB 2020</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Call for GSoC project proposals/mentors</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>period of year where we pro-actively seek for project proposals</p>
+</li>
+<li>
+<p>pre-book SMEs, ask them to make a few hours per coding phase in their schedule (even more so if their SIG participates in GSoC)</p>
+</li>
+<li>
+<p>form mentor groups</p>
+</li>
+<li>
+<p>preplanning meetings</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Mentor and project champion recruitment</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>period of the year when we actively search for mentors from various sources like SIGs and mailing list</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aug_dec_2"><a class="anchor" href="#_aug_dec_2"></a>AUG - DEC</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Swag shipping schedule</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aug_12_15"><a class="anchor" href="#_aug_12_15"></a>AUG 12 - 15</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Presence at DevOps World - Jenkins World conference in San Francisco, California, United States</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aug_19_26"><a class="anchor" href="#_aug_19_26"></a>AUG 19 - 26</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Final week: Students submit their final work product and their final mentor evaluation</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aug_26_sep_2"><a class="anchor" href="#_aug_26_sep_2"></a>AUG 26 - SEP 2</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Mentors submit final student evaluations</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sep_3"><a class="anchor" href="#_sep_3"></a>SEP 3</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Final results of Google Summer of Code 2019 announced</strong></p>
+</div>
+<div class="paragraph">
+<p><strong><a href="https://developers.google.com/open-source/gsoc/help/post-todo">Post GSoC TODO List</a></strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Update your resume to include your work as a Google Summer of Code student</p>
+</li>
+<li>
+<p>Keep working on your project</p>
+</li>
+<li>
+<p>Attend a Meetup or Conference</p>
+</li>
+<li>
+<p>Tell others about GSoC</p>
+</li>
+<li>
+<p>Be a mentor and help others</p>
+</li>
+<li>
+<p>Stay in touch with your mentors and the community</p>
+</li>
+<li>
+<p>Want to apply for a role at Google?</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_oct_17_20"><a class="anchor" href="#_oct_17_20"></a>OCT 17 - 20</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Mentor Summit in Munich, Germany</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dec_2_5"><a class="anchor" href="#_dec_2_5"></a>DEC 2 - 5</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Presence at DevOps World - Jenkins World conference in Lisbon, Portugal</strong></p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="project-ideas.html">GSoC 2021 Project Ideas</a></span>
+  <span class="next"><a href="artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

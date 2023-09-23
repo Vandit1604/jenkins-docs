@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pipeline Development Tools :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.401.3/pipeline/development.html">
+    <link rel="prev" href="shared-libraries.html">
+    <link rel="next" href="syntax.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="user-docs" data-version="2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins User Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/docker.html">Docker</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-credentials.html">Using credentials</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/searchbox.html">Using Search Box</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/referencing-another-project-by-name.html">Referencing another project by name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/aborting-a-build.html">Aborting a build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/fingerprints.html">Fingerprints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-local-language.html">Using local language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/change-time-zone.html">Change time zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/remote-access-api.html">Remote Access API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/executor-starvation.html">Executor Starvation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-agents.html">Using Jenkins agents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Pipeline</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="jenkinsfile.html">Using a Jenkinsfile</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="running-pipelines.html">Running a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="multibranch.html">Branches and Pull Requests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="docker.html">Using Docker with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shared-libraries.html">Extending with Shared Libraries</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="development.html">Pipeline Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="syntax.html">Pipeline Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipeline-best-practices.html">Pipeline Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scaling-pipeline.html">Scaling Pipelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cps-method-mismatches.html">Pipeline CPS Method Mismatches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/dashboard.html">Dashboard</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/activity.html">Activity View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-run-details.html">Pipeline Run Details View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-editor.html">Pipeline Editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../managing/index.html">Managing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-configuration.html">Configuring the System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/casc.html">Configuration as Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/tools.html">Managing Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/about-jenkins.html">About Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-info.html">System Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/cli.html">Jenkins CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-console.html">Script Console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/groovy-hook-scripts.html">Groovy Hook Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/nodes.html">Managing Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-approval.html">In-process Script Approval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/ui-themes.html">Themes for user interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/user-content.html">User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/spawning-processes.html">Spawning Processes From Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Securing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/access-control.html">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-jenkins.html">Securing Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/managing-security.html">Managing Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/controller-isolation.html">Controller Isolation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-builds.html">Securing Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/csrf-protection.html">CSRF Protection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/user-content.html">Rendering User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/build-authorization.html">Access Control for Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/environment-variables.html">Handling Environment Variables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/markup-formatter.html">Markup Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/services.html">Exposed Services and Ports</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/index.html">System Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/backing-up.html">Backing-up/Restoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/monitoring.html">Monitoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/administering-jenkins-on-kubernetes.html">Administering Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-chef.html">Managing Jenkins with Chef</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-puppet.html">Managing Jenkins with Puppet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/viewing-logs.html">Viewing logs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/authenticating-scripted-clients.html">Authenticating scripted clients</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration.html">Reverse proxy configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-haproxy.html">Reverse proxy - HAProxy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-squid.html">Reverse proxy - Squid</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-iis.html">Reverse proxy - IIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-iptables.html">Reverse proxy - iptables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../scaling/index.html">Scaling Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-scale.html">Architecting for Scale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/hardware-recommendations.html">Hardware Recommendations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-manageability.html">Architecting for Manageability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../troubleshooting/index.html">Troubleshooting Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/diagnosing-errors.html">Diagnosing Errors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/obtaining-a-thread-dump.html">Obtaining a thread dump</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins User Documentation</span>
+    <span class="version">2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../2.2/index.html">2.2</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins User Documentation</a></li>
+    <li><a href="index.html">Pipeline</a></li>
+    <li><a href="development.html">Pipeline Development Tools</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../2.401.3/pipeline/development.html">2.401.3</a>
+    <a class="version" href="../../2.2/pipeline/development.html">2.2</a>
+    <a class="version is-current" href="development.html">2.1</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/2.401.2/docs/user-docs/modules/pipeline/pages/development.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Pipeline Development Tools</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins Pipeline includes
+<a href="getting-started.html#built-in-documentation" class="xref page">built-in documentation</a> and the
+<a href="getting-started.html#snippet-generator" class="xref page">Snippet Generator</a> which are key resources
+when developing Pipelines. They provide detailed help and information that is customized
+to the currently installed version of Jenkins and related plugins.
+In this section, we&#8217;ll discuss other tools and resources
+that may help with development of Jenkins Pipelines.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="linter"><a class="anchor" href="#linter"></a>Command-line Pipeline Linter</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins can validate, or
+"<a href="https://en.wikipedia.org/wiki/Lint_(software)">lint</a>",
+a Declarative Pipeline from the command line before actually running it.
+This can be done using a Jenkins CLI command or by making an
+HTTP POST
+request with appropriate parameters.
+We recommended using the
+<a href="#../managing/cli.adoc#ssh" class="xref unresolved">SSH interface</a>
+to run the linter. See the <a href="#../managing/cli.adoc" class="xref unresolved">Jenkins CLI documentation</a> for details on how to properly configure
+Jenkins for secure command-line access.</p>
+</div>
+<div class="listingblock">
+<div class="title">Linting via the CLI with SSH</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># ssh (Jenkins CLI)
+# JENKINS_PORT=[sshd port on controller]
+# JENKINS_HOST=[Jenkins controller hostname]
+ssh -p $JENKINS_PORT $JENKINS_HOST declarative-linter &lt; Jenkinsfile</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Linting via HTTP POST using <code>curl</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># curl (REST API)
+# Assuming "anonymous read access" has been enabled on your Jenkins instance.
+# JENKINS_URL=[root URL of Jenkins controller]
+# JENKINS_CRUMB is needed if your Jenkins controller has CRSF protection enabled as it should
+JENKINS_CRUMB=`curl "$JENKINS_URL/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,\":\",//crumb)"`
+curl -X POST -H $JENKINS_CRUMB -F "jenkinsfile=&lt;Jenkinsfile" $JENKINS_URL/pipeline-model-converter/validate</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
+<div class="paragraph">
+<p>Below are two examples of the Pipeline Linter in action.
+This first example shows the output of the linter when it is passed
+an invalid <code>Jenkinsfile</code>, one that is missing part of the <code>agent</code> declaration.</p>
+</div>
+<div class="listingblock">
+<div class="title">Jenkinsfile</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+  agent
+  stages {
+    stage ('Initialize') {
+      steps {
+        echo 'Placeholder.'
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Linter output for invalid Jenkinsfile</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash"># pass a Jenkinsfile that does not contain an "agent" section
+ssh -p 8675 localhost declarative-linter &lt; ./Jenkinsfile
+Errors encountered validating Jenkinsfile:
+WorkflowScript: 2: Not a valid section definition: "agent". Some extra configuration is required. @ line 2, column 3.
+     agent
+     ^
+
+WorkflowScript: 1: Missing required section "agent" @ line 1, column 1.
+   pipeline &amp;#125;
+   ^</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this second example, the <code>Jenkinsfile</code> has been updated to include the
+missing <code>any</code> on <code>agent</code>.  The linter now reports that the Pipeline is valid.</p>
+</div>
+<div class="listingblock">
+<div class="title">Jenkinsfile</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
+  agent any
+  stages {
+    stage ('Initialize') {
+      steps {
+        echo 'Placeholder.'
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Linter output for valid Jenkinsfile</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">ssh -p 8675 localhost declarative-linter &lt; ./Jenkinsfile
+Jenkinsfile successfully validated.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_blue_ocean_editor"><a class="anchor" href="#_blue_ocean_editor"></a>Blue Ocean Editor</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="#../blueocean/pipeline-editor.adoc" class="xref unresolved">Blue Ocean Pipeline Editor</a> provides a <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a> way to create Declarative Pipelines.
+The editor offers a structural view of all the stages, parallel branches, and steps in a Pipeline.
+The editor validates Pipeline changes as they are made, eliminating many errors before they are even committed.
+Behind the scenes it still generates Declarative Pipeline code.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_there_should_be_a_partial_here"><a class="anchor" href="#_there_should_be_a_partial_here"></a>There should be a partial here</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Unresolved include directive in modules/pipeline/pages/development.adoc - include::./blueocean/_blue-ocean-status.adoc[]</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="replay"><a class="anchor" href="#replay"></a>"Replay" Pipeline Runs with Modifications</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Typically a Pipeline will be defined inside of the classic Jenkins web UI,
+or by committing to a <code>Jenkinsfile</code> in source control. Unfortunately,
+neither approach is ideal for rapid iteration, or prototyping, of a Pipeline.
+The "Replay" feature allows for quick modifications and execution of an existing
+Pipeline without changing the Pipeline configuration or creating a new commit.</p>
+</div>
+<div class="sect2">
+<h3 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h3>
+<div class="paragraph">
+<p>To use the "Replay" feature:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select a previously completed run in the build history.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/replay-previous-run.png" alt="Previous Pipeline Run">
+</div>
+</div>
+</li>
+<li>
+<p>Click "Replay" in the left menu</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/replay-left-bar.png" alt="Replay Left-menu Button">
+</div>
+</div>
+</li>
+<li>
+<p>Make modifications and click "Run". In this example, we changed "ruby-2.3" to "ruby-2.4".</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/replay-modified.png" alt="Replay Left-menu Button">
+</div>
+</div>
+</li>
+<li>
+<p>Check the results of changes</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Once you are satisfied with the changes,
+you can use Replay to view them again, copy them back to your Pipeline job
+or <code>Jenkinsfile</code>, and then commit them using your usual engineering processes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_features"><a class="anchor" href="#_features"></a>Features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Can be called multiple times on the same run</strong> -
+allows for easy parallel testing of different changes.</p>
+</li>
+<li>
+<p><strong>Can also be called on Pipeline runs that are still in-progress</strong> -
+As long as a Pipeline contained syntactically correct Groovy and was able to start,
+it can be Replayed.</p>
+</li>
+<li>
+<p><strong>Referenced Shared Library code is also modifiable</strong> - If a Pipeline run references a
+<a href="shared-libraries.html" class="xref page">Shared Library</a>, the code from the shared library will
+also be shown and modifiable as part of the Replay page.</p>
+</li>
+<li>
+<p><strong>Access Control via dedicated "Run / Replay" permission</strong> -
+implied by "Job / Configure". If Pipeline is not configurable (e.g. Branch Pipeline of a Multibranch) or "Job / Configure" is not granted, users still can experiment with Pipeline Definition via Replay</p>
+</li>
+<li>
+<p><strong>Can be used for Re-run</strong> -
+users lacking "Run / Replay" but who are granted "Job / Build" can still use Replay to run a build again with the same definition.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_limitations"><a class="anchor" href="#_limitations"></a>Limitations</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Pipeline runs with syntax errors cannot be replayed</strong> -
+meaning their code cannot be viewed and any changes made in them cannot be retrieved.
+When using Replay for more significant modifications, save your changes
+to a file or editor outside of Jenkins before running them.
+See <a href="https://issues.jenkins.io/browse/JENKINS-37589">JENKINS-37589</a></p>
+</li>
+<li>
+<p><strong>Replayed Pipeline behavior may differ from runs started by other methods</strong> -
+For Pipelines that are not part of a Multi-branch Pipeline,
+the commit information may differ for the original run and the Replayed run.
+See <a href="https://issues.jenkins.io/browse/JENKINS-36453">JENKINS-36453</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ide_integrations"><a class="anchor" href="#_ide_integrations"></a>IDE Integrations</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_eclipse_jenkins_editor"><a class="anchor" href="#_eclipse_jenkins_editor"></a>Eclipse Jenkins Editor</h3>
+<div class="paragraph">
+<p>The <code>Jenkins Editor</code> Eclipse plugin can be found on
+<a href="https://marketplace.eclipse.org/content/jenkins-editor">Eclipse Marketplace</a>.
+This special text editor provides some features for defining pipelines e.g:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Validate pipeline scripts by <a href="#linter">Jenkins Linter Validation</a>. Failures are shown as eclipse markers</p>
+</li>
+<li>
+<p>An Outline with dedicated icons (for declarative Jenkins pipelines )</p>
+</li>
+<li>
+<p>Syntax / keyword highlighting</p>
+</li>
+<li>
+<p>Groovy validation</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The Jenkins Editor Plugin is a third-party tool that is not supported
+by the Jenkins Project.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_visualstudio_code_jenkins_pipeline_linter_connector"><a class="anchor" href="#_visualstudio_code_jenkins_pipeline_linter_connector"></a>VisualStudio Code Jenkins Pipeline Linter Connector</h3>
+<div class="paragraph">
+<p>The <code>Jenkins Pipeline Linter Connector</code> extension for
+<a href="https://code.visualstudio.com/">VisualStudio Code</a>
+takes the file that you have currently opened, pushes it to your Jenkins Server and displays the validation result in VS Code.</p>
+</div>
+<div class="paragraph">
+<p>​You can find the extension from within the VS Code extension browser or at the following url: <a href="https://marketplace.visualstudio.com/items?itemName=janjoerke.jenkins-pipeline-linter-connector" class="bare">https://marketplace.visualstudio.com/items?itemName=janjoerke.jenkins-pipeline-linter-connector</a></p>
+</div>
+<div class="paragraph">
+<p>The extension adds four settings entries to VS Code which select the Jenkins server you want to use for validation.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>jenkins.pipeline.linter.connector.url</code> is the endpoint at which your Jenkins Server expects the POST request, containing your Jenkinsfile which you want to validate. Typically this points to <em><a href="http://&lt;your_jenkins_server:port&gt;/pipeline-model-converter/validate" class="bare">http://&lt;your_jenkins_server:port&gt;/pipeline-model-converter/validate</a></em>.</p>
+</li>
+<li>
+<p><code>jenkins.pipeline.linter.connector.user</code> allows you to specify your Jenkins username.</p>
+</li>
+<li>
+<p><code>jenkins.pipeline.linter.connector.pass</code> allows you to specify your Jenkins password.</p>
+</li>
+<li>
+<p><code>jenkins.pipeline.linter.connector.crumbUrl</code> has to be specified if your Jenkins Server has CRSF protection enabled. Typically this points to <em><a href="http://&lt;your_jenkins_server:port&gt;/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,%22:%22,//crumb" class="bare">http://&lt;your_jenkins_server:port&gt;/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,%22:%22,//crumb</a>)</em>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_neovim_nvim_jenkinsfile_linter_plugin"><a class="anchor" href="#_neovim_nvim_jenkinsfile_linter_plugin"></a>Neovim nvim-jenkinsfile-linter plugin</h3>
+<div class="paragraph">
+<p>The <a href="https://github.com/ckipp01/nvim-jenkinsfile-linter">nvim-jenkinsfile-linter</a>
+Neovim plugin allows you to validate a Jenkinsfile by using the Pipeline Linter API
+of your Jenkins instance and report any existing diagnostics in your editor.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_atom_linter_jenkins_package"><a class="anchor" href="#_atom_linter_jenkins_package"></a>Atom linter-jenkins package</h3>
+<div class="paragraph">
+<p>The <a href="https://atom.io/packages/linter-jenkins">linter-jenkins</a> Atom package allows
+you to validate a Jenkins file by using the Pipeline Linter API of a running Jenkins.
+You can install it directly from the Atom package manager. It needs also to install
+<a href="https://atom.io/packages/language-jenkinsfile">Jenkinsfile language support in Atom</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sublime_text_jenkinsfile_package"><a class="anchor" href="#_sublime_text_jenkinsfile_package"></a>Sublime Text Jenkinsfile package</h3>
+<div class="paragraph">
+<p>The <a href="https://github.com/june07/sublime-Jenkinsfile">Jenkinsfile</a> Sublime Text package allows
+you to validate a Jenkinsfile by using the Pipeline Linter API of a running Jenkins instance over
+a secure channel (SSH).  You can install it directly from the Sublime Text package manager.</p>
+</div>
+<div class="paragraph">
+<p>​You can find the package from within the Sublime Text interface via the Package Control package, at GitHub, or packagecontrol.io:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/june07/sublime-Jenkinsfile">https://github.com/june07/sublime-Jenkinsfile</a></p>
+</li>
+<li>
+<p><a href="https://packagecontrol.io/packages/Jenkinsfile">https://packagecontrol.io/packages/Jenkinsfile</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="unit-test"><a class="anchor" href="#unit-test"></a>Pipeline Unit Testing Framework</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="https://github.com/jenkinsci/JenkinsPipelineUnit">Pipeline Unit Testing Framework</a>
+allows you to
+<a href="https://en.wikipedia.org/wiki/Unit_testing">unit test</a>
+Pipelines and <a href="shared-libraries.html" class="xref page">Shared Libraries</a>
+before running them in full. It provides a mock execution environment where real
+Pipeline steps are replaced with mock objects that you can use to check for expected
+behavior. New and rough around the edges, but promising.
+The <a href="https://github.com/jenkinsci/JenkinsPipelineUnit/blob/master/README.md">README</a>
+for that project contains examples and usage instructions.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="shared-libraries.html">Extending with Shared Libraries</a></span>
+  <span class="next"><a href="syntax.html">Pipeline Syntax</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

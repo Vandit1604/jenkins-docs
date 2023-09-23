@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Platform :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/sigs/platform/index.html">
+    <link rel="prev" href="../advocacy-and-outreach/outreach-programs/outreach-programs-history.html">
+    <link rel="next" href="../ux/index.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="sigs" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Special Interest Groups</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../gsoc/index.html">Google Summer of Code</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../advocacy-and-outreach/index.html">Advocacy and Outreach</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../advocacy-and-outreach/outreach-programs/index.html">Outreach programs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../advocacy-and-outreach/outreach-programs/outreach-programs-history.html">Outreach Past Programs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">Platform</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../ux/index.html">User Experience</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../docs/index.html">Documentation</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Special Interest Groups</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins Special Interest Groups</a></li>
+    <li><a href="index.html">Platform</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/sigs/modules/platform/pages/index.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Platform</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Connect</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://app.gitter.im/#/room/#jenkinsci_platform-sig:gitter.im">Gitter</a></p>
+</li>
+<li>
+<p><a href="https://www.jenkins.io/sigs/platform/#meetings">Meetings</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="openblock float-group">
+<div class="content">
+<div class="paragraph">
+<p><span class="image right unresolved float-gap"><img src="images:ROOT:logos:formal/256.png" alt="Logo" width="192"></span>
+This special interest group offers a venue for all kinds of platform support discussions:
+Java, Operating Systems, Architectures, Docker, Packaging, Web Containers, etc. The SIG works on defining platform support policies, coordinating platform support efforts with contributors and external communities, and reviewing proposals in the area.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="../index.html" class="xref page">(Back to List of Jenkins Special Interest Groups )</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_members"><a class="anchor" href="#_members"></a>Members</h2>
+<div class="sectionbody">
+<div class="paragraph avatar">
+<p><strong>Leads</strong>:
+<span class="image"><img src="../../images/_images/avatars/oleg_nenashev.png" alt="oleg nenashev" width="30" height="30"></span> Oleg Nenashev
+<span class="image"><img src="../../images/_images/avatars/markewaite.jpg" alt="markewaite" width="30" height="30"></span> Mark Waite
+<span class="image"><img src="../../images/_images/avatars/batmat.jpg" alt="batmat" width="30" height="30"></span> Baptiste Mathus</p>
+</div>
+<div class="paragraph avatar">
+<p><strong>Participants</strong>:
+<span class="image"><img src="../../images/_images/avatars/alecharp.jpg" alt="alecharp" width="30" height="30"></span> Adrien Lecharpentier
+<span class="image"><img src="../../images/_images/avatars/slide_o_mix.jpg" alt="slide o mix" width="30" height="30"></span> Alex Earl
+<span class="image"><img src="../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> David Currie
+<span class="image"><img src="../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Devin Nusbaum
+<span class="image"><img src="../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Durgadas Kamath
+<span class="image"><img src="../../images/_images/avatars/lnewman.jpeg" alt="lnewman" width="30" height="30"></span> Liam Newman\
+<span class="image"><img src="../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Nicolas De Loof
+<span class="image"><img src="../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Ramon Leon
+<span class="image"><img src="../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Robert Sandell
+<span class="image"><img src="../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Sam Van Oort
+<span class="image"><img src="../../images/_images/avatars/tracymiranda.jpg" alt="tracymiranda" width="30" height="30"></span> Tracy Miranda</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_description"><a class="anchor" href="#_description"></a>Description</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The special interest group offers a venue for all kinds of platform support discussions:
+Java, Operating Systems, Architectures, Docker, Packaging, Web Containers, etc.</p>
+</div>
+<div class="paragraph">
+<p>The group focuses on technologies used in Jenkins:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Java Virtual Machines: versions, compatibility and optimizations</p>
+</li>
+<li>
+<p>Operating Systems: native components, packaging</p>
+</li>
+<li>
+<p>Architectures and platforms</p>
+</li>
+<li>
+<p>Web Containers</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Platform SIG cooperates with other groups like the <a href="../docs/index.html" class="xref page">Documentation SIG</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_topics"><a class="anchor" href="#_topics"></a>Topics</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Defining platform support policies (e.g. “defining Windows support policy”)</p>
+</li>
+<li>
+<p>Coordinating effort on new platform support (e.g. <a href="https://github.com/jenkinsci/jep/tree/master/jep/211/README.adoc">Java 11 Support in Jenkins</a>)</p>
+</li>
+<li>
+<p>Working with external communities on better platform support and packaging
+(e.g. ARM architecture support, adapting RedHat packaging to best practices, using systemd, etc.)</p>
+</li>
+<li>
+<p>Reviewing JEPs submitted in the area</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_projects"><a class="anchor" href="#_projects"></a>Projects</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section lists the key initiatives being handled by the Platform SIG.
+See the <a href="https://docs.google.com/document/d/1bDfUdtjpwoX0HO2PRnfqns_TROBOK8tmP6SgVhubr2Y/edit?usp=sharing">SIG meeting notes</a> for more information about the ongoing projects.
+See the <a href="/project/roadmap">Jenkins Project roadmap</a> for a</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docker_images"><a class="anchor" href="#_docker_images"></a>Docker images</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins project ships official controller and agent images,
+and we would like to offer Wide support of platforms and architectures there.
+Scope of interest:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enabling official images to run on Arm, IBM s390x, and other platforms</p>
+</li>
+<li>
+<p>Official controller and agent images for Windows</p>
+</li>
+<li>
+<p>Support Multi-architecture Docker images</p>
+</li>
+<li>
+<p>Enabling continuous delivery for Jenkins packaging</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Experimental DockerHub organization and deployments from ci.jenkins.io ( <a href="https://github.com/jenkinsci/jep/tree/master/jep/217/README.adoc" class="bare">https://github.com/jenkinsci/jep/tree/master/jep/217/README.adoc</a> )</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plugin_management"><a class="anchor" href="#_plugin_management"></a>Plugin management</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We are interested to improve plugin management experience in Jenkins.
+To do that, we work on new tools for Jenkins users and maintainers.
+Scope of interest:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../../user-docs/2.401.3/managing/plugins.html" class="xref page">Plugin management in Jenkins Web UI</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/docker#preinstalling-plugins">Plugin management in Jenkins Docker images</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/plugin-installation-manager-tool">Plugin Installation Manager CLI Tool</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/custom-war-packager">Custom Jenkins WAR/Docker packager</a></p>
+</li>
+<li>
+<p><a href="../../projects/gsoc/2020/project-ideas/jenkins-distribution-customize-service.html" class="xref page">Custom Jenkins distribution build service</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/bom">Bill of Materials for Jenkins plugins</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_java_support"><a class="anchor" href="#_java_support"></a>Java support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In our SIG we are interested to offer a wide range of supported JVMs.
+See the current list of supported versions <a href="../../user-docs/2.401.3/administration/requirements/java.html" class="xref page">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>Scope of interest:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Maintaining Java 11 support in Jenkins and driving its adoption</p>
+</li>
+<li>
+<p>Migration to <a href="https://adoptium.net/">Eclipse Temurin</a> in Docker images</p>
+</li>
+<li>
+<p>Support for future mainstream JVM versions (Java 17)</p>
+</li>
+<li>
+<p>Support for perspective virtual machines like <a href="https://www.graalvm.org/">GraalVM</a> or <a href="https://quarkus.io/">Quarkus</a>, including native executable packaging</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_windows_support"><a class="anchor" href="#_windows_support"></a>Windows support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Many Jenkins users run controller or agents on Windows.
+We are interested to support modern Windows platforms and to offer official distributions for the platform.</p>
+</div>
+<div class="paragraph">
+<p>Scope of interest:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Native Windows installers (MSI), including the ongoing <a href="/blog/2019/02/01/windows-installers/">rework of Windows installers</a></p>
+</li>
+<li>
+<p>Official Docker images for Windows controllers and agents</p>
+</li>
+<li>
+<p>Installation of controllers and agents as Windows services</p>
+</li>
+<li>
+<p>Official <a href="https://chocolatey.org/packages/jenkins">Jenkins Chocolatey package</a></p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/browse/JENKINS-61865">New Windows support policy</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_meetings"><a class="anchor" href="#_meetings"></a>Meetings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We have regular meetings on Tuesday every two weeks, at <strong>17:00 UTC</strong>.
+See the <a href="/event-calendar/">Jenkins Event Calendar</a> for the schedule.
+At these meetings we discuss projects, share presentations, and demonstrate new capabilities.
+Meetings are conducted and recorded via Zoom and archived to the <a href="https://www.youtube.com/user/jenkinsci">Jenkins YouTube channel</a> in the <a href="https://www.youtube.com/playlist?list=PLN7ajX_VdyaO3VROIfVsobTciEkLnVtSM">Platform SIG play list</a>.
+Participant links are posted in the <a href="https://app.gitter.im/#/room/#jenkinsci_platform-sig:gitter.im">SIG Gitter Chat</a> 10 minutes before the meeting starts.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_meeting_agendas"><a class="anchor" href="#_meeting_agendas"></a>Meeting Agendas</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Meeting agendas and meeting notes for the SIG are posted in <a href="https://docs.google.com/document/d/1bDfUdtjpwoX0HO2PRnfqns_TROBOK8tmP6SgVhubr2Y">this Google Document</a>.
+Anyone is welcome to add a topic for an upcoming meeting by suggesting a change in the <a href="https://docs.google.com/document/d/1bDfUdtjpwoX0HO2PRnfqns_TROBOK8tmP6SgVhubr2Y">agenda</a>.</p>
+</div>
+<iframe src="https://docs.google.com/document/d/1bDfUdtjpwoX0HO2PRnfqns_TROBOK8tmP6SgVhubr2Y?embedded=true" width="100%" height="600px"></iframe>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="../advocacy-and-outreach/outreach-programs/outreach-programs-history.html">Outreach Past Programs</a></span>
+  <span class="next"><a href="../ux/index.html">User Experience</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

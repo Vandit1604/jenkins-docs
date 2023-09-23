@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hacktoberfest :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/events/hacktoberfest/index.html">
+    <link rel="prev" href="../devops-world/index.html">
+    <link rel="next" href="faq.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="events" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Events</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../online-meetup/index.html">Jenkins Online Meetup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../online-hackfest/index.html">Jenkins UI/UX Hackfest</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../online-hackfest/faq.html">UI/UX Hackfest. Frequently Asked Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../contributor-summit/index.html">Jenkins Contributor Summit</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../contributor-summit/archive/2021-10.html">Jenkins Contributor Summit 2021</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../contributor-summit/archive/2021-06.html">Jenkins Contributor Summit - June 2021</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../devops-world/index.html">DevOps World 2022</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Hacktoberfest</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ - Hacktoberfest in Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="event-kit.html">Hacktoberfest. Jenkins Event Kit</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Events</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins Events</a></li>
+    <li><a href="index.html">Hacktoberfest</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/events/modules/hacktoberfest/pages/index.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Hacktoberfest</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image center"><img src="../../images/_images/hacktoberfest/hacktoberfest_2022.svg" alt="Hacktoberfest"></span></p>
+</div>
+<div class="paragraph">
+<p><a href="https://hacktoberfest.com/">Hacktoberfest</a>
+is a month long celebration of open source software.
+It happens every year in October.
+During this event everyone can support open-source by contributing changes, and then earn a limited edition swag.</p>
+</div>
+<div class="paragraph">
+<p>We invite everyone to participate and to contribute to the Jenkins project,
+regardless of their background and Jenkins experience.
+There are many ways to
+<a href="../../community/index.html" class="xref page">contribute</a> to Jenkins during Hacktoberfest.
+You can work on code or documentation,
+contribute to <a href="https://wiki.jenkins.io/display/JENKINS/Internationalization">localization</a>,
+create new <a href="/artwork">artwork</a>, etc.
+You can also share your experiences with Jenkins by <a href="https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc#adding-a-blog-post">creating a new blogpost</a>.
+Generally, any pull requests in GitHub would qualify.
+See the <a href="../../community/index.html" class="xref page">Contribute and Participate</a> page for more information about how to contribute.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_quick_start"><a class="anchor" href="#_quick_start"></a>Quick start</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Sign-up to Hacktoberfest on <a href="https://hacktoberfest.com">the event website</a>.</p>
+</li>
+<li>
+<p>Join <a href="https://app.gitter.im/#/room/#jenkinsci_hacktoberfest:gitter.im">our Gitter channel</a>.</p>
+</li>
+<li>
+<p>Everything is set, just start creating pull-requests!</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If a repository has no <code>hacktoberfest</code> topic set, contact the maintainers to see if they are willing to accecpt a contribution.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_where_to_contribute"><a class="anchor" href="#_where_to_contribute"></a>Where to contribute?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Jenkins project is spread across several organizations on GitHub (<code><a href="https://github.com/jenkinsci/">jenkinsci</a></code>, <code><a href="https://github.com/jenkins-infra/">jenkins-infra</a></code>, <code><a href="https://github.com/jenkins-zh/">jenkins-zh</a></code>).
+You are welcome to contribute to <strong>any</strong> repository in <strong>any</strong> of those organizations, or any other Jenkins-related repository on GitHub.
+Repositories may have different contribution guidelines, review and merge policies.
+If you adopt Jenkins in your open-source projects (e.g. Jenkins Pipeline or Configuration as Code),
+it counts as well!
+Note that not all pull requests will automatically count towards Hacktoberfest.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/search?q=org%3Ajenkinsci+org%3Ajenkins-infra+org%3Ajenkins-zh+topic%3Ahacktoberfest">List of repositories marked for Hacktoberfest</a> -
+you can just submit pull requests, no extra steps needed.</p>
+</li>
+<li>
+<p>for other repositories, we will need to get the repo marked for Hacktoberfest so that your pull request counts towards the goal.
+Please follow <a href="/events/hacktoberfest/faq/#how-do-i-mark-my-pull-requests">FAQ: Marking Pull requests</a>.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_issue_queries"><a class="anchor" href="#_issue_queries"></a>Issue queries</h3>
+<div class="paragraph">
+<p>We have marked some issues in Jenkins Jira and GitHub issues which can be handled by contributors during Hacktoberfest:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.jenkins.io/issues/?jql=labels%20%3D%20hacktoberfest%20and%20status%20in%20(Open%2C%20%22To%20Do%22%2C%20Reopened)">Jenkins Jira issues suggested for Hacktoberfest</a></p>
+</li>
+<li>
+<p><a href="https://github.com/search?q=org%3Ajenkinsci+org%3Ajenkins-infra+org%3Ajenkins-zh+is%3Aissue+is%3Aopen+label%3Ahacktoberfest">GitHub issues suggested for Hacktoberfest</a></p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/secure/Dashboard.jspa?selectPageId=19342">Newbie-friendly issue dashboard in Jenkins Jira</a></p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/issues/?jql=labels%20%3D%20newbie-friendly%20and%20status%20in%20(Open%2C%20%22To%20Do%22%2C%20Reopened)">Newbie-friendly issues in Jenkins Jira</a></p>
+</li>
+<li>
+<p><a href="https://github.com/search?q=org%3Ajenkinsci+org%3Ajenkins-infra+org%3Ajenkins-zh+is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">Good first issues on GitHub</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_featured_projects"><a class="anchor" href="#_featured_projects"></a>Featured projects</h3>
+<div class="paragraph">
+<p>If you are a newcomer contributor, we have prepared a list of projects/components where you will get a warm welcome.
+All these projects have newbie-friendly tasks, contributing guidelines, and active maintainers
+who have committed to assist contributors and to provide quick turnaround in pull requests.</p>
+</div>
+<table class="tableblock frame-ends grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 15%;">
+<col style="width: 55%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Project/component</th>
+<th class="tableblock halign-left valign-top">Keywords</th>
+<th class="tableblock halign-left valign-top">Ideas and links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="/">Jenkins Website</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Documentation,<br>
+  Asciidoc,<br>
+  CSS,<br>
+  Ruby</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extend and improve Jenkins documentation, help to improve the website&#8217;s look&amp;feel, create <a href="/blog/">a new blogpost</a>, a technology-specific solution page or a tutorial.</p>
+<p class="tableblock">  <a href="https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc">Contributing guidelines</a>,
+  <a href="https://github.com/jenkins-infra/jenkins.io/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">Good first issues</a></p>
+<p class="tableblock">  Additionally, we invite new and experienced Jenkins developers to help improve the <a href="../../dev-docs/index.html" class="xref page">developer documentation</a>.
+  If you want to learn a Jenkins development topic and share your new knowledge with others, or want to help someone else learn, you&#8217;re welcome to contribute here.</p>
+<p class="tableblock">  <a href="https://github.com/jenkins-infra/jenkins.io/projects/3">Board</a>, <a href="https://app.gitter.im/#/room/#jenkins/docs:matrix.org">chat</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkinsci/jenkins">Jenkins Core</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java,<br>
+Jelly,<br>
+Groovy,<br>
+Javascript,<br>
+HTML,<br>
+CSS,<br>
+SCSS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">There is always something to improve in Jenkins core itself.
+  You can address various issues, improve the codebase,
+  and add new features there.</p>
+<p class="tableblock">  <a href="https://github.com/jenkinsci/jenkins/blob/master/CONTRIBUTING.md">Contributing</a>,
+  <a href="https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20in%20(newbie-friendly)%20AND%20component%20in%20(core)">newcomer-friendly issues</a>, <a href="https://app.gitter.im/#/room/#jenkinsci_jenkins:gitter.im">chat</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://plugins.jenkins.io/">Jenkins Plugin Site</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Javascript, Java, React, Gatsby</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The plugin site is used to find information about 1800+ plugins available in Jenkins.
+   It provides plugin documentation, changelogs, open issues, and other data needed for Jenkins admins and end users.
+   We are interested to keep improving the plugin site&#8217;s UI/UX,
+   provide more search options, and to provide deeper integration with GitHub and other services.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Repositories: <a href="https://github.com/jenkins-infra/plugin-site">Plugin site</a>, <a href="https://github.com/jenkins-infra/plugin-site-api/">Plugin site API</a></p>
+</li>
+<li>
+<p>Issues: <a href="https://github.com/jenkins-infra/plugin-site/issues">Plugin Site</a>, <a href="https://github.com/jenkins-infra/plugin-site-api/issues">Plugin Site API</a>, <a href="https://issues.jenkins.io/issues/?jql=project%20%3D%20WEBSITE%20AND%20component%20%3D%20plugin-site%20AND%20status%20%3D%20%22To%20Do%22%20%20">Jira tickets</a></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkinsci/jenkinsfile-runner">Jenkinsfile Runner</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java, Docker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jenkinsfile Runner is a portable Jenkins Pipeline execution engine, currently in preview.
+  It can run as a standalone CLI tool or as a Docker container.
+  We invite Hacktoberfest participants to evaluate the tool,
+  work on adding new features and demos,</p>
+<p class="tableblock">  <a href="https://github.com/jenkinsci/jenkinsfile-runner/blob/master/CONTRIBUTING.adoc">Contributing</a>,
+  <a href="https://github.com/jenkinsci/jenkinsfile-runner/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">Good first issues</a>,
+  <a href="https://github.com/jenkinsci/jenkinsfile-runner/issues">All open issues</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkinsci/prometheus-plugin">Prometheus Plugin</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java, Prometheus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jenkins Prometheus Plugin expose an endpoint (default /prometheus) with metrics where a Prometheus Server can scrape.
+  We invite Hacktoberfest participants to evaluate the plugin,
+  work on adding new features, and documentation.</p>
+<p class="tableblock">  <a href="https://github.com/jenkinsci/prometheus-plugin/blob/master/.github/CONTRIBUTING.md">Contributing</a>,
+  <a href="https://github.com/jenkinsci/prometheus-plugin/issues?q=is%3Aissue+is%3Aopen+label%3A%22Good+First+Issue%22">Good first issues</a>,
+  <a href="https://github.com/jenkinsci/prometheus-plugin/issues">All open issues</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkinsci/tekton-client-plugin">Tekton Client Plugin</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java, Tekton, Kubernetes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Tekton Client Plugin allows Jenkins users to trigger the creation and deletion of Tekton Pipelines and other resources.
+  We invite Hacktoberfest participants to evaluate the plugin,
+  work on adding new features, and documentation.</p>
+<p class="tableblock">  <a href="https://github.com/jenkinsci/tekton-client-plugin/blob/master/CONTRIBUTING.md">Contributing</a>,
+  <a href="https://github.com/jenkinsci/tekton-client-plugin/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">Good first issues</a>,
+  <a href="https://github.com/jenkinsci/tekton-client-plugin/issues">All open issues</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="/artwork">Jenkins Artwork</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Design</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create new images and logos for <a href="../../projects/jam/index.html" class="xref page">Jenkins area meetups</a>,
+  <a href="../../projects/index.html" class="xref page">subprojects</a>, and plugins.
+  You can also contribute new graphics to plugins.</p>
+<p class="tableblock">  <a href="https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc#adding-a-logo">Adding a logo</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/jenkinsci/helm-charts">Jenkins Helm Chart</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kubernetes, Helm, Documentation</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>stable/jenkins</code> helm chart was recently been moved to <a href="https://github.com/jenkinsci/helm-charts">jenkinsci/helm-charts</a>.
+  The goal is to release a 3.0.0 version of the chart, which removes old or deprecated configuration options, simplifies the Chart and makes it easier to use.
+  Here are some ideas:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Remove offensive terms</p>
+</li>
+<li>
+<p>Use WebSockets to connect agents</p>
+</li>
+<li>
+<p>Improve it&#8217;s documentation</p>
+</li>
+<li>
+<p>Use <a href="https://github.com/jenkinsci/plugin-installation-manager-tool">Plugin Installation Manager Tool</a> to download plugins</p>
+</li>
+<li>
+<p>Remove helm.sh/chart labels or introduce an option to remove them to have fewer changes when using GitOps</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/jenkinsci/helm-charts/milestone/1">v3.0.0 release</a>,
+<a href="https://github.com/jenkinsci/helm-charts/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">good first issues</a>,
+<a href="https://github.com/jenkinsci/helm-charts/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation">documentation tasks</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="../../sigs/docs/index.html#plugin-documentation-on-github" class="xref page">Plugin docs on GitHub</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Markdown,<br>
+  Asciidoc</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>We are moving plugin documentation from Jenkins Wiki to GitHub,
+  and it is a great opportunity to create small pull requests that benefit all Jenkins users.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Migrate plugin documentation as documented in these <a href="/blog/2019/10/21/plugin-docs-on-github/">guidelines</a>).
+Plugins to convert can be found in the <a href="https://reports.jenkins.io/jenkins-plugin-migration.html">plugin migration progress report</a>.</p>
+</li>
+<li>
+<p>Move or improve existing documentation based on <a href="https://github.com/search?q=org%3Ajenkinsci+is%3Aissue+is%3Aopen+label%3Adocumentation">GitHub issues</a></p>
+</li>
+<li>
+<p>Review and renew the existing plugin documentation.  For example, cleanup the agent terminology usage as suggested in the <a href="https://issues.jenkins.io/browse/JENKINS-42816" class="bare">https://issues.jenkins.io/browse/JENKINS-42816</a> EPIC</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.jenkins.io/issues/?jql=labels%20in%20(docs-sig%2C%20documentation)%20AND%20labels%20%3D%20newbie-friendly%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)">Jira newcomer-friendly issues</a>,
+<a href="https://github.com/search?q=org%3Ajenkinsci+is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+label%3Adocumentation&amp;type=Issues">GitHub good first issues</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">French translation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Git, French, Jenkins developer tools</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Improve coverage of French localization of the Jenkins web interface, including the Jenkins core and plugins.
+The same is possible for other languages, let us know if you are interested!</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Some proposal are listed in <a href="https://issues.jenkins.io/browse/JENKINS-66658">a dedicated Epic</a>.</p>
+</li>
+<li>
+<p>A topic is opened in the <a href="https://community.jenkins.io/t/topic-traduction-fr-pour-hacktoberfest-2021-sentez-vous-libre-de-me-rejoindre/405">French category of discourse</a>.</p>
+</li>
+<li>
+<p>Use and improve if needed <a href="/doc/book/using/using-local-language/">the language selection documentation</a></p>
+</li>
+<li>
+<p>Use and improve if needed <a href="../../dev-docs/internationalization/index.html" class="xref page">the internationalization documentation</a></p>
+</li>
+<li>
+<p>If you want to participate to other language than French you are welcome ! However it would be great if you can find some other person speaking the target language for reviews.</p>
+</li>
+<li>
+<p>Add terms for controller/agent/.. (and previous naming) in a speaking language you are mastering in tables <a href="https://github.com/jenkinsci/jep/blob/master/jep/16/README.adoc#translations" class="bare">https://github.com/jenkinsci/jep/blob/master/jep/16/README.adoc#translations</a></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="../../projects/infrastructure/index.html#pick-up-a-task" class="xref page">Jenkins Infrastructure</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Asciidoctor, Docker, Github Actions, Jenkins Pipeline, Kubernetes, Markdown, Packer, Puppet, Python, Shell, YAML</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>An infrastructure is constantly moving forward: there are always dependencies to update,
+security issues to fix, new feature to release, tools to improve, etc.</p>
+</div>
+<div class="paragraph">
+<p>Any kind of contribution is welcome: from documentation to real life code.
+Either you are a beginner in this area, or a veteran of system administration,
+you are welcome to pick an issue and contribute!</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You might want to read the Jenkins Infrastructure&#8217;s <a href="../../projects/infrastructure/index.html#contributing" class="xref page">Contributing Guide</a></p>
+</li>
+<li>
+<p>Ready for action? Look at the good first issues we have on the infrastructure help desk at <a href="https://github.com/jenkins-infra/helpdesk/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">good first issues</a></p>
+</li>
+<li>
+<p>You can also browse the <a href="https://github.com/jenkins-infra"><code>https://github.com/jenkins-infra</code></a> GitHub organization and check for repositories and code.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content Security Policy (CSP)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JavaScript, Jelly, Security</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>During the last years, the Jenkins Security team has seen a lot of <a href="https://owasp.org/www-community/attacks/xss/">Cross-Site Scripting (XSS)</a> vulnerabilities, inside Jenkins core and also for a lot of plugins.
+They have put in place different kinds of mechanisms to enhance the protection of some of the common dangerous code locations.
+But this kind of approach does not scale enough to cover the wide ecosystem and the numerous different ways of introducing (accidentally) XSS vulnerabilities.</p>
+</div>
+<div class="paragraph">
+<p>The objective of this topic is to ease the introduction of <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">CSP</a> in Jenkins by un-inlining the JavaScript resources.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Skill requirement: a bit of JavaScript. The Jelly part is straightforward. No need to have security background.</p>
+</li>
+<li>
+<p>Time requirement: between 30 minutes and 4 hours.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>More details on the approach in <a href="https://docs.google.com/document/d/1hr_Kaf0fVWBACibpHbSYsk4RoqcHD3cBrqXxuTtWKVM">this document</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://issues.jenkins.io/issues/?jql=labels%20%3D%20newbie-friendly%20AND%20%22Epic%20Link%22%20%3D%20JENKINS-60865">Jira newcomer-friendly issues</a></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_experienced_developers"><a class="anchor" href="#_experienced_developers"></a>Experienced developers</h3>
+<div class="paragraph">
+<p>If you are an established developer and want to create something new,
+please don&#8217;t let yourself to be blocked by the suggested topics!
+Feel free to contribute to any area of Jenkins.
+If you see any major functionality missing in Jenkins,
+we invite you to create new plugins.
+See the <a href="../../dev-docs/plugin-tutorial/index.html" class="xref page">Plugin Tutorial</a> and
+<a href="../../dev-docs/publishing/requesting-hosting.html" class="xref page">Hosting Plugins</a> guidelines for more information.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="local-events"><a class="anchor" href="#local-events"></a>Events</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hacktoberfest is a fully online event this year.
+Jenkins specific events for Hacktoberfest will be announced on the <a href="../index.html" class="xref page">events page</a>, in social media (<a href="https://twitter.com/jenkinsci">twitter</a> and <a href="https://www.linkedin.com/company/jenkins-project">LinkedIn</a>), and through the <a href="https://www.meetup.com/Jenkins-online-meetup/">Jenkins Online Meetup page</a>.</p>
+</div>
+<div class="paragraph">
+<p>We are also looking for event organizers and sponsorsS!
+See our <a href="event-kit.html" class="xref page">Event Kit</a> for more information and guidelines.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_faq"><a class="anchor" href="#_faq"></a>FAQ</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See <a href="/events/hacktoberfest/faq">Hacktoberfest in Jenkins FAQ</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resources"><a class="anchor" href="#_resources"></a>Resources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Presentation: Contributing to Jenkins - It Is All About You (<a href="https://docs.google.com/presentation/d/1JHgVzWZAx95IsUAZp8OoyCQGGkrCjzUd7eblwd1Y-hA/edit?usp=sharing">slides</a>)</p>
+</li>
+<li>
+<p><a href="https://youtu.be/nLTfJOZG5kw?t=214">Jenkins in Hacktoberfest 2019</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contact_us"><a class="anchor" href="#_contact_us"></a>Contact us</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Gitter: <a href="https://app.gitter.im/#/room/#jenkinsci_hacktoberfest:gitter.im">jenkinsci/hacktoberfest</a></p>
+</li>
+<li>
+<p>GitHub: <a href="https://github.com/orgs/jenkinsci/teams/hacktoberfest">@jenkinsci/hacktoberfest</a>, <a href="https://github.com/orgs/jenkins-infra/teams/hacktoberfest">@jenkins-infra/hacktoberfest</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_previous_years"><a class="anchor" href="#_previous_years"></a>Previous years</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/blog/2022/11/17/hacktoberfest-recap/">2022</a></p>
+</li>
+<li>
+<p><a href="/blog/2021/10/31/hacktoberfest-results-2021/">2021</a></p>
+</li>
+<li>
+<p><a href="/blog/2021/01/12/new-year-report/#jenkins-in-hacktoberfest-2020">2020</a></p>
+</li>
+<li>
+<p><a href="/blog/2019/10/01/hacktoberfest/">2019</a></p>
+</li>
+<li>
+<p><a href="/blog/2018/10/01/hacktoberfest/">2018</a></p>
+</li>
+<li>
+<p><a href="/blog/2017/10/06/hacktoberfest/">2017</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_discuss"><a class="anchor" href="#_discuss"></a>Discuss</h3>
+<iframe src="https://community.jenkins.io/t/hacktoberfest-2022/3805" title="Discourse Hacktoberfest"></iframe>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="../devops-world/index.html">DevOps World 2022</a></span>
+  <span class="next"><a href="faq.html">FAQ - Hacktoberfest in Jenkins</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Backing-up/Restoring Jenkins :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.401.3/system-administration/backing-up.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="monitoring.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="user-docs" data-version="2.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins User Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/docker.html">Docker</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-credentials.html">Using credentials</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/searchbox.html">Using Search Box</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/referencing-another-project-by-name.html">Referencing another project by name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/aborting-a-build.html">Aborting a build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/fingerprints.html">Fingerprints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-local-language.html">Using local language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/change-time-zone.html">Change time zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/remote-access-api.html">Remote Access API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/executor-starvation.html">Executor Starvation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-agents.html">Using Jenkins agents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/running-pipelines.html">Running a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/development.html">Pipeline Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/syntax.html">Pipeline Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/pipeline-best-practices.html">Pipeline Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/scaling-pipeline.html">Scaling Pipelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/cps-method-mismatches.html">Pipeline CPS Method Mismatches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/dashboard.html">Dashboard</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/activity.html">Activity View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-run-details.html">Pipeline Run Details View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-editor.html">Pipeline Editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../managing/index.html">Managing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-configuration.html">Configuring the System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/casc.html">Configuration as Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/tools.html">Managing Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/about-jenkins.html">About Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-info.html">System Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/cli.html">Jenkins CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-console.html">Script Console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/groovy-hook-scripts.html">Groovy Hook Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/nodes.html">Managing Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-approval.html">In-process Script Approval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/ui-themes.html">Themes for user interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/user-content.html">User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/spawning-processes.html">Spawning Processes From Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Securing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/access-control.html">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-jenkins.html">Securing Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/managing-security.html">Managing Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/controller-isolation.html">Controller Isolation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-builds.html">Securing Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/csrf-protection.html">CSRF Protection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/user-content.html">Rendering User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/build-authorization.html">Access Control for Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/environment-variables.html">Handling Environment Variables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/markup-formatter.html">Markup Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/services.html">Exposed Services and Ports</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">System Administration</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="backing-up.html">Backing-up/Restoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="monitoring.html">Monitoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="administering-jenkins-on-kubernetes.html">Administering Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="with-chef.html">Managing Jenkins with Chef</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="with-puppet.html">Managing Jenkins with Puppet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="viewing-logs.html">Viewing logs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="authenticating-scripted-clients.html">Authenticating scripted clients</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="reverse-proxy-configuration.html">Reverse proxy configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reverse-proxy-configuration-haproxy.html">Reverse proxy - HAProxy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reverse-proxy-configuration-squid.html">Reverse proxy - Squid</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reverse-proxy-configuration-iis.html">Reverse proxy - IIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="reverse-proxy-configuration-iptables.html">Reverse proxy - iptables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="systemd-services.html">Managing systemd services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../scaling/index.html">Scaling Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-scale.html">Architecting for Scale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/hardware-recommendations.html">Hardware Recommendations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-manageability.html">Architecting for Manageability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../troubleshooting/index.html">Troubleshooting Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/diagnosing-errors.html">Diagnosing Errors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/obtaining-a-thread-dump.html">Obtaining a thread dump</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins User Documentation</span>
+    <span class="version">2.2</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins User Documentation</a></li>
+    <li><a href="index.html">System Administration</a></li>
+    <li><a href="backing-up.html">Backing-up/Restoring Jenkins</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.2</button>
+  <div class="version-menu">
+    <a class="version" href="../../2.401.3/system-administration/backing-up.html">2.401.3</a>
+    <a class="version is-current" href="backing-up.html">2.2</a>
+    <a class="version" href="../../2.1/system-administration/backing-up.html">2.1</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/2.401.3/docs/user-docs/modules/system-administration/pages/backing-up.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Backing-up/Restoring Jenkins</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Having good backups of your Jenkins instance is critically important.
+Backups are used for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Disaster recovery.</p>
+</li>
+<li>
+<p>Recovering an older configuration (an accidental configuration change may not be discovered for some time).</p>
+</li>
+<li>
+<p>Recovering a file that is corrupted or was deleted accidentally.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page discusses the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>How to create a backup</p>
+</li>
+<li>
+<p>Files that should be backed up</p>
+</li>
+<li>
+<p>How to validate a backup to ensure that it is usable</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_a_backup"><a class="anchor" href="#_creating_a_backup"></a>Creating a Backup</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Various schemes can be used to create backups.
+These are discussed in this section:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Filesystem snapshots</p>
+</li>
+<li>
+<p>Plugins for backup</p>
+</li>
+<li>
+<p>Write a shell script that backs up the Jenkins instance</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_filesystem_snapshots"><a class="anchor" href="#_filesystem_snapshots"></a>Filesystem snapshots</h3>
+<div class="paragraph">
+<p>Filesystem snapshots provide maximum consistency for backups.
+They also run faster than live backups,
+reducing the possibility of copying different data at different time points.
+They are supported by:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The Linux Logical Volume Manager (LVM)</p>
+</li>
+<li>
+<p>Linux btrfs</p>
+</li>
+<li>
+<p>Solaris ZFS (which also supports incremental backups)</p>
+</li>
+<li>
+<p>FreeBSD ZFS</p>
+</li>
+<li>
+<p>OpenZFS on Linux</p>
+</li>
+<li>
+<p>Some other file system architectures</p>
+</li>
+<li>
+<p>Many cloud providers</p>
+</li>
+<li>
+<p>Some separate storage devices also let you create snapshots at the storage level.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_plugins_for_backup"><a class="anchor" href="#_plugins_for_backup"></a>Plugins for backup</h3>
+<div class="paragraph">
+<p>Several plugins are available for backup.
+From the main menu select <em>Manage Jenkins</em>, then go to <em>Plugins&gt;Available</em> and search for <strong>backup</strong>.
+Note that only the <a href="https://plugins.jenkins.io/thinBackup/">thinBackup Plugin</a> of the open source plugins is currently being maintained.
+You can try the other plugins but you may have problems with them.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_writing_a_shell_script_for_backups"><a class="anchor" href="#_writing_a_shell_script_for_backups"></a>Writing a shell script for backups</h3>
+<div class="paragraph">
+<p>You can write your own shell script that copies the appropriate files and directories to a backup location.
+Use <a href="https://man7.org/linux/man-pages/man8/cron.8.html">cron</a>
+to schedule when the backup script runs.</p>
+</div>
+<div class="paragraph">
+<p>The shell script should create a directory such as <code>/mnt/backup</code>
+to which the backup will be written;
+be sure that you have write permissions to that directory.
+Consider creating <code>/mnt/backup</code> as a separate filesystem with its own mount point.
+An alternative method is to create a subdirectory in <code>/var</code>.
+Note that if you use this method,
+you might need to use the <strong>sudo</strong> command to execute the restore operation.
+Backing up to <code>/tmp</code> is not advised because <code>/tmp</code> may be cleaned on reboot.</p>
+</div>
+<div class="paragraph">
+<p>Create a unique identifier for each backup (use a timestamp, for example)
+to ensure that today&#8217;s backup does not overwrite yesterday&#8217;s backup.</p>
+</div>
+<div class="paragraph">
+<p>Writing files to a local file system is the fastest way to take the backup.
+Consider copying the completed backup to a remote backup server or device for long term storage.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_back_up_the_controller_key_separately"><a class="anchor" href="#_back_up_the_controller_key_separately"></a>Back up the Controller Key Separately</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Never include the controller key in your Jenkins backup!</strong></p>
+</div>
+<div class="paragraph">
+<p>The controller key is used to encrypt data in the <em>secrets</em> directory that secures credentials.
+It is stored in the <em>$JENKINS_HOME/secrets/hudson.util.Secret</em> file
+in the <em>$JENKINS_HOME/secrets/</em> directory and encrypted with <code>master.key</code>.
+If you need to restore a system from a backup, you will need this file.
+And, if someone else accesses your backups and has this key, they have full access to all your information.</p>
+</div>
+<div class="paragraph">
+<p>You should treat your controller key like you treat your SSH private key and NEVER include it in a regular backup.
+Instead, back up the <code>master.key</code> file separately and store it in a very secure location away from your other backups.
+It is a very small file that is seldom changed.
+If you need to do a full system restore, you will need to restore the rest of the system and then apply the backup of the <code>master.key</code> file separately.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_which_files_should_be_backed_up"><a class="anchor" href="#_which_files_should_be_backed_up"></a>Which Files Should Be Backed Up?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The number of files you back up can affect both the time required to run the backup and the size of the resulting backup.
+It also impacts the complexity of restoring the system from the backup.
+Here we discuss why various files should be backed up
+and list some files that could safely be excluded from at least some backups.</p>
+</div>
+<div class="sect2">
+<h3 id="_jenkins_home"><a class="anchor" href="#_jenkins_home"></a>$JENKINS_HOME</h3>
+<div class="paragraph">
+<p>Backing up the entire <code>$JENKINS_HOME</code> directory
+preserves the entire Jenkins instance.
+To restore the system, just copy the entire backup to the new system.</p>
+</div>
+<div class="paragraph">
+<p>Note, however, that <code>JENKINS_HOME</code> includes a number of files that do not really need to be backed up.
+Selecting specific directories and files to back up yields smaller backups
+but may require a greater effort to restore a system.
+One approach is to back up different directories on different schedules.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_files"><a class="anchor" href="#_configuration_files"></a>Configuration files</h3>
+<div class="paragraph">
+<p>Configuration files are stored directly in the <code>$JENKINS_HOME</code> directory.
+<code>./config.xml</code> is the main Jenkins configuration file.
+Other configuration files also have the <code>.xml</code> suffix.
+Specify <code>$JENKINS_HOME/*.xml</code> to back up all configuration files.</p>
+</div>
+<div class="paragraph">
+<p>Configuration files can also be stored in an SCM repository.
+This keeps copies of all previous versions of each file
+that can be retrieved using standard SCM facilities.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_jobs_subdirectory"><a class="anchor" href="#_jobs_subdirectory"></a>./jobs Subdirectory</h3>
+<div class="paragraph">
+<p>The <code>$JENKINS_HOME/jobs</code> directory contains information related
+to all the jobs you create in Jenkins.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>./builds</strong>&#8201;&#8212;&#8201;Contains build records</p>
+</li>
+<li>
+<p><strong>./builds/archive</strong>&#8201;&#8212;&#8201;Contains archived artifacts</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Back this up if it is important to retain these artifacts long-term</p>
+</li>
+<li>
+<p>These can be very large and may make your backups very large</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>./workspace</strong>&#8201;&#8212;&#8201;Contains files checked out from the SCM</p>
+<div class="ulist">
+<ul>
+<li>
+<p>It is usually not necessary to back up these files. You can perform a clean checkout after restoring the system.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>./plugins/*.hpi</strong>&#8201;&#8212;&#8201;Plugin packages with specific versions used on your system</p>
+</li>
+<li>
+<p><strong>./plugins/*.jpi</strong>&#8201;&#8212;&#8201;Plugin packages with specific versions used on your system</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_may_not_need_to_be_backed_up"><a class="anchor" href="#_what_may_not_need_to_be_backed_up"></a>What may not need to be backed up</h3>
+<div class="paragraph">
+<p>The following files and directories
+do not usually need to be included in every routine backup
+because you can download the latest version when you are restoring a system.
+However, some disaster recovery experts recommend against doing any upgrades
+while restoring the system,
+to avoid delays caused by compatibility issues that might arise.
+If your disaster recovery plan specifies that you restore the system
+using the same software versions that were previously running,
+you can make an infrequent backup of the system and all downloaded tools
+and use that to restore the system..</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>./war</strong>&#8201;&#8212;&#8201;Exploded <code>war</code> file</p>
+<div class="ulist">
+<ul>
+<li>
+<p>To restore a system, download the latest <code>war</code> file.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>./cache</strong>&#8201;&#8212;&#8201;Downloaded tools</p>
+<div class="ulist">
+<ul>
+<li>
+<p>To restore a system, download the current version of the tools.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>./tools</strong>&#8201;&#8212;&#8201;Extracted tools</p>
+<div class="ulist">
+<ul>
+<li>
+<p>To restore a system, extract the tools again.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>./plugins/xxx</strong>&#8201;&#8212;&#8201;Subdirectories of installed plugins</p>
+<div class="ulist">
+<ul>
+<li>
+<p>These will be automatically populated on the next restart.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_validating_a_backup"><a class="anchor" href="#_validating_a_backup"></a>Validating a backup</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Your backup strategy should include validation of each backup.
+You do not want to learn that your backup is no good when you need it!</p>
+</div>
+<div class="paragraph">
+<p>A simple way to validate a full backup is to restore it to a temporary location.
+Create a directory for the test validation (such as <strong>/mnt/backup-test</strong>)
+and restore the backup to that directory.</p>
+</div>
+<div class="paragraph">
+<p>Set $JENKINS_HOME to point to this directory,
+specifying a random HTTP port so you do not collide with the real Jenkins instance:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">export JENKINS_HOME=/mnt/backup-test</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now execute the restored Jenkins instance:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">java -jar jenkins.war ---httpPort=9999</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Making backups is a Jenkins best practice.</p>
+</li>
+<li>
+<p>Backups are critical for disaster recovery.</p>
+</li>
+<li>
+<p>Always set up a backup policy that defines:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The configurations and records that need to be saved from the controller</p>
+</li>
+<li>
+<p>How often backups should be taken</p>
+</li>
+<li>
+<p>Where backups should be stored</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Validate your backups.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>You should periodically check whether your backups are intact
+and can be used to meet your recovery objectives.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_going_further"><a class="anchor" href="#_going_further"></a>Going further</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some recommended readings on this subject:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.cloudbees.com/blog/why-smart-efficient-backup-and-restore-techniques-are-essential-jenkins-production-server">Why Smart, Efficient Backup and Restore Techniques are Essential with Jenkins Production Server</a></p>
+</li>
+<li>
+<p><a href="https://plugins.jenkins.io/backup/">Backup Plugin</a></p>
+</li>
+<li>
+<p><a href="https://plugins.jenkins.io/thinBackup/">thinBackup Plugin</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="index.html">System Administration</a></span>
+  <span class="next"><a href="monitoring.html">Monitoring Jenkins</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

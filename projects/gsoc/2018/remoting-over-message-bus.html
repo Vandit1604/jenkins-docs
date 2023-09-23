@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GSoC 2018. Jenkins Remoting over Message Bus/Queue" :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2018/remoting-over-message-bus.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="simple-pull-request-job-plugin.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="projects" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Jenkins Projects</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../index.html">Jenkins Sub-projects</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../user-docs/2.401.3/blueocean/getting-started.html">Getting started with Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../blueocean/about.html">About Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../blueocean/contribute.html">Contributing to Blue Ocean</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../jam/index.html">CI/CD and Jenkins Area Meetups</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../remoting/index.html">Jenkins Remoting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Google Summer of Code in Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Jenkins in Google Summer of Code 2018</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="code-coverage-api-plugin.html">GSoC 2018. Code Coverage API Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="eda-plugins.html">GSoC 2018. EDA Plugins for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="index.html">Jenkins in Google Summer of Code 2018</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../2019/index.html">Jenkins in Google Summer of Code 2019</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../2019/project-ideas.html">GSoC 2021 Project Ideas</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../2019/schedule.html">Jenkins year-round GSoC schedule</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2019/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2019/working-hours-improvements.html">GSoC2019 Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2019/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2019/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2019/gitlab-support-for-multibranch-pipeline.html">Multibranch Pipeline support for GitLab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2019/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka with Kubernetes features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../2019/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/eda-coverage-adapters.html">EDA Coverage Adapters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/advanced-build-discard-strategy-plugin.html">Advanced Build Discard Strategy Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/configuration-as-code-compatibility.html">Configuration as Code Plugin Compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/pipeline-step-documentation-generator.html">Pipeline Step Documentation Generator improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/eda-plugins.html">Plugin(s) for Electronic Design Automation tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/bitbucket-rest-plugin.html">Bitbucket REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/working-hours-improvements.html">Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/machine-learning.html">Jenkins and Machine Learning Plugins for Data Science</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/artifactory-rest-plugin.html">Artifactory REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/remoting-monitoring.html">Jenkins Remoting Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/freestyle-to-pipeline-converter.html">Freestyle job to Pipeline job converter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/jenkins-rest-plugin.html">Jenkins REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/role-strategy-ux.html">Role Strategy Plugin: user experience</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/ath-improvements.html">Improvements to the Jenkins Acceptance Test Harness</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/winsw-yaml-config-support.html">Jenkins Windows Services: YAML Configuration Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/external-fingerprint-storage-for-jenkins.html">External Fingerprint Storage for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/gitlab-support-for-multibranch-pipeline.html">Multi-branch Pipeline support for Gitlab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/docker-registries-polling-plugin.html">Polling Docker Registries for Image Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/code-coverage-api-improvements.html">Code Coverage API Plugin Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/automatic-spec-generator-for-jenkins-rest-api.html">Automatic Specification Generator for Jenkins REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka. Docker/K8s Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../2019/project-ideas/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../sigs/advocacy-and-outreach/outreach-programs/index.html">Outreach programs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../jcasc/index.html">Jenkins Configuration as Code</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../jcasc/dev-tools.html">Dev-Tools for JCasC</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../infrastructure/index.html">Infrastructure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../infrastructure/ircbot.html">IRC Bot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../jenkins-operator/index.html">Jenkins Operator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Other Projects</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes.html">Document Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://jenkins-x.io/">Jenkins X</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Projects</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Jenkins Projects</a></li>
+    <li><a href="../index.html">Google Summer of Code in Jenkins</a></li>
+    <li><a href="index.html">Jenkins in Google Summer of Code 2018</a></li>
+    <li><a href="remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2018/remoting-over-message-bus.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Status:</strong> Completed</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_team"><a class="anchor" href="#_team"></a>Team</h2>
+<div class="sectionbody">
+<div class="paragraph avatar">
+<p><strong>Student</strong>:
+<span class="image"><img src="../../../images/_images/avatars/pvtuan10.jpeg" alt="pvtuan10" width="30" height="30"></span> Pham Vu Tuan</p>
+</div>
+<div class="paragraph avatar">
+<p><strong>Mentor(s):</strong>
+<span class="image"><img src="../../../images/_images/avatars/oleg_nenashev.png" alt="oleg nenashev" width="30" height="30"></span> Oleg Nenashev
+<span class="image"><img src="../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Supun Wanniarachchi</p>
+</div>
+<div class="paragraph">
+<p>My name is Pham Vu Tuan, I am a final year undergraduate student from Singapore. This is the first time I participate in Google Summer of Code and contribute to an open-source organization.</p>
+</div>
+<div class="paragraph">
+<p>I have GSoC mentors who help me in this project <a href="https://github.com/oleg-nenashev">Oleg Nenashev</a> and <a href="https://github.com/Supun94">Supun Wanniarachchi</a>. Besides that, I also receive great support from developers in remoting project <a href="https://github.com/dwnusbaum">Devin Nusbaum</a> and <a href="https://github.com/jeffret-b">Jeff Thompson</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_project_overview"><a class="anchor" href="#_project_overview"></a>Project Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Current versions of Jenkins Remoting are based on the TCP protocol. If it fails, the agent connection and the build fails as well. There are also issues with traffic prioritization and multi-agent communications, which impact Jenkins stability and scalability.</p>
+</div>
+<div class="paragraph">
+<p>This project aims to develop a plugin in order to add support of a popular message queue/bus technology (Kafka) as a fault-tolerant communication layer in Jenkins.</p>
+</div>
+<div class="paragraph">
+<p>The plugin source code can be found in <a href="https://github.com/jenkinsci/remoting-kafka-plugin">GitHub</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_benefits_to_the_community"><a class="anchor" href="#_benefits_to_the_community"></a>Benefits to the community</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The plugin provide useful features to the community:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Provide a new method to connect agent to master using Kafka besides existing methods such as JNLP or plugin:ssh-slaves[SSH Build Agents plugin].</p>
+</li>
+<li>
+<p>Help to resolve the existing issues with the TCP protocol between master and agent communication in Jenkins.</p>
+</li>
+<li>
+<p>Help to resolve traffic prioritization and multi-agent communications issue in Jenkins.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_kafka"><a class="anchor" href="#_why_kafka"></a>Why Kafka?</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Kafka itself is not a queue like ActiveMQ or RabbitMQ, it is a distributed, replicated commit log. This helps to remove message delivery complexity we have in traditional queue system.</p>
+</li>
+<li>
+<p>We need to support data streaming as a requirement, and Kafka is good at this aspect, which RabbitMQ is lack of.</p>
+</li>
+<li>
+<p>Kafka is said to have a better scalability and good support from the development community.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_architecture_overview"><a class="anchor" href="#_architecture_overview"></a>Architecture Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The project consists of multiple components:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kafka Client Library - new command transport implementation, producer and consumer client logic.</p>
+</li>
+<li>
+<p>Remoting Kafka Plugin - plugin implementation with KafkaGlobalConfiguration, KafkaComputerLauncher and KafkaSecretManager.</p>
+</li>
+<li>
+<p>Remoting Kafka Agent - A custom JAR agent with remoting JAR packaged together with a custom Engine implementation to setup a communication channel with Kafka. The agent is also packaged as a <a href="https://hub.docker.com/r/jenkins/remoting-kafka-agent/">Docker image</a> in DockerHub.</p>
+</li>
+<li>
+<p>All the components are packaged together with Docker Compose.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The below diagram is the overview of the current architecture:
+<span class="image center"><img src="../../../images/_images/post-images/remoting-kafka/remoting-kafka-architecture.png" alt="remoting kafka architecture" title="Remoting Kafka Plugin Current Architecture"></span></p>
+</div>
+<div class="paragraph">
+<p>With this design, master is not communicating with agent using direct TCP communication anymore, all the communication commands are transferred with Kafka.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_1_summary"><a class="anchor" href="#_phase_1_summary"></a>Phase 1 Summary</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Setup project as a set of Docker Compose components: Kafka cluster, Jenkins controller (with plugin) and a custom agent.</p>
+</li>
+<li>
+<p>Create a PoC with command transport implementation to support Kafka, which involves of command invocation,RMI, classloading and data streaming.</p>
+</li>
+<li>
+<p>Make necessary changes in Remoting and Core to make them extensible (if needed).</p>
+</li>
+<li>
+<p>Make a decision whether Kafka is suitable as a final implementation.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_2_summary"><a class="anchor" href="#_phase_2_summary"></a>Phase 2 Summary</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Support security for master-agent connection.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Kafka authentication/authorization (<a href="https://issues.jenkins.io/browse/JENKINS-51472">JENKINS-51472</a>, <a href="https://issues.jenkins.io/browse/JENKINS-51473">JENKINS-51473</a>).</p>
+</li>
+<li>
+<p>Agent secrets (<a href="https://issues.jenkins.io/browse/JENKINS-51470">JENKINS-51470</a>).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Improve Kafka producer-consumer model to ensure reliability (<a href="https://issues.jenkins.io/browse/JENKINS-51942">JENKINS-51942</a>).</p>
+</li>
+<li>
+<p>Release alpha version and address feedback (<a href="https://issues.jenkins.io/browse/JENKINS-51713">JENKINS-51713</a>).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_3_summary"><a class="anchor" href="#_phase_3_summary"></a>Phase 3 Summary</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Release 1.0 version of the plugin (<a href="https://issues.jenkins.io/browse/JENKINS-52483">JENKINS-52483</a>).</p>
+</li>
+<li>
+<p>Support remoting-kafka-plugin with Jenkins Configuration-as-code plugin (<a href="https://issues.jenkins.io/browse/JENKINS-51471">JENKINS-51471</a>).</p>
+</li>
+<li>
+<p>Ready-to-fly demo setup (<a href="https://issues.jenkins.io/browse/JENKINS-51711">JENKINS-51711</a>).</p>
+</li>
+<li>
+<p>Basic test automation for the plugin (<a href="https://issues.jenkins.io/browse/JENKINS-52540">JENKINS-52540</a>).</p>
+</li>
+<li>
+<p>Add plugin implementation information to remoting documentation (<a href="https://issues.jenkins.io/browse/JENKINS-52514">JENKINS-52514</a>).</p>
+</li>
+<li>
+<p>Bug fixing and clean up work (<a href="https://issues.jenkins.io/browse/JENKINS-52044">JENKINS-52044</a>, <a href="https://issues.jenkins.io/browse/JENKINS-52079">JENKINS-52079</a>, <a href="https://issues.jenkins.io/browse/JENKINS-52422">JENKINS-52422</a>).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_features"><a class="anchor" href="#_features"></a>Features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are some snapshots for the features of the plugin.</p>
+</div>
+<div class="sect2">
+<h3 id="_1_kafka_global_configuration_with_support_of_credentials_plugin_to_store_secrets"><a class="anchor" href="#_1_kafka_global_configuration_with_support_of_credentials_plugin_to_store_secrets"></a>1. Kafka Global Configuration with support of credentials plugin to store secrets.</h3>
+<div class="paragraph">
+<p><span class="image center"><img src="../../../images/_images/post-images/remoting-kafka/remoting-kafka-configuration.png" alt="remoting kafka configuration" title="Remoting Kafka Plugin Global Configuration"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_launch_agent_with_kafka_launcher"><a class="anchor" href="#_2_launch_agent_with_kafka_launcher"></a>2. Launch agent with Kafka Launcher.</h3>
+<div class="paragraph">
+<p><span class="image center"><img src="../../../images/_images/post-images/remoting-kafka/launch-agent-kafka.png" alt="launch agent kafka" title="Launch agent with Kafka Launcher"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_launch_agent_from_cli_using_agent_jar_with_secret_provided_to_ensure_security"><a class="anchor" href="#_3_launch_agent_from_cli_using_agent_jar_with_secret_provided_to_ensure_security"></a>3. Launch agent from CLI using agent JAR with secret provided to ensure security.</h3>
+<div class="paragraph">
+<p><span class="image center"><img src="../../../images/_images/post-images/remoting-kafka/agent-cli.png" alt="agent cli" title="Command to run agent in CLI"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_run_jobs_pipeline_using_kafka_agent"><a class="anchor" href="#_4_run_jobs_pipeline_using_kafka_agent"></a>4. Run jobs, pipeline using Kafka agent.</h3>
+<div class="paragraph">
+<p><span class="image center"><img src="../../../images/_images/post-images/remoting-kafka/demo-jobs.png" alt="demo jobs" title="Run jobs, pipeline using Kafka agent"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_kafka_communication_between_master_and_agent"><a class="anchor" href="#_5_kafka_communication_between_master_and_agent"></a>5. Kafka communication between master and agent.</h3>
+<div class="paragraph">
+<p><span class="image center"><img src="../../../images/_images/post-images/remoting-kafka/kafka-commands.png" alt="kafka commands" title="Kafka communication between master and agent"></span></p>
+</div>
+<div class="paragraph">
+<p>Remoting operations are being executed over Kafka. In the log you may see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Command execution (SlaveInstallerFactoryImpl.isWindows())</p>
+</li>
+<li>
+<p>Classloading (Classloader.fetch())</p>
+</li>
+<li>
+<p>Log streaming (Pipe.chunk())</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_run_demo_of_the_project"><a class="anchor" href="#_how_to_run_demo_of_the_project"></a>How to run demo of the project</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We have setup a ready-to-fly demo for this plugin. You can try to run a demo of the plugin by following this <a href="https://github.com/jenkinsci/remoting-kafka-plugin#how-to-run-demo-of-the-plugins">instruction</a>.
+Features in the demo:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Docker Compose starts preconfigured Master and agent instance, they connect automatically using Kafka launcher.</p>
+</li>
+<li>
+<p>Kafka is secured and encrypted with SSL.</p>
+</li>
+<li>
+<p>There few demo jobs in the instance so that a user can launch a job on the agent.</p>
+</li>
+<li>
+<p>Kakfa Manager supported in localhost:9000 to support monitoring of Kafka cluster.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_future_work"><a class="anchor" href="#_future_work"></a>Future Work</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Cloud API implementation (<a href="https://issues.jenkins.io/browse/JENKINS-51474">JENKINS-51474</a>).</p>
+</li>
+<li>
+<p>Chunking capabilities for Kafka channel (<a href="https://issues.jenkins.io/browse/JENKINS-51709">JENKINS-51709</a>).</p>
+</li>
+<li>
+<p>Stop bundling remoting in Remoting Kafka Agent (<a href="https://issues.jenkins.io/browse/JENKINS-51944">JENKINS-51944</a>).</p>
+</li>
+<li>
+<p>Consumer pooling, NIO options (<a href="https://issues.jenkins.io/browse/JENKINS-52199">JENKINS-52199</a>).</p>
+</li>
+<li>
+<p>Support multiple Kafka hosts to achieve fault-tolerant communication (<a href="https://issues.jenkins.io/browse/JENKINS-52542">JENKINS-52542</a>).</p>
+</li>
+<li>
+<p>Agent recovery to continue running jobs after disconnection to Kafka (<a href="https://issues.jenkins.io/browse/JENKINS-52954">JENKINS-52954</a>).</p>
+</li>
+<li>
+<p>Make Zookeeper configuration optional to support ad-hoc topics creation (<a href="https://issues.jenkins.io/browse/JENKINS-52870">JENKINS-52870</a>).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_3_presentation_slides"><a class="anchor" href="#_phase_3_presentation_slides"></a>Phase 3 Presentation Slides</h2>
+<div class="sectionbody">
+<center>
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTjstGprw2lDt-TqU0f6-eCsPDOptUwJ5nmQ_kTqojuo6zA2M2_2PdUXPyfpfGFUVIRVoWASLdp-pyp/embed?start=false&loop=false&delayms=60000" frameborder="0" width="720" height="434" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</center>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_3_presentation_video"><a class="anchor" href="#_phase_3_presentation_video"></a>Phase 3 Presentation Video</h2>
+<div class="sectionbody">
+<center>
+  <iframe width="720" height="434" src="https://www.youtube.com/embed/GGEtN4nbtng" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</center>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_useful_links"><a class="anchor" href="#_useful_links"></a>Useful Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://app.gitter.im/#/room/#jenkinsci_remoting:gitter.im"><span class="image"><img src="https://badges.gitter.im/jenkinsci/remoting.svg" alt="title: &quot;Gitter&quot;"></span></a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/remoting-kafka-plugin">GitHub Repository</a></p>
+</li>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Remoting+Kafka+Plugin">Wiki</a></p>
+</li>
+<li>
+<p><a href="https://plugins.jenkins.io/remoting-kafka">Plugin Site</a></p>
+</li>
+<li>
+<p><a href="#ROOT:index.adoc/gsoc/2018/remoting-over-message-bus/">Project Info</a></p>
+</li>
+<li>
+<p><a href="/blog/2018/06/18/remoting-over-message-bus/">Introduction Blogpost</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1GxkI17lZYQ6_pyAOR9sXNXq1K3LwkqjigXdxxf81VkE/edit?usp=sharing">Phase 1 Evaluation Slides</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1TW31N-opvoFwSkD-FChhjCsXNWmeDjkecxJv8Lb6X-A/edit?usp=sharing">Phase 2 Evaluation Slides</a></p>
+</li>
+<li>
+<p><a href="https://youtu.be/qWHM8S0fzUw">Phase 1 Evaluation Video</a></p>
+</li>
+<li>
+<p><a href="https://youtu.be/tuTODhJOTBU">Phase 2 Evaluation Video</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links"><a class="anchor" href="#_links"></a>Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://app.gitter.im/#/room/#jenkinsci_remoting:gitter.im"><span class="image"><img src="https://badges.gitter.im/jenkinsci/remoting.svg" alt="title: &quot;Gitter&quot;"></span></a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/code-coverage-api-plugin">Github</a></p>
+</li>
+<li>
+<p><a href="../index.html#office-hours" class="xref page">Meetings</a></p>
+</li>
+<li>
+<p><a href="https://community.jenkins.io/c/contributing/gsoc">Forum</a></p>
+</li>
+<li>
+<p><a href="../index.html" class="xref page">Jenkins GSoC page</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="index.html">Jenkins in Google Summer of Code 2018</a></span>
+  <span class="next"><a href="simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

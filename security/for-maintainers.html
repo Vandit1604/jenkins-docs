@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Overview for Plugin Maintainers :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/security/for-maintainers.html">
+    <link rel="prev" href="cna.html">
+    <link rel="next" href="plugins.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="security" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Jenkins Security Advisories</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Adminstrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="for-administrators.html">Overview for Jenkins Administrators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scheduling.html">How We Schedule Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="fixing.html">How We Fix Security Issues</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Reporters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="reporting.html">Reporting Security Vulnerabilities</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cna.html">Jenkins CVE Numbers Authority</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Maintainers</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="for-maintainers.html">Overview for Plugin Maintainers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jenkins Security Team</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="team.html">About the Jenkins Security Team</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="improvements.html">Improvements by the Security Team</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Security Advisories</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Jenkins Security Advisories</a></li>
+    <li>For Maintainers</li>
+    <li><a href="for-maintainers.html">Overview for Plugin Maintainers</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/for-maintainers.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Overview for Plugin Maintainers</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="https://issues.jenkins.io/browse/SECURITY">SECURITY project in the Jenkins Jira</a> is a non-public issue tracker for security vulnerabilities.
+Public knowledge of these vulnerabilities could put our users at risk, so access to issues is restricted.</p>
+</div>
+<div class="paragraph">
+<p>We grant access to specific SECURITY issues in JIRA to maintainers of affected plugins.
+They&#8217;re often in a much better position to fix issues in their plugins, and the security team needs to coordinate releases with them even if they don&#8217;t end up authoring the fix.</p>
+</div>
+<div class="paragraph">
+<p>We identify maintainers using <a href="https://github.com/jenkins-infra/repository-permissions-updater">uploader permissions metadata</a>, as that is the most reliable source for this kind of information in the Jenkins project.
+This is also where you would explicitly specify who should be the preferred contact for security issues.
+<a href="https://github.com/jenkins-infra/repository-permissions-updater#managing-security-process">Learn more.</a></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Make sure your notification email address configured in Jira is up to date and that you don&#8217;t ignore notifications sent from Jira.
+Obsolete email addresses and ignored emails will delay the initial contact.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_support_for_maintainers"><a class="anchor" href="#_support_for_maintainers"></a>Support for Maintainers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In general, the Jenkins security team helps maintainers understand reports, provides relevant documentation and examples, and reviews proposed security fixes.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Jira</dt>
+<dd>
+<p>The Jenkins security team can grant access to the private SECURITY issue in Jira to additional users upon request.
+This is the preferred information sharing platform between reporters, maintainers, and the Jenkins security team.</p>
+</dd>
+<dt class="hdlist1">GitHub</dt>
+<dd>
+<p>The Jenkins security team can create private GitHub repositories to support fix development and review.
+Any number of GitHub users can be added to these repositories (Read or Write permission) upon request.
+Jenkins security team members will be available to review and test security fixes.</p>
+</dd>
+<dt class="hdlist1">Artifactory</dt>
+<dd>
+<p>To support staging of security updates (see below), the Jenkins security team will create a private Maven staging repository.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_recommended_practices"><a class="anchor" href="#_recommended_practices"></a>Recommended Practices</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Due to the sensitive nature of security vulnerabilities, the following practices should be followed in resolving the issue and releasing the plugin:</p>
+</div>
+<div class="sect2">
+<h3 id="issue-handling"><a class="anchor" href="#issue-handling"></a>Practices for Issue Handling</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Be responsive.</strong>
+Not responding to reports of security vulnerabilities will not make them go away.
+Even if the reporter does not set a <a href="https://en.wikipedia.org/wiki/Full_disclosure_(computer_security)#Coordinated_vulnerability_disclosure">coordinated disclosure deadline</a>, the Jenkins security team will <a href="/security/plugins">publish security vulnerabilities in security advisories even if no fix exists</a>.
+If you&#8217;re no longer maintaining the plugin, please let us know so we can proceed appropriately.</p>
+</li>
+<li>
+<p><strong>Respect embargoes.</strong>
+A few security issues are <em>embargoed</em>, which means information about them <strong>must not be shared</strong> with others, typically because a new class of issue was discovered and similar vulnerabilities exist in other components.</p>
+</li>
+<li>
+<p><strong>Keep any information gained from the SECURITY tracker private</strong> until a version of the plugin containing the fix is released, as it may put users at risk.</p>
+</li>
+<li>
+<p><strong>Keep the source code for your fix private</strong> until a fixed version of your plugin has been released, e.g. by pushing it to GitHub, even it&#8217;s just your fork that nobody watches.
+If you need assistance in fixing the vulnerability, ask for it in the SECURITY issue.
+The Jenkins security team also offers to review your security fix; please ask for a private repository in the <code>jenkinsci-cert</code> GitHub organization to be created, and submit your fix there.</p>
+</li>
+<li>
+<p><strong>Coordinate the date and time of the release</strong> of the fixed plugin with the Jenkins security team.
+This will allow for assigning <a href="/security/cna">a CVE ID</a> prior to release, and publishing a <a href="/security/advisories/">security advisory</a> informing users of the security vulnerability, and how to address it.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fix-development"><a class="anchor" href="#fix-development"></a>Practices for Fix Development</h3>
+<div class="paragraph">
+<p>Security fixes should be developed on a branch that will be submitted as a pull request in a private repository in the <code>jenkinsci-cert</code> GitHub organization to facilitate fix review.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Keep the security fix minimal.</strong>
+This is not an opportunity to address some old TODO comments, refactor code, or modernize the plugin.
+All of that can be done in a separate update; either at least a week or two before the security update would be published, or after the security update is published.
+In some cases, this even means implementing a "hack" solution, and holding off on the superior fix until after the security update is published.
+This limits the potential risk of regressions in the security update due to unrelated changes.
+Please also refrain from reformatting code you&#8217;re not otherwise changing to make it easier to review the security fix.</p>
+</li>
+<li>
+<p><strong>Keep the security update minimal.</strong>
+If the target branch of the security fix has unrelated changes, branch off from the previous release (specifically the <code>prepare for next development iteration</code> commit in case of manual releases, and the tagged commit in case of JEP-229 CD) and target that branch instead, or make sure to release the plugin&#8217;s unrelated changes a week or two before the security release.
+This also limits the potential risk of regressions in the security update due to unrelated changes.</p>
+</li>
+<li>
+<p><strong>Keep source code private until the security updates are published.</strong>
+The staging instructions below prevent pushing the release commits, which would result in premature disclosure due to delays in the infrastructure, or the staging process.
+Once you&#8217;ve staged a plugin release to a staging repository, push the branch/commits and release tag to the private repository in the <a href="https://github.com/jenkinsci-cert/">jenkinsci-cert</a> GitHub organization <em>only</em>.
+From there, the commits and tag will be pushed to the public repository after the security update is made public, typically within an hour.</p>
+</li>
+<li>
+<p><strong>No late changes.</strong>
+Don&#8217;t add changes to the security release unless they&#8217;re essential for the security fix to work after the fix has been reviewed and approved.
+Otherwise this will invalidate the testing and review that has happened before.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See also <a href="/security/fixing">How We Fix Security Issues</a> for general guidelines.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_process_overview"><a class="anchor" href="#_process_overview"></a>Process Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following is a rough approximation of the typical recommended lifecycle of a plugin security issue in the SECURITY tracker:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Someone <strong>reports an issue</strong> in a plugin.</p>
+</li>
+<li>
+<p>The security team <strong>evaluates</strong> the report.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If we&#8217;re confident it is not a security vulnerability, the issue is moved to the JENKINS project.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>We <strong>determine the maintainer and/or security contact</strong>.
+For the purposes of this document, only plugins maintained by people not also on the security team are considered here.
+Maintainers and security contacts are decided based on <a href="https://github.com/jenkins-infra/repository-permissions-updater">release permissions</a>.</p>
+</li>
+<li>
+<p>We <strong>assign the issue</strong> to the plugin maintainers (resulting in access to the issue), and notify them in a comment.
+If necessary, plugin maintainers are contacted repeatedly, in Jira and/or directly via email, to notify them of this issue.</p>
+</li>
+<li>
+<p>The plugin <strong>maintainer reviews</strong> the reported issue.</p>
+</li>
+<li>
+<p>If they identify it as an actual security vulnerability, they (and, if requested, the security team) <strong>work to resolve the issue</strong>.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The security team provides a private repository for that work in the <code>jenkinsci-cert</code> GitHub organization.</p>
+</li>
+<li>
+<p>Work usually happens on a branch, and a corresponding pull request will be used for review.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>A <strong>date and time of the release is coordinated</strong> between the security team and maintainers.
+The security team handles CVE ID assignment, advance notification of users, and creation of the security advisory.</p>
+</li>
+<li>
+<p>The <strong>security fix is merged</strong>.
+For details, see <a href="#merging">Merge the Fix</a> below.</p>
+</li>
+<li>
+<p>A version of the plugin containing the fix is <strong>uploaded to a staging repository</strong> (see <a href="#upload">Stage with Maven</a> below).</p>
+</li>
+<li>
+<p>The <strong>staged release is published</strong> by the security team, and the corresponding security advisory is published and announced.
+The source code is pushed to the public GitHub repository.
+The issue in the issue tracker is closed.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="staging"><a class="anchor" href="#staging"></a>Staging Procedure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Staging includes all the steps described below and is typically done a few days before the scheduled advisory.
+This strikes a balance between allowing the longest possible time for reviews and testing, while minimizing the risk of releases failing on the intended release date and acknowledging time constraints and different time zones of everyone involved.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The Jenkins security team needs to prepare a Maven staging repository before security updates can be staged, so follow the instructions below only once you know the Maven repository to stage to.
+Make sure to follow instructions provided by the Jenkins security team if they deviate from the instructions below.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="backporting"><a class="anchor" href="#backporting"></a>Backporting</h3>
+<div class="paragraph">
+<p>At this point, consider the need for backports.
+Some administrators may be unable to install the latest version of your plugin.
+Usually this is because the plugin depends on a recent weekly release of Jenkins.
+Users of the <a href="/download/lts/">LTS line of Jenkins releases</a> will not be offered a plugin update that requires a weekly version of Jenkins higher than the LTS baseline, even when they&#8217;re already on the latest version of Jenkins available to them.</p>
+</div>
+<div class="paragraph">
+<p>We recommend that all security fixes are made available to both current weekly and current LTS releases.
+If the current LTS release is the first in its line (e.g., 2.375.1), also consider making the security fix available to users of the previous release, as many administrators may not immediately update.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, the security fixes should generally be made available to users who are already on the latest version of the plugin available to them, rather than an earlier version.
+This will make it easy to update to a version with the fix through the plugin manager, without potentially losing features by doing what amounts to a manual downgrade.</p>
+</div>
+<div class="sect3">
+<h4 id="_backporting_example"><a class="anchor" href="#_backporting_example"></a>Backporting Example</h4>
+<div class="paragraph">
+<p>Suppose it is early 2023 and you&#8217;re preparing a security fix for a plugin you maintain.
+The most recent LTS releases are Jenkins 2.361.4 and Jenkins 2.375.1, and the current weekly release is 2.387.
+The plugin&#8217;s latest release, version 2.2, has a Jenkins dependency of 2.380 because it makes use of a new feature in that release.
+The most recent lower Jenkins dependency of the plugin was Jenkins 2.361.3 in plugin version 2.0.</p>
+</div>
+<div class="paragraph">
+<p>In this case, instances on both 2.361.4 and 2.375.1 will be able to install a security fix provided on top of version 2.0 of the plugin.
+Instances on the weekly release line will be able to install a security fix provided on top of version 2.2.
+So the plugin should get updates with the security fix based on top of version 2.2 (e.g., 2.2.1 or 2.3) <em>and</em> 2.0 (e.g., 2.0.1 or 2.0.0.1, whichever version would be between 2.0 and the next release that already exists).</p>
+</div>
+<div class="paragraph">
+<p>Now consider the case of the plugin version 2.1 previously raising the core dependency from 2.361.2 to Jenkins 2.370 (before 2.2 raised it to 2.380).
+In this case, three separate releases are now needed to cover users of Jenkins 2.361.4, 2.375.1, and 2.387:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jenkins 2.361.4 needs a backport on top of plugin version 2.0 (e.g., 2.0.1 or 2.0.0.1) with a Jenkins dependency of 2.361.2.</p>
+</li>
+<li>
+<p>Jenkins 2.375.1 needs a backport on top of plugin version 2.1 (e.g., 2.1.1 or 2.1.0.1) with a Jenkins dependency of 2.370. While they could in theory install the backport on top of version 2.0, this would effectively be a downgrade, and remove all features added between versions 2.0 and 2.1 of the plugin (if this is even possible without data loss).</p>
+</li>
+<li>
+<p>Only weekly releases like 2.387 will be able to update to the next regular plugin release (e.g., 2.2.1 or 2.3) with a Jenkins dependency of 2.380.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="merging"><a class="anchor" href="#merging"></a>Merge the Fix</h3>
+<div class="paragraph">
+<p>First, prepare the release branch:
+If there are unrelated, unreleased changes on the default branch, create a new branch based on the previous release.
+For plugins with <a href="#dev-docs:publishing:releasing-manually">manual release process</a> this is the <code>prepare for next development iteration</code> commit.
+For plugins delivered with <a href="../dev-docs/publishing/releasing-cd.html" class="xref page">JEP-229 CD automated releases</a>), it is the commit that got tagged as a release.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If all unreleased changes are unlikely to introduce regressions, e.g., minor documentation fixes or similar, it&#8217;s also reasonable to include those changes in the security fix.
+In general we recommend caution when doing this however: even safe-looking dependency updates can easily cause regressions and make administrators choose between a plugin release that is safe and one that works.
+It is always safest to not include unrelated changes in security fixes.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Next, use the Git command line to <strong>squash-merge pull request branches</strong> in the private jenkinsci-cert repository (<code>git merge --squash &lt;BRANCH&gt;</code>).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Do <strong>not</strong> merge using the GitHub UI:
+It would by default add a reference to the private PR (like <code>#1</code>), which is confusing (or at best useless) when seen in the public repository.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>As commit message, use just the ID</strong> of the security issue (for example <code>[SECURITY-12345]</code>), without further details.
+At this point, it may not be clear exactly how the fix will be announced and documented, and discrepancies between the commit message and security advisory would be confusing.
+If you didn&#8217;t develop the fix, make sure to credit the original author by adding <code>--author='Actual Author &lt;<a href="mailto:author@example.org">author@example.org</a>&gt;'</code> to the <code>git commit</code> command.
+To find out what name and email address to put there, see <code>git log &lt;BRANCH&gt;</code>.</p>
+</div>
+<div class="sect3">
+<h4 id="_backporting"><a class="anchor" href="#_backporting"></a>Backporting</h4>
+<div class="sect4">
+<h5 id="_backport_branch_preparation"><a class="anchor" href="#_backport_branch_preparation"></a>Backport Branch Preparation</h5>
+<div class="paragraph">
+<p>Similar to when there are unreleased changes on the default branch, a new branch needs to be created when backporting, unless a branch with the correct baseline already exists, e.g., from an earlier security update.</p>
+</div>
+<div class="paragraph">
+<p>Create a new branch based on the release that the fix should be backported to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For plugins with <a href="../dev-docs/publishing/releasing-manually.html" class="xref page">manual release process</a> this is the <code>prepare for next development iteration</code> commit.</p>
+</li>
+<li>
+<p>For plugins delivered with <a href="../dev-docs/publishing/releasing-cd.html" class="xref page">JEP-229 CD automated releases</a>), it is the commit that got tagged as a release.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+If the plugin recently switched from manual releases to JEP-229 CD automated releases (or vice versa), each branch may require different procedures.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The branch is conventionally named something like <code>2.18.x</code> (if it&#8217;s based on 2.18) or <code>1234.x</code> (if it&#8217;s based on the JEP-229 version 1234.vabdef123).</p>
+</div>
+<div class="sect5">
+<h6 id="_plugins_with_manual_releases"><a class="anchor" href="#_plugins_with_manual_releases"></a>Plugins with manual releases</h6>
+<div class="paragraph">
+<p>For plugins with <a href="../dev-docs/publishing/releasing-manually.html" class="xref page">manual release process</a>, you could set the version number used for releases from the backport branch at this point, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">mvn versions:set -DnewVersion=2.18.1-SNAPSHOT -DgenerateBackupPoms=false</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is optional, as the version number can still be specified when staging.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_plugins_with_jep_229_cd"><a class="anchor" href="#_plugins_with_jep_229_cd"></a>Plugins with JEP-229 CD</h6>
+<div class="paragraph">
+<p>For plugins delivered with <a href="../dev-docs/publishing/releasing-cd.html" class="xref page">JEP-229 CD automated releases</a>, you also need to manually specify a custom version number for the backport branch.
+Otherwise, the automatically generated, linearly increasing version number would not indicate the existence of a backport branch.</p>
+</div>
+<div class="paragraph">
+<p>Edit all applicable <code>pom.xml</code> files (usually just one) and add a prefix corresponding to the baseline version prefix to the <code>&lt;version&gt;</code>.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>
+For example, suppose the plugin should get a backport on top of the version <code>12345.vabdef123</code>.
+The <code>pom.xml</code> needs to be changed as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-diff hljs" data-lang="diff">--- a/pom.xml
++++ b/pom.xml
+@@ -10,12 +10,12 @@
+   &lt;artifactId&gt;very-cool-plugin&lt;/artifactId&gt;
+-  &lt;version&gt;${changelist}&lt;/version&gt;
++  &lt;version&gt;12345.${changelist}&lt;/version&gt;
+   &lt;packaging&gt;hpi&lt;/packaging&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Commit this change, e.g.: <code>git commit -a -m "Prepare for 12345.x"</code>
+As a result, the backport will typically have a version like <code>12345.12347.vabdef123</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In case of manually managed version prefixes, keep those. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-diff hljs" data-lang="diff">--- a/pom.xml
++++ b/pom.xml
+@@ -10,12 +10,12 @@
+  &lt;artifactId&gt;very-cool-plugin&lt;/artifactId&gt;
+-  &lt;version&gt;${revision}.${changelist}&lt;/version&gt;
++  &lt;version&gt;${revision}.12345.${changelist}&lt;/version&gt;
+  &lt;packaging&gt;hpi&lt;/packaging&gt;</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_applying_the_fix"><a class="anchor" href="#_applying_the_fix"></a>Applying the Fix</h5>
+<div class="paragraph">
+<p>When backporting the fix to an earlier line, you need to use <code>git cherry-pick -x &lt;commit-id&gt;</code>, specifying the commit that you merged earlier, instead of <code>git merge --squash &lt;branch&gt;</code>.
+Trying to squash-merge the fix branch will also merge in all unrelated changes between the baseline that the fix was developed on, and the earlier line you&#8217;re trying to merge it into.</p>
+</div>
+<div class="paragraph">
+<p>Beware of potential merge conflicts if the security fix changes lines that were modified between the baseline against which the fix was developed, and the version you&#8217;re backporting to.
+In extreme cases, it can be useful to basically develop the fix multiple times, with individual PRs each targeting a different (backporting) branch, to let reviewers confirm conflict resolution was done correctly.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It&#8217;s a good practice to run <code>mvn clean verify</code> now, even when there are no merge conflicts, to ensure that all tests pass.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="upload"><a class="anchor" href="#upload"></a>Stage with Maven</h3>
+<div class="sect3">
+<h4 id="_plugins_with_manual_releases_2"><a class="anchor" href="#_plugins_with_manual_releases_2"></a>Plugins with manual releases</h4>
+<div class="paragraph">
+<p>For Maven-based plugins that are usually released manually using <code>mvn release:prepare release:perform</code>, use the following command to stage the plugin release.
+<code>REPONAME</code> is a placeholder for the name of the Maven staging repository that is provided by the Jenkins security team.</p>
+</div>
+<div class="paragraph">
+<p><code>mvn -DstagingRepository=maven.jenkins-ci.org::default::https://repo.jenkins-ci.org/REPONAME -DpushChanges=false -DlocalCheckout=true org.apache.maven.plugins:maven-release-plugin:3.0.0:prepare org.apache.maven.plugins:maven-release-plugin:3.0.0:stage</code></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+The staging repository name (<code>REPONAME</code>) is <em>never</em> a GitHub URL or GitHub repository name.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Always use <code>release:stage</code></strong> instead of <code>release:perform</code>.
+While the latter also supports specifying a different repository, it&#8217;s not a necessary parameter, so typos in the system property can result in accidental uploads to the public repository, disclosing any vulnerabilities early.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_plugins_with_otherwise_automated_releases_jep_229_cd"><a class="anchor" href="#_plugins_with_otherwise_automated_releases_jep_229_cd"></a>Plugins with otherwise automated releases (JEP-229 CD)</h4>
+<div class="paragraph">
+<p>For Maven-based plugins that use JEP-229, use the following commands to stage the plugin release.
+<code>REPONAME</code> is a placeholder for the name of the Maven staging repository that is provided by the Jenkins security team.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Build and deploy the release</dt>
+<dd>
+<p><code>mvn -Dset.changelist -DaltDeploymentRepository=maven.jenkins-ci.org::default::https://repo.jenkins-ci.org/REPONAME deploy</code></p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+The staging repository name (<code>REPONAME</code>) is <em>never</em> a GitHub URL or GitHub repository name.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+If your account is allowed to upload plugin releases, be <em>very</em> careful to enter the <code>-DaltDeploymentRepository</code> argument correctly, as any typo in the name would end up deploying to the regular Maven repository, creating a public release.
+</td>
+</tr>
+</table>
+</div>
+</dd>
+<dt class="hdlist1">Create the tag</dt>
+<dd>
+<p><code>git tag "$( mvn -q help:evaluate -Dexpression=project.version -DforceStdout -Dset.changelist )"</code></p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The specific syntax depends on your shell. This command works for <code>bash</code> and <code>zsh</code>.
+You can also just run <code>mvn …</code> first, then copy the output and provide it as argument to <code>git tag</code> manually.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Since this release is staged from a private GitHub repository, be careful not to merge changes into the public GitHub repository that would trigger further releases until after the private commits have been made public after advisory publication.
+Otherwise, administrators may not be offered the staged release containing the security fix, but another release created from the public repository.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_push_commits_and_tags"><a class="anchor" href="#_push_commits_and_tags"></a>Push Commits and Tags</h3>
+<div class="paragraph">
+<p>After uploading, push the release commits/branch(es) and tag(s) to the <strong>private</strong> GitHub repository in the <code>jenkinsci-cert</code> GitHub organization, but <strong>NOT to the public</strong> (<code>jenkinsci</code>) repository.
+The Jenkins security team will typically push these tags and branches to the public repository after the security advisory has been published, or will comment on the private SECURITY issue asking the maintainer to do it otherwise.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_keep_documentation_private"><a class="anchor" href="#_keep_documentation_private"></a>Keep Documentation Private</h3>
+<div class="paragraph">
+<p>Documentation (outside the plugin source code, e.g. in the Jenkins wiki or in GitHub releases metadata) should only be published once the security advisory has been published.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resources"><a class="anchor" href="#_resources"></a>Resources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../dev-docs/security/index.html" class="xref page">Security Chapter in the Jenkins Developer Documentation</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../dev-docs/security/secrets.html" class="xref page">Storing Secrets</a></p>
+</li>
+<li>
+<p><a href="../dev-docs/security/form-validation.html" class="xref page">Form Validation</a> (permission checks and CSRF protection)</p>
+</li>
+<li>
+<p><a href="../dev-docs/security/xss-prevention.html" class="xref page">Preventing Cross-Site Scripting in Jelly views</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. <code>mvn versions:set</code> does not work, it really needs to be done manually.
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="cna.html">Jenkins CVE Numbers Authority</a></span>
+  <span class="next"><a href="plugins.html">Handling Vulnerabilities in Plugins</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

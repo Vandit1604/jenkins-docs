@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/security/advisory/2015-02-27.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="security" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Security Advisories</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Adminstrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-administrators.html">Overview for Jenkins Administrators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../fixing.html">How We Fix Security Issues</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Reporters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../reporting.html">Reporting Security Vulnerabilities</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Maintainers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-maintainers.html">Overview for Plugin Maintainers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jenkins Security Team</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../team.html">About the Jenkins Security Team</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../improvements.html">Improvements by the Security Team</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Security Advisories</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/advisory/2015-02-27.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<hr>
+<div class="paragraph">
+<p>layout: simplepage
+title: Jenkins Security Advisory 2015-02-27
+section: security
+kind: core and plugins
+---</p>
+</div>
+<div class="paragraph">
+<p>This advisory announces:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>multiple security vulnerabilities that were found in Jenkins core.</p>
+</li>
+<li>
+<p>a security vulnerability found in plugin:matrix-project[the matrix-project plugin]</p>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_description"><a class="anchor" href="#_description"></a>Description</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_security_125_combination_filter_groovy_script_unsecured"><a class="anchor" href="#_security_125_combination_filter_groovy_script_unsecured"></a>SECURITY-125 (Combination filter Groovy script unsecured)</h3>
+<div class="paragraph">
+<p>This vulnerability allows users with the job configuration privilege to escalate his privileges, resulting in arbitrary code execution to the Jenkins controller.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_162_directory_traversal_from_artifacts_via_symlink"><a class="anchor" href="#_security_162_directory_traversal_from_artifacts_via_symlink"></a>SECURITY-162 (directory traversal from artifacts via symlink)</h3>
+<div class="paragraph">
+<p>This vulnerability allows users with the job configuration privilege or users with commit access to the build script to access arbitrary files/directories on the Jenkins controller, resulting in the exposure of sensitive information, such as encryption keys.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_163_update_center_metadata_retrieval_dos_attack"><a class="anchor" href="#_security_163_update_center_metadata_retrieval_dos_attack"></a>SECURITY-163 (update center metadata retrieval DoS attack)</h3>
+<div class="paragraph">
+<p>This vulnerability allows authenticated users to disrupt the operation of Jenkins by feeding malicious update center data into Jenkins, affecting plugin installation and tool installation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_165_external_entity_injection_via_xpath"><a class="anchor" href="#_security_165_external_entity_injection_via_xpath"></a>SECURITY-165 (external entity injection via XPath)</h3>
+<div class="paragraph">
+<p>This vulnerability allows users with the read access to Jenkins to retrieve arbitrary XML document on the server, resulting in the exposure of sensitive information inside/outside Jenkins.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_166_hudsonprivatesecurityrealm_allows_creation_of_reserved_names"><a class="anchor" href="#_security_166_hudsonprivatesecurityrealm_allows_creation_of_reserved_names"></a>SECURITY-166 (HudsonPrivateSecurityRealm allows creation of reserved names)</h3>
+<div class="paragraph">
+<p>For users using "Jenkins' own user database" setting, Jenkins doesn&#8217;t refuse reserved names, thus allowing privilege escalation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_167_external_entity_processing_in_xml_can_reveal_sensitive_local_files"><a class="anchor" href="#_security_167_external_entity_processing_in_xml_can_reveal_sensitive_local_files"></a>SECURITY-167 (External entity processing in XML can reveal sensitive local files)</h3>
+<div class="paragraph">
+<p>This vulnerability allows attackers to create malicious XML documents and feed that into Jenkins, which causes Jenkins to retrieve arbitrary XML document on the server, resulting in the exposure of sensitive information inside/outside Jenkins.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_severity"><a class="anchor" href="#_severity"></a>Severity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>SECURITY-125 is rated <strong>critical</strong>. This attack can be only mounted by users with some trust, but it results in arbitrary code execution on the Jenkins controller.</p>
+</div>
+<div class="paragraph">
+<p>SECURITY-162 is rated <strong>critical</strong>. This attack can be only mounted by users with some trust, but it results in the exposure of sensitive information.</p>
+</div>
+<div class="paragraph">
+<p>SECURITY-163 is rated <strong>medium</strong>, as it results in the loss of functionality.</p>
+</div>
+<div class="paragraph">
+<p>SECURITY-165 is rated <strong>critical</strong>. This attack is easy to mount, and it results in the exposure of sensitive information.</p>
+</div>
+<div class="paragraph">
+<p>SECURITY-166 is rated <strong>critical</strong>. For users who use the affected feature, this attack results in arbitrary code execution on the Jenkins controller.</p>
+</div>
+<div class="paragraph">
+<p>SECURITY-167 is rated <strong>critical</strong>. This attack is easy to mount, and it results in the exposure of sensitive information.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_affected_versions"><a class="anchor" href="#_affected_versions"></a>Affected Versions</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>All the Jenkins releases &lt;= 1.600</p>
+</li>
+<li>
+<p>All the LTS releases &lt;= 1.580.3</p>
+</li>
+<li>
+<p>Matrix project plugin &lt;= 1.4</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_credit"><a class="anchor" href="#_credit"></a>Credit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Jenkins project would like to thank the following people for finding the vulnerabilities:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Daniel Beck for finding SECURITY-125, SECURITY-162, SECURITY-163</p>
+</li>
+<li>
+<p>Fabian Beterke for finding SECURITY-165 and SECURITY-167</p>
+</li>
+<li>
+<p>Steven Christou for finding SECURITY-166</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fix"><a class="anchor" href="#_fix"></a>Fix</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Main line users should upgrade to Jenkins 1.600</p>
+</li>
+<li>
+<p>LTS users should upgrade to 1.596.1</p>
+</li>
+<li>
+<p>matrix-project plugin fix is bundled and dependent on the above versions of the core. So when you upgrade core, you&#8217;ll get a fix to matrix-project plugin automatically, which is 1.4.1 or 1.2.1.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_other_resources"><a class="anchor" href="#_other_resources"></a>Other Resources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.cloudbees.com/jenkins-security-advisory-2015-02-27">Corresponding security advisory on CloudBees regarding DEV@cloud and Jenkins Enterprise by CloudBees</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

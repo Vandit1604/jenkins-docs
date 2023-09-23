@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Google Summer of Code. Information for mentors" :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/mentors.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="projects" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Projects</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Jenkins Sub-projects</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../user-docs/2.401.3/blueocean/getting-started.html">Getting started with Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/about.html">About Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/contribute.html">Contributing to Blue Ocean</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../jam/index.html">CI/CD and Jenkins Area Meetups</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../remoting/index.html">Jenkins Remoting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Google Summer of Code in Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="2018/index.html">Jenkins in Google Summer of Code 2018</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018/code-coverage-api-plugin.html">GSoC 2018. Code Coverage API Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018/eda-plugins.html">GSoC 2018. EDA Plugins for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018/index.html">Jenkins in Google Summer of Code 2018</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018/remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018/simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="2019/index.html">Jenkins in Google Summer of Code 2019</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="2019/project-ideas.html">GSoC 2021 Project Ideas</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="2019/schedule.html">Jenkins year-round GSoC schedule</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/working-hours-improvements.html">GSoC2019 Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/gitlab-support-for-multibranch-pipeline.html">Multibranch Pipeline support for GitLab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka with Kubernetes features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="2019/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/eda-coverage-adapters.html">EDA Coverage Adapters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/advanced-build-discard-strategy-plugin.html">Advanced Build Discard Strategy Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/configuration-as-code-compatibility.html">Configuration as Code Plugin Compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/pipeline-step-documentation-generator.html">Pipeline Step Documentation Generator improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/eda-plugins.html">Plugin(s) for Electronic Design Automation tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/bitbucket-rest-plugin.html">Bitbucket REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/working-hours-improvements.html">Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/machine-learning.html">Jenkins and Machine Learning Plugins for Data Science</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/artifactory-rest-plugin.html">Artifactory REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/remoting-monitoring.html">Jenkins Remoting Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/freestyle-to-pipeline-converter.html">Freestyle job to Pipeline job converter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/jenkins-rest-plugin.html">Jenkins REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/role-strategy-ux.html">Role Strategy Plugin: user experience</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/ath-improvements.html">Improvements to the Jenkins Acceptance Test Harness</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/winsw-yaml-config-support.html">Jenkins Windows Services: YAML Configuration Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/external-fingerprint-storage-for-jenkins.html">External Fingerprint Storage for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/gitlab-support-for-multibranch-pipeline.html">Multi-branch Pipeline support for Gitlab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/docker-registries-polling-plugin.html">Polling Docker Registries for Image Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/code-coverage-api-improvements.html">Code Coverage API Plugin Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/automatic-spec-generator-for-jenkins-rest-api.html">Automatic Specification Generator for Jenkins REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka. Docker/K8s Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../sigs/advocacy-and-outreach/outreach-programs/index.html">Outreach programs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../jcasc/index.html">Jenkins Configuration as Code</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../jcasc/dev-tools.html">Dev-Tools for JCasC</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../infrastructure/index.html">Infrastructure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../infrastructure/ircbot.html">IRC Bot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../jenkins-operator/index.html">Jenkins Operator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Other Projects</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes.html">Document Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://jenkins-x.io/">Jenkins X</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Projects</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins Projects</a></li>
+    <li><a href="mentors.html">Google Summer of Code. Information for mentors"</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/mentors.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Google Summer of Code. Information for mentors"</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image right float-gap"><img src="../../images/_images/gsoc/jenkins-gsoc-logo_small.png" alt="Jenkins GSoC"></span></p>
+</div>
+<div class="paragraph">
+<p>This page aggregates links to internal and external resources for Google Summer of Code <strong>mentors</strong>.
+GSoC Contributor resources can be found <a href="#ROOT:index.adoc/gsoc/students">here</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links"><a class="anchor" href="#_links"></a>Links</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mandatory reading:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://google.github.io/gsocguides/mentor/">GSoC Mentor Guide</a></p>
+</li>
+<li>
+<p><a href="https://developers.google.com/open-source/gsoc/help/responsibilities#mentor_responsibilities">Mentoring Responsibilities</a></p>
+</li>
+<li>
+<p><a href="https://summerofcode.withgoogle.com/terms/mentor">Google Summer of Code Mentor Participant Agreement</a></p>
+</li>
+<li>
+<p><a href="https://summerofcode.withgoogle.com/how-it-works/#timeline">Official GSoC timeline</a></p>
+</li>
+<li>
+<p><a href="https://developers.google.com/open-source/gsoc/timeline">Unofficial GSoC timeline</a> (appears to be updated with a few days of lag behind the official one)</p>
+</li>
+<li>
+<p><a href="/conduct">Code of Conduct</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Additional links:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="https://community.jenkins.io/c/contributing/gsoc-mentors/25">mentor&#8217;s Discourse group</a> is used for notifications and coordination between mentors.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#ROOT:index.adoc/gsoc/.adoc#orgadmin" class="xref unresolved">Mailing list for contacting Org Admins</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_do_mentors_get"><a class="anchor" href="#_what_do_mentors_get"></a>What do mentors get?</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>A GSoC Contributor who works full-time in the area of your interest for several months</p>
+</li>
+<li>
+<p>Joint projects with Jenkins experts, lots of fun and ability to study something together</p>
+</li>
+<li>
+<p>Limited-edition of swags from Google and Jenkins project</p>
+</li>
+<li>
+<p>Maybe: Participation in GSoC Mentor Summit and other GSoC events/meetups</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_become_a_mentor"><a class="anchor" href="#_how_to_become_a_mentor"></a>How to become a mentor?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>During GSoC you can join an existing project at any time, including community bonding and coding periods.
+Just send an email to our GSoC mailing list.
+You can also <a href="#ROOT:index.adoc/gsoc/proposing-project-ideas">propose your own project</a> for GSoC, see below.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_expectations_from_mentors"><a class="anchor" href="#_expectations_from_mentors"></a>Expectations from mentors</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mentors are expected to&#8230;&#8203;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Be passionate about Jenkins</p>
+</li>
+<li>
+<p>Lead the project in the area of their interest</p>
+</li>
+<li>
+<p>Actively participate in the project during GSoC Contributor selection, community bonding and coding phases (March - August)</p>
+</li>
+<li>
+<p>Work in teams of 2+ mentors per 1 each GSoC Contributor</p>
+</li>
+<li>
+<p>Dedicate a consistent and significant amount of time, especially during the coding phase (<em>~5 hours</em> per week in a team of two mentors)</p>
+</li>
+<li>
+<p><strong>We recommend to keep the communications with the GSoC Contributors in the open, no private emails unless it is a personal matter</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the existing mailing list and channels of the community</p>
+</li>
+<li>
+<p>If you need a new communication channel (new chat room or other) let the Org Admins know</p>
+</li>
+<li>
+<p>It&#8217;s okay to initiate conversations and introductions in private, but:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Make sure the information given to the GSoC Contributor is also available in public</p>
+</li>
+<li>
+<p>Make sure that no GSoC Contributor is put at an advantage by seeing answers not seen by other GSoC Contributors</p>
+</li>
+<li>
+<p>You could create a Q&amp;A in the project description details where questions are anonymized</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Mentoring does <strong>NOT</strong> require strong expertise in Jenkins plugin development.
+The main objective is to guide GSoC Contributors and to get them involved in the Jenkins community.
+GSoC org admins will help to find advisers if any special expertise is needed.</p>
+</div>
+<div class="paragraph">
+<p>GSoC is an international program.
+Some events and deadlines in the timeline may coincide with holidays and celebrations around the world.
+Although we do our best to accommodate everyone, it is impossible to change the GSoC timeline.
+<strong>Please communicate your holidays to Org Admins, your co-mentors and your GSoC Contributor as soon as possible.</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_expectations_from_mentors_per_phase"><a class="anchor" href="#_expectations_from_mentors_per_phase"></a>Expectations from mentors per phase</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We have divided what mentors should expect in different phases.
+Always refer to the <a href="https://summerofcode.withgoogle.com/how-it-works/#timeline">Official GSoC Timeline</a> for the official timeline, phases and their duration.
+As soon as you become a registered mentor, you will receive via email all timeline updates and reminders.</p>
+</div>
+<div class="paragraph">
+<p>Overall for mentors the time commitment is (for details of activities see below):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#org_application_phase">Call for mentors and organization application phase</a>: 2 to 3 hours per week</p>
+</li>
+<li>
+<p><a href="#org_approval_waiting_phase">Organization approval waiting period</a>: 2 to 3 hours per week</p>
+</li>
+<li>
+<p><a href="#forming_mentor_teams">Mentors and mentor teams</a>: a few hours</p>
+</li>
+<li>
+<p><a href="#student_application_phase">GSoC Contributor exploration and application phase</a>: 2 to 5 hours per week until the GSoC Contributor proposal submission deadline</p>
+</li>
+<li>
+<p><a href="#ranking_and_slot_request_phase">Proposal ranking and slot request phase</a>: about 5 hours total until the slot request submission deadline, but because this phase is time critical and short, we insist that you make an extra effort to attend meetings and participate actively in this process (see below for details).</p>
+</li>
+<li>
+<p><a href="#community_bonding_phase">Community Bonding</a>: 5 to 8 hours per week, this phase is critical for the success of the project, make sure you get on the ball right away.</p>
+</li>
+<li>
+<p><a href="#coding_periods">Coding Periods</a>: 5 to 8 hours per week until the end of the program. The number of hours tend to vary, more at the start, less at the end, not everyone is the same.</p>
+</li>
+<li>
+<p><a href="#eval_periods">Evaluation periods</a>: Same as coding.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="org_application_phase"><a class="anchor" href="#org_application_phase"></a>Call for mentors and organization application phase</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> it is the time you spend reading about the program (2 to 3 hours) and the time you wish to spend submitting project ideas (maybe 3 to 5 hours per project idea).</p>
+</div>
+<div class="paragraph">
+<p>When you get the call for mentors announcement towards the end of December or beginning of January,
+it is time to think about joining the Jenkins GSoC program as a mentor.
+During this phase, the mentor responsibilities are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Read this document and the related links</p>
+</li>
+<li>
+<p>Reach out to the Jenkins GSoC community in the <a href="https://community.jenkins.io/c/contributing/gsoc/6">GSoC Discourse</a> or in the GSoC Gitter.</p>
+</li>
+<li>
+<p>Add your name as potential mentor to the project ideas you wish to mentor (in pull-requests)</p>
+</li>
+<li>
+<p>Propose new project idea(s)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can also:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Engage with prospective GSoC Contributors the <a href="https://community.jenkins.io/c/contributing/gsoc/6">GSoC Discourse</a> or in the GSoC Gitter.</p>
+</li>
+<li>
+<p>Encourage GSoC Contributors to study code and send newbie-friendly pull-requests</p>
+</li>
+<li>
+<p>Ensure the project ideas you are interested in are discussed in the community with subject matter experts and potential users</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Optionally, you can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recruit additional mentors for projects (if possible)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The important aspect of this phase is to produce a list of good project ideas, as this is key to be accepted in the GSoC program.</p>
+</div>
+<div class="paragraph">
+<p>The deadline for producing this list is indicated on the
+<a href="https://summerofcode.withgoogle.com/how-it-works/#timeline">Official GSoC timeline</a>.</p>
+</div>
+<div class="paragraph">
+<p>Jenkins GSoC Org Admins are responsible for submitting the application form for the Jenkins organization.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="org_approval_waiting_phase"><a class="anchor" href="#org_approval_waiting_phase"></a>Organization approval waiting period</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> 2 to 3 hours per week until organizations are announced.</p>
+</div>
+<div class="paragraph">
+<p>During this period, we wait for Google to approve our application request.</p>
+</div>
+<div class="paragraph">
+<p>Mentors should keep interacting with GSoC Contributors during this period.</p>
+</div>
+<div class="paragraph">
+<p>Google publishes the list of accepted organizations according to the
+<a href="https://summerofcode.withgoogle.com/how-it-works/#timeline">Official GSoC timeline</a>.
+If we are accepted, we move on to the next phase.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="forming_mentor_teams"><a class="anchor" href="#forming_mentor_teams"></a>Mentors and mentor teams</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> a few hours before the <a href="#ranking_and_slot_request_phase">Proposal ranking and slot request phase</a>.</p>
+</div>
+<div class="paragraph">
+<p>We want mentors to form mentor teams of at least 2 or 3 mentors and to co-mentor projects together.
+Please spend a few hours forming your mentor team as soon as possible but no later than the start of the <a href="#ranking_and_slot_request_phase">Proposal ranking and slot request phase</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you do not have enough potential mentors for a project,
+do spend a few hours looking for co-mentors (mailing list, chat room, social media, etc.) and contact them.
+You should also setup introduction audio or video conference with them, and you should invite them to the office hours meeting.
+It is good to discuss your mutual interests (why you are interested in the same projects, your respective backgrounds in open source, etc.)
+and your respective availabilities during the program.</p>
+</div>
+<div class="paragraph">
+<p>Mentors must make sure they get invited by org admins, and must make sure to respond to that invitation
+by the time the <a href="#ranking_and_slot_request_phase">Proposal ranking and slot request phase</a> phase begins.</p>
+</div>
+<div class="paragraph">
+<p>All mentors work with the GSoC Contributor during all phases on the program,
+answering the GSoC Contributor questions, coaching, advising, motivating, unblocking, reviewing code and pull-requests, ensuring the process is followed,
+ensuring communications are in public as this is an open source program, and report issues to the lead mentor, etc.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="student_application_phase"><a class="anchor" href="#student_application_phase"></a>GSoC Contributor exploration and application phase</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> about 2 to 5 hours per week (more if you submit your own project ideas which we encourage highly) until the GSoC Contributor application phase ends.</p>
+</div>
+<div class="paragraph">
+<p>Officially, this phase is divided in two:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GSoC Contributors explore and discuss projects and project ideas</p>
+</li>
+<li>
+<p>GSoC Contributors formally apply to GSoC with Google</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>During this long phase, mentors are expected to actively interact and discuss with GSoC Contributors on projects they wish to mentor.
+This means that you need to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>answer questions from GSoC Contributors and clarify the project&#8217;s detailed objectives with them</p>
+</li>
+<li>
+<p>help the GSoC Contributor prepare a high quality proposal</p>
+</li>
+<li>
+<p>review the GSoC Contributor pull-request(s) if any (some GSoC Contributors send fixes for small issues during this phase to get familiar with the process)</p>
+</li>
+<li>
+<p>find out who else is interested in the same project as you (your co-mentors)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>of course we appreciate if you help us find more mentors if you can</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>participate in the weekly public meeting</p>
+</li>
+<li>
+<p>make sure the GSoC Contributors follow the process and that their application meets the requirements in the <a href="https://docs.google.com/document/d/1dIlPLXfLbFsvcaHFuwmH9_lSCVm9m6-SgNYTNAnSZpY/edit">template</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>make sure the GSoC Contributors determine whether they are <a href="students.html#eligibility-steps" class="xref page">eligible</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>if the GSoC Contributor proposes a genuine project idea in your area of interest or expertise, make sure it is presented and discussed in the community</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can still submit new project ideas during this phase.</p>
+</div>
+<div class="paragraph">
+<p>This is a very important phase, use it to get to know the GSoC Contributors who apply to projects that are of interest to you.</p>
+</div>
+<div class="paragraph">
+<p>For this deadline, please see the
+<a href="https://summerofcode.withgoogle.com/how-it-works/#timeline">Official GSoC timeline</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ranking_and_slot_request_phase"><a class="anchor" href="#ranking_and_slot_request_phase"></a>Proposal ranking and slot request phase</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> about 5 hours total, plus continuous interaction with potential GSoC Contributors, until the community bonding starts.</p>
+</div>
+<div class="paragraph">
+<p>This phase is divided in two sub-phases:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#slot_request_sub_phase">Initial proposal ranking and slot request sub-phase</a>: usually 2 to 3 weeks (not very long)</p>
+</li>
+<li>
+<p><a href="#final_selection_phase">Final proposal selection sub-phase</a>: usually 1 week (very short!)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Mentor teams are formalized during this phase, and mentors must be registered with the GSoC website.
+For details on forming mentor teams, see <a href="#forming_mentor_teams">Mentors and mentor teams</a>.</p>
+</div>
+<div class="paragraph">
+<p>GSoC Contributor proposals are ranked for slot requests, and a final selection is made.</p>
+</div>
+<div class="paragraph">
+<p>Note that <strong>we are NOT allowed to communicate any information regarding the selection to GSoC Contributors during this phase until Google makes the official GSoC Contributor Project Announcements.</strong>
+We do not make this announcement, Google does.</p>
+</div>
+<div class="sect3">
+<h4 id="slot_request_sub_phase"><a class="anchor" href="#slot_request_sub_phase"></a>Initial proposal ranking and slot request sub-phase</h4>
+<div class="paragraph">
+<p>The goal of this phase is to determine and request the minimum and the maximum number of projects we can take on as an organization.
+This process is explained in the Mentor Guide in the
+<a href="https://google.github.io/gsocguides/mentor/selecting-students-and-mentors#slot-count">Slot Count</a> section.</p>
+</div>
+<div class="paragraph">
+<p>We have three weeks to send our slot request to Google.
+<strong>It is an intense and critical period for Org Admins and mentors</strong>,
+as this determines who participates in the rest of the program!</p>
+</div>
+<div class="paragraph">
+<p>During this phase, mentors and org admins need to rank the projects.
+Fake and incomplete proposals are discarded.
+Good proposals are ranked in order of chances of success.
+Here we look for quality, completeness and compliance of the GSoC Contributor applications and our capacity to mentor.
+We usually get more projects than we can mentor, so we must make a selection.</p>
+</div>
+<div class="paragraph">
+<p>Regarding our capacity to mentor a project,
+it is critical at this phase that <strong>mentors register their name in the Google GSoC system and
+assign themselves to all the projects they would like to mentor</strong> (as if they had infinite time).</p>
+</div>
+<div class="paragraph">
+<p>When we rank projects, we make sure mentors only get the number of projects they want (usually one or two)
+regardless of how many projects the mentor registers for.
+We also ask mentors to rank the projects they&#8217;d like to mentor in order of their preference.
+Org Admins make sure there is at least TWO mentors per project.
+The Org Admins help organize mentor teams and projects are ranked in a manner that tries to maximize success and happiness for everyone.</p>
+</div>
+<div class="paragraph">
+<p>Note that we allow mentors to participate in more than one project only if the mentor agrees with it.
+We do not recommend taking on more than two projects.
+You can still contribute in the Jenkins project while you mentor in GSoC.</p>
+</div>
+<div class="paragraph">
+<p>This all sounds complicated, but long story short, this phase is when the match making process formally happens between mentors, GSoC Contributors and projects.</p>
+</div>
+<div class="paragraph">
+<p>The max number should never exceed our total mentoring capacity.
+The min number is the quantity of projects we feel confident we can mentor and succeed.
+For example We can feel very confident about 5 projects,
+and reasonably about 2 projects, and not enough confident about the rest.
+Then our min and max would be 5 and 7.</p>
+</div>
+<div class="paragraph">
+<p>Then we send our slot request min and max numbers to Google.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="final_selection_phase"><a class="anchor" href="#final_selection_phase"></a>Final proposal selection sub-phase</h4>
+<div class="paragraph">
+<p>This phase is very short and starts immediately when Google sends us our final number of slots.</p>
+</div>
+<div class="paragraph">
+<p>We may get only the minimum of slots.
+Sometimes heart wrenching decisions need to be made.</p>
+</div>
+<div class="paragraph">
+<p>Org Admins and Mentors need to make an extra effort to devote time to this phase because it is very short and this does not leave us much time to make critical decisions, and it just as important as the other phases.</p>
+</div>
+<div class="paragraph">
+<p>During this phase, mentors and Jenkins Org Admins hold a private meeting to make the final project selection
+and the mentor teams are finalized and confirmed. Then we submit our final selection to the GSoC program.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_final_selection_awaiting_period"><a class="anchor" href="#_final_selection_awaiting_period"></a>Final selection awaiting period</h3>
+<div class="paragraph">
+<p>This only usually lasts a few days.</p>
+</div>
+<div class="paragraph">
+<p>We wait. We are NOT allowed to communicate any information regarding the selection to GSoC Contributors.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="community_bonding_phase"><a class="anchor" href="#community_bonding_phase"></a>Community Bonding</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> about 5 to 8 hours per week, until coding starts.</p>
+</div>
+<div class="paragraph">
+<p>This is the most critical phase when it comes to working with your GSoC Contributor.
+Year after year, if this phase goes well, the rest of the program usually goes well, but if this phase does not go well, the project usually fails.</p>
+</div>
+<div class="paragraph">
+<p>Mentors are expected to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Send a welcome message to their GSoC Contributor within 24 hours after the projects are announced (<a href="https://developers.google.com/open-source/gsoc/timeline">GSoC timeline</a>)</p>
+</li>
+<li>
+<p>Organize your first meeting with the GSoC Contributor, within the first week.
+Bring as many contributors as possible there, and make sure to celebrate and to discuss the next steps.</p>
+</li>
+<li>
+<p>Set the pace, establish your regular meeting times together.</p>
+</li>
+<li>
+<p>Agree on the main communication channels (chats or mailing lists).
+GSoC org admins can help you to create communication channels if needed</p>
+</li>
+<li>
+<p>Help the GSoC Contributor to do first contributions to the project if it has not happened before.
+Newbie-friendly issues might be a good start.
+Get them merged and released as soon as possible</p>
+</li>
+<li>
+<p>Make sure the GSoC Contributor has a detailed plan and a design document for the first coding phase before it starts</p>
+</li>
+<li>
+<p>Get the GSoC Contributor to create issues in Jira for the work items of the coming coding phase</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We have written a guide for this phase, <a href="students.html#community-bonding" class="xref page">read it</a> and follow it.</p>
+</div>
+<div class="paragraph">
+<p>In rare cases, it is acceptable to re-work the project idea, even change it completely, as long as the GSoC Contributor and the mentors all agree.
+Written documentation about this is essential, if it happens, let the Org Admins know.</p>
+</div>
+<div class="paragraph">
+<p>Let Jenkins Org Admins know as soon as possible if there is any need for knowledge transfer sessions.
+We often organize special public presentations to go over plugin and core development flows and code that
+GSoC Contributors and mentors alike benefit from attending.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="coding_periods"><a class="anchor" href="#coding_periods"></a>Coding Periods</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> about 5 to 8 hours per week until the end of the program.</p>
+</div>
+<div class="paragraph">
+<p>See also: <a href="students.html#coding-periods" class="xref page">student coding periods</a>.</p>
+</div>
+<div class="paragraph">
+<p>You are mentoring now. Guide, coach, review pull-requests, unblock the GSoC Contributor,
+ensure GSoC Contributors use Jira for task, bug and feature tracking,
+meet your GSoC Contributor at least once or twice per week over a live one-on-one session
+(video conferencing and screen sharing is infinitely useful here).</p>
+</div>
+<div class="paragraph">
+<p>What if the GSoC Contributor is done early? GSoC Contributor and mentor must determine other work that can be done and let the Jenkins Org Admins know.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="eval_periods"><a class="anchor" href="#eval_periods"></a>Evaluation periods</h3>
+<div class="paragraph">
+<p><strong>Expectation:</strong> same as during the coding periods.</p>
+</div>
+<div class="paragraph">
+<p>See also: <a href="students.html#evaluations" class="xref page">student evaluations</a>.</p>
+</div>
+<div class="paragraph">
+<p>Mentors are expected to evaluate their GSoC Contributor, while they continue to mentor them.
+Coding seldom completely stops during this period.</p>
+</div>
+<div class="paragraph">
+<p>Mentors are expected to:
+* ensure that the GSoC Contributor creates a presentation and prepares a demo
+* ensure their GSoC Contributor presents their project (presentation and demo) at a public meeting in the style of an on-line meetup.
+<strong> We record these presentations and publish them on YouTube.
+* evaluate their GSoC Contributor by comparing the GSoC Contributor project plan with the actual code produced.
+</strong> There is usually great flexibility as we allow mentors and GSoC Contributors to agree on what the expectations are in terms of features and content.
+* fill in the GSoC evaluation form and provide written feedback in that form to their GSoC Contributor and to the Google GSoC organization.</p>
+</div>
+<div class="paragraph">
+<p>This period is a good time to review the Jira tickets and prepare the tickets for the next coding phase.</p>
+</div>
+<div class="paragraph">
+<p>If too little code is produced for reasons that cannot be understood,
+inform your GSoC Contributor of your concerns, and ask the GSoC Contributor why this is happening.
+Often GSoC Contributors are blocked on a technical problem and do not communicate with their mentors.
+As a rule of thumb, there should be code pushed to Github almost every day.
+If not, let the Org Admins know as soon as possible.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="after_the_program"><a class="anchor" href="#after_the_program"></a>After the program</h3>
+<div class="paragraph">
+<p>Many GSoC Contributors ask their mentors how they can continue to contribute after the program.</p>
+</div>
+<div class="paragraph">
+<p>You could setup one-on-one on-line meeting with the GSoC Contributor on a monthly basis.
+You can invite the GSoC Contributor to SIG or other community meetings.
+Jenkins also has on-line meetups with various people presenting that the GSoC Contributor might be interested in joining.</p>
+</div>
+<div class="paragraph">
+<p>Usually, you can invite the GSoC Contributor to look at the bugs and features that have been captured
+in Jira during the coding phases for inspiration on what to do next.
+You can also invite GSoC Contributors to apply next year as a GSoC Contributor or even as a mentor.
+GSoC Contributors like to see their projects continue, and becoming a mentor is a great way to make that happen.</p>
+</div>
+<div class="paragraph">
+<p>Google organizes a mentor summit a few months after the program has ended.
+Each year, the Jenkins Org Admins select 2 mentors who get to go to that summit
+(travel costs and accommodations are paid for by Google).
+Mentors agree that this is a fantastic event!</p>
+</div>
+<div class="paragraph">
+<p>Some mentors travel to the Jenkins World conference and get to meet GSoC Contributors and other mentors.
+This is definitely a conference worth attending for mentors and GSoC Contributors alike.</p>
+</div>
+<div class="paragraph">
+<p>Here are some posts by mentors from past years conferences:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/blog/2020/01/29/gsoc-report/">GSoC 2019 Report</a>, multiple authors</p>
+</li>
+<li>
+<p><a href="http://jeff-pearce.com/google-summer-of-code-with-the-jenkins-project/">Google Summer of Code with the Jenkins Project</a>, by Jeff Pearce</p>
+</li>
+<li>
+<p><a href="/blog/2018/11/13/martinda-gsoc-mentor-summit-experience/">Google Summer of Code Mentor Summit 2018</a>, by Martin d&#8217;Anjou</p>
+</li>
+<li>
+<p><a href="/blog/2019/10/08/google-summer-of-code-mentor-and-org-admin-perspective/">Google Summer of Code Mentor and Org Admin Perspective</a>, by Marky Jackson</p>
+</li>
+<li>
+<p><a href="/blog/2019/08/25/jenkinsworld-contrib-summit-ask-the-expert-booth/">Jenkins World Contributor Summit and Ask the Expert booth</a>, by Marky Jackson</p>
+</li>
+<li>
+<p><a href="/blog/2018/10/14/gsoc2018-results/">Jenkins in Google summer of Code 2018 Results</a> by Oleg Nenashev</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_regarding_mentor_time_off"><a class="anchor" href="#_regarding_mentor_time_off"></a>Regarding mentor time off</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The GSoC program lasts several months.
+We know people go on vacation and need to take time off from their regular day job.
+We are flexible.
+This is one of the reasons why we also assign at least two mentors per GSoC Contributor.
+Make sure you timely communicate your availability to your GSoC Contributor, your co-mentors, and the org admins.</p>
+</div>
+<div class="paragraph">
+<p>If you must withdraw from the program completely, let the Jenkins Org Admins know as soon as possible.
+Life happens, but we need to know about unplanned changes so that we can ensure continuity of the ongoing GSoC projects.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conflict_of_interest_prevention"><a class="anchor" href="#_conflict_of_interest_prevention"></a>Conflict of interest prevention</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We appreciate mentorship provided by any Jenkins contributor.
+On the other hand, we want to avoid any conflicts with GSoC rules and spirit.
+We also want to avoid conflicts of interest between all sides.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Only an individual contributor may be a mentor according to GSoC rules.
+One or more company representatives may act as individual contributors</p>
+</li>
+<li>
+<p>All mentors and org admins are considered as Jenkins community representatives.
+They must follow the <a href="/conduct">Code of Conduct</a></p>
+</li>
+<li>
+<p>If a mentor works for a company, which use Jenkins in commercial products&#8230;&#8203;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The mentorship work should be performed during spare time or during the OSS contribution time dedicated by the company.
+In the latter case the mentor should ensure that there will be a consistent time dedicated over the entire GSoC mentorship period</p>
+</li>
+<li>
+<p>The project proposed by mentors should not overlap neither with direct responsibilities within the company nor with the company product roadmaps.</p>
+</li>
+<li>
+<p>He/She should ensure there is no conflict of interest between the project and the work responsibilities</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There are several examples below:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"I would like to have this feature in my Jenkins installation. I have already made a commitment to deliver within my company. I will lose my bonus if I fail the commitment"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>NOT FINE, you have a conflict of interest. GSoC project may fail due to many reasons</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"I would like to have this feature in my Jenkins installation. It would provide us some added value, but we can live without it. I have not made any commitments"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>FINE if the proposed project is useful to a significant part of the community. Added value will keep you motivated</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"This feature has been already announced publicly by my company, we want to ship it as a part of our product"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>NOT FINE, you have a conflict of interest</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"This feature has not been announced publicly by my company, but we will do it after GSoC"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>NOT FINE, you have a conflict of interest</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"Our product may benefit from the feature, but it&#8217;s not in our roadmaps. The project idea is useful to the community"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>PROBABLY FINE, consult with GSoC Org Admins</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"I want to mentor this feature, but I see that somebody works on the similar feature in open-source"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>PROBABLY FINE, consult with the developers of the competing solution.
+Try to join forces and get them as mentors.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"I want to mentor this project, but I see that another company provides a similar closed-source solution"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>FINE, but ask GSoC Org Admins to contact the company. Maybe they agree to open-source it (and to assign a mentor). If no, it&#8217;s their problem.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"I want to implement a feature based on a patented algorithm/technology. It&#8217;s open-source, so we are free to do whatever"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>NOT FINE, Jenkins project recognizes laws.
+We are under the umbrella of the Linux Foundation, subject to US and international law.
+Contact the patent holder to get a license (needs a review by Jenkins Governance meeting).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>"I went through the list and still have concerns"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>PROBABLY FINE, contact GSoC Org Admins</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All potential issues should be escalated to GSoC admins.
+Intentional violation of the rules above may be a subject for Code of Conduct violation process.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

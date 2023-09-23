@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Managing Nodes :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.401.3/managing/nodes.html">
+    <link rel="prev" href="groovy-hook-scripts.html">
+    <link rel="next" href="script-approval.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="user-docs" data-version="2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins User Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/docker.html">Docker</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-credentials.html">Using credentials</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/searchbox.html">Using Search Box</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/referencing-another-project-by-name.html">Referencing another project by name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/aborting-a-build.html">Aborting a build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/fingerprints.html">Fingerprints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-local-language.html">Using local language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/change-time-zone.html">Change time zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/remote-access-api.html">Remote Access API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/executor-starvation.html">Executor Starvation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-agents.html">Using Jenkins agents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/running-pipelines.html">Running a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/development.html">Pipeline Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/syntax.html">Pipeline Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/pipeline-best-practices.html">Pipeline Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/scaling-pipeline.html">Scaling Pipelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/cps-method-mismatches.html">Pipeline CPS Method Mismatches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/dashboard.html">Dashboard</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/activity.html">Activity View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-run-details.html">Pipeline Run Details View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-editor.html">Pipeline Editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Managing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="system-configuration.html">Configuring the System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="casc.html">Configuration as Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="tools.html">Managing Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="about-jenkins.html">About Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="system-info.html">System Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="system-properties.html">Jenkins Features Controlled with System Properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="change-system-timezone.html">Change System Time Zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cli.html">Jenkins CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="script-console.html">Script Console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="groovy-hook-scripts.html">Groovy Hook Scripts</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="nodes.html">Managing Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="script-approval.html">In-process Script Approval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ui-themes.html">Themes for user interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="user-content.html">User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="spawning-processes.html">Spawning Processes From Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Securing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/access-control.html">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-jenkins.html">Securing Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/managing-security.html">Managing Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/controller-isolation.html">Controller Isolation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-builds.html">Securing Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/csrf-protection.html">CSRF Protection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/user-content.html">Rendering User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/build-authorization.html">Access Control for Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/environment-variables.html">Handling Environment Variables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/markup-formatter.html">Markup Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/services.html">Exposed Services and Ports</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/index.html">System Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/backing-up.html">Backing-up/Restoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/monitoring.html">Monitoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/administering-jenkins-on-kubernetes.html">Administering Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-chef.html">Managing Jenkins with Chef</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-puppet.html">Managing Jenkins with Puppet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/viewing-logs.html">Viewing logs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/authenticating-scripted-clients.html">Authenticating scripted clients</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration.html">Reverse proxy configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-haproxy.html">Reverse proxy - HAProxy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-squid.html">Reverse proxy - Squid</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-iis.html">Reverse proxy - IIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-iptables.html">Reverse proxy - iptables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../scaling/index.html">Scaling Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-scale.html">Architecting for Scale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/hardware-recommendations.html">Hardware Recommendations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-manageability.html">Architecting for Manageability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../troubleshooting/index.html">Troubleshooting Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/diagnosing-errors.html">Diagnosing Errors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/obtaining-a-thread-dump.html">Obtaining a thread dump</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins User Documentation</span>
+    <span class="version">2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../2.2/index.html">2.2</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins User Documentation</a></li>
+    <li><a href="index.html">Managing Jenkins</a></li>
+    <li><a href="nodes.html">Managing Nodes</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../2.401.3/managing/nodes.html">2.401.3</a>
+    <a class="version" href="../../2.2/managing/nodes.html">2.2</a>
+    <a class="version is-current" href="nodes.html">2.1</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/2.401.2/docs/user-docs/modules/managing/pages/nodes.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Managing Nodes</h1>
+<div class="sect1">
+<h2 id="_components_of_distributed_builds"><a class="anchor" href="#_components_of_distributed_builds"></a>Components of Distributed Builds</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Builds in a <a href="/doc/book/scaling/architecting-for-scale/#distributed-builds-architecture">distributed builds architecture</a> use nodes, agents, and executors, which are distinct from the Jenkins controller itself.
+Understanding what each of these components are is useful when managing nodes:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Jenkins controller</dt>
+<dd>
+<p>The Jenkins controller is the Jenkins service itself and where Jenkins is installed.
+It is also a web server that also acts as a "brain" for deciding how, when, and where to run tasks.
+Management tasks such as configuration, authorization, and authentication are executed on the controller, which serves HTTP requests.
+Files written when a Pipeline executes are written to the filesystem on the controller, unless they are off-loaded to an artifact repository such as Nexus or Artifactory.</p>
+</dd>
+<dt class="hdlist1">Nodes</dt>
+<dd>
+<p>Nodes are the "machines" on which build agents run.
+Jenkins monitors each attached node for disk space, free temp space, free swap, clock time/sync, and response time.
+A node is taken offline if any of these values go outside the configured threshold.
+Jenkins supports two types of nodes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>agents</strong> (described below)</p>
+</li>
+<li>
+<p><strong>built-in node</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The built-in node is a node that exists within the controller process.
+It is possible to use agents and the build-in node to run tasks.
+However, running tasks on the built-in node is discouraged for security, performance, and scalability reasons.
+The number of executors configured for the node determines the node&#8217;s ability to run tasks.
+Set the number of executors to 0 to disable running tasks on the built-in node.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Agents</dt>
+<dd>
+<p>Agents manage the task execution on behalf of the Jenkins controller by using executors.
+An agent is a small (170KB single jar) Java client process that connects to a Jenkins controller and is assumed to be unreliable.
+An agent can use any operating system that supports Java.
+Any tools required for building and testing get installed on the node where the agent runs.
+Because these tools are a part of the node, they can be installed directly or in a container, such as Docker or Kubernetes.
+Each agent is effectively a process with its own Process Identifier (PID) on the host machine.
+In practice, nodes and agents are essentially the same but it is good to remember that they are conceptually distinct.</p>
+</dd>
+<dt class="hdlist1">Executors</dt>
+<dd>
+<p>An executor is a slot for the execution of tasks.
+Effectively, it is a thread in the agent.
+The number of executors on a node defines the number of concurrent tasks that can run.
+In other words, this determines the number of concurrent Pipeline <code>stages</code> that can execute at the same time.
+Determine the correct number of executors per build node must be determined based on the resources available on the node and the resources required for the workload.
+When determining how many executors to run on a node, consider CPU and memory requirements, as well as the amount of I/O and network activity:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>One executor per node is the safest configuration.</p>
+</li>
+<li>
+<p>One executor per CPU core can work well, if the tasks running are small.</p>
+</li>
+<li>
+<p>Monitor I/O performance, CPU load, memory usage, and I/O throughput carefully when running multiple executors on a node.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_agents"><a class="anchor" href="#_creating_agents"></a>Creating Agents</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins agents are the "workers" that perform operations requested by the Jenkins controller.
+The Jenkins controller administers the agents and can manage the tooling on the agents.
+Jenkins agents may be statically allocated or they can be dynamically allocated through systems like Kubernetes, OpenShift, Amazon EC2, Azure, Google Cloud, IBM Cloud, Oracle Cloud, and other cloud providers.</p>
+</div>
+<div class="paragraph">
+<p>This 30 minute tutorial from Darin Pope creates a Jenkins agent and connects it to a controller.</p>
+</div>
+<div class="videoblock">
+<div class="title">How to create an agent node in Jenkins</div>
+<div class="content">
+<iframe width="640" height="360" src="https://www.youtube.com/embed/99DddJiH7lM?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_launch_inbound_agent_via_windows_scheduler"><a class="anchor" href="#_launch_inbound_agent_via_windows_scheduler"></a>Launch inbound agent via Windows Scheduler</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you are having trouble getting the inbound agent installed as a Windows service (i.e., you followed <a href="https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+as+a+Windows+service">the instructions on installing the agent as a service here</a> but it didn&#8217;t work), an alternative method of starting the service automatically when Windows starts is to use the Windows Scheduler.</p>
+</div>
+<div class="paragraph">
+<p>We take advantage of the Windows Scheduler&#8217;s ability to run command at system startup</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Configure your node to use the "Launch agents by connecting it to the master" launch method</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click Save</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Note the command required to launch the agent</p>
+<div class="ulist">
+<ul>
+<li>
+<p>On the new agent node&#8217;s Jenkins page, note the agent command line shown.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>It will be like:</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">java -jar agent.jar \
+-jnlpUrl http://&lt;JenkinsHostName&gt;:8080/computer/&lt;nodeName&gt;/slave-agent.jnlp \
+-secret &lt;some_long_hex_string&gt;</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Obtain the agent.jar file and copy it to your new Windows agent node</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In the command line noted in the last step, the "agent.jar" is a hyperlink. Click it to download the agent.jar file.</p>
+</li>
+<li>
+<p>Copy the agent.jar file to a permanent location on your agent machine</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Ensure that you have a java version available on your agent machine</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If not, obtain and install a <a href="/doc/administration/requirements/java/">supported version</a> of Java</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Run the command manually from a CMD window on your agent to confirm that it works</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Open the CMD window</p>
+</li>
+<li>
+<p>Run the command the one like</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">java -jar agent.jar -jnlpUrl \
+http://&lt;JenkinsHostName&gt;:8080/computer/&lt;nodeName&gt;/slave-agent.jnlp -secret &lt;some_long_hex_string&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Go back to the node&#8217;s web page in Jenkins.  If everything works then page should say "Agent is connected"</p>
+</li>
+<li>
+<p>Stop the command (control-c)</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Register a new scheduled job to run the same command</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Open "Task Scheduler" on your windows machine</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Start &#8594; Run: task Scheduler</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Create a basic task (Menu: Action &#8594; Create Basic Task)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>First page of the wizard:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Name: Jenkins Agent</p>
+</li>
+<li>
+<p>Description (optional)</p>
+</li>
+<li>
+<p>Click Next</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Next page of the wizard</p>
+<div class="ulist">
+<ul>
+<li>
+<p>When do you want the task to start: select "When the computer starts"</p>
+</li>
+<li>
+<p>Click Next</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Next page of the wizard</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What action do you want the task to perform: select "Start a program"</p>
+</li>
+<li>
+<p>Click Next</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Next page of the wizard</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Program/Script: enter "java.exe" (or the full path to your java.exe)</p>
+</li>
+<li>
+<p>Add arguments: enter the rest of the command, like</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">-jar agent.jar -jnlpUrl http://&lt;JenkinsHostName&gt;:8080/computer/&lt;nodeName&gt;/slave-agent.jnlp \
+-secret &lt;some_long_hex_string&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>eg:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">-jar D:\Scripts\jenkins\agent.jar \
+-jnlpUrl http://jenkinshost.example.com:8080/computer/buildNode1/slave-agent.jnlp -secret \
+d6a84df1fc4f45ddc9c6ab34b08f13391983ffffffffffb3488b7d5ac77fbc7</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click Next</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Next page of the wizard</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click the check box "Open the Properties dialog for this task when I click Finish</p>
+</li>
+<li>
+<p>Click Finish</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Update the task&#8217;s properties</p>
+<div class="ulist">
+<ul>
+<li>
+<p>On the General tab</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Select the user to run the task as</p>
+</li>
+<li>
+<p>Select "Run whether user is logged on or not"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>On the settings tab</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Uncheck "Stop the task if it runs longer than"</p>
+</li>
+<li>
+<p>Check "Run the task as soon as possible after a scheduled start is missed"</p>
+</li>
+<li>
+<p>Check "If the task failed, restart every: 10 minutes", and "Attempt to restart up to: 3 times"</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click OK</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start the scheduled task and again check that the agent is connected</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Go back to the node&#8217;s web page in Jenkins.  If everything works then page should say "Agent is connected"</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installing_a_jenkins_agent_on_windows"><a class="anchor" href="#_installing_a_jenkins_agent_on_windows"></a>Installing a Jenkins agent on Windows</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can install a Jenkins agent on Windows using the command line.
+In this video, Darin reviews setting up and installing the Jenkins agent, including how to create any necessary files.</p>
+</div>
+<div class="videoblock">
+<div class="title">How to install a Jenkins agent on Windows</div>
+<div class="content">
+<iframe width="800" height="420" src="https://www.youtube.com/embed/N8AQTlHoBKc?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_a_macos_agent_for_jenkins"><a class="anchor" href="#_creating_a_macos_agent_for_jenkins"></a>Creating a macOS agent for Jenkins</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This video reviews the process of creating a macOS agent for Jenkins using Java 11.</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe width="800" height="420" src="https://www.youtube.com/embed/DteE1Zf8CIw?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="groovy-hook-scripts.html">Groovy Hook Scripts</a></span>
+  <span class="next"><a href="script-approval.html">In-process Script Approval</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Proposing new project ideas :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/proposing-project-ideas.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="projects" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Projects</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Jenkins Sub-projects</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../user-docs/2.401.3/blueocean/getting-started.html">Getting started with Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/about.html">About Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/contribute.html">Contributing to Blue Ocean</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../jam/index.html">CI/CD and Jenkins Area Meetups</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../remoting/index.html">Jenkins Remoting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Google Summer of Code in Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="2018/index.html">Jenkins in Google Summer of Code 2018</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018/code-coverage-api-plugin.html">GSoC 2018. Code Coverage API Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018/eda-plugins.html">GSoC 2018. EDA Plugins for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018/index.html">Jenkins in Google Summer of Code 2018</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018/remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018/simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="2019/index.html">Jenkins in Google Summer of Code 2019</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="2019/project-ideas.html">GSoC 2021 Project Ideas</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="2019/schedule.html">Jenkins year-round GSoC schedule</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/working-hours-improvements.html">GSoC2019 Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/gitlab-support-for-multibranch-pipeline.html">Multibranch Pipeline support for GitLab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka with Kubernetes features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="2019/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/eda-coverage-adapters.html">EDA Coverage Adapters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/advanced-build-discard-strategy-plugin.html">Advanced Build Discard Strategy Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/configuration-as-code-compatibility.html">Configuration as Code Plugin Compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/pipeline-step-documentation-generator.html">Pipeline Step Documentation Generator improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/eda-plugins.html">Plugin(s) for Electronic Design Automation tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/bitbucket-rest-plugin.html">Bitbucket REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/working-hours-improvements.html">Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/machine-learning.html">Jenkins and Machine Learning Plugins for Data Science</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/artifactory-rest-plugin.html">Artifactory REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/remoting-monitoring.html">Jenkins Remoting Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/freestyle-to-pipeline-converter.html">Freestyle job to Pipeline job converter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/jenkins-rest-plugin.html">Jenkins REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/role-strategy-ux.html">Role Strategy Plugin: user experience</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/ath-improvements.html">Improvements to the Jenkins Acceptance Test Harness</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/winsw-yaml-config-support.html">Jenkins Windows Services: YAML Configuration Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/external-fingerprint-storage-for-jenkins.html">External Fingerprint Storage for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/gitlab-support-for-multibranch-pipeline.html">Multi-branch Pipeline support for Gitlab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/docker-registries-polling-plugin.html">Polling Docker Registries for Image Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/code-coverage-api-improvements.html">Code Coverage API Plugin Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/automatic-spec-generator-for-jenkins-rest-api.html">Automatic Specification Generator for Jenkins REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka. Docker/K8s Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="2019/project-ideas/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../sigs/advocacy-and-outreach/outreach-programs/index.html">Outreach programs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../jcasc/index.html">Jenkins Configuration as Code</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../jcasc/dev-tools.html">Dev-Tools for JCasC</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../infrastructure/index.html">Infrastructure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../infrastructure/ircbot.html">IRC Bot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../jenkins-operator/index.html">Jenkins Operator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Other Projects</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes.html">Document Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://jenkins-x.io/">Jenkins X</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Projects</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins Projects</a></li>
+    <li><a href="proposing-project-ideas.html">Proposing new project ideas</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/proposing-project-ideas.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Proposing new project ideas</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>New project ideas for GSoC can be proposed by mentors, GSoC applicants, or anyone in the Jenkins
+community with an idea they&#8217;d like to see implemented.</p>
+</div>
+<div class="paragraph">
+<p>Note: Project ideas should not be confused with <a href="students.html#student-proposals" class="xref page">GSoC applicant proposals</a>.</p>
+</div>
+<div class="paragraph">
+<p>GSoC applicants: to browse the existing project ideas offered by the Jenkins Organisation,
+please read the instructions on the <a href="students.html" class="xref page">GSoC contributor page</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_proposal_quick_start"><a class="anchor" href="#_proposal_quick_start"></a>Proposal quick start</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you would like to propose a project idea to the Jenkins community for the GSoC program,
+then you are a Jenkins GSoC Idea champion. You should follow the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Share your idea on the <a href="https://app.gitter.im/#/room/#jenkinsci_gsoc-sig:gitter.im">Jenkins GSoC gitter channel</a> or on the
+<a href="https://community.jenkins.io/c/contributing/gsoc/6">GSoC Discourse channel</a></p>
+</li>
+<li>
+<p>On Discourse, use <code>[GSOC 2023 PROJECT IDEA] Title of idea</code> as the subject</p>
+</li>
+<li>
+<p>The GSoC idea must:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>be about coding</p>
+</li>
+<li>
+<p>be about Jenkins</p>
+</li>
+<li>
+<p>be open-source</p>
+</li>
+<li>
+<p>benefit users or contributors or both</p>
+</li>
+<li>
+<p>identify the best channel to discuss the idea (SIG, sub-project, or developer mailing list)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>The technical discussion of the idea should cover:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>the technical feasibility and the required changes to existing code when applicable</p>
+</li>
+<li>
+<p>the scope of the project (it should be defined to fit approximately 12+ weeks of coding for a GSoC contributor)</p>
+</li>
+<li>
+<p>how it fits with existing projects (does it complement, augment, replace, combine, fix, etc. an existing project?)</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Once the discussion has started on Discourse,
+you can submit your idea for publication on the page of GSoC ideas under the discussion section
+by sending a pull request with an <code>.adoc</code> file for your project idea.</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>fork and clone the <a href="https://github.com/jenkins-infra/jenkins.io">jenkins.io</a> repository</p>
+</li>
+<li>
+<p>create a new <code>.adoc</code> file under the appropriate yearly folder in
+<a href="https://github.com/jenkins-infra/jenkins.io/tree/master/content/projects/gsoc">content/projects/gsoc</a>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For more on the <code>adoc</code> format see <a href="https://asciidoctor.org/">asciidoctor.org</a>.</p>
+</div>
+<div class="paragraph">
+<p>The format for the <code>.adoc</code> file is as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">---
+layout: gsocprojectidea
+title: "Specify the project idea title"
+goal: "One sentence summarizing the goal of your idea"
+category: Plugins
+year: 2023
+status: discussion
+mentors:
+- "userid1"   # This userid must exist under /content/_data/authors/userid.adoc on jenkins.io
+- "userid2"   # You can have multiple mentors (and remove these comments when submitting)
+skills:
+- skills_go_here
+- add_more_if_needed
+links:
+  emailThread: link to the Discourse discussion thread in https://community.jenkins.io/c/contributing/gsoc/6
+---
+
+TODO: DRAFT (this is a placeholder, it will not be shown)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The last step is to submit this new file as a pull-request.</p>
+</div>
+<div class="sect2">
+<h3 id="submit_pr"><a class="anchor" href="#submit_pr"></a>When you submit a pull-request</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>add <code>CC @jenkins-infra/gsoc</code> so we get a notification, or request a review from <code>jenkins-infra/gsoc</code></p>
+</li>
+<li>
+<p>add a link to the related Discourse thread</p>
+</li>
+<li>
+<p>assign the gsoc Label to the PR if you can</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>post the pull-request link to the
+<a href="https://app.gitter.im/#/room/#jenkinsci_gsoc-sig:gitter.im">Jenkins GSoC gitter channel</a> and to the
+<a href="https://community.jenkins.io/c/contributing/gsoc/6">GSoC Discourse channel</a> as a follow up to your original thread.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If your idea gets good feedback, and you want to proceed with it,
+you will need to provide details about the project idea.
+This can be done using the <code>.adoc</code> file itself, a Google Doc, or both.
+What&#8217;s the difference?
+A Google Doc lowers the barrier of entry for comments and feedback, and multiple authors can collaborate on the idea simultaneously.
+It is possible to discuss the project using the comments, but in the end the comment history is hidden once the comments are resolved.
+A pull-request is more rigid and once it is merged, the discussion about the project must take place either in subsequent pull-requests,
+or in a chat room or Discourse. Both are offered and simultaneously possible, use the method that works best for you.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_adoc_for_capturing_the_details_of_the_idea"><a class="anchor" href="#_using_adoc_for_capturing_the_details_of_the_idea"></a>Using <code>.adoc</code> for capturing the details of the idea</h3>
+<div class="paragraph">
+<p>To use the <code>.adoc</code> file for the details, please modify your <code>.adoc</code> file according to this template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">---
+layout: gsocprojectidea
+title: "Specify the project idea title"
+goal: "One sentence summarizing the goal of your idea"
+category: Plugins
+year: 2023
+status: draft
+mentors:
+- "userid1"   # This userid must exist under /content/_data/authors/userid.adoc on jenkins.io
+- "userid2"   # You can have multiple mentors (and remove these comments when submitting)
+skills:
+- skills_go_here
+- add_more_if_needed
+links:
+  {gitter}jenkinsci_gsoc-sig:gitter.im # This can be the gitter link of your project's chat room
+---
+
+Write your project idea here. Sometimes an abstract is enough, but you should include:
+
+* A short description of the project
+* The benefits to the community
+* A list of comparable solutions, and why your idea is better
+* Anything you want to say about your project idea
+* GSoC contributors will read this when they look to participate in the program, so make sure you catch their attention!
+* Have a look at other project ideas for inspiration to improve the way you present your idea
+
+== Quickstart
+
+You may have quick start instructions for GSoC contributors, e.g. how to get started on your proposal. Provide this information here.
+
+== Links
+
+You may have additional links to the ideas here, including related discussions on
+the Jenkins Dev or Jenkins GSoC Discourse, blogposts, Jiras, etc.
+
+Links looks like this:
+
+# Absolute link
+link:https://plugins.jenkins.io/role-strategy[Role Strategy Plugin]
+
+# Relative links within jenkins.io
+xref:projects:gsoc:students.adoc[Information page for GSoC contributors]
+
+
+== Newbie-friendly issues
+
+If you are a potential mentor, propose examples of tickets the applicants could
+study while preparing their project proposals.
+We do NOT require GSoC contributors to make contributions before applying,
+but such tasks may help to select GSoC contributors who are interested to work on the project.</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_a_google_doc_for_capturing_the_details_of_the_idea"><a class="anchor" href="#_using_a_google_doc_for_capturing_the_details_of_the_idea"></a>Using a Google Doc for capturing the details of the idea</h3>
+<div class="paragraph">
+<p>To use a Google Doc for the details, please modify your <code>.adoc</code> file according to this template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">---
+layout: gsocprojectidea
+title: "Specify the project idea title"
+goal: "One sentence summarizing the goal of your idea"
+category: Plugins
+year: 2023
+status: draft
+showGoogleDoc: true  # This line causes the google doc to be embedded on jenkins.io
+mentors:
+- "userid1"   # This userid must exist under /content/_data/authors/userid.adoc on jenkins.io
+- "userid2"   # You can have multiple mentors (and remove these comments when submitting)
+skills:
+- skills_go_here
+- add_more_if_needed
+links:
+  draft: &lt;link to Google Doc&gt;
+---
+See Google doc.</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_both_the_adoc_and_the_google_doc"><a class="anchor" href="#_using_both_the_adoc_and_the_google_doc"></a>Using both the <code>.adoc</code> and the Google Doc</h3>
+<div class="paragraph">
+<p>To use both, add a <code>draft</code> entry to the <code>links</code> like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">links:
+    draft: &lt;link to google doc&gt;
+    ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And remove the line that says <code>showGoogleDoc: true</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>.adoc</code> will be displayed, and the Google Doc will be linked at the bottom.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_additional_links"><a class="anchor" href="#_additional_links"></a>Additional links</h3>
+<div class="paragraph">
+<p>The <code>.adoc</code> can have links to chat rooms, Discourse channel, mailing lists etc. Simply name the links
+and they will be displayed:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">links:
+    mailing list: https://somelink to the mailing list
+    chat: https://some link to a chat room on gitter or slask or other</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_submitting_the_project_details"><a class="anchor" href="#_submitting_the_project_details"></a>Submitting the project details</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Whether you use a Google Doc, the <code>.adoc</code> file or both to document the details of the project idea,
+you need to submit a pull-request, following the <a href="#submit_pr">process described</a> earlier in this document.
+Make sure you post and follow up to all the places where your idea is discussed
+so that participants get the link to the Google Doc.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_publishing_the_idea"><a class="anchor" href="#_publishing_the_idea"></a>Publishing the idea</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Project ideas are published once they have been reviewed by the Org Admin team to ensure they contain
+enough information, all the expected sections, and that the meta information is correct (sig, links, mentors, etc.).</p>
+</div>
+<div class="paragraph">
+<p>Publishing is done via a pull-request that changes the status to <code>published</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_requirements"><a class="anchor" href="#_requirements"></a>Requirements</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>GSoC is about code (though it may and likely should include some documentation)</p>
+</li>
+<li>
+<p>Projects should be about Jenkins (plugins, core, infrastructure, integration, test frameworks, etc.)</p>
+</li>
+<li>
+<p>Projects should be potentially doable by a GSoC contributors in 12+ weeks</p>
+</li>
+<li>
+<p>If your project takes multiple years, try to split it in 12+ weeks long chunks so it fits with the GSoC timeline</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can find more information about requirements and practices in the
+<a href="https://google.github.io/gsocguides/mentor/">GSoC Mentor Guide</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Need some hints? Here are examples of project ideas:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A new plugin for integration with various development tools or services</p>
+</li>
+<li>
+<p><a href="../../dev-docs/plugin-governance/adopt-a-plugin.html" class="xref page">Adopting an existing plugin</a>,
+extending it by adding new features like <a href="../../user-docs/2.401.3/pipeline/index.html" class="xref page">Jenkins Pipeline</a></p>
+</li>
+<li>
+<p>Working on major feature requests from the <a href="https://issues.jenkins.io/secure/Dashboard.jspa">Jenkins bugtracker</a></p>
+</li>
+<li>
+<p>Creating new demo and reference setups,
+powered by various "-as-Code" engines (e.g. Jenkins Pipeline, JobDSL, Docker, <a href="#ROOT:index.adoc/gsoc/gsoc2018-project-ideas/.adoc#jenkins-configuration-as-code" class="xref unresolved">Configuration-as-Code plugin</a>, etc.)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_notes_for_gsoc_applicants"><a class="anchor" href="#_notes_for_gsoc_applicants"></a>Notes for GSoC applicants</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Although we encourage GSoC applicants to propose their own project ideas, we cannot guarantee
+that will find potential mentors for every proposal, especially for narrow areas.
+During the selection phase we won&#8217;t be able to accept proposals without mentors, so
+we highly recommend getting initial feedback in the GSoC Discourse channel before spending too much
+time on such proposals.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_more_examples_of_how_to_write_project_ideas"><a class="anchor" href="#_more_examples_of_how_to_write_project_ideas"></a>More examples of how to write project ideas</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Refer to the following files on Github for additional example to format your project idea submission:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkins-infra/jenkins.io/blob/master/content/projects/gsoc/2019/project-ideas/artifactory-rest-plugin.adoc">Project idea with link to a Google Doc</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkins-infra/jenkins.io/blob/master/content/projects/gsoc/2019/project-ideas/role-strategy-ux.adoc">Project idea with no link to Google Doc</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

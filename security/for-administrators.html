@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Overview for Jenkins Administrators :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/security/for-administrators.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="scheduling.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="security" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Jenkins Security Advisories</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Adminstrators</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="for-administrators.html">Overview for Jenkins Administrators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scheduling.html">How We Schedule Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="fixing.html">How We Fix Security Issues</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Reporters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="reporting.html">Reporting Security Vulnerabilities</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cna.html">Jenkins CVE Numbers Authority</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Maintainers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="for-maintainers.html">Overview for Plugin Maintainers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jenkins Security Team</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="team.html">About the Jenkins Security Team</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="improvements.html">Improvements by the Security Team</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Security Advisories</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Jenkins Security Advisories</a></li>
+    <li>For Adminstrators</li>
+    <li><a href="for-administrators.html">Overview for Jenkins Administrators</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/for-administrators.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Overview for Jenkins Administrators</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page explains everything Jenkins users and administrators need to know about the Jenkins security process.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_terminology"><a class="anchor" href="#_terminology"></a>Terminology</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the context of the Jenkins security project, we&#8217;re using the following terms with the specified meanings:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Security Vulnerability</dt>
+<dd>
+<p>An unintended weakness with impact on confidentiality, integrity, or availability that typically allows an attacker to obtain or modify information.</p>
+</dd>
+<dt class="hdlist1">Security Issue</dt>
+<dd>
+<p>Used interchangeably with <strong>Security Vulnerability</strong>.</p>
+</dd>
+<dt class="hdlist1">Security Fix</dt>
+<dd>
+<p>The specific change that fixes a security vulnerability.</p>
+</dd>
+<dt class="hdlist1">Security Update</dt>
+<dd>
+<p>A release containing one or more security fixes.</p>
+</dd>
+<dt class="hdlist1">Security Advisory</dt>
+<dd>
+<p>A public announcement of security issues and security updates.
+<a href="#what-is-a-security-advisory">See below for details.</a></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_does_the_jenkins_team_learn_about_security_issues"><a class="anchor" href="#_how_does_the_jenkins_team_learn_about_security_issues"></a>How Does the Jenkins Team Learn About Security Issues?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Security researchers, Jenkins contributors, Jenkins security team members, and regular Jenkins users and administrators <a href="/security/#reporting-vulnerabilities">report potential security issues they discover to the Jenkins security team</a>, via the SECURITY project in our issue tracker or via email.
+The Jenkins security team then evaluates the report to see whether it&#8217;s a real security issue or something else, and acts accordingly.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_does_the_jenkins_team_fix_issues"><a class="anchor" href="#_how_does_the_jenkins_team_fix_issues"></a>How Does the Jenkins Team Fix Issues?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We work with maintainers of affected components to address these issues.
+In case of Jenkins (core), security team members usually develop the fixes.</p>
+</div>
+<div class="paragraph">
+<p>Once fixes are ready or <a href="/security/plugins">we&#8217;ve determined that a component is not maintained actively enough</a>, we announce the issues and fixes, if applicable, in a security advisory.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_a_security_advisory"><a class="anchor" href="#_what_is_a_security_advisory"></a>What is a Security Advisory?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A security advisory is a public announcement with information about security issues, including workarounds and fixes.
+In the Jenkins project, we publish all security advisories <a href="/security/advisories">here</a> and announce them through various channels.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_are_security_advisories_announced"><a class="anchor" href="#_how_are_security_advisories_announced"></a>How are Security Advisories Announced?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We announce the publication of a new security advisory through multiple channels:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>We send an email notification to the public <a href="https://groups.google.com/g/jenkinsci-advisories"><code>jenkinsci-advisories</code></a> Google group with a short overview of affected components and a link to the security advisory.</p>
+</li>
+<li>
+<p>We send an email notification to the <a href="https://oss-security.openwall.org/wiki/mailing-lists/oss-security"><code>oss-security</code></a> mailing list with excerpts of the security advisory.</p>
+</li>
+<li>
+<p>We publish an <a href="/security/advisories/rss.xml">RSS feed</a> for the Security Advisories page.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Additionally, Jenkins administrators are informed about published security issues directly in Jenkins if they have affected versions of Jenkins or plugins installed.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_information_do_security_advisories_provide"><a class="anchor" href="#_what_information_do_security_advisories_provide"></a>What Information Do Security Advisories Provide?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Security advisories published by the Jenkins project contain the following sections:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A list of components included in the advisory</p>
+</li>
+<li>
+<p>Descriptions of the security issues and, if applicable, how they were addressed</p>
+</li>
+<li>
+<p>A list of issue severities using the CVSS 3.0 model</p>
+</li>
+<li>
+<p>A list of affected versions</p>
+</li>
+<li>
+<p>A list of fix versions, and, if applicable, a list of components for which no fix is available</p>
+</li>
+<li>
+<p>Credits for reporters <a href="/security/reporting">who informed the Jenkins project</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The lists of version numbers are most useful as a general, short reference.
+The main content of a security advisory is in the section with detailed descriptions, which focuses on answering the following questions in the sections below.</p>
+</div>
+<div class="sect2">
+<h3 id="_the_kind_of_security_issue"><a class="anchor" href="#_the_kind_of_security_issue"></a>The Kind of Security Issue</h3>
+<div class="paragraph">
+<p>The title of each issue gives a quick synopsis to readers familiar with most common (e.g. OWASP Top 10) security vulnerability types.
+The description that follows goes into more details.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="attacker"><a class="anchor" href="#attacker"></a>Who is Able to Exploit the Issue, and How?</h3>
+<div class="paragraph">
+<p>Descriptions usually mention the necessary permissions, for example Overall/Read or Job/Configure, except in cases where this cannot be determined with sufficient confidence.
+For example, through common practices like Pipeline-as-Code, limited job configuration permissions are delegated to users with SCM commit access, so claiming that Job/Configure permission is needed would be unintentionally misleading.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Cross-site request forgery (CSRF) vulnerabilities inherently do not require attackers to have any permissions, so that information is typically omitted.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="impact"><a class="anchor" href="#impact"></a>The Impact of Successful Exploitation</h3>
+<div class="paragraph">
+<p>In many cases, the impact of successful exploitation is directly tied to the kind of vulnerability:
+Cross-site scripting vulnerabilities ultimately can execute commands on Jenkins web pages as the victim, and remote code execution vulnerabilities can execute arbitrary code.</p>
+</div>
+<div class="paragraph">
+<p>In some cases, it is unclear what the <em>exact</em> impact of an issue is.
+Depending on our level of confidence about expected impact, we&#8217;ll provide the best estimation or state that some of the impact is unclear.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fix-description"><a class="anchor" href="#fix-description"></a>How the Issue Was Addressed</h3>
+<div class="paragraph">
+<p>If the issue was fixed, the security advisory will include information about <em>how</em> the issue was addressed.
+This helps understand the impact of updating.
+For example, a previously unsafe feature may no longer work as some users would expect, if they relied on the unsafe behavior.</p>
+</div>
+<div class="paragraph">
+<p>Note that this section will only explain how an issue was addressed if a fix was available as of publication of the security advisory.
+Learn more: <a href="/security/for-administrators/#later">Are Security Advisories Updated Later?</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="workarounds"><a class="anchor" href="#workarounds"></a>Non-obvious Workarounds, if Applicable</h3>
+<div class="paragraph">
+<p>In some cases the affected feature can be disabled using a hidden option.
+If the feature isn&#8217;t used or essential, this can be a possible short-term way to work around the problem.</p>
+</div>
+<div class="paragraph">
+<p>Only workarounds not otherwise clear from the issue description will be mentioned here.
+For example, if the description mentions that an attacker needs specific permissions to exploit a vulnerability, a workaround could be to revoke that permission from anyone who is not fully trusted.
+This would not be explicitly mentioned in the advisory.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="escape-hatches"><a class="anchor" href="#escape-hatches"></a>How to Disable (Part of) a Security Fix</h3>
+<div class="paragraph">
+<p>Security fixes undergo limited testing, so we commonly add "escape hatches", mechanisms to disable all or part of a security fix in case of unexpected problems.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Disabling security fixes will typically cause security issues.
+Doing this should very rarely be necessary.
+Administrators should make sure to <a href="../community/report-issue.html" class="xref page">report problems</a> with security fixes to the Jenkins project&#8217;s public issue tracker as a regression.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_quickly_should_i_apply_security_updates"><a class="anchor" href="#_how_quickly_should_i_apply_security_updates"></a>How Quickly Should I Apply Security Updates?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ideally, you apply security updates immediately.
+The various announcements we send out are intended to minimize any unnecessary delays between us publishing security advisories and users learning about them.
+Additionally, our guidelines for security fix development ensure that security updates are generally very safe to apply.
+In many cases, security fixes also include <a href="/security/for-administrators/#escape-hatches">hidden options that allow you to disable (parts of) security fixes temporarily if they turn out to cause problems</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;re unable to apply every security update immediately, security advisories will explain for every security issue:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/security/for-administrators/#attacker">How can the issue be exploited, and by whom?</a></p>
+</li>
+<li>
+<p><a href="/security/for-administrators/#impact">What is the impact when exploited?</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This information helps you understand whether you&#8217;re affected:
+For example, if you trust everyone with any access to Jenkins fully, then an issue that requires an attacker to be a user with some permissions in Jenkins might not need to be fixed urgently.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+The extensibility of Jenkins makes it impossible to provide definitive answers about exploitability and impact in all cases.
+While the Jenkins security team works hard to understand security issues and provide the best available information in the security advisory, this does not guarantee that we are always correct.
+Even security issues that appear irrelevant for your environment may end up potentially impacting your setup, so security updates should always be installed at the earliest opportunity.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="pre-announcements"><a class="anchor" href="#pre-announcements"></a>Can I Plan Maintenance Windows?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For most security advisories, we send a "pre-announcement" to the <code>jenkinsci-advisories</code> Google group.
+Depending on advisory content, these are typically sent a few days in advance, sometimes up to a week.</p>
+</div>
+<div class="paragraph">
+<p>These pre-announcements will only specify whether Jenkins (core) and/or plugins are affected.
+Affected plugins, if any, are not identified, but the announcement provides some information that allows Jenkins administrators to estimate whether they&#8217;re affected, and how important it is to schedule an immediate update:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The popularity of the most popular included plugins, and the highest severity of issues affecting these plugins.</p>
+</li>
+<li>
+<p>The highest severity of included issues, and the popularity of the most popular plugin in this group.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See the <a href="https://groups.google.com/g/jenkinsci-advisories"><code>jenkinsci-advisories</code> list archive</a> for examples of past pre-announcements.</p>
+</div>
+<div class="paragraph">
+<p>Some advisories are published without a pre-announcement.
+Reasons include: The advisory wasn&#8217;t planned more than a day or two in advance; or its content couldn&#8217;t be finalized until just before publication.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_when_are_security_advisories_published"><a class="anchor" href="#_when_are_security_advisories_published"></a>When are Security Advisories Published?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See <a href="/security/scheduling">How We Schedule Security Advisories</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="later"><a class="anchor" href="#later"></a>Are Security Advisories Updated Later?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Security advisories will be updated if any of the information is later found to be wrong <em>as of time of publication</em>.
+These later updates will be announced through the same channels if the correction is important to understanding the security advisory.</p>
+</div>
+<div class="paragraph">
+<p>If the security advisory announced security issues in plugins without a fix, and a fix is made available later, the existing security advisory will not be updated.
+Learn more:
+<a href="/security/plugins/#followup">Handling Vulnerabilities in Plugins: Following Up Later</a></p>
+</div>
+<div class="paragraph">
+<p>We may also apply minor changes (e.g. grammar correction, phrasing, or fixing broken links) that do not alter the meaning of the content.
+No notifications are sent for changes like that.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_do_i_configure_jenkins_securely"><a class="anchor" href="#_how_do_i_configure_jenkins_securely"></a>How Do I Configure Jenkins Securely?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See <a href="../user-docs/2.401.3/security/index.html" class="xref page">Securing Jenkins in the Jenkins Handbook</a>.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="index.html">Jenkins Security Advisories</a></span>
+  <span class="next"><a href="scheduling.html">How We Schedule Security Advisories</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

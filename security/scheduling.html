@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>How We Schedule Security Advisories :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/security/scheduling.html">
+    <link rel="prev" href="for-administrators.html">
+    <link rel="next" href="plugins.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="security" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Jenkins Security Advisories</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Adminstrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="for-administrators.html">Overview for Jenkins Administrators</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="scheduling.html">How We Schedule Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="fixing.html">How We Fix Security Issues</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Reporters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="reporting.html">Reporting Security Vulnerabilities</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cna.html">Jenkins CVE Numbers Authority</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Maintainers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="for-maintainers.html">Overview for Plugin Maintainers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jenkins Security Team</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="team.html">About the Jenkins Security Team</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="improvements.html">Improvements by the Security Team</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Security Advisories</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Jenkins Security Advisories</a></li>
+    <li>For Adminstrators</li>
+    <li><a href="scheduling.html">How We Schedule Security Advisories</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/scheduling.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">How We Schedule Security Advisories</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>How Jenkins security advisories are scheduled depends on their content.
+Most Jenkins security advisories can broadly be categorized by content:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Security advisories that announce issues in Jenkins (core), and possibly Jenkins plugins</p>
+</li>
+<li>
+<p>Security advisories that announce issues in Jenkins plugins only</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The information on this page describes regularly scheduled security updates and security advisories.
+In very rare cases, the Jenkins project may deviate from the processes described here, e.g. to deliver urgent security fixes for vulnerabilities that were already known publicly.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_security_advisories_involving_jenkins_core"><a class="anchor" href="#_security_advisories_involving_jenkins_core"></a>Security Advisories Involving Jenkins core</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We typically publish between four and eight advisories of this kind every year.</p>
+</div>
+<div class="paragraph">
+<p>The publication dates of these security advisories is tied to the <a href="/download/lts/">Jenkins LTS schedule</a>:
+They are usually published on Wednesdays, which corresponds to the scheduled regular release day for Jenkins LTS releases.
+In the case of the Jenkins weekly release line, the security update will be an additional mid-week release between regular releases typically scheduled for release on weekends.</p>
+</div>
+<div class="paragraph">
+<p><a href="/security/for-administrators/#pre-announcements">Pre-announcements</a> for these security advisories will be published several days in advance, sometimes up to a week.</p>
+</div>
+<div class="sect2">
+<h3 id="_fixed_versions"><a class="anchor" href="#_fixed_versions"></a>Fixed Versions</h3>
+<div class="paragraph">
+<p>Jenkins LTS lines typically consist of three releases: 2.xxx.1, 2.xxx.2, and 2.xxx.3, that are released four weeks apart.
+The first release of each LTS line is effectively a major update for Jenkins LTS users updating from a previous LTS release, while subsequent releases generally only contain few backported bug fixes.</p>
+</div>
+<div class="paragraph">
+<p>When publishing security fixes for Jenkins (core), we generally try to schedule these for the second or third release in an LTS line to make it easier for admins to update quickly.
+If we decide to publish security fixes for the first release in an LTS line, we will also publish an additional release for the previous LTS line.</p>
+</div>
+<div class="paragraph">
+<p>For example, <a href="/security/advisory/2019-09-25/">in September 2019</a>, we published a security advisory for Jenkins (core) and plugins that announced security fixes in 2.190.1.
+Since that was the first release of its LTS line, we also published an additional release for the previous LTS line, 2.176.4, so that admins could safely and quickly upgrade to a release containing these security fixes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_changes_in_security_updates"><a class="anchor" href="#_changes_in_security_updates"></a>Changes in Security Updates</h3>
+<div class="paragraph">
+<p>Security fixes for Jenkins LTS releases are integrated into regular LTS releases.
+This means that an LTS release will not only contain security fixes, but also regular bug fixes and improvements backported from weekly releases.
+An exception to this rule is additional LTS releases for the previous LTS line if 2.xxx.1 is a security update:
+As these are not regular LTS releases, they will only contain security fixes.</p>
+</div>
+<div class="paragraph">
+<p>In the case of security updates for weekly Jenkins releases, security fixes will be the only changes in that release.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_security_advisories_not_involving_jenkins_core"><a class="anchor" href="#_security_advisories_not_involving_jenkins_core"></a>Security Advisories not involving Jenkins core</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These security advisories are published whenever there is a need.
+We try to balance the number of security advisories, and the timely delivery of security fixes, which means we typically publish 1-2 advisories of this kind every month.</p>
+</div>
+<div class="paragraph">
+<p>These advisories can be published on any weekday, but most of the time on Tuesdays, Wednesdays, or Thursdays.
+We generally try to avoid scheduling security advisories on major public holidays affecting the ability of a large number of Jenkins administrators to quickly apply updates.</p>
+</div>
+<div class="paragraph">
+<p><a href="/security/for-administrators/#pre-announcements">Pre-announcements</a> for these security advisories will generally be published at least a day in advance, but rarely more than three work days before publication.
+Plugin security updates have less lead time than those for Jenkins (core), and we only send out pre-announcements once we&#8217;re confident that the provided information will remain correct.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="for-administrators.html">Overview for Jenkins Administrators</a></span>
+  <span class="next"><a href="plugins.html">Handling Vulnerabilities in Plugins</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

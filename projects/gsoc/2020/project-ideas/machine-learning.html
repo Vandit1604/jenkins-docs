@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins and Machine Learning Plugins for Data Science :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2020/project-ideas/machine-learning.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="projects" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../index.html">Jenkins Projects</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../index.html">Jenkins Sub-projects</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../../user-docs/2.401.3/blueocean/getting-started.html">Getting started with Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../blueocean/about.html">About Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../blueocean/contribute.html">Contributing to Blue Ocean</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../jam/index.html">CI/CD and Jenkins Area Meetups</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../remoting/index.html">Jenkins Remoting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../2018/index.html">Jenkins in Google Summer of Code 2018</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/code-coverage-api-plugin.html">GSoC 2018. Code Coverage API Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/eda-plugins.html">GSoC 2018. EDA Plugins for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/index.html">Jenkins in Google Summer of Code 2018</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../2019/index.html">Jenkins in Google Summer of Code 2019</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../2019/project-ideas.html">GSoC 2021 Project Ideas</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../2019/schedule.html">Jenkins year-round GSoC schedule</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/working-hours-improvements.html">GSoC2019 Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/gitlab-support-for-multibranch-pipeline.html">Multibranch Pipeline support for GitLab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka with Kubernetes features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../2019/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/eda-coverage-adapters.html">EDA Coverage Adapters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/advanced-build-discard-strategy-plugin.html">Advanced Build Discard Strategy Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/configuration-as-code-compatibility.html">Configuration as Code Plugin Compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/pipeline-step-documentation-generator.html">Pipeline Step Documentation Generator improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/eda-plugins.html">Plugin(s) for Electronic Design Automation tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/bitbucket-rest-plugin.html">Bitbucket REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/working-hours-improvements.html">Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/machine-learning.html">Jenkins and Machine Learning Plugins for Data Science</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/artifactory-rest-plugin.html">Artifactory REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/remoting-monitoring.html">Jenkins Remoting Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/freestyle-to-pipeline-converter.html">Freestyle job to Pipeline job converter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/jenkins-rest-plugin.html">Jenkins REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/role-strategy-ux.html">Role Strategy Plugin: user experience</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/ath-improvements.html">Improvements to the Jenkins Acceptance Test Harness</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/winsw-yaml-config-support.html">Jenkins Windows Services: YAML Configuration Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/external-fingerprint-storage-for-jenkins.html">External Fingerprint Storage for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/gitlab-support-for-multibranch-pipeline.html">Multi-branch Pipeline support for Gitlab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/docker-registries-polling-plugin.html">Polling Docker Registries for Image Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/code-coverage-api-improvements.html">Code Coverage API Plugin Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/automatic-spec-generator-for-jenkins-rest-api.html">Automatic Specification Generator for Jenkins REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka. Docker/K8s Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../sigs/advocacy-and-outreach/outreach-programs/index.html">Outreach programs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../jcasc/index.html">Jenkins Configuration as Code</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../jcasc/dev-tools.html">Dev-Tools for JCasC</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../infrastructure/index.html">Infrastructure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../infrastructure/ircbot.html">IRC Bot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../jenkins-operator/index.html">Jenkins Operator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Other Projects</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes.html">Document Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://jenkins-x.io/">Jenkins X</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Projects</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Jenkins Projects</a></li>
+    <li><a href="machine-learning.html">Jenkins and Machine Learning Plugins for Data Science</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2020/project-ideas/machine-learning.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins and Machine Learning Plugins for Data Science</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Project goal:</strong> Create a new plugin for integrating Jenkins with one of Machine Learning tools (e.g. Jupyter Python, TensorBoard, or Sacred)</p>
+</div>
+<div class="paragraph">
+<p><strong>Skills to study/improve:</strong> Java, Jenkins plugin, Apache Zeppelin, Jupyter Notebooks, Python, Machine Learning, Data Science</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_background"><a class="anchor" href="#_background"></a>Background</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Machine learning (ML) has established itself as a key data science (DS) technology in finance, retail, marketing, science, and many other fields. Machine learning algorithms learn by analyzing features of training data sets that can then be applied to make predictions, estimations, and classifications in new test cases.
+The power of machine learning comes at the cost of complex development and production environment to support the data, algorithms, and models generated from machine learning [1, see figure below]</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_project_proposal"><a class="anchor" href="#_project_proposal"></a>Project Proposal</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is envisioned that Jenkins and its plugin ecosystem can play a key role in supporting, facilitating and accelerating the integration of ML workflow components and orchestrating their reproducible execution.
+Currently,  Python and interactive computational notebooks (such as Jupyter and Zeppelin) are the dominant software tools for teaching, composing and executing machine learning workflows. Interactive notebooks have proven valuable data exploration and teaching tools as they adopt a ‘literal programming’ paradigm where code fragments, results, instructions and documentation are integrated into a single UI, resembling a familiar  paper ‘notebook’.
+However, interactive notebooks present significant limitations to the adoption of good software engineering principles (test-driven development, code versioning, reproducibility, etc) as well as scaling-up to data sizes typically used in DS production environments [2]. We propose the development of a Jenkins plugin that will integrate machine learning tasks and algorithms to build ML data systems that are easier to develop, test, deploy and maintain.
+The hidden power of interactive computational notebooks comes from back-end  ‘polyglot’ interpreters (a.k.a kernels)  that interpret the code fragments, and return the results of the computation is a useful display (graph, table or other).
+We propose to build a Jenkins plugin that will allow the integration of existing polyglot notebook kernels to support notebook - like computations as Jenkins build tasks.
+The goal is to allow data scientists to define production-grade ML workflows as Jenkins builds, integrating typical Jenkins build tasks with notebook code fragments as build steps. The plugin will support a new build task, to execute code via an appropriate language ‘kernel’ as currently supported by existing notebooks such as Zeppelin and Jupyter.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_technical_quickstart"><a class="anchor" href="#_technical_quickstart"></a>Technical Quickstart</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The project involves interaction between a Jenkins node and an IPython Kernel. Jenkins must be able to connect to a running IPython Kernel - or start one if necessary - to be used to evaluate code used in a Jenkins plugin.
+<a href="http://zeppelin.apache.org/">Apache Zeppelin</a> will be used for this interaction, as they provide existing Java code to interact with an IPython Kernel [3]. In Jenkins, we will use the simple Builder plugin from the Jenkins tutorial [4], modifying its original code to call the IPython instead of printing Hello World.</p>
+</div>
+<div class="paragraph">
+<p>Here’s a step-by-step of what the student will be expected to achieve.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use Apache Maven to create a Java project</p>
+</li>
+<li>
+<p>Learn the API of the Python Maven module of Apache Zeppelin project</p>
+</li>
+<li>
+<p>Use the Python Maven module of Apache Zeppelin (item 2) in the Java project created in item 1 to send Python code, and receive its output</p>
+</li>
+<li>
+<p>Follow the Jenkins Plugin Tutorial [4] and create a simple Builder plug-in, that prints Hello World</p>
+</li>
+<li>
+<p>Modify the plug-in (which is also a Maven project) to call the code created in item 3</p>
+</li>
+<li>
+<p>Prove that we are able to call an IPython Kernel from a Jenkins job</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Extra steps could involve investigate and document for future developers (which is a good practice in Software Engineering) what would be required to use other Kernels (e.g. Perl, R, Groovy, etc), where the code would have to be modified, and perhaps also see if we could use Apache Zeppelin Interpreters [5] from Jenkins.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references"><a class="anchor" href="#_references"></a>References</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Models in Minutes not Months: Data Science as Microservices</p>
+</li>
+<li>
+<p><a href="https://towardsdatascience.com/5-reasons-why-jupyter-notebooks-suck-4dc201e27086" class="bare">https://towardsdatascience.com/5-reasons-why-jupyter-notebooks-suck-4dc201e27086</a></p>
+</li>
+<li>
+<p><a href="https://github.com/apache/zeppelin/blob/master/python/README.md" class="bare">https://github.com/apache/zeppelin/blob/master/python/README.md</a></p>
+</li>
+<li>
+<p>xref:plugin-tutorial:index.adoc</p>
+</li>
+<li>
+<p><a href="https://zeppelin.apache.org/docs/0.7.0/manual/interpreters.html" class="bare">https://zeppelin.apache.org/docs/0.7.0/manual/interpreters.html</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links"><a class="anchor" href="#_links"></a>Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Apply to Google Summer of Code
+xref:ROOT:index.adoc/gsoc/</p>
+</li>
+<li>
+<p>Discussion in the Developer mailing list: <a href="https://groups.google.com/forum/m/#!topic/jenkinsci-dev/VrBoOWVsZ-o" class="bare">https://groups.google.com/forum/m/#!topic/jenkinsci-dev/VrBoOWVsZ-o</a></p>
+</li>
+<li>
+<p>Creating a Jenkins Data Science Platform: <a href="http://biouno.org/2016/03/07/Creating-a-Jenkins-Data-Science-Platform.html" class="bare">http://biouno.org/2016/03/07/Creating-a-Jenkins-Data-Science-Platform.html</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_inspiration_or_evaluation"><a class="anchor" href="#_inspiration_or_evaluation"></a>Inspiration or Evaluation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Other tools that researchers use for experiment tracking (should not be seen as a direct alternative! Some can be used together with Jenkins!)
+* <a href="https://colab.research.google.com/" class="bare">https://colab.research.google.com/</a>
+* <a href="https://neptune.ml/" class="bare">https://neptune.ml/</a> ( ​$99/user/mo)
+* <a href="https://www.comet.ml/" class="bare">https://www.comet.ml/</a> ( ​$39/user/mo)
+* <a href="https://polyaxon.com/" class="bare">https://polyaxon.com/</a>  ​ ​
+* <a href="https://github.com/ModelChimp/modelchimp" class="bare">https://github.com/ModelChimp/modelchimp</a>  ​
+* <a href="https://github.com/datmo/datmo" class="bare">https://github.com/datmo/datmo</a>
+* <a href="https://github.com/IDSIA/sacred" class="bare">https://github.com/IDSIA/sacred</a> + <a href="https://github.com/vivekratnavel/omniboard" class="bare">https://github.com/vivekratnavel/omniboard</a> / <a href="https://github.com/chovanecm/sacredboard" class="bare">https://github.com/chovanecm/sacredboard</a>
+* Airflow
+* studio.ml
+* <a href="https://medium.com/polyaxon" class="bare">https://medium.com/polyaxon</a>
+* Version Control System for Machine Learning Projects <a href="https://dvc.org/" class="bare">https://dvc.org/</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tensorflow"><a class="anchor" href="#_tensorflow"></a>TensorFlow</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://medium.com/@u39kun/managing-your-machine-learning-experiments-and-making-them-repeatable-in-tensorflow-pytorch-bc8043099dbd" class="bare">https://medium.com/@u39kun/managing-your-machine-learning-experiments-and-making-them-repeatable-in-tensorflow-pytorch-bc8043099dbd</a></p>
+</li>
+<li>
+<p><a href="https://github.com/tensorflow/tensorboard" class="bare">https://github.com/tensorflow/tensorboard</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jupyter_zeppelin"><a class="anchor" href="#_jupyter_zeppelin"></a>Jupyter-Zeppelin</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.dataquest.io/blog/jupyter-notebook-tutorial/" class="bare">https://www.dataquest.io/blog/jupyter-notebook-tutorial/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks" class="bare">https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks</a></p>
+</li>
+<li>
+<p><a href="https://nextjournal.com/schmudde/how-to-version-control-jupyter" class="bare">https://nextjournal.com/schmudde/how-to-version-control-jupyter</a></p>
+</li>
+<li>
+<p>Existing Java integration with IPython Kernel (Jupyter), via Apache Zeppelin</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/apache/zeppelin/blob/master/docs/interpreter/python.md#ipython-support" class="bare">https://github.com/apache/zeppelin/blob/master/docs/interpreter/python.md#ipython-support</a></p>
+</li>
+<li>
+<p><a href="https://github.com/apache/zeppelin/blob/master/python/README.md" class="bare">https://github.com/apache/zeppelin/blob/master/python/README.md</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_example_jenkins_pipeline"><a class="anchor" href="#_example_jenkins_pipeline"></a>Example Jenkins Pipeline</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>An example pipeline launching Tensorboard from a Jenkins pipeline can be found <a href="https://gist.github.com/imoutsatsos/256239cb2eb8a9a5932520e77601656b">here</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_newbie_friendly_issues"><a class="anchor" href="#_newbie_friendly_issues"></a>Newbie-friendly issues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We currently do not have any issues but can readily answer questions via the gitter channel <a href="https://app.gitter.im/#/room/#jenkinsci_gsoc-machine-learning-project:gitter.im">here</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_potential_mentors"><a class="anchor" href="#_potential_mentors"></a>Potential Mentors</h2>
+<div class="sectionbody">
+<div class="paragraph avatar">
+<p><span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Ioannis Moutsatsos
+<span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Bruno P. Kinoshita
+<span class="image"><img src="../../../../images/_images/avatars/markyjackson-taulia.png" alt="markyjackson taulia" width="30" height="30"></span> Marky Jackson
+<span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Shivay Lamba</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_project_links"><a class="anchor" href="#_project_links"></a>Project Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="https://img.shields.io/badge/gitter%20-%20join_chat%20-%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_gsoc-machine-learning-project%3Agitter.im" alt="Static Badge"></span></p>
+</li>
+<li>
+<p><a href="../../index.html#office-hours" class="xref page">Meetings</a></p>
+</li>
+<li>
+<p><a href="https://community.jenkins.io/c/contributing/gsoc">Forum</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/document/d/19ignQBMUr3qxfmkf8Sa9KG7wJlxs3js_kg4mJhX_dXo">Project Idea Draft</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_organization_links"><a class="anchor" href="#_organization_links"></a>Organization Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../../index.html" class="xref page">Jenkins GSoC page</a> - documentation, application guidelines</p>
+</li>
+<li>
+<p><a href="../../../../community/index.html" class="xref page">Participate and contribute to Jenkins</a> - landing page for newcomer contributors</p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20">Newbie-friendly issues</a> - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
+&gt; <a href="#2020/project-ideas">Go back to other GSoC 2020 project ideas</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

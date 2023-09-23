@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Managing Plugins :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.401.3/managing/plugins.html">
+    <link rel="prev" href="tools.html">
+    <link rel="next" href="about-jenkins.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="user-docs" data-version="2.401.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins User Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/docker.html">Docker</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-credentials.html">Using credentials</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/searchbox.html">Using Search Box</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/referencing-another-project-by-name.html">Referencing another project by name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/aborting-a-build.html">Aborting a build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/fingerprints.html">Fingerprints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-local-language.html">Using local language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/change-time-zone.html">Change time zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/remote-access-api.html">Remote Access API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/executor-starvation.html">Executor Starvation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-agents.html">Using Jenkins agents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/running-pipelines.html">Running a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/development.html">Pipeline Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/syntax.html">Pipeline Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/pipeline-best-practices.html">Pipeline Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/scaling-pipeline.html">Scaling Pipelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/cps-method-mismatches.html">Pipeline CPS Method Mismatches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/dashboard.html">Dashboard</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/activity.html">Activity View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-run-details.html">Pipeline Run Details View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-editor.html">Pipeline Editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Managing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="system-configuration.html">Configuring the System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="casc.html">Configuration as Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="tools.html">Managing Tools</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="about-jenkins.html">About Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="system-info.html">System Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="system-properties.html">Jenkins Features Controlled with System Properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="change-system-timezone.html">Change System Time Zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cli.html">Jenkins CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="script-console.html">Script Console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="groovy-hook-scripts.html">Groovy Hook Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="nodes.html">Managing Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="script-approval.html">In-process Script Approval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ui-themes.html">Themes for user interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="user-content.html">User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="spawning-processes.html">Spawning Processes From Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Securing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/access-control.html">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-jenkins.html">Securing Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/managing-security.html">Managing Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/controller-isolation.html">Controller Isolation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-builds.html">Securing Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/csrf-protection.html">CSRF Protection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/user-content.html">Rendering User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/build-authorization.html">Access Control for Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/environment-variables.html">Handling Environment Variables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/markup-formatter.html">Markup Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/services.html">Exposed Services and Ports</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/index.html">System Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/backing-up.html">Backing-up/Restoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/monitoring.html">Monitoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/administering-jenkins-on-kubernetes.html">Administering Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-chef.html">Managing Jenkins with Chef</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-puppet.html">Managing Jenkins with Puppet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/viewing-logs.html">Viewing logs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/authenticating-scripted-clients.html">Authenticating scripted clients</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration.html">Reverse proxy configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-haproxy.html">Reverse proxy - HAProxy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-squid.html">Reverse proxy - Squid</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-iis.html">Reverse proxy - IIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-iptables.html">Reverse proxy - iptables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../scaling/index.html">Scaling Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-scale.html">Architecting for Scale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/hardware-recommendations.html">Hardware Recommendations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-manageability.html">Architecting for Manageability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../troubleshooting/index.html">Troubleshooting Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/diagnosing-errors.html">Diagnosing Errors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/obtaining-a-thread-dump.html">Obtaining a thread dump</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary/index.html">Glossary</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins User Documentation</span>
+    <span class="version">2.401.3</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins User Documentation</a></li>
+    <li><a href="index.html">Managing Jenkins</a></li>
+    <li><a href="plugins.html">Managing Plugins</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.401.3</button>
+  <div class="version-menu">
+    <a class="version is-current" href="plugins.html">2.401.3</a>
+    <a class="version" href="../../2.2/managing/plugins.html">2.2</a>
+    <a class="version" href="../../2.1/managing/plugins.html">2.1</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/user-docs/modules/managing/pages/plugins.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Managing Plugins</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Plugins are the primary means of enhancing the functionality of a Jenkins
+environment to suit organization- or user-specific needs. There are
+<a href="https://plugins.jenkins.io">over a thousand different plugins</a>
+which can be installed on a Jenkins controller and to integrate various
+build tools, cloud providers, analysis tools, and much more.</p>
+</div>
+<div class="paragraph">
+<p>Plugins can be automatically downloaded, with their dependencies, from the
+<a href="../glossary/index.html#update-center" class="xref page">Update Center</a>. The Update Center is a service
+operated by the Jenkins project which provides an inventory of open source
+plugins which have been developed and maintained by various members of the
+Jenkins community.</p>
+</div>
+<div class="paragraph">
+<p>This section covers everything from the basics of managing plugins within
+the Jenkins web UI, to making changes on the <a href="../glossary/index.html#controller" class="xref page">controller&#8217;s</a>
+file system.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installing_a_plugin"><a class="anchor" href="#_installing_a_plugin"></a>Installing a plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins provides two methods for installing plugins on the controller:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Using the "Plugin Manager" in the web UI.</p>
+</li>
+<li>
+<p>Using the <a href="#install-with-cli">Jenkins CLI</a> <code>install-plugin</code> command.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Each approach will result in the plugin being loaded by Jenkins but may require
+different levels of access and trade-offs in order to use.</p>
+</div>
+<div class="paragraph">
+<p>The two approaches require that the Jenkins controller be able to download
+meta-data from an Update Center, whether the primary Update Center operated by
+the Jenkins project
+<sup class="footnote" id="_footnote_uc">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>,
+or a custom Update Center.</p>
+</div>
+<div class="paragraph">
+<p>The plugins are packaged as self-contained <code>.hpi</code> files, which have all the
+necessary code, images, and other resources which the plugin needs to operate
+successfully.</p>
+</div>
+<div class="sect2">
+<h3 id="_from_the_web_ui"><a class="anchor" href="#_from_the_web_ui"></a>From the web UI</h3>
+<div class="paragraph">
+<p>The simplest and most common way of installing plugins is through the
+<strong>Manage Jenkins</strong> &gt; <strong>Plugins</strong> view, available to administrators of a
+Jenkins environment.</p>
+</div>
+<div class="paragraph">
+<p>Under the <strong>Available</strong> tab, plugins available for download from the configured
+Update Center can be searched and considered:</p>
+</div>
+<div class="imageblock center">
+<div class="content">
+<img src="../blueocean/_images/intro/blueocean-plugins-filtered.png" alt="Available tab in the Plugin Manager">
+</div>
+</div>
+<div class="paragraph">
+<p>Most plugins can be installed and used immediately by checking the box adjacent
+to the plugin and clicking <strong>Install without restart</strong>.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the list of available plugins is empty, the controller may be incorrectly
+configured or has not yet downloaded plugin meta-data from the Update Center.
+Clicking the <strong>Check now</strong> button forces Jenkins to attempt to contact its
+configured Update Center.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="install-with-cli"><a class="anchor" href="#install-with-cli"></a>Using the Jenkins CLI</h3>
+<div class="videoblock">
+<div class="title">Installing Jenkins plugins using Jenkins CLI</div>
+<div class="content">
+<iframe width="800" height="420" src="https://www.youtube.com/embed/bTFMvXIkNIg?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Administrators may also use the <a href="cli.html" class="xref page">Jenkins CLI</a> which provides a command
+to install plugins. Scripts to manage Jenkins environments, or configuration
+management code, may need to install plugins without direct user interaction in
+the web UI. The Jenkins CLI allows a command line user or automation tool to
+download a plugin and its dependencies.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">java -jar jenkins-cli.jar -s http://localhost:8080/ install-plugin SOURCE ... [-deploy] [-name VAL] [-restart]</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Installs a plugin either from a file, an URL, or from update center.
+
+ SOURCE    : If this points to a local file, that file will be installed. If
+             this is an URL, Jenkins downloads the URL and installs that as a
+             plugin.Otherwise the name is assumed to be the short name of the
+             plugin in the existing update center (like "findbugs"),and the
+             plugin will be installed from the update center.
+ -deploy   : Deploy plugins right away without postponing them until the reboot.
+ -name VAL : If specified, the plugin will be installed as this short name
+             (whereas normally the name is inferred from the source name
+             automatically).
+ -restart  : Restart Jenkins upon successful installation.</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_advanced_installation"><a class="anchor" href="#_advanced_installation"></a>Advanced installation</h3>
+<div class="paragraph">
+<p>The Update Center only allows the installation of the most recently released
+version of a plugin. In cases where an older release of the plugin is desired,
+a Jenkins administrator can download an older <code>.hpi</code> archive and manually
+install that on the Jenkins controller.</p>
+</div>
+<div class="paragraph">
+<p>Jenkins stores plugins it has downloaded in the <code>plugins</code> directory with a <code>.jpi</code> suffix, whether the plugins originally had a <code>.jpi</code> or an <code>.hpi</code> suffix.</p>
+</div>
+<div class="paragraph">
+<p>If an administrator manually copies a plugin archive into the <code>plugins</code> directory, it should be named with a <code>.jpi</code> suffix to match the file names used by plugins installed from the update center.</p>
+</div>
+<div class="sect3">
+<h4 id="_from_the_web_ui_2"><a class="anchor" href="#_from_the_web_ui_2"></a>From the web UI</h4>
+<div class="paragraph">
+<p>Assuming a <code>.hpi</code> file has been downloaded, a logged-in Jenkins administrator
+may upload the file from within the web UI:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to the <strong>Manage Jenkins</strong> &gt; <strong>Plugins</strong> page in the web UI.</p>
+</li>
+<li>
+<p>Click on the <strong>Advanced</strong> tab.</p>
+</li>
+<li>
+<p>Choose the <code>.hpi</code> file from your system or enter a URL to the archive file under the <strong>Deploy Plugin</strong> section.</p>
+</li>
+<li>
+<p><strong>Deploy</strong> the plugin file.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock center">
+<div class="content">
+<img src="_images/plugin-manager-upload.png" alt="Advanced tab in the Plugin Manager">
+</div>
+</div>
+<div class="paragraph">
+<p>Once a plugin file has been uploaded, the Jenkins controller must be manually
+restarted in order for the changes to take effect.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_on_the_controller"><a class="anchor" href="#_on_the_controller"></a>On the controller</h4>
+<div class="paragraph">
+<p>Assuming a <code>.hpi</code> file has been explicitly downloaded by a system
+administrator, the administrator can manually place the file in a
+specific location on the file system.</p>
+</div>
+<div class="paragraph">
+<p>Copy the downloaded <code>.hpi`</code> file into the <code>JENKINS_HOME/plugins</code> directory on
+the Jenkins controller (for example, on Debian systems <code>JENKINS_HOME</code> is generally
+<code>/var/lib/jenkins</code>).
+If an administrator manually copies a plugin archive into the <code>plugins</code> directory, it should be named with a <code>.jpi</code> suffix to match the file names used by plugins installed from the update center.</p>
+</div>
+<div class="paragraph">
+<p>The controller must be restarted before the plugin is loaded and
+made available in the Jenkins environment.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The names of the plugin directories in the Update Site <sup class="footnoteref">[<a class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> are
+not always the same as the plugin&#8217;s display name. Searching
+<a href="https://plugins.jenkins.io/">plugins.jenkins.io</a>
+for the desired plugin will provide the appropriate link to the archive file.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_updating_a_plugin"><a class="anchor" href="#_updating_a_plugin"></a>Updating a plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Updates are listed in the <strong>Updates</strong> tab of the <strong>Plugins</strong> page and can be
+installed by checking the checkboxes of the desired plugin updates and clicking
+the <strong>Download now and install after restart</strong> button.</p>
+</div>
+<div class="imageblock center">
+<div class="content">
+<img src="_images/plugin-manager-update.png" alt="Updates tab in the Plugin Manager">
+</div>
+</div>
+<div class="paragraph">
+<p>By default, the Jenkins controller will check for updates from the Update Center
+once every 24 hours. To manually trigger a check for updates, simply click on
+the <strong>Check now</strong> button in the <strong>Updates</strong> tab.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_removing_a_plugin"><a class="anchor" href="#_removing_a_plugin"></a>Removing a plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When a plugin is no longer used in a Jenkins environment, it is prudent to
+remove the plugin from the Jenkins controller. This provides a number of benefits
+such as reducing memory overhead at boot or runtime, reducing configuration
+options in the web UI, and removing the potential for future conflicts with new
+plugin updates.</p>
+</div>
+<div class="sect2">
+<h3 id="_uninstalling_a_plugin"><a class="anchor" href="#_uninstalling_a_plugin"></a>Uninstalling a plugin</h3>
+<div class="paragraph">
+<p>This video reviews the process of uninstalling a plugin from Jenkins.</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe width="800" height="420" src="https://www.youtube.com/embed/Keh6riX7574?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>The simplest way to uninstall a plugin is to navigate to the <strong>Installed</strong> tab on
+the <strong>Plugins</strong> page. From there, Jenkins will automatically determine
+which plugins are safe to uninstall, those which are not dependencies of other
+plugins, and present a button for doing so.</p>
+</div>
+<div class="imageblock center">
+<div class="content">
+<img src="_images/plugin-manager-uninstall.png" alt="Installed tab in the Plugin Manager">
+</div>
+</div>
+<div class="paragraph">
+<p>A plugin may also be uninstalled by removing the corresponding <code>.jpi</code>
+file from the <code>JENKINS_HOME/plugins</code> directory on the controller. The plugin will
+continue to function until the controller has been restarted.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If a plugin file is removed but required by other plugins, the Jenkins
+controller may fail to boot correctly.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Uninstalling a plugin does <strong>not</strong> remove the configuration that the plugin may
+have created. If there are existing jobs/nodes/views/builds/etc configurations
+that reference data created by the plugin, during boot Jenkins will warn that
+some configurations could not be fully loaded and ignore the unrecognized data.</p>
+</div>
+<div class="paragraph">
+<p>Since the configuration(s) will be preserved until they are overwritten,
+re-installing the plugin will result in those configuration values reappearing.</p>
+</div>
+<div class="sect3">
+<h4 id="_removing_old_data"><a class="anchor" href="#_removing_old_data"></a>Removing old data</h4>
+<div class="paragraph">
+<p>Jenkins provides a facility for purging configuration left behind by
+uninstalled plugins. Navigate to <strong>Manage Jenkins</strong> and then click on <strong>Manage
+Old Data</strong> to review and remove old data.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_disabling_a_plugin"><a class="anchor" href="#_disabling_a_plugin"></a>Disabling a plugin</h3>
+<div class="paragraph">
+<p>Disabling a plugin is a softer way to retire a plugin. Jenkins will continue to
+recognize that the plugin is installed, but it will not start the plugin, and
+no extensions contributed from this plugin will be visible.</p>
+</div>
+<div class="paragraph">
+<p>A Jenkins administrator may disable a plugin by unchecking the box on the
+<strong>Installed</strong> tab of the <strong>Plugins</strong> page (see below).</p>
+</div>
+<div class="imageblock center">
+<div class="content">
+<img src="_images/plugin-manager-disable.png" alt="Installed tab in the Plugin Manager">
+</div>
+</div>
+<div class="paragraph">
+<p>A systems administrator may also disable a plugin by creating a file on the
+Jenkins controller, such as: <code>JENKINS_HOME/plugins/PLUGIN_NAME.jpi.disabled</code>.</p>
+</div>
+<div class="paragraph">
+<p>The configuration(s) created by the disabled plugin behave as if the plugin
+were uninstalled, insofar that they result in warnings on boot but are
+otherwise ignored.</p>
+</div>
+<div class="sect3">
+<h4 id="_using_the_jenkins_cli"><a class="anchor" href="#_using_the_jenkins_cli"></a>Using the Jenkins CLI</h4>
+<div class="paragraph">
+<p>It is also possible to enable or disable plugins via the <a href="cli.html" class="xref page">Jenkins CLI</a>
+using the <code>enable-plugin</code> or <code>disable-plugin</code> commands.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>enable-plugin</code> command was added to Jenkins in <a href="/changelog/#v2.136">v2.136</a>.
+The <code>disable-plugin</code> command was added to Jenkins in <a href="/changelog/#v2.151">v2.151</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <code>enable-plugin</code> command receives a list of plugins to be enabled.
+Any plugins which a selected plugin depends on will also be enabled by this command.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">java -jar jenkins-cli.jar -s http://localhost:8080/ enable-plugin PLUGIN ... [-restart]</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Enables one or more installed plugins transitively.
+
+ PLUGIN   : Enables the plugins with the given short names and their
+            dependencies.
+ -restart : Restart Jenkins after enabling plugins.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>disable-plugin</code> command receives a list of plugins to be disabled. The
+output will display messages for both successful and failed operations. If you
+only want to see error messages, the <code>-quiet</code> option can be specified.
+The <code>-strategy</code> option controls what action will be taken when one of the specified plugins
+is listed as an optional or mandatory dependency of another enabled plugin.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">java -jar jenkins-cli.jar -s http://localhost:8080/ disable-plugin PLUGIN ... [-quiet (-q)]
+[-restart (-r)] [-strategy (-s) strategy]</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Disable one or more installed plugins.
+Disable the plugins with the given short names. You can define how to proceed with the
+dependant plugins and if a restart after should be done. You can also set the quiet mode
+to avoid extra info in the console.
+
+ PLUGIN                  : Plugins to be disabled.
+ -quiet (-q)             : Be quiet, print only the error messages
+ -restart (-r)           : Restart Jenkins after disabling plugins.
+ -strategy (-s) strategy : How to process the dependant plugins.
+                           - none: if a mandatory dependant plugin exists and
+                           it is enabled, the plugin cannot be disabled
+                           (default value).
+                           - mandatory: all mandatory dependant plugins are
+                           also disabled, optional dependant plugins remain
+                           enabled.
+                           - all: all dependant plugins are also disabled, no
+                           matter if its dependency is optional or mandatory.</pre>
+</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In the same way than enabling and disabling plugins from the UI requires a restart
+to complete the process, the changes made with the CLI commands will take effect
+once Jenkins is restarted. The <code>-restart</code> option forces a safe restart of the
+instance once the command has successfully finished, so the changes will be
+immediately applied.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pinned_plugins"><a class="anchor" href="#_pinned_plugins"></a>Pinned plugins</h2>
+<div class="sectionbody">
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Pinned plugins feature was removed in Jenkins 2.0. Versions later than Jenkins
+2.0 do not bundle plugins, instead providing a wizard to install the most
+useful plugins.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The notion of <strong>pinned plugins</strong> applies to plugins that are bundled with
+Jenkins 1.x, such as the
+<a href="https://plugins.jenkins.io/matrix-auth"><strong>Matrix Authorization plugin</strong></a>.</p>
+</div>
+<div class="paragraph">
+<p>By default, whenever Jenkins is upgraded, its bundled plugins overwrite the
+versions of the plugins that are currently installed in <code>JENKINS_HOME</code>.</p>
+</div>
+<div class="paragraph">
+<p>However, when a bundled plugin has been manually updated, Jenkins will mark
+that plugin as pinned to the particular version. On the file system, Jenkins
+creates an empty file called <code>JENKINS_HOME/plugins/PLUGIN_NAME.jpi.pinned</code>
+to indicate the pinning.</p>
+</div>
+<div class="paragraph">
+<p>Pinned plugins will never be overwritten by bundled plugins during Jenkins
+startup. (Newer versions of Jenkins do warn you if a pinned plugin is <em>older</em>
+than what is currently bundled.)</p>
+</div>
+<div class="paragraph">
+<p>It is safe to update a bundled plugin to a version offered by the Update
+Center. This is often necessary to pick up the newest features and fixes. The
+bundled version is occasionally updated, but not consistently.</p>
+</div>
+<div class="paragraph">
+<p>The Plugin Manager allows plugins to be explicitly unpinned. The
+<code>JENKINS_HOME/plugins/PLUGIN_NAME.hpi.pinned</code> file can also be manually
+created/deleted to control the pinning behavior. If the <code>pinned</code> file is
+present, Jenkins will use whatever plugin version the user has specified.
+If the file is absent, Jenkins will restore the plugin to the default version
+on startup.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_an_implied_dependency"><a class="anchor" href="#_what_is_an_implied_dependency"></a>What is an implied dependency?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Features are sometimes detached (or split off) from Jenkins core and moved into a plugin.</p>
+</div>
+<div class="paragraph">
+<p>Many plugins, like <a href="https://plugins.jenkins.io/subversion">Subversion</a> and <a href="https://plugins.jenkins.io/junit">JUnit</a>, got their beginnings as Jenkins core functionalities.
+When a plugin was attached to Jenkins core prior to being detached, it may or may not have used its full functionality with other plugins that relied on the same version of Jenkins.
+To ensure that plugins do not fail when a functionality on which they rely is separated from Jenkins core, it is necessary to have a dependency in the detached plugin, if it specifies a dependency on a version of Jenkins core prior to the split.
+It is assumed that there is a dependency on the detached plugin, even when it isn&#8217;t stated explicitly.</p>
+</div>
+<div class="paragraph">
+<p>Implied dependencies build up over time for plugins that don&#8217;t frequently update which Jenkins core version they depend on.</p>
+</div>
+<div class="sect2">
+<h3 id="_why_does_the_implied_dependency_exist"><a class="anchor" href="#_why_does_the_implied_dependency_exist"></a>Why does the implied dependency exist?</h3>
+<div class="paragraph">
+<p>It is "implied" since it is not stated explicitly in the plugin, and it is a dependency because Jenkins core is uncertain if the APIs available in Jenkins core, prior to the separation of the plugin, are necessary or not.</p>
+</div>
+<div class="paragraph">
+<p>For example, because the Instance Identity plugin was separated from Jenkins core, Jenkins core is uninformed if the dependent plugin needs any functionality that was previously present in Jenkins core.
+This creates an implied dependency.</p>
+</div>
+<div class="paragraph">
+<p>As a Jenkins administrator, you can see the plugins that have an implied dependency from the plugin manager page.
+Hover over the "uninstall" button and a list of plugins with an implied dependency is displayed.</p>
+</div>
+<div class="imageblock center">
+<div class="content">
+<img src="_images/hover-for-implied-dependencies.png" alt="Hover over the uninstall button to see Implied Dependencies">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_can_the_implied_dependency_be_removed"><a class="anchor" href="#_how_can_the_implied_dependency_be_removed"></a>How can the implied dependency be removed?</h3>
+<div class="paragraph">
+<p>The implied dependency can be removed by releasing a new version of the plugin that depends on a newer minimum Jenkins core.
+The <a href="../../../dev-docs/tutorial-improve/index.html" class="xref page">Improve a plugin tutorial</a> provides steps that can assist plugin developers as they update the plugin to <a href="#dev-docs:tutorial-improve:index.adoc:update-base-jenkins-version.adoc" class="xref unresolved">depend on a newer minimum Jenkins core</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. <a href="https://updates.jenkins.io" class="bare">https://updates.jenkins.io</a>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="tools.html">Managing Tools</a></span>
+  <span class="next"><a href="about-jenkins.html">About Jenkins</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/security/advisory/2014-10-01.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="security" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Security Advisories</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Adminstrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-administrators.html">Overview for Jenkins Administrators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../fixing.html">How We Fix Security Issues</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Reporters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../reporting.html">Reporting Security Vulnerabilities</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Maintainers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-maintainers.html">Overview for Plugin Maintainers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Handling Vulnerabilities in Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jenkins Security Team</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../team.html">About the Jenkins Security Team</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../improvements.html">Improvements by the Security Team</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Security Advisories</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/advisory/2014-10-01.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<hr>
+<div class="paragraph">
+<p>layout: simplepage
+title: Jenkins Security Advisory 2014-10-01
+section: security
+kind: core and plugin
+---</p>
+</div>
+<div class="paragraph">
+<p>This advisory announces:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>multiple security vulnerabilities that were found in Jenkins core.</p>
+</li>
+<li>
+<p>two security vulnerabilities found in plugin:monitoring[the monitoring plugin]</p>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_description"><a class="anchor" href="#_description"></a>Description</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_security_87cve_2014_3661_anonymous_dos_attack_through_cli_handshake"><a class="anchor" href="#_security_87cve_2014_3661_anonymous_dos_attack_through_cli_handshake"></a>SECURITY-87/CVE-2014-3661 (anonymous DoS attack through CLI handshake)</h3>
+<div class="paragraph">
+<p>This vulnerability allows unauthenticated users with access to Jenkins' HTTP/HTTPS port to mount a DoS attack on Jenkins through thread exhaustion.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_110cve_2014_3662_user_name_discovery"><a class="anchor" href="#_security_110cve_2014_3662_user_name_discovery"></a>SECURITY-110/CVE-2014-3662 (User name discovery)</h3>
+<div class="paragraph">
+<p>Anonymous users can test if the user of a specific name exists or not through login attempts.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_127128cve_2014_3663_privilege_escalation_in_job_configuration_permission"><a class="anchor" href="#_security_127128cve_2014_3663_privilege_escalation_in_job_configuration_permission"></a>SECURITY-127&amp;128/CVE-2014-3663 (privilege escalation in job configuration permission)</h3>
+<div class="paragraph">
+<p>An user with a permission limited to Job/CONFIGURE can exploit this vulnerability to effectively create a new job, which should have been only possible for users with Job/CREATE permission, or to destroy jobs that he/she does not have access otherwise.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_131cve_2014_3664_directory_traversal_attack"><a class="anchor" href="#_security_131cve_2014_3664_directory_traversal_attack"></a>SECURITY-131/CVE-2014-3664 (directory traversal attack)</h3>
+<div class="paragraph">
+<p>Users with Overall/READ permission can access arbitrary files in the file system readable by the Jenkins process, resulting in the exposure of sensitive information, such as encryption keys.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_138cve_2014_3680_password_exposure_in_dom"><a class="anchor" href="#_security_138cve_2014_3680_password_exposure_in_dom"></a>SECURITY-138/CVE-2014-3680 (Password exposure in DOM)</h3>
+<div class="paragraph">
+<p>If a parameterized job has a default value in a password field, that default value gets exposed to users with Job/READ permission.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_143cve_2014_3681_xss_vulnerability_in_jenkins_core"><a class="anchor" href="#_security_143cve_2014_3681_xss_vulnerability_in_jenkins_core"></a>SECURITY-143/CVE-2014-3681 (XSS vulnerability in Jenkins core)</h3>
+<div class="paragraph">
+<p>Reflected cross-site scripting vulnerability in Jenkins core. An attacker can navigate the user to a carefully crafted URL and have the user execute unintended actions.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_150cve_2014_3666_remote_code_execution_from_cli"><a class="anchor" href="#_security_150cve_2014_3666_remote_code_execution_from_cli"></a>SECURITY-150/CVE-2014-3666 (remote code execution from CLI)</h3>
+<div class="paragraph">
+<p>Unauthenticated user can execute arbitrary code on the Jenkins controller by sending carefully crafted packets over the CLI channel.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="SECURITY-155"><a class="anchor" href="#SECURITY-155"></a>SECURITY-155/CVE-2014-3667 (exposure of plugin code)</h3>
+<div class="paragraph">
+<p>Programs that constitute plugins can be downloaded by anyone with the Overall/READ permission, resulting in the exposure of otherwise sensitive information, such as hard-coded keys in plugins, if any.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_159cve_2013_2186_arbitrary_file_system_write"><a class="anchor" href="#_security_159cve_2013_2186_arbitrary_file_system_write"></a>SECURITY-159/CVE-2013-2186 (arbitrary file system write)</h3>
+<div class="paragraph">
+<p>Security vulnerability in commons fileupload allows unauthenticated attacker to upload arbitrary files to the Jenkins controller.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_149cve_2014_1869_xss_vulnerabilities_in_zeroclipboard"><a class="anchor" href="#_security_149cve_2014_1869_xss_vulnerabilities_in_zeroclipboard"></a>SECURITY-149/CVE-2014-1869 (XSS vulnerabilities in ZeroClipboard)</h3>
+<div class="paragraph">
+<p>reflective XSS vulnerability in one of the library dependencies of Jenkins.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_113cve_2014_3678_xss_vulnerabilities_in_monitoring_plugin"><a class="anchor" href="#_security_113cve_2014_3678_xss_vulnerabilities_in_monitoring_plugin"></a>SECURITY-113/CVE-2014-3678 (XSS vulnerabilities in monitoring plugin)</h3>
+<div class="paragraph">
+<p>Monitoring plugin allows an attacker to cause a victim into executing unwanted actions on Jenkins instance.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_113cve_2014_3679_hole_in_access_control"><a class="anchor" href="#_security_113cve_2014_3679_hole_in_access_control"></a>SECURITY-113/CVE-2014-3679 (hole in access control)</h3>
+<div class="paragraph">
+<p>Certain pages in monitoring plugin are visible to anonymous users, allowing them to gain information that they are not supposed to.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_severity"><a class="anchor" href="#_severity"></a>Severity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>SECURITY-87 is rated <strong>medium</strong>, as it results in the loss of functionality.</p>
+</div>
+<div class="paragraph">
+<p>SECURITY-110 is rated <strong>medium</strong>, as it results in a limited amount of information exposure.</p>
+</div>
+<div class="paragraph">
+<p>SECURITY-127 and SECURITY-128 are rated <strong>high</strong>. The former can be used to further escalate privileges, and the latter results in loss of data.</p>
+</div>
+<div class="paragraph">
+<p>SECURITY-131 and SECURITY-138 is rated <strong>critical</strong>. This vulnerabilities results in exposure of sensitie information and is easily exploitable.</p>
+</div>
+<div class="paragraph">
+<p>SECURITY-143 is rated <strong>high</strong>. It is a passive attack, but it can result in a compromise of the Jenkins controller or loss of data.</p>
+</div>
+<div class="paragraph">
+<p>SECURITY-150 is rated <strong>critical</strong>. This attack can be mounted by any unauthenticated anonymous user with HTTP reachability to Jenkins instance, and results in remote code execution on Jenkins.</p>
+</div>
+<div class="paragraph">
+<p>SECURITY-155 is rated <strong>medium</strong>. This only affects users who have installed proprietary plugins on publicly accessible instances, which is relatively uncommon.</p>
+</div>
+<div class="paragraph">
+<p>SECURITY-159 is rated <strong>critical</strong>. This attack can be mounted by any unauthenticated anonymous user with HTTP reachability to Jenkins instance.</p>
+</div>
+<div class="paragraph">
+<p>SECURITY-113 is rated <strong>high</strong>. It is a passive attack, but it can result in a compromise of the Jenkins controller or loss of data.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_affected_versions"><a class="anchor" href="#_affected_versions"></a>Affected Versions</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>All the Jenkins releases &#8656; 1.582</p>
+</li>
+<li>
+<p>All the LTS releases &#8656; 1.565.2</p>
+</li>
+<li>
+<p>Monitoring plugin &#8656; 1.52.1</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_credit"><a class="anchor" href="#_credit"></a>Credit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Jenkins project would like to thank the following people for finding the vulnerabilities:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Daniel Beck for finding SECURITY-87, SECURITY-110, SECURITY-127, SECURITY-128</p>
+</li>
+<li>
+<p>Jesse Glick for finding SECURITY-131, SECURITY-155</p>
+</li>
+<li>
+<p>Matthias Schmalz for finding SECURITY-138</p>
+</li>
+<li>
+<p>Seth Graham for finding SECURITY-143</p>
+</li>
+<li>
+<p>Stephen Connolly for finding SECURITY-150</p>
+</li>
+<li>
+<p>Manfred Moser for finding SECURITY-159</p>
+</li>
+<li>
+<p>Wilder Rodrigues for finding SECURITY-113</p>
+</li>
+<li>
+<p>Kurt Seifried for finding SECURITY-149</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fix"><a class="anchor" href="#_fix"></a>Fix</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Main line users should upgrade to Jenkins 1.583</p>
+</li>
+<li>
+<p>LTS users should upgrade to 1.565.3</p>
+</li>
+<li>
+<p>User of monitoring plugin should upgrade to 1.53</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These versions include fixes to all the vulnerabilities described above. All the prior versions are affected by these vulnerabilities.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_other_resources"><a class="anchor" href="#_other_resources"></a>Other Resources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.cloudbees.com/jenkins-security-advisory-2014-10-01">Corresponding security advisory on CloudBees regarding DEV@cloud and Jenkins Enterprise by CloudBees</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

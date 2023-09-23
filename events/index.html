@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins Events :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/events/index.html">
+    <link rel="next" href="online-meetup/index.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="events" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Jenkins Events</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="online-meetup/index.html">Jenkins Online Meetup</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="online-hackfest/index.html">Jenkins UI/UX Hackfest</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="online-hackfest/faq.html">UI/UX Hackfest. Frequently Asked Questions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="contributor-summit/index.html">Jenkins Contributor Summit</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="contributor-summit/archive/2021-10.html">Jenkins Contributor Summit 2021</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="contributor-summit/archive/2021-06.html">Jenkins Contributor Summit - June 2021</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="devops-world/index.html">DevOps World 2022</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="hacktoberfest/index.html">Hacktoberfest</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hacktoberfest/faq.html">FAQ - Hacktoberfest in Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hacktoberfest/event-kit.html">Hacktoberfest. Jenkins Event Kit</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Events</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Jenkins Events</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/events/modules/ROOT/pages/index.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins Events</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are many online and local Jenkins-related events: including conferences, meetups, webinars, hackathons, etc.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="online-meetup/index.html" class="xref page">Jenkins Online Meetup</a>. Our project has a virtual meetup for users and developers. We organize regular events and webinars there.</p>
+</li>
+<li>
+<p><a href="../projects/jam/index.html" class="xref page">Local meetups</a>. Jenkins contributors organize many local CI/CD and Jenkins meetups around the world. There might be one in your city!</p>
+</li>
+<li>
+<p><a href="contributor-summit/index.html" class="xref page">Contributor Summits</a>. We organize a few contributor summits every year. It brings together current community members and future contributors to learn, meet, and help shape the future of Jenkins.</p>
+</li>
+<li>
+<p><a href="devops-world/index.html" class="xref page">DevOps World</a>. CloudBees organizes the DevOps World conference and includes Jenkins topics in the conference agenda.</p>
+</li>
+<li>
+<p><a href="hacktoberfest/index.html" class="xref page">Hacktoberfest</a>. Jenkins project is participating to Hacktoberfest.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_major_events"><a class="anchor" href="#_major_events"></a>Major Events</h2>
+<div class="sectionbody">
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/haml-js/0.4.0/haml.min.js"></script>-->
+
+<!--<script type="text/javascript">-->
+<!--  const hamlCode = `.row-->
+<!-- - # Sort by the date defined for each of the events-->
+<!-- - now = Time.now.utc-->
+<!-- - no_events = true-->
+<!-- - site.events.keys.each do |name|-->
+<!-- - data = site.events[name]-->
+<!-- - raise ArgumentError.new("No 'date' specified: #{name}")  unless data.date-->
+<!-- - raise ArgumentError.new("No 'title' specified: #{name}") unless data.title-->
+<!-- - raise ArgumentError.new("No 'link' specified: #{name}") unless data.link-->
+<!-- - data.event_time = Time.parse(data.date)-->
+<!-- - site.events.keys.sort { |x,y| site.events[x].event_time <=> site.events[y].event_time }.each do |name|-->
+<!-- - data = site.events[name]-->
+<!-- - event_time = data.event_time-->
+<!-- - next unless event_time > now-->
+<!-- - no_events = false-->
+<!-- - raise ArgumentError.new("No 'location' specified: #{name}") unless data.location-->
+
+<!--.col-md-3.text-center-->
+<!--  %ul.ji-item-list-->
+<!--    %li.post.event.floating-->
+<!--      %a.body{href: data.link, target: '_blank', rel: 'noreferrer noopener'}-->
+<!--        .header.time-->
+<!--          .date-time-->
+<!--            .date-->
+<!--              .month-->
+<!--                = event_time.strftime('%b')-->
+<!--              .day-->
+<!--                = event_time.strftime('%-d')-->
+<!--              .dow-->
+<!--                = event_time.strftime('%a')-->
+<!--            .time-->
+<!--              = event_time.strftime('%l:%M %P')-->
+<!--        %h5.title-->
+<!--          = data.title-->
+<!--        = data.location-->
+<!--      %p.teaser.collapsed{onclick: "this.classList.toggle('collapsed')"}-->
+<!--        = data.raw_content-->
+<!--        .more-->
+<!--      .attrs-->
+<!-- - if no_events-->
+<!--%p-->
+<!--  There are no upcoming major events registered in the database.-->
+<!--  If you see that your event is missing, please submit a change to our website.-->
+<!--%p-->
+<!--  %a.body{href: 'https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc#adding-an-event', target: '_blank', rel: 'noreferrer noopener'}-->
+<!--    | How to add an event to the Jenkins website?`;-->
+<!--   const htmlCode = Haml.render(hamlCode);-->
+<!-- document.body.innerHTML = htmlCode;-->
+<!--</script>-->
+
+<style>
+.ji-dated-list,
+.ji-item-list,
+.ji-item-list>post,
+.ji-item-list>post>.body,
+.ji-item-list>.post>.body {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size:1rem;
+}
+.events .ji-item-list{
+  text-align: center;
+  white-space: nowrap;
+  overflow: visible;
+  overflow-x: auto;
+  border-bottom:1px solid #ccc;
+  vertical-align:top;
+}
+
+.events .ji-item-list>.event{
+  display:inline-block;
+  margin:0;
+  vertical-align:top;
+}
+.events .ji-item-list>.event>a{
+  width:16rem;
+  padding:.75rem;
+  margin:1rem .25rem .25rem;
+  white-space:normal;
+  text-decoration:none;
+}
+.events .ji-item-list>.event>a .title{
+  margin:.75rem 0 .25rem;
+  height:1.1rem;
+  overflow:hidden;
+  position:relative;
+}
+.events .ji-item-list>.event>a .title:after{
+  content:' ';
+  display:block;
+  position:absolute;
+  height:1.1rem;
+  width:10%;
+  box-shadow:inset white -3rem 0 2rem -2rem;
+  bottom:0; right:0;
+}
+.events .ji-item-list>.event>a .teaser{
+  color:#4a5568;
+  font-size:.85rem;
+  height:3.3rem;
+  overflow:hidden;
+  position:relative;
+}
+.events .ji-item-list>.event>a .teaser:after{
+  content:' ';
+  display:block;
+  position:absolute;
+  height:1.1rem;
+  width:25%;
+  box-shadow:inset white -6rem 0 3rem -3rem;
+  bottom:0; right:0;
+}
+</style>
+
+<div class="col-md-3 text-center">
+    <ul class="ji-item-list">
+        <li class="post event floating">
+        <a class="body" href="https://www.devopsworldjenkins.com/" target="_blank" rel="noreferrer noopener">
+            <div class="header time">
+            <div class="date-time">
+                <div class="date">
+                <div class="month">Sep</div>
+                <div class="day">28</div>
+                <div class="dow">Tue</div>
+                </div>
+                <div class="time">9:00 AM</div>
+            </div>
+            </div>
+            <h5 class="title">DevOps World | Jenkins World 2021</h5>
+            Online
+        </a>
+        <p class="teaser collapsed" onclick="this.classList.toggle('collapsed')">
+            DevOps World | Jenkins World is the largest gathering of Jenkins users in the world, including Jenkins experts, continuous delivery thought leaders and companies offering complementary technologies for Jenkins. Join us online September 28-30, 2021.
+            <div class="more"></div>
+        </p>
+        <div class="attrs">
+            <span class="location">Online</span>
+        </div>
+        </li>
+    </ul>
+</div>
+<div>
+    <p>
+        There are no upcoming major events registered in the database.
+        If you see that your event is missing, please submit a change to our website.
+    </p>
+    <p>
+        <a href="https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc#adding-an-event" target="_blank" rel="noreferrer noopener">How to add an event to the Jenkins website?</a>
+    </p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_event_calendar"><a class="anchor" href="#_event_calendar"></a>Event Calendar</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We have a calendar which lists events related to Jenkins, including regular SIG and project meetings. This calendar is also available in the <a href="https://calendar.google.com/calendar/ical/4ss12f0mqr3tbp1t2fe369slf4%40group.calendar.google.com/public/basic.ics">(.ics format)</a></p>
+</div>
+<!-- Using JSTZ time zone detection library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.6/jstz.min.js"></script>
+
+<script type="text/javascript">
+  const deviceTimeZone = jstz.determine().name();
+  const calendarSrc = 'https://calendar.google.com/calendar/b/1/embed'
+      + '?showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;mode=WEEK'
+      + '&amp;src=4ss12f0mqr3tbp1t2fe369slf4%40group.calendar.google.com&amp;color=%2329527A'
+      + '&amp;ctz='
+  const calendarSrcPrefix = '<iframe src="' + calendarSrc;
+  const calendarSrcSuffix = '" style="border:0;overflow:hidden;" width="1024" height="600" scrolling="no"></iframe>';
+
+  function set_calendar(timezone) {
+    timezone = timezone || deviceTimeZone;
+    document.getElementById('calendar-container').innerHTML = calendarSrcPrefix + encodeURIComponent(timezone) + calendarSrcSuffix;
+  }
+
+  $(function () {
+    set_calendar(deviceTimeZone);
+  });
+</script>
+
+
+<div class="row">
+    <div class="col">
+        <!-- The following div's innerHTML will be overwritten with the-->
+        <!-- calendar iframe set to the appropriate time zone. -->
+        <div id="calendar-container"></div>
+        <p>
+            View calendar using TimeZone:
+            <select id="selected_timezone" onchange="set_calendar(this.value)">
+                <option value="">(auto)</option>
+                <option value="GMT">GMT</option>
+                <option value="CET">CET</option>
+                <option value="America/New_York">US Eastern</option>
+                <option value="America/Los_Angeles">US Pacific</option>
+                <option value="Asia/Tokyo">Tokyo</option>
+                <option value="Asia/Shanghai">Shanghai</option>
+            </select>
+        </p>
+    </div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="next"><a href="online-meetup/index.html">Jenkins Online Meetup</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

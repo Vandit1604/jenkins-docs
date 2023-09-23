@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>External Fingerprint Storage for Jenkins :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2020/projects/external-fingerprint-storage.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="projects" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../index.html">Jenkins Projects</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../index.html">Jenkins Sub-projects</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../../user-docs/2.401.3/blueocean/getting-started.html">Getting started with Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../blueocean/about.html">About Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../blueocean/contribute.html">Contributing to Blue Ocean</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../jam/index.html">CI/CD and Jenkins Area Meetups</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../remoting/index.html">Jenkins Remoting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../2018/index.html">Jenkins in Google Summer of Code 2018</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/code-coverage-api-plugin.html">GSoC 2018. Code Coverage API Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/eda-plugins.html">GSoC 2018. EDA Plugins for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/index.html">Jenkins in Google Summer of Code 2018</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2018/simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../2019/index.html">Jenkins in Google Summer of Code 2019</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../2019/project-ideas.html">GSoC 2021 Project Ideas</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../2019/schedule.html">Jenkins year-round GSoC schedule</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/working-hours-improvements.html">GSoC2019 Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/gitlab-support-for-multibranch-pipeline.html">Multibranch Pipeline support for GitLab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../2019/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka with Kubernetes features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../2019/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/eda-coverage-adapters.html">EDA Coverage Adapters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/advanced-build-discard-strategy-plugin.html">Advanced Build Discard Strategy Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/artifact-promotion-plugin-for-jenkins-pipeline.html">Artifact Promotion plugin for Jenkins Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/configuration-as-code-compatibility.html">Configuration as Code Plugin Compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/pipeline-step-documentation-generator.html">Pipeline Step Documentation Generator improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/eda-plugins.html">Plugin(s) for Electronic Design Automation tools</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/bitbucket-rest-plugin.html">Bitbucket REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/working-hours-improvements.html">Working Hours Plugin - UI Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/machine-learning.html">Jenkins and Machine Learning Plugins for Data Science</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/artifactory-rest-plugin.html">Artifactory REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/remoting-monitoring.html">Jenkins Remoting Monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/freestyle-to-pipeline-converter.html">Freestyle job to Pipeline job converter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/jenkins-rest-plugin.html">Jenkins REST Plugin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/role-strategy-performance.html">Role Strategy Plugin performance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/role-strategy-ux.html">Role Strategy Plugin: user experience</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/plugin-installation-manager-tool-cli.html">Plugin Installation Manager CLI Tool / Library</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/ath-improvements.html">Improvements to the Jenkins Acceptance Test Harness</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/winsw-yaml-config-support.html">Jenkins Windows Services: YAML Configuration Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/external-fingerprint-storage-for-jenkins.html">External Fingerprint Storage for Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/gitlab-support-for-multibranch-pipeline.html">Multi-branch Pipeline support for Gitlab SCM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/docker-registries-polling-plugin.html">Polling Docker Registries for Image Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/code-coverage-api-improvements.html">Code Coverage API Plugin Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/automatic-spec-generator-for-jenkins-rest-api.html">Automatic Specification Generator for Jenkins REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/remoting-over-apache-kafka-docker-k8s-features.html">Remoting over Apache Kafka. Docker/K8s Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../2019/project-ideas/ext-workspace-manager-cloud-features.html">Cloud Features for External Workspace Manager Plugin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../sigs/advocacy-and-outreach/outreach-programs/index.html">Outreach programs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../jcasc/index.html">Jenkins Configuration as Code</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../jcasc/dev-tools.html">Dev-Tools for JCasC</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../infrastructure/index.html">Infrastructure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../infrastructure/ircbot.html">IRC Bot</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../jenkins-operator/index.html">Jenkins Operator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Other Projects</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes.html">Document Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://jenkins-x.io/">Jenkins X</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Projects</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../solutions/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../../solutions/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../../solutions/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../tutorial/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../../tutorial/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../../tutorial/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../user-docs/2.401.3/index.html">2.401.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../../user-docs/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../../user-docs/2.1/index.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../user-docs/2.401.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Jenkins Projects</a></li>
+    <li><a href="external-fingerprint-storage.html">External Fingerprint Storage for Jenkins</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2020/projects/external-fingerprint-storage.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">External Fingerprint Storage for Jenkins</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Status</strong>: Completed</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_team"><a class="anchor" href="#_team"></a>Team</h2>
+<div class="sectionbody">
+<div class="paragraph avatar">
+<p><strong>Student</strong>:
+<span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Sladyn Nunes</p>
+</div>
+<div class="paragraph avatar">
+<p><strong>Mentor(s):</strong>
+<span class="image"><img src="../../../../images/_images/avatars/linuxsuren.jpg" alt="linuxsuren" width="30" height="30"></span> 赵晓杰(Rick)
+<span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Kristin Whetstone
+<span class="image"><img src="../../../../images/_images/avatars/baymac.jpg" alt="baymac" width="30" height="30"></span> Parichay Barpanda
+<span class="image"><img src="../../../../images/_images/avatars/martinda.png" alt="martinda" width="30" height="30"></span> Martin d&#8217;Anjou</p>
+</div>
+<div class="paragraph avatar">
+<p><strong>Advisor(s):</strong>:
+<span class="image"><img src="../../../../images/_images/avatars/oleg_nenashev.png" alt="oleg nenashev" width="30" height="30"></span> Oleg Nenashev</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_abstract"><a class="anchor" href="#_abstract"></a>Abstract</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>File fingerprinting is a way to track which version of a file is being used by a job/build, making dependency tracking
+easy.
+The fingerprinting engine of Jenkins can track usages of artifacts, credentials, files, etc. within the system.
+It does this by maintaining a local XML-based database.
+This led to dependence on the physical disk of the Jenkins controller.</p>
+</div>
+<div class="paragraph">
+<p>This project extended Jenkins core to support storing of fingerprints in external storages.
+External storage plugins can then be used to configure connection to the storage.
+Once configured, the fingerprints are stored and loaded by Jenkins core via these plugins in a seamless manner.
+The project led to the creation of two plugins, backed by Redis and PostgreSQL.
+The <a href="https://www.youtube.com/watch?v=yzd-y5ByXg8&amp;feature=emb_logo">demo</a> shows the Redis fingerprint storage plugin
+in action.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deliverables"><a class="anchor" href="#_deliverables"></a>Deliverables</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Creating the External Fingerprint Storage API in core with support for migration and cleanup</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Released in Jenkins <a href="/changelog-old/#v2.242">v2.242</a>,
+<a href="/changelog-old/#v2.248">v2.248</a>, <a href="/changelog-old/#v2.251">v2.251</a>,
+<a href="/changelog-old/#v2.242">v2.253</a> 🚀</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Redis Fingerprint Storage Plugin</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Released as
+<a href="https://github.com/jenkinsci/redis-fingerprint-storage-plugin/releases/tag/redis-fingerprint-storage-parent-1.0-rc-3">
+1.0-rc-3</a> 🚀</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>PostgreSQL Fingerprint Storage Plugin</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Released as
+<a href="https://github.com/jenkinsci/postgresql-fingerprint-storage-plugin/releases/tag/postgresql-fingerprint-storage-0.1-alpha-1">
+0.1-alpha-1</a> 🚀</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Documentation and testing</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_the_code"><a class="anchor" href="#_getting_the_code"></a>Getting the Code</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All the links mentioned below correspond to code which has been merged. There is no unmerged code.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkinsci/redis-fingerprint-storage-plugin">Redis fingerprint storage plugin repository</a>
+was created for the purpose of this project and the project
+<a href="https://github.com/jenkinsci/redis-fingerprint-storage-plugin/blob/master/README.adoc">README</a> contains
+installation and usage instructions.</p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/postgresql-fingerprint-storage-plugin">PostgreSQL fingerprint storage plugin
+repository</a> was also created for the purpose of this project and
+<a href="https://github.com/jenkinsci/postgresql-fingerprint-storage-plugin/blob/master/README.adoc">README</a> contains
+installation and usage instructions.</p>
+</li>
+<li>
+<p>The external fingerprint storage API (<a href="https://github.com/jenkinsci/jep/tree/master/jep/226" class="bare">https://github.com/jenkinsci/jep/tree/master/jep/226</a>) was created in <a href="https://github.com/jenkinsci/jenkins/README.adoc">
+Jenkins core</a>. Following are the relevant PRs:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkinsci/jenkins/pull/4731">PR-4731</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Introduced External Fingerprint storage API in Jenkins core.</p>
+</li>
+<li>
+<p>Released in <a href="/changelog/#v2.242">Jenkins-2.242</a> 🚀</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/jenkins/pull/4817">PR-4817</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Introduced fingerprint cleanup functionality.</p>
+</li>
+<li>
+<p>Released in <a href="/changelog/#v2.248">Jenkins-2.248</a> 🚀</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/jenkins/pull/4825">PR-4825</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Introduced fingerprint migration.</p>
+</li>
+<li>
+<p>Released in <a href="/changelog/#v2.251">Jenkins-2.251</a> 🚀</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/jenkins/pull/4834">PR-4834</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Introduced <code>FingerprintStorageDescriptor</code> to offer a unified interface for configuring any external fingerprint
+storage plugin.</p>
+</li>
+<li>
+<p>Released in <a href="/changelog/#v2.248">Jenkins-2.248</a> 🚀</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/jenkins/pull/4888">PR-4888</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Exposes fingerprint methods for plugins</p>
+</li>
+<li>
+<p>Released in <a href="/changelog/#v2.253">Jenkins-2.253</a> 🚀</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_demo"><a class="anchor" href="#_demo"></a>Demo</h2>
+<div class="sectionbody">
+<div class="videoblock">
+<div class="title">External Fingerprint Storage Demo</div>
+<div class="content">
+<iframe width="800" height="420" src="https://www.youtube.com/embed/HvbbsoljLyg?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.google.com/presentation/d/1QL5m-7QGtep_G1ysEYKRauAHzDq8nTtOdcnE1t4aYE8/edit?usp=sharing">Slide deck</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_external_fingerprint_storage_api"><a class="anchor" href="#_the_external_fingerprint_storage_api"></a>The External Fingerprint Storage API</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section explains the external fingerprint storage API that was created in Jenkins core.
+For further details, please refer to <a href="https://github.com/jenkinsci/jep/tree/master/jep/226/README.adoc" class="bare">https://github.com/jenkinsci/jep/tree/master/jep/226/README.adoc</a> which explains the design decisions in detail.</p>
+</div>
+<div class="paragraph">
+<p><span class="image center"><img src="../../../../images/_images/post-images/gsoc-external-fingerprint-storage-for-jenkins/overview.png" alt="overview" width="700 height=400" title="External Fingerprint Storage for Jenkins Overview"></span></p>
+</div>
+<div class="paragraph">
+<p>We created the <code>FingerprintStorage</code> class which defines the API for allowing building of custom storage plugins.
+We defined the following methods in the API for plugin developers, which the plugins need to implement:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>void save()</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Saves the given Fingerprint in the storage.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>Fingerprint load(String id)</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Returns the Fingerprint with the given unique ID. The unique ID for a fingerprint is defined by
+<code>Fingerprint#getHashString()</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>void delete(String id)</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the Fingerprint with the given unique ID.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>boolean isReady()</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Returns true if there is some data in the fingerprint database corresponding to the particular Jenkins instance.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more details, please refer to the Javadoc:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://javadoc.jenkins.io/jenkins/fingerprints/FingerprintStorage.html">FingerprintStorage</a></p>
+</li>
+<li>
+<p><a href="https://javadoc.jenkins.io/jenkins/fingerprints/FingerprintStorageDescriptor.html">FingerprintStorageDescriptor</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_fingerprint_cleanup"><a class="anchor" href="#_fingerprint_cleanup"></a>Fingerprint Cleanup</h3>
+<div class="paragraph">
+<p>Fingerprint cleanup thread works by periodically iterating over the fingerprints and editing the job and build
+information of the ones based on whether they are still present in the system.
+It also deletes the fingerprints which do not have any build or job associated with them.</p>
+</div>
+<div class="paragraph">
+<p>We extend this fingerprint cleanup functionality to be supported by external storages.
+Fingerprint cleanup support for external storage plugins was implemented in
+<a href="/changelog/#v2.242">Jenkins-2.248</a>.
+FingerprintStorage API was extended with the following methods:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>iterateAndCleanupFingerprints(TaskListener taskListener)</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Plugins can implement this method (which is called by Jenkins core periodically) to iterate and cleanup the
+fingerprints.
+The reason to design it this way, and not to iterate all the fingerprints via core, is because external storages
+may be able to implement more efficient traversal strategies on their own.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>boolean cleanFingerprint(Fingerprint fingerprint, TaskListener taskListener)</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>This provides a reference implementation of cleanup, which external storages can use to cleanup a fingerprint.
+They may use this, or extend it to provide custom implementations.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This allows the plugins to implement their own cleanup strategies in efficient ways.
+For example, the <a href="https://github.com/jenkinsci/redis-fingerprint-storage-plugin">Redis plugin</a> uses
+<a href="https://redis.io/commands/scan">cursors</a> to traverse and cleanup the fingerprints.</p>
+</div>
+<div class="paragraph">
+<p>Finally, we introduced the option to turn off fingerprint cleanup.
+This was done because it may be the case that storing extra data may be cheaper than performing cleanups,
+especially with external storages.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fingerprint_migration"><a class="anchor" href="#_fingerprint_migration"></a>Fingerprint Migration</h3>
+<div class="paragraph">
+<p>We implemented a lazy migration strategy to transfer the fingerprints from local storage to the newly
+configured external storage.
+Once an external fingerprint storage is configured, the new fingerprints are stored directly in the new storage
+engine.
+However, the old fingerprints present on the disk storage are migrated as and when they are used.</p>
+</div>
+<div class="paragraph">
+<p>This allows the fingerprints to be migrated gradually from the local storage to the external storage and
+prevent huge migrations in one go.
+One caveat is that in case the fingerprint cleanup is turned on, the fingerprints will get transferred whenever
+cleanup is triggered.</p>
+</div>
+<div class="paragraph">
+<p>Migration was introduced as part of this project in <a href="/changelog/#v2.242">Jenkins-2.251</a>.
+Both, the Redis and PostgreSQL, fingerprint storage plugins support migration.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_redis_fingerprint_storage_plugin"><a class="anchor" href="#_redis_fingerprint_storage_plugin"></a>Redis Fingerprint Storage Plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The plugin:redis-fingerprint-storage[Redis fingerprint storage plugin] uses the external fingerprint storage API to store the fingerprints as blobs
+inside Redis instances.</p>
+</div>
+<div class="sect2">
+<h3 id="_installation"><a class="anchor" href="#_installation"></a>Installation</h3>
+<div class="paragraph">
+<p>The plugin can be installed using the Jenkins Update Center.</p>
+</div>
+<div class="paragraph">
+<p>Follow along the following steps after running Jenkins to download and install the plugin:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select <code>Manage Jenkins</code></p>
+</li>
+<li>
+<p>Select <code>Plugins</code></p>
+</li>
+<li>
+<p>Go to <code>Available</code> tab.</p>
+</li>
+<li>
+<p>Search for <code>Redis Fingerprint Storage Plugin</code> and check the box beside it.</p>
+</li>
+<li>
+<p>Click on <code>Install without restart</code></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The plugin should now be installed on your system.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuring_the_plugin_using_web_ui"><a class="anchor" href="#_configuring_the_plugin_using_web_ui"></a>Configuring the plugin using Web UI</h3>
+<div class="paragraph">
+<p>Once the plugin has been installed, you can configure the Redis server details by following the steps below:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select <code>Manage Jenkins</code></p>
+</li>
+<li>
+<p>Select <code>System</code></p>
+</li>
+<li>
+<p>Scroll to the section <code>Redis Fingerprint Storage Configuration</code> and fill in the required details:</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../../../images/_images/post-images/gsoc-external-fingerprint-storage-for-jenkins/config_page.png" alt="Configure Redis"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Host</code> - Enter hostname where Redis is running</p>
+</li>
+<li>
+<p><code>Port</code> - Specify the port on which Redis is running</p>
+</li>
+<li>
+<p><code>SSL</code> - Click if SSL is enabled</p>
+</li>
+<li>
+<p><code>Database</code> - Redis supports integer indexed databases, which can be specified here.</p>
+</li>
+<li>
+<p><code>Connection Timeout</code> - Set the connection timeout duration in milliseconds.</p>
+</li>
+<li>
+<p><code>Socket Timeout</code> - Set the socket timeout duration in milliseconds.</p>
+</li>
+<li>
+<p><code>Credentials</code> - Configure authentication using username and password to the Redis instance.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Use the <code>Test Redis Connection</code> to verify that the details are correct and Jenkins is able to connect to the Redis
+instance.</p>
+</li>
+<li>
+<p>Press the <code>Save</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Now, all the fingerprints produced by this Jenkins instance should be saved in the configured Redis server!</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_postgresql_fingerprint_storage_plugin"><a class="anchor" href="#_postgresql_fingerprint_storage_plugin"></a>PostgreSQL Fingerprint Storage Plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="https://github.com/jenkinsci/postgresql-fingerprint-storage-plugin">PostgreSQL fingerprint storage plugin</a>
+defines a relational structure for storing the fingerprints, and allows fingerprint metadata to be easily queried.
+Installing and using the plugin is very similar to the
+<a href="https://github.com/jenkinsci/redis-fingerprint-storage-plugin">Redis fingerprint storage plugin</a>.
+The usage is not explained here for the sake of brevity.
+The project <a href="https://github.com/jenkinsci/postgresql-fingerprint-storage-plugin/blob/master/README.adoc">README</a>
+and <a href="/blog/2020/08/25/external-fingerprint-storage-phase-3/">phase-3 post</a> have more information about this plugin.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_further_details"><a class="anchor" href="#_further_details"></a>Further Details</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The phase wise progress can be found in the following posts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/blog/2020/06/27/external-fingerprint-storage/">Phase-1 Post</a></p>
+</li>
+<li>
+<p><a href="/blog/2020/07/24/external-fingerprint-storage-phase-2/">Phase-2 Post</a></p>
+</li>
+<li>
+<p><a href="/blog/2020/08/25/external-fingerprint-storage-phase-3/">Phase-3 Post</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_trying_it_out"><a class="anchor" href="#_trying_it_out"></a>Trying it Out!</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you are a Jenkins user, consider trying out the <a href="https://plugins.jenkins.io/redis-fingerprint-storage/">Redis
+Fingerprint Storage Plugin</a> and the <a href="https://github.com/jenkinsci/postgresql-fingerprint-storage-plugin">PostgreSQL
+Fingerprint Storage Plugin</a>.
+We appreciate you trying out the plugins, and welcome any suggestions, feature requests, bug reports, etc.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_future_directions"><a class="anchor" href="#_future_directions"></a>Future Directions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The relational structure of the plugin allows some performance improvements that can be made when implementing cleanup,
+as well as improving the performance of <code>Fingerprint#add(String job, int buildNumber)</code>.
+These designs were discussed and are a scope of future improvement.</p>
+</div>
+<div class="paragraph">
+<p>The current external fingerprint storage API supports configuring multiple Jenkins instances to a single storage.
+This opens up the possibility of developing traceability plugins which can track fingerprints across Jenkins instances.</p>
+</div>
+<div class="paragraph">
+<p>Please consider reaching out to us if you feel any of the use cases would benefit you, or if you would like to share
+some new use cases.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_acknowledgements"><a class="anchor" href="#_acknowledgements"></a>Acknowledgements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Special thanks to <a href="https://github.com/oleg-nenashev">Oleg Nenashev</a>,
+<a href="https://github.com/afalko">Andrey Falko</a>, <a href="https://github.com/mikecirioli">Mike Cirioli</a>,
+<a href="https://github.com/timja">Tim Jacomb</a>, <a href="https://github.com/jglick">Jesse Glick</a> and the entire Jenkins community
+for all the contribution to this project.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reaching_out"><a class="anchor" href="#_reaching_out"></a>Reaching Out</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Feel free to reach out to us for any questions, feedback, etc. on the project&#8217;s
+<a href="https://app.gitter.im/#/room/#jenkinsci_external-fingerprint-storage:gitter.im">Gitter Channel</a> or the
+<a href="mailto:jenkinsci-dev@googlegroups.com">Jenkins Developer Mailing list</a>.
+We use Jenkins <a href="https://issues.jenkins.io/">Jira</a> to track issues.
+Feel free to file issues under <code>redis-fingerprint-storage-plugin</code> or <code>postgresql-fingerprint-storage-plugin</code>
+components.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_other_links"><a class="anchor" href="#_other_links"></a>Other Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.google.com/document/d/10f3IXTA6UMLUOFMTH_atQ3XlyWB3S7KGNCtTZmOUGdM/edit#">GSoC Proposal</a><br></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/document/d/1_LhdsOdvxUDLgyo8vAB1PJ5-85csr7YVI3WkEyNv42w/edit#">Design Document</a><br></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/document/d/13IJWd91uwZ3bGGSHfTx5ulue0rTD9XV8owvncIELkF0/edit#">Daily Progress Document</a><br></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/redis-fingerprint-storage-plugin">Redis Fingerprint Storage Plugin Repository</a><br></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/postgresql-fingerprint-storage-plugin">PostgreSQL Fingerprint Storage Plugin Repository</a><br></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/jep/tree/master/jep/226/README.adoc" class="bare">https://github.com/jenkinsci/jep/tree/master/jep/226/README.adoc</a><br></p>
+</li>
+<li>
+<p><a href="/blog/2020/06/27/external-fingerprint-storage/">Phase 1 Blog Post</a><br></p>
+</li>
+<li>
+<p><a href="/blog/2020/07/24/external-fingerprint-storage-phase-2/">Phase 2 Blog Post</a><br></p>
+</li>
+<li>
+<p><a href="/blog/2020/08/25/external-fingerprint-storage-phase-3/">Phase 3 Blog Post</a><br></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links"><a class="anchor" href="#_links"></a>Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_external-fingerprint-storage%3Agitter.im" alt="Static Badge"></span></p>
+</li>
+<li>
+<p><a href="../project-ideas/jenkins-distribution-customize-service.html#meetings" class="xref page">Meetings</a></p>
+</li>
+<li>
+<p><a href="https://community.jenkins.io/c/contributing/gsoc">Forum</a></p>
+</li>
+<li>
+<p><a href="../project-ideas/external-fingerprint-storage-for-jenkins.html" class="xref page">Original GSoC project idea</a></p>
+</li>
+<li>
+<p><a href="../../index.html" class="xref page">Jenkins GSoC page</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
