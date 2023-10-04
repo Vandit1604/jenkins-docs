@@ -1,11 +1,13 @@
 import React from "react"
 import typography from "../utils/typography"
+import { Header, Footer } from "@jenkinsci/jenkins-io-components"
 const { rhythm } = typography
 
 class IndexPageLayout extends React.Component {
   render() {
     return (
       <>
+        <Header />
         <div
           style={{
             margin: `0 auto`,
@@ -18,6 +20,7 @@ class IndexPageLayout extends React.Component {
         >
           {this.props.children}
         </div>
+        <Footer />
       </>
     );
   }
