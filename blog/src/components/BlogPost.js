@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 import Author from "./Author"
+import Button from '@mui/material/Button';
 
 import typography from "../utils/typography"
-import { BackToButton } from "./BackToButton"
 const { rhythm } = typography
 
 const BlogPost = ({ children }) => {
@@ -19,7 +19,7 @@ const BlogPost = ({ children }) => {
       }}
     >
       <Link to="/blog">
-        <BackToButton>Back to Blogs</BackToButton>
+        <Button variant="contained">Back to Blogs</Button>
       </Link>
       {children}
       <Author />
