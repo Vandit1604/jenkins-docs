@@ -10,7 +10,7 @@ import ExtensionOutlinedIcon from '@mui/icons-material/ExtensionOutlined';
 import SocialDistanceOutlinedIcon from '@mui/icons-material/SocialDistanceOutlined';
 import { box, container, featureInfo } from "../css/index.module.css"
 import { blogauthor, bloglisting, blogpost, blogtitle } from "../css/blogpost.module.css"
-import { BackToButton } from "../components/BackToButton"
+import Button from '@mui/material/Button';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -39,9 +39,9 @@ class IndexPage extends React.Component {
             </p>
             <div style={{ display: "flex", width: "fit-content", justifyContent: "space-between", gap: "2rem" }}>
               <Link to="/download">
-                <BackToButton>Download</BackToButton>
+                <Button variant="contained">Download</Button>
               </Link>
-              <a href="add to link"><BackToButton>Documentation</BackToButton></a>
+              <a href="add to link"><Button variant="contained">Documentation</Button></a>
             </div>
           </div>
         </section>
