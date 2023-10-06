@@ -3,24 +3,20 @@
 }
 
 .container{
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .box {
-  margin: 0 4rem;
+    margin: 0 4rem;
 }
 
 .featureInfo{
-  display: flex;
-  margin-bottom:1rem;
+    display: flex;
+    margin-bottom:1rem;
+    justify-content: flex-start;
 }
 
 .featureInfo h4{
-  margin: minmax(1fr,15%);
+  margin: 0;
 }
-/* .featureInfo::before(){ */
-/*   content: ""; */
-/*   background-color: blue; */
-/*   border-radius: 50%; */
-/* } */

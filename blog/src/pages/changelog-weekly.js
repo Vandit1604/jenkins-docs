@@ -71,9 +71,9 @@ class IndexPage extends React.Component {
                   return null;
                 })()}
                 <h3>What's new in {node.version} ({node.date}) </h3>
-                <img className={rateoffset} src="../../images/images/changelog/sunny.svg" title="No major issue with this release" />
-                <img className={rateoffset} src="../../images/images/changelog/cloudy.svg" title="I experienced notable issues" />
-                <img className={rateoffset} src="../../images/images/changelog/storm.svg" title="I had to roll back" />
+                <img className={rateoffset} src="../../images/images/changelog/sunny.svg" alt="Sunny" title="No major issue with this release" />
+                <img className={rateoffset} src="../../images/images/changelog/cloudy.svg" alt="Cloudy" title="I experienced notable issues" />
+                <img className={rateoffset} src="../../images/images/changelog/storm.svg" alt="Storm" title="I had to roll back" />
                 <p>Community reported issues : </p>
                 <ul>
                   {node.changes?.map((change) => {

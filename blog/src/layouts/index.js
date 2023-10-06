@@ -4,12 +4,8 @@ const { rhythm } = typography
 
 class IndexPageLayout extends React.Component {
   render() {
-    {/* <script src="system.js"></script> */}
-    {/* System.import("./node_modules/@jenkinsci/jenkins-io-components/build/jio-navbar.cjs.js"); */}
-    {/* System.import("./node_modules/@jenkinsci/jenkins-io-components/build/jio-footer.cjs.js"); */}
     return (
       <>
-        {/* <Navbar /> */}
         <div
           style={{
             margin: `0 auto`,
@@ -22,7 +18,6 @@ class IndexPageLayout extends React.Component {
         >
           {this.props.children}
         </div>
-        {/* <Footer /> */}
       </>
     );
   }
