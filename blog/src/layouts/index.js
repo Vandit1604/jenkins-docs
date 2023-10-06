@@ -18,7 +18,6 @@ class IndexPageLayout extends React.Component {
         >
           {this.props.children}
         </div>
-        <jio-footer></jio-footer>
       </>
     );
   }
