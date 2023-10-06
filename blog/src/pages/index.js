@@ -22,14 +22,17 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import {Box} from "@mui/material";
 
 class IndexPage extends React.Component {
   render() {
     return (
       <>
-        <section style={{ padding: "0rem 25rem", display: "flex" }}>
-          <img src="../../images/images/logos/jenkins/Jenkins-stop-the-war.svg" style={{ width: "356px" }} alt={"Jenkins Logo"} />
-          <div >
+        <section style={{ padding: "3rem 12rem", display: "flex" }}>
+          <Box display={"flex"} alignItems={'center'} justifyContent={'center'} sx={{minWidth: '30rem'}}>
+            <img src="../../images/images/logos/jenkins/Jenkins-stop-the-war.svg" style={{ width: "400px" }} alt={"Jenkins Logo"} />
+          </Box>
+          <Box display={"flex"} flexDirection={"column"}>
             <h1>Jenkins</h1>
             <h2>Build great things at any scale</h2>
             <p>The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
@@ -37,13 +40,13 @@ class IndexPage extends React.Component {
               <br />
               We stand with the people of Ukraine. Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the <a href="https://redcross.org.ua/en/donate/">Ukrainian Red Cross</a>
             </p>
-            <div style={{ display: "flex", width: "fit-content", justifyContent: "space-between", gap: "2rem" }}>
+            <div style={{ display: "flex", width: "fit-content", justifyContent: "flex-start", gap: "1rem" }}>
               <Link to="/download">
-                <Button variant="contained">Download</Button>
+                <Button variant="contained" sx={{backgroundColor: "#616161", borderRadius: "0.5rem"}}>Download</Button>
               </Link>
-              <a href="add to link"><Button variant="contained">Documentation</Button></a>
+              <a href="add to link"><Button variant="contained" sx={{backgroundColor: "#D32F2F", borderRadius: "0.5rem"}}>Documentation</Button></a>
             </div>
-          </div>
+          </Box>
         </section>
         <div style={{
           background: "#4799d6",

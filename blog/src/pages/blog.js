@@ -69,7 +69,7 @@ class IndexPage extends React.Component {
           </h3>
         </Link>
         <ul className={bloglisting}>
-          {this.props.data.allAsciidoc.edges.map(({ node }) => {
+          {this.props.data.allAsciidoc.edges.map(({ node, idx }) => {
             if (node.document.title !== "Author") {
               const formattedDate = this.formatDate(node.fields.slug);
               const authorImageSource = (
@@ -89,7 +89,7 @@ class IndexPage extends React.Component {
                 "../../images/gsoc/opengraph.png";
 
               return (
-                <li key={node.fields.slug} className={blogpost}>
+                <li key={`${node.fields.slug}-${node.document.title}-${idx}`} className={blogpost}>
                   <Link
                     to={node.fields.slug}
                     style={{ textDecoration: "none" }}
