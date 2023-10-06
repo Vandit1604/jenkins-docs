@@ -4,6 +4,7 @@ import IndexPageLayout from "../layouts"
 import { vendors, vendorsList } from "../css/download.module.css"
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
 import typography from "../utils/typography"
+import {Button, Tooltip} from "@mui/material";
 const { rhythm } = typography
 
 class IndexPage extends React.Component {
@@ -41,7 +42,7 @@ class IndexPage extends React.Component {
               <div >
                 <h4>Stable (LTS)</h4>
                 <p>Long-Term Support (LTS) release baselines are chosen every 12 weeks from the stream of regular releases. Every 4 weeks, we release stable releases which include bug and security fix backports.</p>
-                <a href="lts">Learn more…</a>
+                <a href="/changelog-lts">Learn more…</a>
                 <p>
                   <Link to="/changelog-lts">Changelog</Link> |
                   <Link to="/upgrade-guide">Upgrade Guide</Link> |
@@ -51,7 +52,7 @@ class IndexPage extends React.Component {
               <div >
                 <h4>Regular releases (Weekly)</h4>
                 <p>This release line delivers bug fixes and new features rapidly to users and plugin developers who need them. It is generally delivered on a weekly cadence.</p>
-                <a href="weekly">Learn more…</a>
+                <a href="/changelog-weekly">Learn more…</a>
                 <p >
                   <a href="">Changelog</a> |
                   <a href="https://get.jenkins.io/war/">Past Releases</a>
@@ -71,18 +72,20 @@ class IndexPage extends React.Component {
             <li>You may also want to verify the package you downloaded. <a href="/download/verify">Learn more about verifying Jenkins downloads</a>.</li>
           </ol>
 
-          <div >
-            <div >
-              <div >
-                <div >
+          <div>
+            <div>
+              <div>
+                <div>
                   <strong><ion-icon name="download-outline"></ion-icon> Download Jenkins</strong>
                   <a href="https://get.jenkins.io/war-stable/<%= site.jenkins.stable %>/jenkins.war">
                     <span >Generic Java package (.war)</span>
                     <div style={{ fontSize: "x-small", overflowWrap: "break-word", wordWrap: "break-word" }}>
                       <span>
-                        <button style={{ border: "transparent", padding: "6px", "data-toggle": "tooltip", "data-placement": "bottom" }} title="Click to copy">
-                          <ion-icon name="copy-outline" id="copy-icon"></ion-icon>
-                        </button>
+                        <Tooltip title="Click to copy" placement="bottom">
+                          <Button sx={{ border: "transparent", padding: "6px" }}>
+                            <ion-icon name="copy-outline" id="copy-icon"></ion-icon>
+                          </Button>
+                        </Tooltip>
                       </span>
                     </div>
                   </a>
@@ -103,7 +106,7 @@ class IndexPage extends React.Component {
             <div className={vendorsList}>
               <div className={vendors}>
                 <a href="https://aws.amazon.com/blogs/devops/setting-up-a-ci-cd-pipeline-by-integrating-jenkins-with-aws-codebuild-and-aws-codedeploy/">
-                  <img class="vendors-image" src="../../images/images/amazon_web_services.png" width="320" />
+                  <img class="vendors-image" src="../../images/images/amazon_web_services.png" alt="AWS" width="320" />
                 </a>
                 <p >
                   Jenkins with AWS CodeBuild and AWS CodeDeploy
@@ -111,7 +114,7 @@ class IndexPage extends React.Component {
               </div>
               <div className={vendors}>
                 <a href="https://docs.microsoft.com/en-us/azure/developer/jenkins/">
-                  <img src="../../images/images/microsoft_azure.png" width="320" />
+                  <img src="../../images/images/microsoft_azure.png" alt="Microsoft Azure" width="320" />
                 </a>
                 <p>
                   Jenkins quickstarts, tutorials, samples, and resources for Azure
@@ -119,7 +122,7 @@ class IndexPage extends React.Component {
               </div>
               <div className={vendors}>
                 <a href="https://cloud.google.com/jenkins">
-                  <img src="../../images/images/google_cloud.png" width="320" />
+                  <img src="../../images/images/google_cloud.png" alt="GCP" width="320" />
                 </a>
                 <p>
                   Jenkins at scale on Google Kubernetes Engine
@@ -127,7 +130,7 @@ class IndexPage extends React.Component {
               </div>
               <div className={vendors}>
                 <a href="https://docs.oracle.com/en/solutions/jenkins-master-agent-mode/">
-                  <img src="../../images/images/oracle_cloud_infrastructure.png" width="320" />
+                  <img src="../../images/images/oracle_cloud_infrastructure.png" alt="Oracle Gloud Infrastructure" width="320" />
                 </a>
                 <p>
                   Jenkins Reference Architecture and one-click deployment on Oracle Cloud Infrastructure
@@ -135,7 +138,7 @@ class IndexPage extends React.Component {
               </div>
               <div className={vendors}>
                 <a href="https://github.com/civo/kubernetes-marketplace/tree/master/jenkins">
-                  <img src="../../images/images/civo.png" width="320" />
+                  <img src="../../images/images/civo.png" alt="CIVO" width="320" />
                 </a>
                 <p>
                   Jenkins one-click deployment on <a class="item" href="https://www.civo.com/"> Civo Kubernetes
@@ -144,7 +147,7 @@ class IndexPage extends React.Component {
               </div>
               <div className={vendors}>
                 <a href="https://bitnami.com/stack/jenkins/cloud">
-                  <img src="../../images/images/bitnami.png" width="320" />
+                  <img src="../../images/images/bitnami.png" alt="Bitami" width="320" />
                 </a>
                 <p>
                   Images for <a class="item" href="https://bitnami.com/stack/jenkins/cloud/aws"> Amazon Web Services,

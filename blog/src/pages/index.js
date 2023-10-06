@@ -84,7 +84,8 @@ class IndexPage extends React.Component {
                     </div>
                     <div>
                       <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
-                        style={{ height: "320px", maxWidth: "unset" }}
+                           alt={"GSoC selected contributor"}
+                           style={{ height: "320px", maxWidth: "unset" }}
                       />
                     </div>
                   </div>
@@ -102,7 +103,8 @@ class IndexPage extends React.Component {
                     </div>
                     <div>
                       <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
-                        style={{ height: "320px", maxWidth: "unset" }}
+                           alt={"GSoC selected contributor"}
+                           style={{ height: "320px", maxWidth: "unset" }}
                       />
                     </div>
                   </div>
@@ -120,7 +122,8 @@ class IndexPage extends React.Component {
                     </div>
                     <div>
                       <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
-                        style={{ height: "320px", maxWidth: "unset" }}
+                           alt={"GSoC selected contributor"}
+                           style={{ height: "320px", maxWidth: "unset" }}
                       />
                     </div>
                   </div>
@@ -257,6 +260,7 @@ class IndexPage extends React.Component {
                   </li>
                 );
               }
+              return null;
             })}
           </ul>
         </IndexPageLayout>

@@ -74,3 +74,106 @@ exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
     })
   }
 }
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html" || stage === "develop-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: require.resolve("@jenkinsci/jenkins-io-components"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@jenkinsci/jenkins-io-components/build/jio-navbar.cjs.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@jenkinsci/jenkins-io-components/build/jio-footer.cjs.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/palette.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/propsToClassKey.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/sizing.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/spacing.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/createTheme/createSpacing.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/createTheme/createTheme.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/useTheme.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/material/styles/createTheme.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/material/styles/defaultTheme.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/createStyled.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/getThemeValue.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/styled.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/Container/createContainer.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/Container/Container.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/Unstable_Grid/createGrid.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/Unstable_Grid/Grid.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/Stack/createStack.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/system/esm/Stack/Stack.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/material/styles/styled.js"),
+            use: loaders.null(),
+          },
+          {
+            test: require.resolve("@mui/material/SvgIcon/SvgIcon.js"),
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}
