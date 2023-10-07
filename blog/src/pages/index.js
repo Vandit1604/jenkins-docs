@@ -291,8 +291,6 @@ class IndexPage extends React.Component {
             })}
           </ul>
         </IndexPageLayout>
-        <div>
-          <div>
             <div style={{ marginBottom: "3rem" }}>
               <center>
                 <strong>
@@ -338,15 +336,12 @@ class IndexPage extends React.Component {
                 </a>
               </li>
             </ul>
-          </div>
           <div className="supporters">
-            <div >
               <center>
                 <strong>
                   We thank the following organizations for their support of the Jenkins project through free and/or open source licensing programs.
                 </strong>
               </center>
-            </div>
             <ul style={{ fontWeight: "bold", display: "flex", justifyContent: "space-evenly", listStyle: "none", padding: "0rem 10rem" }}>
               <li><a href="https://atlassian.com/">Atlassian</a></li>
               <li><a href="https://www.datadoghq.com/">Datadog</a></li>
@@ -361,7 +356,6 @@ class IndexPage extends React.Component {
               <li><a href="https://xmission.com/">XMission</a></li>
             </ul>
           </div>
-        </div >
       </>
     );
   }
@@ -396,5 +390,5 @@ export const pageQuery = graphql`
     }
   }
 }
-        `
+`
 
