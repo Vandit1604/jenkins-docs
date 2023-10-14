@@ -41,6 +41,23 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
+    // Create blog-list pages
+    const posts = result.data.allAsciidoc.edges
+    const postsPerPage = 9
+    const numPages = Math.ceil(posts.length / postsPerPage)
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+        component: path.resolve("./src/pages/blog.js"),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
+        },
+      })
+    })
+
     // Create Asciidoc pages.
     const articleTemplate = path.resolve(`./src/templates/article.js`)
     _.each(result.data.allAsciidoc.edges, edge => {
