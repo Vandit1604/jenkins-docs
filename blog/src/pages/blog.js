@@ -6,6 +6,7 @@ import {
   bloglisting,
   blogpost,
   blogtitle,
+  blogdetails,
 } from "../css/blogpost.module.css";
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png";
 import typography from "../utils/typography";
@@ -35,10 +36,8 @@ class IndexPage extends React.Component {
       "November",
       "December",
     ];
-
-    return `${
-      monthNames[formattedDate.getMonth()]
-    } ${formattedDate.getDate()}, ${formattedDate.getFullYear()}`;
+    return `${monthNames[formattedDate.getMonth()]
+      } ${formattedDate.getDate()}, ${formattedDate.getFullYear()}`;
   }
 
   render() {
@@ -72,27 +71,23 @@ class IndexPage extends React.Component {
           {this.props.data.allAsciidoc.edges.map(({ node, idx }) => {
             if (node.document.title !== "Author") {
               const formattedDate = this.formatDate(node.fields.slug);
-              const authorImageSource = (
-                "../../images/images/avatars/" +
-                node.pageAttributes.author +
-                ".jpg" ??
-                "../../images/images/avatars/" +
-                node.pageAttributes.author +
-                ".png" ??
-                "../../images/images/avatars/" +
-                node.pageAttributes.author +
-                ".jpeg" ??
-                "../../images"
-              );
+              const authorNames = node.pageAttributes.author ?? "author"
+              const authorNamesWoSpaces = authorNames.replace(/\s/g, '')
+              const authorArray = authorNamesWoSpaces.split(",")
+              authorArray.forEach(element => {
+
+                element = "../../images/images/avatars/" + element + ".jpg"
+                console.log(element)
+              });
+
               const opengraphImageSource =
                 node.pageAttributes.opengraph ||
                 "../../images/gsoc/opengraph.png";
-
               return (
                 <li key={`${node.fields.slug}-${node.document.title}-${idx}`} className={blogpost}>
                   <Link
+                    style={{ textDecoration: "none", marginBottom: "12rem" }}
                     to={node.fields.slug}
-                    style={{ textDecoration: "none" }}
                   >
                     <div
                       style={{
@@ -100,6 +95,7 @@ class IndexPage extends React.Component {
                         flexDirection: "column",
                         alignItems: "center",
                         justifyContent: "center",
+                        height: "15rem"
                       }}
                     >
                       <img
@@ -111,13 +107,12 @@ class IndexPage extends React.Component {
                     </div>
                     <span className={blogtitle}>{node.document.title}</span>
                   </Link>
-                  <br />
-                  <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
-                  >
-                    <div>
+
+                  {/* Author Images and Details */}
+                  <div className={blogdetails}>
+                    <div style={{ display: "flex" }}>
                       <img
-                        src={authorImageSource}
+                        src={opengraphImageSource}
                         style={{
                           height: "1rem",
                           width: "1rem",
@@ -128,9 +123,9 @@ class IndexPage extends React.Component {
                         }}
                         alt={""}
                       />
-                      <p className={blogauthor}>{node.pageAttributes.author}</p>
+                      <a href="add link to the author page profile"><p className={blogauthor}>{node.pageAttributes.author}</p></a>
                     </div>
-                    <span>{formattedDate}</span>
+                    <span style={{ textDecoration: "none" }}>{formattedDate}</span>
                   </div>
                 </li>
               );
@@ -146,10 +141,12 @@ class IndexPage extends React.Component {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query {
+  query pageQuery($skip: Int!, $limit: Int!){
     allAsciidoc(
       sort: { fields: { slug: DESC } }
       filter: { document: { main: { ne: "Jenkins Changelog Styleguide" } } }
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {
