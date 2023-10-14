@@ -6,8 +6,9 @@ import {
   bloglisting,
   blogpost,
   blogtitle,
-  blogteaser,
-  blogauthorinfo
+  blogdetails,
+  blogauthorinfo,
+  blogteaser
 } from "../css/blogpost.module.css";
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png";
 import typography from "../utils/typography";
@@ -86,8 +87,8 @@ class IndexPage extends React.Component {
               return (
                 <li key={`${node.fields.slug}-${node.document.title}-${idx}`} className={blogpost}>
                   <Link
+                    style={{ textDecoration: "none", marginBottom: "12rem" }}
                     to={node.fields.slug}
-                    style={{ textDecoration: "none", display: "flex", gap: "1.25rem", flexDirection: "column" }}
                   >
                     <div
                       style={{
@@ -105,32 +106,27 @@ class IndexPage extends React.Component {
                         width="100%"
                       />
                     </div>
-                    <h5 className={blogtitle}>{node.document.title}</h5>
-                    <div className={blogteaser}>
-                      Will include the blog teaser
-                      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
-                    </div>
-                    <div
-                      style={{ display: "flex", justifyContent: "space-between" }}
-                    >
-                      <div className={blogauthorinfo}>
-                        <img
-                          src={authorImageSource}
-                          style={{
-                            height: "1rem",
-                            width: "1rem",
-                            borderRadius: "50%",
-                            display: "inline",
-                            position: "relative",
-                            top: ".3rem",
-                          }}
-                          alt={""}
-                        />
-                        <p className={blogauthor}>{node.pageAttributes.author}</p>
-                      </div>
-                      <span>{formattedDate}</span>
-                    </div>
+                    <span className={blogtitle}>{node.document.title}</span>
                   </Link>
+
+                  <div className={blogdetails}>
+                    <div style={{ display: "flex" }}>
+                      <img
+                        src={opengraphImageSource}
+                        style={{
+                          height: "1rem",
+                          width: "1rem",
+                          borderRadius: "50%",
+                          display: "inline",
+                          position: "relative",
+                          top: ".3rem",
+                        }}
+                        alt={""}
+                      />
+                      <a href="add link to the author page profile"><p className={blogauthor}>{node.pageAttributes.author}</p></a>
+                    </div>
+                    <span style={{ textDecoration: "none" }}>{formattedDate}</span>
+                  </div>
                 </li>
               );
             }
