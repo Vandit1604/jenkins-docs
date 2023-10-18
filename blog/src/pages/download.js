@@ -1,10 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import IndexPageLayout from "../layouts"
-import { vendors, vendorsList } from "../css/download.module.css"
+import { vendors, vendorsList, listGroup,downloadTable} from "../css/download.module.css"
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
 import typography from "../utils/typography"
-import {Button, Tooltip} from "@mui/material";
+import CollectionsBookmarkOutlinedIcon from '@mui/icons-material/CollectionsBookmarkOutlined';
 const { rhythm } = typography
 
 class IndexPage extends React.Component {
@@ -35,27 +35,26 @@ class IndexPage extends React.Component {
         </h3>
         <p>The Jenkins project produces two release lines: Stable (LTS) and regular (Weekly). Depending on your organization's needs, one may be preferred over the other. See the links below for more information and recommendations about the release lines.</p>
         <section>
+
           <h2>Stable (LTS) and Regular Releases</h2>
           <p>The Jenkins project produces two release lines: Stable (LTS) and regular (Weekly). Depending on your organization's needs, one may be preferred over the other. See the links below for more information and recommendations about the release lines.</p>
           <div >
-            <div >
-              <div >
+            <div style={{ display: "flex", justifyContent: "space-between" }} >
+              <div style={{ width: "50%" }}>
                 <h4>Stable (LTS)</h4>
-                <p>Long-Term Support (LTS) release baselines are chosen every 12 weeks from the stream of regular releases. Every 4 weeks, we release stable releases which include bug and security fix backports.</p>
-                <a href="/changelog-lts">Learn more…</a>
+                <p>Long-Term Support (LTS) release baselines are chosen every 12 weeks from the stream of regular releases. Every 4 weeks, we release stable releases which include bug and security fix backports. <a href="/changelog-lts"> Learn more…</a></p>
                 <p>
-                  <Link to="/changelog-lts">Changelog</Link> |
-                  <Link to="/upgrade-guide">Upgrade Guide</Link> |
-                  <a href="https://get.jenkins.io/war-stable/">Past Releases</a>
+                  <Link to="/changelog-lts">Changelog </Link> |
+                  <Link to="/upgrade-guide"> Upgrade Guide </Link> |
+                  <a href="https://get.jenkins.io/war-stable/"> Past Releases</a>
                 </p>
               </div>
-              <div >
+              <div style={{ width: "50%" }}>
                 <h4>Regular releases (Weekly)</h4>
-                <p>This release line delivers bug fixes and new features rapidly to users and plugin developers who need them. It is generally delivered on a weekly cadence.</p>
-                <a href="/changelog-weekly">Learn more…</a>
+                <p>This release line delivers bug fixes and new features rapidly to users and plugin developers who need them. It is generally delivered on a weekly cadence. <a href="/changelog-weekly"> Learn more…</a></p>
                 <p >
-                  <a href="">Changelog</a> |
-                  <a href="https://get.jenkins.io/war/">Past Releases</a>
+                  <a href="">Changelog </a> |
+                  <a href="https://get.jenkins.io/war/"> Past Releases</a>
                 </p>
               </div>
             </div>
@@ -71,33 +70,44 @@ class IndexPage extends React.Component {
             <li>Once a Jenkins package has been downloaded, proceed to the <strong><a href="/doc/book/getting-started/installing/">Installing Jenkins</a></strong> section of the User Handbook.</li>
             <li>You may also want to verify the package you downloaded. <a href="/download/verify">Learn more about verifying Jenkins downloads</a>.</li>
           </ol>
-
-          <div>
+          <div className={downloadTable}>
             <div>
-              <div>
-                <div>
-                  <strong><ion-icon name="download-outline"></ion-icon> Download Jenkins</strong>
-                  <a href="https://get.jenkins.io/war-stable/<%= site.jenkins.stable %>/jenkins.war">
-                    <span >Generic Java package (.war)</span>
-                    <div style={{ fontSize: "x-small", overflowWrap: "break-word", wordWrap: "break-word" }}>
-                      <span>
-                        <Tooltip title="Click to copy" placement="bottom">
-                          <Button sx={{ border: "transparent", padding: "6px" }}>
-                            <ion-icon name="copy-outline" id="copy-icon"></ion-icon>
-                          </Button>
-                        </Tooltip>
-                      </span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div >
-                <strong><ion-icon name="download-outline"></ion-icon> Download Jenkins</strong>
-              </div>
+              <strong>Download Jenkins 2.414.2 LTS for:</strong>
+              <ul className={listGroup}>
+                <li><a href="To be added">Generic Java Package (.war)<br/>SHA-256:</a></li>
+                <li><a target="_blank" href="https://hub.docker.com/r/jenkins/jenkins">Docker</a></li>
+                <li><a target="_blank" href="https://artifacthub.io/packages/helm/jenkinsci/jenkins">Kubernetes</a></li>
+                <li><a target="_blank" href="https://pkg.jenkins.io/debian-stable/">Ubuntu/Debian</a></li>
+                <li><a target="_blank" href="https://pkg.jenkins.io/redhat-stable/">Red Hat/Fedora/Alma/Rocky/CentOS</a></li>
+                <li><a target="_blank" href="https://www.jenkins.io/download/thank-you-downloading-windows-installer-stable">Windows</a></li>
+                <li><a target="_blank" href="https://pkg.jenkins.io/opensuse-stable/">openSUSE</a></li>
+                <li><a target="_blank" href="https://www.freshports.org/devel/jenkins-lts" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">FreeBSD <span><CollectionsBookmarkOutlinedIcon/></span></a></li>
+                <li><a target="_blank" href="https://packages.gentoo.org/packages/dev-util/jenkins-bin" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">Gentoo <span><CollectionsBookmarkOutlinedIcon/></span></a></li>
+                <li><a target="_blank" href="https://www.jenkins.io/download/lts/macos" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">macOS <span><CollectionsBookmarkOutlinedIcon/></span></a></li>
+                <li><a target="_blank" href="https://openports.pl/path/devel/jenkins/stable" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">OpenBSD <span><CollectionsBookmarkOutlinedIcon/></span></a></li>
+                <li><a target="_blank" href="https://pkg.openindiana.org/hipster/en/search.shtml?token=jenkins-core-lts" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">OpenIndiana Hipster <span><CollectionsBookmarkOutlinedIcon/></span></a></li>
+              </ul>
+            </div>
+            <div>
+              <strong>Download Jenkins 2.428 LTS for:</strong>
+              <ul className={listGroup}>
+                <li><a href="google.com">Generic Java Package (.war)<br/>SHA-256:</a></li>
+                <li><a target="_blank" href="https://hub.docker.com/r/jenkins/jenkins">Docker</a></li>
+                <li><a target="_blank" href="https://pkg.jenkins.io/debian/">Ubuntu/Debian</a></li>
+                <li><a target="_blank" href="https://pkg.jenkins.io/redhat/">Red Hat/Fedora/Alma/Rocky/CentOS</a></li>
+                <li><a target="_blank" href="https://www.jenkins.io/download/thank-you-downloading-windows-installer">Windows</a></li>
+                <li><a target="_blank" href="https://pkg.jenkins.io/opensuse/">openSUSE</a></li>
+                <li><a target="_blank" href="https://archlinux.org/packages/extra/any/jenkins/" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">Arch Linux <span><CollectionsBookmarkOutlinedIcon/></span></a></li>
+                <li><a target="_blank" href="https://www.freshports.org/devel/jenkins" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">FreeBSD <span><CollectionsBookmarkOutlinedIcon/></span></a></li>
+                <li><a target="_blank" href="https://packages.gentoo.org/packages/dev-util/jenkins-bin" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">Gentoo <span><CollectionsBookmarkOutlinedIcon/></span></a></li>
+                <li><a target="_blank" href="https://www.jenkins.io/download/weekly/macos" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">macOS <span><CollectionsBookmarkOutlinedIcon/></span></a></li>
+                <li><a target="_blank" href="https://openports.pl/path/devel/jenkins/devel" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">OpenBSD <span><CollectionsBookmarkOutlinedIcon/></span></a></li>
+                <li><a target="_blank" href="https://pkg.openindiana.org/hipster/en/search.shtml?token=jenkins-core-weekly" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">OpenIndiana Hipster <span><CollectionsBookmarkOutlinedIcon/></span></a></li>
+              </ul>
             </div>
           </div>
         </section>
-        <hr />
+          <hr style={{height:"1px",background:"gray",marginTop:"1rem"}}/>
         <p>NOTE: Packages with the <ion-icon name="library-outline"></ion-icon> library icon are maintained by third parties. Such packages may not be as frequently updated as packages supported by the Jenkins project directly.</p>
         <section>
           <h2>Deploying Jenkins in public cloud</h2>
@@ -123,7 +133,7 @@ class IndexPage extends React.Component {
               <div className={vendors}>
                 <a href="https://cloud.google.com/jenkins">
                   <img src="../../images/images/google_cloud.png" alt="GCP" width="320" />
-                </a>
+                </a> <span><CollectionsBookmarkOutlinedIcon/></span>
                 <p>
                   Jenkins at scale on Google Kubernetes Engine
                 </p>
