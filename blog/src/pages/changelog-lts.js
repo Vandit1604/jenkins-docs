@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Seo from "../components/Seo"
 import IndexPageLayout from "../layouts"
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
 import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm, rateoffset} from "../css/changelog.module.css";
@@ -8,6 +7,9 @@ import typography from "../utils/typography"
 const { rhythm } = typography
 
 const ChangelogLTS = ({ data }) => {
+  data.allFile.nodes[0].childrenLtsYaml.map((item) => {
+    console.log(item)
+  })
   return (
     < IndexPageLayout >
       <Link style={{ textDecoration: `none` }} to="/">
@@ -28,7 +30,15 @@ const ChangelogLTS = ({ data }) => {
             src={jenkinsLogo}
             alt="Jenkins Logo"
             style={{
-              height: "80px",
+              color: `black`,
+              marginBottom: rhythm(1.5),
+              fontFamily: "Georgia,serif",
+              fontSize: "40px",
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "nowrap",
+              justifyContent: "center",
+              gap: "15px",
             }}
           />{" "}
           LTS Changelog
@@ -118,41 +128,45 @@ const ChangelogLTS = ({ data }) => {
   }
 }
 
-export const Head = () => <Seo title="Jenkins LTS Changelogs" />
-
 export default ChangelogLTS
 
 export const pageQuery = graphql`
-query{
-  allLtsYaml(sort: {date: DESC}) {
-    edges {
-      node {
+query ChangelogLTS {
+  allFile(
+    filter: {sourceInstanceName: {eq: "changelogs"}, childrenLtsYaml: {elemMatch: {version: {ne: "null"}}}}
+    sort: {childLtsYaml: {date: DESC}}
+  ) {
+    nodes {
+      childrenLtsYaml {
         version
-        date(formatString: "DD-MM-YYYY")
-        lts_predecessor
+        banner
+        changes {
+          references {
+            url
+            title
+            issue
+            pull
+          }
+          type
+        }
+        date(formatString: "YYYY-MM-DD")
         lts_baseline
         lts_changes {
           type
           category
           pull
           issue
-          message
           pr_title
+          message
           references {
-            issue
-            pull
             url
             title
+            issue
+            pull
           }
+          authors
         }
-        changes {
-          type
-          category
-          issue
-          message
-          pull
-          pr_title
-        }
+        lts_predecessor
       }
     }
   }
