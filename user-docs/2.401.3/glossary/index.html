@@ -730,15 +730,31 @@ have been put in place on the Jenkins <a href="#controller">Controller</a>.</p>
 <div class="sect2">
 <h3 id="_aborted"><a class="anchor" href="#_aborted"></a>Aborted</h3>
 <div class="paragraph">
-<p>The <a href="#build">Build</a> was interrupted before it reaches its expected end. For example, the user has stopped it manually or there was a time-out.
-=== Failed
-The <a href="#build">Build</a> had a fatal error.
-=== Stable
-The <a href="#build">Build</a> was <a href="#successful">Successful</a> and no <a href="#publisher">Publisher</a> reports it as <a href="#unstable">Unstable</a>.
-=== Successful
-The <a href="#build">Build</a> has no compilation errors.
-=== Unstable
-The <a href="#build">Build</a> had some errors but they were not fatal. A <a href="#build">Build</a> is unstable if it was built successfully and one or more publishers report it unstable. For example if the JUnit publisher is configured and a test fails then the <a href="#build">Build</a> will be marked unstable.</p>
+<p>The <a href="#build">Build</a> was interrupted before it reaches its expected end. For example, the user has stopped it manually or there was a time-out.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_failed"><a class="anchor" href="#_failed"></a>Failed</h3>
+<div class="paragraph">
+<p>The <a href="#build">Build</a> had a fatal error.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_stable"><a class="anchor" href="#_stable"></a>Stable</h3>
+<div class="paragraph">
+<p>The <a href="#build">Build</a> was <a href="#successful">Successful</a> and no <a href="#publisher">Publisher</a> reports it as <a href="#unstable">Unstable</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_successful"><a class="anchor" href="#_successful"></a>Successful</h3>
+<div class="paragraph">
+<p>The <a href="#build">Build</a> has no compilation errors.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_unstable"><a class="anchor" href="#_unstable"></a>Unstable</h3>
+<div class="paragraph">
+<p>The <a href="#build">Build</a> had some errors but they were not fatal. A <a href="#build">Build</a> is unstable if it was built successfully and one or more publishers report it unstable. For example if the JUnit publisher is configured and a test fails then the <a href="#build">Build</a> will be marked unstable.</p>
 </div>
 </div>
 </div>
