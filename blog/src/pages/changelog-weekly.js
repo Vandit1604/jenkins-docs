@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
+import Ratings from "../components/Ratings"
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
 import typography from "../utils/typography"
 import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm, rateoffset } from "../css/changelog.module.css";
@@ -8,7 +9,6 @@ const { rhythm } = typography
 
 class IndexPage extends React.Component {
   render() {
-    console.log(this.props.data.allWeeklyYaml.edges)
     return (
       < IndexPageLayout >
         <Link style={{ textDecoration: `none` }} to="/">
@@ -71,6 +71,7 @@ class IndexPage extends React.Component {
                   return null;
                 })()}
                 <h3>What's new in {node.version} ({node.date}) </h3>
+                <Ratings />
                 <img className={rateoffset} src="../../images/images/changelog/sunny.svg" alt="Sunny" title="No major issue with this release" />
                 <img className={rateoffset} src="../../images/images/changelog/cloudy.svg" alt="Cloudy" title="I experienced notable issues" />
                 <img className={rateoffset} src="../../images/images/changelog/storm.svg" alt="Storm" title="I had to roll back" />

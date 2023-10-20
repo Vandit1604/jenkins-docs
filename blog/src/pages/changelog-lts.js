@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
-import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm } from "../css/changelog.module.css";
+import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm, rateoffset} from "../css/changelog.module.css";
 import typography from "../utils/typography"
 const { rhythm } = typography
 
@@ -63,6 +63,9 @@ class IndexPage extends React.Component {
         {this.props.data.allLtsYaml.edges.map(({ node }) =>
           <>
             <h3>What's new in {node.version}({node.date}) </h3>
+            <img className={rateoffset} src="../../images/images/changelog/sunny.svg" alt="Sunny" title="No major issue with this release" />
+            <img className={rateoffset} src="../../images/images/changelog/cloudy.svg" alt="Cloudy" title="I experienced notable issues" />
+            <img className={rateoffset} src="../../images/images/changelog/storm.svg" alt="Storm" title="I had to roll back" />
             <p>Community reported issues : </p>
             <h4>Changes since {node.lts_baseline ?? ""}:</h4>
             <ul>
@@ -70,7 +73,7 @@ class IndexPage extends React.Component {
                 return (
                   <li>
                     <span dangerouslySetInnerHTML={{ __html: change.message }} />
-                        <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>(issue {change.issue})</a></span>
+                    <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>(issue {change.issue})</a></span>
                   </li>
                 );
               })}
@@ -82,18 +85,18 @@ class IndexPage extends React.Component {
                   <li>
                     <span dangerouslySetInnerHTML={{ __html: references.message }} />
                     {(() => {
-                    if (references.issue != null) {
-                      return(
-                        <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + references.issue}> issue {references.issue},</a></span>
-                      )
-                    }
+                      if (references.issue != null) {
+                        return (
+                          <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + references.issue}> issue {references.issue},</a></span>
+                        )
+                      }
                     })()}
                     {(() => {
-                    if (references.pull != null) {
-                      return(
-                        <span><a href={"https://github.com/jenkinsci/jenkins/pull/" + references.pull}> pull {references.pull},</a></span>
-                      )
-                    }
+                      if (references.pull != null) {
+                        return (
+                          <span><a href={"https://github.com/jenkinsci/jenkins/pull/" + references.pull}> pull {references.pull},</a></span>
+                        )
+                      }
                     })()}
                   </li>
                 );
