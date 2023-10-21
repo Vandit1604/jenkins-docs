@@ -8,7 +8,7 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
 import ExtensionOutlinedIcon from '@mui/icons-material/ExtensionOutlined';
 import SocialDistanceOutlinedIcon from '@mui/icons-material/SocialDistanceOutlined';
-import { box, container, featureInfo } from "../css/index.module.css"
+import { box, container, featureInfo, sponsorsJumbotron } from "../css/index.module.css"
 import { blogauthor, bloglisting, blogpost, blogtitle } from "../css/blogpost.module.css"
 import Button from '@mui/material/Button';
 
@@ -22,14 +22,14 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import {Box} from "@mui/material";
+import { Box } from "@mui/material";
 
 class IndexPage extends React.Component {
   render() {
     return (
       <>
         <section style={{ padding: "3rem 12rem", display: "flex" }}>
-          <Box display={"flex"} alignItems={'center'} justifyContent={'center'} sx={{minWidth: '30rem'}}>
+          <Box display={"flex"} alignItems={'center'} justifyContent={'center'} sx={{ minWidth: '30rem' }}>
             <img src="../../images/images/logos/jenkins/Jenkins-stop-the-war.svg" style={{ width: "400px" }} alt={"Jenkins Logo"} />
           </Box>
           <Box display={"flex"} flexDirection={"column"}>
@@ -42,9 +42,9 @@ class IndexPage extends React.Component {
             </p>
             <div style={{ display: "flex", width: "fit-content", justifyContent: "flex-start", gap: "1rem" }}>
               <Link to="/download">
-                <Button variant="contained" sx={{backgroundColor: "#616161", borderRadius: "0.5rem"}}>Download</Button>
+                <Button variant="contained" sx={{ backgroundColor: "#616161", borderRadius: "0.5rem" }}>Download</Button>
               </Link>
-              <a href="add to link"><Button variant="contained" sx={{backgroundColor: "#D32F2F", borderRadius: "0.5rem"}}>Documentation</Button></a>
+              <a href="add to link"><Button variant="contained" sx={{ backgroundColor: "#D32F2F", borderRadius: "0.5rem" }}>Documentation</Button></a>
             </div>
           </Box>
         </section>
@@ -87,8 +87,8 @@ class IndexPage extends React.Component {
                     </div>
                     <div>
                       <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
-                           alt={"GSoC selected contributor"}
-                           style={{ height: "320px", maxWidth: "unset" }}
+                        alt={"GSoC selected contributor"}
+                        style={{ height: "320px", maxWidth: "unset" }}
                       />
                     </div>
                   </div>
@@ -106,8 +106,8 @@ class IndexPage extends React.Component {
                     </div>
                     <div>
                       <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
-                           alt={"GSoC selected contributor"}
-                           style={{ height: "320px", maxWidth: "unset" }}
+                        alt={"GSoC selected contributor"}
+                        style={{ height: "320px", maxWidth: "unset" }}
                       />
                     </div>
                   </div>
@@ -125,8 +125,8 @@ class IndexPage extends React.Component {
                     </div>
                     <div>
                       <img src="../../images/images/gsoc/gsoc_projects_contributors_selected.png"
-                           alt={"GSoC selected contributor"}
-                           style={{ height: "320px", maxWidth: "unset" }}
+                        alt={"GSoC selected contributor"}
+                        style={{ height: "320px", maxWidth: "unset" }}
                       />
                     </div>
                   </div>
@@ -141,7 +141,7 @@ class IndexPage extends React.Component {
             <div className={box}>
               <div>
                 <Box className={featureInfo}
-                     sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}
+                  sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}
                 >
                   <MergeTypeIcon style={{ fontSize: "2rem", }} />
                   <Box sx={{ display: "flex", alignItems: "flex-start", justifyContent: "center" }}>
@@ -159,7 +159,7 @@ class IndexPage extends React.Component {
             <div className={box}>
               <div>
                 <Box className={featureInfo}
-                     sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}
+                  sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}
                 >
                   <FileDownloadOutlinedIcon style={{ fontSize: "2rem", }} />
                   <Box sx={{ display: "flex", alignItems: "flex-start", justifyContent: "center" }}>
@@ -168,17 +168,17 @@ class IndexPage extends React.Component {
                     </h4>
                   </Box>
                 </Box>
-                  <p>
-                    Jenkins is a self-contained Java-based program, ready to run
-                    out-of-the-box, with packages for Windows, Linux, macOS and other
-                    Unix-like operating systems.
-                  </p>
+                <p>
+                  Jenkins is a self-contained Java-based program, ready to run
+                  out-of-the-box, with packages for Windows, Linux, macOS and other
+                  Unix-like operating systems.
+                </p>
               </div>
             </div>
             <div className={box}>
               <div>
                 <Box className={featureInfo}
-                     sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}
+                  sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}
                 >
                   <SettingsOutlinedIcon style={{ fontSize: "2rem", }} />
                   <Box sx={{ display: "flex", alignItems: "flex-start", justifyContent: "center" }}>
@@ -196,7 +196,7 @@ class IndexPage extends React.Component {
             <div className={box}>
               <div>
                 <Box className={featureInfo}
-                     sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}
+                  sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}
                 >
                   <AppsOutlinedIcon style={{ fontSize: "2rem", }} />
                   <Box sx={{ display: "flex", alignItems: "flex-start", justifyContent: "center" }}>
@@ -215,7 +215,7 @@ class IndexPage extends React.Component {
             <div className={box}>
               <div>
                 <Box className={featureInfo}
-                     sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}
+                  sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}
                 >
                   <ExtensionOutlinedIcon style={{ fontSize: "2rem", }} />
                   <ion-icon name="extension-puzzle-outline" role="img" className="md hydrated"></ion-icon>
@@ -234,7 +234,7 @@ class IndexPage extends React.Component {
             <div className={box}>
               <div>
                 <Box className={featureInfo}
-                     sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}
+                  sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem" }}
                 >
                   <SocialDistanceOutlinedIcon style={{ fontSize: "2rem", }} />
                   <ion-icon name="git-network-outline" role="img" className="md hydrated"></ion-icon>
@@ -291,71 +291,71 @@ class IndexPage extends React.Component {
             })}
           </ul>
         </IndexPageLayout>
-            <div style={{ marginBottom: "3rem" }}>
-              <center>
-                <strong>
-                  We thank the following organizations for their major commitments to
-                  support the Jenkins project.
-                </strong>
-              </center>
-            </div>
-            <ul style={{ display: "flex", justifyContent: "space-evenly", listStyle: "none", padding: "0rem 5rem" }}>
-              <li>
-                <a href="https://cloudbees.com" rel="noreferrer noopener" target="_blank">
-                  <img alt="CloudBees, Inc." src="../../images/images/sponsors/cloudbees.png" title="CloudBees, Inc." />
-                </a>
-              </li>
-              <li>
-                <a href="https://osuosl.org" rel="noreferrer noopener" target="_blank">
-                  <img alt="Oregon State University Open Source Lab" src="../../images/images/sponsors/osuosl.png" title="Oregon State University Open Source Lab" />
-                </a>
-              </li>
-              <li>
-                <a href="https://cd.foundation/" rel="noreferrer noopener" target="_blank">
-                  <img alt="Continuous Delivery Foundation" src="../../images/images/sponsors/cdf.png" title="Continuous Delivery Foundation" />
-                </a>
-              </li>
-              <li>
-                <a href="https://redhat.com" rel="noreferrer noopener" target="_blank">
-                  <img alt="Red Hat, Inc." src="../../images/images/sponsors/redhat.png" title="Red Hat, Inc." />
-                </a>
-              </li>
-              <li>
-                <a href="https://aws.amazon.com/" rel="noreferrer noopener" target="_blank">
-                  <img alt="AWS" src="../../images/images/sponsors/aws.png" title="AWS" />
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com" rel="noreferrer noopener" target="_blank">
-                  <img alt="GitHub, Inc." src="../../images/images/sponsors/github.png" title="GitHub, Inc." />
-                </a>
-              </li>
-              <li>
-                <a href="https://jfrog.com" rel="noreferrer noopener" target="_blank">
-                  <img alt="JFrog" src="../../images/images/sponsors/jfrog.png" title="JFrog" />
-                </a>
-              </li>
-            </ul>
-          <div className="supporters">
-              <center>
-                <strong>
-                  We thank the following organizations for their support of the Jenkins project through free and/or open source licensing programs.
-                </strong>
-              </center>
-            <ul style={{ fontWeight: "bold", display: "flex", justifyContent: "space-evenly", listStyle: "none", padding: "0rem 10rem" }}>
-              <li><a href="https://atlassian.com/">Atlassian</a></li>
-              <li><a href="https://www.datadoghq.com/">Datadog</a></li>
-              <li><a href="https://www.digitalocean.com/">Digital Ocean</a></li>
-              <li><a href="https://www.discourse.org/">Discourse</a></li>
-              <li><a href="https://www.fastly.com/">Fastly</a></li>
-              <li><a href="https://www.ibm.com/">IBM</a></li>
-              <li><a href="https://www.netlify.com/">Netlify</a></li>
-              <li><a href="https://pagerduty.com/">Pagerduty</a></li>
-              <li><a href="https://sentry.io/">Sentry</a></li>
-              <li><a href="https://www.tsinghua.edu.cn/">Tsinghua University</a></li>
-              <li><a href="https://xmission.com/">XMission</a></li>
-            </ul>
-          </div>
+        <div style={{ marginBottom: "3rem" }}>
+          <center>
+            <strong>
+              We thank the following organizations for their major commitments to
+              support the Jenkins project.
+            </strong>
+          </center>
+        </div>
+        <ul className={sponsorsJumbotron}>
+          <li>
+            <a href="https://cloudbees.com" target="_blank">
+              <img alt="CloudBees, Inc." src="../../images/images/sponsors/cloudbees.png" title="CloudBees, Inc." />
+            </a>
+          </li>
+          <li>
+            <a href="https://osuosl.org" target="_blank">
+              <img alt="Oregon State University Open Source Lab" src="../../images/images/sponsors/osuosl.png" title="Oregon State University Open Source Lab" />
+            </a>
+          </li>
+          <li>
+            <a href="https://cd.foundation/" target="_blank">
+              <img alt="Continuous Delivery Foundation" src="../../images/images/sponsors/cdf.png" title="Continuous Delivery Foundation" />
+            </a>
+          </li>
+          <li>
+            <a href="https://redhat.com" target="_blank">
+              <img alt="Red Hat, Inc." src="../../images/images/sponsors/redhat.png" title="Red Hat, Inc." />
+            </a>
+          </li>
+          <li>
+            <a href="https://aws.amazon.com/" target="_blank">
+              <img alt="AWS" src="../../images/images/sponsors/aws.png" title="AWS" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com" target="_blank">
+              <img alt="GitHub, Inc." src="../../images/images/sponsors/github.png" title="GitHub, Inc." />
+            </a>
+          </li>
+          <li>
+            <a href="https://jfrog.com" target="_blank">
+              <img alt="JFrog" src="../../images/images/sponsors/jfrog.png" title="JFrog" />
+            </a>
+          </li>
+        </ul>
+        <div className="supporters">
+          <center>
+            <strong>
+              We thank the following organizations for their support of the Jenkins project through free and/or open source licensing programs.
+            </strong>
+          </center>
+          <ul style={{ fontWeight: "bold", display: "flex", justifyContent: "space-evenly", listStyle: "none", padding: "0rem 10rem" }}>
+            <li><a href="https://atlassian.com/">Atlassian</a></li>
+            <li><a href="https://www.datadoghq.com/">Datadog</a></li>
+            <li><a href="https://www.digitalocean.com/">Digital Ocean</a></li>
+            <li><a href="https://www.discourse.org/">Discourse</a></li>
+            <li><a href="https://www.fastly.com/">Fastly</a></li>
+            <li><a href="https://www.ibm.com/">IBM</a></li>
+            <li><a href="https://www.netlify.com/">Netlify</a></li>
+            <li><a href="https://pagerduty.com/">Pagerduty</a></li>
+            <li><a href="https://sentry.io/">Sentry</a></li>
+            <li><a href="https://www.tsinghua.edu.cn/">Tsinghua University</a></li>
+            <li><a href="https://xmission.com/">XMission</a></li>
+          </ul>
+        </div>
       </>
     );
   }
