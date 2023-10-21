@@ -20,3 +20,11 @@
 .featureInfo h4{
   margin: 0;
 }
+
+.sponsorsJumbotron{
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0rem 5rem;
+  align-items: center;
+}
