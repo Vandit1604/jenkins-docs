@@ -41,7 +41,7 @@ class IndexPage extends React.Component {
           <div >
             <div style={{ display: "flex", justifyContent: "space-between" }} >
               <div style={{ width: "50%" }}>
-                <h4>Stable (LTS)</h4>
+                <h3>Stable (LTS)</h3>
                 <p>Long-Term Support (LTS) release baselines are chosen every 12 weeks from the stream of regular releases. Every 4 weeks, we release stable releases which include bug and security fix backports. <a href="/changelog-lts"> Learn more…</a></p>
                 <p>
                   <Link to="/changelog-lts">Changelog </Link> |
@@ -50,7 +50,7 @@ class IndexPage extends React.Component {
                 </p>
               </div>
               <div style={{ width: "50%" }}>
-                <h4>Regular releases (Weekly)</h4>
+                <h3>Regular releases (Weekly)</h3>
                 <p>This release line delivers bug fixes and new features rapidly to users and plugin developers who need them. It is generally delivered on a weekly cadence. <a href="/changelog-weekly"> Learn more…</a></p>
                 <p >
                   <a href="">Changelog </a> |
