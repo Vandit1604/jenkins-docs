@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import {data} from "jquery";
 // @author Alan Harder
 
 function loaddata() {
@@ -7,7 +8,7 @@ function loaddata() {
   script.src = 'https://rating.jenkins.io/rate/result.php';
   script.onload = function() { do_loaddata(); }
   script.onreadystatechange = function() { // For IE
-    if (this.readyState == 'loaded' || this.readyState == 'complete') do_loaddata();
+    if (this.readyState === 'loaded' || this.readyState === 'complete') do_loaddata();
   }
   document.getElementById('head').appendChild(script);
   document.getElementById('ratings').style.display = 'block';
@@ -21,7 +22,7 @@ function health(nm, cls, ver, rate, desc) {
 function do_loaddata() {
   var r, v, j = true, div1, div2, txt;
   for (var anchors = document.getElementsByTagName('H3'), i = 0; i < anchors.length; i++) {
-    if (anchors[i].id.charAt(0) != 'v') continue;
+    if (anchors[i].id.charAt(0) !== 'v') continue;
     r = data[v = anchors[i].id.substring(1)];
     div1 = document.createElement('DIV');
     div1.className = 'rate-outer';
@@ -56,10 +57,10 @@ function rate(version, rating) {
   script.type = 'text/javascript';
   script.src = 'https://rating.jenkins.io/rate/submit.php?version='
     + encodeURIComponent(version) + '&rating=' + rating + '&issue=' + encodeURIComponent(issue);
-  script.onload = function() { alert('Thanks!'); location.reload(); }
+  script.onload = function() { alert('Thanks!'); window.location.reload(); }
   script.onreadystatechange = function() { // For IE
-    if (this.readyState == 'loaded' || this.readyState == 'complete') {
-      alert('Thanks!'); location.reload();
+    if (this.readyState === 'loaded' || this.readyState === 'complete') {
+      alert('Thanks!'); window.location.reload();
     }
   }
   document.getElementById('head').appendChild(script);
