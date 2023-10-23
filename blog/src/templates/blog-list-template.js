@@ -179,7 +179,7 @@ export const pageQuery = graphql`
   query pageQuery($skip: Int!, $limit: Int!){
     allAsciidoc(
       sort: { fields: { slug: DESC } }
-      filter: { document: { main: { ne: "Jenkins Changelog Styleguide" } } }
+      filter: { document: { title: { nin: ["Author", "Jenkins Changelog Styleguide"] } } }
       limit: $limit
       skip: $skip
     ) {
