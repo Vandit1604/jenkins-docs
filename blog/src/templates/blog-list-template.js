@@ -172,5 +172,8 @@ export const pageQuery = graphql`
       }
     }
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> ea4d6de96 (added pagination to the blogs)
 `;
