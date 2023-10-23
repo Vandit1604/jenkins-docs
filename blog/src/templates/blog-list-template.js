@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import IndexPageLayout from "../layouts";
+import IndexPageLayout from "../layouts/index.js";
 import {
   blogauthor,
   bloglisting,
@@ -14,7 +14,7 @@ import typography from "../utils/typography";
 
 const { rhythm } = typography;
 
-class IndexPage extends React.Component {
+class BlogIndex extends React.Component {
   formatDate(inputString) {
     const parts = inputString.split("/");
     const datePart = parts[parts.length - 2];
@@ -42,6 +42,14 @@ class IndexPage extends React.Component {
   }
 
   render() {
+    const { currentPage, numPages } = this.props.pageContext
+    const isFirst = currentPage === 1
+    const isLast = currentPage === numPages
+    const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1)
+    const nextPage = (currentPage + 1)
+    console.log(prevPage)
+    console.log(currentPage)
+    console.log(nextPage)
     return (
       <IndexPageLayout>
         <Link style={{ textDecoration: `none` }} to="/">
@@ -115,7 +123,8 @@ class IndexPage extends React.Component {
                     >
                       <div className={blogauthorinfo}>
                         <img
-                          src={authorImageSource}
+                          // src={authorImageSource}
+                          src={opengraphImageSource}
                           style={{
                             height: "1rem",
                             width: "1rem",
@@ -137,12 +146,34 @@ class IndexPage extends React.Component {
             return null;
           })}
         </ul>
+        <ul
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent:"center",
+            gap:"1rem",
+            alignItems: 'center',
+            listStyle: 'none',
+            padding: 0,
+          }}
+        >
+          {!isFirst && (
+            <Link to={"/blog/"+prevPage} rel="prev">
+              ← Previous Page
+            </Link>
+          )}
+          {!isLast && (
+            <Link to={"/blog/"+nextPage} rel="next">
+              Next Page →
+            </Link>
+          )}
+        </ul>
       </IndexPageLayout>
     );
   }
 }
 
-export default IndexPage;
+export default BlogIndex
 
 export const pageQuery = graphql`
   query pageQuery($skip: Int!, $limit: Int!){
@@ -174,4 +205,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
