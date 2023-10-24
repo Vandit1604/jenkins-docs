@@ -42,10 +42,10 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create blog-list pages
-    const filteredPosts = posts.filter(post => post.node.document.title !== 'Author');
-    const numPages = Math.ceil(filteredPosts.length / postsPerPage);
     const posts = result.data.allAsciidoc.edges
+    const filteredPosts = posts.filter(post => post.node.document.title !== 'Author');
     const postsPerPage = 9
+    const numPages = Math.ceil(filteredPosts.length / postsPerPage);
     // const numPages = Math.ceil(posts.length / postsPerPage)
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
