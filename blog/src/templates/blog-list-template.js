@@ -45,11 +45,8 @@ class BlogIndex extends React.Component {
     const { currentPage, numPages } = this.props.pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
-    const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1)
+    const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1)
     const nextPage = (currentPage + 1)
-    console.log(prevPage)
-    console.log(currentPage)
-    console.log(nextPage)
     return (
       <IndexPageLayout>
         <Link style={{ textDecoration: `none` }} to="/">
