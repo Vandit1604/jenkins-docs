@@ -7,7 +7,7 @@ import typography from "../utils/typography"
 import CollectionsBookmarkOutlinedIcon from '@mui/icons-material/CollectionsBookmarkOutlined';
 const { rhythm } = typography
 
-class IndexPage extends React.Component {
+class DownloadPage extends React.Component {
   render() {
     return (
       <IndexPageLayout>
@@ -173,5 +173,5 @@ class IndexPage extends React.Component {
   }
 }
 
-export default IndexPage
+export default DownloadPage
 

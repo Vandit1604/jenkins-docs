@@ -7,7 +7,7 @@ import typography from "../utils/typography"
 import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm, rateoffset } from "../css/changelog.module.css";
 const { rhythm } = typography
 
-class IndexPage extends React.Component {
+class ChangelogWeekly extends React.Component {
   render() {
     return (
       < IndexPageLayout >
@@ -95,7 +95,7 @@ class IndexPage extends React.Component {
   }
 }
 
-export default IndexPage
+export default ChangelogWeekly
 
 export const pageQuery = graphql`
 query {

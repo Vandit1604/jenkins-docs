@@ -6,7 +6,7 @@ import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm, 
 import typography from "../utils/typography"
 const { rhythm } = typography
 
-class IndexPage extends React.Component {
+class ChangelogLTS extends React.Component {
   render() {
     console.log(this.props.data.allLtsYaml.edges)
     return (
@@ -110,7 +110,7 @@ class IndexPage extends React.Component {
   }
 }
 
-export default IndexPage
+export default ChangelogLTS
 
 export const pageQuery = graphql`
 query{

@@ -10,7 +10,7 @@ import IndexPageLayout from "../layouts"
 import typography from "../utils/typography";
 const { rhythm } = typography
 
-class IndexPage extends React.Component {
+class Authors extends React.Component {
   render() {
     return (
       <IndexPageLayout>
@@ -82,7 +82,7 @@ class IndexPage extends React.Component {
   }
 }
 
-export default IndexPage
+export default Authors
 
 export const pageQuery = graphql`
 {
