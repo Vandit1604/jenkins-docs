@@ -6,7 +6,7 @@ import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm }
 import typography from "../utils/typography"
 const { rhythm } = typography
 
-class IndexPage extends React.Component {
+class ChangelogLTS extends React.Component {
   render() {
     console.log(this.props.data.allLtsYaml.edges)
     return (
@@ -70,7 +70,7 @@ class IndexPage extends React.Component {
                 return (
                   <li>
                     <span dangerouslySetInnerHTML={{ __html: change.message }} />
-                        <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>(issue {change.issue})</a></span>
+                    <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>(issue {change.issue})</a></span>
                   </li>
                 );
               })}
@@ -82,18 +82,18 @@ class IndexPage extends React.Component {
                   <li>
                     <span dangerouslySetInnerHTML={{ __html: references.message }} />
                     {(() => {
-                    if (references.issue != null) {
-                      return(
-                        <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + references.issue}> issue {references.issue},</a></span>
-                      )
-                    }
+                      if (references.issue != null) {
+                        return (
+                          <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + references.issue}> issue {references.issue},</a></span>
+                        )
+                      }
                     })()}
                     {(() => {
-                    if (references.pull != null) {
-                      return(
-                        <span><a href={"https://github.com/jenkinsci/jenkins/pull/" + references.pull}> pull {references.pull},</a></span>
-                      )
-                    }
+                      if (references.pull != null) {
+                        return (
+                          <span><a href={"https://github.com/jenkinsci/jenkins/pull/" + references.pull}> pull {references.pull},</a></span>
+                        )
+                      }
                     })()}
                   </li>
                 );
@@ -107,7 +107,7 @@ class IndexPage extends React.Component {
   }
 }
 
-export default IndexPage
+export default ChangelogLTS
 
 export const pageQuery = graphql`
 query{
