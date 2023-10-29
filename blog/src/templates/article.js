@@ -13,7 +13,7 @@ class Article extends React.Component {
           <table>
             <tbody>
               <tr>
-                <th style={{width: "20px"}}>{this.props.data.asciidoc.pageAttributes.author}</th>
+                <th style={{ width: "20px" }}>{this.props.data.asciidoc.pageAttributes.author}</th>
                 <tr><img href={this.props.data.asciidoc.pageAttributes.author + ".png"} /></tr>
               </tr>
             </tbody>
