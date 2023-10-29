@@ -66,21 +66,21 @@ The Jenkins agent configuration correctly warns that the controller must open th
 It is easiest to allow Jenkins to choose the port (a "Random" port).
 Jenkins selects a random available port number and shares that port number with agents during their initial connection to the Jenkins http port.
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/tcp-port-for-inbound-agents.png[TCP port for inbound agents]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/tcp-port-for-inbound-agents.png[TCP port for inbound agents]
 
 == Configure the agent
 
 Once the Jenkins TCP port is open for inbound agents, a new agent is configured from the Jenkins "Nodes" menu
 This creates an "inbound Jenkins agent" that uses the Jenkins `agent.jar` to initiate the connection to the Jenkins controller.
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/inbound-agent-configuration.png[Inbound agent configuration]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/inbound-agent-configuration.png[Inbound agent configuration]
 
 == Download the agent
 
 The agent starts the first time by clicking the "Launch" button on the agent configuration page (only available with Java 8).
 That downloads the "slave-agent.jnlp" file from the web browser.
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/launch-inbound-agent-from-jenkins.png[Launch inbound agent from Jenkins]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/launch-inbound-agent-from-jenkins.png[Launch inbound agent from Jenkins]
 
 == Start the agent
 
@@ -95,13 +95,13 @@ Refer to <<Jenkins agent and icedtea>> for a technique that can help users of th
 
 Java web start (javaws.exe) prompts for permission to run the program with this dialog:
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/javaws-prompt-for-remoting-agent.png[Java Web Start prompt for remoting agent]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/javaws-prompt-for-remoting-agent.png[Java Web Start prompt for remoting agent]
 
 == Install the agent as a service
 
 The agent runs and displays a window on the desktop with a single menu entry, "Install as a service".
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/install-agent-as-a-service.png[Install agent as a service]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/install-agent-as-a-service.png[Install agent as a service]
 
 When the "Install as a service" menu item is clicked, the agent is adjusted to run as a Windows service using the SYSTEM account.
 
@@ -110,7 +110,7 @@ When the "Install as a service" menu item is clicked, the agent is adjusted to r
 The Jenkins controller on Windows can be upgraded to Jenkins 2.249.1 from the "Manage Jenkins" page.
 The upgrade process downloads the new `jenkins.war` file, saves the current version in case of later downgrade, and offers to restart.
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/upgrade-jenkins-from-manage-jenkins.png[Upgrade Jenkins from Manage Jenkins]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/upgrade-jenkins-from-manage-jenkins.png[Upgrade Jenkins from Manage Jenkins]
 
 == Upgrade the agent
 
@@ -138,7 +138,7 @@ The Jenkins agent configuration correctly warns that the controller must open th
 It is easiest to allow Jenkins to choose the port (a "Random" port).
 Jenkins selects a random available port number and shares that port number with agents during their initial connection to the Jenkins http port.
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/tcp-port-for-inbound-agents.png[TCP port for inbound agents]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/tcp-port-for-inbound-agents.png[TCP port for inbound agents]
 
 == Configure the agent
 
@@ -149,14 +149,14 @@ This creates an "inbound Jenkins agent" that uses the Jenkins `agent.jar` to ini
 Once the Jenkins TCP port is open for inbound agents, a new agent is configured from the Jenkins "Nodes" menu
 This creates an "inbound Jenkins agent" that uses the Jenkins `agent.jar` to initiate the connection to the Jenkins controller.
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/inbound-agent-configuration.png[Inbound agent configuration]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/inbound-agent-configuration.png[Inbound agent configuration]
 
 == Download the agent
 
 The agent was started the first time by clicking the "Launch" button on the agent configuration page (only available with Java 8).
 That downloads the "slave-agent.jnlp" file from the web browser.
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/launch-inbound-agent-from-jenkins.png[Launch inbound agent from Jenkins]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/launch-inbound-agent-from-jenkins.png[Launch inbound agent from Jenkins]
 
 == Start the agent with IcedTea-Web
 
@@ -170,13 +170,13 @@ C:\> C:\icedtea-web-1.8.3.win.bin\icedtea-web-image\bin\javaws.exe -wait slave-a
 
 Java web start (javaws.exe) prompts for permission to run the program with this dialog:
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/javaws-prompt-for-remoting-agent.png[Java Web Start prompt for remoting agent]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/javaws-prompt-for-remoting-agent.png[Java Web Start prompt for remoting agent]
 
 == Install the agent as a service
 
 The agent runs and displays a window on the desktop with a single menu entry, "Install as a service".
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/install-agent-as-a-service.png[Install agent as a service]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/install-agent-as-a-service.png[Install agent as a service]
 
 When the "Install as a service" menu item is clicked, the agent is installed and configured to run as a Windows service using the SYSTEM account.
 
@@ -185,7 +185,7 @@ When the "Install as a service" menu item is clicked, the agent is installed and
 The Jenkins controller on Windows was upgraded to Jenkins 2.249.1 from the "Manage Jenkins" page.
 The upgrade process downloads the new `jenkins.war` file, saves the current version in case of later downgrade, and offers to restart.
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/upgrade-jenkins-from-manage-jenkins.png[Upgrade Jenkins from Manage Jenkins]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/upgrade-jenkins-from-manage-jenkins.png[Upgrade Jenkins from Manage Jenkins]
 
 == Upgrading the agent
 
@@ -204,7 +204,7 @@ When the Jenkins war file is started from a Windows command prompt, "Manage Jenk
 An administrator selects that entry and Jenkins will configure itself to run as a service/
 The installer configures the Jenkins controller to run as the SYSTEM user.
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/install-controller-as-service-from-manage-jenkins.png[Install Jenkins as a service from Manage Jenkins]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/install-controller-as-service-from-manage-jenkins.png[Install Jenkins as a service from Manage Jenkins]
 
 == Jenkins agent
 
@@ -213,21 +213,21 @@ The Jenkins agent configuration correctly warns that the controller must open th
 It is easiest to allow Jenkins to choose the port (a "Random" port).
 Jenkins selects a random available port number and shares that port number with agents during their initial connection to the Jenkins http port.
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/tcp-port-for-inbound-agents.png[TCP port for inbound agents]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/tcp-port-for-inbound-agents.png[TCP port for inbound agents]
 
 == Configure the agent
 
 After opening the Jenkins TCP port for inbound agents, we configured a new agent from the "Nodes" menu
 This created an "inbound Jenkins agent" that uses the Jenkins `agent.jar` to initiate the connection to the Jenkins controller.
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/inbound-agent-configuration.png[Inbound agent configuration]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/inbound-agent-configuration.png[Inbound agent configuration]
 
 == Download the agent
 
 The agent was started the first time by clicking the "Launch" button on the agent configuration page (only available with Java 8).
 That downloads the "slave-agent.jnlp" file from the web browser.
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/launch-inbound-agent-from-jenkins.png[Launch inbound agent from Jenkins]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/launch-inbound-agent-from-jenkins.png[Launch inbound agent from Jenkins]
 
 == Start the agent with IcedTea-Web
 
@@ -241,13 +241,13 @@ C:\> C:\icedtea-web-1.8.3.win.bin\icedtea-web-image\bin\javaws.exe -wait slave-a
 
 Java web start (javaws.exe) prompts for permission to run the program with this dialog:
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/javaws-prompt-for-remoting-agent.png[Java Web Start prompt for remoting agent]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/javaws-prompt-for-remoting-agent.png[Java Web Start prompt for remoting agent]
 
 == Install the agent as a service
 
 The agent runs and displays a window on the desktop with a single menu entry, "Install as a service".
 
-image::/post-images/2020/2020-09-09-new-jenkins-release-observations/install-agent-as-a-service.png[Install agent as a service]
+image::/images/images/post-images/2020/2020-09-09-new-jenkins-release-observations/install-agent-as-a-service.png[Install agent as a service]
 
 When the "Install as a service" menu item is clicked, the agent is installed and configured to run as a Windows service using the SYSTEM account.
 

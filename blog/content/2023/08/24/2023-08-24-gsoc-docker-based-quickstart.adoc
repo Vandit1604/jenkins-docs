@@ -5,7 +5,7 @@
 description: "Google Summer of Code 2023 Docker-based Jenkins quick start examples."
 ---
 
-image:/images/gsoc/jenkins-gsoc-logo_small.png[Jenkins GSoC, role=center, float=right]
+image:/images/images/gsoc/jenkins-gsoc-logo_small.png[Jenkins GSoC, role=center, float=right]
 
 == Table of Contents
 
@@ -27,11 +27,11 @@ Furthermore, the project included the creation of user-friendly documentation, t
 
 * Previously, users had to follow six intimidating steps to install Jenkins with Docker, which appear as follows:
 +
-image:../../../post-images/2023/08/24/2023-08-24-Screenshot-docker-in-docker.png[Creating docker in docker container]
+image:/images/post-images/2023/08/24/2023-08-24-Screenshot-docker-in-docker.png[Creating docker in docker container]
 +
-image:../../../post-images/2023/08/24/2023-08-24-Screenshot-dockerfile.png[Building dockerfile ]
+image:/images/post-images/2023/08/24/2023-08-24-Screenshot-dockerfile.png[Building dockerfile ]
 +
-image:../../../post-images/2023/08/24/2023-08-24-Screenshot-custom-container.png[Creating container from previous image]
+image:/images/post-images/2023/08/24/2023-08-24-Screenshot-custom-container.png[Creating container from previous image]
 
 * After this project, users will only need two commands: `git clone URL` and `docker-compose up -d`.
 * This also applies to tutorials that utilize the same Docker setup as mentioned above.

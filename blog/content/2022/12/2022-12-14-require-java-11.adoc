@@ -15,7 +15,7 @@ and a negligible number of users were running Jenkins on Java 17.
 In recent months, usage of Java 11 has surpassed usage of Java 8,
 and usage of Java 17 has entered a phase of rapid adoption:
 
-image:/post-images/2022-12-require-java-11/jvms.png[JVMS by date as of November 2022]
+image:/images/images/post-images/2022-12-require-java-11/jvms.png[JVMS by date as of November 2022]
 
 With all _known_ production issues on Java 17 resolved, we continue to encourage users to upgrade to Java 17,
 particularly in light of the fact that many Java vendors plan to stop providing free public updates for Java 11 https://en.wikipedia.org/wiki/Java_version_history#Release_table[on or after October 2024].

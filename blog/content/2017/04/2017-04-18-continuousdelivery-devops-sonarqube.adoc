@@ -34,17 +34,17 @@ SonarQube has support for Jenkins pipeline.
 The change triggers a new run of the pipeline. Oh no! The build pipeline broke, and the change is not further processed.
 In the following image you see that a defined quality gate was missed. The visualizing is done with Jenkins Blue Ocean.
 
-image:/post-images/sonarqube-jenkins/01_PipelineFailedBlueOcean.png[role=center]
+image:/images/images/post-images/sonarqube-jenkins/01_PipelineFailedBlueOcean.png[role=center]
 
 == SonarQube inspection
 What is the underlying issue? We can open the SonarQube web application and drill down to the finding. In the Java code, obviously a string literal is not placed on the right side.
 
-image:/post-images/sonarqube-jenkins/02_Finding.png[role=center]
+image:/images/images/post-images/sonarqube-jenkins/02_Finding.png[role=center]
 
 During a team meeting it was decided to define this to be a _Blocker_, and SonarQube was configured accordingly. Furthermore, a SonarQube quality gate was created to break any build, if a _blocker_ was identified. Let's now quickly look into the code.
 Yes, SonarQube is right, there is the issue with the following code snippet.
 
-image:/post-images/sonarqube-jenkins/03_FindingVisualizedInCode.png[role=center]
+image:/images/images/post-images/sonarqube-jenkins/03_FindingVisualizedInCode.png[role=center]
 
 We do not want to discuss in detail all used tools, and also covering the complete Jenkins build job would be out of scope.
 But the interesting extract here in regard of the inspection is the following _stage_ defined in Jenkins pipeline DSL:
@@ -104,7 +104,7 @@ This blog post is an appetizer, and scripts are excerpts. For more information, 
 Since they all work in a wonderful Agile team, the next available colleague just promptly fixes the issue. After checking in
 the fixed code, the build pipeline runs again.
 
-image:/post-images/sonarqube-jenkins/04_PipelineFixedBlueOcean.png[role=center]
+image:/images/images/post-images/sonarqube-jenkins/04_PipelineFixedBlueOcean.png[role=center]
 
 
 The pipeline was processed successfully, including the SonarQube quality gate, and as the final step, the packaged and tested artifact was
@@ -145,7 +145,7 @@ stage ('Distribute binaries') { // <1>
 Now let's see check that the binary was deployed to Artifactory, successfully. As part of the context information, also a reference to the
 producing Jenkins build job is available for better traceability.
 
-image:/post-images/sonarqube-jenkins/05_BinaryDeployedInArtifactory.png[role=center]
+image:/images/images/post-images/sonarqube-jenkins/05_BinaryDeployedInArtifactory.png[role=center]
 
 == Summary
 In this blog post, we've discovered tips and tricks to integrate Jenkins with SonarQube, how to define

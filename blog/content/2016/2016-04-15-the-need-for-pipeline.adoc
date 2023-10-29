@@ -15,7 +15,7 @@ explores Jenkins, the link:/doc/pipeline[Pipeline plugin], and the ecosystem
 around it in much more detail.
 ==
 
-image:/images/angry-jenkins_128.png[role=right]
+image:/images/images/angry-jenkins_128.png[role=right]
 
 Over the years, Jenkins has become the undisputed ruler among continuous
 integration (CI), delivery and deployment (CD) tools. It, in a way, defined the
@@ -136,7 +136,7 @@ all-or-nothing rule. Build invokes testing and testing invokes deployment. If
 one of them fails, the developer gets a notification, fixes the problem and
 commits the code that will initiate the repetition of the process.
 
-image:/post-images/need-for-pipeline/simple-cd-flow-small.png[title="A simple
+image:/images/images/post-images/need-for-pipeline/simple-cd-flow-small.png[title="A simple
 and, in most cases, insufficient CD flow", role=center,
 link="/post-images/need-for-pipeline/simple-cd-flow.png"]
 
@@ -151,7 +151,7 @@ so on. I won't go into many examples of situations that require complex flow
 with many tasks, conditionals that depend on results, parallel execution and so
 on. Instead, I'll share a diagram of one of the flows I worked on.
 
-image:/post-images/need-for-pipeline/complex-cd-flow-small.png[title="A more
+image:/images/images/post-images/need-for-pipeline/complex-cd-flow-small.png[title="A more
 complex CD flow", role=center,
 link="/post-images/need-for-pipeline/complex-cd-flow.png"]
 

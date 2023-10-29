@@ -7,7 +7,7 @@
 NOTE: This is a guest blog by Niklas Tanskanen, consultant at
 link:https://eficode.com[Eficode].
 
-image::/images/jenkins-x/logo.svg[Jenkins X, float="right", width=200]
+image::/images/images/jenkins-x/logo.svg[Jenkins X, float="right", width=200]
 
 link:https://kubernetes.io[Kubernetes], the container orchestration platform is rapidly becoming popular. There are more and more workloads that you can run on top of Kubernetes. It's becoming an enabling layer of your Hyper-convergenced infrastructure.
 
@@ -60,7 +60,7 @@ The same field can also be specified by the Kubernetes plugin when you are speci
 
 
 .Specifying `.spec.activeDeadlineSeconds` in the Kubernetes plugin
-image::/post-images/2018-08-30/time-deadline.png[width=800]
+image::/images/images/post-images/2018-08-30/time-deadline.png[width=800]
 
 Same configuration is available in the `Jenkinsfile` as well if you don't like static configurations.
 
@@ -73,7 +73,7 @@ podTemplate(label: 'maven', activeDeadlineSeconds: 180, containers: [
 }
 ----
 
-image::/images/conferences/devops-world-2018.jpg[DevOps World | Jenkins World 2018, float="right", link="https://www.cloudbees.com/devops-world"]
+image::/images/images/conferences/devops-world-2018.jpg[DevOps World | Jenkins World 2018, float="right", link="https://www.cloudbees.com/devops-world"]
 
 This was just a small sample of features of the Kubernetes plugin in Jenkins. For more, be sure to check out our
 link:https://sched.co/FD6E[talk] where we share more of how you can utilise Kubernetes with Jenkins!

@@ -12,7 +12,7 @@ CAUTION: What follows contains some opinions or statements which may not be seen
 
 If we look at the global numbers, Java 8 runtimes now represent 52.8% of the Jenkins instances running, which have not opted out of anonymous usage statistics.
 
-image:/post-images/2016-jvm-versions/2016-jvm-stats-all.png[]
+image:/images/images/post-images/2016-jvm-versions/2016-jvm-stats-all.png[]
 
 And if you look at the trend, Java 8 is clearly growing fast.
 
@@ -25,7 +25,7 @@ those are indeed probably not going to upgrade in general anyway, or when they d
 So, if we only keep the instances running Jenkins 2.x, then the proportion of Java 8 goes to almost 70% compared to Java 7 (Jenkins 2.x requires Java 7)
 footnote:[69% for October, 67% in September]:
 
-image:/post-images/2016-jvm-versions/2016-jvm-stats-only-2.x.png[]
+image:/images/images/post-images/2016-jvm-versions/2016-jvm-stats-only-2.x.png[]
 
 == Conclusion
 

@@ -69,7 +69,7 @@ you run Gatling, a Python file if you are running Selenium, etc.).
 . View the test results:
 
 
-image::/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-1.png[Viewing test results from Taurus]
+image::/images/images/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-1.png[Viewing test results from Taurus]
 
 If you want to conduct an in-depth analysis of your test results, run your
 tests on BlazeMeter. You will be able to monitor KPIs through advanced and
@@ -83,7 +83,7 @@ Run the following command from the terminal:
 bzt <file_name>.yml -report
 ----
 
-image::/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-2.png[Viewing test results in Blazemeter]
+image::/images/images/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-2.png[Viewing test results in Blazemeter]
 
 ### Integrate Taurus With Pipeline
 
@@ -92,9 +92,9 @@ straight to Jenkins after creating your Taurus script.
 
 . Open Jenkins -> New Item -> Fill in an item name -> Click on ‘Pipeline’
 +
-image::/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-3.png[]
+image::/images/images/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-3.png[]
 +
-image::/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-4.png[]
+image::/images/images/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-4.png[]
 +
 . Now create a Pipeline script. You can include all parts of
 your CI/CD process in this script: Commit, Build, Unit Test, Performance Test,
@@ -132,7 +132,7 @@ node {
 }
 ----
 +
-image::/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-5.png[]
+image::/images/images/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-5.png[]
 +
 Note that you can either add the Pipeline inline, or choose the “Pipeline
 script from SCM” option and add the URL to the script on GitHub (in this case
@@ -143,21 +143,21 @@ whenever you need to update the tests, you can just add new commits to the
 . Save the Pipeline
 . Click on ‘Build Now’ to run the Pipeline
 +
-image::/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-6.png[]
+image::/images/images/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-6.png[]
 +
 . Click on the new Build that is running now (build #6 in this example).
 +
-image::/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-7.png[]
+image::/images/images/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-7.png[]
 +
 . Click on ‘Console Output’ to see the test results:
 +
-image::/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-8.png[]
+image::/images/images/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-8.png[]
 +
 . In the Console Output you can see the test results and also the link to the report in BlazeMeter.
 +
-image::/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-9.png[]
+image::/images/images/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-9.png[]
 +
-image::/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-10.png[]
+image::/images/images/post-images/jenkinsworld2017/blazemeter/blazemeter-speaker-blog-2017-10.png[]
 
 
 That’s it! Jenkins Pipeline is now running open-source load testing tools via Taurus.

@@ -21,7 +21,7 @@ went out this week. Of note:
   to get some numbers around optimisations on the web tier.
 * And a grab bag of other great bug fixes.
 
-image::/images/blueocean/input-step.png["Using the input step in Blue Ocean", role=center]
+image::/images/images/blueocean/input-step.png["Using the input step in Blue Ocean", role=center]
 
 Also a bunch of work has been done to support parametrized pipelines, as
 well as creation of new multibranch pipelines (both are much asked for).
@@ -38,7 +38,7 @@ Running the latest can be as simple as:
 docker run -p 8888:8080 jenkinsci/blueocean:latest
 ----
 
-image::/images/blueocean/logo-yarrr.png["Jenkins yarrr", role="right"]
+image::/images/images/blueocean/logo-yarrr.png["Jenkins yarrr", role="right"]
 
 This is built on the incredibly popular
 link:https://hub.docker.com/_/jenkins/[official "jenkins" image]
