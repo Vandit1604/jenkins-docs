@@ -61,7 +61,7 @@ class Authors extends React.Component {
                     </div>
                     <div className={authorinfo}>
                       <br />
-                      <a ref={"https://github.com/" + node.pageAttributes.github} className="github"> <GitHubIcon /></a>
+                      <a href={"https://github.com/" + node.pageAttributes.github} className="github"> <GitHubIcon /></a>
                       <br />
                       <a href={"https://linkedin.com/in/" + node.pageAttributes.linkedin} className="linkedin"><LinkedInIcon /></a>
                       <br />

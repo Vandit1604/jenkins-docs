@@ -75,34 +75,34 @@ class DownloadPage extends React.Component {
               <strong>Download Jenkins 2.414.2 LTS for:</strong>
               <ul className={listGroup}>
                 <li><a href="To be added">Generic Java Package (.war)<br />SHA-256:</a></li>
-                <li><a target="_blank" href="https://hub.docker.com/r/jenkins/jenkins">Docker</a></li>
-                <li><a target="_blank" href="https://artifacthub.io/packages/helm/jenkinsci/jenkins">Kubernetes</a></li>
-                <li><a target="_blank" href="https://pkg.jenkins.io/debian-stable/">Ubuntu/Debian</a></li>
-                <li><a target="_blank" href="https://pkg.jenkins.io/redhat-stable/">Red Hat/Fedora/Alma/Rocky/CentOS</a></li>
-                <li><a target="_blank" href="https://www.jenkins.io/download/thank-you-downloading-windows-installer-stable">Windows</a></li>
-                <li><a target="_blank" href="https://pkg.jenkins.io/opensuse-stable/">openSUSE</a></li>
-                <li><a target="_blank" href="https://www.freshports.org/devel/jenkins-lts" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">FreeBSD <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
-                <li><a target="_blank" href="https://packages.gentoo.org/packages/dev-util/jenkins-bin" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">Gentoo <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
-                <li><a target="_blank" href="https://www.jenkins.io/download/lts/macos" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">macOS <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
-                <li><a target="_blank" href="https://openports.pl/path/devel/jenkins/stable" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">OpenBSD <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
-                <li><a target="_blank" href="https://pkg.openindiana.org/hipster/en/search.shtml?token=jenkins-core-lts" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">OpenIndiana Hipster <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://hub.docker.com/r/jenkins/jenkins">Docker</a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://artifacthub.io/packages/helm/jenkinsci/jenkins">Kubernetes</a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://pkg.jenkins.io/debian-stable/">Ubuntu/Debian</a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://pkg.jenkins.io/redhat-stable/">Red Hat/Fedora/Alma/Rocky/CentOS</a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://www.jenkins.io/download/thank-you-downloading-windows-installer-stable">Windows</a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://pkg.jenkins.io/opensuse-stable/">openSUSE</a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://www.freshports.org/devel/jenkins-lts" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">FreeBSD <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://packages.gentoo.org/packages/dev-util/jenkins-bin" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">Gentoo <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://www.jenkins.io/download/lts/macos" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">macOS <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://openports.pl/path/devel/jenkins/stable" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">OpenBSD <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://pkg.openindiana.org/hipster/en/search.shtml?token=jenkins-core-lts" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">OpenIndiana Hipster <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
               </ul>
             </div>
             <div style={{ width: "45%" }}>
               <strong>Download Jenkins 2.428 LTS for:</strong>
               <ul className={listGroup}>
                 <li><a href="google.com">Generic Java Package (.war)<br />SHA-256:</a></li>
-                <li><a target="_blank" href="https://hub.docker.com/r/jenkins/jenkins">Docker</a></li>
-                <li><a target="_blank" href="https://pkg.jenkins.io/debian/">Ubuntu/Debian</a></li>
-                <li><a target="_blank" href="https://pkg.jenkins.io/redhat/">Red Hat/Fedora/Alma/Rocky/CentOS</a></li>
-                <li><a target="_blank" href="https://www.jenkins.io/download/thank-you-downloading-windows-installer">Windows</a></li>
-                <li><a target="_blank" href="https://pkg.jenkins.io/opensuse/">openSUSE</a></li>
-                <li><a target="_blank" href="https://archlinux.org/packages/extra/any/jenkins/" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">Arch Linux <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
-                <li><a target="_blank" href="https://www.freshports.org/devel/jenkins" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">FreeBSD <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
-                <li><a target="_blank" href="https://packages.gentoo.org/packages/dev-util/jenkins-bin" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">Gentoo <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
-                <li><a target="_blank" href="https://www.jenkins.io/download/weekly/macos" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">macOS <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
-                <li><a target="_blank" href="https://openports.pl/path/devel/jenkins/devel" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">OpenBSD <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
-                <li><a target="_blank" href="https://pkg.openindiana.org/hipster/en/search.shtml?token=jenkins-core-weekly" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">OpenIndiana Hipster <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://hub.docker.com/r/jenkins/jenkins">Docker</a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://pkg.jenkins.io/debian/">Ubuntu/Debian</a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://pkg.jenkins.io/redhat/">Red Hat/Fedora/Alma/Rocky/CentOS</a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://www.jenkins.io/download/thank-you-downloading-windows-installer">Windows</a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://pkg.jenkins.io/opensuse/">openSUSE</a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://archlinux.org/packages/extra/any/jenkins/" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">Arch Linux <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://www.freshports.org/devel/jenkins" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">FreeBSD <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://packages.gentoo.org/packages/dev-util/jenkins-bin" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">Gentoo <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://www.jenkins.io/download/weekly/macos" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">macOS <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://openports.pl/path/devel/jenkins/devel" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">OpenBSD <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
+                <li><a rel="noreferrer" target="_blank"  href="https://pkg.openindiana.org/hipster/en/search.shtml?token=jenkins-core-weekly" title="This is a package supported by a third `party which may be not as frequently updated as packages supported by the Jenkins project directly">OpenIndiana Hipster <span><CollectionsBookmarkOutlinedIcon /></span></a></li>
               </ul>
             </div>
           </div>
