@@ -10,7 +10,7 @@ In this post I wanted to show how you can run Jenkins behind a firewall (which c
 
 Just a very quick refresher on what webhooks are: Messages (often JSON, but not always) typically posted by HTTP(S) from a server to a client that is listening for events.
 
-image:/post-images/2019-01-07-webhook-firewalls/webhooks.png[webhook diagram, role=center]
+image:/images/images/post-images/2019-01-07-webhook-firewalls/webhooks.png[webhook diagram, role=center]
 
 The events flow left to right, Jenkins sits there happily listing on paths like `/github-webhook/` or `/dockerhub-webhook/` etc for some HTTP request to tell it to wake up and do some work.
 
@@ -24,7 +24,7 @@ GitHub/BitBucket may be reporting a new commit or PR, or DockerHub reporting an 
 
 The trick is when something gets in the middle, say a firewall: 
 
-image:/post-images/2019-01-07-webhook-firewalls/firewalls.png[firewall diagram, role=center]
+image:/images/images/post-images/2019-01-07-webhook-firewalls/firewalls.png[firewall diagram, role=center]
 
 
 (_As is industry standard, all firewalls have to be a wall on fire. Please don’t somehow set bricks on fire in your organisation_)
@@ -40,13 +40,13 @@ This is fine - we can fall back to polling for changes. Except this is terrible.
 
 We can both solve this problem, but also, view this is an opportunity. Having things not addressable on the web, or locked down in some default way is a feature, not a bug. You massively reduce your attack surface, and can have defence in depth: 
 
-image:/post-images/2019-01-07-webhook-firewalls/exposed.png[exposed on web, role=center]
+image:/images/images/post-images/2019-01-07-webhook-firewalls/exposed.png[exposed on web, role=center]
 
 ### A Webhook forwarding service
 
 Enter the memorably named link:https://smee.io/[Smee]. This is an link:https://github.com/probot/smee[OSS project] provided by GitHub and also helpfully hosted as a service by GitHub. This can capture and forward webhooks for you. I’ll try to explain it with a diagram:
 
-image:/post-images/2019-01-07-webhook-firewalls/forwarding.png[forwarding, role=center]
+image:/images/images/post-images/2019-01-07-webhook-firewalls/forwarding.png[forwarding, role=center]
 
 GitHub pushes an event (via HTTPS/json in this case) to Smee.io (the funny thing with circles, which is on the public web and accessible from GitHub.com) - and Jenkins in turn subscribes to Smee with an outgoing connection from a client. Note the direction of the arrows: Jenkins only makes an outbound connection. 
 
@@ -56,11 +56,11 @@ This is the important point: this will work as long as the firewall is one way (
 
 Step 1: Firstly - go to https://smee.io/ and click “Start a new channel”: 
 
-image:/post-images/2019-01-07-webhook-firewalls/smee.png[smee website, role=center]
+image:/images/images/post-images/2019-01-07-webhook-firewalls/smee.png[smee website, role=center]
 
 This will give you a unique URL (which you should copy for later use): 
 
-image:/post-images/2019-01-07-webhook-firewalls/config1.png[smee config, role=center]
+image:/images/images/post-images/2019-01-07-webhook-firewalls/config1.png[smee config, role=center]
 
 Next you should install the smee client next to where you have the Jenkins server running:
 
@@ -77,11 +77,11 @@ This says to connect to the smee service, and forward webhooks to /github-webhoo
 
 Next, you need to configure a pipeline that makes use of github. In this case I set up one from scratch. You can skip this if you already have a pipeline setup: 
 
-image:/post-images/2019-01-07-webhook-firewalls/newpipeline.png[new pipeline, role=center]
+image:/images/images/post-images/2019-01-07-webhook-firewalls/newpipeline.png[new pipeline, role=center]
 
 I then chose “GitHub” as the where the code is: 
 
-image:/post-images/2019-01-07-webhook-firewalls/choice.png[choose github, role=center]
+image:/images/images/post-images/2019-01-07-webhook-firewalls/choice.png[choose github, role=center]
 
 
 Then choose your repository. This will set things up ready to receive webhooks from GitHub. (also if you have an existing pipeline setup, and it is using GitHub as the SCM source, that is also fine). 
@@ -91,7 +91,7 @@ The final step is to tell GitHub to post webhook events for that repository (or 
 
 Go to the settings tab for your GitHub repository, and then click “add webhook”:
 
-image:/post-images/2019-01-07-webhook-firewalls/addwebhook.png[add webhook, role=center]
+image:/images/images/post-images/2019-01-07-webhook-firewalls/addwebhook.png[add webhook, role=center]
 
 Next, configure the webhook: 
 
@@ -102,10 +102,10 @@ Next, configure the webhook:
 
 It should look something like this:
 
-image:/post-images/2019-01-07-webhook-firewalls/config2.png[config webhook, role=center]
+image:/images/images/post-images/2019-01-07-webhook-firewalls/config2.png[config webhook, role=center]
 
 OK - webhooks should be flowing now. You can make a change to your repository, and check that a build starts soon after:
 
-image:/post-images/2019-01-07-webhook-firewalls/running.png[running pipeline, role=center]
+image:/images/images/post-images/2019-01-07-webhook-firewalls/running.png[running pipeline, role=center]
 
 Good luck!

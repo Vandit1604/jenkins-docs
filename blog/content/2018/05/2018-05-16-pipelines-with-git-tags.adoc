@@ -49,12 +49,12 @@ tag in Git matching the `release-*` Ant-style wildcard.
 In practice, this means that all pull requests, and branch-based Pipeline Runs
 result in the stage being skipped:
 
-image::/post-images/pipeline-tags/not-deployed.png["Not Deployed!", role=center]
+image::/images/images/post-images/pipeline-tags/not-deployed.png["Not Deployed!", role=center]
 
 When I push a `release-1.0` tag, the Pipeline will then be triggered and run the
 "Deploy" stage:
 
-image::/post-images/pipeline-tags/deployed.png["Deployed!", role=center]
+image::/images/images/post-images/pipeline-tags/deployed.png["Deployed!", role=center]
 
 
 Out of the box, Pipelines won't trigger off of the presence of tags, which
@@ -67,7 +67,7 @@ From the configuration screen of a Multibranch Pipeline (or GitHub Organization
 Folder), Discovering tags can be enabled by adding the appropriate "Behavior"
 to the Branch Source configuration:
 
-image::/post-images/pipeline-tags/branch-source.png["Configuring the Multibranch Pipeline", role=center]
+image::/images/images/post-images/pipeline-tags/branch-source.png["Configuring the Multibranch Pipeline", role=center]
 
 
 ---

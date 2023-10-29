@@ -5,7 +5,7 @@
 description:   This is an introductory blog to the new CloudEvents plugin for Jenkins, developed as a GSoC'21 project. In this blog, we will be looking at how the integration between Jenkins and CloudEvents makes working across a suite of CI/CD tools easier. CloudEvents is the industry-adopted specification for describing events, and with the release of this plugin, Jenkins is now CloudEvents-compliant.
 ---
 
-image:/post-images/2021-08-cloudevents-plugin/jcdevents.JPG[CloudEvents Plugin for Jenkins,  align="center"]
+image:/images/images/post-images/2021-08-cloudevents-plugin/jcdevents.JPG[CloudEvents Plugin for Jenkins,  align="center"]
 
 == The What, Why and How of Interoperability
 
@@ -59,13 +59,13 @@ To use Jenkins as a Source, the following configuration is needed:
 * Events you want sent to the CloudEvents sink URL. 
 
 .Step 1: Manage Jenkins
-image:/post-images/2021-08-cloudevents-plugin/manage_jenkins.png[Manage Jenkins]
+image:/images/images/post-images/2021-08-cloudevents-plugin/manage_jenkins.png[Manage Jenkins]
 
 .Step 2: Configure System
-image:/post-images/2021-08-cloudevents-plugin/configure_system.png[Configure System]
+image:/images/images/post-images/2021-08-cloudevents-plugin/configure_system.png[Configure System]
 
 .Step 3: Configure CloudEvents Sink
-image:/post-images/2021-08-cloudevents-plugin/sink-type.png[Configure Sink to Receive Events]
+image:/images/images/post-images/2021-08-cloudevents-plugin/sink-type.png[Configure Sink to Receive Events]
 
 With Jenkins as a Source configured, Jenkins will send a POST request to the configured sink right as the selected event occurs inside Jenkins. Each event has a different payload specific to the type of the event emitted. 
 

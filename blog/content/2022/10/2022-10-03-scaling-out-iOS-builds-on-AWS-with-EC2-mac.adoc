@@ -3,7 +3,7 @@
 :page-author: xparticle
 :page-opengraph: ../../images/post-images/Jenkins-DevOps.png
 
-image::/post-images/Jenkins-DevOps.png[role=right]
+image::/images/images/post-images/Jenkins-DevOps.png[role=right]
 
 == Scaling out iOS builds on AWS with EC2 mac
 
@@ -32,7 +32,7 @@ can be applied to stand up a fleet of developer machines for phase 1,
 the focus will be placed on the topic at hand which is scalable build
 pipelines for the second phase.
 
-image:/post-images/2022-09-30-scaling-out-iOS-builds-on-AWS-with-EC2-mac/image1.png[image,width=622,height=194]
+image:/images/images/post-images/2022-09-30-scaling-out-iOS-builds-on-AWS-with-EC2-mac/image1.png[image,width=622,height=194]
 
 Figure-1: iOS Application development steps
 
@@ -69,7 +69,7 @@ build scripts. Configuring the event source trigger for Run Command
 could be achieved by a simple well-known pattern utilizing CodeCommit,
 SNS topic, SQS queue and Lambda worker as depicted below.
 
-image:/post-images/2022-09-30-scaling-out-iOS-builds-on-AWS-with-EC2-mac/image2.png[image,width=625,height=272]
+image:/images/images/post-images/2022-09-30-scaling-out-iOS-builds-on-AWS-with-EC2-mac/image2.png[image,width=625,height=272]
 
 Figure-2: Multiple Build Jobs invoked by SSM Agent on EC2 Mac.
 
@@ -93,7 +93,7 @@ on EC2 Linux like shown in Figure-3. Using plugins like
 can define several parameters that simplifies deploying Jenkins to AWS,
 more on this here
 
-image:/post-images/2022-09-30-scaling-out-iOS-builds-on-AWS-with-EC2-mac/image3.png[image,width=616,height=220]
+image:/images/images/post-images/2022-09-30-scaling-out-iOS-builds-on-AWS-with-EC2-mac/image3.png[image,width=616,height=220]
 
 Figure-3: Multiple Build Jobs invoked by Jenkins Agent on EC2 Mac
 instances.
@@ -126,7 +126,7 @@ that EC2 Mac dedicated hosts require a 24-hour minimum allocation
 period, adhering to the macOS Software Licensing Agreement
 ([.underline]#SLA#), before they can be released.
 
-image:/post-images/2022-09-30-scaling-out-iOS-builds-on-AWS-with-EC2-mac/image4.png[image,width=620,height=282]
+image:/images/images/post-images/2022-09-30-scaling-out-iOS-builds-on-AWS-with-EC2-mac/image4.png[image,width=620,height=282]
 
 Figure-4: Multiple EC2 Mac instance executor nodes under an Auto Scaling
 group.
@@ -145,7 +145,7 @@ to accomplish similar goals. Here is a quick depiction on how this would
 work from a Jenkins perspective, removing the well documented additional
 components included in the individual products to make this happen.
 
-image:/post-images/2022-09-30-scaling-out-iOS-builds-on-AWS-with-EC2-mac/image5.png[image,width=622,height=442]
+image:/images/images/post-images/2022-09-30-scaling-out-iOS-builds-on-AWS-with-EC2-mac/image5.png[image,width=622,height=442]
 
 Figure-4: Type-2 virtualization enabling two guest virtual machines on
 EC2 Mac.
@@ -154,7 +154,7 @@ An example of how to combine the benefits of these several layers of
 scale out from AWS Autoscaling and macOS type-2 virtualization into one
 cohesive build fleet is illustrated in the diagram below.
 
-image:/post-images/2022-09-30-scaling-out-iOS-builds-on-AWS-with-EC2-mac/image6.png[image,width=615,height=291]
+image:/images/images/post-images/2022-09-30-scaling-out-iOS-builds-on-AWS-with-EC2-mac/image6.png[image,width=615,height=291]
 
 Figure-5: Combining all scale-out options together.
 

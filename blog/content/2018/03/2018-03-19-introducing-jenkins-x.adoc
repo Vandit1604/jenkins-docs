@@ -23,7 +23,7 @@ All of this adds up to an increased demand for teams to have a solution for clou
 
 == Introducing Jenkins X
 
-image:/images/jenkins-x/logo.svg[Jenkins X Logo,width=200,role="right"]
+image:/images/images/jenkins-x/logo.svg[Jenkins X Logo,width=200,role="right"]
 https://jenkins-x.io[Jenkins X] is a project which rethinks how developers should interact with CI/CD in the cloud with a focus on making development teams productive through automation, tooling and DevOps best practices.
 
 https://jenkins-x.io[Jenkins X] is open source and we invite you to give us feedback and to contribute to the project.
@@ -111,7 +111,7 @@ The following happens when a Preview Environment is created:
 * the Pull Request is built as a preview docker image and chart and deployed into the preview environment
 * a comment is added to the Pull Request to let your team know the preview application is ready for testing with a link to open the application. So in one click your team members can try out the preview!
 
-image::/images/jenkins-x/intro/pr-comment.png[Issue Comment, width=800]
+image::/images/images/jenkins-x/intro/pr-comment.png[Issue Comment, width=800]
 
 This is particularly useful if you are working on a web application or REST endpoint; it lets your team interact with the running Pull Request to help folks approve changes.
 
@@ -121,7 +121,7 @@ If the commit comments reference issues (e.g. via the text `fixes #123`) then Je
 
 Also, as the version associated with those new commits is promoted to `Staging` or `Production`, you will get automated comments on each fixed issue that the issue is now available for review in the corresponding environment along with a link to the release notes and a link to the app running in that environment. e.g.
 
-image::/images/jenkins-x/intro/issue-comment.png[Issue Comment, width=800]
+image::/images/images/jenkins-x/intro/issue-comment.png[Issue Comment, width=800]
 
 
 

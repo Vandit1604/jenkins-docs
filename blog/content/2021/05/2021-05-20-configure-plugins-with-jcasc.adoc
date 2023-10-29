@@ -44,13 +44,13 @@ The JCasC plugin refers to this file to configure the Jenkins instance.
 - Let's change the `systemMessage` field to:
 
 .Updating the jenkins.yaml file
-image::/post-images/2021-05-15-configure-plugins-with-jcasc/updating-the-jenkins-file.png[Updating the jenkins.yaml file, width=700px]
+image::/images/images/post-images/2021-05-15-configure-plugins-with-jcasc/updating-the-jenkins-file.png[Updating the jenkins.yaml file, width=700px]
 
 - Reload the existing configuration to apply the system message change
 - Now, go back to the Dashboard and you can see the updated System Message on top:
 
 .Viewing the changes on Dashboard
-image::/post-images/2021-05-15-configure-plugins-with-jcasc/viewing-changes-in-jenkins-file.png[Viewing the changes]
+image::/images/images/post-images/2021-05-15-configure-plugins-with-jcasc/viewing-changes-in-jenkins-file.png[Viewing the changes]
 
 - This file will be used later to configure the plugin using JCasC.
 
@@ -63,19 +63,19 @@ image::/post-images/2021-05-15-configure-plugins-with-jcasc/viewing-changes-in-j
 - Give it a name (say, “testView”) and set its type to `List View`, and click on the `OK` button.
 
 .Creating the View
-image::/post-images/2021-05-15-configure-plugins-with-jcasc/naming-the-view.png[Naming the View, width=700px]
+image::/images/images/post-images/2021-05-15-configure-plugins-with-jcasc/naming-the-view.png[Naming the View, width=700px]
 
 - Now click on `Add Job Filter` to add any kind of filter, so let’s select `Build Duration Filter` and fill the field with any value (say, "60" minutes),
 
 .Adding filter to the view
-image::/post-images/2021-05-15-configure-plugins-with-jcasc/add-filters-to-view.png[Add Filters, width=700px]
+image::/images/images/post-images/2021-05-15-configure-plugins-with-jcasc/add-filters-to-view.png[Add Filters, width=700px]
 
 - Click on `Apply` > `Save`.
 - To view the full configuration, check out your main `jenkins.yaml` configuration file, by clicking on `Manage Jenkins` > `Configuration as Code` > `View Configuration`
 - Go to the `views` section in this YAML file to see details related to the view,
 
 .Here, details regarding the view (which we just created) is visible 
-image::/post-images/2021-05-15-configure-plugins-with-jcasc/yaml-file-on-jenkins-ui.png[YAML file on Jenkins UI, width=750px]
+image::/images/images/post-images/2021-05-15-configure-plugins-with-jcasc/yaml-file-on-jenkins-ui.png[YAML file on Jenkins UI, width=750px]
 
 '''
 
@@ -85,7 +85,7 @@ image::/post-images/2021-05-15-configure-plugins-with-jcasc/yaml-file-on-jenkins
 - Now click on the `Download Configuration` button to save the configuration file locally.
 
 .Downloading the Configuration
-image::/post-images/2021-05-15-configure-plugins-with-jcasc/download-config-button.png[Download Configuration, height=400px]
+image::/images/images/post-images/2021-05-15-configure-plugins-with-jcasc/download-config-button.png[Download Configuration, height=400px]
 
 '''
 
@@ -95,7 +95,7 @@ image::/post-images/2021-05-15-configure-plugins-with-jcasc/download-config-butt
 - For demo purposes, let’s change the `name` to “YoutubeDemoView” and set the `buildDurationMinutes` as "55".
 
 .Changing the View details locally
-image::/post-images/2021-05-15-configure-plugins-with-jcasc/yaml-file-on-local-text-editor.png[YAML file on Text Editor, width=750px]
+image::/images/images/post-images/2021-05-15-configure-plugins-with-jcasc/yaml-file-on-local-text-editor.png[YAML file on Text Editor, width=750px]
 
 - Save the file.
 
@@ -106,7 +106,7 @@ image::/post-images/2021-05-15-configure-plugins-with-jcasc/yaml-file-on-local-t
 - Now to reflect the local changes done in the `jenkins.yaml` file onto the Jenkins server, click on the `Reload existing configuration` button.
 
 .Applying the New Configuration to the Jenkins instance
-image::/post-images/2021-05-15-configure-plugins-with-jcasc/apply-new-config.png[Apply New Configuration, height=400px]
+image::/images/images/post-images/2021-05-15-configure-plugins-with-jcasc/apply-new-config.png[Apply New Configuration, height=400px]
 
 '''
 
@@ -118,7 +118,7 @@ image::/post-images/2021-05-15-configure-plugins-with-jcasc/apply-new-config.png
 - These two are the exact changes that we did locally in our `jenkins.yaml` file.
 
 .Verifying the changes
-image::/post-images/2021-05-15-configure-plugins-with-jcasc/view-final-changes.png[View Updated Changes, width=700px]
+image::/images/images/post-images/2021-05-15-configure-plugins-with-jcasc/view-final-changes.png[View Updated Changes, width=700px]
 
 
 Congratulations! You’ve successfully configured a plugin (“View Job Filter”) automatically with the help of the “Jenkins Configuration as Code” plugin! You can repeat the same process for other plugins as well.

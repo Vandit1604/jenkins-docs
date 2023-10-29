@@ -37,11 +37,11 @@ mvn hpi:run
 
 On the Global Configuration page, users can input Kubernetes server information and credentials. Then they can start Apache Kafka with only one button click.
 
-image:/post-images/remoting-kafka/kafka-provisioning-kubernetes-ui.png[Kafka provisioning in Kubernetes UI]
+image:/images/images/post-images/remoting-kafka/kafka-provisioning-kubernetes-ui.png[Kafka provisioning in Kubernetes UI]
 
 When users click `Start Kafka on Kubernetes` button, Jenkins will create a Kubernetes client from the information and then apply Zookeeper and Kafka YAML specification files from `resources`.
 
-image:/post-images/remoting-kafka/kafka-provisioning-kubernetes-architecture.png[Kafka provisioning in Kubernetes architecture]
+image:/images/images/post-images/remoting-kafka/kafka-provisioning-kubernetes-architecture.png[Kafka provisioning in Kubernetes architecture]
 
 == Helm Chart
 

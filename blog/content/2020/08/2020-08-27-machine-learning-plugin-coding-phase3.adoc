@@ -5,7 +5,7 @@
 description: "Google Summer of Code 2020 - Machine Learning Plugin project Coding Phase 3"
 ---
 
-image::/images/gsoc/jenkins-gsoc-logo_small.png[align="center"]
+image::/images/images/gsoc/jenkins-gsoc-logo_small.png[align="center"]
 
 Good to see you all again !
 
@@ -53,7 +53,7 @@ More kernels and installation guides are found here. link:https://github.com/jup
 
 Text output will be displayed in the console log. At the same time images/graphs/heat maps and HTMLs will be saved in the workspace. An action is shown in the left panel to display images in realtime. Due to the Content Security Policy of jenkins, some HTMLs which contain harmful javascript may not render in jenkins UI.
 
-image::/images/gsoc/2020/machine_learning_plugin/action_image_view.png[]
+image::/images/images/gsoc/2020/machine_learning_plugin/action_image_view.png[]
 
 == Fixed bugs
 

@@ -38,22 +38,22 @@ My mentors are https://github.com/christ66[Steven Christou], https://github.com/
 == Modernized Coverage Chart
 
 In the summary chart we can see the coverage summary of current coverage metric.
-image:/post-images/2018-06-13-code-coverage-api-plugin/summary-chart.gif[title="Summary Chart", role="center"]
+image:/images/images/post-images/2018-06-13-code-coverage-api-plugin/summary-chart.gif[title="Summary Chart", role="center"]
 
 In the child summary chart, we can see the coverage summary of each child, also, we can use the range handler to filter item we want to see to reduce the chart size. If we want to see coverage details of the child, we can click the child name to see more information.
-image:/post-images/2018-06-13-code-coverage-api-plugin/child-summary-chart.gif[title="Child Summary Chart", role="center"]
+image:/images/images/post-images/2018-06-13-code-coverage-api-plugin/child-summary-chart.gif[title="Child Summary Chart", role="center"]
 
 == Coverage Trend
 
 We also support coverage trend to show coverage metrics changing between builds.
-image:/post-images/2018-06-13-code-coverage-api-plugin/trend-chart.gif[title="Trend Chart", role="center"]
+image:/images/images/post-images/2018-06-13-code-coverage-api-plugin/trend-chart.gif[title="Trend Chart", role="center"]
 
 == Source Code Navigation
 You can enable source code navigation by specifying Source File Storing Level to save last build source files (enable source files navigation in current and last build) or save all build source files (enable source files navigation in all builds).
-image:/post-images/code-coverage-api/source-files-config.png[title="Source File Navigation Configuration" role="center"]
+image:/images/images/post-images/code-coverage-api/source-files-config.png[title="Source File Navigation Configuration" role="center"]
 
 You can see source file with coverage information on File level coverage page.
-image:/post-images/code-coverage-api/source-files-result.png[title="Source File Navigation Result" role="center"]
+image:/images/images/post-images/code-coverage-api/source-files-result.png[title="Source File Navigation Result" role="center"]
 
 == Parallel Pipeline Support
 
@@ -92,10 +92,10 @@ We provide a REST API to retrieve coverage data:
 
 == Failed Conditions and Flexible Threshold Setting
 You can set different failed conditions and threholds to control build result.
-image:/post-images/code-coverage-api/thresholds-config.png[title="Thresholds Configuration" role="center"]
+image:/images/images/post-images/code-coverage-api/thresholds-config.png[title="Thresholds Configuration" role="center"]
 
 If the thresholds satisfy the failed conditions, it will fail the build. 
-image:/post-images/code-coverage-api/thresholds-result.png[title="Thresholds Result" role="center"]
+image:/images/images/post-images/code-coverage-api/thresholds-result.png[title="Thresholds Result" role="center"]
 
 == Other Small Features
 
@@ -114,7 +114,7 @@ So, we can implement code coverage publishing by simply writing an adapter, and 
 
 *The below diagram show the architecture of Code Coverage API plugin*
 
-image:/post-images/code-coverage-api/architecture.png[title="Code Coverage API Plugin Architecture" role="center"]
+image:/images/images/post-images/code-coverage-api/architecture.png[title="Code Coverage API Plugin Architecture" role="center"]
 
 == Implementing a New Coverage Plugin
 

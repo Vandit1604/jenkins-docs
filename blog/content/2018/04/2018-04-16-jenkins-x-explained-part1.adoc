@@ -10,12 +10,12 @@ We’ve chosen a set of core applications that we install and wire together so t
 turn key experience. This blog aims to build on previous introductions to Jenkins X and provide a deeper 
 insight to what you get when you install Jenkins X.
 
-image::/images/jenkins-x/install/key.png[key, width=300]
+image::/images/images/jenkins-x/install/key.png[key, width=300]
 
 So what happens? After downloading the jx CLI you will now be able to create clusters with public cloud providers 
 or install onto an existing Kubernetes cluster.
 
-image::/images/jenkins-x/install/cloud-providers.png[cloud Providers, width=300]
+image::/images/images/jenkins-x/install/cloud-providers.png[cloud Providers, width=300]
 
 This command will create a cluster on your cloud provider of choice.
 

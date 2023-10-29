@@ -17,7 +17,7 @@ change in a 3rd party plugin was discovered.
 Regardless, the latest `b20` has a *lot* of important improvements, and some
 very nice new features.
 
-image:/post-images/blueocean-dev-log/pipeline-creation-flow.png["Creating a Pipeline in Blue Ocean", role=center]
+image:/images/images/post-images/blueocean-dev-log/pipeline-creation-flow.png["Creating a Pipeline in Blue Ocean", role=center]
 
 
 * A first cut of the "Create Pipeline" UX, seen above, allowing you to create Git
@@ -44,7 +44,7 @@ support this.
 
 == Reconnect/disconnect
 
-image:/post-images/blueocean-dev-log/connection-lost.png["Lost connection", role=center]
+image:/images/images/post-images/blueocean-dev-log/connection-lost.png["Lost connection", role=center]
 
 As Blue Ocean is a very "live" style of UX, if your network becomes
 unavailable, or the server is restarted, it is good to know in case you
@@ -54,7 +54,7 @@ and then when the connection is restored, even if you are waiting for a
 Pipeline run to finish, it will then notice this, and refresh things for
 you:
 
-image:/post-images/blueocean-dev-log/connection-ok.png["Reconnected", role=center]
+image:/images/images/post-images/blueocean-dev-log/connection-ok.png["Reconnected", role=center]
 
 Note the opacity changes to make it clear even if you don't see the little
 message. Very nice addition for those of us who work on a train far to often.

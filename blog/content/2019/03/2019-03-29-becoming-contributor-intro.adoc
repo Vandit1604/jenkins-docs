@@ -33,7 +33,7 @@ In this section we get lots of information about the many ways in which we can e
 community. Even though the intention is to display all the possible options, allowing the reader to choose, it can feel
 a bit overwhelming.
 
-image::/post-images/2019-03-29-becoming-contributor/jenkins-participate-page.png[]
+image::/images/images/post-images/2019-03-29-becoming-contributor/jenkins-participate-page.png[]
 
 The page is divided into two columns, the column on the left shows the different options to participate, while the
 column on the right shows the different options to contribute.
@@ -90,7 +90,7 @@ wanted to review, in order to learn more about how to contribute to the website.
 When reading the contributing file, I learned about the Awestruct static site generator, which is the tool used to
 transform the AsciiDoc source files in the repo into a website. However, when I clicked the link to learn more about it, I noticed it was broken. The domain had expired.
 
-image::/post-images/2019-03-29-becoming-contributor/awestruct-site.png[]
+image::/images/images/post-images/2019-03-29-becoming-contributor/awestruct-site.png[]
 
 == Why not fix it?
 
@@ -105,7 +105,7 @@ The first step, as usual, would be to fork the repository and clone it to my mac
 The next step would be to apply the change to the corresponding file. To do so, I created a new branch
 “alternative-awestruct-link” and applied the change there:
 
-image::/post-images/2019-03-29-becoming-contributor/making-change.png[]
+image::/images/images/post-images/2019-03-29-becoming-contributor/making-change.png[]
 
 == Making sure everything builds correctly and tests pass
 
@@ -116,7 +116,7 @@ contribution should follow, making sure everything builds correctly after any ch
 As stated in the contributing guidelines themselves, in order to build this repository we just have to run the default
 “make” target, in the root of the repository.
 
-image::/post-images/2019-03-29-becoming-contributor/executing-make.png[]
+image::/images/images/post-images/2019-03-29-becoming-contributor/executing-make.png[]
 
 Once the command execution finishes, if everything looks good, we are ready to go to the next step: creating the PR.
 
@@ -129,7 +129,7 @@ through the GitHub UI, if we prefer so; or even use https://github.com/github/hu
 In this case, I just clicked the link, which took me to the PR creation page on GitHub. Once there, I added a
 description and created the PR.
 
-image::/post-images/2019-03-29-becoming-contributor/creating-pr.png[]
+image::/images/images/post-images/2019-03-29-becoming-contributor/creating-pr.png[]
 
 When a PR to this repository is created, we notice there are some checks that start running. Jenkins repositories are
 configured to notify the https://ci.jenkins.io/[“Jenkins on Jenkins”], which runs the corresponding CI pipelines for
@@ -137,11 +137,11 @@ each repository, as described in the corresponding https://github.com/jenkins-in
 
 Once the checks are completed, we can see the result in the PR:
 
-image::/post-images/2019-03-29-becoming-contributor/pr-created-passing.png[]
+image::/images/images/post-images/2019-03-29-becoming-contributor/pr-created-passing.png[]
 
 And if we want to see the details of the execution, we can follow the “Show all checks” link:
 
-image::/post-images/2019-03-29-becoming-contributor/pr-checks-jenkins.png[]
+image::/images/images/post-images/2019-03-29-becoming-contributor/pr-checks-jenkins.png[]
 
 == PR Review
 
@@ -150,7 +150,7 @@ Now that the PR has been created and all automated checks are passing, we only h
 Once someone approves the PR and it is later merged, your contribution is integrated into the master branch of the
 repository, becoming part of the next release.
 
-image::/post-images/2019-03-29-becoming-contributor/pr-merged.png[]
+image::/images/images/post-images/2019-03-29-becoming-contributor/pr-merged.png[]
 
 == I have contributed!
 

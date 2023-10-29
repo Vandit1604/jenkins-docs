@@ -12,7 +12,7 @@ This is even more intriguing as some are part of the plugins installed by defaul
 No "install" tick box and the plugin is labeled "unavailable".
 There is a note saying "_This version of the plugin exists but it is not being offered for installation, so the latest bug fixes or features are not available to you. This is typically the case when plugin requirements, e.g. a recent version of Jenkins, are not satisfied. If you are using the latest version of Jenkins offered to you, newer plugin releases may not be available to your release line yet. See the plugin documentation for information about its requirements._".
 
-image:/post-images/2022-02-10-last-plugin-version-not-installable/plugin-not-installable.png[pluginView]
+image:/images/images/post-images/2022-02-10-last-plugin-version-not-installable/plugin-not-installable.png[pluginView]
 
 The message indicates to Jenkins administrators that a newer plugin version is available 
 but that the installed Jenkins core doesn't provide a necessary prerequisite – typically being too old.

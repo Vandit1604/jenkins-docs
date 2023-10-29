@@ -35,7 +35,7 @@ After this change, we were able to observe performance improvements of up to
 3300%. These improvements were visualized using
 link:https://jmh.morethan.io/[JMH Visualizer].
 
-image::/post-images/role-strategy-performance/benchmarks1.png[Benchmarks results after caching matching roles]
+image::/images/images/post-images/role-strategy-performance/benchmarks1.png[Benchmarks results after caching matching roles]
 
 More information is available at pull request on GitHub:
 https://github.com/jenkinsci/role-strategy-plugin/pull/81
@@ -53,7 +53,7 @@ for every permission in the Jenkins system when the plugin gets loaded.
 After both of these changes, we were able to experience improvements of up to
 10000%. The benchmark results show it better:
 
-image::/post-images/role-strategy-performance/benchmarks2.png[Benchmarks results after both changes]
+image::/images/images/post-images/role-strategy-performance/benchmarks2.png[Benchmarks results after both changes]
 
 More information about this change can be found at the GitHub pull request:
 https://github.com/jenkinsci/role-strategy-plugin/pull/83
@@ -68,7 +68,7 @@ With plugin:configuration-as-code[Configuration-as-Code plugin] version
 link:https://github.com/jenkinsci/configuration-as-code-plugin/releases/tag/configuration-as-code-1.24[1.24]
 and above, export of your configuration as YAML now works!
 
-image::/post-images/role-strategy-performance/jcasc-export.png[Role Strategy configuration export working with JCasC 1.24]
+image::/images/images/post-images/role-strategy-performance/jcasc-export.png[Role Strategy configuration export working with JCasC 1.24]
 
 As an alternative to
 Role Strategy Plugin, I also created the brand new plugin:folder-auth[Folder Authorization Plugin].

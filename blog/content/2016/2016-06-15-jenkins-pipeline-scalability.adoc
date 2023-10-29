@@ -14,7 +14,7 @@ Now this is a real challenge.
 
 This is the story of a journey to get out of the jungle of jobs...
 
-image::/post-images/jenkins-pipeline-scalability/journey.png[Journey out of the jungle of jobs, role=center]
+image::/images/images/post-images/jenkins-pipeline-scalability/journey.png[Journey out of the jungle of jobs, role=center]
 
 == Start of the journey
 
@@ -35,7 +35,7 @@ of the story, we had more than 3500 jobs.
 
 3500 jobs. Half a dozen people to manage them all...
 
-image::/post-images/jenkins-pipeline-scalability/thousands.png[Thousands of jobs for a small team, role=center]
+image::/images/images/post-images/jenkins-pipeline-scalability/thousands.png[Thousands of jobs for a small team, role=center]
 
 == Preparing the journey
 
@@ -87,7 +87,7 @@ as configuration":
 ** use the rest of the property file to configure the pipeline library, using
     as many sensible default values as possible
 
-image::/post-images/jenkins-pipeline-scalability/properties.png[Property file, role=center]
+image::/images/images/post-images/jenkins-pipeline-scalability/properties.png[Property file, role=center]
 
 == Piloting the pipeline from the SCM
 
@@ -100,7 +100,7 @@ hooks (in GitHub, BitBucket or even in Subversion), we could:
 * start the pipeline on any other commit on the branch
 * remove the pipeline when the branch was deleted
 
-image::/post-images/jenkins-pipeline-scalability/hooks.png[Hooks, role=center]
+image::/images/images/post-images/jenkins-pipeline-scalability/hooks.png[Hooks, role=center]
 
 Once a project wants to go in our ecosystem, the Jenkins team "seeds" the
 project into Jenkins, by running a job and giving a few parameters.
@@ -111,7 +111,7 @@ Active Directory group names based on the project name.
 The hook for the project must be registered into the SCM and you're up and
 running.
 
-image::/post-images/jenkins-pipeline-scalability/jobs.png[Jobs, role=center]
+image::/images/images/post-images/jenkins-pipeline-scalability/jobs.png[Jobs, role=center]
 
 == Configuration _and_ code
 
@@ -128,7 +128,7 @@ Usually, we tried to have a maximum reuse, through only pipeline libraries, for
 most of our projects, but in other circumstances, we were less strict and
 allowed some teams to develop their own pipeline script.
 
-image::/post-images/jenkins-pipeline-scalability/modes.png[Mixed modes, role=center]
+image::/images/images/post-images/jenkins-pipeline-scalability/modes.png[Mixed modes, role=center]
 
 == End of the journey
 
@@ -154,14 +154,14 @@ In the end, what did we achieve?
 * Pipeline libraries
 * Direct job DSL still possible
 
-image::/post-images/jenkins-pipeline-scalability/responsibilities.png[Responsibilities, role=center]
+image::/images/images/post-images/jenkins-pipeline-scalability/responsibilities.png[Responsibilities, role=center]
 
 == Seed and Pipeline plugin
 
 Now, what about the link:/doc/pipeline/[Pipeline plugin]? Both
 this plugin and the Seed plugin have common functionalities:
 
-image::/post-images/jenkins-pipeline-scalability/seed-now.png[Seed now, role=center]
+image::/images/images/post-images/jenkins-pipeline-scalability/seed-now.png[Seed now, role=center]
 
 What we have found in our journey is that having a "pipeline as configuration"
 was the easiest and most secure way to get a lot of projects on board, with
@@ -179,7 +179,7 @@ what makes the strength of the Seed plugin:
 * pipeline as configuration
 * reusable pipeline libraries, versioned and tested
 
-image::/post-images/jenkins-pipeline-scalability/seed-pipeline.png[Seed and Pipeline, role=center]
+image::/images/images/post-images/jenkins-pipeline-scalability/seed-pipeline.png[Seed and Pipeline, role=center]
 
 == Links
 

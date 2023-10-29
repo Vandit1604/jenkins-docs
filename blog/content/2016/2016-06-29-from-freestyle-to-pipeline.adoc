@@ -31,7 +31,7 @@ The chained jobs allowed us to resume the independent stages of the pipeline,
 and allowed us to run different stages on different hardware (different
 capabilities) as needed. Below is a diagram of what this looked like:
 
-image::/post-images/freestyle-to-pipeline-2016/freestyle-pipeline.png[role=center]
+image::/images/images/post-images/freestyle-to-pipeline-2016/freestyle-pipeline.png[role=center]
 
 
 The `infra_generate_monthly_json` would run periodically creating the
@@ -229,7 +229,7 @@ blue charts]!
 Of course, a nice added bonus is the beautiful visualization of our
 link:https://ci.jenkins.io/job/Infra/job/infra-statistics/[new Pipeline]!
 
-image::/post-images/freestyle-to-pipeline-2016/stats-pipeline.png[The New and Improved Statistics Pipeline, role=center]
+image::/images/images/post-images/freestyle-to-pipeline-2016/stats-pipeline.png[The New and Improved Statistics Pipeline, role=center]
 
 
 == Links

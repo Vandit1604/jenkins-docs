@@ -33,7 +33,7 @@ Navigate to: Manage Jenkins → Configure System → Junit
 
 In the dropdown select 'SQL Database'
 
-image:/post-images/2021/junit-external-storage/junit-sql-config-screen.png[JUnit SQL plugin configuration]
+image:/images/images/post-images/2021/junit-external-storage/junit-sql-config-screen.png[JUnit SQL plugin configuration]
 
 Now configure your Database connection details.
 
@@ -41,7 +41,7 @@ Search for 'Global Database' on the same 'Configure System' page.
 
 Select the database implementation you want to use and click 'Test Connection' to verify Jenkins can connect
 
-image:/post-images/2021/junit-external-storage/junit-sql-config-screen.png[JUnit SQL plugin database configuration]
+image:/images/images/post-images/2021/junit-external-storage/junit-sql-config-screen.png[JUnit SQL plugin database configuration]
 
 Click 'Save'
 
@@ -88,7 +88,7 @@ node {
 
 You will see a test result trend appear like below on the builds project page:
 
-image:/post-images/2021/junit-external-storage/junit-trend.png[JUnit Trend]
+image:/images/images/post-images/2021/junit-external-storage/junit-trend.png[JUnit Trend]
 
 If you check on the controller's file system you will see no `junitResult.xml` for new builds.
 

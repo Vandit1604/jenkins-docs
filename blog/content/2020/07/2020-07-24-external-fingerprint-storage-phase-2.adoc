@@ -46,7 +46,7 @@ fingerprints.
 Earlier, fingerprint cleanup was always run periodically and there was no way to turn it off.
 We also added an option to allow the user to turn off fingerprint cleanup.
 
-image:/post-images/2020/07-external-fingerprint-storage-phase-2/cleanup_disable.png[Fingerprint cleanup disable]
+image:/images/images/post-images/2020/07-external-fingerprint-storage-phase-2/cleanup_disable.png[Fingerprint cleanup disable]
 
 This was done because it may be the case that keeping redundant fingerprints in memory might be cheaper than the
 cleanup operation (especially in the case of external storages, which are cheaper these days).
@@ -73,7 +73,7 @@ The dropdown is shown only when multiple fingerprint storage engines are configu
 link:https://github.com/jenkinsci/redis-fingerprint-storage-plugin[Redis Fingerprint Storage Plugin] was refactored
 to use this new implementation.
 
-image:/post-images/2020/07-external-fingerprint-storage-phase-2/fingerprint_storage_engine_dropdown.png[Fingerprint
+image:/images/images/post-images/2020/07-external-fingerprint-storage-phase-2/fingerprint_storage_engine_dropdown.png[Fingerprint
 Storage Engine Dropdown]
 
 == Strengthened testing for the Redis Fingerprint Storage Plugin
