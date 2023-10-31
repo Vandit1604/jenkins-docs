@@ -1,99 +1,98 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
-import Ratings from "../components/Ratings"
+import Seo from "../components/Seo"
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
 import typography from "../utils/typography"
 import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm, rateoffset } from "../css/changelog.module.css";
 const { rhythm } = typography
 
-class ChangelogWeekly extends React.Component {
-  render() {
-    return (
-      < IndexPageLayout >
-        <Link style={{ textDecoration: `none` }} to="/">
-          <h3
+const ChangelogWeekly = ({ data }) => {
+  return (
+    < IndexPageLayout >
+      <Link style={{ textDecoration: `none` }} to="/">
+        <h3
+          style={{
+            color: `black`,
+            marginBottom: rhythm(1.5),
+            fontFamily: "Georgia,serif",
+            fontSize: "2.7rem",
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "nowrap",
+            justifyContent: "center",
+            gap: "15px",
+          }}
+        >
+          <img
+            src={jenkinsLogo}
+            alt="Jenkins Logo"
             style={{
-              color: `black`,
-              marginBottom: rhythm(1.5),
-              fontFamily: "Georgia,serif",
-              fontSize: "40px",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "nowrap",
-              justifyContent: "center",
-              gap: "15px",
+              height: "5rem",
             }}
-          >
-            <img
-              src={jenkinsLogo}
-              alt="Jenkins Logo"
-              style={{
-                height: "80px",
-              }}
-            />{" "}
-            Weekly Changelog
-          </h3>
-        </Link>
-        <div style={{ textAlign: "end" }}>
+          />{" "}
+          Weekly Changelog
+        </h3>
+      </Link>
+      <div style={{ textAlign: "end" }}>
+        <div className={iconlegend}>
+          Legend:
+          <ul className={image}>
+            <li className={security}>security fix</li>
+            <li className={bug} >major bug fix</li>
+            <li className={bug}>bug fix</li>
+            <li className={rfe}>major enhancement</li>
+            <li className={rfe}>enhancement</li>
+          </ul>
+        </div >
+        <div style={{ margin: "10px 0", width: "100%" }}>
           <div className={iconlegend}>
-            Legend:
-            <ul className={image}>
-              <li className={security}>security fix</li>
-              <li className={bug} >major bug fix</li>
-              <li className={bug}>bug fix</li>
-              <li className={rfe}>major enhancement</li>
-              <li className={rfe}>enhancement</li>
+            Community feedback:
+            <ul className={feedback}>
+              <li className={sunny}>no major issues</li>
+              <li className={cloudy}>notable issues</li>
+              <li className={storm}>required rollback</li>
             </ul>
-          </div >
-          <div style={{ margin: "10px 0", width: "100%" }}>
-            <div className={iconlegend}>
-              Community feedback:
-              <ul className={feedback}>
-                <li className={sunny}>no major issues</li>
-                <li className={cloudy}>notable issues</li>
-                <li className={storm}>required rollback</li>
+          </div>
+        </div ></div>
+      {
+        data.allWeeklyYaml.edges.map(({ node }) =>
+          <>
+            <section style={{ margin: "2rem 0" }}>
+              {(() => {
+                if (node.banner != null) {
+                  return (
+                    <div style={{ margin: "10px", padding: "10px", backgroundColor: "#FFFFCE" }}>
+                      <span dangerouslySetInnerHTML={{ __html: node.banner }} />
+                    </div>
+                  )
+                }
+                return null;
+              })()}
+              <h3>What's new in {node.version} ({node.date}) </h3>
+              <img className={rateoffset} src="../../images/images/changelog/sunny.svg" alt="Sunny" title="No major issue with this release" />
+              <img className={rateoffset} src="../../images/images/changelog/cloudy.svg" alt="Cloudy" title="I experienced notable issues" />
+              <img className={rateoffset} src="../../images/images/changelog/storm.svg" alt="Storm" title="I had to roll back" />
+              <p>Community reported issues : </p>
+              <ul>
+                {node.changes?.map((change) => {
+                  return (
+                    <li>
+                      <span dangerouslySetInnerHTML={{ __html: change.message }} />
+                      <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>(issue {change.issue})</a></span>
+                    </li>
+                  );
+                })}
               </ul>
-            </div>
-          </div ></div>
-        {
-          this.props.data.allWeeklyYaml.edges.map(({ node }) =>
-            <>
-              <section style={{ margin: "2rem 0" }}>
-                {(() => {
-                  if (node.banner != null) {
-                    return (
-                      <div style={{ margin: "10px", padding: "10px", backgroundColor: "#FFFFCE" }}>
-                        <span dangerouslySetInnerHTML={{ __html: node.banner }} />
-                      </div>
-                    )
-                  }
-                  return null;
-                })()}
-                <h3>What's new in {node.version} ({node.date}) </h3>
-                <Ratings />
-                <img className={rateoffset} src="../../images/images/changelog/sunny.svg" alt="Sunny" title="No major issue with this release" />
-                <img className={rateoffset} src="../../images/images/changelog/cloudy.svg" alt="Cloudy" title="I experienced notable issues" />
-                <img className={rateoffset} src="../../images/images/changelog/storm.svg" alt="Storm" title="I had to roll back" />
-                <p>Community reported issues : </p>
-                <ul>
-                  {node.changes?.map((change) => {
-                    return (
-                      <li>
-                        <span dangerouslySetInnerHTML={{ __html: change.message }} />
-                        <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>(issue {change.issue})</a></span>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </section>
-            </>
-          )
-        }
-      </IndexPageLayout >
-    );
-  }
+            </section>
+          </>
+        )
+      }
+    </IndexPageLayout >
+  );
 }
+
+export const Head = () => <Seo title="Jenkins Weekly Changelogs" />
 
 export default ChangelogWeekly
 
