@@ -2,8 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../layouts"
+import Seo from "../components/Seo"
 
-const NotFound = () => {
+const NotFound = ({}) => {
   return (
     <Layout>
       <center>
@@ -16,5 +17,7 @@ const NotFound = () => {
     </Layout>
   );
 };
+
+export const Head = () => <Seo title="Jenkins 404 Page" />
 
 export default NotFound;
