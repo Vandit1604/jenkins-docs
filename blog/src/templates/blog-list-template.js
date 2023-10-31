@@ -173,7 +173,11 @@ export const pageQuery = graphql`
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> ea4d6de96 (added pagination to the blogs)
+=======
+}
+>>>>>>> f5c76eb09 (update components and refactor usage of rem)
 `;
