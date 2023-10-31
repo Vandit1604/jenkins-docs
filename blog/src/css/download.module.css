@@ -1,3 +1,7 @@
+html {
+  font-size: 16px;
+}
+
 .vendorsList {
   display: flex;
   align-items: baseline;
@@ -40,3 +44,6 @@
   background-color: #f6f6f6;
 }
 
+.thirdPartyIcon{
+  font-size: medium;
+}

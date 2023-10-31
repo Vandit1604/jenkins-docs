@@ -1,5 +1,10 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import ImportContactsIcon from '@mui/icons-material/ImportContacts';
+import { github, linkedin, twitter, blog } from "../css/authorpost.module.css"
 
 const Author = () => {
   const data = useStaticQuery(graphql` 
@@ -43,6 +48,18 @@ const Author = () => {
             </div>
             <div dangerouslySetInnerHTML={{ __html: node.pageAttributes.description }}
             />
+            <br />
+            <div style={{ display: "flex", gap: "1rem", padding: "1rem" }}>
+              <br />
+              <a href={"https://github.com/" + node.pageAttributes.github} > <GitHubIcon className={github} /></a>
+              <br />
+              <a href={"https://linkedin.com/in/" + node.pageAttributes.linkedin} ><LinkedInIcon className={linkedin} /></a>
+              <br />
+              <a href={"https://twitter.com/" + node.pageAttributes.twitter} > <TwitterIcon className={twitter} /></a>
+              <br />
+              <a href={node.pageAttributes.blog} ><ImportContactsIcon className={blog} /></a>
+              <br />
+            </div>
           </div>
         </>
       )
