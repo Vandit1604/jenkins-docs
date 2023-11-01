@@ -4,10 +4,9 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import { authorinfo } from "../css/authorpost.module.css"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import IndexPageLayout from "../layouts"
 import { blogauthor, bloglisting, blogpost, blogtitle } from "../css/blogpost.module.css"
-import { useStaticQuery, graphql } from "gatsby"
 
 const AuthorPost = () => {
   const data = useStaticQuery(graphql`

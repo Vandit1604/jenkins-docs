@@ -30,32 +30,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Box } from "@mui/material";
+import { formatDate } from "../utils/formatDate";
 
-function formatDate(inputString) {
-  const parts = inputString.split("/");
-  const datePart = parts[parts.length - 2];
-  const dateComponents = datePart.split("-");
-  const year = parseInt(dateComponents[0]);
-  const month = parseInt(dateComponents[1]);
-  const day = parseInt(dateComponents[2]);
-  const formattedDate = new Date(year, month - 1, day);
-  const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  return `${monthNames[formattedDate.getMonth()]
-    } ${formattedDate.getDate()}, ${formattedDate.getFullYear()}`;
-}
 const IndexPage = ({ data }) => {
   return (
     <>
@@ -292,10 +268,9 @@ const IndexPage = ({ data }) => {
         <ul className={bloglisting}>
           {data.allFile.nodes.map(({ childrenAsciidoc }) => {
             const formattedDate = formatDate(childrenAsciidoc[0].fields.slug);
-            const authorNames = childrenAsciidoc[0].pageAttributes.author ?? "author"
-            const authorNamesWoSpaces = authorNames.replace(/\s/g, '')
-            const authorArray = authorNamesWoSpaces.split(",")
-
+            // const authorNames = childrenAsciidoc[0].pageAttributes.author ?? "author"
+            // const authorNamesWoSpaces = authorNames.replace(/\s/g, '')
+            // const authorArray = authorNamesWoSpaces.split(",")
 
             const opengraphImageSource =
               childrenAsciidoc[0].pageAttributes.opengraph ||

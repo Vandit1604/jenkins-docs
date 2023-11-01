@@ -6,10 +6,10 @@ const HtmlAttributes = {
 }
 
 const HeadComponents = [
-  <>
+  <React.Fragment key="head-navbar">
     <script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
     <jio-navbar></jio-navbar>
-  </>
+  </React.Fragment>
 ]
 
 const BodyAttributes = {
@@ -17,10 +17,10 @@ const BodyAttributes = {
 }
 
 const PostBodyComponents = [
-  <>
+  <React.Fragment key="body-footer">
     <script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
     <jio-footer></jio-footer>
-  </>
+  </React.Fragment>
 ]
 
 exports.onRenderBody = ({
