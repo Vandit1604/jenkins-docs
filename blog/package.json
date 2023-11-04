@@ -13,6 +13,7 @@
     "@mui/material": "^5.14.10",
     "asciidoctor.js": "^1.5.9",
     "babel-plugin-styled-components": "^2.1.4",
+    "fs": "^0.0.1-security",
     "gatsby": "next",
     "gatsby-core-utils": "next",
     "gatsby-plugin-manifest": "^5.12.0",
@@ -25,15 +26,18 @@
     "glob": "^10.3.10",
     "lodash": "^4.17.20",
     "moment": "^2.29.4",
+    "path-browserify": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-typography": "^0.16.19",
     "slash": "^1.0.0",
+    "stream-browserify": "^3.0.0",
     "styled-components": "^6.0.7",
     "swiper": "^10.2.0",
     "typography": "^0.16.19",
-    "typography-breakpoint-constants": "^0.16.19"
+    "typography-breakpoint-constants": "^0.16.19",
+    "url": "^0.11.3"
   },
   "keywords": [
     "gatsby"
@@ -44,5 +48,8 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "start": "npm run develop"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
   }
 }
