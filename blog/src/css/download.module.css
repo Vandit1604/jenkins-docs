@@ -47,3 +47,28 @@ html {
 .thirdPartyIcon{
   font-size: medium;
 }
+
+.downloadTable{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.listGroup{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listGroup li{
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  padding: 12px;
+}
+
+.listGroup:hover(){
+  cursor: pointer;
+  background-color: #f6f6f6;
+}
+
