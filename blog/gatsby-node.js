@@ -94,6 +94,20 @@ exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
   }
 }
 
+// didn't add the stage prop as we want gatsby to apply this polyfill to gatsby develop command
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      fallback: {
+        "stream": require.resolve("stream-browserify"),
+        "url": require.resolve('url'),
+        "fs": require.resolve('fs'),
+        "path": require.resolve('path-browserify'),
+      },
+    },
+  })
+}
+
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === "build-html" || stage === "develop-html") {
     actions.setWebpackConfig({
