@@ -143,7 +143,7 @@ const BlogIndex = ({ pageContext, data }) => {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query BlogIndex($skip: Int!, $limit: Int!) {
+query BlogIndex($skip: Int!, $limit: Int!) {
   allFile(
     filter: {sourceInstanceName: {eq: "pages"}, childrenAsciidoc: {elemMatch: {document: {title: {ne: "Author"}}}}}
     sort: {childrenAsciidoc: {fields: {slug: DESC}}}
@@ -172,12 +172,4 @@ export const pageQuery = graphql`
       }
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> ea4d6de96 (added pagination to the blogs)
-=======
-}
->>>>>>> f5c76eb09 (update components and refactor usage of rem)
-`;
+}`

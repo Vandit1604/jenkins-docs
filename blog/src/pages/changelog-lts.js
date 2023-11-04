@@ -1,49 +1,14 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
-import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
-import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm, rateoffset} from "../css/changelog.module.css";
-import typography from "../utils/typography"
-const { rhythm } = typography
+import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm, rateoffset, banner } from "../css/changelog.module.css";
+import Seo from "../components/Seo"
+import PageName from "../components/PageName";
 
 const ChangelogLTS = ({ data }) => {
-  data.allFile.nodes[0].childrenLtsYaml.map((item) => {
-    console.log(item)
-  })
   return (
     < IndexPageLayout >
-      <Link style={{ textDecoration: `none` }} to="/">
-        <h3
-          style={{
-            color: `black`,
-            marginBottom: rhythm(1.5),
-            fontFamily: "Georgia,serif",
-            fontSize: "40px",
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "nowrap",
-            justifyContent: "center",
-            gap: "15px",
-          }}
-        >
-          <img
-            src={jenkinsLogo}
-            alt="Jenkins Logo"
-            style={{
-              color: `black`,
-              marginBottom: rhythm(1.5),
-              fontFamily: "Georgia,serif",
-              fontSize: "40px",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "nowrap",
-              justifyContent: "center",
-              gap: "15px",
-            }}
-          />{" "}
-          LTS Changelog
-        </h3>
-      </Link>
+      <PageName children={'LTS Changelog'} />
       <div style={{ textAlign: "end" }}>
         <div className={iconlegend}>
           Legend:
@@ -63,70 +28,60 @@ const ChangelogLTS = ({ data }) => {
               <li className={cloudy}>notable issues</li>
               <li className={storm}>required rollback</li>
             </ul>
-          </div >
-          <div style={{ margin: "10px 0", width: "100%" }}>
-            <div className={iconlegend}>
-              Community feedback:
-              <ul className={feedback}>
-                <li className={sunny}>no major issues</li>
-                <li className={cloudy}>notable issues</li>
-                <li className={storm}>required rollback</li>
-              </ul>
-            </div>
-          </div >
+          </div>
+        </div >
+      </div>
+      <div style={{ margin: "10px", padding: "10px", backgroundColor: "#FFFFCE" }}>
+        See the <Link to="/upgrade-guide">LTS upgrade guide</Link> advice on upgrading Jenkins.
+      </div>
+      {data.allFile.nodes.map(({ childrenLtsYaml }) => (
+        <div>
+          {childrenLtsYaml.map((node) => {
+            return (
+              <>
+                {<h2>What's new in {node.version}({node.date}) </h2>}
+                <div>
+                  <img className={rateoffset} src="../../images/images/changelog/sunny.svg" alt="Sunny" title="No major issue with this release" />
+                  <img className={rateoffset} src="../../images/images/changelog/cloudy.svg" alt="Cloudy" title="I experienced notable issues" />
+                  <img className={rateoffset} src="../../images/images/changelog/storm.svg" alt="Storm" title="I had to roll back" />
+                </div>
+                <p>Community reported issues : </p>
+                {node.lts_baseline ? <h4>Changes since {node.lts_baseline}:</h4> : null}
+                {node.banner ? <div className={banner} ><span dangerouslySetInnerHTML={{ __html: node.banner }} /></div> : null}
+                <ul>
+                  {node.changes?.map((change) => {
+                    return (
+                      <li>
+                        <span dangerouslySetInnerHTML={{ __html: change.message }} />
+                        {change.issue ? <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>(issue {change.issue})</a></span> : null}
+                      </li>
+                    );
+                  })}
+                </ul>
+                {node.lts_predecessor ? <h4>Notable changes since {node.lts_predecessor}:</h4> : null}
+                <ul>
+                  {node.lts_changes?.map((references) => {
+                    return (
+                      <li className={node.lts_changes.type}>
+                        <span dangerouslySetInnerHTML={{ __html: references.message }} />
+                        {references.url ? <span><a href={references.url}> issue {references.title},</a></span> : null}
+                        {(references.url && references.title) ? <span><a href={references.url}>{references.title}</a></span> : null}
+                        {references.issue ? <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + references.issue}> issue {references.issue},</a></span> : null}
+                        {references.pull ? <span><a href={"https://github.com/jenkinsci/jenkins/pull/" + references.pull}> pull {references.pull},</a></span> : null}
+                      </li>
+                    );
+                  })}
+                </ul >
+              </>
+            )
+          })}
         </div>
-        <div style={{ margin: "10px", padding: "10px", backgroundColor: "#FFFFCE" }}>
-          See the <Link to="/upgrade-guide">LTS upgrade guide</Link> advice on upgrading Jenkins.
-        </div>
-        {this.props.data.allLtsYaml.edges.map(({ node }) =>
-          <>
-            <h3>What's new in {node.version}({node.date}) </h3>
-            <img className={rateoffset} src="../../images/images/changelog/sunny.svg" alt="Sunny" title="No major issue with this release" />
-            <img className={rateoffset} src="../../images/images/changelog/cloudy.svg" alt="Cloudy" title="I experienced notable issues" />
-            <img className={rateoffset} src="../../images/images/changelog/storm.svg" alt="Storm" title="I had to roll back" />
-            <p>Community reported issues : </p>
-            <h4>Changes since {node.lts_baseline ?? ""}:</h4>
-            <ul>
-              {node.changes?.map((change) => {
-                return (
-                  <li>
-                    <span dangerouslySetInnerHTML={{ __html: change.message }} />
-                    <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>(issue {change.issue})</a></span>
-                  </li>
-                );
-              })}
-            </ul>
-            <h4>Notable changes since {node.lts_predecessor ?? ""}:</h4>
-            <ul>
-              {node.lts_changes?.map((references) => {
-                return (
-                  <li>
-                    <span dangerouslySetInnerHTML={{ __html: references.message }} />
-                    {(() => {
-                      if (references.issue != null) {
-                        return (
-                          <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + references.issue}> issue {references.issue},</a></span>
-                        )
-                      }
-                    })()}
-                    {(() => {
-                      if (references.pull != null) {
-                        return (
-                          <span><a href={"https://github.com/jenkinsci/jenkins/pull/" + references.pull}> pull {references.pull},</a></span>
-                        )
-                      }
-                    })()}
-                  </li>
-                );
-              })}
-            </ul >
-          </>
-        )
-        }
-      </IndexPageLayout >
-    );
-  }
+      ))}
+    </IndexPageLayout >
+  );
 }
+
+export const Head = () => <Seo title="Jenkins LTS Changelogs" />
 
 export default ChangelogLTS
 
@@ -134,22 +89,20 @@ export const pageQuery = graphql`
 query ChangelogLTS {
   allFile(
     filter: {sourceInstanceName: {eq: "changelogs"}, childrenLtsYaml: {elemMatch: {version: {ne: "null"}}}}
-    sort: {childLtsYaml: {date: DESC}}
   ) {
     nodes {
       childrenLtsYaml {
-        version
         banner
-        changes {
-          references {
-            url
-            title
-            issue
-            pull
-          }
-          type
-        }
         date(formatString: "YYYY-MM-DD")
+        version
+        changes {
+          type
+          message
+          pull
+          issue
+          category
+          pr_title
+        }
         lts_baseline
         lts_changes {
           type
@@ -167,6 +120,7 @@ query ChangelogLTS {
           authors
         }
         lts_predecessor
+        
       }
     }
   }

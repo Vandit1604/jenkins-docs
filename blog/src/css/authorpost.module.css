@@ -36,6 +36,7 @@ li {
     NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
     EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
     "Noto Sans", sans-serif;
+  padding-bottom:1rem;
 }
 
 .authorname {
@@ -49,7 +50,6 @@ li {
 .authorinfo{
   display: flex;
   justify-content: space-around;
-  margin: 0.7rem;
 }
 
 .github{
@@ -68,6 +68,6 @@ li {
 }
 
 .blog{
-  color: #2327fd; 
+  color: #0064D6; 
   font-size: 2rem;
 }

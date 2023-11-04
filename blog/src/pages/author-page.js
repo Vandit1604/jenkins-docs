@@ -7,35 +7,12 @@ import React from "react"
 import { graphql } from "gatsby"
 import Seo from "../components/Seo"
 import IndexPageLayout from "../layouts"
-import typography from "../utils/typography";
-const { rhythm } = typography
-
+import PageName from "../components/PageName";
 
 const AuthorPage = ({ data }) => {
   return (
     < IndexPageLayout >
-      <h3
-        style={{
-          color: `black`,
-          marginBottom: rhythm(1.5),
-          fontFamily: "Georgia,serif",
-          fontSize: "40px",
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "nowrap",
-          justifyContent: "center",
-          gap: "15px",
-        }}
-      >
-        <img
-          src={jenkinsLogo}
-          alt="Jenkins Logo"
-          style={{
-            height: "80px",
-          }}
-        />{" "}
-        Jenkins Community Blog Contributors
-      </h3>
+      <PageName children={'Jenkins Community Blog Contributors'} />
       <ul>
         {
           data.allFile.nodes.map(({ childrenAsciidoc }) => {

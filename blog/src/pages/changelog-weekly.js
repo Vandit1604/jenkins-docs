@@ -1,39 +1,15 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
 import Seo from "../components/Seo"
-import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
-import typography from "../utils/typography"
+import PageName from "../components/PageName"
 import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm, rateoffset } from "../css/changelog.module.css";
-const { rhythm } = typography
+import "../css-asciidoc/doc.css"
 
 const ChangelogWeekly = ({ data }) => {
   return (
     < IndexPageLayout >
-      <Link style={{ textDecoration: `none` }} to="/">
-        <h3
-          style={{
-            color: `black`,
-            marginBottom: rhythm(1.5),
-            fontFamily: "Georgia,serif",
-            fontSize: "2.7rem",
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "nowrap",
-            justifyContent: "center",
-            gap: "15px",
-          }}
-        >
-          <img
-            src={jenkinsLogo}
-            alt="Jenkins Logo"
-            style={{
-              height: "5rem",
-            }}
-          />{" "}
-          Weekly Changelog
-        </h3>
-      </Link>
+      <PageName children={'Weekly Changelog'} />
       <div style={{ textAlign: "end" }}>
         <div className={iconlegend}>
           Legend:
@@ -55,38 +31,40 @@ const ChangelogWeekly = ({ data }) => {
             </ul>
           </div>
         </div ></div>
-      {
-        data.allWeeklyYaml.edges.map(({ node }) =>
-          <>
-            <section style={{ margin: "2rem 0" }}>
-              {(() => {
-                if (node.banner != null) {
-                  return (
-                    <div style={{ margin: "10px", padding: "10px", backgroundColor: "#FFFFCE" }}>
-                      <span dangerouslySetInnerHTML={{ __html: node.banner }} />
+      {data.allFile.nodes.map(({ childrenWeeklyYaml }) => (
+        <div>
+          {childrenWeeklyYaml.map((node) => {
+            return (
+              <>
+                <section style={{ margin: "2rem 0" }}>
+                  <div>
+                    {node.banner ? <div style={{ margin: "10px", padding: "10px", backgroundColor: "#FFFFCE" }}><span dangerouslySetInnerHTML={{ __html: node.banner }} /></div> : null}
+                    <h3>What's new in {node.version} ({node.date}) </h3>
+                    <div>
+                      <img className={rateoffset} src="../../images/images/changelog/sunny.svg" alt="Sunny" title="No major issue with this release" />
+                      <img className={rateoffset} src="../../images/images/changelog/cloudy.svg" alt="Cloudy" title="I experienced notable issues" />
+                      <img className={rateoffset} src="../../images/images/changelog/storm.svg" alt="Storm" title="I had to roll back" />
                     </div>
-                  )
-                }
-                return null;
-              })()}
-              <h3>What's new in {node.version} ({node.date}) </h3>
-              <img className={rateoffset} src="../../images/images/changelog/sunny.svg" alt="Sunny" title="No major issue with this release" />
-              <img className={rateoffset} src="../../images/images/changelog/cloudy.svg" alt="Cloudy" title="I experienced notable issues" />
-              <img className={rateoffset} src="../../images/images/changelog/storm.svg" alt="Storm" title="I had to roll back" />
-              <p>Community reported issues : </p>
-              <ul>
-                {node.changes?.map((change) => {
-                  return (
-                    <li>
-                      <span dangerouslySetInnerHTML={{ __html: change.message }} />
-                      <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>(issue {change.issue})</a></span>
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-          </>
-        )
+                    <p>Community reported issues : </p>
+                    <ul>
+                      {node.changes?.map((change) => {
+                        { console.log(change) }
+                        return (
+                          < li >
+                            <span dangerouslySetInnerHTML={{ __html: change.message }} />
+                            {change.issue ? <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>(issue {change.issue}) </a></span> : null}
+                            {change.pull ? <span><a href={"https://github.com/jenkinsci/jenkins/pull/" + change.pull}>(pull {change.pull}) </a></span> : null}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div >
+                </section >
+              </>
+            )
+          })}
+        </div>
+      ))
       }
     </IndexPageLayout >
   );
@@ -97,26 +75,31 @@ export const Head = () => <Seo title="Jenkins Weekly Changelogs" />
 export default ChangelogWeekly
 
 export const pageQuery = graphql`
-query {
-  allWeeklyYaml(sort: {date: DESC}, limit: 30) {
-    edges {
-      node {
-        date(formatString: "YYYY-DD-MM")
-        version
+query ChangelogWeekly {
+  allFile(
+    filter: {sourceInstanceName: {eq: "changelogs"}, childrenWeeklyYaml: {elemMatch: {version: {ne: ""}}}}
+    sort: {childrenWeeklyYaml: {date: DESC}}
+    limit: 30
+  ) {
+    nodes {
+      childrenWeeklyYaml {
         banner
+        date(formatString: "YYYY-MM-DD")
+        version
         changes {
-          type
-          category
-          pull
-          pr_title
-          message
-          issue
           references {
+            issue
             url
             title
-            issue
             pull
           }
+          authors
+          category
+          issue
+          message
+          pr_title
+          pull
+          type
         }
       }
     }

@@ -2,37 +2,14 @@ import React from "react"
 import { Link } from "gatsby"
 import IndexPageLayout from "../layouts"
 import Seo from "../components/Seo"
-import { vendors, vendorsList, listGroup, downloadTable, thirdPartyIcon} from "../css/download.module.css"
-import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
-import typography from "../utils/typography"
+import PageName from "../components/PageName"
+import { vendors, vendorsList, listGroup, downloadTable, thirdPartyIcon } from "../css/download.module.css"
 import CollectionsBookmarkOutlinedIcon from '@mui/icons-material/CollectionsBookmarkOutlined';
-const { rhythm } = typography
 
 const DownloadPage = () => {
   return (
     <IndexPageLayout>
-      <h3
-        style={{
-          color: `black`,
-          marginBottom: rhythm(1.5),
-          fontFamily: "Georgia,serif",
-          fontSize: "2.7rem",
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "nowrap",
-          justifyContent: "center",
-          gap: "15px",
-        }}
-      >
-        <img
-          src={jenkinsLogo}
-          alt="Jenkins Logo"
-          style={{
-            height: "5rem",
-          }}
-        />{" "}
-        Jenkins download and deployment
-      </h3>
+      <PageName children={'Jenkins Download and Deployment'} />
       <p>The Jenkins project produces two release lines: Stable (LTS) and regular (Weekly). Depending on your organization's needs, one may be preferred over the other. See the links below for more information and recommendations about the release lines.</p>
       <section>
 

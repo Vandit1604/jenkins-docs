@@ -1,45 +1,21 @@
-import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import React from "react"
 import Seo from "../components/Seo"
+import PageName from "../components/PageName"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
 import { authorlisting, authorpost, authorname, authorinfo, github, linkedin, twitter, blog } from "../css/authorpost.module.css"
-import typography from "../utils/typography";
-const { rhythm } = typography
 
 const AuthorPage = ({ data }) => {
   return (
     < IndexPageLayout >
-      <h3
-        style={{
-          color: `black`,
-          marginBottom: rhythm(1.5),
-          fontFamily: "Georgia,serif",
-          fontSize: "40px",
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "nowrap",
-          justifyContent: "center",
-          gap: "15px",
-        }}
-      >
-        <img
-          src={jenkinsLogo}
-          alt="Jenkins Logo"
-          style={{
-            height: "80px",
-          }}
-        />{" "}
-        Jenkins Community Blog Contributors
-      </h3>
+      <PageName children={'Jenkins Community Blog Contributors'} />
       <ul className={authorlisting}>
         {
           data.allFile.nodes.map(({ childrenAsciidoc }) => {
-            console.log(childrenAsciidoc);
             return (
               < li key={childrenAsciidoc[0].fields.slug} className={authorpost} >
                 <Link to={childrenAsciidoc[0].fields.slug} style={{ textDecoration: "none" }}>
@@ -61,15 +37,10 @@ const AuthorPage = ({ data }) => {
                     />
                   </div>
                   <div className={authorinfo}>
-                    <br />
-                    <a href={"https://github.com/" + childrenAsciidoc[0].pageAttributes.github} > <GitHubIcon className={github} /></a>
-                    <br />
-                    <a href={"https://linkedin.com/in/" + childrenAsciidoc[0].pageAttributes.linkedin} ><LinkedInIcon className={linkedin} /></a>
-                    <br />
-                    <a href={"https://twitter.com/" + childrenAsciidoc[0].pageAttributes.twitter} > <TwitterIcon className={twitter} /></a>
-                    <br />
-                    <a href={childrenAsciidoc[0].pageAttributes.blog} ><ImportContactsIcon className={blog} /></a>
-                    <br />
+                    {childrenAsciidoc[0].pageAttributes.github ? <a href={"https://github.com/" + childrenAsciidoc[0].pageAttributes.github} > <GitHubIcon className={github} /></a> : null}
+                    {childrenAsciidoc[0].pageAttributes.linkedin ? <a href={"https://linkedin.com/in/" + childrenAsciidoc[0].pageAttributes.linkedin} ><LinkedInIcon className={linkedin} /></a> : null}
+                    {childrenAsciidoc[0].pageAttributes.twitter ? <a href={"https://twitter.com/" + childrenAsciidoc[0].pageAttributes.twitter} > <TwitterIcon className={twitter} /></a> : null}
+                    {childrenAsciidoc[0].pageAttributes.blog ? <a href={childrenAsciidoc[0].pageAttributes.blog} ><ImportContactsIcon className={blog} /></a> : null}
                   </div>
                 </Link>
               </li>
