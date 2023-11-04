@@ -101,7 +101,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       fallback: {
         "stream": require.resolve("stream-browserify"),
         "url": require.resolve('url'),
-        "fs": require.resolve('fs'),
+        "fs": false,
         "path": require.resolve('path-browserify'),
       },
     },
