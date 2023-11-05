@@ -1,39 +1,16 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
 import Seo from "../components/Seo"
-import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
-import typography from "../utils/typography"
+import PageName from "../components/PageName"
 import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm, rateoffset } from "../css/changelog.module.css";
-const { rhythm } = typography
+
 
 const ChangelogWeekly = ({ data }) => {
+  console.log(data)
   return (
     < IndexPageLayout >
-      <Link style={{ textDecoration: `none` }} to="/">
-        <h3
-          style={{
-            color: `black`,
-            marginBottom: rhythm(1.5),
-            fontFamily: "Georgia,serif",
-            fontSize: "2.7rem",
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "nowrap",
-            justifyContent: "center",
-            gap: "15px",
-          }}
-        >
-          <img
-            src={jenkinsLogo}
-            alt="Jenkins Logo"
-            style={{
-              height: "5rem",
-            }}
-          />{" "}
-          Weekly Changelog
-        </h3>
-      </Link>
+      <PageName title={'Weekly Changelog'} />
       <div style={{ textAlign: "end" }}>
         <div className={iconlegend}>
           Legend:
@@ -79,7 +56,8 @@ const ChangelogWeekly = ({ data }) => {
                   return (
                     <li>
                       <span dangerouslySetInnerHTML={{ __html: change.message }} />
-                      <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>(issue {change.issue})</a></span>
+                      {change.issue ? <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>{" issue "+change.issue+","}</a></span> : null}
+                      {change.pull ? <span><a href={"https://github.com/jenkinsci/jenkins/pull/" + change.pull}>{" pull "+change.pull+","}</a></span> : null}
                     </li>
                   );
                 })}

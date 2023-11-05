@@ -1,41 +1,18 @@
-import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import React from "react"
 import Seo from "../components/Seo"
+import PageName from "../components/PageName"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
 import { authorlisting, authorpost, authorname, authorinfo, github, linkedin, twitter, blog } from "../css/authorpost.module.css"
-import typography from "../utils/typography";
-const { rhythm } = typography
 
 const AuthorPage = ({ data }) => {
   return (
     < IndexPageLayout >
-      <h3
-        style={{
-          color: `black`,
-          marginBottom: rhythm(1.5),
-          fontFamily: "Georgia,serif",
-          fontSize: "40px",
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "nowrap",
-          justifyContent: "center",
-          gap: "15px",
-        }}
-      >
-        <img
-          src={jenkinsLogo}
-          alt="Jenkins Logo"
-          style={{
-            height: "80px",
-          }}
-        />{" "}
-        Jenkins Community Blog Contributors
-      </h3>
+      <PageName title={'Jenkins Community Blog Contributors'} />
       <ul className={authorlisting}>
         {
           data.allFile.nodes.map(({ childrenAsciidoc }) => {

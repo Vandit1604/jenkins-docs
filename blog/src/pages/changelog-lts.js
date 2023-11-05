@@ -1,39 +1,15 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Seo from "../components/Seo"
+import PageName from "../components/PageName"
 import IndexPageLayout from "../layouts"
-import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
-import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm, rateoffset } from "../css/changelog.module.css";
-import typography from "../utils/typography"
-const { rhythm } = typography
+import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm, rateoffset, banner } from "../css/changelog.module.css";
 
 const ChangelogLTS = ({ data }) => {
+  console.log(data)
   return (
     < IndexPageLayout >
-      <Link style={{ textDecoration: `none` }} to="/">
-        <h3
-          style={{
-            color: `black`,
-            marginBottom: rhythm(1.5),
-            fontFamily: "Georgia,serif",
-            fontSize: "40px",
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "nowrap",
-            justifyContent: "center",
-            gap: "15px",
-          }}
-        >
-          <img
-            src={jenkinsLogo}
-            alt="Jenkins Logo"
-            style={{
-              height: "80px",
-            }}
-          />{" "}
-          LTS Changelog
-        </h3>
-      </Link>
+      <PageName title={'LTS Changelog'} />
       <div style={{ textAlign: "end" }}>
         <div className={iconlegend}>
           Legend:
@@ -66,13 +42,14 @@ const ChangelogLTS = ({ data }) => {
           <img className={rateoffset} src="../../images/images/changelog/cloudy.svg" alt="Cloudy" title="I experienced notable issues" />
           <img className={rateoffset} src="../../images/images/changelog/storm.svg" alt="Storm" title="I had to roll back" />
           <p>Community reported issues : </p>
+          {node.banner ? <div className={banner}><span dangerouslySetInnerHTML={{ __html: node.banner }} /></div> : null}
           <h4>Changes since {node.lts_baseline ?? ""}:</h4>
           <ul>
             {node.changes?.map((change) => {
               return (
                 <li>
                   <span dangerouslySetInnerHTML={{ __html: change.message }} />
-                  <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>(issue {change.issue})</a></span>
+                  {change.issue ? <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>{" issue "+change.issue+","}</a></span> : null}
                 </li>
               );
             })}
@@ -83,29 +60,9 @@ const ChangelogLTS = ({ data }) => {
               return (
                 <li>
                   <span dangerouslySetInnerHTML={{ __html: references.message }} />
-                  <span>(</span>
-                  {(() => {
-                    if (references.issue != null) {
-                      return (
-                        <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + references.issue}> issue {references.issue},</a></span>
-                      )
-                    }
-                  })()}
-                  {(() => {
-                    if (references.url != null) {
-                      return (
-                        <span><a href={references.url}> issue {references.title},</a></span>
-                      )
-                    }
-                  })()}
-                  {(() => {
-                    if (references.pull != null) {
-                      return (
-                        <span><a href={"https://github.com/jenkinsci/jenkins/pull/" + references.pull}> pull {references.pull},</a></span>
-                      )
-                    }
-                  })()}
-                  <span>)</span>
+                  {references.issue ? <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + references.issue}>{" issue "+references.issue+","}</a></span> : null}
+                  {references.url ? <span><a href={references.url}>{references.title},</a></span> : null}
+                  {references.pull ? <span><a href={"https://github.com/jenkinsci/jenkins/pull/" + references.pull}> {" pull "+references.pull+","}</a></span> : null}
                 </li>
               );
             })}
@@ -127,9 +84,10 @@ query{
     edges {
       node {
         version
-        date(formatString: "DD-MM-YYYY")
+        date(formatString: "YYYY-MM-DD")
         lts_predecessor
         lts_baseline
+        banner
         lts_changes {
           type
           category

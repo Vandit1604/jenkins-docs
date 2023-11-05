@@ -9,11 +9,9 @@ import {
   blogteaser,
   blogauthorinfo
 } from "../css/blogpost.module.css";
-import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png";
-import typography from "../utils/typography";
+import PageName from "../components/PageName"
 import { formatDate } from "../utils/formatDate";
-
-const { rhythm } = typography;
+import { globWalkImage } from "../utils/globWalkImage";
 
 const BlogIndex = ({ pageContext, data }) => {
   const { currentPage, numPages } = pageContext
@@ -23,39 +21,16 @@ const BlogIndex = ({ pageContext, data }) => {
   const nextPage = (currentPage + 1)
   return (
     <IndexPageLayout>
-      <Link style={{ textDecoration: `none` }} to="/">
-        <h3
-          style={{
-            color: `black`,
-            marginBottom: rhythm(1.5),
-            fontFamily: "Georgia,serif",
-            fontSize: "40px",
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "nowrap",
-            justifyContent: "center",
-            gap: "15px",
-          }}
-        >
-          <img
-            src={jenkinsLogo}
-            alt="Jenkins Logo"
-            style={{
-              height: "80px",
-            }}
-          />{" "}
-          The Jenkins Blog
-        </h3>
-      </Link>
-
+      <PageName title={'The Jenkins Blog'} />
       <ul className={bloglisting}>
         {data.allFile.nodes.map(({ childrenAsciidoc }) => {
           const formattedDate = formatDate(childrenAsciidoc[0].fields.slug);
           const authorNames = childrenAsciidoc[0].pageAttributes.author ?? "author"
           const authorNamesWoSpaces = authorNames.replace(/\s/g, '')
           const authorArray = authorNamesWoSpaces.split(",")
-
-
+          const authorArray1=globWalkImage(authorArray)
+          console.log(authorArray1)
+          
           const opengraphImageSource =
             childrenAsciidoc[0].pageAttributes.opengraph ||
             "../../images/gsoc/opengraph.png";
