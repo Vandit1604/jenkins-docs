@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../layouts"
 import Seo from "../components/Seo"
 
-const NotFound = ({}) => {
+const NotFound = () => {
   return (
     <Layout>
       <center>

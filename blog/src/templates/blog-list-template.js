@@ -12,7 +12,11 @@ import {
 import PageName from "../components/PageName"
 import { formatDate } from "../utils/formatDate";
 const fg = require('fast-glob');
+import {globby} from 'globby';
 
+const paths = await globby(['*', '!cake']);
+
+console.log(paths);
 const BlogIndex = ({ pageContext, data }) => {
   const { currentPage, numPages } = pageContext
   const isFirst = currentPage === 1

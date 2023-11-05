@@ -1,4 +1,6 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
+import Avatar from '@mui/material/Avatar';
+import { blue, indigo, cyan } from '@mui/material/colors';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
@@ -38,15 +40,10 @@ const AuthorPage = ({ data }) => {
                     />
                   </div>
                   <div className={authorinfo}>
-                    <br />
-                    <a href={"https://github.com/" + childrenAsciidoc[0].pageAttributes.github} > <GitHubIcon className={github} /></a>
-                    <br />
-                    <a href={"https://linkedin.com/in/" + childrenAsciidoc[0].pageAttributes.linkedin} ><LinkedInIcon className={linkedin} /></a>
-                    <br />
-                    <a href={"https://twitter.com/" + childrenAsciidoc[0].pageAttributes.twitter} > <TwitterIcon className={twitter} /></a>
-                    <br />
-                    <a href={childrenAsciidoc[0].pageAttributes.blog} ><ImportContactsIcon className={blog} /></a>
-                    <br />
+                    {childrenAsciidoc[0].pageAttributes.github ? <a href={"https://github.com/" + childrenAsciidoc[0].pageAttributes.github} ><Avatar sx={{ bgcolor: "rgb(60, 60, 60)" }}> <GitHubIcon className={github} /></Avatar></a> : null}
+                    {childrenAsciidoc[0].pageAttributes.linkedin ? <a href={"https://linkedin.com/in/" + childrenAsciidoc[0].pageAttributes.linkedin} ><Avatar sx={{ bgcolor: blue[700] }}><LinkedInIcon className={linkedin} /></Avatar></a> : null}
+                    {childrenAsciidoc[0].pageAttributes.twitter ? <a href={"https://twitter.com/" + childrenAsciidoc[0].pageAttributes.twitter} ><Avatar sx={{ bgcolor: cyan[50] }}> <TwitterIcon className={twitter} /></Avatar></a> : null}
+                    {childrenAsciidoc[0].pageAttributes.blog ? <a href={childrenAsciidoc[0].pageAttributes.blog} ><Avatar sx={{ bgcolor: indigo[50] }}><ImportContactsIcon className={blog} /></Avatar></a> : null}
                   </div>
                 </Link>
               </li>

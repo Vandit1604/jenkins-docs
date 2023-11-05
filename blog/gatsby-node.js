@@ -16,25 +16,34 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        allAsciidoc(limit: 1000) {
-          edges {
-            node {
-              id
-              html
-              document {
-                title
-              }
-              fields {
-                slug
-              }
-              pageAttributes{
-                author
-                tags
-              }
-            }
-          }
+  allAsciidoc(limit: 1000) {
+    edges {
+      node {
+        id
+        
+        document {
+          title
+        }
+        fields {
+          slug
+        }
+        pageAttributes {
+          author
+          tags
+          author_name
+          blog
+          description
+          github
+          irc
+          linkedin
+          medium
+          opengraph
+          twitter
         }
       }
+    }
+  }
+}
     `
   ).then(result => {
     if (result.errors) {

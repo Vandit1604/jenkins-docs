@@ -28,7 +28,7 @@ li {
 }
 
 .authorpost {
-  border: solid black 1px;
+  border: solid lightgray 1px;
   border-radius: 5px;
   list-style: none;
   cursor: pointer;
@@ -36,6 +36,11 @@ li {
     NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
     EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
     "Noto Sans", sans-serif;
+  transition: all 0.5s ease-out;
+}
+
+.authorpost:hover{
+  border: solid black 1px;
 }
 
 .authorname {
@@ -48,17 +53,17 @@ li {
 
 .authorinfo{
   display: flex;
-  justify-content: space-around;
-  margin: 0.7rem;
+  justify-content: space-evenly;
+  padding: 1rem;
 }
 
 .github{
-  color: black;
+  color: whitesmoke;
   font-size: 2rem;
 }
 
 .linkedin{
-   color: #0E4Eb5;
+   color: white;
   font-size: 2rem;
 }
 
@@ -71,3 +76,4 @@ li {
   color: #2327fd; 
   font-size: 2rem;
 }
+
