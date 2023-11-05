@@ -11,7 +11,7 @@ import {
 } from "../css/blogpost.module.css";
 import PageName from "../components/PageName"
 import { formatDate } from "../utils/formatDate";
-import { globWalkImage } from "../utils/globWalkImage";
+const fg = require('fast-glob');
 
 const BlogIndex = ({ pageContext, data }) => {
   const { currentPage, numPages } = pageContext
@@ -28,9 +28,13 @@ const BlogIndex = ({ pageContext, data }) => {
           const authorNames = childrenAsciidoc[0].pageAttributes.author ?? "author"
           const authorNamesWoSpaces = authorNames.replace(/\s/g, '')
           const authorArray = authorNamesWoSpaces.split(",")
-          const authorArray1=globWalkImage(authorArray)
-          console.log(authorArray1)
-          
+          // tried searching for all the js files
+          const entries = fg.globSync(['**/*.js'], { dot: true });
+          // searching for png files
+          const entries1 = fg.globSync(['static/images/images/avatars/*.png'], { dot: true });
+          console.log(entries)
+          console.log(entries1)
+
           const opengraphImageSource =
             childrenAsciidoc[0].pageAttributes.opengraph ||
             "../../images/gsoc/opengraph.png";
