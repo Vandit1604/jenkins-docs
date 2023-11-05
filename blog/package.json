@@ -13,6 +13,7 @@
     "@mui/material": "^5.14.10",
     "asciidoctor.js": "^1.5.9",
     "babel-plugin-styled-components": "^2.1.4",
+    "fast-glob": "^3.3.1",
     "gatsby": "next",
     "gatsby-core-utils": "next",
     "gatsby-plugin-manifest": "^5.12.0",
@@ -22,9 +23,9 @@
     "gatsby-source-filesystem": "^5.12.0",
     "gatsby-transformer-asciidoc": "next",
     "gatsby-transformer-yaml": "^5.12.0",
-    "glob": "^10.3.10",
     "lodash": "^4.17.20",
     "moment": "^2.29.4",
+    "os-browserify": "^0.3.0",
     "path-browserify": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -36,7 +37,8 @@
     "swiper": "^10.2.0",
     "typography": "^0.16.19",
     "typography-breakpoint-constants": "^0.16.19",
-    "url": "^0.11.3"
+    "url": "^0.11.3",
+    "util": "^0.12.5"
   },
   "keywords": [
     "gatsby"

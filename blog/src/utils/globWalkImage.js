@@ -1,5 +1,5 @@
-import {glob} from 'glob'
+const fg = require('fast-glob');
 
 export async function globWalkImage(inputFileName) {
-  return await glob([`../../static/images/images/avatars/${inputFileName}.{png,jpeg,jpg}`]);
+  return await fg.glob([`../../static/images/images/avatars/${inputFileName}.{png,jpeg,jpg}`], { dot: true });
 }
