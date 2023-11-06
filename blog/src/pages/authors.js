@@ -9,7 +9,7 @@ import Seo from "../components/Seo"
 import PageName from "../components/PageName"
 import { Link, graphql } from "gatsby"
 import IndexPageLayout from "../layouts"
-import { authorlisting, authorpost, authorname, authorinfo, github, linkedin, twitter, blog } from "../css/authorpost.module.css"
+import { authorlisting, authorpost, authorname, authorinfo, github, linkedin, twitter, blog, authoravatar } from "../css/authorpost.module.css"
 
 const AuthorPage = ({ data }) => {
   return (
@@ -18,7 +18,6 @@ const AuthorPage = ({ data }) => {
       <ul className={authorlisting}>
         {
           data.allFile.nodes.map(({ childrenAsciidoc }) => {
-            console.log(childrenAsciidoc);
             return (
               < li key={childrenAsciidoc[0].fields.slug} className={authorpost} >
                 <Link to={childrenAsciidoc[0].fields.slug} style={{ textDecoration: "none" }}>
@@ -35,7 +34,8 @@ const AuthorPage = ({ data }) => {
                       <span className={authorname}>{childrenAsciidoc[0].pageAttributes.author_name}</span>
                     </center>
                     <img
-                      src={"../../images/gsoc/opengraph.png"}
+                      className={authoravatar}
+                      src={childrenAsciidoc[0].pageAttributes.authoravatar ? (childrenAsciidoc[0].pageAttributes.authoravatar) : "../../images/images/avatars/no_image.svg"}
                       alt={childrenAsciidoc[0].document.title}
                     />
                   </div>
@@ -63,6 +63,7 @@ export const pageQuery = graphql`
 query AuthorPage {
   allFile(
     filter: {sourceInstanceName: {eq: "authors"}, childrenAsciidoc: {elemMatch: {document: {title: {eq: "Author"}}}}}
+    sort: {modifiedTime: DESC}
   ) {
     nodes {
       childrenAsciidoc {
@@ -74,6 +75,7 @@ query AuthorPage {
         }
         pageAttributes {
           author_name
+          author
           github
           opengraph
           linkedin
@@ -82,6 +84,7 @@ query AuthorPage {
           medium
           irc
           description
+          authoravatar
         }
       }
     }

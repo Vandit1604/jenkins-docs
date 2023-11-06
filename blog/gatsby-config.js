@@ -22,7 +22,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `authors`,
-        path: `${__dirname}/authors`,
+        path: `${__dirname}/content/authors`,
       },
     },
     `gatsby-transformer-yaml`,

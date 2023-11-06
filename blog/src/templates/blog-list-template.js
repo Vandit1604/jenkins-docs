@@ -10,38 +10,31 @@ import {
   blogauthorinfo
 } from "../css/blogpost.module.css";
 import PageName from "../components/PageName"
-import { formatDate } from "../utils/formatDate";
-const fg = require('fast-glob');
-import {globby} from 'globby';
+import { formatDate,blogAuthorImage,getImageSrc } from "../utils/index.js";
 
-const paths = await globby(['*', '!cake']);
-
-console.log(paths);
 const BlogIndex = ({ pageContext, data }) => {
+
   const { currentPage, numPages } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
   const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1)
   const nextPage = (currentPage + 1)
+
   return (
     <IndexPageLayout>
       <PageName title={'The Jenkins Blog'} />
       <ul className={bloglisting}>
         {data.allFile.nodes.map(({ childrenAsciidoc }) => {
-          const formattedDate = formatDate(childrenAsciidoc[0].fields.slug);
-          const authorNames = childrenAsciidoc[0].pageAttributes.author ?? "author"
-          const authorNamesWoSpaces = authorNames.replace(/\s/g, '')
-          const authorArray = authorNamesWoSpaces.split(",")
-          // tried searching for all the js files
-          const entries = fg.globSync(['**/*.js'], { dot: true });
-          // searching for png files
-          const entries1 = fg.globSync(['static/images/images/avatars/*.png'], { dot: true });
-          console.log(entries)
-          console.log(entries1)
+          // formats
+          const formats = ['jpg', 'png', 'jpeg']
+          const authorList = blogAuthorImage(childrenAsciidoc[0].pageAttributes.author)
 
+          const formattedDate = formatDate(childrenAsciidoc[0].fields.slug);
           const opengraphImageSource =
             childrenAsciidoc[0].pageAttributes.opengraph ||
             "../../images/gsoc/opengraph.png";
+
+
           return (
             <li key={`${childrenAsciidoc[0].fields.slug}-${childrenAsciidoc[0].document.title}`} className={blogpost}>
               <Link
@@ -73,20 +66,38 @@ const BlogIndex = ({ pageContext, data }) => {
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
                   <div className={blogauthorinfo}>
-                    <img
-                      // src={authorImageSource}
-                      src={opengraphImageSource}
-                      style={{
-                        height: "1rem",
-                        width: "1rem",
-                        borderRadius: "50%",
-                        display: "inline",
-                        position: "relative",
-                        top: ".3rem",
-                      }}
-                      alt={""}
-                    />
-                    <p className={blogauthor}>{childrenAsciidoc[0].pageAttributes.author_name}</p>
+                    {
+                      authorList.map((auth) => {
+                        const imageSrc = getImageSrc(auth, formats)
+                        return (
+                          imageSrc ? <img
+                            src={imageSrc}
+                            style={{
+                              height: "1.5rem",
+                              width: "1.5rem",
+                              borderRadius: "50%",
+                              display: "inline",
+                              position: "relative",
+                              top: ".3rem",
+                            }}
+                            alt={""}
+                          /> : <img
+                            src="../../images/images/avatars/no_image.svg"
+                            style={{
+                              height: "1.5rem",
+                              width: "1.5rem",
+                              borderRadius: "50%",
+                              display: "inline",
+                              position: "relative",
+                              top: ".3rem",
+                            }}
+                            alt={""}
+                          />
+                        )
+                      })
+                    }
+                    {authorList.length < 3 && <p className={blogauthor}>{childrenAsciidoc[0].pageAttributes.author}</p>}
+                    {console.log(childrenAsciidoc[0])}
                   </div>
                   <span>{formattedDate}</span>
                 </div>
@@ -102,7 +113,7 @@ const BlogIndex = ({ pageContext, data }) => {
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: "center",
-          gap: "1rem",
+          gap: "1.5rem",
           alignItems: 'center',
           listStyle: 'none',
           padding: 0,
@@ -142,6 +153,7 @@ export const pageQuery = graphql`
           title
         }
         pageAttributes {
+          author
           author_name
           github
           opengraph
@@ -151,6 +163,7 @@ export const pageQuery = graphql`
           medium
           irc
           description
+          authoravatar
         }
       }
     }

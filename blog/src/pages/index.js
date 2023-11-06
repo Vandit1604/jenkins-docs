@@ -30,7 +30,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Box } from "@mui/material";
-import { formatDate } from "../utils/formatDate";
+import { formatDate } from "../utils/index.js";
 
 const IndexPage = ({ data }) => {
   return (
