@@ -3,7 +3,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
-import { authorinfo } from "../css/authorpost.module.css"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import IndexPageLayout from "../layouts"
 import { authorinfo, github, linkedin, twitter, blog, authoravatar } from "../css/authorpost.module.css"
@@ -48,7 +47,7 @@ const AuthorPost = () => {
   `)
   return (
     <section>
-      {data.allFile.nodes.map(({ childrenAsciidoc }) => {
+      {data.allFile.nodes.map(({ childrenAsciidoc }) => (
         <>
           <h1>{node.pageAttributes.author_name}</h1>
           <div style={{ display: "flex" }}>
@@ -65,7 +64,7 @@ const AuthorPost = () => {
           </div>
           {/* Add the Blogposts of each author */}
         </>
-      })}
+      ))}
     </section>
   )
 }
