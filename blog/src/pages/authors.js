@@ -20,7 +20,7 @@ const AuthorPage = ({ data }) => {
           data.allFile.nodes.map(({ childrenAsciidoc }) => {
             return (
               < li key={childrenAsciidoc[0].fields.slug} className={authorpost} >
-                <Link to={childrenAsciidoc[0].fields.slug} style={{ textDecoration: "none" }}>
+                <Link to={"author" + childrenAsciidoc[0].fields.slug} style={{ textDecoration: "none" }}>
                   <div
                     style={{
                       display: "flex",
@@ -35,7 +35,7 @@ const AuthorPage = ({ data }) => {
                     </center>
                     <img
                       className={authoravatar}
-                      src={childrenAsciidoc[0].pageAttributes.authoravatar ? (childrenAsciidoc[0].pageAttributes.authoravatar) : "../../images/images/avatars/no_image.svg"}
+                      src={childrenAsciidoc[0].pageAttributes.authoravatar ? childrenAsciidoc[0].pageAttributes.authoravatar : "../../images/images/avatars/no_image.svg"}
                       alt={childrenAsciidoc[0].document.title}
                     />
                   </div>

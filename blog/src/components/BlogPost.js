@@ -22,7 +22,7 @@ const BlogPost = ({ children }) => {
         <Button variant="contained">Back to Blogs</Button>
       </Link>
       {children}
-      <Author />
+      {/* <Author /> */}
     </div>
   );
 }

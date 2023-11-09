@@ -38,6 +38,7 @@ export const pageQuery = graphql`
         fullName
       }
       pageAttributes {
+        author_name
         author
         tags
         opengraph

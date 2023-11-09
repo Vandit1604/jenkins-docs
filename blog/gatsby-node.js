@@ -9,10 +9,6 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 // create pages.
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  // The “graphql” function allows us to run arbitrary
-  // queries against the local Drupal graphql schema. Think of
-  // it like the site has a built-in database constructed
-  // from the fetched data that you can run queries against.
   return graphql(
     `
       {
@@ -39,6 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
           medium
           opengraph
           twitter
+          authoravatar
         }
       }
     }
@@ -55,7 +52,6 @@ exports.createPages = ({ graphql, actions }) => {
     const filteredPosts = posts.filter(post => post.node.document.title !== 'Author');
     const postsPerPage = 9
     const numPages = Math.ceil(filteredPosts.length / postsPerPage);
-    // const numPages = Math.ceil(posts.length / postsPerPage)
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
         path: i === 0 ? `/blog` : `/blog/${i + 1}`,
@@ -65,6 +61,21 @@ exports.createPages = ({ graphql, actions }) => {
           skip: i * postsPerPage,
           numPages,
           currentPage: i + 1,
+        },
+      })
+    })
+
+    // authors page
+    const authorPostTemplate = path.resolve(`src/templates/author-pages.js`)
+    const authors = result.data.allAsciidoc.edges
+    const filteredAuthors = authors.filter(author => author.node.document.title == 'Author');
+    filteredAuthors.forEach(({ node }) => {
+      createPage({
+        path: `author/${node.pageAttributes.github}`,
+        component: authorPostTemplate,
+        context: {
+          authors,
+          filteredAuthors,
         },
       })
     })
@@ -84,6 +95,8 @@ exports.createPages = ({ graphql, actions }) => {
         component: slash(articleTemplate),
         context: {
           id: edge.node.id,
+          author: edge.node.pageAttributes.author_name,
+          author: edge.node.pageAttributes.author,
         },
       })
     })
@@ -103,18 +116,3 @@ exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
   }
 }
 
-// didn't add the stage prop as we want gatsby to apply this polyfill to gatsby develop command
-exports.onCreateWebpackConfig = ({ actions, config }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      fallback: {
-        stream: false,
-        url: false,
-        fs: false,
-        path: false,
-        util: require.resolve('util'),
-        os: require.resolve('os-browserify/browser'),
-      },
-    },
-  })
-}

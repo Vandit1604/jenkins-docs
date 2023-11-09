@@ -53,12 +53,18 @@ li {
   object-fit: cover;
 }
 
+.authoravataricons{
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+}
+
 .authorinfo{
   display: flex;
   justify-content: space-evenly;
   padding: 1rem;
 }
-
 .authoravatar{
   border-radius: 100%;
 }
@@ -82,3 +88,15 @@ li {
   font-size: 2rem;
 }
 
+.authorpageavatar{
+  float: left;
+  margin: 1rem;
+}
+
+.authorpageavatar img{
+  cursor: pointer;
+  border-radius: 50%;
+  height: 8rem;
+  width: 8rem;
+  object-fit: cover;
+}
