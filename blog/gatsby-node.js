@@ -12,11 +12,11 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-  allAsciidoc(limit: 1000) {
+  allAsciidoc {
     edges {
       node {
         id
-        
+        html
         document {
           title
         }
@@ -74,7 +74,7 @@ exports.createPages = ({ graphql, actions }) => {
         path: `author/${node.pageAttributes.github}`,
         component: authorPostTemplate,
         context: {
-          authors,
+          authorName: `*${node.pageAttributes.github}*`,
           filteredAuthors,
         },
       })

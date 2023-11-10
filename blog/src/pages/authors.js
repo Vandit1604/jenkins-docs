@@ -20,7 +20,7 @@ const AuthorPage = ({ data }) => {
           data.allFile.nodes.map(({ childrenAsciidoc }) => {
             return (
               < li key={childrenAsciidoc[0].fields.slug} className={authorpost} >
-                <Link to={"author" + childrenAsciidoc[0].fields.slug} style={{ textDecoration: "none" }}>
+                <Link to={`/author/${childrenAsciidoc[0].pageAttributes.github}`} style={{ textDecoration: "none" }}>
                   <div
                     style={{
                       display: "flex",

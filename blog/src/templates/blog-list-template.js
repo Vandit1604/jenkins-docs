@@ -7,8 +7,12 @@ import {
   blogpost,
   blogtitle,
   blogteaser,
-  blogauthorinfo
+  blogauthorinfo,
+  blogauthorimage,
 } from "../css/blogpost.module.css";
+import {
+  authorimagecontainer
+} from "../css/authorpost.module.css";
 import PageName from "../components/PageName"
 import { formatDate,blogAuthorImage,getImageSrc } from "../utils/index.js";
 
@@ -34,7 +38,6 @@ const BlogIndex = ({ pageContext, data }) => {
             childrenAsciidoc[0].pageAttributes.opengraph ||
             "../../images/gsoc/opengraph.png";
 
-
           return (
             <li key={`${childrenAsciidoc[0].fields.slug}-${childrenAsciidoc[0].document.title}`} className={blogpost}>
               <Link
@@ -42,13 +45,7 @@ const BlogIndex = ({ pageContext, data }) => {
                 style={{ textDecoration: "none", display: "flex", gap: "1.25rem", flexDirection: "column" }}
               >
                 <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    height: "15rem"
-                  }}
+                  className={{authorimagecontainer}}
                 >
                   <img
                     src={opengraphImageSource}
@@ -70,34 +67,19 @@ const BlogIndex = ({ pageContext, data }) => {
                       authorList.map((auth) => {
                         const imageSrc = getImageSrc(auth, formats)
                         return (
-                          imageSrc ? <img
+                          imageSrc ?  <img
                             src={imageSrc}
-                            style={{
-                              height: "1.5rem",
-                              width: "1.5rem",
-                              borderRadius: "50%",
-                              display: "inline",
-                              position: "relative",
-                              top: ".3rem",
-                            }}
+                            className={blogauthorimage}
                             alt={""}
                           /> : <img
                             src="../../images/images/avatars/no_image.svg"
-                            style={{
-                              height: "1.5rem",
-                              width: "1.5rem",
-                              borderRadius: "50%",
-                              display: "inline",
-                              position: "relative",
-                              top: ".3rem",
-                            }}
+                            className={blogauthorimage}
                             alt={""}
                           />
                         )
                       })
                     }
                     {authorList.length < 3 && <p className={blogauthor}>{childrenAsciidoc[0].pageAttributes.author}</p>}
-                    {console.log(childrenAsciidoc[0])}
                   </div>
                   <span>{formattedDate}</span>
                 </div>

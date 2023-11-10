@@ -1,4 +1,7 @@
 export function blogAuthorImage(input) {
-  input = input.split(',');
-  return input;
+  if (input != null) {
+    input = input.split(',');
+    return input;
+  }
+  return ""
 }

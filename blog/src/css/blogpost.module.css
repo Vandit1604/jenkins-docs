@@ -107,3 +107,12 @@ li {
 .blogauthorinfo{
   display:flex;
 }
+
+.blogauthorimage{
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  display: inline;
+  position: relative;
+  top: .3rem;
+}
