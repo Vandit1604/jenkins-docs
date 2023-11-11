@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import Author from "./Author"
 import Button from '@mui/material/Button';
 
 import typography from "../utils/typography"
@@ -22,7 +21,6 @@ const BlogPost = ({ children }) => {
         <Button variant="contained">Back to Blogs</Button>
       </Link>
       {children}
-      {/* <Author /> */}
     </div>
   );
 }

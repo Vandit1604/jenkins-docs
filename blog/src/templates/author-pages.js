@@ -35,7 +35,6 @@ const AuthorPage = ({ data, pageContext, path }) => {
                 <img src={node.node.pageAttributes.authoravatar ? node.node.pageAttributes.authoravatar : "../../images/images/avatars/no_image.svg"} alt={node.node.pageAttributes.author_name} />
               </div>
               <h2>{node.node.pageAttributes.author_name}</h2>
-              {console.log(node.node)}
               <div dangerouslySetInnerHTML={{ __html: node.node.html }} />
               <div className={authoravataricons} style={{ width: "10rem" }}>
                 {node.node.pageAttributes.github ? <a href={"https://github.com/" + node.node.pageAttributes.github}><Avatar sx={{ bgcolor: "rgb(60, 60, 60)" }}> <GitHubIcon className={github} /></Avatar></a> : null}

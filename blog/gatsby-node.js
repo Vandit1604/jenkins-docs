@@ -95,15 +95,16 @@ exports.createPages = ({ graphql, actions }) => {
         component: slash(articleTemplate),
         context: {
           id: edge.node.id,
-          author: edge.node.pageAttributes.author_name,
+          authorname: edge.node.pageAttributes.author_name,
           author: edge.node.pageAttributes.author,
+          filteredAuthors,
         },
       })
     })
   })
 }
 
-exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
+exports.onCreateNode = async ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `Asciidoc`) {
