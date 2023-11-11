@@ -4,7 +4,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Avatar from '@mui/material/Avatar';
 import { blue, cyan, indigo } from '@mui/material/colors';
-import { graphql } from "gatsby";
+import { Link,graphql } from "gatsby";
 import React from "react";
 import BlogPost from "../components/BlogPost";
 import { authoravataricons, authorpageavatar, blog, github, linkedin, twitter } from "../css/authorpost.module.css";
@@ -30,18 +30,21 @@ const Article = ({ data, pageContext }) => {
       <div
         dangerouslySetInnerHTML={{ __html: data.asciidoc.html }}
       />
-      <div style={{display:"flex",flexDirection:"column"}}>
+      <div>
         <h2>About the Author</h2>
         {
           filteredAuthors.map((node) => {
             return (
-              <>
+              <section style={{marginBottom:"1rem"}}>
                 {authorList.map((auth) => (
-                  <>
+                  <article>
                     {(node.node.pageAttributes.github == auth) ? <> <div className={authorpageavatar}>
                       <img src={node.node.pageAttributes.authoravatar} />
                     </div>
-                      <h2>{node.node.pageAttributes.author_name}</h2>
+                      <Link to={`/author/${node.node.pageAttributes.github}`}>
+                      <h3>{node.node.pageAttributes.author_name}</h3>
+                      </Link>
+                      <article>
                       <div dangerouslySetInnerHTML={{ __html: node.node.html }} />
                       <div className={authoravataricons} style={{ width: "10rem" }}>
                         {node.node.pageAttributes.github ? <a href={"https://github.com/" + node.node.pageAttributes.github}><Avatar sx={{ bgcolor: "rgb(60, 60, 60)" }}> <GitHubIcon className={github} /></Avatar></a> : null}
@@ -49,10 +52,11 @@ const Article = ({ data, pageContext }) => {
                         {node.node.pageAttributes.twitter ? <a href={"https://twitter.com/" + node.node.pageAttributes.twitter}><Avatar sx={{ bgcolor: cyan[50] }}> <TwitterIcon className={twitter} /></Avatar></a> : null}
                         {node.node.pageAttributes.blog ? <a href={node.node.pageAttributes.blog}><Avatar sx={{ bgcolor: indigo[50] }}><ImportContactsIcon className={blog} /></Avatar></a> : null}
                       </div>
+                      </article>
                     </> : null}
-                  </>
+                  </article>
                 ))}
-              </>
+              </section>
             );
           })
         }
