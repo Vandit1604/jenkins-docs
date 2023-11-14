@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => {
             <Link to="/download">
               <Button variant="contained" sx={{ backgroundColor: "#616161", borderRadius: "0.5rem" }}>Download</Button>
             </Link>
-            <a href="add to link"><Button variant="contained" sx={{ backgroundColor: "#D32F2F", borderRadius: "0.5rem" }}>Documentation</Button></a>
+            <a href="https://vandit1604.github.io/jenkins-docs/user-docs/2.401.3/index.html"><Button variant="contained" sx={{ backgroundColor: "#D32F2F", borderRadius: "0.5rem" }}>Documentation</Button></a>
           </div>
         </Box>
       </section>
