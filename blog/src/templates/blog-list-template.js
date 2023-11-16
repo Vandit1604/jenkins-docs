@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import IndexPageLayout from "../layouts/index.js";
+import { authorpageavatar, authorimagecontainer } from "../css/authorpost.module.css";
 import {
   blogauthor,
   bloglisting,
@@ -10,15 +11,12 @@ import {
   blogauthorinfo,
   blogauthorimage,
 } from "../css/blogpost.module.css";
-import {
-  authorimagecontainer
-} from "../css/authorpost.module.css";
 import PageName from "../components/PageName"
-import { formatDate,blogAuthorImage,getImageSrc } from "../utils/index.js";
+import { formatDate, blogAuthorImage, getImageSrc } from "../utils/index.js";
 
 const BlogIndex = ({ pageContext, data }) => {
 
-  const { currentPage, numPages } = pageContext
+  const { currentPage, numPages, filteredAuthors } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
   const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1)
@@ -45,9 +43,10 @@ const BlogIndex = ({ pageContext, data }) => {
                 style={{ textDecoration: "none", display: "flex", gap: "1.25rem", flexDirection: "column" }}
               >
                 <div
-                  className={{authorimagecontainer}}
+                  className={{ authorimagecontainer }}
                 >
                   <img
+                    loading="lazy"
                     src={opengraphImageSource}
                     alt={childrenAsciidoc[0].document.title}
                     height="250px"
@@ -67,11 +66,13 @@ const BlogIndex = ({ pageContext, data }) => {
                       authorList.map((auth) => {
                         const imageSrc = getImageSrc(auth, formats)
                         return (
-                          imageSrc ?  <img
+                          imageSrc ? <img
+                            loading="lazy"
                             src={imageSrc}
                             className={blogauthorimage}
                             alt={""}
                           /> : <img
+                            loading="lazy"
                             src="../../images/images/avatars/no_image.svg"
                             className={blogauthorimage}
                             alt={""}
@@ -79,7 +80,21 @@ const BlogIndex = ({ pageContext, data }) => {
                         )
                       })
                     }
-                    {authorList.length < 3 && <p className={blogauthor}>{childrenAsciidoc[0].pageAttributes.author}</p>}
+                    {
+                      filteredAuthors.map((node) => {
+                        return (
+                          <section style={{ marginBottom: "1rem" }}>
+                            {authorList.map((auth) => (
+                              < article >
+                                {(node.node.pageAttributes.github === auth && authorList.length < 3) ? <Link to={`/author/${node.node.pageAttributes.github}`}>
+                                  <p>{node.node.pageAttributes.author_name}</p>
+                                </Link> : null}
+                              </article>
+                            ))}
+                          </section>
+                        );
+                      })
+                    }
                   </div>
                   <span>{formattedDate}</span>
                 </div>
@@ -112,7 +127,7 @@ const BlogIndex = ({ pageContext, data }) => {
           </Link>
         )}
       </ul>
-    </IndexPageLayout>
+    </IndexPageLayout >
   );
 }
 

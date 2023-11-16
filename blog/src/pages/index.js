@@ -1,38 +1,43 @@
-import React from "react"
+import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined'
+import ExtensionOutlinedIcon from '@mui/icons-material/ExtensionOutlined'
+import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined'
+import MergeTypeIcon from '@mui/icons-material/MergeType'
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
+import SocialDistanceOutlinedIcon from '@mui/icons-material/SocialDistanceOutlined'
+import { Box } from "@mui/material"
+import Button from '@mui/material/Button'
 import { Link, graphql } from "gatsby"
-import IndexPageLayout from "../layouts"
-import Video from "../components/Video"
+import React from "react"
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import { Autoplay, Navigation, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import Seo from "../components/Seo"
-import MergeTypeIcon from '@mui/icons-material/MergeType';
-import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
-import ExtensionOutlinedIcon from '@mui/icons-material/ExtensionOutlined';
-import SocialDistanceOutlinedIcon from '@mui/icons-material/SocialDistanceOutlined';
+import Video from "../components/Video"
+import {
+  authorimagecontainer
+} from "../css/authorpost.module.css"
+import {
+  blogauthor,
+  blogauthorimage,
+  blogauthorinfo,
+  bloglisting,
+  blogpost,
+  blogteaser,
+  blogtitle,
+} from "../css/blogpost.module.css"
 import {
   box,
   container,
   featureInfo,
   sponsorsJumbotron
 } from "../css/index.module.css"
-import {
-  blogauthor,
-  bloglisting,
-  blogpost,
-  blogtitle,
-  blogteaser,
-  blogauthorinfo
-} from "../css/blogpost.module.css";
-import Button from '@mui/material/Button';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import { Box } from "@mui/material";
-import { formatDate } from "../utils/index.js";
+import IndexPageLayout from "../layouts"
+import { blogAuthorImage, formatDate, getImageSrc } from "../utils/index.js"
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, pageContext }) => {
+  console.log(pageContext)
   return (
     <>
       <section style={{ padding: "3rem 12rem", display: "flex" }}>
@@ -267,11 +272,15 @@ const IndexPage = ({ data }) => {
         <h2>Recent Posts</h2>
         <ul className={bloglisting}>
           {data.allFile.nodes.map(({ childrenAsciidoc }) => {
+            // formats
+            const formats = ['jpg', 'png', 'jpeg']
+            const authorList = blogAuthorImage(childrenAsciidoc[0].pageAttributes.author)
+            // date
             const formattedDate = formatDate(childrenAsciidoc[0].fields.slug);
-
             const opengraphImageSource =
               childrenAsciidoc[0].pageAttributes.opengraph ||
               "../../images/gsoc/opengraph.png";
+
             return (
               <li key={`${childrenAsciidoc[0].fields.slug}-${childrenAsciidoc[0].document.title}`} className={blogpost}>
                 <Link
@@ -279,15 +288,10 @@ const IndexPage = ({ data }) => {
                   style={{ textDecoration: "none", display: "flex", gap: "1.25rem", flexDirection: "column" }}
                 >
                   <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      height: "15rem"
-                    }}
+                    className={{ authorimagecontainer }}
                   >
                     <img
+                      loading="lazy"
                       src={opengraphImageSource}
                       alt={childrenAsciidoc[0].document.title}
                       height="250px"
@@ -303,20 +307,25 @@ const IndexPage = ({ data }) => {
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <div className={blogauthorinfo}>
-                      <img
-                        // src={authorImageSource}
-                        src={opengraphImageSource}
-                        style={{
-                          height: "2rem",
-                          width: "2rem",
-                          borderRadius: "50%",
-                          display: "inline",
-                          position: "relative",
-                          top: ".3rem",
-                        }}
-                        alt={""}
-                      />
-                      <p className={blogauthor}>{childrenAsciidoc[0].pageAttributes.author_name}</p>
+                      {
+                        authorList.map((auth) => {
+                          const imageSrc = getImageSrc(auth, formats)
+                          return (
+                            imageSrc ? <img
+                              loading="lazy"
+                              src={imageSrc}
+                              className={blogauthorimage}
+                              alt={""}
+                            /> : <img
+                              loading="lazy"
+                              src="../../images/images/avatars/no_image.svg"
+                              className={blogauthorimage}
+                              alt={""}
+                            />
+                          )
+                        })
+                      }
+                      {authorList.length < 3 && <p className={blogauthor}>{childrenAsciidoc[0].pageAttributes.author}</p>}
                     </div>
                     <span>{formattedDate}</span>
                   </div>
@@ -402,9 +411,9 @@ export default IndexPage
 export const pageQuery = graphql`
   query BlogIndex {
   allFile(
-    limit:9
     filter: {sourceInstanceName: {eq: "pages"}, childrenAsciidoc: {elemMatch: {document: {title: {ne: "Author"}}}}}
     sort: {childrenAsciidoc: {fields: {slug: DESC}}}
+    limit: 9
   ) {
     nodes {
       childrenAsciidoc {
@@ -415,6 +424,7 @@ export const pageQuery = graphql`
           title
         }
         pageAttributes {
+          author
           author_name
           github
           opengraph
@@ -424,6 +434,7 @@ export const pageQuery = graphql`
           medium
           irc
           description
+          authoravatar
         }
       }
     }

@@ -47,6 +47,24 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
+
+    // authors page | passing the authors info the pages via pageContext
+    const authorPostTemplate = path.resolve(`src/templates/author-pages.js`)
+    const authors = result.data.allAsciidoc.edges
+    const filteredAuthors = authors.filter(author => author.node.document.title == 'Author');
+    filteredAuthors.forEach(({ node }) => {
+      createPage({
+        path: `author/${node.pageAttributes.github}`,
+        component: authorPostTemplate,
+        context: {
+          // asterisk's as we're using inbuilt glob in gatsby
+          authorName: `*${node.pageAttributes.github}*`,
+          filteredAuthors,
+        },
+      })
+    })
+
+
     // Create blog-list pages
     const posts = result.data.allAsciidoc.edges
     const filteredPosts = posts.filter(post => post.node.document.title !== 'Author');
@@ -61,24 +79,11 @@ exports.createPages = ({ graphql, actions }) => {
           skip: i * postsPerPage,
           numPages,
           currentPage: i + 1,
-        },
-      })
-    })
-
-    // authors page
-    const authorPostTemplate = path.resolve(`src/templates/author-pages.js`)
-    const authors = result.data.allAsciidoc.edges
-    const filteredAuthors = authors.filter(author => author.node.document.title == 'Author');
-    filteredAuthors.forEach(({ node }) => {
-      createPage({
-        path: `author/${node.pageAttributes.github}`,
-        component: authorPostTemplate,
-        context: {
-          authorName: `*${node.pageAttributes.github}*`,
           filteredAuthors,
         },
       })
     })
+
 
     // Create Asciidoc pages.
     const articleTemplate = path.resolve(`./src/templates/article.js`)
