@@ -264,13 +264,10 @@ const IndexPage = ({ data }) => {
         <Video />
       </div>
       <IndexPageLayout>
-        <h2>Recent Post</h2>
+        <h2>Recent Posts</h2>
         <ul className={bloglisting}>
           {data.allFile.nodes.map(({ childrenAsciidoc }) => {
             const formattedDate = formatDate(childrenAsciidoc[0].fields.slug);
-            // const authorNames = childrenAsciidoc[0].pageAttributes.author ?? "author"
-            // const authorNamesWoSpaces = authorNames.replace(/\s/g, '')
-            // const authorArray = authorNamesWoSpaces.split(",")
 
             const opengraphImageSource =
               childrenAsciidoc[0].pageAttributes.opengraph ||
@@ -310,8 +307,8 @@ const IndexPage = ({ data }) => {
                         // src={authorImageSource}
                         src={opengraphImageSource}
                         style={{
-                          height: "1rem",
-                          width: "1rem",
+                          height: "2rem",
+                          width: "2rem",
                           borderRadius: "50%",
                           display: "inline",
                           position: "relative",

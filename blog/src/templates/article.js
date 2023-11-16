@@ -37,7 +37,7 @@ const Article = ({ data, pageContext }) => {
               <section style={{ marginBottom: "1rem" }}>
                 {authorList.map((auth) => (
                   <article>
-                    {(node.node.pageAttributes.github == auth) ? <> <div className={authorpageavatar}>
+                    {(node.node.pageAttributes.github === auth) ? <> <div className={authorpageavatar}>
                       {node.node.pageAttributes.authoravatar ? <img src={node.node.pageAttributes.authoravatar.slice(5)} alt={node.node.pageAttributes.author} />
                         : <img src="/images/images/avatars/no_image.svg" alt={node.node.pageAttributes.author} />}
                     </div>

@@ -44,8 +44,8 @@ const DownloadPage = () => {
               <h3>Stable (LTS)</h3>
               <p>Long-Term Support (LTS) release baselines are chosen every 12 weeks from the stream of regular releases. Every 4 weeks, we release stable releases which include bug and security fix backports. <a href="/changelog-lts"> Learn more…</a></p>
               <p>
-                <Link to="/changelog-lts">Changelog </Link> |
-                <Link to="/upgrade-guide"> Upgrade Guide </Link> |
+                <Link to="/changelog-lts">Changelog</Link> |
+                <Link to="/upgrade-guide">Upgrade Guide</Link> |
                 <a href="https://get.jenkins.io/war-stable/"> Past Releases</a>
               </p>
             </div>
@@ -53,8 +53,8 @@ const DownloadPage = () => {
               <h3>Regular releases (Weekly)</h3>
               <p>This release line delivers bug fixes and new features rapidly to users and plugin developers who need them. It is generally delivered on a weekly cadence. <a href="/changelog-weekly"> Learn more…</a></p>
               <p >
-                <a href="">Changelog </a> |
-                <a href="https://get.jenkins.io/war/"> Past Releases</a>
+                <a href="#">Changelog</a> |
+                <a href="https://get.jenkins.io/war/">Past Releases</a>
               </p>
             </div>
           </div>

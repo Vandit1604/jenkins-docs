@@ -30,7 +30,7 @@ const AuthorPage = ({ data, pageContext, path }) => {
       {
         filteredAuthors.map((node) => (
           <>
-            {(node.node.pageAttributes.github == author) ? <>
+            {(node.node.pageAttributes.github === author) ? <>
               <div className={authorpageavatar}>
                 <img src={node.node.pageAttributes.authoravatar ? node.node.pageAttributes.authoravatar : "../../images/images/avatars/no_image.svg"} alt={node.node.pageAttributes.author_name} />
               </div>
