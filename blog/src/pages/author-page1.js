@@ -22,7 +22,7 @@ import { formatDate} from "../utils/index.js";
 
 const AuthorPage = ({ data }) => {
   return (
-    < IndexPageLayout >
+    <IndexPageLayout>
       <PageName title={'Jenkins Community Blog Contributors'} />
       <ul>
         {

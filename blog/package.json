@@ -43,7 +43,8 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "start": "npm run develop"
+    "start": "npm run develop",
+    "clean": "gatsby clean"
   },
   "devDependencies": {
     "webpack-cli": "^5.1.4"

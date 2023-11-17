@@ -13,7 +13,7 @@ import { authorlisting, authorpost, authorname, authorinfo, github, linkedin, tw
 
 const AuthorPage = ({ data }) => {
   return (
-    < IndexPageLayout >
+    <IndexPageLayout>
       <PageName title={'Jenkins Community Blog Contributors'} />
       <ul className={authorlisting}>
         {
@@ -51,7 +51,7 @@ const AuthorPage = ({ data }) => {
           })
         }
       </ul>
-    </IndexPageLayout >
+    </IndexPageLayout>
   )
 }
 

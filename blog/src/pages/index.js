@@ -325,6 +325,7 @@ const IndexPage = ({ data, pageContext }) => {
                           )
                         })
                       }
+                      {" "}
                       {authorList.length < 3 && <p className={blogauthor}>{childrenAsciidoc[0].pageAttributes.author}</p>}
                     </div>
                     <span>{formattedDate}</span>
@@ -440,4 +441,3 @@ export const pageQuery = graphql`
     }
   }
 }`
-
