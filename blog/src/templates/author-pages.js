@@ -82,23 +82,28 @@ const AuthorPage = ({ data, pageContext, path }) => {
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
                   <div className={blogauthorinfo}>
-                    {
-                      authorList.map((auth) => {
-                        const imageSrc = getImageSrc(auth, formats)
-                        return (
-                          imageSrc ? <img
-                            src={imageSrc}
-                            className={blogauthorimage}
-                            alt={""}
-                          /> : <img
-                            src="../../images/images/avatars/no_image.svg"
-                            className={blogauthorimage}
-                            alt={""}
-                          />
-                        )
-                      })
-                    }
-                    {authorList.length < 3 && <p className={blogauthor}>{childrenAsciidoc[0].pageAttributes.author}</p>}
+                    {authorList.map((auth) => {
+                      return (
+                        filteredAuthors.map((node) => {
+                          return node.node.pageAttributes.github === auth ? (
+                            <Link className={blogauthorinfo} to={`/author/${node.node.pageAttributes.github}`}>
+                              {node.node.pageAttributes.authoravatar ? <img
+                                loading="lazy"
+                                src={node.node.pageAttributes.authoravatar}
+                                className={blogauthorimage}
+                                alt={node.node.pageAttributes.author}
+                              /> : <img
+                                loading="lazy"
+                                src="../../images/images/avatars/no_image.svg"
+                                className={blogauthorimage}
+                                alt={node.node.pageAttributes.author}
+                              />}
+                              {authorList.length < 3 ? <p>{node.node.pageAttributes.author_name}</p> : null}
+                            </Link>
+                          ) : null;
+                        })
+                      );
+                    })}
                   </div>
                   <span>{formattedDate}</span>
                 </div>

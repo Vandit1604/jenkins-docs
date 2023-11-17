@@ -36,8 +36,7 @@ import {
 import IndexPageLayout from "../layouts"
 import { blogAuthorImage, formatDate, getImageSrc } from "../utils/index.js"
 
-const IndexPage = ({ data, pageContext }) => {
-  console.log(pageContext)
+const IndexPage = ({ data }) => {
   return (
     <>
       <section style={{ padding: "3rem 12rem", display: "flex" }}>
