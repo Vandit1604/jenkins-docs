@@ -1,3 +1,7 @@
+html {
+  font-size: 16px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -15,7 +19,7 @@ li {
   display: grid;
   gap: 1.5rem;
   row-gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(14%, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(14%, 1fr));
   box-sizing: border-box;
   padding: 0;
   list-style-type: none;
@@ -24,7 +28,7 @@ li {
 }
 
 .authorpost {
-  border: solid black 1px;
+  border: solid lightgray 1px;
   border-radius: 5px;
   list-style: none;
   cursor: pointer;
@@ -32,6 +36,11 @@ li {
     NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
     EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
     "Noto Sans", sans-serif;
+  transition: all 0.5s ease-out;
+}
+
+.authorpost:hover{
+  border: solid black 1px;
 }
 
 .authorname {
@@ -39,23 +48,63 @@ li {
 }
 
 .authorpost img{
-  border-radius: 20px;
+  height: 8rem;
+  width: 8rem;
+  object-fit: cover;
+}
+
+.authoravataricons{
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .authorinfo{
   display: flex;
-  justify-content: space-around;
-  margin: 0.7rem;
+  justify-content: space-evenly;
+  padding: 1rem;
 }
-
+.authoravatar{
+  border-radius: 100%;
+}
 .github{
-  color: black;
+  color: whitesmoke;
+  font-size: 2rem;
 }
 
 .linkedin{
-   color: #0E4Eb5;
+   color: white;
+  font-size: 2rem;
 }
 
 .twitter{
   color: rgb(29, 161, 242); 
+  font-size: 2rem;
+}
+
+.blog{
+  color: #2327fd; 
+  font-size: 2rem;
+}
+
+.authorpageavatar{
+  float: left;
+  margin: 1rem;
+}
+
+.authorpageavatar img{
+  cursor: pointer;
+  border-radius: 50%;
+  height: 8rem;
+  width: 8rem;
+  object-fit: cover;
+}
+
+.authorimagecontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 15rem;
 }

@@ -127,7 +127,7 @@ RUN yum install -y python-virtualenv \
 
 Into a full Jenkins Pipeline like this:
 
-image::/post-images/jenkinsworld2017/fireeye-pipeline.png[Full Stage View]
+image::/images/images/post-images/jenkinsworld2017/fireeye-pipeline.png[Full Stage View]
 
 As we look ahead at FireEye, I will explore how the Shared Library sets us up for easier future
 migrations of other tools such as Puppet, JIRA, and Artifactory, and easier integration with new

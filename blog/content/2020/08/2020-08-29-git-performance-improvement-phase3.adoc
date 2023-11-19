@@ -1,7 +1,7 @@
 = Git Plugin Performance Improvement: Final Phase and Release
 :page-tags: plugins, git, platform-sig, developer, performance, gsoc, gsoc2020
 :page-author: rishabhbudhouliya
-:page-opengraph: ../../images/post-images/2020/07-git-plugin-performance-improvement/gsoc-git-opengraph.png
+:page-opengraph: ../../images/images/post-images/2020/07-git-plugin-performance-improvement/gsoc-git-opengraph.png
 
 Since the beginning of the project, the core value which drove its progress was "To enhance the user experience for running Jenkins jobs by reducing the overall execution time".
 
@@ -19,7 +19,7 @@ The project started with deciding to choose a git operation and then trying to c
 
 == Stage 1: Benchmark results with git fetch
 
-image:/post-images/2020/07-git-plugin-performance-improvement/git-fetch-results.png[git-fetch-results, width=938]
+image:/images/images/post-images/2020/07-git-plugin-performance-improvement/git-fetch-results.png[git-fetch-results, width=938]
 
 * The performance of git fetch (average execution time/op) is strongly correlated to the size of a repository
 * There exists an inflection point on the scale of repository size after which the nature of `JGit` performance changes (it starts to degrade)
@@ -41,7 +41,7 @@ Running git fetch operation for a 400 MiB sized repository on:
 
 The result of running this experiment is given below:
 
-image:/post-images/2020/07-git-plugin-performance-improvement/git-multiple-platforms.png[Performance on multiple platforms]
+image:/images/images/post-images/2020/07-git-plugin-performance-improvement/git-multiple-platforms.png[Performance on multiple platforms]
 
 
 NOTE: The difference in performance between `git` and `JGit` remains constant across all platforms.
@@ -50,7 +50,7 @@ Benchmark results on one platform are applicable to all platforms.
 
 == Stage 3: Performance of git fetch and repository structure
 
-image:/post-images/2020/07-git-plugin-performance-improvement/git-repo-diagram.png[title="Relationship of repository structure with performance" role="center", width=420]
+image:/images/images/post-images/2020/07-git-plugin-performance-improvement/git-repo-diagram.png[title="Relationship of repository structure with performance" role="center", width=420]
 
 The area of the circle enclosing each parameter signifies the strength of the positive correlation between the performance of a git fetch operation and that parameter. From the diagram: +
 
@@ -64,7 +64,7 @@ The area of the circle enclosing each parameter signifies the strength of the po
 
 This feature takes the responsibility of choosing the optimal implementation from the *user* and hands it to the *plugin*. It takes the decision of recommending an implementation on the basis of the size of the repository. link:/blog/2020/07/29/git-performance-improvement-phase2/[Here is how it works].
 
-image:/post-images/2020/07-git-plugin-performance-improvement/git-perf-improv.png[title="Faster checkouts with GitToolChooser" role="center", width=938]
+image:/images/images/post-images/2020/07-git-plugin-performance-improvement/git-perf-improv.png[title="Faster checkouts with GitToolChooser" role="center", width=938]
 
 The image above depicts the performance enhancements we have performed over the course of the GSoC project. These improvements have enabled the checkout step to be finished *within half of what it used to take* earlier in some cases.
 
@@ -72,7 +72,7 @@ Let's talk about performance improvements in two parts.
 
 == Major performance improvements
 
-image:/post-images/2020/07-git-plugin-performance-improvement/git-major-perf.png[Major performance enhancements, align='center', width=400]
+image:/images/images/post-images/2020/07-git-plugin-performance-improvement/git-major-perf.png[Major performance enhancements, align='center', width=400]
 
 Building Tensorflow (~800 MiB) using a Jenkins pipeline, there is over 50% reduction in overall time spent in completing a job! 
 The result is consistent multiple platforms.
@@ -83,7 +83,7 @@ The reason for such a decrease is the fact that `JGit` degrades in performance w
 
 *Note: Enable JGit before using the new performance features to let GitToolChooser work with more options* -> link:https://plugins.jenkins.io/git-client/#enabling-jgit[Here's how]
 
-image:/post-images/2020/07-git-plugin-performance-improvement/git-minor-perf.png[title="Minor performance enhancements" role="center", width=400]
+image:/images/images/post-images/2020/07-git-plugin-performance-improvement/git-minor-perf.png[title="Minor performance enhancements" role="center", width=400]
 
 Building the git plugin (~ 20 MiB) using a Jenkins pipeline, there is a drop of a *second* across all platforms when performance enhancement is enabled. Also, eliminating a redundant fetch reduces unnecessary load on git servers.
 

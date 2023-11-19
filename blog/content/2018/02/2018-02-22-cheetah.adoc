@@ -29,17 +29,17 @@ Project Cheetah offers several things, but the most important is Durability Sett
 
 Before and After:
 
-image:/post-images/2018-02-22-cheetah/io-utilization.png[role="center"]
+image:/images/images/post-images/2018-02-22-cheetah/io-utilization.png[role="center"]
 
 As you can see, storage utilization goes down by a _lot_.  While the exact number will vary, across the benchmark testcases *this results in Pipeline throughput of 2x to 6x the previous before becoming IO-bound*. This also increases stability of Jenkins controllers because they will tolerate unexpected load.
 
 This comes with a major drop in CPU IOWait as well:
 
-image:/post-images/2018-02-22-cheetah/cpu-iowait.png[role="center"]
+image:/images/images/post-images/2018-02-22-cheetah/cpu-iowait.png[role="center"]
 
 And of course the rate at which data is written to disk and number of writes/s is also reduced:
 
-image:/post-images/2018-02-22-cheetah/diskio.png[role="center"]
+image:/images/images/post-images/2018-02-22-cheetah/diskio.png[role="center"]
 
 For enterprise users, timing stats often show 10-20% of normal builds is serializing the Program and writing the record of steps run ("FlowNodes") - the performance optimized durability setting will cut this to _almost nothing_ (for standard pipelines, 1/100 or less) - so builds will complete faster, especially complex ones.
 
@@ -53,12 +53,12 @@ There are 3 ways to configure the durability setting:
 == 1. *Globally*, you can choose a global default durability setting:
 Under "Manage Jenkins" > "Configure System", labelled "Pipeline Speed/Durability Settings".  You can override these with the more specific settings below.
 
-image:/post-images/2018-02-22-cheetah/global-durability.png[role="center"]
+image:/images/images/post-images/2018-02-22-cheetah/global-durability.png[role="center"]
 
 == 2. *Each Pipeline* can get a custom Durability Setting:
 This is one of the job properties located at the top of the job configuration, labelled "Custom Pipeline Speed/Durability Level."  **This overrides the global setting.**  Or, use a "properties" step - the setting will apply to the NEXT run after the step is executed (same result).
 
-image:/post-images/2018-02-22-cheetah/pipeline-durability-highlighted.png[role="center"]
+image:/images/images/post-images/2018-02-22-cheetah/pipeline-durability-highlighted.png[role="center"]
 
 [pipeline]
 ----
@@ -83,11 +83,11 @@ pipeline {
 == 3. **Multibranch Projects** can use a new BranchProperty to customize the Durability Setting.
 Under the SCM you can configure a custom Branch Property Strategy and add a property for Custom Pipeline Speed/Durability Level.  This overrides the global Durability Setting and will apply to each branch at the next run.  You can also use a "properties" step to override the setting, but remember that you may have to run the step again to undo this.
 
-image:/post-images/2018-02-22-cheetah/multibranch-durability.png[role="center"]
+image:/images/images/post-images/2018-02-22-cheetah/multibranch-durability.png[role="center"]
 
 Durability settings will take effect with the next applicable Pipeline run, not immediately.  The setting will be displayed in the log. 
 
-image:/post-images/2018-02-22-cheetah/durability-in-log-highlighted.png[role="center"]
+image:/images/images/post-images/2018-02-22-cheetah/durability-in-log-highlighted.png[role="center"]
 
 There is a slight durability trade-off for using the Performance-Optimized mode -- link:/doc/book/pipeline/scaling-pipeline/#what-am-i-giving-up-with-this-durability-setting-trade-off[the appropriate section of the Pipeline Scalability documentation] has the specifics.
 For most uses we do not expect this to be important, but there are a few specific cases where users may wish to use a slower/higher-durability setting.  link:/doc/book/pipeline/scaling-pipeline/#suggested-best-practices-and-tips-for-durability-settings[The Best Practices are documented.]
@@ -112,7 +112,7 @@ We recommend using Performance-Optimized by default, but because it does represe
 
 * We've reduced classloading and reflection quite significantly, which improves scaling and reduces CPU use:
 
-image:/post-images/2018-02-22-cheetah/classloading.png[role="center"]
+image:/images/images/post-images/2018-02-22-cheetah/classloading.png[role="center"]
 
 * Script Security (as of version 1.41) has gotten optimizations to reduce the performance overhead of Sandbox mode and eliminate lock contention so Pipeline multithreads better. 
 

@@ -27,7 +27,7 @@ Staging also involves configuring the software for various environments without 
 to transport the software to production systems in high quality. Many Agile projects make great experience with implementing a staging ladder in
 order to optimize the cycle time between development software and the point when the end user is able to use the software in production.
 
-image:/post-images/artifactory-jenkins/01.png[role=center, title="A typical stagging ladder, aka delivery pipeline."]
+image:/images/images/post-images/artifactory-jenkins/01.png[role=center, title="A typical stagging ladder, aka delivery pipeline."]
 
 Commonly, the staging ladder is illustrated on its side, with the higher rungs being the boxes further to the right. It’s good practice not to skip any rungs during staging.
 The central development environment packages and integrates all respective configuration items and is the base for releasing. Software is staged over different environments by
@@ -56,7 +56,7 @@ environment only if the code satisfies the defined quality requirements; for ins
 metrics should pass out of the central development environment, and then automated and manual acceptance tests are needed to pass the system test. In our case, the last quality gate
 to pass is the one from the  production mirror to production. Here, for example, specific production tests are done or relevant documents must be filled in and signed.
 
-image:/post-images/artifactory-jenkins/02.png[role=center, title="A pipeline with quality gates injected."]
+image:/images/images/post-images/artifactory-jenkins/02.png[role=center, title="A pipeline with quality gates injected."]
 
 It’s mandatory to define the quality requirements in advance and to resist customizing them after the fact, when the software has failed. Quality gates are different at lower and
 higher stages; the latter normally consist of a more severe or broader set of quality requirements, and they often include the requirements of the lower gates. The binary repository
@@ -76,7 +76,7 @@ as a proxy, thus all developers access the repo manager, and not remote binary p
 e.g. role-based access control on specific logical repositories, which may correspond to specific stages of the staging ladder.
 
 
-image:/post-images/artifactory-jenkins/03.png[role=center, title="JFrog Artifactory serves as a proxy."]
+image:/images/images/post-images/artifactory-jenkins/03.png[role=center, title="JFrog Artifactory serves as a proxy."]
 
 Logical repositories can be generic ones (meaning they are agnostic regarding any tools and platforms, thus you can also just upload the menu of your local canteen) or repos
 specific to tools and platforms. In our case, we need a repository for managing the Java EE WAR files and for the Docker images. This can be achieved by
@@ -96,7 +96,7 @@ of the binary cannot be easily derived from the context.
 The following illustration shows a JFrog Artifactory instance with the involved logical repos in place. In our simplified example, the repo promotions are supposed to go from
 _docker-local_ to _docker-prod-local_, and from _libs-release-local_ to _libs-releases-staging-local_. In our use case, we promote the software in version 1.0.0.
 
-image:/post-images/artifactory-jenkins/04.png[role=center, title="Logical repos, inside JFrog Artifactory."]
+image:/images/images/post-images/artifactory-jenkins/04.png[role=center, title="Logical repos, inside JFrog Artifactory."]
 
 Another type of binary repository manager is JFrog Bintray, which serves as a universal distribution platform for many technologies. JFrog Bintray can be an interesting choice
 if you have strong requirements for scalability and worldwide coverage including IP restrictions and handy features around statistics. Most of the concepts and ramp up activities
@@ -153,7 +153,7 @@ Let's now discuss how to proceed for the release candidates.
 The pipeline to promote a dev version to a RC version does contain a couple of different stages, including stages to certify the binaries (meaning labeling it or adding context information) and stages to process the concrete promotion.
 The following illustration shows the successful run of the promotion, for software version 1.0.0.
 
-image:/post-images/artifactory-jenkins/05.png[role=center, title="Promotion to RC. Looks like it succeeded."]
+image:/images/images/post-images/artifactory-jenkins/05.png[role=center, title="Promotion to RC. Looks like it succeeded."]
 
 We utilize Jenkins Blue Ocean that is a new user experience for Jenkins based on a personalizable, modern design that allows users to graphically create, visualize and diagnose
 delivery pipelines. Besides the new approach in general, single Blue Ocean features help to boost productivity dramatically, e.g. to provide log information at your fingertips
@@ -198,7 +198,7 @@ Once the binaries are promoted (and hopefully deployed and tested on respective 
 In our scenario, JFrog Bintray serves as the distribution platform to manage and provide binaries for further usage. Bintray can also serve as a Docker registry, or can just
 provide binaries for scripted or manual download. There are again different ways how to promote binaries, in this case from the RC repos inside JFrog Artifactory to the GA storage in JFrog Bintray, and I summarize one of those possible ways. First, let's look at the Jenkins pipeline, showed in the next illustration. The processing is on its way, currently, and we again have a list of linked stages.
 
-image:/post-images/artifactory-jenkins/06.png[role=center, title="Promotion to GA is running ..."]
+image:/images/images/post-images/artifactory-jenkins/06.png[role=center, title="Promotion to GA is running ..."]
 
 Zooming in now to the key stages, we see that promoting the WAR file is a set of steps that utilize JFrog REST API. We download the binary from JFrog Artifactory, parameterized,
 and upload it to JFrog Bintray.
@@ -237,20 +237,20 @@ Processing the Docker image is as easy as processing the WAR. In this case, we j
 We now have promoted the binaries and uploaded them to JFrog Bintray. The overview page of our product lists two packages: the WAR file and the Docker image. Both can be downloaded
 now and used, the Docker image can be pulled from the JFrog Bintray Docker registry with native Docker commands.
 
-image:/post-images/artifactory-jenkins/07.png[role=center, title="Distribution management platform JFrog Bintray holds our binaries: a WAR file and a Docker image, in version 1.0.0."]
+image:/images/images/post-images/artifactory-jenkins/07.png[role=center, title="Distribution management platform JFrog Bintray holds our binaries: a WAR file and a Docker image, in version 1.0.0."]
 
 As part of its graphical visualization capabilitites, Bintray is able to show the single layers of the uploaded Docker images.
 
-image:/post-images/artifactory-jenkins/08.png[role=center, title="Docker layers of our uploaded Docker image, visualized in JFrog Bintray."]
+image:/images/images/post-images/artifactory-jenkins/08.png[role=center, title="Docker layers of our uploaded Docker image, visualized in JFrog Bintray."]
 
 Bintray can also display usage statistics, e.g. download details. Now guess where I'm sitting right now while downloading the binary?
 
-image:/post-images/artifactory-jenkins/09.png[role=center, title="JFrog Bintray displays download statistics of our binaries."]
+image:/images/images/post-images/artifactory-jenkins/09.png[role=center, title="JFrog Bintray displays download statistics of our binaries."]
 
 Besides providing own statistics, Bintray provides the JFrog Firehose Event API. This API streams live usage data, which in turn can be integrated or aggregated with your ecosystem.
 In our case, we visualize the data, particularly download, upload, and delete statistics, with the ELK stack, as part of a functional monitoring initiative.
 
-image:/post-images/artifactory-jenkins/10.png[role=center, title="The ELK stack visualizes real-time data delivered from JFrog Bintray, via JFrog Firehose Event API."]
+image:/images/images/post-images/artifactory-jenkins/10.png[role=center, title="The ELK stack visualizes real-time data delivered from JFrog Bintray, via JFrog Firehose Event API."]
 
 Crisp, isn't it?
 

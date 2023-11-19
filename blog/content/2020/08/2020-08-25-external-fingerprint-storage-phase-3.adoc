@@ -1,7 +1,7 @@
 = External Fingerprint Storage Phase-3 Update: Introducing the PostgreSQL Fingerprint Storage Plugin
 :page-tags: plugins, fingerprint, cloud-native, external-storage, developer, PostgreSQL, gsoc, gsoc2020
 :page-author: stellargo
-:page-opengraph: ../../images/post-images/2020/08-external-fingerprint-storage-phase-3/opengraph.png
+:page-opengraph: ../../images/images/post-images/2020/08-external-fingerprint-storage-phase-3/opengraph.png
 
 The final phase for the link:/projects/gsoc/2020/projects/external-fingerprint-storage/[External Fingerprint Storage
 Project] has come to an end and to finish off, we release one more fingerprint storage plugin:
@@ -71,7 +71,7 @@ Once the plugin has been installed, you can configure the PostgreSQL server deta
 . Configure the following parameters to connect to your PostgreSQL instance:
 
 +
-image:/post-images/2020/08-external-fingerprint-storage-phase-3/configure.png[Configure Redis]
+image:/images/images/post-images/2020/08-external-fingerprint-storage-phase-3/configure.png[Configure Redis]
 +
 
 * `Host` - Enter hostname where PostgreSQL is running

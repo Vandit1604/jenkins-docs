@@ -1,7 +1,7 @@
 = Automating test runs on hardware with Pipeline as Code
 :page-tags: jenkins2, pipeline, embedded
 
-:page-author: oleg_nenashev
+:page-author: oleg-nenashev
 
 
 In addition to Jenkins development, during last 8 years I've been involved into continuous integration for hardware and embedded projects.
@@ -32,7 +32,7 @@ Generally, any peripheral hardware device can be attached to a Jenkins node.
 Since Jenkins nodes require Java only, almost every development machine can be attached.
 Below you can find a common connection scheme:
 
-image::/post-images/pipeline-as-code-for-hardware/connectBoard.png["Connecting the external device", width=550, align="center"]
+image::/images/images/post-images/pipeline-as-code-for-hardware/connectBoard.png["Connecting the external device", width=550, align="center"]
 
 After the connection, Jenkins jobs could invoke common EDA tools via command-line interfaces.
 It can be easily done by a _Execute shell_ build steps in free-style projects.

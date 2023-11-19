@@ -1,7 +1,7 @@
 = Micro-benchmarking Framework for Jenkins Plugins
 :page-tags: jmh, plugins, benchmark, performance, developer, gsoc, gsoc2019
 
-:page-author: abhyudayasharma
+:page-author: AbhyudayaSharma
 
 
 = Micro-benchmarking Framework for Jenkins Plugins
@@ -157,7 +157,7 @@ Benchmark reports generated (in JSON) can be visualized using the either the plu
 or by passing the benchmark reports to the link:https://jmh.morethan.io[JMH visualizer] web service. As an example, here is
 a visualized report of some benchmarks from the Role Strategy Plugin:
 
-image::/post-images/jmh-microbenchmark-framework/jmh-visualizer.png[Role Strategy Plugin benchmarks visualized by JMH Visualizer]
+image::/images/images/post-images/jmh-microbenchmark-framework/jmh-visualizer.png[Role Strategy Plugin benchmarks visualized by JMH Visualizer]
 
 These improvements seen above were obtained through a small link:https://github.com/jenkinsci/role-strategy-plugin/pull/81[pull request]
 to the plugin and shows how even seemingly small changes can bring major performance improvements. Microbenchmarks

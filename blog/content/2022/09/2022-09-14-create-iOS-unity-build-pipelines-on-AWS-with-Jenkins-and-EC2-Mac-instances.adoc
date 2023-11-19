@@ -1,9 +1,9 @@
 = Create iOS Unity build pipelines on AWS with Jenkins and EC2 Mac instances
 :page-tags: contributor-summit, events, community, contribute, devopsworld2022, aws, game-development, mac, aws-ec2-mac, mac
 :page-author: kursonsk, glenduca
-:page-opengraph: ../../images/post-images/Jenkins-DevOps.png
+:page-opengraph: ../../images/images/post-images/Jenkins-DevOps.png
 
-image::/post-images/Jenkins-DevOps.png[role=right]
+image::/images/images/post-images/Jenkins-DevOps.png[role=right]
 
 == Create iOS Unity build pipelines on AWS with Jenkins and EC2 Mac instances
 
@@ -46,7 +46,7 @@ in our solution.
 
 The high-level architecture looks like the following:
 
-image:/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image1.png[image,width=624,height=217]
+image:/images/images/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image1.png[image,width=624,height=217]
 
 We will build upon these concepts and will use EC2 Spot instances for
 the compute-heavy phase of asset compilation in conjunction with the EC2
@@ -59,7 +59,7 @@ implement scalability and flexibility.
 Services and dependencies used in our solution are shown on the
 following diagram:
 
-== image:/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image2.png[image,width=624,height=250]
+== image:/images/images/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image2.png[image,width=624,height=250]
 
 == Key pieces
 
@@ -77,7 +77,7 @@ https://static.us-east-1.prod.workshops.aws/public/b40b1644-6805-40c7-888e-7a5b0
 template]. It prepares the environment by creating a VPC, subnets, a
 Jenkins Manager installation and an EC2 bastion host. To deploy the
 stack in us-east-2 (Ohio) region, click the button:
-image:/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image3.png[image,width=112,height=21]
+image:/images/images/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image3.png[image,width=112,height=21]
 
 The stack incorporates VPC with two availability zones (AZs), and with
 two private and two public subnets. To follow best practices, we will
@@ -88,7 +88,7 @@ private subnet.
 Internal resources will use NAT gateway to reach the internet in two
 availability zones to reduce inter-AZ traffic costs.
 
-image:/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image4.png[image,width=624,height=295]
+image:/images/images/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image4.png[image,width=624,height=295]
 
 == Unity container and build server
 
@@ -167,13 +167,13 @@ launch an EC2 Mac instance on a dedicated host, however. Depending on
 the architecture (mac1 for x86, mac2 for Apple silicon), you will need
 different dedicated hosts.
 
-image:/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image5.png[image,width=624,height=117]
+image:/images/images/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image5.png[image,width=624,height=117]
 
 Once the instance is launched, you will need to enable VNC to connect to
 it via the graphical user interface (GUI). That process is described
 https://catalog.us-east-1.prod.workshops.aws/workshops/43e96ac6-6d4f-4d99-af97-3ac2a5987391/en-US/020-build-farms/060-labs-unity-mac/015-environment-and-ec2-mac/040-ec2-mac-setup/020-enable-graphical-remote-desktop[here].
 
-image:/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image6.png[image,width=624,height=499]
+image:/images/images/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image6.png[image,width=624,height=499]
 
 EC2 Mac instances use most of the same tools that you have already been
 using with other EC2 instances. These instances live in the VPC, support
@@ -227,12 +227,12 @@ artifacts, however I find it’s better to use Amazon S3 as it provides
 virtually unlimited storage, and can easily be used from within Jenkins
 pipeline.
 
-image:/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image7.png[image,width=624,height=319]
+image:/images/images/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image7.png[image,width=624,height=319]
 
 In order to orchestrate Linux build instances, Jenkins needs the
 following plugins:
 
-image:/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image8.png[image,width=624,height=195]
+image:/images/images/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image8.png[image,width=624,height=195]
 
 The *Docker* and *Docker pipeline* plugins allow us to run docker
 pipeline steps. These are required to launch Unity containers and run
@@ -257,7 +257,7 @@ reservation time for which an EC2 Mac dedicated host has to be reserved.
 However, we can use several Jenkins executors on a single EC2 Mac
 instance:
 
-image:/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image9.png[image,width=624,height=336]
+image:/images/images/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image9.png[image,width=624,height=336]
 
 Also, labels can be used in order to separate kinds of workers within a
 pipeline. Note that on a screenshot above I use label “mac”.
@@ -554,14 +554,14 @@ like signing certificate. The keychain is later deleted.
 
 And once done, the basic pipeline should look like the following:
 
-image:/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image10.png[image,width=624,height=247]
+image:/images/images/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image10.png[image,width=624,height=247]
 
 == Final architecture
 
 Once the all the key pieces mentioned in this post are assembled, the
 final picture is as following:
 
-image:/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image11.png[image,width=624,height=344]
+image:/images/images/post-images/2022-09-14-Create-iOS-Unity-build-pipelines/image11.png[image,width=624,height=344]
 
 Also refer to the
 https://d1.awsstatic.com/architecture-diagrams/ArchitectureDiagrams/unity-build-pipeline-ios-games-on-aws-cloud-ra.pdf?did=wp_card&trk=wp_card[full

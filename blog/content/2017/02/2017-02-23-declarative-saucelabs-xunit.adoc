@@ -63,7 +63,7 @@ Once there, under "Global Pipeline Libraries", add a new library.
 Then set the name to `bitwiseman-shared`, point it at my repository,
 and set the default branch for the library to `master`.
 
-image::/post-images/2017-02-15/shared-library.png[Global Pipeline Library, role="center", width=800]
+image::/images/images/post-images/2017-02-15/shared-library.png[Global Pipeline Library, role="center", width=800]
 
 
 == Reducing Complexity with Declarative
@@ -161,9 +161,9 @@ node {
 }
 ----
 
-image::/post-images/2017-02-23/blue-ocean.png[Blue Ocean Run, role="center", width=800]
+image::/images/images/post-images/2017-02-23/blue-ocean.png[Blue Ocean Run, role="center", width=800]
 
-image::/post-images/2017-02-23/sauce-report.png[SauceLabs Test Report, role="center", width=800]
+image::/images/images/post-images/2017-02-23/sauce-report.png[SauceLabs Test Report, role="center", width=800]
 
 NOTE: Blue Ocean doesn't support displaying SauceLabs test reports yet
 (see link:https://issues.jenkins.io/browse/JENKINS-42242[JENKINS-42242]).

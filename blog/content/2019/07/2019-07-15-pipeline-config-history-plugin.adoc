@@ -1,7 +1,7 @@
 = Introducing the Pipeline Configuration History Plugin
 :page-tags: pipeline, plugins
 :page-author: jochenafuerbacher, stefanbrausch, robinrschulz
-:page-opengraph: ../../images/post-images/2019-07-pipeline-config-history/Diff_2.6.png
+:page-opengraph: ../../images/images/post-images/2019-07-pipeline-config-history/Diff_2.6.png
 
 link:/doc/book/pipeline/[Pipelines] are the efficient and modern way how to create jobs in Jenkins.
 To recognize pipeline changes quickly and easily, we developed the plugin:pipeline-config-history[Pipeline Configuration History] plugin.
@@ -20,7 +20,7 @@ This was the idea and the beginning of plugin:jobConfigHistory[Job Configuration
 
 Now it was possible to view changes of job configurations (like other branches, JDK versions, etc.) and more often the reason for breaking builds were changes of job configurations.
 
-image::/post-images/2019-07-pipeline-config-history/Diff_2.6.png[Screenshot of Job Configuration History]
+image::/images/images/post-images/2019-07-pipeline-config-history/Diff_2.6.png[Screenshot of Job Configuration History]
 
 Over the years the plugin got developed and is still under development.
 New functions were added, that not only view job configurations, but also changes of global and agent configurations.
@@ -60,18 +60,18 @@ Pipeline Configuration History saves changes of the pipeline files between the l
 Therefore when a pipeline job ceases to build successfully, you can check if something has changed on any used pipeline file.
 You can also see the build where changes occurred.
 
-image::/post-images/2019-07-pipeline-config-history/image2019-5-15_13-44-54.png[Screenshot of Pipeline Configuration History]
+image::/images/images/post-images/2019-07-pipeline-config-history/image2019-5-15_13-44-54.png[Screenshot of Pipeline Configuration History]
 
 Because a pipeline configuration can consist of several files where changes could have occurred, only files with changes between two builds are shown in the diff.
 That makes the whole thing more compact and effective:
 
-image::/post-images/2019-07-pipeline-config-history/image2019-5-15_14-5-13.png[Screenshot of Pipeline Configuration History]
+image::/images/images/post-images/2019-07-pipeline-config-history/image2019-5-15_14-5-13.png[Screenshot of Pipeline Configuration History]
 
 But sometimes you may want to show more than the differences between pipeline files.  You may want to see which pipeline files are in use or the content of those files when they were used.
 So it's possible to view all files and their content.
 If required you can download them as well:
 
-image::/post-images/2019-07-pipeline-config-history/image2019-5-15_14-11-7.png[Screenshot of Pipeline Configuration History]
+image::/images/images/post-images/2019-07-pipeline-config-history/image2019-5-15_14-11-7.png[Screenshot of Pipeline Configuration History]
 
 
 == Conclusion

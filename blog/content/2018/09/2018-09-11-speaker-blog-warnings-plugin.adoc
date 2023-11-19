@@ -6,7 +6,7 @@ note: "This is a guest post by Ullrich Hafner, professor for Software Engineerin
   He will be presenting *link:https://sched.co/F9NZ[Static Analysis Plugins - White Mountain Release for Pipelines]* at DevOps World | Jenkins World 2018."
 ---
 
-image::/images/conferences/devops-world-2018.jpg[DevOps World | Jenkins World 2018, float="right", link="https://www.cloudbees.com/devops-world"]
+image::/images/images/conferences/devops-world-2018.jpg[DevOps World | Jenkins World 2018, float="right", link="https://www.cloudbees.com/devops-world"]
 
 Jenkins' plugin:warnings[Warnings plugin] collects compiler warnings or issues reported by static analysis tools and visualizes the
 results. The plugin (and the associated static analysis plugin suite) has been part of the Jenkins plugin eco-system
@@ -126,7 +126,7 @@ The created report of issues can be filtered afterwards. You can specify an arbi
 filters. Currently, there is support for filtering issues by module name, package or namespace name, file name,
 category or type.
 
-image::/post-images/2018-09-11/filter.png[Filtering]
+image::/images/images/post-images/2018-09-11/filter.png[Filtering]
 
 An example pipeline that uses such a filter is shown in the following snippet:
 
@@ -144,7 +144,7 @@ let you to modify Jenkins' build status so that you immediately see if the desir
 A build can be set to **unstable** or **failed** for each of these quality gates. All quality gates use a simple metric:
 the maximum number of issues that can be found and still pass a given quality gate.
 
-image::/post-images/2018-09-11/quality-gate.png[Quality Gate]
+image::/images/images/post-images/2018-09-11/quality-gate.png[Quality Gate]
 
 An example pipeline that enables a quality gate for 10 warnings in total or 1 new warning is shown in the
 following snippet:
@@ -159,7 +159,7 @@ recordIssues
 
 One highlight of the plugin is the ability to categorize issues of subsequent builds as new, fixed and outstanding.
 
-image::/post-images/2018-09-11/trend.png[History]
+image::/images/images/post-images/2018-09-11/trend.png[History]
 
 Using this feature makes it a lot easier to keep the quality of your project under control: you can focus
 only on those warnings that have been introduced recently.
@@ -181,7 +181,7 @@ is up to the individual parsers.
 Note that not every parser is capable of producing warnings with a different severity. Some of the parses simply
 use the same severity for all issues.
 
-image::/post-images/2018-09-11/severities.png[Severities]
+image::/images/images/post-images/2018-09-11/severities.png[Severities]
 
 == Build Trend
 
@@ -189,7 +189,7 @@ In order to see the trend of the analysis results, a chart showing the number of
 shown. This chart is used in the details page as well as in the job overview. Currently, type and configuration
 of the chart is fixed. This will be enhanced in future versions of the plugin.
 
-image::/post-images/2018-09-11/history.png[Trend Chart]
+image::/images/images/post-images/2018-09-11/history.png[Trend Chart]
 
 == Issues Overview
 
@@ -205,7 +205,7 @@ Depending on the number or type of issues you will see the distribution of issue
 
 Each of these detail views are interactive, i.e. you can navigate into a subset of the categorized issues.
 
-image::/post-images/2018-09-11/packages.png[Packages Overview]
+image::/images/images/post-images/2018-09-11/packages.png[Packages Overview]
 
 == Issues Details
 
@@ -223,7 +223,7 @@ issues category, then the category will be automatically hidden.
 - **Details**: the details message for an issue (if provided by the corresponding static analysis tool) is shown as
 child row within the table.
 
-image::/post-images/2018-09-11/details.png[Details]
+image::/images/images/post-images/2018-09-11/details.png[Details]
 
 == Remote API
 

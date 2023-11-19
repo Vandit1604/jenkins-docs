@@ -18,7 +18,7 @@ I am Long Nguyen from link:https://international.fpt.edu.vn/[FPT University], Vi
 
 Use of the plugin requires that users have a configured Apache Zookeeper and Apache Kafka server, which could be intimidating for people who just want to try out the plugin. Now, users can start a simple, single-node Apache Kafka server in Kubernetes environment with just one button click.
 
-image:/post-images/remoting-kafka/kafka-provisioning-kubernetes-ui.png[Apache Kafka provisioning in Kubernetes UI]
+image:/images/images/post-images/remoting-kafka/kafka-provisioning-kubernetes-ui.png[Apache Kafka provisioning in Kubernetes UI]
 
 On the Global Configuration page, users can input Kubernetes server information and credentials. When users click `Start Kafka on Kubernetes` button, Jenkins will create a Kubernetes client from the information and then apply Apache Zookeeper and Apache Kafka YAML specification files from `resources`. After downloading images and creating containers, it will automatically update Apache Zookeeper and Apache Kafka URLs into respective fields.
 
@@ -26,11 +26,11 @@ On the Global Configuration page, users can input Kubernetes server information 
 
 With previous version, users have to manually add/remove nodes so it is hard to scale builds quickly. plugin:kubernetes[Kubernetes plugin] allows us to dynamically provision agents in Kubernetes but it is designed for JNLP agent. With this new version, Remoting Kafka agent can also be provisioned automatically in Kubernetes environment.
 
-image:/post-images/remoting-kafka/cloud-ui.png[Remoting Kafka Cloud UI]
+image:/images/images/post-images/remoting-kafka/cloud-ui.png[Remoting Kafka Cloud UI]
 
 Users can find the new feature in Cloud section in `/configure`. Here users could input Kubernetes connection parameters and desired Remoting Kafka agent properties including labels. When new build with matching labels gets started and there are no free nodes, Cloud will automatically provision Remoting Kafka agent pod in Kubernetes to run the build.
 
-image:/post-images/remoting-kafka/cloud-nodes.png[Remoting Kafka Agent get provisioned]
+image:/images/images/post-images/remoting-kafka/cloud-nodes.png[Remoting Kafka Agent get provisioned]
 
 == Helm Chart
 

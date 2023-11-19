@@ -32,7 +32,7 @@ Jenkins X aims to simplify how to work with continuous delivery and Kubernetes.
 
 First and most importantly, let's see the logo:
 
-image::/images/logos/jenkins-x/jenkins-x.svg[Jenkins X Logo,width=200]
+image::/images/images/logos/jenkins-x/jenkins-x.svg[Jenkins X Logo,width=200]
 
 You can see the nautical theme leaking through (and Kubernetes).
 Whilst it is called Jenkins X, it is about quite a lot more than Jenkins.
@@ -100,7 +100,7 @@ That means each proposed change, before it goes to the default branch (master),
 has an environment made (temporary) that it can be tried out in.
 In GitHub, this shows up as a comment in the pull request:
 
-image::/images/jenkins-x/comment-in-github-pull-request_0.png[Comment in a GitHub Pull Request, width=550]
+image::/images/images/jenkins-x/comment-in-github-pull-request_0.png[Comment in a GitHub Pull Request, width=550]
 
 == Project type detection
 
@@ -114,7 +114,7 @@ link:https://github.com/jenkins-x/draft-repo/tree/master/packs[Draft “packs”
  Jenkins is famous for being un-opinionated in what you do,
  but Jenkins X has strong opinions (but you can extend and customise).
 
- image::/images/jenkins-x/draft-logo.png[Draft Logo, width=300]
+ image::/images/images/jenkins-x/draft-logo.png[Draft Logo, width=300]
 
 == Deploying or promoting to environments
 
@@ -124,7 +124,7 @@ You don’t need to directly interact with Kubernetes if you don’t need to.
 A tool called Helm does the heavy lifting:
 Helm is used to package and perform installations and upgrade for your apps.
 
-image::/images/jenkins-x/helm-logo.png[Helm Logo, width=156]
+image::/images/images/jenkins-x/helm-logo.png[Helm Logo, width=156]
 
 There is a little more magic going on here with environments, which you don’t see at first.
 Each environment, for a team, is represented by a Git repository behind the scenes.
@@ -145,7 +145,7 @@ link:https://www.weave.works/blog/gitops-operations-by-pull-request[WeaveWorks b
 
 I’ll try and explain this one with a diagram:
 
-image::/images/jenkins-x/gitops-flow.png[GitOps Workflow, width=600]
+image::/images/images/jenkins-x/gitops-flow.png[GitOps Workflow, width=600]
 
 The pipeline is actually split in the middle.
 On the left is the more familiar continuous integration pipeline.

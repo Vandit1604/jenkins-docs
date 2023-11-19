@@ -9,37 +9,81 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 // create pages.
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  // The “graphql” function allows us to run arbitrary
-  // queries against the local Drupal graphql schema. Think of
-  // it like the site has a built-in database constructed
-  // from the fetched data that you can run queries against.
   return graphql(
     `
       {
-        allAsciidoc(limit: 1000) {
-          edges {
-            node {
-              id
-              html
-              document {
-                title
-              }
-              fields {
-                slug
-              }
-              pageAttributes{
-                author
-                tags
-              }
-            }
-          }
+  allAsciidoc {
+    edges {
+      node {
+        id
+        html
+        document {
+          title
+        }
+        fields {
+          slug
+        }
+        pageAttributes {
+          author
+          tags
+          author_name
+          blog
+          description
+          github
+          irc
+          linkedin
+          medium
+          opengraph
+          twitter
+          authoravatar
         }
       }
+    }
+  }
+}
     `
   ).then(result => {
     if (result.errors) {
       throw result.errors
     }
+
+
+    // authors page | passing the authors info the pages via pageContext
+    const authorPostTemplate = path.resolve(`src/templates/author-pages.js`)
+    const authors = result.data.allAsciidoc.edges
+    const filteredAuthors = authors.filter(author => author.node.document.title == 'About the Author');
+    filteredAuthors.forEach(({ node }) => {
+      createPage({
+        path: `author/${node.pageAttributes.github}`,
+        component: authorPostTemplate,
+        context: {
+          // asterisk's as we're using inbuilt glob in gatsby
+          authorName: `*${node.pageAttributes.github}*`,
+          filteredAuthors,
+        },
+      })
+    })
+
+
+    // Create blog-list pages
+    const posts = result.data.allAsciidoc.edges
+    const filteredPosts = posts.filter(post => post.node.document.title !== 'Author');
+    const postsPerPage = 9
+    const numPages = Math.ceil(filteredPosts.length / postsPerPage);
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+        component: path.resolve("./src/templates/blog-list-template.js"),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
+          filteredAuthors,
+        },
+      })
+    })
+
 
     // Create Asciidoc pages.
     const articleTemplate = path.resolve(`./src/templates/article.js`)
@@ -56,13 +100,16 @@ exports.createPages = ({ graphql, actions }) => {
         component: slash(articleTemplate),
         context: {
           id: edge.node.id,
+          authorname: edge.node.pageAttributes.author_name,
+          author: edge.node.pageAttributes.author,
+          filteredAuthors,
         },
       })
     })
   })
 }
 
-exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
+exports.onCreateNode = async ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `Asciidoc`) {
@@ -71,109 +118,6 @@ exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
       name: `slug`,
       node,
       value,
-    })
-  }
-}
-
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === "build-html" || stage === "develop-html") {
-    actions.setWebpackConfig({
-      module: {
-        rules: [
-          {
-            test: require.resolve("@jenkinsci/jenkins-io-components"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@jenkinsci/jenkins-io-components/build/jio-navbar.cjs.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@jenkinsci/jenkins-io-components/build/jio-footer.cjs.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/palette.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/propsToClassKey.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/sizing.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/spacing.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/createTheme/createSpacing.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/createTheme/createTheme.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/useTheme.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/material/styles/createTheme.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/material/styles/defaultTheme.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/createStyled.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/getThemeValue.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/styled.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/Container/createContainer.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/Container/Container.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/Unstable_Grid/createGrid.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/Unstable_Grid/Grid.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/Stack/createStack.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/system/esm/Stack/Stack.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/material/styles/styled.js"),
-            use: loaders.null(),
-          },
-          {
-            test: require.resolve("@mui/material/SvgIcon/SvgIcon.js"),
-            use: loaders.null(),
-          },
-        ],
-      },
     })
   }
 }

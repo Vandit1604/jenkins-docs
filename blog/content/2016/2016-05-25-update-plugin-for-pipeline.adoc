@@ -81,7 +81,7 @@ also to look at examples of existing steps.
 Looking through the list of existing steps, I figured that the `archive` step
 was pretty likely to be similar to what I needed for the gatling plugin:
 
-image:/post-images/update-plugin-for-pipeline-tutorial/05_snippet_generator_archive.png[archive
+image:/images/images/post-images/update-plugin-for-pipeline-tutorial/05_snippet_generator_archive.png[archive
 snippet, role=center]
 
 So, I started poking around to see what magic it was that made that `archive`
@@ -148,7 +148,7 @@ need to go into the "Manage Plugins" screen on your development server and
 install the Pipeline plugin once before any of this will work) and visit the
 Snippet Generator to see if my step showed up in the dropdown:
 
-image:/post-images/update-plugin-for-pipeline-tutorial/10_snippet_generator.png[gatlingArchive
+image:/images/images/post-images/update-plugin-for-pipeline-tutorial/10_snippet_generator.png[gatlingArchive
 snippet, role=center]
 
 GREAT SUCCESS!
@@ -173,7 +173,7 @@ dropdown, and then have a look at the options that appear in the 'Build Step'
 dropdown.  To compare with our previous work, let's see what "Archive the
 artifacts" looks like:
 
-image:/post-images/update-plugin-for-pipeline-tutorial/15_archive_metastep_snippet.png[archive
+image:/images/images/post-images/update-plugin-for-pipeline-tutorial/15_archive_metastep_snippet.png[archive
 metastep plugin, role=center]
 
 From the snippet generator we can see that it's possible to trigger an Archive
@@ -220,7 +220,7 @@ required the `AbstractBuild` -> `Run` refactor.
 
 After making these changes, I fired up the development Jenkins server, and, voila!
 
-image:/post-images/update-plugin-for-pipeline-tutorial/20_gatling_metastep_snippet.png[gatling
+image:/images/images/post-images/update-plugin-for-pipeline-tutorial/20_gatling_metastep_snippet.png[gatling
 metastep snippet, role=center]
 
 So, now, we can add a line like this to a Pipeline build script:
@@ -301,7 +301,7 @@ that after the first successful run of the Pipeline job that calls the
 `GatlingPublisher` metastep, the Gatling icon indeed shows up in the sidebar on
 the main project page, and the floating box with the graph shows up as well:
 
-image:/post-images/update-plugin-for-pipeline-tutorial/25_gatling_project_page.png[gatling
+image:/images/images/post-images/update-plugin-for-pipeline-tutorial/25_gatling_project_page.png[gatling
 project page, role=center]
 
 == Making our DSL step do something

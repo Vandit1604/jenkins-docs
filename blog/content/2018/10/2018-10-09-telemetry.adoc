@@ -30,7 +30,7 @@ Uplink telemetry is designed to collect data in _trials_, which are defined as:
 
 Detailed information explaining the scope and purpose of currently active trials is available in the inline help for the usage statistics control in the global configuration.
 
-image::/post-images/2018-10-09/telemetry.png[Screenshot of detailed Uplink telemetry trial description in the Jenkins inline help, role=center]
+image::/images/images/post-images/2018-10-09/telemetry.png[Screenshot of detailed Uplink telemetry trial description in the Jenkins inline help, role=center]
 
 Of course, opting out of anonymous usage statistics there also disables the submission of Uplink telemetry.
 And while Uplink trials report a per-instance UUID to help with collation (e.g. removal of duplicate submissions), that UUID is exclusively used for this purpose, and independent of all other properties of an instance.

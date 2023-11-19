@@ -82,7 +82,7 @@ On my quad-core machine, executing this pipeline takes about 13 minutes and 30
 seconds.  Of that time, it takes 13 minutes to run about 2.7 thousand tests in
 serial.
 
-image::/post-images/2016-06-16/serial.png[Serial Test Pipeline, role=center]
+image::/images/images/post-images/2016-06-16/serial.png[Serial Test Pipeline, role=center]
 
 
 == Parallel Test Execution
@@ -171,7 +171,7 @@ method in the `Jenkinsfile`.
 
 Here's the results for the new pipeline with parallel test execution:
 
-image::/post-images/2016-06-16/serial-vs-parallel.png[Pipeline Duration Comparison, role=center]
+image::/images/images/post-images/2016-06-16/serial-vs-parallel.png[Pipeline Duration Comparison, role=center]
 
 The tests ran almost twice as fast, without changes outside pipeline.  Great!
 

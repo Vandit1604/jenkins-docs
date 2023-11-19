@@ -1,7 +1,7 @@
 = Introducing the Azure Key Vault Credentials Provider for Jenkins
 :page-tags: jenkins, pipeline, security, azure, credentials, credential-provider, configuration-as-code
 :page-author: timja
-:page-opengraph: ../../images/post-images/azure-key-vault/jenkins-on-azure.png
+:page-opengraph: ../../images/images/post-images/azure-key-vault/jenkins-on-azure.png
 description: "Tightly integrate Jenkins and Azure Key Vault"
 ---
 
@@ -87,10 +87,10 @@ The next step is to configure the credential in Jenkins:
 4. click 'Add Credentials'
 
 5. select 'Microsoft Azure Service Principal'
-image:/post-images/azure-key-vault/azure-service-principal-drop-down.png[Microsoft Azure Service Principal dropdown]
+image:/images/images/post-images/azure-key-vault/azure-service-principal-drop-down.png[Microsoft Azure Service Principal dropdown]
 
 6. fill out the form from the credential created above, appId is 'Client ID', password is 'Client Secret'
-image:/post-images/azure-key-vault/azure-service-principal-configuration.png[Microsoft Azure Service Principal credential configuration]
+image:/images/images/post-images/azure-key-vault/azure-service-principal-configuration.png[Microsoft Azure Service Principal credential configuration]
 
 7. click 'Verify Service Principal', you should see 'Successfully verified the Microsoft Azure Service Principal'.
 
@@ -109,7 +109,7 @@ You now have a credential you can use to interact with Azure resources from Jenk
 4. search for 'Azure Key Vault Plugin'
 
 5. enter your vault url and select your credential
-image:/post-images/azure-key-vault/azure-key-vault-global-config.png[Azure Key Vault plugin configuration]
+image:/images/images/post-images/azure-key-vault/azure-key-vault-global-config.png[Azure Key Vault plugin configuration]
 
 6. click 'Save'
 
