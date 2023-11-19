@@ -172,4 +172,3 @@ const DownloadPage = () => (
 export const Head = () => <Seo title="Jenkins Download Page" />
 
 export default DownloadPage
-

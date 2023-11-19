@@ -121,4 +121,3 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
     })
   }
 }
-

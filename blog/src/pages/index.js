@@ -11,17 +11,12 @@ import WhatIsJenkins from "../components/WhatIsJenkins"
 const IndexPage = () => (
   <>
     <WhatIsJenkins />
-
     <Carousel />
-
     <FeatureListSegement />
-
     <div style={{ paddingLeft: "32px", paddingRight: "32px" }}>
       <Video />
     </div>
-
     <RecentBlogPosts />
-
     <div style={{ marginBottom: "3rem" }}>
       <center>
         <strong>
@@ -30,11 +25,8 @@ const IndexPage = () => (
         </strong>
       </center>
     </div>
-
     <Jumbotron />
-
     <Supporters />
-
   </>
 )
 
