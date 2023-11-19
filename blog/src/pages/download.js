@@ -33,7 +33,6 @@ const DownloadPage = () => (
     </h3>
     <p>The Jenkins project produces two release lines: Stable (LTS) and regular (Weekly). Depending on your organization's needs, one may be preferred over the other. See the links below for more information and recommendations about the release lines.</p>
     <section>
-
       <h2>Stable (LTS) and Regular Releases</h2>
       <p>The Jenkins project produces two release lines: Stable (LTS) and regular (Weekly). Depending on your organization's needs, one may be preferred over the other. See the links below for more information and recommendations about the release lines.</p>
       <div>
@@ -58,7 +57,6 @@ const DownloadPage = () => (
         </div>
       </div>
     </section>
-
     <section>
       <h2>Downloading Jenkins</h2>
       <p>Jenkins is distributed as WAR files, native packages, installers, and Docker images. Follow these installation steps:</p>
