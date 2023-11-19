@@ -776,21 +776,17 @@
   width: fit-content;
 }
 
-.doc .flex-participate {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
 .doc .participate-connect {
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
   border-right: 25px solid #889b73;
   padding: 2rem;
+  width: 20rem;
 }
 
 .doc .participate-meet {
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
@@ -799,6 +795,7 @@
 }
 
 .doc .participate-code {
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
@@ -807,6 +804,7 @@
 }
 
 .doc .participate-help {
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
@@ -815,6 +813,7 @@
 }
 
 .doc .participate-translate {
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
@@ -823,6 +822,7 @@
 }
 
 .doc .participate-test {
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
@@ -831,6 +831,7 @@
 }
 
 .doc .participate-document {
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
@@ -839,6 +840,7 @@
 }
 
 .doc .participate-design {
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
@@ -847,6 +849,7 @@
 }
 
 .doc .participate-review {
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
@@ -855,6 +858,7 @@
 }
 
 .doc .participate-donate {
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;

@@ -2,6 +2,7 @@ site:
   title: Jenkins
   url: https://docs.jenkins.com
   start_page: user-docs::index.adoc
+
 content:
   sources:
     - url: https://github.com/Vandit1604/jenkins-docs.git
@@ -11,8 +12,10 @@ content:
     - url: https://github.com/Vandit1604/jenkins-docs.git
       branches: [main]
       start_paths: [docs/dev-docs, docs/events, docs/security, docs/sigs, docs/projects, docs/images, docs/books, docs/community, docs/project, docs/about, docs/download]
+
 runtime:
   fetch: true
+
 asciidoc:
   attributes:
     page-pagination: ''
@@ -26,4 +29,3 @@ ui:
     url: https://github.com/Vandit1604/jenkins-docs/raw/main/ui/build/ui-bundle.zip
     snapshot: true
 
-# --ui-bundle-url=/home/vandit/gsoc-project-demo/jenkins-ui-project/build/ui-bundle.zip
