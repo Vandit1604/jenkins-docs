@@ -96,10 +96,12 @@ const RecentBlogPosts = () => {
                         imageSrc ? <img
                           src={imageSrc}
                           className={blogauthorimage}
+                          loading="lazy"
                           alt={""}
                         /> : <img
                           src="../../images/images/avatars/no_image.svg"
                           className={blogauthorimage}
+                          loading="lazy"
                           alt={""}
                         />
                       )
