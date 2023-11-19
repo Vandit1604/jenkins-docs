@@ -11,6 +11,7 @@ import { authoravataricons, authorpageavatar, blog, github, linkedin, twitter } 
 import { blogAuthorImage } from "../utils/index.js";
 
 const Article = ({ data, pageContext }) => {
+  console.log(pageContext)
   const { filteredAuthors } = pageContext
   const authorList = blogAuthorImage(data.asciidoc.pageAttributes.author)
   return (
@@ -30,14 +31,13 @@ const Article = ({ data, pageContext }) => {
         dangerouslySetInnerHTML={{ __html: data.asciidoc.html }}
       />
       <div>
-        <h2>About the Author</h2>
         {
           filteredAuthors.map((node) => {
             return (
               <section style={{ marginBottom: "1rem" }}>
                 {authorList.map((auth) => (
                   <article>
-                    {(node.node.pageAttributes.github === auth) ? <> <div className={authorpageavatar}>
+                    {(node.node.pageAttributes.github === auth) ? <><h2>About the Author</h2> <div className={authorpageavatar}>
                       {node.node.pageAttributes.authoravatar ? <img src={node.node.pageAttributes.authoravatar.slice(5)} alt={node.node.pageAttributes.author} />
                         : <img src="/images/images/avatars/no_image.svg" alt={node.node.pageAttributes.author} />}
                     </div>

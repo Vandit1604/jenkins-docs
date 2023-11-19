@@ -51,7 +51,7 @@ exports.createPages = ({ graphql, actions }) => {
     // authors page | passing the authors info the pages via pageContext
     const authorPostTemplate = path.resolve(`src/templates/author-pages.js`)
     const authors = result.data.allAsciidoc.edges
-    const filteredAuthors = authors.filter(author => author.node.document.title == 'Author');
+    const filteredAuthors = authors.filter(author => author.node.document.title == 'About the Author');
     filteredAuthors.forEach(({ node }) => {
       createPage({
         path: `author/${node.pageAttributes.github}`,

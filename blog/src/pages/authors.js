@@ -55,7 +55,7 @@ export default AuthorPage
 export const pageQuery = graphql`
 query AuthorPage {
   allFile(
-    filter: {sourceInstanceName: {eq: "authors"}, childrenAsciidoc: {elemMatch: {document: {title: {eq: "Author"}}}}}
+    filter: {sourceInstanceName: {eq: "authors"}, childrenAsciidoc: {elemMatch: {document: {title: {eq: "About the Author"}}}}}
     sort: {modifiedTime: DESC}
   ) {
     nodes {

@@ -122,7 +122,7 @@ export default BlogIndex
 export const pageQuery = graphql`
   query BlogIndex($skip: Int!, $limit: Int!) {
   allFile(
-    filter: {sourceInstanceName: {eq: "pages"}, childrenAsciidoc: {elemMatch: {document: {title: {ne: "Author"}}}}}
+    filter: {sourceInstanceName: {eq: "pages"}, childrenAsciidoc: {elemMatch: {document: {title: {ne: "About the Author"}}}}}
     sort: {childrenAsciidoc: {fields: {slug: DESC}}}
     limit: $limit
     skip: $skip

@@ -4,17 +4,15 @@ import IndexPageLayout from "../layouts"
 import Seo from "../components/Seo"
 import PageName from "../components/PageName"
 
-const UpgradeGuide = () => {
-  return (
-    < IndexPageLayout >
-      <PageName title={'Jenkins Upgrade Guide'}/>
-      <p>This section highlights important changes for administrators upgrading Jenkins LTS. Each section covers the upgrade from the previous LTS release, sections on versions x.y.1 cover the upgrade from the last release of the previous LTS line. if you are skipping LTS releases when upgrading, it is recommended to read the sections for all releases in between.
-      </p>
-      <>
-      </>
-    </IndexPageLayout >
-  );
-}
+const UpgradeGuide = () => (
+  <IndexPageLayout>
+    <PageName title={'Jenkins Upgrade Guide'} />
+    <p>This section highlights important changes for administrators upgrading Jenkins LTS. Each section covers the upgrade from the previous LTS release, sections on versions x.y.1 cover the upgrade from the last release of the previous LTS line. if you are skipping LTS releases when upgrading, it is recommended to read the sections for all releases in between.
+    </p>
+    <>
+    </>
+  </IndexPageLayout>
+)
 
 export const Head = () => <Seo title="Jenkins Upgrade Guide" />
 

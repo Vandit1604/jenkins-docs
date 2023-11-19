@@ -7,5 +7,4 @@ export function getImageSrc(author, formats) {
             return imgPath
         }
     }
-    return ''
 }
