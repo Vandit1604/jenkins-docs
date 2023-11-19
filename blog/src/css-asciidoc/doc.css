@@ -539,3 +539,21 @@ summary {
 [hidden] {
   display: none;
 }
+
+.right {
+  float: right;
+  padding: 15px;
+  
+}
+.right p {
+  text-align: justify;
+}
+
+.left {
+  float: left;
+  padding: 15px;
+}
+
+.left p {
+  text-align: justify;
+}

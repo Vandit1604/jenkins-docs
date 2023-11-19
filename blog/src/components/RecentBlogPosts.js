@@ -57,6 +57,7 @@ const RecentBlogPosts = () => {
         // formats
         const formats = ['jpg', 'png', 'jpeg']
         const authorList = blogAuthorImage(childrenAsciidoc[0].pageAttributes.author)
+        console.log(authorList)
         // date
         const formattedDate = formatDate(childrenAsciidoc[0].fields.slug);
         const opengraphImageSource =
