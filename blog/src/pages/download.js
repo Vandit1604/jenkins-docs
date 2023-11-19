@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import IndexPageLayout from "../layouts"
 import Seo from "../components/Seo"
-import { vendors, vendorsList, listGroup, downloadTable, thirdPartyIcon} from "../css/download.module.css"
+import { vendors, vendorsList, listGroup, downloadTable, thirdPartyIcon } from "../css/download.module.css"
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png"
 import typography from "../utils/typography"
 import CollectionsBookmarkOutlinedIcon from '@mui/icons-material/CollectionsBookmarkOutlined';
@@ -51,7 +51,7 @@ const DownloadPage = () => (
             <h3>Regular releases (Weekly)</h3>
             <p>This release line delivers bug fixes and new features rapidly to users and plugin developers who need them. It is generally delivered on a weekly cadence. <a href="/changelog-weekly"> Learn more…</a></p>
             <p>
-              <a href="#">Changelog</a> |
+              <Link href="/changelog-weekly">Changelog</Link> |
               <a href="https://get.jenkins.io/war/">Past Releases</a>
             </p>
           </div>

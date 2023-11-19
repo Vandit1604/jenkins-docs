@@ -94,12 +94,10 @@ const RecentBlogPosts = () => {
                       const imageSrc = getImageSrc(auth, formats)
                       return (
                         imageSrc ? <img
-                          loading="lazy"
                           src={imageSrc}
                           className={blogauthorimage}
                           alt={""}
                         /> : <img
-                          loading="lazy"
                           src="../../images/images/avatars/no_image.svg"
                           className={blogauthorimage}
                           alt={""}

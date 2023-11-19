@@ -10,7 +10,6 @@ import PageName from "../components/PageName";
 import Seo from "../components/Seo";
 import { authoravataricons, authorpageavatar, authorimagecontainer, blog, github, linkedin, twitter } from "../css/authorpost.module.css";
 import {
-  blogauthor,
   blogauthorinfo,
   bloglisting,
   blogpost,
@@ -19,7 +18,7 @@ import {
   blogauthorimage,
 } from "../css/blogpost.module.css";
 import IndexPageLayout from "../layouts";
-import { formatDate, blogAuthorImage, getImageSrc } from "../utils/index.js";
+import { formatDate, blogAuthorImage } from "../utils/index.js";
 
 const AuthorPage = ({ data, pageContext, path }) => {
   const { filteredAuthors } = pageContext
@@ -50,8 +49,6 @@ const AuthorPage = ({ data, pageContext, path }) => {
       {/* blog posts by an author */}
       <ul className={bloglisting}>
         {data.allFile.nodes.map(({ childrenAsciidoc }) => {
-          // formats
-          const formats = ['jpg', 'png', 'jpeg']
           const authorList = blogAuthorImage(childrenAsciidoc[0].pageAttributes.author)
           const formattedDate = formatDate(childrenAsciidoc[0].fields.slug);
           const opengraphImageSource =
