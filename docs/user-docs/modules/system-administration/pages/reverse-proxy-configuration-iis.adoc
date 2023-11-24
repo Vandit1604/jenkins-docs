@@ -1,3 +1,17 @@
+---
+layout: subsection
+---
+
+ifdef::backend-html5[]
+ifndef::env-github[:imagesdir: ../../../resources/managing]
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+endif::[]
+
 = Reverse proxy - IIS
 
 In situations where you have existing web sites on your server, you may
@@ -77,7 +91,7 @@ VRTJENKINS01 server.
 . Disable the _Reverse rewrite host in response header_
 .. Don't worry, it will work, just follow the rest of the instructions
 . Set the _Response buffer threshold (KB)_ to 0.
-.. This helps to prevent HTTP 502 errors on Jenkin's Replay pages.
+.. This helps to prevent HTTP 502 errors on Jenkins' Replay pages.
 . Apply (the _Actions_ panel again)
 
 === Configuring TLS/SSL

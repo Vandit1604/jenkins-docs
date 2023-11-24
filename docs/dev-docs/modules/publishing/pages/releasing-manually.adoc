@@ -3,16 +3,16 @@
 [IMPORTANT]
 .Prefer automated releases instead of releasing manually
 ====
-See xref:publishing:releasing-cd.adoc[setting up automated plugin release] instead of this guide.
+See link:../releasing-cd[setting up automated plugin release] instead of this guide.
 ====
 
 == Prerequisites
 
-. Make sure you have permissions to release the plugin. xref:publishing:requesting-hosting.adoc[See this guide to learn more details]
+. Make sure you have permissions to release the plugin. link:../requesting-hosting/[See this guide to learn more details]
 
 == Artifactory Credentials for Maven
 
-You will need to tell Maven your credentials to access xref:publishing:artifact-repository.adoc[Artifactory].
+You will need to tell Maven your credentials to access link:../artifact-repository[Artifactory].
 You can obtain your encrypted password from Artifactory using `curl`.
 
 Use this command:
@@ -23,19 +23,20 @@ curl -u your_user_name:your_password https://repo.jenkins-ci.org/setup/settings.
 
 This will print the configuration you need to your terminal. You should see something similar to this:
 
-[source,bash]
+[source,xml]
 ----
-curl -u mr_jenkins:j3nkinsr0ck5 https://repo.jenkins-ci.org/setup/settings.xml
+$ curl -u mr_jenkins:j3nkinsr0ck5 https://repo.jenkins-ci.org/setup/settings.xml
 <settings xmlns="https://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
   <servers>
     <server>
-      <id>maven.jenkins-ci.org</id>
+      <id>maven.jenkins-ci.org</id> // <1>
       <username>mr_jenkins</username>
       <password>APrj80t4398w8fnytd498nft4dt8so</password>
     </server>
   </servers>
 </settings>
 ----
+<1> This is not a valid host name anymore, but still the ID used by default in the Jenkins plugin parent POM.
 
 Store the output as `~/.m2/settings.xml` (`~` representing your user home directory, e.g. `/home/yourname` or `C:\Users\yourname`), creating the file if it doesn't exist yet.
 If you already have this file, merge the `server` block provided in the output with your existing `servers` section, if any, and otherwise add the provided `servers` section to your file.
@@ -70,7 +71,7 @@ mvn release:prepare release:perform
 
 == Troubleshooting
 
-First, make sure your plugin uses a reasonably up to date xref:plugin-development:updating-parent.adoc[parent POM].
+First, make sure your plugin uses a reasonably up to date link:../../plugin-development/updating-parent[parent POM].
 This will prevent the vast majority of problems in releasing the plugin, such as outdated Maven plugins, or obsolete host names.
 
 === The upload to the Maven repository fails with "401 Unauthorized"
@@ -84,7 +85,7 @@ Make sure you've updated your encrypted password since the last time you changed
 The two most common explanations for this error:
 
 * You don't have permission to upload to the specified path.
-  xref:publishing:requesting-hosting.adoc#request-upload-permissions[Learn more about how to request upload permissions].
+  link:../requesting-hosting/#request-upload-permissions[Learn more about how to request upload permissions].
   Check that the path you're allowed to upload to matches the actual upload attempt (i.e. no typos).
 * The specified release already exists and you try to overwrite it.
   We do not allow replacing existing releases.

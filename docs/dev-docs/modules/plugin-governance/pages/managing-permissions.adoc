@@ -6,10 +6,10 @@ There are 2 main permissions available to plugin contributors:
 * **GitHub permissions**. 
   It includes merging pull requests, push to the repositories, managing GitHub applications, etc.
   The effective list of permissions depends on the link:https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization[permission levels], see below.
-* **Release Permissions** which are needed to deploy releases to the xref:publishing:artifact-repository.adoc[Jenkins artifact repository].
+* **Release Permissions** which are needed to deploy releases to the link:/doc/developer/publishing/artifact-repository/[Jenkins artifact repository].
   Snapshots can be deployed by contributors without this permission.
 
-NOTE: If you want to adopt a plugin, please see xref:plugin-governance:adopt-a-plugin.adoc[Adopt a Plugin] instead.
+NOTE: If you want to adopt a plugin, please see link:../adopt-a-plugin[Adopt a Plugin] instead.
 
 == GitHub Permissions
 
@@ -26,19 +26,19 @@ There are multiple ways to do that:
 . Via GitHub Web Interface, if you have admin permissions in the `<pluginId> Developers` team
 ** It is possible to also add collaborators to repositories
 . Via a request in the link:https://github.com/jenkins-infra/helpdesk/issues/new?labels=triage,github-permissions&template=3-github-permissions.yml[Infrastructure help desk]
-. Via a request in the xref:community:mailing-lists:index.adoc[developer mailing list]
-. Via the ChatOps command in the `#jenkins` IRC channel, if you have voice permissions there (see the xref:projects:ROOT:index.adoc/infrastructure/ircbot/[IRCBot])
+. Via a request in the link:/mailing-lists[developer mailing list]
+. Via the ChatOps command in the `#jenkins` IRC channel, if you have voice permissions there (see the link:/projects/infrastructure/ircbot/[IRCBot])
 
 === Getting GitHub permissions as a non-maintainer
 
 You will need to send a permission transfer request and to specify the permission recipient's GitHub account and Jenkins LDAP (aka Jenkins Jira) account there.
 An explicit approval by an active maintainer will be required before the permission transfer happens.
-If there no response from a maintainer, a xref:plugin-governance:adopt-a-plugin.adoc[Plugin Adoption Process] might be used to request ownership of the plugin.
+If there no response from a maintainer, a link:../adopt-a-plugin[Plugin Adoption Process] might be used to request ownership of the plugin.
 
 There are two following ways to do that:
 
-. Via ChatOps command in the `#jenkins` IRC channel, if you have voice permissions there (see the xref:projects:ROOT:index.adoc/infrastructure/ircbot/[IRCBot])
-. Via a request in the xref:community:mailing-lists:index.adoc[developer mailing list].
+. Via ChatOps command in the `#jenkins` IRC channel, if you have voice permissions there (see the link:/projects/infrastructure/ircbot/[IRCBot])
+. Via a request in the link:/mailing-lists[developer mailing list].
 
 The following approvals are generally recognized as valid:
 
@@ -52,7 +52,7 @@ Other types of approval (emails from different addresses, email forwards by requ
 
 == Release Permissions
 
-Release Permissions are needed to deploy releases to the xref:publishing:artifact-repository.adoc[Jenkins artifact repository].
+Release Permissions are needed to deploy releases to the link:/doc/developer/publishing/artifact-repository/[Jenkins artifact repository].
 Permissions to upload plugin releases are independent of GitHub push access and maintained in the link:https://github.com/jenkins-infra/repository-permissions-updater[Repository Permissions Updater] repository.
 
 To request upload permissions for a new maintainer:
@@ -66,7 +66,7 @@ To request upload permissions for a new maintainer:
 
 //TODO(oleg-nenashev): Add CoC violations and so on?
 
-Permission removal can be requested in the same way, e.g. during xref:plugin-governance:adopt-a-plugin.adoc[plugin adoption].
+Permission removal can be requested in the same way, e.g. during link:../adopt-a-plugin[plugin adoption].
 Such requests are subject for explicit approval by contributors being removed or by `jenkinsci` GitHub administrators.
 
 == References

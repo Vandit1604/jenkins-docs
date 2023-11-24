@@ -1,6 +1,13 @@
-= Move description
+---
+layout: developersection
+title: Move description
+---
 
-== Move plugin description to index.jelly
+:modified-files: src/main/resources/index.jelly pom.xml
+:task-identifier: move-description
+:task-description: Move plugin description
+
+= Move plugin description to index.jelly
 
 To help administrators decide if a plugin is relevant for them, each plugin should provide a short description which is then shown in plugin manager and on the plugin site. 
 The preferred location for the plugin description is in the file `src/main/resources/index.jelly`. 
@@ -9,19 +16,19 @@ recent versions of the parent POM require the preferred location and will fail t
 
 Copy the contents of the `description` tag from the POM file to `src/main/resources/index.jelly`.
 
-NOTE: Some plugins do not currently provide description at all or use description copied from the `hello-world` sample plugin. For such plugins you have to write the description yourself. Such plugins are listed in {jira}JENKINS-68300[].
+NOTE: Some plugins do not currently provide description at all or use description copied from the `hello-world` sample plugin. For such plugins you have to write the description yourself. Such plugins are listed in jira:JENKINS-68300[].
 
 When such a conversion is needed, the Maven build process will frequently output a message like:
 
 [source]
 ----
-[ERROR] Failed to execute goal maven-hpi-{plugin}hpi (default-hpi) on
+[ERROR] Failed to execute goal maven-hpi-plugin:hpi (default-hpi) on
 project your-plugin: Missing target/classes/index.jelly. Delete any
 <description> from pom.xml and create src/main/resources/index.jelly:
 ----
 
 // Create the branch
-include::partial$_create-a-branch.adoc[]
+include::doc/developer/tutorial-improve/_create-a-branch.adoc[]
 
 == Compile and test to check the transition is needed
 
@@ -30,7 +37,7 @@ Compile the plugin (with a recent parent pom) and confirm that the description t
 [source,bash]
 ----
 mvn -ntp clean verify
-[ERROR] Failed to execute goal maven-hpi-{plugin}hpi (default-hpi) on
+[ERROR] Failed to execute goal maven-hpi-plugin:hpi (default-hpi) on
 project your-plugin: Missing target/classes/index.jelly. Delete any
 <description> from pom.xml and create src/main/resources/index.jelly:
 ----
@@ -75,4 +82,4 @@ mvn clean verify
 ----
 
 // Create a pull request
-include::partial$_create-a-pull-request.adoc[]
+include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]

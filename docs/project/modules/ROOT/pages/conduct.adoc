@@ -1,4 +1,11 @@
-= Jenkins Code of Conduct
+---
+layout: simplepage
+title: "Jenkins Code of Conduct"
+section: conduct
+---
+
+:toc:
+
 
 As community members, contributors and maintainers of this project,
 and in the interest of fostering an open and welcoming community,
@@ -7,7 +14,7 @@ posting feature requests, updating documentation, submitting pull requests or
 patches, and other activities.
 
 This document defines the Code of Conduct along with reporting and handling guidelines for the Jenkins community. 
-For more details about our cultural values, goals, philosophies, and structure, please consult our xref:ROOT:governance.adoc[Governance Document]. 
+For more details about our cultural values, goals, philosophies, and structure, please consult our link:/project/governance[Governance Document]. 
 
 == Our Pledge
 
@@ -15,7 +22,7 @@ We as members, contributors, and leaders pledge to make participation in our
 community a harassment-free experience for everyone, regardless of age, body
 size, visible or invisible disability, ethnicity, sex characteristics, gender
 identity and expression, level of experience, education, socio-economic status,
-nationality, personal appearance, race, religion, or sexual identity
+nationality, personal appearance, race, caste, color, religion, or sexual identity
 and orientation.
 
 We pledge to act and interact in ways that contribute to an open, welcoming,
@@ -96,17 +103,17 @@ Everything hosted under link:/[jenkins.io], link:https://jenkins-ci.org/[jenkins
 
 ==== Mailing lists
 
-All xref:community:mailing-lists:index.adoc[mailing lists] hosted on Google Groups and other platforms.
+All link:/mailing-lists[mailing lists] hosted on Google Groups and other platforms.
 
 ==== Chats
 
-* All chats documented on the xref:community:chat:index.adoc[this page], e.g. IRC channels: `#jenkins`, `#jenkins-meeting`, `#jenkins-infra`, etc.
+* All chats documented on the link:/chat[this page], e.g. IRC channels: `#jenkins`, `#jenkins-meeting`, `#jenkins-infra`, etc.
 * Gitter channels within the link:https://app.gitter.im/#/room/#jenkins-ci:matrix.org[jenkinsci] space
 * Jenkins chats hosted by Linux Foundation and its subsidiaries including Continuous Delivery Foundation 
 
 ==== Events
 
-* xrefs:jam:index.adoc[Jenkins Area Meetups]
+* link:/projects/jam/[Jenkins Area Meetups]
 * link:/events/online-meetup[Jenkins Online Meetup]
 * Events where Jenkins is officially being represented (e.g.
   link:https://fosdem.org[FOSDEM], link:https://socallinuxexpo.org/[SCaLE])
@@ -119,10 +126,10 @@ Those groups must provide their own moderators and/or reporting system.
 == Reporting
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the xref:board:index.adoc[Jenkins board].
+reported by contacting the link:/project/board[Jenkins board].
 If you feel somebody has breached this code, please send an email with the
 relevant information (links, etc) to `jenkinsci-board@googlegroups.com`.
-This email list is only readable by the xref:board:index.adoc[Governance Board] members.
+This email list is only readable by the link:/project/board[Governance Board] members.
 The board may not have all of the necessary context and history,
 so it's better to describe the issue thoroughly.
 All complaints will be reviewed
@@ -132,7 +139,7 @@ appropriate to the circumstances.
 If you believe one of the board members has violated the code of conduct
 above, please email one of the other members of the Governance Board with the
 details (their emails are visible on the
-xref:board:index.adoc[Governance
+link:/project/board[Governance
 Board] page).
 
 If the desired resolution cannot be reached on the Jenkins community level,
@@ -216,7 +223,7 @@ After 12 months they may appeal to the board for the ban to be lifted.
 
 The ban will include but is not limited to:
 
-*  Bans from Jenkins community xref:community:chat:index.adoc[chats]
+*  Bans from Jenkins community link:/chat[chats]
 *  Deletion of their LDAP account
 *  Blocking their GitHub username from the Jenkins GitHub organizations
 *  Banning their email address from Jenkins mailing lists
@@ -225,15 +232,18 @@ The ban will include but is not limited to:
 
 == Attribution
 
-This Code of Conduct is adapted from the Contributor Covenant,
-version 2.0, available at
-https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
+This Code of Conduct is adapted from the link:https://www.contributor-covenant.org/[Contributor Covenant],
+version 2.1, available at
+https://www.contributor-covenant.org/version/2/1/code_of_conduct.html.
 
 Community Impact Guidelines were inspired by link:https://github.com/mozilla/diversity[Mozilla's code of conduct
 enforcement ladder].
 
+For answers to common questions about the adapted code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations.
+
 == Version history
 
+* **Aug 23, 2023** - Minor update of the Code of Conduct adding translations to the footer and incorporating the link:https://github.com/EthicalSource/contributor_covenant/releases/tag/2.1[2.1] update.
 * **Jul 02, 2020** - Major update of the Code of Conduct.
   It was approved the project governance meeting on Jul 01
   (link:https://docs.google.com/document/d/11Nr8QpqYgBiZjORplL_3Zkwys2qK1vEvK-NYyYa4rzg/edit#heading=h.6rx5y09hwmti[meeting notes],

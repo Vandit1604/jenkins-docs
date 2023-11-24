@@ -1,12 +1,19 @@
-= Report an Issue
+---
+layout: developersection
+title: Report an Issue
+---
 
-== Add a link to “Report an Issue”
+:modified-files: README.md
+:task-identifier: report-an-issue-link
+:task-description: Report an Issue
+
+= Add a link to “Report an Issue”
 
 The plugins site link:https://plugins.jenkins.io[https://plugins.jenkins.io] includes a “Report an Issue” link for each of the plugins.
 The linked page guides the user to provide a better classified issue and leads them to the correct path to privately report security issues.
 
 // Create the branch
-include::partial$_create-a-branch.adoc[]
+include::doc/developer/tutorial-improve/_create-a-branch.adoc[]
 
 == Add "Report an Issue" to README
 
@@ -33,4 +40,4 @@ index 41fad51..e4bc674 100644
 ----
 
 // Create a pull request
-include::partial$_create-a-pull-request.adoc[]
+include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]

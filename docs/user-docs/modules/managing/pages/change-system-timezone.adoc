@@ -1,3 +1,18 @@
+---
+layout: section
+title: Change System Time Zone
+---
+ifdef::backend-html5[]
+:description:
+:author:
+:sectanchors:
+:toc:
+:toclevels: 4
+:hide-uri-scheme:
+ifdef::env-github[:imagesdir: ../resources]
+ifndef::env-github[:imagesdir: ../../resources]
+endif::[]
+
 = Change System Time Zone
 
 The system time zone configuration is the default time zone displayed by Jenkins.
@@ -12,9 +27,9 @@ video::4UmY4dDAlo0[youtube,width=800,height=420]
 
 A user defined time zone for the account can be set from the configure option in the user settings.
 
-image::change-system-timezone-user-defined-timezone.png["Configure option in the dropdown",role=center,width=800]
+image::managing/change-system-timezone-user-defined-timezone.png["Configure option in the dropdown",role=center,width=800]
 
-image::change-system-timezone-user-defined-timezone-2.png["Changing user defined timezone setting",role=center,width=800]
+image::managing/change-system-timezone-user-defined-timezone-2.png["Changing user defined timezone setting",role=center,width=800]
 
 == System Time Zone properties
 
@@ -62,7 +77,7 @@ On windows, edit `%INSTALL_PATH%/jenkins/jenkins.xml`. Put `-Dargs` before `-jar
 <arguments>-Duser.timezone="Europe/Minsk" -jar "%BASE%\jenkins.war"</arguments>
 ----
 
-You can also set it from the xref:user-docs:managing:script-console.adoc[Jenkins Script Console] on a live system without the need for a restart.
+You can also set it from the link:/doc/book/managing/script-console/[Jenkins Script Console] on a live system without the need for a restart.
 This can also be included in a link:/doc/book/managing/groovy-hook-scripts/[Post-initialization script] to make it permanent.
 
 [source,groovy]

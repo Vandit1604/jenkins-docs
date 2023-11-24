@@ -1,14 +1,23 @@
+---
+layout: developersection
+title: Update parent POM
+---
+
+:modified-files: pom.xml
+:task-identifier: update-parent-pom
+:task-description: Use most recent parent pom
+
 = Update parent POM
 
 .Use latest parent POM
 video::Fev8KfFsPZE[youtube,width=800,height=420,start=807]
 
 The Maven project object model ("POM") defines a parent project object model that provides default settings.
-An update of the parent POM will allow this plugin to compile with Java 11 and with Java 17.
+An update of the parent POM will allow this plugin to compile with recent Java versions.
 The most recent parent POM files also provide additional static analysis like spotbugs.
 
 // Create the branch
-include::partial$_create-a-branch.adoc[]
+include::doc/developer/tutorial-improve/_create-a-branch.adoc[]
 
 == Compile the plugin
 
@@ -20,7 +29,7 @@ mvn -ntp clean verify
 ----
 
 When modernizing older plugins, You may need to use Java 8 to compile the plugin initially.
-Once the parent POM has been updated, you'll be able to compile and test with Java 11.
+Once the parent POM has been updated, you'll be able to compile and test with recent Java versions.
 
 == Update parent POM
 
@@ -86,9 +95,9 @@ In many cases, other changes will be needed to the pom.xml file in order to use 
 Some of the other changes may include:
 
 * Resolve spotbugs warnings
-* Resolve xref:plugin-development:updating-parent.adoc#understanding-requireupperbounddeps-failures-and-fixes[upper bounds dependency warnings]
-* Prevent cross-site scripting by xref:xss-prevention.adoc[escaping expressions in Jelly pages]
-* Resolve ambiguous property encodings by xref:tutorial-improve:convert-translations.adoc[converting translations with native2ascii]
+* Resolve link:/doc/developer/plugin-development/updating-parent/#understanding-requireupperbounddeps-failures-and-fixes[upper bounds dependency warnings]
+* Prevent cross-site scripting by link:/doc/developer/security/xss-prevention/[escaping expressions in Jelly pages]
+* Resolve ambiguous property encodings by link:../convert-translations/[converting translations with native2ascii]
 
 // Create a pull request
-include::partial$_create-a-pull-request.adoc[]
+include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]

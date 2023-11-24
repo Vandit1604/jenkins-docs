@@ -1,4 +1,17 @@
-= Other Systems
+---
+layout: section
+title: Other Systems
+---
+ifdef::backend-html5[]
+:description:
+:author:
+:sectanchors:
+:toc:
+:toclevels: 4
+:hide-uri-scheme:
+ifdef::env-github[:imagesdir: ../resources]
+ifndef::env-github[:imagesdir: ../../resources]
+endif::[]
 
 [[other-systems]]
 [[other-operating-systems]]
@@ -165,7 +178,7 @@ before updating, if needed.
 
 == Solaris, OmniOS, SmartOS, and other siblings
 
-Generally it should suffice to install a xref:user-docs:administration:requirements/java.adoc[supported Java version], link:/download[download] the
+Generally it should suffice to install a link:/doc/book/platform-information/support-policy-java/[supported Java version], link:/download[download] the
 `jenkins.war`, and run it as a standalone process.
 
 
@@ -177,4 +190,4 @@ Some caveats apply:
   running the headless JVM], because Jenkins needs some fonts to render certain
   pages.
 
-include::partial$_setup-wizard.adoc[]
+include::doc/book/installing/_setup-wizard.adoc[]

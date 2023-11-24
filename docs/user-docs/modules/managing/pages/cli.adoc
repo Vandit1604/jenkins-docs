@@ -1,3 +1,17 @@
+---
+layout: section
+---
+ifdef::backend-html5[]
+:notitle:
+:description:
+:author:
+:sectanchors:
+:toc:
+ifdef::env-github[:imagesdir: ../resources]
+ifndef::env-github[:imagesdir: ../../resources]
+:hide-uri-scheme:
+endif::[]
+
 = Jenkins CLI
 
 
@@ -30,7 +44,7 @@ WebSocket support is available when using both server and client 2.217 or newer.
 
 In a new Jenkins installation, the SSH service is disabled by default.
 Administrators may choose to set a specific port or ask Jenkins to pick a random port
-in the xref:./security.adoc#ssh-server[Security] page.
+in the <<security#ssh-server, Security>> page.
 In order to determine the randomly assigned SSH port,
 inspect the headers returned on a Jenkins URL, for example:
 
@@ -56,7 +70,7 @@ for the appropriate user, navigate to
 `https://JENKINS_URL/me/configure` and paste an SSH public key
 into the appropriate text area.
 
-image::cli-adding-ssh-public-keys.png["Adding public SSH keys for a user", role=center]
+image::managing/cli-adding-ssh-public-keys.png["Adding public SSH keys for a user", role=center]
 
 === Common Commands
 

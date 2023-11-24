@@ -1,12 +1,15 @@
-= Table to div layout migration
+---
+title: Table to div layout migration
+layout: developer
+---
 
 NOTE: This is documentation for a new feature in Jenkins core.
-See {jira}JENKINS-56109[Change Jenkins configuration UI from tables to divs] for details.
+See jira:JENKINS-56109[Change Jenkins configuration UI from tables to divs] for details.
 
 Jenkins core changed its form layout from ``<table>`` to ``<div>`` in 2.264 (weekly) and 2.277.1 (LTS).
 Jenkins 2.263.x (LTS) releases did *not* change their form layout from ``<table>`` to ``<div>``.
 
-All core ``taglib``s and views were updated in link:https://github.com/jenkinsci/jenkins/pull/3895[jenkinsci/jenkins#3895] as part of {jira}JENKINS-56109[].
+All core ``taglib``s and views were updated in link:https://github.com/jenkinsci/jenkins/pull/3895[jenkinsci/jenkins#3895] as part of jira:JENKINS-56109[].
 
 The vast majority of plugins do not require any changes at all because they use the standard Jelly tags in Jenkins for their forms, such as ``<f:entry>``, ``<f:textbox>``, and ``<f:checkbox>``.
 
@@ -131,4 +134,4 @@ def blockWrapper(Closure closure) {
 
 == I still need more help?
 
-Contact the xref:sigs:ux:index.adoc[UX sig] on link:https://app.gitter.im/#/room/#jenkinsci/ux-sig:matrix.org[Gitter].
+Contact the link:/sigs/ux[UX sig] on link:https://app.gitter.im/#/room/#jenkinsci/ux-sig:matrix.org[Gitter].

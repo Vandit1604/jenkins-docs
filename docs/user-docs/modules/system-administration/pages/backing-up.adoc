@@ -1,3 +1,15 @@
+---
+layout: section
+---
+ifdef::backend-html5[]
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+endif::[]
+
 = Backing-up/Restoring Jenkins
 
 Having good backups of your Jenkins instance is critically important.
@@ -174,7 +186,7 @@ Now execute the restored Jenkins instance:
 
 [source,bash]
 ----
-java -jar jenkins.war ---httpPort=9999
+java -jar jenkins.war --httpPort=9999
 ----
 
 == Summary

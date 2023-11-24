@@ -9,7 +9,7 @@ the sibling file _setup-wizard.adoc (used in index.adoc).
 
 
 [[setup-wizard]]
-== Setup wizard
+==== Setup wizard
 
 Before you can access Jenkins, there are a few quick "one-off" steps you'll need
 to perform.
@@ -24,7 +24,7 @@ an automatically-generated password.
   browse to `\http://localhost:8080` and wait until the *Unlock Jenkins* page
   appears.
 [.boxshadow]
-image::setup-jenkins-01-unlock-jenkins-page.jpg[alt="Unlock Jenkins
+image:tutorials/setup-jenkins-01-unlock-jenkins-page.jpg[alt="Unlock Jenkins
 page",width=100%]
 . Display the Jenkins console log with the command:
 +
@@ -36,7 +36,7 @@ docker logs jenkins-blueocean
   automatically-generated alphanumeric password (between the 2 sets of
   asterisks).
 [.boxshadow]
-image::setup-jenkins-02-copying-initial-admin-password.png[alt="Copying
+image:tutorials/setup-jenkins-02-copying-initial-admin-password.png[alt="Copying
 initial admin password",width=100%]
 . On the *Unlock Jenkins* page, paste this password into the *Administrator
   password* field and click *Continue*.
@@ -68,7 +68,7 @@ Finally, Jenkins asks you to create your first administrator user.
 . If required, log in to Jenkins with the credentials of the user you just
   created and you're ready to start using Jenkins!
 
-[[stopping-and-restarting-jenkins]]
+
 ==== Stopping and restarting Jenkins
 
 Throughout the remainder of this tutorial, you can stop your 

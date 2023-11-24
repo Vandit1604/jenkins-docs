@@ -1,3 +1,12 @@
+---
+layout: developersection
+title: Add more spotbugs checks
+---
+
+:modified-files: pom.xml src/spotbugs
+:task-identifier: add-spotbugs-checks
+:task-description: Increase spotbugs effort and threshold
+
 = Add more spotbugs checks
 
 .Add more thorough spotbugs checks
@@ -7,7 +16,7 @@ The Jenkins plugin pom enables static analysis with link:https://spotbugs.github
 Plugin maintenance can be improved in some cases by increasing the depth of spotbugs analysis.
 
 // Create the branch
-include::partial$_create-a-branch.adoc[]
+include::doc/developer/tutorial-improve/_create-a-branch.adoc[]
 
 == Increase spotbugs checks
 
@@ -92,4 +101,4 @@ An example excludes filter file is also included here:
 ----
 
 // Create a pull request
-include::partial$_create-a-pull-request.adoc[]
+include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]

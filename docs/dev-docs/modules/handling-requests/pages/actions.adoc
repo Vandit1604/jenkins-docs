@@ -1,8 +1,6 @@
 = Web Methods
 
-WARNING: This section is a work in progress. Want to help? Check out the (https://app.gitter.im/#/room/#jenkins/docs:matrix.org)[jenkinsci/docs gitter channel]. For other ways to contribute to the Jenkins project, see (https://www.jenkins.io/participate)[this page about participating and contributing].
-
-== Changes in Jenkins 2.138.4 and Jenkins 2.154
+## Changes in Jenkins 2.138.4 and Jenkins 2.154
 
 Web methods need to provide some indication that they are intended for Stapler routing:
 
@@ -33,6 +31,7 @@ Administrators can follow the instructions to make the method or field work on t
 * Annotate the web method `@StaplerDispatchable`.
   You may need to add a dependency to the `io.jenkins.stapler:io.jenkins.stapler` library to make this annotation available.
 
+
 ////
 TODO:
 AncestorInPath
@@ -41,8 +40,3 @@ QueryParameter
 StaplerRequest
 StaplerResponse
 ////
-
-== References
-
-- link:https://wiki.jenkins.io/display/JENKINS/Web+Method[Web Method]
-

@@ -3,7 +3,7 @@
 == How-To Report an Issue
 
 Jenkins JIRA is an issue tracker, not a support site.
-If you need assistance or have general questions, visit us xref:chat:index.adoc[in chat], email one of the xref:mailing-lists:index.adoc[mailing lists], or post on the https://community.jenkins.io/[community forum].
+If you need assistance or have general questions, visit us link:/chat/[in chat], email one of the link:/mailing-lists[mailing lists], or post on the https://community.jenkins.io/[community forum].
 
 [[Howtoreportanissue-Beforecreatinganissue]]
 == Before creating an issue
@@ -19,16 +19,15 @@ whose use is explained on this page:
 * *Bug*: Something does not work as intended.
 * *Improvement*: Either a current functionality should be improved or new 
 functionality should be added.
-* *Vulnerabilities*: xref:security:ROOT:reporting.adoc[Security related issues in Jenkins]
+* *Vulnerabilities*: link:/security/reporting/[Security related issues in Jenkins]
 
 Other types (_Patch_, _Task_) are not used in JIRA.
 Neither will be explained here.
-If you want to propose a patch, create an issue using one of the 3 types above, and then create a link:https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request[pull request in GitHub].
-be explained here. If you want to propose a patch, create an issue of
-one of the 3 types above and then create a link:https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request[pull request in GitHub].
+If you want to propose a patch, create an issue using one of the 3 types above, and then create a pull request on GitHub link:https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request[as explained here].
+Report issues with infrastructure services hosted by the Jenkins project (jenkins.io, accounts.jenkins.io, etc.) at link:https://github.com/jenkins-infra/helpdesk/issues/[the dedicated help desk].
 
 [[Howtoreportanissue-Beforereportingabug]]
-== Before reporting a bug
+=== Before reporting a bug
 
 * First, *search for the error message or general problem description*.
 This can help you find solutions if it's actually e.g. a configuration
@@ -62,7 +61,7 @@ issue reports or related fixes in newer versions of Jenkins or the
 If you're still unable to resolve the problem, and cannot find existing issue reports or related fixes in newer versions of Jenkins or the plugins, file a *bug*.
 
 [[Howtoreportanissue-Beforerequestinganimprovementorfeature]]
-== Before requesting an improvement or feature
+=== Before requesting an improvement or feature
 
 * *Check newer versions of Jenkins or the plugin* for this feature.
 They may have the feature already!
@@ -89,11 +88,11 @@ However *if the issue you're reporting is in one of Jenkins' plugins*, you'll ha
 * Search for the Plugin and open its page.
 * Click the *Report an issue* link in the *Links* section on the right side of the
 plugin page.
-** After selecting the link, if you end up on JIRA follow the instructions on <<Reporting an Issue in JIRA>>.
-** After selecting the link, if you end up on Github follow the instructions on <<Reporting an Issue on Github>>.
+** After selecting the link, if you end up on JIRA follow the instructions on link:/participate/report-issue/#reporting-issue-on-jira[Reporting an Issue in JIRA].
+** After selecting the link, if you end up on Github follow the instructions on link:/participate/report-issue/#reporting-issue-on-github[Reporting an Issue on Github].
 
 
-== Reporting an issue on JIRA
+=== Reporting an issue on JIRA
 You need to https://accounts.jenkins.io/[register an account] if you
 haven't already. Then, just select *Create Issue* on
 https://issues.jenkins.io/secure/Dashboard.jspa[the JIRA home page].
@@ -101,7 +100,7 @@ https://issues.jenkins.io/secure/Dashboard.jspa[the JIRA home page].
 * For *Project* select:
 ** _Jenkins_ for general issues with Jenkins,
 ** _Security Issues_ if you want to report a security issue privately
-* For _Infrastructure_, if you're reporting a bug with xref:projects:infrastructure:index.adoc[a Jenkins service run by the Jenkins project], open an issue in the https://github.com/jenkins-infra/helpdesk/issues/new/choose[dedicated helpdesk on Github].
+* For _Infrastructure_, if you're reporting a bug with link:/projects/infrastructure/[a Jenkins service run by the Jenkins project], open an issue in the https://github.com/jenkins-infra/helpdesk/issues/new/choose[dedicated helpdesk on Github].
 * Enter a short but meaningful description of your problem as *Summary*.
 * For *Priority*, see
 https://issues.jenkins.io/secure/ShowConstantsHelp.jspa?decorator=popup#PriorityLevels[here]
@@ -111,25 +110,25 @@ priority. If you found a workaround, reduce the priority, even if it's a
 severe problem otherwise.
 * Leave the *Assignee* field to automatic.
 
-== Reporting an issue on GitHub 
+=== Reporting an issue on GitHub 
 You need to have a Github account. 
 link:https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account[Register an account] if you haven't already.
 
 * If you are redirected to the Github issue tracker from the link:https://plugins.jenkins.io/[Plugin Site], you will see something like this:
 +
 [.boxshadow]
-image:image:ROOT:participate/github-issues.png[alt="Github Issue Page",width=80%]
+image:/images/participate/github-issues.png[alt="Github Issue Page",width=80%]
 
 * Select *Get started* next to the type of issue you'd like to open.
 +
 [.boxshadow]
-image:image:ROOT:participate/get-started.png[alt="Get Started Button",width=40%,align="center"]
+image:/images/participate/get-started.png[alt="Get Started Button",width=40%,align="center"]
 
 * After that, fill in the details of the issue according to the Github issue template provided for each type of issue.
 * Don't forget to subscribe to the issue so you'll get notifications regarding any updates on the issue.
 [[Howtoreportanissue-WhatinformationtoprovideforEnvironmentandDescription]]
 
-== What information to provide for Environment and Description
+=== What information to provide for Environment and Description
 
 
 Much of the advice on
@@ -168,7 +167,7 @@ it configured?)
 *how you're launching any involved agents* (via SSH, web browser,
 command line, ...)
 * *Your web browser* (+ version). Make sure the issue occurs on
-xref:user-docs:administration:web-browsers.adoc[supported
+link:/doc/administration/requirements/web-browsers/[supported
 web browsers].
 
 If this is too much information for the Environment field, just put some

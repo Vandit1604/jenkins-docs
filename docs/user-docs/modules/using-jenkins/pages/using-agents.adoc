@@ -1,4 +1,17 @@
-= Using Jenkins agents
+---
+layout: section
+title: Using Jenkins agents
+---
+ifdef::backend-html5[]
+:description:
+:author:
+:sectanchors:
+:toc:
+:toclevels: 4
+:hide-uri-scheme:
+ifdef::env-github[:imagesdir: ../resources]
+ifndef::env-github[:imagesdir: ../../resources]
+endif::[]
 
 The Jenkins architecture is designed for distributed build environments.
 It allows us to use different environments for each build project balancing
@@ -30,7 +43,7 @@ To run this guide you will need a machine with:
 
 [NOTE]
 ====
-If you need help to install Java, Jenkins and Docker please visit the section xref:installing-jenkins:docker.adoc[Installing Jenkins.]
+If you need help to install Java, Jenkins and Docker please visit the section link:/doc/book/installing/docker/[Installing Jenkins.]
 ====
 
 === Generating an SSH key pair
@@ -85,11 +98,11 @@ The key's randomart image is:
 1. Go to your Jenkins dashboard;
 2. Go to `Manage Jenkins` option in main menu and click on the `Manage Credentials` button;
 +
-image::node/credentials-1.png[credentials menu,700]
+image:node/credentials-1.png[credentials menu,700]
 
 3. select the drop option `Add Credentials` from the global item;
 +
-image::node/credentials-2.png[add credentials option,700]
+image:node/credentials-2.png[add credentials option,700]
 
 4. Fill in the form:
 * Kind:  SSH Username with private key;
@@ -98,7 +111,7 @@ image::node/credentials-2.png[add credentials option,700]
 * username: jenkins
 * Private Key: select `Enter directly` and press the Add button to insert the content of your private key file at `~/.ssh/jenkins_agent_key`
 * Passphrase: fill your passphrase used to generate the SSH key pair (leave empty if you didn't use one at the previous step) and then press the `Create` button
-image::node/credentials-3.png[credentials filled form,650]
+image:node/credentials-3.png[credentials filled form,650]
 
 === Creating your Docker agent
 
@@ -112,13 +125,15 @@ Here we will use the link:https://github.com/jenkinsci/docker-ssh-agent[docker-s
 ----
 docker run -d --rm --name=agent1 -p 22:22 \
 -e "JENKINS_AGENT_SSH_PUBKEY=[your-public-key]" \
-jenkins/ssh-agent:alpine
+jenkins/ssh-agent:alpine-jdk17
 ----
 +
 [NOTE]
 ====
 * Remember to replace the tag [your-public-key] for your own SSH *public* key.
 * Your public key value in this example could be found by issuing : `cat ~/.ssh/jenkins_agent_key.pub` on the machine your created it. Do not add the square brackets `[]` around the key value
+* The value of [your-public-key] MUST include the full contents of your .pub file, including the `ssh-XXXX` prefix.
+** Ex: `ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAQQCo9+BpMRYQ/dL3DS2CyJxRF+j6ctbT3/Qp84+KeFhnii7NT7fELilKUSnxS30WAvQCCo2yU1orfgqr41mM70MB`
 * [[ssh-anchor]] If your machine already has a ssh server running on the `22` port (if you logged onto this machine thanks to the `ssh` command, that's the case), you should use another port for the `docker` command, such as `-p 4444:22`
 
 ====
@@ -135,7 +150,7 @@ Here we will use the link:https://github.com/jenkinsci/docker-ssh-agent[docker-s
 ----
 docker run -d --rm --name=agent1 --network jenkins -p 22:22 `
   -e "JENKINS_AGENT_SSH_PUBKEY=[your-public-key]" `
-  jenkins/ssh-agent:jdk11
+  jenkins/ssh-agent:jdk17
 ----
 +
 [NOTE]
@@ -153,7 +168,7 @@ Additionally, the command `docker container inspect agent1 | Select-String -Patt
 2. Go to `Manage Jenkins` option in main menu;
 3. Go to `Manage Nodes and clouds` item;
 +
-image::node/node-1.png[Manage node menu,700]
+image:node/node-1.png[Manage node menu,700]
 
 4. Go to `New Node` option in side menu;
 5. Fill the Node/agent name and select the type; (e.g. Name: agent1, Type: Permanent Agent)
@@ -165,14 +180,14 @@ image::node/node-1.png[Manage node menu,700]
 *** Host; (e.g.: localhost or your IP address )
 *** Credentials; (e.g.: jenkins )
 *** Host Key verification Strategy; (e.g.: Manually trusted key verification ... )
-image::node/node-2.png[node create form,600]
+image:node/node-2.png[node create form,600]
 7. Press the `Save` button and the agent1 will be registered, but offline for the time being. Click on it.
 +
-image::node/node-3.png[node offline,650]
+image:node/node-3.png[node offline,650]
 8. You should now see `This node is being launched.`. If that's not the case, you can now press the `Relaunch agent` button and wait a few seconds. You can now click on the `Log` button on the left, then you should receive +
 the message: `Agent successfully connected and online` on the last log line.
 +
-image::node/node-4.png[Agent successfully connected,650]
+image:node/node-4.png[Agent successfully connected,650]
 
 If your Jenkins controller does not start the agent via ssh, please check the port you <<ssh-anchor,configured>> on your agent.
 Copy it, and then click on the `Advanced...` button.
@@ -187,7 +202,7 @@ You will then be able to paste the port number into the `Port` textfield.
 5. Check the option: `Restrict where this project can be run`;
 6. Fill the field: label with the agent1 label; (e.g.: agent1)
 +
-image::node/node-5.png[Agent job 1,650]
+image:node/node-5.png[Agent job 1,650]
 
 +
 [NOTE]
@@ -197,14 +212,14 @@ Be careful with white spaces before or after the label.
 
 7. Now Select the option `Execute shell` at Build Section;
 +
-image::node/node-6.png[Agent job 2,650]
+image:node/node-6.png[Agent job 2,650]
 
 8. Add the command: `echo $NODE_NAME` in the `Command` field of the `Execute shell` step  and the name +
 of the agent will be printed inside the log when this job is run;
 9. press the save button and then select the option `Build Now`;
 10. Wait some seconds and then go to `Console Output` page
 +
-image::node/node-7.png[Agent job 3,650]
+image:node/node-7.png[Agent job 3,650]
 
 11. you should receive output similar to:
 +

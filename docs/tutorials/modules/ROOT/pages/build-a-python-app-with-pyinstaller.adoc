@@ -1,4 +1,12 @@
-= Build a Python app with PyInstaller
+---
+layout: documentation
+title: Build a Python app with PyInstaller
+section: doc
+---
+
+:toc:
+:toclevels: 3
+:imagesdir: ../../book/resources
 
 This tutorial shows you how to use Jenkins to orchestrate building a simple
 Python application with https://www.pyinstaller.org/[PyInstaller].
@@ -19,26 +27,31 @@ The delivery of the "add2vals" tool through PyInstaller converts this tool into
 a standalone executable file for Linux, which you can download through Jenkins
 and execute at the command line on Linux machines without Python.
 
-*Note:* Unlike the xref:ROOT:index.adoc[other tutorials] in this documentation, this tutorial
+*Note:* Unlike the link:..[other tutorials] in this documentation, this tutorial
 requires approximately 500 MB more Docker image data to be downloaded.
 
 *Duration:* This tutorial takes 20-40 minutes to complete (assuming you've
 already met the <<prerequisites,prerequisites>> below). The exact duration will
-depend on the speed of your machine and whether or not you've already xref:tutorials:ROOT:create-a-pipeline-in-blue-ocean.adoc#run-jenkins-in-docker[run Jenkins in Docker] from xref:ROOT:index.adoc[another tutorial].
+depend on the speed of your machine and whether or not you've already
+<<run-jenkins-in-docker,run Jenkins in Docker>> from link:..[another tutorial].
 
 You can stop this tutorial at any point in time and continue from where you left
 off.
 
-If you've already run though xref:ROOT:index.adoc[another tutorial], you can skip the <<prerequisites, prerequisites >> and <<run-jenkins-in-docker, Run Jenkins in Docker>> sections below and proceed on to xref:partial$fork-sample-repository.adoc[forking the sample repository]. (Just ensure you have link:https://git-scm.com/downloads[Git] installed locally.) If you need to restart Jenkins, simply follow the restart instructions in xref:user-docs:installing-jenkins:partial$_setup-wizard-for-tutorials.adoc[run Jenkins in Docker] and then proceed on.
+If you've already run though link:..[another tutorial], you can skip the
+<<prerequisites,Prerequisites>> and <<run-jenkins-in-docker,Run Jenkins in
+Docker>> sections below and proceed on to <<fork-sample-repository,forking the
+sample repository>>. (Just ensure you have
+link:https://git-scm.com/downloads[Git] installed locally.) If you need to
+restart Jenkins, simply follow the restart instructions in
+<<stopping-and-restarting-jenkins,Stopping and restarting Jenkins>> and then
+proceed on.
 
-[[prerequisites]]
-include::partial$prerequisites.adoc[]
-
+include::doc/tutorials/_prerequisites.adoc[]
 ** link:https://git-scm.com/downloads[Git] and optionally
    link:https://desktop.github.com/[GitHub Desktop]
 
-<<run-jenkins-in-docker, Run Jenkins in Docker>>
-include::user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[]
+include::doc/book/installing/_run-jenkins-in-docker.adoc[]
 
 
 [[fork-sample-repository]]
@@ -142,7 +155,7 @@ pipeline {
         stage('Build') { // <2>
             agent {
                 docker {
-                    image 'python:2-alpine' // <3>
+                    image 'python:3.12.0-alpine3.18' // <3>
                 }
             }
             steps {
@@ -166,7 +179,7 @@ https://hub.docker.com/_/python/[`python:2-alpine` Docker image] (if it's not
 already available on your machine) and runs this image as a separate container.
 This means that:
 * You'll have separate Jenkins and Python containers running locally in Docker.
-* The Python container becomes the xref:user-docs:glossary:index.adoc#agent[agent] that
+* The Python container becomes the link:/doc/book/glossary/#agent[agent] that
   Jenkins uses to run the `Build` stage of your Pipeline project. However,
   this container is short-lived - its lifespan is only that of the duration of
   your `Build` stage's execution.
@@ -209,12 +222,12 @@ workspace directory for use in later stages.
 The Blue Ocean interface turns green if Jenkins compiled your Python application
 successfully.
 [.boxshadow]
-image:python-pyinstaller-02-initial-pipeline-runs-successfully-step-opened.png[alt="Initial
+image:tutorials/python-pyinstaller-02-initial-pipeline-runs-successfully-step-opened.png[alt="Initial
 Pipeline runs successfully",width=100%]
 . Click the *X* at the top-right to return to the main Blue Ocean interface.
 +
 [.boxshadow]
-image:python-pyinstaller-03-main-blue-ocean-interface.png[alt="Main
+image:tutorials/python-pyinstaller-03-main-blue-ocean-interface.png[alt="Main
 Blue Ocean interface",width=100%]
 
 
@@ -252,7 +265,7 @@ pipeline {
         stage('Build') {
             agent {
                 docker {
-                    image 'python:2-alpine'
+                    image 'python:3.12.0-alpine3.18'
                 }
             }
             steps {
@@ -286,7 +299,7 @@ https://hub.docker.com/r/qnib/pytest/[`qnib:pytest` Docker image] (if it's not
 already available on your machine) and runs this image as a separate container.
 This means that:
 * You'll have separate Jenkins and pytest containers running locally in Docker.
-* The pytest container becomes the xref:user-docs:glossary:index.adoc#agent[agent] that
+* The pytest container becomes the link:/doc/book/glossary/#agent[agent] that
   Jenkins uses to run the `Test` stage of your Pipeline project. This
   container's lifespan lasts the duration of your `Test` stage's execution.
 <3> This
@@ -326,7 +339,7 @@ completion_ of the `Test` stage, regardless of the stage's outcome.
   interface should look like. Notice the additional "Test" stage. You can click
   on the previous "Build" stage circle to access the output from that stage.
 [.boxshadow]
-image:python-pyinstaller-11-test-stage-runs-successfully-with-output.png[alt="Test
+image:tutorials/python-pyinstaller-11-test-stage-runs-successfully-with-output.png[alt="Test
 stage runs successfully (with output)",width=100%]
 . Click the *X* at the top-right to return to the main Blue Ocean interface.
 
@@ -372,7 +385,7 @@ pipeline {
         stage('Build') {
             agent {
                 docker {
-                    image 'python:2-alpine'
+                    image 'python:3.12.0-alpine3.18'
                 }
             }
             steps {
@@ -435,7 +448,7 @@ image (if it's not already available on your machine) and runs this image as a
 separate container. This means that:
 * You'll have separate Jenkins and PyInstaller (for Linux) containers running
   locally in Docker.
-* The PyInstaller container becomes the xref:user-docs:glossary:index.adoc#agent[agent]
+* The PyInstaller container becomes the link:/doc/book/glossary/#agent[agent]
   that Jenkins uses to run the `Deliver` stage of your Pipeline project. This
   container's lifespan lasts the duration of your `Deliver` stage's execution.
 <5> This
@@ -481,7 +494,7 @@ completion_ of the `Deliver` stage _only if_ this stage completed successfully.
   stages.
 +
 [.boxshadow]
-image:python-pyinstaller-21-deliver-stage-runs-successfully.png[alt="Deliver
+image:tutorials/python-pyinstaller-21-deliver-stage-runs-successfully.png[alt="Deliver
 stage runs successfully",width=100%]
 
 +
@@ -489,12 +502,12 @@ Here's what the output of the "Deliver" stage should look like, showing you the
 results of PyInstaller bundling your Python application into a single standalone
 executable file.
 [.boxshadow]
-image:python-pyinstaller-22-deliver-stage-output-only.png[alt="Deliver
+image:tutorials/python-pyinstaller-22-deliver-stage-output-only.png[alt="Deliver
 stage output only",width=100%]
 . Click the *X* at the top-right to return to the main Blue Ocean interface,
   which lists your previous Pipeline runs in reverse chronological order.
 [.boxshadow]
-image:python-pyinstaller-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png[alt="Main
+image:tutorials/python-pyinstaller-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png[alt="Main
 Blue Ocean interface with all previous runs displayed",width=100%]
 
 
@@ -508,18 +521,18 @@ generated with PyInstaller locally on your machine. To do this:
   click the top row (representing the most recent Pipeline run) on the main Blue
   Ocean's *Activity* page.
 [.boxshadow]
-image:python-pyinstaller-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png[alt="Main
+image:tutorials/python-pyinstaller-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png[alt="Main
 Blue Ocean interface with all previous runs displayed",width=100%]
 . On the results page of the Pipeline run, click *Artifacts* at the top right
   to access the *Artifacts* page.
 [.boxshadow]
-image:python-pyinstaller-21-deliver-stage-runs-successfully.png[alt="Deliver
+image:tutorials/python-pyinstaller-21-deliver-stage-runs-successfully.png[alt="Deliver
 stage runs successfully",width=100%]
 . In the list of artifacts, click the down-arrow icon at the far right of the
   *dist/add2vals* artifact item to download the standalone executable file to
   your browser's "Downloads" directory.
 [.boxshadow]
-image:python-pyinstaller-24-deliver-stage-artifacts-page.png[alt="Deliver
+image:tutorials/python-pyinstaller-24-deliver-stage-artifacts-page.png[alt="Deliver
 stage Artifacts page",width=100%]
 . Back in your operating system's terminal prompt, `cd` to your browser's
   "Downloads" directory.
@@ -540,15 +553,17 @@ handle practically any aspect of build orchestration and automation.
 
 To learn more about what Jenkins can do, check out:
 
-* The xref:ROOT:index.adoc[Tutorials overview] page for other introductory
+* The link:/doc/tutorials[Tutorials overview] page for other introductory
   tutorials.
-* The xref:user-docs:ROOT:index.adoc[User Handbook] for more detailed information about using
+* The link:/doc/book[User Handbook] for more detailed information about using
   Jenkins, such as link:/doc/book/pipeline[Pipelines] (in particular
   link:/doc/book/pipeline/syntax[Pipeline syntax]) and the
-  xref:user-docs:blueocean:index.adoc[Blue Ocean] interface.
+  link:/doc/book/blueocean[Blue Ocean] interface.
 * The link:/node[Jenkins blog] for the latest events, other tutorials and
   updates.
 
 
 '''
-
+++++
+include::_partials/_feedback-footer.html[]
+++++
