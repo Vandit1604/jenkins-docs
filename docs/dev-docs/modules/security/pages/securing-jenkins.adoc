@@ -1,18 +1,6 @@
----
-layout: section
-wip: true
----
-ifdef::backend-html5[]
-:notitle:
-:description:
-:author:
-:email: jenkinsci-users@googlegroups.com
-ifdef::env-github[:imagesdir: ../resources]
-ifndef::env-github[:imagesdir: ../../resources]
-:toc: left
-endif::[]
-
 = Securing Jenkins
+
+WARNING: This section is a work in progress. Want to help? Check out the (https://app.gitter.im/#/room/#jenkins/docs:matrix.org)[jenkinsci/docs gitter channel]. For other ways to contribute to the Jenkins project, see (https://www.jenkins.io/participate)[this page about participating and contributing].
 
 Securing Jenkins has two aspects to it.
 

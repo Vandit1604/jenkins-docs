@@ -1,7 +1,4 @@
----
-title: Handling Environment Variables
-layout: section
----
+= Handling Environment Variables
 
 It is common for build scripts executed by Jenkins to be passed parameters in the form of environment variables.
 For example, parameterized freestyle projects pass parameter values to Shell and Batch build steps as environment variables.

@@ -1,13 +1,9 @@
 ---
 layout: developerchapter
 summary: FIPS-140 for developers
-wip: true
+WARNING: This section is a work in progress. Want to help? Check out the (https://app.gitter.im/#/room/#jenkins/docs:matrix.org)[jenkinsci/docs gitter channel]. For other ways to contribute to the Jenkins project, see (https://www.jenkins.io/participate)[this page about participating and contributing].
 title: FIPS-140 for developers
-references:
-- url: https://github.com/jenkinsci/jep/blob/master/jep/237/README.adoc
-  title: JEP-237 FIPS-140 support for Jenkins
-- url: hhttps://csrc.nist.gov/pubs/fips/140-2/upd2/final
-  title: FIPS-140-2 Security Requirements for Cryptographic Modules
+
 ---
 
 In order for the code in Jenkins and plugins to be compliant with FIPS-140, sensitive information needs to be handled correctly.
@@ -46,3 +42,7 @@ Therefore it is important that this guidance is applied to all libraries used by
 Care must be taken when obtaining / creating a link:https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/KeyStore.html[`java.security.KeyStore`].
 The majority of ``Keystore``s provided by stock JDKs are not FIPS-140 compliant and the one that is can not be used to store keys only certificates.
 A FIPS-140 compliant `KeyStore` provider would need to be provided by the JVM, as the name of this can not be known at compile time, any code that requires to create a keystore should assume that this has been configured as the default type and use `KeyStore.getInstance(KeyStore.getDefaultType())` to obtain an new instance.
+
+== References:
+* https://github.com/jenkinsci/jep/blob/master/jep/237/README.adoc[JEP-237 FIPS-140 support for Jenkins]
+* hhttps://csrc.nist.gov/pubs/fips/140-2/upd2/final[FIPS-140-2 Security Requirements for Cryptographic Modules]

@@ -1,13 +1,5 @@
----
-title: Securing Builds
-layout: section
----
-ifdef::backend-html5[]
-:toc:
-ifdef::env-github[:imagesdir: ../resources]
-ifndef::env-github[:imagesdir: ../../resources]
-:hide-uri-scheme:
-endif::[]
+= Securing Builds
+
 
 Building software is the primary use case for Jenkins.
 To accomplish that, Jenkins invokes build scripts containing user-specified code, and ensuring this is done in a safe manner must be a major concern for Jenkins administrators.

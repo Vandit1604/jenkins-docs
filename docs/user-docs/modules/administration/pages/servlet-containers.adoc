@@ -1,17 +1,13 @@
----
-layout: section
-title: Other Servlet Containers
----
-ifdef::backend-html5[]
+= Other Servlet Containers
+]
 :description:
 :author:
-:sectanchors:
-:toc:
-:toclevels: 4
+
+
 :hide-uri-scheme:
-ifdef::env-github[:imagesdir: ../resources]
-ifndef::env-github[:imagesdir: ../../resources]
-endif::[]
+
+
+
 
 Jenkins is typically run as a standalone application in its own process.
 The Jenkins WAR file bundles link:https://github.com/jenkinsci/winstone[Winstone],

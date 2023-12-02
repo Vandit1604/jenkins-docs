@@ -1,17 +1,13 @@
----
-layout: section
-title: WAR file
----
-ifdef::backend-html5[]
+= WAR file
+]
 :description:
 :author:
-:sectanchors:
-:toc:
-:toclevels: 4
+
+
 :hide-uri-scheme:
-ifdef::env-github[:imagesdir: ../resources]
-ifndef::env-github[:imagesdir: ../../resources]
-endif::[]
+
+
+
 
 The Jenkins Web application ARchive (WAR) file bundles link:https://github.com/jenkinsci/winstone[Winstone],
 a link:https://www.eclipse.org/jetty/[Jetty] servlet container wrapper,

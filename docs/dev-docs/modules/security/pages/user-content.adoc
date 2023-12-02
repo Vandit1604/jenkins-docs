@@ -1,13 +1,5 @@
----
-title: Rendering User Content
-layout: section
----
-ifdef::backend-html5[]
-:toc:
-ifdef::env-github[:imagesdir: ../resources]
-ifndef::env-github[:imagesdir: ../../resources]
-:hide-uri-scheme:
-endif::[]
+= Rendering User Content
+
 
 Multiple features of Jenkins, and many more in plugins, serve files that can be viewed or downloaded from Jenkins.
 Some built-in examples of that are the workspace browser, archived artifacts, file parameters to builds, or the `/userContent/` directory.

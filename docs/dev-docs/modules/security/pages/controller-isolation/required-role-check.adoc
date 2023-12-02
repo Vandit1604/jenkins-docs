@@ -1,14 +1,10 @@
----
-title: Required Role Check Security Improvement
-layout: documentation
----
-ifdef::backend-html5[]
-:toc:
-:toclevels: 4
-ifdef::env-github[:imagesdir: ../../resources]
-ifndef::env-github[:imagesdir: ../../../resources]
+= Required Role Check Security Improvement
+]
+
+
+
 :hide-uri-scheme:
-endif::[]
+
 
 Jenkins agents communicate with the controller using the https://github.com/jenkinsci/remoting/[remoting library].
 Individual messages (implementations of the `Callable` interface) instruct the other side of the bidirectional communication channel to perform operations and/or provide information.

@@ -1,13 +1,4 @@
----
-title: Controller Isolation
-layout: section
----
-ifdef::backend-html5[]
-:toc:
-ifdef::env-github[:imagesdir: ../resources]
-ifndef::env-github[:imagesdir: ../../resources]
-:hide-uri-scheme:
-endif::[]
+= Controller Isolation
 
 What exactly happens during a build is often controlled by people less trusted than a Jenkins administrator:
 

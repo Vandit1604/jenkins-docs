@@ -1,17 +1,13 @@
----
-layout: section
-title: Using Jenkins agents
----
-ifdef::backend-html5[]
+= Using Jenkins agents
+]
 :description:
 :author:
-:sectanchors:
-:toc:
-:toclevels: 4
+
+
 :hide-uri-scheme:
-ifdef::env-github[:imagesdir: ../resources]
-ifndef::env-github[:imagesdir: ../../resources]
-endif::[]
+
+
+
 
 The Jenkins architecture is designed for distributed build environments.
 It allows us to use different environments for each build project balancing

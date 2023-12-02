@@ -1,16 +1,5 @@
----
-layout: section
----
-ifdef::backend-html5[]
-:notitle:
-:description:
-:author:
-:sectanchors:
-:toc:
-ifdef::env-github[:imagesdir: ../resources]
-ifndef::env-github[:imagesdir: ../../resources]
-:hide-uri-scheme:
-endif::[]
+
+
 
 = Spawning Processes From Build
 

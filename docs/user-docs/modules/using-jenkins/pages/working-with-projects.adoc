@@ -1,15 +1,11 @@
----
-layout: section
-title: Working with projects
----
-ifdef::backend-html5[]
+= Working with projects
+]
 :description:
 :author:
-:sectanchors:
-:toc:
-:toclevels: 4
+
+
 :hide-uri-scheme:
-endif::[]
+
 
 Jenkins uses projects (also known as "jobs") to perform its work.
 Projects are defined and run by Jenkins users.

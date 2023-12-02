@@ -1,14 +1,10 @@
----
-title: Customizing Agent &rarr; Controller Security
-layout: documentation
----
-ifdef::backend-html5[]
-:toc:
-:toclevels: 4
-ifdef::env-github[:imagesdir: ../../resources]
-ifndef::env-github[:imagesdir: ../../../resources]
+= Customizing Agent &rarr; Controller Security
+]
+
+
+
 :hide-uri-scheme:
-endif::[]
+
 
 This section describes how to customize the rules restricting agents' access to the Jenkins controller in Jenkins 2.325 and earlier.
 

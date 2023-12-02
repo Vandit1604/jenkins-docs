@@ -1,17 +1,13 @@
----
-layout: section
-title: Best Practices
----
-ifdef::backend-html5[]
+= Best Practices
+]
 :description:
 :author:
-:sectanchors:
-:toc:
-:toclevels: 4
+
+
 :hide-uri-scheme:
-ifdef::env-github[:imagesdir: ../resources]
-ifndef::env-github[:imagesdir: ../../resources]
-endif::[]
+
+
+
 
 Continuous Integration (CI) with automated test execution and trend analysis has revolutionized the way companies approach build management, release management, deployment automation, and test orchestration.
 In this section, we will explore best practices that aim to enlighten executives, business managers, software developers, and architects about the invaluable contributions Jenkins can make throughout the project lifecycle.

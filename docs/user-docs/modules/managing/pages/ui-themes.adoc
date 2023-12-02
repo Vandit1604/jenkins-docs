@@ -1,17 +1,8 @@
----
-layout: section
-title: Themes for user interface
----
-ifdef::backend-html5[]
-:notitle:
-:description:
-:author:
-:sectanchors:
-:toc:
-ifdef::env-github[:imagesdir: ../resources]
-ifndef::env-github[:imagesdir: ../../resources]
-:hide-uri-scheme:
-endif::[]
+= Themes for user interface
+]
+
+
+
 
 It is possible to customize Jenkins' appearance with custom themes.
 This feature is not a part of the Jenkins core, but it is supported through plugins.

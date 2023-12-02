@@ -1,13 +1,5 @@
----
-title: CSRF Protection
-layout: section
----
-ifdef::backend-html5[]
-:toc:
-ifdef::env-github[:imagesdir: ../resources]
-ifndef::env-github[:imagesdir: ../../resources]
-:hide-uri-scheme:
-endif::[]
+= CSRF Protection
+
 
 https://en.wikipedia.org/wiki/Cross-site_request_forgery[Cross-Site Request Forgery] (CSRF or XSRF) is a type of security vulnerability in web applications.
 Without protection from CSRF, a Jenkins user or administrator visiting some other web site would allow the operator of that site to perform actions in Jenkins as the victim.

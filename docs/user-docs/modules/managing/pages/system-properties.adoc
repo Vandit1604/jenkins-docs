@@ -1,12 +1,6 @@
 ---
 layout: systemproperties
-references:
-- url: https://wiki.jenkins.io/display/JENKINS/Administering+Jenkins
-  title: Administering Jenkins
-- url: http://jenkins.io/doc/book/installing/#configuring-http
-  title: Configuring HTTP in Jenkins
-- url: https://github.com/jenkinsci/remoting/blob/master/docs/configuration.md
-  title: Remoting configuration
+
 properties:
 # Style guide:
 # - Prefer literal blocks over quoted blocks when necessary
@@ -2405,6 +2399,11 @@ If you find these useful, please file a ticket to promote it to an official feat
 
 [NOTE]
 Due to the very large number of system properties used, often just added as a "safety valve" or "escape hatch" in case a change causes problems, this list is not expected to be complete.
+
+== References:
+* https://wiki.jenkins.io/display/JENKINS/Administering+Jenkins[Administering Jenkins]
+* http://jenkins.io/doc/book/installing/#configuring-http[Configuring HTTP in Jenkins]
+* https://github.com/jenkinsci/remoting/blob/master/docs/configuration.md[Remoting configuration]
 
 ++++
 <style>
