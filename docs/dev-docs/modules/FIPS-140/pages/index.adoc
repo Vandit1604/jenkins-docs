@@ -1,10 +1,5 @@
----
-layout: developerchapter
-summary: FIPS-140 for developers
+= FIPS -140 for developers
 WARNING: This section is a work in progress. Want to help? Check out the (https://app.gitter.im/#/room/#jenkins/docs:matrix.org)[jenkinsci/docs gitter channel]. For other ways to contribute to the Jenkins project, see (https://www.jenkins.io/participate)[this page about participating and contributing].
-title: FIPS-140 for developers
-
----
 
 In order for the code in Jenkins and plugins to be compliant with FIPS-140, sensitive information needs to be handled correctly.
 This document provides a non-exhaustive cheat sheet that can guide developers to write code that is FIPS-140 compliant.
