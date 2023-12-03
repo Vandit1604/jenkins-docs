@@ -71,7 +71,8 @@ When creating randomized tokens, it would be much useful and effective if we can
 However in order to substitute randomized tokens, all files included in the bundle should be read. This can become inefficient when bundle consists of large number of files.  Therefore it's important to follow an optimized method for this task.
 
 
-== References
-
+.References
+****
 * https://docs.google.com/document/d/1052sUGFxcDfUHNZFNeQ1FAR61ZB4tJb-GxdW1L3FSC8/edit?usp=sharing[Initial proposal of the project]
 * https://github.com/minudika/support-core-plugin[Project repository]
+****

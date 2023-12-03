@@ -50,7 +50,8 @@ There are the following migration steps:
 . Commit changes, push them to your fork and create a pull request against the plugin repository
 . Once the pull request is merged, create an `INFRA` Jenkins JIRA ticket to replace the content on Wiki by a link to the new jenkins.io locations 
 
-== References
-
-- xref:publishing:documentation.adoc/[Plugin documentation]
-- link:https://reports.jenkins.io/jenkins-plugin-migration.html[Plugin migration progress report]
+.References
+****
+* xref:publishing:documentation.adoc/[Plugin documentation]
+* link:https://reports.jenkins.io/jenkins-plugin-migration.html[Plugin migration progress report]
+****

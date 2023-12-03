@@ -123,9 +123,10 @@ The demo container has a local git repo so you can clone: `git://localhost/repo`
 * Once integration tests are successful, the webapp gets to the staging server at http://localhost:8081/staging/[localhost:8081/staging] (or your docker-machine/boot2docker instance IP)
 * requires a human to Manually inspect the staging instance, and when ready, approves the deployment to the production server at http://localhost:8081/production/
 
-== References
-
+.References
+****
 * https://developer-blog.cloudbees.com/2015/08/workflow-19-and-multibranch-beta.html[Developer blog by jglick introducing multibranch support]
 * https://github.com/jenkinsci/workflow-plugin/blob/master/TUTORIAL.md[workflow plugin tutorial]
 * https://github.com/jenkinsci/workflow-plugin#presentations[workflow plugin presentations]
 * https://github.com/jenkinsci/workflow-aggregator-plugin/tree/master/demo[workflow plugin demo readme]
+****

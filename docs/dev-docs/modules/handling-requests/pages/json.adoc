@@ -283,7 +283,9 @@ If you are not familiar with Jenkins architecture, you can have a look to link:.
 
 For more advanced reading on the HTTP layer of Jenkins, it's managed by link:https://github.com/jenkinsci/stapler[Stapler].
 
-== References
-- link:https://github.com/stapler/stapler/blob/master/docs/reference.adoc[Stapler URL Binding Reference]
-- xref:handling-requests:routing.adoc[How requests in Jenkins are routed]
-- xref:testing:index.adoc[Testing Jenkins]
+.References
+****
+* link:https://github.com/stapler/stapler/blob/master/docs/reference.adoc[Stapler URL Binding Reference]
+* xref:handling-requests:routing.adoc[How requests in Jenkins are routed]
+* xref:testing:index.adoc[Testing Jenkins]
+****

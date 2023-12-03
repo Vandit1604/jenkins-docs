@@ -2,8 +2,7 @@
 
 // this is a straight import of https://wiki.jenkins.io/display/JENKINS/Making+your+plugin+behave+in+secured+Jenkins
 // TODO check contents and remove wiki page
-
-WARNING: This section is a work in progress. Want to help? Check out the (https://app.gitter.im/#/room/#jenkins/docs:matrix.org)[jenkinsci/docs gitter channel]. For other ways to contribute to the Jenkins project, see (https://www.jenkins.io/participate)[this page about participating and contributing].
+:page-layout:wip
 
 == Security Architecture of Jenkins
 
@@ -179,6 +178,7 @@ Authentication providers that can implement account validity checks through mean
 https://wiki.jenkins.io/display/JENKINS/Making+your+plugin+behave+in+secured+Jenkins
 ////
 
-== References
-
-- link:https://plugins.jenkins.io/script-security#ScriptSecurityPlugin-Developer%E2%80%99sguide[Script Security Developer's Guide]
+.References
+****
+* link:https://plugins.jenkins.io/script-security#ScriptSecurityPlugin-Developer%E2%80%99sguide[Script Security Developer's Guide]
+****

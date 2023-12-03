@@ -37,7 +37,8 @@ This should best be done before the telemetry change is released or even merged,
 As telemetry is time-sensitive, and the majority of users use LTS releases, telemetry implementations in core should generally be backported freely into LTS releases to ensure data is collected from as many up-to-date Jenkins instances as possible.
 The link:/download/lts/#backporting-process[general LTS backporting rules] are relaxed for telemetry-related changes.
 
-== References
-
-- link:https://github.com/jenkinsci/jep/blob/master/jep/214/README.adoc['JEP-214: Jenkins Telemetry']
-- link:https://javadoc.jenkins.io/jenkins/telemetry/Telemetry.html['`jenkins.telemetry.Telemetry` extension point Javadoc']
+.References
+****
+* link:https://github.com/jenkinsci/jep/blob/master/jep/214/README.adoc['JEP-214: Jenkins Telemetry']
+* link:https://javadoc.jenkins.io/jenkins/telemetry/Telemetry.html['`jenkins.telemetry.Telemetry` extension point Javadoc']
+****

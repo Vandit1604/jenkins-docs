@@ -67,8 +67,9 @@ These either use the predefined date and time styles (`short`, `medium`, `long`,
 <3> Default (medium) time format
 <4> Custom time format, in this case a time like 17:45:32
 
-== References
-
-- link:https://docs.oracle.com/javase/8/docs/api/java/text/MessageFormat.html[Javadoc for <tt>java.text.MessageFormat</tt>]
-- link:https://docs.oracle.com/javase/8/docs/api/java/text/ChoiceFormat.html[Javadoc for <tt>java.text.ChoiceFormat</tt>]
-- link:https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html[Javadoc for <tt>java.text.SimpleDateFormat</tt> explaining custom date format definitions]
+.References
+****
+* link:https://docs.oracle.com/javase/8/docs/api/java/text/MessageFormat.html[Javadoc for <tt>java.text.MessageFormat</tt>]
+* link:https://docs.oracle.com/javase/8/docs/api/java/text/ChoiceFormat.html[Javadoc for <tt>java.text.ChoiceFormat</tt>]
+* link:https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html[Javadoc for <tt>java.text.SimpleDateFormat</tt> explaining custom date format definitions]
+****

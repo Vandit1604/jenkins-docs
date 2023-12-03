@@ -1,6 +1,5 @@
 = Extensibility
-
-WARNING: This section is a work in progress. Want to help? Check out the (https://app.gitter.im/#/room/#jenkins/docs:matrix.org)[jenkinsci/docs gitter channel]. For other ways to contribute to the Jenkins project, see (https://www.jenkins.io/participate)[this page about participating and contributing].
+:page-layout:wip
 
 Jenkins is designed with extensibility in mind, both internally (core) and with plugins.
 Extensibility in Jenkins is accomplished by combining the concepts discussed below.
@@ -26,16 +25,17 @@ This is similar to class/object in object-oriented programming.
 The exact details vary depending on the subtype, but typically, `jenkinsdoc:Actionable[]` objects will show actions in the sidepanel, and route requests to the action's `getUrlName()` to the action, allowing it to contribute pages to `jenkinsdoc:Actionable[]` objects.
 // link:TODO[Learn more about `Action` and `Actionable`].
 
-== References
-
-- link:https://wiki.jenkins.io/display/JENKINS/Dependency+Injection[Dependency Injection in Jenkins]
-- link:https://wiki.jenkins.io/display/JENKINS/Participating+to+the+initialization[Participating to the initialization]
-- link:https://wiki.jenkins.io/display/JENKINS/Action+and+its+family+of+subtypes[Action and its family of subtypes]
-- xref:extensions:index.adoc[Generated list of extension points]
-- link:https://wiki.jenkins.io/display/JENKINS/AnnotationExtension["On @Extension"]
-- link:https://wiki.jenkins.io/display/JENKINS/Plugin+Cookbook[List of commonly used extension points]
-- link:https://wiki.jenkins.io/display/JENKINS/Defining+a+new+extension+point[Defining a new extension point]
-- link:https://wiki.jenkins.io/display/JENKINS/My+class+is+missing+descriptor[My class is missing descriptor]
-- link:https://wiki.jenkins.io/display/JENKINS/Extension+Point+for+Project+Views+Navigation[Extension Point for Project Views Navigation] 
+.References
+****
+* link:https://wiki.jenkins.io/display/JENKINS/Dependency+Injection[Dependency Injection in Jenkins]
+* link:https://wiki.jenkins.io/display/JENKINS/Participating+to+the+initialization[Participating to the initialization]
+* link:https://wiki.jenkins.io/display/JENKINS/Action+and+its+family+of+subtypes[Action and its family of subtypes]
+* xref:extensions:index.adoc[Generated list of extension points]
+* link:https://wiki.jenkins.io/display/JENKINS/AnnotationExtension["On @Extension"]
+* link:https://wiki.jenkins.io/display/JENKINS/Plugin+Cookbook[List of commonly used extension points]
+* link:https://wiki.jenkins.io/display/JENKINS/Defining+a+new+extension+point[Defining a new extension point]
+* link:https://wiki.jenkins.io/display/JENKINS/My+class+is+missing+descriptor[My class is missing descriptor]
+* link:https://wiki.jenkins.io/display/JENKINS/Extension+Point+for+Project+Views+Navigation[Extension Point for Project Views Navigation] 
 // TODO make into guide or remove as obsolete with BO
-- link:https://github.com/jenkinsci/sample-extensions[Sample extension implementations]
+* link:https://github.com/jenkinsci/sample-extensions[Sample extension implementations]
+****

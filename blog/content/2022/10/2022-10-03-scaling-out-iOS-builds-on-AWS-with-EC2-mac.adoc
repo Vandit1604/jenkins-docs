@@ -167,27 +167,19 @@ Jenkins. Several of the options discussed here are implemented as
 solutions published by AWS with links available in the reference section
 for further reading.
 
-== References
-
+.References
+****
 Refer to these individual articles to dive deep into the many aspects
 and options discussed in this blog and some more.
 
-Anka Type-2 virtualization: https://aws.amazon.com/blogs/compute/getting-started-with-anka-on-ec2-mac-instances/
-
-SQS based build agent: https://github.com/sebsto/swift-build-agent-sqs
-
-iOS pipeline with ec2 mac: https://aws.amazon.com/blogs/compute/unify-your-ios-mobile-app-ci-cd-pipeline-with-amazon-ec2-mac-instances-2/
-
-TeamCity: https://aws.amazon.com/blogs/apn/implementing-macos-build-agents-into-teamcity-using-amazon-ec2-mac-instances/
-
-Auto-scaling: https://aws.amazon.com/blogs/compute/implementing-autoscaling-for-ec2-mac-instances/
-
-Virtualbuddy: https://github.com/insidegui/VirtualBuddy
-
-Tart: https://github.com/cirruslabs/tart
-
-Ec2-macos-init: https://github.com/aws/ec2-macos-init
-
-Harness: https://developer.harness.io/docs/continuous-integration/use-ci/set-up-build-infrastructure/vm-build-infrastructure/define-macos-build-infra-with-anka-registry/
-
-Fastlane: https://docs.fastlane.tools/
+* Anka Type-2 virtualization: https://aws.amazon.com/blogs/compute/getting-started-with-anka-on-ec2-mac-instances/
+* SQS based build agent: https://github.com/sebsto/swift-build-agent-sqs
+* iOS pipeline with ec2 mac: https://aws.amazon.com/blogs/compute/unify-your-ios-mobile-app-ci-cd-pipeline-with-amazon-ec2-mac-instances-2/
+* TeamCity: https://aws.amazon.com/blogs/apn/implementing-macos-build-agents-into-teamcity-using-amazon-ec2-mac-instances/
+* Auto-scaling: https://aws.amazon.com/blogs/compute/implementing-autoscaling-for-ec2-mac-instances/
+* Virtualbuddy: https://github.com/insidegui/VirtualBuddy
+* Tart: https://github.com/cirruslabs/tart
+* Ec2-macos-init: https://github.com/aws/ec2-macos-init
+* Harness: https://developer.harness.io/docs/continuous-integration/use-ci/set-up-build-infrastructure/vm-build-infrastructure/define-macos-build-infra-with-anka-registry/
+* Fastlane: https://docs.fastlane.tools/
+****

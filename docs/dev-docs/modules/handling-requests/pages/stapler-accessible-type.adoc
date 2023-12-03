@@ -41,5 +41,7 @@ Specific recommendations for known problems are listed below.
 * If the return type is not defined in your component, annotate the method or field `@StaplerDispatchable`.
   You may need to add a dependency to the `io.jenkins.stapler:jenkins-stapler-support` library to make this annotation available.
 
-== References:
+.References
+****
 * /security/advisory/2018-12-05/#SECURITY-595[SECURITY-595 security fix]
+****

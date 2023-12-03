@@ -1,6 +1,5 @@
 = Blue Ocean
-
-WARNING: This section is a work in progress. Want to help? Check out the (https://app.gitter.im/#/room/#jenkins/docs:matrix.org)[jenkinsci/docs gitter channel]. For other ways to contribute to the Jenkins project, see (https://www.jenkins.io/participate)[this page about participating and contributing].
+:page-layout:wip
 
 The Blue Ocean plugin for Jenkins is designed to be extended by other plugins. 
 Like many other plugins, Blue Ocean has its own extension points. 
@@ -25,8 +24,8 @@ If you wish to make a plugin for blue ocean, some starting points:
 
 For those with a more graphical focus, you will want to take a look at the https://github.com/jenkinsci/jenkins-design-language[Jenkins Design Language repository].
 
-== References
-
-link:https://github.com/jenkinsci/blueocean-plugin[Main Blue Ocean plugin repository]
-
-link:https://github.com/jenkinsci/jenkins-design-language[Design language repository with the styles and common components for Blue Ocean]
+.References
+****
+* link:https://github.com/jenkinsci/blueocean-plugin[Main Blue Ocean plugin repository]
+* link:https://github.com/jenkinsci/jenkins-design-language[Design language repository with the styles and common components for Blue Ocean]
+****
