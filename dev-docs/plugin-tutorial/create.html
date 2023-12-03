@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/plugin-tutorial/create.html">
     <link rel="prev" href="prepare.html">
     <link rel="next" href="run.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -1331,21 +1331,21 @@
 <div class="ulist">
 <ul>
 <li>
-<p>* <a href="prepare.html" class="xref page">Step 1: Preparing for Plugin Development</a></p>
+<p><a href="../prepare">Step 1: Preparing for Plugin Development</a></p>
 </li>
 <li>
-<p>* <a href="#"><strong>Step 2: Create a Plugin</strong></a></p>
+<p><a href="../create"><strong>Step 2: Create a Plugin</strong></a></p>
 </li>
 <li>
-<p>* <a href="run.html" class="xref page">Step 3: Build and Run the Plugin</a></p>
+<p><a href="../run">Step 3: Build and Run the Plugin</a></p>
 </li>
 <li>
-<p>* <a href="extend.html" class="xref page">Step 4: Extend the Plugin</a></p>
+<p><a href="../extend">Step 4: Extend the Plugin</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>After <a href="prepare.html" class="xref page">preparing your environment</a>, the next step is to create a new plugin.</p>
+<p>After <a href="../prepare">preparing your environment</a>, the next step is to create a new plugin.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1370,18 +1370,16 @@ See <a href="https://wiki.jenkins.io/display/JENKINS/Before+starting+a+new+plugi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">---
-mvn -U archetype:generate -Dfilter="io.jenkins.archetypes:"
----</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">mvn -U archetype:generate -Dfilter=io.jenkins.archetypes:</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>This command will let you generate one of several project archetypes related to Jenkins.
-In this tutorial we&#8217;re going to use the <code>hello-world</code> archetype, version 1.5, so select that:</p>
+In this tutorial we&#8217;re going to use the <code>hello-world</code> archetype, so select the most recent version of that archetype:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">mvn -U archetype:generate -Dfilter="io.jenkins.archetypes:"
+<pre class="highlightjs highlight"><code class="language-none hljs">mvn -U archetype:generate -Dfilter=io.jenkins.archetypes:
 …
 Choose archetype:
 1: remote -&gt; io.jenkins.archetypes:empty-plugin (Skeleton of a Jenkins plugin with a POM and an empty source tree.)
@@ -1410,8 +1408,10 @@ Choose io.jenkins.archetypes:hello-world-plugin version:
 17: 1.17
 18: 1.18
 19: 1.19
+20: 1.20
+21: 1.21
 
-Choose a number: 19: <strong>19</strong> <i class="conum" data-value="2"></i><b>(2)</b>
+Choose a number: 21: <strong>21</strong> <i class="conum" data-value="2"></i><b>(2)</b>
 …
 [INFO] Using property: groupId = unused <i class="conum" data-value="3"></i><b>(3)</b>
 [INFO] Using property: package = io.jenkins.plugins.sample
@@ -1435,7 +1435,7 @@ version: 1.0-SNAPSHOT
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>This tutorial is based on version 1.19 of the <strong>hello-world-plugin</strong> archetype, so enter <strong>18</strong> to select it.</td>
+<td>This tutorial is based on version 1.21 of the <strong>hello-world-plugin</strong> archetype, so enter <strong>21</strong> to select it.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
@@ -1505,7 +1505,7 @@ We will rename the directory to match the conventional repository names used in 
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-To learn more about what&#8217;s involved in a plugin build, see <a href="../plugin-development/build-process.html" class="xref page">Plugin Build Process</a>.
+To learn more about what&#8217;s involved in a plugin build, see <a href="../../plugin-development/build-process">Plugin Build Process</a>.
 </td>
 </tr>
 </table>
@@ -1514,7 +1514,7 @@ To learn more about what&#8217;s involved in a plugin build, see <a href="../plu
 <p>Not the output you&#8217;re seeing? See the <a href="#_troubleshooting">Troubleshooting</a> section below.</p>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s <a href="run.html" class="xref page">run the plugin</a> and see what it does.</p>
+<p>Let&#8217;s <a href="../run">run the plugin</a> and see what it does.</p>
 </div>
 </div>
 </div>
@@ -1528,7 +1528,7 @@ To learn more about what&#8217;s involved in a plugin build, see <a href="../plu
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Anything not working for you? Ask for help in <a href="../../community/chat/index.html" class="xref page">chat</a> or <a href="../../community/mailing-lists/index.html" class="xref page">on the jenkinsci-dev mailing list</a>.
+Anything not working for you? Ask for help in <a href="/chat">chat</a> or <a href="/mailing-lists">on the jenkinsci-dev mailing list</a>.
 </td>
 </tr>
 </table>

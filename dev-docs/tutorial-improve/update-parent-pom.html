@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/tutorial-improve/update-parent-pom.html">
     <link rel="prev" href="add-a-jenkinsfile.html">
     <link rel="next" href="update-base-jenkins-version.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -1326,8 +1326,7 @@
 </aside>
 <article class="doc">
 <h1 class="page">Update parent POM</h1>
-<div id="preamble">
-<div class="sectionbody">
+<h1 id="_update_parent_pom" class="sect0"><a class="anchor" href="#_update_parent_pom"></a>Update parent POM</h1>
 <div class="videoblock">
 <div class="title">Use latest parent POM</div>
 <div class="content">
@@ -1336,23 +1335,11 @@
 </div>
 <div class="paragraph">
 <p>The Maven project object model ("POM") defines a parent project object model that provides default settings.
-An update of the parent POM will allow this plugin to compile with Java 11 and with Java 17.
+An update of the parent POM will allow this plugin to compile with recent Java versions.
 The most recent parent POM files also provide additional static analysis like spotbugs.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_create_a_branch"><a class="anchor" href="#_create_a_branch"></a>Create a branch</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>In a local copy of your <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">fork</a> of the plugin repository create a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository">git branch</a> for your work with the command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git checkout -b {task-identifier} master</code></pre>
-</div>
-</div>
-</div>
+<p>Unresolved include directive in modules/tutorial-improve/pages/update-parent-pom.adoc - include::doc/developer/tutorial-improve/_create-a-branch.adoc[]</p>
 </div>
 <div class="sect1">
 <h2 id="_compile_the_plugin"><a class="anchor" href="#_compile_the_plugin"></a>Compile the plugin</h2>
@@ -1367,12 +1354,12 @@ The most recent parent POM files also provide additional static analysis like sp
 </div>
 <div class="paragraph">
 <p>When modernizing older plugins, You may need to use Java 8 to compile the plugin initially.
-Once the parent POM has been updated, you&#8217;ll be able to compile and test with Java 11.</p>
+Once the parent POM has been updated, you&#8217;ll be able to compile and test with recent Java versions.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_update_parent_pom"><a class="anchor" href="#_update_parent_pom"></a>Update parent POM</h2>
+<h2 id="_update_parent_pom_2"><a class="anchor" href="#_update_parent_pom_2"></a>Update parent POM</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Use Apache Maven to update the parent POM:</p>
@@ -1453,53 +1440,18 @@ Some of the other changes may include:</p>
 <p>Resolve spotbugs warnings</p>
 </li>
 <li>
-<p>Resolve <a href="../plugin-development/updating-parent.html#understanding-requireupperbounddeps-failures-and-fixes" class="xref page">upper bounds dependency warnings</a></p>
+<p>Resolve <a href="/doc/developer/plugin-development/updating-parent/#understanding-requireupperbounddeps-failures-and-fixes">upper bounds dependency warnings</a></p>
 </li>
 <li>
-<p>Prevent cross-site scripting by <a href="#xss-prevention.adoc" class="xref unresolved">escaping expressions in Jelly pages</a></p>
+<p>Prevent cross-site scripting by <a href="/doc/developer/security/xss-prevention/">escaping expressions in Jelly pages</a></p>
 </li>
 <li>
-<p>Resolve ambiguous property encodings by <a href="convert-translations.html" class="xref page">converting translations with native2ascii</a></p>
+<p>Resolve ambiguous property encodings by <a href="../convert-translations/">converting translations with native2ascii</a></p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_create_a_pull_request"><a class="anchor" href="#_create_a_pull_request"></a>Create a pull request</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Commit that change:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git add {modified-files}
-git commit -m "{task-description}"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Push the change to GitHub:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git push origin --set-upstream {task-identifier}</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
-remote:
-remote: Create a pull request for '{task-identifier}' on GitHub by visiting:
-remote: https://github.com/user/your-plugin/pull/new/{task-identifier}
-remote:
-To github.com:user/your-plugin.git
- * [new branch]      {task-identifier} -&gt; {task-identifier}
-Branch '{task-identifier}' tracking remote branch '{task-identifier}'.</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Notice that the output of the command includes the URL, which can be used to open a pull request.
-Copy that URL in your web browser and submit a pull request.</p>
+<p>Unresolved include directive in modules/tutorial-improve/pages/update-parent-pom.adoc - include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]</p>
 </div>
 </div>
 </div>

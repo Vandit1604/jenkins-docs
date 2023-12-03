@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/plugin-development/dependency-management.html">
     <link rel="prev" href="choosing-jenkins-baseline.html">
     <link rel="next" href="dependencies-and-class-loading.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -1385,7 +1385,7 @@ and
 </div>
 <div class="paragraph">
 <p>This error says that a conflict exists between the versions of <code>commons-codec</code> and <code>jcl-over-slf4j</code> specified by the plugin versus Jenkins core.
-See <a href="updating-parent.html#understanding-requireupperbounddeps-failures-and-fixes" class="xref page">Understanding requireUpperBoundDeps failures and fixes</a> for more information.</p>
+See <a href="/doc/developer/plugin-development/updating-parent/#understanding-requireupperbounddeps-failures-and-fixes">Understanding requireUpperBoundDeps failures and fixes</a> for more information.</p>
 </div>
 <div class="paragraph">
 <p>In many cases, upper bounds dependencies errors are best resolved by updating the Jenkins core Bill of Materials and by using the Jenkins plugin Bill of Materials.</p>
@@ -1432,7 +1432,7 @@ To use the Jenkins plugin BOM in your plugin:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Confirm that you are using the <a href="updating-parent.html" class="xref page">current parent pom</a> with the command <code>mvn versions:update-parent</code></p>
+<p>Confirm that you are using the <a href="/doc/developer/plugin-development/updating-parent/">current parent pom</a> with the command <code>mvn versions:update-parent</code></p>
 </li>
 <li>
 <p>Locate the most recent plugin bom version number on the <a href="https://github.com/jenkinsci/bom/releases">plugin bom releases page</a></p>
@@ -1448,9 +1448,9 @@ To use the Jenkins plugin BOM in your plugin:</p>
     &lt;dependencies&gt;
         &lt;dependency&gt;
             &lt;groupId&gt;io.jenkins.tools.bom&lt;/groupId&gt;
-            &lt;artifactId&gt;bom-2.375.x&lt;/artifactId&gt;
+            &lt;artifactId&gt;bom-2.401.x&lt;/artifactId&gt;
             &lt;!-- Latest version goes here --&gt;
-            &lt;version&gt;1981.v17df70e84a_a_1&lt;/version&gt;
+            &lt;version&gt;2582.v830625dd636c&lt;/version&gt;
             &lt;scope&gt;import&lt;/scope&gt;
             &lt;type&gt;pom&lt;/type&gt;
         &lt;/dependency&gt;

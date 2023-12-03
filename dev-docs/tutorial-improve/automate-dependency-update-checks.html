@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/tutorial-improve/automate-dependency-update-checks.html">
     <link rel="prev" href="add-more-spotbugs-checks.html">
     <link rel="next" href="use-plugin-bill-of-materials.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -1326,9 +1326,7 @@
 </aside>
 <article class="doc">
 <h1 class="page">Check dependencies</h1>
-<div class="sect1">
-<h2 id="_automate_dependency_updates"><a class="anchor" href="#_automate_dependency_updates"></a>Automate dependency updates</h2>
-<div class="sectionbody">
+<h1 id="_automate_dependency_updates" class="sect0"><a class="anchor" href="#_automate_dependency_updates"></a>Automate dependency updates</h1>
 <div class="videoblock">
 <div class="title">Automate dependency checks with dependabot</div>
 <div class="content">
@@ -1346,18 +1344,8 @@ When a new release is detected, dependabot submits a pull request to include tha
 <div class="paragraph">
 <p>See the <a href="https://www.youtube.com/watch?v=RXIJpjYlECQ">Jenkins Online Meetup video</a> for more details on dependabot with Jenkins.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_create_a_branch"><a class="anchor" href="#_create_a_branch"></a>Create a branch</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>In a local copy of your <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">fork</a> of the plugin repository create a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository">git branch</a> for your work with the command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git checkout -b {task-identifier} master</code></pre>
-</div>
+<p>Unresolved include directive in modules/tutorial-improve/pages/automate-dependency-update-checks.adoc - include::doc/developer/tutorial-improve/_create-a-branch.adoc[]</p>
 </div>
 <div class="paragraph">
 <p>Automated dependency checks by dependabot are defined in a .github/dependabot.yml file.</p>
@@ -1368,57 +1356,26 @@ When a new release is detected, dependabot submits a pull request to include tha
 cat &gt; .github/dependabot.yml &lt;&lt;END-OF-HERE-DOC
 version: 2
 updates:
+# Maintain dependencies for your plugin
 - package-ecosystem: maven
-  directory: "/"
+  directory: /
   schedule:
     interval: monthly
   open-pull-requests-limit: 10
   target-branch: master
+# Maintain dependencies for GitHub Actions
+- package-ecosystem: github-actions
+  directory: /
+  schedule:
+    interval: monthly
 END-OF-HERE-DOC</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Commit the file and push it to GitHub with the commands:</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_create_a_pull_request"><a class="anchor" href="#_create_a_pull_request"></a>Create a pull request</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Commit that change:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git add {modified-files}
-git commit -m "{task-description}"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Push the change to GitHub:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git push origin --set-upstream {task-identifier}</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
-remote:
-remote: Create a pull request for '{task-identifier}' on GitHub by visiting:
-remote: https://github.com/user/your-plugin/pull/new/{task-identifier}
-remote:
-To github.com:user/your-plugin.git
- * [new branch]      {task-identifier} -&gt; {task-identifier}
-Branch '{task-identifier}' tracking remote branch '{task-identifier}'.</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Notice that the output of the command includes the URL, which can be used to open a pull request.
-Copy that URL in your web browser and submit a pull request.</p>
-</div>
-</div>
+<p>Unresolved include directive in modules/tutorial-improve/pages/automate-dependency-update-checks.adoc - include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]</p>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="add-more-spotbugs-checks.html">Add more spotbugs checks</a></span>

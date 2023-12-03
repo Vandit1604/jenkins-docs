@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.jenkins.com/community/report-issue.html">
     <link rel="prev" href="review-changes.html">
     <link rel="next" href="test.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../_/css/site.css">
     <script>var uiRootPath = '../_'</script>
 <link rel="icon" href="../_/jenkins.svg" type="image/x-icon">
@@ -232,7 +232,7 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>Jenkins JIRA is an issue tracker, not a support site.
-If you need assistance or have general questions, visit us <a href="chat/index.html" class="xref page">in chat</a>, email one of the <a href="mailing-lists/index.html" class="xref page">mailing lists</a>, or post on the <a href="https://community.jenkins.io/">community forum</a>.</p>
+If you need assistance or have general questions, visit us <a href="/chat/">in chat</a>, email one of the <a href="/mailing-lists">mailing lists</a>, or post on the <a href="https://community.jenkins.io/">community forum</a>.</p>
 </div>
 </div>
 </div>
@@ -259,22 +259,18 @@ whose use is explained on this page:</p>
 functionality should be added.</p>
 </li>
 <li>
-<p><strong>Vulnerabilities</strong>: <a href="../security/reporting.html" class="xref page">Security related issues in Jenkins</a></p>
+<p><strong>Vulnerabilities</strong>: <a href="/security/reporting/">Security related issues in Jenkins</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>Other types (<em>Patch</em>, <em>Task</em>) are not used in JIRA.
 Neither will be explained here.
-If you want to propose a patch, create an issue using one of the 3 types above, and then create a <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">pull request in GitHub</a>.
-be explained here. If you want to propose a patch, create an issue of
-one of the 3 types above and then create a <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">pull request in GitHub</a>.</p>
+If you want to propose a patch, create an issue using one of the 3 types above, and then create a pull request on GitHub <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">as explained here</a>.
+Report issues with infrastructure services hosted by the Jenkins project (jenkins.io, accounts.jenkins.io, etc.) at <a href="https://github.com/jenkins-infra/helpdesk/issues/">the dedicated help desk</a>.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="Howtoreportanissue-Beforereportingabug"><a class="anchor" href="#Howtoreportanissue-Beforereportingabug"></a>Before reporting a bug</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="Howtoreportanissue-Beforereportingabug"><a class="anchor" href="#Howtoreportanissue-Beforereportingabug"></a>Before reporting a bug</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -316,10 +312,8 @@ If you&#8217;re still unable to resolve the problem, and cannot find existing is
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="Howtoreportanissue-Beforerequestinganimprovementorfeature"><a class="anchor" href="#Howtoreportanissue-Beforerequestinganimprovementorfeature"></a>Before requesting an improvement or feature</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="Howtoreportanissue-Beforerequestinganimprovementorfeature"><a class="anchor" href="#Howtoreportanissue-Beforerequestinganimprovementorfeature"></a>Before requesting an improvement or feature</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -347,6 +341,7 @@ times with only a few watchers each.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="Howtoreportanissue-Creatingtheissue"><a class="anchor" href="#Howtoreportanissue-Creatingtheissue"></a>Creating the issue</h2>
 <div class="sectionbody">
@@ -368,21 +363,18 @@ plugin page.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>After selecting the link, if you end up on JIRA follow the instructions on <a href="#Reporting an Issue in JIRA">[Reporting an Issue in JIRA]</a>.</p>
+<p>After selecting the link, if you end up on JIRA follow the instructions on <a href="/participate/report-issue/#reporting-issue-on-jira">Reporting an Issue in JIRA</a>.</p>
 </li>
 <li>
-<p>After selecting the link, if you end up on Github follow the instructions on <a href="#Reporting an Issue on Github">[Reporting an Issue on Github]</a>.</p>
+<p>After selecting the link, if you end up on Github follow the instructions on <a href="/participate/report-issue/#reporting-issue-on-github">Reporting an Issue on Github</a>.</p>
 </li>
 </ul>
 </div>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_reporting_an_issue_on_jira"><a class="anchor" href="#_reporting_an_issue_on_jira"></a>Reporting an issue on JIRA</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_reporting_an_issue_on_jira"><a class="anchor" href="#_reporting_an_issue_on_jira"></a>Reporting an issue on JIRA</h3>
 <div class="paragraph">
 <p>You need to <a href="https://accounts.jenkins.io/">register an account</a> if you
 haven&#8217;t already. Then, just select <strong>Create Issue</strong> on
@@ -404,7 +396,7 @@ haven&#8217;t already. Then, just select <strong>Create Issue</strong> on
 </div>
 </li>
 <li>
-<p>For <em>Infrastructure</em>, if you&#8217;re reporting a bug with <a href="../projects/infrastructure/index.html" class="xref page">a Jenkins service run by the Jenkins project</a>, open an issue in the <a href="https://github.com/jenkins-infra/helpdesk/issues/new/choose">dedicated helpdesk on Github</a>.</p>
+<p>For <em>Infrastructure</em>, if you&#8217;re reporting a bug with <a href="/projects/infrastructure/">a Jenkins service run by the Jenkins project</a>, open an issue in the <a href="https://github.com/jenkins-infra/helpdesk/issues/new/choose">dedicated helpdesk on Github</a>.</p>
 </li>
 <li>
 <p>Enter a short but meaningful description of your problem as <strong>Summary</strong>.</p>
@@ -423,10 +415,8 @@ severe problem otherwise.</p>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_reporting_an_issue_on_github"><a class="anchor" href="#_reporting_an_issue_on_github"></a>Reporting an issue on GitHub</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_reporting_an_issue_on_github"><a class="anchor" href="#_reporting_an_issue_on_github"></a>Reporting an issue on GitHub</h3>
 <div class="paragraph">
 <p>You need to have a Github account.
 <a href="https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account">Register an account</a> if you haven&#8217;t already.</p>
@@ -436,13 +426,13 @@ severe problem otherwise.</p>
 <li>
 <p>If you are redirected to the Github issue tracker from the <a href="https://plugins.jenkins.io/">Plugin Site</a>, you will see something like this:</p>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="image:ROOT:participate/github-issues.png" alt="Github Issue Page" width="80%"></span></p>
+<p><span class="image unresolved"><img src="/images/participate/github-issues.png" alt="Github Issue Page" width="80%"></span></p>
 </div>
 </li>
 <li>
 <p>Select <strong>Get started</strong> next to the type of issue you&#8217;d like to open.</p>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="image:ROOT:participate/get-started.png" alt="Get Started Button" width="40%"></span></p>
+<p><span class="image unresolved"><img src="/images/participate/get-started.png" alt="Get Started Button" width="40%"></span></p>
 </div>
 </li>
 <li>
@@ -454,10 +444,8 @@ severe problem otherwise.</p>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_what_information_to_provide_for_environment_and_description"><a class="anchor" href="#_what_information_to_provide_for_environment_and_description"></a>What information to provide for Environment and Description</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_what_information_to_provide_for_environment_and_description"><a class="anchor" href="#_what_information_to_provide_for_environment_and_description"></a>What information to provide for Environment and Description</h3>
 <div class="paragraph">
 <p>Much of the advice on
 <a href="http://www.catb.org/esr/faqs/smart-questions.html#intro">How To Ask Questions
@@ -517,7 +505,7 @@ command line, &#8230;&#8203;)</p>
 </li>
 <li>
 <p><strong>Your web browser</strong> (+ version). Make sure the issue occurs on
-<a href="../user-docs/2.401.3/administration/web-browsers.html" class="xref page">supported
+<a href="/doc/administration/requirements/web-browsers/">supported
 web browsers</a>.</p>
 </li>
 </ul>
@@ -580,6 +568,7 @@ include their version and other relevant configuration.</p>
 (on Linux) <code>kill -3 &lt;Jenkins PID&gt;</code> or <code>jstack -l &lt;Jenkins PID&gt;</code>.</p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 </div>

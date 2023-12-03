@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/publishing/releasing-cd.html">
     <link rel="prev" href="releasing.html">
     <link rel="next" href="releasing-manually.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -1335,7 +1335,7 @@
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Continuous Delivery of Jenkins Components and Plugin (<a href="https://github.com/jenkinsci/jep/tree/master/jep/229/README.adoc" class="bare">https://github.com/jenkinsci/jep/tree/master/jep/229/README.adoc</a>) is relatively new.
+Continuous Delivery of Jenkins Components and Plugin (jep:229[]) is relatively new.
 Any feedback from early adopters will be appreciated.
 </td>
 </tr>
@@ -1369,6 +1369,20 @@ and an informational component with the Git commit hash.
 </tr>
 </table>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Push the work to prepare your plugin for CD to a dedicated branch, which you file a pull request from to your default branch.
+When enabling CD, the hosting team reviews this PR containing all necessary changes in your plugin, to prevent improper releases and mistakes.
+Don&#8217;t push the changes directly to the default branch or merge the PR before the hosting team has reviewed it.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1377,7 +1391,7 @@ and an informational component with the Git commit hash.
 <div class="sect2">
 <h3 id="_incrementals_enablement"><a class="anchor" href="#_incrementals_enablement"></a>Incrementals Enablement</h3>
 <div class="paragraph">
-<p>Verify that the plugin has already been <a href="../plugin-development/incrementals.html" class="xref page">incrementalified</a>.
+<p>Verify that the plugin has already been <a href="../../plugin-development/incrementals">incrementalified</a>.
 <code>pom.xml</code> should contain <code>&lt;version&gt;${revision}${changelist}&lt;/version&gt;</code> and the files <code>.mvn/extensions.xml</code> and <code>.mvn/maven.config</code> should exist <strong>before proceeding with subsequent steps</strong>.</p>
 </div>
 <div class="admonitionblock note">
@@ -1392,6 +1406,22 @@ A new plugin created from the <a href="https://github.com/jenkinsci/archetypes/"
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>Here are some PR examples for various plugins to enable CD:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkinsci/junit-plugin/pull/395/files">junit</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/kubernetes-plugin/pull/1139/files">kubernetes-plugin</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/plain-credentials-plugin/pull/31/files">plain-credentials-plugin</a></p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_enable_cd_permissions"><a class="anchor" href="#_enable_cd_permissions"></a>Enable CD Permissions</h3>
@@ -1403,6 +1433,9 @@ A new plugin created from the <a href="https://github.com/jenkinsci/archetypes/"
 <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">cd:
   enabled: true</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>In your PR towards the repository permission updater, include a link to the PR in your plugin, which contains all the necessary changes, like described above.</p>
 </div>
 <div class="paragraph">
 <p>Once that has been merged, start checking <code><a href="https://github.com/jenkinsci/your-plugin/settings/secrets/actions" class="bare">https://github.com/jenkinsci/your-plugin/settings/secrets/actions</a></code>
@@ -1678,7 +1711,7 @@ If you prefer to only deploy explicitly, not on every push, just comment out the
 <div class="sectionbody">
 <div class="paragraph">
 <p>It is best to avoid ever making incompatible changes to your plugin.
-If you must make one, then you can define <code>hpi.compatibleSinceVersion</code> as for <a href="#plugin-development:mark-a-plugin-incompatible">any plugins</a>.
+If you must make one, then you can define <code>hpi.compatibleSinceVersion</code> as for <a href="../../plugin-development/mark-a-plugin-incompatible">any plugins</a>.
 If <code>master</code> is currently <code>123.vXXX</code> according to</p>
 </div>
 <div class="listingblock">
@@ -1711,7 +1744,7 @@ and less than or equal to that of the release containing the breaking change.)</
 <h2 id="_fallback"><a class="anchor" href="#_fallback"></a>Fallback</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can also release manually if you have configured your machine for <a href="#publishing:releasing-manually">manual release</a>.
+<p>You can also release manually if you have configured your machine for <a href="../releasing-manually">manual release</a>.
 To cut a release:</p>
 </div>
 <div class="listingblock">
@@ -1754,7 +1787,7 @@ mvn -Dset.changelist \
 <ul>
 <li>
 <p>You don&#8217;t have permission to upload to the specified path.
-<a href="requesting-hosting.html#request-upload-permissions" class="xref page">Learn more about how to request upload permissions</a>.
+<a href="../requesting-hosting/#request-upload-permissions">Learn more about how to request upload permissions</a>.
 Check that the path you&#8217;re allowed to upload to matches the actual upload attempt (i.e. no typos).</p>
 </li>
 <li>

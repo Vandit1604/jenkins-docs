@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Jenkins on AWS :: Jenkins</title>
+    <title>Untitled :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/tutorial/2.401.3/tutorial-for-installing-jenkins-on-AWS.html">
     <link rel="prev" href="using-jenkinsfile-runner-github-action-to-build-jenkins-pipeline.html">
     <link rel="next" href="build-a-python-app-with-pyinstaller.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -35,22 +35,22 @@
     <span class="nav-text">xref:-for-installing-jenkins-on-Google-Cloud.adoc[]</span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-java-app-with-maven.html">Build a Java app with Maven</a>
+    <a class="nav-link" href="build-a-java-app-with-maven.html">build-a-java-app-with-maven.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-multibranch-pipeline-project.html">End-to-End Multibranch Pipeline Project Creation</a>
+    <a class="nav-link" href="build-a-multibranch-pipeline-project.html">build-a-multibranch-pipeline-project.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-node-js-and-react-app-with-npm.html">Build a Node.js and React app with npm</a>
+    <a class="nav-link" href="build-a-node-js-and-react-app-with-npm.html">build-a-node-js-and-react-app-with-npm.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="using-jenkinsfile-runner-github-action-to-build-jenkins-pipeline.html">Build a Jenkins pipeline by using Jenkinsfile Runner GitHub Actions</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="tutorial-for-installing-jenkins-on-AWS.html">Jenkins on AWS</a>
+    <a class="nav-link" href="tutorial-for-installing-jenkins-on-AWS.html">tutorial-for-installing-jenkins-on-AWS.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-python-app-with-pyinstaller.html">Build a Python app with PyInstaller</a>
+    <a class="nav-link" href="build-a-python-app-with-pyinstaller.html">build-a-python-app-with-pyinstaller.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="create-a-pipeline-in-blue-ocean.html">Create a Pipeline in Blue Ocean</a>
@@ -193,7 +193,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Jenkins Tutorials</a></li>
-    <li><a href="tutorial-for-installing-jenkins-on-AWS.html">Jenkins on AWS</a></li>
+    <li><a href="tutorial-for-installing-jenkins-on-AWS.html">tutorial-for-installing-jenkins-on-AWS.adoc</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/tutorials/modules/ROOT/pages/tutorial-for-installing-jenkins-on-AWS.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
@@ -203,9 +203,13 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Jenkins on AWS</h1>
-<div id="preamble">
-<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p>layout: documentation
+title: Jenkins on AWS
+section: doc
+---</p>
+</div>
 <div class="paragraph">
 <p>Jenkins is an open-source automation server that integrates with a number of
 AWS Services, including: AWS CodeCommit, AWS CodeDeploy, Amazon EC2 Spot, and Amazon EC2 Fleet.
@@ -242,8 +246,6 @@ If you already have one, you can skip to step 3.</p>
 <p><a href="#_cleaning_up">Clean up tutorial resources</a>.</p>
 </li>
 </ol>
-</div>
-</div>
 </div>
 <div class="sect1">
 <h2 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h2>
@@ -408,17 +410,17 @@ access your instance using SSH.
 </li>
 <li>
 <p>Open the Amazon EC2 console by selecting <strong>EC2</strong> under <strong>Compute</strong>.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/ec2_service.png" alt="Amazon EC2 Services page">
+<img src="tutorials/AWS/ec2_service.png" alt="Amazon EC2 Services page">
 </div>
 </div>
 </li>
 <li>
 <p>In the left-hand navigation bar, select <strong>Security Groups</strong>, and then select <strong>Create Security Group</strong>.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/create_security_group.png" alt="Amazon security group creation screen">
+<img src="tutorials/AWS/create_security_group.png" alt="Amazon security group creation screen">
 </div>
 </div>
 </li>
@@ -482,9 +484,9 @@ Linux Instances.</p>
 </li>
 <li>
 <p>From the Amazon EC2 dashboard, select <strong>Launch Instance</strong>.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/ec2_launch_instance.png" alt="Launching from Amazon">
+<img src="tutorials/AWS/ec2_launch_instance.png" alt="Launching from Amazon">
 </div>
 </div>
 </li>
@@ -503,9 +505,9 @@ This configuration is marked <strong>Free tier eligible</strong>.
 </tr>
 </table>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/ec2_choose_ami.png" alt="Choosing an Amazon Machine Image">
+<img src="tutorials/AWS/ec2_choose_ami.png" alt="Choosing an Amazon Machine Image">
 </div>
 </div>
 </li>
@@ -521,9 +523,9 @@ This configuration is marked <strong>Free tier eligible</strong>.
 </li>
 <li>
 <p>Select <strong>Launch Instance</strong>.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/ec2_review_instance_launch.png" alt="Review your Amazon launch instance">
+<img src="tutorials/AWS/ec2_review_instance_launch.png" alt="Review your Amazon launch instance">
 </div>
 </div>
 </li>
@@ -534,9 +536,9 @@ This configuration is marked <strong>Free tier eligible</strong>.
 <p>In the left-hand navigation bar, choose <strong>Instances</strong> to view the status of your instance.
 Initially, the status of your instance is pending.
 After the status changes to running, your instance is ready for use.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/ec2_view_created_instance.png" alt="Amazon view created instance">
+<img src="tutorials/AWS/ec2_view_created_instance.png" alt="Amazon view created instance">
 </div>
 </div>
 </li>
@@ -578,9 +580,9 @@ After the status changes to running, your instance is ready for use.</p>
 <ol class="arabic">
 <li>
 <p>Select the instance and locate Public DNS.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/ec2_public_dns.png" alt="Amazon public DNS">
+<img src="tutorials/AWS/ec2_public_dns.png" alt="Amazon public DNS">
 </div>
 </div>
 </li>
@@ -635,9 +637,9 @@ Be sure that you have created your key pair as described in <a href="#_creating_
 </li>
 <li>
 <p>Ensure that <strong>Port</strong> is 22.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/ec2_putty.png" alt="Amazon EC2 PuTTY selection">
+<img src="tutorials/AWS/ec2_putty.png" alt="Amazon EC2 PuTTY selection">
 </div>
 </div>
 </li>
@@ -660,9 +662,9 @@ described in <a href="#_creating_a_key_pair">Creating a key pair</a> and then se
 </li>
 <li>
 <p>Select <strong>Open</strong> to start the PuTTY session.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/putty_select_key_pair.png" alt="Selecting and opening a new PuTTY session">
+<img src="tutorials/AWS/putty_select_key_pair.png" alt="Selecting and opening a new PuTTY session">
 </div>
 </div>
 </li>
@@ -751,18 +753,10 @@ To download and install Jenkins:</p>
 </div>
 </li>
 <li>
-<p>Install Java (Amazon Linux 2):</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">[ec2-user ~]$ sudo amazon-linux-extras install java-openjdk11 -y</code></pre>
-</div>
-</div>
-</li>
-<li>
 <p>Install Java (Amazon Linux 2023):</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">[ec2-user ~]$ sudo dnf install java-11-amazon-corretto -y</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">[ec2-user ~]$ sudo dnf install java-17-amazon-corretto -y</code></pre>
 </div>
 </div>
 </li>
@@ -812,9 +806,9 @@ To configure Jenkins:</p>
 <li>
 <p>Connect to http://&lt;your_server_public_DNS&gt;:8080 from your browser.
 You will be able to access Jenkins through its management interface:</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/unlock_jenkins.png" alt="Unlock Jenkins screen">
+<img src="tutorials/AWS/unlock_jenkins.png" alt="Unlock Jenkins screen">
 </div>
 </div>
 </li>
@@ -840,9 +834,9 @@ Click <strong>Install suggested plugins</strong>.</p>
 <li>
 <p>Once the installation is complete, the <strong>Create First Admin User</strong> will open.
 Enter your information, and then select <strong>Save and Continue</strong>.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/create_admin_user.png" alt="Create your first admin user.">
+<img src="tutorials/AWS/create_admin_user.png" alt="Create your first admin user.">
 </div>
 </div>
 </li>
@@ -857,9 +851,9 @@ right.</p>
 <li>
 <p>Select the checkbox next to <strong>Amazon EC2 plugin</strong>, and then select <strong>Install
 without restart</strong>.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/install_ec2_plugin.png" alt="Jenkins Plugin Manager showing available plugins.">
+<img src="tutorials/AWS/install_ec2_plugin.png" alt="Jenkins Plugin Manager showing available plugins.">
 </div>
 </div>
 </li>
@@ -868,34 +862,34 @@ without restart</strong>.</p>
 </li>
 <li>
 <p>Select <strong>Configure a cloud</strong> if there are no existing nodes or clouds.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/configure_cloud.png" alt="Jenkins Dashboard showing configure a cloud.">
+<img src="tutorials/AWS/configure_cloud.png" alt="Jenkins Dashboard showing configure a cloud.">
 </div>
 </div>
 </li>
 <li>
 <p>If you already have other nodes or clouds set up, select <strong>Manage Jenkins</strong>.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/manage-jenkins.png" alt="Jenkins dashboard if there are existing clouds.">
+<img src="tutorials/AWS/manage-jenkins.png" alt="Jenkins dashboard if there are existing clouds.">
 </div>
 </div>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
 <p>After navigating to <strong>Manage Jenkins</strong>, select <strong>Configure Nodes and Clouds</strong> from the left hand side of the page.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/manage-nodes-and-clouds.png" alt="Manage nodes and clouds option from Manage Jenkins page">
+<img src="tutorials/AWS/manage-nodes-and-clouds.png" alt="Manage nodes and clouds option from Manage Jenkins page">
 </div>
 </div>
 </li>
 <li>
 <p>From here, select <strong>Clouds</strong>.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/manage-jenkins-configure-clouds.png" alt="Configure clouds option in navigation.">
+<img src="tutorials/AWS/manage-jenkins-configure-clouds.png" alt="Configure clouds option in navigation.">
 </div>
 </div>
 </li>
@@ -905,76 +899,76 @@ without restart</strong>.</p>
 <li>
 <p>Select <strong>Add a new cloud</strong>, and select <strong>Amazon EC2</strong>.
 A collection of new fields appears.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/add-amazon-cloud.png" alt="Adding Amazon EC2 cloud to Jenkins.">
+<img src="tutorials/AWS/add-amazon-cloud.png" alt="Adding Amazon EC2 cloud to Jenkins.">
 </div>
 </div>
 </li>
 <li>
 <p>Click <strong>Add</strong> under Amazon EC2 Credentials</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/configure_cloud_add_ec2_credentials.png" alt="Adding EC2 credentials in Configure Cloud.">
+<img src="tutorials/AWS/configure_cloud_add_ec2_credentials.png" alt="Adding EC2 credentials in Configure Cloud.">
 </div>
 </div>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
 <p>From the Jenkins Credentials Provider, select AWS Credentials as the <strong>Kind</strong>.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/jenkins_credentials_provider_aws_credentials.png" alt="Choosing Kind AWS Credentials.">
+<img src="tutorials/AWS/jenkins_credentials_provider_aws_credentials.png" alt="Choosing Kind AWS Credentials.">
 </div>
 </div>
 </li>
 <li>
 <p>Scroll down and enter in the IAM User programmatic access keys with permissions to launch EC2 instances and select <strong>Add</strong>.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/add_access_secret_access_keys.png" alt="Adding AWS Credentials.">
+<img src="tutorials/AWS/add_access_secret_access_keys.png" alt="Adding AWS Credentials.">
 </div>
 </div>
 </li>
 <li>
 <p>Scroll down to select your region using the drop-down, and select <strong>Add</strong> for the EC2 Key Pair&#8217;s Private Key.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/configure_cloud_region_private_key.png" alt="Set Region and add Private Key.">
+<img src="tutorials/AWS/configure_cloud_region_private_key.png" alt="Set Region and add Private Key.">
 </div>
 </div>
 </li>
 <li>
 <p>From the Jenkins Credentials Provider, select SSH Username with private key as the Kind and set the Username to <code>ec2-user</code>.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/ssh_username.png" alt="Set Kind to SSH Username with private key.">
+<img src="tutorials/AWS/ssh_username.png" alt="Set Kind to SSH Username with private key.">
 </div>
 </div>
 </li>
 <li>
 <p>Scroll down and select <strong>Enter Directly</strong> under Private Key, then select <strong>Add</strong>.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/private_key_enter_directly.png" alt="Set Private Key to Enter Directly.">
+<img src="tutorials/AWS/private_key_enter_directly.png" alt="Set Private Key to Enter Directly.">
 </div>
 </div>
 </li>
 <li>
 <p>Open the private key pair you created in the <a href="#_creating_a_key_pair">creating a key pair</a> step and paste in the contents from "-----BEGIN RSA PRIVATE KEY-----" to "-----END RSA PRIVATE KEY-----".
 Select <strong>Add</strong> when completed.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/enter_private_key.png" alt="Enter Private Key.">
+<img src="tutorials/AWS/enter_private_key.png" alt="Enter Private Key.">
 </div>
 </div>
 </li>
 <li>
 <p>Scroll down to "Test Connection" and ensure it states "Success".
 Select <strong>Save</strong> when done</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/test_connection.png" alt="Test Connection.">
+<img src="tutorials/AWS/test_connection.png" alt="Test Connection.">
 </div>
 </div>
 </li>
@@ -1006,9 +1000,9 @@ created so you do not continue to accrue charges.</p>
 </li>
 <li>
 <p>Right-click on the instance you created earlier, and select <strong>Terminate</strong>.</p>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/AWS/terminate_instance.png" alt="Terminating your AWS EC2 instance.">
+<img src="tutorials/AWS/terminate_instance.png" alt="Terminating your AWS EC2 instance.">
 </div>
 </div>
 </li>
@@ -1019,7 +1013,7 @@ created so you do not continue to accrue charges.</p>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="using-jenkinsfile-runner-github-action-to-build-jenkins-pipeline.html">Build a Jenkins pipeline by using Jenkinsfile Runner GitHub Actions</a></span>
-  <span class="next"><a href="build-a-python-app-with-pyinstaller.html">Build a Python app with PyInstaller</a></span>
+  <span class="next"><a href="build-a-python-app-with-pyinstaller.html">build-a-python-app-with-pyinstaller.adoc</a></span>
 </nav>
 </article>
   </div>

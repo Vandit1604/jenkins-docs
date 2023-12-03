@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/tutorial-improve/update-base-jenkins-version.html">
     <link rel="prev" href="update-parent-pom.html">
     <link rel="next" href="update-scm-url.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -1326,9 +1326,7 @@
 </aside>
 <article class="doc">
 <h1 class="page">Update Jenkins version</h1>
-<div class="sect1">
-<h2 id="_update_minimum_jenkins_version"><a class="anchor" href="#_update_minimum_jenkins_version"></a>Update minimum Jenkins version</h2>
-<div class="sectionbody">
+<h1 id="_update_minimum_jenkins_version" class="sect0"><a class="anchor" href="#_update_minimum_jenkins_version"></a>Update minimum Jenkins version</h1>
 <div class="videoblock">
 <div class="title">Require a newer minimum Jenkins version</div>
 <div class="content">
@@ -1338,22 +1336,10 @@
 <div class="paragraph">
 <p>Jenkins plugins declare a minimum supported Jenkins version.
 The minimum Jenkins version is a good way for plugin developers to indicate the range of Jenkins versions they are willing to support and test.
-See the <a href="../plugin-development/choosing-jenkins-baseline.html" class="xref page">developer documentation</a> for the recommended minimum Jenkins version.</p>
+See the <a href="/doc/developer/plugin-development/choosing-jenkins-baseline">developer documentation</a> for the recommended minimum Jenkins version.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_create_a_branch"><a class="anchor" href="#_create_a_branch"></a>Create a branch</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>In a local copy of your <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">fork</a> of the plugin repository create a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository">git branch</a> for your work with the command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git checkout -b {task-identifier} master</code></pre>
-</div>
-</div>
-</div>
+<p>Unresolved include directive in modules/tutorial-improve/pages/update-base-jenkins-version.adoc - include::doc/developer/tutorial-improve/_create-a-branch.adoc[]</p>
 </div>
 <div class="sect1">
 <h2 id="_update_minimum_required_jenkins_version"><a class="anchor" href="#_update_minimum_required_jenkins_version"></a>Update minimum required Jenkins version</h2>
@@ -1364,13 +1350,13 @@ See the <a href="../plugin-development/choosing-jenkins-baseline.html" class="xr
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">   &lt;properties&gt;
-     &lt;jenkins.version&gt;PLACEHOLDER_RECENT_LTS_POINT_HIGH&lt;/jenkins.version&gt;
+     &lt;jenkins.version&gt;2.414.3&lt;/jenkins.version&gt;
    &lt;/properties&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>If the plugin is already using the plugin bill of materials, then the bill of materials also needs to be updated with the matching <code>artifactId</code> for the minimum required Jenkins version.
-The <code>version</code> may also need an upgrade see the <a href="../plugin-development/dependency-management.html#jenkins-plugin-bom" class="xref page">developer documentation</a>.</p>
+The <code>version</code> may also need an upgrade see the <a href="/doc/developer/plugin-development/dependency-management/#jenkins-plugin-bom">developer documentation</a>.</p>
 </div>
 <div class="paragraph">
 <p>The <code>git diff</code> might look like this:</p>
@@ -1381,10 +1367,10 @@ The <code>version</code> may also need an upgrade see the <a href="../plugin-dev
     &lt;dependencies&gt;
       &lt;dependency&gt;
         &lt;groupId&gt;io.jenkins.tools.bom&lt;/groupId&gt;
--        &lt;artifactId&gt;bom-2.319.x&lt;/artifactId&gt;
-+        &lt;artifactId&gt;bom-2.375.x&lt;/artifactId&gt;
--        &lt;version&gt;1466.v85a_616ea_b_87c&lt;/version&gt;
-+        &lt;version&gt;1981.v17df70e84a_a_1&lt;/version&gt;
+-        &lt;artifactId&gt;bom-2.332.x&lt;/artifactId&gt;
++        &lt;artifactId&gt;bom-2.401.x&lt;/artifactId&gt;
+-        &lt;version&gt;1757.vf3c66da_b_7492&lt;/version&gt;
++        &lt;version&gt;2582.v830625dd636c&lt;/version&gt;
         &lt;type&gt;pom&lt;/type&gt;
         &lt;scope&gt;import&lt;/scope&gt;
       &lt;/dependency&gt;
@@ -1392,43 +1378,8 @@ The <code>version</code> may also need an upgrade see the <a href="../plugin-dev
   &lt;/dependencyManagement&gt;</code></pre>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_create_a_pull_request"><a class="anchor" href="#_create_a_pull_request"></a>Create a pull request</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Commit that change:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git add {modified-files}
-git commit -m "{task-description}"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Push the change to GitHub:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git push origin --set-upstream {task-identifier}</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
-remote:
-remote: Create a pull request for '{task-identifier}' on GitHub by visiting:
-remote: https://github.com/user/your-plugin/pull/new/{task-identifier}
-remote:
-To github.com:user/your-plugin.git
- * [new branch]      {task-identifier} -&gt; {task-identifier}
-Branch '{task-identifier}' tracking remote branch '{task-identifier}'.</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Notice that the output of the command includes the URL, which can be used to open a pull request.
-Copy that URL in your web browser and submit a pull request.</p>
+<p>Unresolved include directive in modules/tutorial-improve/pages/update-base-jenkins-version.adoc - include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]</p>
 </div>
 </div>
 </div>

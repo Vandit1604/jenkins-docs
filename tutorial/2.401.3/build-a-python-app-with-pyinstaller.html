@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Build a Python app with PyInstaller :: Jenkins</title>
+    <title>Untitled :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/tutorial/2.401.3/build-a-python-app-with-pyinstaller.html">
     <link rel="prev" href="tutorial-for-installing-jenkins-on-AWS.html">
     <link rel="next" href="create-a-pipeline-in-blue-ocean.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -35,22 +35,22 @@
     <span class="nav-text">xref:-for-installing-jenkins-on-Google-Cloud.adoc[]</span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-java-app-with-maven.html">Build a Java app with Maven</a>
+    <a class="nav-link" href="build-a-java-app-with-maven.html">build-a-java-app-with-maven.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-multibranch-pipeline-project.html">End-to-End Multibranch Pipeline Project Creation</a>
+    <a class="nav-link" href="build-a-multibranch-pipeline-project.html">build-a-multibranch-pipeline-project.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-node-js-and-react-app-with-npm.html">Build a Node.js and React app with npm</a>
+    <a class="nav-link" href="build-a-node-js-and-react-app-with-npm.html">build-a-node-js-and-react-app-with-npm.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="using-jenkinsfile-runner-github-action-to-build-jenkins-pipeline.html">Build a Jenkins pipeline by using Jenkinsfile Runner GitHub Actions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="tutorial-for-installing-jenkins-on-AWS.html">Jenkins on AWS</a>
+    <a class="nav-link" href="tutorial-for-installing-jenkins-on-AWS.html">tutorial-for-installing-jenkins-on-AWS.adoc</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="build-a-python-app-with-pyinstaller.html">Build a Python app with PyInstaller</a>
+    <a class="nav-link" href="build-a-python-app-with-pyinstaller.html">build-a-python-app-with-pyinstaller.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="create-a-pipeline-in-blue-ocean.html">Create a Pipeline in Blue Ocean</a>
@@ -193,7 +193,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Jenkins Tutorials</a></li>
-    <li><a href="build-a-python-app-with-pyinstaller.html">Build a Python app with PyInstaller</a></li>
+    <li><a href="build-a-python-app-with-pyinstaller.html">build-a-python-app-with-pyinstaller.adoc</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/tutorials/modules/ROOT/pages/build-a-python-app-with-pyinstaller.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
@@ -203,9 +203,13 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Build a Python app with PyInstaller</h1>
-<div id="preamble">
-<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p>layout: documentation
+title: Build a Python app with PyInstaller
+section: doc
+---</p>
+</div>
 <div class="paragraph">
 <p>This tutorial shows you how to use Jenkins to orchestrate building a simple
 Python application with <a href="https://www.pyinstaller.org/">PyInstaller</a>.</p>
@@ -230,91 +234,36 @@ a standalone executable file for Linux, which you can download through Jenkins
 and execute at the command line on Linux machines without Python.</p>
 </div>
 <div class="paragraph">
-<p><strong>Note:</strong> Unlike the <a href="index.html" class="xref page">other tutorials</a> in this documentation, this tutorial
+<p><strong>Note:</strong> Unlike the <a href="..">other tutorials</a> in this documentation, this tutorial
 requires approximately 500 MB more Docker image data to be downloaded.</p>
 </div>
 <div class="paragraph">
 <p><strong>Duration:</strong> This tutorial takes 20-40 minutes to complete (assuming you&#8217;ve
 already met the <a href="#prerequisites">prerequisites</a> below). The exact duration will
-depend on the speed of your machine and whether or not you&#8217;ve already <a href="#tutorials:ROOT:create-a-pipeline-in-blue-ocean.adoc#run-jenkins-in-docker" class="xref unresolved">run Jenkins in Docker</a> from <a href="index.html" class="xref page">another tutorial</a>.</p>
+depend on the speed of your machine and whether or not you&#8217;ve already
+<a href="#run-jenkins-in-docker">run Jenkins in Docker</a> from <a href="..">another tutorial</a>.</p>
 </div>
 <div class="paragraph">
 <p>You can stop this tutorial at any point in time and continue from where you left
 off.</p>
 </div>
 <div class="paragraph">
-<p>If you&#8217;ve already run though <a href="index.html" class="xref page">another tutorial</a>, you can skip the <a href="#prerequisites">prerequisites </a> and <a href="#run-jenkins-in-docker">Run Jenkins in Docker</a> sections below and proceed on to <a href="#partial$fork-sample-repository.adoc" class="xref unresolved">forking the sample repository</a>. (Just ensure you have <a href="https://git-scm.com/downloads">Git</a> installed locally.) If you need to restart Jenkins, simply follow the restart instructions in <a href="#user-docs:installing-jenkins:partial$_setup-wizard-for-tutorials.adoc" class="xref unresolved">run Jenkins in Docker</a> and then proceed on.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>For this tutorial, you will require:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A macOS, Linux or Windows machine with:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>256 MB of RAM, although more than 2 GB is recommended.</p>
-</li>
-<li>
-<p>10 GB of drive space for Jenkins and your Docker images and containers.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>The following software installed:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.docker.com/">Docker</a> - Read more about installing Docker in the
-<a href="/doc/book/installing/#installing-docker">Installing Docker</a> section of
-the <a href="/doc/book/installing/">Installing Jenkins</a> page.<br>
-<strong>Note:</strong> If you use Linux, this tutorial assumes that you are not running
-Docker commands as the root user, but instead with a single user account that
-also has access to the other tools used throughout this tutorial.</p>
-</li>
-<li>
-<p><a href="https://git-scm.com/downloads">Git</a> and optionally
-<a href="https://desktop.github.com/">GitHub Desktop</a></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
+<p>If you&#8217;ve already run though <a href="..">another tutorial</a>, you can skip the
+<a href="#prerequisites">Prerequisites</a> and <a href="#run-jenkins-in-docker">Run Jenkins in
+Docker</a> sections below and proceed on to <a href="#fork-sample-repository">forking the
+sample repository</a>. (Just ensure you have
+<a href="https://git-scm.com/downloads">Git</a> installed locally.) If you need to
+restart Jenkins, simply follow the restart instructions in
+<a href="#stopping-and-restarting-jenkins">Stopping and restarting Jenkins</a> and then
+proceed on.</p>
 </div>
 <div class="paragraph">
-<p><a href="#run-jenkins-in-docker">Run Jenkins in Docker</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_run_jenkins_in_docker"><a class="anchor" href="#_run_jenkins_in_docker"></a>Run Jenkins in Docker</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In this tutorial, you&#8217;ll be running Jenkins as a Docker container from the
-<a href="https://hub.docker.com/r/jenkins/jenkins/"><code>jenkins/jenkins</code></a> Docker
-image.</p>
+<p>Unresolved include directive in modules/ROOT/pages/build-a-python-app-with-pyinstaller.adoc - include::doc/tutorials/_prerequisites.adoc[]
+** <a href="https://git-scm.com/downloads">Git</a> and optionally
+   <a href="https://desktop.github.com/">GitHub Desktop</a></p>
 </div>
 <div class="paragraph">
-<p>To run Jenkins in Docker, follow the relevant instructions below for either
-<a href="#on-macos-and-linux">macOS and Linux</a> or <a href="#on-windows">Windows</a>.</p>
-</div>
-<div class="paragraph">
-<p>You can read more about Docker container and image concepts in the <a href="#docker.adoc" class="xref unresolved">Docker</a>
-section of the <a href="#installing-jenkins:index.adoc" class="xref unresolved">Installing Jenkins</a> page.</p>
-</div>
-<div class="paragraph">
-<p><a href="#partial$_docker-for-tutorials.adoc" class="xref unresolved">partial$_docker-for-tutorials.adoc</a></p>
-</div>
-<div class="paragraph">
-<p><a href="#partial$_setup-wizard-for-tutorials.adoc" class="xref unresolved">partial$_setup-wizard-for-tutorials.adoc</a></p>
+<p>Unresolved include directive in modules/ROOT/pages/build-a-python-app-with-pyinstaller.adoc - include::doc/book/installing/_run-jenkins-in-docker.adoc[]</p>
 </div>
 <div class="sect2">
 <h3 id="fork-and-clone-the-sample-repository-on-github"><a class="anchor" href="#fork-and-clone-the-sample-repository-on-github"></a>Fork and clone the sample repository</h3>
@@ -507,7 +456,7 @@ Git repository.</p>
         stage('Build') { <i class="conum" data-value="2"></i><b>(2)</b>
             agent {
                 docker {
-                    image 'python:2-alpine' <i class="conum" data-value="3"></i><b>(3)</b>
+                    image 'python:3.12.0-alpine3.18' <i class="conum" data-value="3"></i><b>(3)</b>
                 }
             }
             steps {
@@ -547,7 +496,7 @@ This means that:
 <p>You&#8217;ll have separate Jenkins and Python containers running locally in Docker.</p>
 </li>
 <li>
-<p>The Python container becomes the <a href="../../user-docs/2.401.3/glossary/index.html#agent" class="xref page">agent</a> that
+<p>The Python container becomes the <a href="/doc/book/glossary/#agent">agent</a> that
 Jenkins uses to run the <code>Build</code> stage of your Pipeline project. However,
 this container is short-lived - its lifespan is only that of the duration of
 your <code>Build</code> stage&#8217;s execution.</p>
@@ -616,13 +565,13 @@ home directory).</p>
 successfully.</p>
 </div>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/python-pyinstaller-02-initial-pipeline-runs-successfully-step-opened.png" alt="Initial Pipeline runs successfully" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/python-pyinstaller-02-initial-pipeline-runs-successfully-step-opened.png" alt="Initial Pipeline runs successfully" width="100%"></span></p>
 </div>
 </li>
 <li>
 <p>Click the <strong>X</strong> at the top-right to return to the main Blue Ocean interface.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/python-pyinstaller-03-main-blue-ocean-interface.png" alt="Main Blue Ocean interface" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/python-pyinstaller-03-main-blue-ocean-interface.png" alt="Main Blue Ocean interface" width="100%"></span></p>
 </div>
 </li>
 </ol>
@@ -668,7 +617,7 @@ successfully.</p>
         stage('Build') {
             agent {
                 docker {
-                    image 'python:2-alpine'
+                    image 'python:3.12.0-alpine3.18'
                 }
             }
             steps {
@@ -715,7 +664,7 @@ This means that:
 <p>You&#8217;ll have separate Jenkins and pytest containers running locally in Docker.</p>
 </li>
 <li>
-<p>The pytest container becomes the <a href="../../user-docs/2.401.3/glossary/index.html#agent" class="xref page">agent</a> that
+<p>The pytest container becomes the <a href="/doc/book/glossary/#agent">agent</a> that
 Jenkins uses to run the <code>Test</code> stage of your Pipeline project. This
 container&#8217;s lifespan lasts the duration of your <code>Test</code> stage&#8217;s execution.</p>
 </li>
@@ -779,7 +728,7 @@ If your amended Pipeline ran successfully, here&#8217;s what the Blue Ocean
 interface should look like. Notice the additional "Test" stage. You can click
 on the previous "Build" stage circle to access the output from that stage.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/python-pyinstaller-11-test-stage-runs-successfully-with-output.png" alt="Test stage runs successfully (with output)" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/python-pyinstaller-11-test-stage-runs-successfully-with-output.png" alt="Test stage runs successfully (with output)" width="100%"></span></p>
 </div>
 </li>
 <li>
@@ -835,7 +784,7 @@ on the previous "Build" stage circle to access the output from that stage.</p>
         stage('Build') {
             agent {
                 docker {
-                    image 'python:2-alpine'
+                    image 'python:3.12.0-alpine3.18'
                 }
             }
             steps {
@@ -917,7 +866,7 @@ separate container. This means that:
 locally in Docker.</p>
 </li>
 <li>
-<p>The PyInstaller container becomes the <a href="../../user-docs/2.401.3/glossary/index.html#agent" class="xref page">agent</a>
+<p>The PyInstaller container becomes the <a href="/doc/book/glossary/#agent">agent</a>
 that Jenkins uses to run the <code>Deliver</code> stage of your Pipeline project. This
 container&#8217;s lifespan lasts the duration of your <code>Deliver</code> stage&#8217;s execution.</p>
 </li>
@@ -980,7 +929,7 @@ interface should look like. Notice the additional "Deliver" stage. Click on
 the previous "Test" and "Build" stage circles to access the outputs from those
 stages.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/python-pyinstaller-21-deliver-stage-runs-successfully.png" alt="Deliver stage runs successfully" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/python-pyinstaller-21-deliver-stage-runs-successfully.png" alt="Deliver stage runs successfully" width="100%"></span></p>
 </div>
 <div class="paragraph">
 <p>Here&#8217;s what the output of the "Deliver" stage should look like, showing you the
@@ -988,14 +937,14 @@ results of PyInstaller bundling your Python application into a single standalone
 executable file.</p>
 </div>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/python-pyinstaller-22-deliver-stage-output-only.png" alt="Deliver stage output only" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/python-pyinstaller-22-deliver-stage-output-only.png" alt="Deliver stage output only" width="100%"></span></p>
 </div>
 </li>
 <li>
 <p>Click the <strong>X</strong> at the top-right to return to the main Blue Ocean interface,
 which lists your previous Pipeline runs in reverse chronological order.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/python-pyinstaller-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png" alt="Main Blue Ocean interface with all previous runs displayed" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/python-pyinstaller-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png" alt="Main Blue Ocean interface with all previous runs displayed" width="100%"></span></p>
 </div>
 </li>
 </ol>
@@ -1015,14 +964,14 @@ performed <a href="#add-a-final-deliver-stage-to-your-pipeline">above</a>. To do
 click the top row (representing the most recent Pipeline run) on the main Blue
 Ocean&#8217;s <strong>Activity</strong> page.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/python-pyinstaller-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png" alt="Main Blue Ocean interface with all previous runs displayed" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/python-pyinstaller-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png" alt="Main Blue Ocean interface with all previous runs displayed" width="100%"></span></p>
 </div>
 </li>
 <li>
 <p>On the results page of the Pipeline run, click <strong>Artifacts</strong> at the top right
 to access the <strong>Artifacts</strong> page.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/python-pyinstaller-21-deliver-stage-runs-successfully.png" alt="Deliver stage runs successfully" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/python-pyinstaller-21-deliver-stage-runs-successfully.png" alt="Deliver stage runs successfully" width="100%"></span></p>
 </div>
 </li>
 <li>
@@ -1030,7 +979,7 @@ to access the <strong>Artifacts</strong> page.</p>
 <strong>dist/add2vals</strong> artifact item to download the standalone executable file to
 your browser&#8217;s "Downloads" directory.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/python-pyinstaller-24-deliver-stage-artifacts-page.png" alt="Deliver stage Artifacts page" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/python-pyinstaller-24-deliver-stage-artifacts-page.png" alt="Deliver stage Artifacts page" width="100%"></span></p>
 </div>
 </li>
 <li>
@@ -1066,14 +1015,14 @@ handle practically any aspect of build orchestration and automation.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="index.html" class="xref page">Tutorials overview</a> page for other introductory
+<p>The <a href="/doc/tutorials">Tutorials overview</a> page for other introductory
 tutorials.</p>
 </li>
 <li>
-<p>The <a href="../../user-docs/2.401.3/index.html" class="xref page">User Handbook</a> for more detailed information about using
+<p>The <a href="/doc/book">User Handbook</a> for more detailed information about using
 Jenkins, such as <a href="/doc/book/pipeline">Pipelines</a> (in particular
 <a href="/doc/book/pipeline/syntax">Pipeline syntax</a>) and the
-<a href="../../user-docs/2.401.3/blueocean/index.html" class="xref page">Blue Ocean</a> interface.</p>
+<a href="/doc/book/blueocean">Blue Ocean</a> interface.</p>
 </li>
 <li>
 <p>The <a href="/node">Jenkins blog</a> for the latest events, other tutorials and
@@ -1082,11 +1031,10 @@ updates.</p>
 </ul>
 </div>
 <hr>
-</div>
-</div>
+Unresolved include directive in modules/ROOT/pages/build-a-python-app-with-pyinstaller.adoc - include::_partials/_feedback-footer.html[]
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="tutorial-for-installing-jenkins-on-AWS.html">Jenkins on AWS</a></span>
+  <span class="prev"><a href="tutorial-for-installing-jenkins-on-AWS.html">tutorial-for-installing-jenkins-on-AWS.adoc</a></span>
   <span class="next"><a href="create-a-pipeline-in-blue-ocean.html">Create a Pipeline in Blue Ocean</a></span>
 </nav>
 </article>

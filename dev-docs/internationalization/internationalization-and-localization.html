@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Internationalization and Localization :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/internationalization/internationalization-and-localization.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -1326,7 +1326,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="user-docs:using-jenkins:using-local-language.adoc">How to view Jenkins in your language</a>.</p>
+<p><a href="/doc/book/using/using-local-language/">How to view Jenkins in your language</a>.</p>
 </div>
 </div>
 </div>
@@ -1345,19 +1345,19 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><a href="i18n-source-code.html" class="xref page">Internationalize messages in Java source code</a></p>
+<p><a href="/doc/developer/internationalization/i18n-source-code/">Internationalize messages in Java source code</a></p>
 </li>
 <li>
-<p><a href="i18n-jelly-views.html" class="xref page">Internationalize messages in Jelly views</a></p>
+<p><a href="/doc/developer/internationalization/i18n-jelly-views/">Internationalize messages in Jelly views</a></p>
 </li>
 <li>
-<p><a href="../crowdin/translating-plugins.html" class="xref page">Enable Crowdin translation support for the plugin</a> (Optional)</p>
+<p><a href="/doc/developer/crowdin/translating-plugins/">Enable Crowdin translation support for the plugin</a> (Optional)</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p><a href="prepare-a-java-source-file.html" class="xref page">Prepare a Java source file for localization</a> shows the detailed internationalization steps.
-The <a href="advanced-localization.html" class="xref page">advanced localization</a> documentation provides guidance for more sophisticated internationalization, like date formatting, time formatting, and number formatting.</p>
+<p><a href="/doc/developer/internationalization/prepare-a-java-source-file/">Prepare a Java source file for localization</a> shows the detailed internationalization steps.
+The <a href="/doc/developer/internationalization/advanced-localization/">advanced localization</a> documentation provides guidance for more sophisticated internationalization, like date formatting, time formatting, and number formatting.</p>
 </div>
 </div>
 </div>
@@ -1421,7 +1421,7 @@ These files must be encoded in UTF-8.</p>
 <div class="paragraph">
 <p>After successfully testing the changes interactively, submit a pull request to propose the changes.
 Instructions for localization pull requests to Jenkins core are available in the <a href="https://github.com/jenkinsci/jenkins/blob/master/CONTRIBUTING.md#proposing-changes">Jenkins core contributing guide</a>.
-Plugins that use Crowdin for translation can follow the <a href="crowdin:translating-plugins.adoc">Crowdin translation instructions</a>.
+Plugins that use Crowdin for translation can follow the <a href="/doc/developer/crowdin/translating-plugins/">Crowdin translation instructions</a>.
 Plugins that do not use Crowdin for translation should submit a pull request according to the contributing guide for the specific plugin.</p>
 </div>
 <div class="paragraph">
@@ -1439,10 +1439,8 @@ Try to get in touch with them to avoid a surprise.</p>
 <p>Refactoring the existing code to handle i18n correctly is tedious.
 So <a href="https://plugins.jetbrains.com/plugin/1885-jenkins-development-support">IntelliJ IDEA plugin Jenkins Development Support</a> is developed to simplify this.</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/download_jenkins_dev_support.png" alt="Install Plugin">
-</div>
+<div class="paragraph">
+<p><span class="image unresolved"><img src="../../../images/developer/internationalization-and-localization/download_jenkins_dev_support.png" alt="Install Plugin"></span></p>
 </div>
 </div>
 </div>

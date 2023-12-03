@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Build a Java app with Maven :: Jenkins</title>
+    <title>Untitled :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/tutorial/2.401.3/build-a-java-app-with-maven.html">
     <link rel="prev" href="index.html">
     <link rel="next" href="build-a-multibranch-pipeline-project.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -35,22 +35,22 @@
     <span class="nav-text">xref:-for-installing-jenkins-on-Google-Cloud.adoc[]</span>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="build-a-java-app-with-maven.html">Build a Java app with Maven</a>
+    <a class="nav-link" href="build-a-java-app-with-maven.html">build-a-java-app-with-maven.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-multibranch-pipeline-project.html">End-to-End Multibranch Pipeline Project Creation</a>
+    <a class="nav-link" href="build-a-multibranch-pipeline-project.html">build-a-multibranch-pipeline-project.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-node-js-and-react-app-with-npm.html">Build a Node.js and React app with npm</a>
+    <a class="nav-link" href="build-a-node-js-and-react-app-with-npm.html">build-a-node-js-and-react-app-with-npm.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="using-jenkinsfile-runner-github-action-to-build-jenkins-pipeline.html">Build a Jenkins pipeline by using Jenkinsfile Runner GitHub Actions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="tutorial-for-installing-jenkins-on-AWS.html">Jenkins on AWS</a>
+    <a class="nav-link" href="tutorial-for-installing-jenkins-on-AWS.html">tutorial-for-installing-jenkins-on-AWS.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-python-app-with-pyinstaller.html">Build a Python app with PyInstaller</a>
+    <a class="nav-link" href="build-a-python-app-with-pyinstaller.html">build-a-python-app-with-pyinstaller.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="create-a-pipeline-in-blue-ocean.html">Create a Pipeline in Blue Ocean</a>
@@ -193,7 +193,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Jenkins Tutorials</a></li>
-    <li><a href="build-a-java-app-with-maven.html">Build a Java app with Maven</a></li>
+    <li><a href="build-a-java-app-with-maven.html">build-a-java-app-with-maven.adoc</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/tutorials/modules/ROOT/pages/build-a-java-app-with-maven.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
@@ -203,153 +203,71 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Build a Java app with Maven</h1>
-<div id="preamble">
-<div class="sectionbody">
+<hr>
 <div class="paragraph">
-<p>This tutorial shows you how to use Jenkins to orchestrate building a simple Java
-application with <a href="https://maven.apache.org/">Maven</a>.</p>
-</div>
-<div class="paragraph">
-<p>If you are a Java developer who uses Maven and who is new to CI/CD concepts, or
-you might be familiar with these concepts but don&#8217;t know how to implement
-building your application using Jenkins, then this tutorial is for you.</p>
+<p>layout: documentation
+title: Build a Java app with Maven
+section: doc
+---</p>
 </div>
 <div class="paragraph">
-<p>The simple Java application (which you&#8217;ll obtain from a sample repository on
-GitHub) outputs the string "Hello world!" and is accompanied by a couple of unit
-tests to check that the main application works as expected. The results of these
-tests are saved to a JUnit XML report.</p>
+<p>This tutorial shows you how to use Jenkins to build a simple Java application with <a href="https://maven.apache.org/">Maven</a>.</p>
 </div>
 <div class="paragraph">
-<p><strong>Duration:</strong> This tutorial takes 20-40 minutes to complete (assuming you&#8217;ve
-already met the <a href="#_prerequisites">Prerequisites</a> below). The exact duration will
-depend on the speed of your machine and whether or not you&#8217;ve already
-<a href="#run-jenkins-in-docker">run Jenkins in Docker</a> from <a href="index.html" class="xref page">another tutorial</a>.</p>
+<p>If you are a Java developer using Maven, but new to CI/CD concepts, or if you are familiar with these concepts, but don&#8217;t know how to implement building your application using Jenkins, then this tutorial is for you.</p>
 </div>
 <div class="paragraph">
-<p>You can stop this tutorial at any point in time and continue from where you left
-off.</p>
+<p>This example Java application from a GitHub repository outputs the string "Hello world!", and is accompanied by some unit tests, to check that the main application works as expected.
+The test results are saved to a JUnit XML report.</p>
 </div>
 <div class="paragraph">
-<p>If you&#8217;ve already run through <a href="index.html" class="xref page">another tutorial</a>, you can skip the
-<a href="#_prerequisites">Prerequisites</a> and <a href="#run-jenkins-in-docker">Run Jenkins in
-Docker</a> sections below and proceed on to <a href="#partial$fork-sample-repository.adoc" class="xref unresolved">forking the
-sample repository</a>. (Just ensure you have
-<a href="https://git-scm.com/downloads">Git</a> installed locally.) If you need to
-restart Jenkins, simply follow the restart instructions in
-<a href="#user-docs:installing-jenkins:partial$_setup-wizard-for-tutorials.adoc" class="xref unresolved">run Jenkins in Docker</a> and then
-proceed on.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>For this tutorial, you will require:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A macOS, Linux or Windows machine with:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>256 MB of RAM, although more than 2 GB is recommended.</p>
-</li>
-<li>
-<p>10 GB of drive space for Jenkins and your Docker images and containers.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>The following software installed:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.docker.com/">Docker</a> - Read more about installing Docker in the
-<a href="/doc/book/installing/#installing-docker">Installing Docker</a> section of
-the <a href="/doc/book/installing/">Installing Jenkins</a> page.<br>
-<strong>Note:</strong> If you use Linux, this tutorial assumes that you are not running
-Docker commands as the root user, but instead with a single user account that
-also has access to the other tools used throughout this tutorial.</p>
-</li>
-<li>
-<p><a href="https://git-scm.com/downloads">Git</a> and optionally
-<a href="https://desktop.github.com/">GitHub Desktop</a>.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_run_jenkins_in_docker"><a class="anchor" href="#_run_jenkins_in_docker"></a>Run Jenkins in Docker</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In this tutorial, you&#8217;ll be running Jenkins as a Docker container from the
-<a href="https://hub.docker.com/r/jenkins/jenkins/"><code>jenkins/jenkins</code></a> Docker
-image.</p>
+<p><strong>Duration:</strong> This tutorial takes 20-40 minutes to complete, assuming you meet the below <a href="#prerequisites">prerequisites</a>.
+The exact duration will depend on the speed of your machine and whether or not you&#8217;ve already <a href="#run-jenkins-in-docker">run Jenkins in Docker</a> from <a href="..">another tutorial</a>.</p>
 </div>
 <div class="paragraph">
-<p>To run Jenkins in Docker, follow the relevant instructions below for either
-<a href="#on-macos-and-linux">macOS and Linux</a> or <a href="#on-windows">Windows</a>.</p>
+<p>You can stop this tutorial at any time and continue from where you left off.</p>
 </div>
 <div class="paragraph">
-<p>You can read more about Docker container and image concepts in the <a href="#docker.adoc" class="xref unresolved">Docker</a>
-section of the <a href="#installing-jenkins:index.adoc" class="xref unresolved">Installing Jenkins</a> page.</p>
+<p>If you&#8217;ve already run through <a href="..">another tutorial</a>, you can skip the <a href="#prerequisites">Prerequisites</a> and <a href="#run-jenkins-in-docker">Run Jenkins in Docker</a> sections below and proceed to <a href="#fork-sample-repository">forking the sample repository</a>.
+Make sure you have <a href="https://git-scm.com/downloads">Git</a> installed locally.
+If you need to restart Jenkins, simply follow the restart instructions in <a href="#stopping-and-restarting-jenkins">Stopping and restarting Jenkins</a>, and then proceed.</p>
 </div>
 <div class="paragraph">
-<p><a href="#partial$_docker-for-tutorials.adoc" class="xref unresolved">partial$_docker-for-tutorials.adoc</a></p>
+<p>Unresolved include directive in modules/ROOT/pages/build-a-java-app-with-maven.adoc - include::doc/tutorials/_prerequisites.adoc[]
+** <a href="https://git-scm.com/downloads">Git</a>, and optionally <a href="https://desktop.github.com/">GitHub Desktop</a>.</p>
 </div>
 <div class="paragraph">
-<p><a href="#partial$_setup-wizard-for-tutorials.adoc" class="xref unresolved">partial$_setup-wizard-for-tutorials.adoc</a></p>
+<p>Unresolved include directive in modules/ROOT/pages/build-a-java-app-with-maven.adoc - include::doc/book/installing/_run-jenkins-in-docker.adoc[]</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="fork-and-clone-the-sample-repository-on-github"><a class="anchor" href="#fork-and-clone-the-sample-repository-on-github"></a>Fork and clone the sample repository</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="fork-and-clone-the-sample-repository-on-github"><a class="anchor" href="#fork-and-clone-the-sample-repository-on-github"></a>Fork and clone the sample repository</h3>
 <div class="paragraph">
-<p>Obtain the simple "Hello world!" Java application from GitHub, by forking the
-sample repository of the application&#8217;s source code into your own GitHub account
-and then cloning this fork locally.</p>
+<p>Get the "Hello world!" Java application from GitHub, by forking the sample repository of the application&#8217;s source code into your own GitHub account, and then cloning this fork locally.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Ensure you are signed in to your GitHub account. If you don&#8217;t yet have a
-GitHub account, sign up for a free one on the <a href="https://github.com/">GitHub
-website</a>.</p>
+<p>Make sure you are signed in to your GitHub account.
+If you don&#8217;t yet have a GitHub account, sign up for free at <a href="https://github.com/">GitHub</a>.</p>
 </li>
 <li>
-<p>Fork the
-<a href="https://github.com/jenkins-docs/simple-java-maven-app"><code>simple-java-maven-app</code></a>
-on GitHub into your local GitHub account. If you need help with this process,
-refer to the <a href="https://help.github.com/articles/fork-a-repo/">Fork A Repo</a>
-documentation on the GitHub website for more information.</p>
+<p>Fork the <a href="https://github.com/jenkins-docs/simple-java-maven-app"><code>simple-java-maven-app</code></a> on GitHub into your local GitHub account.
+If you need help, refer to the <a href="https://help.github.com/articles/fork-a-repo/">GitHub documentation on forking a repo</a> for more information.</p>
 </li>
 <li>
-<p>Clone your forked <code>simple-java-maven-app</code> repository (on GitHub) locally to
-your machine. To begin this process, do either of the following (where
-<code>&lt;your-username&gt;</code> is the name of your user account on your operating system):</p>
+<p>Clone the forked <code>simple-java-maven-app</code> repository from GitHub to your machine.
+To begin this process, do either of the following, where <code>&lt;your-username&gt;</code> is the name of your user account on your operating system:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>If you have the GitHub Desktop app installed on your machine:</p>
+<p>If you have the <a href="https://desktop.github.com/">GitHub Desktop</a> app installed on your machine:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>In GitHub, click the green <strong>Clone or download</strong> button on your forked
-repository, then <strong>Open in Desktop</strong>.</p>
+<p>In GitHub, select <strong>Code</strong> in your forked repository, then select <strong>Open with GitHub Desktop</strong>.</p>
 </li>
 <li>
-<p>In GitHub Desktop, before clicking <strong>Clone</strong> on the <strong>Clone a Repository</strong> dialog
-box, ensure <strong>Local Path</strong> for:</p>
+<p>In GitHub Desktop, before selecting <strong>Clone</strong> in <strong>Clone a Repository</strong>, ensure <strong>Local Path</strong> for your operating system, as follows:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -368,12 +286,11 @@ box, ensure <strong>Local Path</strong> for:</p>
 </div>
 </li>
 <li>
-<p>Otherwise:</p>
+<p>Alternatively:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Open up a terminal/command line prompt and <code>cd</code> to the appropriate directory
-on:</p>
+<p>Open a terminal/command line prompt and <code>cd</code> to the appropriate directory, according to your operating system:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -383,16 +300,18 @@ on:</p>
 <p>Linux - <code>/home/&lt;your-username&gt;/GitHub/</code></p>
 </li>
 <li>
-<p>Windows - <code>C:\Users\&lt;your-username&gt;\Documents\GitHub\</code> (although use a Git
-bash command line window as opposed to the usual Microsoft command prompt)</p>
+<p>Windows - <code>C:\Users\&lt;your-username&gt;\Documents\GitHub\</code> (Use a Git bash command line window, not the usual Microsoft command prompt)</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Run the following command to continue/complete cloning your forked repo:<br>
-<code>git clone https://github.com/YOUR-GITHUB-ACCOUNT-NAME/simple-java-maven-app</code><br>
-where <code>YOUR-GITHUB-ACCOUNT-NAME</code> is the name of your GitHub account.</p>
+<p>Run the following command to clone your forked repo, replacing <code>YOUR-GITHUB-ACCOUNT-NAME</code> with the name of your GitHub account:</p>
+<div class="listingblock">
+<div class="content">
+<pre>git clone https://github.com/YOUR-GITHUB-ACCOUNT-NAME/simple-java-maven-app</pre>
+</div>
+</div>
 </li>
 </ol>
 </div>
@@ -401,45 +320,38 @@ where <code>YOUR-GITHUB-ACCOUNT-NAME</code> is the name of your GitHub account.<
 </div>
 </li>
 </ol>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_create_your_pipeline_project_in_jenkins"><a class="anchor" href="#_create_your_pipeline_project_in_jenkins"></a>Create your Pipeline project in Jenkins</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Go back to Jenkins, log in again if necessary and click <strong>create new jobs</strong>
-under <strong>Welcome to Jenkins!</strong><br>
-<strong>Note:</strong> If you don&#8217;t see this, click <strong>New Item</strong> at the top left.</p>
+<p>In Jenkins, sign in again if necessary, and select <strong>create new jobs</strong> under <strong>Welcome to Jenkins!</strong>.
+If your display is different, select <strong>New Item</strong> at the top left.</p>
 </li>
 <li>
-<p>In the <strong>Enter an item name</strong> field, specify the name for your new Pipeline
-project (e.g. <code>simple-java-maven-app</code>).</p>
+<p>Enter your new Pipeline project name in <strong>Enter an item name</strong>.</p>
 </li>
 <li>
-<p>Scroll down and click <strong>Pipeline</strong>, then click <strong>OK</strong> at the end of the page.</p>
+<p>Scroll down and select <strong>Pipeline</strong>, then select <strong>OK</strong> at the end of the page.</p>
 </li>
 <li>
-<p>( <em>Optional</em> ) On the next page, specify a brief description for your Pipeline
-in the <strong>Description</strong> field (e.g. <code>An entry-level Pipeline demonstrating how to
-use Jenkins to build a simple Java application with Maven.</code>)</p>
+<p>(Optional) Enter a Pipeline <strong>Description</strong>.</p>
 </li>
 <li>
-<p>Click the <strong>Pipeline</strong> tab at the top of the page to scroll down to the
-<strong>Pipeline</strong> section.</p>
+<p>Select <strong>Pipeline</strong> on the left pane.</p>
 </li>
 <li>
-<p>From the <strong>Definition</strong> field, choose the <strong>Pipeline script from SCM</strong> option.
-This option instructs Jenkins to obtain your Pipeline from Source Control
-Management (SCM), which will be your locally cloned Git repository.</p>
+<p>Select <strong>Definition</strong>, and then select the <strong>Pipeline script from SCM</strong> option.
+This option instructs Jenkins to obtain your Pipeline from source control management (SCM), which is your locally cloned Git repository.</p>
 </li>
 <li>
-<p>From the <strong>SCM</strong> field, choose <strong>Git</strong>.</p>
+<p>Select <strong>Git</strong> from the options in <strong>SCM</strong>.</p>
 </li>
 <li>
-<p>In the <strong>Repository URL</strong> field, specify the directory path of your locally
-cloned repository <a href="#fork-sample-repository">above</a>,
-which is from your user account/home directory on your host machine, mapped to
-the <code>/home</code> directory of the Jenkins container - i.e.</p>
+<p>Enter the directory path of your locally cloned repository <a href="#fork-sample-repository">above</a> in <strong>Script Path</strong>.
+This directory path from your user account/home directory on your host machine is mapped to the <code>/home</code> directory of the Jenkins container, according to your operating system, below:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -455,9 +367,8 @@ the <code>/home</code> directory of the Jenkins container - i.e.</p>
 </div>
 </li>
 <li>
-<p>Click <strong>Save</strong> to save your new Pipeline project. You&#8217;re now ready to begin
-creating your <code>Jenkinsfile</code>, which you&#8217;ll be checking into your locally cloned
-Git repository.</p>
+<p>Select <strong>Save</strong> to save your new Pipeline project.
+You&#8217;re now ready create a <code>Jenkinsfile</code> to check into your locally cloned Git repository.</p>
 </li>
 </ol>
 </div>
@@ -465,39 +376,32 @@ Git repository.</p>
 <div class="sect2">
 <h3 id="_create_your_initial_pipeline_as_a_jenkinsfile"><a class="anchor" href="#_create_your_initial_pipeline_as_a_jenkinsfile"></a>Create your initial Pipeline as a Jenkinsfile</h3>
 <div class="paragraph">
-<p>You&#8217;re now ready to create your Pipeline that will automate building your Java
-application with Maven in Jenkins. Your Pipeline will be created as a
-<code>Jenkinsfile</code>, which will be committed to your locally cloned Git repository
-(<code>simple-java-maven-app</code>).</p>
+<p>You can now create a Pipeline that automates building your Java application with Maven in Jenkins.</p>
 </div>
 <div class="paragraph">
-<p>This is the foundation of "Pipeline-as-Code", which treats the continuous
-delivery pipeline as a part of the application to be versioned and reviewed like
-any other code. Read more about Pipeline and what a Jenkinsfile is in the
-<a href="/doc/book/pipeline">Pipeline</a> and <a href="/doc/book/pipeline/jenkinsfile">Using
-a Jenkinsfile</a> sections of the User Handbook.</p>
+<p>Your Pipeline is created as a <code>Jenkinsfile</code>, which is committed to your locally cloned Git repository (<code>simple-java-maven-app</code>).</p>
 </div>
 <div class="paragraph">
-<p>First, create an initial Pipeline to download a Maven Docker image and run it as
-a Docker container (which will build your simple Java application). Also add a
-"Build" stage to the Pipeline that begins orchestrating this whole process.</p>
+<p>This is the foundation of "Pipeline-as-Code", which treats the continuous delivery pipeline as a part of the application, to be versioned and reviewed like any other code.
+Read more about Pipeline and what a Jenkinsfile is in the <a href="/doc/book/pipeline">Pipeline</a> and <a href="/doc/book/pipeline/jenkinsfile">Using a Jenkinsfile</a> sections of the User Handbook.</p>
+</div>
+<div class="paragraph">
+<p>First, create an initial Pipeline to download a Maven Docker image and run it as a Docker container, which builds your Java application.
+Be sure to add a "Build" stage to the Pipeline that begins orchestrating this whole process.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Using your favorite text editor or IDE, create and save new text file with the
-name <code>Jenkinsfile</code> at the root of your local <code>simple-java-maven-app</code> Git
-repository.</p>
+<p>Using your favorite text editor or IDE, create and save a new text file with the name <code>Jenkinsfile</code> at the root of your local <code>simple-java-maven-app</code> Git repository.</p>
 </li>
 <li>
-<p>Copy the following Declarative Pipeline code and paste it into your empty
-<code>Jenkinsfile</code>:</p>
+<p>Copy the following Declarative Pipeline code and paste it into your empty <code>Jenkinsfile</code>:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
     agent {
         docker {
-            image 'maven:3.9.0-eclipse-temurin-11' <i class="conum" data-value="1"></i><b>(1)</b>
+            image 'maven:3.9.5-eclipse-temurin-17-alpine' <i class="conum" data-value="1"></i><b>(1)</b>
             args '-v /root/.m2:/root/.m2' <i class="conum" data-value="2"></i><b>(2)</b>
         }
     }
@@ -515,10 +419,7 @@ repository.</p>
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>This <code>image</code> parameter (of the <a href="/doc/book/pipeline/syntax#agent"><code>agent</code></a>
-section&#8217;s <code>docker</code> parameter) downloads the
-<a href="https://hub.docker.com/_/maven/"><code>maven:3.9.0-eclipse-temurin-11</code> Docker image</a> (if it&#8217;s not
-already available on your machine) and runs this image as a separate container.
+<td>This <code>image</code> parameter of the <a href="/doc/book/pipeline/syntax#agent"><code>agent</code></a> section&#8217;s <code>docker</code> parameter downloads the <a href="https://hub.docker.com/_/maven/"><code>maven:3.9.5-eclipse-temurin-17-alpine</code> Docker image</a>, if not already available on your machine, and runs this image as a separate container.
 This means that:
 <div class="ulist">
 <ul>
@@ -526,66 +427,53 @@ This means that:
 <p>You&#8217;ll have separate Jenkins and Maven containers running locally in Docker.</p>
 </li>
 <li>
-<p>The Maven container becomes the <a href="../../user-docs/2.401.3/glossary/index.html#agent" class="xref page">agent</a> that
-Jenkins uses to run your Pipeline project. However, this container is
-short-lived - its lifespan is only that of the duration of your Pipeline&#8217;s
-execution.</p>
+<p>The Maven container becomes the <a href="/doc/book/glossary/#agent">agent</a> that Jenkins uses to run your Pipeline project.
+However, this container is short-lived: for the duration of your Pipeline&#8217;s execution.</p>
 </li>
 </ul>
 </div></td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>This <code>args</code> parameter creates a reciprocal mapping between the <code>/root/.m2</code>
-(i.e. Maven repository) directories in the short-lived Maven Docker container
-and that of your Docker host&#8217;s filesystem. Explaining the details behind this is
-beyond the scope of this tutorial. However, the main reason for doing this is to
-ensure that the artifacts necessary to build your Java application (which Maven
-downloads while your Pipeline is being executed) are retained in the Maven
-repository beyond the lifespan of the Maven container. This prevents Maven from
-having to download the same artifacts during successive runs of your Jenkins
-Pipeline, which you&#8217;ll be conducting later on. Be aware that unlike the Docker
-data volume you created for <code>jenkins-data</code>
-<a href="#download-and-run-jenkins-in-docker">above</a>, the Docker host&#8217;s filesystem is
-effectively cleared out each time Docker is restarted. This means you&#8217;ll lose
-the downloaded Maven repository artifacts each time Docker restarts.</td>
+<td>This <code>args</code> parameter creates a reciprocal mapping between the <code>/root/.m2</code> directories in the short-lived Maven Docker container and that of your Docker host&#8217;s filesystem.
+A fuller explanation is beyond the scope of this tutorial.
+You do this mainly to ensure that the artifacts for building your Java application, which Maven downloads while your Pipeline is being executed, are retained in the Maven repository after the Maven container is gone.
+This prevents Maven from downloading the same artifacts during successive Pipeline runs.
+NOTE: Unlike the Docker data volume created for <code>jenkins-data</code> <a href="#download-and-run-jenkins-in-docker">above</a>, the Docker host&#8217;s filesystem is effectively cleared out each time Docker is restarted, so you lose the downloaded Maven repository artifacts each time Docker restarts.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>Defines a <a href="/doc/book/pipeline/syntax/#stage"><code>stage</code></a> (directive) called
-<code>Build</code> that appears on the Jenkins UI.</td>
+<td>Defines a <a href="/doc/book/pipeline/syntax/#stage"><code>stage</code></a> (directive) called <code>Build</code> that appears on the Jenkins UI.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
-<td>This
-<a href="/doc/pipeline/steps/workflow-durable-task-step/#code-sh-code-shell-script"><code>sh</code></a>
-step (of the <a href="/doc/book/pipeline/syntax/#steps"><code>steps</code></a> section) runs the
-Maven command to cleanly build your Java application (without running any
-tests).</td>
+<td>This <a href="/doc/pipeline/steps/workflow-durable-task-step/#code-sh-code-shell-script"><code>sh</code></a> step runs the Maven command to cleanly build your Java application without running any tests.</td>
 </tr>
 </table>
 </div>
 </li>
 <li>
-<p>Save your edited <code>Jenkinsfile</code> and commit it to your local
-<code>simple-java-maven-app</code> Git repository. E.g. Within the
-<code>simple-java-maven-app</code> directory, run the commands:<br>
-<code>git add .</code><br>
-then<br>
-<code>git commit -m "Add initial Jenkinsfile"</code></p>
+<p>Save your edited <code>Jenkinsfile</code> and commit it to your local <code>simple-java-maven-app</code> Git repository.
+Within the <code>simple-java-maven-app</code> directory, run the commands:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><code>git add .</code></p>
 </li>
 <li>
-<p>Go back to Jenkins again, log in again if necessary and click <strong>Open Blue
-Ocean</strong> on the left to access Jenkins&#8217;s Blue Ocean interface.</p>
+<p><code>git commit -m "Add initial Jenkinsfile"</code></p>
+</li>
+</ol>
+</div>
 </li>
 <li>
-<p>In the <strong>This job has not been run</strong> message box, click <strong>Run</strong>, then quickly
-click the <strong>OPEN</strong> link which appears briefly at the lower-right to see Jenkins
-running your Pipeline project. If you weren&#8217;t able to click the <strong>OPEN</strong> link,
-click the row on the main Blue Ocean interface to access this feature.<br>
-<strong>Note:</strong> You may need to wait several minutes for this first run to complete.
-After making a clone of your local <code>simple-java-maven-app</code> Git repository
-itself, Jenkins:</p>
+<p>In Jenkins, sign in if necessary, and select <strong>Open Blue Ocean</strong> on the left pane.</p>
+</li>
+<li>
+<p>Select <strong>Run</strong> from the <strong>This job has not been run</strong> options, then quickly select <strong>OPEN</strong> on the lower-right.
+If you cannot select <strong>OPEN</strong> in time, you can alternatively select the top row on the main Blue Ocean interface to display Jenkins running your project.
+You may need to wait several minutes for this first run to complete.
+After making a clone of your local <code>simple-java-maven-app</code> Git repository itself, Jenkins:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -594,32 +482,29 @@ itself, Jenkins:</p>
 <li>
 <p>Downloads the Maven Docker image and runs it in a container on Docker.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/java-maven-01-downloading-maven-docker-image.png" alt="Downloading Maven Docker image" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/java-maven-01-downloading-maven-docker-image.png" alt="Downloading Maven Docker image" width="100%"></span></p>
 </div>
 </li>
 <li>
-<p>Runs the <code>Build</code> stage (defined in the <code>Jenkinsfile</code>) on the Maven container.
-During this time, Maven downloads many artifacts necessary to build your Java
-application, which will ultimately be stored in Jenkins&#8217;s local Maven
-repository (in the Docker host&#8217;s filesystem).</p>
+<p>Runs the <code>Build</code> stage defined in the <code>Jenkinsfile</code> on the Maven container.
+During this time, Maven downloads many artifacts necessary to build your Java application, which are ultimately stored in Jenkins' local Maven repository in the Docker host&#8217;s filesystem.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/java-maven-02-initial-pipeline-downloading-maven-artifacts.png" alt="Downloading Maven artifacts" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/java-maven-02-initial-pipeline-downloading-maven-artifacts.png" alt="Downloading Maven artifacts" width="100%"></span></p>
 </div>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>The Blue Ocean interface turns green if Jenkins built your Java application
-successfully.</p>
+<p>The Blue Ocean interface displays green if Jenkins built your Java application successfully.</p>
 </div>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/java-maven-03-initial-pipeline-runs-successfully.png" alt="Initial Pipeline runs successfully" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/java-maven-03-initial-pipeline-runs-successfully.png" alt="Initial Pipeline runs successfully" width="100%"></span></p>
 </div>
 </li>
 <li>
-<p>Click the <strong>X</strong> at the top-right to return to the main Blue Ocean interface.</p>
+<p>Select the <strong>X</strong> at the top-right to return to the main Blue Ocean interface.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/java-maven-04-main-blue-ocean-interface.png" alt="Main Blue Ocean interface" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/java-maven-04-main-blue-ocean-interface.png" alt="Main Blue Ocean interface" width="100%"></span></p>
 </div>
 </li>
 </ol>
@@ -633,8 +518,7 @@ successfully.</p>
 <p>Go back to your text editor/IDE and ensure your <code>Jenkinsfile</code> is open.</p>
 </li>
 <li>
-<p>Copy and paste the following Declarative Pipeline syntax immediately under the
-<code>Build</code> stage of your <code>Jenkinsfile</code>:</p>
+<p>Copy and paste the following Declarative Pipeline syntax immediately under the <code>Build</code> stage of your <code>Jenkinsfile</code>:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">        stage('Test') {
@@ -657,7 +541,7 @@ successfully.</p>
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
     agent {
         docker {
-            image 'maven:3.9.0-eclipse-temurin-11'
+            image 'maven:3.9.5-eclipse-temurin-17-alpine'
             args '-v /root/.m2:/root/.m2'
         }
     }
@@ -685,69 +569,59 @@ successfully.</p>
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Defines a <a href="/doc/book/pipeline/syntax/#stage"><code>stage</code></a> (directive) called
-<code>Test</code> that appears on the Jenkins UI.</td>
+<td>Defines a <a href="/doc/book/pipeline/syntax/#stage"><code>stage</code></a> (directive) called <code>Test</code> that appears on the Jenkins UI.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>This
-<a href="/doc/pipeline/steps/workflow-durable-task-step/#code-sh-code-shell-script"><code>sh</code></a>
-step (of the <a href="/doc/book/pipeline/syntax/#steps"><code>steps</code></a> section) executes
-the Maven command to run the unit test on your simple Java application. This
-command also generates a JUnit XML report, which is saved to the
-<code>target/surefire-reports</code> directory (within the
-<code>/var/jenkins_home/workspace/simple-java-maven-app</code> directory in the Jenkins
-container).</td>
+<td>This <a href="/doc/pipeline/steps/workflow-durable-task-step/#code-sh-code-shell-script"><code>sh</code></a> step executes the Maven command to run the unit test on your Java application.
+This command also generates a JUnit XML report, which is saved to the <code>target/surefire-reports</code> directory within the <code>/var/jenkins_home/workspace/simple-java-maven-app</code> directory in the Jenkins container.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>This
-<a href="/doc/pipeline/steps/junit/#code-junit-code-archive-junit-formatted-test-results"><code>junit</code></a>
-step (provided by the <a href="/doc/pipeline/steps/junit">JUnit Plugin</a>) archives the
-JUnit XML report (generated by the <code>mvn test</code> command above) and exposes the
-results through the Jenkins interface. In Blue Ocean, the results are accessible
-through the <strong>Tests</strong> page of a Pipeline run. The
-<a href="/doc/book/pipeline/syntax/#post"><code>post</code></a> section&#8217;s <code>always</code> condition that
-contains this <code>junit</code> step ensures that the step is <em>always</em> executed <em>at the
-completion</em> of the <code>Test</code> stage, regardless of the stage&#8217;s outcome.</td>
+<td>This <a href="/doc/pipeline/steps/junit/#code-junit-code-archive-junit-formatted-test-results"><code>junit</code></a> step (provided by the <a href="/doc/pipeline/steps/junit">JUnit Plugin</a>), archives the JUnit XML report generated by the <code>mvn test</code> command above, and displays the results through the Jenkins interface.
+In Blue Ocean, select <strong>Tests</strong> to access the Pipeline run test results.
+The <a href="/doc/book/pipeline/syntax/#post"><code>post</code></a> section&#8217;s <code>always</code> condition that contains this <code>junit</code> step ensures that the step is <em>always</em> executed <em>at the completion</em> of the <code>Test</code> stage, regardless of the stage&#8217;s outcome.</td>
 </tr>
 </table>
 </div>
 </li>
 <li>
-<p>Save your edited <code>Jenkinsfile</code> and commit it to your local
-<code>simple-java-maven-app</code> Git repository. E.g. Within the
-<code>simple-java-maven-app</code> directory, run the commands:<br>
-<code>git stage .</code><br>
-then<br>
-<code>git commit -m "Add 'Test' stage"</code></p>
+<p>Save your edited <code>Jenkinsfile</code> and commit it to your local <code>simple-java-maven-app</code> Git repository.
+Within the <code>simple-java-maven-app</code> directory, run the commands:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><code>git stage .</code></p>
 </li>
 <li>
-<p>Go back to Jenkins again, log in again if necessary and ensure you&#8217;ve accessed
-Jenkins&#8217;s Blue Ocean interface.</p>
+<p><code>git commit -m "Add 'Test' stage"</code></p>
 </li>
-<li>
-<p>Click <strong>Run</strong> at the top left, then quickly click the <strong>OPEN</strong> link which appears
-briefly at the lower-right to see Jenkins running your amended Pipeline
-project. If you weren&#8217;t able to click the <strong>OPEN</strong> link, click the <em>top</em> row
-on the Blue Ocean interface to access this feature.<br>
-<strong>Note:</strong> You&#8217;ll notice from this run that Jenkins no longer needs to download
-the Maven Docker image. Instead, Jenkins only needs to run a new container
-from the Maven image downloaded previously. Also, if Docker had not restarted
-since you last ran the Pipeline <a href="#create-your-initial-pipeline-as-a-jenkinsfile">above</a>,
-then no Maven artifacts need to be downloaded during the "Build" stage.
-Therefore, running your Pipeline this subsequent time should be much faster.<br>
-If your amended Pipeline ran successfully, here&#8217;s what the Blue Ocean
-interface should look like. Notice the additional "Test" stage. You can click
-on the previous "Build" stage circle to access the output from that stage.</p>
-<div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/java-maven-11-test-stage-runs-successfully-with-output.png" alt="Test stage runs successfully (with output)" width="100%"></span></p>
+</ol>
 </div>
 </li>
 <li>
-<p>Click the <strong>X</strong> at the top-right to return to the main Blue Ocean interface.</p>
+<p>In Jenkins, sign in if necessary, and access the Blue Ocean interface.</p>
+</li>
+<li>
+<p>Select <strong>Run</strong> at the top left, then quickly select <strong>OPEN</strong>, which appears briefly at the lower-right, to display Jenkins running your updated Pipeline project.
+Alternatively, you can select the <em>top</em> row on the Blue Ocean interface to display Jenkins running your updated Pipeline project.</p>
+<div class="paragraph">
+<p>Note that Jenkins no longer needs to download the Maven Docker image.
+Instead, Jenkins runs a new container from the Maven image downloaded previously.
+If Docker has not restarted since you last ran the Pipeline <a href="#create-your-initial-pipeline-as-a-jenkinsfile">above</a>, then no Maven artifacts are downloaded during the "Build" stage.
+Therefore, running your Pipeline this subsequent time should be much faster.</p>
+</div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>The Blue Ocean interface displays as below if a Pipeline runs successfully.
+Notice the additional "Test" stage.
+You can select the previous "Build" stage circle to access the output from that stage.</p>
+</div>
+<div class="paragraph boxshadow">
+<p><span class="image unresolved"><img src="tutorials/java-maven-11-test-stage-runs-successfully-with-output.png" alt="Test stage runs successfully (with output)" width="100%"></span>
+. Select the <strong>X</strong> at the top-right to return to the main Blue Ocean interface.</p>
 </div>
 </div>
 <div class="sect2">
@@ -758,8 +632,7 @@ on the previous "Build" stage circle to access the output from that stage.</p>
 <p>Go back to your text editor/IDE and ensure your <code>Jenkinsfile</code> is open.</p>
 </li>
 <li>
-<p>Copy and paste the following Declarative Pipeline syntax immediately under the
-<code>Test</code> stage of your <code>Jenkinsfile</code>:</p>
+<p>Copy and paste the following Declarative Pipeline syntax immediately under the <code>Test</code> stage of your <code>Jenkinsfile</code>:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">        stage('Deliver') {
@@ -770,14 +643,14 @@ on the previous "Build" stage circle to access the output from that stage.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>and add a <code>skipStagesAfterUnstable</code> option so that you end up with:</p>
+<p>Add a <code>skipStagesAfterUnstable</code> option, resulting in:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
     agent {
         docker {
-            image 'maven:3.9.0-eclipse-temurin-11'
+            image 'maven:3.9.5-eclipse-temurin-17-alpine'
             args '-v /root/.m2:/root/.m2'
         }
     }
@@ -817,59 +690,49 @@ on the previous "Build" stage circle to access the output from that stage.</p>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>This
-<a href="/doc/pipeline/steps/workflow-durable-task-step/#code-sh-code-shell-script"><code>sh</code></a>
-step (of the <a href="/doc/book/pipeline/syntax/#steps"><code>steps</code></a> section) runs the
-shell script <code>deliver.sh</code> located in the <code>jenkins/scripts</code> directory from the
-root of the <code>simple-java-maven-app</code> repository. Explanations about what this
-script does are covered in the <code>deliver.sh</code> file itself. As a general principle,
-it&#8217;s a good idea to keep your Pipeline code (i.e. the <code>Jenkinsfile</code>) as tidy as
-possible and place more complex build steps (particularly for stages consisting
-of 2 or more steps) into separate shell script files like the <code>deliver.sh</code> file.
-This ultimately makes maintaining your Pipeline code easier, especially if your
-Pipeline gains more complexity.</td>
+<td>This <a href="/doc/pipeline/steps/workflow-durable-task-step/#code-sh-code-shell-script"><code>sh</code></a> step runs the shell script <code>deliver.sh</code> located in the <code>jenkins/scripts</code> directory from the root of the <code>simple-java-maven-app</code> repository.
+Refer to the <code>deliver.sh</code> script file to learn more.
+It is generally good practice to keep your Pipeline code, such as your <code>Jenkinsfile</code>, streamlined, and place more complex build steps, particularly stages consisting of 2 or more steps, into separate shell script files (like the <code>deliver.sh</code> file).
+Maintaining your Pipeline code is easier this way.</td>
 </tr>
 </table>
 </div>
 </li>
 <li>
-<p>Save your edited <code>Jenkinsfile</code> and commit it to your local
-<code>simple-java-maven-app</code> Git repository. E.g. Within the
-<code>simple-java-maven-app</code> directory, run the commands:<br>
-<code>git stage .</code><br>
-then<br>
-<code>git commit -m "Add 'Deliver' stage"</code></p>
+<p>Save your updated <code>Jenkinsfile</code> and commit it to your local <code>simple-java-maven-app</code> Git repository.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><code>git stage .</code></p>
 </li>
 <li>
-<p>Go back to Jenkins again, log in again if necessary and ensure you&#8217;ve accessed
-Jenkins&#8217;s Blue Ocean interface.</p>
+<p><code>git commit -m "Add 'Deliver' stage"</code></p>
+</li>
+</ol>
+</div>
 </li>
 <li>
-<p>Click <strong>Run</strong> at the top left, then quickly click the <strong>OPEN</strong> link which appears
-briefly at the lower-right to see Jenkins running your amended Pipeline
-project. If you weren&#8217;t able to click the <strong>OPEN</strong> link, click the <em>top</em> row
-on the Blue Ocean interface to access this feature.<br>
-If your amended Pipeline ran successfully, here&#8217;s what the Blue Ocean
-interface should look like. Notice the additional "Deliver" stage. Click on
-the previous "Test" and "Build" stage circles to access the outputs from those
-stages.</p>
+<p>In Jenkins, sign in if necessary, and access Jenkins' Blue Ocean interface.</p>
+</li>
+<li>
+<p>Select <strong>Run</strong> at the top left, then quickly select <strong>OPEN</strong>, which appears briefly at the lower-right, to display Jenkins running your updated Pipeline project.
+Alternatively, you can select the <em>top</em> row on the Blue Ocean interface to display Jenkins running your updated Pipeline project.
+The Blue Ocean interface displays as below if a Pipeline runs successfully.
+Notice the additional "Deliver" stage.
+Select the previous "Test" and "Build" stage circles to access the outputs from those stages.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/java-maven-21-deliver-stage-runs-successfully.png" alt="Deliver stage runs successfully" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/java-maven-21-deliver-stage-runs-successfully.png" alt="Deliver stage runs successfully" width="100%"></span></p>
 </div>
 <div class="paragraph">
-<p>Here&#8217;s what the output of the "Deliver" stage should look like, showing you the
-execution results of your Java application at the end.</p>
+<p>The "Deliver" stage output should be something like below, showing you the execution results of your Java application at the end.</p>
 </div>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/java-maven-22-deliver-stage-output-only.png" alt="Deliver stage output only" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/java-maven-22-deliver-stage-output-only.png" alt="Deliver stage output only" width="100%"></span></p>
 </div>
 </li>
 <li>
-<p>Click the <strong>X</strong> at the top-right to return to the main Blue Ocean interface,
-which lists your previous Pipeline runs in reverse chronological order.</p>
-<div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/java-maven-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png" alt="Main Blue Ocean interface with all previous runs displayed" width="100%"></span></p>
-</div>
+<p>Select the <strong>X</strong> at the top-right to return to the main Blue Ocean interface, which lists your previous Pipeline runs in reverse chronological order.
+<span class="image unresolved"><img src="tutorials/java-maven-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png" alt="Main Blue Ocean interface with all previous runs displayed" width="100%"></span></p>
 </li>
 </ol>
 </div>
@@ -877,17 +740,14 @@ which lists your previous Pipeline runs in reverse chronological order.</p>
 <div class="sect2">
 <h3 id="_wrapping_up"><a class="anchor" href="#_wrapping_up"></a>Wrapping up</h3>
 <div class="paragraph">
-<p>Well done! You&#8217;ve just used Jenkins to build a simple Java application with
-Maven!</p>
+<p>Well done!
+You&#8217;ve just used Jenkins to build a simple Java application with Maven!</p>
 </div>
 <div class="paragraph">
-<p>The "Build", "Test" and "Deliver" stages you created above are the basis for
-building more complex Java applications with Maven in Jenkins, as well as Java
-and Maven applications that integrate with other technology stacks.</p>
+<p>The "Build", "Test" and "Deliver" stages you created above are the basis for building more complex Java applications with Maven in Jenkins, as well as Java and Maven applications that integrate with other technology stacks.</p>
 </div>
 <div class="paragraph">
-<p>Because Jenkins is extremely extensible, it can be modified and configured to
-handle practically any aspect of build orchestration and automation.</p>
+<p>Because Jenkins is extremely extensible, it can be modified and configured to handle practically any aspect of build orchestration and automation.</p>
 </div>
 <div class="paragraph">
 <p>To learn more about what Jenkins can do, check out:</p>
@@ -895,28 +755,22 @@ handle practically any aspect of build orchestration and automation.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="index.html" class="xref page">Tutorials overview</a> page for other introductory
-tutorials.</p>
+<p>The <a href="/doc/tutorials">Tutorials overview</a> page for other introductory tutorials.</p>
 </li>
 <li>
-<p>The <a href="../../user-docs/2.401.3/index.html" class="xref page">User Handbook</a> for more detailed information about using
-Jenkins, such as <a href="/doc/book/pipeline">Pipelines</a> (in particular
-<a href="/doc/book/pipeline/syntax">Pipeline syntax</a>) and the
-<a href="../../user-docs/2.401.3/blueocean/index.html" class="xref page">Blue Ocean</a> interface.</p>
+<p>The <a href="/doc/book">User Handbook</a> for more detailed information about using Jenkins, such as <a href="/doc/book/pipeline">Pipelines</a> (in particular <a href="/doc/book/pipeline/syntax">Pipeline syntax</a>) and the <a href="/doc/book/blueocean">Blue Ocean</a> interface.</p>
 </li>
 <li>
-<p>The <a href="/node">Jenkins blog</a> for the latest events, other tutorials and
-updates.</p>
+<p>The <a href="/node">Jenkins blog</a> for the latest events, other tutorials and updates.</p>
 </li>
 </ul>
 </div>
 <hr>
-</div>
-</div>
+Unresolved include directive in modules/ROOT/pages/build-a-java-app-with-maven.adoc - include::_partials/_feedback-footer.html[]
 </div>
 <nav class="pagination">
   <span class="prev"><a href="index.html">Tutorials overview</a></span>
-  <span class="next"><a href="build-a-multibranch-pipeline-project.html">End-to-End Multibranch Pipeline Project Creation</a></span>
+  <span class="next"><a href="build-a-multibranch-pipeline-project.html">build-a-multibranch-pipeline-project.adoc</a></span>
 </nav>
 </article>
   </div>

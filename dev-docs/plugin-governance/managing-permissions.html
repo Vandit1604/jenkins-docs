@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/plugin-governance/managing-permissions.html">
     <link rel="prev" href="index.html">
     <link rel="next" href="adopt-a-plugin.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -1340,7 +1340,7 @@ It includes merging pull requests, push to the repositories, managing GitHub app
 The effective list of permissions depends on the <a href="https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization">permission levels</a>, see below.</p>
 </li>
 <li>
-<p><strong>Release Permissions</strong> which are needed to deploy releases to the <a href="../publishing/artifact-repository.html" class="xref page">Jenkins artifact repository</a>.
+<p><strong>Release Permissions</strong> which are needed to deploy releases to the <a href="/doc/developer/publishing/artifact-repository/">Jenkins artifact repository</a>.
 Snapshots can be deployed by contributors without this permission.</p>
 </li>
 </ul>
@@ -1352,7 +1352,7 @@ Snapshots can be deployed by contributors without this permission.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If you want to adopt a plugin, please see <a href="adopt-a-plugin.html" class="xref page">Adopt a Plugin</a> instead.
+If you want to adopt a plugin, please see <a href="../adopt-a-plugin">Adopt a Plugin</a> instead.
 </td>
 </tr>
 </table>
@@ -1390,10 +1390,10 @@ There are multiple ways to do that:</p>
 <p>Via a request in the <a href="https://github.com/jenkins-infra/helpdesk/issues/new?labels=triage,github-permissions&amp;template=3-github-permissions.yml">Infrastructure help desk</a></p>
 </li>
 <li>
-<p>Via a request in the <a href="../../community/mailing-lists/index.html" class="xref page">developer mailing list</a></p>
+<p>Via a request in the <a href="/mailing-lists">developer mailing list</a></p>
 </li>
 <li>
-<p>Via the ChatOps command in the <code>#jenkins</code> IRC channel, if you have voice permissions there (see the <a href="#projects:ROOT:index.adoc/infrastructure/ircbot/">IRCBot</a>)</p>
+<p>Via the ChatOps command in the <code>#jenkins</code> IRC channel, if you have voice permissions there (see the <a href="/projects/infrastructure/ircbot/">IRCBot</a>)</p>
 </li>
 </ol>
 </div>
@@ -1403,7 +1403,7 @@ There are multiple ways to do that:</p>
 <div class="paragraph">
 <p>You will need to send a permission transfer request and to specify the permission recipient&#8217;s GitHub account and Jenkins LDAP (aka Jenkins Jira) account there.
 An explicit approval by an active maintainer will be required before the permission transfer happens.
-If there no response from a maintainer, a <a href="adopt-a-plugin.html" class="xref page">Plugin Adoption Process</a> might be used to request ownership of the plugin.</p>
+If there no response from a maintainer, a <a href="../adopt-a-plugin">Plugin Adoption Process</a> might be used to request ownership of the plugin.</p>
 </div>
 <div class="paragraph">
 <p>There are two following ways to do that:</p>
@@ -1411,10 +1411,10 @@ If there no response from a maintainer, a <a href="adopt-a-plugin.html" class="x
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Via ChatOps command in the <code>#jenkins</code> IRC channel, if you have voice permissions there (see the <a href="#projects:ROOT:index.adoc/infrastructure/ircbot/">IRCBot</a>)</p>
+<p>Via ChatOps command in the <code>#jenkins</code> IRC channel, if you have voice permissions there (see the <a href="/projects/infrastructure/ircbot/">IRCBot</a>)</p>
 </li>
 <li>
-<p>Via a request in the <a href="../../community/mailing-lists/index.html" class="xref page">developer mailing list</a>.</p>
+<p>Via a request in the <a href="/mailing-lists">developer mailing list</a>.</p>
 </li>
 </ol>
 </div>
@@ -1458,7 +1458,7 @@ If there no response from a maintainer, a <a href="adopt-a-plugin.html" class="x
 <h2 id="_release_permissions"><a class="anchor" href="#_release_permissions"></a>Release Permissions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Release Permissions are needed to deploy releases to the <a href="../publishing/artifact-repository.html" class="xref page">Jenkins artifact repository</a>.
+<p>Release Permissions are needed to deploy releases to the <a href="/doc/developer/publishing/artifact-repository/">Jenkins artifact repository</a>.
 Permissions to upload plugin releases are independent of GitHub push access and maintained in the <a href="https://github.com/jenkins-infra/repository-permissions-updater">Repository Permissions Updater</a> repository.</p>
 </div>
 <div class="paragraph">
@@ -1479,7 +1479,7 @@ Once the permissions are updated, you&#8217;ll be able to release your plugin.</
 </ol>
 </div>
 <div class="paragraph">
-<p>Permission removal can be requested in the same way, e.g. during <a href="adopt-a-plugin.html" class="xref page">plugin adoption</a>.
+<p>Permission removal can be requested in the same way, e.g. during <a href="../adopt-a-plugin">plugin adoption</a>.
 Such requests are subject for explicit approval by contributors being removed or by <code>jenkinsci</code> GitHub administrators.</p>
 </div>
 </div>

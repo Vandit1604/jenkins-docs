@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>GitHub Checks API for Jenkins Plugins :: Jenkins</title>
+    <title>Untitled :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2020/projects/github-checks.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../../../_/css/site.css">
     <script>var uiRootPath = '../../../../_'</script>
 <link rel="icon" href="../../../../_/jenkins.svg" type="image/x-icon">
@@ -33,7 +33,7 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../../../../user-docs/2.401.3/blueocean/getting-started.html">Getting started with Blue Ocean</a>
+    <a class="nav-link" href="../../../../user-docs/2.401.3/blueocean/getting-started.html">user-docs:blueocean:getting-started.adoc</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../../blueocean/about.html">About Blue Ocean</a>
@@ -75,7 +75,7 @@
     <a class="nav-link" href="../../2018/index.html">Jenkins in Google Summer of Code 2018</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../2018/remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</a>
+    <a class="nav-link" href="../../2018/remoting-over-message-bus.html">2018/remoting-over-message-bus.adoc</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../2018/simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a>
@@ -220,7 +220,7 @@
     <a class="nav-link" href="../../../infrastructure/index.html">Infrastructure</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../infrastructure/ircbot.html">IRC Bot</a>
+    <a class="nav-link" href="../../../infrastructure/ircbot.html">ircbot.adoc</a>
   </li>
 </ul>
   </li>
@@ -374,10 +374,6 @@
 <button class="nav-toggle"></button>
   <a href="../../../../user-docs/2.401.3/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../../../index.html">Jenkins Projects</a></li>
-    <li><a href="github-checks.html">GitHub Checks API for Jenkins Plugins</a></li>
-  </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2020/projects/github-checks.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
   </div>
@@ -386,30 +382,29 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">GitHub Checks API for Jenkins Plugins</h1>
-<div id="preamble">
-<div class="sectionbody">
+<hr>
 <div class="paragraph">
-<p><strong>Goal:</strong> Create a new plugin API so that plugins can publish GitHub checks status messages</p>
-</div>
-<div class="paragraph">
-<p><strong>Status:</strong> Completed</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_team"><a class="anchor" href="#_team"></a>Team</h2>
-<div class="sectionbody">
-<div class="paragraph avatar">
-<p><strong>Student</strong>:
-<span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Sladyn Nunes</p>
-</div>
-<div class="paragraph avatar">
-<p><strong>Mentor(s):</strong>
-<span class="image"><img src="../../../../images/_images/avatars/linuxsuren.jpg" alt="linuxsuren" width="30" height="30"></span> 赵晓杰(Rick)
-<span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Kristin Whetstone
-<span class="image"><img src="../../../../images/_images/avatars/baymac.jpg" alt="baymac" width="30" height="30"></span> Parichay Barpanda
-<span class="image"><img src="../../../../images/_images/avatars/martinda.png" alt="martinda" width="30" height="30"></span> Martin d&#8217;Anjou</p>
+<p>layout: gsocproject
+title: "GitHub Checks API for Jenkins Plugins"
+goal: "Create a new plugin API so that plugins can publish GitHub checks status messages"
+category: Plugins
+year: 2020
+status: "Completed"
+sig: platform
+student: XiongKezhi
+mentors:
+- "uhafner"
+- "timja"
+advisors:
+- "jeffpearce"
+tags:
+- gsoc2020
+- github
+links:
+  gitter: "jenkinsci_github-checks-api:gitter.im"
+  draft: <a href="https://docs.google.com/document/d/1gpG7jeQmb9zz46t0ewNNRUrYbl7iHGScp5vgkn7MCXs/edit?usp=sharing" class="bare">https://docs.google.com/document/d/1gpG7jeQmb9zz46t0ewNNRUrYbl7iHGScp5vgkn7MCXs/edit?usp=sharing</a>
+  idea: /projects/gsoc/2020/project-ideas/github-checks
+---</p>
 </div>
 <div class="paragraph">
 <p>The <a href="https://developer.github.com/v3/checks/">GitHub Checks API</a> allows developers to report the CI integrations’ detail information rather than the binary pass/fail build status on GitHub pages.
@@ -417,11 +412,8 @@ This project is about implementing this API as a new Jenkins plugin.
 By consuming this API, other plugins can easily create GitHub checks.
 Thus, any information during the Jenkins process like warnings, summaries, and durations can be directly shown on GitHub pages.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_project_deliverables"><a class="anchor" href="#_project_deliverables"></a>Project Deliverables</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_project_deliverables"><a class="anchor" href="#_project_deliverables"></a>Project Deliverables</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -445,10 +437,8 @@ Thus, any information during the Jenkins process like warnings, summaries, and d
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_phase_1_works"><a class="anchor" href="#_phase_1_works"></a>Phase 1 Works</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_phase_1_works"><a class="anchor" href="#_phase_1_works"></a>Phase 1 Works</h3>
 <div class="videoblock">
 <div class="title">Demo [starts from 50:15]</div>
 <div class="content">
@@ -469,10 +459,8 @@ Thus, any information during the Jenkins process like warnings, summaries, and d
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_phase_2_works"><a class="anchor" href="#_phase_2_works"></a>Phase 2 Works</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_phase_2_works"><a class="anchor" href="#_phase_2_works"></a>Phase 2 Works</h3>
 <div class="videoblock">
 <div class="title">Demo [starts from 24:50]</div>
 <div class="content">
@@ -488,7 +476,7 @@ Thus, any information during the Jenkins process like warnings, summaries, and d
 <p>Consume the API in Code Coverage API plugin as a new feature (<a href="https://github.com/jenkinsci/code-coverage-api-plugin/pull/169">pull request #169</a>)</p>
 </li>
 <li>
-<p>Delpoy plugin:checks-api[Checks API Plugin] and plugin:github-checks[GitHub Checks Plugin] to <a href="https://ci.jenkins.io">ci.jenkins.io</a> and enable the warning checks features</p>
+<p>Deploy plugin:checks-api[Checks API Plugin] and plugin:github-checks[GitHub Checks Plugin] to <a href="https://ci.jenkins.io">ci.jenkins.io</a> and enable the warning checks features</p>
 </li>
 <li>
 <p><a href="/blog/2020/08/03/github-checks-api-plugin-coding-phase-2/">Blog post</a> and <a href="https://docs.google.com/presentation/d/1fMjXH0ANJ67x1R4sfQR5hkTXUmkhiZl-um71RTdXedA/edit?usp=sharing">slides</a></p>
@@ -496,10 +484,8 @@ Thus, any information during the Jenkins process like warnings, summaries, and d
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_phase_3_works"><a class="anchor" href="#_phase_3_works"></a>Phase 3 Works</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_phase_3_works"><a class="anchor" href="#_phase_3_works"></a>Phase 3 Works</h3>
 <div class="videoblock">
 <div class="content">
 <iframe width="800" height="420" src="https://www.youtube.com/embed/S-pEgT3lzpk?rel=0" frameborder="0" allowfullscreen></iframe>
@@ -525,41 +511,14 @@ Thus, any information during the Jenkins process like warnings, summaries, and d
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_meeting"><a class="anchor" href="#_meeting"></a>Meeting</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_meeting"><a class="anchor" href="#_meeting"></a>Meeting</h3>
 <div class="ulist">
 <ul>
 <li>
 <p>We hosted 14 meetings during the whole GSoC 2020, you can find the details in the <a href="https://docs.google.com/document/d/1TZLmu3nBPbwUjzLVYGnV_YtYvmzxzw6A4eEVYpbmi3Y/edit?usp=sharing">meeting notes</a>.</p>
 </li>
 </ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_links"><a class="anchor" href="#_links"></a>Links</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><span class="image"><img src="https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_github-checks-api%3Agitter.im" alt="Static Badge"></span></p>
-</li>
-<li>
-<p><a href="../../index.html#office-hours" class="xref page">Meetings</a></p>
-</li>
-<li>
-<p><a href="https://community.jenkins.io/c/contributing/gsoc">Forum</a></p>
-</li>
-<li>
-<p><a href="../project-ideas/github-checks.html" class="xref page">Original GSoC project idea</a></p>
-</li>
-<li>
-<p><a href="../../index.html" class="xref page">Jenkins GSoC page</a></p>
-</li>
-</ul>
-</div>
 </div>
 </div>
 </article>

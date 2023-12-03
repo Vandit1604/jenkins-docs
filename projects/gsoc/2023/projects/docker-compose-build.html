@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Docker-based Jenkins quickstart examples :: Jenkins</title>
+    <title>Untitled :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2023/projects/docker-compose-build.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../../../_/css/site.css">
     <script>var uiRootPath = '../../../../_'</script>
 <link rel="icon" href="../../../../_/jenkins.svg" type="image/x-icon">
@@ -33,7 +33,7 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../../../../user-docs/2.401.3/blueocean/getting-started.html">Getting started with Blue Ocean</a>
+    <a class="nav-link" href="../../../../user-docs/2.401.3/blueocean/getting-started.html">user-docs:blueocean:getting-started.adoc</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../../blueocean/about.html">About Blue Ocean</a>
@@ -75,7 +75,7 @@
     <a class="nav-link" href="../../2018/index.html">Jenkins in Google Summer of Code 2018</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../2018/remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</a>
+    <a class="nav-link" href="../../2018/remoting-over-message-bus.html">2018/remoting-over-message-bus.adoc</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../2018/simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a>
@@ -220,7 +220,7 @@
     <a class="nav-link" href="../../../infrastructure/index.html">Infrastructure</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../infrastructure/ircbot.html">IRC Bot</a>
+    <a class="nav-link" href="../../../infrastructure/ircbot.html">ircbot.adoc</a>
   </li>
 </ul>
   </li>
@@ -374,10 +374,6 @@
 <button class="nav-toggle"></button>
   <a href="../../../../user-docs/2.401.3/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../../../index.html">Jenkins Projects</a></li>
-    <li><a href="docker-compose-build.html">Docker-based Jenkins quickstart examples</a></li>
-  </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2023/projects/docker-compose-build.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
   </div>
@@ -386,108 +382,112 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Docker-based Jenkins quickstart examples</h1>
-<div id="preamble">
-<div class="sectionbody">
+<hr>
 <div class="paragraph">
-<p><strong>Goal:</strong> Provide examples, sample code, and documentation on how to start a local Jenkins instance.</p>
+<p>layout: gsocprojectidea
+title: "Docker-based Jenkins quickstart examples"
+goal: "Provide examples, sample code, and documentation on how to start a local Jenkins instance."
+category: Tools
+year: 2023
+status: published
+sig: platform
+skills:
+- Java
+- YAML
+- Command line tools
+- Package management tool theory
+mentors:
+- "gounthar"
+- "berviantoleo"
+- "sbostandoust"
+links:
+    emailThread: <a href="https://community.jenkins.io/t/gsoc-2023-project-idea-building-jenkins-io-with-docker-compose/4866" class="bare">https://community.jenkins.io/t/gsoc-2023-project-idea-building-jenkins-io-with-docker-compose/4866</a>
+---
+=== Background</p>
 </div>
 <div class="paragraph">
-<p><strong>Status:</strong> Selected</p>
+<p>We already have a <a href="/doc/book/installing/docker/">section</a> dedicated to docker in the documentation, but it&#8217;s too difficult to use for beginners, and even too complex to begin with.
+We need to provide a simple way to get started with Jenkins and Docker.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_team"><a class="anchor" href="#_team"></a>Team</h2>
-<div class="sectionbody">
-<div class="paragraph avatar">
-<p><strong>Contributor</strong>:
-<span class="image"><img src="../../../../images/_images/avatars/ash-sxn.jpg" alt="ash sxn" width="30" height="30"></span> Ashutosh Saxena</p>
-</div>
-<div class="paragraph avatar">
-<p><strong>Mentor(s)</strong>:
-<span class="image"><img src="../../../../images/_images/avatars/gounthar.png" alt="gounthar" width="30" height="30"></span> Bruno Verachten
-<span class="image"><img src="../../../../images/_images/avatars/berviantoleo.jpg" alt="berviantoleo" width="30" height="30"></span> Bervianto Leo Pratama
-<span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Saeid Bostandoust</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_abstract"><a class="anchor" href="#_abstract"></a>Abstract</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>The project aims to simplify the use of Jenkins with Docker by creating easy-to-use Docker Compose files as suitable examples on which new documentation will be based. Weekly testing with <code>ci.jenkins.io</code> and up-to-date documentation will be crucial, with the goal of enabling users to quickly spin up containers.</p>
+<p>We could have a set of <code>docker-compose</code> files representing various types of Jenkins instances (simple Docker, Kubernetes, …).</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_rationale"><a class="anchor" href="#_rationale"></a>Rationale</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Currently the quickstart process with Jenkins using the existing Docker examples is too complex. The available documentation is also hard to understand (due to its opaqueness) making it challenging for new users to get started. We will be using Docker Compose to make it easier for beginners to pick up and for experienced users to customize.</p>
+<p>These examples would be described in the documentation, and would also (<strong>and that’s the main point</strong>) be tested every week thanks to ci.jenkins.io so that we know they are still working.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_implementation"><a class="anchor" href="#_implementation"></a>Implementation</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>By using Docker Compose to define and run a multi-container Docker application for Jenkins, we can simplify the entire setup process. We will use automated testing in a Jenkins pipeline running on <code>ci.jenkins.io</code>, while using a <code>Jenkinsfile</code> to check the functionality of the Docker Compose files. We will also keep the documentation up to date by using Pipeline Steps documentation generator, as well as doing the appropriate updating/editing of the existing documentation Docker section. By utilizing Gitpod for quickstart, with a <code>.gitpod.yml</code> file that runs docker-compose commands, previews of the Jenkins instance in Gitpod can be made available quite readily.</p>
+<p>As the documentation is using <a href="https://asciidoc.org/"><code>asciidoc</code></a> we could use the <a href="https://docs.asciidoctor.org/asciidoc/latest/directives/include-uri/">Include Content by URI</a> feature to have an up-to-date documentation when it comes to code snippets and at the same time, have <a href="https://ci.jenkins.io"><code>ci.jenkins.io</code></a> test these same code snippets.</p>
 </div>
+<div class="paragraph">
+<p>Of course, these snippets could also be run thanks to <a href="https://www.gitpod.io/">GitPod</a>.</p>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_office_hours"><a class="anchor" href="#_office_hours"></a>Office hours</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_quick_start"><a class="anchor" href="#_quick_start"></a>Quick Start</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>(General) Official weekly Jenkins office hours: Thursdays 15:00 UTC</p>
+<p><a href="https://docs.docker.com/compose/install/">Install Docker Compose</a></p>
 </li>
 <li>
-<p>(Project-based) Weekly project based office hours: Mondays 08:00 UTC</p>
+<p>Clone a <a href="https://github.com/gounthar/MyFirstAndroidAppBuiltByJenkins">repo</a> that already uses docker-compose for Jenkins.</p>
+</li>
+<li>
+<p>Run <code>docker-compose up</code> and wait for the Jenkins instance to be up and running.</p>
+</li>
+<li>
+<p>Study the <code>docker-compose.yml</code> file to understand what it does.</p>
 </li>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_links"><a class="anchor" href="#_links"></a>Links</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_skills_to_study_and_improve"><a class="anchor" href="#_skills_to_study_and_improve"></a>Skills to Study and Improve</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>General office hours meeting can be attended <a href="https://zoom.us/j/93082176149">here</a></p>
+<p><a href="https://docs.docker.com/compose/">Docker Compose</a></p>
 </li>
 <li>
-<p>Project specific office hours can be attended <a href="https://zoom.us/j/92846964984">here</a></p>
+<p><a href="https://docs.docker.com/compose/compose-file/compose-file-v3/">Docker Compose file format v3</a></p>
 </li>
 <li>
-<p>Project specific office hours meeting notes can be found <a href="https://docs.google.com/document/d/1yij9OvM2_92My3vqjn6u8ABHjXcyy0a7O6oM30b6ctM/edit">here</a></p>
+<p><a href="/projects/jcasc/">Jenkins Configuration as Code</a></p>
 </li>
 <li>
-<p>Recordings of these weekly project meetings can be found on the Discourse post <a href="https://community.jenkins.io/t/docker-quick-start-examples-gsoc-2023/7479">here</a></p>
+<p><a href="https://plugins.jenkins.io/job-dsl/">Job DSL</a></p>
 </li>
 <li>
-<p>Gitter channel dedicated to this project can be joined <a href="https://matrix.to/#/#gsoc-2023-docker-quickstart:matrix.org">here</a></p>
+<p><a href="/doc/book/installing/kubernetes/">Kubernetes</a></p>
 </li>
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_project_difficulty_level"><a class="anchor" href="#_project_difficulty_level"></a>Project Difficulty Level</h3>
+<div class="paragraph">
+<p>Beginner to Intermediate</p>
 </div>
-<div class="sect1">
-<h2 id="_connect"><a class="anchor" href="#_connect"></a>Connect</h2>
-<div class="sectionbody">
+</div>
+<div class="sect2">
+<h3 id="_project_size"><a class="anchor" href="#_project_size"></a>Project Size</h3>
+<div class="paragraph">
+<p>175 hours</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_expected_outcomes"><a class="anchor" href="#_expected_outcomes"></a>Expected outcomes</h3>
 <div class="ulist">
 <ul>
 <li>
-<p><span class="image"><img src="https://img.shields.io/badge/gitter%20-%20join_chat%20-%20green?logoColor=green&amp;link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_gsoc-sig%3Agitter.im" alt="Static Badge"></span></p>
+<p>A set of docker-compose files that can be used to get started with Jenkins and Docker or Kubernetes on Windows, Linux, macOs, Vagrant and GitPod.</p>
 </li>
 <li>
-<p><a href="../../index.html#office-hours" class="xref page">Meetings</a></p>
+<p>The documentation that describes how to use these docker-compose files.</p>
+</li>
+<li>
+<p>A <a href="https://ci.jenkins.io"><code>ci.jenkins.io</code></a> job that tests these docker-compose files every week.</p>
 </li>
 </ul>
-</div>
 </div>
 </div>
 </article>

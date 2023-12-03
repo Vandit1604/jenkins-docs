@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Project Governance Document :: Jenkins</title>
+    <title>Untitled :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/Jenkins%20Project/governance.html">
     <link rel="prev" href="conduct.html">
     <link rel="next" href="election-walkthrough.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../_/css/site.css">
     <script>var uiRootPath = '../_'</script>
 <link rel="icon" href="../_/jenkins.svg" type="image/x-icon">
@@ -31,19 +31,19 @@
     <a class="nav-link" href="index.html">Project structure and governance</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="conduct.html">Jenkins Code of Conduct</a>
+    <a class="nav-link" href="conduct.html">conduct.adoc</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="governance.html">Project Governance Document</a>
+    <a class="nav-link" href="governance.html">governance.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="election-walkthrough.html">Board and Officer election walkthrough</a>
+    <a class="nav-link" href="election-walkthrough.html">election-walkthrough.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="team-leads.html">Jenkins Team Leads and Officers</a>
+    <a class="nav-link" href="team-leads.html">team-leads.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="board-election-process.html">Board and Officer election process</a>
+    <a class="nav-link" href="board-election-process.html">board-election-process.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="board.html">Jenkins Board and Officers</a>
@@ -230,7 +230,7 @@
   <ul>
     <li><a href="index.html">Jenkins Project</a></li>
     <li><a href="index.html">Project structure and governance</a></li>
-    <li><a href="governance.html">Project Governance Document</a></li>
+    <li><a href="governance.html">governance.adoc</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/project/modules/ROOT/pages/governance.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
@@ -240,7 +240,13 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Project Governance Document</h1>
+<hr>
+<div class="paragraph">
+<p>layout: simplepage
+title:  Project Governance Document
+section: project
+---</p>
+</div>
 <div class="sect1">
 <h2 id="_who_we_are"><a class="anchor" href="#_who_we_are"></a>Who we are</h2>
 <div class="sectionbody">
@@ -320,10 +326,14 @@ Before 2021, these roles were held by
 <div class="sect2">
 <h3 id="cla"><a class="anchor" href="#cla"></a>Contributor License Agreement (CLA)</h3>
 <div class="paragraph">
-<p>To further clarify the intellectual property rights around the project, we require that core committers sign a contributor agreement. This CLA is the same as Apache&#8217;s CLA with "Apache" replaced by "SPI". This agreement explicitly assigns a set of rights to SPI, such as the effective joint copyright ownership, patent grant, as well as acknowledging that you have the necessary rights to contribute changes.</p>
+<p>To further clarify the intellectual property rights around the project, we require that core committers sign a contributor agreement.
+The Jenkins project uses the EasyCLA service provided by the Linux Foundation.
+Refer to the <a href="https://github.com/jenkinsci/infra-cla/blob/master/README.md">infra-cla README</a> for contributor license agreement submission instructions.
+More details are available from the Linux Foundation for <a href="https://docs.linuxfoundation.org/lfx/easycla/v2-current/contributors/individual-contributor">individual contributors</a> and <a href="https://docs.linuxfoundation.org/lfx/easycla/v2-current/contributors/corporate-contributor">corporate contributors</a>.</p>
 </div>
 <div class="paragraph">
-<p>The assignment of these rights to SPI helps Jenkins being neutral to any particular vendor, and it&#8217;ll also make legal departments happy especially in large organizations who want to use Jenkins.</p>
+<p>EasyCLA is self service and requires no manual intervention by the board or any other Jenkins project member.
+It is a one-time process, valid for all <a href="/project/conduct/#community-spaces">Jenkins community spaces</a>.</p>
 </div>
 <div class="paragraph">
 <p>CLAs come in two flavors. Every core contributor needs to sign an Individual CLA (ICLA), and in cases where you as an individual do not own the work you are contributing (such as when your company assigns you to work on Jenkins and therefore your company owns the hard work you produced), the corporation also needs to sign a Corporate CLA (CCLA). See <a href="https://www.apache.org/licenses/#clas">the discussion in Apache for more details</a>. The CLA forms can be obtained by following the documentation in the <a href="https://github.com/jenkinsci/infra-cla">infra-cla</a> repository.</p>
@@ -397,7 +407,7 @@ Before 2021, these roles were held by
 <p>The board also acts as the ultimate decision-making authority in case disputes cannot be resolved via the regular project community meeting. The decision-making ability of the board is more symbolic and honorific, and it “rules” like British royalty rather than a dictatorship.</p>
 </div>
 <div class="paragraph">
-<p>The <a href="#board:index.adoc" class="xref unresolved">Governance Board</a> page provides further information, including a list of current board members, and how to contact the board.</p>
+<p>The <a href="/project/board">Governance Board</a> page provides further information, including a list of current board members, and how to contact the board.</p>
 </div>
 <div class="paragraph">
 <p>The process by which the Governance Board is elected can be reviewed in the <a href="/project/board-election-process">Board Election Process</a></p>
@@ -412,8 +422,8 @@ Before 2021, these roles were held by
 <p>Because of the sensitive nature of this work, infrastructure admins are by invitation only, and some of the activity happen behind closed doors. Infrastructure admins often appoint others to delegate some partial access to the system to complete some tasks.</p>
 </div>
 <div class="paragraph">
-<p>Infrastructure components are maintained by the xrefs:infrastructure:index.adoc[infrastructure project].
-See the xrefs:infrastructure:index.adoc#contributing[contributing guidelines] for more information.
+<p>Infrastructure components are maintained by the <a href="/projects/infrastructure/">infrastructure project</a>.
+See the <a href="/projects/infrastructure/#contributing">contributing guidelines</a> for more information.
 Open a <a href="https://github.com/jenkins-infra/helpdesk">help desk issue</a> for infrastructure problems.</p>
 </div>
 </div>
@@ -452,28 +462,28 @@ Open a <a href="https://github.com/jenkins-infra/helpdesk">help desk issue</a> f
 <div class="paragraph">
 <p>The communication among people in the community is crucial to the oneness of the project.
 People in the Jenkins project communicate with each other in several different places.
-There is an <a href="../sigs/advocacy-and-outreach/index.html" class="xref page">Advocacy and Outreach</a> special interest group which focuses on public communications.
+There is an <a href="/sigs/advocacy-and-outreach/">Advocacy and Outreach</a> special interest group which focuses on public communications.
 Some of the communication channels are listed below.</p>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Mailing lists</dt>
 <dd>
-<p>We encourage mailing lists as the primary means of developer &amp; user discussion, because of their asynchrony and ability to search the archive. The project website lists <a href="../community/mailing-lists/index.html" class="xref page">the active mailing lists and their purposes</a>.</p>
+<p>We encourage mailing lists as the primary means of developer &amp; user discussion, because of their asynchrony and ability to search the archive. The project website lists <a href="/mailing-lists">the active mailing lists and their purposes</a>.</p>
 </dd>
 <dt class="hdlist1">Chats</dt>
 <dd>
-<p>Jenkins project uses <a href="../community/chat/index.html" class="xref page">IRC and Gitter channels</a> for real time interactive communications. This is also the place where active members bond with each other.</p>
+<p>Jenkins project uses <a href="/chat">IRC and Gitter channels</a> for real time interactive communications. This is also the place where active members bond with each other.</p>
 </dd>
 <dt class="hdlist1">Twitter</dt>
 <dd>
-<p><a href="https://twitter.com/jenkinsci">@jenkinsci</a> is the official Twitter account of the Jenkins project, run by the team of contributors (<a href="https://github.com/jenkinsci/jep/tree/master/jep/10/README.adoc" class="bare">https://github.com/jenkinsci/jep/tree/master/jep/10/README.adoc</a>).
+<p><a href="https://twitter.com/jenkinsci">@jenkinsci</a> is the official Twitter account of the Jenkins project, run by the team of contributors (jep:10[]).
 There are also a <a href="https://twitter.com/jenkins_release">@jenkins_release</a> account for automatic plugin release announcements,
 and other accounts being run by sub-communities like meetup groups.</p>
 </dd>
 <dt class="hdlist1">Special interest group channels</dt>
 <dd>
-<p>There are multiple <a href="../sigs/index.html" class="xref page">Special Interest Groups</a> in the community.
+<p>There are multiple <a href="/sigs/">Special Interest Groups</a> in the community.
 These groups focus on particular topics and organize dedicated communication channels including chats, mailing lists and regular meetings.</p>
 </dd>
 </dl>
@@ -485,7 +495,7 @@ These groups focus on particular topics and organize dedicated communication cha
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section summarizes the key infrastructure services we run in the project.
-See the xrefs:infrastructure:index.adoc[Jenkins Infrastructure] page for the full list of services and more details.</p>
+See the <a href="/projects/infrastructure">Jenkins Infrastructure</a> page for the full list of services and more details.</p>
 </div>
 <div class="dlist">
 <dl>
@@ -498,7 +508,7 @@ Its source codes can be found <a href="https://github.com/jenkins-infra/jenkins.
 <dt class="hdlist1">Source code</dt>
 <dd>
 <p>We host most of our code on GitHub. <a href="https://github.com/jenkinsci/">jenkinsci</a> and <a href="https://github.com/jenkins-infra/">jenkins-infra</a> are the organizations where we host most of our code.
-More information about the GitHub organization and repository structures can be found <a href="../community/code.html#where-to-contribute" class="xref page">here</a>.</p>
+More information about the GitHub organization and repository structures can be found <a href="/participate/code/#where-to-contribute">here</a>.</p>
 </dd>
 <dt class="hdlist1">User Accounts</dt>
 <dd>
@@ -534,7 +544,7 @@ and we invite all interested parties to join us and to contribute towards the ro
 <p><a href="/project/roadmap">Public Jenkins Roadmap</a></p>
 </li>
 <li>
-<p><a href="https://github.com/jenkinsci/jep/tree/master/jep/14/README.adoc">Public Jenkins Roadmap Process</a></p>
+<p>jep:14[Public Jenkins Roadmap Process]</p>
 </li>
 </ul>
 </div>
@@ -544,10 +554,10 @@ and we invite all interested parties to join us and to contribute towards the ro
 <h2 id="meeting"><a class="anchor" href="#meeting"></a>Decision making</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Jenkins project uses <a href="governance-meeting/index.html" class="xref page">biweekly project meetings</a> as the primary forum of decision making for matters that need consensus.
-The meeting is conducted using a video call or <a href="../community/chat/index.html#meeting" class="xref page">IRC</a>.
+<p>The Jenkins project uses <a href="/project/governance-meeting">biweekly project meetings</a> as the primary forum of decision making for matters that need consensus.
+The meeting is conducted using a video call or <a href="/chat/#meeting">IRC</a>.
 These meetings are open to anyone, and everyone is welcome to provide their feedback and vote on decisions at the meeting.
-Agenda items can be added by anyone by simply adding your topic to <a href="governance-meeting/index.html" class="xref page">the Governance Meeting Agenda</a>.</p>
+Agenda items can be added by anyone by simply adding your topic to <a href="/project/governance-meeting">the Governance Meeting Agenda</a>.</p>
 </div>
 <div class="paragraph">
 <p>The meeting minutes are public:</p>
@@ -555,7 +565,7 @@ Agenda items can be added by anyone by simply adding your topic to <a href="gove
 <div class="ulist">
 <ul>
 <li>
-<p><a href="governance-meeting/index.html" class="xref page">Governance Meeting Agenda</a> for meetings held in as video calls</p>
+<p><a href="/project/governance-meeting">Governance Meeting Agenda</a> for meetings held in as video calls</p>
 </li>
 <li>
 <p><a href="http://meetings.jenkins-ci.org/jenkins-meeting/">September 2015 to today</a></p>
@@ -644,7 +654,7 @@ If you have trouble figuring out who to contact, the good fallback option is the
 <p>Each published plugin has its own page on <a href="https://plugins.jenkins.io/" class="bare">https://plugins.jenkins.io/</a>, such as <a href="https://plugins.jenkins.io/git">this</a>.
 These pages provide documentation and information about the plugin: installation statistics, changelogs, known issues, etc.
 Documentation is retrieved from the GitHub repository of the plugin or from an archived copy of the decommissioned Jenkins wiki.
-See the <a href="../dev-docs/publishing/documentation.html" class="xref page">Plugin Documentation Page</a> in the Developer guide for more information about how it works.</p>
+See the <a href="/doc/developer/publishing/documentation/">Plugin Documentation Page</a> in the Developer guide for more information about how it works.</p>
 </div>
 </div>
 </div>
@@ -703,7 +713,7 @@ In particular, this means we can copy Oracle Hudson&#8217;s source code under th
 <div class="sect2">
 <h3 id="_bringing_in_new_pluginstoolslibraries"><a class="anchor" href="#_bringing_in_new_pluginstoolslibraries"></a>Bringing in new plugins/tools/libraries</h3>
 <div class="paragraph">
-<p>If you develop a plugin, we encourage you to co-host that with the Jenkins project so that other people in the community can participate. See <a href="../dev-docs/publishing/requesting-hosting.html" class="xref page">Hosting Plugins</a> for more details.</p>
+<p>If you develop a plugin, we encourage you to co-host that with the Jenkins project so that other people in the community can participate. See <a href="/doc/developer/publishing/requesting-hosting/">Hosting Plugins</a> for more details.</p>
 </div>
 </div>
 <div class="sect2">
@@ -722,7 +732,7 @@ In particular, this means we can copy Oracle Hudson&#8217;s source code under th
 </div>
 <div class="paragraph">
 <p>To that end, we also encourage people to pick up dormant plugins and consider them theirs.
-See the <a href="../dev-docs/plugin-governance/adopt-a-plugin.html" class="xref page">Adopt a Plugin</a> guidelines for more information.</p>
+See the <a href="/doc/developer/plugin-governance/adopt-a-plugin/">Adopt a Plugin</a> guidelines for more information.</p>
 </div>
 <div class="paragraph">
 <p>Many less active plugins do not really have any obvious owner, and they are collaboratively maintained by people making small changes and releasing them whenever the need arises. If in doubt, ask on the dev list.</p>
@@ -746,7 +756,7 @@ See the onboarding guidelines <a href="https://github.com/jenkinsci/jenkins/blob
 <div class="sect2">
 <h3 id="_contributing_localizations"><a class="anchor" href="#_contributing_localizations"></a>Contributing localizations</h3>
 <div class="paragraph">
-<p>We are always looking for people who can help localize Jenkins to different languages. If you are interested in helping, drop us a note in the dev list to get commit access, and see <a href="../dev-docs/internationalization/index.html" class="xref page">Internationalization</a> for the details of how to make changes.</p>
+<p>We are always looking for people who can help localize Jenkins to different languages. If you are interested in helping, drop us a note in the dev list to get commit access, and see <a href="/doc/developer/internationalization/">Internationalization</a> for the details of how to make changes.</p>
 </div>
 </div>
 <div class="sect2">
@@ -766,7 +776,7 @@ See the onboarding guidelines <a href="https://github.com/jenkinsci/jenkins/blob
 <p>Refer to the ticket in your commit message by using the notation <code>[JENKINS-1234]</code> where <em>JENKINS-1234</em> is the ticket ID. This allows our scripts to understand the history and generate changelogs without human help. If you use the notation <code>[FIX JENKINS-1234]</code>, our bot will close the ticket automatically when the change is merged into the repository, and when the change is tested in our CI server. These notations create useful cross-references across systems, and are therefore highly recommended.</p>
 </li>
 <li>
-<p>We encourage you to have a test case for the code you added to avoid future regressions. See <a href="../dev-docs/testing/index.html" class="xref page">Testing</a> for more details about how to write tests.</p>
+<p>We encourage you to have a test case for the code you added to avoid future regressions. See <a href="/doc/developer/testing/">Testing</a> for more details about how to write tests.</p>
 </li>
 <li>
 <p>Try to describe your changes so that other people understand what you did.</p>
@@ -793,8 +803,8 @@ Send your questions to the dev list, or add an item to the <a href="/project/gov
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="conduct.html">Jenkins Code of Conduct</a></span>
-  <span class="next"><a href="election-walkthrough.html">Board and Officer election walkthrough</a></span>
+  <span class="prev"><a href="conduct.html">conduct.adoc</a></span>
+  <span class="next"><a href="election-walkthrough.html">election-walkthrough.adoc</a></span>
 </nav>
 </article>
   </div>

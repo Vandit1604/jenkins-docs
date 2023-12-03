@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/handling-requests/deprecated-reflective-access.html">
     <link rel="prev" href="json.html">
     <link rel="next" href="../security/index.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -1333,10 +1333,10 @@
 <p>Stapler now tries to access a field first and only if it gets access denied then will it force access via javadoc:java.lang.reflect.AccessibleObject#setAccessible-boolean-[setAccessible(true)].</p>
 </div>
 <div class="paragraph">
-<p>This behavior is not recommended anymore, and will trigger <code>IllegalReflectiveAccess</code> warnings when running Jenkins on Java 11.</p>
+<p>This behavior is not recommended anymore, and will trigger <code>IllegalReflectiveAccess</code> warnings when running Jenkins on Java 11 or newer.</p>
 </div>
 <div class="paragraph">
-<p>If you see a warning message about this then you should <a href="../../community/report-issue.html" class="xref page">report an issue</a> to the respective plugin.</p>
+<p>If you see a warning message about this then you should <a href="/participate/report-issue/">report an issue</a> to the respective plugin.</p>
 </div>
 <div class="listingblock">
 <div class="content">

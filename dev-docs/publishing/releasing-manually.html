@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/publishing/releasing-manually.html">
     <link rel="prev" href="releasing-cd.html">
     <link rel="next" href="removing-from-distribution.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -1337,7 +1337,7 @@
 <td class="content">
 <div class="title">Prefer automated releases instead of releasing manually</div>
 <div class="paragraph">
-<p>See <a href="releasing-cd.html" class="xref page">setting up automated plugin release</a> instead of this guide.</p>
+<p>See <a href="../releasing-cd">setting up automated plugin release</a> instead of this guide.</p>
 </div>
 </td>
 </tr>
@@ -1351,7 +1351,7 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Make sure you have permissions to release the plugin. <a href="requesting-hosting.html" class="xref page">See this guide to learn more details</a></p>
+<p>Make sure you have permissions to release the plugin. <a href="../requesting-hosting/">See this guide to learn more details</a></p>
 </li>
 </ol>
 </div>
@@ -1361,7 +1361,7 @@
 <h2 id="_artifactory_credentials_for_maven"><a class="anchor" href="#_artifactory_credentials_for_maven"></a>Artifactory Credentials for Maven</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You will need to tell Maven your credentials to access <a href="artifact-repository.html" class="xref page">Artifactory</a>.
+<p>You will need to tell Maven your credentials to access <a href="../artifact-repository">Artifactory</a>.
 You can obtain your encrypted password from Artifactory using <code>curl</code>.</p>
 </div>
 <div class="paragraph">
@@ -1377,17 +1377,25 @@ You can obtain your encrypted password from Artifactory using <code>curl</code>.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl -u mr_jenkins:j3nkinsr0ck5 https://repo.jenkins-ci.org/setup/settings.xml
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">$ curl -u mr_jenkins:j3nkinsr0ck5 https://repo.jenkins-ci.org/setup/settings.xml
 &lt;settings xmlns="https://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
   &lt;servers&gt;
     &lt;server&gt;
-      &lt;id&gt;maven.jenkins-ci.org&lt;/id&gt;
+      &lt;id&gt;maven.jenkins-ci.org&lt;/id&gt; <i class="conum" data-value="1"></i><b>(1)</b>
       &lt;username&gt;mr_jenkins&lt;/username&gt;
       &lt;password&gt;APrj80t4398w8fnytd498nft4dt8so&lt;/password&gt;
     &lt;/server&gt;
   &lt;/servers&gt;
 &lt;/settings&gt;</code></pre>
 </div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This is not a valid host name anymore, but still the ID used by default in the Jenkins plugin parent POM.</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Store the output as <code>~/.m2/settings.xml</code> (<code>~</code> representing your user home directory, e.g. <code>/home/yourname</code> or <code>C:\Users\yourname</code>), creating the file if it doesn&#8217;t exist yet.
@@ -1432,7 +1440,7 @@ If you already have this file, merge the <code>server</code> block provided in t
 <h2 id="_troubleshooting"><a class="anchor" href="#_troubleshooting"></a>Troubleshooting</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>First, make sure your plugin uses a reasonably up to date <a href="../plugin-development/updating-parent.html" class="xref page">parent POM</a>.
+<p>First, make sure your plugin uses a reasonably up to date <a href="../../plugin-development/updating-parent">parent POM</a>.
 This will prevent the vast majority of problems in releasing the plugin, such as outdated Maven plugins, or obsolete host names.</p>
 </div>
 <div class="sect2">
@@ -1453,7 +1461,7 @@ This will prevent the vast majority of problems in releasing the plugin, such as
 <ul>
 <li>
 <p>You don&#8217;t have permission to upload to the specified path.
-<a href="requesting-hosting.html#request-upload-permissions" class="xref page">Learn more about how to request upload permissions</a>.
+<a href="../requesting-hosting/#request-upload-permissions">Learn more about how to request upload permissions</a>.
 Check that the path you&#8217;re allowed to upload to matches the actual upload attempt (i.e. no typos).</p>
 </li>
 <li>

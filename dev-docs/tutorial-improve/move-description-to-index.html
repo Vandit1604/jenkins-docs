@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/tutorial-improve/move-description-to-index.html">
     <link rel="prev" href="convert-translations.html">
     <link rel="next" href="../extensions/index.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -1326,9 +1326,7 @@
 </aside>
 <article class="doc">
 <h1 class="page">Move description</h1>
-<div class="sect1">
-<h2 id="_move_plugin_description_to_index_jelly"><a class="anchor" href="#_move_plugin_description_to_index_jelly"></a>Move plugin description to index.jelly</h2>
-<div class="sectionbody">
+<h1 id="_move_plugin_description_to_index_jelly" class="sect0"><a class="anchor" href="#_move_plugin_description_to_index_jelly"></a>Move plugin description to index.jelly</h1>
 <div class="paragraph">
 <p>To help administrators decide if a plugin is relevant for them, each plugin should provide a short description which is then shown in plugin manager and on the plugin site.
 The preferred location for the plugin description is in the file <code>src/main/resources/index.jelly</code>.
@@ -1345,7 +1343,7 @@ recent versions of the parent POM require the preferred location and will fail t
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Some plugins do not currently provide description at all or use description copied from the <code>hello-world</code> sample plugin. For such plugins you have to write the description yourself. Such plugins are listed in <a href="https://issues.jenkins.io/browse/JENKINS-68300" class="bare">https://issues.jenkins.io/browse/JENKINS-68300</a>.
+Some plugins do not currently provide description at all or use description copied from the <code>hello-world</code> sample plugin. For such plugins you have to write the description yourself. Such plugins are listed in jira:JENKINS-68300[].
 </td>
 </tr>
 </table>
@@ -1355,25 +1353,13 @@ Some plugins do not currently provide description at all or use description copi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">[ERROR] Failed to execute goal maven-hpi-{plugin}hpi (default-hpi) on
+<pre class="highlightjs highlight"><code class="language-none hljs">[ERROR] Failed to execute goal maven-hpi-plugin:hpi (default-hpi) on
 project your-plugin: Missing target/classes/index.jelly. Delete any
 &lt;description&gt; from pom.xml and create src/main/resources/index.jelly:</code></pre>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_create_a_branch"><a class="anchor" href="#_create_a_branch"></a>Create a branch</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>In a local copy of your <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">fork</a> of the plugin repository create a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository">git branch</a> for your work with the command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git checkout -b {task-identifier} master</code></pre>
-</div>
-</div>
-</div>
+<p>Unresolved include directive in modules/tutorial-improve/pages/move-description-to-index.adoc - include::doc/developer/tutorial-improve/_create-a-branch.adoc[]</p>
 </div>
 <div class="sect1">
 <h2 id="_compile_and_test_to_check_the_transition_is_needed"><a class="anchor" href="#_compile_and_test_to_check_the_transition_is_needed"></a>Compile and test to check the transition is needed</h2>
@@ -1384,7 +1370,7 @@ project your-plugin: Missing target/classes/index.jelly. Delete any
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn -ntp clean verify
-[ERROR] Failed to execute goal maven-hpi-{plugin}hpi (default-hpi) on
+[ERROR] Failed to execute goal maven-hpi-plugin:hpi (default-hpi) on
 project your-plugin: Missing target/classes/index.jelly. Delete any
 &lt;description&gt; from pom.xml and create src/main/resources/index.jelly:</code></pre>
 </div>
@@ -1435,43 +1421,8 @@ index 0000000..9434d10
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn clean verify</code></pre>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_create_a_pull_request"><a class="anchor" href="#_create_a_pull_request"></a>Create a pull request</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Commit that change:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git add {modified-files}
-git commit -m "{task-description}"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Push the change to GitHub:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git push origin --set-upstream {task-identifier}</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
-remote:
-remote: Create a pull request for '{task-identifier}' on GitHub by visiting:
-remote: https://github.com/user/your-plugin/pull/new/{task-identifier}
-remote:
-To github.com:user/your-plugin.git
- * [new branch]      {task-identifier} -&gt; {task-identifier}
-Branch '{task-identifier}' tracking remote branch '{task-identifier}'.</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Notice that the output of the command includes the URL, which can be used to open a pull request.
-Copy that URL in your web browser and submit a pull request.</p>
+<p>Unresolved include directive in modules/tutorial-improve/pages/move-description-to-index.adoc - include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]</p>
 </div>
 </div>
 </div>

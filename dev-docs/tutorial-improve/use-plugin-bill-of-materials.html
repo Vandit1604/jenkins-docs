@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/tutorial-improve/use-plugin-bill-of-materials.html">
     <link rel="prev" href="automate-dependency-update-checks.html">
     <link rel="next" href="enable-incrementals.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -1326,9 +1326,7 @@
 </aside>
 <article class="doc">
 <h1 class="page">Use plugin bill of materials</h1>
-<div class="sect1">
-<h2 id="_use_plugin_bill_of_materials_for_easier_dependency_management"><a class="anchor" href="#_use_plugin_bill_of_materials_for_easier_dependency_management"></a>Use plugin bill of materials for easier dependency management</h2>
-<div class="sectionbody">
+<h1 id="_use_plugin_bill_of_materials_for_easier_dependency_management" class="sect0"><a class="anchor" href="#_use_plugin_bill_of_materials_for_easier_dependency_management"></a>Use plugin bill of materials for easier dependency management</h1>
 <div class="videoblock">
 <div class="title">Simplify dependency management with the plugin bill of materials</div>
 <div class="content">
@@ -1339,20 +1337,8 @@
 <p>Updating the versions of plugin dependencies manually can be exhausting, looking for the correct set of versions that work with each other and do not cause upper-bounds dependency error reports.
 The <a href="https://github.com/jenkinsci/bom#bill-of-materials-for-jenkins-plugins">Jenkins plugin bill of materials</a> simplifies that by shifting the evaluation of versions from each plugin author to a centralized process maintained by members of the Jenkins community.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_create_a_branch"><a class="anchor" href="#_create_a_branch"></a>Create a branch</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>In a local copy of your <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">fork</a> of the plugin repository create a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository">git branch</a> for your work with the command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git checkout -b {task-identifier} master</code></pre>
-</div>
-</div>
-</div>
+<p>Unresolved include directive in modules/tutorial-improve/pages/use-plugin-bill-of-materials.adoc - include::doc/developer/tutorial-improve/_create-a-branch.adoc[]</p>
 </div>
 <div class="sect1">
 <h2 id="_use_the_plugin_bill_of_materials"><a class="anchor" href="#_use_the_plugin_bill_of_materials"></a>Use the plugin bill of materials</h2>
@@ -1367,8 +1353,8 @@ For example, the addition might look like:</p>
   &lt;dependencies&gt;
     &lt;dependency&gt;
       &lt;groupId&gt;io.jenkins.tools.bom&lt;/groupId&gt;
-      &lt;artifactId&gt;bom-2.375.x&lt;/artifactId&gt;
-      &lt;version&gt;1981.v17df70e84a_a_1&lt;/version&gt;
+      &lt;artifactId&gt;bom-2.401.x&lt;/artifactId&gt;
+      &lt;version&gt;2582.v830625dd636c&lt;/version&gt;
       &lt;scope&gt;import&lt;/scope&gt;
       &lt;type&gt;pom&lt;/type&gt;
     &lt;/dependency&gt;
@@ -1387,43 +1373,8 @@ For example, the addition might look like:</p>
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn clean verify</code></pre>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_create_a_pull_request"><a class="anchor" href="#_create_a_pull_request"></a>Create a pull request</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Commit that change:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git add {modified-files}
-git commit -m "{task-description}"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Push the change to GitHub:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git push origin --set-upstream {task-identifier}</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
-remote:
-remote: Create a pull request for '{task-identifier}' on GitHub by visiting:
-remote: https://github.com/user/your-plugin/pull/new/{task-identifier}
-remote:
-To github.com:user/your-plugin.git
- * [new branch]      {task-identifier} -&gt; {task-identifier}
-Branch '{task-identifier}' tracking remote branch '{task-identifier}'.</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Notice that the output of the command includes the URL, which can be used to open a pull request.
-Copy that URL in your web browser and submit a pull request.</p>
+<p>Unresolved include directive in modules/tutorial-improve/pages/use-plugin-bill-of-materials.adoc - include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]</p>
 </div>
 </div>
 </div>

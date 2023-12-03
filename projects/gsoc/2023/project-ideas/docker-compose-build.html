@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Docker-based Jenkins quickstart examples :: Jenkins</title>
+    <title>Untitled :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2023/project-ideas/docker-compose-build.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../../../_/css/site.css">
     <script>var uiRootPath = '../../../../_'</script>
 <link rel="icon" href="../../../../_/jenkins.svg" type="image/x-icon">
@@ -33,7 +33,7 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../../../../user-docs/2.401.3/blueocean/getting-started.html">Getting started with Blue Ocean</a>
+    <a class="nav-link" href="../../../../user-docs/2.401.3/blueocean/getting-started.html">user-docs:blueocean:getting-started.adoc</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../../blueocean/about.html">About Blue Ocean</a>
@@ -75,7 +75,7 @@
     <a class="nav-link" href="../../2018/index.html">Jenkins in Google Summer of Code 2018</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../2018/remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue"</a>
+    <a class="nav-link" href="../../2018/remoting-over-message-bus.html">2018/remoting-over-message-bus.adoc</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../2018/simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a>
@@ -220,7 +220,7 @@
     <a class="nav-link" href="../../../infrastructure/index.html">Infrastructure</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../infrastructure/ircbot.html">IRC Bot</a>
+    <a class="nav-link" href="../../../infrastructure/ircbot.html">ircbot.adoc</a>
   </li>
 </ul>
   </li>
@@ -374,10 +374,6 @@
 <button class="nav-toggle"></button>
   <a href="../../../../user-docs/2.401.3/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../../../index.html">Jenkins Projects</a></li>
-    <li><a href="docker-compose-build.html">Docker-based Jenkins quickstart examples</a></li>
-  </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2023/project-ideas/docker-compose-build.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
   </div>
@@ -386,22 +382,31 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Docker-based Jenkins quickstart examples</h1>
-<div id="preamble">
-<div class="sectionbody">
+<hr>
 <div class="paragraph">
-<p><strong>Project goal:</strong> Provide examples, sample code, and documentation on how to start a local Jenkins instance.</p>
+<p>layout: gsocprojectidea
+title: "Docker-based Jenkins quickstart examples"
+goal: "Provide examples, sample code, and documentation on how to start a local Jenkins instance."
+category: Tools
+year: 2023
+status: published
+sig: platform
+skills:
+- Java
+- YAML
+- Command line tools
+- Package management tool theory
+mentors:
+- "gounthar"
+- "berviantoleo"
+- "sbostandoust"
+links:
+    emailThread: <a href="https://community.jenkins.io/t/gsoc-2023-project-idea-building-jenkins-io-with-docker-compose/4866" class="bare">https://community.jenkins.io/t/gsoc-2023-project-idea-building-jenkins-io-with-docker-compose/4866</a>
+---
+=== Background</p>
 </div>
 <div class="paragraph">
-<p><strong>Skills to study/improve:</strong> Java, YAML, Command line tools, Package management tool theory</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_background"><a class="anchor" href="#_background"></a>Background</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>We already have a <a href="../../../../user-docs/2.401.3/installing-jenkins/docker.html" class="xref page">section</a> dedicated to docker in the documentation, but it&#8217;s too difficult to use for beginners, and even too complex to begin with.
+<p>We already have a <a href="/doc/book/installing/docker/">section</a> dedicated to docker in the documentation, but it&#8217;s too difficult to use for beginners, and even too complex to begin with.
 We need to provide a simple way to get started with Jenkins and Docker.</p>
 </div>
 <div class="paragraph">
@@ -416,11 +421,8 @@ We need to provide a simple way to get started with Jenkins and Docker.</p>
 <div class="paragraph">
 <p>Of course, these snippets could also be run thanks to <a href="https://www.gitpod.io/">GitPod</a>.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_quick_start"><a class="anchor" href="#_quick_start"></a>Quick Start</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_quick_start"><a class="anchor" href="#_quick_start"></a>Quick Start</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -438,10 +440,8 @@ We need to provide a simple way to get started with Jenkins and Docker.</p>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_skills_to_study_and_improve"><a class="anchor" href="#_skills_to_study_and_improve"></a>Skills to Study and Improve</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_skills_to_study_and_improve"><a class="anchor" href="#_skills_to_study_and_improve"></a>Skills to Study and Improve</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -451,37 +451,31 @@ We need to provide a simple way to get started with Jenkins and Docker.</p>
 <p><a href="https://docs.docker.com/compose/compose-file/compose-file-v3/">Docker Compose file format v3</a></p>
 </li>
 <li>
-<p><a href="#ROOT:index.adoc/jcasc/">Jenkins Configuration as Code</a></p>
+<p><a href="/projects/jcasc/">Jenkins Configuration as Code</a></p>
 </li>
 <li>
 <p><a href="https://plugins.jenkins.io/job-dsl/">Job DSL</a></p>
 </li>
 <li>
-<p><a href="../../../../user-docs/2.401.3/installing-jenkins/kubernetes.html" class="xref page">Kubernetes</a></p>
+<p><a href="/doc/book/installing/kubernetes/">Kubernetes</a></p>
 </li>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_project_difficulty_level"><a class="anchor" href="#_project_difficulty_level"></a>Project Difficulty Level</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_project_difficulty_level"><a class="anchor" href="#_project_difficulty_level"></a>Project Difficulty Level</h3>
 <div class="paragraph">
 <p>Beginner to Intermediate</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_project_size"><a class="anchor" href="#_project_size"></a>Project Size</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_project_size"><a class="anchor" href="#_project_size"></a>Project Size</h3>
 <div class="paragraph">
 <p>175 hours</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_expected_outcomes"><a class="anchor" href="#_expected_outcomes"></a>Expected outcomes</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_expected_outcomes"><a class="anchor" href="#_expected_outcomes"></a>Expected outcomes</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -494,42 +488,6 @@ We need to provide a simple way to get started with Jenkins and Docker.</p>
 <p>A <a href="https://ci.jenkins.io"><code>ci.jenkins.io</code></a> job that tests these docker-compose files every week.</p>
 </li>
 </ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_potential_mentors"><a class="anchor" href="#_potential_mentors"></a>Potential Mentors</h2>
-<div class="sectionbody">
-<div class="paragraph avatar">
-<p><span class="image"><img src="../../../../images/_images/avatars/gounthar.png" alt="gounthar" width="30" height="30"></span> Bruno Verachten
-<span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Saeid Bostandoust</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_project_links"><a class="anchor" href="#_project_links"></a>Project Links</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><span class="image"><img src="https://img.shields.io/badge/gitter-join_chat%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_gsoc-sig%3Agitter.im" alt="Static Badge"></span></p>
-</li>
-<li>
-<p><a href="https://www.jenkins.io/projects/gsoc/#office-hours">Meetings</a>
-== Organization Links</p>
-</li>
-<li>
-<p><a href="../../index.html" class="xref page">Jenkins GSoC page</a> - documentation, application guidelines</p>
-</li>
-<li>
-<p><a href="../../../../community/index.html" class="xref page">Participate and contribute to Jenkins</a> - landing page for newcomer contributors</p>
-</li>
-<li>
-<p><a href="https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20">Newbie-friendly issues</a> - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
-&gt; <a href="#2023/project-ideas">Go back to other GSoC 2023 project ideas</a></p>
-</li>
-</ul>
-</div>
 </div>
 </div>
 </article>

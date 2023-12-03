@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Build a Node.js and React app with npm :: Jenkins</title>
+    <title>Untitled :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/tutorial/2.401.3/build-a-node-js-and-react-app-with-npm.html">
     <link rel="prev" href="build-a-multibranch-pipeline-project.html">
     <link rel="next" href="using-jenkinsfile-runner-github-action-to-build-jenkins-pipeline.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -35,22 +35,22 @@
     <span class="nav-text">xref:-for-installing-jenkins-on-Google-Cloud.adoc[]</span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-java-app-with-maven.html">Build a Java app with Maven</a>
+    <a class="nav-link" href="build-a-java-app-with-maven.html">build-a-java-app-with-maven.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-multibranch-pipeline-project.html">End-to-End Multibranch Pipeline Project Creation</a>
+    <a class="nav-link" href="build-a-multibranch-pipeline-project.html">build-a-multibranch-pipeline-project.adoc</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="build-a-node-js-and-react-app-with-npm.html">Build a Node.js and React app with npm</a>
+    <a class="nav-link" href="build-a-node-js-and-react-app-with-npm.html">build-a-node-js-and-react-app-with-npm.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="using-jenkinsfile-runner-github-action-to-build-jenkins-pipeline.html">Build a Jenkins pipeline by using Jenkinsfile Runner GitHub Actions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="tutorial-for-installing-jenkins-on-AWS.html">Jenkins on AWS</a>
+    <a class="nav-link" href="tutorial-for-installing-jenkins-on-AWS.html">tutorial-for-installing-jenkins-on-AWS.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-python-app-with-pyinstaller.html">Build a Python app with PyInstaller</a>
+    <a class="nav-link" href="build-a-python-app-with-pyinstaller.html">build-a-python-app-with-pyinstaller.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="create-a-pipeline-in-blue-ocean.html">Create a Pipeline in Blue Ocean</a>
@@ -193,7 +193,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Jenkins Tutorials</a></li>
-    <li><a href="build-a-node-js-and-react-app-with-npm.html">Build a Node.js and React app with npm</a></li>
+    <li><a href="build-a-node-js-and-react-app-with-npm.html">build-a-node-js-and-react-app-with-npm.adoc</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/tutorials/modules/ROOT/pages/build-a-node-js-and-react-app-with-npm.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
@@ -203,9 +203,13 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Build a Node.js and React app with npm</h1>
-<div id="preamble">
-<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p>layout: documentation
+title: Build a Node.js and React app with npm
+section: doc
+---</p>
+</div>
 <div class="paragraph">
 <p>This tutorial shows you how to use Jenkins to orchestrate building a simple
 <a href="https://nodejs.org/en/">Node.js</a> and <a href="https://reactjs.org/">React</a> application
@@ -226,89 +230,29 @@ satisfactorily.</p>
 <p><strong>Duration:</strong> This tutorial takes 20-40 minutes to complete (assuming you&#8217;ve
 already met the <a href="#prerequisites">prerequisites</a> below). The exact duration will
 depend on the speed of your machine and whether or not you&#8217;ve already
-<a href="#tutorials:ROOT:create-a-pipeline-in-blue-ocean.adoc#run-jenkins-in-docker" class="xref unresolved">run Jenkins in Docker</a> from <a href="index.html" class="xref page">another tutorial</a>.</p>
+<a href="#run-jenkins-in-docker">run Jenkins in Docker</a> from <a href="..">another tutorial</a>.</p>
 </div>
 <div class="paragraph">
 <p>You can stop this tutorial at any point in time and continue from where you left
 off.</p>
 </div>
 <div class="paragraph">
-<p>If you&#8217;ve already run though <a href="index.html" class="xref page">another tutorial</a>, you can skip the
-<a href="#prerequisites">prerequisites</a> and <a href="#run-jenkins-in-docker">Run Jenkins in
-Docker</a> sections below and proceed on to <a href="#partial$fork-sample-repository.adoc" class="xref unresolved">forking the
+<p>If you&#8217;ve already run though <a href="..">another tutorial</a>, you can skip the
+<a href="#prerequisites">Prerequisites</a> and <a href="#run-jenkins-in-docker">Run Jenkins in
+Docker</a> sections below and proceed on to <a href="#fork-sample-repository">forking the
 sample repository</a>. (Just ensure you have
 <a href="https://git-scm.com/downloads">Git</a> installed locally.) If you need to
 restart Jenkins, simply follow the restart instructions in
-<a href="#user-docs:installing-jenkins:partial$_setup-wizard-for-tutorials.adoc" class="xref unresolved">run Jenkins in Docker</a> and then
+<a href="#stopping-and-restarting-jenkins">Stopping and restarting Jenkins</a> and then
 proceed on.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>For this tutorial, you will require:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A macOS, Linux or Windows machine with:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>256 MB of RAM, although more than 2 GB is recommended.</p>
-</li>
-<li>
-<p>10 GB of drive space for Jenkins and your Docker images and containers.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>The following software installed:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.docker.com/">Docker</a> - Read more about installing Docker in the
-<a href="/doc/book/installing/#installing-docker">Installing Docker</a> section of
-the <a href="/doc/book/installing/">Installing Jenkins</a> page.<br>
-<strong>Note:</strong> If you use Linux, this tutorial assumes that you are not running
-Docker commands as the root user, but instead with a single user account that
-also has access to the other tools used throughout this tutorial.</p>
-</li>
-<li>
-<p><a href="https://git-scm.com/downloads">Git</a> and optionally
-<a href="https://desktop.github.com/">GitHub Desktop</a>.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_run_jenkins_in_docker"><a class="anchor" href="#_run_jenkins_in_docker"></a>Run Jenkins in Docker</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In this tutorial, you&#8217;ll be running Jenkins as a Docker container from the
-<a href="https://hub.docker.com/r/jenkins/jenkins/"><code>jenkins/jenkins</code></a> Docker
-image.</p>
+<p>Unresolved include directive in modules/ROOT/pages/build-a-node-js-and-react-app-with-npm.adoc - include::doc/tutorials/_prerequisites.adoc[]
+** <a href="https://git-scm.com/downloads">Git</a> and optionally
+   <a href="https://desktop.github.com/">GitHub Desktop</a>.</p>
 </div>
 <div class="paragraph">
-<p>To run Jenkins in Docker, follow the relevant instructions below for either
-<a href="#on-macos-and-linux">macOS and Linux</a> or <a href="#on-windows">Windows</a>.</p>
-</div>
-<div class="paragraph">
-<p>You can read more about Docker container and image concepts in the <a href="#docker.adoc" class="xref unresolved">Docker</a>
-section of the <a href="#installing-jenkins:index.adoc" class="xref unresolved">Installing Jenkins</a> page.</p>
-</div>
-<div class="paragraph">
-<p><a href="#partial$_docker-for-tutorials.adoc" class="xref unresolved">partial$_docker-for-tutorials.adoc</a></p>
-</div>
-<div class="paragraph">
-<p><a href="#partial$_setup-wizard-for-tutorials.adoc" class="xref unresolved">partial$_setup-wizard-for-tutorials.adoc</a></p>
+<p>Unresolved include directive in modules/ROOT/pages/build-a-node-js-and-react-app-with-npm.adoc - include::doc/book/installing/_run-jenkins-in-docker.adoc[]</p>
 </div>
 <div class="sect2">
 <h3 id="fork-and-clone-the-sample-repository-on-github"><a class="anchor" href="#fork-and-clone-the-sample-repository-on-github"></a>Fork and clone the sample repository</h3>
@@ -498,7 +442,7 @@ Git repository.</p>
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
     agent {
         docker {
-            image 'node:lts-bullseye-slim' <i class="conum" data-value="1"></i><b>(1)</b>
+            image 'node:20.9.0-alpine3.18' <i class="conum" data-value="1"></i><b>(1)</b>
             args '-p 3000:3000' <i class="conum" data-value="2"></i><b>(2)</b>
         }
     }
@@ -518,7 +462,7 @@ Git repository.</p>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 <td>This <code>image</code> parameter (of the <a href="/doc/book/pipeline/syntax#agent"><code>agent</code></a>
 section&#8217;s <code>docker</code> parameter) downloads the
-<a href="https://hub.docker.com/_/node/"><code>node:lts-bullseye-slim</code> Docker image</a> (if it&#8217;s not
+<a href="https://hub.docker.com/_/node/"><code>node:20.9.0-alpine3.18</code> Docker image</a> (if it&#8217;s not
 already available on your machine) and runs this image as a separate container.
 This means that:
 <div class="ulist">
@@ -527,7 +471,7 @@ This means that:
 <p>You&#8217;ll have separate Jenkins and Node containers running locally in Docker.</p>
 </li>
 <li>
-<p>The Node container becomes the <a href="../../user-docs/2.401.3/glossary/index.html#agent" class="xref page">agent</a> that
+<p>The Node container becomes the <a href="/doc/book/glossary/#agent">agent</a> that
 Jenkins uses to run your Pipeline project. However, this container is
 short-lived - its lifespan is only that of the duration of your Pipeline&#8217;s
 execution.</p>
@@ -588,7 +532,7 @@ repository itself, Jenkins:</p>
 <li>
 <p>Downloads the Node Docker image and runs it in a container on Docker.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/node-js-react-01-downloading-node-docker-image.png" alt="Downloading Node Docker image" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/node-js-react-01-downloading-node-docker-image.png" alt="Downloading Node Docker image" width="100%"></span></p>
 </div>
 </li>
 <li>
@@ -597,7 +541,7 @@ During this time, <code>npm</code> downloads many dependencies necessary to run 
 Node.js and React application, which will ultimately be stored in the
 <code>node_modules</code> workspace directory (within the Jenkins home directory).</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/node-js-react-02-initial-pipeline-downloading-npm-dependencies.png" alt="Downloading 'npm' dependencies" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/node-js-react-02-initial-pipeline-downloading-npm-dependencies.png" alt="Downloading 'npm' dependencies" width="100%"></span></p>
 </div>
 </li>
 </ol>
@@ -607,13 +551,13 @@ Node.js and React application, which will ultimately be stored in the
 application successfully.</p>
 </div>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/node-js-react-03-initial-pipeline-runs-successfully.png" alt="Initial Pipeline runs successfully" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/node-js-react-03-initial-pipeline-runs-successfully.png" alt="Initial Pipeline runs successfully" width="100%"></span></p>
 </div>
 </li>
 <li>
 <p>Click the <strong>X</strong> at the top-right to return to the main Blue Ocean interface.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/node-js-react-04-main-blue-ocean-interface.png" alt="Main Blue Ocean interface" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/node-js-react-04-main-blue-ocean-interface.png" alt="Main Blue Ocean interface" width="100%"></span></p>
 </div>
 </li>
 </ol>
@@ -645,7 +589,7 @@ application successfully.</p>
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
     agent {
         docker {
-            image 'node:lts-bullseye-slim'
+            image 'node:20.9.0-alpine3.18'
             args '-p 3000:3000'
         }
     }
@@ -713,7 +657,7 @@ If your amended Pipeline ran successfully, here&#8217;s what the Blue Ocean
 interface should look like. Notice the additional "Test" stage. You can click
 on the previous "Build" stage circle to access the output from that stage.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/node-js-react-11-test-stage-runs-successfully-with-output.png" alt="Test stage runs successfully (with output)" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/node-js-react-11-test-stage-runs-successfully-with-output.png" alt="Test stage runs successfully (with output)" width="100%"></span></p>
 </div>
 </li>
 <li>
@@ -751,7 +695,7 @@ on the previous "Build" stage circle to access the output from that stage.</p>
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
     agent {
         docker {
-            image 'node:lts-buster-slim'
+            image 'node:20.9.0-alpine3.18'
             args '-p 3000:3000'
         }
     }
@@ -833,7 +777,7 @@ interface should look like. Notice the additional "Deliver" stage. Click on
 the previous "Test" and "Build" stage circles to access the outputs from those
 stages.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/node-js-react-21-deliver-stage-pauses-for-user-input.png" alt="Deliver stage pauses for user input" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/node-js-react-21-deliver-stage-pauses-for-user-input.png" alt="Deliver stage pauses for user input" width="100%"></span></p>
 </div>
 </li>
 <li>
@@ -841,7 +785,7 @@ stages.</p>
 the green <strong><code>./jenkins/scripts/deliver.sh</code></strong> step to expand its content and
 scroll down until you see the <code>http://localhost:3000</code> link.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/node-js-react-22-deliver-stage-opened-deliver-sh-step.png" alt="Deliver stage output only" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/node-js-react-22-deliver-stage-opened-deliver-sh-step.png" alt="Deliver stage output only" width="100%"></span></p>
 </div>
 </li>
 <li>
@@ -886,14 +830,14 @@ editor.</td>
 <p>When you are finished viewing the page/site, click the <strong>Proceed</strong> button to
 complete the Pipeline&#8217;s execution.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/node-js-react-23-deliver-stage-runs-successfully.png" alt="Deliver stage runs successfully" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/node-js-react-23-deliver-stage-runs-successfully.png" alt="Deliver stage runs successfully" width="100%"></span></p>
 </div>
 </li>
 <li>
 <p>Click the <strong>X</strong> at the top-right to return to the main Blue Ocean interface,
 which lists your previous Pipeline runs in reverse chronological order.</p>
 <div class="paragraph boxshadow">
-<p><span class="image"><img src="_images/node-js-react-24-main-blue-ocean-interface-with-all-previous-runs-displayed.png" alt="Main Blue Ocean interface with all previous runs displayed" width="100%"></span></p>
+<p><span class="image unresolved"><img src="tutorials/node-js-react-24-main-blue-ocean-interface-with-all-previous-runs-displayed.png" alt="Main Blue Ocean interface with all previous runs displayed" width="100%"></span></p>
 </div>
 </li>
 </ol>
@@ -920,14 +864,14 @@ handle practically any aspect of build orchestration and automation.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="index.html" class="xref page">Tutorials overview</a> page for other introductory
+<p>The <a href="/doc/tutorials">Tutorials overview</a> page for other introductory
 tutorials.</p>
 </li>
 <li>
-<p>The <a href="../../user-docs/2.401.3/index.html" class="xref page">User Handbook</a> for more detailed information about using
+<p>The <a href="/doc/book">User Handbook</a> for more detailed information about using
 Jenkins, such as <a href="/doc/book/pipeline">Pipelines</a> (in particular
 <a href="/doc/book/pipeline/syntax">Pipeline syntax</a>) and the
-<a href="../../user-docs/2.401.3/blueocean/index.html" class="xref page">Blue Ocean</a> interface.</p>
+<a href="/doc/book/blueocean">Blue Ocean</a> interface.</p>
 </li>
 <li>
 <p>The <a href="/node">Jenkins blog</a> for the latest events, other tutorials and
@@ -936,11 +880,10 @@ updates.</p>
 </ul>
 </div>
 <hr>
-</div>
-</div>
+Unresolved include directive in modules/ROOT/pages/build-a-node-js-and-react-app-with-npm.adoc - include::_partials/_feedback-footer.html[]
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="build-a-multibranch-pipeline-project.html">End-to-End Multibranch Pipeline Project Creation</a></span>
+  <span class="prev"><a href="build-a-multibranch-pipeline-project.html">build-a-multibranch-pipeline-project.adoc</a></span>
   <span class="next"><a href="using-jenkinsfile-runner-github-action-to-build-jenkins-pipeline.html">Build a Jenkins pipeline by using Jenkinsfile Runner GitHub Actions</a></span>
 </nav>
 </article>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Making Objects Accessible via Stapler :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/handling-requests/stapler-accessible-type.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
@@ -1325,15 +1325,6 @@
 <h1 class="page">Making Objects Accessible via Stapler</h1>
 <div id="preamble">
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>url: /security/advisory/2018-12-05/#SECURITY-595
-  title: SECURITY-595 security fix
----</p>
-</li>
-</ul>
-</div>
 <div class="paragraph">
 <p>Before Jenkins 2.138.4 and 2.154, most objects in Jenkins were accessible through the basic Stapler routing rules discussed in <a href="routing.html" class="xref page">Routing Requests</a>.
 Starting in Jenkins 2.138.4 and 2.154, this is further restricted to address several security issues.</p>
@@ -1415,6 +1406,18 @@ You may need to add a dependency to the <code>io.jenkins.stapler:jenkins-stapler
 <li>
 <p>If the return type is not defined in your component, annotate the method or field <code>@StaplerDispatchable</code>.
 You may need to add a dependency to the <code>io.jenkins.stapler:jenkins-stapler-support</code> library to make this annotation available.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references"><a class="anchor" href="#_references"></a>References:</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>/security/advisory/2018-12-05/#SECURITY-595[SECURITY-595 security fix]</p>
 </li>
 </ul>
 </div>
