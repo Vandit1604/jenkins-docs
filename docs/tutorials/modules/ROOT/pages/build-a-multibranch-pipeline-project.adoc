@@ -1,4 +1,11 @@
-= End-to-End Multibranch Pipeline Project Creation
+---
+layout: documentation
+title: End-to-End Multibranch Pipeline Project Creation
+section: doc
+---
+
+
+:imagesdir: ../../book/resources
 
 This tutorial shows you how to use Jenkins to orchestrate building and testing
 a simple https://nodejs.org/en/[Node.js] and https://reactjs.org/[React]
@@ -6,41 +13,41 @@ application with the https://www.npmjs.com/[Node Package Manager (npm)], _as
 well as_ deliver different outcomes for development and production purposes.
 
 Before starting this tutorial, it is recommended that you run through at least
-one of the initial set of Introductory tutorials from the xref:ROOT:index.adoc[Tutorials overview] page first to familiarize
+one of the initial set of link:../#introductory-tutorials[Introductory
+tutorials] from the link:..[Tutorials overview] page first to familiarize
 yourself with CI/CD concepts (relevant to a technology stack you're most
 familiar with), how these concepts are implemented in Jenkins and the
 fundamentals of Jenkins Pipelines.
 
 In this tutorial, you'll use the same application that the
-xref:build-a-node-js-and-react-app-with-npm.adoc[Build a Node.js and React app
+link:../build-a-node-js-and-react-app-with-npm[Build a Node.js and React app
 with npm] tutorial is based on. Therefore, you'll be building and testing the
 same application but this time, its delivery will be different depending on the
 Git branch that Jenkins builds from. That is, the branch being built determines
 which delivery stage of your Pipeline is executed.
 
 *Duration:* This tutorial takes 30-50 minutes to complete (assuming you've
-already met the <<prerequisites,prerequisites>> below). The exact duration will
+already met the <<prerequisites,Prerequisites>> below). The exact duration will
 depend on the speed of your machine and whether or not you've already
-xref:tutorials:ROOT:create-a-pipeline-in-blue-ocean.adoc#run-jenkins-in-docker[run Jenkins in Docker] from xref:ROOT:index.adoc[another tutorial].
+<<run-jenkins-in-docker,run Jenkins in Docker>> from link:..[another tutorial].
 
 You can stop this tutorial at any point in time and continue from where you left
 off.
 
-If you've already run though xref:ROOT:index.adoc[another tutorial], you can skip the <<prerequisites,prerequisites>> and <<run-jenkins-in-docker,Run Jenkins in
-Docker>> sections below and proceed on to xref:partial$fork-sample-repository.adoc[forking the
-sample repository]. (Just ensure you have
+If you've already run though link:..[another tutorial], you can skip the
+<<prerequisites,Prerequisites>> and <<run-jenkins-in-docker,Run Jenkins in
+Docker>> sections below and proceed on to <<fork-sample-repository,forking the
+sample repository>>. (Just ensure you have
 link:https://git-scm.com/downloads[Git] installed locally.) If you need to
 restart Jenkins, simply follow the restart instructions in
-xref:user-docs:installing-jenkins:partial$_setup-wizard-for-tutorials.adoc[run Jenkins in Docker] and then
+<<stopping-and-restarting-jenkins,Stopping and restarting Jenkins>> and then
 proceed on.
 
-[[prerequisites]]
-include::partial$prerequisites.adoc[prerequisites]
-
+include::doc/tutorials/_prerequisites.adoc[]
 ** link:https://git-scm.com/downloads[Git] and optionally
    link:https://desktop.github.com/[GitHub Desktop].
 
-include::user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[]
+include::doc/book/installing/_run-jenkins-in-docker.adoc[]
 
 
 [[fork-sample-repository]]
@@ -146,7 +153,7 @@ project as a "Multibranch Pipeline" project.
   interface.
 +
 [.boxshadow]
-image:multibranch-pipeline-01-main-blueocean-interface.png[alt="Main
+image:tutorials/multibranch-pipeline-01-main-blueocean-interface.png[alt="Main
 Blue Ocean interface",width=100%]
 
 [NOTE]
@@ -199,7 +206,7 @@ process and a "Test" stage to check that the application renders satisfactorily.
 pipeline {
     agent {
         docker {
-            image 'node:lts-alpine'
+            image 'node:20.9.0-alpine3.18'
             args '-p 3000:3000 -p 5000:5000' // <1>
         }
     }
@@ -228,11 +235,11 @@ are covered in subsequent sections of this tutorial.
 +
 *Note:* For an explanation of the other components of this `Jenkinsfile`, refer
 to the annotations of the Declarative Pipeline in the
-xref:build-a-node-js-and-react-app-with-npm.adoc#create-your-initial-pipeline-as-a-jenkinsfile[``Create
+link:../build-a-node-js-and-react-app-with-npm/#create-your-initial-pipeline-as-a-jenkinsfile[``Create
 your initial Pipeline...''] and
-xref:build-a-node-js-and-react-app-with-npm.adoc#add-a-test-stage-to-your-pipeline[``Add
+link:../build-a-node-js-and-react-app-with-npm/#add-a-test-stage-to-your-pipeline[``Add
 a test stage...''] sections of the
-xref:build-a-node-js-and-react-app-with-npm.adoc[Build a Node.js and React app
+link:../build-a-node-js-and-react-app-with-npm/[Build a Node.js and React app
 with npm] tutorial.
 . Save your edited `Jenkinsfile` and commit it to your local
   `building-a-multibranch-pipeline-project` Git repository. E.g. Within the
@@ -245,10 +252,10 @@ with npm] tutorial.
 . Click *Branches* at the top right to access the list of your Pipeline
   project's branches.
 [.boxshadow]
-image:multibranch-pipeline-11-branches-page.png[alt="Branches
+image:tutorials/multibranch-pipeline-11-branches-page.png[alt="Branches
 page",width=100%]
 . Click the run icon
-  image:multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
+  image:tutorials/multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
   of the `master` branch of your Pipeline project, then quickly click the *OPEN*
   link that appears briefly at the lower-right to see Jenkins building the
   `master` branch with the amended `Jenkinsfile`. If you weren't able to click
@@ -257,7 +264,7 @@ page",width=100%]
   Within a few minutes, the Blue Ocean interface turns green if Jenkins built
   your Node.js and React application successfully from your `master` branch.
 [.boxshadow]
-image:multibranch-pipeline-13-build-and-test-stages-run-successfully-with-output.png[alt="Build
+image:tutorials/multibranch-pipeline-13-build-and-test-stages-run-successfully-with-output.png[alt="Build
 and test stages run successfully with output",width=100%]
 . Click the *X* at the top-right to return to the *Activity* page of the Blue
   Ocean interface.
@@ -309,7 +316,7 @@ so that you end up with:
 pipeline {
     agent {
         docker {
-            image 'node:lts-alpine'
+            image 'node:20.9.0-alpine3.18'
             args '-p 3000:3000 -p 5000:5000'
         }
     }
@@ -360,7 +367,7 @@ matches the name of the branch that Jenkins is running the build from, then the
 *Notes:*
 * For an explanation of the `input message` steps, refer to annotation *4* of
   the Declarative Pipeline at the
-  xref:build-a-node-js-and-react-app-with-npm.adoc#add-a-final-deliver-stage-to-your-pipeline[``Add
+  link:../build-a-node-js-and-react-app-with-npm/#add-a-final-deliver-stage-to-your-pipeline[``Add
   a final deliver stage...'' section of the Build a Node.js and React app]
   tutorial.
 * For an explanation of the `deliver-for-development.sh`,
@@ -378,7 +385,7 @@ matches the name of the branch that Jenkins is running the build from, then the
 . Click *Branches* at the top right to access the list of your Pipeline
   project's branches.
 . Click the run icon
-  image:multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
+  image:tutorials/multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
   of the `master` branch of your Pipeline project, then quickly click the *OPEN*
   link that appears briefly at the lower-right to see Jenkins building the
   `master` branch with the amended `Jenkinsfile`. If you weren't able to click
@@ -388,7 +395,7 @@ matches the name of the branch that Jenkins is running the build from, then the
   are running the build from (`master`) does not meet the `when` directives'
   `branch` conditions in these stages.
 [.boxshadow]
-image:multibranch-pipeline-21-complete-pipeline-runs-successfully-on-master-branch.png[alt="Complete
+image:tutorials/multibranch-pipeline-21-complete-pipeline-runs-successfully-on-master-branch.png[alt="Complete
 Pipeline runs successfully on the 'master' branch",width=100%]
 . Click the *X* at the top-right to return to the *Activity* page of the Blue
   Ocean interface.
@@ -425,7 +432,7 @@ Your `development` and `production` branches should now have all your
 . Click *Branches* at the top right to access the list of your Pipeline
   project's branches.
 . Click the run icon
-  image:multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
+  image:tutorials/multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
   of the `development` branch of your Pipeline project, then quickly click the
   *OPEN* link that appears briefly at the lower-right to see Jenkins building
   the `development` branch with the amended `Jenkinsfile`. If you weren't able
@@ -436,7 +443,7 @@ Your `development` and `production` branches should now have all your
   green *Shell Script* step to expand its contents and scroll down until you see
   the `\http://localhost:3000` link.
 [.boxshadow]
-image:multibranch-pipeline-31-deliver-for-development-stage-opened.png[alt="Shell
+image:tutorials/multibranch-pipeline-31-deliver-for-development-stage-opened.png[alt="Shell
 Script step 'Deliver for development' stage opened",width=100%] +
   *Note:* Since you are building the application on a different branch, the `npm
   install` step will require a few minutes for `npm` to download the many
@@ -457,7 +464,7 @@ Script step 'Deliver for development' stage opened",width=100%] +
   *Deliver for development* stage was executed but the *Deploy for production*
   stage was not.
 [.boxshadow]
-image:multibranch-pipeline-32-complete-pipeline-runs-successfully-on-development-branch.png[alt="Complete
+image:tutorials/multibranch-pipeline-32-complete-pipeline-runs-successfully-on-development-branch.png[alt="Complete
 Pipeline runs successfully on the 'development' branch",width=100%]
 . Click the *X* at the top-right to return to the *Activity* page of the Blue
   Ocean interface.
@@ -468,7 +475,7 @@ Pipeline runs successfully on the 'development' branch",width=100%]
 . Click *Branches* at the top right to access the list of your Pipeline
   project's branches.
 . Click the run icon
-  image:multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
+  image:tutorials/multibranch-pipeline-12-run-icon.png[alt="Run icon",width=3%]
   of the `production` branch of your Pipeline project, then quickly click the
   *OPEN* link that appears briefly at the lower-right to see Jenkins building
   the `production` branch with the amended `Jenkinsfile`. If you weren't able to
@@ -479,7 +486,7 @@ Pipeline runs successfully on the 'development' branch",width=100%]
   green *Shell Script* step to expand its contents and scroll down until you see
   the `\http://localhost:5000` link.
 [.boxshadow]
-image:multibranch-pipeline-41-deploy-for-production-stage-opened.png[alt="Shell
+image:tutorials/multibranch-pipeline-41-deploy-for-production-stage-opened.png[alt="Shell
 Script step 'Deploy for production' stage opened",width=100%] +
 . Click the `\http://localhost:5000` link to view your Node.js and React
   application in a new web browser tab. This will be running in production mode
@@ -495,7 +502,7 @@ Script step 'Deploy for production' stage opened",width=100%] +
   *Deploy for production* stage was executed but the *Deliver for development*
   stage was skipped.
 [.boxshadow]
-image:multibranch-pipeline-42-complete-pipeline-runs-successfully-on-production-branch.png[alt="Complete
+image:tutorials/multibranch-pipeline-42-complete-pipeline-runs-successfully-on-production-branch.png[alt="Complete
 Pipeline runs successfully on the 'production' branch",width=100%]
 . Click the *X* at the top-right to return to the *Activity* page of the Blue
   Ocean interface. +
@@ -626,15 +633,17 @@ handle practically any aspect of build orchestration and automation.
 
 To learn more about what Jenkins can do, check out:
 
-* The xref:ROOT:index.adoc[Tutorials overview] page for other introductory
+* The link:/doc/tutorials[Tutorials overview] page for other introductory
   tutorials.
-* The xref:user-docs:ROOT:index.adoc[User Handbook] for more detailed information about using
+* The link:/doc/book[User Handbook] for more detailed information about using
   Jenkins, such as link:/doc/book/pipeline[Pipelines] (in particular
   link:/doc/book/pipeline/syntax[Pipeline syntax]) and the
-  xref:user-docs:blueocean:index.adoc[Blue Ocean] interface.
+  link:/doc/book/blueocean[Blue Ocean] interface.
 * The link:/node[Jenkins blog] for the latest events, other tutorials and
   updates.
 
 
 '''
-
+++++
+include::_partials/_feedback-footer.html[]
+++++

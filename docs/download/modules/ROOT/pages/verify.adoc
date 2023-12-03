@@ -1,4 +1,5 @@
-= Verifying Downloads
+= "Verifying Downloads"
+
 == Verifying Jenkins Downloads
 
 NOTE: Jenkins automatically verifies the integrity of Jenkins core updates it downloads from update centers. These instructions apply to manual downloads.
@@ -59,4 +60,3 @@ NOTE: Jenkins automatically verifies the integrity of plugins it downloads from 
 
 To manually download plugin releases, visit the plugin's page on the https://plugins.jenkins.io/[plugin site] and select "Archives".
 That page will list all releases available for download as well as their SHA-1 and SHA-256 checksums.
-

@@ -1,12 +1,16 @@
 = Enable incrementals
 
-== Publish incremental development artifacts
+:modified-files: pom.xml .mvn/
+:task-identifier: incrementalify
+:task-description: Publish incremental development artifacts
+
+= Publish incremental development artifacts
 
 Jenkins evaluation of pull request builds is faster and easier when incremental builds are enabled.
-See the jenkins.io xref:plugin-development:incrementals.adoc[incremental build instructions] for more details.
+See the jenkins.io link:/doc/developer/plugin-development/incrementals/[incremental build instructions] for more details.
 
 // Create the branch
-include::partial$_create-a-branch.adoc[]
+include::doc/developer/tutorial-improve/_create-a-branch.adoc[]
 
 Run the Maven command to enable incrementals:
 [source,bash]
@@ -15,4 +19,4 @@ mvn incrementals:incrementalify
 ----
 
 // Create a pull request
-include::partial$_create-a-pull-request.adoc[]
+include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]

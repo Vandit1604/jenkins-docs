@@ -1,5 +1,6 @@
 = Remote Access API
 
+
 Jenkins provides machine-consumable remote access API to its
 functionalities. 
 Currently it comes in three flavors:
@@ -38,6 +39,8 @@ Remote API can be used to do things like these:
 
 You merely need to perform an HTTP POST on
 `+JENKINS_URL/job/JOBNAME/build+`.
+
+This also works for Multibranch Pipelines and Organization Folders. It would trigger a scan.
 
 *Jobs with parameters*
 

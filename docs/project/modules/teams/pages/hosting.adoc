@@ -1,7 +1,14 @@
-= Hosting Team
-
-// mailinglist: "/mailing-lists/#jenkinsci-dev-googlegroups-com"
-// chat: "/project/teams/hosting/#chat"
+---
+layout: project
+title: "Hosting Team"
+section: projects
+tags:
+- hosting
+- plugin-site
+links:
+  mailinglist: "/mailing-lists/#jenkinsci-dev-googlegroups-com"
+  chat: "/project/teams/hosting/#chat"
+---
 
 The Jenkins Hosting Team handles various requests related to hosting of open-source plugins and other components (forking and transferring plugins, managing permissions and update centers, etc.).
 There are multiple contributors involved in this activity on a regular basis.
@@ -10,13 +17,13 @@ There are multiple contributors involved in this activity on a regular basis.
 
 * Triage and processing of new plugin link:https://github.com/jenkins-infra/repository-permissions-updater/issues?q=is%3Aissue+is%3Aopen++label%3Ahosting-request+[Hosting] requests.
   There is some automation around this process, but human reviews are needed too...
-** Ensure that xref:dev-docs:publishing:preparation.adoc[plugin publishing requirements] are followed:
-naming conventions and `artifactId`s, `groupId`s, documentation, duplication of existing plugins, license compliance, etc.
+** Ensure that link:/doc/developer/publishing/preparation[plugin publishing requirements] are followed:
+naming conventions and `artifactId`s, `groupId`s, documentation, duplication of existing plugins, license compliance, etc.]
 ** Check plugin compliance with security best practices and recommendations.
-* Managing plugin developer and release permissions (xref:dev-docs:plugin-governance:managing-permissions.adoc[documentation]).
-* Processing xref:dev-docs:plugin-governance:adopt-a-plugin.adoc[plugin adoption] requests in the developer mailing list
+* Managing plugin developer and release permissions (link:/doc/developer/plugin-governance/managing-permissions/[documentation]).
+* Processing link:/doc/developer/plugin-governance/adopt-a-plugin/[plugin adoption] requests in the developer mailing list
 * Processing blacklisting and plugin tagging/doc URL requests in the Update Centers for non-security reasons.
-* Maintaining the xref:dev-docs:publishing:index.adoc[publishing] and xref:dev-docs:plugin-governance:index.adoc[plugin governance] documentation.
+* Maintaining the link:/doc/developer/publishing[publishing] and link:/doc/developer/plugin-governance/[plugin governance] documentation.
 
 == Key repositories
 
@@ -68,9 +75,9 @@ A registered username is needed too, if you're using matrix clients, such as ele
 ==== Configuration
 
 . Subscribe to all channels and repositories listed in the _Assisting with Q&A and request reviews_ section
-. Join the xref:community:chat:index.adoc[`#jenkins-hosting` IRC channel] and xref:community:chat:index.adoc#cloaks[obtain a cloak].
+. Join the link:/chat/[`#jenkins-hosting` IRC channel] and link:/chat/#cloaks[obtain a cloak].
   It will be needed for ChatOps.
-. Request voice permission (`+vV`) from a channel operator in the xref:community:chat:index.adoc[`#jenkins-hosting` IRC channel] to get access to the bot commands.
+. Request voice permission (`+vV`) from a channel operator in the link:/chat/[`#jenkins-hosting` IRC channel] to get access to the bot commands.
 Current channel operator(s):
 @timja
 
@@ -84,7 +91,7 @@ Current channel operator(s):
 == Chat
 
 The team has a dedicated `#jenkins-hosting` IRC channel on Libera Chat.
-To join it, follow xref:community:chat:index.adoc[these guidelines].
+To join it, follow link:/chat/[these guidelines].
 
 == Meetings
 
@@ -93,7 +100,7 @@ If needed, you can request a meeting in the developer mailing list.
 
 == Tools
 
-* xrefs:infrastructure:ircbot.adoc[Jenkins IRC Bot] - ChatOps tool for managing the hosting and ownership requests.
+* link:/projects/infrastructure/ircbot/[Jenkins IRC Bot] - ChatOps tool for managing the hosting and ownership requests.
 * link:https://github.com/slide/jenkins-jira-checker[Jenkins Jira Checker] - Azure Function for checking hosting requests for Jenkins plugins
 
 == References

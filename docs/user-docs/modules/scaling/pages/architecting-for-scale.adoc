@@ -1,3 +1,15 @@
+---
+layout: section
+---
+]
+:doctitle: Architecting for Scale
+ R. Tyler Croy
+
+:imagesdir: /doc/book/resources/
+
+
+
+
 = Architecting for Scale
 
 == Introduction
@@ -67,7 +79,7 @@ whose integrity and privacy could not be, thus,  guaranteed.
 See
 link:/doc/book/security/controller-isolation/[Distributed Builds]
 in the
-xref:user-docs:security:index.adoc[Securing Jenkins]
+link:/doc/book/security/[Securing Jenkins]
 chapter for more information.
 
 For all these reasons Jenkins supports agents, where the
@@ -163,7 +175,7 @@ up to date each time it connects to the controller.
 
 [[inbound_agent]]
 .Inbound agent launch command
-image::inbound-agent.png[Inbound agent node screen, scaledwidth=90%]
+image::hardware-recommendations/inbound-agent.png[Inbound agent node screen, scaledwidth=90%]
 
 This approach is convenient for an execution as a daemon on Unix.
 
@@ -173,9 +185,8 @@ This approach is convenient for an execution as a daemon on Unix.
   that the script runs the java program as a _java -jar agent.jar_ on the
   agent.
 
-Windows agent set-up can either follow the standard SSH and JNLP approach  or
-use a more Windows-specific configuration approach. Windows agents have the
-following options:
+Windows agent set-up can follow the standard SSH and inbound agent approaches.
+Windows agents have the following options:
 
 * *SSH-connector approach with Putty*
 * *SSH-connector approach with Cygwin and OpenSSH*:
@@ -184,13 +195,7 @@ following options:
 * *SSH-connector approach with Microsoft OpenSSH*:
   The link:https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse[Microsoft OpenSSH server] works well for Microsoft operating systems that support the server.
   Refer to installation instructions in the link:https://github.com/jenkinsci/ssh-slaves-plugin/blob/master/doc/CONFIGURE.md#launch-windows-agents-using-microsoft-openssh[ssh build agents configuration guide].
-* *Remote management facilities (WMI + DCOM)*: With this approach, which
-  utilizes the
-  {plugin}windows-slaves[WMI Windows Agents Plugin]), the Jenkins controller will register the agent on the
-  windows agent machine creating a Windows service. The Jenkins controller can
-  control the agents, issuing stops/restarts/updates of the same. However this
-  is difficult to configure and not recommended.
-* *JNLP-connector approach*: With
+* *Inbound agent approach*: With
   https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+as+a+Windows+service[this approach]
    it is possible to manually register the agent as Windows service,
   but it will not be possible to centrally manage it from the controller. Each
@@ -251,15 +256,15 @@ In particular it is possible to offload the execution of the jobs to agents in
 the cloud thanks to ad-hoc plugins which will handle the creation of the cloud
 resources together with their destruction when they are not needed anymore:
 
-* The {plugin}ec2[EC2 Plugin]
+* The plugin:ec2[EC2 Plugin]
   lets Jenkins use AWS EC2 instances as cloud build resources when it runs out of on-premises agents.
   The EC2 agents will be dynamically created inside an AWS network and de-provisioned when they are not needed.
-* The {plugin}azure-vm-agents[Azure VM Agents Plugin]
+* The plugin:azure-vm-agents[Azure VM Agents Plugin]
   dynamically spins up Jenkins agents as Azure VMs per user provided
   configuration via templates, including support for virtual network integration
   and subnet placement. Idle agents can be configured for automatic shutdown
   to reduce costs.
-* The {plugin}jclouds-jenkins[JCloud plugin]
+* The plugin:jclouds-jenkins[JCloud plugin]
   creates the possibility of executing the jobs on any cloud provider supported
   by JCloud libraries
 
@@ -398,7 +403,7 @@ This policy can be set on a job's configuration page.
 It is a best practice to take regular backups of your $JENKINS_HOME.
 A backup ensures that your Jenkins instance can be restored despite a misconfiguration,
 accidental job deletion, or data corruption. 
-See the link:https://www.jenkins.io/doc/book/system-administration/backing-up/[Backup policies] for more details.
+See the link:/doc/book/system-administration/backing-up/[Backup policies] for more details.
 
 === Finding your $JENKINS_HOME
 
@@ -702,7 +707,7 @@ can have multiple backup controllers configured.
 Set up an authentication realm that Jenkins will use for its user database.
 
 TIP: If you are trying to set up a proof-of-concept, it is recommended to use
-the {plugin}mock-security-realm[Mock Security Realm plugin] for authentication.
+the plugin:mock-security-realm[Mock Security Realm plugin] for authentication.
 
 .Step 3: Add build nodes (agents) to controller
 

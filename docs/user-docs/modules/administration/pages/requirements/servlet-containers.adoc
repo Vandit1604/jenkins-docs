@@ -1,11 +1,13 @@
----
-layout: documentation
-title: Servlet Container Support Policy
----
+= Other Servlet Containers
+]
+:description:
+:author:
 
-This page documents the servlet container support policy for the Jenkins controller.
 
-== Why?
+:hide-uri-scheme:
+
+
+
 
 Jenkins is typically run as a standalone application in its own process.
 The Jenkins WAR file bundles link:https://github.com/jenkinsci/winstone[Winstone],
@@ -17,51 +19,60 @@ Theoretically, Jenkins can also be run as a servlet in a traditional servlet con
 like link:https://tomcat.apache.org/[Apache Tomcat] or link:https://www.wildfly.org/[WildFly],
 but in practice this is largely untested and there are many caveats.
 In particular, support for WebSocket agents is only implemented for the Jetty servlet container.
+See the link:/doc/book/platform-information/support-policy-servlet-containers[Servlet Container Support Policy] page for details.
 
 WARNING: Support for traditional servlet containers may be discontinued in the future.
 
-== Support levels
+Jenkins requires Servlet API 4.0 (Jakarta EE 8) with `javax.servlet` imports.
+Jenkins is incompatible with Servlet API 5.0 (Jakarta EE 9) or later with `jakarta.servlet` imports.
+Ensure that the Servlet API version of your chosen servlet container is compatible before running Jenkins.
 
-We define multiple support levels for servlet containers.
+== Tomcat 9
 
-[width="100%",cols="20%,35%,45%",options="header",]
-|===
-|Support level |Description |Servlet containers
+Tomcat 9 is based on Servlet API 4.0 (Jakarta EE 8), which is the version of the servlet API required by Jenkins.
 
-| **Level 1:** Supported
-| We run automated testing for these servlet containers, and we intend to fix reported issues in a timely manner.
-a|The versions of Winstone and Jetty bundled in the Jenkins link:/doc/book/installing/war-file/[WAR file].
+CAUTION: Later versions of Tomcat use newer versions of the Servlet API and are incompatible with Jenkins.
 
-| **Level 2:** Patches considered
-| Support may have limitations and extra requirements.
-  We do not regularly test compatibility, and we may drop support at any time.
-  We consider patches that do not put Level 1 support at risk and do not create maintenance overhead.
-a|
-  * Tomcat 9, based on Servlet API 4.0 (Jakarta EE 8) with `javax.servlet` imports.
-  * WildFly 26, based on Servlet API 4.0 (Jakarta EE 8) with `javax.servlet` imports.
-  * Other servlet containers that are based on Servlet API 4.0 (Jakarta EE 8) with `javax.servlet` imports.
+Jenkins can be deployed to Tomcat by placing the Jenkins WAR file in the `+${CATALINA_HOME}/webapps/+` directory.
 
-| **Level 3:** Unsupported
-| These versions are known to be incompatible or to have severe limitations.
-  We do not support the listed servlet containers.
-a|
-  * Jetty 11 or later, based on Servlet API 5.0 (Jakarta EE 9) or later with `jakarta.servlet` imports.
-  * Tomcat 10 or later, based on Servlet API 5.0 (Jakarta EE 9) or later with `jakarta.servlet` imports.
-  * WildFly 27 or later, based on Servlet API 5.0 (Jakarta EE 9) or later with `jakarta.servlet` imports.
-  * Other servlet containers that are based on Servlet API 5.0 (Jakarta EE 9) or later with `jakarta.servlet` imports.
-|===
+To configure the Jenkins home directory, set the `JENKINS_HOME` Java system property via the `CATALINA_OPTS` environment variable.
+For example, create `+${CATALINA_HOME}/bin/setenv.sh+` with the following contents:
 
-== References
+[source,bash]
+----
+export CATALINA_OPTS=-DJENKINS_HOME=/var/lib/jenkins
+----
 
-* link:/doc/book/installing/servlet-containers/[Installation instructions]
-* link:https://www.eclipse.org/jetty/[Jetty versions]
-* link:https://tomcat.apache.org/whichversion.html[Tomcat versions]
-* link:https://www.wildfly.org/news/2022/11/09/WildFly27-Final-Released/[WildFly 27 release announcement]
+NOTE: Running multiple Jenkins controllers within a single Java process is unsupported.
 
-== Contributing
+Scheme selection in redirect URLs is delegated to the servlet container,
+and Jetty handles the `X-Forwarded-For`, `X-Forwarded-By`, and `X-Forwarded-Proto` headers by default.
+With Tomcat, one needs to add a link:https://tomcat.apache.org/tomcat-9.0-doc/config/valve.html#Remote_IP_Valve[Remote IP Valve]
+to expose these headers to Jenkins via the Servlet API.
+Add the following to `+${CATALINA_HOME}/conf/server.xml+` within the `<Host>` section:
 
-You are welcome to propose PRs that add support or documentation for other servlet containers or to share feedback;
-we will appreciate your contributions!
-Servlet container support in Jenkins falls under the xref:sigs:platform:index.adoc[Platform Special Interest Group]
-which has a link:https://app.gitter.im/#/room/#jenkinsci_platform-sig:gitter.im[chat], a link:https://community.jenkins.io/[forum]., and xref:sigs:platform:index.adoc#meetings[regular meetings].
-You are welcome to join these channels.
+[source,xml]
+----
+<Valve className="org.apache.catalina.valves.RemoteIpValve"
+       remoteIpHeader="X-Forwarded-For"
+       proxiesHeader="X-Forwarded-By"
+       protocolHeader="X-Forwarded-Proto" />
+----
+
+== WildFly 26
+
+WildFly 26 is based on Servlet API 4.0 (Jakarta EE 8), which is the version of the servlet API required by Jenkins.
+
+CAUTION: Later versions of WildFly use newer versions of the Servlet API and are incompatible with Jenkins.
+
+Jenkins can be deployed to WildFly by placing the Jenkins WAR file in the `+${JBOSS_HOME}/standalone/deployments/+` directory.
+
+To configure the Jenkins home directory, set the `JENKINS_HOME` Java system property via the `JAVA_OPTS` environment variable.
+For example, update `+${JBOSS_HOME}/bin/standalone.conf+` with the following contents:
+
+[source,bash]
+----
+JAVA_OPTS="$JAVA_OPTS -DJENKINS_HOME=/var/lib/jenkins"
+----
+
+NOTE: Running multiple Jenkins controllers within a single Java process is unsupported.

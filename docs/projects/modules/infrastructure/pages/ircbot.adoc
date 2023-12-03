@@ -1,11 +1,14 @@
-= IRC Bot
+---
+layout: simplepage
+title: "IRC Bot"
+project: infrastructure
+---
 
-The primary Jenkins IRC Channel (`#jenkins` on the
+
+The bot is named `jenkins-admin` and serves in the `#jenkins-hosting` room on the
 link:https://libera.chat/[Libera Chat]
-network) uses an administrator bot "jenkins-admin" so that some of the project
-operation work can be done by the community. This bot is available for anyone
-in the channel with "voice", which is an IRC jargon for those users who are
-trusted.
+network.
+This bot is available for anyone in the channel with "voice", which is an IRC jargon for those users who are trusted.
 
 == Available actions
 
@@ -161,9 +164,7 @@ jenkins-admin: Create REPO on github for SOMEONE
 In the latter form, the specified someone will get the commit access to the
 repository right away.
 
-
 === Issue Tracker Management
-
 
 *Create an issue tracker component*
 
@@ -204,7 +205,6 @@ jenkins-admin: Remove lead of COMPONENT1[, COMPONENT2, COMPONENT3...]
 ----
 jenkins-admin: Rename component COMPONENT to NEW_NAME
 ----
-
 
 *Modify the component description*
 

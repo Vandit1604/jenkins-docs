@@ -1,7 +1,13 @@
-= Board and Officer election walkthrough
+---
+layout: simplepage
+title: "Board and Officer election walkthrough"
+section: project
+description: >
+  This page describes steps during the board and officer election.
+---
 
 This document outlines, how to nominate and vote for board members and officers, with the different services used during the election.
-If you are interested in the election process, please read the xref:board-election-process.adoc[Board and Officer election process] and the xref:governance.adoc[governance] documents.
+If you are interested in the election process, please read the link:../board-election-process[Board and Officer election process] and the link:../governance[governance] documents.
 
 This document uses the elections of 2023 in the examples.
 The process is the same for all future elections, except for the dates.
@@ -21,14 +27,14 @@ During the registration period, we invite community members to nominate candidat
 
 Create a new message with the "Message" button.
 
-image::new-message.png[Propose a new message]
+image::../project/election-walkthrough-screenshots/new-message.png[Propose a new message]
 
 === Send the nomination message
 
 Compose the nomination message and send it.
 Include the name of the candidate and a brief description of their motivation to run for the board or officer position
 
-image::send-message.png[Send new message]
+image::../project/election-walkthrough-screenshots/send-message.png[Send new message]
 
 You may not receive a response, yet the election committee has registered your nomination.
 
@@ -42,7 +48,7 @@ The following example shows the joining process:
 NOTE: Every year, a new group is created for the election.
 If you have participated in the previous election, you need to join the new group!
 
-image::join-election-group.png[Joining the annual election group]
+image::../project/election-walkthrough-screenshots/join-election-group.png[Joining the annual election group]
 
 Joining the group is required to receive the invitation to cast your vote.
 
@@ -53,7 +59,7 @@ To manage elections, the Jenkins project uses the link:https://civs1.civs.us/[Co
 If you haven't participated in Jenkins elections before, you need to link:https://civs1.civs.us/cgi-bin/opt_in.pl[activate your account] on the CIVS service manually.
 The following example shows the activation process:
 
-image::activate-civs-account.png[Activate your CIVS account]
+image::../project/election-walkthrough-screenshots/activate-civs-account.png[Activate your CIVS account]
 
 NOTE: Ensure `civs@cornell.edu` is not blocked by your spam filter.
 
@@ -61,7 +67,7 @@ Enter your email address used to sign up on the Jenkins community forums and cli
 The CIVS service emails you with an activation code.
 Enter this code in the `Activation code` field and click the `Complete activation` button:
 
-image::confirm-civs-account.png[Confirm your CIVS account]
+image::../project/election-walkthrough-screenshots/confirm-civs-account.png[Confirm your CIVS account]
 
 NOTE: You can activate your account before the voting phase starts and before you receive the invitation to vote, but you don't see any pending poll invitations until the voting phase starts.
 If you have activated your account before the voting phase starts, you can proceed to the voting page directly, by following the voting invitation link in the email.
@@ -69,7 +75,7 @@ The email is sent to the email address you used to sign up on the Jenkins commun
 
 Now that you have activated your account successfully, you can proceed to the voting page, by clicking on the link shown under "Pending poll invitations":
 
-image::proceed-to-vote.png[Proceed to vote with your CIVS account]
+image::../project/election-walkthrough-screenshots/proceed-to-vote.png[Proceed to vote with your CIVS account]
 
 === Rank the candidates
 
@@ -80,7 +86,7 @@ Once you have ranked your choices, click the `Submit ranking` button, at the bot
 
 The CIVS service confirms the submission of your vote:
 
-image::voting-successful.png[The voting was successful]
+image::../project/election-walkthrough-screenshots/voting-successful.png[The voting was successful]
 
 == Troubleshooting
 

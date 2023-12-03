@@ -40,7 +40,7 @@ and
 ----
 
 This error says that a conflict exists between the versions of `commons-codec` and `jcl-over-slf4j` specified by the plugin versus Jenkins core.
-See xref:plugin-development:updating-parent.adoc#understanding-requireupperbounddeps-failures-and-fixes[Understanding requireUpperBoundDeps failures and fixes] for more information.
+See link:/doc/developer/plugin-development/updating-parent/#understanding-requireupperbounddeps-failures-and-fixes[Understanding requireUpperBoundDeps failures and fixes] for more information.
 
 In many cases, upper bounds dependencies errors are best resolved by updating the Jenkins core Bill of Materials and by using the Jenkins plugin Bill of Materials.
 
@@ -71,7 +71,7 @@ The plugin BOM provides Pipeline plugin version numbers so that the developer do
 The plugin bill of materials is defined in the `dependencyManagement` section of your _pom.xml_ file.
 To use the Jenkins plugin BOM in your plugin:
 
-. Confirm that you are using the xref:plugin-development:updating-parent.adoc[current parent pom] with the command `mvn versions:update-parent`
+. Confirm that you are using the link:/doc/developer/plugin-development/updating-parent/[current parent pom] with the command `mvn versions:update-parent`
 . Locate the most recent plugin bom version number on the link:https://github.com/jenkinsci/bom/releases[plugin bom releases page]
 . Copy the `dependencyManagement` section from the _pom.xml_ file in that directory
 . Insert this `dependencyManagement` section into the _pom.xml_ file for your plugin
@@ -82,9 +82,9 @@ To use the Jenkins plugin BOM in your plugin:
     <dependencies>
         <dependency>
             <groupId>io.jenkins.tools.bom</groupId>
-            <artifactId>bom-2.375.x</artifactId>
+            <artifactId>bom-2.401.x</artifactId>
             <!-- Latest version goes here -->
-            <version>1981.v17df70e84a_a_1</version>
+            <version>2582.v830625dd636c</version>
             <scope>import</scope>
             <type>pom</type>
         </dependency>

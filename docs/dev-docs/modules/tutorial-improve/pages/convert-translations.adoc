@@ -1,6 +1,10 @@
 = Convert translations
 
-== Convert translations with native2ascii
+:modified-files: src/resources/
+:task-identifier: convert-translations
+:task-description: Convert translations with native2ascii
+
+= Convert translations with native2ascii
 
 Java property files provide localizations in the Jenkins project.
 Unfortunately, in the past they had to use ISO-8859-1 encoding, even for files that needed to represent characters outside of ISO-8859-1.
@@ -20,7 +24,7 @@ non-ASCII characters with escape sequences using a tool like
 ----
 
 // Create the branch
-include::partial$_create-a-branch.adoc[]
+include::doc/developer/tutorial-improve/_create-a-branch.adoc[]
 
 == Compile and test to check conversion is needed
 
@@ -76,4 +80,4 @@ mvn clean verify
 ----
 
 // Create a pull request
-include::partial$_create-a-pull-request.adoc[]
+include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]

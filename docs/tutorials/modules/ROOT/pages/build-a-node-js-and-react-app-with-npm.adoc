@@ -1,5 +1,13 @@
-= Build a Node.js and React app with npm
-:page-aliases: building-a-node-js-and-react-app-with-npm.adoc, using-jenkins-to-build-a-node-js-and-react-application-with-npm.adoc, using-jenkins-to-build-a-node-js-react-project.adoc
+---
+layout: documentation
+title: Build a Node.js and React app with npm
+section: doc
+---
+
+
+:imagesdir: ../../book/resources
+:tutorial-for: node
+
 
 This tutorial shows you how to use Jenkins to orchestrate building a simple
 https://nodejs.org/en/[Node.js] and https://reactjs.org/[React] application
@@ -17,29 +25,28 @@ satisfactorily.
 *Duration:* This tutorial takes 20-40 minutes to complete (assuming you've
 already met the <<prerequisites,prerequisites>> below). The exact duration will
 depend on the speed of your machine and whether or not you've already
-xref:tutorials:ROOT:create-a-pipeline-in-blue-ocean.adoc#run-jenkins-in-docker[run Jenkins in Docker] from xref:ROOT:index.adoc[another tutorial].
+<<run-jenkins-in-docker,run Jenkins in Docker>> from link:..[another tutorial].
 
 You can stop this tutorial at any point in time and continue from where you left
 off.
 
-If you've already run though xref:ROOT:index.adoc[another tutorial], you can skip the
-<<prerequisites,prerequisites>> and <<run-jenkins-in-docker,Run Jenkins in
-Docker>> sections below and proceed on to xref:partial$fork-sample-repository.adoc[forking the
-sample repository]. (Just ensure you have
+If you've already run though link:..[another tutorial], you can skip the
+<<prerequisites,Prerequisites>> and <<run-jenkins-in-docker,Run Jenkins in
+Docker>> sections below and proceed on to <<fork-sample-repository,forking the
+sample repository>>. (Just ensure you have
 link:https://git-scm.com/downloads[Git] installed locally.) If you need to
 restart Jenkins, simply follow the restart instructions in
-xref:user-docs:installing-jenkins:partial$_setup-wizard-for-tutorials.adoc[run Jenkins in Docker] and then
+<<stopping-and-restarting-jenkins,Stopping and restarting Jenkins>> and then
 proceed on.
 
-[[prerequisites]]
-include::partial$prerequisites.adoc[prerequisites]
-
+include::doc/tutorials/_prerequisites.adoc[]
 ** link:https://git-scm.com/downloads[Git] and optionally
    link:https://desktop.github.com/[GitHub Desktop].
 
-include::user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[]
+include::doc/book/installing/_run-jenkins-in-docker.adoc[]
 
 
+[[fork-sample-repository]]
 [[fork-and-clone-the-sample-repository-on-github]]
 === Fork and clone the sample repository
 
@@ -137,7 +144,7 @@ process.
 pipeline {
     agent {
         docker {
-            image 'node:lts-bullseye-slim' // <1>
+            image 'node:20.9.0-alpine3.18' // <1>
             args '-p 3000:3000' // <2>
         }
     }
@@ -152,11 +159,11 @@ pipeline {
 ----
 <1> This `image` parameter (of the link:/doc/book/pipeline/syntax#agent[`agent`]
 section's `docker` parameter) downloads the
-https://hub.docker.com/_/node/[`node:lts-bullseye-slim` Docker image] (if it's not
+https://hub.docker.com/_/node/[`node:20.9.0-alpine3.18` Docker image] (if it's not
 already available on your machine) and runs this image as a separate container.
 This means that:
 * You'll have separate Jenkins and Node containers running locally in Docker.
-* The Node container becomes the xref:user-docs:glossary:index.adoc#agent[agent] that
+* The Node container becomes the link:/doc/book/glossary/#agent[agent] that
   Jenkins uses to run your Pipeline project. However, this container is
   short-lived - its lifespan is only that of the duration of your Pipeline's
   execution.
@@ -192,7 +199,7 @@ in the Jenkins container).
 .. Downloads the Node Docker image and runs it in a container on Docker.
 +
 [.boxshadow]
-image:node-js-react-01-downloading-node-docker-image.png[alt="Downloading
+image:tutorials/node-js-react-01-downloading-node-docker-image.png[alt="Downloading
 Node Docker image",width=100%]
 .. Runs the `Build` stage (defined in the `Jenkinsfile`) on the Node container.
    During this time, `npm` downloads many dependencies necessary to run your
@@ -200,19 +207,19 @@ Node Docker image",width=100%]
    `node_modules` workspace directory (within the Jenkins home directory).
 +
 [.boxshadow]
-image:node-js-react-02-initial-pipeline-downloading-npm-dependencies.png[alt="Downloading
+image:tutorials/node-js-react-02-initial-pipeline-downloading-npm-dependencies.png[alt="Downloading
 'npm' dependencies",width=100%]
 
 +
 The Blue Ocean interface turns green if Jenkins built your Node.js and React
 application successfully.
 [.boxshadow]
-image:node-js-react-03-initial-pipeline-runs-successfully.png[alt="Initial
+image:tutorials/node-js-react-03-initial-pipeline-runs-successfully.png[alt="Initial
 Pipeline runs successfully",width=100%]
 . Click the *X* at the top-right to return to the main Blue Ocean interface.
 +
 [.boxshadow]
-image:node-js-react-04-main-blue-ocean-interface.png[alt="Main Blue
+image:tutorials/node-js-react-04-main-blue-ocean-interface.png[alt="Main Blue
 Ocean interface",width=100%]
 
 
@@ -236,7 +243,7 @@ so that you end up with:
 pipeline {
     agent {
         docker {
-            image 'node:lts-bullseye-slim'
+            image 'node:20.9.0-alpine3.18'
             args '-p 3000:3000'
         }
     }
@@ -287,7 +294,7 @@ your Pipeline, especially if it gains more complexity.
   interface should look like. Notice the additional "Test" stage. You can click
   on the previous "Build" stage circle to access the output from that stage.
 [.boxshadow]
-image:node-js-react-11-test-stage-runs-successfully-with-output.png[alt="Test
+image:tutorials/node-js-react-11-test-stage-runs-successfully-with-output.png[alt="Test
 stage runs successfully (with output)",width=100%]
 . Click the *X* at the top-right to return to the main Blue Ocean interface.
 
@@ -315,7 +322,7 @@ so that you end up with:
 pipeline {
     agent {
         docker {
-            image 'node:lts-buster-slim'
+            image 'node:20.9.0-alpine3.18'
             args '-p 3000:3000'
         }
     }
@@ -375,13 +382,13 @@ file itself.
   stages.
 +
 [.boxshadow]
-image:node-js-react-21-deliver-stage-pauses-for-user-input.png[alt="Deliver
+image:tutorials/node-js-react-21-deliver-stage-pauses-for-user-input.png[alt="Deliver
 stage pauses for user input",width=100%]
 . Ensure you are viewing the "Deliver" stage (click it if necessary), then click
   the green *`./jenkins/scripts/deliver.sh`* step to expand its content and
   scroll down until you see the `\http://localhost:3000` link.
 [.boxshadow]
-image:node-js-react-22-deliver-stage-opened-deliver-sh-step.png[alt="Deliver
+image:tutorials/node-js-react-22-deliver-stage-opened-deliver-sh-step.png[alt="Deliver
 stage output only",width=100%]
 . Click the `\http://localhost:3000` link to view your Node.js and React
   application running (in development mode) in a new web browser tab. You should
@@ -410,12 +417,12 @@ editor.
   complete the Pipeline's execution.
 +
 [.boxshadow]
-image:node-js-react-23-deliver-stage-runs-successfully.png[alt="Deliver
+image:tutorials/node-js-react-23-deliver-stage-runs-successfully.png[alt="Deliver
 stage runs successfully",width=100%]
 . Click the *X* at the top-right to return to the main Blue Ocean interface,
   which lists your previous Pipeline runs in reverse chronological order.
 [.boxshadow]
-image:node-js-react-24-main-blue-ocean-interface-with-all-previous-runs-displayed.png[alt="Main
+image:tutorials/node-js-react-24-main-blue-ocean-interface-with-all-previous-runs-displayed.png[alt="Main
 Blue Ocean interface with all previous runs displayed",width=100%]
 
 
@@ -433,15 +440,17 @@ handle practically any aspect of build orchestration and automation.
 
 To learn more about what Jenkins can do, check out:
 
-* The xref:ROOT:index.adoc[Tutorials overview] page for other introductory
+* The link:/doc/tutorials[Tutorials overview] page for other introductory
   tutorials.
-* The xref:user-docs:ROOT:index.adoc[User Handbook] for more detailed information about using
+* The link:/doc/book[User Handbook] for more detailed information about using
   Jenkins, such as link:/doc/book/pipeline[Pipelines] (in particular
   link:/doc/book/pipeline/syntax[Pipeline syntax]) and the
-  xref:user-docs:blueocean:index.adoc[Blue Ocean] interface.
+  link:/doc/book/blueocean[Blue Ocean] interface.
 * The link:/node[Jenkins blog] for the latest events, other tutorials and
   updates.
 
 
 '''
-
+++++
+include::_partials/_feedback-footer.html[]
+++++

@@ -1,6 +1,10 @@
 = Check dependencies
 
-== Automate dependency updates
+:modified-files: .github/dependabot.yml
+:task-identifier: auto-update-deps
+:task-description: Automate dependency updates
+
+= Automate dependency updates
 
 .Automate dependency checks with dependabot
 video::2c8wK2jkcIA[youtube,width=800,height=420,start=980]
@@ -14,7 +18,7 @@ When a new release is detected, dependabot submits a pull request to include tha
 See the link:https://www.youtube.com/watch?v=RXIJpjYlECQ[Jenkins Online Meetup video] for more details on dependabot with Jenkins.
 
 // Create the branch
-include::partial$_create-a-branch.adoc[]
+include::doc/developer/tutorial-improve/_create-a-branch.adoc[]
 
 Automated dependency checks by dependabot are defined in a .github/dependabot.yml file.
 
@@ -24,16 +28,22 @@ mkdir .github
 cat > .github/dependabot.yml <<END-OF-HERE-DOC
 version: 2
 updates:
+# Maintain dependencies for your plugin
 - package-ecosystem: maven
-  directory: "/"
+  directory: /
   schedule:
     interval: monthly
   open-pull-requests-limit: 10
   target-branch: master
+# Maintain dependencies for GitHub Actions
+- package-ecosystem: github-actions
+  directory: /
+  schedule:
+    interval: monthly
 END-OF-HERE-DOC
 ----
 
 Commit the file and push it to GitHub with the commands:
 
 // Create a pull request
-include::partial$_create-a-pull-request.adoc[]
+include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]

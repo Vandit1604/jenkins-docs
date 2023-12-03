@@ -1,17 +1,17 @@
 = Preparing for Plugin Development
 
-- * xref:prepare.adoc[*Step 1: Preparing for Plugin Development*]
-- * xref:create.adoc[Step 2: Create a Plugin]
-- * xref:run.adoc[Step 3: Build and Run the Plugin]
-- * xref:extend.adoc[Step 4: Extend the Plugin]
+- link:../prepare[*Step 1: Preparing for Plugin Development*]
+- link:../create[Step 2: Create a Plugin]
+- link:../run[Step 3: Build and Run the Plugin]
+- link:../extend[Step 4: Extend the Plugin]
 
 == Download and install a JDK
 
 // TIMEBASED
 Jenkins is based on Java, so to build Jenkins plugins you need to install a Java Development Kit (JDK).
-Java 11 is the version we recommend to users, so that's what we're using in this tutorial.
+Java 17 is the version we recommend to users, so that's what we're using in this tutorial.
 
-You can download and install Java 11 from the link:https://adoptium.net/[Eclipse Temurin website].
+You can download and install Java 17 from the link:https://adoptium.net/[Eclipse Temurin website].
 
 NOTE: Many Linux distributions provide packages for Java for an easier install and upgrade experience.
 Consult your distribution's documentation for details.
@@ -46,7 +46,7 @@ To verify that Maven is installed, run the following command:
 mvn -version
 ----
 This command prints some diagnostic output, including the versions of Java and Maven, and which Java installation was found by Maven.
-It should indicate an _11_ version of Java, and list the path to where Java is located.
+It should indicate a _17_ version of Java, and list the path to where Java is located.
 If you don't see this information, see <<Troubleshooting>>.
 
 == Setting up a productive environment with your IDE
@@ -79,8 +79,8 @@ Open the project as an existing Maven Project.
 
 == Next step
 
-xref:plugin-tutorial:create.adoc[Create and build your first Jenkins plugin].
+link:../create[Create and build your first Jenkins plugin].
 
 == Troubleshooting
 
-NOTE: Anything not working for you? Ask for help on our community forum link:https://community.jenkins.io[community.jenkins.io] or xref:community:mailing-lists:index.adoc[on the jenkinsci-dev mailing list].
+NOTE: Anything not working for you? Ask for help on our community forum link:https://community.jenkins.io[community.jenkins.io] or link:/mailing-lists[on the jenkinsci-dev mailing list].

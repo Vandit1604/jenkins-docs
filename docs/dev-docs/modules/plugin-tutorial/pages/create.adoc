@@ -1,11 +1,11 @@
 = Create a Plugin
 
-- * xref:prepare.adoc[Step 1: Preparing for Plugin Development]
-- * xref:create.adoc[*Step 2: Create a Plugin*]
-- * xref:run.adoc[Step 3: Build and Run the Plugin]
-- * xref:extend.adoc[Step 4: Extend the Plugin]
+- link:../prepare[Step 1: Preparing for Plugin Development]
+- link:../create[*Step 2: Create a Plugin*]
+- link:../run[Step 3: Build and Run the Plugin]
+- link:../extend[Step 4: Extend the Plugin]
 
-After xref:plugin-tutorial:prepare.adoc[preparing your environment], the next step is to create a new plugin.
+After link:../prepare[preparing your environment], the next step is to create a new plugin.
 
 NOTE: If your intention is to publish your plugin on the Jenkins update site, now is a good time to look for plugins that already do something similar.
 See link:https://wiki.jenkins.io/display/JENKINS/Before+starting+a+new+plugin[this wiki page] for more information.
@@ -15,17 +15,15 @@ See link:https://wiki.jenkins.io/display/JENKINS/Before+starting+a+new+plugin[th
 Open a command prompt, navigate to the directory you want to store your new Jenkins plugin in, and run the following command:
 
 [source]
----
-mvn -U archetype:generate -Dfilter="io.jenkins.archetypes:"
----
+mvn -U archetype:generate -Dfilter=io.jenkins.archetypes:
 
 This command will let you generate one of several project archetypes related to Jenkins.
-In this tutorial we're going to use the `hello-world` archetype, version 1.5, so select that:
+In this tutorial we're going to use the `hello-world` archetype, so select the most recent version of that archetype:
 
 // https://asciidoctor.org/docs/user-manual/#applying-substitutions
 [source,subs="verbatim,quotes"]
 ----
-mvn -U archetype:generate -Dfilter="io.jenkins.archetypes:"
+mvn -U archetype:generate -Dfilter=io.jenkins.archetypes:
 …
 Choose archetype:
 1: remote -> io.jenkins.archetypes:empty-plugin (Skeleton of a Jenkins plugin with a POM and an empty source tree.)
@@ -54,8 +52,10 @@ Choose io.jenkins.archetypes:hello-world-plugin version:
 17: 1.17
 18: 1.18
 19: 1.19
+20: 1.20
+21: 1.21
 
-Choose a number: 19: *19* // <2>
+Choose a number: 21: *21* // <2>
 …
 [INFO] Using property: groupId = unused // <3>
 [INFO] Using property: package = io.jenkins.plugins.sample
@@ -72,7 +72,7 @@ version: 1.0-SNAPSHOT
 
 ----
 <1> Enter the number for the `hello-world-plugin` archetype, *4* in this case.
-<2> This tutorial is based on version 1.19 of the *hello-world-plugin* archetype, so enter *18* to select it.
+<2> This tutorial is based on version 1.21 of the *hello-world-plugin* archetype, so enter *21* to select it.
 <3> `groupId` uniquely identifies your project across all projects.
     A group ID should follow Java's package name rules.
     This means it starts with a reversed domain name.
@@ -111,15 +111,15 @@ Maven will download several more dependencies, and then go through the configure
 [INFO] Finished at: 2022-11-17T10:04:29-07:00
 [INFO] ------------------------------------------------------------------------
 
-NOTE: To learn more about what's involved in a plugin build, see xref:plugin-development:build-process.adoc[Plugin Build Process].
+NOTE: To learn more about what's involved in a plugin build, see link:../../plugin-development/build-process[Plugin Build Process].
 
 Not the output you're seeing? See the <<Troubleshooting>> section below.
 
-Let's xref:plugin-tutorial:run.adoc[run the plugin] and see what it does.
+Let's link:../run[run the plugin] and see what it does.
 
 == Troubleshooting
 
-NOTE: Anything not working for you? Ask for help in xref:community:chat:index.adoc[chat] or xref:community:mailing-lists:index.adoc[on the jenkinsci-dev mailing list].
+NOTE: Anything not working for you? Ask for help in link:/chat[chat] or link:/mailing-lists[on the jenkinsci-dev mailing list].
 
 === `archetype:generate` hangs
 

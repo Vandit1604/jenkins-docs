@@ -1,4 +1,11 @@
-= Project Governance Document
+---
+layout: simplepage
+title:  Project Governance Document
+section: project
+---
+
+
+
 
 == Who we are
 
@@ -53,9 +60,13 @@ This is not to be confused with proprietary plugins --- we recognize and encoura
 
 === Contributor License Agreement (CLA)
 
-To further clarify the intellectual property rights around the project, we require that core committers sign a contributor agreement. This CLA is the same as Apache's CLA with "Apache" replaced by "SPI". This agreement explicitly assigns a set of rights to SPI, such as the effective joint copyright ownership, patent grant, as well as acknowledging that you have the necessary rights to contribute changes.
+To further clarify the intellectual property rights around the project, we require that core committers sign a contributor agreement.
+The Jenkins project uses the EasyCLA service provided by the Linux Foundation.
+Refer to the link:https://github.com/jenkinsci/infra-cla/blob/master/README.md[infra-cla README] for contributor license agreement submission instructions.
+More details are available from the Linux Foundation for link:https://docs.linuxfoundation.org/lfx/easycla/v2-current/contributors/individual-contributor[individual contributors] and link:https://docs.linuxfoundation.org/lfx/easycla/v2-current/contributors/corporate-contributor[corporate contributors].
 
-The assignment of these rights to SPI helps Jenkins being neutral to any particular vendor, and it'll also make legal departments happy especially in large organizations who want to use Jenkins.
+EasyCLA is self service and requires no manual intervention by the board or any other Jenkins project member.
+It is a one-time process, valid for all link:/project/conduct/#community-spaces[Jenkins community spaces].
 
 CLAs come in two flavors. Every core contributor needs to sign an Individual CLA (ICLA), and in cases where you as an individual do not own the work you are contributing (such as when your company assigns you to work on Jenkins and therefore your company owns the hard work you produced), the corporation also needs to sign a Corporate CLA (CCLA). See link:https://www.apache.org/licenses/#clas[the discussion in Apache for more details]. The CLA forms can be obtained by following the documentation in the link:https://github.com/jenkinsci/infra-cla[infra-cla] repository.
 
@@ -96,7 +107,7 @@ The governance board consists of five people who act as public representatives o
 
 The board also acts as the ultimate decision-making authority in case disputes cannot be resolved via the regular project community meeting. The decision-making ability of the board is more symbolic and honorific, and it “rules” like British royalty rather than a dictatorship.
 
-The xref:board:index.adoc[Governance Board] page provides further information, including a list of current board members, and how to contact the board.
+The link:/project/board[Governance Board] page provides further information, including a list of current board members, and how to contact the board.
 
 The process by which the Governance Board is elected can be reviewed in the link:/project/board-election-process[Board Election Process]
 
@@ -107,8 +118,8 @@ Infrastructure administrators have root access to the various servers and build 
 
 Because of the sensitive nature of this work, infrastructure admins are by invitation only, and some of the activity happen behind closed doors. Infrastructure admins often appoint others to delegate some partial access to the system to complete some tasks.
 
-Infrastructure components are maintained by the xrefs:infrastructure:index.adoc[infrastructure project].
-See the xrefs:infrastructure:index.adoc#contributing[contributing guidelines] for more information.
+Infrastructure components are maintained by the link:/projects/infrastructure/[infrastructure project].
+See the link:/projects/infrastructure/#contributing[contributing guidelines] for more information.
 Open a link:https://github.com/jenkins-infra/helpdesk[help desk issue] for infrastructure problems.
 
 === Core committers
@@ -134,28 +145,28 @@ Users use Jenkins and its plugins. They contribute to the project by providing f
 
 The communication among people in the community is crucial to the oneness of the project.
 People in the Jenkins project communicate with each other in several different places.
-There is an xref:sigs:advocacy-and-outreach:index.adoc[Advocacy and Outreach] special interest group which focuses on public communications.
+There is an link:/sigs/advocacy-and-outreach/[Advocacy and Outreach] special interest group which focuses on public communications.
 Some of the communication channels are listed below.
 
 Mailing lists::
-We encourage mailing lists as the primary means of developer & user discussion, because of their asynchrony and ability to search the archive. The project website lists xref:community:mailing-lists:index.adoc[the active mailing lists and their purposes].
+We encourage mailing lists as the primary means of developer & user discussion, because of their asynchrony and ability to search the archive. The project website lists link:/mailing-lists[the active mailing lists and their purposes].
 
 Chats::
-Jenkins project uses xref:community:chat:index.adoc[IRC and Gitter channels] for real time interactive communications. This is also the place where active members bond with each other.
+Jenkins project uses link:/chat[IRC and Gitter channels] for real time interactive communications. This is also the place where active members bond with each other.
 
 Twitter::
-link:https://twitter.com/jenkinsci[@jenkinsci] is the official Twitter account of the Jenkins project, run by the team of contributors ({jep}10/README.adoc[]).
+link:https://twitter.com/jenkinsci[@jenkinsci] is the official Twitter account of the Jenkins project, run by the team of contributors (jep:10[]).
 There are also a link:https://twitter.com/jenkins_release[@jenkins_release] account for automatic plugin release announcements,
 and other accounts being run by sub-communities like meetup groups.
 
 Special interest group channels::
-There are multiple xref:sigs:ROOT:index.adoc[Special Interest Groups] in the community.
+There are multiple link:/sigs/[Special Interest Groups] in the community.
 These groups focus on particular topics and organize dedicated communication channels including chats, mailing lists and regular meetings.
 
 == Infrastructure
 
 This section summarizes the key infrastructure services we run in the project.
-See the xrefs:infrastructure:index.adoc[Jenkins Infrastructure] page for the full list of services and more details.
+See the link:/projects/infrastructure[Jenkins Infrastructure] page for the full list of services and more details.
 
 Website::
 Jenkins website (jenkins.io) is self-hosted by the Jenkins project.
@@ -164,7 +175,7 @@ Its source codes can be found link:https://github.com/jenkins-infra/jenkins.io/[
 
 Source code::
 We host most of our code on GitHub. link:https://github.com/jenkinsci/[jenkinsci] and link:https://github.com/jenkins-infra/[jenkins-infra] are the organizations where we host most of our code.
-More information about the GitHub organization and repository structures can be found xref:community:ROOT:code.adoc#where-to-contribute[here].
+More information about the GitHub organization and repository structures can be found link:/participate/code/#where-to-contribute[here].
 
 User Accounts::
 The infrastructure admins run an LDAP server and link:https://accounts.jenkins.io/[a small frontend program] to let users create accounts on jenkins.io.
@@ -186,19 +197,19 @@ All initiatives depend on contributions,
 and we invite all interested parties to join us and to contribute towards the roadmap goals.
 
 * link:/project/roadmap[Public Jenkins Roadmap]
-* {jep}14/README.adoc[Public Jenkins Roadmap Process]
+* jep:14[Public Jenkins Roadmap Process]
 
 [[meeting]]
 == Decision making
 
-The Jenkins project uses xref:governance-meeting:index.adoc[biweekly project meetings] as the primary forum of decision making for matters that need consensus.
-The meeting is conducted using a video call or xref:community:chat:index.adoc#meeting[IRC].
+The Jenkins project uses link:/project/governance-meeting[biweekly project meetings] as the primary forum of decision making for matters that need consensus.
+The meeting is conducted using a video call or link:/chat/#meeting[IRC].
 These meetings are open to anyone, and everyone is welcome to provide their feedback and vote on decisions at the meeting.
-Agenda items can be added by anyone by simply adding your topic to xref:governance-meeting:index.adoc[the Governance Meeting Agenda].
+Agenda items can be added by anyone by simply adding your topic to link:/project/governance-meeting[the Governance Meeting Agenda].
 
 The meeting minutes are public:
 
-* xref:governance-meeting:index.adoc[Governance Meeting Agenda] for meetings held in as video calls
+* link:/project/governance-meeting[Governance Meeting Agenda] for meetings held in as video calls
 * link:http://meetings.jenkins-ci.org/jenkins-meeting/[September 2015 to today]
 * link:http://meetings.jenkins-ci.org/jenkins/[2011 to September 2015]
 
@@ -258,7 +269,7 @@ If you have trouble figuring out who to contact, the good fallback option is the
 Each published plugin has its own page on https://plugins.jenkins.io/, such as link:https://plugins.jenkins.io/git[this].
 These pages provide documentation and information about the plugin: installation statistics, changelogs, known issues, etc.
 Documentation is retrieved from the GitHub repository of the plugin or from an archived copy of the decommissioned Jenkins wiki.
-See the xref:dev-docs:publishing:documentation.adoc[Plugin Documentation Page] in the Developer guide for more information about how it works.
+See the link:/doc/developer/publishing/documentation/[Plugin Documentation Page] in the Developer guide for more information about how it works.
 
 == How we develop code
 
@@ -295,7 +306,7 @@ In some cases, the supposed "temporary" patch sets became more permanent for var
 
 === Bringing in new plugins/tools/libraries
 
-If you develop a plugin, we encourage you to co-host that with the Jenkins project so that other people in the community can participate. See xref:dev-docs:publishing:requesting-hosting.adoc[Hosting Plugins] for more details.
+If you develop a plugin, we encourage you to co-host that with the Jenkins project so that other people in the community can participate. See link:/doc/developer/publishing/requesting-hosting/[Hosting Plugins] for more details.
 
 === Making changes to existing plugins
 
@@ -308,7 +319,7 @@ If you’d like to be involved more seriously, in addition to the pull request, 
 It is often the case that the original developer moves onto other things once the plugin becomes good enough for them (or if the original author changes the job and no longer has incentive to work on the technology.) So we encourage new developers or developers of different plugin to pitch in on other plugins’ pending pull requests or work on issues filed against them.
 
 To that end, we also encourage people to pick up dormant plugins and consider them theirs.
-See the xref:dev-docs:plugin-governance:adopt-a-plugin.adoc[Adopt a Plugin] guidelines for more information.
+See the link:/doc/developer/plugin-governance/adopt-a-plugin/[Adopt a Plugin] guidelines for more information.
 
 Many less active plugins do not really have any obvious owner, and they are collaboratively maintained by people making small changes and releasing them whenever the need arises. If in doubt, ask on the dev list.
 
@@ -325,7 +336,7 @@ When making changes, use your common sense. For example, if you are thinking abo
 
 === Contributing localizations
 
-We are always looking for people who can help localize Jenkins to different languages. If you are interested in helping, drop us a note in the dev list to get commit access, and see xref:dev-docs:internationalization:index.adoc[Internationalization] for the details of how to make changes.
+We are always looking for people who can help localize Jenkins to different languages. If you are interested in helping, drop us a note in the dev list to get commit access, and see link:/doc/developer/internationalization/[Internationalization] for the details of how to make changes.
 
 [[pull-request]]
 
@@ -336,7 +347,7 @@ As discussed above, Jenkins project uses pull requests as one of the main workfl
 * See link:https://help.github.com/articles/creating-a-pull-request/[the github online help] for how to create a pull request
 * We encourage you to file a ticket in link:https://issues.jenkins.io/[the issue tracker] to describe the bug that you are fixing or the feature you are implementing. This creates a permanent record on our system that allows future developers to understand how the code came into the current shape. This is not a requirement (especially for small changes), but we appreciate if you do that.
 * Refer to the ticket in your commit message by using the notation `[JENKINS-1234]` where _JENKINS-1234_ is the ticket ID. This allows our scripts to understand the history and generate changelogs without human help. If you use the notation `[FIX JENKINS-1234]`, our bot will close the ticket automatically when the change is merged into the repository, and when the change is tested in our CI server. These notations create useful cross-references across systems, and are therefore highly recommended.
-* We encourage you to have a test case for the code you added to avoid future regressions. See xref:dev-docs:testing:index.adoc[Testing] for more details about how to write tests.
+* We encourage you to have a test case for the code you added to avoid future regressions. See link:/doc/developer/testing/[Testing] for more details about how to write tests.
 * Try to describe your changes so that other people understand what you did.
 * Make sure you didn’t modify portions that aren’t related to your changes (most often caused by IDE auto-fixing import statements and other code formats.)
 

@@ -1,3 +1,13 @@
+---
+layout: section
+---
+]
+:doctitle: Architecting for Manageability
+ R. Tyler Croy
+
+
+
+
 = Architecting for Manageability
 
 == Introduction
@@ -150,7 +160,7 @@ control our _$JENKINS_HOME_ in a Github repository known as "demo-joc". The
 
 [source,bash]
 ----
-FROM eclipse-temurin:11-jdk-jammy
+FROM eclipse-temurin:17-jdk-jammy
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update && \
     apt-get -y upgrade && \
@@ -272,7 +282,7 @@ when such troubleshooting is required.
 
 === Using the Jenkins Metrics Plugin
 
-The {plugin}metrics[metrics plugin] is an open-source plugin that exposed Jenkins metrics.
+The plugin:metrics[metrics plugin] is an open-source plugin that exposed Jenkins metrics.
 Metrics are exposed using the link:https://dropwizard.github.io/metrics/3.1.0[Dropwizard Metrics API]
 
 .Metrics exposed
@@ -280,7 +290,7 @@ Metrics are exposed using the link:https://dropwizard.github.io/metrics/3.1.0[Dr
 The exact list of exposed metrics varies depending on your installed plugins.
 To get a full list of available metrics for your controller, run the following
 script on the
-xref:user-docs:managing:script-console.adoc[Jenkins script console]:
+link:/doc/book/managing/script-console/[Jenkins script console]:
 
 [source,groovy]
 ----
@@ -292,7 +302,7 @@ for (j in Jenkins.instance.getExtensionList(jenkins.metrics.api.MetricProvider.c
 }
 ----
 
-The {plugin}metrics[metrics plugin] documentation describes the available metrics.
+The plugin:metrics[metrics plugin] documentation describes the available metrics.
 
 .Metrics Usage
 
@@ -308,4 +318,4 @@ keys can be configured from the Jenkins global configuration screen
 generated and permissions associated with those keys can also be restricted at
 this level.
 
-Additional information on hardware recommendations can be be found on the xref:hardware-recommendations.adoc[Hardware Recommendations] page
+Additional information on hardware recommendations can be be found on the link:../hardware-recommendations/[Hardware Recommendations] page

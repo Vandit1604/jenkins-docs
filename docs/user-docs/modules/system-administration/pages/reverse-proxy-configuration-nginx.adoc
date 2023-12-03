@@ -1,3 +1,15 @@
+---
+layout: subsection
+---
+
+]
+
+
+
+
+
+
+
 = Reverse proxy - Nginx
 
 In situations where you have existing web sites on your server, you may
@@ -85,9 +97,7 @@ server {
       proxy_connect_timeout      90;
       proxy_send_timeout         90;
       proxy_read_timeout         90;
-      proxy_buffering            off;
       proxy_request_buffering    off; # Required for HTTP CLI commands
-      proxy_set_header Connection ""; # Clear for keepalive
   }
 
 }
@@ -96,7 +106,7 @@ server {
 This assumes that you run Jenkins on port 8080.
 Remember to create the folder /var/log/nginx/jenkins.
 
-include::partial$_context_path.adoc[]
+include::doc/book/system-administration/reverse-proxy-configuration-with-jenkins/_context_path.adoc[]
 
 If you are having problems with some paths (eg folders) with *Blue
 Ocean*, you may need to add the following snippet to your proxy

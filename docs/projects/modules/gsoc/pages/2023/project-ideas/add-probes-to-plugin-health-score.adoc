@@ -1,10 +1,24 @@
-= Add probes to \"Plugin Health Score\"
-
-*Project Goal:*  First iteration of the tool provided a limited set of probes. To improve the effectiveness of the scoring system, more probes are needed.
-
-*Skills to study/improve:* Java, Data extraction from GitHub repositories, Data analysis applied to data representation
-
-== Background
+---
+layout: gsocprojectidea
+title: "Add probes to \"Plugin Health Score\""
+goal: "First iteration of the tool provided a limited set of probes. To improve the effectiveness of the scoring system, more probes are needed."
+category: Tools
+year: 2023
+status: published
+sig: platform
+skills:
+- Java
+- Data extraction from GitHub repositories
+- Data analysis applied to data representation
+mentors:
+- "alecharp"
+- "dheerajodha"
+links:
+    emailThread: https://community.jenkins.io/t/gsoc-2023-project-idea-add-probes-to-plugin-health-score/4838
+    gitter: "jenkinsci_GSoC-Plugin_Health_Score:gitter.im"
+//   draft: https://docs.google.com/document/d/1s-dLUfU1OK-88bCj-GKaNuFfJQlQNLTWtacKkVMVmHc
+---
+=== Background
 
 Keeping a plugin current with the ongoing development of Jenkins is key for a smooth operation.
 Keeping it current can require user interface improvements, dependency updates, and more.
@@ -27,7 +41,7 @@ The plugin health score already provides a few probes to measure the health of a
 
 A “Plugin Health Score Probe” will be executed on all the plugins to verify the status or measure a given health indicator. Some can be quite simple, but others need creativity and skills. The more probes we have, the better the health score quality and its representativity. Bottom line: we need more probes…
 
-== Quick Start
+=== Quick Start
 
 A presentation of the "Plugin Health Score" project was made during the link:https://community.jenkins.io/t/gsoc-office-hours-emea/1471[10-Feb-2022 GSoC Office Hour].
 
@@ -37,7 +51,7 @@ A presentation of the status of the "Plugin Health Score" project at the end of 
 
 video::fM2SMbppRxw[youtube,width=800,height=420,start=328]
 
-== Some simple probe ideas
+=== Some simple probe ideas
 
 * Comparing the existing parent pom to the latest one?
 * Comparing the base Jenkins version to the latest one?
@@ -48,41 +62,26 @@ video::fM2SMbppRxw[youtube,width=800,height=420,start=328]
 
 Existing probes are listed at link:https://plugin-health.jenkins.io/probes[Plugin Health Scoring +::+ Probes]
 
-== Skills to Study and Improve
+=== Skills to Study and Improve
 
 * Java
 * Data extraction from GitHub repositories
 * Data analysis applied to data representation
 
-== Project Difficulty Level
+=== Project Difficulty Level
 
 Beginner to Intermediate
 
-== Project Size
+=== Project Size
 
 175 hours
 
-== Expected outcomes
+=== Expected outcomes
 
 New probes to help improve the plugin health score.
 
 Details to be clarified interactively, together with the mentors, during the Contributor Application drafting phase.
 
-== Newbie Friendly Issues
+=== Newbie Friendly Issues
 
 For some newbie friendly issues, please refer to the link:https://github.com/jenkins-infra/plugin-health-scoring/issues[issue tracker on GitHub]. Look out for the link:https://github.com/jenkins-infra/plugin-health-scoring/issues?q=is%3Aissue+is%3Aopen+label%3Afriendly[`friendly` label] for some issues that can be served as an introduction to the project.
-
-== Potential Mentors
-[.avatar]
-image:images:ROOT:avatars/alecharp.jpg[,width=30,height=30] Adrien Lecharpentier
-image:images:ROOT:avatars/dheerajodha.jpg[,width=30,height=30] Dheeraj Singh Jodha
-
-== Project Links 
-* image:https://img.shields.io/badge/gitter-join_chat%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_GSoC-Plugin_Health_Score%3Agitter.im[Static Badge]
-* https://www.jenkins.io/projects/gsoc/#office-hours[Meetings]
-
-== Organization Links 
-* xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
-* xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
-* https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
-> xref:2023/project-ideas[Go back to other GSoC 2023 project ideas]

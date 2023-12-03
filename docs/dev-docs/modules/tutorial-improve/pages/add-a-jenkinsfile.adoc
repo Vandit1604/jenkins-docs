@@ -1,12 +1,18 @@
 = Add a Jenkinsfile
 
+:modified-files: Jenkinsfile
+:task-identifier: add-a-jenkinsfile
+:task-description: Add Jenkinsfile for ci.jenkins.io
+
+= Add a Jenkinsfile
+
 .Add a Jenkinsfile to the repository
 video::Fev8KfFsPZE[youtube,width=800,height=420,start=807]
 
 If the plugin repository does not already include a Jenkinsfile, add a `Jenkinsfile` so that link:https://ci.jenkins.io[ci.jenkins.io] will automatically compile and test the plugin and any pull requests submitted to the plugin.
 
 // Create the branch
-include::partial$_create-a-branch.adoc[]
+include::doc/developer/tutorial-improve/_create-a-branch.adoc[]
 
 == Create the Jenkinsfile
 
@@ -16,16 +22,16 @@ Create a file named `Jenkinsfile` with the content:
 buildPlugin(
   useContainerAgent: true, // Set to `false` if you need to use Docker for containerized tests
   configurations: [
-    [platform: 'linux', jdk: 17],
-    [platform: 'windows', jdk: 11],
+    [platform: 'linux', jdk: 21],
+    [platform: 'windows', jdk: 17],
 ])
 ```
 Be sure the configuration platform is set correctly.
 Building with a `Jenkinsfile` configuration that includes Java 8 will result in a low-level class version error when using version 4.52 or later of the plugin parent POM.
 
 // Create a pull request
-include::partial$_create-a-pull-request.adoc[]
+include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]
 
 A job will be automatically created in the link:https://ci.jenkins.io/job/Plugins/[ci.jenkins.io Plugins folder] after the pull request is merged and the GitHub organization folder is scanned by ci.jenkins.io.
 
-For more details, see the xref:publishing:continuous-integration.adoc[continuous integration] page for Jenkins developers.
+For more details, see the link:/doc/developer/publishing/continuous-integration/[continuous integration] page for Jenkins developers.

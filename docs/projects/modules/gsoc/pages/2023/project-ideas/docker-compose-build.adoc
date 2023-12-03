@@ -1,12 +1,28 @@
-= Docker-based Jenkins quickstart examples
+---
+layout: gsocprojectidea
+title: "Docker-based Jenkins quickstart examples"
+goal: "Provide examples, sample code, and documentation on how to start a local Jenkins instance."
+category: Tools
+year: 2023
+status: published
+sig: platform
+skills:
+- Java
+- YAML
+- Command line tools
+- Package management tool theory
+mentors:
+- "gounthar"
+- "berviantoleo"
+- "sbostandoust"
+links:
+    emailThread: https://community.jenkins.io/t/gsoc-2023-project-idea-building-jenkins-io-with-docker-compose/4866
+//   gitter: "jenkinsci_plugin-installation-manager-cli-tool:gitter.im"
+//   draft: https://docs.google.com/document/d/1s-dLUfU1OK-88bCj-GKaNuFfJQlQNLTWtacKkVMVmHc
+---
+=== Background
 
-*Project goal:* Provide examples, sample code, and documentation on how to start a local Jenkins instance.
-
-*Skills to study/improve:* Java, YAML, Command line tools, Package management tool theory
-
-== Background
-
-We already have a xref:user-docs:installing-jenkins:docker.adoc[section] dedicated to docker in the documentation, but it's too difficult to use for beginners, and even too complex to begin with. 
+We already have a link:/doc/book/installing/docker/[section] dedicated to docker in the documentation, but it's too difficult to use for beginners, and even too complex to begin with. 
 We need to provide a simple way to get started with Jenkins and Docker.
 
 We could have a set of `docker-compose` files representing various types of Jenkins instances (simple Docker, Kubernetes, …).
@@ -17,30 +33,30 @@ As the documentation is using link:https://asciidoc.org/[`asciidoc`] we could us
 
 Of course, these snippets could also be run thanks to link:https://www.gitpod.io/[GitPod].
 
-== Quick Start
+=== Quick Start
 
 * link:https://docs.docker.com/compose/install/[Install Docker Compose]
 * Clone a link:https://github.com/gounthar/MyFirstAndroidAppBuiltByJenkins[repo] that already uses docker-compose for Jenkins.
 * Run `docker-compose up` and wait for the Jenkins instance to be up and running.
 * Study the `docker-compose.yml` file to understand what it does.
 
-== Skills to Study and Improve
+=== Skills to Study and Improve
 
 * link:https://docs.docker.com/compose/[Docker Compose]
 * link:https://docs.docker.com/compose/compose-file/compose-file-v3/[Docker Compose file format v3]
-* xref:ROOT:index.adoc/jcasc/[Jenkins Configuration as Code]
+* link:/projects/jcasc/[Jenkins Configuration as Code]
 * link:https://plugins.jenkins.io/job-dsl/[Job DSL]
-* xref:user-docs:installing-jenkins:kubernetes.adoc[Kubernetes]
+* link:/doc/book/installing/kubernetes/[Kubernetes]
 
-== Project Difficulty Level
+=== Project Difficulty Level
 
 Beginner to Intermediate
 
-== Project Size
+=== Project Size
 
 175 hours
 
-== Expected outcomes
+=== Expected outcomes
 
 * A set of docker-compose files that can be used to get started with Jenkins and Docker or Kubernetes on Windows, Linux, macOs, Vagrant and GitPod.
 * The documentation that describes how to use these docker-compose files.
@@ -50,18 +66,4 @@ Beginner to Intermediate
 //
 // Details to be clarified interactively, together with the mentors, during the Contributor Application drafting phase. 
 // 
-// == Newbie Friendly Issues
-
-== Potential Mentors
-[.avatar]
-image:images:ROOT:avatars/gounthar.png[,width=30,height=30] Bruno Verachten
-image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Saeid Bostandoust
-
-== Project Links
-* image:https://img.shields.io/badge/gitter-join_chat%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_gsoc-sig%3Agitter.im[Static Badge]
-* https://www.jenkins.io/projects/gsoc/#office-hours[Meetings]
-== Organization Links 
-* xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
-* xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
-* https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
-> xref:2023/project-ideas[Go back to other GSoC 2023 project ideas]
+// === Newbie Friendly Issues

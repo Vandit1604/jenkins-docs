@@ -1,9 +1,4 @@
 = Making Objects Accessible via Stapler
-layout: developersection
-references:
-- url: /security/advisory/2018-12-05/#SECURITY-595
-  title: SECURITY-595 security fix
----
 
 Before Jenkins 2.138.4 and 2.154, most objects in Jenkins were accessible through the basic Stapler routing rules discussed in xref:handling-requests:routing.adoc[Routing Requests].
 Starting in Jenkins 2.138.4 and 2.154, this is further restricted to address several security issues.
@@ -45,3 +40,6 @@ Specific recommendations for known problems are listed below.
   You may need to add a dependency to the `io.jenkins.stapler:jenkins-stapler-support` library to make this annotation available.
 * If the return type is not defined in your component, annotate the method or field `@StaplerDispatchable`.
   You may need to add a dependency to the `io.jenkins.stapler:jenkins-stapler-support` library to make this annotation available.
+
+== References:
+* /security/advisory/2018-12-05/#SECURITY-595[SECURITY-595 security fix]

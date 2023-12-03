@@ -1,7 +1,17 @@
 = Using a Jenkinsfile
+]
+:description:
+:author:
+
+
+:hide-uri-scheme:
+
+
+
+= Using a Jenkinsfile
 
 This section builds on the information covered in
-xref:getting-started:index.adoc[Getting started with Pipeline]
+link:../getting-started[Getting started with Pipeline]
 and introduces more useful steps, common patterns, and demonstrates some
 non-trivial `Jenkinsfile` examples.
 
@@ -15,7 +25,7 @@ provides a number of immediate benefits:
   footnote:[https://en.wikipedia.org/wiki/Single_Source_of_Truth]
   for the Pipeline, which can be viewed and edited by multiple members of the project.
 
-Pipeline supports xref:pipeline:syntax.adoc[two syntaxes], Declarative (introduced in
+Pipeline supports link:../syntax[two syntaxes], Declarative (introduced in
 Pipeline 2.5) and Scripted Pipeline. Both of which support building continuous
 delivery pipelines. Both may be used to define a Pipeline in either the web UI
 or with a `Jenkinsfile`, though it's generally considered a best practice to
@@ -25,7 +35,7 @@ create a `Jenkinsfile` and check the file into the source control repository.
 == Creating a Jenkinsfile
 
 As discussed in the
-xref:getting-started:index.adoc#defining-a-pipeline-in-scm[Defining a Pipeline in SCM],
+link:../getting-started#defining-a-pipeline-in-scm[Defining a Pipeline in SCM],
 a `Jenkinsfile` is a text file that contains the definition of a Jenkins
 Pipeline and is checked into source control. Consider the following Pipeline
 which implements a basic three-stage continuous delivery pipeline.
@@ -76,7 +86,7 @@ creation and execution of a simple Pipeline in a test installation of Jenkins.
 ====
 It is assumed that there is already a source control repository set up for
 the project and a Pipeline has been defined in Jenkins following
-xref:./getting-started.adoc#defining-a-pipeline-in-scm[these instructions].
+<<getting-started#defining-a-pipeline-in-scm, these instructions>>.
 ====
 
 Using a text editor, ideally one which supports
@@ -93,7 +103,7 @@ Declarative Pipeline not valid, it would not be capable of doing any work! By
 default the `agent` directive ensures that the source repository is checked out
 and made available for steps in the subsequent stages.
 
-The xref:./syntax#stages, stages directive>>, and <<syntax.adoc#steps[steps directives]
+The <<syntax#stages, stages directive>>, and <<syntax#steps, steps directives>>
 are also required for a valid Declarative Pipeline as they instruct Jenkins
 what to execute and in which stage it should be executed.
 
@@ -183,7 +193,7 @@ link:https://plugins.jenkins.io/?labels=report[number of plugins].
 At a fundamental level, when there are test failures, it is useful to have
 Jenkins record the failures for reporting and visualization in the web UI.  The
 example below uses the `junit` step, provided by the
-{plugin}junit[JUnit plugin].
+plugin:junit[JUnit plugin].
 
 In the example below, if tests fail, the Pipeline is marked "unstable", as
 denoted by a yellow ball in the web UI. Based on the recorded test reports,
@@ -341,7 +351,7 @@ node {
 Setting an environment variable within a Jenkins Pipeline is accomplished
 differently depending on whether Declarative or Scripted Pipeline is used.
 
-Declarative Pipeline supports an xref:./syntax.adoc#environment[environment]
+Declarative Pipeline supports an <<syntax#environment, environment>>
 directive, whereas users of Scripted Pipeline must use the `withEnv` step.
 
 [pipeline]
@@ -421,9 +431,9 @@ pipeline {
 === Handling credentials
 
 Credentials
-xref:using-jenkins:using-credentials.adoc#configuring-credentials[configured in
+link:../../using/using-credentials#configuring-credentials[configured in
 Jenkins] can be handled in Pipelines for immediate use. Read more about using
-credentials in Jenkins on the xref:using-jenkins:using-credentials.adoc[Using
+credentials in Jenkins on the link:../../using/using-credentials[Using
 credentials] page.
 
 .The correct way to handle credentials in Jenkins
@@ -1082,7 +1092,7 @@ node {
 === Handling failure
 
 Declarative Pipeline supports robust failure handling by default via its
-xref:./syntax.adoc#post[post section] which allows declaring a number of different
+<<syntax#post, post section>> which allows declaring a number of different
 "post conditions" such as: `always`, `unstable`, `success`, `failure`, and
 `changed`. The <<syntax, Pipeline Syntax>> section provides more detail on
 how to use the various post conditions.
@@ -1232,7 +1242,7 @@ stage('Test') {
 (`+**/target/*.jar+`) for reuse within the _same_ Pipeline. Once the Pipeline has
 completed its execution, stashed files are deleted from the Jenkins controller.
 <2> The parameter in `agent`/`node` allows for any valid Jenkins label
-expression. Consult the xref:user-docs:glossary:index.adoc#syntax[Pipeline Syntax] section for more details.
+expression. Consult the <<syntax#, Pipeline Syntax>> section for more details.
 <3> `unstash` will retrieve the named "stash" from the Jenkins controller into the
 Pipeline's current workspace.
 <4> The `bat` script allows for executing batch scripts on Windows-based

@@ -14,8 +14,7 @@ In 2014 Google announced that they will be shutting down their OpenID 2.0 authen
 
 If you find yourself locked out of your Jenkins system after the old endpoint is shut down you will need to follow the steps https://wiki.jenkins.io/display/JENKINS/Disable+security[here] to disable Jenkins security temporarily. Then you can connect without authentication and switch to the Google Login plugin. You will probably want to uninstall the old OpenID plugin at that point as well. +
 
-References:
-
+== References:
 
 * https://developers.google.com/identity/protocols/OpenID2Migration#shutdown-timetable[Shutdown announcement from Google] +
 * https://issues.jenkins.io/browse/JENKINS-23431[JENKINS-23431, bug tracking this fix] +
