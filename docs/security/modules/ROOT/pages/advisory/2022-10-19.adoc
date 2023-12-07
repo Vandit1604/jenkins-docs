@@ -552,7 +552,7 @@ issues:
   description: |-
     Jenkins sets the `Content-Security-Policy` header to static files served by Jenkins (specifically `DirectoryBrowserSupport`), such as workspaces, `/userContent`, or archived artifacts, unless a Resource Root URL is specified.
 
-    PLUGIN_NAME 0.7 and earlier programmatically updates link:/doc/book/managing/system-properties/#hudson-model-directorybrowsersupport-csp[the Java system property] allowing administrators to customize the `Content-Security-Policy` header for static files served by Jenkins to include `media-src: 'self'`.
+    PLUGIN_NAME 0.7 and earlier programmatically updates xref:user-docs:managing:system-properties.adoc#hudson-model-directorybrowsersupport-csp[the Java system property] allowing administrators to customize the `Content-Security-Policy` header for static files served by Jenkins to include `media-src: 'self'`.
     On a Jenkins instance with default configuration, this effectively disables all other directives in the default rule set, including `script-src`.
     This allows cross-site scripting (XSS) attacks by users with the ability to control files in workspaces, archived artifacts, etc.
 

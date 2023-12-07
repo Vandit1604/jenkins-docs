@@ -1,13 +1,4 @@
----
-layout: documentation
-title: Build a Node.js and React app with npm
-section: doc
----
-
-
-:imagesdir: ../../book/resources
-:tutorial-for: node
-
+= Build a Node.js and React app with npm
 
 This tutorial shows you how to use Jenkins to orchestrate building a simple
 https://nodejs.org/en/[Node.js] and https://reactjs.org/[React] application
@@ -125,7 +116,7 @@ Node.js and React application in Jenkins. Your Pipeline will be created as a
 This is the foundation of "Pipeline-as-Code", which treats the continuous
 delivery pipeline as a part of the application to be versioned and reviewed like
 any other code. Read more about Pipeline and what a Jenkinsfile is in the
-link:/doc/book/pipeline[Pipeline] and link:/doc/book/pipeline/jenkinsfile[Using
+xref:user-docs:pipeline:index.adoc[Pipeline] and xref:user-docs:pipeline:jenkinsfile.adoc[Using
 a Jenkinsfile] sections of the User Handbook.
 
 First, create an initial Pipeline to download a Node Docker image and run it as
@@ -157,7 +148,7 @@ pipeline {
     }
 }
 ----
-<1> This `image` parameter (of the link:/doc/book/pipeline/syntax#agent[`agent`]
+<1> This `image` parameter (of the xref:user-docs:pipeline:syntax.adoc#agent[`agent`]
 section's `docker` parameter) downloads the
 https://hub.docker.com/_/node/[`node:20.9.0-alpine3.18` Docker image] (if it's not
 already available on your machine) and runs this image as a separate container.
@@ -171,11 +162,11 @@ This means that:
 through port 3000. The significance of this is explained in the
 `jenkins/scripts/deliver.sh` file of your cloned repository, and is covered in a
 subsequent section of this tutorial.
-<3> Defines a link:/doc/book/pipeline/syntax/#stage[`stage`] (directive) called
+<3> Defines a xref:user-docs:pipeline:syntax.adoc#stage[`stage`] (directive) called
 `Build` that appears on the Jenkins UI.
 <4> This
 link:/doc/pipeline/steps/workflow-durable-task-step/#code-sh-code-shell-script[`sh`]
-step (of the link:/doc/book/pipeline/syntax/#steps[`steps`] section) executes
+step (of the xref:user-docs:pipeline:syntax.adoc#steps[`steps`] section) executes
 the `npm` command to ensure that all dependencies required to run your
 application have been downloaded to the `node_modules` workspace directory
 (within the `/var/jenkins_home/workspace/simple-node-js-react-npm-app` directory
@@ -261,11 +252,11 @@ pipeline {
     }
 }
 ----
-<1> Defines a link:/doc/book/pipeline/syntax/#stage[`stage`] (directive) called
+<1> Defines a xref:user-docs:pipeline:syntax.adoc#stage[`stage`] (directive) called
 `Test` that appears on the Jenkins UI.
 <2> This
 link:/doc/pipeline/steps/workflow-durable-task-step/#code-sh-code-shell-script[`sh`]
-step (of the link:/doc/book/pipeline/syntax/#steps[`steps`] section) runs the
+step (of the xref:user-docs:pipeline:syntax.adoc#steps[`steps`] section) runs the
 shell script `test.sh` located in the `jenkins/scripts` directory from the root
 of the `simple-node-js-react-npm-app` repository. Explanations about what this
 script does are covered in the `test.sh` file itself. As a general principle,
@@ -350,7 +341,7 @@ pipeline {
 <1> Defines a new stage called `Deliver` that appears on the Jenkins UI.
 <2> This
 link:/doc/pipeline/steps/workflow-durable-task-step/#code-sh-code-shell-script[`sh`]
-step (of the link:/doc/book/pipeline/syntax/#steps[`steps`] section) runs the
+step (of the xref:user-docs:pipeline:syntax.adoc#steps[`steps`] section) runs the
 shell script `deliver.sh` located in the `jenkins/scripts` directory from the
 root of the `simple-node-js-react-npm-app` repository. Explanations about what
 this script does are covered in the `deliver.sh` file itself.
@@ -443,7 +434,7 @@ To learn more about what Jenkins can do, check out:
 * The link:/doc/tutorials[Tutorials overview] page for other introductory
   tutorials.
 * The link:/doc/book[User Handbook] for more detailed information about using
-  Jenkins, such as link:/doc/book/pipeline[Pipelines] (in particular
+  Jenkins, such as xref:user-docs:pipeline:index.adoc[Pipelines] (in particular
   link:/doc/book/pipeline/syntax[Pipeline syntax]) and the
   link:/doc/book/blueocean[Blue Ocean] interface.
 * The link:/node[Jenkins blog] for the latest events, other tutorials and

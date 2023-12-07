@@ -59,4 +59,4 @@ In this case, it may be necessary to disable CSRF protection temporarily.
 IMPORTANT: It is *strongly recommended* that CSRF protection be left *enabled*, including on instances operating on private, fully trusted networks.
 
 To disable CSRF protection, set the system property `hudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PROTECTION` to `true` on startup.
-link:/doc/book/managing/system-properties/[Learn more about system properties in Jenkins].
+xref:user-docs:managing:system-properties.adoc[Learn more about system properties in Jenkins].

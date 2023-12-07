@@ -77,9 +77,9 @@ permissions on all Jenkins resources on the controller. This means that, with a
 simple script, a malicious user can have direct access to private information
 whose integrity and privacy could not be, thus,  guaranteed.
 See
-link:/doc/book/security/controller-isolation/[Distributed Builds]
+xref:dev-docs:security:controller-isolation.adoc[Distributed Builds]
 in the
-link:/doc/book/security/[Securing Jenkins]
+xref:dev-docs:security:index.adoc[Securing Jenkins]
 chapter for more information.
 
 For all these reasons Jenkins supports agents, where the
@@ -91,7 +91,7 @@ project. For example, some projects may be configured to "restrict where this
 project is run" which ties the project to a specific agent or set of labeled
 agents. Other projects which omit this configuration will select an agent from
 the available pool in Jenkins.
-Learn more about Agents in link:/doc/book/managing/nodes/#creating-agents/[Managing Nodes]
+Learn more about Agents in xref:user-docs:managing:nodes/.adoc#creating-agents[Managing Nodes]
 
 In a distributed builds environment, the Jenkins controller will use its resources
 to only handle HTTP requests and manage the build environment. Actual execution
@@ -388,7 +388,7 @@ different approaches to expandable storage:
   and just requires that the _$JENKINS_HOME_ be on its own filesystem. This
   makes it easier to create snapshots, backups, etc.
 - For systems with an existing Jenkins installation, there are at least two options:
-** The System Property link:/doc/book/managing/system-properties/#jenkins-model-jenkins-buildsdir[jenkins.model.Jenkins.buildsDir]
+** The System Property xref:user-docs:managing:system-properties.adoc#jenkins-model-jenkins-buildsdir[jenkins.model.Jenkins.buildsDir]
 ** *Symbolic Links* (symlinks) may be used instead to store job 
   folders on separate volumes with symlinks to those directories.
 
@@ -532,7 +532,7 @@ This typically makes it more impractical to set up a different backup policy, or
 
 For instance, if you would like to move builds under a different root, you can use the following value: `+$JENKINS_VAR/${ITEM_FULL_NAME}/builds+`.
 
-Note that starting with Jenkins 2.119, the User Interface for this was replaced by the `jenkins.model.Jenkins.buildsDir` system property. See the link:/doc/book/managing/system-properties/[dedicated _Features Controlled with System Properties_ wiki page] for more details.
+Note that starting with Jenkins 2.119, the User Interface for this was replaced by the `jenkins.model.Jenkins.buildsDir` system property. See the xref:user-docs:managing:system-properties.adoc[dedicated _Features Controlled with System Properties_ wiki page] for more details.
 
 ////
 NOT documenting the other jenkins.model.Jenkins.workspacesDir property on purpose, as this should generally not be used.

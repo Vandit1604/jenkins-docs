@@ -1,17 +1,7 @@
 = Using a Jenkinsfile
-]
-:description:
-:author:
-
-
-:hide-uri-scheme:
-
-
-
-= Using a Jenkinsfile
 
 This section builds on the information covered in
-link:../getting-started[Getting started with Pipeline]
+xref:user-docs:pipeline:getting-started.adoc[Getting started with Pipeline]
 and introduces more useful steps, common patterns, and demonstrates some
 non-trivial `Jenkinsfile` examples.
 
@@ -35,7 +25,7 @@ create a `Jenkinsfile` and check the file into the source control repository.
 == Creating a Jenkinsfile
 
 As discussed in the
-link:../getting-started#defining-a-pipeline-in-scm[Defining a Pipeline in SCM],
+xref:user-docs:pipeline:getting-started.adoc#defining-a-pipeline-in-scm[Defining a Pipeline in SCM],
 a `Jenkinsfile` is a text file that contains the definition of a Jenkins
 Pipeline and is checked into source control. Consider the following Pipeline
 which implements a basic three-stage continuous delivery pipeline.
@@ -431,7 +421,7 @@ pipeline {
 === Handling credentials
 
 Credentials
-link:../../using/using-credentials#configuring-credentials[configured in
+xref:user-docs:using-jenkins:using-credentials.adoc#configuring-credentials[configured in
 Jenkins] can be handled in Pipelines for immediate use. Read more about using
 credentials in Jenkins on the link:../../using/using-credentials[Using
 credentials] page.

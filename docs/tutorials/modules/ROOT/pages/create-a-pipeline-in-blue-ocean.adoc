@@ -12,7 +12,7 @@ Since Blue Ocean provides a simplified Git-handling experience, you'll be intera
 
 *Duration:* This tutorial takes 20-40 minutes to complete if you've already met the <<prerequisites,prerequisites>> below.
 
-The exact duration depends on the speed of your machine and whether or not you've already xref:tutorials:ROOT:create-a-pipeline-in-blue-ocean.adoc#run-jenkins-in-docker[run Jenkins in Docker] from xref:ROOT:index.adoc[another tutorial].
+The exact duration depends on the speed of your machine and whether or not you've already xref:tutorials:ROOT:create-a-pipeline-in-blue-ocean.adoc.adoc#run-jenkins-in-docker[run Jenkins in Docker] from xref:ROOT:index[another tutorial].
 
 include::user-docs:blueocean:partial$_blue-ocean-status.adoc[]
 
@@ -245,7 +245,7 @@ image:pipeline-in-blueocean-38-main-blue-ocean-interface-with-all-previous-runs-
 
 === Follow up (optional)
 
-If you check the contents of the `Jenkinsfile` that Blue Ocean created at the root of your forked `creating-a-pipeline-in-blue-ocean` repository, note the location of the link:/doc/book/pipeline/syntax#environment[`environment`] directive.
+If you check the contents of the `Jenkinsfile` that Blue Ocean created at the root of your forked `creating-a-pipeline-in-blue-ocean` repository, note the location of the xref:user-docs:pipeline:syntax.adoc#environment[`environment`] directive.
 This directive's location within the "Test" stage means that the environment variable `CI`, with its value of `true`, is only available within the scope of this "Test" stage.
 
 You can set this directive in Blue Ocean, so that its environment variable is available globally throughout Pipeline.
@@ -281,7 +281,7 @@ Because Jenkins is extremely extensible, it can be modified and configured to ha
 To learn more about what Jenkins can do, check out:
 
 * The xref:ROOT:index.adoc[Tutorials overview] page for other introductory tutorials.
-* The xref:user-docs:ROOT:index.adoc[User Handbook] for more detailed information about using Jenkins, such as link:/doc/book/pipeline[Pipelines], link:/doc/book/pipeline/syntax[Pipeline syntax], and the xref:user-docs:blueocean:index.adoc[Blue Ocean] interface.
+* The xref:user-docs:ROOT:index.adoc[User Handbook] for more detailed information about using Jenkins, such as xref:user-docs:pipeline:index.adoc[Pipelines], link:/doc/book/pipeline/syntax[Pipeline syntax], and the xref:user-docs:blueocean:index.adoc[Blue Ocean] interface.
 * The link:/node[Jenkins blog] for the latest events, other tutorials, and updates.
 
 

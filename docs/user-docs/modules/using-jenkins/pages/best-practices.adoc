@@ -63,7 +63,7 @@ Refer to the link:/doc/book/pipeline/pipeline-as-code/#multibranch-pipeline-proj
 If organization folders are not an option for you, consider using multibranch Pipelines as an alternative.
 However, it's important to highlight that organization folders are preferred, due to their ability to automatically create and delete multibranch projects when repositories are added or removed.
 
-Refer to the link:/doc/book/pipeline/[Pipeline] documentation for more details.
+Refer to the xref:user-docs:pipeline:index.adoc[Pipeline] documentation for more details.
 
 .Differences between Freestyle and Pipeline in Jenkins
 video::IOUm1lw7F58[youtube,width=800,height=420]
@@ -95,7 +95,7 @@ video::tj3xYFA6Q2o[youtube,width=800,height=420]
 Use agents to perform builds instead of running builds on the controller.
 Utilizing agents offers enhanced safety and scalability.
 
-Refer to the link:/doc/book/security/controller-isolation/[controller isolation] documentation for more details.
+Refer to the xref:dev-docs:security:controller-isolation.adoc[controller isolation] documentation for more details.
 
 === Show failures to the right people
 

@@ -9,7 +9,7 @@ including how to:
   link:getting-started#through-blue-ocean[Blue Ocean], through the
   link:getting-started#through-the-classic-ui[classic UI] or in
   link:getting-started#defining-a-pipeline-in-scm[SCM],
-* link:jenkinsfile[create and use a `Jenkinsfile`] - covers use-case scenarios
+* xref:user-docs:pipeline:jenkinsfile.adoc[create and use a `Jenkinsfile`] - covers use-case scenarios
   on how to craft and construct your `Jenkinsfile`,
 * work with link:multibranch[branches and pull requests],
 * link:docker[use Docker with Pipeline] - covers how Jenkins can invoke Docker
@@ -18,7 +18,7 @@ including how to:
 * link:shared-libraries[extend Pipeline with shared libraries],
 * use different link:development[development tools] to facilitate the creation
   of your Pipeline, and
-* work with link:syntax[Pipeline syntax] - this page is a comprehensive
+* work with xref:user-docs:pipeline:syntax.adoc[Pipeline syntax] - this page is a comprehensive
   reference of all Declarative Pipeline syntax.
 
 For an overview of content in the Jenkins User Handbook, see
@@ -41,11 +41,11 @@ testing and deployment.
 
 Pipeline provides an extensible set of tools for modeling simple-to-complex
 delivery pipelines "as code" via the
-link:syntax[Pipeline domain-specific language (DSL) syntax].
+xref:user-docs:pipeline:syntax.adoc[Pipeline domain-specific language (DSL) syntax].
 footnote:dsl[link:https://en.wikipedia.org/wiki/Domain-specific_language[Domain-specific language]]
 
 The definition of a Jenkins Pipeline is written into a text file (called a
-link:jenkinsfile[`Jenkinsfile`]) which in turn can be committed to a project's
+xref:user-docs:pipeline:jenkinsfile.adoc[`Jenkinsfile`]) which in turn can be committed to a project's
 source control repository.
 footnote:scm[link:https://en.wikipedia.org/wiki/Version_control[Source control management]]
 This is the foundation of "Pipeline-as-code"; treating the CD pipeline a part of
@@ -336,4 +336,4 @@ executes the given shell command.
 {plugin}workflow-durable-task-step[Pipeline: Nodes and Processes plugin]) that
 executes the given shell command.
 
-Read more about Pipeline syntax on the link:syntax[Pipeline Syntax] page.
+Read more about Pipeline syntax on the xref:user-docs:pipeline:syntax.adoc[Pipeline Syntax] page.

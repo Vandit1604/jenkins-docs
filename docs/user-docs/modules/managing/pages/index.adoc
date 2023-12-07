@@ -25,20 +25,20 @@ Other system administration topics are discussed in
 
 Screens for configuring resources for your Jenkins instance.
 
-link:system-configuration[System]::
+xref:user-docs:managing:system-configuration.adoc[System]::
 Configure global settings and paths for the Jenkins instance
 
-link:tools[Tools]::
+xref:user-docs:managing:tools.adoc[Tools]::
 Configure tools, their locations, and automatic installers
 
-link:plugins[Plugins]::
+xref:user-docs:managing:plugins.adoc[Plugins]::
 Add, update, remove, disable/enable plugins
 that extend the functionality of Jenkins.
 
-link:nodes[Nodes and Clouds]::
+xref:user-docs:managing:nodes[Nodes and Clouds]::
 Add, remove, control, and monitor the nodes used for the agents on which build jobs run.
 
-link:casc[Configuration as Code]::
+xref:user-docs:managing:casc[Configuration as Code]::
 Configure your Jenkins instance using a human-readable YAML file rather than the UI.
 This is an optional feature that appears in this group
 only when the plugin is installed on your controller.
@@ -46,35 +46,35 @@ only when the plugin is installed on your controller.
 == Security group
 
 Screens for configuring security features for your Jenkins instance.
-See link:/doc/book/security/[Securing Jenkins] for general information
+See xref:dev-docs:security:index.adoc[Securing Jenkins] for general information
 about managing Jenkins security.
 
-link:system-configuration[Security]::
+xref:user-docs:managing:system-configuration.adoc[Security]::
 Set configuration parameters that secure your Jenkins instance.
 
-link:/doc/book/using/using-credentials/#adding-new-global-credentials[Manage Credentials]::
+xref:user-docs:using-jenkins:using-credentials.adoc#adding-new-global-credentials[Manage Credentials]::
 Configure the credentials that provide secure access
 to third-party sites and applications that interact with Jenkins.
 
 *Credential Providers*::
 Configure credential providers and types
 
-link:users[Users]::
+xref:user-docs:managing:users[Users]::
 Manage users defined in the Jenkins user database.
 This is not used if you use a different security realm such as LDAP or AD.
 
 == Status Information group
 
-link:system-info[System Information]::
+xref:user-docs:managing:system-info[System Information]::
 Displays information about the Jenkins environment.
 
-link:/doc/book/system-administration/viewing-logs/[System Log]::
+xref:user-docs:system-administration:viewing-logs.adoc[System Log]::
 Jenkins log that contains all `java.util.logging` output related to Jenkins.
 
 *Load Statistics*::
 Displays information about resource utilization on you Jenkins instance.
 
-link:about-jenkins[About Jenkins]::
+xref:user-docs:managing:about-jenkins[About Jenkins]::
 Provides version and license information for your Jenkins instance.
 
 == Troubleshooting group
@@ -91,10 +91,10 @@ and management tools that enable you to do administrative tasks without using th
 Discard all data that is loaded in memory and reload everything from the file system.
 This is useful when you modify configuration files directly on disk.
 
-link:cli[Jenkins CLI]::
+xref:dev-docs:cli:index.adoc[Jenkins CLI]::
 How to use the Jenkins CLI from a shell or script.
 
-link:/doc/book/managing/script-console/[Script Console]::
+xref:user-docs:managing:script-console.adoc[Script Console]::
 Execute an Apache Groovy script for administration, troubleshooting, and diagnostics.
 
 Prepare for Shutdown::

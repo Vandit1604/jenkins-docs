@@ -26,7 +26,7 @@ Their compatibility fixes are tracked in the Jira epic https://issues.jenkins.io
 
 As part of the change in 2.326, almost all code related to the agent-to-controller security system's configuration has been removed.
 
-A notable exception is `jenkins.security.s2m.AdminWhitelistRule` as that is used by https://plugins.jenkins.io/configuration-as-code/[Configuration as Code Plugin] and is also expected to be in frequent use in link:/doc/book/managing/groovy-hook-scripts/[Groovy init scripts].
+A notable exception is `jenkins.security.s2m.AdminWhitelistRule` as that is used by https://plugins.jenkins.io/configuration-as-code/[Configuration as Code Plugin] and is also expected to be in frequent use in xref:user-docs:managing:groovy-hook-scripts.adoc[Groovy init scripts].
 It is now a stub retaining the basic API -- `#getMasterKillSwitch` and `#setMasterKillSwitch(boolean)`, but both methods only generate log messages informing users about their obsolescence.
 Invocations of these methods can be safely removed when running Jenkins 2.326 or newer.
 Users of Configuration as Code may remove the `remotingSecurity` section from

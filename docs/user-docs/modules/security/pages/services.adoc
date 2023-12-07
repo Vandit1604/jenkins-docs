@@ -66,7 +66,7 @@ Authentication can be username/password or using public key authentication.
 For the latter, the public keys can be stored in Jenkins users' profiles.
 
 This SSH server does not provide a regular OS shell once logged in.
-Instead, it provides a shell-like interface for the link:/doc/book/managing/cli/[Jenkins CLI].
+Instead, it provides a shell-like interface for the xref:user-docs:managing:cli.adoc[Jenkins CLI].
 
 Additionally, some plugins may provide features that require the SSH server to be enabled, like the {plugin}git-server[GIT server] Plugin.
 

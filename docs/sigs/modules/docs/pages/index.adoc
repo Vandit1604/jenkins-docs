@@ -162,9 +162,9 @@ This project is tracked in the {jira}WEBSITE-738[] EPIC.
 === Solution Pages
 
 Jenkins xref:solutions:ROOT:index.adoc[solution pages] highlight specific use cases for Jenkins users.
-Those solutions include SCM provider solutions (link:/solutions/github[GitHub], link:/solutions/bitbucketserver[Bitbucket]),
-programming language solutions (link:/solutions/python[Python], link:/solutions/ruby[Ruby], link:/solutions/c[C/C++], link:/solutions/java[Java], and link:/solutions/php[PHP]),
-and execution environment solutions (link:/solutions/python[Pipeline], link:/solutions/docker[Docker], link:/solutions/embedded[Embedded], and link:/solutions/android[Android]).
+Those solutions include SCM provider solutions (xref:solutions:ROOT:github.adoc[GitHub], link:/solutions/bitbucketserver[Bitbucket]),
+programming language solutions (xref:solutions:ROOT:python.adoc[Python], link:/solutions/ruby[Ruby], link:/solutions/c[C/C++], link:/solutions/java[Java], and link:/solutions/php[PHP]),
+and execution environment solutions (xref:solutions:ROOT:python.adoc[Pipeline], xref:solutions:ROOT:docker.adoc[Docker], xref:solutions:ROOT:embedded.adoc[Embedded], and xref:solutions:ROOT:android.adoc[Android]).
 An excellent xref:solutions:ROOT:index.adoc[opening page] has been provided by link:https://github.com/zbynek[Zbynek Konecny].
 Additional use cases and user stories are being collected by link:https://github.com/alyssat[Alyssa Tong].
 
