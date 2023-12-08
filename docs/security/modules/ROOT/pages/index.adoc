@@ -20,7 +20,7 @@ We announce the publication of a new security advisory through multiple channels
 
 Additionally, Jenkins administrators are informed about published security issues directly in Jenkins if they have affected versions of Jenkins or plugins installed.
 
-Finally, the Jenkins project is a link:/security/cna[CVE Numbers Authority], and we submit CVE metadata simultaneously with the publication of security advisories, allowing automated security tools using CVE information to identify vulnerable installations.
+Finally, the Jenkins project is a xref:security:ROOT:cna.adoc[CVE Numbers Authority], and we submit CVE metadata simultaneously with the publication of security advisories, allowing automated security tools using CVE information to identify vulnerable installations.
 
 [IMPORTANT]
 ====

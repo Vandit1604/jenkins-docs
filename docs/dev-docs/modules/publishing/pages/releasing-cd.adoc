@@ -25,7 +25,7 @@ Don't push the changes directly to the default branch or merge the PR before the
 
 === Incrementals Enablement
 
-Verify that the plugin has already been link:../../plugin-development/incrementals[incrementalified].
+Verify that the plugin has already been xref:dev-docs:plugin-development:incrementals.adoc[incrementalified].
 `pom.xml` should contain `<version>$\{revision}$\{changelist}</version>` and the files `.mvn/extensions.xml` and `.mvn/maven.config` should exist *before proceeding with subsequent steps*.
 
 NOTE: A new plugin created from the link:https://github.com/jenkinsci/archetypes/[archetypes] will already have this setup.
@@ -249,7 +249,7 @@ If you prefer to only deploy explicitly, not on every push, just comment out the
 == Noting incompatible changes
 
 It is best to avoid ever making incompatible changes to your plugin.
-If you must make one, then you can define `hpi.compatibleSinceVersion` as for link:../../plugin-development/mark-a-plugin-incompatible[any plugins].
+If you must make one, then you can define `hpi.compatibleSinceVersion` as for xref:dev-docs:plugin-development:mark-a-plugin-incompatible.adoc[any plugins].
 If `master` is currently `123.vXXX` according to
 
 [source,shell]
@@ -275,7 +275,7 @@ Do not forget to mark the PR with the label `breaking` (or `removed`) to get an 
 
 == Fallback
 
-You can also release manually if you have configured your machine for link:../releasing-manually[manual release].
+You can also release manually if you have configured your machine for xref:releasing-manually.adoc[manual release].
 To cut a release:
 
 [source,shell]
@@ -306,7 +306,7 @@ Alternatively you can temporarily update the secrets yourself with your own pers
 The two most common explanations for this error are:
 
 * You don't have permission to upload to the specified path.
-  link:../requesting-hosting/#request-upload-permissions[Learn more about how to request upload permissions].
+  xref:requesting-hosting.adoc#request-upload-permissions[Learn more about how to request upload permissions].
   Check that the path you're allowed to upload to matches the actual upload attempt (i.e. no typos).
 * The specified release already exists and you try to overwrite it.
   We do not allow replacing existing releases.

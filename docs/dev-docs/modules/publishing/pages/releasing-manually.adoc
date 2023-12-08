@@ -3,16 +3,16 @@
 [IMPORTANT]
 .Prefer automated releases instead of releasing manually
 ====
-See link:../releasing-cd[setting up automated plugin release] instead of this guide.
+See xref:releasing-cd.adoc[setting up automated plugin release] instead of this guide.
 ====
 
 == Prerequisites
 
-. Make sure you have permissions to release the plugin. link:../requesting-hosting/[See this guide to learn more details]
+. Make sure you have permissions to release the plugin. xref:requesting-hosting.adoc[See this guide to learn more details]
 
 == Artifactory Credentials for Maven
 
-You will need to tell Maven your credentials to access link:../artifact-repository[Artifactory].
+You will need to tell Maven your credentials to access xref:artifact-repository.adoc[Artifactory].
 You can obtain your encrypted password from Artifactory using `curl`.
 
 Use this command:
@@ -71,7 +71,7 @@ mvn release:prepare release:perform
 
 == Troubleshooting
 
-First, make sure your plugin uses a reasonably up to date link:../../plugin-development/updating-parent[parent POM].
+First, make sure your plugin uses a reasonably up to date xref:dev-docs:plugin-development:updating-parent.adoc[parent POM].
 This will prevent the vast majority of problems in releasing the plugin, such as outdated Maven plugins, or obsolete host names.
 
 === The upload to the Maven repository fails with "401 Unauthorized"
@@ -85,7 +85,7 @@ Make sure you've updated your encrypted password since the last time you changed
 The two most common explanations for this error:
 
 * You don't have permission to upload to the specified path.
-  link:../requesting-hosting/#request-upload-permissions[Learn more about how to request upload permissions].
+  xref:requesting-hosting.adoc#request-upload-permissions[Learn more about how to request upload permissions].
   Check that the path you're allowed to upload to matches the actual upload attempt (i.e. no typos).
 * The specified release already exists and you try to overwrite it.
   We do not allow replacing existing releases.

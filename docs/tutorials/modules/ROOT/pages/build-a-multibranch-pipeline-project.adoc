@@ -1,9 +1,4 @@
-
-title: End-to-End Multibranch Pipeline Project Creation
-
-
-
-:imagesdir: ../../book/resources
+= End-to-End Multibranch Pipeline Project Creation
 
 This tutorial shows you how to use Jenkins to orchestrate building and testing
 a simple https://nodejs.org/en/[Node.js] and https://reactjs.org/[React]
@@ -11,8 +6,8 @@ application with the https://www.npmjs.com/[Node Package Manager (npm)], _as
 well as_ deliver different outcomes for development and production purposes.
 
 Before starting this tutorial, it is recommended that you run through at least
-one of the initial set of link:../#introductory-tutorials[Introductory
-tutorials] from the link:..[Tutorials overview] page first to familiarize
+one of the initial set of xref:tutorials:ROOT:index.adoc#introductory-tutorials[Introductory
+tutorials] from the xref:tutorials:ROOT:index.adoc[Tutorials overview] page first to familiarize
 yourself with CI/CD concepts (relevant to a technology stack you're most
 familiar with), how these concepts are implemented in Jenkins and the
 fundamentals of Jenkins Pipelines.
@@ -27,12 +22,12 @@ which delivery stage of your Pipeline is executed.
 *Duration:* This tutorial takes 30-50 minutes to complete (assuming you've
 already met the <<prerequisites,Prerequisites>> below). The exact duration will
 depend on the speed of your machine and whether or not you've already
-<<run-jenkins-in-docker,run Jenkins in Docker>> from link:..[another tutorial].
+<<run-jenkins-in-docker,run Jenkins in Docker>> from xref:tutorials:ROOT:index.adoc[another tutorial].
 
 You can stop this tutorial at any point in time and continue from where you left
 off.
 
-If you've already run though link:..[another tutorial], you can skip the
+If you've already run though xref:tutorials:ROOT:index.adoc[another tutorial], you can skip the
 <<prerequisites,Prerequisites>> and <<run-jenkins-in-docker,Run Jenkins in
 Docker>> sections below and proceed on to <<fork-sample-repository,forking the
 sample repository>>. (Just ensure you have
@@ -635,7 +630,7 @@ To learn more about what Jenkins can do, check out:
   tutorials.
 * The link:/doc/book[User Handbook] for more detailed information about using
   Jenkins, such as xref:user-docs:pipeline:index.adoc[Pipelines] (in particular
-  link:/doc/book/pipeline/syntax[Pipeline syntax]) and the
+  xref:user-docs:pipeline:syntax.adoc[Pipeline syntax]) and the
   link:/doc/book/blueocean[Blue Ocean] interface.
 * The link:/node[Jenkins blog] for the latest events, other tutorials and
   updates.

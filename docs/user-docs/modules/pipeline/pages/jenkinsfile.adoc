@@ -15,7 +15,7 @@ provides a number of immediate benefits:
   footnote:[https://en.wikipedia.org/wiki/Single_Source_of_Truth]
   for the Pipeline, which can be viewed and edited by multiple members of the project.
 
-Pipeline supports link:../syntax[two syntaxes], Declarative (introduced in
+Pipeline supports xref:syntax.adoc[two syntaxes], Declarative (introduced in
 Pipeline 2.5) and Scripted Pipeline. Both of which support building continuous
 delivery pipelines. Both may be used to define a Pipeline in either the web UI
 or with a `Jenkinsfile`, though it's generally considered a best practice to
@@ -423,7 +423,7 @@ pipeline {
 Credentials
 xref:user-docs:using-jenkins:using-credentials.adoc#configuring-credentials[configured in
 Jenkins] can be handled in Pipelines for immediate use. Read more about using
-credentials in Jenkins on the link:../../using/using-credentials[Using
+credentials in Jenkins on the xref:user-docs:using-jenkins:using-credentials.adoc[Using
 credentials] page.
 
 .The correct way to handle credentials in Jenkins

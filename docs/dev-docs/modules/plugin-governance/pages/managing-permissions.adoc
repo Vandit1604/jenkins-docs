@@ -9,7 +9,7 @@ There are 2 main permissions available to plugin contributors:
 * **Release Permissions** which are needed to deploy releases to the link:/doc/developer/publishing/artifact-repository/[Jenkins artifact repository].
   Snapshots can be deployed by contributors without this permission.
 
-NOTE: If you want to adopt a plugin, please see link:../adopt-a-plugin[Adopt a Plugin] instead.
+NOTE: If you want to adopt a plugin, please see xref:adopt-a-plugin.adoc[Adopt a Plugin] instead.
 
 == GitHub Permissions
 
@@ -33,7 +33,7 @@ There are multiple ways to do that:
 
 You will need to send a permission transfer request and to specify the permission recipient's GitHub account and Jenkins LDAP (aka Jenkins Jira) account there.
 An explicit approval by an active maintainer will be required before the permission transfer happens.
-If there no response from a maintainer, a link:../adopt-a-plugin[Plugin Adoption Process] might be used to request ownership of the plugin.
+If there no response from a maintainer, a xref:adopt-a-plugin.adoc[Plugin Adoption Process] might be used to request ownership of the plugin.
 
 There are two following ways to do that:
 
@@ -66,7 +66,7 @@ To request upload permissions for a new maintainer:
 
 //TODO(oleg-nenashev): Add CoC violations and so on?
 
-Permission removal can be requested in the same way, e.g. during link:../adopt-a-plugin[plugin adoption].
+Permission removal can be requested in the same way, e.g. during xref:adopt-a-plugin.adoc[plugin adoption].
 Such requests are subject for explicit approval by contributors being removed or by `jenkinsci` GitHub administrators.
 
 .References

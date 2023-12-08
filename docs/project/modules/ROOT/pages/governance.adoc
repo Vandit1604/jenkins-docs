@@ -1,8 +1,4 @@
----
-layout: simplepage
-title:  Project Governance Document
-section: project
----
+=  Project Governance Document
 
 
 
@@ -97,7 +93,7 @@ We encourage plugins to follow the same 3rd party license policy as the core. Yo
 
 == Trademark
 
-See the link:../trademark[Trademark and Attribution] page for details.
+See the xref:trademark.adoc[Trademark and Attribution] page for details.
 
 == Project roles/stakeholders
 
@@ -336,7 +332,7 @@ When making changes, use your common sense. For example, if you are thinking abo
 
 === Contributing localizations
 
-We are always looking for people who can help localize Jenkins to different languages. If you are interested in helping, drop us a note in the dev list to get commit access, and see link:/doc/developer/internationalization/[Internationalization] for the details of how to make changes.
+We are always looking for people who can help localize Jenkins to different languages. If you are interested in helping, drop us a note in the dev list to get commit access, and see xref:dev-docs:internationalization:index.adoc[Internationalization] for the details of how to make changes.
 
 [[pull-request]]
 

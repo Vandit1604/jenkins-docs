@@ -7,7 +7,7 @@ kind: core and plugins
 
 This advisory announces a vulnerability in Jenkins (weekly and LTS) and various plugins.
 
-NOTE: This advisory has been superseded by the entry for plugin:ant[Ant Plugin] in the link:../2018-01-22/#xss-vulnerability-in-job-configuration-forms-in-ant-plugin[2018-01-22 security advisory].
+NOTE: This advisory has been superseded by the entry for plugin:ant[Ant Plugin] in the xref:2018-01-22.adoc#xss-vulnerability-in-job-configuration-forms-in-ant-plugin[2018-01-22 security advisory].
 
 == Description
 
@@ -58,6 +58,6 @@ As of publication of this advisory, there is no fix available other than the wor
 
 == Credit
 
-The Jenkins project would like to thank the reporters for discovering and link:/security/#reporting-vulnerabilities[reporting] these vulnerabilities:
+The Jenkins project would like to thank the reporters for discovering and xref:dev-docs:security:index.adoc#reporting-vulnerabilities[reporting] these vulnerabilities:
 
 * *Dhiraj Datar, Lakhshya Cyber Security Labs* for SECURITY-624

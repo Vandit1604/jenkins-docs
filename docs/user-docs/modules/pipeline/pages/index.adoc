@@ -130,7 +130,7 @@ image::realworld-pipeline-flow.png[alt="Pipeline Flow",width=100%]
 == Pipeline concepts
 
 The following concepts are key aspects of Jenkins Pipeline, which tie in closely
-to Pipeline syntax (see the link:#pipeline-syntax-overview[overview] below).
+to Pipeline syntax (see the xref:user-docs:pipeline:index.adoc#pipeline-syntax-overview[overview] below).
 
 
 === Pipeline
@@ -140,7 +140,7 @@ your entire build process, which typically includes stages for building an
 application, testing it and then delivering it.
 
 Also, a `pipeline` block is a
-link:#declarative-pipeline-fundamentals[key part of Declarative Pipeline syntax].
+xref:user-docs:pipeline:index.adoc#declarative-pipeline-fundamentals[key part of Declarative Pipeline syntax].
 
 
 === Node
@@ -149,7 +149,7 @@ A node is a machine which is part of the Jenkins environment and is capable of
 executing a Pipeline.
 
 Also, a `node` block is a
-link:#scripted-pipeline-fundamentals[key part of Scripted Pipeline syntax].
+xref:user-docs:pipeline:index.adoc#scripted-pipeline-fundamentals[key part of Scripted Pipeline syntax].
 
 
 === Stage
@@ -174,10 +174,10 @@ implemented a new _step_.
 == Pipeline syntax overview
 
 The following Pipeline code skeletons illustrate the fundamental differences
-between link:#declarative-pipeline-fundamentals[Declarative Pipeline syntax] and
-link:#scripted-pipeline-fundamentals[Scripted Pipeline syntax].
+between xref:user-docs:pipeline:index.adoc#declarative-pipeline-fundamentals[Declarative Pipeline syntax] and
+xref:user-docs:pipeline:index.adoc#scripted-pipeline-fundamentals[Scripted Pipeline syntax].
 
-Be aware that both link:#stage[stages] and link:#step[steps] (above) are common
+Be aware that both xref:user-docs:pipeline:index.adoc#stage[stages] and xref:user-docs:pipeline:index.adoc#step[steps] (above) are common
 elements of both Declarative and Scripted Pipeline syntax.
 
 
@@ -321,9 +321,9 @@ instructions for executing the entire Pipeline.
 instructs Jenkins to allocate an executor (on a node) and workspace for the
 entire Pipeline.
 <3> `stage` is a syntax block that describes a
-link:#stage[stage of this Pipeline]. Read more about `stage` blocks in
+xref:user-docs:pipeline:index.adoc#stage[stage of this Pipeline]. Read more about `stage` blocks in
 Declarative Pipeline syntax on the link:syntax#stage[Pipeline syntax] page. As
-mentioned link:#scripted-pipeline-fundamentals[above], `stage` blocks are
+mentioned xref:user-docs:pipeline:index.adoc#scripted-pipeline-fundamentals[above], `stage` blocks are
 optional in Scripted Pipeline syntax.
 <4> link:syntax#steps[`steps`] is Declarative Pipeline-specific syntax that
 describes the steps to be run in this `stage`.

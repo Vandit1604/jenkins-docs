@@ -1,11 +1,11 @@
 = Pipeline syntax
 
-This section builds on the information introduced in link:../getting-started[Getting started with Pipeline] and should be treated solely as a reference.
-For more information on how to use Pipeline syntax in practical examples, refer to the link:../jenkinsfile[Using a Jenkinsfile] section of this chapter.
+This section builds on the information introduced in xref:user-docs:pipeline:getting-started.adoc[Getting started with Pipeline] and should be treated solely as a reference.
+For more information on how to use Pipeline syntax in practical examples, refer to the xref:jenkinsfile.adoc[Using a Jenkinsfile] section of this chapter.
 As of version 2.5 of the Pipeline plugin, Pipeline supports two discrete syntaxes which are detailed below.
 For the pros and cons of each, refer to the <<compare>>.
 
-As discussed at the link:../[start of this chapter], the most fundamental part of a Pipeline is the "step". Basically, steps tell Jenkins _what_ to do and serve as the basic building block for both Declarative and Scripted Pipeline syntax.
+As discussed at the xref:user-docs:pipeline:syntax.adoc[start of this chapter], the most fundamental part of a Pipeline is the "step". Basically, steps tell Jenkins _what_ to do and serve as the basic building block for both Declarative and Scripted Pipeline syntax.
 
 For an overview of available steps, please refer to the link:/doc/pipeline/steps[Pipeline Steps reference] which contains a comprehensive list of steps built into Pipeline as well as steps provided by plugins.
 
@@ -33,7 +33,7 @@ Each statement has to be on its own line.
 * A property reference statement is treated as a no-argument method invocation.
 So, for example, `input` is treated as `input()`.
 
-You can use the link:../getting-started/#directive-generator[Declarative Directive Generator] to help you get started with configuring the directives and sections in your Declarative Pipeline.
+You can use the xref:getting-started.adoc#directive-generator[Declarative Directive Generator] to help you get started with configuring the directives and sections in your Declarative Pipeline.
 
 === Limitations
 
@@ -2057,7 +2057,7 @@ node {
 [[scripted-steps]]
 === Steps
 
-As discussed at the link:../[start of this chapter], the most fundamental part of a Pipeline is the "step".
+As discussed at the xref:user-docs:pipeline:syntax.adoc[start of this chapter], the most fundamental part of a Pipeline is the "step".
 Fundamentally, steps tell Jenkins _what_ to do and serve as the basic building block for both Declarative and Scripted Pipeline syntax.
 
 Scripted Pipeline does *not* introduce any steps which are specific to its syntax; link:/doc/pipeline/steps[Pipeline Steps reference] contains a comprehensive list of steps provided by Pipeline and plugins.

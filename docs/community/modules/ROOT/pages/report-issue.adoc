@@ -19,7 +19,7 @@ whose use is explained on this page:
 * *Bug*: Something does not work as intended.
 * *Improvement*: Either a current functionality should be improved or new 
 functionality should be added.
-* *Vulnerabilities*: link:/security/reporting/[Security related issues in Jenkins]
+* *Vulnerabilities*: xref:security:ROOT:reporting.adoc[Security related issues in Jenkins]
 
 Other types (_Patch_, _Task_) are not used in JIRA.
 Neither will be explained here.
@@ -167,7 +167,7 @@ it configured?)
 *how you're launching any involved agents* (via SSH, web browser,
 command line, ...)
 * *Your web browser* (+ version). Make sure the issue occurs on
-link:/doc/administration/requirements/web-browsers/[supported
+xref:user-docs:platform-information:support-policy-web-browsers.adoc[supported
 web browsers].
 
 If this is too much information for the Environment field, just put some

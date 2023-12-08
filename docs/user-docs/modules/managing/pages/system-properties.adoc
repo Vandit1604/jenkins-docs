@@ -368,7 +368,7 @@ properties:
   description: |
     Determines the Content Security Policy header sent for static files served by Jenkins.
     Only affects instances that don't have a resource root URL set up.
-    See link:../../system-administration/security/configuring-content-security-policy/[Configuring Content Security Policy] for more details.
+    See xref:user-docs:system-administration:configuring-content-security-policy.adoc[Configuring Content Security Policy] for more details.
 
 - name: hudson.model.DownloadService$Downloadable.defaultInterval
   tags:
@@ -1596,7 +1596,7 @@ properties:
     mv $JENKINS_HOME/jobs/[JOB_NAME]/builds [TARGET_DIR]/[JOB_NAME]
     ```
 
-    For link:/doc/book/pipeline/multibranch/#creating-a-multibranch-pipeline[Multibranch Pipeline] jobs, run for each `BRANCH_NAME`:
+    For xref:user-docs:pipeline:multibranch.adoc#creating-a-multibranch-pipeline[Multibranch Pipeline] jobs, run for each `BRANCH_NAME`:
 
     ```sh
     mkdir -p [TARGET_DIR]/[JOB_NAME]/branches/
@@ -1604,7 +1604,7 @@ properties:
         [TARGET_DIR]/[JOB_NAME]/branches/[BRANCH_NAME]
     ```
 
-    For link:/doc/book/pipeline/multibranch/#organization-folders[Organization Folders], run this for each `REPO_NAME` and `BRANCH_NAME`:
+    For xref:user-docs:pipeline:multibranch.adoc#organization-folders[Organization Folders], run this for each `REPO_NAME` and `BRANCH_NAME`:
 
     ```sh
     mkdir -p [TARGET_DIR]/[ORG_NAME]/jobs/[REPO_NAME]/branches/

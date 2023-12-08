@@ -16,7 +16,7 @@ While this page covers the basics of utilizing Docker from within a `Jenkinsfile
 [[execution-environment]]
 == Customizing the execution environment
 
-Pipeline is designed to easily use link:https://docs.docker.com/[Docker] images as the execution environment for a single link:../../glossary/#stage[Stage] or the entire Pipeline.
+Pipeline is designed to easily use link:https://docs.docker.com/[Docker] images as the execution environment for a single xref:user-docs:glossary:index.adoc#stage[Stage] or the entire Pipeline.
 Meaning that a user can define the tools required for their Pipeline, without having to manually configure agents.
 Any tool that can be link:https://hub.docker.com[packaged in a Docker container] can be used with ease, by making only minor edits to a `Jenkinsfile`.
 
@@ -110,7 +110,7 @@ pipeline {
 Many build tools will download external dependencies and cache them locally for future re-use.
 Since containers are initially created with "clean" file systems, this can result in slower Pipelines, as they may not take advantage of on-disk caches between subsequent Pipeline runs.
 
-Pipeline supports adding custom arguments that are passed to Docker, allowing users to specify custom link:https://docs.docker.com/engine/tutorials/dockervolumes/[Docker Volumes] to mount, which can be used for caching data on the link:../../glossary/#agent[agent] between Pipeline runs.
+Pipeline supports adding custom arguments that are passed to Docker, allowing users to specify custom link:https://docs.docker.com/engine/tutorials/dockervolumes/[Docker Volumes] to mount, which can be used for caching data on the xref:user-docs:glossary:index.adoc#agent[agent] between Pipeline runs.
 The following example will cache `~/.m2` between Pipeline runs utilizing the link:https://hub.docker.com/_/maven/[`maven` container], avoiding the need to re-download dependencies for subsequent Pipeline runs.
 
 [pipeline]
@@ -228,7 +228,7 @@ pipeline {
 ----
 
 
-The `agent { dockerfile true }` syntax supports a number of other options, which are described in more detail in the link:../syntax#agent[Pipeline Syntax] section.
+The `agent { dockerfile true }` syntax supports a number of other options, which are described in more detail in the xref:user-docs:pipeline:syntax.adoc#agent[Pipeline Syntax] section.
 
 .Using a Dockerfile with Jenkins Pipeline
 video::Pi2kJ2RJS50[youtube, width=852, height=480]
@@ -236,9 +236,9 @@ video::Pi2kJ2RJS50[youtube, width=852, height=480]
 
 === Specifying a Docker Label
 
-By default, Pipeline assumes that _any_ configured link:../../glossary/#agent[agent] is capable of running Docker-based Pipelines.
+By default, Pipeline assumes that _any_ configured xref:user-docs:glossary:index.adoc#agent[agent] is capable of running Docker-based Pipelines.
 For Jenkins environments that have macOS, Windows, or other agents that are unable to run the Docker daemon, this default setting may be problematic.
-Pipeline provides a global option on the *Manage Jenkins* page and on the link:../../glossary/#folder[Folder] level, for specifying which agents (by link:../../glossary/#label[Label]) to use for running Docker-based Pipelines.
+Pipeline provides a global option on the *Manage Jenkins* page and on the xref:user-docs:glossary:index.adoc#folder[Folder] level, for specifying which agents (by xref:user-docs:glossary:index.adoc#label[Label]) to use for running Docker-based Pipelines.
 
 image::pipeline/configure-docker-label.png[Configuring the Pipeline Docker Label]
 

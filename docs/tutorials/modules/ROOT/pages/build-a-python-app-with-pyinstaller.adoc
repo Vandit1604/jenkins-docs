@@ -436,7 +436,7 @@ block defines two variables which will be used later in the 'Deliver' stage.
 link:/doc/pipeline/steps/workflow-basic-steps/#dir-change-current-directory[`dir`]
 step (of the link:/doc/pipeline/steps/workflow-basic-steps[`basic steps`] section) creates a new subdirectory
 named by the build number. The final program will be created in that directory by pyinstaller.
-`BUILD_ID` is one of the pre-defined Jenkins link:/doc/book/pipeline/jenkinsfile/#using-environment-variables[environment variables] and is available in all jobs.
+`BUILD_ID` is one of the pre-defined Jenkins xref:user-docs:pipeline:jenkinsfile.adoc#using-environment-variables[environment variables] and is available in all jobs.
 <4> This
 link:/doc/pipeline/steps/workflow-basic-steps/#unstash-restore-files-previously-stashed[`unstash`]
 step (of the link:/doc/pipeline/steps/workflow-basic-steps[`basic steps`] section) restores
@@ -554,7 +554,7 @@ To learn more about what Jenkins can do, check out:
   tutorials.
 * The link:/doc/book[User Handbook] for more detailed information about using
   Jenkins, such as xref:user-docs:pipeline:index.adoc[Pipelines] (in particular
-  link:/doc/book/pipeline/syntax[Pipeline syntax]) and the
+  xref:user-docs:pipeline:syntax.adoc[Pipeline syntax]) and the
   link:/doc/book/blueocean[Blue Ocean] interface.
 * The link:/node[Jenkins blog] for the latest events, other tutorials and
   updates.

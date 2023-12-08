@@ -11,7 +11,7 @@ Only very commonly installed plugins are considered below.
 The web UI served via HTTP (or HTTPS), by default on port 8080.
 Sometimes Jenkins is running behind a reverse proxy that may customize or filter requests and responses.
 
-For an overview of the URLs accessible to users without any permissions in Jenkins, see link:../access-control[Access Control].
+For an overview of the URLs accessible to users without any permissions in Jenkins, see xref:access-control.adoc[Access Control].
 // TODO that should be moved here.
 
 == TCP Agent Listener Port

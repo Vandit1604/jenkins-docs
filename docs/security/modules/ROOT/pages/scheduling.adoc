@@ -18,7 +18,7 @@ The publication dates of these security advisories is tied to the link:/download
 They are usually published on Wednesdays, which corresponds to the scheduled regular release day for Jenkins LTS releases.
 In the case of the Jenkins weekly release line, the security update will be an additional mid-week release between regular releases typically scheduled for release on weekends.
 
-link:/security/for-administrators/#pre-announcements[Pre-announcements] for these security advisories will be published several days in advance, sometimes up to a week.
+xref:security:ROOT:for-administrators.adoc#pre-announcements[Pre-announcements] for these security advisories will be published several days in advance, sometimes up to a week.
 
 ### Fixed Versions
 
@@ -48,5 +48,5 @@ We try to balance the number of security advisories, and the timely delivery of 
 These advisories can be published on any weekday, but most of the time on Tuesdays, Wednesdays, or Thursdays.
 We generally try to avoid scheduling security advisories on major public holidays affecting the ability of a large number of Jenkins administrators to quickly apply updates.
 
-link:/security/for-administrators/#pre-announcements[Pre-announcements] for these security advisories will generally be published at least a day in advance, but rarely more than three work days before publication.
+xref:security:ROOT:for-administrators.adoc#pre-announcements[Pre-announcements] for these security advisories will generally be published at least a day in advance, but rarely more than three work days before publication.
 Plugin security updates have less lead time than those for Jenkins (core), and we only send out pre-announcements once we're confident that the provided information will remain correct.

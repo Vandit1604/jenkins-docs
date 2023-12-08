@@ -1,6 +1,6 @@
 = Internationalization and Localization
 
-link:/doc/book/using/using-local-language/[How to view Jenkins in your language].
+xref:user-docs:using-jenkins:using-local-language.adoc[How to view Jenkins in your language].
 
 == What plugin developers need to do
 
@@ -8,12 +8,12 @@ link:/doc/book/using/using-local-language/[How to view Jenkins in your language]
 
 Developers must do the following to localize a plugin or other module:
 
-. link:/doc/developer/internationalization/i18n-source-code/[Internationalize messages in Java source code]
-. link:/doc/developer/internationalization/i18n-jelly-views/[Internationalize messages in Jelly views]
+. xref:dev-docs:internationalization:i18n-source-code.adoc[Internationalize messages in Java source code]
+. xref:dev-docs:internationalization:i18n-jelly-views.adoc[Internationalize messages in Jelly views]
 . link:/doc/developer/crowdin/translating-plugins/[Enable Crowdin translation support for the plugin] (Optional)
 
-link:/doc/developer/internationalization/prepare-a-java-source-file/[Prepare a Java source file for localization] shows the detailed internationalization steps.
-The link:/doc/developer/internationalization/advanced-localization/[advanced localization] documentation provides guidance for more sophisticated internationalization, like date formatting, time formatting, and number formatting.
+xref:dev-docs:internationalization:prepare-a-java-source-file.adoc[Prepare a Java source file for localization] shows the detailed internationalization steps.
+The xref:dev-docs:internationalization:advanced-localization.adoc[advanced localization] documentation provides guidance for more sophisticated internationalization, like date formatting, time formatting, and number formatting.
 
 == Translator tasks
 
