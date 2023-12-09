@@ -1,6 +1,4 @@
----
-layout: project
-title: "Hacktoberfest in Jenkins FAQ"
+= "Hacktoberfest in Jenkins FAQ"
 sigId: "advocacy-and-outreach"
 tags:
   - outreach-programs
@@ -61,7 +59,7 @@ Here are some links which may help:
 
 * link:/participate/[Participate] - landing page for newcomer contributors
 * link:/blog/2017/08/07/intro-to-plugin-development/[Plugin Development Tutorials]
-* link:/doc/developer/[Developer Documentation]
+* xref:dev-docs:ROOT:index.adoc[Developer Documentation]
 * link:https://app.gitter.im/#/room/#jenkinsci_hacktoberfest:gitter.im[Gitter channel] for Q&A
 
 Suggested project ideas also have their own documentation to help newcomers.
@@ -77,7 +75,7 @@ Unmerged pull-requests can also count in Hacktoberfest, as long as it has the `h
 
 * For general questions (process and general direction) use our link:https://matrix.to/#/#jenkinsci_hacktoberfest:gitter.im[Hacktoberfest Gitter channel]
 * You can also use other link:/chat[chats] or
-link:/mailing-lists/[mailing lists].
+xref:community:mailing-lists:index.adoc[mailing lists].
 Many subprojects also have their own chats, and we encourage using them if you want to reach out to the wider community.
 
 === Does Jenkins project send special swag?

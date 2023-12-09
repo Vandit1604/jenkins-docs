@@ -1,9 +1,8 @@
 = Security
+:page-layout:wip
 
 // this is a straight import of https://wiki.jenkins.io/display/JENKINS/Making+your+plugin+behave+in+secured+Jenkins
 // TODO check contents and remove wiki page
-
-WARNING: This section is a work in progress. Want to help? Check out the (https://app.gitter.im/#/room/#jenkins/docs:matrix.org)[jenkinsci/docs gitter channel]. For other ways to contribute to the Jenkins project, see (https://www.jenkins.io/participate)[this page about participating and contributing].
 
 == Security Architecture of Jenkins
 
@@ -49,7 +48,7 @@ In all cases, this is the code you need to write.
 == Controlling read access to `AccessControlled` objects
 
 The recommended way to control read access to `AccessControlled` objects is to implement the `StaplerProxy` interface.
-See link:read-access[Restricting HTTP Access to `AccessControlled` Objects] for more information.
+See xref:dev-docs:security:read-access.adoc[Restricting HTTP Access to `AccessControlled` Objects] for more information.
 
 == What do plugins need to do to protect web methods?
 
@@ -73,7 +72,7 @@ Permission p = ... do the step 3 above ...
 ac.checkPermission(p)
 ----
 
-See also link:form-validation[Securely implementing form validation].
+See also xref:dev-docs:security:form-validation.adoc[Securely implementing form validation].
 
 === Checking permissions in Jelly files
 
@@ -179,6 +178,7 @@ Authentication providers that can implement account validity checks through mean
 https://wiki.jenkins.io/display/JENKINS/Making+your+plugin+behave+in+secured+Jenkins
 ////
 
-== References
-
-- link:https://plugins.jenkins.io/script-security#ScriptSecurityPlugin-Developer%E2%80%99sguide[Script Security Developer's Guide]
+.References
+****
+* link:https://plugins.jenkins.io/script-security#ScriptSecurityPlugin-Developer%E2%80%99sguide[Script Security Developer's Guide]
+****

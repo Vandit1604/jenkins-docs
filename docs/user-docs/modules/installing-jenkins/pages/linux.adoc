@@ -1,7 +1,5 @@
 = Linux
-]
-:description:
-:author:
+
 
 
 :hide-uri-scheme:
@@ -84,7 +82,7 @@ Here, "8081" was chosen but you can put another port available.
 === Installation of Java
 
 Jenkins requires Java to run, yet not all Linux distributions include Java by default.
-Additionally, link:/doc/book/platform-information/support-policy-java/[not all Java versions are compatible] with Jenkins.
+Additionally, xref:user-docs:platform-information:support-policy-java.adoc[not all Java versions are compatible] with Jenkins.
 
 There are multiple Java implementations which you can use.
 link:https://openjdk.java.net/[OpenJDK] is the most popular one at the moment, we will use it in this guide.

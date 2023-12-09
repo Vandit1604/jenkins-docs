@@ -1,8 +1,4 @@
----
-layout: security
-title: "Reporting Security Vulnerabilities"
-section: security
----
+= "Reporting Security Vulnerabilities"
 
 == Overview
 
@@ -43,7 +39,7 @@ The following components are out of scope:
 We do not consider the following issues to be vulnerabilities in Jenkins (core + plugins):
 
 * Vulnerabilities only exploitable by users with Overall/Administer permission will generally not be considered to be vulnerabilities.
-  Administrators in Jenkins can use the link:/doc/book/managing/script-console/[Script Console] and install plugins.
+  Administrators in Jenkins can use the xref:user-docs:managing:script-console.adoc[Script Console] and install plugins.
   These tools let them run arbitrary code and change the behavior of Jenkins in multiple ways, so that very few, if any, vulnerabilities will let them do something novel.
   We still recommend reporting such vulnerabilities in private so that they can be reviewed by the security team, in case the vulnerable code is also used for features accessible by regular users.
 * Web methods that lack permission checks or CSRF protection, and cause Jenkins to access a URL, that is not controlled by an attacker, without disclosing configuration information from Jenkins or returning sensitive information.
@@ -56,14 +52,14 @@ We do not consider the following issues to be vulnerabilities in Jenkins (core +
 * Users with Overall/Administer permission (or the deprecated Overall/RunScripts permission) are able to execute arbitrary code using the Script Console, related APIs (`/eval`, `/script`, `/scriptText`), and many plugins.
   This is a feature.
 * Jobs started by a specific user can run on agents where the user lacks Agent/Build permission and can themselves trigger builds of jobs where the user lacks Job/Build permission.
-  link:/doc/book/security/build-authorization/[See the documentation on Access Control for Builds].
+  xref:user-docs:security:build-authorization.adoc[See the documentation on Access Control for Builds].
 * Ability for unauthenticated users to trigger SCM polling via webhooks without directly initiating a build or other resource-intensive computations.
 * Any issues in plugins whose exploitation has been prevented through changes in Jenkins core or other plugins for at least 13 months. Some examples:
 ** Cross-site scripting (XSS) vulnerabilities due to lack of `escape-by-default` XML processing instruction are no longer exploitable since Jenkins 2.146 and 2.138.2 (published 2018-10-10).
 ** Cross-site scripting (XSS) vulnerabilities through user-provided content in `Cause#getShortDescription` without a custom `description.jelly` are no longer exploitable since Jenkins 2.315 and LTS 2.303.2 (published 2021-10-06).
-link:/doc/developer/security/xss-prevention/Cause-getShortDescription/[See the documentation on the redefinition of Cause#getShortDescription].
+xref:dev-docs:security:xss-prevention/Cause-getShortDescription.adoc[See the documentation on the redefinition of Cause#getShortDescription].
 ** `Callable` implementations providing an implementation of `#checkRoles(RoleChecker)` that neither throws an exception nor calls `RoleChecker#check` is no longer exploitable since Jenkins 2.319 and LTS 2.303.3 (published 2021-11-04).
-link:/doc/developer/security/remoting-callables/[See the documentation on Remoting Callables].
+xref:dev-docs:security:remoting-callables.adoc[See the documentation on Remoting Callables].
 * Log messages containing secrets at levels more verbose than `INFO` (i.e., `CONFIG`, `FINE`, `FINER`, `FINEST`), implying that they are not recorded in the default Jenkins log recorder.
 
 ==== Docker Images
@@ -86,7 +82,7 @@ The following behaviors/issues are not vulnerabilities in Jenkins project infras
 * Public repositories in the https://github.com/jenkins-infra/[`jenkins-infra` GitHub organization] expose how many of our services are configured.
   This is intentional.
   Please only report leaked secrets, or similar information disclosure, that results in a direct, immediate risk.
-* DMARC/DKIM/SPF configuration of googlegroups.com, which we use for our link:/mailing-lists/[mailing lists].
+* DMARC/DKIM/SPF configuration of googlegroups.com, which we use for our xref:community:mailing-lists:index.adoc[mailing lists].
   We trust Google to choose the correct tradeoffs for their Google Groups service, and have no power to change anything anyway.
 * The public availability of the Algolia API key. It needs to be public.
 // TODO Possibly other keys as well?
@@ -133,4 +129,4 @@ Currently there is no program to reward vulnerability reporters.
 
 == Security Advisories
 
-We publish Jenkins core and plugin security advisories link:/security/advisories[on this site] and notify users via link:/security/#security-notifications[various mailing lists] as well as through security warnings on the Jenkins UI.
+We publish Jenkins core and plugin security advisories link:/security/advisories[on this site] and notify users via xref:dev-docs:security:index.adoc#security-notifications[various mailing lists] as well as through security warnings on the Jenkins UI.

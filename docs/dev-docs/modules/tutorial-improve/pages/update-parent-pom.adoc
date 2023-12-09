@@ -92,9 +92,9 @@ In many cases, other changes will be needed to the pom.xml file in order to use 
 Some of the other changes may include:
 
 * Resolve spotbugs warnings
-* Resolve link:/doc/developer/plugin-development/updating-parent/#understanding-requireupperbounddeps-failures-and-fixes[upper bounds dependency warnings]
-* Prevent cross-site scripting by link:/doc/developer/security/xss-prevention/[escaping expressions in Jelly pages]
-* Resolve ambiguous property encodings by link:../convert-translations/[converting translations with native2ascii]
+* Resolve xref:dev-docs:plugin-development:updating-parent.adoc#understanding-requireupperbounddeps-failures-and-fixes[upper bounds dependency warnings]
+* Prevent cross-site scripting by xref:dev-docs:security:xss-prevention.adoc[escaping expressions in Jelly pages]
+* Resolve ambiguous property encodings by xref:convert-translations.adoc[converting translations with native2ascii]
 
 // Create a pull request
 include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]

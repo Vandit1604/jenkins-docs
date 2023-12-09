@@ -3,7 +3,7 @@
 link:https://github.com/jenkinsci/jenkins/[Jenkins Core]
 
 == AbstractProject.+++<wbr/>+++LabelValidator
-`jenkinsdoc:hudson.model.AbstractProject.LabelValidator]`
+`jenkinsdoc:hudson.model.AbstractProject.LabelValidator`
 
 +++ Plugins may want to contribute additional restrictions on the use of specific labels for specific projects.+++ +++ This extension point allows such restrictions.+++
 
@@ -14,7 +14,7 @@ _(no known implementations)_
 
 
 == AdministrativeMonitor
-`jenkinsdoc:hudson.model.AdministrativeMonitor]`
+`jenkinsdoc:hudson.model.AdministrativeMonitor`
 
 +++ Checks the health of a subsystem of Jenkins and if there's something+++ +++ that requires administrator's attention, notify the administrator.+++
 
@@ -76,7 +76,7 @@ _(no known implementations)_
 
 
 == AgentProtocol
-`jenkinsdoc:jenkins.AgentProtocol]`
+`jenkinsdoc:jenkins.AgentProtocol`
 
 +++ Pluggable Jenkins TCP agent protocol handler called from+++ jenkinsdoc:TcpSlaveAgentListener] +++.+++
 
@@ -88,7 +88,7 @@ _(no known implementations)_
 
 
 == AlternativeUiTextProvider
-`jenkinsdoc:hudson.util.AlternativeUiTextProvider]`
+`jenkinsdoc:hudson.util.AlternativeUiTextProvider`
 
 +++ Provides the alternative text to be rendered in the UI.+++
 
@@ -101,7 +101,7 @@ _(no known implementations)_
 
 
 == AperiodicWork
-`jenkinsdoc:hudson.model.AperiodicWork]`
+`jenkinsdoc:hudson.model.AperiodicWork`
 
 +++ Extension point which allows scheduling a task with variable interval. Interval in evaluated every time before next+++ +++ task is scheduled by calling+++ jenkinsdoc:=getRecurrencePeriod()] +++. Task to be scheduled is obtain by calling+++ jenkinsdoc:=getNewInstance()] +++.+++
 
@@ -122,7 +122,7 @@ _(no known implementations)_
 
 
 == ArtifactManagerFactory
-`jenkinsdoc:jenkins.model.ArtifactManagerFactory]`
+`jenkinsdoc:jenkins.model.ArtifactManagerFactory`
 
 +++ Pluggable ability to manage transfer and/or storage of build artifacts.+++ +++ The descriptor should specify at least a display name, and optionally a {@code config} view.+++ +++ Since the user can configure this class, you must have a+++ jenkinsdoc:DataBoundConstructor] +++.+++
 
@@ -136,7 +136,7 @@ _(no known implementations)_
 
 
 == AuthorizationStrategy
-`jenkinsdoc:hudson.security.AuthorizationStrategy]`
+`jenkinsdoc:hudson.security.AuthorizationStrategy`
 
 +++ Controls authorization throughout Hudson.+++
 
@@ -157,7 +157,7 @@ _(no known implementations)_
 
 
 == BasicHeaderAuthenticator
-`jenkinsdoc:jenkins.security.BasicHeaderAuthenticator]`
+`jenkinsdoc:jenkins.security.BasicHeaderAuthenticator`
 
 +++ When Jenkins receives HTTP basic authentication, this hook will validate the username/password+++ +++ pair.+++
 
@@ -170,7 +170,7 @@ _(no known implementations)_
 
 
 == BuildDiscarder
-`jenkinsdoc:jenkins.model.BuildDiscarder]`
+`jenkinsdoc:jenkins.model.BuildDiscarder`
 
 +++ Implementation of "Discard old build records" feature.+++
 
@@ -186,7 +186,7 @@ _(no known implementations)_
 
 
 == BuildReference.+++<wbr/>+++HolderFactory
-`jenkinsdoc:jenkins.model.lazy.BuildReference.HolderFactory]`
+`jenkinsdoc:jenkins.model.lazy.BuildReference.HolderFactory`
 
 +++ Extensible factory for creating build references.+++
 
@@ -197,7 +197,7 @@ _(no known implementations)_
 
 
 == BuildStepListener
-`jenkinsdoc:hudson.model.BuildStepListener]`
+`jenkinsdoc:hudson.model.BuildStepListener`
 
 +++ Receives events that happen as a build executes+++ jenkinsdoc:BuildStep] +++s.+++
 
@@ -210,7 +210,7 @@ _(no known implementations)_
 
 
 == BuildVariableContributor
-`jenkinsdoc:hudson.model.BuildVariableContributor]`
+`jenkinsdoc:hudson.model.BuildVariableContributor`
 
 +++ Contributes build variables to builds.+++
 
@@ -222,7 +222,7 @@ _(no known implementations)_
 
 
 == BuildWrapper
-`jenkinsdoc:hudson.tasks.BuildWrapper]`
+`jenkinsdoc:hudson.tasks.BuildWrapper`
 
 +++ Pluggability point for performing pre/post actions for the build process.+++
 
@@ -384,7 +384,7 @@ _(no known implementations)_
 
 
 == Builder
-`jenkinsdoc:hudson.tasks.Builder]`
+`jenkinsdoc:hudson.tasks.Builder`
 
 ++++++ jenkinsdoc:BuildStep] +++s that perform the actual build.+++
 
@@ -1131,7 +1131,7 @@ _(no known implementations)_
 
 
 == CLICommand
-`jenkinsdoc:hudson.cli.CLICommand]`
+`jenkinsdoc:hudson.cli.CLICommand`
 
 +++ Base class for Hudson CLI.+++
 
@@ -1242,7 +1242,7 @@ _(no known implementations)_
 
 
 == CaptchaSupport
-`jenkinsdoc:hudson.security.captcha.CaptchaSupport]`
+`jenkinsdoc:hudson.security.captcha.CaptchaSupport`
 
 +++ Extension point for adding Captcha Support to User Registration Page+++ jenkinsdoc:CaptchaSupport] +++.+++
 
@@ -1253,7 +1253,7 @@ _(no known implementations)_
 
 
 == ChangeLogAnnotator
-`jenkinsdoc:hudson.scm.ChangeLogAnnotator]`
+`jenkinsdoc:hudson.scm.ChangeLogAnnotator`
 
 +++ Performs mark up on changelog messages to be displayed.+++
 
@@ -1279,7 +1279,7 @@ _(no known implementations)_
 
 
 == ChannelConfigurator
-`jenkinsdoc:jenkins.security.ChannelConfigurator]`
+`jenkinsdoc:jenkins.security.ChannelConfigurator`
 
 +++ Intercepts the new creation of+++ jenkinsdoc:Channel] +++and tweak its configuration.+++
 
@@ -1290,7 +1290,7 @@ _(no known implementations)_
 
 
 == CliTransportAuthenticator
-`jenkinsdoc:hudson.cli.CliTransportAuthenticator]`
+`jenkinsdoc:hudson.cli.CliTransportAuthenticator`
 
 _This extension point has no Javadoc documentation._
 
@@ -1300,7 +1300,7 @@ _(no known implementations)_
 
 
 == Cloud
-`jenkinsdoc:hudson.slaves.Cloud]`
+`jenkinsdoc:hudson.slaves.Cloud`
 
 +++ Creates+++ jenkinsdoc:Node] +++s to dynamically expand/shrink the agents attached to Hudson.+++
 
@@ -1353,7 +1353,7 @@ _(no known implementations)_
 
 
 == CloudProvisioningListener
-`jenkinsdoc:hudson.slaves.CloudProvisioningListener]`
+`jenkinsdoc:hudson.slaves.CloudProvisioningListener`
 
 +++ Allows extensions to be notified of events in any+++ jenkinsdoc:Cloud] +++and to prevent+++ +++ provisioning from a+++ jenkinsdoc:Cloud] +++.+++
 
@@ -1364,7 +1364,7 @@ _(no known implementations)_
 
 
 == ComputerConnector
-`jenkinsdoc:hudson.slaves.ComputerConnector]`
+`jenkinsdoc:hudson.slaves.ComputerConnector`
 
 +++ Factory of+++ jenkinsdoc:ComputerLauncher] +++.+++
 
@@ -1378,7 +1378,7 @@ _(no known implementations)_
 
 
 == ComputerLauncher
-`jenkinsdoc:hudson.slaves.ComputerLauncher]`
+`jenkinsdoc:hudson.slaves.ComputerLauncher`
 
 +++ Extension point to allow control over how+++ jenkinsdoc:Computer] +++s are "launched",+++ +++ meaning how they get connected to their agent program.+++
 
@@ -1447,7 +1447,7 @@ _(no known implementations)_
 
 
 == ComputerListener
-`jenkinsdoc:hudson.slaves.ComputerListener]`
+`jenkinsdoc:hudson.slaves.ComputerListener`
 
 +++ Receives notifications about status changes of+++ jenkinsdoc:Computer] +++s.+++
 
@@ -1521,7 +1521,7 @@ _(no known implementations)_
 
 
 == ComputerPanelBox
-`jenkinsdoc:hudson.model.ComputerPanelBox]`
+`jenkinsdoc:hudson.model.ComputerPanelBox`
 
 +++ Adds box rendered in the computer side panel.+++
 
@@ -1533,7 +1533,7 @@ _(no known implementations)_
 
 
 == ComputerPinger
-`jenkinsdoc:hudson.model.ComputerPinger]`
+`jenkinsdoc:hudson.model.ComputerPinger`
 
 +++ A way to see if a computer is reachable.+++
 
@@ -1544,7 +1544,7 @@ _(no known implementations)_
 
 
 == ConsoleAnnotationDescriptor
-`jenkinsdoc:hudson.console.ConsoleAnnotationDescriptor]`
+`jenkinsdoc:hudson.console.ConsoleAnnotationDescriptor`
 
 +++ Descriptor for+++ jenkinsdoc:ConsoleNote] +++.+++
 
@@ -1589,7 +1589,7 @@ _(no known implementations)_
 
 
 == ConsoleAnnotatorFactory
-`jenkinsdoc:hudson.console.ConsoleAnnotatorFactory]`
+`jenkinsdoc:hudson.console.ConsoleAnnotatorFactory`
 
 +++ Entry point to the+++ jenkinsdoc:ConsoleAnnotator] +++extension point. This class creates a new instance+++ +++ of+++ jenkinsdoc:ConsoleAnnotator] +++that starts a new console annotation session.+++
 
@@ -1605,7 +1605,7 @@ _(no known implementations)_
 
 
 == ConsoleLogFilter
-`jenkinsdoc:hudson.console.ConsoleLogFilter]`
+`jenkinsdoc:hudson.console.ConsoleLogFilter`
 
 +++ A hook to allow filtering of information that is written to the console log.+++ +++ Unlike+++ jenkinsdoc:ConsoleAnnotator] +++and+++ jenkinsdoc:ConsoleNote] +++, this class provides+++ +++ direct access to the underlying+++ jenkinsdoc:OutputStream] +++so it's possible to suppress+++ +++ data, which isn't possible from the other interfaces.+++ +++ (+++ jenkinsdoc:ArgumentListBuilder=add(String, boolean)] +++is a simpler way to suppress a single password.)+++ +++
 <p>Implementations which are+++ jenkinsdoc:Serializable] +++may be sent to an agent JVM for processing.+++ +++ In particular, this happens under <a href="https://www.jenkins.io/jep/210" rel="nofollow">JEP-210</a>.+++ +++ In this case, the implementation should not assume that+++ jenkinsdoc:JenkinsJVM=isJenkinsJVM] +++,+++ +++ and if generating+++ jenkinsdoc:ConsoleNote] +++s will need to encode them on the master side first.+++</p>
@@ -1639,7 +1639,7 @@ _(no known implementations)_
 
 
 == ConsoleNote
-`jenkinsdoc:hudson.console.ConsoleNote]`
+`jenkinsdoc:hudson.console.ConsoleNote`
 
 +++ Data that hangs off from a console output.+++
 
@@ -1687,7 +1687,7 @@ _(no known implementations)_
 
 
 == CrumbExclusion
-`jenkinsdoc:hudson.security.csrf.CrumbExclusion]`
+`jenkinsdoc:hudson.security.csrf.CrumbExclusion`
 
 +++ Allows plugins to define exceptions to the CSRF protection filter.+++
 
@@ -1738,7 +1738,7 @@ _(no known implementations)_
 
 
 == CrumbIssuer
-`jenkinsdoc:hudson.security.csrf.CrumbIssuer]`
+`jenkinsdoc:hudson.security.csrf.CrumbIssuer`
 
 +++ A CrumbIssuer represents an algorithm to generate a nonce value, known as a+++ +++ crumb, to counter cross site request forgery exploits. Crumbs are typically+++ +++ hashes incorporating information that uniquely identifies an agent that sends+++ +++ a request, along with a guarded secret so that the crumb value cannot be+++ +++ forged by a third party.+++
 
@@ -1750,7 +1750,7 @@ _(no known implementations)_
 
 
 == CustomClassFilter
-`jenkinsdoc:jenkins.security.CustomClassFilter]`
+`jenkinsdoc:jenkins.security.CustomClassFilter`
 
 +++ Allows extensions to adjust the behavior of+++ jenkinsdoc:ClassFilter=DEFAULT] +++.+++ +++ Custom filters can be called frequently, and return values are uncached, so implementations should be fast.+++
 
@@ -1762,7 +1762,7 @@ _(no known implementations)_
 
 
 == DescriptorVisibilityFilter
-`jenkinsdoc:hudson.model.DescriptorVisibilityFilter]`
+`jenkinsdoc:hudson.model.DescriptorVisibilityFilter`
 
 +++ Hides+++ jenkinsdoc:Descriptor] +++s from users.+++
 
@@ -1795,7 +1795,7 @@ _(no known implementations)_
 
 
 == DownloadService.+++<wbr/>+++Downloadable
-`jenkinsdoc:hudson.model.DownloadService.Downloadable]`
+`jenkinsdoc:hudson.model.DownloadService.Downloadable`
 
 +++ Represents a periodically updated JSON data file obtained from a remote URL.+++
 
@@ -1816,7 +1816,7 @@ _(no known implementations)_
 
 
 == EnvVarsFilterGlobalRule
-`jenkinsdoc:jenkins.tasks.filters.EnvVarsFilterGlobalRule]`
+`jenkinsdoc:jenkins.tasks.filters.EnvVarsFilterGlobalRule`
 
 +++ Environment variables filter rule that is configured globally for all jobs.
 <p>+++ +++ The job types can be filtered using+++ jenkinsdoc:=isApplicable(Run, Object, Launcher)] ++++++</p>
@@ -1831,7 +1831,7 @@ _(no known implementations)_
 
 
 == EnvVarsFilterLocalRule
-`jenkinsdoc:jenkins.tasks.filters.EnvVarsFilterLocalRule]`
+`jenkinsdoc:jenkins.tasks.filters.EnvVarsFilterLocalRule`
 
 +++ Environment variables filter rule that is specific to a job configuration, using script-specific variables, etc.
 <p>+++ +++ The job types can be filtered using+++ jenkinsdoc:EnvVarsFilterLocalRuleDescriptor=isApplicable(Class)] ++++++</p>
@@ -1843,7 +1843,7 @@ _(no known implementations)_
 
 
 == EnvironmentContributor
-`jenkinsdoc:hudson.model.EnvironmentContributor]`
+`jenkinsdoc:hudson.model.EnvironmentContributor`
 
 +++ Contributes environment variables to builds.+++
 
@@ -1898,7 +1898,7 @@ _(no known implementations)_
 
 
 == ExecutorListener
-`jenkinsdoc:hudson.model.ExecutorListener]`
+`jenkinsdoc:hudson.model.ExecutorListener`
 
 +++ A listener for task related events from executors.+++ +++ A+++ jenkinsdoc:Computer=getRetentionStrategy] +++or+++ jenkinsdoc:SlaveComputer=getLauncher] +++may implement this interface.+++ +++ Or you may create an implementation as an extension (since TODO).+++
 
@@ -1931,7 +1931,7 @@ _(no known implementations)_
 
 
 == ExtensionFilter
-`jenkinsdoc:jenkins.ExtensionFilter]`
+`jenkinsdoc:jenkins.ExtensionFilter`
 
 +++ Filters out+++ jenkinsdoc:ExtensionComponent] +++s discovered by+++ jenkinsdoc:ExtensionFinder] +++s,+++ +++ as if they were never discovered.+++
 
@@ -1942,7 +1942,7 @@ _(no known implementations)_
 
 
 == ExtensionFinder
-`jenkinsdoc:hudson.ExtensionFinder]`
+`jenkinsdoc:hudson.ExtensionFinder`
 
 +++ Discovers the implementations of an extension point.+++
 
@@ -1955,7 +1955,7 @@ _(no known implementations)_
 
 
 == FederatedLoginService
-`jenkinsdoc:hudson.security.FederatedLoginService]`
+`jenkinsdoc:hudson.security.FederatedLoginService`
 
 +++ Abstraction for a login mechanism through external authenticator/identity provider+++ +++ (instead of username/password.)+++
 
@@ -1967,7 +1967,7 @@ _(no known implementations)_
 
 
 == FilePath.+++<wbr/>+++FileCallableWrapperFactory
-`jenkinsdoc:hudson.FilePath.FileCallableWrapperFactory]`
+`jenkinsdoc:hudson.FilePath.FileCallableWrapperFactory`
 
 +++ This extension point allows to contribute a wrapper around a fileCallable so that a plugin can "intercept" a+++ +++ call.+++ +++
 <p>The+++ jenkinsdoc:=wrap(hudson.remoting.DelegatingCallable)] +++method itself will be executed on the controller+++ +++ (and may collect contextual data if needed) and the returned wrapper will be executed on remote.+++</p>
@@ -1979,7 +1979,7 @@ _(no known implementations)_
 
 
 == FingerprintFacet
-`jenkinsdoc:jenkins.model.FingerprintFacet]`
+`jenkinsdoc:jenkins.model.FingerprintFacet`
 
 +++ Plugin-specific additions to fingerprint information.+++
 
@@ -2007,7 +2007,7 @@ _(no known implementations)_
 
 
 == FingerprintStorage
-`jenkinsdoc:jenkins.fingerprints.FingerprintStorage]`
+`jenkinsdoc:jenkins.fingerprints.FingerprintStorage`
 
 +++ Pluggable fingerprint storage API for fingerprints.+++
 
@@ -2019,7 +2019,7 @@ _(no known implementations)_
 
 
 == GlobalBuildDiscarderStrategy
-`jenkinsdoc:jenkins.model.GlobalBuildDiscarderStrategy]`
+`jenkinsdoc:jenkins.model.GlobalBuildDiscarderStrategy`
 
 +++ Extension point for global background build discarders.+++
 
@@ -2032,7 +2032,7 @@ _(no known implementations)_
 
 
 == GlobalConfiguration
-`jenkinsdoc:jenkins.model.GlobalConfiguration]`
+`jenkinsdoc:jenkins.model.GlobalConfiguration`
 
 +++ Convenient base class for extensions that contributes to the system configuration page but nothing+++ +++ else, or to manage the global configuration of a plugin implementing several extension points.+++
 
@@ -2288,7 +2288,7 @@ _(no known implementations)_
 
 
 == GlobalConfigurationCategory
-`jenkinsdoc:jenkins.model.GlobalConfigurationCategory]`
+`jenkinsdoc:jenkins.model.GlobalConfigurationCategory`
 
 +++ Grouping of related+++ jenkinsdoc:GlobalConfiguration] +++s.+++
 
@@ -2304,7 +2304,7 @@ _(no known implementations)_
 
 
 == GlobalSettingsProvider
-`jenkinsdoc:jenkins.mvn.GlobalSettingsProvider]`
+`jenkinsdoc:jenkins.mvn.GlobalSettingsProvider`
 
 _This extension point has no Javadoc documentation._
 
@@ -2316,7 +2316,7 @@ _This extension point has no Javadoc documentation._
 
 
 == Header
-`jenkinsdoc:jenkins.views.Header]`
+`jenkinsdoc:jenkins.views.Header`
 
 +++ Extension point that provides capabilities to render a specific header.+++
 
@@ -2329,7 +2329,7 @@ _This extension point has no Javadoc documentation._
 
 
 == HttpSessionListener
-`jenkinsdoc:jenkins.util.HttpSessionListener]`
+`jenkinsdoc:jenkins.util.HttpSessionListener`
 
 ++++++ jenkinsdoc:javax.servlet.http.HttpSessionListener] ++++++ jenkinsdoc:ExtensionPoint] +++for Jenkins.+++ +++
 <p>+++ +++ Allows plugins to listen to+++ jenkinsdoc:HttpSession] +++lifecycle events.+++</p>
@@ -2341,7 +2341,7 @@ _This extension point has no Javadoc documentation._
 
 
 == HudsonHomeDiskUsageMonitor.+++<wbr/>+++Solution
-`jenkinsdoc:hudson.diagnosis.HudsonHomeDiskUsageMonitor.Solution]`
+`jenkinsdoc:hudson.diagnosis.HudsonHomeDiskUsageMonitor.Solution`
 
 +++ Extension point for suggesting solutions for full JENKINS_HOME.+++ +++ Views are as follows:+++
 
@@ -2352,7 +2352,7 @@ _(no known implementations)_
 
 
 == IdStrategy
-`jenkinsdoc:jenkins.model.IdStrategy]`
+`jenkinsdoc:jenkins.model.IdStrategy`
 
 +++ The strategy to use for manipulating converting names (e.g. user names, group names, etc) into ids.+++
 
@@ -2365,7 +2365,7 @@ _(no known implementations)_
 
 
 == InstallState
-`jenkinsdoc:jenkins.install.InstallState]`
+`jenkinsdoc:jenkins.install.InstallState`
 
 +++ Jenkins install state.+++
 
@@ -2384,7 +2384,7 @@ _(no known implementations)_
 
 
 == InstallStateFilter
-`jenkinsdoc:jenkins.install.InstallStateFilter]`
+`jenkinsdoc:jenkins.install.InstallStateFilter`
 
 +++ Allows plugging in to the lifecycle when determining InstallState+++ +++ from+++ jenkinsdoc:InstallUtil=getNextInstallState(InstallState)] ++++++
 
@@ -2395,7 +2395,7 @@ _(no known implementations)_
 
 
 == InstanceIdentityProvider
-`jenkinsdoc:jenkins.model.identity.InstanceIdentityProvider]`
+`jenkinsdoc:jenkins.model.identity.InstanceIdentityProvider`
 
 +++ A source of instance identity.+++ +++
 <p>Should not be used from plugins, except to be implemented by {@code instance-identity}.+++ +++ Other plugins wishing to get the RSA key may depend on {@code instance-identity} directly.+++</p>
@@ -2407,7 +2407,7 @@ _(no known implementations)_
 
 
 == ItemCategory
-`jenkinsdoc:jenkins.model.item_category.ItemCategory]`
+`jenkinsdoc:jenkins.model.item_category.ItemCategory`
 
 +++ A category for+++ jenkinsdoc:hudson.model.Item] +++s.+++
 
@@ -2421,7 +2421,7 @@ _(no known implementations)_
 
 
 == ItemListener
-`jenkinsdoc:hudson.model.listeners.ItemListener]`
+`jenkinsdoc:hudson.model.listeners.ItemListener`
 
 +++ Receives notifications about CRUD operations of+++ jenkinsdoc:Item] +++.+++
 
@@ -2543,7 +2543,7 @@ _(no known implementations)_
 
 
 == JnlpAgentReceiver
-`jenkinsdoc:jenkins.slaves.JnlpAgentReceiver]`
+`jenkinsdoc:jenkins.slaves.JnlpAgentReceiver`
 
 +++ Receives incoming agents connecting through the likes of+++ jenkinsdoc:JnlpSlaveAgentProtocol4] +++or+++ jenkinsdoc:WebSocketAgents] +++.+++
 
@@ -2556,7 +2556,7 @@ _(no known implementations)_
 
 
 == Job
-`jenkinsdoc:hudson.model.Job]`
+`jenkinsdoc:hudson.model.Job`
 
 +++ A job is an runnable entity under the monitoring of Hudson.+++
 
@@ -2592,7 +2592,7 @@ _(no known implementations)_
 
 
 == JobProperty
-`jenkinsdoc:hudson.model.JobProperty]`
+`jenkinsdoc:hudson.model.JobProperty`
 
 +++ Extensible property of+++ jenkinsdoc:Job] +++.+++
 
@@ -2728,7 +2728,7 @@ _(no known implementations)_
 
 
 == LabelAtomProperty
-`jenkinsdoc:hudson.model.labels.LabelAtomProperty]`
+`jenkinsdoc:hudson.model.labels.LabelAtomProperty`
 
 +++ Extensible property of+++ jenkinsdoc:LabelAtom] +++.+++
 
@@ -2740,7 +2740,7 @@ _(no known implementations)_
 
 
 == LabelFinder
-`jenkinsdoc:hudson.model.LabelFinder]`
+`jenkinsdoc:hudson.model.LabelFinder`
 
 +++ Automatically adds labels to+++ jenkinsdoc:Node] +++s.+++
 
@@ -2757,7 +2757,7 @@ _(no known implementations)_
 
 
 == LabelValidator
-`jenkinsdoc:jenkins.model.labels.LabelValidator]`
+`jenkinsdoc:jenkins.model.labels.LabelValidator`
 
 +++ Plugins may want to contribute additional restrictions on the use of specific labels for specific context items.+++ +++ This extension point allows such restrictions.+++
 
@@ -2768,7 +2768,7 @@ _(no known implementations)_
 
 
 == LauncherDecorator
-`jenkinsdoc:hudson.LauncherDecorator]`
+`jenkinsdoc:hudson.LauncherDecorator`
 
 +++ Decorates+++ jenkinsdoc:Launcher] +++so that one can intercept executions of commands+++ +++ and alters the command being executed, such as doing this in fakeroot, sudo, pfexec, etc.+++
 
@@ -2782,7 +2782,7 @@ _(no known implementations)_
 
 
 == Lifecycle
-`jenkinsdoc:hudson.lifecycle.Lifecycle]`
+`jenkinsdoc:hudson.lifecycle.Lifecycle`
 
 +++ Provides the capability for starting/stopping/restarting/uninstalling Hudson.+++
 
@@ -2798,7 +2798,7 @@ _(no known implementations)_
 
 
 == ListViewColumn
-`jenkinsdoc:hudson.views.ListViewColumn]`
+`jenkinsdoc:hudson.views.ListViewColumn`
 
 +++ Extension point for adding a column to a table rendering of+++ jenkinsdoc:Item] +++s, such as+++ jenkinsdoc:ListView] +++.+++
 
@@ -2949,7 +2949,7 @@ _(no known implementations)_
 
 
 == LoadBalancer
-`jenkinsdoc:hudson.model.LoadBalancer]`
+`jenkinsdoc:hudson.model.LoadBalancer`
 
 +++ Strategy that decides which+++ jenkinsdoc:Task] +++gets run on which+++ jenkinsdoc:Executor] +++.+++
 
@@ -2963,7 +2963,7 @@ _(no known implementations)_
 
 
 == LoadPredictor
-`jenkinsdoc:hudson.model.queue.LoadPredictor]`
+`jenkinsdoc:hudson.model.queue.LoadPredictor`
 
 +++ Predicts future load to the system, to assist the scheduling decisions+++
 
@@ -2975,7 +2975,7 @@ _(no known implementations)_
 
 
 == ManagementLink
-`jenkinsdoc:hudson.model.ManagementLink]`
+`jenkinsdoc:hudson.model.ManagementLink`
 
 +++ Extension point to add icon to {@code http://server/hudson/manage} page.+++
 
@@ -3061,7 +3061,7 @@ _(no known implementations)_
 
 
 == MarkupFormatter
-`jenkinsdoc:hudson.markup.MarkupFormatter]`
+`jenkinsdoc:hudson.markup.MarkupFormatter`
 
 +++ Generalization of a function that takes text with some markup and converts that to HTML.+++ +++ Such markup is often associated with Wiki.+++
 
@@ -3077,7 +3077,7 @@ _(no known implementations)_
 
 
 == MyViewsTabBar
-`jenkinsdoc:hudson.views.MyViewsTabBar]`
+`jenkinsdoc:hudson.views.MyViewsTabBar`
 
 +++ Extension point for adding a MyViewsTabBar header to Projects+++ jenkinsdoc:MyViewsProperty] +++.+++
 
@@ -3088,7 +3088,7 @@ _(no known implementations)_
 
 
 == Node
-`jenkinsdoc:hudson.model.Node]`
+`jenkinsdoc:hudson.model.Node`
 
 +++ Base type of Jenkins agents (although in practice, you probably extend+++ jenkinsdoc:Slave] +++to define a new agent type).+++
 
@@ -3152,7 +3152,7 @@ _(no known implementations)_
 
 
 == NodeListener
-`jenkinsdoc:jenkins.model.NodeListener]`
+`jenkinsdoc:jenkins.model.NodeListener`
 
 +++ Listen to+++ jenkinsdoc:Node] +++CRUD operations.+++
 
@@ -3170,7 +3170,7 @@ _(no known implementations)_
 
 
 == NodeMonitor
-`jenkinsdoc:hudson.node_monitors.NodeMonitor]`
+`jenkinsdoc:hudson.node_monitors.NodeMonitor`
 
 +++ Extension point for managing and monitoring+++ jenkinsdoc:Node] +++s.+++
 
@@ -3193,7 +3193,7 @@ _(no known implementations)_
 
 
 == NodeProperty
-`jenkinsdoc:hudson.slaves.NodeProperty]`
+`jenkinsdoc:hudson.slaves.NodeProperty`
 
 +++ Extensible property of+++ jenkinsdoc:Node] +++.+++
 
@@ -3232,7 +3232,7 @@ _(no known implementations)_
 
 
 == NodeProvisioner.+++<wbr/>+++Strategy
-`jenkinsdoc:hudson.slaves.NodeProvisioner.Strategy]`
+`jenkinsdoc:hudson.slaves.NodeProvisioner.Strategy`
 
 +++ Extension point for node provisioning strategies.+++
 
@@ -3255,7 +3255,7 @@ _(no known implementations)_
 
 
 == Notifier
-`jenkinsdoc:hudson.tasks.Notifier]`
+`jenkinsdoc:hudson.tasks.Notifier`
 
 ++++++ jenkinsdoc:BuildStep] +++s that run after the build is completed.+++
 
@@ -3464,7 +3464,7 @@ _(no known implementations)_
 
 
 == PageDecorator
-`jenkinsdoc:hudson.model.PageDecorator]`
+`jenkinsdoc:hudson.model.PageDecorator`
 
 +++ Participates in the rendering of HTML pages for all pages of Hudson.+++
 
@@ -3511,7 +3511,7 @@ _(no known implementations)_
 
 
 == ParameterDefinition
-`jenkinsdoc:hudson.model.ParameterDefinition]`
+`jenkinsdoc:hudson.model.ParameterDefinition`
 
 +++ Defines a parameter for a build.+++
 
@@ -3611,7 +3611,7 @@ _(no known implementations)_
 
 
 == ParserConfigurator
-`jenkinsdoc:hudson.util.io.ParserConfigurator]`
+`jenkinsdoc:hudson.util.io.ParserConfigurator`
 
 +++ Configures XML parsers to be used for various XML parsing activities inside Jenkins.+++
 
@@ -3622,7 +3622,7 @@ _(no known implementations)_
 
 
 == PeriodicWork
-`jenkinsdoc:hudson.model.PeriodicWork]`
+`jenkinsdoc:hudson.model.PeriodicWork`
 
 +++ Extension point to perform a periodic task in Hudson (through+++ jenkinsdoc:Timer] +++.)+++
 
@@ -3731,7 +3731,7 @@ _(no known implementations)_
 
 
 == PermissionAdder
-`jenkinsdoc:hudson.security.PermissionAdder]`
+`jenkinsdoc:hudson.security.PermissionAdder`
 
 +++ Service which can add permissions for a given user to the configured authorization strategy.+++ +++ Useful e.g. to make the first user created in the system be automatically granted administer privilege.+++
 
@@ -3742,7 +3742,7 @@ _(no known implementations)_
 
 
 == PingFailureAnalyzer
-`jenkinsdoc:jenkins.slaves.PingFailureAnalyzer]`
+`jenkinsdoc:jenkins.slaves.PingFailureAnalyzer`
 
 +++ Get notified when a channel triggered a ping failure, but before the channel is killed.+++
 
@@ -3753,7 +3753,7 @@ _(no known implementations)_
 
 
 == PluginLocaleDrivenResourceProvider
-`jenkinsdoc:jenkins.PluginLocaleDrivenResourceProvider]`
+`jenkinsdoc:jenkins.PluginLocaleDrivenResourceProvider`
 
 +++ Contribute localizations for arbitrary resources from plugins.+++
 
@@ -3764,7 +3764,7 @@ _(no known implementations)_
 
 
 == PluginManagerStaplerOverride
-`jenkinsdoc:hudson.PluginManagerStaplerOverride]`
+`jenkinsdoc:hudson.PluginManagerStaplerOverride`
 
 +++ Extension point for selectively overriding parts of the+++ jenkinsdoc:PluginManager] +++views+++ +++ Anything extending this and registered with an @Extension can replace existing views and define new views.+++
 
@@ -3775,7 +3775,7 @@ _(no known implementations)_
 
 
 == PluginServletFilter
-`jenkinsdoc:hudson.util.PluginServletFilter]`
+`jenkinsdoc:hudson.util.PluginServletFilter`
 
 +++ Servlet+++ jenkinsdoc:Filter] +++that chains multiple+++ jenkinsdoc:Filter] +++s, provided by plugins+++
 
@@ -3786,7 +3786,7 @@ _(no known implementations)_
 
 
 == PluginStrategy
-`jenkinsdoc:hudson.PluginStrategy]`
+`jenkinsdoc:hudson.PluginStrategy`
 
 +++ Pluggability point for how to create+++ jenkinsdoc:PluginWrapper] +++.+++
 
@@ -3797,7 +3797,7 @@ _(no known implementations)_
 
 
 == ProcessKiller
-`jenkinsdoc:hudson.util.ProcessKiller]`
+`jenkinsdoc:hudson.util.ProcessKiller`
 
 +++ Extension point that defines more elaborate way of killing processes, such as+++ +++ sudo or pfexec, for+++ jenkinsdoc:ProcessTree] +++.+++
 
@@ -3809,7 +3809,7 @@ _(no known implementations)_
 
 
 == ProcessKillingVeto
-`jenkinsdoc:hudson.util.ProcessKillingVeto]`
+`jenkinsdoc:hudson.util.ProcessKillingVeto`
 
 +++ Allows extensions to veto killing processes. If at least one extension vetoes+++ +++ the killing of a process, it will not be killed. This can be useful to keep+++ +++ daemon processes alive. An example is mspdbsrv.exe used by Microsoft+++ +++ compilers.+++
 
@@ -3820,7 +3820,7 @@ _(no known implementations)_
 
 
 == ProjectNamingStrategy
-`jenkinsdoc:jenkins.model.ProjectNamingStrategy]`
+`jenkinsdoc:jenkins.model.ProjectNamingStrategy`
 
 +++ This ExtensionPoint allows to enforce the name of projects/jobs.+++
 
@@ -3832,7 +3832,7 @@ _(no known implementations)_
 
 
 == Queue.+++<wbr/>+++QueueDecisionHandler
-`jenkinsdoc:hudson.model.Queue.QueueDecisionHandler]`
+`jenkinsdoc:hudson.model.Queue.QueueDecisionHandler`
 
 +++ Extension point for deciding if particular job should be scheduled or not.+++
 
@@ -3860,7 +3860,7 @@ _(no known implementations)_
 
 
 == QueueItemAuthenticator
-`jenkinsdoc:jenkins.security.QueueItemAuthenticator]`
+`jenkinsdoc:jenkins.security.QueueItemAuthenticator`
 
 +++ Extension point to run+++ jenkinsdoc:hudson.model.Queue.Executable] +++s under a specific identity for better access control.+++ +++ You must override either+++ jenkinsdoc:=authenticate2(hudson.model.Queue.Item)] +++, or+++ jenkinsdoc:=authenticate2(hudson.model.Queue.Task)] +++, or both.+++
 
@@ -3873,7 +3873,7 @@ _(no known implementations)_
 
 
 == QueueItemAuthenticatorProvider
-`jenkinsdoc:jenkins.security.QueueItemAuthenticatorProvider]`
+`jenkinsdoc:jenkins.security.QueueItemAuthenticatorProvider`
 
 +++ There are cases where a plugin need to provide a+++ jenkinsdoc:QueueItemAuthenticator] +++that cannot be controlled or+++ +++ configured by the user. This extension point provides the mechanism whereby the a+++ jenkinsdoc:QueueItemAuthenticator] ++++++ +++ can be provided either before or after those provided by+++ jenkinsdoc:QueueItemAuthenticatorConfiguration] +++which+++ +++ will use+++ jenkinsdoc:Extension=ordinal()] +++of {@code 100}+++
 
@@ -3885,7 +3885,7 @@ _(no known implementations)_
 
 
 == QueueListener
-`jenkinsdoc:hudson.model.queue.QueueListener]`
+`jenkinsdoc:hudson.model.queue.QueueListener`
 
 +++ Listener for events in+++ jenkinsdoc:Queue] +++.+++
 
@@ -3932,7 +3932,7 @@ _(no known implementations)_
 
 
 == QueueSorter
-`jenkinsdoc:hudson.model.queue.QueueSorter]`
+`jenkinsdoc:hudson.model.queue.QueueSorter`
 
 +++ Singleton extension point for sorting buildable items+++
 
@@ -3949,7 +3949,7 @@ _(no known implementations)_
 
 
 == QueueTaskDispatcher
-`jenkinsdoc:hudson.model.queue.QueueTaskDispatcher]`
+`jenkinsdoc:hudson.model.queue.QueueTaskDispatcher`
 
 +++ Vetos the execution of a task on a node+++
 
@@ -3982,7 +3982,7 @@ _(no known implementations)_
 
 
 == Recorder
-`jenkinsdoc:hudson.tasks.Recorder]`
+`jenkinsdoc:hudson.tasks.Recorder`
 
 ++++++ jenkinsdoc:BuildStep] +++s that run after the build is completed.+++
 
@@ -4313,7 +4313,7 @@ _(no known implementations)_
 
 
 == RepositoryBrowser
-`jenkinsdoc:hudson.scm.RepositoryBrowser]`
+`jenkinsdoc:hudson.scm.RepositoryBrowser`
 
 +++ Connects Hudson to repository browsers like ViewCVS or FishEye,+++ +++ so that Hudson can generate links to them.+++
 
@@ -4390,7 +4390,7 @@ _(no known implementations)_
 
 
 == RestartListener
-`jenkinsdoc:hudson.model.RestartListener]`
+`jenkinsdoc:hudson.model.RestartListener`
 
 +++ Extension point that allows plugins to veto the restart.+++
 
@@ -4406,7 +4406,7 @@ _(no known implementations)_
 
 
 == RetentionStrategy
-`jenkinsdoc:hudson.slaves.RetentionStrategy]`
+`jenkinsdoc:hudson.slaves.RetentionStrategy`
 
 +++ Controls when to take+++ jenkinsdoc:Computer] +++offline, bring it back online, or even to destroy it.+++
 
@@ -4462,7 +4462,7 @@ _(no known implementations)_
 
 
 == RootAction
-`jenkinsdoc:hudson.model.RootAction]`
+`jenkinsdoc:hudson.model.RootAction`
 
 +++ Marker interface for actions that are added to+++ jenkinsdoc:jenkins.model.Jenkins] +++.+++
 
@@ -4657,7 +4657,7 @@ _(no known implementations)_
 
 
 == RoutingDecisionProvider
-`jenkinsdoc:jenkins.security.stapler.RoutingDecisionProvider]`
+`jenkinsdoc:jenkins.security.stapler.RoutingDecisionProvider`
 
 _This extension point has no Javadoc documentation._
 
@@ -4667,7 +4667,7 @@ _This extension point has no Javadoc documentation._
 
 
 == Run
-`jenkinsdoc:hudson.model.Run]`
+`jenkinsdoc:hudson.model.Run`
 
 +++ A particular execution of+++ jenkinsdoc:Job] +++.+++
 
@@ -4704,7 +4704,7 @@ _This extension point has no Javadoc documentation._
 
 
 == Run.+++<wbr/>+++StatusSummarizer
-`jenkinsdoc:hudson.model.Run.StatusSummarizer]`
+`jenkinsdoc:hudson.model.Run.StatusSummarizer`
 
 +++ Used to implement+++ jenkinsdoc:=getBuildStatusSummary] +++.+++
 
@@ -4715,7 +4715,7 @@ _This extension point has no Javadoc documentation._
 
 
 == RunListener
-`jenkinsdoc:hudson.model.listeners.RunListener]`
+`jenkinsdoc:hudson.model.listeners.RunListener`
 
 +++ Receives notifications about builds.+++
 
@@ -4910,7 +4910,7 @@ _This extension point has no Javadoc documentation._
 
 
 == SCM
-`jenkinsdoc:hudson.scm.SCM]`
+`jenkinsdoc:hudson.scm.SCM`
 
 +++ Captures the configuration information in it.+++
 
@@ -4974,7 +4974,7 @@ _This extension point has no Javadoc documentation._
 
 
 == SCMCheckoutStrategy
-`jenkinsdoc:jenkins.scm.SCMCheckoutStrategy]`
+`jenkinsdoc:jenkins.scm.SCMCheckoutStrategy`
 
 +++ Controls the check out behavior in+++ jenkinsdoc:AbstractBuild] +++.+++
 
@@ -4986,7 +4986,7 @@ _This extension point has no Javadoc documentation._
 
 
 == SCMDecisionHandler
-`jenkinsdoc:jenkins.scm.SCMDecisionHandler]`
+`jenkinsdoc:jenkins.scm.SCMDecisionHandler`
 
 +++ Extension point for various decisions about SCM operations for+++ jenkinsdoc:Item] +++instances.+++
 
@@ -4997,7 +4997,7 @@ _(no known implementations)_
 
 
 == SCMListener
-`jenkinsdoc:hudson.model.listeners.SCMListener]`
+`jenkinsdoc:hudson.model.listeners.SCMListener`
 
 +++ Receives notifications about SCM activities in Hudson.+++
 
@@ -5030,7 +5030,7 @@ _(no known implementations)_
 
 
 == SCMPollListener
-`jenkinsdoc:hudson.model.listeners.SCMPollListener]`
+`jenkinsdoc:hudson.model.listeners.SCMPollListener`
 
 +++ A hook for listening to polling activities in Jenkins.+++
 
@@ -5042,7 +5042,7 @@ _(no known implementations)_
 
 
 == SaveableListener
-`jenkinsdoc:hudson.model.listeners.SaveableListener]`
+`jenkinsdoc:hudson.model.listeners.SaveableListener`
 
 +++ Receives notifications about save actions on+++ jenkinsdoc:Saveable] +++objects in Hudson.+++
 
@@ -5075,7 +5075,7 @@ _(no known implementations)_
 
 
 == SearchFactory
-`jenkinsdoc:hudson.search.SearchFactory]`
+`jenkinsdoc:hudson.search.SearchFactory`
 
 +++ Creates a+++ jenkinsdoc:Search] +++instance for a+++ jenkinsdoc:SearchableModelObject] +++.+++
 
@@ -5088,7 +5088,7 @@ _(no known implementations)_
 
 
 == SecureRequester
-`jenkinsdoc:jenkins.security.SecureRequester]`
+`jenkinsdoc:jenkins.security.SecureRequester`
 
 +++ An extension point for authorizing REST API access to an object where an unsafe result type would be produced.+++ +++ Both JSONP and XPath with primitive result sets are considered unsafe due to CSRF attacks.+++ +++ A default implementation allows requests if a deprecated system property is set, or if Jenkins is unsecured anyway,+++ +++ but plugins may offer implementations which authorize scripted clients, requests from inside a trusted domain, etc.+++
 
@@ -5100,7 +5100,7 @@ _(no known implementations)_
 
 
 == SecurityListener
-`jenkinsdoc:jenkins.security.SecurityListener]`
+`jenkinsdoc:jenkins.security.SecurityListener`
 
 +++ Listener notified of various significant events related to security.+++
 
@@ -5117,7 +5117,7 @@ _(no known implementations)_
 
 
 == SecurityRealm
-`jenkinsdoc:hudson.security.SecurityRealm]`
+`jenkinsdoc:hudson.security.SecurityRealm`
 
 +++ Pluggable security realm that connects external user database to Hudson.+++
 
@@ -5160,7 +5160,7 @@ _(no known implementations)_
 
 
 == SettingsProvider
-`jenkinsdoc:jenkins.mvn.SettingsProvider]`
+`jenkinsdoc:jenkins.mvn.SettingsProvider`
 
 _This extension point has no Javadoc documentation._
 
@@ -5172,7 +5172,7 @@ _This extension point has no Javadoc documentation._
 
 
 == SimplePageDecorator
-`jenkinsdoc:jenkins.model.SimplePageDecorator]`
+`jenkinsdoc:jenkins.model.SimplePageDecorator`
 
 +++ Participates in the rendering of the login page+++
 
@@ -5186,7 +5186,7 @@ _This extension point has no Javadoc documentation._
 
 
 == SlaveRestarter
-`jenkinsdoc:jenkins.slaves.restarter.SlaveRestarter]`
+`jenkinsdoc:jenkins.slaves.restarter.SlaveRestarter`
 
 +++ Extension point to control how to restart an inbound agent when it loses the connection with the master.+++
 
@@ -5198,7 +5198,7 @@ _This extension point has no Javadoc documentation._
 
 
 == SlaveSystemInfo
-`jenkinsdoc:jenkins.slaves.systemInfo.SlaveSystemInfo]`
+`jenkinsdoc:jenkins.slaves.systemInfo.SlaveSystemInfo`
 
 +++ Extension point that contributes to the system information page of+++ jenkinsdoc:Computer] +++.+++
 
@@ -5212,7 +5212,7 @@ _This extension point has no Javadoc documentation._
 
 
 == SubTaskContributor
-`jenkinsdoc:hudson.model.queue.SubTaskContributor]`
+`jenkinsdoc:hudson.model.queue.SubTaskContributor`
 
 +++ Externally contributes+++ jenkinsdoc:SubTask] +++s to+++ jenkinsdoc:AbstractProject=getSubTasks()] +++.+++
 
@@ -5223,7 +5223,7 @@ _(no known implementations)_
 
 
 == Telemetry
-`jenkinsdoc:jenkins.telemetry.Telemetry]`
+`jenkinsdoc:jenkins.telemetry.Telemetry`
 
 +++ Extension point for collecting JEP-214 telemetry.+++
 
@@ -5238,7 +5238,7 @@ _(no known implementations)_
 
 
 == ToolInstallation
-`jenkinsdoc:hudson.tools.ToolInstallation]`
+`jenkinsdoc:hudson.tools.ToolInstallation`
 
 +++ Formalization of a tool installed in nodes used for builds.+++ +++ (Examples include things like JDKs, Ants, Mavens, and Groovys.)+++
 
@@ -5333,7 +5333,7 @@ _(no known implementations)_
 
 
 == ToolInstaller
-`jenkinsdoc:hudson.tools.ToolInstaller]`
+`jenkinsdoc:hudson.tools.ToolInstaller`
 
 +++ An object which can ensure that a generic+++ jenkinsdoc:ToolInstallation] +++in fact exists on a node.+++ +++ The properties can be added to+++ jenkinsdoc:ToolInstallation] +++using the+++ jenkinsdoc:InstallSourceProperty] +++.+++
 
@@ -5400,7 +5400,7 @@ _(no known implementations)_
 
 
 == ToolLocationTranslator
-`jenkinsdoc:hudson.tools.ToolLocationTranslator]`
+`jenkinsdoc:hudson.tools.ToolLocationTranslator`
 
 +++ This Jenkins-wide extension points can participate in determining the actual node-specific path+++ +++ of the+++ jenkinsdoc:ToolInstallation] +++for the given+++ jenkinsdoc:Node] +++.+++
 
@@ -5412,7 +5412,7 @@ _(no known implementations)_
 
 
 == ToolProperty
-`jenkinsdoc:hudson.tools.ToolProperty]`
+`jenkinsdoc:hudson.tools.ToolProperty`
 
 +++ Extensible property of+++ jenkinsdoc:ToolInstallation] +++.+++
 
@@ -5425,7 +5425,7 @@ _(no known implementations)_
 
 
 == TopLevelItem
-`jenkinsdoc:hudson.model.TopLevelItem]`
+`jenkinsdoc:hudson.model.TopLevelItem`
 
 ++++++ jenkinsdoc:Item] +++that can be directly displayed under+++ jenkinsdoc:jenkins.model.Jenkins] +++or other containers.+++ +++ (A "container" would be any+++ jenkinsdoc:ItemGroup] +++{@code }, such as a folder of projects.)+++ +++ Ones that don't need to be under specific parent (say, unlike {@code MatrixConfiguration}),+++ +++ and thus can be freely moved, copied, etc.+++
 
@@ -5471,7 +5471,7 @@ _(no known implementations)_
 
 
 == TransientActionFactory
-`jenkinsdoc:jenkins.model.TransientActionFactory]`
+`jenkinsdoc:jenkins.model.TransientActionFactory`
 
 +++ Allows you to add actions to any kind of object at once.+++ +++ but may specify a type such as+++ jenkinsdoc:TopLevelItem] +++most of whose implementations are in fact+++ jenkinsdoc:Actionable] ++++++
 
@@ -5583,7 +5583,7 @@ _(no known implementations)_
 
 
 == TransientBuildActionFactory
-`jenkinsdoc:hudson.model.TransientBuildActionFactory]`
+`jenkinsdoc:hudson.model.TransientBuildActionFactory`
 
 +++ Extension point for inserting transient+++ jenkinsdoc:Action] +++s into+++ jenkinsdoc:Run] +++s.+++
 
@@ -5601,7 +5601,7 @@ _(no known implementations)_
 
 
 == TransientComputerActionFactory
-`jenkinsdoc:hudson.model.TransientComputerActionFactory]`
+`jenkinsdoc:hudson.model.TransientComputerActionFactory`
 
 +++ Extension point for inserting transient+++ jenkinsdoc:hudson.model.Action] +++s to+++ jenkinsdoc:hudson.model.Computer] +++s.+++ +++
 <p>+++ +++ To register your implementation, put+++ jenkinsdoc:hudson.Extension] +++on your subtype.+++</p>
@@ -5621,7 +5621,7 @@ _(no known implementations)_
 
 
 == TransientFingerprintFacetFactory
-`jenkinsdoc:jenkins.model.TransientFingerprintFacetFactory]`
+`jenkinsdoc:jenkins.model.TransientFingerprintFacetFactory`
 
 _This extension point has no Javadoc documentation._
 
@@ -5631,7 +5631,7 @@ _(no known implementations)_
 
 
 == TransientProjectActionFactory
-`jenkinsdoc:hudson.model.TransientProjectActionFactory]`
+`jenkinsdoc:hudson.model.TransientProjectActionFactory`
 
 +++ Extension point for inserting transient+++ jenkinsdoc:Action] +++s into+++ jenkinsdoc:AbstractProject] +++s.+++
 
@@ -5674,7 +5674,7 @@ _(no known implementations)_
 
 
 == TransientUserActionFactory
-`jenkinsdoc:hudson.model.TransientUserActionFactory]`
+`jenkinsdoc:hudson.model.TransientUserActionFactory`
 
 +++ Extension point for inserting transient+++ jenkinsdoc:Action] +++s into+++ jenkinsdoc:User] +++s.+++
 
@@ -5687,7 +5687,7 @@ _(no known implementations)_
 
 
 == TransientViewActionFactory
-`jenkinsdoc:hudson.model.TransientViewActionFactory]`
+`jenkinsdoc:hudson.model.TransientViewActionFactory`
 
 +++ Extension point for adding transient+++ jenkinsdoc:Action] +++s to+++ jenkinsdoc:View] +++s.+++
 
@@ -5703,7 +5703,7 @@ _(no known implementations)_
 
 
 == Trigger
-`jenkinsdoc:hudson.triggers.Trigger]`
+`jenkinsdoc:hudson.triggers.Trigger`
 
 +++ Triggers a+++ jenkinsdoc:Build] +++.+++
 
@@ -5770,7 +5770,7 @@ _(no known implementations)_
 
 
 == URLConnectionDecorator
-`jenkinsdoc:hudson.URLConnectionDecorator]`
+`jenkinsdoc:hudson.URLConnectionDecorator`
 
 +++ Decorates the connections that Jenkins open to access external resources.+++
 
@@ -5781,7 +5781,7 @@ _(no known implementations)_
 
 
 == UnprotectedRootAction
-`jenkinsdoc:hudson.model.UnprotectedRootAction]`
+`jenkinsdoc:hudson.model.UnprotectedRootAction`
 
 ++++++ jenkinsdoc:RootAction] +++s that are accessible to requests that do not have the READ permission on+++ jenkinsdoc:jenkins.model.Jenkins] +++.+++
 
@@ -5869,7 +5869,7 @@ _(no known implementations)_
 
 
 == UpdateCenter.+++<wbr/>+++UpdateCenterConfiguration
-`jenkinsdoc:hudson.model.UpdateCenter.UpdateCenterConfiguration]`
+`jenkinsdoc:hudson.model.UpdateCenter.UpdateCenterConfiguration`
 
 +++ Strategy object for controlling the update center's behaviors.+++
 
@@ -5880,7 +5880,7 @@ _(no known implementations)_
 
 
 == User.+++<wbr/>+++CanonicalIdResolver
-`jenkinsdoc:hudson.model.User.CanonicalIdResolver]`
+`jenkinsdoc:hudson.model.User.CanonicalIdResolver`
 
 +++ Resolves User IDs by ID, full names or other strings.+++ +++
 <p>+++ +++ This extension point may be useful to map SCM user names to Jenkins+++ jenkinsdoc:User] +++IDs.+++ +++ Currently the extension point is used in+++ jenkinsdoc:User=get(String, boolean, Map)] +++.+++</p>
@@ -5894,7 +5894,7 @@ _(no known implementations)_
 
 
 == UserAvatarResolver
-`jenkinsdoc:hudson.tasks.UserAvatarResolver]`
+`jenkinsdoc:hudson.tasks.UserAvatarResolver`
 
 +++ Infers avatar image URLs for users+++
 
@@ -5906,7 +5906,7 @@ _(no known implementations)_
 
 
 == UserExperimentalFlag
-`jenkinsdoc:jenkins.model.experimentalflags.UserExperimentalFlag]`
+`jenkinsdoc:jenkins.model.experimentalflags.UserExperimentalFlag`
 
 +++ User specific experimental flag to enable or disable specific behavior.+++ +++ As it's user specific, usually this kind of feature flag is only used for UI.+++
 
@@ -5917,7 +5917,7 @@ _(no known implementations)_
 
 
 == UserNameResolver
-`jenkinsdoc:hudson.tasks.UserNameResolver]`
+`jenkinsdoc:hudson.tasks.UserNameResolver`
 
 +++ Finds full name off the user when none is specified.+++
 
@@ -5928,7 +5928,7 @@ _(no known implementations)_
 
 
 == UserProperty
-`jenkinsdoc:hudson.model.UserProperty]`
+`jenkinsdoc:hudson.model.UserProperty`
 
 +++ Extensible property of+++ jenkinsdoc:User] +++.+++
 
@@ -5983,7 +5983,7 @@ _(no known implementations)_
 
 
 == UserSeedChangeListener
-`jenkinsdoc:jenkins.security.seed.UserSeedChangeListener]`
+`jenkinsdoc:jenkins.security.seed.UserSeedChangeListener`
 
 +++ Listener notified when a user was requested to changed their seed+++
 
@@ -5994,7 +5994,7 @@ _(no known implementations)_
 
 
 == View
-`jenkinsdoc:hudson.model.View]`
+`jenkinsdoc:hudson.model.View`
 
 +++ Encapsulates the rendering of the list of+++ jenkinsdoc:TopLevelItem] +++s+++ +++ that+++ jenkinsdoc:Jenkins] +++owns.+++
 
@@ -6038,7 +6038,7 @@ _(no known implementations)_
 
 
 == ViewJobFilter
-`jenkinsdoc:hudson.views.ViewJobFilter]`
+`jenkinsdoc:hudson.views.ViewJobFilter`
 
 +++ Each ViewJobFilter contributes to or removes from the list of Jobs for a view.+++
 
@@ -6080,7 +6080,7 @@ _(no known implementations)_
 
 
 == ViewProperty
-`jenkinsdoc:hudson.model.ViewProperty]`
+`jenkinsdoc:hudson.model.ViewProperty`
 
 +++ Extensible property of+++ jenkinsdoc:View] +++.+++
 
@@ -6091,7 +6091,7 @@ _(no known implementations)_
 
 
 == ViewsTabBar
-`jenkinsdoc:hudson.views.ViewsTabBar]`
+`jenkinsdoc:hudson.views.ViewsTabBar`
 
 +++ Extension point for adding a ViewsTabBar header to Projects+++ jenkinsdoc:ListView] +++.+++
 
@@ -6107,7 +6107,7 @@ _(no known implementations)_
 
 
 == Widget
-`jenkinsdoc:hudson.widgets.Widget]`
+`jenkinsdoc:hudson.widgets.Widget`
 
 +++ Box to be rendered in the side panel.+++
 
@@ -6134,7 +6134,7 @@ _(no known implementations)_
 
 
 == WorkspaceBrowser
-`jenkinsdoc:hudson.model.WorkspaceBrowser]`
+`jenkinsdoc:hudson.model.WorkspaceBrowser`
 
 +++ Allows to access a workspace as an alternative to online build node.+++ +++
 <p>+++ +++ Primary use case is+++ jenkinsdoc:hudson.slaves.Cloud] +++implementations that don't keep the agent+++ +++ online to browse workspace, but maintain a copy of node workspace on the controller.+++</p>
@@ -6146,7 +6146,7 @@ _(no known implementations)_
 
 
 == WorkspaceListener
-`jenkinsdoc:hudson.model.WorkspaceListener]`
+`jenkinsdoc:hudson.model.WorkspaceListener`
 
 _This extension point has no Javadoc documentation._
 
@@ -6158,7 +6158,7 @@ _This extension point has no Javadoc documentation._
 
 
 == WorkspaceLocator
-`jenkinsdoc:jenkins.slaves.WorkspaceLocator]`
+`jenkinsdoc:jenkins.slaves.WorkspaceLocator`
 
 +++ Allow extensions to override workspace locations+++ +++ on given agents or projects.+++
 

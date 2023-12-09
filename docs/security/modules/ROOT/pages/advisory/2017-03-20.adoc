@@ -68,13 +68,13 @@ There were no permission checks performed in the Distributed Fork plugin that pr
 * Email Extension (email-ext) Plugin should be updated to version 2.57.1.
 * Mailer Plugin should be updated to version 1.20.
 * SSH Build Agents Plugin should be updated to version 1.15.
-* Pipeline: Classpath Step Plugin should be disabled or uninstalled, and its uses replaced by the link:/doc/book/pipeline/shared-libraries/[Pipeline libraries feature]. No fix for this plugin is currently planned.
+* Pipeline: Classpath Step Plugin should be disabled or uninstalled, and its uses replaced by the xref:user-docs:pipeline:shared-libraries.adoc[Pipeline libraries feature]. No fix for this plugin is currently planned.
 
 These versions include fixes to the vulnerabilities described above. All prior versions are affected by these vulnerabilities unless otherwise noted.
 
 == Credit
 
-The Jenkins project would like to thank the following people for discovering and link:/security/#reporting-vulnerabilities[reporting] these vulnerabilities:
+The Jenkins project would like to thank the following people for discovering and xref:dev-docs:security:index.adoc#reporting-vulnerabilities[reporting] these vulnerabilities:
 
 * *Tim Otten, CiviCRM LLC* for SECURITY-161
 * *Steven Christou, CloudBees, Inc.* for SECURITY-251

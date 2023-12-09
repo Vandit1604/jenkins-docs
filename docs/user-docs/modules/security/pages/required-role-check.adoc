@@ -60,7 +60,7 @@ xref:security:remoting-callables.adoc[See the developer documentation] for consi
 
 To allow specific, known safe callables to execute on any end of any remoting communication channel despite their empty role check, do either of the following:
 
-Set the link:/doc/book/managing/system-properties/#hudson-remoting-channelbuilder-specificcallablescanignoreroleche[Java system property `hudson.remoting.ChannelBuilder.specificCallablesCanIgnoreRoleChecker`] to a comma-separated list of class names.
+Set the xref:user-docs:managing:system-properties.adoc#hudson-remoting-channelbuilder-specificcallablescanignoreroleche[Java system property `hudson.remoting.ChannelBuilder.specificCallablesCanIgnoreRoleChecker`] to a comma-separated list of class names.
 The class names are the same as in the error message.
 
 Alternatively, you can use the xref:user-docs:managing:script-console.adoc[Jenkins script console].
@@ -78,7 +78,7 @@ Run this script once for every callable you want to allow.
 
 === Disable security hardening 
 
-To disable the security hardening altogether, set the link:/doc/book/managing/system-properties/#hudson-remoting-channelbuilder-allcallablescanignorerolechecker[Java system property `hudson.remoting.ChannelBuilder.allCallablesCanIgnoreRoleChecker`] to `true`.
+To disable the security hardening altogether, set the xref:user-docs:managing:system-properties.adoc#hudson-remoting-channelbuilder-allcallablescanignorerolechecker[Java system property `hudson.remoting.ChannelBuilder.allCallablesCanIgnoreRoleChecker`] to `true`.
 
 Alternatively, you can use the xref:user-docs:managing:script-console.adoc[Jenkins script console].
 This approach is immediately effective and does not require Jenkins to be restarted first, but is only effective until Jenkins is restarted.

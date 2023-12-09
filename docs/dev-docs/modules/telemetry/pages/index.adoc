@@ -24,7 +24,7 @@ https://github.com/jenkinsci/jenkins/tree/master/core/src/main/java/jenkins/tele
 
 You can inspect telemetry data locally by calling `ExtensionList.lookupSingleton(package.to.YourTelemetry.class).createContent()` in the script console (careful, as this typically will modify state).
 
-Alternatively, you can set the link:/doc/book/managing/system-properties/#jenkins-telemetry-telemetry-endpoint[`jenkins.telemetry.Telemetry.endpoint`] Java system property on startup (or set `jenkins.telemetry.Telemetry.ENDPOINT` in the xref:user-docs:managing:script-console.adoc[script console]) to a test HTTP server that lets you inspect HTTP requests and their POST bodies.
+Alternatively, you can set the xref:user-docs:managing:system-properties.adoc#jenkins-telemetry-telemetry-endpoint[`jenkins.telemetry.Telemetry.endpoint`] Java system property on startup (or set `jenkins.telemetry.Telemetry.ENDPOINT` in the xref:user-docs:managing:script-console.adoc[script console]) to a test HTTP server that lets you inspect HTTP requests and their POST bodies.
 To trigger telemetry submission, you can call `ExtensionList.lookupSingleton(jenkins.telemetry.Telemetry.TelemetryReporter.class).run()` in the script console.
 
 === Uplink Access
@@ -37,7 +37,8 @@ This should best be done before the telemetry change is released or even merged,
 As telemetry is time-sensitive, and the majority of users use LTS releases, telemetry implementations in core should generally be backported freely into LTS releases to ensure data is collected from as many up-to-date Jenkins instances as possible.
 The link:/download/lts/#backporting-process[general LTS backporting rules] are relaxed for telemetry-related changes.
 
-== References
-
-- link:https://github.com/jenkinsci/jep/blob/master/jep/214/README.adoc['JEP-214: Jenkins Telemetry']
-- link:https://javadoc.jenkins.io/jenkins/telemetry/Telemetry.html['`jenkins.telemetry.Telemetry` extension point Javadoc']
+.References
+****
+* link:https://github.com/jenkinsci/jep/blob/master/jep/214/README.adoc['JEP-214: Jenkins Telemetry']
+* link:https://javadoc.jenkins.io/jenkins/telemetry/Telemetry.html['`jenkins.telemetry.Telemetry` extension point Javadoc']
+****

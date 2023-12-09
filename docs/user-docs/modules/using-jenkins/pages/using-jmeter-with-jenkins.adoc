@@ -15,7 +15,7 @@ Some of the main benefits of using JMeter with Jenkins are:
 NOTE: This page outlines how to use Apache JMeter with Jenkins.
 The instructions are intentionally performed by running Apache JMeter on the Jenkins controller.
 Apache JMeter in a Jenkins production environment should be run on a Jenkins agent, not on the Jenkins controller.
-To learn more about Jenkins agents, refer to the link:/doc/book/using/using-agents/[using Jenkins agents] page.
+To learn more about Jenkins agents, refer to the xref:user-docs:using-jenkins:using-agents.adoc[using Jenkins agents] page.
 
 == Apache JMeter
 
@@ -24,7 +24,7 @@ It can also be used to simulate a heavy load on a server, group of servers, netw
 
 == Jenkins Installation
 
-The Jenkins docs has a page to help with the link:/doc/book/installing/[Jenkins installation process.].
+The Jenkins docs has a page to help with the xref:user-docs:installing-jenkins:index.adoc[Jenkins installation process.].
 This guide uses the .jar installation.
 Refer to the link:/doc/pipeline/tour/getting-started/[guided tour page] if you want to use .jar as well.
 Both installation methods produce the same results.

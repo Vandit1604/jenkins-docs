@@ -315,7 +315,7 @@ with:
 === Configure ephemeral Jenkins instance (optional)
 
 Sometimes, JCasC might not be able to provide the configurations you need. 
-In this case, refer to link:/doc/book/managing/groovy-hook-scripts/[Groovy Hook Scripts] to set up the ephemeral Jenkins instance.
+In this case, refer to xref:user-docs:managing:groovy-hook-scripts.adoc[Groovy Hook Scripts] to set up the ephemeral Jenkins instance.
 These Groovy scripts will have full access to the ephemeral Jenkins server and will be executed right after Jenkins starts up.
 
 NOTE: This option and its core are still in progress, so it’s not mentioned in the Jenkinsfile Runner GitHub Actions official guide.

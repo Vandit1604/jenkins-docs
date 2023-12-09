@@ -38,7 +38,7 @@ up to date.
 
 Security for in-process scripting is provided by two different mechanisms: the
 <<groovy-sandbox>> and <<script-approval>>. The first, the Groovy Sandbox, is
-enabled by default for link:/doc/book/pipeline[Jenkins Pipeline] allowing
+enabled by default for xref:user-docs:pipeline:index.adoc[Jenkins Pipeline] allowing
 user-supplied Scripted and Declarative Pipeline to execute without prior
 Administrator intervention. The second, Script
 Approval, allows Administrators to approve or deny unsandboxed scripts, or
@@ -54,7 +54,7 @@ that Administrators only deviate from these defaults if absolutely necessary.
 
 To reduce manual interventions by Administrators, most scripts will run in a
 Groovy Sandbox by default, including all
-link:/doc/book/pipeline[Jenkins Pipelines].
+xref:user-docs:pipeline:index.adoc[Jenkins Pipelines].
 The sandbox only allows a subset of Groovy's methods deemed sufficiently safe
 for "untrusted" access to be executed without prior approval. Scripts using
 the Groovy Sandbox are *all* subject to the same restrictions, therefore a

@@ -58,16 +58,18 @@ either through a command line tool or an API, so it can be distributed to agents
 A simple SCM skeleton plugin you can build with Gradle or Maven.
 No real functionality, just a minimalistic skeleton.
 
-== References
-- link:https://github.com/jenkinsci/scm-api-plugin/blob/master/docs/consumer.adoc[SCM API Consumer Guide]
-- link:https://github.com/jenkinsci/scm-api-plugin/blob/master/docs/implementation.adoc[SCM API Implementation Guide]
-- link:https://wiki.jenkins.io/display/JENKINS/SCM+plugin+architecture[SCM plugin architecture]
-- link:https://wiki.jenkins.io/display/JENKINS/Remoting[Remoting]
-- link:https://wiki.jenkins.io/display/JENKINS/Polling+for+changes[Polling for changes]
-- link:https://wiki.jenkins.io/display/JENKINS/Checking+out+files[Checking out files]
-- link:https://wiki.jenkins.io/display/JENKINS/Change+log[Change log]
-- link:https://wiki.jenkins.io/display/JENKINS/Repository+browser[Repository browser]
-- link:https://github.com/martinda/simple-scm-plugin[simple-scm-plugin] 
+.References
+****
+* link:https://github.com/jenkinsci/scm-api-plugin/blob/master/docs/consumer.adoc[SCM API Consumer Guide]
+* link:https://github.com/jenkinsci/scm-api-plugin/blob/master/docs/implementation.adoc[SCM API Implementation Guide]
+* link:https://wiki.jenkins.io/display/JENKINS/SCM+plugin+architecture[SCM plugin architecture]
+* link:https://wiki.jenkins.io/display/JENKINS/Remoting[Remoting]
+* link:https://wiki.jenkins.io/display/JENKINS/Polling+for+changes[Polling for changes]
+* link:https://wiki.jenkins.io/display/JENKINS/Checking+out+files[Checking out files]
+* link:https://wiki.jenkins.io/display/JENKINS/Change+log[Change log]
+* link:https://wiki.jenkins.io/display/JENKINS/Repository+browser[Repository browser]
+* link:https://github.com/martinda/simple-scm-plugin[simple-scm-plugin] 
+****
 // TODO move into jenkinsci org
 
   

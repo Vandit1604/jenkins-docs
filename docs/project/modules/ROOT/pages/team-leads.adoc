@@ -1,8 +1,4 @@
----
-layout: simplepage
-title: "Jenkins Team Leads and Officers"
-section: project
----
+= "Jenkins Team Leads and Officers"
 
 Jenkins team leads and officers are individual contributors with the responsibility and accountability for
 leading a particular facet of the Jenkins project and/or the community.
@@ -45,7 +41,7 @@ Coordinates the security-related activities in the Jenkins project. This is an *
 * Publish link:https://wiki.jenkins.io/display/JENKINS/Security+Advisorie[Security Advisories] (including CVE IDs and CVSS) and notify the link:https://groups.google.com/g/jenkinsci-advisories[mailing list]
 * Drive security policy definition/changes in the community
 * Represent the Jenkins project on security topics with third parties
-* Represent the link:/security/cna/[Jenkins CNA].
+* Represent the xref:security:ROOT:cna.adoc[Jenkins CNA].
 
 [[infrastructure]]
 === Infrastructure Officer
@@ -111,6 +107,7 @@ This is an **elected role**.
 
 // TODO: Formalize Team leads and add them to the list
 
-== References
-
+.References
+****
 * link:/project/board-election-process/[Jenkins Governance Board and Officer election process]
+****

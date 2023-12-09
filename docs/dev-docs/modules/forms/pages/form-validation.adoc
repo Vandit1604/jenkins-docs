@@ -103,6 +103,7 @@ public FormValidation doCheckThreads(@QueryParameter String value, @AncestorInPa
 }
 ----
 
-== References
-
-- xref:security:form-validation.adoc[Securely implementing form validation]
+.References
+****
+* xref:security:form-validation.adoc[Securely implementing form validation]
+****

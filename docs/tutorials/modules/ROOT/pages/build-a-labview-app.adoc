@@ -8,7 +8,7 @@ We'll walk through setting up Jenkins as our CI server and using it to automate 
 
 *Duration:* This tutorial takes 20-40 minutes to complete (assuming you've
 already met the <<prerequisites,prerequisites>> below). The exact duration will
-depend on the speed of your machine and whether or not you've already link:/doc/book/installing/[installed Jenkins] from xref:ROOT:index.adoc[another tutorial].
+depend on the speed of your machine and whether or not you've already xref:user-docs:installing-jenkins:index.adoc[installed Jenkins] from xref:ROOT:index.adoc[another tutorial].
 
 You can stop this tutorial at any point in time and continue from where you left off.
 
@@ -148,9 +148,9 @@ Congrats! You’ve set up the GitHub repositories you’ll need for this example
 
 === Jenkins Initial Setup
 
-*Note*: This tutorial uses the classic Jenkins view, with minimal plugins to get the example running. You can use additional plugins such as link:/doc/book/blueocean/[Blue Ocean] for an enhanced UI experience.
+*Note*: This tutorial uses the classic Jenkins view, with minimal plugins to get the example running. You can use additional plugins such as xref:user-docs:blueocean:index.adoc[Blue Ocean] for an enhanced UI experience.
 
-. Install Jenkins based on your Operating System using the link:/doc/book/installing/[help], and navigate to the address of your Jenkins server in your browser. A few additional notes (all of which are already mentioned in the aforementioned Jenkins help):
+. Install Jenkins based on your Operating System using the xref:user-docs:installing-jenkins:index.adoc[help], and navigate to the address of your Jenkins server in your browser. A few additional notes (all of which are already mentioned in the aforementioned Jenkins help):
 ** The default Jenkins address is http://localhost:8080 
 ** The first time you launch Jenkins, you will need to unlock it with the admin password from the Console log output
 [.boxshadow]
@@ -354,8 +354,8 @@ To learn more about what Jenkins can do, check out:
 * The xref:ROOT:index.adoc[Tutorials overview] page for other introductory
   tutorials.
 * The xref:user-docs:ROOT:index.adoc[User Handbook] for more detailed information about using
-  Jenkins, such as link:/doc/book/pipeline[Pipelines] (in particular
-  link:/doc/book/pipeline/syntax[Pipeline syntax]) and the
+  Jenkins, such as xref:user-docs:pipeline:index.adoc[Pipelines] (in particular
+  xref:user-docs:pipeline:syntax.adoc[Pipeline syntax]) and the
   xref:user-docs:blueocean:index.adoc[Blue Ocean] interface.
 * The link:/node[Jenkins blog] for the latest events, other tutorials and
   updates.

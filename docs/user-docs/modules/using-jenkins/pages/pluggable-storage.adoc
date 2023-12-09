@@ -35,20 +35,20 @@ Below you can find a summary of ongoing activities and their current status:
 | Fully delivered, with support for uploading artifacts directly from agents.
   Related JEPs: jep:202[].
 
-  link:/doc/developer/extensions/jenkins-core/#artifactmanagerfactory[Extension point]
+  xref:dev-docs:extensions:jenkins-core.adoc#artifactmanagerfactory[Extension point]
 
 | plugin:artifact-manager-s3[Artifact Manager on S3],
   plugin:azure-artifact-manager[Azure Artifact Manager],
-  link:/doc/developer/extensions/jenkins-core/#artifactmanagerfactory[<More implementations>]
+  xref:dev-docs:extensions:jenkins-core.adoc#artifactmanagerfactory[<More implementations>]
 
 | **Credentials** +
   **(Available)**
 | Completed before the JEP process was introduced.
 
-link:/doc/developer/extensions/credentials/#credentialsprovider[Extension point]
+xref:dev-docs:extensions:credentials.adoc#credentialsprovider[Extension point]
 | plugin:kubernetes-credentials-provider[Kubernetes Credentials Provider],
   plugin:aws-secrets-manager-credentials-provider[AWS Secrets Manager Credentials Provider],
-  link:/doc/developer/extensions/credentials/#credentialsprovider[<More implementations>]
+  xref:dev-docs:extensions:credentials.adoc#credentialsprovider[<More implementations>]
 
 | Build logs +
   (Preview / Paused)
@@ -147,7 +147,7 @@ when using common steps like _Archive Artifacts_.
 
 Jenkins 2.118+ offers an extended jenkinsdoc:jenkins.util.VirtualFile[] API
 which allows implementing external artifact managers using the
-link:/doc/developer/extensions/jenkins-core/#artifactmanagerfactory[ArtifactManagerFactory]
+xref:dev-docs:extensions:jenkins-core.adoc#artifactmanagerfactory[ArtifactManagerFactory]
 extension point.
 
 Implementation example(s):
@@ -196,7 +196,7 @@ Related JEPs:
 === Credentials
 
 In plugin:credentials[Credentials Plugin] 1.15+ there
-is a link:/doc/developer/extensions/credentials/#credentialsprovider[CredentialsProvider]
+is a xref:dev-docs:extensions:credentials.adoc#credentialsprovider[CredentialsProvider]
 extension point which allows referencing and resolving external credentials.
 This engine allows implementing external credentials for plugins implementing Credentials API..
 

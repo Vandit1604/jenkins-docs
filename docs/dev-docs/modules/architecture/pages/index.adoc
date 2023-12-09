@@ -1,6 +1,5 @@
 = Architecture
-
-WARNING: This section is a work in progress. Want to help? Check out the (https://app.gitter.im/#/room/#jenkins/docs:matrix.org)[jenkinsci/docs gitter channel]. For other ways to contribute to the Jenkins project, see (https://www.jenkins.io/participate)[this page about participating and contributing].
+:page-layout:wip
 
 This section provides a high level overview of the Jenkins architecture.
 The audience is Java developers familiar with Jenkins (as users) who want to understand how Jenkins works internally.
@@ -22,6 +21,7 @@ image::jenkins-dataflow.png[]
 
 The source of this diagram is https://github.com/Vandit1604/jenkins-docs/tree/main/docs/dev-docs/modules/architecture/assets/attachments/jenkins-dataflow.diagrams.net[on github], to be opened with https://app.diagrams.net.
 
-== References
-
-- link:https://wiki.jenkins.io/display/JENKINS/Architecture[Architecture wiki page]
+.References
+****
+* link:https://wiki.jenkins.io/display/JENKINS/Architecture[Architecture wiki page]
+****

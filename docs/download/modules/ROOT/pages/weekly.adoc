@@ -17,7 +17,7 @@ Conditions for new releases of the _Weekly Release Line_:
 ** Currently these releases happen on a weekly basis on Tuesdays.
 * **Security releases** for the Jenkins core (see the link:/security[Jenkins Security] page).
 ** We coordinate Jenkins Weekly and LTS releases so that the vulnerabilities are fixed at the same time in all release lines.
-   Jenkins security team sends notifications about upcoming security releases to link:/security/#advisories[Jenkins Security Advisory Channels].
+   Jenkins security team sends notifications about upcoming security releases to xref:dev-docs:security:index.adoc#advisories[Jenkins Security Advisory Channels].
 ** Usually these releases happen on Wednesdays.
    If we release security updates on Wednesday, there will be no regular release the day before.
    link:/security/scheduling/[Learn more about how we schedule security advisories].
@@ -40,8 +40,9 @@ While that release may be expedited (see out-of-order releases above), there won
 It is possible to switch between Jenkins Weekly and LTS release lines when needed.
 See the documentation link:/download/lts/#switching-between-release-lines[here].
 
-== References
-
+.References
+****
 * link:/changelog[Jenkins Weekly Release changelog]
 * link:/download/lts/[Long-Term Support (LTS) Release Line]
 * link:/security[Jenkins Security Process]
+****

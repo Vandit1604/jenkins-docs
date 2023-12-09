@@ -1,6 +1,6 @@
 = Restricting HTTP Access to <code>AccessControlled</code> Objects
 
-## Overview
+== Overview
 
 Types with Jelly/Groovy views or web methods may be restricted to users with a certain permission.
 Some examples:
@@ -14,7 +14,7 @@ A major downside to this approach is that every Stapler-accessible method return
 Otherwise, a different getter or field could be used to access the object in question, bypassing the permission check.
 Various security issues have resulted from this strategy, so it is not generally considered sufficient to restrict access to objects on its own.
 
-## Using `StaplerProxy`
+== Using `StaplerProxy`
 
 A more robust approach to prevent HTTP request handling by objects is to implement `StaplerProxy`.
 While originally intended to forward request handling to a different object on certain conditions, it can also be used to just perform a permission check, and returning different values depending on the outcome of that check:

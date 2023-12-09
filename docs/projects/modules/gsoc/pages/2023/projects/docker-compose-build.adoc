@@ -22,7 +22,7 @@ links:
 ---
 === Background
 
-We already have a link:/doc/book/installing/docker/[section] dedicated to docker in the documentation, but it's too difficult to use for beginners, and even too complex to begin with. 
+We already have a xref:user-docs:installing-jenkins:docker.adoc[section] dedicated to docker in the documentation, but it's too difficult to use for beginners, and even too complex to begin with. 
 We need to provide a simple way to get started with Jenkins and Docker.
 
 We could have a set of `docker-compose` files representing various types of Jenkins instances (simple Docker, Kubernetes, …).
@@ -46,7 +46,7 @@ Of course, these snippets could also be run thanks to link:https://www.gitpod.io
 * link:https://docs.docker.com/compose/compose-file/compose-file-v3/[Docker Compose file format v3]
 * link:/projects/jcasc/[Jenkins Configuration as Code]
 * link:https://plugins.jenkins.io/job-dsl/[Job DSL]
-* link:/doc/book/installing/kubernetes/[Kubernetes]
+* xref:user-docs:installing-jenkins:kubernetes.adoc[Kubernetes]
 
 === Project Difficulty Level
 

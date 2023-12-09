@@ -45,8 +45,8 @@ This is enabled by default if Jenkins is run using `mvn -pl war jetty:run` (core
 As above, but only for requests that have the `X-Stapler-Trace` header.
 The corresponding Java system property is xref:managing:system-properties.adoc#stapler-trace-per-request[`stapler.trace.per-request`].
 
-== References
-
-- link:https://github.com/stapler/stapler/blob/master/docs/reference.adoc[Stapler URL Binding Reference]
-- link:https://wiki.jenkins.io/display/JENKINS/Figuring+out+URL+binding+of+Stapler[Figuring out URL binding in Stapler]
-
+.References
+****
+* link:https://github.com/stapler/stapler/blob/master/docs/reference.adoc[Stapler URL Binding Reference]
+* link:https://wiki.jenkins.io/display/JENKINS/Figuring+out+URL+binding+of+Stapler[Figuring out URL binding in Stapler]
+****

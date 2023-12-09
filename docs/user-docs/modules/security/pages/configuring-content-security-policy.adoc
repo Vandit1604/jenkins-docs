@@ -1,7 +1,4 @@
-= Configuring Content Security Policy
-]
-
-
+= Configuring Content Security policy
 
 This page describes the restrictions applied by potentially untrusted files served by Jenkins by default and how to customize them.
 
@@ -39,7 +36,7 @@ See https://content-security-policy.com/[content-security-policy.com] for a refe
 
 == Customizing Content Security Policy
 
-IMPORTANT: It is strongly recommended to set up the link:../user-content/#resource-root-url[Resource Root URL] instead of customizing Content-Security-Policy.
+IMPORTANT: It is strongly recommended to set up the xref:user-content.adoc#resource-root-url[Resource Root URL] instead of customizing Content-Security-Policy.
 Most of the documentation below was written when `Content-Security-Policy` was first introduced and is retained for use by administrators unable to set up Jenkins to serve user content from a different domain.
 
 === Considerations
@@ -49,7 +46,7 @@ It depends on the specific Jenkins setup whether relaxing these rules substantia
 The following needs to be taken into consideration:
 
 * *Are less trusted users allowed to create or modify files in Jenkins workspaces?* Jenkins builds pull requests sent by untrusted users, or employ a security model that limits trust in users allowed to configure one or more jobs, this also affects in what way the CSP rule set should be relaxed: Anything allowed there could be abused by users with the ability to change files in workspaces or archived artifacts.
-* *Are some agents not fully trusted?* Even when link:/doc/book/security/controller-isolation/#agent-controller-access-control[Agent To Controller Access] is used to limit what agents can do on the
+* *Are some agents not fully trusted?* Even when xref:dev-docs:security:controller-isolation.adoc#agent-controller-access-control[Agent To Controller Access] is used to limit what agents can do on the
 controller node, the entire build directory on the controller node is writable by agents, with the exception of the build.xml file itself.
 Therefore any file stored in a build directory and served by Jenkins should be considered potentially unsafe.
 
@@ -58,7 +55,7 @@ If neither is true, and all users with the ability to change files in workspaces
 
 === Implementation
 
-The CSP header sent by Jenkins can be modified by link:/doc/book/managing/system-properties/[setting the Java system property] `hudson.model.DirectoryBrowserSupport.CSP`:
+The CSP header sent by Jenkins can be modified by xref:user-docs:managing:system-properties.adoc[setting the Java system property] `hudson.model.DirectoryBrowserSupport.CSP`:
 
 If its value is the *empty string*, e.g. `java -Dhudson.model.DirectoryBrowserSupport.CSP= -jar jenkins.war` then the header will not be sent at all.
 

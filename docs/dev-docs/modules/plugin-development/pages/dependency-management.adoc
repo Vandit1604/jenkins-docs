@@ -40,7 +40,7 @@ and
 ----
 
 This error says that a conflict exists between the versions of `commons-codec` and `jcl-over-slf4j` specified by the plugin versus Jenkins core.
-See link:/doc/developer/plugin-development/updating-parent/#understanding-requireupperbounddeps-failures-and-fixes[Understanding requireUpperBoundDeps failures and fixes] for more information.
+See xref:dev-docs:plugin-development:updating-parent.adoc#understanding-requireupperbounddeps-failures-and-fixes[Understanding requireUpperBoundDeps failures and fixes] for more information.
 
 In many cases, upper bounds dependencies errors are best resolved by updating the Jenkins core Bill of Materials and by using the Jenkins plugin Bill of Materials.
 
@@ -71,7 +71,7 @@ The plugin BOM provides Pipeline plugin version numbers so that the developer do
 The plugin bill of materials is defined in the `dependencyManagement` section of your _pom.xml_ file.
 To use the Jenkins plugin BOM in your plugin:
 
-. Confirm that you are using the link:/doc/developer/plugin-development/updating-parent/[current parent pom] with the command `mvn versions:update-parent`
+. Confirm that you are using the xref:dev-docs:plugin-development:updating-parent.adoc[current parent pom] with the command `mvn versions:update-parent`
 . Locate the most recent plugin bom version number on the link:https://github.com/jenkinsci/bom/releases[plugin bom releases page]
 . Copy the `dependencyManagement` section from the _pom.xml_ file in that directory
 . Insert this `dependencyManagement` section into the _pom.xml_ file for your plugin
@@ -114,7 +114,8 @@ See the video below for an example that adds Dependabot to an existing plugin re
 .Automate dependency management with Dependabot
 video::2c8wK2jkcIA[youtube, width=852, height=480, start=980]
 
-== References
-
-- link:https://github.com/jenkinsci/plugin-pom/[Plugin parent POM 4.0 and up]
-- link:https://github.com/jenkinsci/jenkins/blob/master/bom/pom.xml[Jenkins Core BOM]
+.References
+****
+* link:https://github.com/jenkinsci/plugin-pom/[Plugin parent POM 4.0 and up]
+* link:https://github.com/jenkinsci/jenkins/blob/master/bom/pom.xml[Jenkins Core BOM]
+****

@@ -1,6 +1,5 @@
 = Testing
-
-WARNING: This section is a work in progress. Want to help? Check out the (https://app.gitter.im/#/room/#jenkins/docs:matrix.org)[jenkinsci/docs gitter channel]. For other ways to contribute to the Jenkins project, see (https://www.jenkins.io/participate)[this page about participating and contributing].
+:page-layout:wip
 
 == Overview
 Writing automated tests for Jenkins and its plugins is important to ensure that everything works as expected — in various scenarios, with multiple Java versions, and on different operating systems — while helping to prevent regressions from being introduced in later releases.
@@ -38,7 +37,7 @@ For example:
 ----
 
 ==== Working with Pipeline
-You are encouraged to test that your plugin works with link:/doc/pipeline/[Pipeline].
+You are encouraged to test that your plugin works with xref:user-docs:pipeline:index.adoc[Pipeline].
 You can do so without making your plugin itself dependent on various Pipeline-related plugins; instead you can include these as `test` dependencies, so that they are only used when compiling and running test cases.
 
 This is done by adding the minimum required Pipeline plugins to the `<dependencies>` section of your POM.
@@ -459,9 +458,10 @@ TODO: RestartableJenkinsRule.
 == Advanced and Tips etc.
 //Tip: Use @ClassRule for JenkinsRule, if you're 900% sure that everything is ok
 
-== References
-
-- link:https://wiki.jenkins.io/display/JENKINS/Mocking+in+Unit+Tests[Wiki: Mocking in Unit Tests]
-- link:https://wiki.jenkins.io/display/JENKINS/Unit+Test+on+Windows[Wiki: Unit Testing on Windows]
-- link:https://javadoc.jenkins.io/component/jenkins-test-harness/[Jenkins Test Harness Javadoc]
-- link:https://github.com/jenkinsci/acceptance-test-harness[Acceptance Test Harness]
+.References
+****
+* link:https://wiki.jenkins.io/display/JENKINS/Mocking+in+Unit+Tests[Wiki: Mocking in Unit Tests]
+* link:https://wiki.jenkins.io/display/JENKINS/Unit+Test+on+Windows[Wiki: Unit Testing on Windows]
+* link:https://javadoc.jenkins.io/component/jenkins-test-harness/[Jenkins Test Harness Javadoc]
+* link:https://github.com/jenkinsci/acceptance-test-harness[Acceptance Test Harness]
+****

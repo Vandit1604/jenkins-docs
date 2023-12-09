@@ -113,7 +113,7 @@ issues:
     [NOTE]
     ======
     In case this results in problems, e.g. a valid URL unexpectedly being rejected, set the system property `jenkins.model.JenkinsLocationConfiguration.disableUrlValidation` to `true` to disable this restriction.
-    link:/doc/book/managing/system-properties/[Learn more about system properties in Jenkins].
+    xref:user-docs:managing:system-properties.adoc[Learn more about system properties in Jenkins].
     ======
 
 
