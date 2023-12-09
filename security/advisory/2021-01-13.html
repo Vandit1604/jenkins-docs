@@ -29,7 +29,7 @@
     <span class="nav-text">For Adminstrators</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-administrators.html">for-administrators.adoc</a>
+    <a class="nav-link" href="../for-administrators.html">"Overview for Jenkins Administrators"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
@@ -47,7 +47,7 @@
     <span class="nav-text">For Reporters</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../reporting.html">reporting.adoc</a>
+    <a class="nav-link" href="../reporting.html">"Reporting Security Vulnerabilities"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
@@ -59,7 +59,7 @@
     <span class="nav-text">For Maintainers</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-maintainers.html">for-maintainers.adoc</a>
+    <a class="nav-link" href="../for-maintainers.html">"Overview for Plugin Maintainers"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../plugins.html">Managing Plugins</a>
@@ -294,7 +294,7 @@ This results in a reflected cross-site scripting (XSS) vulnerability if the conf
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>    NOTE: In case of problems with this change, these protections can be disabled by setting the link:/doc/book/managing/system-properties/[Java system properties] `hudson.markup.MarkupFormatter.previewsAllowGET` to `true` and/or `hudson.markup.MarkupFormatter.previewsSetCSP` to `false`.
+<pre>    NOTE: In case of problems with this change, these protections can be disabled by setting the xref:user-docs:managing:system-properties.adoc[Java system properties] `hudson.markup.MarkupFormatter.previewsAllowGET` to `true` and/or `hudson.markup.MarkupFormatter.previewsSetCSP` to `false`.
     Doing either is discouraged.
 - id: SECURITY-2171
   reporter: Jesse Glick, CloudBees, Inc. and Wadeck Follonier, CloudBees, Inc.
@@ -345,7 +345,7 @@ This results in a reflected cross-site scripting (XSS) vulnerability if the conf
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>    In case of problems, the link:/doc/book/managing/system-properties/[Java system properties] `hudson.util.RobustReflectionConverter.recordFailuresForAdmins` and `hudson.util.RobustReflectionConverter.recordFailuresForAllAuthentications` can be set to `true` to record configuration data submissions from administrators or all users, partially or completely disabling this fix.
+<pre>    In case of problems, the xref:user-docs:managing:system-properties.adoc[Java system properties] `hudson.util.RobustReflectionConverter.recordFailuresForAdmins` and `hudson.util.RobustReflectionConverter.recordFailuresForAllAuthentications` can be set to `true` to record configuration data submissions from administrators or all users, partially or completely disabling this fix.
 - id: SECURITY-1452
   reporter: Travis Emmert from Apple Information Security
   title: Arbitrary file read vulnerability in workspace browsers
@@ -396,7 +396,7 @@ While they may still exist on the file system, they are no longer shown on the U
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>    In case of problems, this change can be reverted by setting the link:/doc/book/managing/system-properties/[Java system property] `jenkins.model.Nodes.enforceNameRestrictions` to `false`.
+<pre>    In case of problems, this change can be reverted by setting the xref:user-docs:managing:system-properties.adoc[Java system property] `jenkins.model.Nodes.enforceNameRestrictions` to `false`.
 - id: SECURITY-2023
   reporter: Wadeck Follonier, CloudBees, Inc.
   title: Arbitrary file existence check in file fingerprints
@@ -447,7 +447,7 @@ If a larger size is requested, the default size for the graph will be rendered i
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>    This threshold can be configured by setting the link:/doc/book/managing/system-properties/[Java system property] `hudson.util.Graph.maxArea` to a different number on startup.
+<pre>    This threshold can be configured by setting the xref:user-docs:managing:system-properties.adoc[Java system property] `hudson.util.Graph.maxArea` to a different number on startup.
 - id: SECURITY-2047
   reporter: Daniel Beck, CloudBees, Inc.
   title: Missing permission check for paths with specific prefix
@@ -516,7 +516,7 @@ If a larger size is requested, the default size for the graph will be rendered i
 <div class="literalblock">
 <div class="content">
 <pre>    In case this change causes problems, additional paths can be made accessible without Overall/Read permissions:
-    The link:/doc/book/managing/system-properties/[Java system property] `jenkins.model.Jenkins.additionalReadablePaths` is a comma-separated list of additional path prefixes to allow access to.
+    The xref:user-docs:managing:system-properties.adoc[Java system property] `jenkins.model.Jenkins.additionalReadablePaths` is a comma-separated list of additional path prefixes to allow access to.
 - id: SECURITY-2057
   reporter: Long Nguyen, Viettel Cyber Security
   title: Credentials stored in plain text by PLUGIN_NAME

@@ -64,6 +64,33 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
+    <span class="nav-text">index.adoc</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-11.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-windows.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-linux.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-web-browsers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-java.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-servlet-containers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-17.adoc</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
@@ -106,7 +133,7 @@
     <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/getting-started.html">getting-started.adoc</a>
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with the Guided Tour</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
@@ -118,7 +145,7 @@
     <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
@@ -187,7 +214,7 @@
     <a class="nav-link" href="system-info.html">System Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="system-properties.html">system-properties.adoc</a>
+    <a class="nav-link" href="system-properties.html">Jenkins Features Controlled with System Properties</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="change-system-timezone.html">Change System Time Zone</a>
@@ -571,7 +598,7 @@ up to date.</p>
 <div class="paragraph">
 <p>Security for in-process scripting is provided by two different mechanisms: the
 <a href="#groovy-sandbox">Groovy Sandbox</a> and <a href="#script-approval">Script Approval</a>. The first, the Groovy Sandbox, is
-enabled by default for <a href="/doc/book/pipeline">Jenkins Pipeline</a> allowing
+enabled by default for <a href="../pipeline/index.html" class="xref page">Jenkins Pipeline</a> allowing
 user-supplied Scripted and Declarative Pipeline to execute without prior
 Administrator intervention. The second, Script
 Approval, allows Administrators to approve or deny unsandboxed scripts, or
@@ -591,7 +618,7 @@ that Administrators only deviate from these defaults if absolutely necessary.</p
 <div class="paragraph">
 <p>To reduce manual interventions by Administrators, most scripts will run in a
 Groovy Sandbox by default, including all
-<a href="/doc/book/pipeline">Jenkins Pipelines</a>.
+<a href="../pipeline/index.html" class="xref page">Jenkins Pipelines</a>.
 The sandbox only allows a subset of Groovy&#8217;s methods deemed sufficiently safe
 for "untrusted" access to be executed without prior approval. Scripts using
 the Groovy Sandbox are <strong>all</strong> subject to the same restrictions, therefore a

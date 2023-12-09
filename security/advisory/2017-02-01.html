@@ -29,7 +29,7 @@
     <span class="nav-text">For Adminstrators</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-administrators.html">for-administrators.adoc</a>
+    <a class="nav-link" href="../for-administrators.html">"Overview for Jenkins Administrators"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
@@ -47,7 +47,7 @@
     <span class="nav-text">For Reporters</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../reporting.html">reporting.adoc</a>
+    <a class="nav-link" href="../reporting.html">"Reporting Security Vulnerabilities"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
@@ -59,7 +59,7 @@
     <span class="nav-text">For Maintainers</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-maintainers.html">for-maintainers.adoc</a>
+    <a class="nav-link" href="../for-maintainers.html">"Overview for Plugin Maintainers"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../plugins.html">Managing Plugins</a>
@@ -345,7 +345,7 @@ kind: core
 <p>Jenkins allows plugins to annotate build logs, adding new content or changing the presentation of existing content while the build is running. Popular examples include the highlighting of sections by plugin:ant[Ant Plugin], or the timestamp metadata from plugin:timestamper[Timestamper]. Malicious Jenkins users, or users with SCM access, could configure jobs or modify build scripts such that they print serialized console notes that perform cross-site scripting attacks on Jenkins users viewing the build logs.</p>
 </div>
 <div class="paragraph">
-<p>To prevent this, console notes are now signed by Jenkins when created, and Jenkins will only deserialize correctly signed console notes. <strong>As a side effect, console notes created before updating to a release containing this fix will no longer be deserialized.</strong> To restore the previous (unsafe) behavior, set the system property <code>hudson.console.ConsoleNote.INSECURE</code> to <code>true</code> as described on <a href="/doc/book/managing/system-properties/">Features controlled by system properties</a>.</p>
+<p>To prevent this, console notes are now signed by Jenkins when created, and Jenkins will only deserialize correctly signed console notes. <strong>As a side effect, console notes created before updating to a release containing this fix will no longer be deserialized.</strong> To restore the previous (unsafe) behavior, set the system property <code>hudson.console.ConsoleNote.INSECURE</code> to <code>true</code> as described on <a href="../../user-docs/2.401.3/managing/system-properties.html" class="xref page">Features controlled by system properties</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -405,7 +405,7 @@ kind: core
 <p>When administrators accessed a URL like <code>/user/example</code> via HTTP GET, a user with the ID <code>example</code> was created if it did not exist. While this user record was only retained until restart in most cases, administrators' web browsers could be manipulated to create a large number of user records.</p>
 </div>
 <div class="paragraph">
-<p>Accessing these URLs now no longer results in a user record getting created, Jenkins will respond with 404 Not Found if no such user exists. When using the internal Jenkins user database, new users can be created via <em>Manage Jenkins » Manage Users</em>. To restore the previous (unsafe) behavior, set the system property <code>hudson.model.User.allowUserCreationViaUrl</code> to <code>true</code> as described on <a href="/doc/book/managing/system-properties/">Features controlled by system properties</a>.</p>
+<p>Accessing these URLs now no longer results in a user record getting created, Jenkins will respond with 404 Not Found if no such user exists. When using the internal Jenkins user database, new users can be created via <em>Manage Jenkins » Manage Users</em>. To restore the previous (unsafe) behavior, set the system property <code>hudson.model.User.allowUserCreationViaUrl</code> to <code>true</code> as described on <a href="../../user-docs/2.401.3/managing/system-properties.html" class="xref page">Features controlled by system properties</a>.</p>
 </div>
 </div>
 </div>
@@ -510,7 +510,7 @@ kind: core
 <h2 id="_credit"><a class="anchor" href="#_credit"></a>Credit</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Jenkins project would like to thank the reporters for discovering and <a href="/security/#reporting-vulnerabilities">reporting</a> these vulnerabilities:</p>
+<p>The Jenkins project would like to thank the reporters for discovering and <a href="../../dev-docs/security/index.html#reporting-vulnerabilities" class="xref page">reporting</a> these vulnerabilities:</p>
 </div>
 <div class="ulist">
 <ul>

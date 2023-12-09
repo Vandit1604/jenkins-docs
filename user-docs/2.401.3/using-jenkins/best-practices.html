@@ -62,6 +62,33 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
+    <span class="nav-text">index.adoc</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-11.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-windows.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-linux.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-web-browsers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-java.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-servlet-containers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-17.adoc</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="index.html">Using Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
@@ -104,7 +131,7 @@
     <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/getting-started.html">getting-started.adoc</a>
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with the Guided Tour</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
@@ -116,7 +143,7 @@
     <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
@@ -185,7 +212,7 @@
     <a class="nav-link" href="../managing/system-info.html">System Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../managing/system-properties.html">system-properties.adoc</a>
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
@@ -534,7 +561,7 @@ Leverage this feature and optimize your job management by structuring your job d
 If you are using GitHub organizations, Bitbucket teams, GitLab groups, or Gitea organizations, Jenkins can automatically detect the creation of a new repository and generate a Multibranch Pipeline project for it.</p>
 </div>
 <div class="paragraph">
-<p>Refer to the <a href="/doc/book/pipeline/pipeline-as-code/#organization-folders">organization folders</a> documentation for more details.</p>
+<p>Refer to the <a href="#user-docs:pipeline:pipeline-as-code.adoc#organization-folders" class="xref unresolved">organization folders</a> documentation for more details.</p>
 </div>
 <div class="videoblock">
 <div class="title">GitHub organization folders</div>
@@ -586,7 +613,7 @@ However, it&#8217;s important to note that organization folders are preferred ov
 </div>
 </div>
 <div class="paragraph">
-<p>Refer to the <a href="/doc/book/pipeline/pipeline-as-code/#multibranch-pipeline-projects">multibranch Pipelines</a> documentation for more details.</p>
+<p>Refer to the <a href="#user-docs:pipeline:pipeline-as-code.adoc#multibranch-pipeline-projects" class="xref unresolved">multibranch Pipelines</a> documentation for more details.</p>
 </div>
 </div>
 <div class="sect2">
@@ -596,7 +623,7 @@ However, it&#8217;s important to note that organization folders are preferred ov
 However, it&#8217;s important to highlight that organization folders are preferred, due to their ability to automatically create and delete multibranch projects when repositories are added or removed.</p>
 </div>
 <div class="paragraph">
-<p>Refer to the <a href="/doc/book/pipeline/">Pipeline</a> documentation for more details.</p>
+<p>Refer to the <a href="../pipeline/index.html" class="xref page">Pipeline</a> documentation for more details.</p>
 </div>
 <div class="videoblock">
 <div class="title">Differences between Freestyle and Pipeline in Jenkins</div>
@@ -653,7 +680,7 @@ Performance test results help identify delays or areas of concern.</p>
 Utilizing agents offers enhanced safety and scalability.</p>
 </div>
 <div class="paragraph">
-<p>Refer to the <a href="/doc/book/security/controller-isolation/">controller isolation</a> documentation for more details.</p>
+<p>Refer to the <a href="#dev-docs:security:controller-isolation.adoc" class="xref unresolved">controller isolation</a> documentation for more details.</p>
 </div>
 </div>
 <div class="sect2">
@@ -692,7 +719,7 @@ This ensures that naming restrictions are enforced uniformly.</p>
 However, Jenkins offers a solution called "file fingerprinting" to simplify this process.</p>
 </div>
 <div class="paragraph">
-<p>Refer to the <a href="/doc/book/using/fingerprints/">fingerprinting page</a> for more information.</p>
+<p>Refer to the <a href="fingerprints.html" class="xref page">fingerprinting page</a> for more information.</p>
 </div>
 </div>
 <div class="sect2">
@@ -731,7 +758,7 @@ Disabling security can leave your Jenkins instance vulnerable to unauthorized ac
 It is important to maintain a secure environment by keeping security enabled at all times.</p>
 </div>
 <div class="paragraph">
-<p>Refer to the <a href="/doc/book/security/securing-jenkins/">securing Jenkins</a> chapter of the User Handbook for more details.</p>
+<p>Refer to the <a href="../security/securing-jenkins.html" class="xref page">securing Jenkins</a> chapter of the User Handbook for more details.</p>
 </div>
 </div>
 <div class="sect2">
@@ -744,7 +771,7 @@ Regularly testing your backups and verifying their completeness and restorabilit
 Prioritizing backup health and conducting routine checks is essential for maintaining a robust and resilient system.</p>
 </div>
 <div class="paragraph">
-<p>More details can be found in the <a href="/doc/book/system-administration/backing-up/">backup documentation</a>.</p>
+<p>More details can be found in the <a href="../system-administration/backing-up.html" class="xref page">backup documentation</a>.</p>
 </div>
 </div>
 <div class="sect2">

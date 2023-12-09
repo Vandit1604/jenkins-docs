@@ -64,6 +64,33 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
+    <span class="nav-text">index.adoc</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-11.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-windows.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-linux.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-web-browsers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-java.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-servlet-containers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-17.adoc</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
@@ -106,7 +133,7 @@
     <a class="nav-link" href="index.html">Pipeline</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="getting-started.html">getting-started.adoc</a>
+    <a class="nav-link" href="getting-started.html">Getting started with the Guided Tour</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="jenkinsfile.html">Using a Jenkinsfile</a>
@@ -118,7 +145,7 @@
     <a class="nav-link" href="multibranch.html">Branches and Pull Requests</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="docker.html">Using Docker with pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="shared-libraries.html">Extending with Shared Libraries</a>
@@ -187,7 +214,7 @@
     <a class="nav-link" href="../managing/system-info.html">System Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../managing/system-properties.html">system-properties.adoc</a>
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
@@ -499,10 +526,11 @@
 </aside>
 <article class="doc">
 <h1 class="page">Using a Jenkinsfile</h1>
-<h1 id="_using_a_jenkinsfile" class="sect0"><a class="anchor" href="#_using_a_jenkinsfile"></a>Using a Jenkinsfile</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>This section builds on the information covered in
-<a href="../getting-started">Getting started with Pipeline</a>
+<a href="getting-started.html" class="xref page">Getting started with Pipeline</a>
 and introduces more useful steps, common patterns, and demonstrates some
 non-trivial <code>Jenkinsfile</code> examples.</p>
 </div>
@@ -527,18 +555,20 @@ for the Pipeline, which can be viewed and edited by multiple members of the proj
 </ul>
 </div>
 <div class="paragraph">
-<p>Pipeline supports <a href="../syntax">two syntaxes</a>, Declarative (introduced in
+<p>Pipeline supports <a href="syntax.html" class="xref page">two syntaxes</a>, Declarative (introduced in
 Pipeline 2.5) and Scripted Pipeline. Both of which support building continuous
 delivery pipelines. Both may be used to define a Pipeline in either the web UI
 or with a <code>Jenkinsfile</code>, though it&#8217;s generally considered a best practice to
 create a <code>Jenkinsfile</code> and check the file into the source control repository.</p>
+</div>
+</div>
 </div>
 <div class="sect1">
 <h2 id="_creating_a_jenkinsfile"><a class="anchor" href="#_creating_a_jenkinsfile"></a>Creating a Jenkinsfile</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>As discussed in the
-<a href="../getting-started#defining-a-pipeline-in-scm">Defining a Pipeline in SCM</a>,
+<a href="getting-started.html#defining-a-pipeline-in-scm" class="xref page">Defining a Pipeline in SCM</a>,
 a <code>Jenkinsfile</code> is a text file that contains the definition of a Jenkins
 Pipeline and is checked into source control. Consider the following Pipeline
 which implements a basic three-stage continuous delivery pipeline.</p>
@@ -1066,9 +1096,9 @@ pipeline {
 <h3 id="_handling_credentials"><a class="anchor" href="#_handling_credentials"></a>Handling credentials</h3>
 <div class="paragraph">
 <p>Credentials
-<a href="../../using/using-credentials#configuring-credentials">configured in
+<a href="../using-jenkins/using-credentials.html#configuring-credentials" class="xref page">configured in
 Jenkins</a> can be handled in Pipelines for immediate use. Read more about using
-credentials in Jenkins on the <a href="../../using/using-credentials">Using
+credentials in Jenkins on the <a href="../using-jenkins/using-credentials.html" class="xref page">Using
 credentials</a> page.</p>
 </div>
 <div class="videoblock">
@@ -2227,17 +2257,17 @@ exists in the Jenkins environment.</p>
 <div id="footnotes">
 <hr>
 <div class="footnote" id="_footnotedef_1">
-<a href="#_footnoteref_1">1</a>. <a href="https://en.wikipedia.org/wiki/Source_control_management" class="bare">en.wikipedia.org/wiki/Source_control_management</a>
+<a href="#_footnoteref_1">1</a>. <a href="https://en.wikipedia.org/wiki/Source_control_management" class="bare">https://en.wikipedia.org/wiki/Source_control_management</a>
 </div>
 <div class="footnote" id="_footnotedef_2">
-<a href="#_footnoteref_2">2</a>. <a href="https://en.wikipedia.org/wiki/Single_Source_of_Truth" class="bare">en.wikipedia.org/wiki/Single_Source_of_Truth</a>
+<a href="#_footnoteref_2">2</a>. <a href="https://en.wikipedia.org/wiki/Single_Source_of_Truth" class="bare">https://en.wikipedia.org/wiki/Single_Source_of_Truth</a>
 </div>
 <div class="footnote" id="_footnotedef_3">
-<a href="#_footnoteref_3">3</a>. <a href="https://en.wikipedia.org/wiki/Domain-specific_language" class="bare">en.wikipedia.org/wiki/Domain-specific_language</a>
+<a href="#_footnoteref_3">3</a>. <a href="https://en.wikipedia.org/wiki/Domain-specific_language" class="bare">https://en.wikipedia.org/wiki/Domain-specific_language</a>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="getting-started.html">getting-started.adoc</a></span>
+  <span class="prev"><a href="getting-started.html">Getting started with the Guided Tour</a></span>
   <span class="next"><a href="running-pipelines.html">Running a Pipeline</a></span>
 </nav>
 </article>

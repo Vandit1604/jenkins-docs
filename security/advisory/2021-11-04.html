@@ -29,7 +29,7 @@
     <span class="nav-text">For Adminstrators</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-administrators.html">for-administrators.adoc</a>
+    <a class="nav-link" href="../for-administrators.html">"Overview for Jenkins Administrators"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
@@ -47,7 +47,7 @@
     <span class="nav-text">For Reporters</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../reporting.html">reporting.adoc</a>
+    <a class="nav-link" href="../reporting.html">"Reporting Security Vulnerabilities"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
@@ -59,7 +59,7 @@
     <span class="nav-text">For Maintainers</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-maintainers.html">for-maintainers.adoc</a>
+    <a class="nav-link" href="../for-maintainers.html">"Overview for Plugin Maintainers"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../plugins.html">Managing Plugins</a>
@@ -328,8 +328,8 @@ issues:
 <div class="literalblock">
 <div class="content">
 <pre>IMPORTANT: As some common operations are now newly subject to access control, it is expected that plugins sending commands from agents to the controller may start failing.
-Additionally, the newly introduced path canonicalization means that instances using a custom builds directory (link:/doc/book/managing/system-properties/#jenkins-model-jenkins-buildsdir[Java system property `jenkins.model.Jenkins.buildsDir`]) or partitioning `JENKINS_HOME` using symbolic links may fail access control checks.
-See link:/doc/book/security/controller-isolation/agent-to-controller/#file-access-rules[the documentation] for how to customize the configuration in case of problems.</pre>
+Additionally, the newly introduced path canonicalization means that instances using a custom builds directory (xref:user-docs:managing:system-properties.adoc#jenkins-model-jenkins-buildsdir[Java system property `jenkins.model.Jenkins.buildsDir`]) or partitioning `JENKINS_HOME` using symbolic links may fail access control checks.
+See xref:dev-docs:security:controller-isolation/agent-to-controller.adoc#file-access-rules[the documentation] for how to customize the configuration in case of problems.</pre>
 </div>
 </div>
 <div class="literalblock">
@@ -371,7 +371,7 @@ Make sure to read the plugin documentation before installing it.</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>    IMPORTANT: It is not easily possible to link:/doc/book/security/controller-isolation/agent-to-controller/#file-access-rules[customize the file access rules] to prohibit access to the `libs/` directory specifically, as built-in rules (granting access to `&lt;BUILDDIR&gt;` contents) would take precedence over a custom rule prohibiting access.
+<pre>    IMPORTANT: It is not easily possible to xref:dev-docs:security:controller-isolation/agent-to-controller.adoc#file-access-rules[customize the file access rules] to prohibit access to the `libs/` directory specifically, as built-in rules (granting access to `&lt;BUILDDIR&gt;` contents) would take precedence over a custom rule prohibiting access.
 - id: SECURITY-2428
   reporter: Daniel Beck, CloudBees, Inc.
   title: Agent-to-controller access control allows reading/writing most content of

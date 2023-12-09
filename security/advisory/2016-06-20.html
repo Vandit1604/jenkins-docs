@@ -29,7 +29,7 @@
     <span class="nav-text">For Adminstrators</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-administrators.html">for-administrators.adoc</a>
+    <a class="nav-link" href="../for-administrators.html">"Overview for Jenkins Administrators"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
@@ -47,7 +47,7 @@
     <span class="nav-text">For Reporters</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../reporting.html">reporting.adoc</a>
+    <a class="nav-link" href="../reporting.html">"Reporting Security Vulnerabilities"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
@@ -59,7 +59,7 @@
     <span class="nav-text">For Maintainers</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-maintainers.html">for-maintainers.adoc</a>
+    <a class="nav-link" href="../for-maintainers.html">"Overview for Plugin Maintainers"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../plugins.html">Managing Plugins</a>
@@ -280,7 +280,7 @@ kind: plugins
 <p><strong>SECURITY-305 / CVE-2013-7397 and CVE-2013-7398</strong></p>
 </div>
 <div class="paragraph">
-<p>Async HTTP Client Plugin provides the Async HTTP Client Java library to other plugins. It is based on the 1.7.x line of AHC, which by default is vulnerable to <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-7397">CVE-2013-7397</a> and <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-7398">CVE-2013-7398</a>, allowing man-in-the-middle attacks. The fixes for these vulnerabilities were backported. The system property <code>jenkins.plugins.asynchttpclient.AHC.acceptAnyCertificate</code> can temporarily be set to <code>true</code> to disable these new validity checks. <a href="/doc/book/managing/system-properties/">Learn more about system properties in Jenkins</a>.</p>
+<p>Async HTTP Client Plugin provides the Async HTTP Client Java library to other plugins. It is based on the 1.7.x line of AHC, which by default is vulnerable to <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-7397">CVE-2013-7397</a> and <a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-7398">CVE-2013-7398</a>, allowing man-in-the-middle attacks. The fixes for these vulnerabilities were backported. The system property <code>jenkins.plugins.asynchttpclient.AHC.acceptAnyCertificate</code> can temporarily be set to <code>true</code> to disable these new validity checks. <a href="../../user-docs/2.401.3/managing/system-properties.html" class="xref page">Learn more about system properties in Jenkins</a>.</p>
 </div>
 </div>
 </div>
@@ -365,7 +365,7 @@ kind: plugins
 <h2 id="_credit"><a class="anchor" href="#_credit"></a>Credit</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Jenkins project would like to thank the following people for discovering and <a href="/security/#reporting-vulnerabilities">reporting</a> these vulnerabilities:</p>
+<p>The Jenkins project would like to thank the following people for discovering and <a href="../../dev-docs/security/index.html#reporting-vulnerabilities" class="xref page">reporting</a> these vulnerabilities:</p>
 </div>
 <div class="ulist">
 <ul>

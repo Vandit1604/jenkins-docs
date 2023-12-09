@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Jenkins</title>
+    <title>"Reporting Security Vulnerabilities" :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/security/reporting.html">
     <link rel="prev" href="fixing.html">
     <link rel="next" href="cna.html">
@@ -31,7 +31,7 @@
     <span class="nav-text">For Adminstrators</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="for-administrators.html">for-administrators.adoc</a>
+    <a class="nav-link" href="for-administrators.html">"Overview for Jenkins Administrators"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="scheduling.html">How We Schedule Security Advisories</a>
@@ -49,7 +49,7 @@
     <span class="nav-text">For Reporters</span>
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="reporting.html">reporting.adoc</a>
+    <a class="nav-link" href="reporting.html">"Reporting Security Vulnerabilities"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="cna.html">Jenkins CVE Numbers Authority</a>
@@ -61,7 +61,7 @@
     <span class="nav-text">For Maintainers</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="for-maintainers.html">for-maintainers.adoc</a>
+    <a class="nav-link" href="for-maintainers.html">"Overview for Plugin Maintainers"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="plugins.html">Managing Plugins</a>
@@ -214,7 +214,7 @@
   <ul>
     <li><a href="index.html">Jenkins Security Advisories</a></li>
     <li>For Reporters</li>
-    <li><a href="reporting.html">reporting.adoc</a></li>
+    <li><a href="reporting.html">"Reporting Security Vulnerabilities"</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/reporting.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
@@ -224,13 +224,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<hr>
-<div class="paragraph">
-<p>layout: security
-title: "Reporting Security Vulnerabilities"
-section: security
----</p>
-</div>
+<h1 class="page">"Reporting Security Vulnerabilities"</h1>
 <div class="sect1">
 <h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
@@ -311,7 +305,7 @@ When in doubt, we recommend you report issues to us as described above, and let 
 <ul>
 <li>
 <p>Vulnerabilities only exploitable by users with Overall/Administer permission will generally not be considered to be vulnerabilities.
-Administrators in Jenkins can use the <a href="/doc/book/managing/script-console/">Script Console</a> and install plugins.
+Administrators in Jenkins can use the <a href="../user-docs/2.401.3/managing/script-console.html" class="xref page">Script Console</a> and install plugins.
 These tools let them run arbitrary code and change the behavior of Jenkins in multiple ways, so that very few, if any, vulnerabilities will let them do something novel.
 We still recommend reporting such vulnerabilities in private so that they can be reviewed by the security team, in case the vulnerable code is also used for features accessible by regular users.</p>
 </li>
@@ -336,7 +330,7 @@ This is a feature.</p>
 </li>
 <li>
 <p>Jobs started by a specific user can run on agents where the user lacks Agent/Build permission and can themselves trigger builds of jobs where the user lacks Job/Build permission.
-<a href="/doc/book/security/build-authorization/">See the documentation on Access Control for Builds</a>.</p>
+<a href="../user-docs/2.401.3/security/build-authorization.html" class="xref page">See the documentation on Access Control for Builds</a>.</p>
 </li>
 <li>
 <p>Ability for unauthenticated users to trigger SCM polling via webhooks without directly initiating a build or other resource-intensive computations.</p>
@@ -350,11 +344,11 @@ This is a feature.</p>
 </li>
 <li>
 <p>Cross-site scripting (XSS) vulnerabilities through user-provided content in <code>Cause#getShortDescription</code> without a custom <code>description.jelly</code> are no longer exploitable since Jenkins 2.315 and LTS 2.303.2 (published 2021-10-06).
-<a href="/doc/developer/security/xss-prevention/Cause-getShortDescription/">See the documentation on the redefinition of Cause#getShortDescription</a>.</p>
+<a href="../dev-docs/security/xss-prevention/Cause-getShortDescription.html" class="xref page">See the documentation on the redefinition of Cause#getShortDescription</a>.</p>
 </li>
 <li>
 <p><code>Callable</code> implementations providing an implementation of <code>#checkRoles(RoleChecker)</code> that neither throws an exception nor calls <code>RoleChecker#check</code> is no longer exploitable since Jenkins 2.319 and LTS 2.303.3 (published 2021-11-04).
-<a href="/doc/developer/security/remoting-callables/">See the documentation on Remoting Callables</a>.</p>
+<a href="../dev-docs/security/remoting-callables.html" class="xref page">See the documentation on Remoting Callables</a>.</p>
 </li>
 </ul>
 </div>
@@ -405,7 +399,7 @@ This is intentional.
 Please only report leaked secrets, or similar information disclosure, that results in a direct, immediate risk.</p>
 </li>
 <li>
-<p>DMARC/DKIM/SPF configuration of googlegroups.com, which we use for our <a href="/mailing-lists/">mailing lists</a>.
+<p>DMARC/DKIM/SPF configuration of googlegroups.com, which we use for our <a href="../community/mailing-lists/index.html" class="xref page">mailing lists</a>.
 We trust Google to choose the correct tradeoffs for their Google Groups service, and have no power to change anything anyway.</p>
 </li>
 <li>
@@ -481,7 +475,7 @@ For example, Jenkins core is on a monthly release cadence with several weeks of 
 <h2 id="_security_advisories"><a class="anchor" href="#_security_advisories"></a>Security Advisories</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>We publish Jenkins core and plugin security advisories <a href="/security/advisories">on this site</a> and notify users via <a href="/security/#security-notifications">various mailing lists</a> as well as through security warnings on the Jenkins UI.</p>
+<p>We publish Jenkins core and plugin security advisories <a href="/security/advisories">on this site</a> and notify users via <a href="../dev-docs/security/index.html#security-notifications" class="xref page">various mailing lists</a> as well as through security warnings on the Jenkins UI.</p>
 </div>
 </div>
 </div>

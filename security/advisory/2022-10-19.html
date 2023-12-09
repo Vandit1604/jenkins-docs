@@ -29,7 +29,7 @@
     <span class="nav-text">For Adminstrators</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-administrators.html">for-administrators.adoc</a>
+    <a class="nav-link" href="../for-administrators.html">"Overview for Jenkins Administrators"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
@@ -47,7 +47,7 @@
     <span class="nav-text">For Reporters</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../reporting.html">reporting.adoc</a>
+    <a class="nav-link" href="../reporting.html">"Reporting Security Vulnerabilities"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
@@ -59,7 +59,7 @@
     <span class="nav-text">For Maintainers</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-maintainers.html">for-maintainers.adoc</a>
+    <a class="nav-link" href="../for-maintainers.html">"Overview for Plugin Maintainers"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../plugins.html">Managing Plugins</a>
@@ -830,7 +830,7 @@ Additionally, several plugins have previously been updated to list parameters in
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: custom-checkbox-parameter
     previous: '1.4'
@@ -853,7 +853,7 @@ Additionally, several plugins have previously been updated to list parameters in
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: s3explorer
     previous: 1.0.8
@@ -876,7 +876,7 @@ Those can be used as part of an attack to capture the credentials using another 
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: compuware-topaz-for-total-test
     previous: 2.4.8
@@ -905,7 +905,7 @@ See the link:/doc/upgrade-guide/2.303/#upgrading-to-jenkins-lts-2-303-3[LTS upgr
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: compuware-topaz-for-total-test
     previous: 2.4.8
@@ -928,7 +928,7 @@ See the link:/doc/upgrade-guide/2.303/#upgrading-to-jenkins-lts-2-303-3[LTS upgr
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: compuware-topaz-for-total-test
     previous: 2.4.8
@@ -951,7 +951,7 @@ Those can be used as part of an attack to capture the credentials using another 
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: compuware-strobe-measurement
     previous: 1.0.1
@@ -974,13 +974,13 @@ This allows cross-site scripting (XSS) attacks by users with the ability to cont
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>NOTE: Jenkins instances with link:/doc/book/security/user-content/#resource-root-url[Resource Root URL] configured are unaffected.</pre>
+<pre>NOTE: Jenkins instances with xref:user-docs:security:user-content.adoc#resource-root-url[Resource Root URL] configured are unaffected.</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: xframium
     title: XFramium Builder
@@ -998,20 +998,20 @@ This allows cross-site scripting (XSS) attacks by users with the ability to cont
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>PLUGIN_NAME 0.7 and earlier programmatically updates link:/doc/book/managing/system-properties/#hudson-model-directorybrowsersupport-csp[the Java system property] allowing administrators to customize the `Content-Security-Policy` header for static files served by Jenkins to include `media-src: 'self'`.
+<pre>PLUGIN_NAME 0.7 and earlier programmatically updates xref:user-docs:managing:system-properties.adoc#hudson-model-directorybrowsersupport-csp[the Java system property] allowing administrators to customize the `Content-Security-Policy` header for static files served by Jenkins to include `media-src: 'self'`.
 On a Jenkins instance with default configuration, this effectively disables all other directives in the default rule set, including `script-src`.
 This allows cross-site scripting (XSS) attacks by users with the ability to control files in workspaces, archived artifacts, etc.</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>NOTE: Jenkins instances with link:/doc/book/security/user-content/#resource-root-url[Resource Root URL] configured are unaffected.</pre>
+<pre>NOTE: Jenkins instances with xref:user-docs:security:user-content.adoc#resource-root-url[Resource Root URL] configured are unaffected.</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: screenrecorder
     title: ScreenRecorder
@@ -1035,13 +1035,13 @@ This allows cross-site scripting (XSS) attacks by users with the ability to cont
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>NOTE: Jenkins instances with link:/doc/book/security/user-content/#resource-root-url[Resource Root URL] configured are unaffected.</pre>
+<pre>NOTE: Jenkins instances with xref:user-docs:security:user-content.adoc#resource-root-url[Resource Root URL] configured are unaffected.</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: neuvector-vulnerability-scanner
     title: NeuVector Vulnerability Scanner
@@ -1065,13 +1065,13 @@ This allows cross-site scripting (XSS) attacks by users with the ability to cont
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>NOTE: Jenkins instances with link:/doc/book/security/user-content/#resource-root-url[Resource Root URL] configured are unaffected.</pre>
+<pre>NOTE: Jenkins instances with xref:user-docs:security:user-content.adoc#resource-root-url[Resource Root URL] configured are unaffected.</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
 <pre>  As of publication of this advisory, there is no fix.
-  link:/security/plugins/#unresolved[Learn why we announce this.]
+  xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
 plugins:
 - name: fireline
   title: 360 FireLine

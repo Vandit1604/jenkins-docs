@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Jenkins</title>
+    <title>End-to-End Multibranch Pipeline Project Creation :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/tutorial/2.401.3/build-a-multibranch-pipeline-project.html">
     <link rel="prev" href="build-a-java-app-with-maven.html">
     <link rel="next" href="build-a-node-js-and-react-app-with-npm.html">
@@ -35,13 +35,13 @@
     <span class="nav-text">xref:-for-installing-jenkins-on-Google-Cloud.adoc[]</span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-java-app-with-maven.html">build-a-java-app-with-maven.adoc</a>
+    <a class="nav-link" href="build-a-java-app-with-maven.html">Build a Java app with Maven</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="build-a-multibranch-pipeline-project.html">build-a-multibranch-pipeline-project.adoc</a>
+    <a class="nav-link" href="build-a-multibranch-pipeline-project.html">End-to-End Multibranch Pipeline Project Creation</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-node-js-and-react-app-with-npm.html">build-a-node-js-and-react-app-with-npm.adoc</a>
+    <a class="nav-link" href="build-a-node-js-and-react-app-with-npm.html">Build a Node.js and React app with npm</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="using-jenkinsfile-runner-github-action-to-build-jenkins-pipeline.html">Build a Jenkins pipeline by using Jenkinsfile Runner GitHub Actions</a>
@@ -50,7 +50,7 @@
     <a class="nav-link" href="tutorial-for-installing-jenkins-on-AWS.html">tutorial-for-installing-jenkins-on-AWS.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-python-app-with-pyinstaller.html">build-a-python-app-with-pyinstaller.adoc</a>
+    <a class="nav-link" href="build-a-python-app-with-pyinstaller.html">Build a Python app with PyInstaller</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="create-a-pipeline-in-blue-ocean.html">Create a Pipeline in Blue Ocean</a>
@@ -193,7 +193,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Jenkins Tutorials</a></li>
-    <li><a href="build-a-multibranch-pipeline-project.html">build-a-multibranch-pipeline-project.adoc</a></li>
+    <li><a href="build-a-multibranch-pipeline-project.html">End-to-End Multibranch Pipeline Project Creation</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/tutorials/modules/ROOT/pages/build-a-multibranch-pipeline-project.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
@@ -203,13 +203,9 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<hr>
-<div class="paragraph">
-<p>layout: documentation
-title: End-to-End Multibranch Pipeline Project Creation
-section: doc
----</p>
-</div>
+<h1 class="page">End-to-End Multibranch Pipeline Project Creation</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>This tutorial shows you how to use Jenkins to orchestrate building and testing
 a simple <a href="https://nodejs.org/en/">Node.js</a> and <a href="https://reactjs.org/">React</a>
@@ -218,15 +214,15 @@ well as</em> deliver different outcomes for development and production purposes.
 </div>
 <div class="paragraph">
 <p>Before starting this tutorial, it is recommended that you run through at least
-one of the initial set of <a href="../#introductory-tutorials">Introductory
-tutorials</a> from the <a href="..">Tutorials overview</a> page first to familiarize
+one of the initial set of <a href="#tutorials:ROOT:index.adoc#introductory-tutorials" class="xref unresolved">Introductory
+tutorials</a> from the <a href="#tutorials:ROOT:index.adoc" class="xref unresolved">Tutorials overview</a> page first to familiarize
 yourself with CI/CD concepts (relevant to a technology stack you&#8217;re most
 familiar with), how these concepts are implemented in Jenkins and the
 fundamentals of Jenkins Pipelines.</p>
 </div>
 <div class="paragraph">
 <p>In this tutorial, you&#8217;ll use the same application that the
-<a href="../build-a-node-js-and-react-app-with-npm">Build a Node.js and React app
+<a href="#tutorials:ROOT:build-a-node-js-and-react-app-with-npm.adoc" class="xref unresolved">Build a Node.js and React app
 with npm</a> tutorial is based on. Therefore, you&#8217;ll be building and testing the
 same application but this time, its delivery will be different depending on the
 Git branch that Jenkins builds from. That is, the branch being built determines
@@ -236,14 +232,14 @@ which delivery stage of your Pipeline is executed.</p>
 <p><strong>Duration:</strong> This tutorial takes 30-50 minutes to complete (assuming you&#8217;ve
 already met the <a href="#prerequisites">Prerequisites</a> below). The exact duration will
 depend on the speed of your machine and whether or not you&#8217;ve already
-<a href="#run-jenkins-in-docker">run Jenkins in Docker</a> from <a href="..">another tutorial</a>.</p>
+<a href="#run-jenkins-in-docker">run Jenkins in Docker</a> from <a href="#tutorials:ROOT:index.adoc" class="xref unresolved">another tutorial</a>.</p>
 </div>
 <div class="paragraph">
 <p>You can stop this tutorial at any point in time and continue from where you left
 off.</p>
 </div>
 <div class="paragraph">
-<p>If you&#8217;ve already run though <a href="..">another tutorial</a>, you can skip the
+<p>If you&#8217;ve already run though <a href="#tutorials:ROOT:index.adoc" class="xref unresolved">another tutorial</a>, you can skip the
 <a href="#prerequisites">Prerequisites</a> and <a href="#run-jenkins-in-docker">Run Jenkins in
 Docker</a> sections below and proceed on to <a href="#fork-sample-repository">forking the
 sample repository</a>. (Just ensure you have
@@ -259,6 +255,8 @@ proceed on.</p>
 </div>
 <div class="paragraph">
 <p>Unresolved include directive in modules/ROOT/pages/build-a-multibranch-pipeline-project.adoc - include::doc/book/installing/_run-jenkins-in-docker.adoc[]</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="fork-and-clone-the-sample-repository-on-github"><a class="anchor" href="#fork-and-clone-the-sample-repository-on-github"></a>Fork and clone the sample repository</h3>
@@ -477,9 +475,9 @@ interface.</p>
 <td class="content">
 <div class="paragraph">
 <p>The Pipeline stub consists of the basic requirements for a valid Pipeline - i.e.
-an <a href="/doc/book/pipeline/syntax#agent"><code>agent</code></a> and a
-<a href="/doc/book/pipeline/syntax#stages"><code>stages</code></a> section, as well as a
-<a href="/doc/book/pipeline/syntax#stage"><code>stage</code></a> directive.</p>
+an <a href="../../user-docs/2.401.3/pipeline/syntax.html#agent" class="xref page"><code>agent</code></a> and a
+<a href="../../user-docs/2.401.3/pipeline/syntax.html#stages" class="xref page"><code>stages</code></a> section, as well as a
+<a href="../../user-docs/2.401.3/pipeline/syntax.html#stage" class="xref page"><code>stage</code></a> directive.</p>
 </div>
 <div class="paragraph">
 <p>The reason why the <code>building-a-multibranch-pipeline-project</code> repository includes
@@ -579,11 +577,11 @@ are covered in subsequent sections of this tutorial.</td>
 <div class="paragraph">
 <p><strong>Note:</strong> For an explanation of the other components of this <code>Jenkinsfile</code>, refer
 to the annotations of the Declarative Pipeline in the
-<a href="../build-a-node-js-and-react-app-with-npm/#create-your-initial-pipeline-as-a-jenkinsfile"><code>Create
+<a href="#tutorials:ROOT:build-a-node-js-and-react-app-with-npm.adoc#create-your-initial-pipeline-as-a-jenkinsfile" class="xref unresolved"><code>Create
 your initial Pipeline&#8230;&#8203;''</a> and
-<a href="../build-a-node-js-and-react-app-with-npm/#add-a-test-stage-to-your-pipeline"></code>Add
+<a href="#tutorials:ROOT:build-a-node-js-and-react-app-with-npm.adoc#add-a-test-stage-to-your-pipeline" class="xref unresolved"></code>Add
 a test stage&#8230;&#8203;''</a> sections of the
-<a href="../build-a-node-js-and-react-app-with-npm/">Build a Node.js and React app
+<a href="#tutorials:ROOT:build-a-node-js-and-react-app-with-npm.adoc" class="xref unresolved">Build a Node.js and React app
 with npm</a> tutorial.</p>
 </div>
 </li>
@@ -638,7 +636,7 @@ Pipeline, which Jenkins will selectively execute based on the branch that Jenkin
 <code>Jenkinsfile</code> describes your project&#8217;s entire build, test, delivery and
 deployment processes in Jenkins for each branch of your repository. Read more
 about Pipeline and what a Jenkinsfile is in the
-<a href="/doc/book/pipeline">Pipeline</a> and <a href="/doc/book/pipeline/jenkinsfile">Using
+<a href="../../user-docs/2.401.3/pipeline/index.html" class="xref page">Pipeline</a> and <a href="../../user-docs/2.401.3/pipeline/jenkinsfile.html" class="xref page">Using
 a Jenkinsfile</a> sections of the User Handbook.</p>
 </div>
 <div class="olist arabic">
@@ -727,9 +725,9 @@ a Jenkinsfile</a> sections of the User Handbook.</p>
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>These <a href="/doc/book/pipeline/syntax#when"><code>when</code></a> directives (along with
+<td>These <a href="../../user-docs/2.401.3/pipeline/syntax.html#when" class="xref page"><code>when</code></a> directives (along with
 their <code>branch</code> conditions) determine whether or not the
-<a href="/doc/book/pipeline/syntax#stage"><code>stages</code></a> (containing these <code>when</code>
+<a href="../../user-docs/2.401.3/pipeline/syntax.html#stage" class="xref page"><code>stages</code></a> (containing these <code>when</code>
 directives) should be executed. If a <code>branch</code> condition&#8217;s value (i.e. pattern)
 matches the name of the branch that Jenkins is running the build from, then the
 <code>stage</code> that contains this <code>when</code> and <code>branch</code> construct will be executed.</td>
@@ -744,7 +742,7 @@ matches the name of the branch that Jenkins is running the build from, then the
 <li>
 <p>For an explanation of the <code>input message</code> steps, refer to annotation <strong>4</strong> of
 the Declarative Pipeline at the
-<a href="../build-a-node-js-and-react-app-with-npm/#add-a-final-deliver-stage-to-your-pipeline">``Add
+<a href="#tutorials:ROOT:build-a-node-js-and-react-app-with-npm.adoc#add-a-final-deliver-stage-to-your-pipeline" class="xref unresolved">``Add
 a final deliver stage&#8230;&#8203;'' section of the Build a Node.js and React app</a>
 tutorial.</p>
 </li>
@@ -1150,14 +1148,14 @@ handle practically any aspect of build orchestration and automation.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="/doc/tutorials">Tutorials overview</a> page for other introductory
+<p>The <a href="#tutorials:ROOT:index.adoc" class="xref unresolved">Tutorials overview</a> page for other introductory
 tutorials.</p>
 </li>
 <li>
-<p>The <a href="/doc/book">User Handbook</a> for more detailed information about using
-Jenkins, such as <a href="/doc/book/pipeline">Pipelines</a> (in particular
-<a href="/doc/book/pipeline/syntax">Pipeline syntax</a>) and the
-<a href="/doc/book/blueocean">Blue Ocean</a> interface.</p>
+<p>The <a href="../../user-docs/2.401.3/index.html" class="xref page">User Handbook</a> for more detailed information about using
+Jenkins, such as <a href="../../user-docs/2.401.3/pipeline/index.html" class="xref page">Pipelines</a> (in particular
+<a href="../../user-docs/2.401.3/pipeline/syntax.html" class="xref page">Pipeline syntax</a>) and the
+<a href="../../user-docs/2.401.3/blueocean/index.html" class="xref page">Blue Ocean</a> interface.</p>
 </li>
 <li>
 <p>The <a href="/node">Jenkins blog</a> for the latest events, other tutorials and
@@ -1169,8 +1167,8 @@ updates.</p>
 Unresolved include directive in modules/ROOT/pages/build-a-multibranch-pipeline-project.adoc - include::_partials/_feedback-footer.html[]
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="build-a-java-app-with-maven.html">build-a-java-app-with-maven.adoc</a></span>
-  <span class="next"><a href="build-a-node-js-and-react-app-with-npm.html">build-a-node-js-and-react-app-with-npm.adoc</a></span>
+  <span class="prev"><a href="build-a-java-app-with-maven.html">Build a Java app with Maven</a></span>
+  <span class="next"><a href="build-a-node-js-and-react-app-with-npm.html">Build a Node.js and React app with npm</a></span>
 </nav>
 </article>
   </div>

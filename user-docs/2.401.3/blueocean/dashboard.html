@@ -64,6 +64,33 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
+    <span class="nav-text">index.adoc</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-11.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-windows.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-linux.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-web-browsers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-java.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-servlet-containers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-17.adoc</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
@@ -106,7 +133,7 @@
     <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/getting-started.html">getting-started.adoc</a>
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with the Guided Tour</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
@@ -118,7 +145,7 @@
     <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
@@ -187,7 +214,7 @@
     <a class="nav-link" href="../managing/system-info.html">System Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../managing/system-properties.html">system-properties.adoc</a>
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
@@ -499,7 +526,8 @@
 </aside>
 <article class="doc">
 <h1 class="page">Dashboard</h1>
-<h1 id="_dashboard" class="sect0"><a class="anchor" href="#_dashboard"></a>Dashboard</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>Blue Ocean&#8217;s "Dashboard" is the default view when opening Blue Ocean.
 It displays an overview of all Pipeline projects configured on a Jenkins instance.</p>
@@ -513,11 +541,13 @@ It displays an overview of all Pipeline projects configured on a Jenkins instanc
 <div class="paragraph boxshadow">
 <p><span class="image unresolved center"><img src="blueocean/dashboard/overview.png" alt="Overview of the Blue Ocean Dashboard" width="100%"></span></p>
 </div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_navigation_bar"><a class="anchor" href="#_navigation_bar"></a>Navigation bar</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Dashboard includes the blue <a href="../getting-started#navigation-bar">navigation bar</a> along the top of the interface.</p>
+<p>The Dashboard includes the blue <a href="getting-started.html#navigation-bar" class="xref page">navigation bar</a> along the top of the interface.</p>
 </div>
 <div class="paragraph">
 <p>The bar is divided into two sections:</p>
@@ -548,7 +578,7 @@ It displays an overview of all Pipeline projects configured on a Jenkins instanc
 <p><strong>Search pipelines</strong>: This field allows users to filter the <a href="#pipelines-list">Pipelines list</a> to match the text you enter into this field.</p>
 </li>
 <li>
-<p><strong>New Pipeline</strong>: This option begins the process of <a href="../creating-pipelines">creating a Pipeline</a>.</p>
+<p><strong>New Pipeline</strong>: This option begins the process of <a href="creating-pipelines.html" class="xref page">creating a Pipeline</a>.</p>
 </li>
 </ul>
 </div>
@@ -596,7 +626,7 @@ The following information is displayed for each Pipeline listed:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Selecting an item in the Pipelines list will display that item&#8217;s <a href="../activity">Activity View</a>.</p>
+<p>Selecting an item in the Pipelines list will display that item&#8217;s <a href="activity.html" class="xref page">Activity View</a>.</p>
 </div>
 </div>
 </div>
@@ -613,7 +643,7 @@ This list also includes options to run or re-run the item on the indicated branc
 </div>
 <div class="paragraph">
 <p>You should only add an item or branch to your Favorites list if it needs regular monitoring.
-Adding an item&#8217;s specific branch to your Favorites list can be done through the item&#8217;s <a href="../activity">Activity View</a>.</p>
+Adding an item&#8217;s specific branch to your Favorites list can be done through the item&#8217;s <a href="activity.html" class="xref page">Activity View</a>.</p>
 </div>
 <div class="paragraph">
 <p>Blue Ocean automatically adds branches and PRs to this list when they include a run that contains any modifications you have performed.</p>
@@ -624,7 +654,7 @@ When there are no longer items in this list, the list is removed from the Dashbo
 Selecting the favorite &#9733; for any item will bring the list back to your Dashboard.</p>
 </div>
 <div class="paragraph">
-<p>Selecting an item in the Favorites list opens the <a href="../pipeline-run-details">Pipeline run details</a> for the latest run on the branch or PR indicated.</p>
+<p>Selecting an item in the Favorites list opens the <a href="pipeline-run-details.html" class="xref page">Pipeline run details</a> for the latest run on the branch or PR indicated.</p>
 </div>
 <div class="sect2">
 <h3 id="pipeline-health"><a class="anchor" href="#pipeline-health"></a>Health icons</h3>
@@ -633,7 +663,7 @@ Selecting the favorite &#9733; for any item will bring the list back to your Das
 These icons change depending on the number of recent builds that have passed.</p>
 </div>
 <div class="paragraph">
-<p>Health icons on the Dashboard represent overall Pipeline health, whereas the health icons in the <a href="../activity#branches">Branches tab of the Activity View</a> represent the overall health for each branch.</p>
+<p>Health icons on the Dashboard represent overall Pipeline health, whereas the health icons in the <a href="activity.html#branches" class="xref page">Branches tab of the Activity View</a> represent the overall health for each branch.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Health icons (best to worst)</caption>

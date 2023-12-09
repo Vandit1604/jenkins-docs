@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Jenkins</title>
+    <title>"Overview for Plugin Maintainers" :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/security/for-maintainers.html">
     <link rel="prev" href="cna.html">
     <link rel="next" href="plugins.html">
@@ -31,7 +31,7 @@
     <span class="nav-text">For Adminstrators</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="for-administrators.html">for-administrators.adoc</a>
+    <a class="nav-link" href="for-administrators.html">"Overview for Jenkins Administrators"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="scheduling.html">How We Schedule Security Advisories</a>
@@ -49,7 +49,7 @@
     <span class="nav-text">For Reporters</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="reporting.html">reporting.adoc</a>
+    <a class="nav-link" href="reporting.html">"Reporting Security Vulnerabilities"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="cna.html">Jenkins CVE Numbers Authority</a>
@@ -61,7 +61,7 @@
     <span class="nav-text">For Maintainers</span>
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="for-maintainers.html">for-maintainers.adoc</a>
+    <a class="nav-link" href="for-maintainers.html">"Overview for Plugin Maintainers"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="plugins.html">Managing Plugins</a>
@@ -214,7 +214,7 @@
   <ul>
     <li><a href="index.html">Jenkins Security Advisories</a></li>
     <li>For Maintainers</li>
-    <li><a href="for-maintainers.html">for-maintainers.adoc</a></li>
+    <li><a href="for-maintainers.html">"Overview for Plugin Maintainers"</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/for-maintainers.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
@@ -224,13 +224,9 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<hr>
-<div class="paragraph">
-<p>layout: security
-title: "Overview for Plugin Maintainers"
-section: security
----</p>
-</div>
+<h1 class="page">"Overview for Plugin Maintainers"</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>The <a href="https://issues.jenkins.io/browse/SECURITY">SECURITY project in the Jenkins Jira</a> is a non-public issue tracker for security vulnerabilities.
 Public knowledge of these vulnerabilities could put our users at risk, so access to issues is restricted.</p>
@@ -256,6 +252,8 @@ Obsolete email addresses and ignored emails will delay the initial contact.
 </td>
 </tr>
 </table>
+</div>
+</div>
 </div>
 <div class="sect1">
 <h2 id="_support_for_maintainers"><a class="anchor" href="#_support_for_maintainers"></a>Support for Maintainers</h2>
@@ -327,7 +325,7 @@ The Jenkins security team also offers to review your security fix; please ask fo
 </li>
 <li>
 <p><strong>Coordinate the date and time of the release</strong> of the fixed plugin with the Jenkins security team.
-This will allow for assigning <a href="/security/cna">a CVE ID</a> prior to release, and publishing a <a href="/security/advisories/">security advisory</a> informing users of the security vulnerability, and how to address it.</p>
+This will allow for assigning <a href="cna.html" class="xref page">a CVE ID</a> prior to release, and publishing a <a href="/security/advisories/">security advisory</a> informing users of the security vulnerability, and how to address it.</p>
 </li>
 </ul>
 </div>
@@ -366,7 +364,7 @@ Otherwise this will invalidate the testing and review that has happened before.<
 </ul>
 </div>
 <div class="paragraph">
-<p>See also <a href="/security/fixing">How We Fix Security Issues</a> for general guidelines.</p>
+<p>See also <a href="fixing.html" class="xref page">How We Fix Security Issues</a> for general guidelines.</p>
 </div>
 </div>
 </div>
@@ -511,8 +509,8 @@ In this case, three separate releases are now needed to cover users of Jenkins 2
 <div class="paragraph">
 <p>First, prepare the release branch:
 If there are unrelated, unreleased changes on the default branch, create a new branch based on the previous release.
-For plugins with <a href="/doc/developer/publishing/releasing-manually/">manual release process</a> this is the <code>prepare for next development iteration</code> commit.
-For plugins delivered with <a href="/doc/developer/publishing/releasing-cd/">JEP-229 CD automated releases</a>, it is the commit that got tagged as a release.</p>
+For plugins with <a href="../dev-docs/publishing/releasing-manually.html" class="xref page">manual release process</a> this is the <code>prepare for next development iteration</code> commit.
+For plugins delivered with <a href="../dev-docs/publishing/releasing-cd.html" class="xref page">JEP-229 CD automated releases</a>, it is the commit that got tagged as a release.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -563,10 +561,10 @@ To find out what name and email address to put there, see <code>git log &lt;BRAN
 <div class="ulist">
 <ul>
 <li>
-<p>For plugins with <a href="/doc/developer/publishing/releasing-manually/">manual release process</a> this is the <code>prepare for next development iteration</code> commit.</p>
+<p>For plugins with <a href="../dev-docs/publishing/releasing-manually.html" class="xref page">manual release process</a> this is the <code>prepare for next development iteration</code> commit.</p>
 </li>
 <li>
-<p>For plugins delivered with <a href="/doc/developer/publishing/releasing-cd/">JEP-229 CD automated releases</a>), it is the commit that got tagged as a release.</p>
+<p>For plugins delivered with <a href="../dev-docs/publishing/releasing-cd.html" class="xref page">JEP-229 CD automated releases</a>), it is the commit that got tagged as a release.</p>
 </li>
 </ul>
 </div>
@@ -588,7 +586,7 @@ If the plugin recently switched from manual releases to JEP-229 CD automated rel
 <div class="sect5">
 <h6 id="_plugins_with_manual_releases"><a class="anchor" href="#_plugins_with_manual_releases"></a>Plugins with manual releases</h6>
 <div class="paragraph">
-<p>For plugins with <a href="/doc/developer/publishing/releasing-manually/">manual release process</a>, you could set the version number used for releases from the backport branch at this point, for example:</p>
+<p>For plugins with <a href="../dev-docs/publishing/releasing-manually.html" class="xref page">manual release process</a>, you could set the version number used for releases from the backport branch at this point, for example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -602,7 +600,7 @@ If the plugin recently switched from manual releases to JEP-229 CD automated rel
 <div class="sect5">
 <h6 id="_plugins_with_jep_229_cd"><a class="anchor" href="#_plugins_with_jep_229_cd"></a>Plugins with JEP-229 CD</h6>
 <div class="paragraph">
-<p>For plugins delivered with <a href="/doc/developer/publishing/releasing-cd/">JEP-229 CD automated releases</a>, you also need to manually specify a custom version number for the backport branch.
+<p>For plugins delivered with <a href="../dev-docs/publishing/releasing-cd.html" class="xref page">JEP-229 CD automated releases</a>, you also need to manually specify a custom version number for the backport branch.
 Otherwise, the automatically generated, linearly increasing version number would not indicate the existence of a backport branch.</p>
 </div>
 <div class="paragraph">
@@ -798,17 +796,17 @@ git push jenkinsci-cert master v2.6.3.x matrix-auth-2.6.6 matrix-auth-2.6.3.1</c
 <div class="ulist">
 <ul>
 <li>
-<p><a href="/doc/developer/security/">Security Chapter in the Jenkins Developer Documentation</a></p>
+<p><a href="../dev-docs/security/index.html" class="xref page">Security Chapter in the Jenkins Developer Documentation</a></p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="/doc/developer/security/secrets/">Storing Secrets</a></p>
+<p><a href="../dev-docs/security/secrets.html" class="xref page">Storing Secrets</a></p>
 </li>
 <li>
-<p><a href="/doc/developer/security/form-validation/">Form Validation</a> (permission checks and CSRF protection)</p>
+<p><a href="../dev-docs/security/form-validation.html" class="xref page">Form Validation</a> (permission checks and CSRF protection)</p>
 </li>
 <li>
-<p><a href="/doc/developer/security/xss-prevention/">Preventing Cross-Site Scripting in Jelly views</a></p>
+<p><a href="../dev-docs/security/xss-prevention.html" class="xref page">Preventing Cross-Site Scripting in Jelly views</a></p>
 </li>
 </ul>
 </div>

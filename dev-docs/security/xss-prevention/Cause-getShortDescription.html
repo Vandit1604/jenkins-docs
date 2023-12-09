@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Permissions :: Jenkins</title>
-    <link rel="canonical" href="https://docs.jenkins.com/dev-docs/security/access-control/permissions.html">
+    <title>Redefinition of Cause#getShortDescription :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/dev-docs/security/xss-prevention/Cause-getShortDescription.html">
     <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -1312,306 +1312,48 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">Jenkins Developer Documentation</a></li>
-    <li><a href="permissions.html">Permissions</a></li>
+    <li><a href="Cause-getShortDescription.html">Redefinition of Cause#getShortDescription</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/dev-docs/modules/security/pages/access-control/permissions.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/dev-docs/modules/security/pages/xss-prevention/Cause-getShortDescription.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Permissions</h1>
-<div id="preamble">
-<div class="sectionbody">
+<h1 class="page">Redefinition of Cause#getShortDescription</h1>
 <div class="paragraph">
-<p>The following sections describe the access granted to users with (or without) the specified permissions.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_default_permissions"><a class="anchor" href="#_default_permissions"></a>Default Permissions</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_overall_permissions"><a class="anchor" href="#_overall_permissions"></a><em>Overall</em> Permissions</h3>
-<div class="paragraph">
-<p>These permissions are granted globally, rather than on individual objects.</p>
-</div>
-<div class="sect3">
-<h4 id="_access_granted_without_overallread"><a class="anchor" href="#_access_granted_without_overallread"></a>Access granted <em>without</em> Overall/Read</h4>
-<div class="paragraph">
-<p>While Overall/Read is a prerequisite for more extensive access to Jenkins, some features are available without it.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Very basic UI, like the login form, the account signup form (if using the Jenkins user database as security realm), and some error pages ("Oops!").</p>
-</li>
-<li>
-<p>Access to URLs provided by the security realm (to implement user signup or handle SSO authentication) (<code>/securityRealm/</code>).</p>
-</li>
-<li>
-<p><code>agent.jar</code>, <code>remoting.jar</code>, and <code>jenkins-cli.jar</code> files (plus deprecated aliases) to easily download client packages matching the running version of Jenkins (<code>/jnlpJars/</code>).</p>
-</li>
-<li>
-<p>Agent JNLP files (<code>/computer/&#8230;&#8203;/jenkins-agent.jnlp?encrypted=true</code> plus deprecated alias) to connect inbound agents to Jenkins.</p>
-</li>
-<li>
-<p>Access to the TCP agent listener endpoint used by agents connecting to Jenkins via the agent TCP port (<code>/tcpSlaveAgentListener/</code>).</p>
-</li>
-<li>
-<p>Access to some static resources (JS, CSS, and image files) bundled with Jenkins and Jenkins plugins (<code>/adjuncts/</code>).</p>
-</li>
-</ul>
+<p>The <code>Cause#getShortDescription</code> method was defined to return a "one line" short snippet of HTML in Jenkins 2.314 and earlier, LTS 2.303.1 and earlier.
+To prevent further security vulnerabilities like <a href="../../../security/advisory/2021-10-06.html#SECURITY-2499" class="xref page">SECURITY-2499</a> from having an impact on Jenkins users, the method has been redefined to return plain text in Jenkins 2.315 and LTS 2.303.2, and its output is no longer rendered as HTML on the UI.</p>
 </div>
 <div class="paragraph">
-<p>Additionally, both Jenkins and any plugin may implement an extension point to make URLs available without authentication.
-SCM plugins commonly do this to let SCM features like post-commit hooks inform Jenkins about new commits, causing jobs to poll for changes.</p>
+<p>If an implementation of <code>#getShortDescription</code> returns a string that includes user-specified content, plugin maintainers are advised to consider both the behavior of older and newer Jenkins releases if their plugin can be used on Jenkins 2.314 and earlier.
+"User content" in this case refers to any dynamic content that is specified locally or provided by another system that Jenkins integrates with and is not guaranteed to be safe to interpret as HTML.</p>
 </div>
-<div class="paragraph">
-<p>As of Jenkins 2.290, the following extensions are provided as part of Jenkins (core):</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>/assets/</code> provides access to further static resources.</p>
-</li>
-<li>
-<p><code>/cli/</code> handles CLI connections.
-CLI documentation is also available here, but those pages are individually protected.</p>
-</li>
-<li>
-<p>The <code>/whoAmI/</code> URL allows determining who the current user is.
-It is available to users without permissions to troubleshoot permissions issues.</p>
-</li>
-<li>
-<p><code>/wsagents/</code> handles agent connections using web sockets.</p>
-</li>
-<li>
-<p><code>/instance-identity/</code> provides a public key that allows identifying the Jenkins instance and setting up secure communication with it.
-See <a href="https://github.com/jenkinsci/instance-identity-plugin">the component documentation</a> for details.</p>
-</li>
-<li>
-<p><code>/static-files/</code> is used to implement the Resource Root URL feature serving user-provided contents from another domain.
-See <a href="/doc/book/security/configuring-content-security-policy">its documentation</a>.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>A list of all these extensions is provided on the UI when selecting (but not saving) the <em>Delegate to Servlet container</em> security realm, or can be obtained via the <a href="/doc/book/managing/script-console/">Script Console</a> using:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">ExtensionList.lookup(UnprotectedRootAction).each {
-  println String.format("URL: '%s/' provided by '%s' in '%s'", it.urlName, Jenkins.get().pluginManager.whichPlugin(it.class)?.shortName?:"Jenkins Core", it.class.name)
-}
-return</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>While these extensions opt out of the built-in <em>Overall/Read</em> permission requirements, they are expected to implement permission checks themselves whenever performing actions typically requiring permissions, or to check for the presence of a previously set up token in place of regular authentication.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-In your HTTP access logs, you may see accesses to URLs starting with <code>/static/</code>, followed by a random looking string of letters and numbers.
-This is part of a caching feature in Jenkins: Requests to these URLs expect cacheable responses, so HTTP response headers with a long expiration time are set.
-The string following <code>/static/</code> is randomly generated once on startup, ensuring that it changes when the Jenkins version (and therefore the contents of cacheable files) changes.
-Any path starting with <code>/static/&#8230;&#8203;/</code> can be treated for logging purposes as if this prefix wasn&#8217;t present.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="overall-read"><a class="anchor" href="#overall-read"></a>Access granted with Overall/Read</h4>
-<div class="paragraph">
-<p>Users with Overall/Read access are expected to be legitimate users of Jenkins.</p>
-</div>
-<div class="paragraph">
-<p>In addition to the above, a user granted <em>Overall/Read</em> can do all of the following:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Access the basic Jenkins API and the API of any object they have access to.</p>
-</li>
-<li>
-<p>Access the People directory listing user accounts and known committer identities of anyone involved in visible projects.</p>
-</li>
-<li>
-<p>List and view all agents configured in Jenkins and access their summary pages.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>To support various features available to legitimate users of Jenkins, the following not as obvious URLs are accessible as well:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Further path prefixes (in addition to <code>adjuncts/</code>, <code>assets/</code>, and core webapp resources) providing static assets, both by Jenkins core and by plugins.
-See <a href="/doc/developer/views/exposing-bundled-resources/">the developer documentation</a>.</p>
-</li>
-<li>
-<p>Path prefixes providing access to all URLs implemented in extension lists of all extension points implemented in Jenkins.
-These URLs are typically used to support form validation and form autocompletion, and the way they&#8217;re organized means that some basic access is granted to any user with <em>Overall/Read</em> access.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>While the vast majority of URLs in Jenkins are by default protected by an <em>Overall/Read</em> permission check, a lack of individual permission checks in endpoints for form validation and similar actions taken through the UI can result in users with only <em>Overall/Read</em> access to be able to access these actions.
-Lack of necessary permission checks constitutes a security vulnerability.
-While these are expected to be resolved in a timely manner, this may be worth considering when deciding who to grant <em>Overall/Read</em> permission to.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="administer"><a class="anchor" href="#administer"></a>Access granted with Overall/Administer</h4>
-<div class="paragraph">
-<p>In short: <strong>Everything.</strong></p>
-</div>
-<div class="paragraph">
-<p>Administrators can do all of the following:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Install and upload plugins that can run arbitrary code.</p>
-</li>
-<li>
-<p>Use the Script Console both on the Jenkins controller and on individual agents, running arbitrary code in the Jenkins controller and agent processes.</p>
-</li>
-<li>
-<p>Use the Script Console (or configure jobs) to run arbitrary shell scripts on the Jenkins controller or any connected agent.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>There are no limits to what users with <em>Overall/Administer</em> permission can do in Jenkins.
-Anything they cannot accomplish through the existing UI they can do through the Script Console or by installing a plugin that does it.</p>
-</div>
-<div class="paragraph">
-<p>An instance on which an untrusted user gained <em>Overall/Administer</em> permission should be considered fully compromised and should be replaced.
-All secrets (credentials, etc.) stored on that instance should be rotated or revoked and all artifacts created from that point on should be verified.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_optional_permissions"><a class="anchor" href="#_optional_permissions"></a>Optional Permissions</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>These permissions are not enabled by default.</p>
-</div>
-<div class="sect2">
-<h3 id="_access_granted_with_overallsystemread"><a class="anchor" href="#_access_granted_with_overallsystemread"></a>Access granted with Overall/SystemRead</h3>
-<div class="paragraph">
-<p>This permission grants read-only access to the Jenkins global configuration.
-Its primarily intended to be used when the Jenkins configuration is managed externally, e.g. using the plugin:configuration-as-code/[Configuration as Code] plugin.
-It works best when combined with the <em>ExtendedRead</em> permission that allows read-only access to agents and items.</p>
-</div>
-<div class="paragraph">
-<p>This permission can be enabled by setting <a href="/doc/book/managing/system-properties/#jenkins-security-systemreadpermission">the system property <code>jenkins.security.SystemReadPermission</code> to <code>true</code></a> or installing the plugin:extended-read-permission[Extended Read Permission] plugin.</p>
-</div>
-<div class="paragraph">
-<p>Learn more in jep:224[].</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-This permission was added in Jenkins 2.222.
-Some features, especially those provided by plugins, may not yet support this permission.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_access_granted_with_overallmanage"><a class="anchor" href="#_access_granted_with_overallmanage"></a>Access granted with Overall/Manage</h3>
-<div class="paragraph">
-<p><em>Overall/Administer</em> (described below) is a very high level of permission:
-Between administrative tools like the script console and the ability to install plugins, there are no limits to what administrators can do.</p>
-</div>
-<div class="paragraph">
-<p><em>Overall/Manage</em> grants permission to access and modify a subset of administrative options.
-Users with this permission are able to perform some administrative tasks.
-Options generally considered critical to the security of Jenkins are not available to these users.</p>
-</div>
-<div class="paragraph">
-<p>This permission can be enabled by setting <a href="/doc/book/managing/system-properties/#jenkins-security-managepermission">the system property <code>jenkins.security.ManagePermission</code> to <code>true</code></a> or installing the plugin:manage-permission[Overall/Manage permission enabler] plugin.</p>
-</div>
-<div class="paragraph">
-<p>Learn more in jep:223[].</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-This permission was added in Jenkins 2.222.
-Some features, especially those provided by plugins, may not yet support this permission.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_obsolete_permissions"><a class="anchor" href="#_obsolete_permissions"></a>Obsolete Permissions</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The following three permissions are obsolete since Jenkins 2.222:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Overall/RunScripts</p>
-</li>
-<li>
-<p>Overall/UploadPlugins</p>
-</li>
-<li>
-<p>Overall/ManageUpdateSites</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>These permissions were intended for use in an externally managed, hosted Jenkins environment.
-They would allow a user to directly (through the script console) or indirectly (through plugin installation) execute code they control.
-By default, these permissions were <em>implied</em> by the Overall/Administer permission by default to not impact more common Jenkins environments, while allowing a hosted environment to have administrators with <em>Overall/Administer</em> permission but not these more sensitive permissions.</p>
-</div>
-<div class="paragraph">
-<p>This model has been retired.
-While these permissions still exist, they&#8217;re no longer used by Jenkins core and related features have been removed, e.g., uploading plugins or using the script console just requires Overall/Administer permission now.</p>
-</div>
-<div class="paragraph">
-<p>For more fine-grained access to the global configuration, the permissions <em>Overall/Manage</em> and <em>Overall/SystemRead</em> can optionally be enabled.</p>
-</div>
-</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">No HTML intended, does not contain user content</dt>
+<dd>
+<p>This is safe to use and no adaptation to the new behavior of Jenkins is necessary.</p>
+</dd>
+<dt class="hdlist1">HTML intended, does not contain user content</dt>
+<dd>
+<p>This is safe to use, but will need to be adapted to the new behavior of Jenkins, otherwise the UI will render escaped HTML tags.
+Define a custom <code>description.jelly</code> file that renders HTML, and return plain text content from <code>#getShortDescription</code>.</p>
+</dd>
+<dt class="hdlist1">No HTML intended, contains user content</dt>
+<dd>
+<p>This is likely unsafe in older Jenkins releases if users are able to inject HTML.
+Please <a href="../../../security/reporting.html" class="xref page">report this</a> to the Jenkins security team.</p>
+</dd>
+<dt class="hdlist1">HTML intended, contains user content</dt>
+<dd>
+<p>This may or may not be safe in older Jenkins releases, depending on whether user content is specifically escaped.
+Define a custom <code>description.jelly</code> file that renders HTML, and return plain text content from <code>#getShortDescription</code>.
+Be mindful of user content rendered as part of <code>#getShortDescription</code> intending to be plain text, but which would still be rendered as HTML in Jenkins 2.314 and earlier, 2.303.1 and earlier.</p>
+</dd>
+</dl>
 </div>
 </article>
   </div>

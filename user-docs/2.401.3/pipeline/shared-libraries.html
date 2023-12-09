@@ -64,6 +64,33 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
+    <span class="nav-text">index.adoc</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-11.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-windows.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-linux.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-web-browsers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-java.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-servlet-containers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-17.adoc</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
@@ -106,7 +133,7 @@
     <a class="nav-link" href="index.html">Pipeline</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="getting-started.html">getting-started.adoc</a>
+    <a class="nav-link" href="getting-started.html">Getting started with the Guided Tour</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="jenkinsfile.html">Using a Jenkinsfile</a>
@@ -118,7 +145,7 @@
     <a class="nav-link" href="multibranch.html">Branches and Pull Requests</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="docker.html">Using Docker with pipeline</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="shared-libraries.html">Extending with Shared Libraries</a>
@@ -187,7 +214,7 @@
     <a class="nav-link" href="../managing/system-info.html">System Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../managing/system-properties.html">system-properties.adoc</a>
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
@@ -499,7 +526,8 @@
 </aside>
 <article class="doc">
 <h1 class="page">Extending with Shared Libraries</h1>
-<h1 id="_extending_with_shared_libraries" class="sect0"><a class="anchor" href="#_extending_with_shared_libraries"></a>Extending with Shared Libraries</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>As Pipeline is adopted for more and more projects in an organization, common
 patterns are likely to emerge. Oftentimes it is useful to share parts of
@@ -514,6 +542,8 @@ external source control repositories and loaded into existing Pipelines.</p>
 <div class="videoblock">
 <div class="content">
 <iframe width="800" height="420" src="https://www.youtube.com/embed/Wj-weFEsTb0?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -543,7 +573,7 @@ pick anything offered.  In this case, you need to include
 <code>${library.yourLibName.version}</code> somewhere in the configuration of the SCM, so
 that during checkout the plugin will expand this variable to select the desired
 version.  For example, for Subversion, you can set the <em>Repository URL</em> to
-<code><a href="https://svnserver/project/${library.yourLibName.version}" class="bare">svnserver/project/${library.yourLibName.version}</a></code> and then use
+<code><a href="https://svnserver/project/${library.yourLibName.version}" class="bare">https://svnserver/project/${library.yourLibName.version}</a></code> and then use
 versions such as <code>trunk</code> or <code>branches/dev</code> or <code>tags/1.0</code>.</p>
 </div>
 <div class="sect2">
@@ -577,7 +607,7 @@ So if you had a file called <code>vars/log.groovy</code> with a function like <c
 </div>
 <div class="paragraph">
 <p>The basename of each <code>.groovy</code> file should be a Groovy (~ Java) identifier, conventionally <code>camelCased</code>.
-The matching <code>.txt</code>, if present, can contain documentation, processed through the system’s configured <a href="https://wiki.jenkins.io/display/JENKINS/Markup+formatting">markup formatter</a> (so may really be HTML, Markdown, etc., though the <code>.txt</code> extension is required). This documentation will only be visible on the <a href="/doc/book/pipeline/getting-started/#global-variable-reference">Global Variable Reference</a> pages that are accessed from the navigation sidebar of Pipeline jobs that import the shared library. In addition, those jobs must run successfully once before the shared library documentation will be generated.</p>
+The matching <code>.txt</code>, if present, can contain documentation, processed through the system’s configured <a href="https://wiki.jenkins.io/display/JENKINS/Markup+formatting">markup formatter</a> (so may really be HTML, Markdown, etc., though the <code>.txt</code> extension is required). This documentation will only be visible on the <a href="getting-started.html#global-variable-reference" class="xref page">Global Variable Reference</a> pages that are accessed from the navigation sidebar of Pipeline jobs that import the shared library. In addition, those jobs must run successfully once before the shared library documentation will be generated.</p>
 </div>
 <div class="paragraph">
 <p>The Groovy source files in these directories get the same “CPS transformation”
@@ -1354,7 +1384,7 @@ execute a second one, your build will fail as a result.</p>
 Refer to the pull request or merge request branch naming convention for other providers like Assembla, Bitbucket, Gitea, GitLab, and Tuleap.</p>
 </div>
 <div class="paragraph">
-<p>Take, for example, a change to the global ci.jenkins.io shared pipeline, which has its source code stored at <a href="https://github.com/jenkins-infra/pipeline-library/" class="bare">github.com/jenkins-infra/pipeline-library/</a>.</p>
+<p>Take, for example, a change to the global ci.jenkins.io shared pipeline, which has its source code stored at <a href="https://github.com/jenkins-infra/pipeline-library/" class="bare">https://github.com/jenkins-infra/pipeline-library/</a>.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s say you&#8217;re writing a new feature and opened a pull request on the pipeline library, number <code>123</code>.</p>
@@ -1382,14 +1412,14 @@ Refer to the pull request or merge request branch naming convention for other pr
 <div id="footnotes">
 <hr>
 <div class="footnote" id="_footnotedef_1">
-<a href="#_footnoteref_1">1</a>. <a href="https://en.wikipedia.org/wiki/Don't_repeat_yourself" class="bare">en.wikipedia.org/wiki/Don't_repeat_yourself</a>
+<a href="#_footnoteref_1">1</a>. <a href="https://en.wikipedia.org/wiki/Don't_repeat_yourself" class="bare">https://en.wikipedia.org/wiki/Don't_repeat_yourself</a>
 </div>
 <div class="footnote" id="_footnotedef_2">
-<a href="#_footnoteref_2">2</a>. <a href="https://gist.github.com/rtyler/e5e57f075af381fce4ed3ae57aa1f0c2" class="bare">gist.github.com/rtyler/e5e57f075af381fce4ed3ae57aa1f0c2</a>
+<a href="#_footnoteref_2">2</a>. <a href="https://gist.github.com/rtyler/e5e57f075af381fce4ed3ae57aa1f0c2" class="bare">https://gist.github.com/rtyler/e5e57f075af381fce4ed3ae57aa1f0c2</a>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="docker.html">Using Docker with Pipeline</a></span>
+  <span class="prev"><a href="docker.html">Using Docker with pipeline</a></span>
   <span class="next"><a href="development.html">Pipeline Development Tools</a></span>
 </nav>
 </article>

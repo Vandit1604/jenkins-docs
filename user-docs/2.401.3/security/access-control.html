@@ -64,6 +64,33 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
+    <span class="nav-text">index.adoc</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-11.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-windows.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-linux.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-web-browsers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-java.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-servlet-containers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-17.adoc</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
@@ -106,7 +133,7 @@
     <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/getting-started.html">getting-started.adoc</a>
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with the Guided Tour</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
@@ -118,7 +145,7 @@
     <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
@@ -187,7 +214,7 @@
     <a class="nav-link" href="../managing/system-info.html">System Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../managing/system-properties.html">system-properties.adoc</a>
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
@@ -558,7 +585,7 @@ A disadvantage is the lack of integration with Jenkins access controls and poten
 <div class="sectionbody">
 <div class="paragraph">
 <p>When configuring authentication and authorization in Jenkins, it is easy to accidentally allow far more access than intended.
-See <a href="/doc/book/security/access-control/permissions/#administer">the documentation on the access given to administrators</a> about the impact of unintentionally granting Administer permission.</p>
+See <a href="#dev-docs:security:access-control/permissions.adoc#administer" class="xref unresolved">the documentation on the access given to administrators</a> about the impact of unintentionally granting Administer permission.</p>
 </div>
 <div class="dlist">
 <dl>
@@ -584,7 +611,7 @@ Granting Overall/Administer permission to <em>anonymous</em> is similar to <em>A
 </dd>
 <dt class="hdlist1">Built-in node</dt>
 <dd>
-<p>Users with limited permissions <a href="/doc/book/security/controller-isolation/">must not be able to configure jobs that run on the built-in node</a>.
+<p>Users with limited permissions <a href="#dev-docs:security:controller-isolation.adoc" class="xref unresolved">must not be able to configure jobs that run on the built-in node</a>.
 When setting up a new Jenkins instance, adding users and switching authorization strategies, it is important to also set up distributed builds and limit what jobs are able to run on the built-in node.</p>
 </dd>
 </dl>
@@ -601,7 +628,7 @@ Without this permission, only very few features explicitly intended to be used w
 </div>
 <div class="paragraph">
 <p>The highest level of permissions is <em>Overall/Administer</em>.
-With this permission, users can upload and install plugins and have access to the <a href="/doc/book/managing/script-console/">Script Console</a>.</p>
+With this permission, users can upload and install plugins and have access to the <a href="../managing/script-console.html" class="xref page">Script Console</a>.</p>
 </div>
 <div class="paragraph">
 <p>Between these two extremes is finer-grained permission control involving other permissions.
@@ -626,7 +653,7 @@ Permissions are by default inherited, but that can be customized as well, so tha
 </ul>
 </div>
 <div class="paragraph">
-<p>For more details about the various permissions in Jenkins and the level of access they grant, see <a href="/doc/book/security/access-control/permissions/">Permissions</a>.</p>
+<p>For more details about the various permissions in Jenkins and the level of access they grant, see <a href="#dev-docs:security:access-control/permissions.adoc" class="xref unresolved">Permissions</a>.</p>
 </div>
 </div>
 </div>
@@ -634,7 +661,7 @@ Permissions are by default inherited, but that can be customized as well, so tha
 <h2 id="_disabling_access_control"><a class="anchor" href="#_disabling_access_control"></a>Disabling Access Control</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>See <a href="/doc/book/security/access-control/disable/">Disable Access Control</a>.</p>
+<p>See <a href="#dev-docs:security:access-control/disable.adoc" class="xref unresolved">Disable Access Control</a>.</p>
 </div>
 </div>
 </div>

@@ -1370,7 +1370,7 @@ See JEP-214 for more details about these considerations.
 <p>You can inspect telemetry data locally by calling <code>ExtensionList.lookupSingleton(package.to.YourTelemetry.class).createContent()</code> in the script console (careful, as this typically will modify state).</p>
 </div>
 <div class="paragraph">
-<p>Alternatively, you can set the <a href="/doc/book/managing/system-properties/#jenkins-telemetry-telemetry-endpoint"><code>jenkins.telemetry.Telemetry.endpoint</code></a> Java system property on startup (or set <code>jenkins.telemetry.Telemetry.ENDPOINT</code> in the <a href="../../user-docs/2.401.3/managing/script-console.html" class="xref page">script console</a>) to a test HTTP server that lets you inspect HTTP requests and their POST bodies.
+<p>Alternatively, you can set the <a href="../../user-docs/2.401.3/managing/system-properties.html#jenkins-telemetry-telemetry-endpoint" class="xref page"><code>jenkins.telemetry.Telemetry.endpoint</code></a> Java system property on startup (or set <code>jenkins.telemetry.Telemetry.ENDPOINT</code> in the <a href="../../user-docs/2.401.3/managing/script-console.html" class="xref page">script console</a>) to a test HTTP server that lets you inspect HTTP requests and their POST bodies.
 To trigger telemetry submission, you can call <code>ExtensionList.lookupSingleton(jenkins.telemetry.Telemetry.TelemetryReporter.class).run()</code> in the script console.</p>
 </div>
 </div>
@@ -1387,12 +1387,9 @@ This should best be done before the telemetry change is released or even merged,
 <p>As telemetry is time-sensitive, and the majority of users use LTS releases, telemetry implementations in core should generally be backported freely into LTS releases to ensure data is collected from as many up-to-date Jenkins instances as possible.
 The <a href="/download/lts/#backporting-process">general LTS backporting rules</a> are relaxed for telemetry-related changes.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_references"><a class="anchor" href="#_references"></a>References</h2>
-<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title">References</div>
 <div class="ulist">
 <ul>
 <li>
@@ -1402,6 +1399,9 @@ The <a href="/download/lts/#backporting-process">general LTS backporting rules</
 <p><a href="https://javadoc.jenkins.io/jenkins/telemetry/Telemetry.html">'`jenkins.telemetry.Telemetry` extension point Javadoc'</a></p>
 </li>
 </ul>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

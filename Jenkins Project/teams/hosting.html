@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Jenkins</title>
+    <title>Hosting Team :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/Jenkins%20Project/teams/hosting.html">
     <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -29,19 +29,19 @@
     <a class="nav-link" href="../index.html">Project structure and governance</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../conduct.html">conduct.adoc</a>
+    <a class="nav-link" href="../conduct.html">"Jenkins Code of Conduct"</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../governance.html">governance.adoc</a>
+    <a class="nav-link" href="../governance.html">Project Governance Document</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../election-walkthrough.html">election-walkthrough.adoc</a>
+    <a class="nav-link" href="../election-walkthrough.html">"Board and Officer election walkthrough"</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../team-leads.html">team-leads.adoc</a>
+    <a class="nav-link" href="../team-leads.html">"Jenkins Team Leads and Officers"</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../board-election-process.html">board-election-process.adoc</a>
+    <a class="nav-link" href="../board-election-process.html">"Board and Officer election process"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../board.html">Jenkins Board and Officers</a>
@@ -225,6 +225,10 @@
 <button class="nav-toggle"></button>
   <a href="../../user-docs/2.401.3/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins Project</a></li>
+    <li><a href="hosting.html">Hosting Team</a></li>
+  </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/project/modules/teams/pages/hosting.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
   </div>
@@ -233,22 +237,14 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<hr>
-<div class="paragraph">
-<p>layout: project
-title: "Hosting Team"
-section: projects
-tags:
-- hosting
-- plugin-site
-links:
-  mailinglist: "/mailing-lists/#jenkinsci-dev-googlegroups-com"
-  chat: "/project/teams/hosting/#chat"
----</p>
-</div>
+<h1 class="page">Hosting Team</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>The Jenkins Hosting Team handles various requests related to hosting of open-source plugins and other components (forking and transferring plugins, managing permissions and update centers, etc.).
 There are multiple contributors involved in this activity on a regular basis.</p>
+</div>
+</div>
 </div>
 <div class="sect1">
 <h2 id="_team_responsibilities"><a class="anchor" href="#_team_responsibilities"></a>Team Responsibilities</h2>
@@ -261,7 +257,7 @@ There is some automation around this process, but human reviews are needed too&#
 <div class="ulist">
 <ul>
 <li>
-<p>Ensure that <a href="/doc/developer/publishing/preparation">plugin publishing requirements</a> are followed:
+<p>Ensure that <a href="../../dev-docs/publishing/preparation.html" class="xref page">plugin publishing requirements</a> are followed:
 naming conventions and `artifactId`s, `groupId`s, documentation, duplication of existing plugins, license compliance, etc.]</p>
 </li>
 <li>
@@ -271,16 +267,16 @@ naming conventions and `artifactId`s, `groupId`s, documentation, duplication of 
 </div>
 </li>
 <li>
-<p>Managing plugin developer and release permissions (<a href="/doc/developer/plugin-governance/managing-permissions/">documentation</a>).</p>
+<p>Managing plugin developer and release permissions (<a href="../../dev-docs/plugin-governance/managing-permissions.html" class="xref page">documentation</a>).</p>
 </li>
 <li>
-<p>Processing <a href="/doc/developer/plugin-governance/adopt-a-plugin/">plugin adoption</a> requests in the developer mailing list</p>
+<p>Processing <a href="../../dev-docs/plugin-governance/adopt-a-plugin.html" class="xref page">plugin adoption</a> requests in the developer mailing list</p>
 </li>
 <li>
 <p>Processing blacklisting and plugin tagging/doc URL requests in the Update Centers for non-security reasons.</p>
 </li>
 <li>
-<p>Maintaining the <a href="/doc/developer/publishing">publishing</a> and <a href="/doc/developer/plugin-governance/">plugin governance</a> documentation.</p>
+<p>Maintaining the <a href="../../dev-docs/publishing/index.html" class="xref page">publishing</a> and <a href="#dev-docs:plugin-governance:ROOT:index.adoc" class="xref unresolved">plugin governance</a> documentation.</p>
 </li>
 </ul>
 </div>
@@ -456,11 +452,9 @@ If needed, you can request a meeting in the developer mailing list.</p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_references"><a class="anchor" href="#_references"></a>References</h2>
-<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title">References</div>
 <div class="ulist">
 <ul>
 <li>
@@ -471,6 +465,8 @@ If needed, you can request a meeting in the developer mailing list.</p>
 <a href="https://docs.google.com/presentation/d/1bf80nEjbllitdzEM-p00tdr521In5u16GwdTQRI7_ag/edit?usp=sharing">slides</a></p>
 </li>
 </ul>
+</div>
+</div>
 </div>
 </div>
 </div>

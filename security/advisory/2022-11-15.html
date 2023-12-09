@@ -29,7 +29,7 @@
     <span class="nav-text">For Adminstrators</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-administrators.html">for-administrators.adoc</a>
+    <a class="nav-link" href="../for-administrators.html">"Overview for Jenkins Administrators"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
@@ -47,7 +47,7 @@
     <span class="nav-text">For Reporters</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../reporting.html">reporting.adoc</a>
+    <a class="nav-link" href="../reporting.html">"Reporting Security Vulnerabilities"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
@@ -59,7 +59,7 @@
     <span class="nav-text">For Maintainers</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-maintainers.html">for-maintainers.adoc</a>
+    <a class="nav-link" href="../for-maintainers.html">"Overview for Plugin Maintainers"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../plugins.html">Managing Plugins</a>
@@ -330,7 +330,7 @@ Previously approved scripts will have their SHA-1 based whole-script approval re
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>    Administrators can set the link:/doc/book/managing/system-properties/[Java system property] `org.jenkinsci.plugins.pipeline.utility.steps.conf.ReadPropertiesStepExecution.CUSTOM_PREFIX_INTERPOLATOR_LOOKUPS` to customize which prefix interpolators are enabled.
+<pre>    Administrators can set the xref:user-docs:managing:system-properties.adoc[Java system property] `org.jenkinsci.plugins.pipeline.utility.steps.conf.ReadPropertiesStepExecution.CUSTOM_PREFIX_INTERPOLATOR_LOOKUPS` to customize which prefix interpolators are enabled.
   plugins:
   - name: pipeline-utility-steps
     previous: 2.13.1
@@ -439,7 +439,7 @@ As a result, all webhook URLs in the plugin will be different after updating the
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>    Administrators can set the link:/doc/book/managing/system-properties/[Java system] property `org.jenkinsci.plugins.registry.notification.webhook.JSONWebHook.DO_NOT_REQUIRE_API_TOKEN` to `true` to disable this fix.
+<pre>    Administrators can set the xref:user-docs:managing:system-properties.adoc[Java system] property `org.jenkinsci.plugins.registry.notification.webhook.JSONWebHook.DO_NOT_REQUIRE_API_TOKEN` to `true` to disable this fix.
   plugins:
   - name: dockerhub-notification
     previous: 2.6.2
@@ -499,7 +499,7 @@ As a result, all webhook URLs in the plugin will be different after updating the
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: cavisson-ns-nd-integration
     previous: 4.8.0.146
@@ -527,7 +527,7 @@ As a result, all webhook URLs in the plugin will be different after updating the
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: violations
     previous: 0.7.11
@@ -550,7 +550,7 @@ As a result, all webhook URLs in the plugin will be different after updating the
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: bart
     title: BART
@@ -574,7 +574,7 @@ As a result, all webhook URLs in the plugin will be different after updating the
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: config-rotator
     title: Config Rotator
@@ -603,7 +603,7 @@ As a result, all webhook URLs in the plugin will be different after updating the
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: xpdev
     previous: '1.0'
@@ -627,7 +627,7 @@ Those can be used as part of an attack to capture the credentials using another 
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: loaderio-jenkins-plugin
     previous: 1.0.1
@@ -655,7 +655,7 @@ Those can be used as part of an attack to capture the credentials using another 
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: delete-log-plugin
     previous: '1.0'
@@ -683,7 +683,7 @@ Those can be used as part of an attack to capture the credentials using another 
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: cccc
     previous: '0.6'
@@ -711,7 +711,7 @@ Those can be used as part of an attack to capture the credentials using another 
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: sourcemonitor
     previous: '0.2'
@@ -739,7 +739,7 @@ Those can be used as part of an attack to capture the credentials using another 
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: osf-builder-suite-xml-linter
     title: 'OSF Builder Suite : : XML Linter'
@@ -768,7 +768,7 @@ Those can be used as part of an attack to capture the credentials using another 
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: cluster-stats
     previous: 0.4.6
@@ -791,7 +791,7 @@ Those can be used as part of an attack to capture the credentials using another 
 <div class="literalblock">
 <div class="content">
 <pre>    As of publication of this advisory, there is no fix.
-    link:/security/plugins/#unresolved[Learn why we announce this.]
+    xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
   plugins:
   - name: japex
     previous: '1.7'
@@ -814,7 +814,7 @@ Those can be used as part of an attack to capture the credentials using another 
 <div class="literalblock">
 <div class="content">
 <pre>  As of publication of this advisory, there is no fix.
-  link:/security/plugins/#unresolved[Learn why we announce this.]
+  xref:dev-docs:security:plugin.adoc#unresolved[Learn why we announce this.]
 plugins:
 - name: associated-files
   previous: 0.2.1</pre>

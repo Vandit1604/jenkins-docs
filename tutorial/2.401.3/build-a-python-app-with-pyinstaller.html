@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Jenkins</title>
+    <title>Build a Python app with PyInstaller :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/tutorial/2.401.3/build-a-python-app-with-pyinstaller.html">
     <link rel="prev" href="tutorial-for-installing-jenkins-on-AWS.html">
     <link rel="next" href="create-a-pipeline-in-blue-ocean.html">
@@ -35,13 +35,13 @@
     <span class="nav-text">xref:-for-installing-jenkins-on-Google-Cloud.adoc[]</span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-java-app-with-maven.html">build-a-java-app-with-maven.adoc</a>
+    <a class="nav-link" href="build-a-java-app-with-maven.html">Build a Java app with Maven</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-multibranch-pipeline-project.html">build-a-multibranch-pipeline-project.adoc</a>
+    <a class="nav-link" href="build-a-multibranch-pipeline-project.html">End-to-End Multibranch Pipeline Project Creation</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-node-js-and-react-app-with-npm.html">build-a-node-js-and-react-app-with-npm.adoc</a>
+    <a class="nav-link" href="build-a-node-js-and-react-app-with-npm.html">Build a Node.js and React app with npm</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="using-jenkinsfile-runner-github-action-to-build-jenkins-pipeline.html">Build a Jenkins pipeline by using Jenkinsfile Runner GitHub Actions</a>
@@ -50,7 +50,7 @@
     <a class="nav-link" href="tutorial-for-installing-jenkins-on-AWS.html">tutorial-for-installing-jenkins-on-AWS.adoc</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="build-a-python-app-with-pyinstaller.html">build-a-python-app-with-pyinstaller.adoc</a>
+    <a class="nav-link" href="build-a-python-app-with-pyinstaller.html">Build a Python app with PyInstaller</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="create-a-pipeline-in-blue-ocean.html">Create a Pipeline in Blue Ocean</a>
@@ -193,7 +193,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Jenkins Tutorials</a></li>
-    <li><a href="build-a-python-app-with-pyinstaller.html">build-a-python-app-with-pyinstaller.adoc</a></li>
+    <li><a href="build-a-python-app-with-pyinstaller.html">Build a Python app with PyInstaller</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/tutorials/modules/ROOT/pages/build-a-python-app-with-pyinstaller.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
@@ -203,13 +203,9 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<hr>
-<div class="paragraph">
-<p>layout: documentation
-title: Build a Python app with PyInstaller
-section: doc
----</p>
-</div>
+<h1 class="page">Build a Python app with PyInstaller</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>This tutorial shows you how to use Jenkins to orchestrate building a simple
 Python application with <a href="https://www.pyinstaller.org/">PyInstaller</a>.</p>
@@ -264,6 +260,8 @@ proceed on.</p>
 </div>
 <div class="paragraph">
 <p>Unresolved include directive in modules/ROOT/pages/build-a-python-app-with-pyinstaller.adoc - include::doc/book/installing/_run-jenkins-in-docker.adoc[]</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="fork-and-clone-the-sample-repository-on-github"><a class="anchor" href="#fork-and-clone-the-sample-repository-on-github"></a>Fork and clone the sample repository</h3>
@@ -429,7 +427,7 @@ application with PyInstaller in Jenkins. Your Pipeline will be created as a
 <p>This is the foundation of "Pipeline-as-Code", which treats the continuous
 delivery pipeline a part of the application to be versioned and reviewed like
 any other code. Read more about Pipeline and what a Jenkinsfile is in the
-<a href="/doc/book/pipeline">Pipeline</a> and <a href="/doc/book/pipeline/jenkinsfile">Using
+<a href="../../user-docs/2.401.3/pipeline/index.html" class="xref page">Pipeline</a> and <a href="../../user-docs/2.401.3/pipeline/jenkinsfile.html" class="xref page">Using
 a Jenkinsfile</a> sections of the User Handbook.</p>
 </div>
 <div class="paragraph">
@@ -472,20 +470,20 @@ Git repository.</p>
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The <a href="/doc/book/pipeline/syntax#agent"><code>agent</code></a> section with the <code>none</code>
+<td>The <a href="../../user-docs/2.401.3/pipeline/syntax.html#agent" class="xref page"><code>agent</code></a> section with the <code>none</code>
 parameter specified at the top of this Pipeline code block means that no global
 agent will be allocated for the entire Pipeline&#8217;s execution and that each
-<a href="/doc/book/pipeline/syntax/#stage"><code>stage</code></a> directive must specify its own
+<a href="../../user-docs/2.401.3/pipeline/syntax.html#stage" class="xref page"><code>stage</code></a> directive must specify its own
 <code>agent</code> section.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Defines a <a href="/doc/book/pipeline/syntax/#stage"><code>stage</code></a> (directive) called
+<td>Defines a <a href="../../user-docs/2.401.3/pipeline/syntax.html#stage" class="xref page"><code>stage</code></a> (directive) called
 <code>Build</code> that appears on the Jenkins UI.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>This <code>image</code> parameter (of the <a href="/doc/book/pipeline/syntax#agent"><code>agent</code></a>
+<td>This <code>image</code> parameter (of the <a href="../../user-docs/2.401.3/pipeline/syntax.html#agent" class="xref page"><code>agent</code></a>
 section&#8217;s <code>docker</code> parameter) downloads the
 <a href="https://hub.docker.com/_/python/"><code>python:2-alpine</code> Docker image</a> (if it&#8217;s not
 already available on your machine) and runs this image as a separate container.
@@ -496,7 +494,7 @@ This means that:
 <p>You&#8217;ll have separate Jenkins and Python containers running locally in Docker.</p>
 </li>
 <li>
-<p>The Python container becomes the <a href="/doc/book/glossary/#agent">agent</a> that
+<p>The Python container becomes the <a href="../../user-docs/2.401.3/glossary/index.html#agent" class="xref page">agent</a> that
 Jenkins uses to run the <code>Build</code> stage of your Pipeline project. However,
 this container is short-lived - its lifespan is only that of the duration of
 your <code>Build</code> stage&#8217;s execution.</p>
@@ -508,7 +506,7 @@ your <code>Build</code> stage&#8217;s execution.</p>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
 <td>This
 <a href="/doc/pipeline/steps/workflow-durable-task-step/#sh-shell-script"><code>sh</code></a>
-step (of the <a href="/doc/book/pipeline/syntax/#steps"><code>steps</code></a> section) runs the
+step (of the <a href="../../user-docs/2.401.3/pipeline/syntax.html#steps" class="xref page"><code>steps</code></a> section) runs the
 Python command to compile your application and its <code>calc</code> library into byte code
 files (each with <code>.pyc</code> extension), which are placed into the <code>sources</code>
 workspace directory (within the
@@ -648,12 +646,12 @@ successfully.</p>
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Defines a <a href="/doc/book/pipeline/syntax/#stage"><code>stage</code></a> (directive) called
+<td>Defines a <a href="../../user-docs/2.401.3/pipeline/syntax.html#stage" class="xref page"><code>stage</code></a> (directive) called
 <code>Test</code> that appears on the Jenkins UI.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>This <code>image</code> parameter (of the <a href="/doc/book/pipeline/syntax#agent"><code>agent</code></a>
+<td>This <code>image</code> parameter (of the <a href="../../user-docs/2.401.3/pipeline/syntax.html#agent" class="xref page"><code>agent</code></a>
 section&#8217;s <code>docker</code> parameter) downloads the
 <a href="https://hub.docker.com/r/qnib/pytest/"><code>qnib:pytest</code> Docker image</a> (if it&#8217;s not
 already available on your machine) and runs this image as a separate container.
@@ -664,7 +662,7 @@ This means that:
 <p>You&#8217;ll have separate Jenkins and pytest containers running locally in Docker.</p>
 </li>
 <li>
-<p>The pytest container becomes the <a href="/doc/book/glossary/#agent">agent</a> that
+<p>The pytest container becomes the <a href="../../user-docs/2.401.3/glossary/index.html#agent" class="xref page">agent</a> that
 Jenkins uses to run the <code>Test</code> stage of your Pipeline project. This
 container&#8217;s lifespan lasts the duration of your <code>Test</code> stage&#8217;s execution.</p>
 </li>
@@ -675,7 +673,7 @@ container&#8217;s lifespan lasts the duration of your <code>Test</code> stage&#8
 <td><i class="conum" data-value="3"></i><b>3</b></td>
 <td>This
 <a href="/doc/pipeline/steps/workflow-durable-task-step/#sh-shell-script"><code>sh</code></a>
-step (of the <a href="/doc/book/pipeline/syntax/#steps"><code>steps</code></a> section) executes
+step (of the <a href="../../user-docs/2.401.3/pipeline/syntax.html#steps" class="xref page"><code>steps</code></a> section) executes
 pytest&#8217;s <code>py.test</code> command on <code>sources/test_calc.py</code>, which runs a set of unit
 tests (defined in <code>test_calc.py</code>) on the "calc" library&#8217;s <code>add2</code> function (used
 by your simple Python application <code>add2vals</code>). The:
@@ -698,7 +696,7 @@ step (provided by the <a href="/doc/pipeline/steps/junit">JUnit Plugin</a>) arch
 JUnit XML report (generated by the <code>py.test</code> command above) and exposes the
 results through the Jenkins interface. In Blue Ocean, the results are accessible
 through the <strong>Tests</strong> page of a Pipeline run. The
-<a href="/doc/book/pipeline/syntax/#post"><code>post</code></a> section&#8217;s <code>always</code> condition that
+<a href="../../user-docs/2.401.3/pipeline/syntax.html#post" class="xref page"><code>post</code></a> section&#8217;s <code>always</code> condition that
 contains this <code>junit</code> step ensures that the step is <em>always</em> executed <em>at the
 completion</em> of the <code>Test</code> stage, regardless of the stage&#8217;s outcome.</td>
 </tr>
@@ -834,7 +832,7 @@ on the previous "Build" stage circle to access the output from that stage.</p>
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Defines a <a href="/doc/book/pipeline/syntax/#stage"><code>stage</code></a> (directive) called
+<td>Defines a <a href="../../user-docs/2.401.3/pipeline/syntax.html#stage" class="xref page"><code>stage</code></a> (directive) called
 <code>Deliver</code> that appears on the Jenkins UI.</td>
 </tr>
 <tr>
@@ -849,7 +847,7 @@ block defines two variables which will be used later in the 'Deliver' stage.</td
 <a href="/doc/pipeline/steps/workflow-basic-steps/#dir-change-current-directory"><code>dir</code></a>
 step (of the <a href="/doc/pipeline/steps/workflow-basic-steps"><code>basic steps</code></a> section) creates a new subdirectory
 named by the build number. The final program will be created in that directory by pyinstaller.
-<code>BUILD_ID</code> is one of the pre-defined Jenkins <a href="/doc/book/pipeline/jenkinsfile/#using-environment-variables">environment variables</a> and is available in all jobs.</td>
+<code>BUILD_ID</code> is one of the pre-defined Jenkins <a href="../../user-docs/2.401.3/pipeline/jenkinsfile.html#using-environment-variables" class="xref page">environment variables</a> and is available in all jobs.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
@@ -866,7 +864,7 @@ separate container. This means that:
 locally in Docker.</p>
 </li>
 <li>
-<p>The PyInstaller container becomes the <a href="/doc/book/glossary/#agent">agent</a>
+<p>The PyInstaller container becomes the <a href="../../user-docs/2.401.3/glossary/index.html#agent" class="xref page">agent</a>
 that Jenkins uses to run the <code>Deliver</code> stage of your Pipeline project. This
 container&#8217;s lifespan lasts the duration of your <code>Deliver</code> stage&#8217;s execution.</p>
 </li>
@@ -877,7 +875,7 @@ container&#8217;s lifespan lasts the duration of your <code>Deliver</code> stage
 <td><i class="conum" data-value="5"></i><b>5</b></td>
 <td>This
 <a href="/doc/pipeline/steps/workflow-durable-task-step/#sh-shell-script"><code>sh</code></a>
-step (of the <a href="/doc/book/pipeline/syntax/#steps"><code>steps</code></a> section) executes
+step (of the <a href="../../user-docs/2.401.3/pipeline/syntax.html#steps" class="xref page"><code>steps</code></a> section) executes
 the <code>pyinstaller</code> command (in the PyInstaller container) on your simple Python
 application. This bundles your <code>add2vals.py</code> Python application into a single
 standalone executable file (via the <code>--onefile</code> option) and outputs the this
@@ -898,7 +896,7 @@ step (provided as part of Jenkins core) archives the standalone executable file
 Jenkins home&#8217;s workspace directory) and exposes this file through the Jenkins
 interface. In Blue Ocean, archived artifacts like these are accessible through
 the <strong>Artifacts</strong> page of a Pipeline run. The
-<a href="/doc/book/pipeline/syntax/#post"><code>post</code></a> section&#8217;s <code>success</code> condition that
+<a href="../../user-docs/2.401.3/pipeline/syntax.html#post" class="xref page"><code>post</code></a> section&#8217;s <code>success</code> condition that
 contains this <code>archiveArtifacts</code> step ensures that the step is executed <em>at the
 completion</em> of the <code>Deliver</code> stage <em>only if</em> this stage completed successfully.</td>
 </tr>
@@ -1015,14 +1013,14 @@ handle practically any aspect of build orchestration and automation.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="/doc/tutorials">Tutorials overview</a> page for other introductory
+<p>The <a href="#tutorials:ROOT:index.adoc" class="xref unresolved">Tutorials overview</a> page for other introductory
 tutorials.</p>
 </li>
 <li>
-<p>The <a href="/doc/book">User Handbook</a> for more detailed information about using
-Jenkins, such as <a href="/doc/book/pipeline">Pipelines</a> (in particular
-<a href="/doc/book/pipeline/syntax">Pipeline syntax</a>) and the
-<a href="/doc/book/blueocean">Blue Ocean</a> interface.</p>
+<p>The <a href="../../user-docs/2.401.3/index.html" class="xref page">User Handbook</a> for more detailed information about using
+Jenkins, such as <a href="../../user-docs/2.401.3/pipeline/index.html" class="xref page">Pipelines</a> (in particular
+<a href="../../user-docs/2.401.3/pipeline/syntax.html" class="xref page">Pipeline syntax</a>) and the
+<a href="../../user-docs/2.401.3/blueocean/index.html" class="xref page">Blue Ocean</a> interface.</p>
 </li>
 <li>
 <p>The <a href="/node">Jenkins blog</a> for the latest events, other tutorials and

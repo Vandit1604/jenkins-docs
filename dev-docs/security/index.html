@@ -1325,22 +1325,6 @@
 </aside>
 <article class="doc">
 <h1 class="page">Security</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-This section is a work in progress. Want to help? Check out the (<a href="https://app.gitter.im/#/room/#jenkins/docs:matrix.org)">jenkinsci/docs gitter channel</a>. For other ways to contribute to the Jenkins project, see (<a href="https://www.jenkins.io/participate)">this page about participating and contributing</a>.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
 <div class="sect1">
 <h2 id="_security_architecture_of_jenkins"><a class="anchor" href="#_security_architecture_of_jenkins"></a>Security Architecture of Jenkins</h2>
 <div class="sectionbody">
@@ -1412,7 +1396,7 @@ In all cases, this is the code you need to write.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The recommended way to control read access to <code>AccessControlled</code> objects is to implement the <code>StaplerProxy</code> interface.
-See <a href="read-access">Restricting HTTP Access to <code>AccessControlled</code> Objects</a> for more information.</p>
+See <a href="read-access.html" class="xref page">Restricting HTTP Access to <code>AccessControlled</code> Objects</a> for more information.</p>
 </div>
 </div>
 </div>
@@ -1450,7 +1434,7 @@ ac.checkPermission(p)</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>See also <a href="form-validation">Securely implementing form validation</a>.</p>
+<p>See also <a href="form-validation.html" class="xref page">Securely implementing form validation</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="_checking_permissions_in_jelly_files"><a class="anchor" href="#_checking_permissions_in_jelly_files"></a>Checking permissions in Jelly files</h3>
@@ -1645,18 +1629,18 @@ However, <em>until a user attempts to log in with their password, Jenkins is nev
 This means that without explicit support from its corresponding Jenkins authentication provider plugin, Jenkins will otherwise continue to allow the account to authenticate through the above-mentioned authentication methods (SSH keys, API tokens) until the account is also deleted or disabled in Jenkins by an administrator.
 Authentication providers that can implement account validity checks through means other than attempting to log the user in should throw a subtype of <code>org.springframework.security.authentication.AccountStatusException</code> in <code>SecurityRealm.loadUserByUsername2</code>.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_references"><a class="anchor" href="#_references"></a>References</h2>
-<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title">References</div>
 <div class="ulist">
 <ul>
 <li>
 <p><a href="https://plugins.jenkins.io/script-security#ScriptSecurityPlugin-Developer%E2%80%99sguide">Script Security Developer&#8217;s Guide</a></p>
 </li>
 </ul>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

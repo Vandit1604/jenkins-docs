@@ -64,6 +64,33 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
+    <span class="nav-text">index.adoc</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-11.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-windows.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-linux.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-web-browsers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-java.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-servlet-containers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-17.adoc</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
@@ -106,7 +133,7 @@
     <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/getting-started.html">getting-started.adoc</a>
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with the Guided Tour</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
@@ -118,7 +145,7 @@
     <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
@@ -187,7 +214,7 @@
     <a class="nav-link" href="system-info.html">System Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="system-properties.html">system-properties.adoc</a>
+    <a class="nav-link" href="system-properties.html">Jenkins Features Controlled with System Properties</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="change-system-timezone.html">Change System Time Zone</a>
@@ -543,24 +570,24 @@ Each monitor includes a description of the issue it is reporting and links to ad
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><a href="system-configuration">System</a></dt>
+<dt class="hdlist1"><a href="system-configuration.html" class="xref page">System</a></dt>
 <dd>
 <p>Configure global settings and paths for the Jenkins instance</p>
 </dd>
-<dt class="hdlist1"><a href="tools">Tools</a></dt>
+<dt class="hdlist1"><a href="tools.html" class="xref page">Tools</a></dt>
 <dd>
 <p>Configure tools, their locations, and automatic installers</p>
 </dd>
-<dt class="hdlist1"><a href="plugins">Plugins</a></dt>
+<dt class="hdlist1"><a href="plugins.html" class="xref page">Plugins</a></dt>
 <dd>
 <p>Add, update, remove, disable/enable plugins
 that extend the functionality of Jenkins.</p>
 </dd>
-<dt class="hdlist1"><a href="nodes">Nodes and Clouds</a></dt>
+<dt class="hdlist1"><a href="#user-docs:managing:nodes">Nodes and Clouds</a></dt>
 <dd>
 <p>Add, remove, control, and monitor the nodes used for the agents on which build jobs run.</p>
 </dd>
-<dt class="hdlist1"><a href="casc">Configuration as Code</a></dt>
+<dt class="hdlist1"><a href="#user-docs:managing:casc">Configuration as Code</a></dt>
 <dd>
 <p>Configure your Jenkins instance using a human-readable YAML file rather than the UI.
 This is an optional feature that appears in this group
@@ -575,16 +602,16 @@ only when the plugin is installed on your controller.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Screens for configuring security features for your Jenkins instance.
-See <a href="/doc/book/security/">Securing Jenkins</a> for general information
+See <a href="../../../dev-docs/security/index.html" class="xref page">Securing Jenkins</a> for general information
 about managing Jenkins security.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><a href="system-configuration">Security</a></dt>
+<dt class="hdlist1"><a href="system-configuration.html" class="xref page">Security</a></dt>
 <dd>
 <p>Set configuration parameters that secure your Jenkins instance.</p>
 </dd>
-<dt class="hdlist1"><a href="/doc/book/using/using-credentials/#adding-new-global-credentials">Manage Credentials</a></dt>
+<dt class="hdlist1"><a href="../using-jenkins/using-credentials.html#adding-new-global-credentials" class="xref page">Manage Credentials</a></dt>
 <dd>
 <p>Configure the credentials that provide secure access
 to third-party sites and applications that interact with Jenkins.</p>
@@ -593,7 +620,7 @@ to third-party sites and applications that interact with Jenkins.</p>
 <dd>
 <p>Configure credential providers and types</p>
 </dd>
-<dt class="hdlist1"><a href="users">Users</a></dt>
+<dt class="hdlist1"><a href="#user-docs:managing:users">Users</a></dt>
 <dd>
 <p>Manage users defined in the Jenkins user database.
 This is not used if you use a different security realm such as LDAP or AD.</p>
@@ -607,11 +634,11 @@ This is not used if you use a different security realm such as LDAP or AD.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><a href="system-info">System Information</a></dt>
+<dt class="hdlist1"><a href="#user-docs:managing:system-info">System Information</a></dt>
 <dd>
 <p>Displays information about the Jenkins environment.</p>
 </dd>
-<dt class="hdlist1"><a href="/doc/book/system-administration/viewing-logs/">System Log</a></dt>
+<dt class="hdlist1"><a href="../system-administration/viewing-logs.html" class="xref page">System Log</a></dt>
 <dd>
 <p>Jenkins log that contains all <code>java.util.logging</code> output related to Jenkins.</p>
 </dd>
@@ -619,7 +646,7 @@ This is not used if you use a different security realm such as LDAP or AD.</p>
 <dd>
 <p>Displays information about resource utilization on you Jenkins instance.</p>
 </dd>
-<dt class="hdlist1"><a href="about-jenkins">About Jenkins</a></dt>
+<dt class="hdlist1"><a href="#user-docs:managing:about-jenkins">About Jenkins</a></dt>
 <dd>
 <p>Provides version and license information for your Jenkins instance.</p>
 </dd>
@@ -654,11 +681,11 @@ and management tools that enable you to do administrative tasks without using th
 <p>Discard all data that is loaded in memory and reload everything from the file system.
 This is useful when you modify configuration files directly on disk.</p>
 </dd>
-<dt class="hdlist1"><a href="cli">Jenkins CLI</a></dt>
+<dt class="hdlist1"><a href="../../../dev-docs/cli/index.html" class="xref page">Jenkins CLI</a></dt>
 <dd>
 <p>How to use the Jenkins CLI from a shell or script.</p>
 </dd>
-<dt class="hdlist1"><a href="/doc/book/managing/script-console/">Script Console</a></dt>
+<dt class="hdlist1"><a href="script-console.html" class="xref page">Script Console</a></dt>
 <dd>
 <p>Execute an Apache Groovy script for administration, troubleshooting, and diagnostics.</p>
 </dd>

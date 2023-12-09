@@ -35,13 +35,13 @@
     <span class="nav-text">xref:-for-installing-jenkins-on-Google-Cloud.adoc[]</span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-java-app-with-maven.html">build-a-java-app-with-maven.adoc</a>
+    <a class="nav-link" href="build-a-java-app-with-maven.html">Build a Java app with Maven</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-multibranch-pipeline-project.html">build-a-multibranch-pipeline-project.adoc</a>
+    <a class="nav-link" href="build-a-multibranch-pipeline-project.html">End-to-End Multibranch Pipeline Project Creation</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-node-js-and-react-app-with-npm.html">build-a-node-js-and-react-app-with-npm.adoc</a>
+    <a class="nav-link" href="build-a-node-js-and-react-app-with-npm.html">Build a Node.js and React app with npm</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="using-jenkinsfile-runner-github-action-to-build-jenkins-pipeline.html">Build a Jenkins pipeline by using Jenkinsfile Runner GitHub Actions</a>
@@ -50,7 +50,7 @@
     <a class="nav-link" href="tutorial-for-installing-jenkins-on-AWS.html">tutorial-for-installing-jenkins-on-AWS.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-a-python-app-with-pyinstaller.html">build-a-python-app-with-pyinstaller.adoc</a>
+    <a class="nav-link" href="build-a-python-app-with-pyinstaller.html">Build a Python app with PyInstaller</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="create-a-pipeline-in-blue-ocean.html">Create a Pipeline in Blue Ocean</a>
@@ -222,7 +222,7 @@ Since Blue Ocean provides a simplified Git-handling experience, you&#8217;ll be 
 <p><strong>Duration:</strong> This tutorial takes 20-40 minutes to complete if you&#8217;ve already met the <a href="#prerequisites">prerequisites</a> below.</p>
 </div>
 <div class="paragraph">
-<p>The exact duration depends on the speed of your machine and whether or not you&#8217;ve already <a href="#tutorials:ROOT:create-a-pipeline-in-blue-ocean.adoc#run-jenkins-in-docker" class="xref unresolved">run Jenkins in Docker</a> from <a href="index.html" class="xref page">another tutorial</a>.</p>
+<p>The exact duration depends on the speed of your machine and whether or not you&#8217;ve already <a href="#tutorials:ROOT:create-a-pipeline-in-blue-ocean.adoc#run-jenkins-in-docker" class="xref unresolved">run Jenkins in Docker</a> from <a href="#ROOT:index">another tutorial</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -288,8 +288,8 @@ If you need to restart Jenkins, follow the restart instructions in <a href="#use
 <ul>
 <li>
 <p><a href="https://www.docker.com/">Docker</a> - Read more about installing Docker in the
-<a href="/doc/book/installing/#installing-docker">Installing Docker</a> section of
-the <a href="/doc/book/installing/">Installing Jenkins</a> page.<br>
+<a href="../../user-docs/2.401.3/installing-jenkins/index.html#installing-docker" class="xref page">Installing Docker</a> section of
+the <a href="../../user-docs/2.401.3/installing-jenkins/index.html" class="xref page">Installing Jenkins</a> page.<br>
 <strong>Note:</strong> If you use Linux, this tutorial assumes that you are not running
 Docker commands as the root user, but instead with a single user account that
 also has access to the other tools used throughout this tutorial.</p>
@@ -865,7 +865,7 @@ You should see a page/site with the title <strong>Welcome to React</strong>.</p>
 <div class="sect2">
 <h3 id="_follow_up_optional"><a class="anchor" href="#_follow_up_optional"></a>Follow up (optional)</h3>
 <div class="paragraph">
-<p>If you check the contents of the <code>Jenkinsfile</code> that Blue Ocean created at the root of your forked <code>creating-a-pipeline-in-blue-ocean</code> repository, note the location of the <a href="/doc/book/pipeline/syntax#environment"><code>environment</code></a> directive.
+<p>If you check the contents of the <code>Jenkinsfile</code> that Blue Ocean created at the root of your forked <code>creating-a-pipeline-in-blue-ocean</code> repository, note the location of the <a href="../../user-docs/2.401.3/pipeline/syntax.html#environment" class="xref page"><code>environment</code></a> directive.
 This directive&#8217;s location within the "Test" stage means that the environment variable <code>CI</code>, with its value of <code>true</code>, is only available within the scope of this "Test" stage.</p>
 </div>
 <div class="paragraph">
@@ -943,7 +943,7 @@ However, when you inspect the <code>Jenkinsfile</code> again, you&#8217;ll notic
 <p>The <a href="index.html" class="xref page">Tutorials overview</a> page for other introductory tutorials.</p>
 </li>
 <li>
-<p>The <a href="../../user-docs/2.401.3/index.html" class="xref page">User Handbook</a> for more detailed information about using Jenkins, such as <a href="/doc/book/pipeline">Pipelines</a>, <a href="/doc/book/pipeline/syntax">Pipeline syntax</a>, and the <a href="../../user-docs/2.401.3/blueocean/index.html" class="xref page">Blue Ocean</a> interface.</p>
+<p>The <a href="../../user-docs/2.401.3/index.html" class="xref page">User Handbook</a> for more detailed information about using Jenkins, such as <a href="../../user-docs/2.401.3/pipeline/index.html" class="xref page">Pipelines</a>, <a href="../../user-docs/2.401.3/pipeline/syntax.html" class="xref page">Pipeline syntax</a>, and the <a href="../../user-docs/2.401.3/blueocean/index.html" class="xref page">Blue Ocean</a> interface.</p>
 </li>
 <li>
 <p>The <a href="/node">Jenkins blog</a> for the latest events, other tutorials, and updates.</p>
@@ -954,7 +954,7 @@ However, when you inspect the <code>Jenkinsfile</code> again, you&#8217;ll notic
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="build-a-python-app-with-pyinstaller.html">build-a-python-app-with-pyinstaller.adoc</a></span>
+  <span class="prev"><a href="build-a-python-app-with-pyinstaller.html">Build a Python app with PyInstaller</a></span>
   <span class="next"><a href="build-a-labview-app.html">Build a LabVIEW app</a></span>
 </nav>
 </article>

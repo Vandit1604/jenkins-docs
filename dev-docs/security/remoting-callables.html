@@ -1413,7 +1413,7 @@ A typical implementation that breaks will look like the following:</p>
 <p>If a plugin implementing an inadequate role check (like this example) attempts to send a <code>Callable</code> through the remoting channel from the agent to the controller, the security improvement will detect it and throw an exception before <code>#call()</code> would be invoked.</p>
 </div>
 <div class="paragraph">
-<p>While administrators can allow specific <code>Callable</code> subtypes to bypass this protection mechanism (<a href="/doc/book/security/controller-isolation/required-role-check/">see documentation</a>), plugin developers are advised to update their plugins:
+<p>While administrators can allow specific <code>Callable</code> subtypes to bypass this protection mechanism (<a href="../../user-docs/2.401.3/security/required-role-check.html" class="xref page">see documentation</a>), plugin developers are advised to update their plugins:
 <code>Callable</code> implementations should extend from one of the classes mentioned above, with a strong preference for <code>MasterToSlaveCallable</code>, which should work in almost all cases.
 If that does not work and the plugin cannot be restructured to work with a <code>MasterToSlaveCallable</code>, the <code>Callable</code> implementation should be changed to a <code>SlaveToMasterCallable</code>, and the best practices recommended below must be implemented to ensure it cannot be bypassed.</p>
 </div>

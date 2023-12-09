@@ -29,7 +29,7 @@
     <span class="nav-text">For Adminstrators</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-administrators.html">for-administrators.adoc</a>
+    <a class="nav-link" href="../for-administrators.html">"Overview for Jenkins Administrators"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
@@ -47,7 +47,7 @@
     <span class="nav-text">For Reporters</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../reporting.html">reporting.adoc</a>
+    <a class="nav-link" href="../reporting.html">"Reporting Security Vulnerabilities"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
@@ -59,7 +59,7 @@
     <span class="nav-text">For Maintainers</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-maintainers.html">for-maintainers.adoc</a>
+    <a class="nav-link" href="../for-maintainers.html">"Overview for Plugin Maintainers"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../plugins.html">Managing Plugins</a>
@@ -348,7 +348,7 @@ Specific endpoints receiving only simple form submissions have a lower limit.</p
 <div class="content">
 <pre>NOTE: Some Jenkins forms can be very complex, and these limits apply to all fields and not just fields representing uploaded files.
 As a result, legitimate submissions of complex forms that include (possible) file uploads may be affected by these limits.
-If that happens, these limits can be changed by setting the Java system properties link:/doc/book/managing/system-properties/#hudson-util-multipartformdataparser-fileupload_max_files[`hudson.util.MultipartFormDataParser.FILEUPLOAD_MAX_FILES`] and link:/doc/book/managing/system-properties/#org-kohsuke-stapler-requestimpl-fileupload_max_files[`org.kohsuke.stapler.RequestImpl.FILEUPLOAD_MAX_FILES`] to a bigger value, or to `-1` to completely disable them.</pre>
+If that happens, these limits can be changed by setting the Java system properties xref:user-docs:managing:system-properties.adoc#hudson-util-multipartformdataparser-fileupload_max_files[`hudson.util.MultipartFormDataParser.FILEUPLOAD_MAX_FILES`] and xref:user-docs:managing:system-properties.adoc#org-kohsuke-stapler-requestimpl-fileupload_max_files[`org.kohsuke.stapler.RequestImpl.FILEUPLOAD_MAX_FILES`] to a bigger value, or to `-1` to completely disable them.</pre>
 </div>
 </div>
 <div class="literalblock">
@@ -360,10 +360,10 @@ These releases of Jenkins also introduce additional Java system properties that 
 </div>
 </li>
 <li>
-<p><a href="/doc/book/managing/system-properties/#hudson-util-multipartformdataparser-fileupload_max_file_size"><code>hudson.util.MultipartFormDataParser.FILEUPLOAD_MAX_FILE_SIZE</code></a> and <a href="/doc/book/managing/system-properties/#org-kohsuke-stapler-requestimpl-fileupload_max_file_size"><code>org.kohsuke.stapler.RequestImpl.FILEUPLOAD_MAX_FILE_SIZE</code></a> allow limiting the size (in bytes) of individual fields that can be processed in one <code>multipart/form-data</code> request.</p>
+<p><a href="../../user-docs/2.401.3/managing/system-properties.html#hudson-util-multipartformdataparser-fileupload_max_file_size" class="xref page"><code>hudson.util.MultipartFormDataParser.FILEUPLOAD_MAX_FILE_SIZE</code></a> and <a href="../../user-docs/2.401.3/managing/system-properties.html#org-kohsuke-stapler-requestimpl-fileupload_max_file_size" class="xref page"><code>org.kohsuke.stapler.RequestImpl.FILEUPLOAD_MAX_FILE_SIZE</code></a> allow limiting the size (in bytes) of individual fields that can be processed in one <code>multipart/form-data</code> request.</p>
 </li>
 <li>
-<p><a href="/doc/book/managing/system-properties/#hudson-util-multipartformdataparser-fileupload_max_size"><code>hudson.util.MultipartFormDataParser.FILEUPLOAD_MAX_SIZE</code></a> and <a href="/doc/book/managing/system-properties/#org-kohsuke-stapler-requestimpl-fileupload_max_size"><code>org.kohsuke.stapler.RequestImpl.FILEUPLOAD_MAX_SIZE</code></a> allow limiting the total request size (in bytes) that can be processed in one <code>multipart/form-data</code> request.</p>
+<p><a href="../../user-docs/2.401.3/managing/system-properties.html#hudson-util-multipartformdataparser-fileupload_max_size" class="xref page"><code>hudson.util.MultipartFormDataParser.FILEUPLOAD_MAX_SIZE</code></a> and <a href="../../user-docs/2.401.3/managing/system-properties.html#org-kohsuke-stapler-requestimpl-fileupload_max_size" class="xref page"><code>org.kohsuke.stapler.RequestImpl.FILEUPLOAD_MAX_SIZE</code></a> allow limiting the total request size (in bytes) that can be processed in one <code>multipart/form-data</code> request.</p>
 <div class="literalblock">
 <div class="content">
 <pre>    By default, Jenkins does not set these size limits.
@@ -399,7 +399,7 @@ These releases of Jenkins also introduce additional Java system properties that 
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>    NOTE: The link:/doc/book/managing/system-properties/#hudson-model-directorybrowsersupport-allowtmpescape[Java system property `hudson.model.DirectoryBrowserSupport.allowTmpEscape`] can be set to `true` to restore the previous behavior.
+<pre>    NOTE: The xref:user-docs:managing:system-properties.adoc#hudson-model-directorybrowsersupport-allowtmpescape[Java system property `hudson.model.DirectoryBrowserSupport.allowTmpEscape`] can be set to `true` to restore the previous behavior.
 - id: SECURITY-3058
   reporter: Kevin Guerroudj, CloudBees, Inc.
   title: Temporary file parameter created with insecure permissions

@@ -64,6 +64,33 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
+    <span class="nav-text">index.adoc</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-11.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-windows.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-linux.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-web-browsers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-java.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-servlet-containers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-17.adoc</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
@@ -106,7 +133,7 @@
     <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/getting-started.html">getting-started.adoc</a>
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with the Guided Tour</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
@@ -118,7 +145,7 @@
     <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
@@ -187,7 +214,7 @@
     <a class="nav-link" href="../managing/system-info.html">System Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../managing/system-properties.html">system-properties.adoc</a>
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
@@ -518,13 +545,13 @@ Others involve environment-specific setup and trade-offs and depend on specific 
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><a href="controller-isolation">Controller Isolation</a></dt>
+<dt class="hdlist1"><a href="#dev-docs:security:controller-isolation.adoc" class="xref unresolved">Controller Isolation</a></dt>
 <dd>
 <p>Builds should not be executed on the built-in node, but that is just the beginning:
 This section discusses what other steps can be taken to protect the controller from being impacted by running builds.<br>
 <strong>This needs to be configured according to the needs of your environment.</strong></p>
 </dd>
-<dt class="hdlist1"><a href="access-control">Access Control</a></dt>
+<dt class="hdlist1"><a href="#dev-docs:security:access-control">Access Control</a></dt>
 <dd>
 <p>By default, Jenkins does not allow anonymous access, and a single admin user exists.
 This chapter discusses which level of access is provided by permissions and how to safely grant access to more users.<br>
@@ -570,13 +597,13 @@ This section discusses how to protect your builds.<br>
 This chapter explains how to work around any problems this may cause.<br>
 <em>This is set up securely by default.</em></p>
 </dd>
-<dt class="hdlist1"><a href="markup-formatter">Markup Formatter</a></dt>
+<dt class="hdlist1"><a href="#dev-docs:security:markup-formatter">Markup Formatter</a></dt>
 <dd>
 <p>The default markup formatter renders text as entered (i.e. escaping HTML metacharacters).
 This chapter explains how to switch to a different markup formatter and explains what admins need to be aware of.<br>
 <em>This is set up securely by default.</em></p>
 </dd>
-<dt class="hdlist1"><a href="user-content">Rendering User Content</a></dt>
+<dt class="hdlist1"><a href="#dev-docs:security:user-content">Rendering User Content</a></dt>
 <dd>
 <p>By default, Jenkins strictly limits the features useable in user content (files from workspaces, archived artifacts, etc.) it serves.
 This chapter discusses how to customize this and make HTML reports and similar content both functional and safe to view.<br>

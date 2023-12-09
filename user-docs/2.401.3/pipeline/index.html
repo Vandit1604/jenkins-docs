@@ -64,6 +64,33 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
+    <span class="nav-text">index.adoc</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-11.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-windows.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-linux.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-web-browsers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-java.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-servlet-containers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-17.adoc</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
@@ -106,7 +133,7 @@
     <a class="nav-link" href="index.html">Pipeline</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="getting-started.html">getting-started.adoc</a>
+    <a class="nav-link" href="getting-started.html">Getting started with the Guided Tour</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="jenkinsfile.html">Using a Jenkinsfile</a>
@@ -118,7 +145,7 @@
     <a class="nav-link" href="multibranch.html">Branches and Pull Requests</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="docker.html">Using Docker with pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="shared-libraries.html">Extending with Shared Libraries</a>
@@ -187,7 +214,7 @@
     <a class="nav-link" href="../managing/system-info.html">System Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../managing/system-properties.html">system-properties.adoc</a>
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
@@ -508,33 +535,33 @@ including how to:</p>
 <ul>
 <li>
 <p><a href="../blueocean/getting-started.html" class="xref page">get started with Pipeline</a> - covers how to
-<a href="getting-started#defining-a-pipeline">define a Jenkins Pipeline</a> (i.e. your
+<a href="getting-started.html#defining-a-pipeline" class="xref page">define a Jenkins Pipeline</a> (i.e. your
 <code>Pipeline</code>) through
-<a href="getting-started#through-blue-ocean">Blue Ocean</a>, through the
-<a href="getting-started#through-the-classic-ui">classic UI</a> or in
-<a href="getting-started#defining-a-pipeline-in-scm">SCM</a>,</p>
+<a href="getting-started.html#through-blue-ocean" class="xref page">Blue Ocean</a>, through the
+<a href="getting-started.html#through-the-classic-ui" class="xref page">classic UI</a> or in
+<a href="getting-started.html#defining-a-pipeline-in-scm" class="xref page">SCM</a>,</p>
 </li>
 <li>
-<p><a href="jenkinsfile">create and use a <code>Jenkinsfile</code></a> - covers use-case scenarios
+<p><a href="jenkinsfile.html" class="xref page">create and use a <code>Jenkinsfile</code></a> - covers use-case scenarios
 on how to craft and construct your <code>Jenkinsfile</code>,</p>
 </li>
 <li>
-<p>work with <a href="multibranch">branches and pull requests</a>,</p>
+<p>work with <a href="multibranch.html" class="xref page">branches and pull requests</a>,</p>
 </li>
 <li>
-<p><a href="docker">use Docker with Pipeline</a> - covers how Jenkins can invoke Docker
+<p><a href="docker.html" class="xref page">use Docker with Pipeline</a> - covers how Jenkins can invoke Docker
 containers on agents/nodes (from a <code>Jenkinsfile</code>) to build your Pipeline
 projects,</p>
 </li>
 <li>
-<p><a href="shared-libraries">extend Pipeline with shared libraries</a>,</p>
+<p><a href="shared-libraries.html" class="xref page">extend Pipeline with shared libraries</a>,</p>
 </li>
 <li>
-<p>use different <a href="development">development tools</a> to facilitate the creation
+<p>use different <a href="development.html" class="xref page">development tools</a> to facilitate the creation
 of your Pipeline, and</p>
 </li>
 <li>
-<p>work with <a href="syntax">Pipeline syntax</a> - this page is a comprehensive
+<p>work with <a href="syntax.html" class="xref page">Pipeline syntax</a> - this page is a comprehensive
 reference of all Declarative Pipeline syntax.</p>
 </li>
 </ul>
@@ -565,12 +592,12 @@ testing and deployment.</p>
 <div class="paragraph">
 <p>Pipeline provides an extensible set of tools for modeling simple-to-complex
 delivery pipelines "as code" via the
-<a href="syntax">Pipeline domain-specific language (DSL) syntax</a>.
+<a href="syntax.html" class="xref page">Pipeline domain-specific language (DSL) syntax</a>.
 <sup class="footnote" id="_footnote_dsl">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>The definition of a Jenkins Pipeline is written into a text file (called a
-<a href="jenkinsfile"><code>Jenkinsfile</code></a>) which in turn can be committed to a project&#8217;s
+<a href="jenkinsfile.html" class="xref page"><code>Jenkinsfile</code></a>) which in turn can be committed to a project&#8217;s
 source control repository.
 <sup class="footnote" id="_footnote_scm">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>
 This is the foundation of "Pipeline-as-code"; treating the CD pipeline a part of
@@ -683,7 +710,7 @@ Jenkins.</p>
 </div>
 <div class="paragraph">
 <p>Building on the core Jenkins value of extensibility, Pipeline is also extensible
-both by users with <a href="shared-libraries">Pipeline Shared Libraries</a> and by
+both by users with <a href="shared-libraries.html" class="xref page">Pipeline Shared Libraries</a> and by
 plugin developers.
 <sup class="footnote" id="_footnote_ghof">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup></p>
 </div>
@@ -963,13 +990,13 @@ node { <i class="conum" data-value="7"></i><b>(7)</b>
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td><a href="syntax#declarative-pipeline"><code>pipeline</code></a> is Declarative
+<td><a href="syntax.html#declarative-pipeline" class="xref page"><code>pipeline</code></a> is Declarative
 Pipeline-specific syntax that defines a "block" containing all content and
 instructions for executing the entire Pipeline.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td><a href="syntax#agent"><code>agent</code></a> is Declarative Pipeline-specific syntax that
+<td><a href="syntax.html#agent" class="xref page"><code>agent</code></a> is Declarative Pipeline-specific syntax that
 instructs Jenkins to allocate an executor (on a node) and workspace for the
 entire Pipeline.</td>
 </tr>
@@ -977,36 +1004,36 @@ entire Pipeline.</td>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
 <td><code>stage</code> is a syntax block that describes a
 <a href="#stage">stage of this Pipeline</a>. Read more about <code>stage</code> blocks in
-Declarative Pipeline syntax on the <a href="syntax#stage">Pipeline syntax</a> page. As
+Declarative Pipeline syntax on the <a href="syntax.html#stage" class="xref page">Pipeline syntax</a> page. As
 mentioned <a href="#scripted-pipeline-fundamentals">above</a>, <code>stage</code> blocks are
 optional in Scripted Pipeline syntax.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
-<td><a href="syntax#steps"><code>steps</code></a> is Declarative Pipeline-specific syntax that
+<td><a href="syntax.html#steps" class="xref page"><code>steps</code></a> is Declarative Pipeline-specific syntax that
 describes the steps to be run in this <code>stage</code>.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="5"></i><b>5</b></td>
-<td><code>sh</code> is a Pipeline <a href="syntax#steps">step</a> (provided by the
+<td><code>sh</code> is a Pipeline <a href="syntax.html#steps" class="xref page">step</a> (provided by the
 <a href="https://plugins.jenkins.io/workflow-durable-task-step">Pipeline: Nodes and Processes plugin</a>) that
 executes the given shell command.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="6"></i><b>6</b></td>
-<td><code>junit</code> is another Pipeline <a href="syntax#steps">step</a> (provided by the
+<td><code>junit</code> is another Pipeline <a href="syntax.html#steps" class="xref page">step</a> (provided by the
 <a href="https://plugins.jenkins.io/junit">JUnit plugin</a>) for aggregating test reports.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="7"></i><b>7</b></td>
-<td><code>sh</code> is a Pipeline <a href="syntax#steps">step</a> (provided by the
+<td><code>sh</code> is a Pipeline <a href="syntax.html#steps" class="xref page">step</a> (provided by the
 <a href="https://plugins.jenkins.io/workflow-durable-task-step">Pipeline: Nodes and Processes plugin</a>) that
 executes the given shell command.</td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Read more about Pipeline syntax on the <a href="syntax">Pipeline Syntax</a> page.</p>
+<p>Read more about Pipeline syntax on the <a href="syntax.html" class="xref page">Pipeline Syntax</a> page.</p>
 </div>
 </div>
 </div>
@@ -1033,7 +1060,7 @@ executes the given shell command.</td>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a></span>
-  <span class="next"><a href="getting-started.html">getting-started.adoc</a></span>
+  <span class="next"><a href="getting-started.html">Getting started with the Guided Tour</a></span>
 </nav>
 </article>
   </div>

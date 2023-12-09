@@ -1327,18 +1327,6 @@
 <h1 class="page">Extensibility</h1>
 <div id="preamble">
 <div class="sectionbody">
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-This section is a work in progress. Want to help? Check out the (<a href="https://app.gitter.im/#/room/#jenkins/docs:matrix.org)">jenkinsci/docs gitter channel</a>. For other ways to contribute to the Jenkins project, see (<a href="https://www.jenkins.io/participate)">this page about participating and contributing</a>.
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>Jenkins is designed with extensibility in mind, both internally (core) and with plugins.
 Extensibility in Jenkins is accomplished by combining the concepts discussed below.</p>
@@ -1373,11 +1361,9 @@ This is similar to class/object in object-oriented programming.</p>
 <code>jenkinsdoc:Action[]</code> implementations can be used to store arbitrary data with a model object, or contribute additions to its presentation.
 The exact details vary depending on the subtype, but typically, <code>jenkinsdoc:Actionable[]</code> objects will show actions in the sidepanel, and route requests to the action&#8217;s <code>getUrlName()</code> to the action, allowing it to contribute pages to <code>jenkinsdoc:Actionable[]</code> objects.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_references"><a class="anchor" href="#_references"></a>References</h2>
-<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title">References</div>
 <div class="ulist">
 <ul>
 <li>
@@ -1411,6 +1397,8 @@ The exact details vary depending on the subtype, but typically, <code>jenkinsdoc
 <p><a href="https://github.com/jenkinsci/sample-extensions">Sample extension implementations</a></p>
 </li>
 </ul>
+</div>
+</div>
 </div>
 </div>
 </div>

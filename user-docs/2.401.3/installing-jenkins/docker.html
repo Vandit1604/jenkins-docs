@@ -64,6 +64,33 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
+    <span class="nav-text">index.adoc</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-11.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-windows.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-linux.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-web-browsers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-java.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-servlet-containers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-17.adoc</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
@@ -106,7 +133,7 @@
     <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/getting-started.html">getting-started.adoc</a>
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with the Guided Tour</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
@@ -118,7 +145,7 @@
     <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
@@ -187,7 +214,7 @@
     <a class="nav-link" href="../managing/system-info.html">System Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../managing/system-properties.html">system-properties.adoc</a>
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
@@ -499,7 +526,8 @@
 </aside>
 <article class="doc">
 <h1 class="page">Using Docker with Pipeline</h1>
-<h1 id="_using_docker_with_pipeline" class="sect0"><a class="anchor" href="#_using_docker_with_pipeline"></a>Using Docker with Pipeline</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>Many organizations use <a href="https://www.docker.com">Docker</a> to unify their build and test environments across machines, and to provide an efficient mechanism for deploying applications.
 Starting with Pipeline versions 2.5 and higher, Pipeline has built-in support for interacting with Docker from within a <code>Jenkinsfile</code>.</p>
@@ -507,11 +535,13 @@ Starting with Pipeline versions 2.5 and higher, Pipeline has built-in support fo
 <div class="paragraph">
 <p>While this page covers the basics of utilizing Docker from within a <code>Jenkinsfile</code>, it will not cover the fundamentals of Docker, which you can refer to in the <a href="https://docs.docker.com/get-started/">Docker Getting Started Guide</a>.</p>
 </div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="execution-environment"><a class="anchor" href="#execution-environment"></a>Customizing the execution environment</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pipeline is designed to easily use <a href="https://docs.docker.com/">Docker</a> images as the execution environment for a single <a href="../../glossary/#stage">Stage</a> or the entire Pipeline.
+<p>Pipeline is designed to easily use <a href="https://docs.docker.com/">Docker</a> images as the execution environment for a single <a href="../glossary/index.html#stage" class="xref page">Stage</a> or the entire Pipeline.
 Meaning that a user can define the tools required for their Pipeline, without having to manually configure agents.
 Any tool that can be <a href="https://hub.docker.com">packaged in a Docker container</a> can be used with ease, by making only minor edits to a <code>Jenkinsfile</code>.</p>
 </div>
@@ -623,7 +653,7 @@ pipeline {
 Since containers are initially created with "clean" file systems, this can result in slower Pipelines, as they may not take advantage of on-disk caches between subsequent Pipeline runs.</p>
 </div>
 <div class="paragraph">
-<p>Pipeline supports adding custom arguments that are passed to Docker, allowing users to specify custom <a href="https://docs.docker.com/engine/tutorials/dockervolumes/">Docker Volumes</a> to mount, which can be used for caching data on the <a href="../../glossary/#agent">agent</a> between Pipeline runs.
+<p>Pipeline supports adding custom arguments that are passed to Docker, allowing users to specify custom <a href="https://docs.docker.com/engine/tutorials/dockervolumes/">Docker Volumes</a> to mount, which can be used for caching data on the <a href="../glossary/index.html#agent" class="xref page">agent</a> between Pipeline runs.
 The following example will cache <code>~/.m2</code> between Pipeline runs utilizing the <a href="https://hub.docker.com/_/maven/"><code>maven</code> container</a>, avoiding the need to re-download dependencies for subsequent Pipeline runs.</p>
 </div>
 <div class="listingblock">
@@ -744,7 +774,7 @@ pipeline {
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>agent { dockerfile true }</code> syntax supports a number of other options, which are described in more detail in the <a href="../syntax#agent">Pipeline Syntax</a> section.</p>
+<p>The <code>agent { dockerfile true }</code> syntax supports a number of other options, which are described in more detail in the <a href="../pipeline/syntax.html#agent" class="xref page">Pipeline Syntax</a> section.</p>
 </div>
 <div class="videoblock">
 <div class="title">Using a Dockerfile with Jenkins Pipeline</div>
@@ -756,9 +786,9 @@ pipeline {
 <div class="sect2">
 <h3 id="_specifying_a_docker_label"><a class="anchor" href="#_specifying_a_docker_label"></a>Specifying a Docker Label</h3>
 <div class="paragraph">
-<p>By default, Pipeline assumes that <em>any</em> configured <a href="../../glossary/#agent">agent</a> is capable of running Docker-based Pipelines.
+<p>By default, Pipeline assumes that <em>any</em> configured <a href="../glossary/index.html#agent" class="xref page">agent</a> is capable of running Docker-based Pipelines.
 For Jenkins environments that have macOS, Windows, or other agents that are unable to run the Docker daemon, this default setting may be problematic.
-Pipeline provides a global option on the <strong>Manage Jenkins</strong> page and on the <a href="../../glossary/#folder">Folder</a> level, for specifying which agents (by <a href="../../glossary/#label">Label</a>) to use for running Docker-based Pipelines.</p>
+Pipeline provides a global option on the <strong>Manage Jenkins</strong> page and on the <a href="../glossary/index.html#folder" class="xref page">Folder</a> level, for specifying which agents (by <a href="../glossary/index.html#label" class="xref page">Label</a>) to use for running Docker-based Pipelines.</p>
 </div>
 <div class="imageblock unresolved">
 <div class="content">

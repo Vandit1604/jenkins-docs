@@ -64,6 +64,33 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
+    <span class="nav-text">index.adoc</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-11.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-windows.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-linux.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-web-browsers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-java.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:support-policy-servlet-containers.adoc</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref:upgrade-java-to-17.adoc</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
@@ -106,7 +133,7 @@
     <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/getting-started.html">getting-started.adoc</a>
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with the Guided Tour</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
@@ -118,7 +145,7 @@
     <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
@@ -187,7 +214,7 @@
     <a class="nav-link" href="../managing/system-info.html">System Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../managing/system-properties.html">system-properties.adoc</a>
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
@@ -587,9 +614,9 @@ permissions on all Jenkins resources on the controller. This means that, with a
 simple script, a malicious user can have direct access to private information
 whose integrity and privacy could not be, thus,  guaranteed.
 See
-<a href="/doc/book/security/controller-isolation/">Distributed Builds</a>
+<a href="#dev-docs:security:controller-isolation.adoc" class="xref unresolved">Distributed Builds</a>
 in the
-<a href="/doc/book/security/">Securing Jenkins</a>
+<a href="../../../dev-docs/security/index.html" class="xref page">Securing Jenkins</a>
 chapter for more information.</p>
 </div>
 <div class="paragraph">
@@ -603,7 +630,7 @@ project. For example, some projects may be configured to "restrict where this
 project is run" which ties the project to a specific agent or set of labeled
 agents. Other projects which omit this configuration will select an agent from
 the available pool in Jenkins.
-Learn more about Agents in <a href="/doc/book/managing/nodes/#creating-agents/">Managing Nodes</a></p>
+Learn more about Agents in <a href="#user-docs:managing:nodes/.adoc#creating-agents" class="xref unresolved">Managing Nodes</a></p>
 </div>
 <div class="paragraph">
 <p>In a distributed builds environment, the Jenkins controller will use its resources
@@ -848,7 +875,7 @@ by JCloud libraries</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Hardware: see the <a href="/doc/book/hardware-recommendations/#hardware-recommendations">Hardware Recommendations</a> page</p>
+<p>Hardware: see the user-docs:scaling:hardware-recommendations.adoc#hardware-recommendations[Hardware Recommendations] page</p>
 </li>
 </ul>
 </div>
@@ -1064,7 +1091,7 @@ makes it easier to create snapshots, backups, etc.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The System Property <a href="/doc/book/managing/system-properties/#jenkins-model-jenkins-buildsdir">jenkins.model.Jenkins.buildsDir</a></p>
+<p>The System Property <a href="../managing/system-properties.html#jenkins-model-jenkins-buildsdir" class="xref page">jenkins.model.Jenkins.buildsDir</a></p>
 </li>
 <li>
 <p><strong>Symbolic Links</strong> (symlinks) may be used instead to store job
@@ -1094,7 +1121,7 @@ This policy can be set on a job&#8217;s configuration page.</p>
 <p>It is a best practice to take regular backups of your $JENKINS_HOME.
 A backup ensures that your Jenkins instance can be restored despite a misconfiguration,
 accidental job deletion, or data corruption.
-See the <a href="/doc/book/system-administration/backing-up/">Backup policies</a> for more details.</p>
+See the <a href="../system-administration/backing-up.html" class="xref page">Backup policies</a> for more details.</p>
 </div>
 <div class="sect2">
 <h3 id="_finding_your_jenkins_home"><a class="anchor" href="#_finding_your_jenkins_home"></a>Finding your $JENKINS_HOME</h3>
@@ -1257,7 +1284,7 @@ So you either want to use them from the beginning, or make sure you take into co
 <p>For instance, if you would like to move builds under a different root, you can use the following value: <code>$JENKINS_VAR/${ITEM_FULL_NAME}/builds</code>.</p>
 </div>
 <div class="paragraph">
-<p>Note that starting with Jenkins 2.119, the User Interface for this was replaced by the <code>jenkins.model.Jenkins.buildsDir</code> system property. See the <a href="/doc/book/managing/system-properties/">dedicated <em>Features Controlled with System Properties</em> wiki page</a> for more details.</p>
+<p>Note that starting with Jenkins 2.119, the User Interface for this was replaced by the <code>jenkins.model.Jenkins.buildsDir</code> system property. See the <a href="../managing/system-properties.html" class="xref page">dedicated <em>Features Controlled with System Properties</em> wiki page</a> for more details.</p>
 </div>
 </div>
 </div>

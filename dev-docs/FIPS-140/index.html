@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>FIPS -140 for developers :: Jenkins</title>
+    <title>FIPS -140 for developers:page-layout:wip :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/FIPS-140/index.html">
     <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -1312,7 +1312,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Jenkins Developer Documentation</a></li>
-    <li><a href="index.html">FIPS -140 for developers</a></li>
+    <li><a href="index.html">FIPS -140 for developers:page-layout:wip</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/dev-docs/modules/FIPS-140/pages/index.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
@@ -1322,9 +1322,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">FIPS -140 for developers</h1>
-<div id="preamble">
-<div class="sectionbody">
+<h1 class="page">FIPS -140 for developers:page-layout:wip</h1>
 <div class="paragraph">
 <p>In order for the code in Jenkins and plugins to be compliant with FIPS-140, sensitive information needs to be handled correctly.
 This document provides a non-exhaustive cheat sheet that can guide developers to write code that is FIPS-140 compliant.
@@ -1395,11 +1393,9 @@ Therefore it is important that this guidance is applied to all libraries used by
 The majority of <code>Keystore</code>s provided by stock JDKs are not FIPS-140 compliant and the one that is can not be used to store keys only certificates.
 A FIPS-140 compliant <code>KeyStore</code> provider would need to be provided by the JVM, as the name of this can not be known at compile time, any code that requires to create a keystore should assume that this has been configured as the default type and use <code>KeyStore.getInstance(KeyStore.getDefaultType())</code> to obtain an new instance.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_references"><a class="anchor" href="#_references"></a>References:</h2>
-<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title">References</div>
 <div class="ulist">
 <ul>
 <li>

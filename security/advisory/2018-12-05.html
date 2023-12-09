@@ -29,7 +29,7 @@
     <span class="nav-text">For Adminstrators</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-administrators.html">for-administrators.adoc</a>
+    <a class="nav-link" href="../for-administrators.html">"Overview for Jenkins Administrators"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
@@ -47,7 +47,7 @@
     <span class="nav-text">For Reporters</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../reporting.html">reporting.adoc</a>
+    <a class="nav-link" href="../reporting.html">"Reporting Security Vulnerabilities"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
@@ -59,7 +59,7 @@
     <span class="nav-text">For Maintainers</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-maintainers.html">for-maintainers.adoc</a>
+    <a class="nav-link" href="../for-maintainers.html">"Overview for Plugin Maintainers"</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../plugins.html">Managing Plugins</a>
@@ -344,7 +344,7 @@ cvss:
   severity: medium
   vector: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L
 description: |
-  The fix for <a href="../2017-11-08">SECURITY-499</a> introduced a mechanism that renamed user directories on disk as a user with an unsafe user name (user ID) is loaded.
+  The fix for <a href="#2017-11-08.adoc" class="xref unresolved">SECURITY-499</a> introduced a mechanism that renamed user directories on disk as a user with an unsafe user name (user ID) is loaded.
   Insufficient input validation allowed attackers to rename such user directories even for users with a safe user name by submitting a crafted user name when attempting to log in, even with an invalid password.
   Doing so prevented users from logging in successfully afterwards.</p>
 <div class="literalblock">
@@ -385,14 +385,14 @@ Notably, the configuration may have been changed to not allow a build to run on 
 <div class="content">
 <pre>In rare cases, it may be desirable to disable this fix.
 To do so, set the Java system property `hudson.model.DirectoryBrowserSupport.allowSymlinkEscape` to `true`.
-link:/doc/book/managing/system-properties/[Learn more about system properties in Jenkins].</pre>
+xref:user-docs:managing:system-properties.adoc[Learn more about system properties in Jenkins].</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
 <pre>NOTE: While the same component allows browsing archived artifacts, this fix does not apply to archived artifacts.
 Valid symbolic links are archived as the files and directories they point to on the agent, while invalid symlinks cannot escape the root directory for archived artifacts on the Jenkins controller.
-This was previously fixed as SECURITY-162 in the link:../2015-02-27/[2015-02-27 security advisory].</pre>
+This was previously fixed as SECURITY-162 in the xref:2015-02-27.adoc[2015-02-27 security advisory].</pre>
 </div>
 </div>
 </li>
