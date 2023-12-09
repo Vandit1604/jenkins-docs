@@ -38,7 +38,7 @@ Even if you run Jenkins on a private network and trust everyone in your team, se
 If you find a vulnerability in Jenkins, please report it in the issue tracker under the link:https://issues.jenkins.io/browse/SECURITY[SECURITY project].
 This project is configured in such a way that only the reporter, the maintainers, and the Jenkins security team can see the details.
 Restricting access to this potentially sensitive information allows core and plugin maintainers to develop effective security fixes that are safe to apply.
-We provide issue reporting guidelines and an overview of our process on link:reporting[Reporting Security Vulnerabilities].
+We provide issue reporting guidelines and an overview of our process on xref:security:ROOT:reporting.adoc[Reporting Security Vulnerabilities].
 
 If you are unable to report using our issue tracker, you can also send your report to the private Jenkins Security Team mailing list:
 `jenkinsci-cert@googlegroups.com`

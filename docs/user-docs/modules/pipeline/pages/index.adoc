@@ -4,19 +4,19 @@ This chapter covers all recommended aspects of Jenkins Pipeline functionality,
 including how to:
 
 * xref:user-docs:blueocean:getting-started.adoc[get started with Pipeline] - covers how to
-  link:getting-started#defining-a-pipeline[define a Jenkins Pipeline] (i.e. your
+  xref:user-docs:pipeline:getting-started.adoc#defining-a-pipeline[define a Jenkins Pipeline] (i.e. your
   `Pipeline`) through
-  link:getting-started#through-blue-ocean[Blue Ocean], through the
-  link:getting-started#through-the-classic-ui[classic UI] or in
-  link:getting-started#defining-a-pipeline-in-scm[SCM],
+  xref:user-docs:pipeline:getting-started.adoc#through-blue-ocean[Blue Ocean], through the
+  xref:user-docs:pipeline:getting-started.adoc#through-the-classic-ui[classic UI] or in
+  xref:user-docs:pipeline:getting-started.adoc#defining-a-pipeline-in-scm[SCM],
 * xref:user-docs:pipeline:jenkinsfile.adoc[create and use a `Jenkinsfile`] - covers use-case scenarios
   on how to craft and construct your `Jenkinsfile`,
-* work with link:multibranch[branches and pull requests],
-* link:docker[use Docker with Pipeline] - covers how Jenkins can invoke Docker
+* work with xref:user-docs:pipeline:multibranch.adoc[branches and pull requests],
+* xref:user-docs:pipeline:docker.adoc[use Docker with Pipeline] - covers how Jenkins can invoke Docker
   containers on agents/nodes (from a `Jenkinsfile`) to build your Pipeline
   projects,
-* link:shared-libraries[extend Pipeline with shared libraries],
-* use different link:development[development tools] to facilitate the creation
+* xref:user-docs:pipeline:shared-libraries.adoc[extend Pipeline with shared libraries],
+* use different xref:user-docs:pipeline:development.adoc[development tools] to facilitate the creation
   of your Pipeline, and
 * work with xref:user-docs:pipeline:syntax.adoc[Pipeline syntax] - this page is a comprehensive
   reference of all Declarative Pipeline syntax.
@@ -117,7 +117,7 @@ Jenkins.
 video::IOUm1lw7F58[youtube,width=800,height=420]
 
 Building on the core Jenkins value of extensibility, Pipeline is also extensible
-both by users with link:shared-libraries[Pipeline Shared Libraries] and by
+both by users with xref:user-docs:pipeline:shared-libraries.adoc[Pipeline Shared Libraries] and by
 plugin developers.
 footnote:ghof[{plugin}github-organization-folder[GitHub Organization Folder plugin]]
 
@@ -314,25 +314,25 @@ node { // <7>
     }
 }
 ----
-<1> link:syntax#declarative-pipeline[`pipeline`] is Declarative
+<1> xref:user-docs:pipeline:syntax.adoc#declarative-pipeline[`pipeline`] is Declarative
 Pipeline-specific syntax that defines a "block" containing all content and
 instructions for executing the entire Pipeline.
-<2> link:syntax#agent[`agent`] is Declarative Pipeline-specific syntax that
+<2> xref:user-docs:pipeline:syntax.adoc#agent[`agent`] is Declarative Pipeline-specific syntax that
 instructs Jenkins to allocate an executor (on a node) and workspace for the
 entire Pipeline.
 <3> `stage` is a syntax block that describes a
 xref:user-docs:pipeline:index.adoc#stage[stage of this Pipeline]. Read more about `stage` blocks in
-Declarative Pipeline syntax on the link:syntax#stage[Pipeline syntax] page. As
+Declarative Pipeline syntax on the xref:user-docs:pipeline:syntax.adoc#stage[Pipeline syntax] page. As
 mentioned xref:user-docs:pipeline:index.adoc#scripted-pipeline-fundamentals[above], `stage` blocks are
 optional in Scripted Pipeline syntax.
-<4> link:syntax#steps[`steps`] is Declarative Pipeline-specific syntax that
+<4> xref:user-docs:pipeline:syntax.adoc#steps[`steps`] is Declarative Pipeline-specific syntax that
 describes the steps to be run in this `stage`.
-<5> `sh` is a Pipeline link:syntax#steps[step] (provided by the
+<5> `sh` is a Pipeline xref:user-docs:pipeline:syntax.adoc#steps[step] (provided by the
 {plugin}workflow-durable-task-step[Pipeline: Nodes and Processes plugin]) that
 executes the given shell command.
-<6> `junit` is another Pipeline link:syntax#steps[step] (provided by the
+<6> `junit` is another Pipeline xref:user-docs:pipeline:syntax.adoc#steps[step] (provided by the
 {plugin}junit[JUnit plugin]) for aggregating test reports.
-<7> `sh` is a Pipeline link:syntax#steps[step] (provided by the
+<7> `sh` is a Pipeline xref:user-docs:pipeline:syntax.adoc#steps[step] (provided by the
 {plugin}workflow-durable-task-step[Pipeline: Nodes and Processes plugin]) that
 executes the given shell command.
 
