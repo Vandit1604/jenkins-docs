@@ -66,7 +66,7 @@ If Jenkins security is enabled, you must log in as a user who has an _admin_ rol
 |`--argumentsRealm.roles.$USER=admin`
 |Assigns user $USER the admin  role.
 The user can configure Jenkins even if security is enabled in Jenkins.
-Refer to link:/doc/book/system-administration/security/[Securing Jenkins] for more information.
+Refer to xref:user-docs:system-administration:security.adoc[Securing Jenkins] for more information.
 
 |`--paramsFromStdIn`
 |Reads parameters from standard input (stdin).

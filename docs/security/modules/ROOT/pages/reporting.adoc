@@ -52,7 +52,7 @@ We do not consider the following issues to be vulnerabilities in Jenkins (core +
 * Users with Overall/Administer permission (or the deprecated Overall/RunScripts permission) are able to execute arbitrary code using the Script Console, related APIs (`/eval`, `/script`, `/scriptText`), and many plugins.
   This is a feature.
 * Jobs started by a specific user can run on agents where the user lacks Agent/Build permission and can themselves trigger builds of jobs where the user lacks Job/Build permission.
-  link:/doc/book/security/build-authorization/[See the documentation on Access Control for Builds].
+  xref:user-docs:security:build-authorization.adoc[See the documentation on Access Control for Builds].
 * Ability for unauthenticated users to trigger SCM polling via webhooks without directly initiating a build or other resource-intensive computations.
 * Any issues in plugins whose exploitation has been prevented through changes in Jenkins core or other plugins for at least 13 months. Some examples:
 ** Cross-site scripting (XSS) vulnerabilities due to lack of `escape-by-default` XML processing instruction are no longer exploitable since Jenkins 2.146 and 2.138.2 (published 2018-10-10).

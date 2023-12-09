@@ -265,7 +265,7 @@ If you have trouble figuring out who to contact, the good fallback option is the
 Each published plugin has its own page on https://plugins.jenkins.io/, such as link:https://plugins.jenkins.io/git[this].
 These pages provide documentation and information about the plugin: installation statistics, changelogs, known issues, etc.
 Documentation is retrieved from the GitHub repository of the plugin or from an archived copy of the decommissioned Jenkins wiki.
-See the link:/doc/developer/publishing/documentation/[Plugin Documentation Page] in the Developer guide for more information about how it works.
+See the xref:dev-docs:publishing:documentation.adoc[Plugin Documentation Page] in the Developer guide for more information about how it works.
 
 == How we develop code
 
@@ -302,7 +302,7 @@ In some cases, the supposed "temporary" patch sets became more permanent for var
 
 === Bringing in new plugins/tools/libraries
 
-If you develop a plugin, we encourage you to co-host that with the Jenkins project so that other people in the community can participate. See link:/doc/developer/publishing/requesting-hosting/[Hosting Plugins] for more details.
+If you develop a plugin, we encourage you to co-host that with the Jenkins project so that other people in the community can participate. See xref:dev-docs:publishing:requesting-hosting.adoc[Hosting Plugins] for more details.
 
 === Making changes to existing plugins
 
@@ -315,7 +315,7 @@ If you’d like to be involved more seriously, in addition to the pull request, 
 It is often the case that the original developer moves onto other things once the plugin becomes good enough for them (or if the original author changes the job and no longer has incentive to work on the technology.) So we encourage new developers or developers of different plugin to pitch in on other plugins’ pending pull requests or work on issues filed against them.
 
 To that end, we also encourage people to pick up dormant plugins and consider them theirs.
-See the link:/doc/developer/plugin-governance/adopt-a-plugin/[Adopt a Plugin] guidelines for more information.
+See the xref:dev-docs:plugin-governance:adopt-a-plugin.adoc[Adopt a Plugin] guidelines for more information.
 
 Many less active plugins do not really have any obvious owner, and they are collaboratively maintained by people making small changes and releasing them whenever the need arises. If in doubt, ask on the dev list.
 
@@ -343,7 +343,7 @@ As discussed above, Jenkins project uses pull requests as one of the main workfl
 * See link:https://help.github.com/articles/creating-a-pull-request/[the github online help] for how to create a pull request
 * We encourage you to file a ticket in link:https://issues.jenkins.io/[the issue tracker] to describe the bug that you are fixing or the feature you are implementing. This creates a permanent record on our system that allows future developers to understand how the code came into the current shape. This is not a requirement (especially for small changes), but we appreciate if you do that.
 * Refer to the ticket in your commit message by using the notation `[JENKINS-1234]` where _JENKINS-1234_ is the ticket ID. This allows our scripts to understand the history and generate changelogs without human help. If you use the notation `[FIX JENKINS-1234]`, our bot will close the ticket automatically when the change is merged into the repository, and when the change is tested in our CI server. These notations create useful cross-references across systems, and are therefore highly recommended.
-* We encourage you to have a test case for the code you added to avoid future regressions. See link:/doc/developer/testing/[Testing] for more details about how to write tests.
+* We encourage you to have a test case for the code you added to avoid future regressions. See xref:dev-docs:testing:index.adoc[Testing] for more details about how to write tests.
 * Try to describe your changes so that other people understand what you did.
 * Make sure you didn’t modify portions that aren’t related to your changes (most often caused by IDE auto-fixing import statements and other code formats.)
 

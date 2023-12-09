@@ -28,7 +28,7 @@ A disadvantage is the lack of integration with Jenkins access controls and poten
 == Common Configuration Mistakes
 
 When configuring authentication and authorization in Jenkins, it is easy to accidentally allow far more access than intended.
-See link:/doc/book/security/access-control/permissions/#administer[the documentation on the access given to administrators] about the impact of unintentionally granting Administer permission.
+See xref:dev-docs:security:access-control/permissions.adoc#administer[the documentation on the access given to administrators] about the impact of unintentionally granting Administer permission.
 
 Anyone can do anything::
 The *anyone can do anything* authorization strategy is very rarely a good choice, as it allows even anonymous users to administer Jenkins.
@@ -51,7 +51,7 @@ Users with limited permissions xref:dev-docs:security:controller-isolation.adoc[
 When setting up a new Jenkins instance, adding users and switching authorization strategies, it is important to also set up distributed builds and limit what jobs are able to run on the built-in node.
 
 //In addition to the above items that discuss who may (effectively) be granted administrative access to Jenkins, you should be careful who you give any read access to Jenkins.
-//See link:/doc/book/security/access-control/permissions/#overall-read[the documentation of the level of access that granting basic read access gives].
+//See xref:dev-docs:security:access-control/permissions.adoc#overall-read[the documentation of the level of access that granting basic read access gives].
 
 == Permissions
 
@@ -75,8 +75,8 @@ As an example, plugin:matrix-auth[Matrix Authorization Strategy] provides two di
   In this model, permissions can be granted globally (as in the previous strategy), or only on specific folders, jobs, or agents.
   Permissions are by default inherited, but that can be customized as well, so that users granted _Item/Read_ globally or on a parent folder may be excluded from access to a job.
 
-For more details about the various permissions in Jenkins and the level of access they grant, see link:/doc/book/security/access-control/permissions/[Permissions].
+For more details about the various permissions in Jenkins and the level of access they grant, see xref:dev-docs:security:access-control/permissions.adoc[Permissions].
 
 == Disabling Access Control
 
-See link:/doc/book/security/access-control/disable/[Disable Access Control].
+See xref:dev-docs:security:access-control/disable.adoc[Disable Access Control].

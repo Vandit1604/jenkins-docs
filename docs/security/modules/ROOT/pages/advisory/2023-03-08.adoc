@@ -81,14 +81,14 @@ issues:
 
     NOTE: Some Jenkins forms can be very complex, and these limits apply to all fields and not just fields representing uploaded files.
     As a result, legitimate submissions of complex forms that include (possible) file uploads may be affected by these limits.
-    If that happens, these limits can be changed by setting the Java system properties xref:user-docs:managing:system-properties.adoc#hudson-util-multipartformdataparser-fileupload_max_files[`hudson.util.MultipartFormDataParser.FILEUPLOAD_MAX_FILES`] and link:/doc/book/managing/system-properties/#org-kohsuke-stapler-requestimpl-fileupload_max_files[`org.kohsuke.stapler.RequestImpl.FILEUPLOAD_MAX_FILES`] to a bigger value, or to `-1` to completely disable them.
+    If that happens, these limits can be changed by setting the Java system properties xref:user-docs:managing:system-properties.adoc#hudson-util-multipartformdataparser-fileupload_max_files[`hudson.util.MultipartFormDataParser.FILEUPLOAD_MAX_FILES`] and xref:user-docs:managing:system-properties.adoc#org-kohsuke-stapler-requestimpl-fileupload_max_files[`org.kohsuke.stapler.RequestImpl.FILEUPLOAD_MAX_FILES`] to a bigger value, or to `-1` to completely disable them.
 
     [NOTE]
     ====
     These releases of Jenkins also introduce additional Java system properties that can be set to restrict request sizes:
 
-    * xref:user-docs:managing:system-properties.adoc#hudson-util-multipartformdataparser-fileupload_max_file_size[`hudson.util.MultipartFormDataParser.FILEUPLOAD_MAX_FILE_SIZE`] and link:/doc/book/managing/system-properties/#org-kohsuke-stapler-requestimpl-fileupload_max_file_size[`org.kohsuke.stapler.RequestImpl.FILEUPLOAD_MAX_FILE_SIZE`] allow limiting the size (in bytes) of individual fields that can be processed in one `multipart/form-data` request.
-    * xref:user-docs:managing:system-properties.adoc#hudson-util-multipartformdataparser-fileupload_max_size[`hudson.util.MultipartFormDataParser.FILEUPLOAD_MAX_SIZE`] and link:/doc/book/managing/system-properties/#org-kohsuke-stapler-requestimpl-fileupload_max_size[`org.kohsuke.stapler.RequestImpl.FILEUPLOAD_MAX_SIZE`] allow limiting the total request size (in bytes) that can be processed in one `multipart/form-data` request.
+    * xref:user-docs:managing:system-properties.adoc#hudson-util-multipartformdataparser-fileupload_max_file_size[`hudson.util.MultipartFormDataParser.FILEUPLOAD_MAX_FILE_SIZE`] and xref:user-docs:managing:system-properties.adoc#org-kohsuke-stapler-requestimpl-fileupload_max_file_size[`org.kohsuke.stapler.RequestImpl.FILEUPLOAD_MAX_FILE_SIZE`] allow limiting the size (in bytes) of individual fields that can be processed in one `multipart/form-data` request.
+    * xref:user-docs:managing:system-properties.adoc#hudson-util-multipartformdataparser-fileupload_max_size[`hudson.util.MultipartFormDataParser.FILEUPLOAD_MAX_SIZE`] and xref:user-docs:managing:system-properties.adoc#org-kohsuke-stapler-requestimpl-fileupload_max_size[`org.kohsuke.stapler.RequestImpl.FILEUPLOAD_MAX_SIZE`] allow limiting the total request size (in bytes) that can be processed in one `multipart/form-data` request.
 
     By default, Jenkins does not set these size limits.
     Setting these system properties can offer additional protection, but comes at a greater risk of impacting legitimate use (e.g., when uploading huge file parameters).

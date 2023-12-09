@@ -1,11 +1,4 @@
 = Using Docker with Pipeline
-]
-:description:
-:author:
-
-
-
-= Using Docker with Pipeline
 
 Many organizations use link:https://www.docker.com[Docker] to unify their build and test environments across machines, and to provide an efficient mechanism for deploying applications.
 Starting with Pipeline versions 2.5 and higher, Pipeline has built-in support for interacting with Docker from within a `Jenkinsfile`.

@@ -1,7 +1,5 @@
 = Best Practices
-]
-:description:
-:author:
+
 
 
 :hide-uri-scheme:
@@ -123,7 +121,7 @@ This ensures that naming restrictions are enforced uniformly.
 When dealing with interdependent projects, it can be challenging to keep track of which version of one project is used by another.
 However, Jenkins offers a solution called "file fingerprinting" to simplify this process.
 
-Refer to the link:/doc/book/using/fingerprints/[fingerprinting page] for more information.
+Refer to the xref:user-docs:using-jenkins:fingerprints.adoc[fingerprinting page] for more information.
 
 === Don't use the Maven job type
 
@@ -150,7 +148,7 @@ While it is technically possible to disable security, it is strongly advised **n
 Disabling security can leave your Jenkins instance vulnerable to unauthorized access and potential security breaches.
 It is important to maintain a secure environment by keeping security enabled at all times.
 
-Refer to the link:/doc/book/security/securing-jenkins/[securing Jenkins] chapter of the User Handbook for more details.
+Refer to the xref:user-docs:security:securing-jenkins.adoc[securing Jenkins] chapter of the User Handbook for more details.
 
 === Back up regularly
 
@@ -160,7 +158,7 @@ Backups are a critical component of ensuring the integrity and availability of y
 Regularly testing your backups and verifying their completeness and restorability will help you mitigate the impact of any potential failures and ensure that your data can be recovered effectively when needed.
 Prioritizing backup health and conducting routine checks is essential for maintaining a robust and resilient system.
 
-More details can be found in the link:/doc/book/system-administration/backing-up/[backup documentation].
+More details can be found in the xref:user-docs:system-administration:backing-up.adoc[backup documentation].
 
 === Avoid scheduling overload
 

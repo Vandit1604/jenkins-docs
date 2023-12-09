@@ -1,9 +1,9 @@
 
-title: Build a Python app with PyInstaller
+= Build a Python app with PyInstaller
 
 
 
-:imagesdir: ../../book/resources
+
 
 This tutorial shows you how to use Jenkins to orchestrate building a simple
 Python application with https://www.pyinstaller.org/[PyInstaller].
@@ -176,7 +176,7 @@ https://hub.docker.com/_/python/[`python:2-alpine` Docker image] (if it's not
 already available on your machine) and runs this image as a separate container.
 This means that:
 * You'll have separate Jenkins and Python containers running locally in Docker.
-* The Python container becomes the link:/doc/book/glossary/#agent[agent] that
+* The Python container becomes the xref:user-docs:glossary:index.adoc#agent[agent] that
   Jenkins uses to run the `Build` stage of your Pipeline project. However,
   this container is short-lived - its lifespan is only that of the duration of
   your `Build` stage's execution.
@@ -296,7 +296,7 @@ https://hub.docker.com/r/qnib/pytest/[`qnib:pytest` Docker image] (if it's not
 already available on your machine) and runs this image as a separate container.
 This means that:
 * You'll have separate Jenkins and pytest containers running locally in Docker.
-* The pytest container becomes the link:/doc/book/glossary/#agent[agent] that
+* The pytest container becomes the xref:user-docs:glossary:index.adoc#agent[agent] that
   Jenkins uses to run the `Test` stage of your Pipeline project. This
   container's lifespan lasts the duration of your `Test` stage's execution.
 <3> This
@@ -445,7 +445,7 @@ image (if it's not already available on your machine) and runs this image as a
 separate container. This means that:
 * You'll have separate Jenkins and PyInstaller (for Linux) containers running
   locally in Docker.
-* The PyInstaller container becomes the link:/doc/book/glossary/#agent[agent]
+* The PyInstaller container becomes the xref:user-docs:glossary:index.adoc#agent[agent]
   that Jenkins uses to run the `Deliver` stage of your Pipeline project. This
   container's lifespan lasts the duration of your `Deliver` stage's execution.
 <5> This
@@ -550,12 +550,12 @@ handle practically any aspect of build orchestration and automation.
 
 To learn more about what Jenkins can do, check out:
 
-* The link:/doc/tutorials[Tutorials overview] page for other introductory
+* The xref:tutorials:ROOT:index.adoc[Tutorials overview] page for other introductory
   tutorials.
-* The link:/doc/book[User Handbook] for more detailed information about using
+* The xref:user-docs:ROOT:index.adoc[User Handbook] for more detailed information about using
   Jenkins, such as xref:user-docs:pipeline:index.adoc[Pipelines] (in particular
   xref:user-docs:pipeline:syntax.adoc[Pipeline syntax]) and the
-  link:/doc/book/blueocean[Blue Ocean] interface.
+  xref:user-docs:blueocean:index.adoc[Blue Ocean] interface.
 * The link:/node[Jenkins blog] for the latest events, other tutorials and
   updates.
 

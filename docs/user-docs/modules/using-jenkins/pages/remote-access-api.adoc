@@ -72,7 +72,7 @@ and match the *File location* field in the Jenkins job configuration with the ke
 == Remote API and security
 
 When your Jenkins is secured, you can use HTTP BASIC authentication to authenticate remote API requests. 
-See link:/doc/book/system-administration/authenticating-scripted-clients/[Authenticating scripted clients] for more details.
+See xref:user-docs:system-administration:authenticating-scripted-clients.adoc[Authenticating scripted clients] for more details.
 
 [[RemoteaccessAPI-CSRFProtection]]
 == CSRF Protection

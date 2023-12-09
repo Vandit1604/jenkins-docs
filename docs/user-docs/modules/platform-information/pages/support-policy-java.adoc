@@ -29,10 +29,10 @@ see the "Running Java-based tools and builds on Jenkins" section below.
 .Upgrading Java to a newer version
 ====
 Upgrading an existing Jenkins setup to a newer version of Java?
-Refer to the link:/doc/book/platform-information/upgrade-java-to-17[Java 11 to 17 upgrade guidelines] and the link:/doc/book/platform-information/upgrade-java-to-11[Java 8 to 11 upgrade guidelines].
+Refer to the xref:user-docs:platform-information:upgrade-java-to-17[Java 11 to 17 upgrade guidelines] and the xref:user-docs:platform-information:upgrade-java-to-11.adoc[Java 8 to 11 upgrade guidelines].
 ====
 
-Docker installation instructions are included in link:/doc/book/installing/docker/#downloading-and-running-jenkins-in-docker["Downloading and running Jenkins in Docker"].
+Docker installation instructions are included in xref:user-docs:installing-jenkins:docker.adoc#downloading-and-running-jenkins-in-docker["Downloading and running Jenkins in Docker"].
 
 The Jenkins project performs a full test flow with the following JDK/JREs:
 
@@ -75,7 +75,7 @@ This includes:
 
 * Container Images
 * Jenkins core release builds
-* link:/doc/developer/publishing/releasing-cd/[Automated plugin releases]
+* xref:dev-docs:publishing:releasing-cd.adoc[Automated plugin releases]
 * link:https://ci.jenkins.io[Continuous integration build and test]
 * Testing Infrastructure
 

@@ -1,7 +1,5 @@
 = WAR file
-]
-:description:
-:author:
+
 
 
 :hide-uri-scheme:
@@ -12,7 +10,7 @@
 The Jenkins Web application ARchive (WAR) file bundles link:https://github.com/jenkinsci/winstone[Winstone],
 a link:https://www.eclipse.org/jetty/[Jetty] servlet container wrapper,
 and can be started on any operating system or platform with a version of Java supported by Jenkins.
-See the link:/doc/book/platform-information/support-policy-java[Java Requirements] page for details.
+See the xref:user-docs:platform-information:support-policy-java.adoc[Java Requirements] page for details.
 
 include::doc/book/installing/_installation_requirements.adoc[]
 

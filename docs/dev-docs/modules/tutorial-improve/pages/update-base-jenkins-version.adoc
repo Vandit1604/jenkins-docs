@@ -11,7 +11,7 @@ video::Fev8KfFsPZE[youtube,width=800,height=420,start=2430]
 
 Jenkins plugins declare a minimum supported Jenkins version.
 The minimum Jenkins version is a good way for plugin developers to indicate the range of Jenkins versions they are willing to support and test.
-See the link:/doc/developer/plugin-development/choosing-jenkins-baseline[developer documentation] for the recommended minimum Jenkins version.
+See the xref:dev-docs:plugin-development:choosing-jenkins-baseline.adoc[developer documentation] for the recommended minimum Jenkins version.
 
 // Create the branch
 include::doc/developer/tutorial-improve/_create-a-branch.adoc[]
@@ -28,7 +28,7 @@ Update the minimum required Jenkins version by setting a `jenkins.version` value
 ----
 
 If the plugin is already using the plugin bill of materials, then the bill of materials also needs to be updated with the matching `artifactId` for the minimum required Jenkins version.
-The `version` may also need an upgrade see the link:/doc/developer/plugin-development/dependency-management/#jenkins-plugin-bom[developer documentation].
+The `version` may also need an upgrade see the xref:dev-docs:plugin-development:dependency-management.adoc#jenkins-plugin-bom[developer documentation].
 
 The `git diff` might look like this:
 

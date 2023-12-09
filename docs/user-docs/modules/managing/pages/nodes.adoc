@@ -6,7 +6,7 @@
 
 == Components of Distributed Builds
 
-Builds in a link:/doc/book/scaling/architecting-for-scale/#distributed-builds-architecture[distributed builds architecture] use nodes, agents, and executors, which are distinct from the Jenkins controller itself.
+Builds in a xref:user-docs:scaling:architecting-for-scale.adoc#distributed-builds-architecture[distributed builds architecture] use nodes, agents, and executors, which are distinct from the Jenkins controller itself.
 Understanding what each of these components are is useful when managing nodes:
 
 ////
@@ -91,7 +91,7 @@ java -jar agent.jar \
 * In the command line noted in the last step, the "agent.jar" is a hyperlink. Click it to download the agent.jar file.
 * Copy the agent.jar file to a permanent location on your agent machine
 . Ensure that you have a java version available on your agent machine
-* If not, obtain and install a link:/doc/book/platform-information/support-policy-java/[supported version] of Java
+* If not, obtain and install a xref:user-docs:platform-information:support-policy-java.adoc[supported version] of Java
 . Run the command manually from a CMD window on your agent to confirm that it works
 * Open the CMD window
 * Run the command the one like
