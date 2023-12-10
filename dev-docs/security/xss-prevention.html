@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Preventing Cross-Site Scripting in Jelly views :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/security/xss-prevention.html">
+    <link rel="prev" href="form-validation.html">
+    <link rel="next" href="rendering-user-content.html">
     <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
@@ -114,8 +116,8 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="form-validation.html">Securely implementing form validation</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <span class="nav-text">xref:xss-prevention.adoc</span>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="xss-prevention.html">Preventing Cross-Site Scripting in Jelly views</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="rendering-user-content.html">Rendering User Content</a>
@@ -124,7 +126,7 @@
     <a class="nav-link" href="remoting-callables.html">Remoting Callables</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="read-access.html">Restricting HTTP Access to &lt;code&gt;AccessControlled&lt;/code&gt; Objects</a>
+    <a class="nav-link" href="read-access.html">Restricting HTTP Access to <code>AccessControlled</code> Objects</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="csp.html">Content-Security-Policy Compatibility</a>
@@ -1312,6 +1314,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Jenkins Developer Documentation</a></li>
+    <li><a href="index.html">Security</a></li>
     <li><a href="xss-prevention.html">Preventing Cross-Site Scripting in Jelly views</a></li>
   </ul>
 </nav>
@@ -1547,6 +1550,10 @@ If we try to inject a <code>"</code>, it will be automatically converted to <cod
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="form-validation.html">Securely implementing form validation</a></span>
+  <span class="next"><a href="rendering-user-content.html">Rendering User Content</a></span>
+</nav>
 </article>
   </div>
 </main>
