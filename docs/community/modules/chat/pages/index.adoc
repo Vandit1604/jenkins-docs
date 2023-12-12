@@ -40,7 +40,7 @@ In that case, just stick around, and periodically (every few hours) ask your que
 
 === `#jenkins-infra`
 
-Discussions of the xref:projects:ROOT:index.adoc/infrastructure/[Jenkins project infrastructure], i.e. most services running on `jenkins.io`, `jenkins-ci.org`, and related domains.
+Discussions of the xref:projects:infrastructure:index.adoc[Jenkins project infrastructure], i.e. most services running on `jenkins.io`, `jenkins-ci.org`, and related domains.
 
 === `#jenkins-release`
 
@@ -52,7 +52,7 @@ It is used by the Release Team when planning and rolling out the new releases an
 Chat of the Jenkins xref:project:teams:hosting.adoc[Hosting team] that manages permissions and handles plugin hosting requests.
 We use the *jenkins-admin* bot to automate common administrative operations.
 Its use is limited to users with _voice_ or _op_ in this channel.
-xref:projects:ROOT:index.adoc/infrastructure/ircbot/[Learn more about the IRC Bot].
+xref:projects:infrastructure:ircbot.adoc[Learn more about the IRC Bot].
 
 === Channel spam protection
 
@@ -84,7 +84,7 @@ To obtain a cloak:
 
 * ensure you have a *registered user* on Libera Chat
 * ensure you are already recognized as a developer (have +vV voice privilege)
-* Contact a xref:projects:ROOT:index.adoc/infrastructure/[Jenkins Infrastructure Team] member, who will request a cloak on your behalf in `#libera-community`
+* Contact a xref:projects:infrastructure:index.adoc[Jenkins Infrastructure Team] member, who will request a cloak on your behalf in `#libera-community`
 * monitor your memoserv notices for updates from Libera Chat staff requesting confirmation of cloak request
 ** */msg memoserv help*
 
