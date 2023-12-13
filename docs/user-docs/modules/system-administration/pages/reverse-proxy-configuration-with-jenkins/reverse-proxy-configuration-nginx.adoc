@@ -94,7 +94,7 @@ server {
 This assumes that you run Jenkins on port 8080.
 Remember to create the folder /var/log/nginx/jenkins.
 
-include::doc/book/system-administration/reverse-proxy-configuration-with-jenkins/_context_path.adoc[]
+include::partial$_context_path.adoc[]
 
 If you are having problems with some paths (eg folders) with *Blue
 Ocean*, you may need to add the following snippet to your proxy
