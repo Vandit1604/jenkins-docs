@@ -1,5 +1,5 @@
-ROOT_DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 UI_DIR=./ui
+UI_BUILD_DIR=./ui/build
 PLAYBOOK_DIR=./playbook
 
 # Build everything after cleaning
@@ -23,4 +23,4 @@ antora:	ui
 # Rule to clean cache
 clean:
 	rm ui/build/ui-bundle.zip
-	rm -rf playbook/build/site
+	rm -rf playbook/build
