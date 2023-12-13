@@ -1,9 +1,8 @@
 UI_DIR=./ui
-UI_BUILD=./ui/build
 PLAYBOOK_DIR=./playbook
 
 # Build everything after cleaning
-all:	ui	antora
+all:	clean	ui	antora
 
 install:
 	npm i -g gulp
@@ -23,3 +22,4 @@ antora:	ui
 # Rule to clean cache
 clean:
 	rm ui/build/ui-bundle.zip
+	rm -rf playbook/build
