@@ -23,6 +23,7 @@ This 6 minute tutorial from Darin Pope configures Apache httpd on Alma Linux as 
 .Configure Apache HTTP server as a reverse proxy
 video::E3_g5wYZlfk[youtube, width=640, height=360]
 
+[#mod_proxy]
 == mod_proxy
 
 http://httpd.apache.org/docs/2.0/mod/mod_proxy.html[mod_proxy] works by
@@ -39,7 +40,7 @@ a2enmod proxy_http
 a2enmod headers
 ----
 
-A typical set up for mod_proxy would look like this:
+A typical setup for mod_proxy would look like this:
 
 [source]
 ----
@@ -115,7 +116,7 @@ proxy-html filter to modify urls:
 SetOutputFilter proxy-html
 ----
 
-Instead you can use the following:
+Instead, you can use the following:
 
 [source]
 ----
@@ -231,6 +232,7 @@ NameVirtualHost *:443
 </VirtualHost>
 ----
 
+[#mod_rewrite]
 == mod_rewrite
 
 The Apache mod_rewrite module can be used to configure an Apache reverse proxy for Jenkins.
@@ -280,7 +282,7 @@ The _ProxyRequests Off_ prevents Apache from functioning as a forward
 proxy server (except for _ProxyPass_), it is advised to include it
 unless the server should function as a proxy.
 
-include::doc/book/system-administration/reverse-proxy-configuration-with-jenkins/_context_path.adoc[]
+include::partial$_context_path.adoc[]
 
 == Proxying CLI commands with the HTTP(S) transport
 
