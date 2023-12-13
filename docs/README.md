@@ -1,6 +1,6 @@
 # Antora Documentation
 
-* User documtation
+* User documentation
 * Developer documentation
 * Tutorials
 
