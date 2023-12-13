@@ -1,4 +1,4 @@
-= "Jenkins and Python"
+= Jenkins and Python
 
 Unlike compiled languages, Python doesn't need a "build" per se. Python
 projects can still benefit greatly from using Jenkins for continuous
@@ -13,12 +13,12 @@ for testing/reporting such as:
   code coverage reports.
 
 
-image::/images/solution-images/jenkins-chart-nosetests.png[role=center]
+image::solutions:ROOT:jenkins-chart-nosetests.png[role=center]
 
 * link:https://www.pylint.org/[pylint] for generating code quality reports which
   can be integrated directly into Jenkins for trending and reporting purposes.
 
-image::/images/solution-images/jenkins-chart-pylint.png[role=center]
+image::solutions:ROOT:jenkins-chart-pylint.png[role=center]
 
 (_images courtesy of link:http://www.alexconrad.org/2011/10/jenkins-and-python.html[Alex Conrad]_)
 

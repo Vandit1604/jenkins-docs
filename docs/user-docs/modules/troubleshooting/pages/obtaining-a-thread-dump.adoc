@@ -46,7 +46,7 @@ In a situation like this, the standard output of JVM is normally redirected to a
 so you need to hunt down where it is written to and pick up the dump from there.
 On Unix, you can look at `+/proc/PID/fd/1+` to figure out which file the stdout is being
 written to.
-If you are running as a Windows service, see the xref:user-docs:installing-jenkins:windows.adoc[Windows installation instructions] for the log file location.
+If you are running as a Windows service, see the xref:installing-jenkins:windows.adoc[Windows installation instructions] for the log file location.
 
 This approach is platform specific, but it tends to be more reliable
 even when JVM is in a dire state.

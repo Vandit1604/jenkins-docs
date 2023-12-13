@@ -3,26 +3,26 @@
 This chapter covers all recommended aspects of Jenkins Pipeline functionality,
 including how to:
 
-* xref:user-docs:blueocean:getting-started.adoc[get started with Pipeline] - covers how to
-  xref:user-docs:pipeline:getting-started.adoc#defining-a-pipeline[define a Jenkins Pipeline] (i.e. your
+* xref:blueocean:getting-started.adoc[get started with Pipeline] - covers how to
+  xref:pipeline:getting-started.adoc#defining-a-pipeline[define a Jenkins Pipeline] (i.e. your
   `Pipeline`) through
-  xref:user-docs:pipeline:getting-started.adoc#through-blue-ocean[Blue Ocean], through the
-  xref:user-docs:pipeline:getting-started.adoc#through-the-classic-ui[classic UI] or in
-  xref:user-docs:pipeline:getting-started.adoc#defining-a-pipeline-in-scm[SCM],
-* xref:user-docs:pipeline:jenkinsfile.adoc[create and use a `Jenkinsfile`] - covers use-case scenarios
+  xref:pipeline:getting-started.adoc#through-blue-ocean[Blue Ocean], through the
+  xref:pipeline:getting-started.adoc#through-the-classic-ui[classic UI] or in
+  xref:pipeline:getting-started.adoc#defining-a-pipeline-in-scm[SCM],
+* xref:pipeline:jenkinsfile.adoc[create and use a `Jenkinsfile`] - covers use-case scenarios
   on how to craft and construct your `Jenkinsfile`,
-* work with xref:user-docs:pipeline:multibranch.adoc[branches and pull requests],
-* xref:user-docs:pipeline:docker.adoc[use Docker with Pipeline] - covers how Jenkins can invoke Docker
+* work with xref:pipeline:multibranch.adoc[branches and pull requests],
+* xref:pipeline:docker.adoc[use Docker with Pipeline] - covers how Jenkins can invoke Docker
   containers on agents/nodes (from a `Jenkinsfile`) to build your Pipeline
   projects,
-* xref:user-docs:pipeline:shared-libraries.adoc[extend Pipeline with shared libraries],
-* use different xref:user-docs:pipeline:development.adoc[development tools] to facilitate the creation
+* xref:pipeline:shared-libraries.adoc[extend Pipeline with shared libraries],
+* use different xref:pipeline:development.adoc[development tools] to facilitate the creation
   of your Pipeline, and
-* work with xref:user-docs:pipeline:syntax.adoc[Pipeline syntax] - this page is a comprehensive
+* work with xref:pipeline:syntax.adoc[Pipeline syntax] - this page is a comprehensive
   reference of all Declarative Pipeline syntax.
 
 For an overview of content in the Jenkins User Handbook, see
-xref:user-docs:blueocean:getting-started.adoc[User Handbook Overview].
+xref:blueocean:getting-started.adoc[User Handbook Overview].
 
 [[overview]]
 == What is Jenkins Pipeline?
@@ -41,11 +41,11 @@ testing and deployment.
 
 Pipeline provides an extensible set of tools for modeling simple-to-complex
 delivery pipelines "as code" via the
-xref:user-docs:pipeline:syntax.adoc[Pipeline domain-specific language (DSL) syntax].
+xref:pipeline:syntax.adoc[Pipeline domain-specific language (DSL) syntax].
 footnote:dsl[link:https://en.wikipedia.org/wiki/Domain-specific_language[Domain-specific language]]
 
 The definition of a Jenkins Pipeline is written into a text file (called a
-xref:user-docs:pipeline:jenkinsfile.adoc[`Jenkinsfile`]) which in turn can be committed to a project's
+xref:pipeline:jenkinsfile.adoc[`Jenkinsfile`]) which in turn can be committed to a project's
 source control repository.
 footnote:scm[link:https://en.wikipedia.org/wiki/Version_control[Source control management]]
 This is the foundation of "Pipeline-as-code"; treating the CD pipeline a part of
@@ -117,7 +117,7 @@ Jenkins.
 video::IOUm1lw7F58[youtube,width=800,height=420]
 
 Building on the core Jenkins value of extensibility, Pipeline is also extensible
-both by users with xref:user-docs:pipeline:shared-libraries.adoc[Pipeline Shared Libraries] and by
+both by users with xref:pipeline:shared-libraries.adoc[Pipeline Shared Libraries] and by
 plugin developers.
 footnote:ghof[{plugin}github-organization-folder[GitHub Organization Folder plugin]]
 
@@ -130,7 +130,7 @@ image::realworld-pipeline-flow.png[alt="Pipeline Flow",width=100%]
 == Pipeline concepts
 
 The following concepts are key aspects of Jenkins Pipeline, which tie in closely
-to Pipeline syntax (see the xref:user-docs:pipeline:index.adoc#pipeline-syntax-overview[overview] below).
+to Pipeline syntax (see the xref:pipeline:index.adoc#pipeline-syntax-overview[overview] below).
 
 
 === Pipeline
@@ -140,7 +140,7 @@ your entire build process, which typically includes stages for building an
 application, testing it and then delivering it.
 
 Also, a `pipeline` block is a
-xref:user-docs:pipeline:index.adoc#declarative-pipeline-fundamentals[key part of Declarative Pipeline syntax].
+xref:pipeline:index.adoc#declarative-pipeline-fundamentals[key part of Declarative Pipeline syntax].
 
 
 === Node
@@ -149,7 +149,7 @@ A node is a machine which is part of the Jenkins environment and is capable of
 executing a Pipeline.
 
 Also, a `node` block is a
-xref:user-docs:pipeline:index.adoc#scripted-pipeline-fundamentals[key part of Scripted Pipeline syntax].
+xref:pipeline:index.adoc#scripted-pipeline-fundamentals[key part of Scripted Pipeline syntax].
 
 
 === Stage
@@ -174,10 +174,10 @@ implemented a new _step_.
 == Pipeline syntax overview
 
 The following Pipeline code skeletons illustrate the fundamental differences
-between xref:user-docs:pipeline:index.adoc#declarative-pipeline-fundamentals[Declarative Pipeline syntax] and
-xref:user-docs:pipeline:index.adoc#scripted-pipeline-fundamentals[Scripted Pipeline syntax].
+between xref:pipeline:index.adoc#declarative-pipeline-fundamentals[Declarative Pipeline syntax] and
+xref:pipeline:index.adoc#scripted-pipeline-fundamentals[Scripted Pipeline syntax].
 
-Be aware that both xref:user-docs:pipeline:index.adoc#stage[stages] and xref:user-docs:pipeline:index.adoc#step[steps] (above) are common
+Be aware that both xref:pipeline:index.adoc#stage[stages] and xref:pipeline:index.adoc#step[steps] (above) are common
 elements of both Declarative and Scripted Pipeline syntax.
 
 
@@ -314,26 +314,26 @@ node { // <7>
     }
 }
 ----
-<1> xref:user-docs:pipeline:syntax.adoc#declarative-pipeline[`pipeline`] is Declarative
+<1> xref:pipeline:syntax.adoc#declarative-pipeline[`pipeline`] is Declarative
 Pipeline-specific syntax that defines a "block" containing all content and
 instructions for executing the entire Pipeline.
-<2> xref:user-docs:pipeline:syntax.adoc#agent[`agent`] is Declarative Pipeline-specific syntax that
+<2> xref:pipeline:syntax.adoc#agent[`agent`] is Declarative Pipeline-specific syntax that
 instructs Jenkins to allocate an executor (on a node) and workspace for the
 entire Pipeline.
 <3> `stage` is a syntax block that describes a
-xref:user-docs:pipeline:index.adoc#stage[stage of this Pipeline]. Read more about `stage` blocks in
-Declarative Pipeline syntax on the xref:user-docs:pipeline:syntax.adoc#stage[Pipeline syntax] page. As
-mentioned xref:user-docs:pipeline:index.adoc#scripted-pipeline-fundamentals[above], `stage` blocks are
+xref:pipeline:index.adoc#stage[stage of this Pipeline]. Read more about `stage` blocks in
+Declarative Pipeline syntax on the xref:pipeline:syntax.adoc#stage[Pipeline syntax] page. As
+mentioned xref:pipeline:index.adoc#scripted-pipeline-fundamentals[above], `stage` blocks are
 optional in Scripted Pipeline syntax.
-<4> xref:user-docs:pipeline:syntax.adoc#steps[`steps`] is Declarative Pipeline-specific syntax that
+<4> xref:pipeline:syntax.adoc#steps[`steps`] is Declarative Pipeline-specific syntax that
 describes the steps to be run in this `stage`.
-<5> `sh` is a Pipeline xref:user-docs:pipeline:syntax.adoc#steps[step] (provided by the
+<5> `sh` is a Pipeline xref:pipeline:syntax.adoc#steps[step] (provided by the
 {plugin}workflow-durable-task-step[Pipeline: Nodes and Processes plugin]) that
 executes the given shell command.
-<6> `junit` is another Pipeline xref:user-docs:pipeline:syntax.adoc#steps[step] (provided by the
+<6> `junit` is another Pipeline xref:pipeline:syntax.adoc#steps[step] (provided by the
 {plugin}junit[JUnit plugin]) for aggregating test reports.
-<7> `sh` is a Pipeline xref:user-docs:pipeline:syntax.adoc#steps[step] (provided by the
+<7> `sh` is a Pipeline xref:pipeline:syntax.adoc#steps[step] (provided by the
 {plugin}workflow-durable-task-step[Pipeline: Nodes and Processes plugin]) that
 executes the given shell command.
 
-Read more about Pipeline syntax on the xref:user-docs:pipeline:syntax.adoc[Pipeline Syntax] page.
+Read more about Pipeline syntax on the xref:pipeline:syntax.adoc[Pipeline Syntax] page.

@@ -123,5 +123,5 @@ As Jenkins sends its current version when requesting new data, the same link:htt
 For example, instances running an LTS release of Jenkins will only be offered LTS versions of Jenkins to upgrade to.
 See https://updates.jenkins.io/[updates.jenkins.io] to learn more.
 
-After switching between release lines, it's recommend to update the update site metadata cached in Jenkins by hitting the "Check now" button in the Plugins Manager (further instructions xref:user-docs:managing:plugins/.adoc#from-the-web-ui[here]).
+After switching between release lines, it's recommend to update the update site metadata cached in Jenkins by hitting the "Check now" button in the Plugins Manager (further instructions xref:user-docs:managing:plugins.adoc#from-the-web-ui[here]).
 Otherwise, Jenkins may offer to update or install plugins whose newer versions are incompatible with the installed version.

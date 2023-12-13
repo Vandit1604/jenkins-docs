@@ -10,9 +10,9 @@
 The Jenkins Web application ARchive (WAR) file bundles link:https://github.com/jenkinsci/winstone[Winstone],
 a link:https://www.eclipse.org/jetty/[Jetty] servlet container wrapper,
 and can be started on any operating system or platform with a version of Java supported by Jenkins.
-See the xref:user-docs:platform-information:support-policy-java.adoc[Java Requirements] page for details.
+See the xref:platform-information:support-policy-java.adoc[Java Requirements] page for details.
 
-include::doc/book/installing/_installation_requirements.adoc[]
+include::user-docs:installing-jenkins:partial$_installation_requirements.adoc[]
 
 == Run the WAR file
 
@@ -28,8 +28,8 @@ The Jenkins Web application ARchive (WAR) file can be started from the command l
 
 * This process does not automatically install any specific plugins.
   They need to installed separately via the
-  xref:user-docs:managing:index.adoc[**Manage Jenkins**] >
-  xref:user-docs:managing:plugins.adoc[**Plugins**] page in Jenkins.
+  xref:managing:index.adoc[**Manage Jenkins**] >
+  xref:managing:plugins.adoc[**Plugins**] page in Jenkins.
 * You can change the port by specifying the `--httpPort` option when you run the
   `java -jar jenkins.war` command. For example, to make Jenkins accessible
   through port 9090, then run Jenkins using the command: +
@@ -56,4 +56,4 @@ JENKINS_HOME=my-jenkins-config java -jar jenkins.war
 For more details of command line arguments that can adjust Jenkins startup, use the command: +
 `java -jar jenkins.war --help`
 
-include::doc/book/installing/_setup-wizard.adoc[]
+include::user-docs:installing-jenkins:partial$_setup-wizard.adoc[]

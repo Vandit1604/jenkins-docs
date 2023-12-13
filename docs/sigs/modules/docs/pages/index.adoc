@@ -62,7 +62,7 @@ The SIG offers a venue for all kinds of documentation creation, improvement, and
 The group focuses on documentation for Jenkins, including:
 
 * xref:user-docs:ROOT:index.adoc[User documentation] - Using Jenkins
-** xref:tutorials:ROOT:index.adoc[Tutorials]
+** xref:tutorials:index.adoc[Tutorials]
 ** xref:user-docs:ROOT:index.adoc[User Handbook]
 ** References like xref:user-docs:pipeline:syntax.adoc[Pipeline Syntax] and link:/doc/pipeline/steps/[Pipeline Steps]
 ** xref:ROOT:how-to-guides.adoc[How-to Guides]
@@ -123,7 +123,7 @@ Useful links:
 * link:/blog/2019/10/21/plugin-docs-on-github/[Documentation migration guidelines blog post]
 * {jira}JENKINS-59467[Template issue for plugin documentation migration to GitHub]
 * link:https://groups.google.com/forum/#!topic/jenkinsci-dev/VSdfVMDIW-A[Announcement in the developer mailing list]
-* xref:publishing:documentation.adoc#plugin-pages[Using GitHub as a source of plugin documentation]
+* xref:dev-docs:publishing:documentation.adoc#plugin-pages[Using GitHub as a source of plugin documentation]
 
 === Plugin site integration with GitHub
 
@@ -134,7 +134,7 @@ This project is tracked in the {jira}WEBSITE-637[] EPIC.
 
 Useful links:
 
-* xref:publishing:documentation.adoc[Publishing Plugin Documentation]
+* xref:dev-docs:publishing:documentation.adoc[Publishing Plugin Documentation]
 * link:https://github.com/jenkins-infra/plugin-site[Plugin Site Frontend]
 * link:https://github.com/jenkins-infra/update-center2[Jenkins Update Center] (serves plugin metadata)
 * link:https://github.com/jenkins-infra/plugin-site/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22[Newbie-friendly issues for the plugin site]

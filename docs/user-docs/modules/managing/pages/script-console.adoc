@@ -193,7 +193,7 @@ curl -d "script=<your_script_here>" https://jenkins/script
 curl -d "script=<your_script_here>" https://jenkins/scriptText
 ----
 
-Also, xref:user-docs:managing:cli.adoc[Jenkins CLI]
+Also, xref:managing:cli.adoc[Jenkins CLI]
 offers the possibility to execute groovy scripts remotely using
 `groovy` command or execute groovy interactively via `groovysh`.
 However, once again curl can be used to execute groovy scripts by making

@@ -21,9 +21,9 @@ video::4UmY4dDAlo0[youtube,width=800,height=420]
 
 A user defined time zone for the account can be set from the configure option in the user settings.
 
-image::managing/change-system-timezone-user-defined-timezone.png["Configure option in the dropdown",role=center,width=800]
+image::user-docs:managing:change-system-timezone-user-defined-timezone.png["Configure option in the dropdown",role=center,width=800]
 
-image::managing/change-system-timezone-user-defined-timezone-2.png["Changing user defined timezone setting",role=center,width=800]
+image::user-docs:managing:change-system-timezone-user-defined-timezone-2.png["Changing user defined timezone setting",role=center,width=800]
 
 == System Time Zone properties
 
@@ -71,8 +71,8 @@ On windows, edit `%INSTALL_PATH%/jenkins/jenkins.xml`. Put `-Dargs` before `-jar
 <arguments>-Duser.timezone="Europe/Minsk" -jar "%BASE%\jenkins.war"</arguments>
 ----
 
-You can also set it from the xref:user-docs:managing:script-console.adoc[Jenkins Script Console] on a live system without the need for a restart.
-This can also be included in a xref:user-docs:managing:groovy-hook-scripts.adoc[Post-initialization script] to make it permanent.
+You can also set it from the xref:managing:script-console.adoc[Jenkins Script Console] on a live system without the need for a restart.
+This can also be included in a xref:managing:groovy-hook-scripts.adoc[Post-initialization script] to make it permanent.
 
 [source,groovy]
 ----

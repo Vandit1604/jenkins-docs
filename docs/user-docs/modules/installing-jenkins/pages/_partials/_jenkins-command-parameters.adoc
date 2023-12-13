@@ -66,7 +66,7 @@ If Jenkins security is enabled, you must log in as a user who has an _admin_ rol
 |`--argumentsRealm.roles.$USER=admin`
 |Assigns user $USER the admin  role.
 The user can configure Jenkins even if security is enabled in Jenkins.
-Refer to xref:user-docs:system-administration:security.adoc[Securing Jenkins] for more information.
+Refer to xref:system-administration:security.adoc[Securing Jenkins] for more information.
 
 |`--paramsFromStdIn`
 |Reads parameters from standard input (stdin).
@@ -97,7 +97,7 @@ Java properties are set from the command line that started Jenkins.
 Property assignments use the form `-DsomeName=someValue` to assign the value `someValue` to the property named `someName`.
 For example, to assign the value `true` to a property `testName`, the command line argument would be `-DtestName=true`.
 
-Refer to the detailed list of xref:user-docs:managing:system-properties.adoc#Featurescontrolledbysystemproperties-PropertiesinJenkinsCore[Jenkins properties] for more information.
+Refer to the detailed list of xref:managing:system-properties.adoc#Featurescontrolledbysystemproperties-PropertiesinJenkinsCore[Jenkins properties] for more information.
 
 == Configuring HTTP
 

@@ -198,7 +198,7 @@ a| Let's improve the documentation for Jenkins end users and administrators.
 a| If you are interested to do UX testing, Jenkins installation guidelines could be a great subject for you.
    Some guidelines were created long ago, and they could benefit from a refresh.
 
-* Test xref:user-docs:installing-jenkins:index.adoc[installation guidelines] and xref:tutorials:ROOT:index.adoc[tutorials],
+* Test xref:user-docs:installing-jenkins:index.adoc[installation guidelines] and xref:tutorials:index.adoc[tutorials],
   submit patches and discovered issues.
 * Renew the Windows installation guide for Jenkins weekly releases that use the new Windows installer.
   See link:/blog/2019/02/01/windows-installers/[this blogpost] for an overview of the new Windows Installer.
@@ -211,7 +211,7 @@ a| Help us to improve documentation for real-world Jenkins use-cases!
 * Review and refresh the existing xref:solutions:ROOT:index.adoc[solution pages]: add links to plugins and articles, extend the overview sections, improve the rendering. 
   See {jira}WEBSITE-742[] for the issue links.
 * **Advanced:** Create new xref:solutions:ROOT:index.adoc[solution pages] for various use-cases (e.g. Documentation as code, Continuous Deployment, Static Analysis) or technologies (Git, Gitlab, Kubernetes, etc.).
-* **Advanced:** Create new xref:tutorials:ROOT:index.adoc[Tutorials], e.g. how to use a Jenkins feature or how to implement a common automation use-case with Jenkins
+* **Advanced:** Create new xref:tutorials:index.adoc[Tutorials], e.g. how to use a Jenkins feature or how to implement a common automation use-case with Jenkins
 
 | Improve Plugin Documentation
 a| We are moving plugin documentation from Jenkins Wiki to Documentation as Code so that it is stored directly in plugin repositories.

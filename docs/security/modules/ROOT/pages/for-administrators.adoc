@@ -65,7 +65,7 @@ Security advisories published by the Jenkins project contain the following secti
 . A list of issue severities using the CVSS 3.0 model
 . A list of affected versions
 . A list of fix versions, and, if applicable, a list of components for which no fix is available
-. Credits for reporters xref:security:ROOT:reporting.adoc[who informed the Jenkins project]
+. Credits for reporters xref:ROOT:reporting.adoc[who informed the Jenkins project]
 
 The lists of version numbers are most useful as a general, short reference.
 The main content of a security advisory is in the section with detailed descriptions, which focuses on answering the following questions in the sections below.
@@ -103,7 +103,7 @@ This helps understand the impact of updating.
 For example, a previously unsafe feature may no longer work as some users would expect, if they relied on the unsafe behavior.
 
 Note that this section will only explain how an issue was addressed if a fix was available as of publication of the security advisory.
-Learn more: xref:security:ROOT:for-administrators.adoc#later[Are Security Advisories Updated Later?]
+Learn more: xref:ROOT:for-administrators.adoc#later[Are Security Advisories Updated Later?]
 
 
 [[workarounds]]
@@ -133,12 +133,12 @@ Administrators should make sure to link:/participate/report-issue/[report proble
 Ideally, you apply security updates immediately.
 The various announcements we send out are intended to minimize any unnecessary delays between us publishing security advisories and users learning about them.
 Additionally, our guidelines for security fix development ensure that security updates are generally very safe to apply.
-In many cases, security fixes also include xref:security:ROOT:for-administrators.adoc#escape-hatches[hidden options that allow you to disable (parts of) security fixes temporarily if they turn out to cause problems].
+In many cases, security fixes also include xref:ROOT:for-administrators.adoc#escape-hatches[hidden options that allow you to disable (parts of) security fixes temporarily if they turn out to cause problems].
 
 If you're unable to apply every security update immediately, security advisories will explain for every security issue:
 
-* xref:security:ROOT:for-administrators.adoc#attacker[How can the issue be exploited, and by whom?]
-* xref:security:ROOT:for-administrators.adoc#impact[What is the impact when exploited?]
+* xref:ROOT:for-administrators.adoc#attacker[How can the issue be exploited, and by whom?]
+* xref:ROOT:for-administrators.adoc#impact[What is the impact when exploited?]
 
 This information helps you understand whether you're affected:
 For example, if you trust everyone with any access to Jenkins fully, then an issue that requires an attacker to be a user with some permissions in Jenkins might not need to be fixed urgently.

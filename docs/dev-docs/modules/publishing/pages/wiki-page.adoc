@@ -3,7 +3,7 @@
 WARNING: The Jenkins wiki was made 'read-only' in link:https://groups.google.com/d/msg/jenkinsci-dev/lNmas8aBRrI/eL3u7A6qBwAJ[October 2019]. 
 In September 2021, link:/blog/2021/09/04/wiki-attacked/[Jenkins wiki was attacked] and as a result, the impacted server was permanently disabled and the site was rendered static.
 Plugin documentation is now maintained in the GitHub repository of the plugin.
-See the xref:publishing:documentation.adoc[plugin documentation guidelines] for details.
+See the xref:dev-docs:publishing:documentation.adoc[plugin documentation guidelines] for details.
 
 Plugin documentation is available from the link:https://plugins.jenkins.io[Jenkins plugins site] so that potential users can learn about the plugin without installing it.
 
@@ -26,7 +26,7 @@ There are the following migration steps:
 . Copy the README.md file and all docs/images to the plugin repository
 ** You can merge the copied file with the existing README file or create a new one.
 . Copy-edit the documentation, see below
-. Modify the URL documentation page reference in the project file so that it points to GitHub (xref:publishing:documentation.adoc#referencing-the-documentation-page-from-the-project-file[documentation]).
+. Modify the URL documentation page reference in the project file so that it points to GitHub (xref:dev-docs:publishing:documentation.adoc#referencing-the-documentation-page-from-the-project-file[documentation]).
 . Commit changes, push them to your fork and create a pull request against the repository.
 
 === Reviewing the documentation
@@ -53,6 +53,6 @@ There are the following migration steps:
 
 .References
 ****
-* xref:publishing:documentation.adoc/[Plugin documentation]
+* xref:dev-docs:publishing:documentation.adoc/[Plugin documentation]
 * link:https://reports.jenkins.io/jenkins-plugin-migration.html[Plugin migration progress report]
 ****

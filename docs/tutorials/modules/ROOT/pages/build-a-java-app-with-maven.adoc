@@ -8,18 +8,20 @@ This example Java application from a GitHub repository outputs the string "Hello
 The test results are saved to a JUnit XML report.
 
 *Duration:* This tutorial takes 20-40 minutes to complete, assuming you meet the below <<prerequisites,prerequisites>>.
-The exact duration will depend on the speed of your machine and whether or not you've already <<run-jenkins-in-docker,run Jenkins in Docker>> from link:..[another tutorial].
+The exact duration will depend on the speed of your machine and whether or not you've already <<run-jenkins-in-docker,run Jenkins in Docker>> from xref:index.adoc[another tutorial].
 
 You can stop this tutorial at any time and continue from where you left off.
 
-If you've already run through link:..[another tutorial], you can skip the <<prerequisites,Prerequisites>> and <<run-jenkins-in-docker,Run Jenkins in Docker>> sections below and proceed to <<fork-sample-repository,forking the sample repository>>.
+If you've already run through xref:index.adoc[another tutorial], you can skip the <<prerequisites,Prerequisites>> and <<run-jenkins-in-docker,Run Jenkins in Docker>> sections below and proceed to <<fork-sample-repository,forking the sample repository>>.
 Make sure you have link:https://git-scm.com/downloads[Git] installed locally.
 If you need to restart Jenkins, simply follow the restart instructions in <<stopping-and-restarting-jenkins,Stopping and restarting Jenkins>>, and then proceed.
 
-include::doc/tutorials/_prerequisites.adoc[]
+[#prerequisites]
+
+include::partial$prerequisites.adoc[]
 ** link:https://git-scm.com/downloads[Git], and optionally link:https://desktop.github.com/[GitHub Desktop].
 
-include::doc/book/installing/_run-jenkins-in-docker.adoc[]
+include::user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[]
 
 
 [[fork-sample-repository]]
@@ -130,23 +132,23 @@ After making a clone of your local `simple-java-maven-app` Git repository itself
 .. Downloads the Maven Docker image and runs it in a container on Docker.
 +
 [.boxshadow]
-image:tutorials/java-maven-01-downloading-maven-docker-image.png[alt="Downloading
+image:tutorials:ROOT:java-maven-01-downloading-maven-docker-image.png[alt="Downloading
 Maven Docker image",width=100%]
 .. Runs the `Build` stage defined in the `Jenkinsfile` on the Maven container.
 During this time, Maven downloads many artifacts necessary to build your Java application, which are ultimately stored in Jenkins' local Maven repository in the Docker host's filesystem.
 [.boxshadow]
-image:tutorials/java-maven-02-initial-pipeline-downloading-maven-artifacts.png[alt="Downloading
+image:tutorials:ROOT:java-maven-02-initial-pipeline-downloading-maven-artifacts.png[alt="Downloading
 Maven artifacts",width=100%]
 
 +
 The Blue Ocean interface displays green if Jenkins built your Java application successfully.
 [.boxshadow]
-image:tutorials/java-maven-03-initial-pipeline-runs-successfully.png[alt="Initial
+image:tutorials:ROOT:java-maven-03-initial-pipeline-runs-successfully.png[alt="Initial
 Pipeline runs successfully",width=100%]
 . Select the *X* at the top-right to return to the main Blue Ocean interface.
 +
 [.boxshadow]
-image:tutorials/java-maven-04-main-blue-ocean-interface.png[alt="Main Blue Ocean
+image:tutorials:ROOT:java-maven-04-main-blue-ocean-interface.png[alt="Main Blue Ocean
 interface",width=100%]
 
 
@@ -223,7 +225,7 @@ The Blue Ocean interface displays as below if a Pipeline runs successfully.
 Notice the additional "Test" stage.
 You can select the previous "Build" stage circle to access the output from that stage.
 [.boxshadow]
-image:tutorials/java-maven-11-test-stage-runs-successfully-with-output.png[alt="Test
+image:tutorials:ROOT:java-maven-11-test-stage-runs-successfully-with-output.png[alt="Test
 stage runs successfully (with output)",width=100%]
 . Select the *X* at the top-right to return to the main Blue Ocean interface.
 
@@ -296,17 +298,17 @@ Notice the additional "Deliver" stage.
 Select the previous "Test" and "Build" stage circles to access the outputs from those stages.
 +
 [.boxshadow]
-image:tutorials/java-maven-21-deliver-stage-runs-successfully.png[alt="Deliver
+image:tutorials:ROOT:java-maven-21-deliver-stage-runs-successfully.png[alt="Deliver
 stage runs successfully",width=100%]
 
 +
 The "Deliver" stage output should be something like below, showing you the execution results of your Java application at the end.
 [.boxshadow]
-image:tutorials/java-maven-22-deliver-stage-output-only.png[alt="Deliver stage
+image:tutorials:ROOT:java-maven-22-deliver-stage-output-only.png[alt="Deliver stage
 output only",width=100%]
 . Select the *X* at the top-right to return to the main Blue Ocean interface, which lists your previous Pipeline runs in reverse chronological order.
 [.boxshadow]
-image:tutorials/java-maven-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png[alt="Main
+image:tutorials:ROOT:java-maven-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png[alt="Main
 Blue Ocean interface with all previous runs displayed",width=100%]
 
 
@@ -321,15 +323,17 @@ Because Jenkins is extremely extensible, it can be modified and configured to ha
 
 To learn more about what Jenkins can do, check out:
 
-* The xref:tutorials:ROOT:index.adoc[Tutorials overview] page for other introductory tutorials.
+* The xref:index.adoc[Tutorials overview] page for other introductory tutorials.
 * The xref:user-docs:ROOT:index.adoc[User Handbook] for more detailed information about using Jenkins, such as xref:user-docs:pipeline:index.adoc[Pipelines] (in particular xref:user-docs:pipeline:syntax.adoc[Pipeline syntax]) and the xref:user-docs:blueocean:index.adoc[Blue Ocean] interface.
 * The link:/node[Jenkins blog] for the latest events, other tutorials and updates.
 
 
 '''
+////
 ++++
 include::_partials/_feedback-footer.html[]
 ++++
+////
 
 ////
 Hide this warning due to temporary addition to 'mvn jar:jar install:install'

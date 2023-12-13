@@ -3,12 +3,12 @@
 Blue Ocean's "Dashboard" is the default view when opening Blue Ocean.
 It displays an overview of all Pipeline projects configured on a Jenkins instance.
 
-include::doc/book/blueocean/_blue-ocean-status.adoc[]
+include::user-docs:blueocean:partial$_blue-ocean-status.adoc
 
 The Dashboard consists of a blue link:#navigation-bar[navigation bar] at the top, the link:#pipelines-list[Pipelines list], and the link:#favorites-list[Favorites list].
 
 [.boxshadow]
-image:blueocean/dashboard/overview.png[Overview of the Blue Ocean Dashboard,role=center,width=100%]
+image:user-docs:blueocean:dashboard/overview.png[Overview of the Blue Ocean Dashboard,role=center,width=100%]
 
 == Navigation bar
 
@@ -72,25 +72,25 @@ Selecting an item in the Favorites list opens the xref:pipeline-run-details.adoc
 Blue Ocean represents the overall health of a Pipeline/item or one of its branches using weather icons. 
 These icons change depending on the number of recent builds that have passed.
 
-Health icons on the Dashboard represent overall Pipeline health, whereas the health icons in the xref:user-docs:blueocean:activity.adoc#branches[Branches tab of the Activity View] represent the overall health for each branch.
+Health icons on the Dashboard represent overall Pipeline health, whereas the health icons in the xref:blueocean:activity.adoc#branches[Branches tab of the Activity View] represent the overall health for each branch.
 
 .Health icons (best to worst)
 |===
 |Icon |Health
 
-|image:blueocean/icons/weather/sunny.svg[Sunny,role=center]
+|image:user-docs:blueocean:icons/weather/sunny.svg[Sunny,role=center]
 |*Sunny*, more than 80% of Runs passing
 
-|image:blueocean/icons/weather/partially-sunny.svg[Partially Sunny,role=center]
+|image:user-docs:blueocean:icons/weather/partially-sunny.svg[Partially Sunny,role=center]
 |*Partially Sunny*, 61% to 80% of Runs passing
 
-|image:blueocean/icons/weather/cloudy.svg[Cloudy,role=center,width=100]
+|image:user-docs:blueocean:icons/weather/cloudy.svg[Cloudy,role=center,width=100]
 |*Cloudy*, 41% to 60% of Runs passing
 
-|image:blueocean/icons/weather/raining.svg[Raining,role=center]
+|image:user-docs:blueocean:icons/weather/raining.svg[Raining,role=center]
 |*Raining*, 21% to 40% of Runs passing
 
-|image:blueocean/icons/weather/storm.svg[Storm,role=center]
+|image:user-docs:blueocean:icons/weather/storm.svg[Storm,role=center]
 |*Storm*, less than 21% of Runs passing
 |===
 
@@ -103,18 +103,18 @@ Blue Ocean represents the run status of a Pipeline/item or one of its branches u
 |===
 |Icon |Status
 
-|image:blueocean/dashboard/status-in-progress.png["In Progress" Status Icon,role=center]
+|image:user-docs:blueocean:dashboard/status-in-progress.png["In Progress" Status Icon,role=center]
 |*In Progress*
 
-|image:blueocean/dashboard/status-passed.png["Passed" Status Icon,role=center]
+|image:user-docs:blueocean:dashboard/status-passed.png["Passed" Status Icon,role=center]
 |*Passed*
 
-|image:blueocean/dashboard/status-unstable.png["Unstable" Status Icon,role=center]
+|image:user-docs:blueocean:dashboard/status-unstable.png["Unstable" Status Icon,role=center]
 |*Unstable*
 
-|image:blueocean/dashboard/status-failed.png["Failed" Status Icon,role=center]
+|image:user-docs:blueocean:dashboard/status-failed.png["Failed" Status Icon,role=center]
 |*Failed*
 
-|image:blueocean/dashboard/status-aborted.png["Aborted" Status Icon,role=center]
+|image:user-docs:blueocean:dashboard/status-aborted.png["Aborted" Status Icon,role=center]
 |*Aborted*
 |===
