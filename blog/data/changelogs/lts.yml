@@ -9279,7 +9279,7 @@
     message: |-
       Warn administrators when their Linux operating system is approaching end of life.
 
-- version: "2.426.1"
+- version: "2.401.3"
   date: 2023-07-26
   changes:
 
@@ -9300,7 +9300,7 @@
 
 - version: "2.414.1"
   date: 2023-08-23
-  lts_predecessor: "2.426.1"
+  lts_predecessor: "2.401.3"
   lts_baseline: "2.414"
   changes: # compared to lts_baseline 2.401 - extracted from the RC commit(s)
 
