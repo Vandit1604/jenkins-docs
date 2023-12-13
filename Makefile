@@ -1,5 +1,4 @@
 UI_DIR=./ui
-UI_BUILD_DIR=./ui/build
 PLAYBOOK_DIR=./playbook
 
 # Build everything after cleaning
