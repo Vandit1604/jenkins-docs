@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pipeline :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.426.1/pipeline/index.html">
+    <link rel="prev" href="../using-jenkins/using-jmeter-with-jenkins.html">
+    <link rel="next" href="getting-started.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+<link rel="icon" href="../../../_/jenkins.svg" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="user-docs" data-version="2.426.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins User Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../platform-information/index.html">Platform Information</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/upgrade-java-to-11.html">Upgrading to Java 11</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-linux.html">Linux Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-web-browsers.html">Browser compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-java.html">Java Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-servlet-containers.html">Servlet Container Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/upgrade-java-to-17.html">Upgrading to Java 17</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-credentials.html">Using credentials</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/searchbox.html">Using Search Box</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/referencing-another-project-by-name.html">Referencing another project by name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/aborting-a-build.html">Aborting a build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/fingerprints.html">Fingerprints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-local-language.html">Using local language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/change-time-zone.html">Change time zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/remote-access-api.html">Remote Access API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/executor-starvation.html">Executor Starvation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-agents.html">Using Jenkins agents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Pipeline</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started with the Guided Tour</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="jenkinsfile.html">Using a Jenkinsfile</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="running-pipelines.html">Running a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="multibranch.html">Branches and Pull Requests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="docker.html">Using Docker with pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shared-libraries.html">Extending with Shared Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="development.html">Pipeline Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="syntax.html">Pipeline syntax</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipeline-best-practices.html">Pipeline Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scaling-pipeline.html">Scaling Pipelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cps-method-mismatches.html">Pipeline CPS Method Mismatches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with the Guided Tour</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/dashboard.html">Dashboard</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/activity.html">Activity View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-run-details.html">Pipeline Run Details View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-editor.html">Pipeline Editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../managing/index.html">Managing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-configuration.html">Configuring the System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/casc.html">Configuration as Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/tools.html">Managing Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/about-jenkins.html">About Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-info.html">System Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/cli.html">Jenkins CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-console.html">Script Console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/groovy-hook-scripts.html">Groovy Hook Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/nodes.html">Managing Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-approval.html">In-process Script Approval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/ui-themes.html">Themes for user interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/user-content.html">User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/spawning-processes.html">Spawning Processes From Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Securing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/access-control.html">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-jenkins.html">Securing Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/managing-security.html">Managing Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/controller-isolation.html">Controller Isolation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-builds.html">Securing Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/csrf-protection.html">CSRF Protection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/user-content.html">Rendering User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/build-authorization.html">Access Control for Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/environment-variables.html">Handling Environment Variables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/markup-formatter.html">Markup Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/services.html">Exposed Services and Ports</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/index.html">System Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/backing-up.html">Backing-up/Restoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/monitoring.html">Monitoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/administering-jenkins-on-kubernetes.html">Administering Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-chef.html">Managing Jenkins with Chef</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-puppet.html">Managing Jenkins with Puppet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/viewing-logs.html">Viewing logs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/authenticating-scripted-clients.html">Authenticating scripted clients</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/index.html">Reverse proxy configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-haproxy.html">Reverse proxy - HAProxy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-squid.html">Reverse proxy - Squid</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iis.html">Reverse proxy - IIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iptables.html">Reverse proxy - iptables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-troubleshooting.adoc">reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-troubleshooting.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../scaling/index.html">Scaling Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-scale.html">Architecting for Scale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/hardware-recommendations.html">Hardware Recommendations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-manageability.html">Architecting for Manageability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../troubleshooting/index.html">Troubleshooting Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/diagnosing-errors.html">Diagnosing Errors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/obtaining-a-thread-dump.html">Obtaining a thread dump</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary/index.html">Glossary</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins User Documentation</span>
+    <span class="version">2.426.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.426.1/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.426.1/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins User Documentation</a></li>
+    <li><a href="index.html">Pipeline</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/user-docs/modules/pipeline/pages/index.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Pipeline</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This chapter covers all recommended aspects of Jenkins Pipeline functionality,
+including how to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../blueocean/getting-started.html" class="xref page">get started with Pipeline</a> - covers how to
+<a href="getting-started.html#defining-a-pipeline" class="xref page">define a Jenkins Pipeline</a> (i.e. your
+<code>Pipeline</code>) through
+<a href="getting-started.html#through-blue-ocean" class="xref page">Blue Ocean</a>, through the
+<a href="getting-started.html#through-the-classic-ui" class="xref page">classic UI</a> or in
+<a href="getting-started.html#defining-a-pipeline-in-scm" class="xref page">SCM</a>,</p>
+</li>
+<li>
+<p><a href="jenkinsfile.html" class="xref page">create and use a <code>Jenkinsfile</code></a> - covers use-case scenarios
+on how to craft and construct your <code>Jenkinsfile</code>,</p>
+</li>
+<li>
+<p>work with <a href="multibranch.html" class="xref page">branches and pull requests</a>,</p>
+</li>
+<li>
+<p><a href="docker.html" class="xref page">use Docker with Pipeline</a> - covers how Jenkins can invoke Docker
+containers on agents/nodes (from a <code>Jenkinsfile</code>) to build your Pipeline
+projects,</p>
+</li>
+<li>
+<p><a href="shared-libraries.html" class="xref page">extend Pipeline with shared libraries</a>,</p>
+</li>
+<li>
+<p>use different <a href="development.html" class="xref page">development tools</a> to facilitate the creation
+of your Pipeline, and</p>
+</li>
+<li>
+<p>work with <a href="syntax.html" class="xref page">Pipeline syntax</a> - this page is a comprehensive
+reference of all Declarative Pipeline syntax.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For an overview of content in the Jenkins User Handbook, see
+<a href="../blueocean/getting-started.html" class="xref page">User Handbook Overview</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="anchor" href="#overview"></a>What is Jenkins Pipeline?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins Pipeline (or simply "Pipeline" with a capital "P") is a suite of plugins
+which supports implementing and integrating <em>continuous delivery pipelines</em> into
+Jenkins.</p>
+</div>
+<div class="paragraph">
+<p>A <em>continuous delivery (CD) pipeline</em> is an automated expression of your process
+for getting software from version control right through to your users and
+customers. Every change to your software (committed in source control) goes
+through a complex process on its way to being released. This process involves
+building the software in a reliable and repeatable manner, as well as
+progressing the built software (called a "build") through multiple stages of
+testing and deployment.</p>
+</div>
+<div class="paragraph">
+<p>Pipeline provides an extensible set of tools for modeling simple-to-complex
+delivery pipelines "as code" via the
+<a href="syntax.html" class="xref page">Pipeline domain-specific language (DSL) syntax</a>.
+<sup class="footnote" id="_footnote_dsl">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>The definition of a Jenkins Pipeline is written into a text file (called a
+<a href="jenkinsfile.html" class="xref page"><code>Jenkinsfile</code></a>) which in turn can be committed to a project&#8217;s
+source control repository.
+<sup class="footnote" id="_footnote_scm">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>
+This is the foundation of "Pipeline-as-code"; treating the CD pipeline a part of
+the application to be versioned and reviewed like any other code.</p>
+</div>
+<div class="paragraph">
+<p>Creating a <code>Jenkinsfile</code> and committing it to source control provides a number
+of immediate benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Automatically creates a Pipeline build process for all branches and pull
+requests.</p>
+</li>
+<li>
+<p>Code review/iteration on the Pipeline (along with the remaining source code).</p>
+</li>
+<li>
+<p>Audit trail for the Pipeline.</p>
+</li>
+<li>
+<p>Single source of truth
+<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>
+for the Pipeline, which can be viewed and edited by multiple
+members of the project.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>While the syntax for defining a Pipeline, either in the web UI or with a
+<code>Jenkinsfile</code> is the same, it is generally considered best practice to define
+the Pipeline in a <code>Jenkinsfile</code> and check that in to source control.</p>
+</div>
+<div class="sect2">
+<h3 id="_declarative_versus_scripted_pipeline_syntax"><a class="anchor" href="#_declarative_versus_scripted_pipeline_syntax"></a>Declarative versus Scripted Pipeline syntax</h3>
+<div class="paragraph">
+<p>A <code>Jenkinsfile</code> can be written using two types of syntax - Declarative and
+Scripted.</p>
+</div>
+<div class="paragraph">
+<p>Declarative and Scripted Pipelines are constructed fundamentally differently.
+Declarative Pipeline is a more recent feature of Jenkins Pipeline which:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>provides richer syntactical features over Scripted Pipeline syntax, and</p>
+</li>
+<li>
+<p>is designed to make writing and reading Pipeline code easier.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Many of the individual syntactical components (or "steps") written into a
+<code>Jenkinsfile</code>, however, are common to both Declarative and Scripted Pipeline.
+Read more about how these two types of syntax differ in <a href="#pipeline-concepts">[pipeline-concepts]</a>
+and <a href="#pipeline-syntax-overview">[pipeline-syntax-overview]</a> below.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="why"><a class="anchor" href="#why"></a>Why Pipeline?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins is, fundamentally, an automation engine which supports a number of
+automation patterns. Pipeline adds a powerful set of automation tools onto
+Jenkins, supporting use cases that span from simple continuous integration to
+comprehensive CD pipelines. By modeling a series of related tasks, users can
+take advantage of the many features of Pipeline:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Code</strong>: Pipelines are implemented in code and typically checked into source
+control, giving teams the ability to edit, review, and iterate upon their
+delivery pipeline.</p>
+</li>
+<li>
+<p><strong>Durable</strong>: Pipelines can survive both planned and unplanned restarts of the
+Jenkins controller.</p>
+</li>
+<li>
+<p><strong>Pausable</strong>: Pipelines can optionally stop and wait for human input or approval
+before continuing the Pipeline run.</p>
+</li>
+<li>
+<p><strong>Versatile</strong>: Pipelines support complex real-world CD requirements, including
+the ability to fork/join, loop, and perform work in parallel.</p>
+</li>
+<li>
+<p><strong>Extensible</strong>: The Pipeline plugin supports custom extensions to its DSL
+<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> and multiple options for integration with other plugins.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>While Jenkins has always allowed rudimentary forms of chaining Freestyle Jobs
+together to perform sequential tasks,
+<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup> Pipeline makes this concept a first-class citizen in
+Jenkins.</p>
+</div>
+<div class="videoblock">
+<div class="title">What is the difference between Freestyle and Pipeline in Jenkins</div>
+<div class="content">
+<iframe width="800" height="420" src="https://www.youtube.com/embed/IOUm1lw7F58?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Building on the core Jenkins value of extensibility, Pipeline is also extensible
+both by users with <a href="shared-libraries.html" class="xref page">Pipeline Shared Libraries</a> and by
+plugin developers.
+<sup class="footnote" id="_footnote_ghof">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>The flowchart below is an example of one CD scenario easily modeled in Jenkins
+Pipeline:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/realworld-pipeline-flow.png" alt="Pipeline Flow" width="100%">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pipeline_concepts"><a class="anchor" href="#_pipeline_concepts"></a>Pipeline concepts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following concepts are key aspects of Jenkins Pipeline, which tie in closely
+to Pipeline syntax (see the <a href="#pipeline-syntax-overview">overview</a> below).</p>
+</div>
+<div class="sect2">
+<h3 id="_pipeline"><a class="anchor" href="#_pipeline"></a>Pipeline</h3>
+<div class="paragraph">
+<p>A Pipeline is a user-defined model of a CD pipeline. A Pipeline&#8217;s code defines
+your entire build process, which typically includes stages for building an
+application, testing it and then delivering it.</p>
+</div>
+<div class="paragraph">
+<p>Also, a <code>pipeline</code> block is a
+<a href="#declarative-pipeline-fundamentals">key part of Declarative Pipeline syntax</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_node"><a class="anchor" href="#_node"></a>Node</h3>
+<div class="paragraph">
+<p>A node is a machine which is part of the Jenkins environment and is capable of
+executing a Pipeline.</p>
+</div>
+<div class="paragraph">
+<p>Also, a <code>node</code> block is a
+<a href="#scripted-pipeline-fundamentals">key part of Scripted Pipeline syntax</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_stage"><a class="anchor" href="#_stage"></a>Stage</h3>
+<div class="paragraph">
+<p>A <code>stage</code> block defines a conceptually distinct subset of tasks performed
+through the entire Pipeline (e.g. "Build", "Test" and "Deploy" stages),
+which is used by many plugins to visualize or present Jenkins Pipeline
+status/progress.
+<sup class="footnote" id="_footnote_blueocean">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step"><a class="anchor" href="#_step"></a>Step</h3>
+<div class="paragraph">
+<p>A single task. Fundamentally, a step tells Jenkins <em>what</em> to do at a
+particular point in time (or "step" in the process). For example, to execute
+the shell command <code>make</code> use the <code>sh</code> step: <code>sh 'make'</code>. When a plugin
+extends the Pipeline DSL, <sup class="footnoteref">[<a class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> that typically means the plugin has
+implemented a new <em>step</em>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pipeline_syntax_overview"><a class="anchor" href="#_pipeline_syntax_overview"></a>Pipeline syntax overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following Pipeline code skeletons illustrate the fundamental differences
+between <a href="#declarative-pipeline-fundamentals">Declarative Pipeline syntax</a> and
+<a href="#scripted-pipeline-fundamentals">Scripted Pipeline syntax</a>.</p>
+</div>
+<div class="paragraph">
+<p>Be aware that both <a href="#stage">stages</a> and <a href="#step">steps</a> (above) are common
+elements of both Declarative and Scripted Pipeline syntax.</p>
+</div>
+<div class="sect2">
+<h3 id="_declarative_pipeline_fundamentals"><a class="anchor" href="#_declarative_pipeline_fundamentals"></a>Declarative Pipeline fundamentals</h3>
+<div class="paragraph">
+<p>In Declarative Pipeline syntax, the <code>pipeline</code> block defines all the work done
+throughout your entire Pipeline.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>// Declarative //
+pipeline {
+    agent any <i class="conum" data-value="1"></i><b>(1)</b>
+    stages {
+        stage('Build') { <i class="conum" data-value="2"></i><b>(2)</b>
+            steps {
+                // <i class="conum" data-value="3"></i><b>(3)</b>
+            }
+        }
+        stage('Test') { <i class="conum" data-value="4"></i><b>(4)</b>
+            steps {
+                // <i class="conum" data-value="5"></i><b>(5)</b>
+            }
+        }
+        stage('Deploy') { <i class="conum" data-value="6"></i><b>(6)</b>
+            steps {
+                // <i class="conum" data-value="7"></i><b>(7)</b>
+            }
+        }
+    }
+}
+// Script //</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Execute this Pipeline or any of its stages, on any available agent.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Defines the "Build" stage.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Perform some steps related to the "Build" stage.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Defines the "Test" stage.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Perform some steps related to the "Test" stage.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Defines the "Deploy" stage.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>Perform some steps related to the "Deploy" stage.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_scripted_pipeline_fundamentals"><a class="anchor" href="#_scripted_pipeline_fundamentals"></a>Scripted Pipeline fundamentals</h3>
+<div class="paragraph">
+<p>In Scripted Pipeline syntax, one or more <code>node</code> blocks do the core work
+throughout the entire Pipeline. Although this is not a mandatory requirement of
+Scripted Pipeline syntax, confining your Pipeline&#8217;s work inside of a <code>node</code>
+block does two things:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Schedules the steps contained within the block to run by adding an item
+to the Jenkins queue. As soon as an executor is free on a node, the
+steps will run.</p>
+</li>
+<li>
+<p>Creates a workspace (a directory specific to that particular
+Pipeline) where work can be done on files checked out from source control.<br>
+<strong>Caution:</strong> Depending on your Jenkins configuration, some workspaces may
+not get automatically cleaned up after a period of inactivity. See tickets
+and discussion linked from
+<a href="https://issues.jenkins.io/browse/JENKINS-2111">JENKINS-2111</a> for more
+information.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>// Declarative //
+// Script //
+node {  <i class="conum" data-value="1"></i><b>(1)</b>
+    stage('Build') { <i class="conum" data-value="2"></i><b>(2)</b>
+        // <i class="conum" data-value="3"></i><b>(3)</b>
+    }
+    stage('Test') { <i class="conum" data-value="4"></i><b>(4)</b>
+        // <i class="conum" data-value="5"></i><b>(5)</b>
+    }
+    stage('Deploy') { <i class="conum" data-value="6"></i><b>(6)</b>
+        // <i class="conum" data-value="7"></i><b>(7)</b>
+    }
+}</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Execute this Pipeline or any of its stages, on any available agent.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Defines the "Build" stage. <code>stage</code> blocks are optional in Scripted Pipeline
+syntax. However, implementing <code>stage</code> blocks in a Scripted Pipeline provides
+clearer visualization of each `stage&#8217;s subset of tasks/steps in the Jenkins UI.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Perform some steps related to the "Build" stage.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Defines the "Test" stage.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Perform some steps related to the "Test" stage.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Defines the "Deploy" stage.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>Perform some steps related to the "Deploy" stage.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pipeline_example"><a class="anchor" href="#_pipeline_example"></a>Pipeline example</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here is an example of a <code>Jenkinsfile</code> using Declarative Pipeline syntax - its
+Scripted syntax equivalent can be accessed by clicking the <strong>Toggle Scripted
+Pipeline</strong> link below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>// Declarative //
+pipeline { <i class="conum" data-value="1"></i><b>(1)</b>
+    agent any <i class="conum" data-value="2"></i><b>(2)</b>
+    options {
+        skipStagesAfterUnstable()
+    }
+    stages {
+        stage('Build') { <i class="conum" data-value="3"></i><b>(3)</b>
+            steps { <i class="conum" data-value="4"></i><b>(4)</b>
+                sh 'make' <i class="conum" data-value="5"></i><b>(5)</b>
+            }
+        }
+        stage('Test'){
+            steps {
+                sh 'make check'
+                junit 'reports/**/*.xml' <i class="conum" data-value="6"></i><b>(6)</b>
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'make publish'
+            }
+        }
+    }
+}
+// Script //
+node { <i class="conum" data-value="7"></i><b>(7)</b>
+    stage('Build') { <i class="conum" data-value="3"></i><b>(3)</b>
+        sh 'make' <i class="conum" data-value="5"></i><b>(5)</b>
+    }
+    stage('Test') {
+        sh 'make check'
+        junit 'reports/**/*.xml' <i class="conum" data-value="6"></i><b>(6)</b>
+    }
+    if (currentBuild.currentResult == 'SUCCESS') {
+        stage('Deploy') {
+            sh 'make publish' <i class="conum" data-value="7"></i><b>(7)</b>
+        }
+    }
+}</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><a href="syntax.html#declarative-pipeline" class="xref page"><code>pipeline</code></a> is Declarative
+Pipeline-specific syntax that defines a "block" containing all content and
+instructions for executing the entire Pipeline.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><a href="syntax.html#agent" class="xref page"><code>agent</code></a> is Declarative Pipeline-specific syntax that
+instructs Jenkins to allocate an executor (on a node) and workspace for the
+entire Pipeline.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><code>stage</code> is a syntax block that describes a
+<a href="#stage">stage of this Pipeline</a>. Read more about <code>stage</code> blocks in
+Declarative Pipeline syntax on the <a href="syntax.html#stage" class="xref page">Pipeline syntax</a> page. As
+mentioned <a href="#scripted-pipeline-fundamentals">above</a>, <code>stage</code> blocks are
+optional in Scripted Pipeline syntax.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><a href="syntax.html#steps" class="xref page"><code>steps</code></a> is Declarative Pipeline-specific syntax that
+describes the steps to be run in this <code>stage</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td><code>sh</code> is a Pipeline <a href="syntax.html#steps" class="xref page">step</a> (provided by the
+<a href="https://plugins.jenkins.io/workflow-durable-task-step">Pipeline: Nodes and Processes plugin</a>) that
+executes the given shell command.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td><code>junit</code> is another Pipeline <a href="syntax.html#steps" class="xref page">step</a> (provided by the
+<a href="https://plugins.jenkins.io/junit">JUnit plugin</a>) for aggregating test reports.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td><code>sh</code> is a Pipeline <a href="syntax.html#steps" class="xref page">step</a> (provided by the
+<a href="https://plugins.jenkins.io/workflow-durable-task-step">Pipeline: Nodes and Processes plugin</a>) that
+executes the given shell command.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Read more about Pipeline syntax on the <a href="syntax.html" class="xref page">Pipeline Syntax</a> page.</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. <a href="https://en.wikipedia.org/wiki/Domain-specific_language">Domain-specific language</a>
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. <a href="https://en.wikipedia.org/wiki/Version_control">Source control management</a>
+</div>
+<div class="footnote" id="_footnotedef_3">
+<a href="#_footnoteref_3">3</a>. <a href="https://en.wikipedia.org/wiki/Single_source_of_truth">Single source of truth</a>
+</div>
+<div class="footnote" id="_footnotedef_4">
+<a href="#_footnoteref_4">4</a>. Additional plugins have been used to implement complex behaviors utilizing Freestyle Jobs such as the Copy Artifact, Parameterized Trigger, and Promoted Builds plugins
+</div>
+<div class="footnote" id="_footnotedef_5">
+<a href="#_footnoteref_5">5</a>. <a href="https://plugins.jenkins.io/github-organization-folder">GitHub Organization Folder plugin</a>
+</div>
+<div class="footnote" id="_footnotedef_6">
+<a href="#_footnoteref_6">6</a>. <a href="../blueocean/index.html" class="xref page">Blue Ocean</a>, <a href="https://plugins.jenkins.io/pipeline-stage-view">Pipeline: Stage View plugin</a>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a></span>
+  <span class="next"><a href="getting-started.html">Getting started with the Guided Tour</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

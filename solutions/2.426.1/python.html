@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>"Jenkins and Python" :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/solutions/2.426.1/python.html">
+    <link rel="prev" href="docker.html">
+    <link rel="next" href="ruby.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+<link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="solutions" data-version="2.426.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Jenkins Solutions Page</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="android.html">Jenkins and Android</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="php.html">Jenkins and PHP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="docker.html">Using Docker with Pipeline</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="python.html">"Jenkins and Python"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ruby.html">Jenkins and Ruby</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipeline.html">Pipeline as Code with Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="github.html">Jenkins with GitHub</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="embedded.html">Jenkins in the Embedded World</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bitbucketserver.html">Bitbucket Server</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="c.html">Jenkins and C/C++</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../user-docs/2.426.1/platform-information/support-policy-java.html">Java Support Policy</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Solutions Page</span>
+    <span class="version">2.426.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorial/2.426.1/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorial/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.426.1/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.426.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Jenkins Solutions Page</a></li>
+    <li><a href="python.html">"Jenkins and Python"</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/solutions/modules/ROOT/pages/python.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">"Jenkins and Python"</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Unlike compiled languages, Python doesn&#8217;t need a "build" per se. Python
+projects can still benefit greatly from using Jenkins for continuous
+integration and delivery.</p>
+</div>
+<div class="paragraph">
+<p>In the Python ecosystem there are tools which can be integrated into Jenkins
+for testing/reporting such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/nose-devs/nose2">nose2</a> and <a href="https://docs.pytest.org/en/latest">pytest</a>
+for executing unit tests and generating JUnit-compatible XML test reports <em>and</em>
+plugin:cobertura[Cobertura]-compatible
+code coverage reports.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock unresolved center">
+<div class="content">
+<img src="/images/solution-images/jenkins-chart-nosetests.png" alt="jenkins chart nosetests">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.pylint.org/">pylint</a> for generating code quality reports which
+can be integrated directly into Jenkins for trending and reporting purposes.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock unresolved center">
+<div class="content">
+<img src="/images/solution-images/jenkins-chart-pylint.png" alt="jenkins chart pylint">
+</div>
+</div>
+<div class="paragraph">
+<p>(<em>images courtesy of <a href="http://www.alexconrad.org/2011/10/jenkins-and-python.html">Alex Conrad</a></em>)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resources"><a class="anchor" href="#_resources"></a>Resources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Below are a collection of miscellaneous resources for working with Python on
+top of Jenkins. If you believe something is missing, please click ("<a href="https://github.com/jenkins-infra/jenkins.io/edit/master/content//solutions/python.adoc">here</a>") or the "Improve this Page" link in the lower right, and submit a pull request!</p>
+</div>
+<div class="sect2">
+<h3 id="_templates"><a class="anchor" href="#_templates"></a>Templates</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/bobuss/python-jenkins-template">Jenkins job template for a Python-based project using Nose</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_the_jenkins_api"><a class="anchor" href="#_using_the_jenkins_api"></a>Using the Jenkins API</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://pythonhosted.org/jenkinsapi/">Jenkins API - Python client library for Jenkins' API</a></p>
+</li>
+<li>
+<p><a href="https://python-jenkins.readthedocs.org/en/latest/">Python-Jenkins : Python Wrapper for Jenkins REST API</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="docker.html">Using Docker with Pipeline</a></span>
+  <span class="next"><a href="ruby.html">Jenkins and Ruby</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

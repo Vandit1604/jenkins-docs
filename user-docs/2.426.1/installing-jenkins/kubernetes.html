@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kubernetes :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.426.1/installing-jenkins/kubernetes.html">
+    <link rel="prev" href="initial-settings.html">
+    <link rel="next" href="linux.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+<link rel="icon" href="../../../_/jenkins.svg" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="user-docs" data-version="2.426.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins User Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Installing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="docker.html">Using Docker with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="initial-settings.html">Initial Settings</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="kubernetes.html">Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="macos.html">macOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="other.html">Other Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="war-file.html">WAR file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../platform-information/index.html">Platform Information</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/upgrade-java-to-11.html">Upgrading to Java 11</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-linux.html">Linux Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-web-browsers.html">Browser compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-java.html">Java Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-servlet-containers.html">Servlet Container Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/upgrade-java-to-17.html">Upgrading to Java 17</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-credentials.html">Using credentials</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/searchbox.html">Using Search Box</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/referencing-another-project-by-name.html">Referencing another project by name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/aborting-a-build.html">Aborting a build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/fingerprints.html">Fingerprints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-local-language.html">Using local language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/change-time-zone.html">Change time zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/remote-access-api.html">Remote Access API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/executor-starvation.html">Executor Starvation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-agents.html">Using Jenkins agents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with the Guided Tour</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/running-pipelines.html">Running a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/development.html">Pipeline Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/syntax.html">Pipeline syntax</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/pipeline-best-practices.html">Pipeline Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/scaling-pipeline.html">Scaling Pipelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/cps-method-mismatches.html">Pipeline CPS Method Mismatches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with the Guided Tour</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/dashboard.html">Dashboard</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/activity.html">Activity View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-run-details.html">Pipeline Run Details View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-editor.html">Pipeline Editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../managing/index.html">Managing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-configuration.html">Configuring the System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/casc.html">Configuration as Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/tools.html">Managing Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/about-jenkins.html">About Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-info.html">System Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/cli.html">Jenkins CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-console.html">Script Console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/groovy-hook-scripts.html">Groovy Hook Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/nodes.html">Managing Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-approval.html">In-process Script Approval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/ui-themes.html">Themes for user interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/user-content.html">User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/spawning-processes.html">Spawning Processes From Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Securing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/access-control.html">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-jenkins.html">Securing Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/managing-security.html">Managing Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/controller-isolation.html">Controller Isolation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-builds.html">Securing Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/csrf-protection.html">CSRF Protection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/user-content.html">Rendering User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/build-authorization.html">Access Control for Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/environment-variables.html">Handling Environment Variables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/markup-formatter.html">Markup Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/services.html">Exposed Services and Ports</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/index.html">System Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/backing-up.html">Backing-up/Restoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/monitoring.html">Monitoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/administering-jenkins-on-kubernetes.html">Administering Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-chef.html">Managing Jenkins with Chef</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-puppet.html">Managing Jenkins with Puppet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/viewing-logs.html">Viewing logs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/authenticating-scripted-clients.html">Authenticating scripted clients</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/index.html">Reverse proxy configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-haproxy.html">Reverse proxy - HAProxy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-squid.html">Reverse proxy - Squid</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iis.html">Reverse proxy - IIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iptables.html">Reverse proxy - iptables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-troubleshooting.adoc">reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-troubleshooting.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../scaling/index.html">Scaling Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-scale.html">Architecting for Scale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/hardware-recommendations.html">Hardware Recommendations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-manageability.html">Architecting for Manageability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../troubleshooting/index.html">Troubleshooting Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/diagnosing-errors.html">Diagnosing Errors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/obtaining-a-thread-dump.html">Obtaining a thread dump</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary/index.html">Glossary</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins User Documentation</span>
+    <span class="version">2.426.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.426.1/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.426.1/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins User Documentation</a></li>
+    <li><a href="index.html">Installing Jenkins</a></li>
+    <li><a href="kubernetes.html">Kubernetes</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/user-docs/modules/installing-jenkins/pages/kubernetes.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Kubernetes</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kubernetes (K8s) is an open-source system for automating deployment, scaling,
+and management of containerized applications.</p>
+</div>
+<div class="paragraph">
+<p>A Kubernetes cluster adds a new automation layer to Jenkins.
+Kubernetes makes sure that resources are used effectively and that your servers
+and underlying infrastructure are not overloaded.
+Kubernetes' ability to orchestrate container deployment ensures that Jenkins always
+has the right amount of resources available.</p>
+</div>
+<div class="paragraph">
+<p>Hosting Jenkins on a Kubernetes Cluster is beneficial for Kubernetes-based deployments and dynamic container-based scalable Jenkins agents.
+Here, we see a step-by-step process for setting up Jenkins on a Kubernetes Cluster.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setup_jenkins_on_kubernetes"><a class="anchor" href="#_setup_jenkins_on_kubernetes"></a>Setup Jenkins On Kubernetes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For setting up a Jenkins Cluster on Kubernetes, we will do the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#create-a-namespace">Create a Namespace</a></p>
+</li>
+<li>
+<p><a href="#create-a-service-account">Create a service account</a> with Kubernetes admin permissions.</p>
+</li>
+<li>
+<p><a href="#create-a-volume">Create local persistent volume</a> for persistent Jenkins data on Pod restarts.</p>
+</li>
+<li>
+<p><a href="#create-a-deployment">Create a deployment YAML</a> and deploy it.</p>
+</li>
+<li>
+<p><a href="#create-a-service">Create a service YAML</a> and deploy it.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This guide doesn’t use local persistent volume as this is a generic guide.
+For using persistent volume for your Jenkins data, you need to create volumes of relevant cloud or on-prem data center and configure it.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_jenkins_kubernetes_manifest_files"><a class="anchor" href="#_jenkins_kubernetes_manifest_files"></a>Jenkins Kubernetes Manifest Files</h3>
+<div class="paragraph">
+<p>All the Jenkins Kubernetes manifest files used here are hosted on GitHub.
+Please clone the repository if you have trouble copying the manifest from the document.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git clone https://github.com/scriptcamp/kubernetes-jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Use the GitHub files for reference and follow the steps in the next sections.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kubernetes_jenkins_deployment"><a class="anchor" href="#_kubernetes_jenkins_deployment"></a>Kubernetes Jenkins Deployment</h3>
+<div class="paragraph">
+<p>Let’s get started with deploying Jenkins on Kubernetes.</p>
+</div>
+<div id="create-a-namespace" class="paragraph">
+<p><strong>Step 1</strong>: Create a Namespace for Jenkins.
+It is good to categorize all the DevOps tools as a separate namespace from other applications.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl create namespace devops-tools</code></pre>
+</div>
+</div>
+<div id="create-a-service-account" class="paragraph">
+<p><strong>Step 2:</strong> Create a 'serviceAccount.yaml' file and copy the following admin service account manifest.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: jenkins-admin
+rules:
+  - apiGroups: [""]
+    resources: ["*"]
+    verbs: ["*"]
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: jenkins-admin
+  namespace: devops-tools
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: jenkins-admin
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: jenkins-admin
+subjects:
+- kind: ServiceAccount
+  name: jenkins-admin
+  namespace: devops-tools</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The 'serviceAccount.yaml' creates a 'jenkins-admin' clusterRole, 'jenkins-admin' ServiceAccount and binds the 'clusterRole' to the service account.</p>
+</div>
+<div class="paragraph">
+<p>The 'jenkins-admin' cluster role has all the permissions to manage the cluster components.
+You can also restrict access by specifying individual resource actions.</p>
+</div>
+<div class="paragraph">
+<p>Now create the service account using kubectl.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl apply -f serviceAccount.yaml</code></pre>
+</div>
+</div>
+<div id="create-a-volume" class="paragraph">
+<p><strong>Step 3: </strong>Create 'volume.yaml' and copy the following persistent volume manifest.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: local-storage
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: jenkins-pv-volume
+  labels:
+    type: local
+spec:
+  storageClassName: local-storage
+  claimRef:
+    name: jenkins-pv-claim
+    namespace: devops-tools
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  local:
+    path: /mnt
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - worker-node01
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: jenkins-pv-claim
+  namespace: devops-tools
+spec:
+  storageClassName: local-storage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Important Note:</strong> Replace 'worker-node01' with any one of your cluster worker nodes hostname.</p>
+</div>
+<div class="paragraph">
+<p>You can get the worker node hostname using the kubectl.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl get nodes</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For volume, we are using the 'local' storage class for the purpose of demonstration.
+Meaning, it creates a 'PersistentVolume' volume in a specific node under the '/mnt' location.</p>
+</div>
+<div class="paragraph">
+<p>As the 'local' storage class requires the node selector, you need to specify the worker node name correctly for the Jenkins pod to get scheduled in the specific node.</p>
+</div>
+<div class="paragraph">
+<p>If the pod gets deleted or restarted, the data will get persisted in the node volume.
+However, if the node gets deleted, you will lose all the data.</p>
+</div>
+<div class="paragraph">
+<p>Ideally, you should use a persistent volume using the available storage class with the cloud provider, or the one provided by the cluster administrator to persist data on node failures.</p>
+</div>
+<div class="paragraph">
+<p>Let’s create the volume using kubectl</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl create -f volume.yaml</code></pre>
+</div>
+</div>
+<div id="create-a-deployment" class="paragraph">
+<p><strong>Step 4:</strong> Create a Deployment file named 'deployment.yaml' and copy the following deployment manifest.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins
+  namespace: devops-tools
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins-server
+  template:
+    metadata:
+      labels:
+        app: jenkins-server
+    spec:
+      securityContext:
+            fsGroup: 1000
+            runAsUser: 1000
+      serviceAccountName: jenkins-admin
+      containers:
+        - name: jenkins
+          image:: jenkins/jenkins:lts
+          resources:
+            limits:
+              memory: "2Gi"
+              cpu: "1000m"
+            requests:
+              memory: "500Mi"
+              cpu: "500m"
+          ports:
+            - name: httpport
+              containerPort: 8080
+            - name: jnlpport
+              containerPort: 50000
+          livenessProbe:
+            httpGet:
+              path: "/login"
+              port: 8080
+            initialDelaySeconds: 90
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 5
+          readinessProbe:
+            httpGet:
+              path: "/login"
+              port: 8080
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+          volumeMounts:
+            - name: jenkins-data
+              mountPath: /var/jenkins_home
+      volumes:
+        - name: jenkins-data
+          persistentVolumeClaim:
+              claimName: jenkins-pv-claim</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this Jenkins Kubernetes deployment we have used the following:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>'securityContext' for Jenkins pod to be able to write to the local persistent volume.</p>
+</li>
+<li>
+<p>Liveness and readiness probe to monitor the health of the Jenkins pod.</p>
+</li>
+<li>
+<p>Local persistent volume based on local storage class that holds the Jenkins data path '/var/jenkins_home'.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The deployment file uses local storage class persistent volume for Jenkins data.
+For production use cases, you should add a cloud-specific storage class persistent volume for your Jenkins data.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you don’t want the local storage persistent volume, you can replace the volume definition in the deployment with the host directory as shown below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">volumes:
+- name: jenkins-data
+emptyDir: \{}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create the deployment using kubectl.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl apply -f deployment.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check the deployment status.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl get deployments -n devops-tools</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, you can get the deployment details using the following command.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl describe deployments --namespace=devops-tools</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="create-a-service"><a class="anchor" href="#create-a-service"></a>Accessing Jenkins Using Kubernetes Service</h3>
+<div class="paragraph">
+<p>We have now created a deployment.
+However, it is not accessible to the outside world.
+For accessing the Jenkins deployment from the outside world, we need to create a service and map it to the deployment.</p>
+</div>
+<div class="paragraph">
+<p>Create 'service.yaml' and copy the following service manifest:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-service
+  namespace: devops-tools
+  annotations:
+      prometheus.io/scrape: 'true'
+      prometheus.io/path:   /
+      prometheus.io/port:   '8080'
+spec:
+  selector:
+    app: jenkins-server
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 32000</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Here, we are using the type as 'NodePort' which will expose Jenkins on all kubernetes node IPs on port 32000.
+If you have an ingress setup, you can create an ingress rule to access Jenkins.
+Also, you can expose the Jenkins service as a Loadbalancer if you are running the cluster on AWS, Google, or Azure cloud.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Create the Jenkins service using kubectl.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl apply -f service.yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, when browsing to any one of the Node IPs on port 32000, you will be able to access the Jenkins dashboard.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">http://&lt;node-ip&gt;:32000</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Jenkins will ask for the initial Admin password when you access the dashboard for the first time.</p>
+</div>
+<div class="paragraph">
+<p>You can get that from the pod logs either from the Kubernetes dashboard or CLI.
+You can get the pod details using the following CLI command.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl get pods --namespace=devops-tools</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With the pod name, you can get the logs as shown below.
+Replace the pod name with your pod name.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl logs jenkins-deployment-2539456353-j00w5 --namespace=devops-tools</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The password can be found at the end of the log.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can run the exec command to get the password directly from the location as shown below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl exec -it jenkins-559d8cd85c-cfcgk cat /var/jenkins_home/secrets/initialAdminPassword -n devops-tools</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once you enter the password, proceed to install the suggested plugin and create an admin user.
+All of these steps are self-explanatory from the Jenkins dashboard.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_jenkins_with_helm_v3"><a class="anchor" href="#_install_jenkins_with_helm_v3"></a>Install Jenkins with Helm v3</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A typical Jenkins deployment consists of a controller node and, optionally, one or more agents. To simplify the deployment of Jenkins, we’ll use <a href="https://helm.sh/">Helm</a> to deploy Jenkins.
+Helm is a package manager for Kubernetes and its package format is called a chart.
+Many community-developed charts are available on <a href="https://github.com/helm/charts">GitHub</a>.</p>
+</div>
+<div class="paragraph">
+<p>Helm Charts provide “push button” deployment and deletion of apps, making adoption and development of Kubernetes apps easier for those with little container or microservices experience.</p>
+</div>
+<div class="sect2">
+<h3 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Helm command line interface</dt>
+<dd>
+<p>If you don&#8217;t have Helm command line interface installed and configured locally, see the sections below to <a href="#_install_helm">Install Helm</a> and <a href="#_configure_helm">Configure Helm</a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_install_helm"><a class="anchor" href="#_install_helm"></a>Install Helm</h3>
+<div class="paragraph">
+<p>To install Helm CLI, follow the instructions from the <a href="https://helm.sh/docs/intro/install/">Installing Helm</a> page.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configure_helm"><a class="anchor" href="#_configure_helm"></a>Configure Helm</h3>
+<div class="paragraph">
+<p>Once Helm is installed and set up properly, add the Jenkins repo as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">helm repo add jenkinsci https://charts.jenkins.io
+helm repo update</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The helm charts in the Jenkins repo can be listed with the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">helm search repo jenkinsci</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_create_a_persistent_volume"><a class="anchor" href="#_create_a_persistent_volume"></a>Create a persistent volume</h3>
+<div class="paragraph">
+<p>We want to create a <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">persistent volume</a> for our Jenkins controller pod.
+This will prevent us from losing our whole configuration of the Jenkins controller and our jobs when we reboot our minikube.
+This <a href="https://minikube.sigs.k8s.io/docs/handbook/persistent_volumes/">official minikube doc</a> explains which directories we can use to mount or data.
+In a multi-node Kubernetes cluster, you’ll need some solution like NFS to make the mount directory available in the whole cluster.
+But because we use minikube which is a one-node cluster we don’t have to bother about it.</p>
+</div>
+<div class="paragraph">
+<p>We choose to use the <code>/data</code> directory. This directory will contain our Jenkins controller configuration.</p>
+</div>
+<div class="paragraph">
+<p><strong>We will create a volume which is called jenkins-pv:</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Paste the content from <a href="https://raw.githubusercontent.com/jenkins-infra/jenkins.io/master/content/doc/tutorials/kubernetes/installing-jenkins-on-kubernetes/jenkins-volume.yaml">https://raw.githubusercontent.com/installing-jenkins-on-kubernetes/jenkins-volume.yaml</a> into a YAML formatted file called <code>jenkins-volume.yaml</code>.</p>
+</li>
+<li>
+<p>Run the following command to apply the spec:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl apply -f jenkins-volume.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It’s worth noting that, in the above spec, hostPath uses the /data/jenkins-volume/ of your node to emulate network-attached storage.
+This approach is only suited for development and testing purposes.
+For production, you should provide a network resource like a Google Compute Engine persistent disk, or an Amazon Elastic Block Store volume.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Minikube configured for hostPath sets the permissions on /data to the root account only. Once the volume is created you will need to manually change the permissions to allow the jenkins account to write its data.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">minikube ssh
+sudo chown -R 1000:1000 /data/jenkins-volume</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_create_a_service_account"><a class="anchor" href="#_create_a_service_account"></a>Create a service account</h3>
+<div class="paragraph">
+<p>In Kubernetes, service accounts are used to provide an identity for pods.
+Pods that want to interact with the API server will authenticate with a
+particular service account.
+By default, applications will authenticate as the <code>default</code> service account in
+the namespace they are running in.
+This means, for example, that an application running in the <code>test</code> namespace
+will use the default service account of the <code>test</code> namespace.</p>
+</div>
+<div class="paragraph">
+<p><strong>We will create a service account called jenkins:</strong></p>
+</div>
+<div class="paragraph">
+<p>A ClusterRole is a set of permissions that can be assigned to resources within a given cluster.
+Kubernetes APIs are categorized into API groups, based on the API objects that they relate to.
+While creating a ClusterRole, you can specify the operations that can be performed by the ClusterRole on one or more API objects in one or more API groups, just as we have done above.
+ClusterRoles have several uses. You can use a ClusterRole to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>define permissions on namespaced resources and be granted within individual namespace(s)</p>
+</li>
+<li>
+<p>define permissions on namespaced resources and be granted across all namespaces</p>
+</li>
+<li>
+<p>define permissions on cluster-scoped resources</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you want to define a role cluster-wide, use a ClusterRole;
+if you want to define a role within a namespace, use a Role.</p>
+</div>
+<div class="paragraph">
+<p>A role binding grants the permissions defined in a role to a user or set of users.
+It holds a list of subjects (users, groups, or service accounts), and a reference to the role being granted.</p>
+</div>
+<div class="paragraph">
+<p>A RoleBinding may reference any Role in the same namespace.
+Alternatively, a RoleBinding can reference a ClusterRole and bind that ClusterRole to the namespace of the RoleBinding.
+To bind a ClusterRole to all the namespaces in our cluster, we use a ClusterRoleBinding.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Paste the content from <a href="https://raw.githubusercontent.com/jenkins-infra/jenkins.io/master/content/doc/tutorials/kubernetes/installing-jenkins-on-kubernetes/jenkins-sa.yaml">https://raw.githubusercontent.com/installing-jenkins-on-kubernetes/jenkins-sa.yaml</a> into a YAML formatted file called
+<code>jenkins-sa.yaml</code>.</p>
+</li>
+<li>
+<p>Run the following command to apply the spec:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl apply -f jenkins-sa.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_install_jenkins"><a class="anchor" href="#_install_jenkins"></a>Install Jenkins</h3>
+<div class="paragraph">
+<p>We will deploy Jenkins including the Jenkins Kubernetes plugin.
+See the <a href="https://github.com/jenkinsci/helm-charts/tree/main/charts/jenkins">official chart</a> for more details.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To enable persistence, we will create an override file and pass it as an argument to the
+Helm CLI.
+ Paste the content from <a href="https://raw.githubusercontent.com/jenkinsci/helm-charts/main/charts/jenkins/values.yaml" class="bare">https://raw.githubusercontent.com/jenkinsci/helm-charts/main/charts/jenkins/values.yaml</a> into a YAML formatted file called <code>jenkins-values.yaml</code>.</p>
+<div class="paragraph">
+<p>The <code>jenkins-values.yaml</code> is used as a template to provide values that are necessary for setup.</p>
+</div>
+</li>
+<li>
+<p>Open the <code>jenkins-values.yaml</code> file in your favorite text editor and modify the following:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>nodePort: Because we are using minikube we need to use NodePort as service type. Only cloud providers offer load balancers. We define port 32000 as port.</p>
+</li>
+<li>
+<p>storageClass:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">storageClass: jenkins-pv</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>serviceAccount: the serviceAccount section of the jenkins-values.yaml file should look like this:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">serviceAccount:
+  create: false
+# Service account name is autogenerated by default
+name: jenkins
+annotations: {}</code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Where `name: jenkins` refers to the serviceAccount created for jenkins.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>We can also define which plugins we want to install on our Jenkins.
+We use some default plugins like git and the pipeline plugin.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Now you can install Jenkins by running the <code>helm install</code> command and passing it the
+following arguments:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The name of the release <code>jenkins</code></p>
+</li>
+<li>
+<p>The -f flag with the YAML file with overrides <code>jenkins-values.yaml</code></p>
+</li>
+<li>
+<p>The name of the chart <code>jenkinsci/jenkins</code></p>
+</li>
+<li>
+<p>The <code>-n</code> flag with the name of your namespace <code>jenkins</code></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">chart=jenkinsci/jenkins
+helm install jenkins -n jenkins -f jenkins-values.yaml $chart</code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>This outputs something similar to the following:</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">NAME: jenkins
+LAST DEPLOYED: Wed Sep 16 11:13:10 2020
+NAMESPACE: jenkins
+STATUS: deployed
+REVISION: 1</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist NOTE">
+<ol class="NOTE">
+<li>
+<p>Get your 'admin' user password by running:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jsonpath="{.data.jenkins-admin-password}"
+secret=$(kubectl get secret -n jenkins jenkins -o jsonpath=$jsonpath)
+echo $(echo $secret | base64 --decode)</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Get the Jenkins URL to visit by running these commands in the same shell:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jsonpath="{.spec.ports[0].nodePort}"
+NODE_PORT=$(kubectl get -n jenkins -o jsonpath=$jsonpath services jenkins)
+jsonpath="{.items[0].status.addresses[0].address}"
+NODE_IP=$(kubectl get nodes -n jenkins -o jsonpath=$jsonpath)
+echo http://$NODE_IP:$NODE_PORT/login</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Login with the password from step 1 and the username: admin</p>
+</li>
+<li>
+<p>Use Jenkins Configuration as Code by specifying configScripts in your values.yaml file.
+See the plugin:configuration-as-code[configuration as code documentation] and  <a href="https://github.com/jenkinsci/configuration-as-code-plugin/tree/master/demos">examples</a>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Visit the <a href="https://cloud.google.com/solutions/jenkins-on-container-engine">Jenkins on Kubernetes solutions page</a> for more information on running Jenkins on Kubernetes.
+Visit the <a href="/projects/jcasc/">Jenkins Configuration as Code project</a> for more information on configuration as code.
+. Depending on your environment, it can take a bit of time for Jenkins to start up. Enter the
+  following command to inspect the status of your Pod:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl get pods -n jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once Jenkins is installed, the status should be  set to Running as in the following output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl get pods -n jenkins
+NAME                       READY   STATUS    RESTARTS   AGE
+jenkins-645fbf58d6-6xfvj   1/1     Running   0          2m</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To access your Jenkins server, you must retrieve the password. You can retrieve your password
+using either of the two options below.</p>
+<div class="paragraph">
+<p><strong>Option 1</strong></p>
+</div>
+<div class="paragraph">
+<p>Run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jsonpath="{.data.jenkins-admin-password}"
+secret=$(kubectl get secret -n jenkins jenkins -o jsonpath=$jsonpath)
+echo $(echo $secret | base64 --decode)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output should look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">Um1kJLOWQY</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>👆🏻Note that your password will be different.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Option 2</strong></p>
+</div>
+<div class="paragraph">
+<p>Run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">jsonpath="{.data.jenkins-admin-password}"
+kubectl get secret -n jenkins jenkins -o jsonpath=$jsonpath</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output should be a <strong>base64 encoded string</strong> like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">WkIwRkdnbDZYZg==</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Decode the base64 string and you have your password. You can use <a href="https://www.base64decode.org/">this website</a> to decode your output.</p>
+</div>
+</li>
+<li>
+<p>Get the name of the Pod running that is running Jenkins using the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl get pods -n jenkins</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Use the kubectl command to set up port forwarding:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl -n jenkins port-forward &lt;pod_name&gt; 8080:8080
+Forwarding from 127.0.0.1:8080 -&gt; 8080
+Forwarding from [::1]:8080 -&gt; 8080</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Visit <a href="http://127.0.0.1:8080/" class="bare">http://127.0.0.1:8080/</a> and log in using <code>admin</code> as the username and the password you retrieved earlier.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_jenkins_with_yaml_files"><a class="anchor" href="#_install_jenkins_with_yaml_files"></a>Install Jenkins with YAML files</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes how to use a set of YAML (Yet Another Markup Language) files to install Jenkins on a Kubernetes cluster.
+The YAML files are easily tracked, edited, and can be reused indefinitely.</p>
+</div>
+<div class="sect2">
+<h3 id="_create_jenkins_deployment_file"><a class="anchor" href="#_create_jenkins_deployment_file"></a>Create Jenkins deployment file</h3>
+<div class="paragraph">
+<p>Copy the contents <a href="https://raw.githubusercontent.com/jenkins-infra/jenkins.io/master/content/doc/tutorials/kubernetes/installing-jenkins-on-kubernetes/jenkins-deployment.yaml">here</a> into your preferred text editor and create a jenkins-deployment.yaml file in the “jenkins” namespace we created in this <a href="#create-a-namespace">section</a> above.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>This <a href="https://raw.githubusercontent.com/jenkins-infra/jenkins.io/master/content/doc/tutorials/kubernetes/installing-jenkins-on-kubernetes/jenkins-deployment.yaml">deployment file</a> is defining a Deployment as indicated by the <code>kind</code> field.</p>
+</li>
+<li>
+<p>The Deployment specifies a single replica. This ensures one and only one instance
+will be maintained by the Replication Controller in the event of failure.</p>
+</li>
+<li>
+<p>The container image name is jenkins and version is 2.32.2</p>
+</li>
+<li>
+<p>The list of ports specified within the spec are a list of ports to expose from
+the container on the Pods IP address.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Jenkins running on (http) port 8080.</p>
+</li>
+<li>
+<p>The Pod exposes the port 8080 of the jenkins container.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The volumeMounts section of the file creates a Persistent Volume.
+This volume is mounted within the container at the path /var/jenkins_home and
+so modifications to data within /var/jenkins_home are written to the volume.
+The role of a persistent volume is to store basic Jenkins data and preserve it
+beyond the lifetime of a pod.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Exit and save the changes once you add the content to the Jenkins deployment file.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_deploy_jenkins"><a class="anchor" href="#_deploy_jenkins"></a>Deploy Jenkins</h3>
+<div class="paragraph">
+<p>To create the deployment execute:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl create -f jenkins-deployment.yaml -n jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The command also instructs the system to install Jenkins within the jenkins namespace.</p>
+</div>
+<div class="paragraph">
+<p>To validate that creating the deployment was successful you can invoke:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl get deployments -n jenkins</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grant_access_to_jenkins_service"><a class="anchor" href="#_grant_access_to_jenkins_service"></a>Grant access to Jenkins service</h3>
+<div class="paragraph">
+<p>We have a Jenkins instance deployed but it is still not accessible.
+The Jenkins Pod has been assigned an IP address that is internal to the Kubernetes cluster.
+It’s possible to log into the Kubernetes Node and access Jenkins from there but that’s not a very useful way to access the service.</p>
+</div>
+<div class="paragraph">
+<p>To make Jenkins accessible outside the Kubernetes cluster the Pod needs to be exposed as a Service.
+A Service is an abstraction that exposes Jenkins to the wider network.
+It allows us to maintain a persistent connection to the pod regardless of the changes in the cluster.
+With a local deployment, this means creating a NodePort service type.
+A NodePort service type exposes a service on a port on each node in the cluster.
+The service is accessed through the Node IP address and the service nodePort.
+A simple service is defined <a href="https://raw.githubusercontent.com/jenkins-infra/jenkins.io/master/content/doc/tutorials/kubernetes/installing-jenkins-on-kubernetes/jenkins-service.yaml">here</a>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>This <a href="https://raw.githubusercontent.com/jenkins-infra/jenkins.io/master/content/doc/tutorials/kubernetes/installing-jenkins-on-kubernetes/jenkins-service.yaml">service file</a> is defining a Service as
+indicated by the <code>kind</code> field.</p>
+</li>
+<li>
+<p>The Service is of type NodePort. Other options are ClusterIP (only accessible within the cluster) and LoadBalancer (IP address assigned by a cloud provider e.g. AWS Elastic IP).</p>
+</li>
+<li>
+<p>The list of ports specified within the spec is a list of ports exposed by this service.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The port is the port that will be exposed by the service.</p>
+</li>
+<li>
+<p>The target port is the port to access the Pods targeted by this service. A port name may also be specified.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The selector specifies the selection criteria for the Pods targeted by this service.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To create the service execute:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl create -f jenkins-service.yaml -n jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To validate that creating the service was successful you can run:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl get services -n jenkins
+NAME       TYPE        CLUSTER-IP       EXTERNAL-IP    PORT(S)           AGE
+jenkins    NodePort    10.103.31.217    &lt;none&gt;         8080:32664/TCP    59s</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_access_jenkins_dashboard"><a class="anchor" href="#_access_jenkins_dashboard"></a>Access Jenkins dashboard</h3>
+<div class="paragraph">
+<p>So now we have created a deployment and service, how do we access Jenkins?</p>
+</div>
+<div class="paragraph">
+<p>From the output above we can see that the service has been exposed on port 32664.
+We also know that because the service is of type NodeType the service will route
+requests made to any node on this port to the Jenkins pod.
+All that’s left for us is to determine the IP address of the minikube VM.
+Minikube have made this really simple by including a specific command that outputs
+the IP address of the running cluster:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">minikube ip
+192.168.99.100</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now we can access the Jenkins instance at <a href="http://192.168.99.100:32664/" class="bare">http://192.168.99.100:32664/</a></p>
+</div>
+<div class="paragraph">
+<p>To access Jenkins, you initially need to enter your credentials.
+The default username for new installations is admin.
+The password can be obtained in several ways.
+This example uses the Jenkins deployment pod name.</p>
+</div>
+<div class="paragraph">
+<p>To find the name of the pod, enter the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl get pods -n jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once you locate the name of the pod, use it to access the pod’s logs.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl logs &lt;pod_name&gt; -n jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The password is at the end of the log formatted as a long alphanumeric string:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">*************************************************************
+*************************************************************
+*************************************************************
+
+Jenkins initial setup is required.
+An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+94b73ef6578c4b4692a157f768b2cfef
+
+This may also be found at:
+/var/jenkins_home/secrets/initialAdminPassword
+
+*************************************************************
+*************************************************************
+*************************************************************</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You have successfully installed Jenkins on your Kubernetes cluster and can use it to create new and efficient development pipelines.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_jenkins_with_jenkins_operator"><a class="anchor" href="#_install_jenkins_with_jenkins_operator"></a>Install Jenkins with Jenkins Operator</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="https://jenkinsci.github.io/kubernetes-operator/docs/">Jenkins Operator</a> is a Kubernetes native Operator which manages operations
+for Jenkins on Kubernetes.</p>
+</div>
+<div class="paragraph">
+<p>It was built with immutability and declarative configuration as code in mind, to automate many of the manual tasks required
+to deploy and run Jenkins on Kubernetes.</p>
+</div>
+<div class="paragraph">
+<p>Jenkins Operator is easy to install with applying just a few yaml manifests or with the use of Helm.</p>
+</div>
+<div class="paragraph">
+<p>For instructions on installing Jenkins Operator on your Kubernetes cluster and deploying and configuring Jenkins there,
+see <a href="https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/latest/">official documentation of Jenkins Operator</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="setup-wizard"><a class="anchor" href="#setup-wizard"></a>Post-installation setup wizard</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After downloading, installing and running Jenkins using one of the procedures
+above (except for installation with Jenkins Operator), the post-installation setup wizard begins.</p>
+</div>
+<div class="paragraph">
+<p>This setup wizard takes you through a few quick "one-off" steps to unlock
+Jenkins, customize it with plugins and create the first administrator user
+through which you can continue accessing Jenkins.</p>
+</div>
+<div class="sect2">
+<h3 id="_unlocking_jenkins"><a class="anchor" href="#_unlocking_jenkins"></a>Unlocking Jenkins</h3>
+<div class="paragraph">
+<p>When you first access a new Jenkins instance, you are asked to unlock it using
+an automatically-generated password.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Browse to <code>http://localhost:8080</code> (or whichever port you configured for
+Jenkins when installing it) and wait until the <strong>Unlock Jenkins</strong> page appears.</p>
+<div class="paragraph boxshadow">
+<p><span class="image unresolved"><img src="tutorials/setup-jenkins-01-unlock-jenkins-page.jpg" alt="Unlock Jenkins page" width="80%"></span></p>
+</div>
+</li>
+<li>
+<p>From the Jenkins console log output, copy the automatically-generated
+alphanumeric password (between the 2 sets of asterisks).</p>
+<div class="paragraph boxshadow">
+<p><span class="image unresolved"><img src="tutorials/setup-jenkins-02-copying-initial-admin-password.png" alt="Copying initial admin password" width="80%"></span><br>
+  <strong>Note:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The command: <code>sudo cat /var/lib/jenkins/secrets/initialAdminPassword</code> will print the password at console.<br></p>
+</li>
+<li>
+<p>If you are running Jenkins in Docker using the official <code>jenkins/jenkins</code> image you can use <code>sudo docker exec ${CONTAINER_ID or CONTAINER_NAME} cat /var/jenkins_home/secrets/initialAdminPassword</code> to print the password in the console without having to exec into the container.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>On the <strong>Unlock Jenkins</strong> page, paste this password into the <strong>Administrator
+password</strong> field and click <strong>Continue</strong>.<br>
+<strong>Note:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The Jenkins console log indicates the location (in the Jenkins home directory)
+where this password can also be obtained. This password must be entered in the
+setup wizard on new Jenkins installations before you can access Jenkins&#8217;s main
+UI. This password also serves as the default administrator account&#8217;s password
+(with username "admin") if you happen to skip the subsequent user-creation
+step in the setup wizard.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_customizing_jenkins_with_plugins"><a class="anchor" href="#_customizing_jenkins_with_plugins"></a>Customizing Jenkins with plugins</h3>
+<div class="paragraph">
+<p>After <a href="#unlocking-jenkins">unlocking Jenkins</a>, the <strong>Customize Jenkins</strong> page
+appears. Here you can install any number of useful plugins as part of your
+initial setup.</p>
+</div>
+<div class="paragraph">
+<p>Click one of the two options shown:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Install suggested plugins</strong> - to install the recommended set of plugins, which
+are based on most common use cases.</p>
+</li>
+<li>
+<p><strong>Select plugins to install</strong> - to choose which set of plugins to initially
+install. When you first access the plugin selection page, the suggested
+plugins are selected by default.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you are not sure what plugins you need, choose <strong>Install suggested
+plugins</strong>.
+You can install (or remove) additional Jenkins plugins at a later point in time
+via the
+<a href="../managing/index.html" class="xref page"><strong>Manage Jenkins</strong></a> &gt;
+<a href="../managing/plugins.html" class="xref page"><strong>Plugins</strong></a> page in Jenkins.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The setup wizard shows the progression of Jenkins being configured and your
+chosen set of Jenkins plugins being installed. This process may take a few
+minutes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_creating_the_first_administrator_user"><a class="anchor" href="#_creating_the_first_administrator_user"></a>Creating the first administrator user</h3>
+<div class="paragraph">
+<p>Finally, after <a href="#customizing-jenkins-with-plugins">customizing Jenkins with
+plugins</a>, Jenkins asks you to create your first administrator user.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>When the <strong>Create First Admin User</strong> page appears, specify the details for your
+administrator user in the respective fields and click <strong>Save and Finish</strong>.</p>
+</li>
+<li>
+<p>When the <strong>Jenkins is ready</strong> page appears, click <strong>Start using Jenkins</strong>.<br>
+<strong>Notes:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>This page may indicate <strong>Jenkins is almost ready!</strong> instead and if so, click
+<strong>Restart</strong>.</p>
+</li>
+<li>
+<p>If the page does not automatically refresh after a minute, use your web
+browser to refresh the page manually.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If required, log in to Jenkins with the credentials of the user you just
+created and you are ready to start using Jenkins!</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion"><a class="anchor" href="#_conclusion"></a>Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you host Jenkins on Kubernetes for production workloads, you need to consider setting up a highly available persistent volume, to avoid data loss during pod or node deletion.</p>
+</div>
+<div class="paragraph">
+<p>A pod or node deletion could happen anytime in Kubernetes environments.
+It could be a patching activity or a downscaling activity.</p>
+</div>
+<div class="paragraph">
+<p>Hopefully, this step-by-step guide helps you learn and understand the components involved in setting up a Jenkins server on a Kubernetes cluster.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="initial-settings.html">Initial Settings</a></span>
+  <span class="next"><a href="linux.html">Linux</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

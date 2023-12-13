@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins and Ruby :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/solutions/2.426.1/ruby.html">
+    <link rel="prev" href="python.html">
+    <link rel="next" href="pipeline.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+<link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="solutions" data-version="2.426.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Jenkins Solutions Page</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="android.html">Jenkins and Android</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="php.html">Jenkins and PHP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="docker.html">Using Docker with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="python.html">"Jenkins and Python"</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="ruby.html">Jenkins and Ruby</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipeline.html">Pipeline as Code with Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="github.html">Jenkins with GitHub</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="embedded.html">Jenkins in the Embedded World</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bitbucketserver.html">Bitbucket Server</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="c.html">Jenkins and C/C++</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../user-docs/2.426.1/platform-information/support-policy-java.html">Java Support Policy</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Solutions Page</span>
+    <span class="version">2.426.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorial/2.426.1/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorial/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.426.1/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.426.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Jenkins Solutions Page</a></li>
+    <li><a href="ruby.html">Jenkins and Ruby</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/solutions/modules/ROOT/pages/ruby.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins and Ruby</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins integrates well with the Ruby toolchain for common tasks that many Ruby
+developers are already running locally. Tasks such as executing
+<a href="https://rspec.info/">RSpec</a> or <a href="https://cucumber.io/">Cucumber</a>,
+generating documentation, running code analysis tools and deploying Ruby
+software can all be done through Jenkins.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_integrating_test_results"><a class="anchor" href="#_integrating_test_results"></a>Integrating test results</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Many tools, like Cucumber, can natively output JUnit-formatted XML which
+integrates by default into Jenkins via the "Publish JUnit test result report"
+Post-build Action. For tools which do not generate the appropriately
+formatted XML by default, there are gems which add the necessary formatters,
+such as <a href="https://github.com/ci-reporter/ci_reporter">ci_reporter</a>.</p>
+</div>
+<div class="imageblock unresolved center">
+<div class="content">
+<img src="images:ROOT:solution-images:junit-rspec-postbuild-action.png" alt="Configured JUnit post-build action">
+</div>
+</div>
+<div class="paragraph">
+<p>By integrating the test reports into Jenkins, you can generate trends and
+reports. There are other plugins, such as the
+<a href="https://plugins.jenkins.io/email-ext">Email Ext plugin</a>
+which can also make use of these machine-readable test reports to send
+email notifications with only the failing test cases listed.</p>
+</div>
+<div class="imageblock unresolved center">
+<div class="content">
+<img src="images:ROOT:solution-images:junit-rspec-trend.png" alt="Trending RSpec test reports">
+</div>
+</div>
+<div class="paragraph">
+<p>Using plugins such as the <a href="https://plugins.jenkins.io/cucumber-testresult-plugin">Cucumber Test Result plugin</a>
+improve the integration and discoverability of successful/unsuccessful
+Cucumber scenarios.</p>
+</div>
+<div class="paragraph">
+<p>By integrating these tools into Jenkins, team members no longer need to
+attempt to parse thousands of lines of console output, but instead can more
+easily find the important information about a build.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_presentations"><a class="anchor" href="#_presentations"></a>Presentations</h2>
+<div class="sectionbody">
+<center>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/AewrLMZMPnLlSj"
+  width="595" height="485" frameborder="0" marginwidth="0" marginheight="0"
+  scrolling="no">
+</iframe>
+</center>
+<div class="paragraph">
+<p><strong><a href="https://www.slideshare.net/cowboyd/ruby-ci-withjenkins">Ruby CI with Jenkins</a></strong>
+from <a href="https://github.com/cowboyd">cowboyd</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_other_presentations"><a class="anchor" href="#_other_presentations"></a>Other presentations</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="_attachments/Jenkins-hearts-Ruby.pdf" class="xref attachment">Jenkins ♥ Ruby</a> (<code>.pdf</code>) an introduction to
+integrating Jenkins with Ruby projects by <a href="https://github.com/rtyler">R. Tyler Croy</a></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Jenkins ♥ Ruby Articles</div>
+<div class="paragraph">
+<p><a href="http://thediscoblog.com/blog/2014/01/24/continuous-delivery-for-heroku-with-jenkins/">Continuous Delivery for Heroku With Jenkins</a></p>
+</div>
+<div class="paragraph">
+<p>thediscoblog.com</p>
+</div>
+<div class="paragraph">
+<p><a href="https://atomic-penguin.github.io/blog/2014/04/29/stupid-jenkins-and-chef-tricks-part-1-rubocop/">Integrating Rubocop into Jenkins</a></p>
+</div>
+<div class="paragraph">
+<p>atomic-penguin.github.io</p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.cryptocracy.com/blog/2014/01/03/cooking-with-jenkins-test-kitchen-and-docker/">Cooking with Jenkins, Test Kitchen and Docker</a></p>
+</div>
+<div class="paragraph">
+<p>www.cryptocracy.com</p>
+</div>
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Ruby plugins for Jenkins</div>
+<div class="paragraph">
+<p><a href="https://plugins.jenkins.io/junit">JUnit plugin</a></p>
+</div>
+<div class="paragraph">
+<p>publishes XML formatted test reports (generated by tools like ci_reporter, cucumber) for trending and analysis</p>
+</div>
+<div class="paragraph">
+<p><a href="https://plugins.jenkins.io/brakeman">Brakeman plugin</a></p>
+</div>
+<div class="paragraph">
+<p>incorporates the output from the Brakeman security scanner for Rails projects</p>
+</div>
+<div class="paragraph">
+<p><a href="https://plugins.jenkins.io/rake">Rake plugin</a></p>
+</div>
+<div class="paragraph">
+<p>adds Rake invocation as a build step</p>
+</div>
+<div class="paragraph">
+<p><a href="https://plugins.jenkins.io/rubymetrics">RubyMetrics plugin</a></p>
+</div>
+<div class="paragraph">
+<p>reports for Jenkins. Rcov, Rails stats, Rails notes and Flog.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://plugins.jenkins.io/rubymotion">RubyMotion plugin</a></p>
+</div>
+<div class="paragraph">
+<p>build RubyMotion projects from within Jenkins</p>
+</div>
+<div class="paragraph">
+<p><a href="https://plugins.jenkins.io/cucumber-test-result">Cucumber Test Result plugin</a></p>
+</div>
+<div class="paragraph">
+<p>integrate and report from Cucumber executions</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="python.html">"Jenkins and Python"</a></span>
+  <span class="next"><a href="pipeline.html">Pipeline as Code with Jenkins</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

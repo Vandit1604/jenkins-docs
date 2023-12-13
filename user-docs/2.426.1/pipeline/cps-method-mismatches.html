@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pipeline CPS Method Mismatches :: Jenkins</title>
+    <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.426.1/pipeline/cps-method-mismatches.html">
+    <link rel="prev" href="scaling-pipeline.html">
+    <link rel="next" href="../blueocean/index.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+<link rel="icon" href="../../../_/jenkins.svg" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="user-docs" data-version="2.426.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins User Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../platform-information/index.html">Platform Information</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/upgrade-java-to-11.html">Upgrading to Java 11</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-linux.html">Linux Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-web-browsers.html">Browser compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-java.html">Java Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-servlet-containers.html">Servlet Container Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/upgrade-java-to-17.html">Upgrading to Java 17</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-credentials.html">Using credentials</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/searchbox.html">Using Search Box</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/referencing-another-project-by-name.html">Referencing another project by name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/aborting-a-build.html">Aborting a build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/fingerprints.html">Fingerprints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-local-language.html">Using local language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/change-time-zone.html">Change time zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/remote-access-api.html">Remote Access API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/executor-starvation.html">Executor Starvation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-agents.html">Using Jenkins agents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Pipeline</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started with the Guided Tour</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="jenkinsfile.html">Using a Jenkinsfile</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="running-pipelines.html">Running a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="multibranch.html">Branches and Pull Requests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="docker.html">Using Docker with pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shared-libraries.html">Extending with Shared Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="development.html">Pipeline Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="syntax.html">Pipeline syntax</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipeline-best-practices.html">Pipeline Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scaling-pipeline.html">Scaling Pipelines</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="cps-method-mismatches.html">Pipeline CPS Method Mismatches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with the Guided Tour</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/dashboard.html">Dashboard</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/activity.html">Activity View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-run-details.html">Pipeline Run Details View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-editor.html">Pipeline Editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../managing/index.html">Managing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-configuration.html">Configuring the System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/casc.html">Configuration as Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/tools.html">Managing Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/about-jenkins.html">About Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-info.html">System Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/cli.html">Jenkins CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-console.html">Script Console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/groovy-hook-scripts.html">Groovy Hook Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/nodes.html">Managing Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-approval.html">In-process Script Approval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/ui-themes.html">Themes for user interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/user-content.html">User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/spawning-processes.html">Spawning Processes From Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Securing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/access-control.html">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-jenkins.html">Securing Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/managing-security.html">Managing Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/controller-isolation.html">Controller Isolation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-builds.html">Securing Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/csrf-protection.html">CSRF Protection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/user-content.html">Rendering User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/build-authorization.html">Access Control for Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/environment-variables.html">Handling Environment Variables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/markup-formatter.html">Markup Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/services.html">Exposed Services and Ports</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/index.html">System Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/backing-up.html">Backing-up/Restoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/monitoring.html">Monitoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/administering-jenkins-on-kubernetes.html">Administering Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-chef.html">Managing Jenkins with Chef</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-puppet.html">Managing Jenkins with Puppet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/viewing-logs.html">Viewing logs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/authenticating-scripted-clients.html">Authenticating scripted clients</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/index.html">Reverse proxy configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-haproxy.html">Reverse proxy - HAProxy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-squid.html">Reverse proxy - Squid</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iis.html">Reverse proxy - IIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iptables.html">Reverse proxy - iptables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-troubleshooting.adoc">reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-troubleshooting.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../scaling/index.html">Scaling Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-scale.html">Architecting for Scale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/hardware-recommendations.html">Hardware Recommendations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-manageability.html">Architecting for Manageability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../troubleshooting/index.html">Troubleshooting Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/diagnosing-errors.html">Diagnosing Errors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/obtaining-a-thread-dump.html">Obtaining a thread dump</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary/index.html">Glossary</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins User Documentation</span>
+    <span class="version">2.426.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../Jenkins%20Project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.426.1/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorial/2.426.1/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorial/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins User Documentation</a></li>
+    <li><a href="index.html">Pipeline</a></li>
+    <li><a href="cps-method-mismatches.html">Pipeline CPS Method Mismatches</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/user-docs/modules/pipeline/pages/cps-method-mismatches.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Pipeline CPS Method Mismatches</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins Pipeline uses a library called Groovy CPS to run Pipeline scripts.
+While Pipeline uses the Groovy parser and compiler, unlike a regular Groovy environment it runs most of the program inside a special interpreter.
+This uses a continuation-passing style (CPS) transform to turn your code into a version that can save its current state to disk (a file called <code>program.dat</code>  inside your build directory) and continue running even after Jenkins has restarted.
+(You can get some more technical background on the https://plugins.jenkins.io/workflow-cps[Pipeline: Groovy plugin page] and the https://github.com/cloudbees/groovy-cps/blob/master/README.md[library page].)</p>
+</div>
+<div class="paragraph">
+<p>While the CPS transform is usually transparent to users, there are limitations to what Groovy language constructs can be supported, and in some circumstances it can lead to counterintuitive behavior.
+<a href="https://issues.jenkins.io/browse/JENKINS-31314">JENKINS-31314</a> makes the runtime try to detect the most common mistake: calling CPS-transformed code from non-CPS-transformed code.
+The following kinds of things are CPS-transformed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Almost all of the Pipeline script you write (including in libraries)</p>
+</li>
+<li>
+<p>Most Pipeline steps, including all those which take a block</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following kinds of things are <em>not</em> CPS-transformed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Compiled Java bytecode, including</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the Java Platform</p>
+</li>
+<li>
+<p>Jenkins core and plugins</p>
+</li>
+<li>
+<p>the runtime for the Groovy language</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Constructor bodies in your Pipeline script</p>
+</li>
+<li>
+<p>Any method in your Pipeline script marked with the <code>@NonCPS</code> annotation</p>
+</li>
+<li>
+<p>A few Pipeline steps which take no block and act instantaneously, such as <code>echo</code> or <code>properties</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>CPS-transformed code may call non-CPS-transformed code or other CPS-transformed code, and non-CPS-transformed code may call other non-CPS-transformed code, but non-CPS-transformed code <strong>may not</strong> call CPS-transformed code.
+If you try to call CPS-transformed code from non-CPS-transformed code, the CPS interpreter is unable to operate correctly, resulting in incorrect and often confusing results.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_common_problems_and_solutions"><a class="anchor" href="#_common_problems_and_solutions"></a>Common problems and solutions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_use_of_pipeline_steps_fromnoncps"><a class="anchor" href="#_use_of_pipeline_steps_fromnoncps"></a>Use of Pipeline steps from <code>@NonCPS</code></h3>
+<div class="paragraph">
+<p>Sometimes users will apply the <code>@NonCPS</code>  annotation to a method definition in order to bypass the CPS transform inside that method.
+This can be done to work around limitations in Groovy language coverage (since the body of the method will execute using the native Groovy semantics), or to get better performance (the interpreter imposes a substantial overhead).
+However, such methods must not call CPS-transformed code such as Pipeline steps.
+For example, the following will not work:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">@NonCPS
+def compileOnPlatforms() {
+  ['linux', 'windows'].each { arch -&gt;
+    node(arch) {
+      sh 'make'
+    }
+  }
+}
+compileOnPlatforms()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Using the <code>node</code>  or <code>sh</code>  steps from this method is illegal, and the behavior will be anomalous.
+The warning in the logs from running this script looks like this:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>expected to call WorkflowScript.compileOnPlatforms but wound up catching node</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>To fix this case, simply remove the annotation — it was not needed.
+(Longtime Pipeline users might have thought it was, prior to the fix of https://issues.jenkins.io/browse/JENKINS-26481[JENKINS-26481].)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_calling_non_cps_transformed_methods_with_cps_transformed_arguments"><a class="anchor" href="#_calling_non_cps_transformed_methods_with_cps_transformed_arguments"></a>Calling non-CPS-transformed methods with CPS-transformed arguments</h3>
+<div class="paragraph">
+<p>Some Groovy and Java methods take complex types as parameters to support dynamic behavior.
+A common case is sorting methods that allow callers to specify a method to use for comparing objects (<a href="https://issues.jenkins.io/browse/JENKINS-44924">JENKINS-44924</a>).
+Many similar methods in the Groovy standard library work correctly after the fix for https://issues.jenkins.io/browse/JENKINS-26481[JENKINS-26481], but some methods remain unfixed.
+For example, the following will not work:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">def sortByLength(List&lt;String&gt; list) {
+  list.toSorted { a, b -&gt; Integer.valueOf(a.length()).compareTo(b.length()) }
+}
+def sorted = sortByLength(['333', '1', '4444', '22'])
+echo(sorted.toString())</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The closure passed to <code>Iterable.toSorted</code> is CPS-transformed, but <code>Iterable.toSorted</code> itself is not CPS-transformed internally, so this will not work as intended.
+The current behavior is that the return value of the call to <code>toSorted</code> will be the return value of the first call to the closure.
+In the example, this results in <code>sorted</code> being set to <code>-1</code>, and the warning in the logs looks like this:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>expected to call java.util.ArrayList.toSorted but wound up catching org.jenkinsci.plugins.workflow.cps.CpsClosure2.call</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>To fix this case, any argument passed to these methods must not be CPS-transformed.
+This can be accomplished by encapsulating the problematic method (<code>Iterable.toSorted</code> in the example) inside another method, and annotating the outer method with <code>@NonCPS</code>, or by creating an explicit class definition for the closure and annotating all methods on that class with <code>@NonCPS</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_constructors"><a class="anchor" href="#_constructors"></a>Constructors</h3>
+<div class="paragraph">
+<p>Occasionally, users may attempt to use CPS-transformed code such as Pipeline steps inside of a constructor in a Pipeline script.
+Unfortunately, the construction of objects via the <code>new</code> operator in Groovy is not something that can be CPS-transformed (<a href="https://issues.jenkins.io/browse/JENKINS-26313">JENKINS-26313</a>), and so this will not work.
+Here is an example that calls a CPS-transformed method in a constructor:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">class Test {
+  def x
+  public Test() {
+    setX()
+  }
+  private void setX() {
+    this.x = 1;
+  }
+}
+def x = new Test().x
+echo "${x}"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The construction of <code>Test</code> will fail when the constructor calls <code>Test.setX</code> because <code>setX</code> is a CPS-transformed method.
+The warning in the logs from running this script looks like this:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>expected to call Test.&lt;init&gt; but wound up catching Test.setX</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>To fix this case, ensure that any methods defined in a Pipeline script that are called from inside of a constructor are annotated with <code>@NonCPS</code> and that constructors do not call any Pipeline steps.
+If you must call CPS-transformed code such a Pipeline steps from the constructor, you need move the logic related to the CPS-transformed methods out of the constructor, for example into a static factory method that calls the CPS-transformed code and then passes the results to the constructor.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_overrides_of_non_cps_transformed_methods"><a class="anchor" href="#_overrides_of_non_cps_transformed_methods"></a>Overrides of non-CPS-transformed methods</h3>
+<div class="paragraph">
+<p>Users may create a class in a Pipeline Script that extends a preexisting class defined outside of the Pipeline script, for example from the Java or Groovy standard libraries.
+When doing so, the subclass must ensure that any overriding methods are annotated with <code>@NonCPS</code> and do not use any CPS-transformed code internally.
+Otherwise, the overriding methods will fail if called from a non-CPS context.
+For example, the following will not work:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">class Test {
+  @Override
+  public String toString() {
+    return "Test"
+  }
+}
+def builder = new StringBuilder()
+builder.append(new Test())
+echo(builder.toString())</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Calling the CPS-transformed override of <code>toString</code> from non-CPS-transformed code such as <code>StringBuilder.append</code> is not permitted and will not work as expected in most cases.
+The warning in the logs from running this script looks like this:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>expected to call java.lang.StringBuilder.append but wound up catching Test.toString</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>To fix this case, add the <code>@NonCPS</code> annotation to the overriding method, and remove any uses of CPS-transformed code such as Pipeline steps from the method.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="PipelineCPSmethodmismatches-ClosuresinsideGString"><a class="anchor" href="#PipelineCPSmethodmismatches-ClosuresinsideGString"></a>Closures inside <code>GString</code></h3>
+<div class="paragraph">
+<p>In Groovy, it is possible to use a closure in a <code>GString</code> so that the closure is evaluated every time the <code>GString</code> is used as a <code>String</code>.
+However, in Pipeline scripts, this will not work as expected, because the closure inside of the GString will be CPS-transformed.
+Here is an example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">def x = 1
+def s = "x = ${-&gt; x}"
+x = 2
+echo(s)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Using a closure inside of a <code>GString</code>  as in this example will not work.
+The warning from the logs when running this script looks like this:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>expected to call WorkflowScript.echo but wound up catching org.jenkinsci.plugins.workflow.cps.CpsClosure2.call</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>To fix this case, replace the original GString with a closure that returns a GString that uses a normal expression rather than a closure, and then call the closure where you would have used the original <code>GString</code> as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">def x = 1
+def s = { -&gt; x = "${x}" }
+x = 2
+echo(s())</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_false_positives"><a class="anchor" href="#_false_positives"></a>False Positives</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Unfortunately, some expressions may incorrectly trigger this warning even though they execute correctly.
+If you run into such a case, please <a href="/participate/report-issue/redirect/#21713">file a new issue</a> (after first checking for duplicates) for <code>workflow-cps-plugin</code>.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="scaling-pipeline.html">Scaling Pipelines</a></span>
+  <span class="next"><a href="../blueocean/index.html">Blue Ocean</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

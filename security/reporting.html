@@ -170,10 +170,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../solutions/2.401.3/index.html">Jenkins Solutions Page</a>
+      <a class="title" href="../solutions/2.426.1/index.html">Jenkins Solutions Page</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../solutions/2.401.3/index.html">2.401.3</a>
+          <a href="../solutions/2.426.1/index.html">2.426.1</a>
         </li>
       </ul>
     </li>
@@ -186,18 +186,18 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../tutorial/2.401.3/index.html">Jenkins Tutorials</a>
+      <a class="title" href="../tutorial/2.426.1/index.html">Jenkins Tutorials</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../tutorial/2.401.3/index.html">2.401.3</a>
+          <a href="../tutorial/2.426.1/index.html">2.426.1</a>
         </li>
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../user-docs/2.401.3/index.html">Jenkins User Documentation</a>
+      <a class="title" href="../user-docs/2.426.1/index.html">Jenkins User Documentation</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../user-docs/2.401.3/index.html">2.401.3</a>
+          <a href="../user-docs/2.426.1/index.html">2.426.1</a>
         </li>
       </ul>
     </li>
@@ -209,7 +209,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../user-docs/2.401.3/index.html" class="home-link"></a>
+  <a href="../user-docs/2.426.1/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Jenkins Security Advisories</a></li>
@@ -225,6 +225,20 @@
 </aside>
 <article class="doc">
 <h1 class="page">"Reporting Security Vulnerabilities"</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 <div class="sect1">
 <h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
@@ -305,7 +319,7 @@ When in doubt, we recommend you report issues to us as described above, and let 
 <ul>
 <li>
 <p>Vulnerabilities only exploitable by users with Overall/Administer permission will generally not be considered to be vulnerabilities.
-Administrators in Jenkins can use the <a href="../user-docs/2.401.3/managing/script-console.html" class="xref page">Script Console</a> and install plugins.
+Administrators in Jenkins can use the <a href="../user-docs/2.426.1/managing/script-console.html" class="xref page">Script Console</a> and install plugins.
 These tools let them run arbitrary code and change the behavior of Jenkins in multiple ways, so that very few, if any, vulnerabilities will let them do something novel.
 We still recommend reporting such vulnerabilities in private so that they can be reviewed by the security team, in case the vulnerable code is also used for features accessible by regular users.</p>
 </li>
@@ -330,7 +344,7 @@ This is a feature.</p>
 </li>
 <li>
 <p>Jobs started by a specific user can run on agents where the user lacks Agent/Build permission and can themselves trigger builds of jobs where the user lacks Job/Build permission.
-<a href="../user-docs/2.401.3/security/build-authorization.html" class="xref page">See the documentation on Access Control for Builds</a>.</p>
+<a href="../user-docs/2.426.1/security/build-authorization.html" class="xref page">See the documentation on Access Control for Builds</a>.</p>
 </li>
 <li>
 <p>Ability for unauthenticated users to trigger SCM polling via webhooks without directly initiating a build or other resource-intensive computations.</p>
