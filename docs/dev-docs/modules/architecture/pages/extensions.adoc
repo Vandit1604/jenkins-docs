@@ -1,5 +1,5 @@
 = Extensions
-:page-layout:wip
+:page-layout: wip
 
 Jenkins defines extension points, which are interfaces or abstract classes that model an aspect of its behavior.
 The interface or class defines contracts of what needs implementation, and Jenkins allows plugins to contribute those implementations.

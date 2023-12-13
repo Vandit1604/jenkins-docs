@@ -1,5 +1,5 @@
+:page-layout: wip
 = FIPS -140 for developers
-:page-layout:wip
 
 In order for the code in Jenkins and plugins to be compliant with FIPS-140, sensitive information needs to be handled correctly.
 This document provides a non-exhaustive cheat sheet that can guide developers to write code that is FIPS-140 compliant.

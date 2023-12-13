@@ -29,7 +29,7 @@ npm --version
 - Run the following command to install Antora globally:
 
 ```bash
-npm install -g @antora/cli@3.0 @antora/site-generator-default@3.0
+npm install -g @antora/cli@3.0 @antora/site-generator-default@3.1.5
 ```
 
 - Verify the installation by running the following command:
