@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Reverse proxy - Nginx :: Jenkins</title>
+    <title>Untitled :: Jenkins</title>
     <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.426.1/system-administration/reverse-proxy-configuration-nginx.html">
     <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -335,7 +335,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-troubleshooting.adoc">reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-troubleshooting.adoc</a>
+    <a class="nav-link" href="reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="systemd-services.html">Managing systemd services</a>
@@ -510,10 +510,6 @@
 <button class="nav-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">Jenkins User Documentation</a></li>
-    <li><a href="reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a></li>
-  </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/user-docs/modules/system-administration/pages/reverse-proxy-configuration-nginx.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
   </div>
@@ -522,7 +518,6 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Reverse proxy - Nginx</h1>
 <div class="admonitionblock note">
     <table>
         <tbody>
@@ -537,184 +532,11 @@
         </tbody>
     </table>
 </div>
-<div id="preamble">
-<div class="sectionbody">
+<hr>
 <div class="paragraph">
-<p>In situations where you have existing web sites on your server, you may
-find it useful to run Jenkins (or the servlet container that Jenkins
-runs in) behind <a href="https://nginx.org/">Nginx</a>, so that you can bind Jenkins
-to the part of a bigger website that you may have.
-This section discusses some of the approaches for doing this.</p>
-</div>
-<div class="paragraph">
-<p>When a request arrives for certain URLs, Nginx becomes a proxy and forwards that request to Jenkins, then it forwards the response back to the client.</p>
-</div>
-<div class="paragraph">
-<p>This 9 minute video tutorial from Darin Pope configures Nginx as a reverse proxy.</p>
-</div>
-<div class="videoblock">
-<div class="title">Configuring Nginx as a reverse proxy</div>
-<div class="content">
-<iframe width="640" height="360" src="https://www.youtube.com/embed/yixMeJGtLFk?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-</div>
-<div class="paragraph">
-<p>The Nginx configuration fragment below provides an example Nginx reverse proxy configuration.
-It assumes the Jenkins controller and the Nginx reverse proxy are running on the same computer.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">upstream jenkins {
-  keepalive 32; # keepalive connections
-  server 127.0.0.1:8080; # jenkins ip and port
-}
-
-# Required for Jenkins websocket agents
-map $http_upgrade $connection_upgrade {
-  default upgrade;
-  '' close;
-}
-
-server {
-  listen          80;       # Listen on port 80 for IPv4 requests
-
-  server_name     jenkins.example.com;  # replace 'jenkins.example.com' with your server domain name
-
-  # this is the jenkins web root directory
-  # (mentioned in the output of "systemctl cat jenkins")
-  root            /var/run/jenkins/war/;
-
-  access_log      /var/log/nginx/jenkins.access.log;
-  error_log       /var/log/nginx/jenkins.error.log;
-
-  # pass through headers from Jenkins that Nginx considers invalid
-  ignore_invalid_headers off;
-
-  location ~ "^/static/[0-9a-fA-F]{8}\/(.*)$" {
-    # rewrite all static files into requests to the root
-    # E.g /static/12345678/css/something.css will become /css/something.css
-    rewrite "^/static/[0-9a-fA-F]{8}\/(.*)" /$1 last;
-  }
-
-  location /userContent {
-    # have nginx handle all the static requests to userContent folder
-    # note : This is the $JENKINS_HOME dir
-    root /var/lib/jenkins/;
-    if (!-f $request_filename){
-      # this file does not exist, might be a directory or a /**view** url
-      rewrite (.*) /$1 last;
-      break;
-    }
-    sendfile on;
-  }
-
-  location / {
-      sendfile off;
-      proxy_pass         http://jenkins;
-      proxy_redirect     default;
-      proxy_http_version 1.1;
-
-      # Required for Jenkins websocket agents
-      proxy_set_header   Connection        $connection_upgrade;
-      proxy_set_header   Upgrade           $http_upgrade;
-
-      proxy_set_header   Host              $http_host;
-      proxy_set_header   X-Real-IP         $remote_addr;
-      proxy_set_header   X-Forwarded-For   $proxy_add_x_forwarded_for;
-      proxy_set_header   X-Forwarded-Proto $scheme;
-      proxy_max_temp_file_size 0;
-
-      #this is the maximum upload size
-      client_max_body_size       10m;
-      client_body_buffer_size    128k;
-
-      proxy_connect_timeout      90;
-      proxy_send_timeout         90;
-      proxy_read_timeout         90;
-      proxy_request_buffering    off; # Required for HTTP CLI commands
-  }
-
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This assumes that you run Jenkins on port 8080.
-Remember to create the folder /var/log/nginx/jenkins.</p>
-</div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/system-administration/pages/reverse-proxy-configuration-nginx.adoc - include::doc/book/system-administration/reverse-proxy-configuration-with-jenkins/_context_path.adoc[]</p>
-</div>
-<div class="paragraph">
-<p>If you are having problems with some paths (eg folders) with <strong>Blue
-Ocean</strong>, you may need to add the following snippet to your proxy
-configuration:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">if ($request_uri ~* "/blue(/.*)") {
-    proxy_pass http://YOUR_SERVER_IP:YOUR_JENKINS_PORT/blue$1;
-    break;
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_permissions"><a class="anchor" href="#_permissions"></a>Permissions</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To give Nginx permission to read Jenkins web root folder, add the <code>nginx</code> user to
-the Jenkins group:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">usermod -aG jenkins nginx</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If the last command failed because the <code>nginx</code> user is not defined in the system,
-then you can try adding the <code>www-data</code> user to the Jenkins group:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">usermod -aG jenkins www-data</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If you are experiencing timeouts when attempting to run long CLI
-commands through a proxy in Jenkins, you can increase the
-<code>proxy_read_timeout</code> setting as necessary.
-Older versions of Jenkins may not respect the <code>proxy_read_timeout</code> setting.</p>
-</div>
-<div class="paragraph">
-<p>If you are experiencing the following error when attempting to run long
-CLI commands in Jenkins and Jenkins is running behind Nginx, it
-is probably due to Nginx timing out the CLI connection.
-You can increase the <code>proxy_read_timeout</code> setting as necessary so the command will
-complete successfully.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">WARNING: null
-hudson.cli.DiagnosedStreamCorruptionException
-Read back: 0x00 0x00 0x00 0x1e 0x07
-           'Started reverse-proxy-test #68'
-           0x00 0x00 0x00 0x01 0x07 0x0a
-Read ahead:
-Diagnosis problem:
-    java.io.IOException: Premature EOF
-        at sun.net.www.http.ChunkedInputStream.readAheadBlocking(ChunkedInputStream.java:565)
-        ...
-    at hudson.cli.FlightRecorderInputStream.analyzeCrash(FlightRecorderInputStream.java:82)
-    at hudson.cli.PlainCLIProtocol$EitherSide$Reader.run(PlainCLIProtocol.java:153)
-Caused by: java.io.IOException: Premature EOF
-    at sun.net.www.http.ChunkedInputStream.readAheadBlocking(ChunkedInputStream.java:565)
-    ...
-    at java.io.DataInputStream.readInt(DataInputStream.java:387)
-    at hudson.cli.PlainCLIProtocol$EitherSide$Reader.run(PlainCLIProtocol.java:111)</code></pre>
-</div>
-</div>
-</div>
+<p>layout: redirect
+redirect_url: /doc/book/system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-nginx/
+---</p>
 </div>
 </article>
   </div>

@@ -337,7 +337,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-troubleshooting.adoc">reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-troubleshooting.adoc</a>
+    <a class="nav-link" href="../reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../systemd-services.html">Managing systemd services</a>
@@ -562,18 +562,18 @@ Choose the technique that best meets your needs:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#mod_proxy">[mod_proxy]</a></p>
+<p><a href="#mod_proxy">mod_proxy</a></p>
 </li>
 <li>
 <p><a href="#_mod_proxy_with_https">mod_proxy with HTTPS</a></p>
 </li>
 <li>
-<p><a href="#mod_rewrite">[mod_rewrite]</a></p>
+<p><a href="#mod_rewrite">mod_rewrite</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>This 6 minute tutorial from Darin Pope configures Apache httpd on Alma Linux as a reverse proxy with <a href="#mod_proxy">[mod_proxy]</a>.</p>
+<p>This 6 minute tutorial from Darin Pope configures Apache httpd on Alma Linux as a reverse proxy with <a href="#mod_proxy">mod_proxy</a>.</p>
 </div>
 <div class="videoblock">
 <div class="title">Configure Apache HTTP server as a reverse proxy</div>
@@ -584,7 +584,7 @@ Choose the technique that best meets your needs:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_mod_proxy"><a class="anchor" href="#_mod_proxy"></a>mod_proxy</h2>
+<h2 id="mod_proxy"><a class="anchor" href="#mod_proxy"></a>mod_proxy</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="http://httpd.apache.org/docs/2.0/mod/mod_proxy.html">mod_proxy</a> works by
@@ -603,7 +603,7 @@ a2enmod headers</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>A typical set up for mod_proxy would look like this:</p>
+<p>A typical setup for mod_proxy would look like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -625,7 +625,7 @@ AllowEncodedSlashes NoDecode
 <p>This assumes that you run Jenkins on port 8081.</p>
 </div>
 <div class="paragraph">
-<p><a href="#context-path">[context-path]</a> provides more details on reverse proxy requires for the Jenkins context path.</p>
+<p><a href="#context-path">Context path</a> provides more details on reverse proxy requires for the Jenkins context path.</p>
 </div>
 <div class="paragraph">
 <p>When running on a dedicated server and you are using / as context, make
@@ -690,7 +690,7 @@ proxy-html filter to modify urls:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Instead you can use the following:</p>
+<p>Instead, you can use the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -817,7 +817,7 @@ NameVirtualHost *:443
 </div>
 </div>
 <div class="sect1">
-<h2 id="_mod_rewrite"><a class="anchor" href="#_mod_rewrite"></a>mod_rewrite</h2>
+<h2 id="mod_rewrite"><a class="anchor" href="#mod_rewrite"></a>mod_rewrite</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Apache mod_rewrite module can be used to configure an Apache reverse proxy for Jenkins.</p>
@@ -864,15 +864,42 @@ AllowEncodedSlashes NoDecode
 <p>This assumes that you run Jenkins on port 8081.
 The context path of Jenkins must be the same between Apache and Jenkins.
 Jenkins can&#8217;t run on http://example.com:8081/ci and be reverse proxied at http://example.com/jenkins .
-<a href="#context-path">[context-path]</a> provides more details on reverse proxy requires for the Jenkins context path.</p>
+<a href="#context-path">Context path</a> provides more details on reverse proxy requires for the Jenkins context path.</p>
 </div>
 <div class="paragraph">
 <p>The <em>ProxyRequests Off</em> prevents Apache from functioning as a forward
 proxy server (except for <em>ProxyPass</em>), it is advised to include it
 unless the server should function as a proxy.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="context-path"><a class="anchor" href="#context-path"></a>Context path</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Unresolved include directive in modules/system-administration/pages/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-apache.adoc - include::doc/book/system-administration/reverse-proxy-configuration-with-jenkins/_context_path.adoc[]</p>
+<p>The context path is the prefix of a URL path.
+The Jenkins controller and the reverse proxy <strong>must use the same context path</strong>.
+For example, if the Jenkins controller URL is https://www.example.com/jenkins/ then the <code>--prefix=/jenkins</code> argument must be included in the Jenkins controller command line arguments.</p>
+</div>
+<div class="paragraph">
+<p>Set the context path when using the Linux packages by running <code>systemctl edit jenkins</code> and adding the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">[Service]
+Environment="JENKINS_PREFIX=/jenkins"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set the context path on Windows controllers by including the <code>--prefix</code> command line argument in the <code>jenkins.xml</code> file in the installation directory.</p>
+</div>
+<div class="paragraph">
+<p>Ensure that Jenkins is running at the context path where your reverse proxy is serving Jenkins.
+You will have the least pain if you keep to this principle.</p>
+</div>
+<div class="paragraph">
+<p>The <code>--prefix</code> command line argument is not needed if the context path is empty.
+For example, the URL https://jenkins.example.com/ has an empty context path.</p>
 </div>
 </div>
 </div>
