@@ -7,6 +7,7 @@ all:	clean	ui	antora
 
 install:
 	npm i -g gulp
+	npm i -g http-server
 
 # Rule to build the UI before building the docs
 ui:	install
