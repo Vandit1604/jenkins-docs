@@ -85,6 +85,7 @@ Meanwhile, certain features may not work as before the upgrade.
 
 
 === Active Choices (uno-choice) Plugin
+
 *JENKINS-28732*
 
 This plugin allowed users with Job/Configure permissions to run arbitrary Groovy code inside the Jenkins JVM.
@@ -93,6 +94,7 @@ This vulnerability has been previously disclosed, and fixed in Active Choices Pl
 
 
 === Adaptive DSL Plugin
+
 *SECURITY-457*
 
 This plugin allows users with Job/Configure permissions to run arbitrary Groovy code inside the Jenkins JVM.
@@ -101,6 +103,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Application Detector Plugin
+
 *SECURITY-494*
 
 This plugin allows Jenkins administrators to run arbitrary Groovy code inside the Jenkins JVM to determine whether an application is installed.
@@ -111,6 +114,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Artifact Deployer Plugin
+
 *SECURITY-294*
 
 This plugin allows users with Job/Configure permissions to run arbitrary Groovy code inside the Jenkins JVM by configuring a Groovy script to be executed when the build is deleted (labeled _Execute a groovy script when the job is deleted_).
@@ -119,6 +123,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Build Flow Plugin
+
 *SECURITY-293*
 
 Build Flow Plugin implements a DSL for orchestrating a build pipeline.
@@ -130,6 +135,7 @@ As of publication of this advisory, there is no fix.
 
 
 === CAS Plugin
+
 *SECURITY-488*
 
 This plugin allows Jenkins administrators to run arbitrary Groovy code inside the Jenkins JVM to determine group memberships.
@@ -140,6 +146,7 @@ As of publication of this advisory, there is no fix.
 
 
 === CAS protocol version 1 Plugin
+
 *SECURITY-491*
 
 This plugin allows Jenkins administrators to run arbitrary Groovy code inside the Jenkins JVM to determine group memberships.
@@ -150,6 +157,7 @@ As of publication of this advisory, there is no fix.
 
 
 === CVS Tagging Plugin
+
 *SECURITY-459*
 
 CVS Tagging Plugin allows specifying a Groovy `GString` expression to define the tag for the build.
@@ -161,6 +169,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Dynamic Parameter Plugin
+
 *SECURITY-462*
 
 Dynamic Parameter Plugin allows users with Job/Configure permission to define scripts to be executed on the _Build With Parameters_ form to determine available parameter values.
@@ -171,6 +180,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Email Extension (email-ext) Plugin
+
 *SECURITY-257*
 
 The following features allowed users with Item/Configure permission to run arbitrary Groovy code inside the Jenkins JVM, effectively elevating privileges to Overall/Run Scripts:
@@ -212,6 +222,7 @@ To find out whether you're likely to be impacted by these changes, use link:http
 
 
 === Environment Injector (envinject) Plugin
+
 *SECURITY-256*
 
 This plugin allowed users with Job/Configure permissions to run arbitrary Groovy code inside the Jenkins JVM by configuring a Groovy script to be executed before a build starts, effectively elevating privileges to Overall/Run Scripts.
@@ -233,6 +244,7 @@ To find out whether you're likely to be impacted by these changes, use link:http
 
 
 === Extended Choice Parameter Plugin
+
 *SECURITY-187*
 
 This plugin allowed users with Job/Configure permissions to run arbitrary Groovy code inside the Jenkins JVM, effectively elevating privileges to Overall/Run Scripts.
@@ -241,6 +253,7 @@ This vulnerability has been previously disclosed, and fixed in Extended Choice P
 
 
 === Extensible Choice Parameter Plugin
+
 *SECURITY-123*
 
 This plugin allowed users with Job/Configure permissions to run arbitrary Groovy code inside the Jenkins JVM by configuring a Groovy script to be executed to determine valid parameter values, effectively elevating privileges to Overall/Run Scripts.
@@ -260,6 +273,7 @@ To find out whether you're likely to be impacted by these changes, use link:http
 
 
 === Grails Plugin
+
 *SECURITY-458*
 
 This plugin allows users with Job/Configure permissions to run arbitrary Groovy code inside the Jenkins JVM by configuring a Groovy expression for the `grails.work.dir` option in a job configuration.
@@ -268,6 +282,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Groovy Plugin
+
 *SECURITY-292*
 
 One of the Groovy Plugin's major features is the ability to run "System Groovy".
@@ -281,6 +296,7 @@ To find out whether you're likely to be impacted by these changes, use link:http
 
 
 === Groovy Label Assignment Plugin
+
 *JENKINS-27535*
 
 This plugin allowed users with Job/Configure permissions to run arbitrary Groovy code inside the Jenkins JVM, effectively elevating privileges to Overall/Run Scripts.
@@ -289,6 +305,7 @@ This vulnerability has been previously disclosed, and fixed in Groovy Label Assi
 
 
 === Groovy Postbuild Plugin
+
 *JENKINS-15212*
 
 This plugin allowed users with Job/Configure permissions to run arbitrary Groovy code inside the Jenkins JVM, effectively elevating privileges to Overall/Run Scripts.
@@ -297,6 +314,7 @@ This vulnerability has been previously disclosed, and fixed in Groovy Postbuild 
 
 
 === GroovyAxis Plugin
+
 *SECURITY-460*
 
 This plugin allows users with Job/Configure permissions to run arbitrary Groovy code inside the Jenkins JVM, effectively elevating privileges to Overall/Run Scripts.
@@ -307,6 +325,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Job DSL Plugin
+
 *SECURITY-369*
 
 This plugin allows users with Job/Configure permission to run arbitrary Groovy code inside the Jenkins JVM, effectively elevating privileges to Overall/Run Scripts.
@@ -327,6 +346,7 @@ More information:
 
 
 === Lockable Resources Plugin
+
 *SECURITY-368*
 
 Lockable Resources Plugin allows users with Job/Configure permission to define a label expression to determine the resources to use.
@@ -340,6 +360,7 @@ To find out whether you're likely to be impacted by these changes, use link:http
 
 
 === Ontrack Plugin
+
 *SECURITY-495*
 
 This plugin allows users with Job/Configure permission to run arbitrary Groovy code inside the Jenkins JVM using the Ontrack DSL feature, effectively elevating privileges to Overall/Run Scripts.
@@ -348,6 +369,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Post-Build Script Plugin
+
 *SECURITY-295*
 
 This plugin allows users with Job/Configure permission to run arbitrary Groovy code inside the Jenkins JVM, effectively elevating privileges to Overall/Run Scripts.
@@ -356,6 +378,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Process Cleaner Plugin
+
 *SECURITY-489*
 
 This plugin allows users with Job/Configure permission to run arbitrary Groovy code inside the Jenkins JVM of the node the build is running on, effectively elevating privileges to Overall/Run Scripts.
@@ -364,6 +387,7 @@ As of publication of this advisory, there is no fix.
 
 
 === PTC Integrity CM Plugin
+
 *SECURITY-176*
 
 This plugin allows users with Job/Configure permissions to run arbitrary Groovy code inside the Jenkins JVM by supplying a Groovy script for the checkpoint label option, effectively elevating privileges to Overall/Run Scripts.
@@ -374,6 +398,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Reactor Plugin
+
 *SECURITY-487*
 
 This plugin allows users with Job/Configure permission to run arbitrary Groovy code inside the Jenkins JVM by defining a Reactor Script that will be run when a Reactor Event triggers, effectively elevating privileges to Overall/Run Scripts.
@@ -382,6 +407,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Script SCM Plugin
+
 *SECURITY-461*
 
 This plugin allows users with Job/Configure permission to run arbitrary Groovy code inside the Jenkins JVM, effectively elevating privileges to Overall/Run Scripts.
@@ -390,6 +416,7 @@ As of publication of this advisory, there is no fix.
 
 
 === scripttrigger Plugin
+
 *SECURITY-456*
 
 This plugin allows users with Job/Configure permission to run arbitrary Groovy code inside the Jenkins JVM, effectively elevating privileges to Overall/Run Scripts.
@@ -398,6 +425,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Splunk Extension Plugin
+
 *SECURITY-496*
 
 Splunk Extension Plugin allows users able to configure a Pipeline to run arbitrary Groovy code inside the Jenkins JVM, effectively elevating privileges to Overall/Run Scripts.
@@ -407,6 +435,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Subversion Tagging Plugin
+
 *SECURITY-298*
 
 Subversion Tagging Plugin allows specifying a Groovy `GString` expression to define the tag for the build.
@@ -418,6 +447,7 @@ As of publication of this advisory, there is no fix.
 
 
 === tcl Plugin
+
 *SECURITY-379*
 
 This plugin allows users with Job/Configure permission to run arbitrary TCL code inside the Jenkins JVM, effectively elevating that permission to Overall/Run Scripts.
@@ -426,6 +456,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Warnings Plugin
+
 *SECURITY-405*
 
 Warnings Plugin allowed users with Overall/Read access to Jenkins to invoke a form validation method that allowed them to run arbitrary Groovy code inside the Jenkins JVM, effectively elevating privileges to Overall/Run Scripts.
@@ -434,6 +465,7 @@ This has been addressed in Warnings Plugin 4.61 and the affected form validation
 
 
 === Youtrack Plugin
+
 *SECURITY-464*
 
 Youtrack Plugin allowed users with Job/Configure permission to run arbitrary Groovy code inside the Jenkins JVM as part of a Groovy template for a comment to be posted to Youtrack, effectively elevating that permission to Overall/Run Scripts.
@@ -457,6 +489,7 @@ If it exists, you also have Overall/Run Scripts permission.
 
 
 === Claim Plugin
+
 *SECURITY-296*
 
 Claim Plugin 2.6 and newer allows Jenkins administrators to run arbitrary Groovy code inside the Jenkins JVM to be executed whenever a claim is changed.
@@ -468,6 +501,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Extreme Notification Plugin
+
 *SECURITY-492*
 
 Extreme Notification Plugin allows administrators to run arbitrary Groovy code inside the Jenkins JVM as part of notifications.
@@ -479,6 +513,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Scriptler Plugin
+
 *SECURITY-367*
 
 Scriptler Plugin allows administrators to run arbitrary Groovy code inside the Jenkins JVM.
@@ -493,6 +528,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Shared Objects Plugin
+
 *SECURITY-493*
 
 Shared Objects Plugin allows administrators to run arbitrary Groovy code inside the Jenkins JVM.
@@ -504,6 +540,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Splunk Plugin
+
 *SECURITY-479*
 
 Splunk Plugin allows administrators to run arbitrary Groovy code inside the Jenkins JVM.
@@ -515,6 +552,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Warnings Plugin
+
 *SECURITY-297*
 
 Warnings Plugin allows administrators to run arbitrary Groovy code inside the Jenkins JVM as part of custom warning parsers.
@@ -538,6 +576,7 @@ OTHER ISSUES
 These issues fit in neither of the previous two categories.
 
 === Persistent cross-site scripting vulnerability in Scriptler Plugin
+
 *SECURITY-333*
 
 Administrators are able to submit arbitrary HTML as description of Scriptler scripts that are shown verbatim to other administrators, allowing cross-site scripting attacks.
@@ -546,6 +585,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Script management vulnerable to Cross-Site Request Forgery attacks in Scriptler Plugin
+
 *SECURITY-334*
 
 None of the script management functionality in Scriptler requires POST access, and is therefore vulnerable to CSRF exploits even with CSRF protection enabled in the Jenkins global security configuration.
@@ -554,6 +594,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Any user can add Scriptler script build steps to job configurations
+
 *SECURITY-365*
 
 Scriptler plugin lets users with Overall/Run Scripts or Overall/Administer permission add Scriptler script executions to job configurations.
@@ -565,6 +606,7 @@ As of publication of this advisory, there is no fix.
 
 
 === Scriptler Plugin allows any Scriptler script to be executed as build step
+
 *SECURITY-366*
 
 Scriptler Plugin executes any Scriptler scripts specified for the Scriptler build step in job configurations even though it is documented to only allow specific scripts to be included.
@@ -575,6 +617,7 @@ Additionally, jobs configured through the UI will continue to run specified scri
 As of publication of this advisory, there is no fix.
 
 === Environment Injector (EnvInject) Plugin allows low privilege users to access parts of arbitrary files on controller
+
 *SECURITY-348*
 
 Environment Injector Plugin allowed users with Job/Configure permission to include properties files containing an environment definition from the Jenkins controller.
@@ -595,6 +638,7 @@ This is strongly discouraged.
 
 
 === Permission check bypass in Job DSL Plugin
+
 *SECURITY-363*
 
 Job DSL plugin allowed users with the ability to edit Job DSL scripts in Jenkins or SCM to bypass permission checks.
@@ -630,6 +674,7 @@ More information about this, including how the various options affect Job DSL, c
 * link:https://github.com/jenkinsci/job-dsl-plugin/wiki/Script-Security[Script Security]
 
 === Matrix Authorization Strategy Plugin allowed configuring dangerous permissions
+
 *SECURITY-410*
 
 The Matrix Authorization Strategy Plugin allowed configuring the following permissions independently from Overall/Administer:
@@ -655,6 +700,7 @@ If you want to retain the old, unsafe behavior, set the system property `hudson.
 The plugin retains permissions configured before upgrading, so there should be no changes in behavior afterwards.
 
 === Role-based Authorization Strategy Plugin allowed configuring dangerous permissions
+
 *SECURITY-410*
 
 The Role-based Authorization Strategy Plugin allowed configuring the following permissions independently from Overall/Administer:

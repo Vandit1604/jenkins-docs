@@ -87,7 +87,6 @@ issues:
 
 == Description
 
-
 === XXE vulnerabilities in multiple static analysis plugins
 
 * *SECURITY-655 / CVE-2018-1000008* (PMD)
@@ -102,6 +101,7 @@ This allows attacker to configure build processes such that one of these plugins
 External entity resolution has been disabled for these plugins.
 
 === CSRF vulnerability in Release plugin
+
 *SECURITY-607 / CVE-2018-1000013*
 
 Release plugin did not require form submissions to be submitted via POST, resulting in a CSRF vulnerability allowing attackers to trigger release builds.
@@ -109,6 +109,7 @@ Release plugin did not require form submissions to be submitted via POST, result
 Access to the form action URL now requires POST.
 
 === CSRF vulnerability in Translation Assistance plugin
+
 *SECURITY-507 / CVE-2018-1000014*
 
 Translation Assistance plugin did not require form submissions to be submitted via POST, resulting in a CSRF vulnerability allowing attackers to override localized strings displayed to all users on the current Jenkins instance if the victim is a Jenkins administrator.
@@ -116,6 +117,7 @@ Translation Assistance plugin did not require form submissions to be submitted v
 Access to the form action URL now requires POST.
 
 === Incorrect permission checks in Pipeline: Nodes and Processes plugin allows executing builds on agents while lacking Computer/Build permission
+
 *SECURITY-675 / CVE-2018-1000015*
 
 On instances with plugin:authorize-project[Authorize Project plugin], the authentication associated with a build may lack the Computer/Build permission on some agents.
@@ -124,6 +126,7 @@ This did not prevent the execution of `node` blocks on those agents due to incor
 Build permissions on agents are now properly enforced for `node` steps.
 
 === XSS vulnerability in job configuration forms in Ant plugin
+
 *SECURITY-624 and SECURITY-694*
 
 Ant plugin failed to escape tool names it shows on job configuration screens, resulting in a cross-site scripting (XSS) vulnerability that is exploitable only by Jenkins administrators.

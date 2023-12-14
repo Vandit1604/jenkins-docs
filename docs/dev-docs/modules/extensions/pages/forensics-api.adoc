@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/forensics-api[Forensics API Plugin]
 
 == BlamerFactory
+
 `jenkinsdoc:forensics-api:io.jenkins.plugins.forensics.blame.BlamerFactory]`
 
 +++ Jenkins' extension point that allows plugins to create+++ jenkinsdoc:Blamer] +++instances based on a supported+++ jenkinsdoc:SCM] +++.+++
@@ -14,6 +15,7 @@ https://plugins.jenkins.io/forensics-api[Forensics API Plugin]
 
 
 == CommitDecoratorFactory
+
 `jenkinsdoc:forensics-api:io.jenkins.plugins.forensics.util.CommitDecoratorFactory]`
 
 +++ Jenkins' extension point that allows plugins to create+++ jenkinsdoc:CommitDecorator] +++instances based on a supported {@link+++ +++ SCM} and+++ jenkinsdoc:RepositoryBrowser] +++.+++
@@ -25,6 +27,7 @@ https://plugins.jenkins.io/forensics-api[Forensics API Plugin]
 
 
 == DeltaCalculatorFactory
+
 `jenkinsdoc:forensics-api:io.jenkins.plugins.forensics.delta.DeltaCalculatorFactory]`
 
 +++ Jenkins' extension point that allows plugins to create+++ jenkinsdoc:DeltaCalculator] +++instances based on a supported {@link+++ +++ SCM}.+++
@@ -36,6 +39,7 @@ https://plugins.jenkins.io/forensics-api[Forensics API Plugin]
 
 
 == MinerFactory
+
 `jenkinsdoc:forensics-api:io.jenkins.plugins.forensics.miner.MinerFactory]`
 
 +++ Jenkins extension point that allows plugins to create+++ jenkinsdoc:RepositoryMiner] +++instances based on a supported {@link+++ +++ SCM}.+++

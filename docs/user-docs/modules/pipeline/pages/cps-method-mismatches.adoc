@@ -70,6 +70,7 @@ def sortByLength(List<String> list) {
   list.toSorted { a, b -> Integer.valueOf(a.length()).compareTo(b.length()) }
 }
 def sorted = sortByLength(['333', '1', '4444', '22'])
+
 echo(sorted.toString())
 ----
 
@@ -99,9 +100,11 @@ class Test {
   }
   private void setX() {
     this.x = 1;
+
   }
 }
 def x = new Test().x
+
 echo "${x}"
 ----
 
@@ -131,6 +134,7 @@ class Test {
   }
 }
 def builder = new StringBuilder()
+
 builder.append(new Test())
 echo(builder.toString())
 ----
@@ -154,8 +158,11 @@ Here is an example:
 [source,groovy]
 ----
 def x = 1
+
 def s = "x = ${-> x}"
+
 x = 2
+
 echo(s)
 ----
 
@@ -171,8 +178,11 @@ To fix this case, replace the original GString with a closure that returns a GSt
 [source,groovy]
 ----
 def x = 1
+
 def s = { -> x = "${x}" }
+
 x = 2
+
 echo(s())
 ----
 

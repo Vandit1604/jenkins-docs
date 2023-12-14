@@ -43,6 +43,7 @@ class MyCallable implements Callable<ReturnType,ExceptionType> {
     private String parameter;
     public MyCallable(String parameter) {
         this.parameter = parameter;
+
     }
     public ReturnType call() throws ExceptionType {
         return Some.code().operatesOn(this.parameter);

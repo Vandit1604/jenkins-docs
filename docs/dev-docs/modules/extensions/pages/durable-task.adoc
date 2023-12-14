@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/durable-task[Durable Task Plugin]
 
 == DurableTask
+
 `jenkinsdoc:durable-task:org.jenkinsci.plugins.durabletask.DurableTask]`
 
 +++ A task which may be run asynchronously on a build node and withstand disconnection of the slave agent.+++ +++ Should have a descriptor, and a {@code config.jelly} for form data binding.+++

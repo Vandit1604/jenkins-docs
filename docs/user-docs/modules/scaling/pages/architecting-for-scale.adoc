@@ -65,7 +65,7 @@ permissions on all Jenkins resources on the controller. This means that, with a
 simple script, a malicious user can have direct access to private information
 whose integrity and privacy could not be, thus,  guaranteed.
 See
-xref:dev-docs:security:controller-isolation.adoc[Distributed Builds]
+xref:user-docs:security:controller-isolation.adoc[Distributed Builds]
 in the
 xref:dev-docs:security:index.adoc[Securing Jenkins]
 chapter for more information.
@@ -139,6 +139,7 @@ properly
 [source, width="300"]
 ----
 sc.exe create "<serviceKey>" start= auto binPath= "<path to jenkins-slave.exe>" DisplayName= "<service display name>"
+
 ----
 
 _<serviceKey>_ is the name of the registry key to define this agent service and
@@ -335,7 +336,9 @@ the number of configured jobs is known is as follows:
 [source, width="350"]
 ----
 controllers = number of jobs/500
+
 executors = number of jobs * 0.03
+
 ----
 
 The equation for *estimating the maximum number of jobs, controllers, and executors
@@ -344,8 +347,11 @@ needed* for an organization based on the number of developers is as follows:
 [source, width="350"]
 ----
 number of jobs = number of developers * 3.333
+
 number of controllers = number of jobs/500
+
 number of executors = number of jobs * 0.03
+
 ----
 
 These numbers will provide a good starting point for a Jenkins installation,

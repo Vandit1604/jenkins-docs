@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/docker-slaves[Docker Slaves Plugin]
 
 == DockerDriverFactory
+
 `jenkinsdoc:docker-slaves:it.dockins.dockerslaves.spi.DockerDriverFactory]`
 
 _This extension point has no Javadoc documentation._
@@ -13,6 +14,7 @@ _This extension point has no Javadoc documentation._
 
 
 == DockerHostSource
+
 `jenkinsdoc:docker-slaves:it.dockins.dockerslaves.spi.DockerHostSource]`
 
 +++ A DockerHostSource is responsible to determine (or provision) the dockerhost to host a build for the specified job.+++ +++
@@ -25,6 +27,7 @@ _This extension point has no Javadoc documentation._
 
 
 == Hint
+
 `jenkinsdoc:docker-slaves:it.dockins.dockerslaves.spec.Hint]`
 
 _This extension point has no Javadoc documentation._

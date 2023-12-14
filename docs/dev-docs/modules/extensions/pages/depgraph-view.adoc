@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/depgraph-view[Dependency Graph Viewer Plugin]
 
 == EdgeProvider
+
 `jenkinsdoc:depgraph-view:hudson.plugins.depgraph_view.model.graph.edge.EdgeProvider]`
 
 +++ This is an extension point which makes it possible to add edges+++ +++ to the DependencyGraph which gets drawn. Note that in order to add your own+++ +++ EdgeProvider you must not annotate the corresponding subclass with+++ jenkinsdoc:hudson.Extension] ++++++ +++ but instead add a+++ jenkinsdoc:com.google.inject.Module] +++with a+++ jenkinsdoc:com.google.inject.multibindings.Multibinder] ++++++ +++ which has the+++ jenkinsdoc:hudson.Extension] +++annotation. For example see+++ jenkinsdoc:DependencyGraphModule] ++++++ +++ and+++ jenkinsdoc:DependencyGraphEdgeProvider] ++++++
@@ -21,6 +22,7 @@ https://plugins.jenkins.io/depgraph-view[Dependency Graph Viewer Plugin]
 
 
 == EdgeProvider
+
 `jenkinsdoc:depgraph-view:hudson.plugins.depgraph_view.model.graph.EdgeProvider]`
 
 +++ This interface is only here to not break other plugin extensions.+++
@@ -32,6 +34,7 @@ https://plugins.jenkins.io/depgraph-view[Dependency Graph Viewer Plugin]
 
 
 == SubProjectProvider
+
 `jenkinsdoc:depgraph-view:hudson.plugins.depgraph_view.model.graph.project.SubProjectProvider]`
 
 +++ This is an extension point which makes it possible to subprojects+++ +++ to the DependencyGraph which gets drawn. Note that in order to add your own+++ +++ EdgeProvider you must not annotate the corresponding subclass with+++ jenkinsdoc:hudson.Extension] ++++++ +++ but instead add a+++ jenkinsdoc:com.google.inject.Module] +++with a+++ jenkinsdoc:com.google.inject.multibindings.Multibinder] ++++++ +++ which has the+++ jenkinsdoc:hudson.Extension] +++annotation. For example see+++ jenkinsdoc:DependencyGraphModule] ++++++ +++ and+++ jenkinsdoc:ParameterizedTriggerSubProjectProvider] ++++++
@@ -43,6 +46,7 @@ https://plugins.jenkins.io/depgraph-view[Dependency Graph Viewer Plugin]
 
 
 == SubProjectProvider
+
 `jenkinsdoc:depgraph-view:hudson.plugins.depgraph_view.model.graph.SubProjectProvider]`
 
 +++ This interface is only here to not break other plugin extensions.+++

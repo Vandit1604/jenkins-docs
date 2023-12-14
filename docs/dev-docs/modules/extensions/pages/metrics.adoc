@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/metrics[Metrics Plugin]
 
 == HealthCheckProvider
+
 `jenkinsdoc:metrics:jenkins.metrics.api.HealthCheckProvider]`
 
 +++ Provides+++ jenkinsdoc:HealthCheck] +++instances to register.+++
@@ -14,6 +15,7 @@ https://plugins.jenkins.io/metrics[Metrics Plugin]
 
 
 == MetricProvider
+
 `jenkinsdoc:metrics:jenkins.metrics.api.MetricProvider]`
 
 +++ Provides metrics to register.+++
@@ -30,6 +32,7 @@ https://plugins.jenkins.io/metrics[Metrics Plugin]
 
 
 == MetricsAccessKey.+++<wbr/>+++Provider
+
 `jenkinsdoc:metrics:jenkins.metrics.api.MetricsAccessKey.Provider]`
 
 +++ An extension point that allows for plugins to provide their own set of access keys.+++
@@ -42,6 +45,7 @@ https://plugins.jenkins.io/metrics[Metrics Plugin]
 
 
 == QueueItemMetricsListener
+
 `jenkinsdoc:metrics:jenkins.metrics.api.QueueItemMetricsListener]`
 
 +++ Receives details of metrics events about queue items.+++

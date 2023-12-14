@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/parameterized-trigger[Parameterized Trigger Plugin]
 
 == AbstractBuildParameterFactory
+
 `jenkinsdoc:parameterized-trigger:hudson.plugins.parameterizedtrigger.AbstractBuildParameterFactory]`
 
 +++ Generates Build Parameters. These will can be used in the TriggerBuilder to trigger the same projects with many different+++ +++ parameters.+++
@@ -22,6 +23,7 @@ https://plugins.jenkins.io/parameterized-trigger[Parameterized Trigger Plugin]
 
 
 == AbstractBuildParameters
+
 `jenkinsdoc:parameterized-trigger:hudson.plugins.parameterizedtrigger.AbstractBuildParameters]`
 
 +++ Extension point to produce an+++ jenkinsdoc:Action] +++to invoke child projects with.+++

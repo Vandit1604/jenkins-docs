@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/rebuild[Rebuilder Plugin]
 
 == RebuildActionDispatcher
+
 `jenkinsdoc:rebuild:com.sonyericsson.rebuild.RebuildActionDispatcher]`
 
 +++ Extension point to propagate additional actions to the rebuild.+++
@@ -14,6 +15,7 @@ _(no known implementations)_
 
 
 == RebuildParameterProvider
+
 `jenkinsdoc:rebuild:com.sonyericsson.rebuild.RebuildParameterProvider]`
 
 +++ Extension point to provide views to show parameters in rebuild page.+++
@@ -33,6 +35,7 @@ _(no known implementations)_
 
 
 == RebuildValidator
+
 `jenkinsdoc:rebuild:com.sonyericsson.rebuild.RebuildValidator]`
 
 +++ Extension point for allowing disabling of the rebuild-action, in case+++ +++ other plug-ins provides similar functionality.+++

@@ -527,11 +527,13 @@ pipeline {
     agent any
     environment { // <1>
         CC = 'clang'
+
     }
     stages {
         stage('Example') {
             environment { // <2>
                 AN_ACCESS_KEY = credentials('my-predefined-secret-text') // <3>
+
             }
             steps {
                 sh 'printenv'
@@ -555,6 +557,7 @@ pipeline {
         stage('Example Username/Password') {
             environment {
                 SERVICE_CREDS = credentials('my-predefined-username-password')
+
             }
             steps {
                 sh 'echo "Service user is $SERVICE_CREDS_USR"'
@@ -565,6 +568,7 @@ pipeline {
         stage('Example SSH Username with private key') {
             environment {
                 SSH_CREDS = credentials('my-predefined-ssh-creds')
+
             }
             steps {
                 sh 'echo "SSH private key is located at $SSH_CREDS"'
@@ -847,6 +851,7 @@ pipeline {
 
 [[cron-syntax]]
 ==== Jenkins cron syntax
+
 The Jenkins cron syntax follows the syntax of the link:https://en.wikipedia.org/wiki/Cron[cron utility] (with minor differences).
 Specifically, each line consists of 5 fields separated by TAB or whitespace:
 
@@ -948,6 +953,7 @@ pipeline {
 =====
 
 ==== tools
+
 ////
 XXX: This is intentionally light until https://issues.jenkins.io/browse/WEBSITE-193
 ////
@@ -1455,6 +1461,7 @@ pipeline {
             }
             environment {
                 FOR_SEQUENTIAL = "some-value"
+
             }
             stages {
                 stage('In Sequential 1') {
@@ -1914,7 +1921,9 @@ pipeline {
                 }
                 when { anyOf {
                     expression { params.PLATFORM_FILTER == 'all' }
+
                     expression { params.PLATFORM_FILTER == env.PLATFORM }
+
                 } }
                 axes {
                     axis {
@@ -1992,7 +2001,9 @@ pipeline {
 
                 script {
                     def browsers = ['chrome', 'firefox']
+
                     for (int i = 0; i < browsers.size(); ++i) {
+
                         echo "Testing the ${browsers[i]} browser"
                     }
                 }
@@ -2023,6 +2034,7 @@ Providing flow control, therefore, rests on Groovy expressions, such as the `if/
 node {
     stage('Example') {
         if (env.BRANCH_NAME == 'master') {
+
             echo 'I only execute on the master branch'
         } else {
             echo 'I execute elsewhere'

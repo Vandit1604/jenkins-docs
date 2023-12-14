@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/run-selector[Run Selector Plugin]
 
 == RunFilter
+
 `jenkinsdoc:run-selector:org.jenkinsci.plugins.runselector.RunFilter]`
 
 +++ Additional filters used by+++ jenkinsdoc:RunSelector] +++.+++ +++ Use+++ jenkinsdoc:RunFilterDescriptor] +++for its descriptor.+++
@@ -22,6 +23,7 @@ https://plugins.jenkins.io/run-selector[Run Selector Plugin]
 
 
 == RunSelector
+
 `jenkinsdoc:run-selector:org.jenkinsci.plugins.runselector.RunSelector]`
 
 +++ Extension point for enumerating builds to copy artifacts from.+++ +++ Subclasses should override+++ jenkinsdoc:=getNextBuild(Job, RunSelectorContext)] +++.+++ +++ use+++ jenkinsdoc:RunSelectorDescriptor] +++for its descriptor.+++

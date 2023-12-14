@@ -28,6 +28,7 @@ You can mark your extension as an optional extension by changing the `@Extension
 [source,java]
 ----
 @Extension(optional = true)
+
 public static class YourDescriptor extends Descriptor<YourDescribable> {
     @Override
     public String getDisplayName() {
@@ -41,6 +42,7 @@ To determine if an optional dependency is installed, the Jenkins.getPlugin(Strin
 [source,java]
 ----
 if (Jenkins.getInstance().getPlugin("javanet-uploader") != null) {
+
     // use classes in the "javanet-uploader" plugin
 }
 ----
@@ -111,7 +113,9 @@ public class SomeClass {
 public class SomeClass {
   public void doSomething() {
     Derived d = getDrived();
+
     Base b = (Base)d; // This causes loading Derived even without execution.
+
     ...
   }
 }
@@ -124,6 +128,7 @@ public class SomeClass {
 public class SomeClass {
   public void doSomething() {
     Derived d = getDrived();
+
     doSomethingImpl(d); // This causes loading Derived even without execution.
     ...
   }
@@ -143,7 +148,9 @@ public class SomeClass {
 public class SomeClass {
   public void doSomething() {
     Derived d = getDrived();
+
     Object b = (Object)d; // This causes loading Derived even without execution.
+
     ...
   }
 }
@@ -156,7 +163,9 @@ public class SomeClass {
 public class SomeClass {
   public void doSomething() {
     Collection<Derived> dList = getDerivedList();
+
     Base b = (Base)dList.get(0);
+
   }
 }
 ----

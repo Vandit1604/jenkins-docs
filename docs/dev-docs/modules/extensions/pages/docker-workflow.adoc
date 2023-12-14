@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/docker-workflow[Docker Pipeline Plugin]
 
 == DockerLabelProvider
+
 `jenkinsdoc:docker-workflow:org.jenkinsci.plugins.docker.workflow.declarative.DockerLabelProvider]`
 
 +++ Provider of label expressions to use for {@code agent: docker} when no other label is provided.+++
@@ -14,6 +15,7 @@ _(no known implementations)_
 
 
 == DockerPropertiesProvider
+
 `jenkinsdoc:docker-workflow:org.jenkinsci.plugins.docker.workflow.declarative.DockerPropertiesProvider]`
 
 +++ Provider of configuration options to use for {@code agent docker}.+++

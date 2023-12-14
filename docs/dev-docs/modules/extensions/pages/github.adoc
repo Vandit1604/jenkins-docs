@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/github[GitHub Plugin]
 
 == ConditionalResult
+
 `jenkinsdoc:github:org.jenkinsci.plugins.github.extension.status.misc.ConditionalResult]`
 
 +++ This extension point allows to define when and what to send as state and message.+++ +++ It will be used as part of+++ jenkinsdoc:org.jenkinsci.plugins.github.status.sources.ConditionalStatusResultSource] +++.+++
@@ -15,6 +16,7 @@ https://plugins.jenkins.io/github[GitHub Plugin]
 
 
 == GHEventsSubscriber
+
 `jenkinsdoc:github:org.jenkinsci.plugins.github.extension.GHEventsSubscriber]`
 
 +++ Extension point to subscribe events from GH, which plugin interested in.+++ +++ This point should return true in+++ jenkinsdoc:=isApplicable] ++++++ +++ only if it can parse hooks with events contributed in+++ jenkinsdoc:=events()] ++++++
@@ -41,6 +43,7 @@ https://plugins.jenkins.io/github[GitHub Plugin]
 
 
 == GitHubCommitShaSource
+
 `jenkinsdoc:github:org.jenkinsci.plugins.github.extension.status.GitHubCommitShaSource]`
 
 +++ Extension point to provide commit sha which will be used to set state+++
@@ -53,6 +56,7 @@ https://plugins.jenkins.io/github[GitHub Plugin]
 
 
 == GitHubReposSource
+
 `jenkinsdoc:github:org.jenkinsci.plugins.github.extension.status.GitHubReposSource]`
 
 +++ Extension point to provide list of resolved repositories where commit is located+++
@@ -65,6 +69,7 @@ https://plugins.jenkins.io/github[GitHub Plugin]
 
 
 == GitHubRepositoryNameContributor
+
 `jenkinsdoc:github:com.cloudbees.jenkins.GitHubRepositoryNameContributor]`
 
 +++ Extension point that associates+++ jenkinsdoc:GitHubRepositoryName] +++s to a project.+++
@@ -81,6 +86,7 @@ https://plugins.jenkins.io/github[GitHub Plugin]
 
 
 == GitHubStatusBackrefSource
+
 `jenkinsdoc:github:org.jenkinsci.plugins.github.extension.status.GitHubStatusBackrefSource]`
 
 +++ Extension point to provide backref for the status, i.e. to the build or to the test report.+++
@@ -93,6 +99,7 @@ https://plugins.jenkins.io/github[GitHub Plugin]
 
 
 == GitHubStatusContextSource
+
 `jenkinsdoc:github:org.jenkinsci.plugins.github.extension.status.GitHubStatusContextSource]`
 
 +++ Extension point to provide context of the state. For example `integration-tests` or `build`+++
@@ -105,6 +112,7 @@ https://plugins.jenkins.io/github[GitHub Plugin]
 
 
 == GitHubStatusResultSource
+
 `jenkinsdoc:github:org.jenkinsci.plugins.github.extension.status.GitHubStatusResultSource]`
 
 +++ Extension point to provide exact state and message for the commit+++
@@ -117,6 +125,7 @@ https://plugins.jenkins.io/github[GitHub Plugin]
 
 
 == GitHubWebHook.+++<wbr/>+++Listener
+
 `jenkinsdoc:github:com.cloudbees.jenkins.GitHubWebHook.Listener]`
 
 +++ Other plugins may be interested in listening for these updates.+++
@@ -128,6 +137,7 @@ _(no known implementations)_
 
 
 == StatusErrorHandler
+
 `jenkinsdoc:github:org.jenkinsci.plugins.github.extension.status.StatusErrorHandler]`
 
 +++ Extension point to provide way of how to react on errors in status setter step+++

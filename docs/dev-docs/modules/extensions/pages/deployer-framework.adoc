@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/deployer-framework[Deployer Framework Plugin]
 
 == CapabilitiesResolver
+
 `jenkinsdoc:deployer-framework:com.cloudbees.plugins.deployer.resolvers.CapabilitiesResolver]`
 
 +++ Provides information about the capabilities that should be exposed for different project types.+++ +++ If there is a specific project type which should have its own tweaks (e.g. promoted-builds)+++ +++ then it can implement an extension of this type and change the effective behaviour.+++
@@ -15,6 +16,7 @@ https://plugins.jenkins.io/deployer-framework[Deployer Framework Plugin]
 
 
 == DeployListener
+
 `jenkinsdoc:deployer-framework:com.cloudbees.plugins.deployer.DeployListener]`
 
 +++ An extension point for listening to deployment events+++
@@ -26,6 +28,7 @@ _(no known implementations)_
 
 
 == DeploySource
+
 `jenkinsdoc:deployer-framework:com.cloudbees.plugins.deployer.sources.DeploySource]`
 
 +++ A source of files to deploy.+++
@@ -40,6 +43,7 @@ _(no known implementations)_
 
 
 == DeployTarget
+
 `jenkinsdoc:deployer-framework:com.cloudbees.plugins.deployer.targets.DeployTarget]`
 
 _This extension point has no Javadoc documentation._

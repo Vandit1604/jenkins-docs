@@ -77,8 +77,10 @@ import hudson.util.RemotingDiagnostics
 import jenkins.model.Jenkins
 
 String agentName = 'your agent name'
+
 //groovy script you want executed on an agent
 groovy_script = '''
+
 println System.getenv("PATH")
 println "uname -a".execute().text
 '''.trim()
@@ -86,8 +88,10 @@ println "uname -a".execute().text
 String result
 Jenkins.instance.slaves.find { agent ->
     agent.name == agentName
+
 }.with { agent ->
     result = RemotingDiagnostics.executeGroovy(groovy_script, agent.channel)
+
 }
 println result
 ----
@@ -126,10 +130,13 @@ import hudson.remoting.Channel
 import jenkins.model.Jenkins
 
 String agentName = 'some-agent'
+
 String filePath = '/tmp/file.txt'
 
 Channel agentChannel = Jenkins.instance.slaves.find { agent ->
+
     agent.name == agentName
+
 }.channel
 
 new FilePath(agentChannel, filePath).write().with { os ->
@@ -155,16 +162,21 @@ import java.nio.charset.StandardCharsets
 import java.util.stream.Collectors
 
 String agentName = 'some-agent'
+
 String filePath = '/tmp/file.txt'
 
 Channel agentChannel = Jenkins.instance.slaves.find { agent ->
+
     agent.name == agentName
+
 }.channel
 
 String fileContents = ''
+
 new FilePath(agentChannel, filePath).read().with { is ->
     try {
         fileContents = new BufferedReader(
+
             new InputStreamReader(is, StandardCharsets.UTF_8))
                 .lines()
                 .collect(Collectors.joining("\n"))
@@ -227,7 +239,9 @@ Here is the equivalent command using python, not curl.
 ----
 with open('somescript.groovy', 'r') as fd:
     data = fd.read()
+
 r = requests.post('https://jenkins/scriptText', auth=('username', 'api-token'), data={'script': data})
+
 ----
 
 == Shortcut key on script console to submit

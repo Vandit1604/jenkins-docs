@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/git[Git Plugin]
 
 == BuildChooser
+
 `jenkinsdoc:git:hudson.plugins.git.util.BuildChooser]`
 
 +++ Interface defining an API to choose which revisions ought to be+++ +++ considered for building.+++
@@ -20,6 +21,7 @@ https://plugins.jenkins.io/git[Git Plugin]
 
 
 == GitStatus.+++<wbr/>+++Listener
+
 `jenkinsdoc:git:hudson.plugins.git.GitStatus.Listener]`
 
 +++ Other plugins may be interested in listening for these updates.+++
@@ -34,6 +36,7 @@ https://plugins.jenkins.io/git[Git Plugin]
 
 
 == GitToolChooser.+++<wbr/>+++RepositorySizeAPI
+
 `jenkinsdoc:git:jenkins.plugins.git.GitToolChooser.RepositorySizeAPI]`
 
 +++ Other plugins can estimate the size of repository using this extension point+++ +++ The size is assumed to be in KiBs+++

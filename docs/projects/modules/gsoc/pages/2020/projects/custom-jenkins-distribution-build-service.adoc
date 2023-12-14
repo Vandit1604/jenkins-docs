@@ -5,6 +5,7 @@
 *Status:* Completed
 
 == Team
+
 [.avatar]
 *Student*: 
 image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Sladyn Nunes
@@ -24,6 +25,7 @@ image:images:ROOT:avatars/oleg_nenashev.png[,width=30,height=30] Oleg Nenashev
 The main idea behind the project is to build a customizable Jenkins distribution service that could be used to build tailor-made Jenkins distributions. The service would provide users with a simple interface to select the configurations they want to build the instance with eg: plugins, authorization matrices etc. Furthermore it would include a section for sharing community created distros so that users can find and download already built Jenkins war/configuration files to use out of the box.
 
 == Key Deliverables
+
 * A backend service built on spring boot having a modern Restful API support for constructing a  customized WAR package and configuration files.
 * A configuration constructing engine that can convert UI fields into a configuration file.
 * Front End application in the form of a website with a simple user interface for the users to interact with and customize the distribution.
@@ -147,6 +149,7 @@ https://docs.google.com/document/d/1-ujWVJ2a5VYkUF6UA7m4bEpSDxmb3mJZhCbmoKO716U/
 https://docs.google.com/document/d/1DSCH-3wh6uV9Rm_j8PcBzq2lvQPhZ31AIwmWkEaLxvc/edit?usp=sharing[Daily Notes] +
 
 == Links 
+
 * image:https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_jenkins-custom-distribution-service%3Agitter.im[Static Badge]
 * xref:gsoc:2020/project-ideas/jenkins-distribution-customize-service.adoc#meetings[Meetings]
 * https://community.jenkins.io/c/contributing/gsoc[Forum]

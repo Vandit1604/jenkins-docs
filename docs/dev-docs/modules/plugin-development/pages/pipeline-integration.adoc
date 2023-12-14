@@ -76,11 +76,13 @@ public String getLocation() {
 @DataBoundSetter
 public void setLocation(String location) {
     this.location = location;
+
 }
 
 private String actualLocation(Run<?,?> build, TaskListener listener) {
     if (build instanceof AbstractBuild) {
         EnvVars env = build.getEnvironment(listener);
+
         env.overrideAll(((AbstractBuild) build).getBuildVariables());
         return env.expand(location);
     } else {
@@ -133,6 +135,7 @@ public String getStuff() {
 @DataBoundSetter
 public void setStuff(@CheckForNull String stuff) {
     this.stuff = Util.fixEmpty(stuff);
+
 }
 ----
 
@@ -159,11 +162,13 @@ public String getStuff() {
 @DataBoundSetter
 public void setStuff(@NonNull String stuff) {
     this.stuff = stuff;
+
 }
 
 @Extension
 public static class DescriptorImpl extends Descriptor<Whatever> {
     public static final String defaultStuff = "junk";
+
     // …
 }
 ----
@@ -184,11 +189,13 @@ private String stuff;
 @NonNull
 public String getStuff() {
     return stuff == null ? DescriptorImpl.defaultStuff : stuff;
+
 }
 
 @DataBoundSetter
 public void setStuff(@NonNull String stuff) {
     this.stuff = stuff.equals(DescriptorImpl.defaultStuff) ? null : stuff;
+
 }
 ----
 
@@ -232,6 +239,7 @@ public class ForgetBuilder extends Builder implements SimpleBuildStep {
     @DataBoundConstructor
     public ForgetBuilder(String what) {
         this.what = what;
+
     }
 
     public String getWhat() {
@@ -336,6 +344,7 @@ public class HoursAway extends Timeframe {
     @DataBoundConstructor
     public HoursAway(long hours) {
         this.hours = hours;
+
     }
 
     public long getHours() {
@@ -369,6 +378,7 @@ public Timeframe getWhen() {
 @DataBoundSetter
 public void setWhen(Timeframe when) {
     this.when = when;
+
 }
 ----
 

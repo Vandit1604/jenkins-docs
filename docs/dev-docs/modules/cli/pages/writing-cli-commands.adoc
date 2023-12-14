@@ -39,6 +39,7 @@ To resolve this, you also need to define a `CLI resolver`, which uses a portion 
 public static AbstractItem resolveForCLI(
         @Argument(required=true,metaVar="NAME",usage="Job name") String name) throws CmdLineException {
     AbstractItem item = Jenkins.get().getItemByFullName(name, AbstractItem.class);
+
     if (item==null)
         throw new CmdLineException(null,"No such job exists:"+name);
     return item;

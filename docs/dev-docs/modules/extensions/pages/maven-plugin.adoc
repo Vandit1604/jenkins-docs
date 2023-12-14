@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/maven-plugin[Maven Integration Plugin]
 
 == LocalRepositoryLocator
+
 `jenkinsdoc:maven-https://plugins.jenkins.io/hudson.maven.local_repo.LocalRepositoryLocator]`
 
 +++ Strategy pattern that decides the location of the Maven local repository for a build.+++
@@ -16,6 +17,7 @@ https://plugins.jenkins.io/maven-plugin[Maven Integration Plugin]
 
 
 == MavenReporter
+
 `jenkinsdoc:maven-https://plugins.jenkins.io/hudson.maven.MavenReporter]`
 
 +++ Listens to the build execution of+++ jenkinsdoc:MavenBuild] +++,+++ +++ and normally records some information and exposes thoses+++ +++ in+++ jenkinsdoc:MavenBuild] +++later.+++
@@ -45,6 +47,7 @@ https://plugins.jenkins.io/maven-plugin[Maven Integration Plugin]
 
 
 == PlexusModuleContributorFactory
+
 `jenkinsdoc:maven-https://plugins.jenkins.io/hudson.maven.PlexusModuleContributorFactory]`
 
 +++ Contributes additional code into Plexus container when we run Maven.+++
@@ -56,6 +59,7 @@ _(no known implementations)_
 
 
 == TcpSocketHostLocator
+
 `jenkinsdoc:maven-https://plugins.jenkins.io/hudson.maven.TcpSocketHostLocator]`
 
 +++ Identify the Host name to use from maven-agent to connect to to Jenkins agent TCP socket.+++ +++

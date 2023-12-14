@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/recipe[Recipe Plugin]
 
 == ExportMechanism
+
 `jenkinsdoc:recipe:org.jenkinsci.plugins.recipe.mechanisms.ExportMechanism]`
 
 +++ The code that exports a recipe to somewhere.+++
@@ -16,6 +17,7 @@ https://plugins.jenkins.io/recipe[Recipe Plugin]
 
 
 == Ingredient
+
 `jenkinsdoc:recipe:org.jenkinsci.plugins.recipe.Ingredient]`
 
 +++ An unit of a configured item in Jenkins that gets transported to another Jenkins instance.+++

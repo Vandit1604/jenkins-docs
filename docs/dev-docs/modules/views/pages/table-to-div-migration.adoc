@@ -118,6 +118,7 @@ blockWrapper {
 
 def blockWrapper(Closure closure) {
     if (context.getVariableWithDefaultValue("divBasedFormLayout", false) == true) {
+
         div() {
             closure.call()
         }

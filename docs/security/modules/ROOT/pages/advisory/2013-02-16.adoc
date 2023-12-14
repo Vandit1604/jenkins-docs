@@ -8,6 +8,7 @@ kind: core
 This advisory announces multiple security vulnerabilities that were found in Jenkins core.
 
 == Description
+
 One of the vulnerabilities allows link:https://owasp.org/www-community/attacks/csrf[cross-site request forgery (CSRF) attacks] on the Jenkins controller, which causes an user to make unwanted actions on Jenkins.
 
 Another vulnerability enables link:https://owasp.org/www-community/attacks/xss/[cross-site scripting (XSS) attacks], which has the similar consequence.
@@ -19,6 +20,7 @@ In the fourth vulnerability, a malicious user of Jenkins can trick Jenkins into 
 And lastly, a vulnerability allows a malicious user of Jenkins to mount a denial of service attack by feeding a carefully crafted payload to Jenkins.
 
 == Severity
+
 The first three vulnerabilities (CSRF and XSS) are rated as *high*, as they allow malicious users to gain unauthorized access to the information and impersonate the administrator of the system. In addition, this allows Jenkins inside a firewall to be attacked from outside. On the other hands, this attack can be only mounted passively, and the attacker needs to know the URL of your Jenkins installations.
 
 The build privilege escalation vulnerability is rated as *medium*, as it requires an attacker to be a valid user of Jenkins with a write access.
@@ -27,6 +29,7 @@ The last denial of service attack is rated *low*, as it also requires an attacke
 
 
 == Fix
+
 * Main line users should upgrade to Jenkins 1.502
 * LTS users should upgrade to 1.480.3
 
@@ -38,4 +41,5 @@ As a part of the fix, these versions contain the following incompatible changes.
 * If your Jenkins does not have the security enabled, some of the xref:user-docs:using-jenkins:remote-access-api.adoc[Remote access API] calls that previously didn't  require `POST` now requires it. See the "CSRF Protection" section of the remote access API page for how to add necessary header.
 
 == Other resources
+
 * link:https://www.cloudbees.com/jenkins-advisory/jenkins-security-advisory-2013-02-16.cb[Corresponding security advisory on CloudBees regarding DEV@cloud and Jenkins Enterprise by CloudBees]

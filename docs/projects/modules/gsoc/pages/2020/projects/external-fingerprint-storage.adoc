@@ -1,10 +1,12 @@
 = External Fingerprint Storage for Jenkins
+
 *Goal:*  Extend Jenkins to support storing artifact usage history in external databases"
 category: Core
 
 *Status*: Completed
 
 == Team
+
 [.avatar]
 *Student*: 
 image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Sladyn Nunes
@@ -314,6 +316,7 @@ components.
 * link:/blog/2020/08/25/external-fingerprint-storage-phase-3/[Phase 3 Blog Post] +
 
 == Links 
+
 * image:https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_external-fingerprint-storage%3Agitter.im[Static Badge] 
 * xref:gsoc:2020/project-ideas/jenkins-distribution-customize-service.adoc#meetings[Meetings]
 * https://community.jenkins.io/c/contributing/gsoc[Forum]

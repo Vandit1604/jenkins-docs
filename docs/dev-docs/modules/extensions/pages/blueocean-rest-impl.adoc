@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/blueocean-rest-impl[REST Implementation for Blue Ocean Plugin]
 
 == ContainerFilter
+
 `jenkinsdoc:blueocean-rest-impl:io.jenkins.blueocean.service.embedded.rest.ContainerFilter]`
 
 +++ Simple extension point to allow filtering item types by a specific key+++ +++ This can be used anywhere a list of items are returned, and it will examine+++ +++ the current request for a ?filter=filter1(param:value),filter2 parameter,+++ +++ okay the last bit is a future addition once/if OmniSearch and this are consolidated+++
@@ -16,6 +17,7 @@ https://plugins.jenkins.io/blueocean-rest-impl[REST Implementation for Blue Ocea
 
 
 == JobAnalyticsCheck
+
 `jenkinsdoc:blueocean-rest-impl:io.jenkins.blueocean.service.embedded.analytics.JobAnalyticsCheck]`
 
 +++Used to check the type of item for+++ jenkinsdoc:io.jenkins.blueocean.service.embedded.analytics.JobAnalytics] ++++++
@@ -33,6 +35,7 @@ https://plugins.jenkins.io/blueocean-rest-impl[REST Implementation for Blue Ocea
 
 
 == JobAnalyticsExclude
+
 `jenkinsdoc:blueocean-rest-impl:io.jenkins.blueocean.service.embedded.analytics.JobAnalyticsExclude]`
 
 +++Used to exclude an item from+++ jenkinsdoc:io.jenkins.blueocean.service.embedded.analytics.JobAnalytics] ++++++
@@ -46,6 +49,7 @@ https://plugins.jenkins.io/blueocean-rest-impl[REST Implementation for Blue Ocea
 
 
 == KeenConfiguration
+
 `jenkinsdoc:blueocean-rest-impl:io.jenkins.blueocean.service.embedded.analytics.KeenConfiguration]`
 
 _This extension point has no Javadoc documentation._

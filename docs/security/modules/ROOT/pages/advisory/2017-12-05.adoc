@@ -11,8 +11,8 @@ NOTE: This advisory has been superseded by the entry for plugin:ant[Ant Plugin] 
 
 == Description
 
-
 === Stored XSS vulnerability in tool names exploitable by administrators
+
 *SECURITY-624*
 
 Jenkins administrators can configure tools, such as JDK, Maven, or Ant, that will be available in job configurations for use by build scripts.

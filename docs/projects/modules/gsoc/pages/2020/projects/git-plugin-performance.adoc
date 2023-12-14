@@ -5,6 +5,7 @@
 *Status:* Completed
 
 == Team
+
 [.avatar]
 *Student*: 
 image:images:ROOT:avatars/XiongKezhi.jpeg[,width=30,height=30] Kezhi Xiong
@@ -26,6 +27,7 @@ It is also logical to fix existing performance issues within the git plugin to e
 The project identified git SCM checkout as the area which showed potential scope for enhancements. Improving any portion of the process meant a direct reduction in the overall execution time of a Jenkins job.
 
 == Background of the project
+
 The git plugin is one of the most widely used Jenkins component which provides git source code management functionalities to the Jenkins ecosystem. These functionalities or the git operations (like fetch or checkout) are provided using two mutually exclusive implementations, link:https://github.com/jenkinsci/git-client-plugin/blob/master/src/main/java/org/jenkinsci/plugins/gitclient/CliGitAPIImpl.java[CliGitAPIImpl] and link:https://github.com/jenkinsci/git-client-plugin/blob/master/src/main/java/org/jenkinsci/plugins/gitclient/JGitAPIImpl.java[JGitAPIImpl]. 
 
 By default, only command line git is enabled for a user. To enable JGit and fully appreciate the benefits of the new features, go to this doc: link:https://plugins.jenkins.io/git-client/#enabling-jgit[Enabling JGit in the git plugin].
@@ -51,6 +53,7 @@ The graphical results for various benchmarks performed throughout the projects a
   * link:/blog/2020/07/29/git-performance-improvement-phase2/#jmh-benchmarks-in-multiple-environments[Benchmarks in multiple environments]
 
 == Performance enhancement in the checkout step
+
 The project has introduced a new feature called the `GitToolChooser` which recommends the optimal git implementation for a particular scenario. +
 The user doesn't have to worry about choosing the correct implementation for the given remote repository. +
 Here is a graphical representation of the feature:
@@ -132,6 +135,7 @@ video::sEqK4dAFg4s[youtube,width=800,height=420]
 Office hours are scheduled each Wednesday at 14:30 UTC, with regular link:https://docs.google.com/document/d/1ov4ug9WfbcTYNHL1DBcsxyRKgCi7EnFVIywdiP36CSk/edit#[meeting notes] available for anyone to read.
 
 == Links 
+
 * image:https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_github-checks-api%3Agitter.im[Static Badge]
 * xref:gsoc:2020/project-ideas/git-plugin-performance.adoc#meetings[Meetings]
 * https://community.jenkins.io/c/contributing/gsoc[Forum]

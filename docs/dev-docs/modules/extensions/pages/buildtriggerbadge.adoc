@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/buildtriggerbadge[Build Trigger Badge Plugin]
 
 == BuildTriggerBadgeDeactivator
+
 `jenkinsdoc:buildtriggerbadge:org.jenkinsci.plugins.buildtriggerbadge.provider.BuildTriggerBadgeDeactivator]`
 
 +++ Extend this class if you want to be able to disable the badge for a given cause globally.+++
@@ -14,6 +15,7 @@ _(no known implementations)_
 
 
 == BuildTriggerBadgeProvider
+
 `jenkinsdoc:buildtriggerbadge:org.jenkinsci.plugins.buildtriggerbadge.provider.BuildTriggerBadgeProvider]`
 
 +++ Extend this class to be able to define/override an association between a class and an icon. This will then add that icon as a badge in+++ +++ the build history side panel.+++

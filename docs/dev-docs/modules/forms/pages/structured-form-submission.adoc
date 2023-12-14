@@ -1,6 +1,7 @@
 = Structured form submission
 
 == Why?
+
 The data model of HTML form submission is a map — each form field has a name, and when submitted, the server retrieves the values by names. This model has several problems.
 
 One is the lack of structure; if you have a repeated structure in a form, which in turn contains a nested repeated structure, just giving it a name doesn't allow you to distinguish the nesting structure.
@@ -13,6 +14,7 @@ Another issue is the scope of the name. In HTML, all the form fields need to hav
 To avoid these issues and further simplify the server side, in Jenkins the notion of the "structured form submission" is introduced.
 
 == What is structured form submission?
+
 Structured form submission is a form submission where the data model is a JSON object tree, not a map. This is done by having a client compute the JSON representation at the form submission time, and send that to the server as a hidden text field (along with all the other fields.)
 
 Structure is determined by several factors. First, the name of the form field becomes the JSON property name. For compatibility reasons, a name can have any "abc.def." kind of prefix, and the prefix portion will be ignored. So for example, in the simplest case, the following form will produce the JSON result on the right.
@@ -123,6 +125,7 @@ staplerRequest.getFileItem("randomIdabcdefg") would return the file uploaded for
 ----
 
 === Advanced topics
+
 Sometimes, the mark up and the layout of the form makes it impossible for a grouped form fields to have a single common ancestor element (for example, grouped form elements are often spread across multiple table rows.) In such a case, you can put the `nameref` attribute to merge multiple tree of elements into one. This mechanism is mostly used inside Jenkins form layout tags behind the scene, so it's not something plugin developers would need to worry about.
 Consider the following example:
 
@@ -157,11 +160,13 @@ Consider the following example:
 If the `nameref` attribute points to a check box or a radio button INPUT element, the subordinate structure is only submitted when the INPUT element is selected/checked. This is convenient when such an INPUT element is used to control the visibility of nested form parts.
 
 == Writing server code
+
 You can access the entire JSON tree by calling `StructuredForm.get(request)`, but such code is generally only necessary when you are in charge of the entire form submission. `Descriptor.configure()` and `Descriptor.newInstance()` take JSONObject, which corresponds to the form fragment that you contributed via `config.jelly`/`global.jelly`.
 
 See some of the Descriptor implementations in Jenkins core as an example.
 
 === Databinding
+
 StaplerRequest provides several data-binding methods from JSONObject, which greatly simplifies the object instantiation from form data. See the javadoc of the `StaplerRequest.bindJSONXXX` methods for details.
 
 Normally you don't need to implement anything on the server side if you are using the xref:plugin-development:pipeline-integration.adoc#constructor-vs-setters[standard data binding conventions].
@@ -185,6 +190,7 @@ Alternatively you can call the save method in each setter that you have:
 @DataBoundSetter
 public void setCredentialID(String credentialID) {
     this.credentialID = credentialID;
+
     save();
 }
 ----

@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/vsphere-cloud[vSphere Plugin]
 
 == ReconfigureStep
+
 `jenkinsdoc:vsphere-cloud:org.jenkinsci.plugins.vsphere.builders.ReconfigureStep]`
 
 +++ Define a base class for all Reconfigure Acion steps. All Reconfigure Action steps should extend+++ +++ this class.+++
@@ -18,6 +19,7 @@ https://plugins.jenkins.io/vsphere-cloud[vSphere Plugin]
 
 
 == VSphereBuildStep
+
 `jenkinsdoc:vsphere-cloud:org.jenkinsci.plugins.vsphere.VSphereBuildStep]`
 
 +++ Define a base class for all vSphere build steps. All vSphere build steps should extend +++ +++ this class, as it contains server information required by all.+++

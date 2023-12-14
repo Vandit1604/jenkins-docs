@@ -23,6 +23,7 @@ public class SampleAction implements Action {
 
     public SampleAction(Project project) {
         this.project = project;
+
     }
 
     public int getBuildStepsCount() {

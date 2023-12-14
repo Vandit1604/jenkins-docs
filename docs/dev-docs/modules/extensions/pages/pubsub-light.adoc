@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/pubsub-light[Pub-Sub "light" Bus Plugin]
 
 == AbstractChannelSubscriber
+
 `jenkinsdoc:pubsub-light:org.jenkinsci.plugins.pubsub.AbstractChannelSubscriber]`
 
 +++ Simple asynchronous+++ jenkinsdoc:ChannelSubscriber] ++++++ jenkinsdoc:ExtensionPoint] +++for Jenkins.+++
@@ -14,6 +15,7 @@ _(no known implementations)_
 
 
 == MessageEnricher
+
 `jenkinsdoc:pubsub-light:org.jenkinsci.plugins.pubsub.MessageEnricher]`
 
 +++ Message enricher extension point.+++ +++
@@ -27,6 +29,7 @@ _(no known implementations)_
 
 
 == PubsubBus
+
 `jenkinsdoc:pubsub-light:org.jenkinsci.plugins.pubsub.PubsubBus]`
 
 +++ Abstract Pub-sub bus.+++

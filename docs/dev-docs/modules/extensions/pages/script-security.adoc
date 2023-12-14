@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/script-security[Script Security Plugin]
 
 == ApprovalListener
+
 `jenkinsdoc:script-security:org.jenkinsci.plugins.scriptsecurity.scripts.ApprovalListener]`
 
 +++ Receives notifications on approval-related events.+++
@@ -14,6 +15,7 @@ _(no known implementations)_
 
 
 == Language
+
 `jenkinsdoc:script-security:org.jenkinsci.plugins.scriptsecurity.scripts.Language]`
 
 +++ A language for which we can request+++ jenkinsdoc:ScriptApproval] +++.+++
@@ -31,6 +33,7 @@ _(no known implementations)_
 
 
 == Whitelist
+
 `jenkinsdoc:script-security:org.jenkinsci.plugins.scriptsecurity.sandbox.Whitelist]`
 
 +++ Determines which methods and similar members which scripts may call.+++

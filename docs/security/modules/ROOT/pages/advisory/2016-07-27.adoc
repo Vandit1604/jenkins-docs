@@ -11,6 +11,7 @@ This advisory announces a vulnerability in the link:https://plugins.jenkins.io/c
 == Description
 
 === Cucumber Reports Plugin disables Content-Security-Policy for archived and workspace files
+
 *SECURITY-309*
 
 Jenkins 1.641 and 1.625.3 introduced `Content-Security-Policy` HTTP headers as protection against Cross-Site Scripting attacks using workspace files and archived artifacts served using `DirectoryBrowserSupport` (link:/security/advisory/2015-12-09/[SECURITY-95]).

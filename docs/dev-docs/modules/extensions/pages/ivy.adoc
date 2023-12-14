@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/ivy[Ivy Plugin]
 
 == IvyBuilderType
+
 `jenkinsdoc:ivy:hudson.ivy.builder.IvyBuilderType]`
 
 _This extension point has no Javadoc documentation._
@@ -14,6 +15,7 @@ _This extension point has no Javadoc documentation._
 
 
 == IvyReporter
+
 `jenkinsdoc:ivy:hudson.ivy.IvyReporter]`
 
 +++ Listens to the build execution of+++ jenkinsdoc:IvyBuild] +++,+++ +++ and normally records some information and exposes these+++ +++ in+++ jenkinsdoc:IvyBuild] +++later.+++

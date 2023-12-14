@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/cloudbees-folder[Folders Plugin]
 
 == AbstractFolderProperty
+
 `jenkinsdoc:cloudbees-folder:com.cloudbees.hudson.plugins.folder.AbstractFolderProperty]`
 
 +++ Property potentially applicable to any+++ jenkinsdoc:AbstractFolder] +++.+++
@@ -46,6 +47,7 @@ https://plugins.jenkins.io/cloudbees-folder[Folders Plugin]
 
 
 == FolderIcon
+
 `jenkinsdoc:cloudbees-folder:com.cloudbees.hudson.plugins.folder.FolderIcon]`
 
 +++ Renders+++ jenkinsdoc:StatusIcon] +++for a folder.+++
@@ -62,6 +64,7 @@ https://plugins.jenkins.io/cloudbees-folder[Folders Plugin]
 
 
 == ItemGroupModifier
+
 `jenkinsdoc:cloudbees-folder:com.cloudbees.hudson.plugins.folder.relocate.ItemGroupModifier]`
 
 _This extension point has no Javadoc documentation._
@@ -72,6 +75,7 @@ _This extension point has no Javadoc documentation._
 
 
 == OrphanedItemStrategy
+
 `jenkinsdoc:cloudbees-folder:com.cloudbees.hudson.plugins.folder.computed.OrphanedItemStrategy]`
 
 +++ A strategy for removing children after they are no longer indexed by an owning+++ jenkinsdoc:ComputedFolder] +++.+++
@@ -84,6 +88,7 @@ _This extension point has no Javadoc documentation._
 
 
 == RelocationHandler
+
 `jenkinsdoc:cloudbees-folder:com.cloudbees.hudson.plugins.folder.relocate.RelocationHandler]`
 
 +++ Provides some kind of specialized handling for a move.+++ +++ Handlers are chained in extension registration order, so that some can decorate other handlers.+++ +++ It is also possible for a handler to send a placeholder response and schedule a move for later (keeping the rest of the handlers ready).+++
@@ -95,6 +100,7 @@ _This extension point has no Javadoc documentation._
 
 
 == RelocationUI
+
 `jenkinsdoc:cloudbees-folder:com.cloudbees.hudson.plugins.folder.relocate.RelocationUI]`
 
 +++ Extension point to provide a pluggable UI for moving+++ jenkinsdoc:Item] +++instances.+++
@@ -106,6 +112,7 @@ _This extension point has no Javadoc documentation._
 
 
 == TransientFolderActionFactory
+
 `jenkinsdoc:cloudbees-folder:com.cloudbees.hudson.plugins.folder.TransientFolderActionFactory]`
 
 +++ Extension point for inserting transient+++ jenkinsdoc:Action] +++s into+++ jenkinsdoc:Folder] +++s.+++

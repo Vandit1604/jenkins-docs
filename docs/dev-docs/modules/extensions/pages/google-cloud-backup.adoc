@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/google-cloud-backup[Google Cloud Backup Plugin]
 
 == AbstractStorageProvider
+
 `jenkinsdoc:google-cloud-backup:com.google.jenkins.plugins.persistentmaster.storage.AbstractStorageProvider]`
 
 +++ Provides a+++ jenkinsdoc:Storage] +++instance that can be used to perform backups.+++
@@ -15,6 +16,7 @@ https://plugins.jenkins.io/google-cloud-backup[Google Cloud Backup Plugin]
 
 
 == ConfigurableScope
+
 `jenkinsdoc:google-cloud-backup:com.google.jenkins.plugins.persistentmaster.scope.ConfigurableScope]`
 
 +++ Defines a+++ jenkinsdoc:Scope] +++that can be configured from form data and/or config+++ +++ files.+++

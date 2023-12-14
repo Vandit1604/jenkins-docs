@@ -20,10 +20,12 @@ public static class MyJsonObject {
 
     public MyJsonObject(String message) {
         this.message = message;
+
     }
 
     public void setMessage(String message) {
         this.message = message;
+
     }
 
     public String getMessage() {
@@ -75,28 +77,37 @@ public class JsonAPI implements RootAction /* (3) */ {
 
     @GET
     @WebMethod(name = "get-example")/* (7) */
+
     public /* (8) */ JsonHttpResponse getExample() {
         JSONObject response = JSONObject.fromObject(new MyJsonObject("I am Jenkins"));
+
         return new JsonHttpResponse(response, 200); /* (9) */
     }
 
     @GET
     @WebMethod(name = "get-example-param")
+
     public JsonHttpResponse getWithParameters(
         @QueryParameter(required = true) String paramValue /* (10) */) {
 
         requireNonNull(paramValue);
         MyJsonObject myJsonObject = new MyJsonObject("I am Jenkins " + paramValue);
+
         JSONObject response = JSONObject.fromObject(myJsonObject);
+
         return new JsonHttpResponse(response, 200);
     }
 
     @GET
     @WebMethod(name = "get-error500")
+
     public JsonHttpResponse getError500() { /* (11) */
         MyJsonObject myJsonObject = new MyJsonObject("You got an error 500");
+
         JSONObject jsonResponse = JSONObject.fromObject(myJsonObject);
+
         JsonHttpResponse error500 = new JsonHttpResponse(jsonResponse, 500);
+
         throw error500;
     }
 }
@@ -153,6 +164,7 @@ class JsonAPITest {
         JenkinsRule.WebClient webClient = j.createWebClient();
 
         JSONWebResponse response = webClient.getJSON(GET_API_URL);
+
         assertThat(response.getContentAsString(), Matchers.containsString("I am Jenkins hello"));
         assertThat(response.getStatusCode(), Matchers.equalTo(200));
     }
@@ -161,6 +173,7 @@ class JsonAPITest {
     void testAdvancedGetJSON(JenkinsRule j) throws Exception {
         //Given a Jenkins setup with a user "admin"
         MockAuthorizationStrategy auth = new MockAuthorizationStrategy()
+
             .grant(Jenkins.ADMINISTER).everywhere().to("admin");
 
         j.jenkins.setSecurityRealm(j.createDummySecurityRealm());
@@ -175,10 +188,12 @@ class JsonAPITest {
 
         // - simple call without authentication should be forbidden
         JSONWebResponse response = webClient.getJSON(GET_API_URL);
+
         assertThat(response.getStatusCode(), Matchers.equalTo(403));
 
         // - same call but authenticated using withBasicApiToken() should be fine
         response = webClient.withBasicApiToken("admin").getJSON(GET_API_URL);
+
         assertThat(response.getStatusCode(), Matchers.equalTo(200));
     }
 }
@@ -195,10 +210,12 @@ Starting from the class `JsonAPI` provided for GET example, add:
 ----
 @POST
 @WebMethod(name = "create")
+
 public JsonHttpResponse create(@JsonBody MyJsonObject body) {
     //Do any logic required for creation
     //For the example purpose we just uppercase the message parsed from the request.
     JSONObject response = new JSONObject();
+
     response.put("message", body.message.toUpperCase());
     return new JsonHttpResponse(response, 200);
 }
@@ -252,6 +269,7 @@ void testPostJSON(JenkinsRule j) throws Exception {
 
     //Given a Jenkins setup with a user "admin"
     MockAuthorizationStrategy auth = new MockAuthorizationStrategy()
+
         .grant(Jenkins.ADMINISTER).everywhere().to("admin");
 
     j.jenkins.setSecurityRealm(j.createDummySecurityRealm());
@@ -262,7 +280,9 @@ void testPostJSON(JenkinsRule j) throws Exception {
 
     // Testing an authenticated POST that should answer 200 OK and return same json
     MyJsonObject objectToSend = new MyJsonObject("Jenkins is the way !");
+
     JenkinsRule.JSONWebResponse response = webClient
+
         .withBasicApiToken("admin")
         .postJSON("custom-api/create", JSONObject.fromObject(objectToSend));
 

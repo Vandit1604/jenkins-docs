@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/blueocean-jwt[JWT for Blue Ocean Plugin]
 
 == JwtAuthenticationService
+
 `jenkinsdoc:blueocean-jwt:io.jenkins.blueocean.auth.jwt.JwtAuthenticationService]`
 
 +++ JWT endpoint resource. Provides functionality to get JWT token and also provides JWK endpoint to get+++ +++ public key using keyId.+++
@@ -14,6 +15,7 @@ https://plugins.jenkins.io/blueocean-jwt[JWT for Blue Ocean Plugin]
 
 
 == JwtAuthenticationStoreFactory
+
 `jenkinsdoc:blueocean-jwt:io.jenkins.blueocean.auth.jwt.JwtAuthenticationStoreFactory]`
 
 +++ An authentication provider implements this extension point to store enough information in JWT claim so that later on+++ +++ when the token verification happens, using this same claims this authentication object can be re-created.+++
@@ -25,6 +27,7 @@ https://plugins.jenkins.io/blueocean-jwt[JWT for Blue Ocean Plugin]
 
 
 == JwtSigningKeyProvider
+
 `jenkinsdoc:blueocean-jwt:io.jenkins.blueocean.auth.jwt.JwtSigningKeyProvider]`
 
 +++ PublicKey provider, to be used during signing+++
@@ -36,6 +39,7 @@ https://plugins.jenkins.io/blueocean-jwt[JWT for Blue Ocean Plugin]
 
 
 == JwtTokenDecorator
+
 `jenkinsdoc:blueocean-jwt:io.jenkins.blueocean.auth.jwt.JwtTokenDecorator]`
 
 +++ Participates in the creation of JwtToken+++
@@ -47,6 +51,7 @@ _(no known implementations)_
 
 
 == JwtTokenServiceEndpoint
+
 `jenkinsdoc:blueocean-jwt:io.jenkins.blueocean.auth.jwt.JwtTokenServiceEndpoint]`
 
 +++ This extension point serves the JWT token service endpoint+++
@@ -58,6 +63,7 @@ _(no known implementations)_
 
 
 == JwtTokenVerifier
+
 `jenkinsdoc:blueocean-jwt:io.jenkins.blueocean.auth.jwt.JwtTokenVerifier]`
 
 +++ If an incoming HTTP request contains JWT token, pick that up, verifies the integrity, then+++ +++ convert that into+++ jenkinsdoc:JwtAuthentication] +++so that the rest of Jenkins can process this request+++ +++ with proper identity of the caller.+++

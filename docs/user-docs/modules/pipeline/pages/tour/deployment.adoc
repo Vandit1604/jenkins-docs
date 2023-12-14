@@ -41,6 +41,7 @@ node {
         echo 'Testing'
     }
     if (currentBuild.currentResult == 'SUCCESS') {
+
         stage('Deploy') {
             echo 'Deploying'
         }

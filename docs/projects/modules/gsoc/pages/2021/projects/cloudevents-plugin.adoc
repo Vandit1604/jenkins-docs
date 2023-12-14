@@ -19,12 +19,14 @@ links:
 ---
 
 === Background
+
 As the CI/CD world is moving more towards interoperability between multiple platforms, Jenkins should also be compatible with the same interoperability standards. Some of these standards with respect to communication between different CI/CD platforms are put forth by the CloudEvents specification. This spec outlines the structure of CloudEvents, which are produced or consumed by entities which support it, hence making those entities compatible with other CI/CD platforms which also support them allowing them to work together.
 
 Jenkins currently does not support CloudEvents, making it hard for users to use it with other platforms which support them.
 
 
 ==== Project Details
+
 This project idea proposes to implement a Jenkins plugin which extends the Jenkins to make CloudEvents both discoverable and subscribable. Users should be able to set a global configuration to allow users to subscribe and discover CloudEvents.
 
 The project requires the student to start with plugin development from scratch and then work with understanding how to use the CloudEvents Java SDK to create and read events.
@@ -33,6 +35,7 @@ In the beginning, the student can work on understanding the Jenkins plugin devel
 
 
 === Links
+
 There are many examples of such documentation on the web:
 
 * link:https://CloudEvents.io/[CloudEvents website]
@@ -40,6 +43,7 @@ There are many examples of such documentation on the web:
 
 
 === Study Links
+
 * link:https://en.wikipedia.org/wiki/Event-driven_architecture[Event-driven architecture]
 * link:https://www.youtube.com/watch?v=STKCRSUsyP0&t=944s[The many meanings of event driven architecture by Martin Fowler]
 
@@ -52,6 +56,7 @@ In the beginning, the student can work on understanding the Jenkins plugin devel
 
 
 === Skills to improve/study
+
 * Java
 * Go
 * Networking

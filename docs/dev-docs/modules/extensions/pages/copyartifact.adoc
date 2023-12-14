@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/copyartifact[Copy Artifact Plugin]
 
 == BuildSelector
+
 `jenkinsdoc:copyartifact:hudson.plugins.copyartifact.BuildSelector]`
 
 +++ Extension point for selecting the build to copy artifacts from.+++ +++ In a subclass override just isSelectable() for a standard loop through completed+++ +++ builds, starting with the most recent. Otherwise override getBuild() to provide+++ +++ different build selection logic.+++
@@ -25,6 +26,7 @@ https://plugins.jenkins.io/copyartifact[Copy Artifact Plugin]
 
 
 == Copier
+
 `jenkinsdoc:copyartifact:hudson.plugins.copyartifact.Copier]`
 
 +++ Extension point for how files are copied.+++ +++ CopyArtifact plugin provides a default implementation using methods+++ +++ available in the Jenkins FilePath class.+++

@@ -308,6 +308,7 @@ node { // <7>
         junit 'reports/**/*.xml' // <6>
     }
     if (currentBuild.currentResult == 'SUCCESS') {
+
         stage('Deploy') {
             sh 'make publish' // <7>
         }

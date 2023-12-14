@@ -344,6 +344,7 @@ Which can then be called from a Scripted Pipeline:
 [source,groovy]
 ----
 def z = new org.foo.Zot()
+
 z.checkOutFrom(repo)
 ----
 
@@ -359,6 +360,7 @@ package org.foo
 class Utilities implements Serializable {
   def steps
   Utilities(steps) {this.steps = steps}
+
   def mvn(args) {
     steps.sh "${steps.tool 'Maven'}/bin/mvn -o ${args}"
   }
@@ -373,6 +375,7 @@ in the example below, can properly suspend and resume in Jenkins.
 ----
 @Library('utils') import org.foo.Utilities
 def utils = new Utilities(this)
+
 node {
   utils.mvn 'clean package'
 }
@@ -500,6 +503,7 @@ allows the global variable to be invoked in a manner similar to a step:
 ----
 // vars/sayHello.groovy
 def call(String name = 'human') {
+
     // Any valid steps can be called from this code, just like in other
     // Scripted Pipeline
     echo "Hello, ${name}."
@@ -613,6 +617,7 @@ resource loading:
 [source,groovy]
 ----
 def request = libraryResource 'com/mycorp/pipeline/somelib/request.json'
+
 ----
 
 The file is loaded as a string, suitable for passing to certain APIs or saving
@@ -648,6 +653,7 @@ build number is odd or even:
 // vars/evenOrOdd.groovy
 def call(int buildNumber) {
   if (buildNumber % 2 == 0) {
+
     pipeline {
       agent any
       stages {

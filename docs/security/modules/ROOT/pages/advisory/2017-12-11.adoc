@@ -11,8 +11,8 @@ This advisory announces a vulnerability in this Jenkins plugin:
 
 == Description
 
-
 === Arbitrary file read vulnerability in Script Security Plugin
+
 *SECURITY-663 / CVE-2017-1000505*
 
 Users with the ability to configure sandboxed Groovy and Pipeline scripts, including those from SCM, are able to use a type coercion feature in Groovy to create new `File` objects from strings. This allowed reading arbitrary files on the Jenkins controller file system.
@@ -24,9 +24,11 @@ Such a type coercion is now subject to sandbox protection and considered to be a
 * SECURITY-663: link:https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N[medium]
 
 == Affected versions
+
 * Script Security Plugin up to and including 1.36
 
 == Fix
+
 * Script Security Plugin should be updated to version 1.37
 
 These versions include fixes to the vulnerabilities described above.

@@ -1,6 +1,5 @@
 = Access Control
 
-
 Jenkins access control is split into two parts:
 
 * Authentication (users prove who they are) is done using a _security realm_.
@@ -28,7 +27,7 @@ A disadvantage is the lack of integration with Jenkins access controls and poten
 == Common Configuration Mistakes
 
 When configuring authentication and authorization in Jenkins, it is easy to accidentally allow far more access than intended.
-See xref:dev-docs:security:access-control/permissions.adoc#administer[the documentation on the access given to administrators] about the impact of unintentionally granting Administer permission.
+See xref:user-docs:security:permissions.adoc#administer[the documentation on the access given to administrators] about the impact of unintentionally granting Administer permission.
 
 Anyone can do anything::
 The *anyone can do anything* authorization strategy is very rarely a good choice, as it allows even anonymous users to administer Jenkins.
@@ -47,7 +46,7 @@ Similar to the previous items, you should generally not grant significant permis
 Granting Overall/Administer permission to _anonymous_ is similar to _Anyone can do anything_, while granting that permission to _authenticated_ is essentially the same as _Logged-in users can do anything_.
 
 Built-in node::
-Users with limited permissions xref:dev-docs:security:controller-isolation.adoc[must not be able to configure jobs that run on the built-in node].
+Users with limited permissions xref:user-docs:security:controller-isolation.adoc[must not be able to configure jobs that run on the built-in node].
 When setting up a new Jenkins instance, adding users and switching authorization strategies, it is important to also set up distributed builds and limit what jobs are able to run on the built-in node.
 
 //In addition to the above items that discuss who may (effectively) be granted administrative access to Jenkins, you should be careful who you give any read access to Jenkins.

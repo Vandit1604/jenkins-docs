@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/jobcacher[Job Cacher Plugin]
 
 == Cache
+
 `jenkinsdoc:jobcacher:jenkins.plugins.jobcacher.Cache]`
 
 +++ This class provides the Cache extension point that when implemented provides the caching logic for saving files+++ +++ from the executor to the cache storage system and sending them back to the executor.+++
@@ -14,6 +15,7 @@ https://plugins.jenkins.io/jobcacher[Job Cacher Plugin]
 
 
 == ItemStorage
+
 `jenkinsdoc:jobcacher:jenkins.plugins.itemstorage.ItemStorage]`
 
 +++ Extension point for providing a new implementation of item storage that plugins can use to store data associated+++ +++ with an item in whatever storage mechanism the storage implementation provides.+++

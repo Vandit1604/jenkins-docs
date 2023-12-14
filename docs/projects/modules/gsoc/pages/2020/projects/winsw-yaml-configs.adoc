@@ -6,6 +6,7 @@ category: Core, Tools
 *Status*: Completed
 
 == Team
+
 [.avatar]
 *Student*: 
 image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Buddhika Chathuranga
@@ -39,18 +40,21 @@ The usage of YAML should simplify configuration management in Jenkins, especiall
 ** Sample-minimal.yaml
 
 == Phase 1
+
 * YAML service Descriptor
 * Start implementing configurations verification on startup
 * Project Guideline documentation
 * Blog Post 1
 
 == Phase 2
+
 * Finish implementation of configurations verification on startup
 * Start implementing YAML schema validation
 * Minimal Viable Product will be released
 * Blog Post 2
 
 == Phase 3
+
 * Finish implementation of YAML schema validation
 * Sample YAML config files
 * Blog Post 3
@@ -58,6 +62,7 @@ The usage of YAML should simplify configuration management in Jenkins, especiall
 During each phase, the respective unit test will be added to the existing Unit Test library.
 
 == Current Status
+
 https://github.com/winsw/winsw/releases/tag/v2.10.0[MVP has been released]. This release contains the following features.
 
 * YAML configuration parsing
@@ -91,11 +96,13 @@ https://github.com/winsw/winsw/releases/tag/v2.10.0[MVP has been released]. This
 * Integrate the new Windows Service Wrapper into the Jenkins core
 
 == Articles
+
 * link:/blog/2020/07/08/winsw-yaml-support[GSoC 2020 - Phase 01 Updates]
 * link:/blog/2020/08/27/winsw-yaml-support[GSoC 2020 - Phase 03 Updates]
 * https://medium.com/runtimeerror/path-to-gsoc-2021-e6a81e62308d[Path to GSoC2021 @ *Medium*]
 
 == Demos
+
 * https://www.youtube.com/watch?v=9qyo1f2rKQw&feature=youtu.be[Phase 1 Demo]
 * https://www.youtube.com/watch?v=oSBvJwSXOVQ&t=2736s[Phase 2 Demo]
 * https://www.youtube.com/watch?v=G05unV7aDrg[Phase 3 Demo]
@@ -108,6 +115,7 @@ Meeting notes are available https://docs.google.com/document/d/1eq1M1buaEMmRQ3XL
 See the link:https://drive.google.com/file/d/1G2cOaRb-Mle_Fl7YVAzlVITDgrN6eCbE/view?usp=sharingp[GSoC Project application draft] for more details.
 
 == Links 
+
 * image:https://img.shields.io/badge/gitter%20-%20join_chat%20-%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23winsw%2Fwinsw[Static Badge]
 * xref:gsoc:index.adoc#office-hours[Meetings]
 * https://community.jenkins.io/c/contributing/gsoc[Forum]

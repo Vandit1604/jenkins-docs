@@ -1,12 +1,6 @@
 = Using Jenkins agents
 
 
-
-:hide-uri-scheme:
-
-
-
-
 The Jenkins architecture is designed for distributed build environments.
 It allows us to use different environments for each build project balancing
 the workload among multiple agents running jobs in parallel.
@@ -81,6 +75,7 @@ The key's randomart image is:
 |    o+.+ o o     |
 |  ... o.So* .    |
 |  o+ = +.X=      |
+
 | o oO + *..+     |
 |. oo.o o .E .    |
 | o... oo.. o     |

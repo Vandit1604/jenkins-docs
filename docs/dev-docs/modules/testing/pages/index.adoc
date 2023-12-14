@@ -1,7 +1,9 @@
 = Testing
+
 :page-layout: wip
 
 == Overview
+
 Writing automated tests for Jenkins and its plugins is important to ensure that everything works as expected — in various scenarios, with multiple Java versions, and on different operating systems — while helping to prevent regressions from being introduced in later releases.
 
 Whether you're writing a new Jenkins plugin, or just looking to xref:community:ROOT:index.adoc[participate in the Jenkins project], this guide aims to cover everything you should need to get started writing various types of automated tests.
@@ -17,14 +19,18 @@ This provides the following features:
 5. link:https://htmlunit.sourceforge.io/[HtmlUnit] support, making it simple to test interaction with the web UI and other HTTP calls.
 
 == Setting Up
+
 === Dependencies
+
 ==== Jenkins Test Harness
+
 By default, you don't need to do anything to set up the https://github.com/jenkinsci/jenkins-test-harness/[Jenkins Test Harness] for your plugin.
 All Jenkins plugins inherit from the link:https://github.com/jenkinsci/plugin-pom/[plugin parent POM] and therefore have the test harness dependency included automatically.
 
 Similarly, JUnit is included as a dependency by the parent POM, so you don't need to add it as a dependency.
 
 ===== Overriding the Test Harness Version
+
 If you're using version 2.3 or newer of the plugin parent POM, you can change the test harness version used by overriding the `jenkins-test-harness.version` property, if you need newer features.
 For example:
 [source,xml]
@@ -37,6 +43,7 @@ For example:
 ----
 
 ==== Working with Pipeline
+
 You are encouraged to test that your plugin works with xref:user-docs:pipeline:index.adoc[Pipeline].
 You can do so without making your plugin itself dependent on various Pipeline-related plugins; instead you can include these as `test` dependencies, so that they are only used when compiling and running test cases.
 
@@ -70,11 +77,13 @@ The following list covers typical integration tests:
 (You will also need to specify ``<version>``s, unless you are using the link:https://github.com/jenkinsci/bom/blob/master/README.md[BOM].)
 
 ==== Depending on Other Plugins
+
 Any Jenkins plugins that you add as dependencies to your POM with `<scope>test</scope>` will be available in the Jenkins installations created while running test cases, or when using xref:plugin-tutorial:run.adoc[`mvn hpi:run`].
 
 You can also apply the link:https://javadoc.jenkins.io/component/jenkins-test-harness/?org/jvnet/hudson/test/recipes/WithPlugin.html[`@WithPlugin`] annotation to individual test cases, but this is rarely required.
 
 === Source Code Location
+
 The source code for your test cases should be placed in the standard location for Maven projects, i.e. under the `src/test/java/` directory.
 
 == Examples
@@ -84,26 +93,34 @@ including use of `JenkinsRule` to test plugin code in the context of temporary J
 try using one of the official link:https://github.com/jenkinsci/archetypes#usage[archetypes].
 
 == Running Tests
+
 === From the Command Line
+
 `mvn test` will run all test cases, report progress and results on the command line, and write those results to JUnit XML files following the pattern `target/surefire-reports/TEST-<class name>.xml`.
 // TODO: Running an individual test class.
 
 === From an IDE
+
 Most Java IDEs should be able to run JUnit tests and report on the results.
 
 //=== Debugging
+
 //==== From the Command Line
+
 //==== From an IDE
 
 == What to Test
+
 Now that we can write a basic test, we should discuss what you should be testing…
 
 TODO: Unit testing of your code, as much as possible. JenkinsRule testing: creating jobs that use your build steps, running them, asserting on the output
 
 == Common Patterns
+
 This section covers patterns that you will commonly use in your test cases, plus scenarios that you should consider testing.
 
 === Configuration Round-trip Testing
+
 For Freestyle jobs, where users have to configure projects via the web interface, if you're writing a link:https://javadoc.jenkins.io/byShortName/Builder[`Builder`], link:https://javadoc.jenkins.io/byShortName/Publisher[`Publisher`] or similar, it's a good idea to test that your configuration form works properly.
 The process to follow is:
 
@@ -116,6 +133,7 @@ This can be done easily with the link:https://javadoc.jenkins.io/component/jenki
 Use link:https://github.com/jenkinsci/archetypes#usage[archetypes] to see examples.
 
 === Providing Environment Variables
+
 In Jenkins, you can set environment variables on the System page, which then become available during builds.
 To recreate the same configuration from a test method, you can do the following:
 
@@ -125,7 +143,9 @@ To recreate the same configuration from a test method, you can do the following:
 
 @Test public void someTest() {
   EnvironmentVariablesNodeProperty prop = new EnvironmentVariablesNodeProperty();
+
   EnvVars env = prop.getEnvVars();
+
   env.put("DEPLOY_TARGET", "staging");
   j.jenkins.getGlobalNodeProperties().add(prop);
   // …
@@ -133,11 +153,14 @@ To recreate the same configuration from a test method, you can do the following:
 ----
 
 === Providing Test Data
+
 In order to test parts of your plugin, you may want certain files to exist in the build workspace, or that Jenkins is configured in a certain way.
 This section covers various ways to achieve this using the Jenkins Test Harness.
 
 ==== Customizing the Build Workspace
+
 ===== Using a Dummy SCM
+
 Freestyle projects typically check out code from an SCM before running the build steps, and the test harness provides a few dummy SCM implementations which make it easy to "check out" files into the workspace.
 
 The simplest of these is the link:https://javadoc.jenkins.io/component/jenkins-test-harness/?org/jvnet/hudson/test/SingleFileSCM.html[`SingleFileSCM`] which, as its name suggests, provides a single file during checkout.
@@ -150,6 +173,7 @@ For example:
 @Test public void customizeWorkspaceWithFile() throws Exception {
   // Create a Freestyle project with a dummy SCM
   FreeStyleProject project = j.createFreeStyleProject();
+
   project.setScm(new SingleFileSCM("greeting.txt", "hello"));
   // …
 }
@@ -181,6 +205,7 @@ project.setScm(new ExtractResourceSCM(getClass().getResource("files-and-folders.
 ----
 
 ===== Within a Pipeline
+
 Pipeline projects don't have the concept of a single SCM, like Freestyle projects do, but offer a variety of ways to places files into a workspace.
 
 At its most simple, you can use the link:/doc/pipeline/steps/workflow-basic-steps/#writefile-write-file-to-workspace[`writeFile`] step from the {plugin}workflow-basic-steps[Pipeline: Basic Steps plugin]. For example:
@@ -192,6 +217,7 @@ At its most simple, you can use the link:/doc/pipeline/steps/workflow-basic-step
 @Test public void customizeWorkspace() throws Exception {
     // Create a new Pipeline with the given (Scripted Pipeline) definition
     WorkflowJob project = j.createProject(WorkflowJob.class);
+
     project.setDefinition(new CpsFlowDefinition("" +
         "node {" + // <1>
         "  writeFile text: 'hello', file: 'greeting.txt'" +
@@ -230,6 +256,7 @@ public class PipelineWorkspaceExampleTest {
 
       // Create a new Pipeline with the given (Scripted Pipeline) definition
       WorkflowJob project = j.createProject(WorkflowJob.class);
+
       project.setDefinition(new CpsFlowDefinition("" +
           "node {" + // <1>
           "  unzip '" + zipFile.getPath() + "'" + // <1>
@@ -242,19 +269,24 @@ public class PipelineWorkspaceExampleTest {
 <1> The path to the zip file is dynamic, so we pass it into the Pipeline definition.
 
 ===== Using `FilePath`
+
 TODO: Expand this section, and explain the below example.
 
 [source,java]
 ----
 FilePath workspace = j.jenkins.getWorkspaceFor(job);
+
 FilePath report = workspace.child("target").child("lint-results.xml");
+
 report.copyFrom(getClass().getResourceAsStream("lint-results_r20.xml"));
 ----
 
 ==== Customizing the `JENKINS_HOME` Directory
+
 TODO: Write this section.
 
 ==== Using `@LocalData`
+
 TODO: Properly write this section.
 
 Runs a test case with a data set local to test method or the test class.
@@ -271,10 +303,12 @@ Search is performed in this specific order. The fall back mechanism allows you t
 The choice of zip and directory depends on the nature of the test data, as well as the size of it.
 
 === Configuring an SCM
+
 TODO: Write this section.
 You can create a Git repository during a test using `@GitSampleRepoRule`.
 
 === Using Agents
+
 Agents can be used in tests creating a `DumbSlave` object to be used later in a Pipeline or in a Freestyle job.
 After that, the agent can be connected to the Controller using the `JenkinsRule` methods or retrieving the `Computer` object from the agent.
 
@@ -301,7 +335,9 @@ public class WithAgentTest {
   public void test_agent() throws Exception {
     // Creating the agent with a specific label
     LabelAtom testingLabel = new LabelAtom("testing");
+
     DumbSlave agent = jenkinsRule.createSlave(testingLabel);
+
     /* If you need to change the Launcher
     agent.setLauncher(new JNLPLauncher(true));
     agent.save();
@@ -313,16 +349,19 @@ public class WithAgentTest {
     online. Better use waitOnline
 
     Computer computer = agent.toComputer();
+
     while (!computer.isOnline()) {
       computer.connect(true);
     }
     */
 
     FreeStyleProject freeStyleProject = jenkinsRule.jenkins.getItemByFullName("my-freestyle", FreeStyleProject.class);
+
     freeStyleProject.setAssignedLabel(testingLabel);
     // Testing the job
 
     WorkflowJob workflowJob = jenkinsRule.jenkins.getItemByFullName("my-workflow", WorkflowJob.class);
+
     // Testing the job
   }
 }
@@ -355,6 +394,7 @@ computer.disconnect(new OfflineCause.IdleOfflineCause());
 ----
 
 === Enabling security
+
 If you need a security realm for testing you can use a `MockAuthorizationStrategy()` where you can grant rights as needed for your test. In the following example everyone gets `READ` on the Jenkins instance and users *alice* and *bob* get individual rights. Using `LocalData` presets can be used if you need to setup a lot for your test.
 
 [source,java]
@@ -379,6 +419,7 @@ public class MyTest {
     j.jenkins.setSecurityRealm(j.createDummySecurityRealm());
     // setup a MockAuthorizationStrategy
     MockAuthorizationStrategy authorizationStrategy = new MockAuthorizationStrategy();
+
     authorizationStrategy.grant(Jenkins.READ).onRoot().toEveryone();
     authorizationStrategy.grant(Item.DISCOVER).everywhere().to("alice");
     authorizationStrategy.grant(Item.READ).everywhere().to("bob");
@@ -389,16 +430,20 @@ public class MyTest {
 
     // alice can discover project
     JenkinsRule.WebClient alice = j.createWebClient().login("alice");
+
     FailingHttpStatusCodeException e = assertThrows(FailingHttpStatusCodeException.class, () -> alice.goTo("bypass/myproject"));
+
     Assert.assertEquals("alice can discover", 403, e.getStatusCode());
 
     // bob can read project
     JenkinsRule.WebClient bob = j.createWebClient().login("bob");
+
     bob.goTo("bypass/myproject"); // success    
   }
 ----
 
 === Verifying Logs
+
 You can verify log messages using `@LoggerRule`.
 This can also be useful for temporarily enabling certain loggers during interactive testing.
 For example:
@@ -437,6 +482,7 @@ To increase the timeout of the tests you can use the following commands:
 `mvn -Djenkins.test.timeout=250 verify` 
 
 == Performance Testing
+
 Starting from link:https://github.com/jenkinsci/jenkins-test-harness/releases/tag/jenkins-test-harness-2.50[Jenkins Test Harness 2.50], the framework provides ways to run microbenchmarks using
 link:https://openjdk.java.net/projects/code-tools/jmh/[Java Microbenchmark Harness].
 
@@ -449,13 +495,17 @@ To use them in your plugin, please find documentation here:
 * link:https://github.com/jenkins-infra/pipeline-library#runbenchmarks[Running benchmark through Jenkinsfile]
 
 == Further Pipeline Testing
+
 === Testing Durable Pipeline Steps
+
 TODO: RestartableJenkinsRule.
 
 == Further Patterns
+
 === Custom builder
 
 == Advanced and Tips etc.
+
 //Tip: Use @ClassRule for JenkinsRule, if you're 900% sure that everything is ok
 
 .References

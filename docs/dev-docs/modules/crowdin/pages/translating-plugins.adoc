@@ -17,6 +17,7 @@ image::images:ROOT:developer/crowdin/crowdin-ui.png[Crowdin translation UI]
 This is the view that comes up, when you are translating plugins. Let's break down how to use it and what the different parts do.
 
 ==== String overview
+
 image::images:ROOT:developer/crowdin/source-string-list.png[source string list]
 
 On the left side, you can see a list of strings in the file selected. The strings with a red square are still up to translate.
@@ -32,6 +33,7 @@ Strings with a green tick have been translated and gone through the proofreading
 image::images:ROOT:developer/crowdin/proofread.png[]
 
 ==== Propose a translation
+
 The box right to the string overview is where you can propose translations.
 
 image::images:ROOT:developer/crowdin/translation-proposal.png[]

@@ -87,6 +87,7 @@ Run this script:
 [source,groovy]
 ----
 hudson.remoting.ChannelBuilder.CALLABLES_CAN_IGNORE_ROLECHECKER = true
+
 ----
 
 == Fixing Plugins

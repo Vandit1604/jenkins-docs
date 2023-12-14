@@ -1,12 +1,6 @@
 = Best Practices
 
 
-
-:hide-uri-scheme:
-
-
-
-
 Continuous Integration (CI) with automated test execution and trend analysis has revolutionized the way companies approach build management, release management, deployment automation, and test orchestration.
 In this section, we will explore best practices that aim to enlighten executives, business managers, software developers, and architects about the invaluable contributions Jenkins can make throughout the project lifecycle.
 
@@ -93,7 +87,7 @@ video::tj3xYFA6Q2o[youtube,width=800,height=420]
 Use agents to perform builds instead of running builds on the controller.
 Utilizing agents offers enhanced safety and scalability.
 
-Refer to the xref:dev-docs:security:controller-isolation.adoc[controller isolation] documentation for more details.
+Refer to the xref:user-docs:security:controller-isolation.adoc[controller isolation] documentation for more details.
 
 === Show failures to the right people
 

@@ -50,6 +50,7 @@ node {
     }
     finally {
         if (currentBuild.result == 'UNSTABLE') {
+
             echo 'I am unstable :/'
         } else {
             echo 'One way or another, I have finished'
