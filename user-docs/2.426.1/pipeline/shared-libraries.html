@@ -133,7 +133,7 @@
     <a class="nav-link" href="index.html">Pipeline</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="getting-started.html">Getting started with the Guided Tour</a>
+    <a class="nav-link" href="getting-started.html">Getting started with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="jenkinsfile.html">Using a Jenkinsfile</a>
@@ -487,10 +487,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../tutorial/2.426.1/index.html">Jenkins Tutorials</a>
+      <a class="title" href="../../../tutorials/2.426.1/index.html">Jenkins Tutorials</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../tutorial/2.426.1/index.html">2.426.1</a>
+          <a href="../../../tutorials/2.426.1/index.html">2.426.1</a>
         </li>
       </ul>
     </li>
@@ -642,9 +642,9 @@ Currently this feature is not supported for internal libraries.</p>
 the use-case. <em>Manage Jenkins » System » Global Pipeline Libraries</em>
 as many libraries as necessary can be configured.</p>
 </div>
-<div class="imageblock unresolved center">
+<div class="imageblock center">
 <div class="content">
-<img src="pipeline/add-global-pipeline-libraries.png" alt="Add a Global Pipeline Library">
+<img src="_images/add-global-pipeline-libraries.png" alt="Add a Global Pipeline Library">
 </div>
 </div>
 <div class="paragraph">
@@ -695,9 +695,9 @@ classes or global variables defined by any such libraries. To access other
 shared libraries, the <code>Jenkinsfile</code> needs to use the <code>@Library</code> annotation,
 specifying the library&#8217;s name:</p>
 </div>
-<div class="imageblock unresolved center">
+<div class="imageblock center">
 <div class="content">
-<img src="pipeline/configure-global-pipeline-library.png" alt="Configuring a Global Pipeline Library">
+<img src="_images/configure-global-pipeline-library.png" alt="Configuring a Global Pipeline Library">
 </div>
 </div>
 <div class="listingblock">
@@ -882,9 +882,9 @@ specifically updated to support a new API for checking out an arbitrary named
 version (<strong>Modern SCM</strong> option). As of this writing, the latest versions of the
 Git and Subversion plugins support this mode.</p>
 </div>
-<div class="imageblock unresolved center">
+<div class="imageblock center">
 <div class="content">
-<img src="pipeline/global-pipeline-library-modern-scm.png" alt="Configuring a 'Modern SCM' for a Pipeline Library">
+<img src="_images/global-pipeline-library-modern-scm.png" alt="Configuring a 'Modern SCM' for a Pipeline Library">
 </div>
 </div>
 <div class="sect3">
@@ -897,9 +897,9 @@ branch/tag/ref may be configured for that particular SCM plugin.  This ensures
 that during checkout of the library&#8217;s source code, the SCM plugin will expand
 this variable to checkout the appropriate version of the library.</p>
 </div>
-<div class="imageblock unresolved center">
+<div class="imageblock center">
 <div class="content">
-<img src="pipeline/global-pipeline-library-legacy-scm.png" alt="Configuring a 'Legacy SCM' for a Pipeline Library">
+<img src="_images/global-pipeline-library-legacy-scm.png" alt="Configuring a 'Legacy SCM' for a Pipeline Library">
 </div>
 </div>
 </div>

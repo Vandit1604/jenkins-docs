@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>End-to-End Multibranch Pipeline Project Creation :: Jenkins Docs</title>
-    <link rel="canonical" href="https://docs.jenkins.com/tutorial/2.426.1/build-a-multibranch-pipeline-project.html">
+    <link rel="canonical" href="https://docs.jenkins.com/tutorials/2.426.1/build-a-multibranch-pipeline-project.html">
     <link rel="prev" href="build-a-java-app-with-maven.html">
     <link rel="next" href="build-a-node-js-and-react-app-with-npm.html">
     <meta name="generator" content="Antora 3.1.5">
@@ -19,7 +19,7 @@
   width: 100vw;
   z-index: 100;"></jio-navbar>
   <div class="body">
-<div class="nav-container" data-component="tutorial" data-version="2.426.1">
+<div class="nav-container" data-component="tutorials" data-version="2.426.1">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -228,15 +228,15 @@ well as</em> deliver different outcomes for development and production purposes.
 </div>
 <div class="paragraph">
 <p>Before starting this tutorial, it is recommended that you run through at least
-one of the initial set of <a href="#tutorials:ROOT:index.adoc#introductory-tutorials" class="xref unresolved">Introductory
-tutorials</a> from the <a href="#tutorials:ROOT:index.adoc" class="xref unresolved">Tutorials overview</a> page first to familiarize
+one of the initial set of <a href="index.html#introductory-tutorials" class="xref page">Introductory
+tutorials</a> from the <a href="index.html" class="xref page">Tutorials overview</a> page first to familiarize
 yourself with CI/CD concepts (relevant to a technology stack you&#8217;re most
 familiar with), how these concepts are implemented in Jenkins and the
 fundamentals of Jenkins Pipelines.</p>
 </div>
 <div class="paragraph">
 <p>In this tutorial, you&#8217;ll use the same application that the
-<a href="#tutorials:ROOT:build-a-node-js-and-react-app-with-npm.adoc" class="xref unresolved">Build a Node.js and React app
+<a href="build-a-node-js-and-react-app-with-npm.html" class="xref page">Build a Node.js and React app
 with npm</a> tutorial is based on. Therefore, you&#8217;ll be building and testing the
 same application but this time, its delivery will be different depending on the
 Git branch that Jenkins builds from. That is, the branch being built determines
@@ -246,14 +246,14 @@ which delivery stage of your Pipeline is executed.</p>
 <p><strong>Duration:</strong> This tutorial takes 30-50 minutes to complete (assuming you&#8217;ve
 already met the <a href="#prerequisites">Prerequisites</a> below). The exact duration will
 depend on the speed of your machine and whether or not you&#8217;ve already
-<a href="#run-jenkins-in-docker">run Jenkins in Docker</a> from <a href="#tutorials:ROOT:index.adoc" class="xref unresolved">another tutorial</a>.</p>
+<a href="#run-jenkins-in-docker">run Jenkins in Docker</a> from <a href="index.html" class="xref page">another tutorial</a>.</p>
 </div>
 <div class="paragraph">
 <p>You can stop this tutorial at any point in time and continue from where you left
 off.</p>
 </div>
 <div class="paragraph">
-<p>If you&#8217;ve already run though <a href="#tutorials:ROOT:index.adoc" class="xref unresolved">another tutorial</a>, you can skip the
+<p>If you&#8217;ve already run though <a href="index.html" class="xref page">another tutorial</a>, you can skip the
 <a href="#prerequisites">Prerequisites</a> and <a href="#run-jenkins-in-docker">Run Jenkins in
 Docker</a> sections below and proceed on to <a href="#fork-sample-repository">forking the
 sample repository</a>. (Just ensure you have
@@ -262,15 +262,73 @@ restart Jenkins, simply follow the restart instructions in
 <a href="#stopping-and-restarting-jenkins">Stopping and restarting Jenkins</a> and then
 proceed on.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/build-a-multibranch-pipeline-project.adoc - include::doc/tutorials/_prerequisites.adoc[]
-** <a href="https://git-scm.com/downloads">Git</a> and optionally
-   <a href="https://desktop.github.com/">GitHub Desktop</a>.</p>
+<p>For this tutorial, you will require:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A macOS, Linux or Windows machine with:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>256 MB of RAM, although more than 2 GB is recommended.</p>
+</li>
+<li>
+<p>10 GB of drive space for Jenkins and your Docker images and containers.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The following software installed:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.docker.com/">Docker</a> - Read more about installing Docker in the
+<a href="../../user-docs/2.426.1/installing-jenkins/index.html#installing-docker" class="xref page">Installing Docker</a> section of
+the <a href="../../user-docs/2.426.1/installing-jenkins/index.html" class="xref page">Installing Jenkins</a> page.<br>
+<strong>Note:</strong> If you use Linux, this tutorial assumes that you are not running
+Docker commands as the root user, but instead with a single user account that
+also has access to the other tools used throughout this tutorial.</p>
+</li>
+<li>
+<p><a href="https://git-scm.com/downloads">Git</a> and optionally
+<a href="https://desktop.github.com/">GitHub Desktop</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_run_jenkins_in_docker"><a class="anchor" href="#_run_jenkins_in_docker"></a>Run Jenkins in Docker</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this tutorial, you&#8217;ll be running Jenkins as a Docker container from the
+<a href="https://hub.docker.com/r/jenkins/jenkins/"><code>jenkins/jenkins</code></a> Docker
+image.</p>
 </div>
 <div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/build-a-multibranch-pipeline-project.adoc - include::doc/book/installing/_run-jenkins-in-docker.adoc[]</p>
+<p>To run Jenkins in Docker, follow the relevant instructions below for either
+<a href="#on-macos-and-linux">macOS and Linux</a> or <a href="#on-windows">Windows</a>.</p>
 </div>
+<div class="paragraph">
+<p>You can read more about Docker container and image concepts in the <a href="#docker.adoc" class="xref unresolved">Docker</a>
+section of the <a href="#installing-jenkins:index.adoc" class="xref unresolved">Installing Jenkins</a> page.</p>
 </div>
+<div class="paragraph">
+<p><a href="#partial$_docker-for-tutorials.adoc" class="xref unresolved">partial$_docker-for-tutorials.adoc</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#partial$_setup-wizard-for-tutorials.adoc" class="xref unresolved">partial$_setup-wizard-for-tutorials.adoc</a></p>
 </div>
 <div class="sect2">
 <h3 id="fork-and-clone-the-sample-repository-on-github"><a class="anchor" href="#fork-and-clone-the-sample-repository-on-github"></a>Fork and clone the sample repository</h3>
@@ -475,7 +533,7 @@ branch and proceeds to run each Pipeline against its respective branch, whose
 build results are shown on the <strong>Activity</strong> page of the main Blue Ocean
 interface.</p>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="tutorials/multibranch-pipeline-01-main-blueocean-interface.png" alt="Main Blue Ocean interface" width="100%"></span></p>
+<p><span class="image"><img src="_images/multibranch-pipeline-01-main-blueocean-interface.png" alt="Main Blue Ocean interface" width="100%"></span></p>
 </div>
 </li>
 </ol>
@@ -591,11 +649,11 @@ are covered in subsequent sections of this tutorial.</td>
 <div class="paragraph">
 <p><strong>Note:</strong> For an explanation of the other components of this <code>Jenkinsfile</code>, refer
 to the annotations of the Declarative Pipeline in the
-<a href="#tutorials:ROOT:build-a-node-js-and-react-app-with-npm.adoc#create-your-initial-pipeline-as-a-jenkinsfile" class="xref unresolved"><code>Create
+<a href="build-a-node-js-and-react-app-with-npm.html#create-your-initial-pipeline-as-a-jenkinsfile" class="xref page"><code>Create
 your initial Pipeline&#8230;&#8203;''</a> and
-<a href="#tutorials:ROOT:build-a-node-js-and-react-app-with-npm.adoc#add-a-test-stage-to-your-pipeline" class="xref unresolved"></code>Add
+<a href="build-a-node-js-and-react-app-with-npm.html#add-a-test-stage-to-your-pipeline" class="xref page"></code>Add
 a test stage&#8230;&#8203;''</a> sections of the
-<a href="#tutorials:ROOT:build-a-node-js-and-react-app-with-npm.adoc" class="xref unresolved">Build a Node.js and React app
+<a href="build-a-node-js-and-react-app-with-npm.html" class="xref page">Build a Node.js and React app
 with npm</a> tutorial.</p>
 </div>
 </li>
@@ -615,12 +673,12 @@ Jenkins&#8217;s Blue Ocean interface.</p>
 <p>Click <strong>Branches</strong> at the top right to access the list of your Pipeline
 project&#8217;s branches.</p>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="tutorials/multibranch-pipeline-11-branches-page.png" alt="Branches page" width="100%"></span></p>
+<p><span class="image"><img src="_images/multibranch-pipeline-11-branches-page.png" alt="Branches page" width="100%"></span></p>
 </div>
 </li>
 <li>
 <p>Click the run icon
-<span class="image unresolved"><img src="tutorials/multibranch-pipeline-12-run-icon.png" alt="Run icon" width="3%"></span>
+<span class="image"><img src="_images/multibranch-pipeline-12-run-icon.png" alt="Run icon" width="3%"></span>
 of the <code>master</code> branch of your Pipeline project, then quickly click the <strong>OPEN</strong>
 link that appears briefly at the lower-right to see Jenkins building the
 <code>master</code> branch with the amended <code>Jenkinsfile</code>. If you weren&#8217;t able to click
@@ -629,7 +687,7 @@ access this feature.<br>
 Within a few minutes, the Blue Ocean interface turns green if Jenkins built
 your Node.js and React application successfully from your <code>master</code> branch.</p>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="tutorials/multibranch-pipeline-13-build-and-test-stages-run-successfully-with-output.png" alt="Build and test stages run successfully with output" width="100%"></span></p>
+<p><span class="image"><img src="_images/multibranch-pipeline-13-build-and-test-stages-run-successfully-with-output.png" alt="Build and test stages run successfully with output" width="100%"></span></p>
 </div>
 </li>
 <li>
@@ -756,7 +814,7 @@ matches the name of the branch that Jenkins is running the build from, then the
 <li>
 <p>For an explanation of the <code>input message</code> steps, refer to annotation <strong>4</strong> of
 the Declarative Pipeline at the
-<a href="#tutorials:ROOT:build-a-node-js-and-react-app-with-npm.adoc#add-a-final-deliver-stage-to-your-pipeline" class="xref unresolved">``Add
+<a href="build-a-node-js-and-react-app-with-npm.html#add-a-final-deliver-stage-to-your-pipeline" class="xref page">``Add
 a final deliver stage&#8230;&#8203;'' section of the Build a Node.js and React app</a>
 tutorial.</p>
 </li>
@@ -787,7 +845,7 @@ project&#8217;s branches.</p>
 </li>
 <li>
 <p>Click the run icon
-<span class="image unresolved"><img src="tutorials/multibranch-pipeline-12-run-icon.png" alt="Run icon" width="3%"></span>
+<span class="image"><img src="_images/multibranch-pipeline-12-run-icon.png" alt="Run icon" width="3%"></span>
 of the <code>master</code> branch of your Pipeline project, then quickly click the <strong>OPEN</strong>
 link that appears briefly at the lower-right to see Jenkins building the
 <code>master</code> branch with the amended <code>Jenkinsfile</code>. If you weren&#8217;t able to click
@@ -797,7 +855,7 @@ Notice how Jenkins skips the last two stages you added, since the branch you
 are running the build from (<code>master</code>) does not meet the <code>when</code> directives'
 <code>branch</code> conditions in these stages.</p>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="tutorials/multibranch-pipeline-21-complete-pipeline-runs-successfully-on-master-branch.png" alt="Complete Pipeline runs successfully on the 'master' branch" width="100%"></span></p>
+<p><span class="image"><img src="_images/multibranch-pipeline-21-complete-pipeline-runs-successfully-on-master-branch.png" alt="Complete Pipeline runs successfully on the 'master' branch" width="100%"></span></p>
 </div>
 </li>
 <li>
@@ -870,7 +928,7 @@ project&#8217;s branches.</p>
 </li>
 <li>
 <p>Click the run icon
-<span class="image unresolved"><img src="tutorials/multibranch-pipeline-12-run-icon.png" alt="Run icon" width="3%"></span>
+<span class="image"><img src="_images/multibranch-pipeline-12-run-icon.png" alt="Run icon" width="3%"></span>
 of the <code>development</code> branch of your Pipeline project, then quickly click the
 <strong>OPEN</strong> link that appears briefly at the lower-right to see Jenkins building
 the <code>development</code> branch with the amended <code>Jenkinsfile</code>. If you weren&#8217;t able
@@ -883,7 +941,7 @@ page to access this feature.</p>
 green <strong>Shell Script</strong> step to expand its contents and scroll down until you see
 the <code>http://localhost:3000</code> link.</p>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="tutorials/multibranch-pipeline-31-deliver-for-development-stage-opened.png" alt="Shell Script step 'Deliver for development' stage opened" width="100%"></span><br>
+<p><span class="image"><img src="_images/multibranch-pipeline-31-deliver-for-development-stage-opened.png" alt="Shell Script step 'Deliver for development' stage opened" width="100%"></span><br>
   <strong>Note:</strong> Since you are building the application on a different branch, the <code>npm
   install</code> step will require a few minutes for <code>npm</code> to download the many
   dependencies required to run your Node.js and React application (stored in a
@@ -908,7 +966,7 @@ application successfully from your <code>development</code> branch. Notice how t
 <strong>Deliver for development</strong> stage was executed but the <strong>Deploy for production</strong>
 stage was not.</p>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="tutorials/multibranch-pipeline-32-complete-pipeline-runs-successfully-on-development-branch.png" alt="Complete Pipeline runs successfully on the 'development' branch" width="100%"></span></p>
+<p><span class="image"><img src="_images/multibranch-pipeline-32-complete-pipeline-runs-successfully-on-development-branch.png" alt="Complete Pipeline runs successfully on the 'development' branch" width="100%"></span></p>
 </div>
 </li>
 <li>
@@ -928,7 +986,7 @@ project&#8217;s branches.</p>
 </li>
 <li>
 <p>Click the run icon
-<span class="image unresolved"><img src="tutorials/multibranch-pipeline-12-run-icon.png" alt="Run icon" width="3%"></span>
+<span class="image"><img src="_images/multibranch-pipeline-12-run-icon.png" alt="Run icon" width="3%"></span>
 of the <code>production</code> branch of your Pipeline project, then quickly click the
 <strong>OPEN</strong> link that appears briefly at the lower-right to see Jenkins building
 the <code>production</code> branch with the amended <code>Jenkinsfile</code>. If you weren&#8217;t able to
@@ -941,7 +999,7 @@ to access this feature.</p>
 green <strong>Shell Script</strong> step to expand its contents and scroll down until you see
 the <code>http://localhost:5000</code> link.</p>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="tutorials/multibranch-pipeline-41-deploy-for-production-stage-opened.png" alt="Shell Script step 'Deploy for production' stage opened" width="100%"></span><br></p>
+<p><span class="image"><img src="_images/multibranch-pipeline-41-deploy-for-production-stage-opened.png" alt="Shell Script step 'Deploy for production' stage opened" width="100%"></span><br></p>
 </div>
 </li>
 <li>
@@ -961,7 +1019,7 @@ application successfully from your <code>production</code> branch. Notice how th
 <strong>Deploy for production</strong> stage was executed but the <strong>Deliver for development</strong>
 stage was skipped.</p>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="tutorials/multibranch-pipeline-42-complete-pipeline-runs-successfully-on-production-branch.png" alt="Complete Pipeline runs successfully on the 'production' branch" width="100%"></span></p>
+<p><span class="image"><img src="_images/multibranch-pipeline-42-complete-pipeline-runs-successfully-on-production-branch.png" alt="Complete Pipeline runs successfully on the 'production' branch" width="100%"></span></p>
 </div>
 </li>
 <li>
@@ -1162,7 +1220,7 @@ handle practically any aspect of build orchestration and automation.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="#tutorials:ROOT:index.adoc" class="xref unresolved">Tutorials overview</a> page for other introductory
+<p>The <a href="index.html" class="xref page">Tutorials overview</a> page for other introductory
 tutorials.</p>
 </li>
 <li>
@@ -1178,7 +1236,8 @@ updates.</p>
 </ul>
 </div>
 <hr>
-Unresolved include directive in modules/ROOT/pages/build-a-multibranch-pipeline-project.adoc - include::_partials/_feedback-footer.html[]
+</div>
+</div>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="build-a-java-app-with-maven.html">Build a Java app with Maven</a></span>

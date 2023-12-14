@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Jenkins Docs</title>
+    <title>GSoC 2018. Jenkins Remoting over Message Bus/Queue :: Jenkins Docs</title>
     <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2018/remoting-over-message-bus.html">
     <link rel="prev" href="index.html">
     <link rel="next" href="simple-pull-request-job-plugin.html">
@@ -77,7 +77,7 @@
     <a class="nav-link" href="index.html">Jenkins in Google Summer of Code 2018</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="remoting-over-message-bus.html">2018/remoting-over-message-bus.adoc</a>
+    <a class="nav-link" href="remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="simple-pull-request-job-plugin.html">GSoC 2018. Simple Pull-Request Job Plugin</a>
@@ -351,10 +351,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../tutorial/2.426.1/index.html">Jenkins Tutorials</a>
+      <a class="title" href="../../../tutorials/2.426.1/index.html">Jenkins Tutorials</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../tutorial/2.426.1/index.html">2.426.1</a>
+          <a href="../../../tutorials/2.426.1/index.html">2.426.1</a>
         </li>
       </ul>
     </li>
@@ -380,7 +380,7 @@
     <li><a href="../../index.html">Jenkins Projects</a></li>
     <li><a href="../index.html">Google Summer of Code in Jenkins</a></li>
     <li><a href="index.html">Jenkins in Google Summer of Code 2018</a></li>
-    <li><a href="remoting-over-message-bus.html">2018/remoting-over-message-bus.adoc</a></li>
+    <li><a href="remoting-over-message-bus.html">GSoC 2018. Jenkins Remoting over Message Bus/Queue</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2018/remoting-over-message-bus.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
@@ -390,6 +390,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
+<h1 class="page">GSoC 2018. Jenkins Remoting over Message Bus/Queue</h1>
 <div class="admonitionblock note">
     <table>
         <tbody>
@@ -404,22 +405,30 @@
         </tbody>
     </table>
 </div>
-<hr>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>layout: gsocproject
-title: "GSoC 2018. Jenkins Remoting over Message Bus/Queue"
-status: "Completed"
-tags:
-- gsoc2018
-- remoting
-student: pvtuan10
+<p><strong>Status</strong>: Completed</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_team"><a class="anchor" href="#_team"></a>Team</h2>
+<div class="sectionbody">
+<div class="paragraph avatar">
+<p><strong>Student</strong>:
+<span class="image"><img src="../../../images/_images/avatars/pvtuan10.jpeg" alt="pvtuan10" width="30" height="30"></span> Pham Vu Tuan</p>
+</div>
+<div class="paragraph avatar">
+<p><strong>Mentor(s):</strong>
+<span class="image"><img src="../../../images/_images/avatars/oleg_nenashev.png" alt="oleg nenashev" width="30" height="30"></span> Oleg Nenashev
+<span class="image"><img src="../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Supun Wanniarachchi</p>
+</div>
+<div class="paragraph">
+<p>student: pvtuan10
 mentors:
 - "oleg_nenashev"
-- "supun94"
-links:
-  gitter: "jenkinsci_remoting:gitter.im"
-  github: "jenkinsci/remoting-kafka-plugin"
----</p>
+- "supun94"</p>
 </div>
 <div class="paragraph">
 <p>My name is Pham Vu Tuan, I am a final year undergraduate student from Singapore. This is the first time I participate in Google Summer of Code and contribute to an open-source organization.</p>
@@ -427,8 +436,11 @@ links:
 <div class="paragraph">
 <p>I have GSoC mentors who help me in this project <a href="https://github.com/oleg-nenashev">Oleg Nenashev</a> and <a href="https://github.com/Supun94">Supun Wanniarachchi</a>. Besides that, I also receive great support from developers in remoting project <a href="https://github.com/dwnusbaum">Devin Nusbaum</a> and <a href="https://github.com/jeffret-b">Jeff Thompson</a>.</p>
 </div>
-<div class="sect2">
-<h3 id="_project_overview"><a class="anchor" href="#_project_overview"></a>Project Overview</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_project_overview"><a class="anchor" href="#_project_overview"></a>Project Overview</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Current versions of Jenkins Remoting are based on the TCP protocol. If it fails, the agent connection and the build fails as well. There are also issues with traffic prioritization and multi-agent communications, which impact Jenkins stability and scalability.</p>
 </div>
@@ -439,8 +451,10 @@ links:
 <p>The plugin source code can be found in <a href="https://github.com/jenkinsci/remoting-kafka-plugin">GitHub</a>.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_benefits_to_the_community"><a class="anchor" href="#_benefits_to_the_community"></a>Benefits to the community</h3>
+</div>
+<div class="sect1">
+<h2 id="_benefits_to_the_community"><a class="anchor" href="#_benefits_to_the_community"></a>Benefits to the community</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The plugin provide useful features to the community:</p>
 </div>
@@ -458,8 +472,10 @@ links:
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_why_kafka"><a class="anchor" href="#_why_kafka"></a>Why Kafka?</h3>
+</div>
+<div class="sect1">
+<h2 id="_why_kafka"><a class="anchor" href="#_why_kafka"></a>Why Kafka?</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -474,8 +490,10 @@ links:
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_architecture_overview"><a class="anchor" href="#_architecture_overview"></a>Architecture Overview</h3>
+</div>
+<div class="sect1">
+<h2 id="_architecture_overview"><a class="anchor" href="#_architecture_overview"></a>Architecture Overview</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The project consists of multiple components:</p>
 </div>
@@ -497,14 +515,16 @@ links:
 </div>
 <div class="paragraph">
 <p>The below diagram is the overview of the current architecture:
-<span class="image unresolved center"><img src="/images/post-images/remoting-kafka/remoting-kafka-architecture.png" alt="remoting kafka architecture" title="Remoting Kafka Plugin Current Architecture"></span></p>
+image::images:ROOT:post-images/remoting-kafka/remoting-kafka-architecture.png[title="Remoting Kafka Plugin Current Architecture", role="center"]</p>
 </div>
 <div class="paragraph">
 <p>With this design, master is not communicating with agent using direct TCP communication anymore, all the communication commands are transferred with Kafka.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_phase_1_summary"><a class="anchor" href="#_phase_1_summary"></a>Phase 1 Summary</h3>
+</div>
+<div class="sect1">
+<h2 id="_phase_1_summary"><a class="anchor" href="#_phase_1_summary"></a>Phase 1 Summary</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -522,8 +542,10 @@ links:
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_phase_2_summary"><a class="anchor" href="#_phase_2_summary"></a>Phase 2 Summary</h3>
+</div>
+<div class="sect1">
+<h2 id="_phase_2_summary"><a class="anchor" href="#_phase_2_summary"></a>Phase 2 Summary</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -548,8 +570,10 @@ links:
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_phase_3_summary"><a class="anchor" href="#_phase_3_summary"></a>Phase 3 Summary</h3>
+</div>
+<div class="sect1">
+<h2 id="_phase_3_summary"><a class="anchor" href="#_phase_3_summary"></a>Phase 3 Summary</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -573,39 +597,56 @@ links:
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_features"><a class="anchor" href="#_features"></a>Features</h3>
+</div>
+<div class="sect1">
+<h2 id="_features"><a class="anchor" href="#_features"></a>Features</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>There are some snapshots for the features of the plugin.</p>
 </div>
-<div class="sect3">
-<h4 id="_1_kafka_global_configuration_with_support_of_credentials_plugin_to_store_secrets"><a class="anchor" href="#_1_kafka_global_configuration_with_support_of_credentials_plugin_to_store_secrets"></a>1. Kafka Global Configuration with support of credentials plugin to store secrets.</h4>
-<div class="paragraph">
-<p><span class="image unresolved center"><img src="/images/post-images/remoting-kafka/remoting-kafka-configuration.png" alt="remoting kafka configuration" title="Remoting Kafka Plugin Global Configuration"></span></p>
+<div class="sect2">
+<h3 id="_1_kafka_global_configuration_with_support_of_credentials_plugin_to_store_secrets"><a class="anchor" href="#_1_kafka_global_configuration_with_support_of_credentials_plugin_to_store_secrets"></a>1. Kafka Global Configuration with support of credentials plugin to store secrets.</h3>
+<div class="imageblock center">
+<div class="content">
+<img src="../../../images/_images/post-images/remoting-kafka/remoting-kafka-configuration.png" alt="remoting kafka configuration">
+</div>
+<div class="title">Figure 1. Remoting Kafka Plugin Global Configuration</div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_2_launch_agent_with_kafka_launcher"><a class="anchor" href="#_2_launch_agent_with_kafka_launcher"></a>2. Launch agent with Kafka Launcher.</h4>
-<div class="paragraph">
-<p><span class="image unresolved center"><img src="/images/post-images/remoting-kafka/launch-agent-kafka.png" alt="launch agent kafka" title="Launch agent with Kafka Launcher"></span></p>
+<div class="sect2">
+<h3 id="_2_launch_agent_with_kafka_launcher"><a class="anchor" href="#_2_launch_agent_with_kafka_launcher"></a>2. Launch agent with Kafka Launcher.</h3>
+<div class="imageblock center">
+<div class="content">
+<img src="../../../images/_images/post-images/remoting-kafka/launch-agent-kafka.png" alt="launch agent kafka">
+</div>
+<div class="title">Figure 2. Launch agent with Kafka Launcher</div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_3_launch_agent_from_cli_using_agent_jar_with_secret_provided_to_ensure_security"><a class="anchor" href="#_3_launch_agent_from_cli_using_agent_jar_with_secret_provided_to_ensure_security"></a>3. Launch agent from CLI using agent JAR with secret provided to ensure security.</h4>
-<div class="paragraph">
-<p><span class="image unresolved center"><img src="/images/post-images/remoting-kafka/agent-cli.png" alt="agent cli" title="Command to run agent in CLI"></span></p>
+<div class="sect2">
+<h3 id="_3_launch_agent_from_cli_using_agent_jar_with_secret_provided_to_ensure_security"><a class="anchor" href="#_3_launch_agent_from_cli_using_agent_jar_with_secret_provided_to_ensure_security"></a>3. Launch agent from CLI using agent JAR with secret provided to ensure security.</h3>
+<div class="imageblock center">
+<div class="content">
+<img src="../../../images/_images/post-images/remoting-kafka/agent-cli.png" alt="agent cli">
+</div>
+<div class="title">Figure 3. Command to run agent in CLI</div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_4_run_jobs_pipeline_using_kafka_agent"><a class="anchor" href="#_4_run_jobs_pipeline_using_kafka_agent"></a>4. Run jobs, pipeline using Kafka agent.</h4>
-<div class="paragraph">
-<p><span class="image unresolved center"><img src="/images/post-images/remoting-kafka/demo-jobs.png" alt="demo jobs" title="Run jobs, pipeline using Kafka agent"></span></p>
+<div class="sect2">
+<h3 id="_4_run_jobs_pipeline_using_kafka_agent"><a class="anchor" href="#_4_run_jobs_pipeline_using_kafka_agent"></a>4. Run jobs, pipeline using Kafka agent.</h3>
+<div class="imageblock center">
+<div class="content">
+<img src="../../../images/_images/post-images/remoting-kafka/demo-jobs.png" alt="demo jobs">
+</div>
+<div class="title">Figure 4. Run jobs, pipeline using Kafka agent</div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_5_kafka_communication_between_master_and_agent"><a class="anchor" href="#_5_kafka_communication_between_master_and_agent"></a>5. Kafka communication between master and agent.</h4>
-<div class="paragraph">
-<p><span class="image unresolved center"><img src="/images/post-images/remoting-kafka/kafka-commands.png" alt="kafka commands" title="Kafka communication between master and agent"></span></p>
+<div class="sect2">
+<h3 id="_5_kafka_communication_between_master_and_agent"><a class="anchor" href="#_5_kafka_communication_between_master_and_agent"></a>5. Kafka communication between master and agent.</h3>
+<div class="imageblock center">
+<div class="content">
+<img src="../../../images/_images/post-images/remoting-kafka/kafka-commands.png" alt="kafka commands">
+</div>
+<div class="title">Figure 5. Kafka communication between master and agent</div>
 </div>
 <div class="paragraph">
 <p>Remoting operations are being executed over Kafka. In the log you may see:</p>
@@ -625,8 +666,10 @@ links:
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_how_to_run_demo_of_the_project"><a class="anchor" href="#_how_to_run_demo_of_the_project"></a>How to run demo of the project</h3>
+</div>
+<div class="sect1">
+<h2 id="_how_to_run_demo_of_the_project"><a class="anchor" href="#_how_to_run_demo_of_the_project"></a>How to run demo of the project</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>We have setup a ready-to-fly demo for this plugin. You can try to run a demo of the plugin by following this <a href="https://github.com/jenkinsci/remoting-kafka-plugin#how-to-run-demo-of-the-plugins">instruction</a>.
 Features in the demo:</p>
@@ -648,8 +691,10 @@ Features in the demo:</p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_future_work"><a class="anchor" href="#_future_work"></a>Future Work</h3>
+</div>
+<div class="sect1">
+<h2 id="_future_work"><a class="anchor" href="#_future_work"></a>Future Work</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -676,24 +721,30 @@ Features in the demo:</p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_phase_3_presentation_slides"><a class="anchor" href="#_phase_3_presentation_slides"></a>Phase 3 Presentation Slides</h3>
+</div>
+<div class="sect1">
+<h2 id="_phase_3_presentation_slides"><a class="anchor" href="#_phase_3_presentation_slides"></a>Phase 3 Presentation Slides</h2>
+<div class="sectionbody">
 <center>
   <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTjstGprw2lDt-TqU0f6-eCsPDOptUwJ5nmQ_kTqojuo6zA2M2_2PdUXPyfpfGFUVIRVoWASLdp-pyp/embed?start=false&loop=false&delayms=60000" frameborder="0" width="720" height="434" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </center>
 </div>
-<div class="sect2">
-<h3 id="_phase_3_presentation_video"><a class="anchor" href="#_phase_3_presentation_video"></a>Phase 3 Presentation Video</h3>
+</div>
+<div class="sect1">
+<h2 id="_phase_3_presentation_video"><a class="anchor" href="#_phase_3_presentation_video"></a>Phase 3 Presentation Video</h2>
+<div class="sectionbody">
 <center>
   <iframe width="720" height="434" src="https://www.youtube.com/embed/GGEtN4nbtng" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </center>
 </div>
-<div class="sect2">
-<h3 id="_useful_links"><a class="anchor" href="#_useful_links"></a>Useful Links</h3>
+</div>
+<div class="sect1">
+<h2 id="_useful_links"><a class="anchor" href="#_useful_links"></a>Useful Links</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://app.gitter.im/#/room/#jenkinsci_remoting:gitter.im"><span class="image"><img src="https://badges.gitter.im/jenkinsci/remoting.svg" alt="title: &quot;Gitter&quot;"></span></a></p>
+<p><a href="https://app.gitter.im/#/room/#jenkinsci_remoting:gitter.im">image::https://badges.gitter.im/jenkinsci/remoting.svg[title: "Gitter"</a>]</p>
 </li>
 <li>
 <p><a href="https://github.com/jenkinsci/remoting-kafka-plugin">GitHub Repository</a></p>
@@ -723,6 +774,31 @@ Features in the demo:</p>
 <p><a href="https://youtu.be/tuTODhJOTBU">Phase 2 Evaluation Video</a></p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links"><a class="anchor" href="#_links"></a>Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://app.gitter.im/#/room/#jenkinsci_remoting:gitter.im">Gitter | Join Chat</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/remoting-kafka-plugin">Github</a></p>
+</li>
+<li>
+<p><a href="../index.html#office-hours" class="xref page">Meetings</a></p>
+</li>
+<li>
+<p><a href="https://community.jenkins.io/c/contributing/gsoc">Forum</a></p>
+</li>
+<li>
+<p><a href="../index.html" class="xref page">Jenkins GSoC page</a></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <nav class="pagination">

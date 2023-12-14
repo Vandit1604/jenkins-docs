@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Build a Java app with Maven :: Jenkins Docs</title>
-    <link rel="canonical" href="https://docs.jenkins.com/tutorial/2.426.1/build-a-java-app-with-maven.html">
+    <link rel="canonical" href="https://docs.jenkins.com/tutorials/2.426.1/build-a-java-app-with-maven.html">
     <link rel="prev" href="tutorials-for-installing-jenkins-on-Google-Cloud.html">
     <link rel="next" href="build-a-multibranch-pipeline-project.html">
     <meta name="generator" content="Antora 3.1.5">
@@ -19,7 +19,7 @@
   width: 100vw;
   z-index: 100;"></jio-navbar>
   <div class="body">
-<div class="nav-container" data-component="tutorial" data-version="2.426.1">
+<div class="nav-container" data-component="tutorials" data-version="2.426.1">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -232,24 +232,82 @@ The test results are saved to a JUnit XML report.</p>
 </div>
 <div class="paragraph">
 <p><strong>Duration:</strong> This tutorial takes 20-40 minutes to complete, assuming you meet the below <a href="#prerequisites">prerequisites</a>.
-The exact duration will depend on the speed of your machine and whether or not you&#8217;ve already <a href="#run-jenkins-in-docker">run Jenkins in Docker</a> from <a href="..">another tutorial</a>.</p>
+The exact duration will depend on the speed of your machine and whether or not you&#8217;ve already <a href="#run-jenkins-in-docker">run Jenkins in Docker</a> from <a href="index.html" class="xref page">another tutorial</a>.</p>
 </div>
 <div class="paragraph">
 <p>You can stop this tutorial at any time and continue from where you left off.</p>
 </div>
 <div class="paragraph">
-<p>If you&#8217;ve already run through <a href="..">another tutorial</a>, you can skip the <a href="#prerequisites">Prerequisites</a> and <a href="#run-jenkins-in-docker">Run Jenkins in Docker</a> sections below and proceed to <a href="#fork-sample-repository">forking the sample repository</a>.
+<p>If you&#8217;ve already run through <a href="index.html" class="xref page">another tutorial</a>, you can skip the <a href="#prerequisites">Prerequisites</a> and <a href="#run-jenkins-in-docker">Run Jenkins in Docker</a> sections below and proceed to <a href="#fork-sample-repository">forking the sample repository</a>.
 Make sure you have <a href="https://git-scm.com/downloads">Git</a> installed locally.
 If you need to restart Jenkins, simply follow the restart instructions in <a href="#stopping-and-restarting-jenkins">Stopping and restarting Jenkins</a>, and then proceed.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/build-a-java-app-with-maven.adoc - include::doc/tutorials/_prerequisites.adoc[]
-** <a href="https://git-scm.com/downloads">Git</a>, and optionally <a href="https://desktop.github.com/">GitHub Desktop</a>.</p>
+<p>For this tutorial, you will require:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A macOS, Linux or Windows machine with:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>256 MB of RAM, although more than 2 GB is recommended.</p>
+</li>
+<li>
+<p>10 GB of drive space for Jenkins and your Docker images and containers.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The following software installed:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.docker.com/">Docker</a> - Read more about installing Docker in the
+<a href="../../user-docs/2.426.1/installing-jenkins/index.html#installing-docker" class="xref page">Installing Docker</a> section of
+the <a href="../../user-docs/2.426.1/installing-jenkins/index.html" class="xref page">Installing Jenkins</a> page.<br>
+<strong>Note:</strong> If you use Linux, this tutorial assumes that you are not running
+Docker commands as the root user, but instead with a single user account that
+also has access to the other tools used throughout this tutorial.</p>
+</li>
+<li>
+<p><a href="https://git-scm.com/downloads">Git</a>, and optionally <a href="https://desktop.github.com/">GitHub Desktop</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_run_jenkins_in_docker"><a class="anchor" href="#_run_jenkins_in_docker"></a>Run Jenkins in Docker</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this tutorial, you&#8217;ll be running Jenkins as a Docker container from the
+<a href="https://hub.docker.com/r/jenkins/jenkins/"><code>jenkins/jenkins</code></a> Docker
+image.</p>
 </div>
 <div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/build-a-java-app-with-maven.adoc - include::doc/book/installing/_run-jenkins-in-docker.adoc[]</p>
+<p>To run Jenkins in Docker, follow the relevant instructions below for either
+<a href="#on-macos-and-linux">macOS and Linux</a> or <a href="#on-windows">Windows</a>.</p>
 </div>
+<div class="paragraph">
+<p>You can read more about Docker container and image concepts in the <a href="#docker.adoc" class="xref unresolved">Docker</a>
+section of the <a href="#installing-jenkins:index.adoc" class="xref unresolved">Installing Jenkins</a> page.</p>
 </div>
+<div class="paragraph">
+<p><a href="#partial$_docker-for-tutorials.adoc" class="xref unresolved">partial$_docker-for-tutorials.adoc</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#partial$_setup-wizard-for-tutorials.adoc" class="xref unresolved">partial$_setup-wizard-for-tutorials.adoc</a></p>
 </div>
 <div class="sect2">
 <h3 id="fork-and-clone-the-sample-repository-on-github"><a class="anchor" href="#fork-and-clone-the-sample-repository-on-github"></a>Fork and clone the sample repository</h3>
@@ -494,14 +552,14 @@ After making a clone of your local <code>simple-java-maven-app</code> Git reposi
 <li>
 <p>Downloads the Maven Docker image and runs it in a container on Docker.</p>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="tutorials/java-maven-01-downloading-maven-docker-image.png" alt="Downloading Maven Docker image" width="100%"></span></p>
+<p><span class="image"><img src="_images/java-maven-01-downloading-maven-docker-image.png" alt="Downloading Maven Docker image" width="100%"></span></p>
 </div>
 </li>
 <li>
 <p>Runs the <code>Build</code> stage defined in the <code>Jenkinsfile</code> on the Maven container.
 During this time, Maven downloads many artifacts necessary to build your Java application, which are ultimately stored in Jenkins' local Maven repository in the Docker host&#8217;s filesystem.</p>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="tutorials/java-maven-02-initial-pipeline-downloading-maven-artifacts.png" alt="Downloading Maven artifacts" width="100%"></span></p>
+<p><span class="image"><img src="_images/java-maven-02-initial-pipeline-downloading-maven-artifacts.png" alt="Downloading Maven artifacts" width="100%"></span></p>
 </div>
 </li>
 </ol>
@@ -510,13 +568,13 @@ During this time, Maven downloads many artifacts necessary to build your Java ap
 <p>The Blue Ocean interface displays green if Jenkins built your Java application successfully.</p>
 </div>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="tutorials/java-maven-03-initial-pipeline-runs-successfully.png" alt="Initial Pipeline runs successfully" width="100%"></span></p>
+<p><span class="image"><img src="_images/java-maven-03-initial-pipeline-runs-successfully.png" alt="Initial Pipeline runs successfully" width="100%"></span></p>
 </div>
 </li>
 <li>
 <p>Select the <strong>X</strong> at the top-right to return to the main Blue Ocean interface.</p>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="tutorials/java-maven-04-main-blue-ocean-interface.png" alt="Main Blue Ocean interface" width="100%"></span></p>
+<p><span class="image"><img src="_images/java-maven-04-main-blue-ocean-interface.png" alt="Main Blue Ocean interface" width="100%"></span></p>
 </div>
 </li>
 </ol>
@@ -632,7 +690,7 @@ Notice the additional "Test" stage.
 You can select the previous "Build" stage circle to access the output from that stage.</p>
 </div>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="tutorials/java-maven-11-test-stage-runs-successfully-with-output.png" alt="Test stage runs successfully (with output)" width="100%"></span>
+<p><span class="image"><img src="_images/java-maven-11-test-stage-runs-successfully-with-output.png" alt="Test stage runs successfully (with output)" width="100%"></span>
 . Select the <strong>X</strong> at the top-right to return to the main Blue Ocean interface.</p>
 </div>
 </div>
@@ -733,18 +791,18 @@ The Blue Ocean interface displays as below if a Pipeline runs successfully.
 Notice the additional "Deliver" stage.
 Select the previous "Test" and "Build" stage circles to access the outputs from those stages.</p>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="tutorials/java-maven-21-deliver-stage-runs-successfully.png" alt="Deliver stage runs successfully" width="100%"></span></p>
+<p><span class="image"><img src="_images/java-maven-21-deliver-stage-runs-successfully.png" alt="Deliver stage runs successfully" width="100%"></span></p>
 </div>
 <div class="paragraph">
 <p>The "Deliver" stage output should be something like below, showing you the execution results of your Java application at the end.</p>
 </div>
 <div class="paragraph boxshadow">
-<p><span class="image unresolved"><img src="tutorials/java-maven-22-deliver-stage-output-only.png" alt="Deliver stage output only" width="100%"></span></p>
+<p><span class="image"><img src="_images/java-maven-22-deliver-stage-output-only.png" alt="Deliver stage output only" width="100%"></span></p>
 </div>
 </li>
 <li>
 <p>Select the <strong>X</strong> at the top-right to return to the main Blue Ocean interface, which lists your previous Pipeline runs in reverse chronological order.
-<span class="image unresolved"><img src="tutorials/java-maven-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png" alt="Main Blue Ocean interface with all previous runs displayed" width="100%"></span></p>
+<span class="image"><img src="_images/java-maven-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png" alt="Main Blue Ocean interface with all previous runs displayed" width="100%"></span></p>
 </li>
 </ol>
 </div>
@@ -767,7 +825,7 @@ You&#8217;ve just used Jenkins to build a simple Java application with Maven!</p
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="#tutorials:ROOT:index.adoc" class="xref unresolved">Tutorials overview</a> page for other introductory tutorials.</p>
+<p>The <a href="index.html" class="xref page">Tutorials overview</a> page for other introductory tutorials.</p>
 </li>
 <li>
 <p>The <a href="../../user-docs/2.426.1/index.html" class="xref page">User Handbook</a> for more detailed information about using Jenkins, such as <a href="../../user-docs/2.426.1/pipeline/index.html" class="xref page">Pipelines</a> (in particular <a href="../../user-docs/2.426.1/pipeline/syntax.html" class="xref page">Pipeline syntax</a>) and the <a href="../../user-docs/2.426.1/blueocean/index.html" class="xref page">Blue Ocean</a> interface.</p>
@@ -778,7 +836,8 @@ You&#8217;ve just used Jenkins to build a simple Java application with Maven!</p
 </ul>
 </div>
 <hr>
-Unresolved include directive in modules/ROOT/pages/build-a-java-app-with-maven.adoc - include::_partials/_feedback-footer.html[]
+</div>
+</div>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="tutorials-for-installing-jenkins-on-Google-Cloud.html">Jenkins on Google Cloud</a></span>

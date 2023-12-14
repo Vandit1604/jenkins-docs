@@ -133,7 +133,7 @@
     <a class="nav-link" href="../../pipeline/index.html">Pipeline</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../pipeline/getting-started.html">Getting started with the Guided Tour</a>
+    <a class="nav-link" href="../../pipeline/getting-started.html">Getting started with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
@@ -487,10 +487,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../../tutorial/2.426.1/index.html">Jenkins Tutorials</a>
+      <a class="title" href="../../../../tutorials/2.426.1/index.html">Jenkins Tutorials</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../../tutorial/2.426.1/index.html">2.426.1</a>
+          <a href="../../../../tutorials/2.426.1/index.html">2.426.1</a>
         </li>
       </ul>
     </li>
@@ -651,9 +651,36 @@ Caused by: sun.security.provider.certpath.SunCertPathBuilderException:
 <p>You may be able to avoid that message with the <code>-noCertificateCheck</code> argument to <code>agent.jar</code>.
 That will disable server certificate checking from the agent.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/system-administration/pages/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-squid.adoc - include::doc/book/system-administration/reverse-proxy-configuration-with-jenkins/_context_path.adoc[]</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="context-path"><a class="anchor" href="#context-path"></a>Context path</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The context path is the prefix of a URL path.
+The Jenkins controller and the reverse proxy <strong>must use the same context path</strong>.
+For example, if the Jenkins controller URL is https://www.example.com/jenkins/ then the <code>--prefix=/jenkins</code> argument must be included in the Jenkins controller command line arguments.</p>
+</div>
+<div class="paragraph">
+<p>Set the context path when using the Linux packages by running <code>systemctl edit jenkins</code> and adding the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">[Service]
+Environment="JENKINS_PREFIX=/jenkins"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set the context path on Windows controllers by including the <code>--prefix</code> command line argument in the <code>jenkins.xml</code> file in the installation directory.</p>
+</div>
+<div class="paragraph">
+<p>Ensure that Jenkins is running at the context path where your reverse proxy is serving Jenkins.
+You will have the least pain if you keep to this principle.</p>
+</div>
+<div class="paragraph">
+<p>The <code>--prefix</code> command line argument is not needed if the context path is empty.
+For example, the URL https://jenkins.example.com/ has an empty context path.</p>
 </div>
 </div>
 </div>

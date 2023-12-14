@@ -133,7 +133,7 @@
     <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with the Guided Tour</a>
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
@@ -487,10 +487,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../tutorial/2.426.1/index.html">Jenkins Tutorials</a>
+      <a class="title" href="../../../tutorials/2.426.1/index.html">Jenkins Tutorials</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../tutorial/2.426.1/index.html">2.426.1</a>
+          <a href="../../../tutorials/2.426.1/index.html">2.426.1</a>
         </li>
       </ul>
     </li>
@@ -797,8 +797,153 @@ pages.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="setup-wizard"><a class="anchor" href="#setup-wizard"></a>Post-installation setup wizard</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Unresolved include directive in modules/installing-jenkins/pages/other.adoc - include::doc/book/installing/_setup-wizard.adoc[]</p>
+<p>After downloading, installing and running Jenkins using one of the procedures
+above (except for installation with Jenkins Operator), the post-installation setup wizard begins.</p>
+</div>
+<div class="paragraph">
+<p>This setup wizard takes you through a few quick "one-off" steps to unlock
+Jenkins, customize it with plugins and create the first administrator user
+through which you can continue accessing Jenkins.</p>
+</div>
+<div class="sect2">
+<h3 id="_unlocking_jenkins"><a class="anchor" href="#_unlocking_jenkins"></a>Unlocking Jenkins</h3>
+<div class="paragraph">
+<p>When you first access a new Jenkins instance, you are asked to unlock it using
+an automatically-generated password.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Browse to <code>http://localhost:8080</code> (or whichever port you configured for
+Jenkins when installing it) and wait until the <strong>Unlock Jenkins</strong> page appears.</p>
+<div class="paragraph boxshadow">
+<p><span class="image"><img src="_images/setup-jenkins-01-unlock-jenkins-page.jpg" alt="Unlock Jenkins page" width="80%"></span></p>
+</div>
+</li>
+<li>
+<p>From the Jenkins console log output, copy the automatically-generated
+alphanumeric password (between the 2 sets of asterisks).</p>
+<div class="paragraph boxshadow">
+<p><span class="image"><img src="_images/setup-jenkins-02-copying-initial-admin-password.png" alt="Copying initial admin password" width="80%"></span><br>
+  <strong>Note:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The command: <code>sudo cat /var/lib/jenkins/secrets/initialAdminPassword</code> will print the password at console.<br></p>
+</li>
+<li>
+<p>If you are running Jenkins in Docker using the official <code>jenkins/jenkins</code> image you can use <code>sudo docker exec ${CONTAINER_ID or CONTAINER_NAME} cat /var/jenkins_home/secrets/initialAdminPassword</code> to print the password in the console without having to exec into the container.<br></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>On the <strong>Unlock Jenkins</strong> page, paste this password into the <strong>Administrator
+password</strong> field and click <strong>Continue</strong>.<br>
+<strong>Note:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>The Jenkins console log indicates the location (in the Jenkins home directory)
+where this password can also be obtained. This password must be entered in the
+setup wizard on new Jenkins installations before you can access Jenkins&#8217;s main
+UI. This password also serves as the default administrator account&#8217;s password
+(with username "admin") if you happen to skip the subsequent user-creation
+step in the setup wizard.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_customizing_jenkins_with_plugins"><a class="anchor" href="#_customizing_jenkins_with_plugins"></a>Customizing Jenkins with plugins</h3>
+<div class="paragraph">
+<p>After <a href="#unlocking-jenkins">unlocking Jenkins</a>, the <strong>Customize Jenkins</strong> page
+appears. Here you can install any number of useful plugins as part of your
+initial setup.</p>
+</div>
+<div class="paragraph">
+<p>Click one of the two options shown:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Install suggested plugins</strong> - to install the recommended set of plugins, which
+are based on most common use cases.</p>
+</li>
+<li>
+<p><strong>Select plugins to install</strong> - to choose which set of plugins to initially
+install. When you first access the plugin selection page, the suggested
+plugins are selected by default.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you are not sure what plugins you need, choose <strong>Install suggested
+plugins</strong>.
+You can install (or remove) additional Jenkins plugins at a later point in time
+via the
+<a href="../managing/index.html" class="xref page"><strong>Manage Jenkins</strong></a> &gt;
+<a href="../managing/plugins.html" class="xref page"><strong>Plugins</strong></a> page in Jenkins.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The setup wizard shows the progression of Jenkins being configured and your
+chosen set of Jenkins plugins being installed. This process may take a few
+minutes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_creating_the_first_administrator_user"><a class="anchor" href="#_creating_the_first_administrator_user"></a>Creating the first administrator user</h3>
+<div class="paragraph">
+<p>Finally, after <a href="#customizing-jenkins-with-plugins">customizing Jenkins with
+plugins</a>, Jenkins asks you to create your first administrator user.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>When the <strong>Create First Admin User</strong> page appears, specify the details for your
+administrator user in the respective fields and click <strong>Save and Finish</strong>.</p>
+</li>
+<li>
+<p>When the <strong>Jenkins is ready</strong> page appears, click <strong>Start using Jenkins</strong>.<br>
+<strong>Notes:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>This page may indicate <strong>Jenkins is almost ready!</strong> instead and if so, click
+<strong>Restart</strong>.</p>
+</li>
+<li>
+<p>If the page does not automatically refresh after a minute, use your web
+browser to refresh the page manually.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If required, log in to Jenkins with the credentials of the user you just
+created and you are ready to start using Jenkins!</p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 </div>
