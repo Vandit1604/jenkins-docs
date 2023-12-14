@@ -63,7 +63,7 @@ The `vars` directory hosts script files that are exposed as a variable in Pipeli
 So if you had a file called `vars/log.groovy` with a function like `def info(message)...` in it, you can access this function like `log.info "hello world"` in the Pipeline. You can put as many functions as you like inside this file. Read on below for more examples and options.
 
 The basename of each `.groovy` file should be a Groovy (~ Java) identifier, conventionally `camelCased`.
-The matching `.txt`, if present, can contain documentation, processed through the system’s configured https://wiki.jenkins.io/display/JENKINS/Markup+formatting[markup formatter] (so may really be HTML, Markdown, etc., though the `.txt` extension is required). This documentation will only be visible on the xref:user-docs:pipeline:getting-started.adoc#global-variable-reference[Global Variable Reference] pages that are accessed from the navigation sidebar of Pipeline jobs that import the shared library. In addition, those jobs must run successfully once before the shared library documentation will be generated.
+The matching `.txt`, if present, can contain documentation, processed through the system’s configured https://wiki.jenkins.io/display/JENKINS/Markup+formatting[markup formatter] (so may really be HTML, Markdown, etc., though the `.txt` extension is required). This documentation will only be visible on the xref:pipeline:getting-started.adoc#global-variable-reference[Global Variable Reference] pages that are accessed from the navigation sidebar of Pipeline jobs that import the shared library. In addition, those jobs must run successfully once before the shared library documentation will be generated.
 
 The Groovy source files in these directories get the same “CPS transformation”
 as in Scripted Pipeline.
@@ -79,7 +79,7 @@ There are several places where Shared Libraries can be defined, depending on
 the use-case. _Manage Jenkins » System » Global Pipeline Libraries_
 as many libraries as necessary can be configured.
 
-image::pipeline/add-global-pipeline-libraries.png["Add a Global Pipeline Library", role=center]
+image::user-docs:pipeline:add-global-pipeline-libraries.png["Add a Global Pipeline Library", role=center]
 
 Since these libraries will be globally usable, any Pipeline in the system can
 utilize functionality implemented in these libraries.
@@ -117,7 +117,7 @@ classes or global variables defined by any such libraries. To access other
 shared libraries, the `Jenkinsfile` needs to use the `@Library` annotation,
 specifying the library's name:
 
-image::pipeline/configure-global-pipeline-library.png["Configuring a Global Pipeline Library", role=center]
+image::user-docs:pipeline:configure-global-pipeline-library.png["Configuring a Global Pipeline Library", role=center]
 
 [source,groovy]
 ----
@@ -269,7 +269,7 @@ specifically updated to support a new API for checking out an arbitrary named
 version (**Modern SCM** option). As of this writing, the latest versions of the
 Git and Subversion plugins support this mode.
 
-image::pipeline/global-pipeline-library-modern-scm.png["Configuring a 'Modern SCM' for a Pipeline Library", role=center]
+image::user-docs:pipeline:global-pipeline-library-modern-scm.png["Configuring a 'Modern SCM' for a Pipeline Library", role=center]
 
 ==== Legacy SCM
 
@@ -280,7 +280,7 @@ branch/tag/ref may be configured for that particular SCM plugin.  This ensures
 that during checkout of the library's source code, the SCM plugin will expand
 this variable to checkout the appropriate version of the library.
 
-image::pipeline/global-pipeline-library-legacy-scm.png["Configuring a 'Legacy SCM' for a Pipeline Library", role=center]
+image::user-docs:pipeline:global-pipeline-library-legacy-scm.png["Configuring a 'Legacy SCM' for a Pipeline Library", role=center]
 
 ==== Dynamic retrieval
 

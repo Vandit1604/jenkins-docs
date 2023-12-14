@@ -48,7 +48,7 @@ Since the crumb includes the web session ID, clients need to do the following:
 * For all subsequent requests, provide the crumb and the session cookie in addition to username and password.
 
 Alternatively **authenticate using username and API token**.
-Requests authenticating with an xref:user-docs:system-administration:authenticating-scripted-clients.adoc[API token] are exempt from CSRF protection in Jenkins.
+Requests authenticating with an xref:system-administration:authenticating-scripted-clients.adoc[API token] are exempt from CSRF protection in Jenkins.
 
 ## Disabling CSRF Protection
 
@@ -58,4 +58,4 @@ In this case, it may be necessary to disable CSRF protection temporarily.
 IMPORTANT: It is *strongly recommended* that CSRF protection be left *enabled*, including on instances operating on private, fully trusted networks.
 
 To disable CSRF protection, set the system property `hudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PROTECTION` to `true` on startup.
-xref:user-docs:managing:system-properties.adoc[Learn more about system properties in Jenkins].
+xref:managing:system-properties.adoc[Learn more about system properties in Jenkins].

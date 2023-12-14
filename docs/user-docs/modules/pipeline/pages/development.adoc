@@ -19,7 +19,7 @@ HTTP POST
 request with appropriate parameters.
 We recommended using the
 xref:./../managing/cli.adoc#ssh[SSH interface]
-to run the linter. See the xref:user-docs:glossary:index.adoc#../managing/cli[Jenkins CLI documentation] for details on how to properly configure
+to run the linter. See the xref:glossary:index.adoc#../managing/cli[Jenkins CLI documentation] for details on how to properly configure
 Jenkins for secure command-line access.
 
 .Linting via the CLI with SSH
@@ -105,7 +105,7 @@ Jenkinsfile successfully validated.
 
 == Blue Ocean Editor
 
-The xref:user-docs:glossary:index.adoc#../blueocean/pipeline-editor[Blue Ocean Pipeline Editor] provides a link:https://en.wikipedia.org/wiki/WYSIWYG[WYSIWYG] way to create Declarative Pipelines.
+The xref:glossary:index.adoc#../blueocean/pipeline-editor[Blue Ocean Pipeline Editor] provides a link:https://en.wikipedia.org/wiki/WYSIWYG[WYSIWYG] way to create Declarative Pipelines.
 The editor offers a structural view of all the stages, parallel branches, and steps in a Pipeline.
 The editor validates Pipeline changes as they are made, eliminating many errors before they are even committed.  
 Behind the scenes it still generates Declarative Pipeline code.
@@ -153,7 +153,7 @@ allows for easy parallel testing of different changes.
 As long as a Pipeline contained syntactically correct Groovy and was able to start,
 it can be Replayed.
 * *Referenced Shared Library code is also modifiable* - If a Pipeline run references a
-xref:user-docs:glossary:index.adoc#shared-libraries[Shared Library], the code from the shared library will
+xref:glossary:index.adoc#shared-libraries[Shared Library], the code from the shared library will
 also be shown and modifiable as part of the Replay page.
 * *Access Control via dedicated "Run / Replay" permission* -
 implied by "Job / Configure". If Pipeline is not configurable (e.g. Branch Pipeline of a Multibranch) or "Job / Configure" is not granted, users still can experiment with Pipeline Definition via Replay
@@ -232,7 +232,7 @@ a secure channel (SSH).  You can install it directly from the Sublime Text packa
 The link:https://github.com/jenkinsci/JenkinsPipelineUnit[Pipeline Unit Testing Framework]
 allows you to
 link:https://en.wikipedia.org/wiki/Unit_testing[unit test]
-Pipelines and xref:user-docs:glossary:index.adoc#shared-libraries[Shared Libraries]
+Pipelines and xref:glossary:index.adoc#shared-libraries[Shared Libraries]
 before running them in full. It provides a mock execution environment where real
 Pipeline steps are replaced with mock objects that you can use to check for expected
 behavior. New and rough around the edges, but promising.

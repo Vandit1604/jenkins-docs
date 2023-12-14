@@ -29,8 +29,8 @@ If editing an existing Pipeline, the credentials for that Pipeline must allow pu
 
 The editor can be launched through the:
 
-* *New Pipeline* option from the xref:user-docs:blueocean:dashboard.adoc[Blue Ocean dashboard].
-* *Branches* tab within the xref:user-docs:blueocean:activity.adoc#branches[Activity view].
+* *New Pipeline* option from the xref:blueocean:dashboard.adoc[Blue Ocean dashboard].
+* *Branches* tab within the xref:blueocean:activity.adoc#branches[Activity view].
 * *Edit* (icon:pencil[]) in the Pipeline run details view.
 
 == Navigation bar
@@ -45,20 +45,20 @@ The local navigation bar includes:
 == Pipeline Settings
 
 By default, the pane on the right side of the editor displays the *Pipeline Settings*.
-Selecting an existing stage or adding a stage displays the xref:user-docs:blueocean:pipeline-editor.adoc#stage-configuration[stage configuration] pane instead.
+Selecting an existing stage or adding a stage displays the xref:blueocean:pipeline-editor.adoc#stage-configuration[stage configuration] pane instead.
 To navigate back to the *Pipeline Settings* pane, select any empty space in the background of the editor.
 Within the Pipeline Settings pane, there are two sections that are configurable.
 
 === Agent
 
 The *Agent* section controls which agent the Pipeline uses.
-This performs the same process as the xref:./../pipeline/syntax.adoc#agent[agent directive].
+This performs the same process as the xref:pipeline:syntax.adoc#agent[agent directive].
 The *Image* field allows users to configure which container image runs when the Pipeline is active.
 
 === Environment
 
 The *Environment* section allows users to configure environment variables for the Pipeline.
-This is the same process as the xref:./../pipeline/syntax.adoc#environment[environment directive].
+This is the same process as the xref:pipeline:syntax.adoc#environment[environment directive].
 
 == Stage editor
 
@@ -114,4 +114,4 @@ image::editor/save-pipeline.png[Save Pipeline dialog, role=center]
 
 You can optionally enter a description of the changes before saving.
 The dialog also provides options for saving changes to the same branch or creating a new branch to save to.
-Selecting *Save & run* saves any changes to the Pipeline as a new commit, starts a new Pipeline run based on those changes, and navigates to the xref:user-docs:glossary:index.adoc#activity[Activity view] for this pipeline.
+Selecting *Save & run* saves any changes to the Pipeline as a new commit, starts a new Pipeline run based on those changes, and navigates to the xref:glossary:index.adoc#activity[Activity view] for this pipeline.

@@ -57,12 +57,12 @@ See xref:publishing:requesting-hosting.adoc#categorize-the-plugin[categorize the
 
 Plugin labels are assigned to plugin repositories by their maintainers as link:https://help.github.com/en/github/administering-a-repository/classifying-your-repository-with-topics[GitHub topics].
 GitHub topics that match entries from the link:https://github.com/jenkins-infra/update-center2/blob/master/resources/allowed-github-topics.properties[plugin label allowlist] are displayed on the plugin site.
-The xref:publishing:documentation.adoc[plugin documentation guide] includes instructions for xref:publishing:documentation.adoc#documenting-plugins[documenting], categorizing, and xref:publishing:documentation.adoc#labeling-plugins[labeling] plugins.
+The xref:dev-docs:publishing:documentation.adoc[plugin documentation guide] includes instructions for xref:dev-docs:publishing:documentation.adoc#documenting-plugins[documenting], categorizing, and xref:dev-docs:publishing:documentation.adoc#labeling-plugins[labeling] plugins.
 
 === Where does the description of the plugin come from?
 
 The plugin site will pull content from a specified Markdown or AsciiDoc file in plugin's GitHub repository, defaulting to the README file.
-See xref:publishing:documentation.adoc#using-github-as-a-source-of-documentation[documentation] for
+See xref:dev-docs:publishing:documentation.adoc#using-github-as-a-source-of-documentation[documentation] for
 how to configure GitHub documentation.
 
 NOTE: In the past it was possible to use Jenkins Wiki as the source of documentation.

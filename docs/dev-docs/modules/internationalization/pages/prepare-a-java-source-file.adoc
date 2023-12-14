@@ -58,7 +58,7 @@ public boolean configure(StaplerRequest req, JSONObject formData) throws FormExc
 
 [NOTE]
 ====
-See xref:dev-docs:development-environment:ide-configuration.adoc[IDE Configuration] for plugins that make this and the following steps easier.
+See xref:development-environment:ide-configuration.adoc[IDE Configuration] for plugins that make this and the following steps easier.
 ====
 
 The localized strings for the default language (typically English), unless they are reused within the same component, are typically added to a `Messages.properties` file in the same package as the class that uses it.

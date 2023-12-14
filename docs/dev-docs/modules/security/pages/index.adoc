@@ -48,7 +48,7 @@ In all cases, this is the code you need to write.
 == Controlling read access to `AccessControlled` objects
 
 The recommended way to control read access to `AccessControlled` objects is to implement the `StaplerProxy` interface.
-See xref:dev-docs:security:read-access.adoc[Restricting HTTP Access to `AccessControlled` Objects] for more information.
+See xref:security:read-access.adoc[Restricting HTTP Access to `AccessControlled` Objects] for more information.
 
 == What do plugins need to do to protect web methods?
 
@@ -72,7 +72,7 @@ Permission p = ... do the step 3 above ...
 ac.checkPermission(p)
 ----
 
-See also xref:dev-docs:security:form-validation.adoc[Securely implementing form validation].
+See also xref:security:form-validation.adoc[Securely implementing form validation].
 
 === Checking permissions in Jelly files
 

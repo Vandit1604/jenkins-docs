@@ -280,7 +280,7 @@ Metrics are exposed using the link:https://dropwizard.github.io/metrics/3.1.0[Dr
 The exact list of exposed metrics varies depending on your installed plugins.
 To get a full list of available metrics for your controller, run the following
 script on the
-xref:user-docs:managing:script-console.adoc[Jenkins script console]:
+xref:managing:script-console.adoc[Jenkins script console]:
 
 [source,groovy]
 ----

@@ -79,7 +79,7 @@ project. For example, some projects may be configured to "restrict where this
 project is run" which ties the project to a specific agent or set of labeled
 agents. Other projects which omit this configuration will select an agent from
 the available pool in Jenkins.
-Learn more about Agents in xref:user-docs:managing:nodes/.adoc#creating-agents[Managing Nodes]
+Learn more about Agents in xref:managing:nodes.adoc#creating-agents[Managing Nodes]
 
 In a distributed builds environment, the Jenkins controller will use its resources
 to only handle HTTP requests and manage the build environment. Actual execution
@@ -163,7 +163,7 @@ up to date each time it connects to the controller.
 
 [[inbound_agent]]
 .Inbound agent launch command
-image::hardware-recommendations/inbound-agent.png[Inbound agent node screen, scaledwidth=90%]
+image::user-docs:scaling:inbound-agent.png[Inbound agent node screen, scaledwidth=90%]
 
 This approach is convenient for an execution as a daemon on Unix.
 
@@ -376,7 +376,7 @@ different approaches to expandable storage:
   and just requires that the _$JENKINS_HOME_ be on its own filesystem. This
   makes it easier to create snapshots, backups, etc.
 - For systems with an existing Jenkins installation, there are at least two options:
-** The System Property xref:user-docs:managing:system-properties.adoc#jenkins-model-jenkins-buildsdir[jenkins.model.Jenkins.buildsDir]
+** The System Property xref:managing:system-properties.adoc#jenkins-model-jenkins-buildsdir[jenkins.model.Jenkins.buildsDir]
 ** *Symbolic Links* (symlinks) may be used instead to store job 
   folders on separate volumes with symlinks to those directories.
 
@@ -391,7 +391,7 @@ This policy can be set on a job's configuration page.
 It is a best practice to take regular backups of your $JENKINS_HOME.
 A backup ensures that your Jenkins instance can be restored despite a misconfiguration,
 accidental job deletion, or data corruption. 
-See the xref:user-docs:system-administration:backing-up.adoc[Backup policies] for more details.
+See the xref:system-administration:backing-up.adoc[Backup policies] for more details.
 
 === Finding your $JENKINS_HOME
 
@@ -520,7 +520,7 @@ This typically makes it more impractical to set up a different backup policy, or
 
 For instance, if you would like to move builds under a different root, you can use the following value: `+$JENKINS_VAR/${ITEM_FULL_NAME}/builds+`.
 
-Note that starting with Jenkins 2.119, the User Interface for this was replaced by the `jenkins.model.Jenkins.buildsDir` system property. See the xref:user-docs:managing:system-properties.adoc[dedicated _Features Controlled with System Properties_ wiki page] for more details.
+Note that starting with Jenkins 2.119, the User Interface for this was replaced by the `jenkins.model.Jenkins.buildsDir` system property. See the xref:managing:system-properties.adoc[dedicated _Features Controlled with System Properties_ wiki page] for more details.
 
 ////
 NOT documenting the other jenkins.model.Jenkins.workspacesDir property on purpose, as this should generally not be used.

@@ -3,8 +3,8 @@
 Jenkins, and a number of plugins, allow users to execute
 Groovy scripts _in_ Jenkins. These scripting capabilities are provided by:
 
-* xref:user-docs:glossary:index.adoc#script-console[Script Console].
-* xref:user-docs:glossary:index.adoc#pipeline[Jenkins Pipeline].
+* xref:glossary:index.adoc#script-console[Script Console].
+* xref:glossary:index.adoc#pipeline[Jenkins Pipeline].
 * The {plugin}email-ext[Extended Email plugin].
 * The {plugin}groovy[Groovy plugin] - when using the "Execute system Groovy
   script" step.
@@ -38,7 +38,7 @@ up to date.
 
 Security for in-process scripting is provided by two different mechanisms: the
 <<groovy-sandbox>> and <<script-approval>>. The first, the Groovy Sandbox, is
-enabled by default for xref:user-docs:pipeline:index.adoc[Jenkins Pipeline] allowing
+enabled by default for xref:pipeline:index.adoc[Jenkins Pipeline] allowing
 user-supplied Scripted and Declarative Pipeline to execute without prior
 Administrator intervention. The second, Script
 Approval, allows Administrators to approve or deny unsandboxed scripts, or
@@ -54,7 +54,7 @@ that Administrators only deviate from these defaults if absolutely necessary.
 
 To reduce manual interventions by Administrators, most scripts will run in a
 Groovy Sandbox by default, including all
-xref:user-docs:pipeline:index.adoc[Jenkins Pipelines].
+xref:pipeline:index.adoc[Jenkins Pipelines].
 The sandbox only allows a subset of Groovy's methods deemed sufficiently safe
 for "untrusted" access to be executed without prior approval. Scripts using
 the Groovy Sandbox are *all* subject to the same restrictions, therefore a

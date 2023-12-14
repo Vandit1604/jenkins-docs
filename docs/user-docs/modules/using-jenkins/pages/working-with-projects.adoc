@@ -4,9 +4,9 @@ Jenkins uses projects (also known as "jobs") to perform its work.
 Projects are defined and run by Jenkins users.
 Jenkins offers several different types of projects, including:
 
-* xref:user-docs:pipeline:index.adoc[Pipeline]
-* xref:user-docs:pipeline:multibranch.adoc[Multibranch Pipeline]
-* xref:user-docs:pipeline:multibranch.adoc#organization-folders[Organization folders]
+* xref:pipeline:index.adoc[Pipeline]
+* xref:pipeline:multibranch.adoc[Multibranch Pipeline]
+* xref:pipeline:multibranch.adoc#organization-folders[Organization folders]
 * Freestyle
 * plugin:matrix-project[Multi-configuration (matrix)]
 * plugin:maven-plugin[Maven]

@@ -130,7 +130,7 @@ For example, to access Jenkins on your host machine through port 49000, enter `-
 <7> ( _Optional_ ) Maps port 50000 of the current container to port 50000 on the host machine.
 This is only necessary if you have set up one or more inbound Jenkins agents on other machines, which in turn interact with your `jenkins-blueocean` container, known as the Jenkins "controller".
 Inbound Jenkins agents communicate with the Jenkins controller through TCP port 50000 by default.
-You can change this port number on your Jenkins controller through the xref:user-docs:managing:security.adoc[Security] page.
+You can change this port number on your Jenkins controller through the xref:managing:security.adoc[Security] page.
 For example, if you update the *TCP port for inbound Jenkins agents* of your Jenkins controller to 51000, you need to re-run Jenkins via the `docker run ...` command.
 Specify the "publish" option as follows: the first value is the port number on the machine hosting the Jenkins controller, and the last value matches the changed value on the Jenkins controller, for example,`--publish 52000:51000`.
 Inbound Jenkins agents communicate with the Jenkins controller on that port (52000 in this example).

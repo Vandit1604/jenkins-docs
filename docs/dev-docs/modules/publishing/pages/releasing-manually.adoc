@@ -71,7 +71,7 @@ mvn release:prepare release:perform
 
 == Troubleshooting
 
-First, make sure your plugin uses a reasonably up to date xref:dev-docs:plugin-development:updating-parent.adoc[parent POM].
+First, make sure your plugin uses a reasonably up to date xref:plugin-development:updating-parent.adoc[parent POM].
 This will prevent the vast majority of problems in releasing the plugin, such as outdated Maven plugins, or obsolete host names.
 
 === The upload to the Maven repository fails with "401 Unauthorized"

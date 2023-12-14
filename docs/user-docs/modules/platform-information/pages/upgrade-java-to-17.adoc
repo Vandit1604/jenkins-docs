@@ -17,7 +17,7 @@ As with any upgrade, we recommend:
 
 If you need to upgrade Jenkins, as well as the JVM, we recommend you:
 
-. xref:user-docs:system-administration:backing-up.adoc#jenkins_home[Back up `JENKINS_HOME`].
+. xref:system-administration:backing-up.adoc#jenkins_home[Back up `JENKINS_HOME`].
 . Stop the Jenkins instance.
 . Upgrade the JVM on which Jenkins is running.
 ** Use a package manager to install the new JVM.

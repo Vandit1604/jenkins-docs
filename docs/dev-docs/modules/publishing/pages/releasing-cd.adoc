@@ -25,7 +25,7 @@ Don't push the changes directly to the default branch or merge the PR before the
 
 === Incrementals Enablement
 
-Verify that the plugin has already been xref:dev-docs:plugin-development:incrementals.adoc[incrementalified].
+Verify that the plugin has already been xref:plugin-development:incrementals.adoc[incrementalified].
 `pom.xml` should contain `<version>$\{revision}$\{changelist}</version>` and the files `.mvn/extensions.xml` and `.mvn/maven.config` should exist *before proceeding with subsequent steps*.
 
 NOTE: A new plugin created from the link:https://github.com/jenkinsci/archetypes/[archetypes] will already have this setup.
@@ -249,7 +249,7 @@ If you prefer to only deploy explicitly, not on every push, just comment out the
 == Noting incompatible changes
 
 It is best to avoid ever making incompatible changes to your plugin.
-If you must make one, then you can define `hpi.compatibleSinceVersion` as for xref:dev-docs:plugin-development:mark-a-plugin-incompatible.adoc[any plugins].
+If you must make one, then you can define `hpi.compatibleSinceVersion` as for xref:plugin-development:mark-a-plugin-incompatible.adoc[any plugins].
 If `master` is currently `123.vXXX` according to
 
 [source,shell]

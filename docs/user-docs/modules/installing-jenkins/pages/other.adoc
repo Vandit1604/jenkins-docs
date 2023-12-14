@@ -172,7 +172,7 @@ before updating, if needed.
 
 == Solaris, OmniOS, SmartOS, and other siblings
 
-Generally it should suffice to install a xref:user-docs:platform-information:support-policy-java.adoc[supported Java version], link:/download[download] the
+Generally it should suffice to install a xref:platform-information:support-policy-java.adoc[supported Java version], link:/download[download] the
 `jenkins.war`, and run it as a standalone process.
 
 
@@ -184,4 +184,4 @@ Some caveats apply:
   running the headless JVM], because Jenkins needs some fonts to render certain
   pages.
 
-include::doc/book/installing/_setup-wizard.adoc[]
+include::user-docs:installing-jenkins:partial$_setup-wizard.adoc[]

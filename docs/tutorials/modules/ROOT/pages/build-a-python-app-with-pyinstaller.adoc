@@ -24,18 +24,18 @@ The delivery of the "add2vals" tool through PyInstaller converts this tool into
 a standalone executable file for Linux, which you can download through Jenkins
 and execute at the command line on Linux machines without Python.
 
-*Note:* Unlike the link:..[other tutorials] in this documentation, this tutorial
+*Note:* Unlike the xref:index.adoc[other tutorials] in this documentation, this tutorial
 requires approximately 500 MB more Docker image data to be downloaded.
 
 *Duration:* This tutorial takes 20-40 minutes to complete (assuming you've
 already met the <<prerequisites,prerequisites>> below). The exact duration will
 depend on the speed of your machine and whether or not you've already
-<<run-jenkins-in-docker,run Jenkins in Docker>> from link:..[another tutorial].
+<<run-jenkins-in-docker,run Jenkins in Docker>> from xref:index.adoc[another tutorial].
 
 You can stop this tutorial at any point in time and continue from where you left
 off.
 
-If you've already run though link:..[another tutorial], you can skip the
+If you've already run though xref:index.adoc[another tutorial], you can skip the
 <<prerequisites,Prerequisites>> and <<run-jenkins-in-docker,Run Jenkins in
 Docker>> sections below and proceed on to <<fork-sample-repository,forking the
 sample repository>>. (Just ensure you have
@@ -44,11 +44,12 @@ restart Jenkins, simply follow the restart instructions in
 <<stopping-and-restarting-jenkins,Stopping and restarting Jenkins>> and then
 proceed on.
 
-include::doc/tutorials/_prerequisites.adoc[]
+[#prerequisites]
+include::partial$prerequisites.adoc[]
 ** link:https://git-scm.com/downloads[Git] and optionally
    link:https://desktop.github.com/[GitHub Desktop]
 
-include::doc/book/installing/_run-jenkins-in-docker.adoc[]
+include::user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[]
 
 
 [[fork-sample-repository]]
@@ -219,12 +220,12 @@ workspace directory for use in later stages.
 The Blue Ocean interface turns green if Jenkins compiled your Python application
 successfully.
 [.boxshadow]
-image:tutorials/python-pyinstaller-02-initial-pipeline-runs-successfully-step-opened.png[alt="Initial
+image:tutorials:ROOT:python-pyinstaller-02-initial-pipeline-runs-successfully-step-opened.png[alt="Initial
 Pipeline runs successfully",width=100%]
 . Click the *X* at the top-right to return to the main Blue Ocean interface.
 +
 [.boxshadow]
-image:tutorials/python-pyinstaller-03-main-blue-ocean-interface.png[alt="Main
+image:tutorials:ROOT:python-pyinstaller-03-main-blue-ocean-interface.png[alt="Main
 Blue Ocean interface",width=100%]
 
 
@@ -336,7 +337,7 @@ completion_ of the `Test` stage, regardless of the stage's outcome.
   interface should look like. Notice the additional "Test" stage. You can click
   on the previous "Build" stage circle to access the output from that stage.
 [.boxshadow]
-image:tutorials/python-pyinstaller-11-test-stage-runs-successfully-with-output.png[alt="Test
+image:tutorials:ROOT:python-pyinstaller-11-test-stage-runs-successfully-with-output.png[alt="Test
 stage runs successfully (with output)",width=100%]
 . Click the *X* at the top-right to return to the main Blue Ocean interface.
 
@@ -491,7 +492,7 @@ completion_ of the `Deliver` stage _only if_ this stage completed successfully.
   stages.
 +
 [.boxshadow]
-image:tutorials/python-pyinstaller-21-deliver-stage-runs-successfully.png[alt="Deliver
+image:tutorials:ROOT:python-pyinstaller-21-deliver-stage-runs-successfully.png[alt="Deliver
 stage runs successfully",width=100%]
 
 +
@@ -499,12 +500,12 @@ Here's what the output of the "Deliver" stage should look like, showing you the
 results of PyInstaller bundling your Python application into a single standalone
 executable file.
 [.boxshadow]
-image:tutorials/python-pyinstaller-22-deliver-stage-output-only.png[alt="Deliver
+image:tutorials:ROOT:python-pyinstaller-22-deliver-stage-output-only.png[alt="Deliver
 stage output only",width=100%]
 . Click the *X* at the top-right to return to the main Blue Ocean interface,
   which lists your previous Pipeline runs in reverse chronological order.
 [.boxshadow]
-image:tutorials/python-pyinstaller-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png[alt="Main
+image:tutorials:ROOT:python-pyinstaller-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png[alt="Main
 Blue Ocean interface with all previous runs displayed",width=100%]
 
 
@@ -518,18 +519,18 @@ generated with PyInstaller locally on your machine. To do this:
   click the top row (representing the most recent Pipeline run) on the main Blue
   Ocean's *Activity* page.
 [.boxshadow]
-image:tutorials/python-pyinstaller-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png[alt="Main
+image:tutorials:ROOT:python-pyinstaller-23-main-blue-ocean-interface-with-all-previous-runs-displayed.png[alt="Main
 Blue Ocean interface with all previous runs displayed",width=100%]
 . On the results page of the Pipeline run, click *Artifacts* at the top right
   to access the *Artifacts* page.
 [.boxshadow]
-image:tutorials/python-pyinstaller-21-deliver-stage-runs-successfully.png[alt="Deliver
+image:tutorials:ROOT:python-pyinstaller-21-deliver-stage-runs-successfully.png[alt="Deliver
 stage runs successfully",width=100%]
 . In the list of artifacts, click the down-arrow icon at the far right of the
   *dist/add2vals* artifact item to download the standalone executable file to
   your browser's "Downloads" directory.
 [.boxshadow]
-image:tutorials/python-pyinstaller-24-deliver-stage-artifacts-page.png[alt="Deliver
+image:tutorials:ROOT:python-pyinstaller-24-deliver-stage-artifacts-page.png[alt="Deliver
 stage Artifacts page",width=100%]
 . Back in your operating system's terminal prompt, `cd` to your browser's
   "Downloads" directory.
@@ -550,7 +551,7 @@ handle practically any aspect of build orchestration and automation.
 
 To learn more about what Jenkins can do, check out:
 
-* The xref:tutorials:ROOT:index.adoc[Tutorials overview] page for other introductory
+* The xref:index.adoc[Tutorials overview] page for other introductory
   tutorials.
 * The xref:user-docs:ROOT:index.adoc[User Handbook] for more detailed information about using
   Jenkins, such as xref:user-docs:pipeline:index.adoc[Pipelines] (in particular
@@ -561,6 +562,8 @@ To learn more about what Jenkins can do, check out:
 
 
 '''
+////
 ++++
 include::_partials/_feedback-footer.html[]
 ++++
+////

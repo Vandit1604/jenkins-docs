@@ -50,7 +50,7 @@ As of Jenkins 2.0, by default this port is disabled.
 For administrators wishing to use inbound TCP agents, the two port options are:
 
 
-. *Random*: The TCP port is chosen at random to avoid collisions on the Jenkins xref:user-docs:glossary:index.adoc#controller[controller].
+. *Random*: The TCP port is chosen at random to avoid collisions on the Jenkins xref:glossary:index.adoc#controller[controller].
   The downside to randomized ports is that they are chosen during the boot of the Jenkins controller,
   making it difficult to manage firewall rules allowing TCP traffic.
 . *Fixed*: The port is chosen by the Jenkins administrator and is consistent across reboots of the Jenkins controller.
@@ -197,13 +197,13 @@ granted to "kohsuke", "developers", "administrators", "authenticated", and
 
 === Markup Formatter
 
-See xref:user-docs:security:markup-formatter.adoc[Markup Formatter].
+See xref:security:markup-formatter.adoc[Markup Formatter].
 
 
 == CSRF Protection
 
-See xref:user-docs:security:csrf-protection.adoc[CSRF Protection].
+See xref:security:csrf-protection.adoc[CSRF Protection].
 
 == Agent/Master Access Control
 
-See xref:user-docs:security:controller-isolation.adoc[Isolating the Controller from Builds].
+See xref:security:controller-isolation.adoc[Isolating the Controller from Builds].
