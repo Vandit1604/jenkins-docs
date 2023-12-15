@@ -9,7 +9,7 @@ the sibling file _docker-for-tutorials.adoc (used in
 _run-jenkins-in-docker.adoc).
 ////
 
-
+[#on-macos-and-linux]
 === On macOS and Linux
 
 . Open up a terminal window.
@@ -157,7 +157,7 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
 ----
 . Proceed to the <<setup-wizard,Post-installation setup wizard>>.
 
-
+[#on-windows]
 === On Windows
 
 The Jenkins project provides a Linux container image, not a Windows container image.
