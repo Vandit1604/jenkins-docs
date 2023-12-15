@@ -447,10 +447,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../Jenkins%20Project/index.html">default</a>
+          <a href="../../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -861,6 +861,7 @@ pipeline {
             when {
               expression {
                 currentBuild.result == null || currentBuild.result == 'SUCCESS' <i class="conum" data-value="1"></i><b>(1)</b>
+
               }
             }
             steps {
@@ -874,6 +875,7 @@ node {
     /* .. snip .. */
     stage('Deploy') {
         if (currentBuild.result == null || currentBuild.result == 'SUCCESS') { <i class="conum" data-value="1"></i><b>(1)</b>
+
             sh 'make publish'
         }
     }
@@ -1015,11 +1017,13 @@ pipeline {
     agent any
     environment { <i class="conum" data-value="1"></i><b>(1)</b>
         CC = 'clang'
+
     }
     stages {
         stage('Example') {
             environment { <i class="conum" data-value="2"></i><b>(2)</b>
                 DEBUG_FLAGS = '-g'
+
             }
             steps {
                 sh 'printenv'
@@ -1069,11 +1073,13 @@ pipeline {
     environment {
         // Using returnStdout
         CC = """${sh(
+
                 returnStdout: true,
                 script: 'echo "clang"'
             )}""" <i class="conum" data-value="2"></i><b>(2)</b>
         // Using returnStatus
         EXIT_STATUS = """${sh(
+
                 returnStatus: true,
                 script: 'exit 1'
             )}"""
@@ -1082,6 +1088,7 @@ pipeline {
         stage('Example') {
             environment {
                 DEBUG_FLAGS = '-g'
+
             }
             steps {
                 sh 'printenv'
@@ -1151,7 +1158,9 @@ pipeline {
     }
     environment {
         AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
+
         AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+
     }
     stages {
         stage('Example stage 1') {
@@ -1238,6 +1247,7 @@ credential ID <code>jenkins-bitbucket-common-creds</code>.</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">environment {
     BITBUCKET_COMMON_CREDS = credentials('jenkins-bitbucket-common-creds')
+
 }</code></pre>
 </div>
 </div>
@@ -1293,6 +1303,7 @@ pipeline {
         stage('Example stage 1') {
             environment {
                 BITBUCKET_COMMON_CREDS = credentials('jenkins-bitbucket-common-creds')
+
             }
             steps {
                 // <i class="conum" data-value="1"></i><b>(1)</b>
@@ -1387,6 +1398,7 @@ pipeline {
         // the value of a temporary file.  For example:
         //   /home/user/.jenkins/workspace/cred_test@tmp/secretFiles/546a5cf3-9b56-4165-a0fd-19e2afe6b31f/kubeconfig.txt
         MY_KUBECONFIG = credentials('my-kubeconfig')
+
     }
     stages {
         stage('Example stage 1') {
@@ -1740,6 +1752,7 @@ either single quotes, or double quotes, for example:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">def singlyQuoted = 'Hello'
+
 def doublyQuoted = "World"</code></pre>
 </div>
 </div>
@@ -1750,6 +1763,7 @@ interpolation, for example:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">def username = 'Jenkins'
+
 echo 'Hello Mr. ${username}'
 echo "I said, Hello Mr. ${username}"</code></pre>
 </div>
@@ -1797,6 +1811,7 @@ pipeline {
     agent any
     environment {
         EXAMPLE_CREDS = credentials('example-credentials-id')
+
     }
     stages {
         stage('Example') {
@@ -1821,6 +1836,7 @@ pipeline {
     agent any
     environment {
         EXAMPLE_CREDS = credentials('example-credentials-id')
+
     }
     stages {
         stage('Example') {
@@ -1913,6 +1929,7 @@ pipeline {
   agent any
   environment {
     EXAMPLE_KEY = credentials('example-credentials-id') // Secret value is 'sec%ret'
+
   }
   stages {
     stage('Example') {
@@ -1939,6 +1956,7 @@ pipeline {
   agent any
   environment {
     EXAMPLE_KEY = credentials('example-credentials-id') // Secret value is 'sec%ret'
+
   }
   stages {
     stage('Example') {

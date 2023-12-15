@@ -447,10 +447,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../Jenkins%20Project/index.html">default</a>
+          <a href="../../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -599,7 +599,7 @@ A disadvantage is the lack of integration with Jenkins access controls and poten
 <div class="sectionbody">
 <div class="paragraph">
 <p>When configuring authentication and authorization in Jenkins, it is easy to accidentally allow far more access than intended.
-See <a href="#dev-docs:security:access-control/permissions.adoc#administer" class="xref unresolved">the documentation on the access given to administrators</a> about the impact of unintentionally granting Administer permission.</p>
+See <a href="permissions.html#administer" class="xref page">the documentation on the access given to administrators</a> about the impact of unintentionally granting Administer permission.</p>
 </div>
 <div class="dlist">
 <dl>
@@ -625,7 +625,7 @@ Granting Overall/Administer permission to <em>anonymous</em> is similar to <em>A
 </dd>
 <dt class="hdlist1">Built-in node</dt>
 <dd>
-<p>Users with limited permissions <a href="#dev-docs:security:controller-isolation.adoc" class="xref unresolved">must not be able to configure jobs that run on the built-in node</a>.
+<p>Users with limited permissions <a href="controller-isolation.html" class="xref page">must not be able to configure jobs that run on the built-in node</a>.
 When setting up a new Jenkins instance, adding users and switching authorization strategies, it is important to also set up distributed builds and limit what jobs are able to run on the built-in node.</p>
 </dd>
 </dl>

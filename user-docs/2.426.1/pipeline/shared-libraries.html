@@ -447,10 +447,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../Jenkins%20Project/index.html">default</a>
+          <a href="../../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -977,6 +977,7 @@ return this</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">def z = new org.foo.Zot()
+
 z.checkOutFrom(repo)</code></pre>
 </div>
 </div>
@@ -994,6 +995,7 @@ constructor, or just one method:</p>
 class Utilities implements Serializable {
   def steps
   Utilities(steps) {this.steps = steps}
+
   def mvn(args) {
     steps.sh "${steps.tool 'Maven'}/bin/mvn -o ${args}"
   }
@@ -1009,6 +1011,7 @@ in the example below, can properly suspend and resume in Jenkins.</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">@Library('utils') import org.foo.Utilities
 def utils = new Utilities(this)
+
 node {
   utils.mvn 'clean package'
 }</code></pre>
@@ -1174,6 +1177,7 @@ allows the global variable to be invoked in a manner similar to a step:</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">// vars/sayHello.groovy
 def call(String name = 'human') {
+
     // Any valid steps can be called from this code, just like in other
     // Scripted Pipeline
     echo "Hello, ${name}."
@@ -1351,6 +1355,7 @@ build number is odd or even:</p>
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">// vars/evenOrOdd.groovy
 def call(int buildNumber) {
   if (buildNumber % 2 == 0) {
+
     pipeline {
       agent any
       stages {

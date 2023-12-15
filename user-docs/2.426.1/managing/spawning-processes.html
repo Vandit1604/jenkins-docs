@@ -447,10 +447,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../Jenkins%20Project/index.html">default</a>
+          <a href="../../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -608,6 +608,7 @@ For example:</p>
   &lt;attribute name="property" /&gt;
 
   date = new java.text.SimpleDateFormat("HH:mm")
+
     .format(new Date(System.currentTimeMillis() + 60000));
   project.setProperty(attributes.get("property"), date);
 &lt;/scriptdef&gt;
@@ -648,39 +649,58 @@ For example:</p>
 
 
 var WshShell = WScript.CreateObject("WScript.Shell");
+
 var exeStr = "%comspec% /c";
+
 var arg = "";
+
 var windowStyle = 1;
+
 var WshProcessEnv = WshShell.Environment("PROCESS");
+
 var windowTitle = WshProcessEnv("ANTRUN_TITLE");
+
 var outputFile = WshProcessEnv("ANTRUN_OUTPUT");
+
 var OS = WshProcessEnv("OS");
+
 var isWindowsNT = (OS == "Windows_NT");
 
 // On Windows NT/2000/XP, specify a title for the window.  If the environment
 // variable ANTRUN_TITLE is specified, that will be used instead of a default.
 if (isWindowsNT) {
   if (windowTitle == "")
+
      windowTitle = "Ant - " + WScript.Arguments(i);
+
   exeStr += "title " + windowTitle + " &amp;&amp;";
+
 }
 
 // Loop through arguments quoting ones with spaces
 for (var i = 0; i &lt; WScript.Arguments.count(); i++) {
+
   arg = WScript.Arguments(i);
+
   if (arg.indexOf(' ') &gt; 0)
     exeStr += " \"" + arg + "\"";
+
   else
     exeStr += " " + arg;
+
 }
 
 // If the environment variable ANTRUN_OUTPUT was specified, redirect
 // output to that file.
 if (outputFile != "") {
+
   windowStyle = 7;  // new window is minimized
+
   exeStr += " &gt; \"" + outputFile + "\"";
+
   if (isWindowsNT)
     exeStr += " 2&gt;&amp;1";
+
 }
 
 // WScript.Echo(exeStr);

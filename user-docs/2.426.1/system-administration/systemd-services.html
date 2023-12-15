@@ -447,10 +447,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../Jenkins%20Project/index.html">default</a>
+          <a href="../../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -661,7 +661,7 @@ Environment="CASC_JENKINS_CONFIG=/var/lib/jenkins/configuration-as-code/"</code>
 The migration logic, on the other hand, creates the drop-in unit as <code>root</code> with 0600 (<code>-rw-------</code>) permissions.
 This might be of consequence if you store an HTTPS keystore location and/or password in the drop-in unit
 and also run jobs directly on the controller,
-a practice which the Jenkins project <a href="#dev-docs:security:controller-isolation.adoc" class="xref unresolved">explicitly discourages</a>.
+a practice which the Jenkins project <a href="../security/controller-isolation.html" class="xref page">explicitly discourages</a>.
 When in doubt, secure the drop-in unit by setting its permissions to 0600 with <code>chmod(1)</code>.
 </td>
 </tr>

@@ -445,10 +445,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../../Jenkins%20Project/index.html">default</a>
+          <a href="../../../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -583,14 +583,18 @@ To avoid this, explicit disable the option <code>url-path-2f-decode</code>.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">server.http-parseopts = (
+
   "url-path-2f-decode" =&gt; "disable"
 )
 
 server.modules += ( "mod_proxy" )
 
 $HTTP["host"] == "jenkins.example.com" {
+
   proxy.balance = "hash"
+
   proxy.server = (
+
     "" =&gt; (
       "jenkins" =&gt; (
         "host" =&gt; "127.0.0.1",
@@ -621,6 +625,7 @@ request to Jenkins.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">server.http-parseopts = (
+
   "url-path-2f-decode" =&gt; "disable"
 )
 
@@ -628,7 +633,9 @@ server.modules += ( "mod_proxy" )
 
 $HTTP["url"] =~ "^/jenkins(.*)$" {
   proxy.balance = "hash"
+
   proxy.server = (
+
     "" =&gt; (
       "jenkins" =&gt; (
         "host" =&gt; "127.0.0.1",

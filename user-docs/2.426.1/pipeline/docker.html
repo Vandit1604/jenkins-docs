@@ -447,10 +447,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../Jenkins%20Project/index.html">default</a>
+          <a href="../../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -959,6 +959,7 @@ Using the container&#8217;s ID, the Pipeline can create a link by passing custom
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
     checkout scm
     def customImage = docker.build("my-image:${env.BUILD_ID}")
+
     customImage.push()
 }</code></pre>
 </div>
@@ -972,6 +973,7 @@ The <code>push()</code> method accepts an optional <code>tag</code> parameter, a
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
     checkout scm
     def customImage = docker.build("my-image:${env.BUILD_ID}")
+
     customImage.push()
 
     customImage.push('latest')
@@ -1014,7 +1016,9 @@ When passing arguments this way, the last value in the string must be the path t
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
     checkout scm
     def dockerfile = 'Dockerfile.test'
+
     def customImage = docker.build("my-image:${env.BUILD_ID}",
+
                                    "-f ${dockerfile} ./dockerfiles") <i class="conum" data-value="1"></i><b>(1)</b>
 }</code></pre>
 </div>

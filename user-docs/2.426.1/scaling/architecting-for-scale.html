@@ -447,10 +447,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../Jenkins%20Project/index.html">default</a>
+          <a href="../../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -628,7 +628,7 @@ permissions on all Jenkins resources on the controller. This means that, with a
 simple script, a malicious user can have direct access to private information
 whose integrity and privacy could not be, thus,  guaranteed.
 See
-<a href="#dev-docs:security:controller-isolation.adoc" class="xref unresolved">Distributed Builds</a>
+<a href="../security/controller-isolation.html" class="xref page">Distributed Builds</a>
 in the
 <a href="../../../dev-docs/security/index.html" class="xref page">Securing Jenkins</a>
 chapter for more information.</p>
@@ -1047,6 +1047,7 @@ the number of configured jobs is known is as follows:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">controllers = number of jobs/500
+
 executors = number of jobs * 0.03</code></pre>
 </div>
 </div>
@@ -1057,7 +1058,9 @@ needed</strong> for an organization based on the number of developers is as foll
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">number of jobs = number of developers * 3.333
+
 number of controllers = number of jobs/500
+
 number of executors = number of jobs * 0.03</code></pre>
 </div>
 </div>

@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins Governance Meeting Archive 2015 :: Jenkins Docs</title>
+    <link rel="canonical" href="https://docs.jenkins.com/project/governance-meeting/archives/2015.html">
+    <link rel="prev" href="2012.html">
+    <link rel="next" href="2011.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+<link rel="icon" href="../../../_/jenkins.svg" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="project" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Jenkins Project</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html">Project structure and governance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../conduct.html">"Jenkins Code of Conduct"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../governance.html">Project Governance Document</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../election-walkthrough.html">"Board and Officer election walkthrough"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../team-leads.html">Jenkins Team Leads and Officers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../board-election-process.html">"Board and Officer election process"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../board.html">Jenkins Board and Officers</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../trademark/index.html">Trademark and Attribution</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../trademark/approved-usage.html">Approved Trademark Usage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Jenkins Governance Meeting</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2011.html">Jenkins Governance Meeting Archive 2011</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2012.html">Jenkins Governance Meeting Archive 2012</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="2015.html">Jenkins Governance Meeting Archive 2015</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2011.html">Jenkins Governance Meeting Archive 2011</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018.html">Jenkins Governance Meeting Archive 2018</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2013.html">Jenkins Governance Meeting Archive 2013</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2017.html">Jenkins Governance Meeting Archive 2017</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2016.html">Jenkins Governance Meeting Archive 2016</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2014.html">Jenkins Governance Meeting Archive 2014</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019.html">Jenkins Governance Meeting Archive 2019</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Project</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.426.1/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorials/2.426.1/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorials/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../user-docs/2.426.1/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-docs/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../user-docs/2.426.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Jenkins Project</a></li>
+    <li><a href="../index.html">Jenkins Governance Meeting</a></li>
+    <li><a href="2015.html">Jenkins Governance Meeting Archive 2015</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/project/modules/governance-meeting/pages/archives/2015.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins Governance Meeting Archive 2015</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page is an archive of past meeting agendas, their minutes and IRC logs, for the year shown above.
+For current information, see the <a href="../index.html" class="xref page">Governance Meeting</a> page.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Dec23meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Dec23meeting"></a>Dec 23 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>This meeting will be skipped.</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Dec9meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Dec9meeting"></a>Dec 9 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20151209T11&amp;p1=224&amp;ah=1&amp;sort=1">Dec
+9 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check</p>
+</li>
+<li>
+<p>Next LTS baseline selection</p>
+</li>
+<li>
+<p>(<strong>hopefully</strong>) Final review/adoption of
+<a href="https://wiki.jenkins.io/display/JENKINS/Board+Election+Process">Board
+Election Process</a> (<a href="/blog/authors/rtyler/">
+(rtyler)</a>)</p>
+</li>
+<li>
+<p>Review/adopt a
+<a href="https://wiki.jenkins.io/display/JENKINS/Code+of+Conduct">Code of Conduct</a>
+(<a href="/blog/authors/rtyler/">(rtyler)</a>)</p>
+</li>
+<li>
+<p><strong>NOT</strong> tweet anymore plugins w/o a wiki page
+(<a href="/blog/authors/batmat">(batmat)</a>) (for
+<a href="https://groups.google.com/forum/?utm_medium=email&amp;utm_source=footer#!msg/jenkinsci-dev/qR8WqJZmNZs/1a9Zd3F0DAAJ">reference</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-12-09-19.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-12-09-19.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Nov25meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Nov25meeting"></a>Nov 25 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20151125T11&amp;p1=224&amp;ah=1&amp;sort=1">Nov
+25 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS RC status check</p>
+</li>
+<li>
+<p>Announce Security Officer
+(<a href="/blog/authors/rtyler/">(rtyler)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-11-25-19.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-11-25-19.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Nov11meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Nov11meeting"></a>Nov 11 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20151111T11&amp;p1=224&amp;ah=1&amp;sort=1">Nov
+11 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>Review proposed www site change from Drupal to static site generation
+(current <a href="https://github.com/rtyler/jenkins.io">repo</a> and
+<a href="http://jenkins.lasagna.io/">generated version of site</a>)
+(<a href="/blog/authors/rtyler/">(rtyler)</a>)</p>
+</li>
+<li>
+<p>CERT membership requests from
+<a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a><mark>!msg/jenkinsci-dev/TachZG6zw44/UMBz91HMAgAJ[Ivan
+Meredith] and
+<a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a></mark>!msg/jenkinsci-dev/TachZG6zw44/v2sG6UvPAgAJ[Ben
+Walding] (<a href="/blog/authors/daniel-beck/">
+(danielbeck)</a>)</p>
+</li>
+<li>
+<p>Review
+<a href="https://wiki.jenkins.io/display/JENKINS/Board+Election+Process">Board
+Election Process</a> and either move forward with the proposal or take
+feedback so we can have elections next year
+(<a href="/blog/authors/rtyler/">(rtyler)</a>)</p>
+</li>
+<li>
+<p>Jenkins 2.0 proposal recap
+(<a href="/blog/authors/rtyler/">(rtyler)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-11-11-19.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-11-11-19.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Oct28meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Oct28meeting"></a>Oct 28 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20151028T11&amp;p1=224&amp;ah=1&amp;sort=1">Oct
+28 11:00 Pacific</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>It is the end of daylight savings time season. The meeting will be held
+at 11 am Pacific time, adjust accordingly.</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Rewards+for+reporting+security+issues">Rewards
+for reporting security issues</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>LTS status check</p>
+</li>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Proposal+-+Revisiting+JUC+in+2016" class="bare">https://wiki.jenkins.io/display/JENKINS/Proposal+-+Revisiting+JUC+in+2016</a>[Proposal</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Revisiting JUC in 2016]
+(<a href="/blog/authors/kohsuke/">(kohsuke)</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Sticker purchase approval
+(<a href="/blog/authors/kohsuke/">(kohsuke)</a>)</p>
+</li>
+<li>
+<p>Voting: Should we require squashing commits in the core?
+(<a href="/blog/authors/oleg_nenashev/">
+(oleg_nenashev)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Related discussion:
+<a href="https://groups.google.com/forum/#\!searchin/jenkinsci-dev/squash/jenkinsci-dev/kqvuDqXwPZw/oF-KMdNbCwAJ" class="bare">https://groups.google.com/forum/#\!searchin/jenkinsci-dev/squash/jenkinsci-dev/kqvuDqXwPZw/oF-KMdNbCwAJ</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-10-28-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-10-28-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Oct14meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Oct14meeting"></a>Oct 14 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20151014T11&amp;p1=224&amp;ah=1&amp;sort=1">Oct
+14th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Approved+Trademark+Usage">Approved
+Trademark Usage</a> has been updated.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Quick announcement of <code>#jenkins-community</code>
+(<a href="/blog/authors/rtyler/">(rtyler)</a>)</p>
+</li>
+<li>
+<p>LTS status check</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkinsci/jenkins/pull/1812/files#diff-600376dffeb79835ede4a0b285078036R850">Link
+to changelog-stable when building</a>?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>New Website JIRA project to organize website efforts under
+(<a href="/blog/authors/rtyler/">(rtyler)</a>)</p>
+</li>
+<li>
+<p>Approval of new Q4 patron messages by CloudBees
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Proposal+-+Project+sub-teams" class="bare">https://wiki.jenkins.io/display/JENKINS/Proposal+-+Project+sub-teams</a>[Proposal</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Project sub-teams] (<a href="/blog/authors/rtyler/">(rtyler)</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Governance+Meeting+Archive+2015#">Permission
+request</a> - Admin access to jenkinsci org
+(<a href="/blog/authors/oleg_nenashev/">
+(oleg_nenashev)</a>)</p>
+</li>
+<li>
+<p>JIRA project for plugin hosting (and possibly similar) requests
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-10-14-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-10-14-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Sep30meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Sep30meeting"></a>Sep 30 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>This is the first meeting to be held in #jenkins-meeting.</strong></p>
+</div>
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150930T11&amp;p1=224&amp;ah=1&amp;sort=1">Sep
+30th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check</p>
+<div class="ulist">
+<ul>
+<li>
+<p>No RC posted two weeks ago?</p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/browse/JENKINS-29876">JENKINS-29876</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Q4
+<a href="https://wiki.jenkins.io/display/JENKINS/Patron+of+Jenkins+program">patron
+program</a> messages (<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Same as for Q3, with same pre-approved message pending:
+<a href="https://github.com/jenkinsci/patron/pull/4" class="bare">https://github.com/jenkinsci/patron/pull/4</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Time to think about Jenkins board elections?
+<a href="/blog/authors/orrc">(orrc)</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>This was vaguely discussed in the 100k podcast in February, and soon
+2/3 of the board will be CloudBees employees</p>
+</li>
+<li>
+<p>The most recent proposal seems to be
+<a href="https://wiki.jenkins.io/display/JENKINS/Board+Election+Process">proposal
+from April 2013</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Time to move to Java 8 and servlet 3.1?
+(teilo) for core?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-09-30-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2015/jenkins-meeting.2015-09-30-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Sep16meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Sep16meeting"></a>Sep 16 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150916T11&amp;p1=224&amp;ah=1&amp;sort=1">Sep
+16th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS backporting status check
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p>Protect master branches of repositories
+(<a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a><mark>!topic/jenkinsci-dev/0ciUju7raOA[<a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a></mark>!topic/jenkinsci-dev/0ciUju7raOA|https://groups.google.com/forum/#!topic/jenkinsci-dev/0ciUju7raOA]</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-09-16-18.02.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-09-16-18.02.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Sep2meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Sep2meeting"></a>Sep 2 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150902T11&amp;p1=224&amp;ah=1&amp;sort=1">Sep
+2nd 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Travel grant blog post:
+<a href="http://jenkins-ci.org/content/announcing-travel-grant-program" class="bare">http://jenkins-ci.org/content/announcing-travel-grant-program</a></p>
+</li>
+<li>
+<p>Botbot.me logging for #jenkins: <a href="https://botbot.me/freenode/jenkins/" class="bare">https://botbot.me/freenode/jenkins/</a></p>
+</li>
+<li>
+<p>#jenkins-meeting: Waiting for
+<a href="https://github.com/jenkins-infra/jenkins-infra/pull/152" class="bare">https://github.com/jenkins-infra/jenkins-infra/pull/152</a> to be merged
+into prod</p>
+</li>
+<li>
+<p>Infra access list:
+<a href="https://wiki.jenkins.io/display/JENKINS/Infrastructure+Admins">Infrastructure
+Admins</a> (still missing Artifactory)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>LTS RC status check
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p>LTS baseline selection
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p><a href="https://wiki.jenkins-ci.org/display/JENKINS/Travel+Grant+Program">Travel
+grant program</a> blessing
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p>Process for merging PRs with multiple commits
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>
+but it was really (integer) and (tfennelly) who brought it up)</p>
+</li>
+<li>
+<p>Clarification what requires a CLA and what does not
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p>CERT Team membership request for
+<a href="/blog/authors/oleg_nenashev/">
+(oleg_nenashev)</a>,
+(vlatombe) and
+(varmenise) (<a href="/blog/authors/oleg_nenashev/">(oleg_nenashev)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-09-02-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-09-02-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Aug19meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Aug19meeting"></a>Aug 19 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150819T11&amp;p1=224&amp;ah=1&amp;sort=1">Aug
+19th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.jenkins-ci.org/display/JENKINS/Travel+Grant+Program">Travel
+grant program draft</a>
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>LTS RC status check / LTS baseline selection
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What about
+<a href="https://issues.jenkins.io/browse/JENKINS-29936">JENKINS-29936</a>?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Revisiting bundled plugins
+(<a href="/blog/authors/kohsuke/">(kohsuke)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>See
+<a href="https://groups.google.com/forum/#!topic/jenkinsci-dev/kRobm-cxFw8">mailing
+list post</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Allow file browsing in artifactory for ability view javadocs, add link
+in confluence macros live link, send request to jfrog support to get
+newer artifactory
+version. (integer)</p>
+</li>
+<li>
+<p>Provide public list of JIRA/confluence/artifactory admins in wiki
+(integer)]</p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/jenkins/pull/1774">HTMLUnit update</a>
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-08-19-18.03.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-08-19-18.03.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Aug5meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Aug5meeting"></a>Aug 5 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150805T11&amp;p1=224&amp;ah=1&amp;sort=1">Aug
+5th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>Jenkins certification
+(<a href="/blog/authors/kohsuke/">(kohsuke)</a>)</p>
+</li>
+<li>
+<p>Approval of new
+<a href="https://wiki.jenkins-ci.org/display/JENKINS/Patron+of+Jenkins+program">Patron
+program</a> messages (<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p>JUC travel grant (<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>(<a href="http://meetings.jenkins-ci.org/jenkins/2014/jenkins.2014-09-17-18.00.log.html">previous
+discussion</a>)</p>
+</li>
+<li>
+<p>The Jenkins project currently has
+~http://permalink.gmane.org/gmane.org.spi.general/1507[$24k] in the bank</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-08-05-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-08-05-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Jul22meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Jul22meeting"></a>Jul 22 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=201507022T11&amp;p1=224&amp;ah=1&amp;sort=1">Jul
+22th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LTS 1.609 RC status check
+(<a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-07-22-18.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-07-22-18.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Jul8meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Jul8meeting"></a>Jul 8 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150708T11&amp;p1=224&amp;ah=1&amp;sort=1">Jul
+8th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS 1.609.2 RC status check
+(<a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-07-08-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-07-08-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-June10meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-June10meeting"></a>June 10 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150610T11&amp;p1=224&amp;ah=1&amp;sort=1">June
+10th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>Can we start to look at fixing the
+<a href="https://issues.jenkins.io/issues/?jql=project%20%3D%20INFRA%20AND%20component%20%3D%20spof%20ORDER%20BY%20updated%20DESC%2C%20priority%20DESC%2C%20created%20ASC">single
+points of failure</a>? (<a href="/blog/authors/orrc">
+(orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>e.g. <a href="https://issues.jenkins.io/browse/INFRA-225">INFRA-225</a> was
+recently broken for a month; related
+<a href="https://issues.jenkins.io/browse/INFRA-75">INFRA-75</a> is one year old</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Using labels for pull requests to core (instead of renaming to
+something like "[WIP] [JENKINS-12345] Foo").
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p>"Action items are <a href="https://issues.jenkins.io/browse/MEETING">tracked
+in JIRA</a>" — can we agree to do this?
+(<a href="/blog/authors/orrc">(orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>People miss meetings or forget action items, and there&#8217;s usually no
+follow-up and the actions never get done</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Time to move to Servlet 3.0 (3.1?) as
+<a href="http://jenkins-ci.org/content/good-bye-java6">announced</a>?
+(teilo)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-06-10-18.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-06-10-18.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-May27meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-May27meeting"></a>May 27 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150527T11&amp;p1=224&amp;ah=1&amp;sort=1">May
+27th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS RC status check
+(<a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>When to flip the switch on
+<a href="https://github.com/jenkinsci/backend-update-center2/pull/20">plugins
+without wiki pages</a>? (<a href="/blog/authors/orrc">
+(orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://groups.google.com/forum/#!msg/jenkinsci-dev/dfvRxvCv7Mg/jIailHDwY2EJ">Mailing
+list thread</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Can we start to look at fixing the
+<a href="https://issues.jenkins.io/issues/?jql=project%20%3D%20INFRA%20AND%20component%20%3D%20spof%20ORDER%20BY%20updated%20DESC%2C%20priority%20DESC%2C%20created%20ASC">single
+points of failure</a>? (<a href="/blog/authors/orrc">
+(orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>e.g. <a href="https://issues.jenkins.io/browse/INFRA-225">INFRA-225</a> is
+currently (again) a visible problem; related
+<a href="https://issues.jenkins.io/browse/INFRA-75">INFRA-75</a> is one year old
+today</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-05-27-18.19.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-05-27-18.19.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-May13meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-May13meeting"></a>May 13 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150513T11&amp;p1=224&amp;ah=1&amp;sort=1">May
+13th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS RC status check
+(<a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>#jenkins-meeting (<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p>Should we only include plugins in the Update Centre if they have a
+wiki page? (<a href="/blog/authors/orrc">(orrc)</a>,
+(evernat)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a><mark>!msg/jenkinsci-dev/oEHEjKo08yA/_z2GEtcUfz0J[ML
+discussion];
+<a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a></mark>!msg/jenkinsci-dev/oEHEjKo08yA/S_uQ_C_7NMQJ[more
+details]</p>
+</li>
+<li>
+<p>47+ POMs have no <code>url</code> value, or a value with typos (which we can
+<a href="https://github.com/jenkinsci/backend-update-center2/pull/14/files">override</a>
+for now)</p>
+</li>
+<li>
+<p>60+ plugins <a href="https://gist.github.com/orrc/2995a31028a27f9765d1">have no
+wiki page at all</a> (not including workflow-*)</p>
+</li>
+<li>
+<p>20+ plugins have no source code in github.com/jenkinsci (or at all);
+at least 1 is closed-source
+(<a href="http://maven.jenkins-ci.org/content/repositories/releases/com/antelink/reporter/jenkins/plugin/AntepediaReporter-CI-plugin/1.8/AntepediaReporter-CI-plugin-1.8.pom">private
+repo, Java source excluded from release</a>: AntepediaReporter — orrc
+contacted them and they&#8217;re considering open-sourcing)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Infra training/handover/expansion? (Was mentioned a while back and
+more recently, but can&#8217;t find the link)
+(<a href="/blog/authors/orrc">(orrc)</a>)</p>
+</li>
+<li>
+<p>Using a CDN with HTTPS / removing need for mirrorbrain?
+(<a href="/blog/authors/orrc">(orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.jenkins.io/browse/INFRA-266?focusedCommentId=226524#comment-226524">Comments
+on INFRA-266</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Further requirements for plugins published in the community update
+center (<a href="/blog/authors/daniel-beck/">
+(danielbeck)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>To allow review, inspection and collaboration:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Require a valid SCM URL for new plugin releases inside
+@jenkinsci/svn.jenkins-ci.org (that must exist) – needs to handle
+plugins not bundled with Gradle</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>To protect users:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Require that the uploader of the binary is the same user who created
+the tag (we have the data in LDAP, see jenkins-ci.org/account)</p>
+</li>
+<li>
+<p>Remove the commit permissions from 'everyone', it&#8217;s reckless</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-05-13-18.07.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-05-13-18.07.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Apr29meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Apr29meeting"></a>Apr 29 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150429T11&amp;p1=224&amp;ah=1&amp;sort=1">Apr
+29th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>Carryover from last meeting w.r.t. SECURITY bounties. Anything for
+historical submitters? Who has the action item?</p>
+</li>
+<li>
+<p>Trademark usage approval for "CloudBees Jenkins Platform"
+(<a href="/blog/authors/kohsuke/">(kohsuke)</a>)</p>
+</li>
+<li>
+<p>We only allow OSS plugins to be distributed via the update center, but
+what about closed source plugins which are documented on our wiki? (e.g.
+<a href="https://wiki.jenkins.io/display/JENKINS/Governance+Meeting+Archive+2015#">CxSuite
+Jenkins Plugin</a>)</p>
+</li>
+<li>
+<p>Should we only include plugins in the Update Centre if they have a
+wiki page? (<a href="/blog/authors/orrc">(orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://groups.google.com/forum/#!msg/jenkinsci-dev/oEHEjKo08yA/_z2GEtcUfz0J">ML
+discussion</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>#jenkins-meeting (<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p>LTS.next (<a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>Infra training? (Was mentioned a while back and more recently, but
+can&#8217;t find the link) (<a href="/blog/authors/orrc">
+(orrc)</a>)</p>
+</li>
+<li>
+<p>Using a CDN with HTTPS / removing need for mirrorbrain?
+(<a href="/blog/authors/orrc">(orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://issues.jenkins.io/browse/INFRA-266?focusedCommentId=226524#comment-226524">Comments
+on INFRA-266</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-04-29-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-04-29-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Apr15meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Apr15meeting"></a>Apr 15 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150415T11&amp;p1=224&amp;ah=1&amp;sort=1">Apr
+15th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>Migrate Jenkins-on-Jenkins jobs onto jenkins.ci.cloudbees.com
+(<a href="/blog/authors/rtyler/">(rtyler)</a>)</p>
+</li>
+<li>
+<p>Carryover from last meeting w.r.t. SECURITY bounties. Anything for
+historical submitters? Who has the action item?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-04-15-18.05.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-04-15-18.05.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Apr1meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Apr1meeting"></a>Apr 1 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150401T11&amp;p1=224&amp;ah=1&amp;sort=1">Apr
+1st 11:00 Pacific</a>.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s DST change season: Make sure you&#8217;re not
+<a href="https://en.wikipedia.org/wiki/Off-by-one_error">off by one</a> (hour)!</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>JUC 2015 - obtain approval for a Mobile Morning mini-track that focus
+on Jenkins mobile development (Alyssa)</p>
+</li>
+<li>
+<p>Build/publisher steps &amp; AbortException
+handling (integer)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkinsci/jenkins/pull/1577" class="bare">https://github.com/jenkinsci/jenkins/pull/1577</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Defining guidelines on expected behavior and/or structure for plugins?
+If so, should we enforce them?
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://groups.google.com/d/msg/jenkinsci-dev/OHjuxTD1W9k/d4dRBtR_vFQJ" class="bare">https://groups.google.com/d/msg/jenkinsci-dev/OHjuxTD1W9k/d4dRBtR_vFQJ</a></p>
+</li>
+<li>
+<p><a href="http://meetings.jenkins-ci.org/jenkins/2014/jenkins.2014-10-01-18.01.html" class="bare">http://meetings.jenkins-ci.org/jenkins/2014/jenkins.2014-10-01-18.01.html</a>
+Item 3</p>
+</li>
+<li>
+<p><a href="http://meetings.jenkins-ci.org/jenkins/2014/jenkins.2014-10-15-18.02.html" class="bare">http://meetings.jenkins-ci.org/jenkins/2014/jenkins.2014-10-15-18.02.html</a>
+Item 3</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Would changing the meeting time to 10 AM PST/PDT allow overruns?
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p>Who gets voice on IRC? "Committers"&#8230;&#8203; to any plugin? To core?
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/browse/JENKINS-27268">JENKINS-27268</a>
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p>Bug bounties/rewards for security issues?
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p>Resurrecting the MEETING Jira project (maybe even have the bot create
+issues for action items automatically)
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p>The important content of the Wiki is difficult to find (between
+outdated or even empty pages), and there&#8217;s no real introduction to
+Jenkins – What can we do about it?
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p>Proposal: move Jenkins
+<a href="https://github.com/cloudbees/jenkins-ci.org-docker">official image
+repo</a> to jenkinsci org so enhancement / version updates can be managed
+by the community (<a href="/blog/authors/ndeloof">
+(ndeloof)</a>)</p>
+</li>
+<li>
+<p>Disabling "Clone" feature in JIRA
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+<li>
+<p>The Chinese mirror is a mess
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://mirrors.jenkins-ci.org/status.html" class="bare">http://mirrors.jenkins-ci.org/status.html</a></p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/browse/INFRA-260" class="bare">https://issues.jenkins.io/browse/INFRA-260</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-04-01-18.02.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-04-01-18.02.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Mar18meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Mar18meeting"></a>Mar 18 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150318T11&amp;p1=224&amp;ah=1&amp;sort=1">Mar
+18th 11:00 Pacific</a>.</p>
+</div>
+<div class="paragraph">
+<p>Canceled.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Mar4meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Mar4meeting"></a>Mar 4 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150304T11&amp;p1=224&amp;ah=1&amp;sort=1">Mar
+4th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LTS RC status check</p>
+</li>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>Are there new "Patron of Jenkins" sponsors? No messages have been
+shown in 2015. (<a href="/blog/authors/orrc">
+(orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Maybe there was supposed to be one in Q1?
+<a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a><mark>!topic/jenkinsci-patrons/GQZwr5tQMyQ[<a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a></mark>!topic/jenkinsci-patrons/GQZwr5tQMyQ|https://groups.google.com/forum/#!topic/jenkinsci-patrons/GQZwr5tQMyQ]</p>
+</li>
+<li>
+<p>Also, the wiki states that
+"<a href="https://wiki.jenkins-ci.org/display/JENKINS/Patron+of+Jenkins+program">the
+program will be reviewed and changes might be made</a>" in March 2015</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Workflow specific mailing lists
+(<a href="https://wiki.jenkins-ci.org/display/~dty">Dean Yu</a>)</p>
+</li>
+<li>
+<p>New release process? (i.e. release from master; no more RC branch)
+(discussed by <a href="/blog/authors/kohsuke/">
+(kohsuke)</a>, <a href="/blog/authors/jglick">
+(jglick)</a> &amp; <a href="/blog/authors/daniel-beck/">
+(danielbeck)</a> in IRC)</p>
+</li>
+<li>
+<p>Governance Document Updates
+(<a href="/blog/authors/orrc">(orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>As per the Jenkins 100K podcast, we now have a trademark?</p>
+</li>
+<li>
+<p>More information about the board; there appears to be no information
+about <em>who</em> that is, how to "contact the board", and if/when the board
+changes (see also: the podcast)</p>
+</li>
+<li>
+<p>Release process needs updating, if we decide to kill off RCs</p>
+</li>
+<li>
+<p>Broken or no-longer-updated links, e.g. Sun coding style, GitHub repo
+wiki page, pull request wiki page</p>
+</li>
+<li>
+<p>Other stuff we want to review, that&#8217;s changed in the past three
+years? e.g. at least simple text updates like "500+ repos" is now
+"1000+"&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Build/publisher steps &amp; AbortException
+handling (integer)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-03-04-19.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-03-04-19.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Feb18meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Feb18meeting"></a>Feb 18 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="http://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150218T11&amp;p1=224&amp;ah=1&amp;sort=1">Feb
+18th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Approving another batch of stickers
+(<a href="/blog/authors/kohsuke/">(kohsuke)</a>)</p>
+</li>
+<li>
+<p><a href="https://groups.google.com/forum/?hl=en#!topic/jenkinsci-dev/oDXLTVcy56Y">IDEA
+licenses</a> (integer)</p>
+</li>
+<li>
+<p>Should we have an "ops lead"? Adding more infra team members?
+Moderator teams?
+<a href="https://groups.google.com/forum/#!topic/jenkinsci-dev/046RwHh3Nko">mailing
+list discussion</a> (<a href="/blog/authors/orrc">
+(orrc)</a>)</p>
+</li>
+<li>
+<p>Who should we reach out for JUC speakers?
+(<a href="/blog/authors/kohsuke/">(kohsuke)</a>)</p>
+</li>
+<li>
+<p>LTS status check (<a href="/blog/authors/kohsuke/">(kohsuke)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-02-18-19.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-02-18-19.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Feb4meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Feb4meeting"></a>Feb 4 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN
+<a href="http://www.timeanddate.com/worldclock/fixedtime.html?msg=Jenkins+Governance+Meeting&amp;iso=20150204T11&amp;p1=224&amp;ah=1&amp;sort=1">Feb
+4th 11:00 Pacific</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jenkins 100K PR planning (hgilmore)</p>
+</li>
+<li>
+<p>LTS RC status (<a href="/blog/authors/kohsuke/">
+(kohsuke)</a>/https://wiki.jenkins.io/display/JENKINS/Governance+Meeting+Archive+2015#[~ogondza])</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-02-04-19.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-02-04-19.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Jan21meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Jan21meeting"></a>Jan 21 meeting</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Releases of Windows libraries: winp and winsw
+(<a href="/blog/authors/oleg_nenashev/">
+(oleg_nenashev)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>winp: <a href="https://github.com/kohsuke/winp/pull/12" class="bare">https://github.com/kohsuke/winp/pull/12</a> - option to disable the
+DLL unpacking</p>
+</li>
+<li>
+<p>winsw:
+<a href="https://issues.jenkins.io/browse/JENKINS-10547">JENKINS-10547</a>,
+<a href="https://issues.jenkins.io/browse/JENKINS-22685">JENKINS-22685</a>
+correct properties handling, log rotation fix</p>
+</li>
+<li>
+<p>A decision on MVS version would be useful for both projects. Proposed
+version - <strong>Visual Studio Community 2013</strong> (free for FOSS projects)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Jenkins at 100K active users (Heidi Gilmore)</p>
+</li>
+<li>
+<p>INFRA (integer)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-01-21-19.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-01-21-19.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2015-Jan7meeting"><a class="anchor" href="#GovernanceMeetingArchive2015-Jan7meeting"></a>Jan 7 meeting</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>JUC post-mortem (<a href="/blog/authors/alyssat">
+(atong)</a>/<a href="/blog/authors/kohsuke/">
+(kohsuke)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-01-07-19.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins/2015/jenkins.2015-01-07-19.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="2012.html">Jenkins Governance Meeting Archive 2012</a></span>
+  <span class="next"><a href="2011.html">Jenkins Governance Meeting Archive 2011</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

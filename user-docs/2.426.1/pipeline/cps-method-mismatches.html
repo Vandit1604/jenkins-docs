@@ -447,10 +447,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../Jenkins%20Project/index.html">default</a>
+          <a href="../../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -655,6 +655,7 @@ For example, the following will not work:</p>
   list.toSorted { a, b -&gt; Integer.valueOf(a.length()).compareTo(b.length()) }
 }
 def sorted = sortByLength(['333', '1', '4444', '22'])
+
 echo(sorted.toString())</code></pre>
 </div>
 </div>
@@ -691,9 +692,11 @@ Here is an example that calls a CPS-transformed method in a constructor:</p>
   }
   private void setX() {
     this.x = 1;
+
   }
 }
 def x = new Test().x
+
 echo "${x}"</code></pre>
 </div>
 </div>
@@ -730,6 +733,7 @@ For example, the following will not work:</p>
   }
 }
 def builder = new StringBuilder()
+
 builder.append(new Test())
 echo(builder.toString())</code></pre>
 </div>
@@ -759,8 +763,11 @@ Here is an example:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">def x = 1
+
 def s = "x = ${-&gt; x}"
+
 x = 2
+
 echo(s)</code></pre>
 </div>
 </div>
@@ -781,8 +788,11 @@ The warning from the logs when running this script looks like this:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">def x = 1
+
 def s = { -&gt; x = "${x}" }
+
 x = 2
+
 echo(s())</code></pre>
 </div>
 </div>

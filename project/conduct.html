@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>"Jenkins Code of Conduct" :: Jenkins Docs</title>
+    <link rel="canonical" href="https://docs.jenkins.com/project/conduct.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="governance.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <script>var uiRootPath = '../_'</script>
+<link rel="icon" href="../_/jenkins.svg" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="project" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Jenkins Project</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Project structure and governance</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="conduct.html">"Jenkins Code of Conduct"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="governance.html">Project Governance Document</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="election-walkthrough.html">"Board and Officer election walkthrough"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="team-leads.html">Jenkins Team Leads and Officers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="board-election-process.html">"Board and Officer election process"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="board.html">Jenkins Board and Officers</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="trademark/index.html">Trademark and Attribution</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="trademark/approved-usage.html">Approved Trademark Usage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="governance-meeting/index.html">Jenkins Governance Meeting</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="governance-meeting/archives/2011.html">Jenkins Governance Meeting Archive 2011</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="governance-meeting/archives/2012.html">Jenkins Governance Meeting Archive 2012</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="governance-meeting/archives/2015.html">Jenkins Governance Meeting Archive 2015</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="governance-meeting/archives/2011.html">Jenkins Governance Meeting Archive 2011</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="governance-meeting/archives/2018.html">Jenkins Governance Meeting Archive 2018</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="governance-meeting/archives/2013.html">Jenkins Governance Meeting Archive 2013</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="governance-meeting/archives/2017.html">Jenkins Governance Meeting Archive 2017</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="governance-meeting/archives/2016.html">Jenkins Governance Meeting Archive 2016</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="governance-meeting/archives/2014.html">Jenkins Governance Meeting Archive 2014</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="governance-meeting/archives/2019.html">Jenkins Governance Meeting Archive 2019</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Project</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../solutions/2.426.1/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../solutions/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../tutorials/2.426.1/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../tutorials/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../user-docs/2.426.1/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../user-docs/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../user-docs/2.426.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Jenkins Project</a></li>
+    <li><a href="index.html">Project structure and governance</a></li>
+    <li><a href="conduct.html">"Jenkins Code of Conduct"</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/project/modules/ROOT/pages/conduct.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">"Jenkins Code of Conduct"</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>As community members, contributors and maintainers of this project,
+and in the interest of fostering an open and welcoming community,
+we commit to respect all people who participate in the community through reporting issues,
+posting feature requests, updating documentation, submitting pull requests or
+patches, and other activities.</p>
+</div>
+<div class="paragraph">
+<p>This document defines the Code of Conduct along with reporting and handling guidelines for the Jenkins community.
+For more details about our cultural values, goals, philosophies, and structure, please consult our <a href="/project/governance">Governance Document</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_our_pledge"><a class="anchor" href="#_our_pledge"></a>Our Pledge</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We as members, contributors, and leaders pledge to make participation in our
+community a harassment-free experience for everyone, regardless of age, body
+size, visible or invisible disability, ethnicity, sex characteristics, gender
+identity and expression, level of experience, education, socio-economic status,
+nationality, personal appearance, race, caste, color, religion, or sexual identity
+and orientation.</p>
+</div>
+<div class="paragraph">
+<p>We pledge to act and interact in ways that contribute to an open, welcoming,
+diverse, inclusive, and healthy community.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_our_standards"><a class="anchor" href="#_our_standards"></a>Our Standards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Examples of behavior that contributes to a positive environment for our
+community include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Demonstrating empathy and kindness toward other people</p>
+</li>
+<li>
+<p>Being respectful of differing opinions, viewpoints, and experiences</p>
+</li>
+<li>
+<p>Giving and gracefully accepting constructive feedback</p>
+</li>
+<li>
+<p>Accepting responsibility and apologizing to those affected by our mistakes,
+and learning from the experience</p>
+</li>
+<li>
+<p>Focusing on what is best not just for us as individuals, but for the
+overall community</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Examples of unacceptable behavior include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The use of sexualized language or imagery, and sexual attention or
+advances of any kind</p>
+</li>
+<li>
+<p>Trolling, insulting or derogatory comments, and personal or political attacks</p>
+</li>
+<li>
+<p>Public or private harassment</p>
+</li>
+<li>
+<p>Publishing others' private information, such as a physical or email
+address, without their explicit permission</p>
+</li>
+<li>
+<p>Other conduct which could reasonably be considered inappropriate in a
+professional setting</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_enforcement_responsibilities"><a class="anchor" href="#_enforcement_responsibilities"></a>Enforcement Responsibilities</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins Board members are responsible for clarifying and enforcing our standards of
+acceptable behavior and will take appropriate and fair corrective action in
+response to any behavior that they deem inappropriate, threatening, offensive,
+or harmful.</p>
+</div>
+<div class="paragraph">
+<p>Community leaders (Jenkins Board members, service administrators, plugin and other maintainers)
+have the right and responsibility to remove, edit, or reject
+comments, commits, code, wiki edits, issues, and other contributions that are
+not aligned to this Code of Conduct, and will communicate reasons for moderation
+decisions when appropriate.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_scope"><a class="anchor" href="#_scope"></a>Scope</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This Code of Conduct applies within all <a href="#_community_spaces">Community Spaces</a>, and also applies when
+an individual is officially representing the community in public spaces.
+Examples of representing our community include using an official e-mail address,
+posting via an official social media account, or acting as an appointed
+representative at an online or offline event.</p>
+</div>
+<div class="sect2">
+<h3 id="_community_spaces"><a class="anchor" href="#_community_spaces"></a>Community Spaces</h3>
+<div class="sect3">
+<h4 id="_source_control"><a class="anchor" href="#_source_control"></a>Source Control</h4>
+<div class="paragraph">
+<p>All resources and conversations within the Jenkins GitHub organizations are subject to the code of conduct.
+It includes but not limited to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Organizations</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkinsci">jenkinsci</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci-cert">jenkinsci-cert</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkins-infra">jenkins-infra</a></p>
+</li>
+<li>
+<p><a href="https://github.com/stapler">stapler</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Commits</p>
+</li>
+<li>
+<p>Pull requests</p>
+</li>
+<li>
+<p>Issues</p>
+</li>
+<li>
+<p>Wikis</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Technical criticism is always appreciated. Keep it positive and constructive. Don&#8217;t merely decry the current state of affairs. Offer and solicit suggestions as to how things may be improved.
+(courtesy of the <a href="https://golang.org/conduct#values">Go Lang Code of Conduct</a>)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_websites"><a class="anchor" href="#_websites"></a>Websites</h4>
+<div class="paragraph">
+<p>Everything hosted under <a href="/">jenkins.io</a>, <a href="https://jenkins-ci.org/">jenkins-ci.org</a> and their sub-domains such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/">jenkins.io</a></p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/">issues.jenkins.io</a></p>
+</li>
+<li>
+<p><a href="https://stories.jenkins.io/">stories.jenkins.io</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mailing_lists"><a class="anchor" href="#_mailing_lists"></a>Mailing lists</h4>
+<div class="paragraph">
+<p>All <a href="/mailing-lists">mailing lists</a> hosted on Google Groups and other platforms.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_chats"><a class="anchor" href="#_chats"></a>Chats</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>All chats documented on the <a href="/chat">this page</a>, e.g. IRC channels: <code>#jenkins</code>, <code>#jenkins-meeting</code>, <code>#jenkins-infra</code>, etc.</p>
+</li>
+<li>
+<p>Gitter channels within the <a href="https://app.gitter.im/#/room/#jenkins-ci:matrix.org">jenkinsci</a> space</p>
+</li>
+<li>
+<p>Jenkins chats hosted by Linux Foundation and its subsidiaries including Continuous Delivery Foundation</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_events"><a class="anchor" href="#_events"></a>Events</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/projects/jam/">Jenkins Area Meetups</a></p>
+</li>
+<li>
+<p><a href="/events/online-meetup">Jenkins Online Meetup</a></p>
+</li>
+<li>
+<p>Events where Jenkins is officially being represented (e.g.
+<a href="https://fosdem.org">FOSDEM</a>, <a href="https://socallinuxexpo.org/">SCaLE</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_other_jenkins_communities"><a class="anchor" href="#_other_jenkins_communities"></a>Other Jenkins Communities</h3>
+<div class="paragraph">
+<p>Other Jenkins groups (such as conferences, meetups, and other unofficial forums) and local communities are encouraged to adopt this Code of Conduct.
+Those groups must provide their own moderators and/or reporting system.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reporting"><a class="anchor" href="#_reporting"></a>Reporting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Instances of abusive, harassing, or otherwise unacceptable behavior may be
+reported by contacting the <a href="/project/board">Jenkins board</a>.
+If you feel somebody has breached this code, please send an email with the
+relevant information (links, etc) to <code>jenkinsci-board@googlegroups.com</code>.
+This email list is only readable by the <a href="/project/board">Governance Board</a> members.
+The board may not have all of the necessary context and history,
+so it&#8217;s better to describe the issue thoroughly.
+All complaints will be reviewed
+and investigated and will result in a response that is deemed necessary and
+appropriate to the circumstances.</p>
+</div>
+<div class="paragraph">
+<p>If you believe one of the board members has violated the code of conduct
+above, please email one of the other members of the Governance Board with the
+details (their emails are visible on the
+<a href="board.html" class="xref page">Governance
+Board</a> page).</p>
+</div>
+<div class="paragraph">
+<p>If the desired resolution cannot be reached on the Jenkins community level,
+an issue can be escalated to the Continuous Delivery Foundation (CDF) by contacting the project team at <code>conduct@cd.foundation</code>.
+See the <a href="https://github.com/cdfoundation/.github/blob/main/CODE_OF_CONDUCT.md">CDF Code of Conduct</a> for more information about reporting and enforcement in this case.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_handling_of_violations"><a class="anchor" href="#_handling_of_violations"></a>Handling of violations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Community leaders will follow these Community Impact Guidelines in determining
+the consequences for any action they deem in violation of this Code of Conduct.</p>
+</div>
+<div class="paragraph">
+<p>Depending on the severity of the violations the board may elect to take one of the following paths.
+Handling of violations will be done in private and the affected people will be notified.
+In the majority of cases there will not be a public announcement of the resolution,
+unless the Governance Board deems it necessary to announce the resolution in public.</p>
+</div>
+<div class="sect2">
+<h3 id="_1_correction"><a class="anchor" href="#_1_correction"></a>1. Correction</h3>
+<div class="paragraph">
+<p>If the severity of the violation is mild enough, the board will notify the community member that their conduct is not acceptable and needs to change.</p>
+</div>
+<div class="paragraph">
+<p><strong>Community Impact</strong>: Use of inappropriate language or other behavior deemed
+unprofessional or unwelcome in the community.</p>
+</div>
+<div class="paragraph">
+<p><strong>Consequence</strong>: A private, written warning from community leaders, providing
+clarity around the nature of the violation and an explanation of why the
+behavior was inappropriate. A public apology may be requested.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_warning"><a class="anchor" href="#_2_warning"></a>2. Warning</h3>
+<div class="paragraph">
+<p>If the severity of the violation is serious enough,
+the board will issue an official warning to the community member.</p>
+</div>
+<div class="paragraph">
+<p><strong>Community Impact</strong>: A violation through a single incident or series
+of actions.</p>
+</div>
+<div class="paragraph">
+<p><strong>Consequence</strong>: A warning with consequences for continued behavior. No
+interaction with the people involved, including unsolicited interaction with
+those enforcing the Code of Conduct, for a specified period of time. This
+includes avoiding interactions in community spaces as well as external channels
+like social media. Violating these terms may lead to a <em>Probation</em> or <em>Ban</em>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_probation"><a class="anchor" href="#_3_probation"></a>3. Probation</h3>
+<div class="paragraph">
+<p>If the severity of the violation is serious or reprimands are not effective,
+the board will ask the community member to "take a break"
+and to step
+away from the community for a period of time.
+The intent of this is to send a clear signal to the community member that their
+conduct is unacceptable, de-escalate the situation for everyone who are
+affected, and ask the community member to reflect on their behaviors.</p>
+</div>
+<div class="paragraph">
+<p><strong>Community Impact</strong>: A serious violation of community standards, including
+sustained inappropriate behavior.</p>
+</div>
+<div class="paragraph">
+<p><strong>Consequence</strong>: A temporary ban from any sort of interaction or public
+communication with the community for a specified period of time
+(chats, mailing lists, pull requests, issues, events, etc.).
+No public or
+private interaction with the people involved, including unsolicited interaction
+with those enforcing the Code of Conduct, is allowed during this period.
+Violating these terms may lead to a ban.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_ban"><a class="anchor" href="#_4_ban"></a>4. Ban</h3>
+<div class="paragraph">
+<p><strong>Community Impact</strong>: Demonstrating a pattern of violation of community
+standards, including sustained inappropriate behavior,  harassment of an
+individual, or aggression toward or disparagement of classes of individuals.</p>
+</div>
+<div class="paragraph">
+<p><strong>Consequence</strong>: A permanent ban from any sort of public interaction within
+the community.
+The individual will be expelled from the Jenkins community.
+After 12 months they may appeal to the board for the ban to be lifted.</p>
+</div>
+<div class="paragraph">
+<p>The ban will include but is not limited to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bans from Jenkins community <a href="/chat">chats</a></p>
+</li>
+<li>
+<p>Deletion of their LDAP account</p>
+</li>
+<li>
+<p>Blocking their GitHub username from the Jenkins GitHub organizations</p>
+</li>
+<li>
+<p>Banning their email address from Jenkins mailing lists</p>
+</li>
+<li>
+<p>Banning them from social media and meetup groups</p>
+</li>
+<li>
+<p>Banning them from participating in Community-organized events</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_attribution"><a class="anchor" href="#_attribution"></a>Attribution</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This Code of Conduct is adapted from the <a href="https://www.contributor-covenant.org/">Contributor Covenant</a>,
+version 2.1, available at
+<a href="https://www.contributor-covenant.org/version/2/1/code_of_conduct.html" class="bare">https://www.contributor-covenant.org/version/2/1/code_of_conduct.html</a>.</p>
+</div>
+<div class="paragraph">
+<p>Community Impact Guidelines were inspired by <a href="https://github.com/mozilla/diversity">Mozilla&#8217;s code of conduct
+enforcement ladder</a>.</p>
+</div>
+<div class="paragraph">
+<p>For answers to common questions about the adapted code of conduct, see the FAQ at <a href="https://www.contributor-covenant.org/faq" class="bare">https://www.contributor-covenant.org/faq</a>. Translations are available at <a href="https://www.contributor-covenant.org/translations" class="bare">https://www.contributor-covenant.org/translations</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_version_history"><a class="anchor" href="#_version_history"></a>Version history</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Aug 23, 2023</strong> - Minor update of the Code of Conduct adding translations to the footer and incorporating the <a href="https://github.com/EthicalSource/contributor_covenant/releases/tag/2.1">2.1</a> update.</p>
+</li>
+<li>
+<p><strong>Jul 02, 2020</strong> - Major update of the Code of Conduct.
+It was approved the project governance meeting on Jul 01
+(<a href="https://docs.google.com/document/d/11Nr8QpqYgBiZjORplL_3Zkwys2qK1vEvK-NYyYa4rzg/edit#heading=h.6rx5y09hwmti">meeting notes</a>,
+ <a href="https://groups.google.com/forum/#!topic/jenkinsci-dev/u0T56f9MSZY">developer mailing list discussion</a>).
+Notable changes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Code of Conduct is updated to <a href="https://www.contributor-covenant.org/version/2/0/code_of_conduct/">Contributor Covenant, version 2.0</a></p>
+</li>
+<li>
+<p>Align <em>Handling of Violations</em> with <a href="https://www.contributor-covenant.org/version/2/0/code_of_conduct/">Contributor Covenant 2.0</a> <em>Enforcement Guidelines</em></p>
+</li>
+<li>
+<p>Refresh the <em>Community Spaces</em> section</p>
+</li>
+<li>
+<p>Reference Continuous Delivery Foundation (CDF) as a second escalation level</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Jan 06, 2016</strong> - First version of Code of Conduct is introduced.
+It is adapted from the <a href="https://www.contributor-covenant.org/version/1/3/0/">Contributor Covenant, version 1.3.0</a>.
+The Code of Conduct was approved by the project governance meeting on
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2016/jenkins-meeting.2016-01-06-19.01.html">2016-01-06</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="index.html">Project structure and governance</a></span>
+  <span class="next"><a href="governance.html">Project Governance Document</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

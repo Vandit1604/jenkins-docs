@@ -418,7 +418,7 @@
     <a class="nav-link" href="../tutorial-improve/update-parent-pom.html">Update parent POM</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../tutorial-improve/update-base-jenkins-version.html">Update Jenkins version</a>
+    <a class="nav-link" href="../tutorial-improve/update-base-jenkins-version.html">Update minimum Jenkins version</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../tutorial-improve/update-scm-url.html">Update SCM URL</a>
@@ -427,7 +427,7 @@
     <a class="nav-link" href="../tutorial-improve/add-more-spotbugs-checks.html">Add more spotbugs checks</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../tutorial-improve/automate-dependency-update-checks.html">Check dependencies</a>
+    <a class="nav-link" href="../tutorial-improve/automate-dependency-update-checks.html">Automate dependency updates</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../tutorial-improve/use-plugin-bill-of-materials.html">Use plugin bill of materials</a>
@@ -445,7 +445,7 @@
     <a class="nav-link" href="../tutorial-improve/add-a-link-to-report-an-issue.html">Report an Issue</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../tutorial-improve/replace-jsr-305-annotations.html">Replace JSR-305</a>
+    <a class="nav-link" href="../tutorial-improve/replace-jsr-305-annotations.html">Replace JSR-305 annotations with Spotbugs annotations</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../tutorial-improve/convert-translations.html">Convert translations</a>
@@ -1244,10 +1244,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../Jenkins%20Project/index.html">default</a>
+          <a href="../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -1503,6 +1503,7 @@ you can set the URL in your <code>build.gradle</code> like so:</p>
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">jenkinsPlugin {
   // ...
   url = 'https://github.com/jenkinsci/your-plugin'
+
   // ...
 }</code></pre>
 </div>
@@ -1564,7 +1565,7 @@ GitHub offers standard ways to define guidelines and to show them to contributor
 See <a href="https://help.github.com/en/articles/setting-guidelines-for-repository-contributors">Setting guidelines for repository contributors</a> for more information</p>
 </li>
 <li>
-<p>Jenkins has a <a href="#project:ROOT:conduct.adoc" class="xref unresolved">Code of Conduct</a> which applies to all contributors and to all components hosted by the project.
+<p>Jenkins has a <a href="../../project/conduct.html" class="xref page">Code of Conduct</a> which applies to all contributors and to all components hosted by the project.
 It is defined for all repositories using the <a href="https://github.com/jenkinsci/.github">jenkinsci/.github</a> repository,
 plugin maintainers do not need to set it up.</p>
 </li>
@@ -1586,7 +1587,6 @@ The table of contents is requested by assigning the value <code>macro</code> to 
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">= Your Plugin Name
-
 
 [[Introduction]]
 == Introduction

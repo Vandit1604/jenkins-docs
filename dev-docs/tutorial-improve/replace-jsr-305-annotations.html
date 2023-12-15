@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Replace JSR-305 :: Jenkins Docs</title>
+    <title>Replace JSR-305 annotations with Spotbugs annotations :: Jenkins Docs</title>
     <link rel="canonical" href="https://docs.jenkins.com/dev-docs/tutorial-improve/replace-jsr-305-annotations.html">
     <link rel="prev" href="add-a-link-to-report-an-issue.html">
     <link rel="next" href="convert-translations.html">
@@ -418,7 +418,7 @@
     <a class="nav-link" href="update-parent-pom.html">Update parent POM</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="update-base-jenkins-version.html">Update Jenkins version</a>
+    <a class="nav-link" href="update-base-jenkins-version.html">Update minimum Jenkins version</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="update-scm-url.html">Update SCM URL</a>
@@ -427,7 +427,7 @@
     <a class="nav-link" href="add-more-spotbugs-checks.html">Add more spotbugs checks</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="automate-dependency-update-checks.html">Check dependencies</a>
+    <a class="nav-link" href="automate-dependency-update-checks.html">Automate dependency updates</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="use-plugin-bill-of-materials.html">Use plugin bill of materials</a>
@@ -445,7 +445,7 @@
     <a class="nav-link" href="add-a-link-to-report-an-issue.html">Report an Issue</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="replace-jsr-305-annotations.html">Replace JSR-305</a>
+    <a class="nav-link" href="replace-jsr-305-annotations.html">Replace JSR-305 annotations with Spotbugs annotations</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="convert-translations.html">Convert translations</a>
@@ -1244,10 +1244,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../Jenkins%20Project/index.html">default</a>
+          <a href="../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -1312,7 +1312,7 @@
   <ul>
     <li><a href="../index.html">Jenkins Developer Documentation</a></li>
     <li><a href="index.html">Improve a Plugin Tutorial</a></li>
-    <li><a href="replace-jsr-305-annotations.html">Replace JSR-305</a></li>
+    <li><a href="replace-jsr-305-annotations.html">Replace JSR-305 annotations with Spotbugs annotations</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/dev-docs/modules/tutorial-improve/pages/replace-jsr-305-annotations.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
@@ -1322,7 +1322,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Replace JSR-305</h1>
+<h1 class="page">Replace JSR-305 annotations with Spotbugs annotations</h1>
 <div class="admonitionblock note">
     <table>
         <tbody>
@@ -1337,7 +1337,8 @@
         </tbody>
     </table>
 </div>
-<h1 id="_replace_jsr_305_annotations_with_spotbugs_annotations" class="sect0"><a class="anchor" href="#_replace_jsr_305_annotations_with_spotbugs_annotations"></a>Replace JSR-305 annotations with Spotbugs annotations</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>Annotations for <code>Nonnull</code>, <code>CheckForNull</code>, and several others were proposed for Java as part of <strong>dormant</strong> <a href="https://jcp.org/en/jsr/detail?id=305">Java specification request JSR-305</a>.
 The proposal never became a part of standard Java.
@@ -1346,8 +1347,20 @@ Jenkins plugins should switch from using JSR-305 annotations to use Spotbugs ann
 <div class="paragraph">
 <p>Refer to the <a href="https://groups.google.com/g/jenkinsci-dev/c/uE1wwtVi1W0/m/gLxdEJmlBQAJ">mailing list discussion</a> from James Nord.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_a_branch"><a class="anchor" href="#_create_a_branch"></a>Create a branch</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Unresolved include directive in modules/tutorial-improve/pages/replace-jsr-305-annotations.adoc - include::doc/developer/tutorial-improve/_create-a-branch.adoc[]</p>
+<p>In a local copy of your <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">fork</a> of the plugin repository create a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository">git branch</a> for your work with the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git checkout -b {task-identifier} master</code></pre>
+</div>
+</div>
+</div>
 </div>
 <div class="sect1">
 <h2 id="_migrate_nonnull"><a class="anchor" href="#_migrate_nonnull"></a>Migrate Nonnull</h2>
@@ -1388,8 +1401,43 @@ The spotbugs annotations are provided by the parent pom.</p>
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn clean verify</code></pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_a_pull_request"><a class="anchor" href="#_create_a_pull_request"></a>Create a pull request</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Unresolved include directive in modules/tutorial-improve/pages/replace-jsr-305-annotations.adoc - include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]</p>
+<p>Commit that change:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git add {modified-files}
+git commit -m "{task-description}"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Push the change to GitHub:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git push origin --set-upstream {task-identifier}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for '{task-identifier}' on GitHub by visiting:
+remote: https://github.com/user/your-plugin/pull/new/{task-identifier}
+remote:
+To github.com:user/your-plugin.git
+ * [new branch]      {task-identifier} -&gt; {task-identifier}
+Branch '{task-identifier}' tracking remote branch '{task-identifier}'.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice that the output of the command includes the URL, which can be used to open a pull request.
+Copy that URL in your web browser and submit a pull request.</p>
 </div>
 </div>
 </div>

@@ -447,10 +447,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../Jenkins%20Project/index.html">default</a>
+          <a href="../../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -609,7 +609,7 @@ This limitation does not apply to Scripted Pipelines.</p>
 <p>Sections in Declarative Pipeline typically contain one or more <a href="#declarative-directives">Directives</a> or <a href="#declarative-steps">Steps</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="_agent"><a class="anchor" href="#_agent"></a>agent</h4>
+<h4 id="agent"><a class="anchor" href="#agent"></a>agent</h4>
 <div class="paragraph">
 <p>The <code>agent</code> section specifies where the entire Pipeline, or a specific stage, will execute in the Jenkins environment depending on where the <code>agent</code> section is placed.
 The section must be defined at the top-level inside the <code>pipeline</code> block, but stage-level usage is optional.</p>
@@ -997,7 +997,7 @@ Using <code>agent none</code> also forces each <code>stage</code> section to con
 </div>
 </div>
 <div class="sect3">
-<h4 id="_post"><a class="anchor" href="#_post"></a>post</h4>
+<h4 id="post"><a class="anchor" href="#post"></a>post</h4>
 <div class="paragraph">
 <p>The <code>post</code> section defines one or more additional <a href="#declarative-steps">steps</a> that are run upon the completion of a Pipeline&#8217;s or stage&#8217;s run (depending on the location of the <code>post</code> section within the Pipeline). <code>post</code> can support any of the following <a href="#post-conditions">post-condition</a> blocks: <code>always</code>, <code>changed</code>, <code>fixed</code>, <code>regression</code>, <code>aborted</code>, <code>failure</code>, <code>success</code>, <code>unstable</code>, <code>unsuccessful</code>, and <code>cleanup</code>.
 These condition blocks allow the execution of steps inside each condition depending on the completion status of the Pipeline or stage.
@@ -1119,8 +1119,8 @@ This is typically denoted in the web UI depending on the status previously menti
 <div class="sect3">
 <h4 id="_stages"><a class="anchor" href="#_stages"></a>stages</h4>
 <div class="paragraph">
-<p>Containing a sequence of one or more <a href="#stage">[stage]</a> directives, the <code>stages</code> section is where the bulk of the "work" described by a Pipeline will be located.
-At a minimum, it is recommended that <code>stages</code> contain at least one <a href="#stage">[stage]</a> directive for each discrete part of the continuous delivery process, such as Build, Test, and Deploy.</p>
+<p>Containing a sequence of one or more <a href="#stage">stage</a> directives, the <code>stages</code> section is where the bulk of the "work" described by a Pipeline will be located.
+At a minimum, it is recommended that <code>stages</code> contain at least one <a href="#stage">stage</a> directive for each discrete part of the continuous delivery process, such as Build, Test, and Deploy.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch syntax">
 <colgroup>
@@ -1317,11 +1317,13 @@ At a minimum, it is recommended that <code>stages</code> contain at least one <a
     agent any
     environment { <i class="conum" data-value="1"></i><b>(1)</b>
         CC = 'clang'
+
     }
     stages {
         stage('Example') {
             environment { <i class="conum" data-value="2"></i><b>(2)</b>
                 AN_ACCESS_KEY = credentials('my-predefined-secret-text') <i class="conum" data-value="3"></i><b>(3)</b>
+
             }
             steps {
                 sh 'printenv'
@@ -1360,6 +1362,7 @@ At a minimum, it is recommended that <code>stages</code> contain at least one <a
         stage('Example Username/Password') {
             environment {
                 SERVICE_CREDS = credentials('my-predefined-username-password')
+
             }
             steps {
                 sh 'echo "Service user is $SERVICE_CREDS_USR"'
@@ -1370,6 +1373,7 @@ At a minimum, it is recommended that <code>stages</code> contain at least one <a
         stage('Example SSH Username with private key') {
             environment {
                 SSH_CREDS = credentials('my-predefined-ssh-creds')
+
             }
             steps {
                 sh 'echo "SSH private key is located at $SSH_CREDS"'
@@ -1952,7 +1956,7 @@ For example, <code>@hourly</code> is the same as <code>H * * * *</code> and coul
 </table>
 </div>
 <div class="sect3">
-<h4 id="_stage"><a class="anchor" href="#_stage"></a>stage</h4>
+<h4 id="stage"><a class="anchor" href="#stage"></a>stage</h4>
 <div class="paragraph">
 <p>The <code>stage</code> directive goes in the <code>stages</code> section and should contain a <a href="#steps">[steps]</a> section, an optional <code>agent</code> section, or other stage-specific directives.
 Practically speaking, all of the real work done by a Pipeline will be wrapped in one or more <code>stage</code> directives.</p>
@@ -2728,6 +2732,7 @@ However, a <code>stage</code> directive within a <code>parallel</code> or <code>
             }
             environment {
                 FOR_SEQUENTIAL = "some-value"
+
             }
             stages {
                 stage('In Sequential 1') {
@@ -3211,7 +3216,7 @@ The "per-cell" directives, on the other hand, are evaluated at runtime.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#agent">[agent]</a></p>
+<p><a href="#agent">agent</a></p>
 </li>
 <li>
 <p><a href="#environment">[environment]</a></p>
@@ -3223,7 +3228,7 @@ The "per-cell" directives, on the other hand, are evaluated at runtime.</p>
 <p><a href="#options">[options]</a></p>
 </li>
 <li>
-<p><a href="#post">[post]</a></p>
+<p><a href="#post">post</a></p>
 </li>
 <li>
 <p><a href="#tools">[tools]</a></p>
@@ -3251,7 +3256,9 @@ The "per-cell" directives, on the other hand, are evaluated at runtime.</p>
                 }
                 when { anyOf {
                     expression { params.PLATFORM_FILTER == 'all' }
+
                     expression { params.PLATFORM_FILTER == env.PLATFORM }
+
                 } }
                 axes {
                     axis {
@@ -3333,7 +3340,9 @@ For most use-cases, the <code>script</code> step should be unnecessary in Declar
 
                 script {
                     def browsers = ['chrome', 'firefox']
+
                     for (int i = 0; i &lt; browsers.size(); ++i) {
+
                         echo "Testing the ${browsers[i]} browser"
                     }
                 }
@@ -3371,6 +3380,7 @@ Providing flow control, therefore, rests on Groovy expressions, such as the <cod
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
     stage('Example') {
         if (env.BRANCH_NAME == 'master') {
+
             echo 'I only execute on the master branch'
         } else {
             echo 'I execute elsewhere'

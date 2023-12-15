@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins Governance Meeting Archive 2017 :: Jenkins Docs</title>
+    <link rel="canonical" href="https://docs.jenkins.com/project/governance-meeting/archives/2017.html">
+    <link rel="prev" href="2013.html">
+    <link rel="next" href="2016.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+<link rel="icon" href="../../../_/jenkins.svg" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="project" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Jenkins Project</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html">Project structure and governance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../conduct.html">"Jenkins Code of Conduct"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../governance.html">Project Governance Document</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../election-walkthrough.html">"Board and Officer election walkthrough"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../team-leads.html">Jenkins Team Leads and Officers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../board-election-process.html">"Board and Officer election process"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../board.html">Jenkins Board and Officers</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../trademark/index.html">Trademark and Attribution</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../trademark/approved-usage.html">Approved Trademark Usage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Jenkins Governance Meeting</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2011.html">Jenkins Governance Meeting Archive 2011</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2012.html">Jenkins Governance Meeting Archive 2012</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2015.html">Jenkins Governance Meeting Archive 2015</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2011.html">Jenkins Governance Meeting Archive 2011</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2018.html">Jenkins Governance Meeting Archive 2018</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2013.html">Jenkins Governance Meeting Archive 2013</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="2017.html">Jenkins Governance Meeting Archive 2017</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2016.html">Jenkins Governance Meeting Archive 2016</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2014.html">Jenkins Governance Meeting Archive 2014</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2019.html">Jenkins Governance Meeting Archive 2019</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Project</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.426.1/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorials/2.426.1/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorials/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../user-docs/2.426.1/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-docs/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../user-docs/2.426.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Jenkins Project</a></li>
+    <li><a href="../index.html">Jenkins Governance Meeting</a></li>
+    <li><a href="2017.html">Jenkins Governance Meeting Archive 2017</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/project/modules/governance-meeting/pages/archives/2017.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins Governance Meeting Archive 2017</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page is an archive of past meeting agendas, their minutes and IRC logs, for the year shown above.
+For current information, see the <a href="../index.html" class="xref page">Governance Meeting</a> page.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-December20thmeeting"><a class="anchor" href="#GovernanceMeetingArchive2017-December20thmeeting"></a><strong class="line-through">December 20th meeting</strong></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong class="line-through"><a href="https://groups.google.com/d/msg/jenkinsci-dev/LmzleFNKecY/IBokx8ZwCAAJ">Skipped
+due to lack of agenda items and revised LTS schedule.</a></strong></p>
+</div>
+<div class="paragraph">
+<p><strong class="line-through">WHEN: December 20th 18:00 UTC</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong class="line-through">Recap last meeting&#8217;s actions</strong></p>
+</li>
+<li>
+<p><strong class="line-through">No LTS status check due to holiday schedule change</strong></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-December6thmeeting"><a class="anchor" href="#GovernanceMeetingArchive2017-December6thmeeting"></a>December 6th meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN: December 6th 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-12-06-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-12-06-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-November22ndmeeting"><a class="anchor" href="#GovernanceMeetingArchive2017-November22ndmeeting"></a>November 22nd meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN: November 22nd 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check
+( <a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>Planned release schedule for holiday season (topic for discussion
+proposed by (andresrc)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-11-22-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-11-22-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-November8thmeeting"><a class="anchor" href="#GovernanceMeetingArchive2017-November8thmeeting"></a>November 8th meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Note that the meeting time is in UTC, due to daylight savings time the
+start time for you may have changed recently.</p>
+</div>
+<div class="paragraph">
+<p>WHEN November 8th 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check
+( <a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>LTS baseline selection</p>
+</li>
+<li>
+<p>Jenkins Enhancement Proposals
+(<a href="https://github.com/jenkinsci/jep/tree/jep-1/jep/1">JEP-1</a>)
+( <a href="/blog/authors/rtyler/">
+(rtyler)</a> and <a href="/blog/authors/lnewman">
+(bitwiseman)</a> )</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-11-08-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-11-08-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-October25thmeeting"><a class="anchor" href="#GovernanceMeetingArchive2017-October25thmeeting"></a>October 25th meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN October 25th 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check
+( <a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>Q4 patron messages (Daniel)<br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-10-25-17.59.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-10-25-17.59.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-October11thmeeting"><a class="anchor" href="#GovernanceMeetingArchive2017-October11thmeeting"></a>October 11th meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN October 11th 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check
+( <a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-10-11-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-10-11-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-September27thmeeting"><a class="anchor" href="#GovernanceMeetingArchive2017-September27thmeeting"></a>September 27th meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN September 27th 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check
+( <a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>Huayou Tech request for mark usage for events "Jenkins User Conference
+China" (Forest Jing)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-09-27-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-09-27-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-September13thmeeting"><a class="anchor" href="#GovernanceMeetingArchive2017-September13thmeeting"></a>September 13th meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN September 13th 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check
+( <a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>CloudBees request for mark usage for events  “Jenkins Days by
+CloudBees” (<a href="https://github.com/alyssat">Alyssa Tong</a>)</p>
+</li>
+<li>
+<p>TechMatrix request for mark usage for events "Jenkins Day Japan"
+(Kohsuke)</p>
+</li>
+<li>
+<p>Introduction to Forest Jing - JAM Shanghai &amp; Beijing organizer <br></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-09-13-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-09-13-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-August16thmeeting"><a class="anchor" href="#GovernanceMeetingArchive2017-August16thmeeting"></a>August 16th meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN August 16th 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p><strong class="line-through">LTS status check
+( <a href="/blog/authors/olivergondza">
+(olivergondza)</a> will not make it to the meeting)</strong></p>
+</li>
+<li>
+<p>next LTS baseline selection
+(<a href="/blog/authors/jglick">(jglick)</a>)</p>
+</li>
+<li>
+<p>Vote on proposal:[.F0XO1GC-mb-Y]# Add optional "Released as" and
+"Stage Release" states to JIRA#
+(<a href="/blog/authors/oleg_nenashev/">
+(oleg_nenashev)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>JIRA ticket:
+<a href="https://issues.jenkins.io/browse/INFRA-1301">INFRA-1301</a></p>
+</li>
+<li>
+<p><a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a><mark>%21topic/jenkinsci-dev/wzc4VLplHvs[<a href="https://groups.google.com/forum/" class="bare">https://groups.google.com/forum/</a></mark>!topic/jenkinsci-dev/wzc4VLplHvs]</p>
+</li>
+<li>
+<p>Proposal Text with
+Edits: https://docs.google.com/document/d/1EIRuCMOjmPgpxybkWRPHfx1f1yglcuYlqPWN8K1Ni28/edit?usp=sharing</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-08-16-17.59.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-08-16-17.59.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-August2meeting"><a class="anchor" href="#GovernanceMeetingArchive2017-August2meeting"></a>August 2 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN August 2nd 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check
+( <a href="/blog/authors/olivergondza">
+(olivergondza)</a> )</p>
+</li>
+<li>
+<p>Jenkins World organization update (<a href="https://github.com/alyssat">Alyssa
+Tong</a>)</p>
+</li>
+<li>
+<p>Infra status update (<a href="/blog/authors/rtyler/">(rtyler)</a>)</p>
+</li>
+<li>
+<p><a href="https://groups.google.com/d/msg/jenkinsci-dev/PoxnVCKa9NM/2F2iLlDuBwAJ">Jenkins
+mark usage request from CloudBees</a>
+(<a href="/blog/authors/kohsuke/">(kohsuke)</a> but
+ <a href="/blog/authors/rtyler/">(rtyler)</a> will
+proxy)</p>
+</li>
+<li>
+<p>Deprecate Remoting CLI1/JNLP1/JNLP2/JNLP3 protocol - sign-off
+<a href="https://issues.jenkins.io/browse/JENKINS-45841">JENKINS-45841</a>
+(<a href="/blog/authors/oleg_nenashev/">
+(oleg_nenashev)</a>)<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://groups.google.com/forum/#!topic/jenkinsci-dev/sN2wHHFOJPg">Discussion
+in the Mailing List</a> (see compatibility notes and the rollout plan)</p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/jenkins/pull/2950">Main pull-request</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-08-02-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-08-02-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-July19meeting"><a class="anchor" href="#GovernanceMeetingArchive2017-July19meeting"></a>July 19 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN July 19th 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check
+( <a href="/blog/authors/olivergondza">
+(olivergondza)</a> )</p>
+</li>
+<li>
+<p><a href="https://github.com/docker-library/docs/pull/948">Deprecate</a> "jenkins"
+official docker image (that we don&#8217;t control) and "jenkinsci/<strong>" and
+start deploying our own stuff under
+"<a href="https://hub.docker.com/r/jenkins/">jenkins</a>/</strong>" docker registry (ndeloof)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-07-19-18.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-07-19-18.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-July5meeting"><a class="anchor" href="#GovernanceMeetingArchive2017-July5meeting"></a>July 5 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN July 5th 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check
+( <a href="/blog/authors/olivergondza">
+(olivergondza)</a> )</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-07-05-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-07-05-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-June21stmeeting"><a class="anchor" href="#GovernanceMeetingArchive2017-June21stmeeting"></a>June 21st meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN June 21st 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check
+( <a href="/blog/authors/olivergondza">
+(olivergondza)</a> )</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-06-21-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-06-21-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-June7thmeeting"><a class="anchor" href="#GovernanceMeetingArchive2017-June7thmeeting"></a>June 7th meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN June 7th 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check
+( <a href="/blog/authors/olivergondza">
+(olivergondza)</a> )</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-06-07-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-06-07-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-May24thmeeting"><a class="anchor" href="#GovernanceMeetingArchive2017-May24thmeeting"></a>May 24th meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN May 24th 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check
+( <a href="/blog/authors/olivergondza">
+(olivergondza)</a> )</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Next LTS baseline selection ([~olivergondza])</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Purchasing a SendGrid account to send project emails from Azure-based
+applications - <a href="/blog/authors/rtyler/">
+(rtyler)</a>, <a href="/blog/authors/olblak">
+(olblak)</a></p>
+</li>
+<li>
+<p>Adding <a href="/blog/authors/olblak">
+(olblak)</a> as an admin in LDAP and provide access to jenkins-keys
+(provides puppet dashboard, account admin access, ability to encrypt
+secrets, etc)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-05-24-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-05-24-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-May10thmeeting"><a class="anchor" href="#GovernanceMeetingArchive2017-May10thmeeting"></a>May 10th meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN: May 10th 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check
+(<a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>Infrastructure update (JIRA, Confluence, accounts, etc) (
+<a href="/blog/authors/rtyler/">(rtyler)</a>,
+<a href="/blog/authors/olblak">(olblak)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-05-10-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-05-10-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-April26thmeeting"><a class="anchor" href="#GovernanceMeetingArchive2017-April26thmeeting"></a>April 26th meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN: April 12th 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check
+(<a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>Jenkins Ambassador program heads up (<a href="https://github.com/alyssat">Alyssa
+Tong</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-04-26-18.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-04-26-18.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-April12thmeeting"><a class="anchor" href="#GovernanceMeetingArchive2017-April12thmeeting"></a>April 12th meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN: April 12th 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check
+(<a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>Google Groups issues (<a href="/blog/authors/rtyler/">(rtyler)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-04-12-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-04-12-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-March29meeting"><a class="anchor" href="#GovernanceMeetingArchive2017-March29meeting"></a>March 29 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN: March 29 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS Status check
+(<a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>Sublicense request, on behalf of JFrog, "Jenkins Community Day" event
+in Paris (Alyssa Tong)</p>
+</li>
+<li>
+<p>Java 8 baseline bump heads up
+(<a href="/blog/authors/batmat">(batmat)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-03-29-18.02.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-03-29-18.02.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-March15meeting"><a class="anchor" href="#GovernanceMeetingArchive2017-March15meeting"></a>March 15 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN: March 15 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS Status check
+(<a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>The "Day of Jenkins" events (in
+<a href="http://www.code-conf.com/doj/doj-gbg/">GOT</a> and
+<a href="http://www.code-conf.com/doj/doj-osl/">OSL</a>) needs a sub license
+(<a href="https://wiki.jenkins-ci.org/display/~lars_kruse">Lars Kruse</a>)</p>
+</li>
+<li>
+<p>Obtain sub license for "DevOps Connect &amp; Jenkins Days" events (Alyssa
+Tong)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-03-15-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-03-15-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-March1meeting"><a class="anchor" href="#GovernanceMeetingArchive2017-March1meeting"></a>March 1 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN: March 1 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS Status check
+(<a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>Pick new LTS line
+(<a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/changelog/">changelog</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The future of the patron program
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>It doesn&#8217;t make sense in its current form with the wiki slowly
+getting replaced</p>
+</li>
+<li>
+<p>Do we want to just end it (for now), or implement e.g. on the site,
+on JIRA, …?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Obtain clearance on trademark usage "CloudBees Jenkins X" (Alyssa
+Tong)</p>
+</li>
+<li>
+<p>GSoC 2017 update
+(<a href="/blog/authors/oleg_nenashev/">
+(oleg_nenashev)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-03-01-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-03-01-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-Feb15meeting"><a class="anchor" href="#GovernanceMeetingArchive2017-Feb15meeting"></a>Feb 15 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN: Feb 15 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS Status check
+(<a href="/blog/authors/olivergondza">
+(olivergondza)</a>)</p>
+</li>
+<li>
+<p>GSoC update (<a href="/blog/authors/oleg_nenashev/">(oleg_nenashev)</a>)</p>
+</li>
+<li>
+<p>Infrastructure update (<a href="/blog/authors/rtyler/">(rtyler)</a>)</p>
+</li>
+<li>
+<p>Should we host plugins with closed-source dependencies?
+(<a href="/blog/authors/batmat">(batmat)</a>,
+<a href="/blog/authors/orrc">(orrc)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/blog/authors/batmat">(batmat)</a>
+brought up the point after
+<a href="https://issues.jenkins.io/browse/HOSTING-271">HOSTING-271</a></p>
+</li>
+<li>
+<p>Closed-source plugins are explicitly banned in the
+<a href="https://wiki.jenkins.io/display/JENKINS/Governance+Document">Governance
+Document</a> ("But no such [proprietary] plugins will be hosted by the
+Jenkins project.") and on
+<a href="https://wiki.jenkins.io/display/JENKINS/Hosting+Plugins">Hosting Plugins</a></p>
+</li>
+<li>
+<p>Should we add a clarification that the source of all dependencies
+(which implies transient?) must also be open source? Or are binary blobs
+(so long as they&#8217;re accessible) ok?</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-02-15-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-02-15-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-Feb1meeting"><a class="anchor" href="#GovernanceMeetingArchive2017-Feb1meeting"></a>Feb 1 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN: Feb 01 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS Status check</p>
+</li>
+<li>
+<p>GSoC update</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://groups.google.com/forum/#!topic/jenkinsci-dev/cPN7IZHGDWE">Status
+update</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/document/d/13mkt5DBjVAnr7dSiJ0oO4R5-nn80kGQ5OFhBoUzInIU/edit#heading=h.w10hxu7oxi77">Application
+draf</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Infrastructure update (<a href="/blog/authors/rtyler/">(rtyler)</a>)</p>
+</li>
+<li>
+<p><a href="https://groups.google.com/forum/#!topic/jenkinsci-dev/1jZmjgSDcqM">Trademark
+usage approval</a> for upcoming "CloudBees Jenkins" product names
+(<a href="/blog/authors/rtyler/">(rtyler)</a>)</p>
+</li>
+<li>
+<p>Request for 50 private repos in the jenkinsci-cert GitHub org (1200
+USD/year, up from 20 repos for 600 USD/year)
+(<a href="/blog/authors/daniel-beck/">(danielbeck)</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Part 1:</p>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-02-01-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-02-01-18.00.log.html">raw</a></p>
+</div>
+<div class="paragraph">
+<p>Part 2:</p>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-02-01-18.27.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-02-01-18.27.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-Jan18meeting"><a class="anchor" href="#GovernanceMeetingArchive2017-Jan18meeting"></a>Jan 18 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN Jan 18 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check</p>
+</li>
+<li>
+<p>Review GSoC project application status'</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://groups.google.com/forum/#!topic/jenkinsci-dev/cPN7IZHGDWE">Status
+update</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/document/d/13mkt5DBjVAnr7dSiJ0oO4R5-nn80kGQ5OFhBoUzInIU/edit#heading=h.w10hxu7oxi77">Application
+draf</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Bug Triage Team Idea
+(<a href="/blog/authors/slide_o_mix">
+(slide_o_mix)</a>)</p>
+</li>
+<li>
+<p>JDK8 baseline upgrade news
+(<a href="/blog/authors/batmat">(batmat)</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Jenkins <a href="https://github.com/jenkinsci/jenkins/pull/2698">core now
+builds on Windows</a> and is green \o/ (err, blue)</p>
+</li>
+<li>
+<p><a href="https://github.com/jenkins-infra/jenkins.io/pull/545">PR</a> for the
+public announcement is up for review</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>FOSDEM planning update</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-01-18-18.01.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-01-18-18.01.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GovernanceMeetingArchive2017-Jan4meeting"><a class="anchor" href="#GovernanceMeetingArchive2017-Jan4meeting"></a>Jan 4 meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WHEN Jan 4 18:00 UTC</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Recap last meeting&#8217;s actions</p>
+</li>
+<li>
+<p>LTS status check</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This should be quick as we postponed the .2 release
+<span class="image"><img src="https://wiki.jenkins.io/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/_/images/icons/emoticons/smile.svg" alt="(smile)"></span></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MINUTES
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-01-04-18.00.html">summary</a>
+and
+<a href="http://meetings.jenkins-ci.org/jenkins-meeting/2017/jenkins-meeting.2017-01-04-18.00.log.html">raw</a></p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="2013.html">Jenkins Governance Meeting Archive 2013</a></span>
+  <span class="next"><a href="2016.html">Jenkins Governance Meeting Archive 2016</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -447,10 +447,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../Jenkins%20Project/index.html">default</a>
+          <a href="../../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -627,8 +627,10 @@ Both installation methods produce the same results.</p>
 </li>
 <li>
 <p>Mark the installation checkbox, and select <strong>Install without restart</strong>.</p>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jmeter/jmeter-00.png" alt="Available plugins filtered for performance."></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/jmeter/jmeter-00.png" alt="Available plugins filtered for performance.">
+</div>
 </div>
 </li>
 </ol>
@@ -636,8 +638,10 @@ Both installation methods produce the same results.</p>
 <div class="paragraph">
 <p>If everything is successful, you will receive this confirmation screen:</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jmeter/jmeter-01.png" alt="Install success confirmation page."></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/jmeter/jmeter-01.png" alt="Install success confirmation page.">
+</div>
 </div>
 </div>
 </div>
@@ -666,8 +670,10 @@ For example, usr/jmeter/bin is the file path used here.</p>
 <li>
 <p>Add this command to the last line of the file: <code>jmeter.save.saveservice.output_format=xml</code>.
 Save and close the file to ensure the changes are made.</p>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jmeter/jmeter-03.png" alt="user.properties command"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/jmeter/jmeter-03.png" alt="user.properties command">
+</div>
 </div>
 </li>
 </ol>
@@ -714,8 +720,10 @@ For Windows users the file will be <code>jmeter.bat</code>.
 <li>
 <p>On the left side of the screen, using the right or secondary select with your mouse, select your test plan.
 Follow this path: <strong>Add &gt; Thread(Users) &gt; Thread Group</strong>, and select it.</p>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jmeter/jmeter-04.png" alt="Adding a Thread Group to the test plan."></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/jmeter/jmeter-04.png" alt="Adding a Thread Group to the test plan.">
+</div>
 </div>
 </li>
 <li>
@@ -723,14 +731,18 @@ Follow this path: <strong>Add &gt; Thread(Users) &gt; Thread Group</strong>, and
 </li>
 <li>
 <p>On the left side of the screen, right or secondary select <strong>Thread Group</strong> with your mouse, then follow this path: <strong>Add &gt; Sampler &gt; HTTP Request</strong>, and select the HTTP Request option.</p>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jmeter/jmeter-05.png" alt="Thread Group"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/jmeter/jmeter-05.png" alt="Thread Group">
+</div>
 </div>
 </li>
 <li>
 <p>In HTTP Request, enter the <strong>Name</strong> of your test, the <strong>Server Name or IP</strong>, and the <strong>Path</strong> context. For example, here we would use <code>Installing</code>, <code>www.jenkins.io</code>, and <code>/doc/book/installing/</code>.</p>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jmeter/jmeter-06.png" alt="HTTP Request sample"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/jmeter/jmeter-06.png" alt="HTTP Request sample">
+</div>
 </div>
 </li>
 <li>
@@ -740,8 +752,10 @@ Now our plan has three things to test.</p>
 <li>
 <p>To add a visual report, right or secondary select your Thread Group, then follow the path: <strong>Add &gt; Listener &gt; View results in table</strong>.
 Select the <strong>View Results in Table</strong> option.</p>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jmeter/jmeter-07.png" alt="Save and run test plan"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/jmeter/jmeter-07.png" alt="Save and run test plan">
+</div>
 </div>
 </li>
 <li>
@@ -753,8 +767,10 @@ For example: <code>jenkins.io.jml</code>.</p>
 <div class="paragraph">
 <p>Run the test and view the table results.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jmeter/jmeter-08.png" alt="test results"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/jmeter/jmeter-08.png" alt="test results">
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -780,8 +796,10 @@ set JTL=/usr/jmeter/reports/jenkins.io.report.jtl
 </li>
 <li>
 <p>If everything works properly, the report file is created at the indicated location by the <code>-l</code> parameter.</p>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jmeter/jmeter-09.png" alt="Jmeter command line test results."></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/jmeter/jmeter-09.png" alt="Jmeter command line test results.">
+</div>
 </div>
 </li>
 </ol>
@@ -811,8 +829,10 @@ set JTL=/usr/jmeter/reports/jenkins.io.report.jtl
 </li>
 <li>
 <p>Enter the same code we used to run JMeter in the previous section:</p>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jmeter/jmeter-10.png" alt="Jenkins JMeter build step"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/jmeter/jmeter-10.png" alt="Jenkins JMeter build step">
+</div>
 </div>
 </li>
 <li>
@@ -833,8 +853,10 @@ If it is not available, check the previous section and make sure you have instal
 </li>
 <li>
 <p>Fill in the source for these reports:</p>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jmeter/jmeter-11.png" alt="Source of reports"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/jmeter/jmeter-11.png" alt="Source of reports">
+</div>
 </div>
 </li>
 <li>
@@ -842,14 +864,18 @@ If it is not available, check the previous section and make sure you have instal
 </li>
 <li>
 <p>After the job finishes, navigate to the <strong>Console Output</strong> view the execution details.</p>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jmeter/jmeter-12.png" alt="Execution Details"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/jmeter/jmeter-12.png" alt="Execution Details">
+</div>
 </div>
 </li>
 <li>
 <p>From the <strong>Console Output</strong> view, you can access the <strong>Performance Report</strong>, and can view the JMeter report data.</p>
-<div class="paragraph">
-<p><span class="image"><img src="_images/jmeter/jmeter-13.png" alt="Report Execution Details"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/jmeter/jmeter-13.png" alt="Report Execution Details">
+</div>
 </div>
 </li>
 </ol>

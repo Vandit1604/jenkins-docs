@@ -418,7 +418,7 @@
     <a class="nav-link" href="../tutorial-improve/update-parent-pom.html">Update parent POM</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../tutorial-improve/update-base-jenkins-version.html">Update Jenkins version</a>
+    <a class="nav-link" href="../tutorial-improve/update-base-jenkins-version.html">Update minimum Jenkins version</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../tutorial-improve/update-scm-url.html">Update SCM URL</a>
@@ -427,7 +427,7 @@
     <a class="nav-link" href="../tutorial-improve/add-more-spotbugs-checks.html">Add more spotbugs checks</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../tutorial-improve/automate-dependency-update-checks.html">Check dependencies</a>
+    <a class="nav-link" href="../tutorial-improve/automate-dependency-update-checks.html">Automate dependency updates</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../tutorial-improve/use-plugin-bill-of-materials.html">Use plugin bill of materials</a>
@@ -445,7 +445,7 @@
     <a class="nav-link" href="../tutorial-improve/add-a-link-to-report-an-issue.html">Report an Issue</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../tutorial-improve/replace-jsr-305-annotations.html">Replace JSR-305</a>
+    <a class="nav-link" href="../tutorial-improve/replace-jsr-305-annotations.html">Replace JSR-305 annotations with Spotbugs annotations</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../tutorial-improve/convert-translations.html">Convert translations</a>
@@ -1244,10 +1244,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../Jenkins%20Project/index.html">default</a>
+          <a href="../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -1365,10 +1365,12 @@ We are using a very simple java Object for example purpose, but in production co
 
     public MyJsonObject(String message) {
         this.message = message;
+
     }
 
     public void setMessage(String message) {
         this.message = message;
+
     }
 
     public String getMessage() {
@@ -1424,28 +1426,37 @@ public class JsonAPI implements RootAction /* (3) */ {
 
     @GET
     @WebMethod(name = "get-example")/* (7) */
+
     public /* (8) */ JsonHttpResponse getExample() {
         JSONObject response = JSONObject.fromObject(new MyJsonObject("I am Jenkins"));
+
         return new JsonHttpResponse(response, 200); /* (9) */
     }
 
     @GET
     @WebMethod(name = "get-example-param")
+
     public JsonHttpResponse getWithParameters(
         @QueryParameter(required = true) String paramValue /* (10) */) {
 
         requireNonNull(paramValue);
         MyJsonObject myJsonObject = new MyJsonObject("I am Jenkins " + paramValue);
+
         JSONObject response = JSONObject.fromObject(myJsonObject);
+
         return new JsonHttpResponse(response, 200);
     }
 
     @GET
     @WebMethod(name = "get-error500")
+
     public JsonHttpResponse getError500() { /* (11) */
         MyJsonObject myJsonObject = new MyJsonObject("You got an error 500");
+
         JSONObject jsonResponse = JSONObject.fromObject(myJsonObject);
+
         JsonHttpResponse error500 = new JsonHttpResponse(jsonResponse, 500);
+
         throw error500;
     }
 }</code></pre>
@@ -1528,6 +1539,7 @@ class JsonAPITest {
         JenkinsRule.WebClient webClient = j.createWebClient();
 
         JSONWebResponse response = webClient.getJSON(GET_API_URL);
+
         assertThat(response.getContentAsString(), Matchers.containsString("I am Jenkins hello"));
         assertThat(response.getStatusCode(), Matchers.equalTo(200));
     }
@@ -1536,6 +1548,7 @@ class JsonAPITest {
     void testAdvancedGetJSON(JenkinsRule j) throws Exception {
         //Given a Jenkins setup with a user "admin"
         MockAuthorizationStrategy auth = new MockAuthorizationStrategy()
+
             .grant(Jenkins.ADMINISTER).everywhere().to("admin");
 
         j.jenkins.setSecurityRealm(j.createDummySecurityRealm());
@@ -1550,10 +1563,12 @@ class JsonAPITest {
 
         // - simple call without authentication should be forbidden
         JSONWebResponse response = webClient.getJSON(GET_API_URL);
+
         assertThat(response.getStatusCode(), Matchers.equalTo(403));
 
         // - same call but authenticated using withBasicApiToken() should be fine
         response = webClient.withBasicApiToken("admin").getJSON(GET_API_URL);
+
         assertThat(response.getStatusCode(), Matchers.equalTo(200));
     }
 }</code></pre>
@@ -1576,10 +1591,12 @@ For this example the same Object is used as input and output, but you can also u
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@POST
 @WebMethod(name = "create")
+
 public JsonHttpResponse create(@JsonBody MyJsonObject body) {
     //Do any logic required for creation
     //For the example purpose we just uppercase the message parsed from the request.
     JSONObject response = new JSONObject();
+
     response.put("message", body.message.toUpperCase());
     return new JsonHttpResponse(response, 200);
 }</code></pre>
@@ -1662,6 +1679,7 @@ void testPostJSON(JenkinsRule j) throws Exception {
 
     //Given a Jenkins setup with a user "admin"
     MockAuthorizationStrategy auth = new MockAuthorizationStrategy()
+
         .grant(Jenkins.ADMINISTER).everywhere().to("admin");
 
     j.jenkins.setSecurityRealm(j.createDummySecurityRealm());
@@ -1672,7 +1690,9 @@ void testPostJSON(JenkinsRule j) throws Exception {
 
     // Testing an authenticated POST that should answer 200 OK and return same json
     MyJsonObject objectToSend = new MyJsonObject("Jenkins is the way !");
+
     JenkinsRule.JSONWebResponse response = webClient
+
         .withBasicApiToken("admin")
         .postJSON("custom-api/create", JSONObject.fromObject(objectToSend));
 

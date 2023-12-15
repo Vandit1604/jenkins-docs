@@ -447,10 +447,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../Jenkins%20Project/index.html">default</a>
+          <a href="../../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -993,6 +993,7 @@ node { <i class="conum" data-value="7"></i><b>(7)</b>
         junit 'reports/**/*.xml' <i class="conum" data-value="6"></i><b>(6)</b>
     }
     if (currentBuild.currentResult == 'SUCCESS') {
+
         stage('Deploy') {
             sh 'make publish' <i class="conum" data-value="7"></i><b>(7)</b>
         }

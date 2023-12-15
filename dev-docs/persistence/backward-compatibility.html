@@ -418,7 +418,7 @@
     <a class="nav-link" href="../tutorial-improve/update-parent-pom.html">Update parent POM</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../tutorial-improve/update-base-jenkins-version.html">Update Jenkins version</a>
+    <a class="nav-link" href="../tutorial-improve/update-base-jenkins-version.html">Update minimum Jenkins version</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../tutorial-improve/update-scm-url.html">Update SCM URL</a>
@@ -427,7 +427,7 @@
     <a class="nav-link" href="../tutorial-improve/add-more-spotbugs-checks.html">Add more spotbugs checks</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../tutorial-improve/automate-dependency-update-checks.html">Check dependencies</a>
+    <a class="nav-link" href="../tutorial-improve/automate-dependency-update-checks.html">Automate dependency updates</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../tutorial-improve/use-plugin-bill-of-materials.html">Use plugin bill of materials</a>
@@ -445,7 +445,7 @@
     <a class="nav-link" href="../tutorial-improve/add-a-link-to-report-an-issue.html">Report an Issue</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../tutorial-improve/replace-jsr-305-annotations.html">Replace JSR-305</a>
+    <a class="nav-link" href="../tutorial-improve/replace-jsr-305-annotations.html">Replace JSR-305 annotations with Spotbugs annotations</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../tutorial-improve/convert-translations.html">Convert translations</a>
@@ -1244,10 +1244,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../Jenkins%20Project/index.html">default</a>
+          <a href="../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -1363,8 +1363,11 @@ Just put it right in your class alongside your fields. For example:</p>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected Object readResolve() {
   if (gridBuilder == null) {
+
     if (selectedJob != null) {
+
       gridBuilder = new DownstreamProjectGridBuilder(selectedJob);
+
     }
   }
   return this;
@@ -1403,7 +1406,9 @@ protected List&lt;Long&gt; myObjectIds;
 
 protected Object readResolve() {
   if (myObjectId != null) {
+
    myObjectIds = Arrays.asList(myObjectId)
+
   }
   return this;
 }</code></pre>
@@ -1468,6 +1473,7 @@ protected Object readResolve() {
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// compatibility with earlier plugins
 public Object readResolve() {
   if (this.getClass() != SCMBrowserBase.class) {
+
     return this;
   }
   // make sure to return the default SCMBrowser only if we no class is given in config.
@@ -1518,6 +1524,7 @@ you can use the <a href="https://javadoc.jenkins.io/hudson/init/Initializer.html
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Initializer(before = InitMilestone.PLUGINS_STARTED)
+
 public static void addAliases() {
   Items.XSTREAM2.addCompatibilityAlias("org.acme.old.Foo", Foo.class);
 }</code></pre>

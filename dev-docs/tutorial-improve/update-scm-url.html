@@ -418,7 +418,7 @@
     <a class="nav-link" href="update-parent-pom.html">Update parent POM</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="update-base-jenkins-version.html">Update Jenkins version</a>
+    <a class="nav-link" href="update-base-jenkins-version.html">Update minimum Jenkins version</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="update-scm-url.html">Update SCM URL</a>
@@ -427,7 +427,7 @@
     <a class="nav-link" href="add-more-spotbugs-checks.html">Add more spotbugs checks</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="automate-dependency-update-checks.html">Check dependencies</a>
+    <a class="nav-link" href="automate-dependency-update-checks.html">Automate dependency updates</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="use-plugin-bill-of-materials.html">Use plugin bill of materials</a>
@@ -445,7 +445,7 @@
     <a class="nav-link" href="add-a-link-to-report-an-issue.html">Report an Issue</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="replace-jsr-305-annotations.html">Replace JSR-305</a>
+    <a class="nav-link" href="replace-jsr-305-annotations.html">Replace JSR-305 annotations with Spotbugs annotations</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="convert-translations.html">Convert translations</a>
@@ -1244,10 +1244,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../Jenkins%20Project/index.html">default</a>
+          <a href="../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -1337,7 +1337,8 @@
         </tbody>
     </table>
 </div>
-<h1 id="_update_scm_url" class="sect0"><a class="anchor" href="#_update_scm_url"></a>Update SCM URL</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="videoblock">
 <div class="title">Update the SCM URL in the SCM section of the pom file</div>
 <div class="content">
@@ -1348,8 +1349,20 @@
 <p>GitHub has deprecated one of the unauthenticated access protocols (git:// protocol).
 The <code>pom.xml</code> section that defines the <code>scm</code> for the plugin should refer to the repository with the <code>https://</code> protocol instead of the <code>git://</code> protocol</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_a_branch"><a class="anchor" href="#_create_a_branch"></a>Create a branch</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Unresolved include directive in modules/tutorial-improve/pages/update-scm-url.adoc - include::doc/developer/tutorial-improve/_create-a-branch.adoc[]</p>
+<p>In a local copy of your <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">fork</a> of the plugin repository create a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository">git branch</a> for your work with the command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git checkout -b {task-identifier} master</code></pre>
+</div>
+</div>
+</div>
 </div>
 <div class="sect1">
 <h2 id="_use_https_instead_of_git_protocol"><a class="anchor" href="#_use_https_instead_of_git_protocol"></a>Use https instead of git protocol</h2>
@@ -1365,13 +1378,48 @@ The <code>pom.xml</code> section that defines the <code>scm</code> for the plugi
    &lt;/scm&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_a_pull_request"><a class="anchor" href="#_create_a_pull_request"></a>Create a pull request</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Unresolved include directive in modules/tutorial-improve/pages/update-scm-url.adoc - include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]</p>
+<p>Commit that change:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git add {modified-files}
+git commit -m "{task-description}"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Push the change to GitHub:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git push origin --set-upstream {task-identifier}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for '{task-identifier}' on GitHub by visiting:
+remote: https://github.com/user/your-plugin/pull/new/{task-identifier}
+remote:
+To github.com:user/your-plugin.git
+ * [new branch]      {task-identifier} -&gt; {task-identifier}
+Branch '{task-identifier}' tracking remote branch '{task-identifier}'.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice that the output of the command includes the URL, which can be used to open a pull request.
+Copy that URL in your web browser and submit a pull request.</p>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="update-base-jenkins-version.html">Update Jenkins version</a></span>
+  <span class="prev"><a href="update-base-jenkins-version.html">Update minimum Jenkins version</a></span>
   <span class="next"><a href="add-more-spotbugs-checks.html">Add more spotbugs checks</a></span>
 </nav>
 </article>

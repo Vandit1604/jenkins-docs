@@ -418,7 +418,7 @@
     <a class="nav-link" href="../tutorial-improve/update-parent-pom.html">Update parent POM</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../tutorial-improve/update-base-jenkins-version.html">Update Jenkins version</a>
+    <a class="nav-link" href="../tutorial-improve/update-base-jenkins-version.html">Update minimum Jenkins version</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../tutorial-improve/update-scm-url.html">Update SCM URL</a>
@@ -427,7 +427,7 @@
     <a class="nav-link" href="../tutorial-improve/add-more-spotbugs-checks.html">Add more spotbugs checks</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../tutorial-improve/automate-dependency-update-checks.html">Check dependencies</a>
+    <a class="nav-link" href="../tutorial-improve/automate-dependency-update-checks.html">Automate dependency updates</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../tutorial-improve/use-plugin-bill-of-materials.html">Use plugin bill of materials</a>
@@ -445,7 +445,7 @@
     <a class="nav-link" href="../tutorial-improve/add-a-link-to-report-an-issue.html">Report an Issue</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../tutorial-improve/replace-jsr-305-annotations.html">Replace JSR-305</a>
+    <a class="nav-link" href="../tutorial-improve/replace-jsr-305-annotations.html">Replace JSR-305 annotations with Spotbugs annotations</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../tutorial-improve/convert-translations.html">Convert translations</a>
@@ -1244,10 +1244,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../Jenkins%20Project/index.html">default</a>
+          <a href="../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -1484,11 +1484,13 @@ public String getLocation() {
 @DataBoundSetter
 public void setLocation(String location) {
     this.location = location;
+
 }
 
 private String actualLocation(Run&lt;?,?&gt; build, TaskListener listener) {
     if (build instanceof AbstractBuild) {
         EnvVars env = build.getEnvironment(listener);
+
         env.overrideAll(((AbstractBuild) build).getBuildVariables());
         return env.expand(location);
     } else {
@@ -1556,6 +1558,7 @@ public String getStuff() {
 @DataBoundSetter
 public void setStuff(@CheckForNull String stuff) {
     this.stuff = Util.fixEmpty(stuff);
+
 }</code></pre>
 </div>
 </div>
@@ -1583,11 +1586,13 @@ public String getStuff() {
 @DataBoundSetter
 public void setStuff(@NonNull String stuff) {
     this.stuff = stuff;
+
 }
 
 @Extension
 public static class DescriptorImpl extends Descriptor&lt;Whatever&gt; {
     public static final String defaultStuff = "junk";
+
     // …
 }</code></pre>
 </div>
@@ -1619,11 +1624,13 @@ private String stuff;
 @NonNull
 public String getStuff() {
     return stuff == null ? DescriptorImpl.defaultStuff : stuff;
+
 }
 
 @DataBoundSetter
 public void setStuff(@NonNull String stuff) {
     this.stuff = stuff.equals(DescriptorImpl.defaultStuff) ? null : stuff;
+
 }</code></pre>
 </div>
 </div>
@@ -1695,6 +1702,7 @@ For example, if you defined</p>
     @DataBoundConstructor
     public ForgetBuilder(String what) {
         this.what = what;
+
     }
 
     public String getWhat() {
@@ -1805,6 +1813,7 @@ public class HoursAway extends Timeframe {
     @DataBoundConstructor
     public HoursAway(long hours) {
         this.hours = hours;
+
     }
 
     public long getHours() {
@@ -1839,6 +1848,7 @@ public Timeframe getWhen() {
 @DataBoundSetter
 public void setWhen(Timeframe when) {
     this.when = when;
+
 }</code></pre>
 </div>
 </div>

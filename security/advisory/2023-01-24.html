@@ -29,7 +29,7 @@
     <span class="nav-text">For Adminstrators</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../for-administrators.html">"Overview for Jenkins Administrators"</a>
+    <a class="nav-link" href="../for-administrators.html">Overview for Jenkins Administrators</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
@@ -144,10 +144,10 @@
       </ul>
     </li>
     <li class="component">
-      <a class="title" href="../../Jenkins%20Project/index.html">Jenkins Project</a>
+      <a class="title" href="../../project/index.html">Jenkins Project</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../Jenkins%20Project/index.html">default</a>
+          <a href="../../project/index.html">default</a>
         </li>
       </ul>
     </li>
@@ -265,8 +265,12 @@ issues:
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>    NOTE: As part of this fix, map constructors may only be invoked in the sandbox using the `new` keyword. Attempting to invoke a map constructor using a Groovy cast will fail unconditionally. For example, code such as `[key: value] as MyClass` or `MyClass mc = [key: value]` must be converted to use `new MyClass(key: value)` instead.
-  plugins:
+<pre>NOTE: As part of this fix, map constructors may only be invoked in the sandbox using the `new` keyword. Attempting to invoke a map constructor using a Groovy cast will fail unconditionally. For example, code such as `[key: value] as MyClass` or `MyClass mc = [key: value]` must be converted to use `new MyClass(key: value)` instead.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  plugins:
   - name: script-security
     previous: 1228.vd93135a_2fb_25
     fixed: 1229.v4880b_b_e905a_6
