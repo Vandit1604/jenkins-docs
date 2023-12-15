@@ -1,10 +1,10 @@
 = Move description
 
-:modified-files: src/main/resources/index.jelly pom.xml
-:task-identifier: move-description
-:task-description: Move plugin description
+// :modified-files: src/main/resources/index.jelly pom.xml
+// :task-identifier: move-description
+// :task-description: Move plugin description
 
-= Move plugin description to index.jelly
+// = Move plugin description to index.jelly
 
 To help administrators decide if a plugin is relevant for them, each plugin should provide a short description which is then shown in plugin manager and on the plugin site. 
 The preferred location for the plugin description is in the file `src/main/resources/index.jelly`. 
@@ -25,7 +25,7 @@ project your-plugin: Missing target/classes/index.jelly. Delete any
 ----
 
 // Create the branch
-include::doc/developer/tutorial-improve/_create-a-branch.adoc[]
+include::dev-docs:tutorial-improve:partial$_create-a-branch.adoc[]
 
 == Compile and test to check the transition is needed
 
@@ -79,4 +79,4 @@ mvn clean verify
 ----
 
 // Create a pull request
-include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]
+include::dev-docs:tutorial-improve:partial$_create-a-pull-request.adoc[]

@@ -15,6 +15,7 @@
 <script>
 (function () {
     var anchorMap = {
+
         "ji-toolbar": "/sigs/docs/", /* Algolia search redirect to stay on same page */
         "jenkins-on-kubernetes": "/sigs/docs/gsod/2020/projects/document-jenkins-on-kubernetes/",
     }
@@ -23,6 +24,7 @@
     * https://stackoverflow.com/a/10076097/151365
     */
     var hash = window.location.hash.substring(1);
+
     if (hash) {
         /*
         * Best practice for javascript redirects:
@@ -62,12 +64,12 @@ The SIG offers a venue for all kinds of documentation creation, improvement, and
 The group focuses on documentation for Jenkins, including:
 
 * xref:user-docs:ROOT:index.adoc[User documentation] - Using Jenkins
-** xref:tutorials:index.adoc[Tutorials]
+** xref:tutorials:ROOT:index.adoc[Tutorials]
 ** xref:user-docs:ROOT:index.adoc[User Handbook]
 ** References like xref:user-docs:pipeline:syntax.adoc[Pipeline Syntax] and link:/doc/pipeline/steps/[Pipeline Steps]
 ** xref:ROOT:how-to-guides.adoc[How-to Guides]
 * xref:dev-docs:ROOT:index.adoc[Developer documentation] - Extending Jenkins
-** xref:plugin-tutorial:index.adoc[Tutorials]
+** xref:dev-docs:plugin-tutorial:index.adoc[Tutorials]
 ** xref:dev-docs:reference:index.adoc[Developer Reference]
 ** xref:dev-docs:guides:index.adoc[How-To Guides]
 * xref:solutions:ROOT:index.adoc[Solution documentation] - using Jenkins with specific technologies (e.g. Java, PHP, or Docker).

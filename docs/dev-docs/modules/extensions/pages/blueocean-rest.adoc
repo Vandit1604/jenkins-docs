@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/blueocean-rest[REST API for Blue Ocean Plugin]
 
 == AdditionalAnalyticsProperties
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.analytics.AdditionalAnalyticsProperties]`
 
 +++ Enhance a request with properties when tracking an analytics event+++
@@ -15,6 +16,7 @@ https://plugins.jenkins.io/blueocean-rest[REST API for Blue Ocean Plugin]
 
 
 == Analytics
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.analytics.Analytics]`
 
 +++ Facade for reporting user analytics+++
@@ -28,6 +30,7 @@ https://plugins.jenkins.io/blueocean-rest[REST API for Blue Ocean Plugin]
 
 
 == ApiRoutable
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.ApiRoutable]`
 
 +++ Marks the REST API endpoints that are exposed by+++ jenkinsdoc:ApiHead] ++++++
@@ -47,6 +50,7 @@ https://plugins.jenkins.io/blueocean-rest[REST API for Blue Ocean Plugin]
 
 
 == BlueExtensionClassContainer
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.model.BlueExtensionClassContainer]`
 
 +++ Map representation of+++ jenkinsdoc:BlueExtensionClass] +++es+++
@@ -58,6 +62,7 @@ https://plugins.jenkins.io/blueocean-rest[REST API for Blue Ocean Plugin]
 
 
 == BlueFavoriteResolver
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.factory.BlueFavoriteResolver]`
 
 +++ Resolves favorite for a given model object+++ jenkinsdoc:Item] ++++++
@@ -69,6 +74,7 @@ https://plugins.jenkins.io/blueocean-rest[REST API for Blue Ocean Plugin]
 
 
 == BlueIssueFactory
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.factory.BlueIssueFactory]`
 
 _This extension point has no Javadoc documentation._
@@ -80,6 +86,7 @@ _This extension point has no Javadoc documentation._
 
 
 == BlueOceanConfigFactory
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.factory.BlueOceanConfigFactory]`
 
 +++ Blue Ocean configuration factory which allows different extensions to return configuration values.+++
@@ -91,6 +98,7 @@ _This extension point has no Javadoc documentation._
 
 
 == BlueOceanUIProvider
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.BlueOceanUIProvider]`
 
 +++ BlueOcean UI provider.+++
@@ -102,6 +110,7 @@ _This extension point has no Javadoc documentation._
 
 
 == BlueOceanUrlMapper
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.factory.BlueOceanUrlMapper]`
 
 +++ Maps Jenkins+++ jenkinsdoc:ModelObject] +++to BlueOcean front end URL+++
@@ -113,6 +122,7 @@ _This extension point has no Javadoc documentation._
 
 
 == BlueOceanUrlObjectFactory
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.factory.BlueOceanUrlObjectFactory]`
 
 ++++++ jenkinsdoc:hudson.ExtensionPoint] +++to provide+++ jenkinsdoc:BlueOceanUrlObject] +++for Jenkins model object+++
@@ -124,6 +134,7 @@ _This extension point has no Javadoc documentation._
 
 
 == BlueOrganizationContainer
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.model.BlueOrganizationContainer]`
 
 +++ Container of BlueOcean+++ jenkinsdoc:BlueOrganization] +++s+++
@@ -135,6 +146,7 @@ _This extension point has no Javadoc documentation._
 
 
 == BluePipelineFactory
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.factory.BluePipelineFactory]`
 
 +++ Factory that gives instance of+++ jenkinsdoc:BluePipeline] ++++++
@@ -154,6 +166,7 @@ _This extension point has no Javadoc documentation._
 
 
 == BlueRunFactory
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.factory.BlueRunFactory]`
 
 +++ Factory that gives instance of+++ jenkinsdoc:BlueRun] ++++++
@@ -167,6 +180,7 @@ _This extension point has no Javadoc documentation._
 
 
 == BlueTestResultFactory
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.factory.BlueTestResultFactory]`
 
 _This extension point has no Javadoc documentation._
@@ -178,6 +192,7 @@ _This extension point has no Javadoc documentation._
 
 
 == BlueTrendFactory
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.factory.BlueTrendFactory]`
 
 +++ Allows extensions to attach+++ jenkinsdoc:BlueTrend] +++data to a+++ jenkinsdoc:BluePipeline] +++for reports and visualization.+++
@@ -190,6 +205,7 @@ _This extension point has no Javadoc documentation._
 
 
 == BlueUserContainer
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.model.BlueUserContainer]`
 
 +++ User API.+++
@@ -201,6 +217,7 @@ _This extension point has no Javadoc documentation._
 
 
 == LinkResolver
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.hal.LinkResolver]`
 
 _This extension point has no Javadoc documentation._
@@ -212,6 +229,7 @@ _This extension point has no Javadoc documentation._
 
 
 == OmniSearch
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.OmniSearch]`
 
 +++ Extension point to contribute the search capability+++
@@ -226,6 +244,7 @@ _This extension point has no Javadoc documentation._
 
 
 == OrganizationFactory
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.factory.organization.OrganizationFactory]`
 
 +++ Maps BlueOcean organization and+++ jenkinsdoc:ItemGroup] +++s.+++
@@ -237,6 +256,7 @@ _This extension point has no Javadoc documentation._
 
 
 == OrganizationRoute
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.OrganizationRoute]`
 
 +++ Route contributing to+++ jenkinsdoc:io.jenkins.blueocean.rest.model.BlueOrganization] +++: url path /organization/:id/:organizationRoute.urlName()+++
@@ -249,6 +269,7 @@ _This extension point has no Javadoc documentation._
 
 
 == RootRoutable
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.RootRoutable]`
 
 +++ Additional+++ jenkinsdoc:Routable] +++s that augment+++ jenkinsdoc:BlueOceanUIProvider=getUrlBasePrefix()] +++root object.+++
@@ -261,6 +282,7 @@ _This extension point has no Javadoc documentation._
 
 
 == UserRoute
+
 `jenkinsdoc:blueocean-rest:io.jenkins.blueocean.rest.UserRoute]`
 
 +++ Route contributing to+++ jenkinsdoc:io.jenkins.blueocean.rest.model.BlueUser] +++: url path /organization/:id/users/:user/:userRoute.urlName()+++

@@ -17,6 +17,7 @@ This forms the basis for the rest of this guide.
 ----
 public FormValidation doCheckFoo(@QueryParameter String value) {
   if (Util.fixEmptyAndTrim(value) == null) {
+
     return FormValidation.error("foo cannot be empty");
   }
   return FormValidation.ok();
@@ -56,6 +57,7 @@ To check for global permissions like `Administer`, add a call to `Jenkins#checkP
 public FormValidation doCheckFoo(@QueryParameter String value) {
   Jenkins.get().checkPermission(Jenkins.ADMINISTER); // or Jenkins.getInstance() on older core baselines
   if (Util.fixEmptyAndTrim(value) == null) {
+
     return FormValidation.error("foo cannot be empty");
   }
   return FormValidation.ok();
@@ -68,11 +70,13 @@ If a different jenkinsdoc:AccessControlled[]'s permissions are to be checked, as
 ----
 public FormValidation doCheckFoo(@QueryParameter String value, @AncestorInPath Item item) {
   if (item == null) { // no context
+
     return FormValidation.ok();
   }
   item.checkPermission(Item.CONFIGURE);
 
   if (Util.fixEmptyAndTrim(value) == null) {
+
     return FormValidation.error("foo cannot be empty");
   }
   return FormValidation.ok();
@@ -99,6 +103,7 @@ Applying this protection is as simple as adding the annotation to the method:
 @POST
 public FormValidation doCheckFoo(@QueryParameter String value) {
   if (Util.fixEmptyAndTrim(value) == null) {
+
     return FormValidation.error("foo cannot be empty");
   }
   return FormValidation.ok();

@@ -1,4 +1,5 @@
 = Groovy Hook Scripts
+
 :page-layout: wip
 
 In several places inside Jenkins, a series of "hook scripts" get executed to allow some actions to take place in reaction to some key
@@ -22,6 +23,7 @@ The following events use this mechanism by replacing `+HOOK+` in `+HOOK.groovy.d
 * *boot-failure*: Boot failure hook
 
 == Post initialization script (init hook)
+
 You can create a Groovy script file `+$JENKINS_HOME/init.groovy+`, or
 any `+.groovy+` file in the directory `+$JENKINS_HOME/init.groovy.d/+`,
 to run some additional things right after Jenkins starts up. 
@@ -42,6 +44,7 @@ is /var/log/jenkins/jenkins.log
 
 
 == Boot failure hook
+
 When Jenkins encounters a fatal problem during boot, it'll invoke
 "boot-failure" hook script to allow automatic corrective actions to be taken 
 (such as notifying somebody, raising alerts, restarting, and so on.)

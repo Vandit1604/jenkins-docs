@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/junit[JUnit Plugin]
 
 == JunitTestResultStorage
+
 `jenkinsdoc:junit:io.jenkins.plugins.junit.storage.JunitTestResultStorage]`
 
 +++ Allows test results to be saved and loaded from an external storage service.+++
@@ -15,6 +16,7 @@ https://plugins.jenkins.io/junit[JUnit Plugin]
 
 
 == TestDataPublisher
+
 `jenkinsdoc:junit:hudson.tasks.junit.TestDataPublisher]`
 
 +++ Contributes+++ jenkinsdoc:TestAction] +++s to test results.+++
@@ -38,6 +40,7 @@ https://plugins.jenkins.io/junit[JUnit Plugin]
 
 
 == TestNameTransformer
+
 `jenkinsdoc:junit:hudson.tasks.junit.TestNameTransformer]`
 
 +++ Allow extensions to transform the class/package/method name for JUnit test+++ +++ cases which will be displayed on the test result page.+++

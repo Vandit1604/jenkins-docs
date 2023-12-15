@@ -1,8 +1,6 @@
-= Update Jenkins version
-
-:modified-files: pom.xml
-:task-identifier: require-newer-core
-:task-description: Require 2.414.3 as minimum Jenkins version
+// :modified-files: pom.xml
+// :task-identifier: require-newer-core
+// :task-description: Require 2.414.3 as minimum Jenkins version
 
 = Update minimum Jenkins version
 
@@ -14,7 +12,7 @@ The minimum Jenkins version is a good way for plugin developers to indicate the 
 See the xref:plugin-development:choosing-jenkins-baseline.adoc[developer documentation] for the recommended minimum Jenkins version.
 
 // Create the branch
-include::doc/developer/tutorial-improve/_create-a-branch.adoc[]
+include::dev-docs:tutorial-improve:partial$_create-a-branch.adoc[]
 
 == Update minimum required Jenkins version
 
@@ -50,4 +48,4 @@ The `git diff` might look like this:
 ----
 
 // Create a pull request
-include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]
+include::dev-docs:tutorial-improve:partial$_create-a-pull-request.adoc[]

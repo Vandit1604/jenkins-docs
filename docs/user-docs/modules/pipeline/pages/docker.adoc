@@ -135,8 +135,6 @@ node {
 }
 ----
 
-
-
 === Using multiple containers
 
 It has become increasingly common for code bases to rely on multiple different technologies.
@@ -354,6 +352,7 @@ The return value can also be used to publish the Docker image to link:https://hu
 node {
     checkout scm
     def customImage = docker.build("my-image:${env.BUILD_ID}")
+
     customImage.push()
 }
 ----
@@ -366,6 +365,7 @@ The `push()` method accepts an optional `tag` parameter, allowing the Pipeline t
 node {
     checkout scm
     def customImage = docker.build("my-image:${env.BUILD_ID}")
+
     customImage.push()
 
     customImage.push('latest')
@@ -398,7 +398,9 @@ This example overrides the default `Dockerfile` by passing the `-f` flag:
 node {
     checkout scm
     def dockerfile = 'Dockerfile.test'
+
     def customImage = docker.build("my-image:${env.BUILD_ID}",
+
                                    "-f ${dockerfile} ./dockerfiles") // <1>
 }
 ----

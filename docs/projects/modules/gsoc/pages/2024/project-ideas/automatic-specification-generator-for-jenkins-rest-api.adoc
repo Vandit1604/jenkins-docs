@@ -19,6 +19,7 @@ links:
 ---
 
 === Background
+
 Developers need to know what to expect in terms of responses for each REST API endpoint, so external tools like jenkins-rest can be developed with confidence, and possibly with the help of some REST specification automation.
 For example, this could be done using the link:https://www.openapis.org/[OpenAPI Specification] (formerly known as Swagger Specification).
 Users of the REST API most often want:
@@ -32,6 +33,7 @@ The goal of this project is to find and implement the extraction of the REST API
 
 
 ==== Project Details
+
 Generating the expected HTTP responses is a difficult task.
 The student is expected to study Jenkins core to identify ways to extract them.
 For example, they could be extracted from Javadocs and annotations.
@@ -57,6 +59,7 @@ Plugins and the core would thus have their own version number, and an additional
 
 
 === Links
+
 There are many examples of such documentation on the web:
 
 * link:https://docs.atlassian.com/bitbucket-server/rest/5.15.0/bitbucket-rest.html?utm_source=%2Fstatic%2Frest%2Fbitbucket-server%2Flatest%2Fbitbucket-rest.html&utm_medium=301[Bitbucket REST API] (link to Bitbucket documentation)
@@ -91,6 +94,7 @@ There are many examples of such documentation on the web:
 
 
 === Skills to improve/study
+
 * Java
 * REST API
 * OpenAPI specification details and automatic generators

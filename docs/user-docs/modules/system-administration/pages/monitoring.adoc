@@ -24,6 +24,7 @@ See the jira:WEBSITE-738[] EPIC for tasks related to this page, contributions ar
 - plugin:monitoring[Monitoring plugin for Jenkins]
 
 == Other Monitoring Plugins
+
 - plugin:versioncolumn[Versions Node Monitors]
 - plugin:systemloadaverage-monitor[Agents Monitoring for unix nodes]
 - plugin:jqs-monitoring[Job/Queue/Slaves Monitoring]
@@ -65,7 +66,9 @@ Set `pingIntervalSeconds` and `pingTimeoutSeconds on the controller` JVM to -1:
 [source,groovy]
 ----
 Jenkins.instance.injector.getInstance(hudson.slaves.ChannelPinger.class).@pingIntervalSeconds = -1
+
 Jenkins.instance.injector.getInstance(hudson.slaves.ChannelPinger.class).@pingTimeoutSeconds = -1
+
 ----
 
 ----

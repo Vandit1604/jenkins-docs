@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/database[Database Plugin]
 
 == Database
+
 `jenkinsdoc:database:org.jenkinsci.plugins.database.Database]`
 
 ++++++ jenkinsdoc:DataSource] +++configured by the user in Jenkins.+++
@@ -22,6 +23,7 @@ https://plugins.jenkins.io/database[Database Plugin]
 
 
 == PerItemDatabase
+
 `jenkinsdoc:database:org.jenkinsci.plugins.database.PerItemDatabase]`
 
 +++ Similar to+++ jenkinsdoc:Database] +++but assumes that there is a separate database per item.+++ +++ Typically would be implemented by an embeddable database capable of loading from the {@linkplain TopLevelItem=getRootDir root directory}.+++ +++ It is recommended, but not required, that implementations have a no-argument+++ jenkinsdoc:DataBoundConstructor] +++,+++ +++ which permits them to be configured by default merely by installing a plugin.+++

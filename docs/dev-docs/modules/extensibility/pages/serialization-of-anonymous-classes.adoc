@@ -46,6 +46,7 @@ private static final class ThingCounter extends MasterToSlaveFileCallable<Intege
     private final String arg;
     ThingCounter(String arg) {
         this.arg = arg;
+
     }
     @Override
     Integer invoke(File f, VirtualChannel channel) throws IOException, InterruptedException {
@@ -90,6 +91,7 @@ class YourClass {
     // right at the top of the file:
     /** @deprecated unused */
     private static final Object[] SOME_CLOSURES = {
+
         new Object() {}, // YourClass$1
         new Object() {}, // YourClass$2
     };
@@ -113,6 +115,7 @@ class YourClass {
         private final String arg;
         ThingThatGetsSaved(String arg) {
             this.arg = arg;
+
         }
         @Override
         public void someMethod() {

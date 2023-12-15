@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/elasticbox[ElasticBox CI Plugin]
 
 == BuildManager
+
 `jenkinsdoc:elasticbox:com.elasticbox.jenkins.triggers.BuildManager]`
 
 _This extension point has no Javadoc documentation._
@@ -13,6 +14,7 @@ _This extension point has no Javadoc documentation._
 
 
 == BuilderListener
+
 `jenkinsdoc:elasticbox:com.elasticbox.jenkins.builders.BuilderListener]`
 
 +++ Receives notification about ElasticBox instances/boxes that were deployed/managed by the ElasticBox build steps.+++
@@ -24,6 +26,7 @@ _This extension point has no Javadoc documentation._
 
 
 == ElasticBoxExecutor.+++<wbr/>+++Workload
+
 `jenkinsdoc:elasticbox:com.elasticbox.jenkins.ElasticBoxExecutor.Workload]`
 
 _This extension point has no Javadoc documentation._

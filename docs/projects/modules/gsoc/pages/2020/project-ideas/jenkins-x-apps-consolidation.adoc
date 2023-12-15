@@ -5,6 +5,7 @@
 *Skills to study/improve:* Go, Kubernetes
 
 == Background
+
 Find out more about the Jenkins X project here: https://jenkins-x.io/
 
 This proposal tries to conslidate Apps and Addons inside Jenkins X to avoid confusion.
@@ -12,6 +13,7 @@ This proposal tries to conslidate Apps and Addons inside Jenkins X to avoid conf
 Two years ago we added the addon framework to Jenkins X as a way of extending the Jenkins X platform to provide additional capabilities. 
 
 === We created Addons
+
  
 `Addons` were either generic helm charts or a combination of helm chart plus some custom go code to install and integrate them with the Jenkins X platform.
 
@@ -57,6 +59,7 @@ We welcome your contributions.
 If you're looking to build from source or get started hacking on jx, please see the CONTRIBUTING.MD or our Contributing Guide on the Jenkins X website: https://jenkins-x.io/docs/contributing/code/
 
 == Potential Mentors 
+
 [.avatar]
 image:images:ROOT:avatars/jstrachan.jpeg[,width=30,height=30] James Strachan
 image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Neha Gupta
@@ -67,12 +70,14 @@ image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Nikhil Da Rocha
 image:images:ROOT:avatars/sahilrkalra.png[,width=30,height=30] Sahil Kalra
 
 == Project Links 
+
 * https://jenkins-x.io/community/#slack[Chat]
 * xref:gsoc:index.adoc#office-hours[Meetings]
 * https://community.jenkins.io/c/contributing/gsoc[Forum]
 * https://github.com/jenkins-x/enhancements/blob/master/proposals/1/README.md[Project Idea Draft]
 
 == Organization Links 
+
 * xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
 * xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
 * https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)

@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/pipeline-groovy-lib[Pipeline: Groovy Libraries Plugin]
 
 == ClasspathAdder
+
 `jenkinsdoc:pipeline-groovy-lib:org.jenkinsci.plugins.workflow.libs.ClasspathAdder]`
 
 +++ Allows libraries to be mapped to actual classpath additions.+++
@@ -14,6 +15,7 @@ https://plugins.jenkins.io/pipeline-groovy-lib[Pipeline: Groovy Libraries Plugin
 
 
 == LibraryResolver
+
 `jenkinsdoc:pipeline-groovy-lib:org.jenkinsci.plugins.workflow.libs.LibraryResolver]`
 
 +++ Allows a provider of libraries to indicate which libraries should be visible to a given job.+++
@@ -27,6 +29,7 @@ https://plugins.jenkins.io/pipeline-groovy-lib[Pipeline: Groovy Libraries Plugin
 
 
 == LibraryRetriever
+
 `jenkinsdoc:pipeline-groovy-lib:org.jenkinsci.plugins.workflow.libs.LibraryRetriever]`
 
 +++ A way in which a library can be physically obtained for use in a build.+++
@@ -41,6 +44,7 @@ https://plugins.jenkins.io/pipeline-groovy-lib[Pipeline: Groovy Libraries Plugin
 
 
 == LibraryStepRetrieverVerifier
+
 `jenkinsdoc:pipeline-groovy-lib:org.jenkinsci.plugins.workflow.libs.LibraryStepRetrieverVerifier]`
 
 _This extension point has no Javadoc documentation._

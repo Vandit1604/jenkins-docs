@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/support-core[Support Core Plugin]
 
 == BundleNameInstanceTypeProvider
+
 `jenkinsdoc:support-core:com.cloudbees.jenkins.support.BundleNameInstanceTypeProvider]`
 
 +++
@@ -22,6 +23,7 @@ https://plugins.jenkins.io/support-core[Support Core Plugin]
 
 
 == Component
+
 `jenkinsdoc:support-core:com.cloudbees.jenkins.support.api.Component]`
 
 +++ Represents a component of a support bundle.+++
@@ -88,6 +90,7 @@ https://plugins.jenkins.io/support-core[Support Core Plugin]
 
 
 == ContentFilter
+
 `jenkinsdoc:support-core:com.cloudbees.jenkins.support.filter.ContentFilter]`
 
 +++ Provides a strategy to filter support bundle written contents. This is primarily useful to anonymize data written+++ +++ to the bundle, though more complex filtering can be achieved.+++
@@ -102,6 +105,7 @@ https://plugins.jenkins.io/support-core[Support Core Plugin]
 
 
 == DataFaker
+
 `jenkinsdoc:support-core:com.cloudbees.jenkins.support.filter.DataFaker]`
 
 +++ Provides a way to generate random names.+++
@@ -113,6 +117,7 @@ _(no known implementations)_
 
 
 == DirectoryComponent
+
 `jenkinsdoc:support-core:com.cloudbees.jenkins.support.impl.DirectoryComponent]`
 
 _This extension point has no Javadoc documentation._
@@ -125,6 +130,7 @@ _This extension point has no Javadoc documentation._
 
 
 == NameProvider
+
 `jenkinsdoc:support-core:com.cloudbees.jenkins.support.filter.NameProvider]`
 
 +++ Strategy for providing a stream of names to anonymize along with an accompanying name generator.+++
@@ -136,6 +142,7 @@ _(no known implementations)_
 
 
 == ObjectComponent
+
 `jenkinsdoc:support-core:com.cloudbees.jenkins.support.api.ObjectComponent]`
 
 +++ Represents a component of a support bundle for a specific model object.+++
@@ -162,6 +169,7 @@ _(no known implementations)_
 
 
 == SupportProvider
+
 `jenkinsdoc:support-core:com.cloudbees.jenkins.support.api.SupportProvider]`
 
 +++ The provider of support.+++

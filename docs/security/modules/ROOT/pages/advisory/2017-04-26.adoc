@@ -10,6 +10,7 @@ This advisory announces multiple vulnerabilities in Jenkins.
 == Description
 
 === CSRF: Multiple vulnerabilities
+
 *SECURITY-412 through SECURITY-420 / CVE-2017-1000356*
 
 Multiple link:https://en.wikipedia.org/wiki/Cross-site_request_forgery[Cross-Site Request Forgery] vulnerabilities in Jenkins allowed malicious users to perform several administrative actions by tricking a victim into opening a web page.
@@ -40,6 +41,7 @@ The most notable ones:
 The above, as well as several other more minor issues, have all been fixed and these actions now require POST requests, and, if configured, a CSRF crumb, to work.
 
 === CLI: Unauthenticated remote code execution
+
 *SECURITY-429 / CVE-2017-1000353*
 
 An unauthenticated remote code execution vulnerability allowed attackers to transfer a serialized Java `SignedObject` object to the remoting-based Jenkins CLI, that would be deserialized using a new `ObjectInputStream`, bypassing the existing blocklist-based protection mechanism.
@@ -51,6 +53,7 @@ This feature has been backported to Jenkins 2.46.2.
 It is strongly recommended that users upgrading Jenkins disable the remoting-based CLI, and use the one of the other modes (HTTP or SSH) instead.
 
 === CLI: Login command allowed impersonating any Jenkins user
+
 *SECURITY-466 / CVE-2017-1000354*
 
 The `login` command available in the remoting-based CLI stored the encrypted user name of the successfully authenticated user in a cache file used to authenticate further commands.
@@ -61,6 +64,7 @@ This has been fixed by storing the cached authentication as a hash-based MAC wit
 Previously cached authentications are invalidated when upgrading Jenkins to a version containing a fix for this.
 
 === XStream: Java crash when trying to instantiate void/Void
+
 *SECURITY-503 / CVE-2017-1000355*
 
 Jenkins uses the XStream library to serialize and deserialize XML.

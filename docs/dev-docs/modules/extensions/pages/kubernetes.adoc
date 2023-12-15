@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/kubernetes[Kubernetes Plugin]
 
 == InProvisioning
+
 `jenkinsdoc:kubernetes:org.csanchez.jenkins.plugins.kubernetes.InProvisioning]`
 
 +++ Collects the Kubernetes agents currently in provisioning.+++
@@ -14,6 +15,7 @@ https://plugins.jenkins.io/kubernetes[Kubernetes Plugin]
 
 
 == KubernetesComputerFactory
+
 `jenkinsdoc:kubernetes:org.csanchez.jenkins.plugins.kubernetes.KubernetesComputerFactory]`
 
 +++ A factory of+++ jenkinsdoc:KubernetesComputer] +++instances.+++
@@ -25,6 +27,7 @@ _(no known implementations)_
 
 
 == PlannedNodeBuilderFactory
+
 `jenkinsdoc:kubernetes:org.csanchez.jenkins.plugins.kubernetes.PlannedNodeBuilderFactory]`
 
 +++ A factory of+++ jenkinsdoc:PlannedNodeBuilder] +++instances.+++
@@ -36,6 +39,7 @@ _(no known implementations)_
 
 
 == PodDecorator
+
 `jenkinsdoc:kubernetes:org.csanchez.jenkins.plugins.kubernetes.pod.decorator.PodDecorator]`
 
 +++ Allows to alter a pod definition after it has been built from the yaml and DSL/GUI configuration.+++
@@ -49,6 +53,7 @@ _(no known implementations)_
 
 
 == PodRetention
+
 `jenkinsdoc:kubernetes:org.csanchez.jenkins.plugins.kubernetes.pod.retention.PodRetention]`
 
 +++ <code>PodRetention</code> instances determine if the Kubernetes pod running a Jenkins agent+++ +++ should be deleted after Jenkins terminates the agent.+++
@@ -63,6 +68,7 @@ _(no known implementations)_
 
 
 == PodTemplateFilter
+
 `jenkinsdoc:kubernetes:org.csanchez.jenkins.plugins.kubernetes.PodTemplateFilter]`
 
 +++ Filters a pod template according to criteria.+++
@@ -74,6 +80,7 @@ _(no known implementations)_
 
 
 == PodTemplateSource
+
 `jenkinsdoc:kubernetes:org.csanchez.jenkins.plugins.kubernetes.PodTemplateSource]`
 
 +++ A source of pod templates.+++
@@ -86,6 +93,7 @@ _(no known implementations)_
 
 
 == Reaper.+++<wbr/>+++Listener
+
 `jenkinsdoc:kubernetes:org.csanchez.jenkins.plugins.kubernetes.pod.retention.Reaper.Listener]`
 
 +++ Listener called when a Kubernetes event related to a Kubernetes agent happens.+++
@@ -100,6 +108,7 @@ _(no known implementations)_
 
 
 == TemplateEnvVar
+
 `jenkinsdoc:kubernetes:org.csanchez.jenkins.plugins.kubernetes.model.TemplateEnvVar]`
 
 _This extension point has no Javadoc documentation._
@@ -113,6 +122,7 @@ _This extension point has no Javadoc documentation._
 
 
 == YamlMergeStrategy
+
 `jenkinsdoc:kubernetes:org.csanchez.jenkins.plugins.kubernetes.pod.yaml.YamlMergeStrategy]`
 
 _This extension point has no Javadoc documentation._

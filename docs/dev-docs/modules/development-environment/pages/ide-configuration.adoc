@@ -15,9 +15,11 @@ This plugin has the following features:
 * Select a string expression, then "Refactor" > "i18n for Stapler" to create a message resource
 
 == Netbeans
+
 http://plugins.netbeans.org/plugin/43938/?show=true
 
 == Visual Studio Code
+
 See: https://code.visualstudio.com/docs/languages/java for useful extensions
 
 Create the following 2 files in your project:
@@ -71,10 +73,11 @@ Create the following 2 files in your project:
 `F5` to start your debug session.
 
 == XSD configuration
+
 If there isn't a plugin available for your IDE you can manually add the taglib to your IDE.
 
 XML schemas for tag libraries defined in Jelly, stapler, and Jenkins are available. Most modern IDEs and other XML editors can use them to provide auto-completion, which improves your productivity.
-See xref:development-enviorment:taglibs.adoc[Taglibs] for links to the up-to date schemas.
+See xref:dev-docs:development-environment:taglibs.adoc[Taglibs] for links to the up-to date schemas.
 
 .References
 ****

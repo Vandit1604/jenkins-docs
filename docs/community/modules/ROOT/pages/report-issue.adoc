@@ -81,6 +81,7 @@ times with only a few watchers each.
 
 [[Howtoreportanissue-Creatingtheissue]]
 == Creating the issue
+
 If you are reporting an issue in Jenkins, then you'll have to report it on link:https://issues.jenkins.io/[JIRA].
 However *if the issue you're reporting is in one of Jenkins' plugins*, you'll have to follow these steps:
 
@@ -93,6 +94,7 @@ plugin page.
 
 
 === Reporting an issue on JIRA
+
 You need to https://accounts.jenkins.io/[register an account] if you
 haven't already. Then, just select *Create Issue* on
 https://issues.jenkins.io/secure/Dashboard.jspa[the JIRA home page].
@@ -111,6 +113,7 @@ severe problem otherwise.
 * Leave the *Assignee* field to automatic.
 
 === Reporting an issue on GitHub 
+
 You need to have a Github account. 
 link:https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account[Register an account] if you haven't already.
 
@@ -129,7 +132,6 @@ image:images:ROOT:participate/get-started.png[alt="Get Started Button",width=40%
 [[Howtoreportanissue-WhatinformationtoprovideforEnvironmentandDescription]]
 
 === What information to provide for Environment and Description
-
 
 Much of the advice on
 http://www.catb.org/esr/faqs/smart-questions.html#intro[How To Ask Questions

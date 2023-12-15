@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/matrix-project[Matrix Project Plugin]
 
 == Axis
+
 `jenkinsdoc:matrix-project:hudson.matrix.Axis]`
 
 +++ Configuration axis.+++
@@ -29,6 +30,7 @@ https://plugins.jenkins.io/matrix-project[Matrix Project Plugin]
 
 
 == MatrixAggregatable
+
 `jenkinsdoc:matrix-project:hudson.matrix.MatrixAggregatable]`
 
 ++++++ jenkinsdoc:Publisher] +++,+++ jenkinsdoc:JobProperty] +++,+++ jenkinsdoc:BuildWrapper] +++can optionally implement this interface+++ +++ to perform result aggregation across+++ jenkinsdoc:MatrixRun] +++.+++
@@ -85,6 +87,7 @@ https://plugins.jenkins.io/matrix-project[Matrix Project Plugin]
 
 
 == MatrixAggregator
+
 `jenkinsdoc:matrix-project:hudson.matrix.MatrixAggregator]`
 
 +++ Performs the aggregation of+++ jenkinsdoc:MatrixRun] +++results+++ +++ into+++ jenkinsdoc:MatrixBuild] +++.+++
@@ -133,6 +136,7 @@ https://plugins.jenkins.io/matrix-project[Matrix Project Plugin]
 
 
 == MatrixBuildListener
+
 `jenkinsdoc:matrix-project:hudson.matrix.listeners.MatrixBuildListener]`
 
 +++ Controls which subset of+++ jenkinsdoc:MatrixRun] +++s to rebuild.+++
@@ -148,6 +152,7 @@ https://plugins.jenkins.io/matrix-project[Matrix Project Plugin]
 
 
 == MatrixConfigurationSorter
+
 `jenkinsdoc:matrix-project:hudson.matrix.MatrixConfigurationSorter]`
 
 +++ Add sorting for configurations+++ jenkinsdoc:MatrixConfiguration] +++s of matrix job+++ jenkinsdoc:MatrixProject] ++++++
@@ -162,6 +167,7 @@ https://plugins.jenkins.io/matrix-project[Matrix Project Plugin]
 
 
 == MatrixExecutionStrategy
+
 `jenkinsdoc:matrix-project:hudson.matrix.MatrixExecutionStrategy]`
 
 +++ Controls the execution sequence of+++ jenkinsdoc:MatrixConfiguration] +++when+++ jenkinsdoc:MatrixProject] +++builds,+++ +++ including what degree it gets serialized/parallelled, how the whole build is abandoned when+++ +++ some fails, etc.+++

@@ -1,5 +1,6 @@
-= Security
 :page-layout: wip
+= Security
+
 
 // this is a straight import of https://wiki.jenkins.io/display/JENKINS/Making+your+plugin+behave+in+secured+Jenkins
 // TODO check contents and remove wiki page
@@ -32,6 +33,7 @@ You can easily imagine that in a security sensitive environment you don't want r
             rsp.setStatus(HttpServletResponse.SC_OK);
             rsp.setContentType("text/plain");
             try (PrintWriter w = rsp.getWriter()) {
+
                 w.println("Shutting down");
             }
         }
@@ -68,7 +70,9 @@ With these three information, you can now insert:
 [source]
 ----
 AccessControlled ac = ... do the step 2 above ...
+
 Permission p = ... do the step 3 above ...
+
 ac.checkPermission(p)
 ----
 
@@ -162,6 +166,7 @@ It uses normal SSH configuration using your local keys to authenticate.
 It shares the same verifier with the Native CLI way.
 
 ==== Other ways
+
 The plugin have the possibility to propose a new `SecurityRealm` or implements some ``ExtensionPoint``s
 (like https://github.com/jenkinsci/jenkins/blob/master/core/src/main/java/jenkins/security/QueueItemAuthenticator.java[QueueItemAuthenticator])
 in order to provide new ways for a user to authenticate.

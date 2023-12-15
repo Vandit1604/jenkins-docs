@@ -6,6 +6,7 @@
 
  
 == Background
+
 Developers need to know what to expect in terms of responses for each REST API endpoint, so external tools like jenkins-rest can be developed with confidence, and possibly with the help of some REST specification automation.
 For example, this could be done using the link:https://www.openapis.org/[OpenAPI Specification] (formerly known as Swagger Specification).
 Users of the REST API most often want:
@@ -18,6 +19,7 @@ A lot of APIs are contributed from extensions, so there are multiple REST APIs (
 The goal of this project is to find and implement the extraction of the REST APIs from the sources and generate and publish the REST APIs respective documentation.
 
 == Project Details
+
 Generating the expected HTTP responses is a difficult task.
 The student is expected to study Jenkins core to identify ways to extract them.
 For example, they could be extracted from Javadocs and annotations.
@@ -42,6 +44,7 @@ The plugins would have their own REST API path with a version number like: `http
 Plugins and the core would thus have their own version number, and an additional REST API version number.  Automated API documentation using the OpenAPI 3.0 specification is part of identifying the API specs.
 
 == Links
+
 There are many examples of such documentation on the web:
 
 * link:https://docs.atlassian.com/bitbucket-server/rest/5.15.0/bitbucket-rest.html?utm_source=%2Fstatic%2Frest%2Fbitbucket-server%2Flatest%2Fbitbucket-rest.html&utm_medium=301[Bitbucket REST API] (link to Bitbucket documentation)
@@ -73,6 +76,7 @@ There are many examples of such documentation on the web:
 * Javadoc Landing Page — While Javadoc isn’t Rest API, user experience concerns described in {jira}INFRA-1717[] for Javadoc Landing Page could be re-considered when determining where to publish Rest API accordingly
 
 == Skills to improve/study
+
 * Java
 * REST API
 * OpenAPI specification details and automatic generators
@@ -94,16 +98,19 @@ New feature
 Details to be clarified interactively, together with the mentors, during the Contributor Application drafting phase. 
 
 == Potential Mentors
+
 [.avatar]
 * image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Kristin Whetstone
 * image:images:ROOT:avatars/abhyudayasharma.jpg[,width=30,height=30] Abhyudaya Sharma
 
 == Project Links
+
 * image:https://img.shields.io/badge/gitter%20-%20join_chat%20-%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_gsoc-sig%3Agitter.im[Static Badge]
 * https://www.jenkins.io/projects/gsoc/#office-hours[Meetings]
 * https://docs.google.com/document/d/1CYzV_w5SrA-npXEMwTkJ4E2QyJdd2cJm7eDpwhg4XPk[Project idea draft]
 
 == Organization Links 
+
 * xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
 * xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
 * https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)

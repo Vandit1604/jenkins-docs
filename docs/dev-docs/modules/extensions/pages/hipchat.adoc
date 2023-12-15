@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/hipchat[HipChat Plugin]
 
 == CardProvider
+
 `jenkinsdoc:hipchat:jenkins.plugins.hipchat.CardProvider]`
 
 +++ An extension point that can be used to allow full control over HipChat notification cards for individual+++ +++ notifications. The provider itself is globally configured, so any job-specific behavior would be the responsibility+++ +++ of the plugin itself.+++

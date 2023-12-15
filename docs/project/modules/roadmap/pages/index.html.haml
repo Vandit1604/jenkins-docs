@@ -29,6 +29,7 @@ tags:
       = label.displayName
 
 - statuses = []
+
 - site.roadmap[:roadmap].statuses.each do | status |
   - if status.hide
   - else
@@ -40,26 +41,34 @@ tags:
       - statuses.each do | status |
         %th
           = status.displayName
+
   %tbody
     - site.roadmap[:roadmap].categories.each do | category |
       %tr.status-category
         %td.cat-name{:colspan => 5}
           %span
             = category.name
+
       %tr.category-initiatives
         - statuses.each do | status |
           %td{:class => "status #{status.id}", "data-header" => status.displayName}
             - category.initiatives.each do | initiative |
               - if initiative.status == status.id
+
                 - labelClasses = ""
+
                 - if initiative.labels
                   - initiative.labels.each do | label |
                     - labelClasses = "#{labelClasses} initiative-label-#{label}"
+
                 %div{:class => "status initiative #{status.id} #{labelClasses}"}
                   - itemLink = initiative.link.nil? ? category.link : initiative.link
+
                   - itemTooltip = initiative.description.nil? ? status.description : initiative.description
+
                   %a{tooltip_href(itemLink, itemTooltip)}
                     = initiative.name
+
 %h2
   References
 %ul

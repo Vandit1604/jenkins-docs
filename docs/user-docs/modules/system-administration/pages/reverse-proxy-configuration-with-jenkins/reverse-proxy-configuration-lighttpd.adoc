@@ -29,14 +29,18 @@ When a request for the domain `jenkins.example.com` arrives, Lighttpd proxies th
 [source]
 ----
 server.http-parseopts = (
+
   "url-path-2f-decode" => "disable"
 )
 
 server.modules += ( "mod_proxy" )
 
 $HTTP["host"] == "jenkins.example.com" {
+
   proxy.balance = "hash"
+
   proxy.server = ( 
+
     "" => (
       "jenkins" => (
         "host" => "127.0.0.1",
@@ -61,6 +65,7 @@ request to Jenkins.
 [source]
 ----
 server.http-parseopts = (
+
   "url-path-2f-decode" => "disable"
 )
 
@@ -68,7 +73,9 @@ server.modules += ( "mod_proxy" )
 
 $HTTP["url"] =~ "^/jenkins(.*)$" {
   proxy.balance = "hash" 
+
   proxy.server = (
+
     "" => (
       "jenkins" => (
         "host" => "127.0.0.1",

@@ -17,6 +17,7 @@ Let's consider the following example, taken from the sample `HelloWorldBuilder`:
 public FormValidation doCheckName(@QueryParameter String value)
         throws IOException, ServletException {
     if (value.length() == 0)
+
         return FormValidation.error("Please set a name"); // <1>
     if (value.length() < 4)
         return FormValidation.warning("Isn't the name too short?"); // <2>
@@ -37,6 +38,7 @@ public boolean configure(StaplerRequest req, JSONObject formData) throws FormExc
     // To persist global configuration information,
     // set that to properties and call save().
     useFrench = formData.getBoolean("useFrench"); // <4>
+
     // ^Can also use req.bindJSON(this, formData);
     //  (easier when there are many fields; need set* methods for this, like setUseFrench)
     save();
@@ -50,7 +52,6 @@ public boolean configure(StaplerRequest req, JSONObject formData) throws FormExc
 <4> This is an internal identifier for a form configuration option and must not be internationalized.
 
 == Step 2: Prepare the `Messages.properties` file
-
 
 ////
 // TODO better documentation for tool support, including how Netbeans transparently handles properties encoding
@@ -110,6 +111,7 @@ Example:
 public FormValidation doCheckName(@QueryParameter String value)
         throws IOException, ServletException {
     if (value.length() == 0)
+
         return FormValidation.error(Messages.HelloWorldBuilder_NoName());
     if (value.length() < 4)
         return FormValidation.warning(Messages.HelloWorldBuilder_ShortName());

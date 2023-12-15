@@ -58,6 +58,7 @@ The following Groovy code shows how to authenticate to Jenkins and get some syst
 import com.cdancy.jenkins.rest.JenkinsClient
 
 JenkinsClient client = JenkinsClient.builder()
+
     .endPoint("http://127.0.0.1:8080") // Optional. Defaults to http://127.0.0.1:8080
     .credentials("user:apiToken") // Optional.
     .build()
@@ -89,9 +90,13 @@ use warnings;
 use LWP;
 
 my $server = 'srvname';
+
 my $srvurl = "http://$server/jenkins";
+
 my $uagent = LWP::UserAgent->new;
+
 my $req = HTTP::Request->new(
+
   GET => "$srvurl/job/test/build?token=theTokenConfiguredForThisJob&cause=LWP+Test"
 );
 $req->authorization_basic('username@mydomain.com', 'apiToken');
@@ -142,20 +147,27 @@ public class JenkinsScraper {
     public String scrape(String urlString, String username, String password) 
         throws ClientProtocolException, IOException {
         URI uri = URI.create(urlString);
+
         HttpHost host = new HttpHost(uri.getHost(), uri.getPort(), uri.getScheme());
+
         CredentialsProvider credsProvider = new BasicCredentialsProvider();
+
         credsProvider.setCredentials(new AuthScope(uri.getHost(), uri.getPort()), 
             new UsernamePasswordCredentials(username, password));
         // Create AuthCache instance
         AuthCache authCache = new BasicAuthCache();
+
         // Generate BASIC scheme object and add it to the local auth cache
         BasicScheme basicAuth = new BasicScheme();
+
         authCache.put(host, basicAuth);
         CloseableHttpClient httpClient =
             HttpClients.custom().setDefaultCredentialsProvider(credsProvider).build();
         HttpGet httpGet = new HttpGet(uri);
+
         // Add AuthCache to the execution context
         HttpClientContext localContext = HttpClientContext.create();
+
         localContext.setAuthCache(authCache);
 
         HttpResponse response = httpClient.execute(host, httpGet, localContext);

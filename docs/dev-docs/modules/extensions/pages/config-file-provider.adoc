@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/config-file-provider[Config File Provider Plugin]
 
 == ConfigContextResolver
+
 `jenkinsdoc:config-file-provider:org.jenkinsci.plugins.configfiles.ConfigContextResolver]`
 
 +++ ConfigContextResolver provides a way for a plugin to specify the context (+++ jenkinsdoc:ItemGroup] +++) used to retrieve+++ +++ configuration files from for classes deriving from+++ jenkinsdoc:ItemGroup] +++it defines.+++
@@ -14,6 +15,7 @@ https://plugins.jenkins.io/config-file-provider[Config File Provider Plugin]
 
 
 == ConfigProvider
+
 `jenkinsdoc:config-file-provider:org.jenkinsci.lib.configprovider.ConfigProvider]`
 
 +++ A ConfigProvider represents a configuration file (such as Maven's settings.xml) where the user can choose its actual content among several {@linkplain Config concrete contents} that are+++ +++ pre-configured.+++ +++
@@ -53,6 +55,7 @@ https://plugins.jenkins.io/config-file-provider[Config File Provider Plugin]
 
 
 == ManagedFile
+
 `jenkinsdoc:config-file-provider:org.jenkinsci.plugins.configfiles.buildwrapper.ManagedFile]`
 
 _This extension point has no Javadoc documentation._

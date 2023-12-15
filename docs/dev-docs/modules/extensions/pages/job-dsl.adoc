@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/job-dsl[Job DSL Plugin]
 
 == ContextExtensionPoint
+
 `jenkinsdoc:job-dsl:javaposse.jobdsl.plugin.ContextExtensionPoint]`
 
 +++ An ExtensionPoint for the job-dsl-plugin to extend it with new DSL methods.+++
@@ -53,6 +54,7 @@ https://plugins.jenkins.io/job-dsl[Job DSL Plugin]
 
 
 == ScriptSource
+
 `jenkinsdoc:job-dsl:javaposse.jobdsl.plugin.casc.ScriptSource]`
 
 _This extension point has no Javadoc documentation._

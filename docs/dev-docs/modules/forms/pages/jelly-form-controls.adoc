@@ -39,6 +39,7 @@ public FormValidation doTestConnection(@QueryParameter("accessId") final String 
         @AncestorInPath Job job) throws IOException, ServletException {
     try {
          if (job == null) {
+
              Jenkins.get().checkPermission(Jenkins.ADMINISTER);
          } else {
              job.checkPermission(Item.CONFIGURE);
@@ -105,12 +106,14 @@ Use an link:https://github.com/jenkinsci/jenkins/blob/63f80114e99f6692812c303940
 ----
 
 == Select (drop-down menu) with model filled values
+
 Basically the same as above. You need to define the following method in the descriptor of your Describable instance:
 
 [source, java]
 ----
 public ListBoxModel doFillGoalTypeItems() {
     ListBoxModel items = new ListBoxModel();
+
     
     items.add("Build Goal", "buildGoal");
     items.add("SpotBugs goal", "spotBugsGoal");

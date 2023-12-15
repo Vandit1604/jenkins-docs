@@ -31,9 +31,12 @@ opengraph:
 
 %p
   = succeed '.' do
+
     This page aggregates project ideas for Google Summer of Code
     = page.year
+
   = succeed '.' do
+
     Refer to the Jenkins Google Summer of Code page
     %a{:href => expand_link("/projects/gsoc/")}
     for more information about this project and applications.
@@ -43,6 +46,7 @@ opengraph:
   Project ideas without potential mentors will be considered, though applicants may need to work with the community and GSoC org admins to find mentors.
   To add a new project idea, see:
   = succeed '.' do
+
     %a{:href => expand_link("/projects/gsoc/proposing-project-ideas/")}
       proposing project ideas
 
@@ -64,24 +68,31 @@ opengraph:
   %tbody
     // TODO: parameterize year
     - ideas = site.pages.select { |p| p.source_path =~ /\/content\/projects\/gsoc\/2024\/project-ideas\/[^\/]+.adoc/ }
+
     - ideas.each do |item|
       - if item.status == "published"
+
         %tr
           %td
             %a{:href => item.url}
               %strong
                 = item.title
+
             %br
             = succeed '.' do
+
               = item.goal
+
             %br
             %b
               Potential Mentor(s):
             - item.mentors.each do |mentor|
               = display_user_optional(mentor)
+
           %td.pi_table_category
             - if item.category
               = item.category
+
             - else
               Undefined
           %td.pi_table_skills
@@ -105,23 +116,30 @@ opengraph:
   %tbody
     // TODO: parameterize year
     - ideas = site.pages.select { |p| p.source_path =~ /\/content\/projects\/gsoc\/2024\/project-ideas\/[^\/]+.adoc/ }
+
     - ideas.each do |item|
       - if item.status == "draft"
+
         %tr
           %td
             %a{:href => item.url}
               %strong
                 = item.title
+
             %br
               = succeed '.' do
+
                 = item.goal
+
             %b
               Potential Mentor(s):
             - item.mentors.each do |mentor|
               = display_user_optional(mentor)
+
           %td.pi_table_category
             - if item.category
               = item.category
+
             - else
               Undefined
           %td.pi_table_skills
@@ -129,6 +147,7 @@ opengraph:
 
 // TODO parameterize year
 - ideas = site.pages.select { |p| p.source_path =~ /\/content\/projects\/gsoc\/2024\/project-ideas\/[^\/]+.adoc/ }
+
 - if ideas.length > 1
   %h3
     Ongoing discussion
@@ -146,16 +165,21 @@ opengraph:
     %tbody
       - ideas.each do |item|
         - if item.status == "discussion"
+
           %tr
             %td
               %a{:href => item.links.emailThread}
                 %strong
                   = item.title
+
               %br
                 = succeed '.' do
+
                   = item.goal
+
             %td.pi_table_category
               - if item.category
                 = item.category
+
               - else
                 Undefined

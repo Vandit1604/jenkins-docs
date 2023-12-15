@@ -22,8 +22,11 @@ Just put it right in your class alongside your fields. For example:
 ----
 protected Object readResolve() {
   if (gridBuilder == null) {
+
     if (selectedJob != null) {
+
       gridBuilder = new DownstreamProjectGridBuilder(selectedJob);
+
     }
   }
   return this;
@@ -53,7 +56,9 @@ protected List<Long> myObjectIds;
 
 protected Object readResolve() {
   if (myObjectId != null) {
+
    myObjectIds = Arrays.asList(myObjectId)
+
   }
   return this;
 }
@@ -101,6 +106,7 @@ or
 // compatibility with earlier plugins
 public Object readResolve() {
   if (this.getClass() != SCMBrowserBase.class) {
+
     return this;
   }
   // make sure to return the default SCMBrowser only if we no class is given in config.
@@ -139,6 +145,7 @@ you can use the link:https://javadoc.jenkins.io/hudson/init/Initializer.html[`In
 [source,java]
 ----
 @Initializer(before = InitMilestone.PLUGINS_STARTED)
+
 public static void addAliases() {
   Items.XSTREAM2.addCompatibilityAlias("org.acme.old.Foo", Foo.class);
 }

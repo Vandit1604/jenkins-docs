@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/ownership[Job and Node ownership Plugin]
 
 == ItemOwnershipPolicy
+
 `jenkinsdoc:ownership:com.synopsys.arc.jenkins.plugins.ownership.extensions.ItemOwnershipPolicy]`
 
 +++ Implements an ownership changes policy for+++ jenkinsdoc:Item] +++s. +++ +++ This policy defines actions to be implemented if specific changes in jobs occur.+++
@@ -16,6 +17,7 @@ https://plugins.jenkins.io/ownership[Job and Node ownership Plugin]
 
 
 == OwnershipHelperLocator
+
 `jenkinsdoc:ownership:org.jenkinsci.plugins.ownership.model.OwnershipHelperLocator]`
 
 +++ Extension point, which allows to identify+++ jenkinsdoc:IOwnershipHelper] +++for particular classes.+++

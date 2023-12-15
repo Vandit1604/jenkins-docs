@@ -72,6 +72,7 @@ This directory path from your user account/home directory on your host machine i
 . Select *Save* to save your new Pipeline project.
 You're now ready create a `Jenkinsfile` to check into your locally cloned Git repository.
 
+[#create-your-initial-pipeline-as-a-jenkinsfile]
 === Create your initial Pipeline as a Jenkinsfile
 
 You can now create a Pipeline that automates building your Java application with Maven in Jenkins.
@@ -114,7 +115,7 @@ However, this container is short-lived: for the duration of your Pipeline's exec
 A fuller explanation is beyond the scope of this tutorial.
 You do this mainly to ensure that the artifacts for building your Java application, which Maven downloads while your Pipeline is being executed, are retained in the Maven repository after the Maven container is gone.
 This prevents Maven from downloading the same artifacts during successive Pipeline runs.
-NOTE: Unlike the Docker data volume created for `jenkins-data` <<download-and-run-jenkins-in-docker,above>>, the Docker host's filesystem is effectively cleared out each time Docker is restarted, so you lose the downloaded Maven repository artifacts each time Docker restarts.
+NOTE: Unlike the Docker data volume created for `jenkins-data` xref:user-docs:pipeline:tour/getting-started.adoc#download-and-run-jenkins-in-docker[`above`], the Docker host's filesystem is effectively cleared out each time Docker is restarted, so you lose the downloaded Maven repository artifacts each time Docker restarts.
 <3> Defines a xref:user-docs:pipeline:syntax.adoc#stage[`stage`] (directive) called `Build` that appears on the Jenkins UI.
 <4> This link:/doc/pipeline/steps/workflow-durable-task-step/#code-sh-code-shell-script[`sh`] step runs the Maven command to cleanly build your Java application without running any tests.
 . Save your edited `Jenkinsfile` and commit it to your local `simple-java-maven-app` Git repository.

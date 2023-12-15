@@ -1,10 +1,10 @@
 = Add more spotbugs checks
 
-:modified-files: pom.xml src/spotbugs
-:task-identifier: add-spotbugs-checks
-:task-description: Increase spotbugs effort and threshold
+// :modified-files: pom.xml src/spotbugs
+// :task-identifier: add-spotbugs-checks
+// :task-description: Increase spotbugs effort and threshold
 
-= Add more spotbugs checks
+// = Add more spotbugs checks
 
 .Add more thorough spotbugs checks
 video::2c8wK2jkcIA[youtube,width=800,height=420,start=255]
@@ -13,7 +13,7 @@ The Jenkins plugin pom enables static analysis with link:https://spotbugs.github
 Plugin maintenance can be improved in some cases by increasing the depth of spotbugs analysis.
 
 // Create the branch
-include::doc/developer/tutorial-improve/_create-a-branch.adoc[]
+include::dev-docs:tutorial-improve:partial$_create-a-branch.adoc[]
 
 == Increase spotbugs checks
 
@@ -46,7 +46,9 @@ import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 /* ... preceding a method that returns a Boolean and may return null */
     @SuppressFBWarnings(
             value = "NP_BOOLEAN_RETURN_NULL",
+
             justification = "Null return indicates others should evaluate further")
+
 ```
 
 == Add a spotbugs exclusions file (if needed)
@@ -75,6 +77,7 @@ An example excludes filter file is also included here:
     triage, then:
 
     - Add a @SuppressFBWarnings(value = "[...]", justification = "[...]")
+
       annotation if it is a false positive.  Indicate the reason why
       it is a false positive, then remove the exclusion from this
       section.
@@ -98,4 +101,4 @@ An example excludes filter file is also included here:
 ----
 
 // Create a pull request
-include::doc/developer/tutorial-improve/_create-a-pull-request.adoc[]
+include::dev-docs:tutorial-improve:partial$_create-a-pull-request.adoc[]

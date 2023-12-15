@@ -1,5 +1,6 @@
 = Controller Isolation
 
+
 What exactly happens during a build is often controlled by people less trusted than a Jenkins administrator:
 
 * Jenkins users with Job/Configure permission
@@ -44,6 +45,7 @@ In this case, ensure that the agent process has no file system access (neither r
 
 
 //== Infrastructure 
+
 // TODO Don't run agents on the same Docker host as the controller etc.
 
 == Agent &rarr; Controller Access Control

@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/scm-api[SCM API Plugin]
 
 == SCMEventListener
+
 `jenkinsdoc:scm-api:jenkins.scm.api.SCMEventListener]`
 
 +++ Base class for listeners to+++ jenkinsdoc:SCMEvent] +++s+++
@@ -16,6 +17,7 @@ https://plugins.jenkins.io/scm-api[SCM API Plugin]
 
 
 == SCMFileSystem.+++<wbr/>+++Builder
+
 `jenkinsdoc:scm-api:jenkins.scm.api.SCMFileSystem.Builder]`
 
 +++ Extension point that allows different plugins to implement+++ jenkinsdoc:SCMFileSystem] +++classes for the same+++ jenkinsdoc:SCM] ++++++ +++ or+++ jenkinsdoc:SCMSource] +++and let Jenkins pick the most capable for any specific+++ jenkinsdoc:SCM] +++implementation.+++
@@ -37,6 +39,7 @@ https://plugins.jenkins.io/scm-api[SCM API Plugin]
 
 
 == SCMHead.+++<wbr/>+++HeadByItem
+
 `jenkinsdoc:scm-api:jenkins.scm.api.SCMHead.HeadByItem]`
 
 +++ Means of locating a head given an item.+++
@@ -48,6 +51,7 @@ https://plugins.jenkins.io/scm-api[SCM API Plugin]
 
 
 == SCMHeadMigration
+
 `jenkinsdoc:scm-api:jenkins.scm.api.SCMHeadMigration]`
 
 +++ If a+++ jenkinsdoc:SCMSource] +++plugin needs to migrate the implementation classes for+++ jenkinsdoc:SCMHead] +++this extension+++ +++ point allows the plugin to register type migrations. For speed of migration implementations should just jump directly+++ +++ to the final end-point and not expect recursive chain walking.+++
@@ -64,6 +68,7 @@ https://plugins.jenkins.io/scm-api[SCM API Plugin]
 
 
 == SCMNavigator
+
 `jenkinsdoc:scm-api:jenkins.scm.api.SCMNavigator]`
 
 +++ An API for discovering new and navigating already discovered+++ jenkinsdoc:SCMSource] +++s within an organization.+++ +++ An implementation does not need to cache existing discoveries, but some form of caching is strongly recommended+++ +++ where the backing provider of repositories has a rate limiter on API calls.+++
@@ -81,6 +86,7 @@ https://plugins.jenkins.io/scm-api[SCM API Plugin]
 
 
 == SCMNavigatorOwners
+
 `jenkinsdoc:scm-api:jenkins.scm.api.SCMNavigatorOwners]`
 
 +++ Provides a means to lookup the+++ jenkinsdoc:SCMNavigatorOwners] +++that own+++ jenkinsdoc:SCMNavigatorOwner] +++instances.+++
@@ -92,6 +98,7 @@ _(no known implementations)_
 
 
 == SCMNavigatorOwners.+++<wbr/>+++Enumerator
+
 `jenkinsdoc:scm-api:jenkins.scm.api.SCMNavigatorOwners.Enumerator]`
 
 +++ Extension point to allow for access to embedded+++ jenkinsdoc:SCMSourceOwner] +++instances that+++ ++++++ jenkinsdoc:SCMNavigatorOwners.JenkinsItemEnumerator] +++will not find.+++
@@ -103,6 +110,7 @@ _(no known implementations)_
 
 
 == SCMSource
+
 `jenkinsdoc:scm-api:jenkins.scm.api.SCMSource]`
 
 +++ A+++ jenkinsdoc:SCMSource] +++is responsible for fetching+++ jenkinsdoc:SCMHead] +++and corresponding+++ jenkinsdoc:SCMRevision] +++instances from+++ +++ which it can build+++ jenkinsdoc:SCM] +++instances that are configured to check out the specific+++ jenkinsdoc:SCMHead] +++at the+++ +++ specified+++ jenkinsdoc:SCMRevision] +++.+++
@@ -133,6 +141,7 @@ _(no known implementations)_
 
 
 == SCMSource.+++<wbr/>+++SourceByItem
+
 `jenkinsdoc:scm-api:jenkins.scm.api.SCMSource.SourceByItem]`
 
 +++ Means of locating a head given an item.+++
@@ -144,6 +153,7 @@ _(no known implementations)_
 
 
 == SCMSourceOwners
+
 `jenkinsdoc:scm-api:jenkins.scm.api.SCMSourceOwners]`
 
 +++ Provides a means to lookup the+++ jenkinsdoc:SCMSourceOwners] +++that own+++ jenkinsdoc:SCMSource] +++instances.+++
@@ -155,6 +165,7 @@ _(no known implementations)_
 
 
 == SCMSourceOwners.+++<wbr/>+++Enumerator
+
 `jenkinsdoc:scm-api:jenkins.scm.api.SCMSourceOwners.Enumerator]`
 
 +++ Extension point to allow for access to embedded+++ jenkinsdoc:SCMSourceOwner] +++instances that+++ ++++++ jenkinsdoc:SCMSourceOwners.JenkinsItemEnumerator] +++will not find.+++
@@ -166,6 +177,7 @@ _(no known implementations)_
 
 
 == SCMTrait
+
 `jenkinsdoc:scm-api:jenkins.scm.api.trait.SCMTrait]`
 
 +++ Base class for common traits.+++

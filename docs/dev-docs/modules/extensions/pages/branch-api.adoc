@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/branch-api[Branch API Plugin]
 
 == BranchBuildStrategy
+
 `jenkinsdoc:branch-api:jenkins.branch.BranchBuildStrategy]`
 
 +++ An extension point that allows controlling whether a specific+++ jenkinsdoc:SCMHead] +++should be automatically built when+++ +++ discovered.+++ +++
@@ -28,6 +29,7 @@ https://plugins.jenkins.io/branch-api[Branch API Plugin]
 
 
 == BranchProjectFactory
+
 `jenkinsdoc:branch-api:jenkins.branch.BranchProjectFactory]`
 
 +++ Creates instances of the branch projects for a specific+++ jenkinsdoc:Branch] +++and also provides some utility methods for+++ +++ updating the branch specific projects.+++
@@ -52,6 +54,7 @@ https://plugins.jenkins.io/branch-api[Branch API Plugin]
 
 
 == BranchProperty
+
 `jenkinsdoc:branch-api:jenkins.branch.BranchProperty]`
 
 +++ Additional information associated with+++ jenkinsdoc:Branch] +++.+++ +++
@@ -73,6 +76,7 @@ https://plugins.jenkins.io/branch-api[Branch API Plugin]
 
 
 == BranchPropertyStrategy
+
 `jenkinsdoc:branch-api:jenkins.branch.BranchPropertyStrategy]`
 
 +++ A strategy for determining the properties that apply to a specific+++ jenkinsdoc:SCMHead] +++.+++
@@ -85,6 +89,7 @@ https://plugins.jenkins.io/branch-api[Branch API Plugin]
 
 
 == MultiBranchProjectFactory
+
 `jenkinsdoc:branch-api:jenkins.branch.MultiBranchProjectFactory]`
 
 +++ Creates+++ jenkinsdoc:MultiBranchProject] +++s for repositories where recognized.+++
@@ -103,6 +108,7 @@ https://plugins.jenkins.io/branch-api[Branch API Plugin]
 
 
 == PropertyMigration
+
 `jenkinsdoc:branch-api:jenkins.branch.PropertyMigration]`
 
 +++ An extension point that captures the need for a complex migration of a folder property into some other configuration+++ +++ of the containing folder.+++
@@ -114,6 +120,7 @@ https://plugins.jenkins.io/branch-api[Branch API Plugin]
 
 
 == PropertyMigration.+++<wbr/>+++Migrator
+
 `jenkinsdoc:branch-api:jenkins.branch.PropertyMigration.Migrator]`
 
 _This extension point has no Javadoc documentation._

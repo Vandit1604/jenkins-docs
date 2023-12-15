@@ -53,6 +53,7 @@ project: gsoc
     - ideas=site.pages.select { |p| p.source_path =~ /\/content\/projects\/gsoc\/2019\/project-ideas\/[^\/]+.adoc/ }
     - ideas.each do |item|
       - if item.status == "published"
+
         %tr
           %td
             %a{:href => item.url}
@@ -93,6 +94,7 @@ Potential Mentor(s):
     - ideas=site.pages.select { |p| p.source_path =~ /\/content\/projects\/gsoc\/2019\/project-ideas\/[^\/]+.adoc/ }
     - ideas.each do |item|
       - if item.status != "published"
+
         %tr
           %td
             %a{:href => item.url}

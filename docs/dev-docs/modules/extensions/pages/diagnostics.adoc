@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/diagnostics[Diagnostics Plugin]
 
 == Diagnostic
+
 `jenkinsdoc:diagnostics:org.jenkinsci.plugins.diagnostics.diagnostics.Diagnostic]`
 
 +++ Extension point that allows the creation of new diagnostics.+++
@@ -18,6 +19,7 @@ https://plugins.jenkins.io/diagnostics[Diagnostics Plugin]
 
 
 == SupportBundleDiagnostic.+++<wbr/>+++SupportBundleConfig
+
 `jenkinsdoc:diagnostics:org.jenkinsci.plugins.diagnostics.diagnostics.SupportBundleDiagnostic.SupportBundleConfig]`
 
 +++ base class for support bundle configurations.+++

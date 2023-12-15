@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/jacoco[JaCoCo Plugin]
 
 == Rule
+
 `jenkinsdoc:jacoco:hudson.plugins.jacoco.Rule]`
 
 +++ Rule object encapsulates the logic to mark+++ jenkinsdoc:CoverageObject] +++s as "failed".+++ +++ Such logic is used to mark builds as unstable when certain condition is met.+++

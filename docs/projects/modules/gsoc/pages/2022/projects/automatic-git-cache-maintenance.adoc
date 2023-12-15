@@ -5,6 +5,7 @@
 *Status:* Selected
 
 == Team 
+
 [.avatar]
 *Contributor*: 
 image:images:ROOT:avatars/vihaanthora.jpg[,width=30,height=30] Vihaan Thora
@@ -17,6 +18,7 @@ image:images:ROOT:avatars/vihaanthora.jpg[,width=30,height=30] Vihaan Thora
 
 
 == Abstract
+
 image:images:ROOT:post-images/gsoc-git-cache-maintenance/maintenance.png[title='Git Maintenance']
 
 The project aims to add https://git-scm.com/docs/git-maintenance[git-maintenance] to improve performance of the Jenkins controller. Git-maintenance optimizes caches, thereby executing the git commands faster.
@@ -26,16 +28,20 @@ The project aims to add https://git-scm.com/docs/git-maintenance[git-maintenance
 Git caches that exist on the controller can become slower and larger than necessary during the lifetime of the remote repositories. Command line git focuses on high performance for frequent operations and relies on end users to perform most repository maintenance. Garbage collection, removal of deleted branches, and other operations are not performed by default on most cached repositories. This project aims to undertake the responsibility of git maintenance tasks by doing all the hard work behind the scenes and providing a simple user interface to configure the maintenance.
 
 == Project Deliverables
+
 * Git Maintenance official API support for v >= 2.30
+
 * Git Maintenance support for versions < 2.30 (Older versions of git)
 * Scheduling git maintenance using cron syntax to optimize caches on Jenkins controller.
 * Display execution results of maintenance tasks in UI.
 * Testing the software (Unit tests).
 
 == Architecture Diagram
+
 image:images:ROOT:post-images/gsoc-git-cache-maintenance/architecture-diagram.png[title='Architecture Diagram']
 
 == Evaluation Phase 1
+
 image:images:ROOT:post-images/gsoc-git-cache-maintenance/maintenance-config.png[title="Config UI"]
 
 1. Added git maintenance api in Git Client Plugin.
@@ -44,6 +50,7 @@ image:images:ROOT:post-images/gsoc-git-cache-maintenance/maintenance-config.png[
 4. Logging and unit tests.
 
 === Resources
+
 1. link:https://docs.google.com/presentation/d/1t2vuNn1NFpDusnw0m4vdFw6WBQMeU6kccv_K1v2L6R0/edit#slide=id.g13dcaed2105_0_17[Slides]
 2. Phase 1 demo and presentation:
 
@@ -51,6 +58,7 @@ video::loLSNdCv6K4[youtube,start=1791,width=800,height=420]
 
 
 == Evaluation Phase 2
+
 image:images:ROOT:post-images/gsoc-git-cache-maintenance/maintenance-records.png[title="Maintenance Records"]
 
 1. Created a table to display maintenance execution results.
@@ -61,6 +69,7 @@ image:images:ROOT:post-images/gsoc-git-cache-maintenance/maintenance-records.png
 * link:https://github.com/jenkinsci/git-client-plugin/blob/git-client-3.4.0/README.adoc[Documentation]
 
 == Resources
+
 1. Phase 2 demo and presentation:
 
 video::fM2SMbppRxw[youtube,start=1791,width=800,height=420]
@@ -92,6 +101,7 @@ As I cloned it, the cache was almost optimized.
 |==
 
 == Learnings-
+
 1. Architecture Designing
 2. Core Java Programming
 3. MultiThreading
@@ -100,6 +110,7 @@ As I cloned it, the cache was almost optimized.
 6. Time Management
 
 == Project links
+
 1. Pull Requests-
 * link:https://github.com/jenkinsci/git-plugin/pull/1277[Git Plugin #1277]
 * link:https://github.com/jenkinsci/git-client-plugin/pull/862[Git Client Plugin #862]
@@ -108,6 +119,7 @@ As I cloned it, the cache was almost optimized.
 3. link:https://community.jenkins.io/t/git-cache-maintenance-gsoc-2022/2563[Weekly Office hour]
 
 == Links
+
 * image:https://img.shields.io/badge/gitter%20-%20join_chat%20-%20green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_git-plugin%3Agitter.im[Static Badge]
 * https://docs.google.com/document/d/1Jc0zyLtbh0lj1MwG9FdBY9PRed5falQGnUbU1KfREqk/edit#heading=h.63lwv71bjiiy[Meetings]
 * xref:gsoc:2022/projects/automatic-git-cache-maintenance.adoc[Original GSoC project idea]

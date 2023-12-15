@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/checks-api[Checks API Plugin]
 
 == AbstractStatusChecksProperties
+
 `jenkinsdoc:checks-api:io.jenkins.plugins.checks.status.AbstractStatusChecksProperties]`
 
 +++ Extension points for implementations to provide status checks properties. When no implementations is provided for a+++ +++ job, a+++ jenkinsdoc:DefaultStatusCheckProperties] +++will be used.+++
@@ -15,6 +16,7 @@ https://plugins.jenkins.io/checks-api[Checks API Plugin]
 
 
 == ChecksPublisherFactory
+
 `jenkinsdoc:checks-api:io.jenkins.plugins.checks.api.ChecksPublisherFactory]`
 
 +++ A publisher API for consumers to publish checks.+++
@@ -27,6 +29,7 @@ https://plugins.jenkins.io/checks-api[Checks API Plugin]
 
 
 == StatusChecksProperties
+
 `jenkinsdoc:checks-api:io.jenkins.plugins.checks.status.StatusChecksProperties]`
 
 +++ Properties that controls status checks. When no implementations is provided for a job, a {@link+++ +++ DefaultStatusCheckProperties} will be used.+++

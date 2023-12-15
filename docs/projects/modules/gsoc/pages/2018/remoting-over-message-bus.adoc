@@ -1,9 +1,11 @@
 = GSoC 2018. Jenkins Remoting over Message Bus/Queue
+
 Goal:
 
 *Status*: Completed
 
 == Team
+
 [.avatar]
 *Student*: 
 image:images:ROOT:avatars/pvtuan10.jpeg[,width=30,height=30] Pham Vu Tuan
@@ -24,6 +26,7 @@ My name is Pham Vu Tuan, I am a final year undergraduate student from Singapore.
 I have GSoC mentors who help me in this project https://github.com/oleg-nenashev[Oleg Nenashev] and https://github.com/Supun94[Supun Wanniarachchi]. Besides that, I also receive great support from developers in remoting project https://github.com/dwnusbaum[Devin Nusbaum] and https://github.com/jeffret-b[Jeff Thompson].
 
 == Project Overview
+
 Current versions of Jenkins Remoting are based on the TCP protocol. If it fails, the agent connection and the build fails as well. There are also issues with traffic prioritization and multi-agent communications, which impact Jenkins stability and scalability.
 
 This project aims to develop a plugin in order to add support of a popular message queue/bus technology (Kafka) as a fault-tolerant communication layer in Jenkins.
@@ -31,6 +34,7 @@ This project aims to develop a plugin in order to add support of a popular messa
 The plugin source code can be found in https://github.com/jenkinsci/remoting-kafka-plugin[GitHub].
 
 == Benefits to the community
+
 The plugin provide useful features to the community:
 
 * Provide a new method to connect agent to master using Kafka besides existing methods such as JNLP or plugin:ssh-slaves[SSH Build Agents plugin].
@@ -38,11 +42,13 @@ The plugin provide useful features to the community:
 * Help to resolve traffic prioritization and multi-agent communications issue in Jenkins.
 
 == Why Kafka?
+
 * Kafka itself is not a queue like ActiveMQ or RabbitMQ, it is a distributed, replicated commit log. This helps to remove message delivery complexity we have in traditional queue system.
 * We need to support data streaming as a requirement, and Kafka is good at this aspect, which RabbitMQ is lack of.
 * Kafka is said to have a better scalability and good support from the development community.
 
 == Architecture Overview
+
 The project consists of multiple components:
 
 * Kafka Client Library - new command transport implementation, producer and consumer client logic.
@@ -80,21 +86,27 @@ With this design, master is not communicating with agent using direct TCP commun
 * Bug fixing and clean up work (https://issues.jenkins.io/browse/JENKINS-52044[JENKINS-52044], https://issues.jenkins.io/browse/JENKINS-52079[JENKINS-52079], https://issues.jenkins.io/browse/JENKINS-52422[JENKINS-52422]).
 
 == Features
+
 There are some snapshots for the features of the plugin.
 
 === 1. Kafka Global Configuration with support of credentials plugin to store secrets.
+
 image::images:ROOT:post-images/remoting-kafka/remoting-kafka-configuration.png[title="Remoting Kafka Plugin Global Configuration", role="center"]
 
 === 2. Launch agent with Kafka Launcher.
+
 image::images:ROOT:post-images/remoting-kafka/launch-agent-kafka.png[title="Launch agent with Kafka Launcher", role="center"]
 
 === 3. Launch agent from CLI using agent JAR with secret provided to ensure security.
+
 image::images:ROOT:post-images/remoting-kafka/agent-cli.png[title="Command to run agent in CLI", role="center"]
 
 === 4. Run jobs, pipeline using Kafka agent.
+
 image::images:ROOT:post-images/remoting-kafka/demo-jobs.png[title="Run jobs, pipeline using Kafka agent", role="center"]
 
 === 5. Kafka communication between master and agent.
+
 image::images:ROOT:post-images/remoting-kafka/kafka-commands.png[title="Kafka communication between master and agent", role="center"]
 
 Remoting operations are being executed over Kafka. In the log you may see:
@@ -104,6 +116,7 @@ Remoting operations are being executed over Kafka. In the log you may see:
 * Log streaming (Pipe.chunk())
 
 == How to run demo of the project
+
 We have setup a ready-to-fly demo for this plugin. You can try to run a demo of the plugin by following this https://github.com/jenkinsci/remoting-kafka-plugin#how-to-run-demo-of-the-plugins[instruction].
 Features in the demo:
 
@@ -123,6 +136,7 @@ Features in the demo:
 * Make Zookeeper configuration optional to support ad-hoc topics creation (https://issues.jenkins.io/browse/JENKINS-52870[JENKINS-52870]).
 
 == Phase 3 Presentation Slides
+
 ++++
 <center>
   <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTjstGprw2lDt-TqU0f6-eCsPDOptUwJ5nmQ_kTqojuo6zA2M2_2PdUXPyfpfGFUVIRVoWASLdp-pyp/embed?start=false&loop=false&delayms=60000" frameborder="0" width="720" height="434" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
@@ -130,6 +144,7 @@ Features in the demo:
 ++++
 
 == Phase 3 Presentation Video
+
 ++++
 <center>
   <iframe width="720" height="434" src="https://www.youtube.com/embed/GGEtN4nbtng" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -137,6 +152,7 @@ Features in the demo:
 ++++
 
 == Useful Links
+
 * https://app.gitter.im/#/room/#jenkinsci_remoting:gitter.im[image::https://badges.gitter.im/jenkinsci/remoting.svg[title: "Gitter"]]
 * https://github.com/jenkinsci/remoting-kafka-plugin[GitHub Repository]
 * https://wiki.jenkins.io/display/JENKINS/Remoting+Kafka+Plugin[Wiki]
@@ -149,6 +165,7 @@ Features in the demo:
 * https://youtu.be/tuTODhJOTBU[Phase 2 Evaluation Video]
 
 == Links 
+
 * https://app.gitter.im/#/room/#jenkinsci_remoting:gitter.im[Gitter | Join Chat]
 * https://github.com/jenkinsci/remoting-kafka-plugin[Github]
 * xref:gsoc:index.adoc#office-hours[Meetings]

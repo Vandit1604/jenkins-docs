@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/subversion[Subversion Plugin]
 
 == SubversionCredentialProvider
+
 `jenkinsdoc:subversion:hudson.scm.SubversionCredentialProvider]`
 
 +++ Extension point for programmatically providing a credential (such as username/password) for+++ +++ Subversion access.+++
@@ -14,6 +15,7 @@ _(no known implementations)_
 
 
 == SubversionRepositoryStatus.+++<wbr/>+++Listener
+
 `jenkinsdoc:subversion:hudson.scm.SubversionRepositoryStatus.Listener]`
 
 +++ An extension point to allow things other than jobs to listen for repository status updates.+++
@@ -26,6 +28,7 @@ _(no known implementations)_
 
 
 == WorkspaceUpdater
+
 `jenkinsdoc:subversion:hudson.scm.subversion.WorkspaceUpdater]`
 
 +++ Encapsulates the logic of how files are obtained from a subversion repository.+++

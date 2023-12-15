@@ -103,6 +103,7 @@ you can set the URL in your `+build.gradle+` like so:
 jenkinsPlugin {
   // ...
   url = 'https://github.com/jenkinsci/your-plugin'
+
   // ...
 }
 ```
@@ -148,7 +149,6 @@ The table of contents is requested by assigning the value `macro` to the `toc` v
 
 ```adoc
 = Your Plugin Name
-
 
 [[Introduction]]
 == Introduction

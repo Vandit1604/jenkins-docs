@@ -45,6 +45,7 @@ This limitation does not apply to Scripted Pipelines.
 
 Sections in Declarative Pipeline typically contain one or more <<declarative-directives>> or <<declarative-steps>>.
 
+[#agent]
 ==== agent
 
 The `agent` section specifies where the entire Pipeline, or a specific stage, will execute in the Jenkins environment depending on where the `agent` section is placed.
@@ -349,6 +350,7 @@ Using `agent none` also forces each `stage` section to contain its own `agent` s
 <2> Execute the steps in this stage in a newly created container using this image.
 <3> Execute the steps in this stage in a newly created container using a different image from the previous stage.
 =====
+[#post]
 ==== post
 
 The `post` section defines one or more additional <<declarative-steps,steps>> that are run upon the completion of a Pipeline's or stage's run (depending on the location of the `post` section within the Pipeline). `post` can support any of the following <<post-conditions, post-condition>> blocks: `always`, `changed`, `fixed`, `regression`, `aborted`, `failure`, `success`, `unstable`, `unsuccessful`, and `cleanup`.
@@ -527,11 +529,13 @@ pipeline {
     agent any
     environment { // <1>
         CC = 'clang'
+
     }
     stages {
         stage('Example') {
             environment { // <2>
                 AN_ACCESS_KEY = credentials('my-predefined-secret-text') // <3>
+
             }
             steps {
                 sh 'printenv'
@@ -555,6 +559,7 @@ pipeline {
         stage('Example Username/Password') {
             environment {
                 SERVICE_CREDS = credentials('my-predefined-username-password')
+
             }
             steps {
                 sh 'echo "Service user is $SERVICE_CREDS_USR"'
@@ -565,6 +570,7 @@ pipeline {
         stage('Example SSH Username with private key') {
             environment {
                 SSH_CREDS = credentials('my-predefined-ssh-creds')
+
             }
             steps {
                 sh 'echo "SSH private key is located at $SSH_CREDS"'
@@ -847,6 +853,7 @@ pipeline {
 
 [[cron-syntax]]
 ==== Jenkins cron syntax
+
 The Jenkins cron syntax follows the syntax of the link:https://en.wikipedia.org/wiki/Cron[cron utility] (with minor differences).
 Specifically, each line consists of 5 fields separated by TAB or whitespace:
 
@@ -911,6 +918,7 @@ For example, `@hourly` is the same as `H * * * *` and could mean at any time dur
 |`triggers{ cron('H H 1,15 1-11 *') }`
 |===
 
+[#stage]
 ==== stage
 
 The `stage` directive goes in the `stages` section and should contain a <<steps>> section, an optional `agent` section, or other stage-specific directives.
@@ -948,6 +956,7 @@ pipeline {
 =====
 
 ==== tools
+
 ////
 XXX: This is intentionally light until https://issues.jenkins.io/browse/WEBSITE-193
 ////
@@ -1455,6 +1464,7 @@ pipeline {
             }
             environment {
                 FOR_SEQUENTIAL = "some-value"
+
             }
             stages {
                 stage('In Sequential 1') {
@@ -1914,7 +1924,9 @@ pipeline {
                 }
                 when { anyOf {
                     expression { params.PLATFORM_FILTER == 'all' }
+
                     expression { params.PLATFORM_FILTER == env.PLATFORM }
+
                 } }
                 axes {
                     axis {
@@ -1992,7 +2004,9 @@ pipeline {
 
                 script {
                     def browsers = ['chrome', 'firefox']
+
                     for (int i = 0; i < browsers.size(); ++i) {
+
                         echo "Testing the ${browsers[i]} browser"
                     }
                 }
@@ -2023,6 +2037,7 @@ Providing flow control, therefore, rests on Groovy expressions, such as the `if/
 node {
     stage('Example') {
         if (env.BRANCH_NAME == 'master') {
+
             echo 'I only execute on the master branch'
         } else {
             echo 'I execute elsewhere'

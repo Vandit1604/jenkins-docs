@@ -58,8 +58,11 @@ Choose io.jenkins.archetypes:hello-world-plugin version:
 Choose a number: 21: *21* // <2>
 …
 [INFO] Using property: groupId = unused // <3>
+
 [INFO] Using property: package = io.jenkins.plugins.sample
+
 [INFO] Using property: hostOnJenkinsGitHub = true
+
 Define value for property 'artifactId': *demo* // <4>
 Define value for property 'version' 1.0-SNAPSHOT: : // <5>
 Confirm properties configuration:

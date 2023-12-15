@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/gerrit-trigger[Gerrit Trigger Plugin]
 
 == GerritMessageProvider
+
 `jenkinsdoc:gerrit-trigger:com.sonyericsson.hudson.plugins.gerrit.trigger.gerritnotifier.GerritMessageProvider]`
 
 +++ ExtensionPoint that allows other plug-ins to provide custom messages.+++
@@ -15,6 +16,7 @@ https://plugins.jenkins.io/gerrit-trigger[Gerrit Trigger Plugin]
 
 
 == GerritTriggeredBuildListener
+
 `jenkinsdoc:gerrit-trigger:com.sonyericsson.hudson.plugins.gerrit.trigger.extensions.GerritTriggeredBuildListener]`
 
 +++ A abstract class for listening Gerrit triggered build result.+++

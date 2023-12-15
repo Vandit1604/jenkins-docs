@@ -32,6 +32,7 @@ The parameter name `value` is also significant. The `throws` clause isn't.
 This naming convention is how Jenkins wires up your form validation method. The return type also must be FormValidation, which offers various static factory methods to create an instance. Form validation can be of 3 different kinds: `ok`, `warning` or `error`. Validation message can either be represented in plaintext or use HTML markup. Several validations of different kinds can be reported wrapping then into one using aggregate factory method.
 
 == Getting values of other fields
+
 Sometimes your validation method needs values of other input fields to perform a check. You do this by defining them as additional parameters:
 
 [source,java]
@@ -39,7 +40,9 @@ Sometimes your validation method needs values of other input fields to perform a
 public FormValidation doCheckThreads(@QueryParameter String value, @QueryParameter String cpu) {
   try {
     int t = Integer.parseInt(value);
+
     int c = Integer.parseInt(cpu);
+
     if (t*c>10) {
       return FormValidation.warning("That's asking for too much");
     } else {
@@ -81,7 +84,9 @@ public FormValidation doCheckThreads(
 ) {
   try {
     int t = Integer.parseInt(value);
+
     int c = Integer.parseInt(cpu);
+
     if (t*c>10) {
       return FormValidation.warning("That's asking for too much");
     } else {
@@ -94,6 +99,7 @@ public FormValidation doCheckThreads(
 ----
 
 == Accessing context
+
 Sometimes you want to access the context. For example, you might want to access the current FreeStyleProject object while validating a field of a Builder. You do this by putting AncestorInPath annotation.
 
 [source,java]

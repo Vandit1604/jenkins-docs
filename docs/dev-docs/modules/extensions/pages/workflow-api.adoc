@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/workflow-api[Pipeline: API Plugin]
 
 == DurabilityHintProvider
+
 `jenkinsdoc:workflow-api:org.jenkinsci.plugins.workflow.flow.DurabilityHintProvider]`
 
 +++ Provides a way to indirectly register durability settings to apply to pipelines.+++
@@ -14,6 +15,7 @@ https://plugins.jenkins.io/workflow-api[Pipeline: API Plugin]
 
 
 == ErrorCondition
+
 `jenkinsdoc:workflow-api:org.jenkinsci.plugins.workflow.flow.ErrorCondition]`
 
 +++ User-configurable predicate for errors that may occur during a build.+++ +++ Implementations could check for agent-related outages, for example.+++ +++ Step callers could use a condition to decide whether to ignore or report an error, retry, etc.+++
@@ -26,6 +28,7 @@ https://plugins.jenkins.io/workflow-api[Pipeline: API Plugin]
 
 
 == FlowCopier
+
 `jenkinsdoc:workflow-api:org.jenkinsci.plugins.workflow.flow.FlowCopier]`
 
 +++ A way for plugins to copy metadata and associated files from one flow execution to another.+++ +++ Useful when a new execution is not being created from scratch, but is a kind of clone of another.+++
@@ -39,6 +42,7 @@ https://plugins.jenkins.io/workflow-api[Pipeline: API Plugin]
 
 
 == FlowDefinition
+
 `jenkinsdoc:workflow-api:org.jenkinsci.plugins.workflow.flow.FlowDefinition]`
 
 +++ Actual executable script.+++
@@ -63,6 +67,7 @@ https://plugins.jenkins.io/workflow-api[Pipeline: API Plugin]
 
 
 == FlowExecutionListener
+
 `jenkinsdoc:workflow-api:org.jenkinsci.plugins.workflow.flow.FlowExecutionListener]`
 
 +++ Listens for significant status updates for a+++ jenkinsdoc:FlowExecution] +++, such as started running or completed.+++
@@ -77,6 +82,7 @@ https://plugins.jenkins.io/workflow-api[Pipeline: API Plugin]
 
 
 == FlowNodeViewColumn
+
 `jenkinsdoc:workflow-api:org.jenkinsci.plugins.workflow.visualization.table.FlowNodeViewColumn]`
 
 +++ Extension point for adding a column to a table rendering of+++ jenkinsdoc:FlowNode] +++s.+++
@@ -90,6 +96,7 @@ https://plugins.jenkins.io/workflow-api[Pipeline: API Plugin]
 
 
 == FlowNodeViewColumnDescriptor
+
 `jenkinsdoc:workflow-api:org.jenkinsci.plugins.workflow.visualization.table.FlowNodeViewColumnDescriptor]`
 
 ++++++ jenkinsdoc:Descriptor] +++for+++ jenkinsdoc:FlowNodeViewColumn] +++.+++
@@ -103,6 +110,7 @@ https://plugins.jenkins.io/workflow-api[Pipeline: API Plugin]
 
 
 == GraphListener
+
 `jenkinsdoc:workflow-api:org.jenkinsci.plugins.workflow.flow.GraphListener]`
 
 +++ {@code GraphListener}s can be used in two different ways: either as an+++ jenkinsdoc:Extension] +++, which will have its+++ ++++++ jenkinsdoc:=onNewHead(FlowNode)] +++fired for every+++ jenkinsdoc:FlowExecution] +++, or by instantiation and being passed to+++ ++++++ jenkinsdoc:FlowExecution=addListener(GraphListener)] +++, in which case only events for that specific+++ jenkinsdoc:FlowExecution] ++++++ +++ will be fired.+++
@@ -124,6 +132,7 @@ https://plugins.jenkins.io/workflow-api[Pipeline: API Plugin]
 
 
 == LogStorageFactory
+
 `jenkinsdoc:workflow-api:org.jenkinsci.plugins.workflow.log.LogStorageFactory]`
 
 +++ Factory interface for+++ jenkinsdoc:LogStorage] +++.+++
@@ -135,6 +144,7 @@ https://plugins.jenkins.io/workflow-api[Pipeline: API Plugin]
 
 
 == PickleFactory
+
 `jenkinsdoc:workflow-api:org.jenkinsci.plugins.workflow.pickles.PickleFactory]`
 
 +++ Provides a way of converting transient objects into+++ jenkinsdoc:Pickle] +++s.+++
@@ -154,6 +164,7 @@ https://plugins.jenkins.io/workflow-api[Pipeline: API Plugin]
 
 
 == StashManager.+++<wbr/>+++StashBehavior
+
 `jenkinsdoc:workflow-api:org.jenkinsci.plugins.workflow.flow.StashManager.StashBehavior]`
 
 +++ Extension point for customizing behavior of stashes from other plugins.+++
@@ -165,6 +176,7 @@ _(no known implementations)_
 
 
 == StepListener
+
 `jenkinsdoc:workflow-api:org.jenkinsci.plugins.workflow.flow.StepListener]`
 
 ++++++ jenkinsdoc:StepListener] +++s are fired before invoking a step but after the+++ jenkinsdoc:FlowNode] +++has been created and the+++ ++++++ jenkinsdoc:StepContext] +++has been populated. A+++ jenkinsdoc:StepListener] +++can perform actions before the+++ jenkinsdoc:Step] +++is+++ +++ executed, such as calling+++ jenkinsdoc:StepContext=onFailure] +++to make the step fail before it starts.+++
@@ -177,6 +189,7 @@ _(no known implementations)_
 
 
 == TaskListenerDecorator.+++<wbr/>+++Factory
+
 `jenkinsdoc:workflow-api:org.jenkinsci.plugins.workflow.log.TaskListenerDecorator.Factory]`
 
 +++ Allows a decorator to be applied to any build.+++

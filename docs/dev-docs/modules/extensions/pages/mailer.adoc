@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/mailer[Mailer Plugin]
 
 == MailAddressFilter
+
 `jenkinsdoc:mailer:jenkins.plugins.mailer.tasks.MailAddressFilter]`
 
 +++ Checks email addresses if they should be excluded from sent emails.+++
@@ -14,6 +15,7 @@ _(no known implementations)_
 
 
 == MailAddressResolver
+
 `jenkinsdoc:mailer:hudson.tasks.MailAddressResolver]`
 
 +++ Infers e-mail addresses for the user when none is specified.+++

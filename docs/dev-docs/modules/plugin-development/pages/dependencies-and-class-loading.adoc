@@ -72,6 +72,7 @@ When you _initiate_ loading of a class
 [source,java]
 ----
 Class<?> alpha = Charlie.class.getClassLoader().loadClass("org.jenkinsci.plugins.a.Alpha");
+
 ----
 
 you are asking a particular `ClassLoader` (here, C’s) to look up a class by name.
@@ -136,7 +137,9 @@ import org.somelib.LibClass;
 class UsesThatLib {
     Object someMethod() {
         Thread t = Thread.currentThread();
+
         ClassLoader orig = t.getContextClassLoader();
+
         t.setContextClassLoader(UsesThatLib.class.getClassLoader());
         try {
             return LibClass.use(UsesThatLib.class.getName());

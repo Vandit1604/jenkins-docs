@@ -54,6 +54,7 @@ For example:
   <attribute name="property" />
 
   date = new java.text.SimpleDateFormat("HH:mm")
+
     .format(new Date(System.currentTimeMillis() + 60000));
   project.setProperty(attributes.get("property"), date);
 </scriptdef>
@@ -93,39 +94,58 @@ Another similar workaround on Windows is to use a wrapper script and launch your
 
 
 var WshShell = WScript.CreateObject("WScript.Shell");
+
 var exeStr = "%comspec% /c";
+
 var arg = "";
+
 var windowStyle = 1;
+
 var WshProcessEnv = WshShell.Environment("PROCESS");
+
 var windowTitle = WshProcessEnv("ANTRUN_TITLE");
+
 var outputFile = WshProcessEnv("ANTRUN_OUTPUT");
+
 var OS = WshProcessEnv("OS");
+
 var isWindowsNT = (OS == "Windows_NT");
 
 // On Windows NT/2000/XP, specify a title for the window.  If the environment
 // variable ANTRUN_TITLE is specified, that will be used instead of a default.
 if (isWindowsNT) {
   if (windowTitle == "")
+
      windowTitle = "Ant - " + WScript.Arguments(i);
+
   exeStr += "title " + windowTitle + " &&";
+
 }
 
 // Loop through arguments quoting ones with spaces
 for (var i = 0; i < WScript.Arguments.count(); i++) {
+
   arg = WScript.Arguments(i);
+
   if (arg.indexOf(' ') > 0)
     exeStr += " \"" + arg + "\"";
+
   else
     exeStr += " " + arg;
+
 }
 
 // If the environment variable ANTRUN_OUTPUT was specified, redirect
 // output to that file.
 if (outputFile != "") {
+
   windowStyle = 7;  // new window is minimized
+
   exeStr += " > \"" + outputFile + "\"";
+
   if (isWindowsNT)
     exeStr += " 2>&1";
+
 }
 
 // WScript.Echo(exeStr);

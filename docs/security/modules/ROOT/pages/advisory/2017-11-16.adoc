@@ -11,8 +11,8 @@ This advisory announces vulnerabilities in these Jenkins plugins:
 
 == Description
 
-
 === Reflected Cross-Site Scripting vulnerability in Delivery Pipeline plugin
+
 *SECURITY-640 / CVE-2017-1000404*
 
 Delivery Pipeline Plugin used the unescaped content of the query parameter `fullscreen` in its JavaScript, resulting in a cross-site scripting vulnerability through specially crafted URLs.
@@ -26,9 +26,11 @@ The plugin now converts the value to a boolean (true/false) and inserts that int
 
 
 == Affected versions
+
 * Delivery Pipeline Plugin up to and including 1.0.7
 
 == Fix
+
 * Delivery Pipeline Plugin should be updated to version 1.0.8
 
 These versions include fixes to the vulnerabilities described above.

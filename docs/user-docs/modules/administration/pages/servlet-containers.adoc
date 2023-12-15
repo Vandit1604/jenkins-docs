@@ -1,12 +1,6 @@
 = Other Servlet Containers
 
 
-
-:hide-uri-scheme:
-
-
-
-
 Jenkins is typically run as a standalone application in its own process.
 The Jenkins WAR file bundles link:https://github.com/jenkinsci/winstone[Winstone],
 a link:https://www.eclipse.org/jetty/[Jetty] servlet container wrapper,

@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/logstash[Logstash Plugin]
 
 == LogstashIndexer
+
 `jenkinsdoc:logstash:jenkins.plugins.logstash.configuration.LogstashIndexer]`
 
 +++ Extension point for logstash indexers.+++ +++ This extension point provides the configuration for the indexer. You also have to implement the actual+++ +++ indexer in a separate class extending+++ jenkinsdoc:AbstractLogstashIndexerDao] +++.+++

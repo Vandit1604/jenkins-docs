@@ -3,6 +3,7 @@
 https://plugins.jenkins.io/external-workspace-manager[External Workspace Manager Plugin]
 
 == DiskAllocationStrategy
+
 `jenkinsdoc:external-workspace-manager:org.jenkinsci.plugins.ewm.DiskAllocationStrategy]`
 
 +++ Abstract class for defining a disk allocation strategy.+++ +++ Each disk allocation strategy should extend this class and provide its own implementation of disk allocation.+++
@@ -17,6 +18,7 @@ https://plugins.jenkins.io/external-workspace-manager[External Workspace Manager
 
 
 == DiskInfoProvider
+
 `jenkinsdoc:external-workspace-manager:org.jenkinsci.plugins.ewm.DiskInfoProvider]`
 
 +++ Contains additional information about a+++ jenkinsdoc:org.jenkinsci.plugins.ewm.definitions.Disk] +++entry.+++
