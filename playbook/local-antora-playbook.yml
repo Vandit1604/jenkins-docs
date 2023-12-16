@@ -6,12 +6,12 @@ content:
   sources:
     - url: ../
       # remember well to change the branch name to the one you are working on to generate the preview
-      branches: [main]
+      branches: [fix/patch-issues-with-advisories-setup]
       start_paths: [docs/tutorials, docs/user-docs, docs/solutions]
       # developer docs are un-versioned that's why they are to be fetched individually
     - url: ../
       # remember well to change the branch name to the one you are working on to generate the preview
-      branches: [main]
+      branches: [fix/patch-issues-with-advisories-setup]
       start_paths: [docs/dev-docs, docs/events, docs/security, docs/sigs, docs/projects, docs/images, docs/books, docs/community, docs/project, docs/about, docs/download]
 
 runtime:

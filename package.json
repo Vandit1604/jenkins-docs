@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "jenkins-docs",
   "version": "1.0.0",
   "description": "Provides a template Antora component file and directory structure, along with some other helpful command-line tools. Its aim is to make it as quick and painless as possible to get up and running with new Antora projects and to extend existing ones.",
   "devDependencies": {
@@ -11,8 +11,7 @@
   },
   "keywords": [
     "Antora",
-    "AsciiDoc",
-    "tooling"
+    "AsciiDoc"
   ],
   "author": "",
   "overrides": {
@@ -27,6 +26,8 @@
     "@types/jquery": "^3.5.16",
     "bootstrap": "^5.3.1",
     "datatables.net-dt": "^1.13.4",
+    "fs-extra": "^11.2.0",
+    "glob": "^10.3.10",
     "jstz": "^2.1.1"
   }
 }

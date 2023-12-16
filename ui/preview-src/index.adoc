@@ -24,7 +24,6 @@ video::e7N3jX2b1i0[youtube]
 ****
 
 ++++
-
 <style>
 .ji-dated-list,
 .ji-item-list,
@@ -38,6 +37,7 @@ video::e7N3jX2b1i0[youtube]
   list-style: none;
   font-size:1rem;
 }
+
 .events .ji-item-list{
   text-align: center;
   white-space: nowrap;
@@ -52,6 +52,7 @@ video::e7N3jX2b1i0[youtube]
   margin:0;
   vertical-align:top;
 }
+
 .events .ji-item-list>.event>a{
   width:16rem;
   padding:.75rem;
@@ -59,12 +60,14 @@ video::e7N3jX2b1i0[youtube]
   white-space:normal;
   text-decoration:none;
 }
+
 .events .ji-item-list>.event>a .title{
   margin:.75rem 0 .25rem;
   height:1.1rem;
   overflow:hidden;
   position:relative;
 }
+
 .events .ji-item-list>.event>a .title:after{
   content:' ';
   display:block;
@@ -74,6 +77,7 @@ video::e7N3jX2b1i0[youtube]
   box-shadow:inset white -3rem 0 2rem -2rem;
   bottom:0; right:0;
 }
+
 .events .ji-item-list>.event>a .teaser{
   color:#4a5568;
   font-size:.85rem;
@@ -81,6 +85,7 @@ video::e7N3jX2b1i0[youtube]
   overflow:hidden;
   position:relative;
 }
+
 .events .ji-item-list>.event>a .teaser:after{
   content:' ';
   display:block;
@@ -91,8 +96,6 @@ video::e7N3jX2b1i0[youtube]
   bottom:0; right:0;
 }
 </style>
-
-
 ++++
 
 [.float-group]
