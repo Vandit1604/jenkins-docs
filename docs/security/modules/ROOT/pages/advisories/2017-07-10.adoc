@@ -5,19 +5,19 @@ NOTE: This advisory originally recommended upgrading Poll SCM plugin to version 
 
 This advisory announces vulnerabilities in these Jenkins plugins:
 
-* plugin:docker-commons[Docker Commons Plugin]
-* plugin:git[Git Plugin]
-* plugin:github-branch-source[GitHub Branch Source Plugin]
-* plugin:parameterized-trigger[Parameterized Trigger Plugin]
-* plugin:periodicbackup[Periodic Backup Plugin]
-* plugin:pipeline-build-step[Pipeline: Build Step Plugin]
-* plugin:workflow-cps[Pipeline: Groovy Plugin]
-* plugin:pollscm[Poll SCM Plugin]
-* plugin:role-strategy[Role-based Authorization Strategy Plugin]
-* plugin:script-security[Script Security Plugin]
-* plugin:sidebar-link[Sidebar Link Plugin]
-* plugin:ssh[SSH Plugin]
-* plugin:subversion[Subversion Plugin]
+* {plugin}docker-commons[Docker Commons Plugin]
+* {plugin}git[Git Plugin]
+* {plugin}github-branch-source[GitHub Branch Source Plugin]
+* {plugin}parameterized-trigger[Parameterized Trigger Plugin]
+* {plugin}periodicbackup[Periodic Backup Plugin]
+* {plugin}pipeline-build-step[Pipeline: Build Step Plugin]
+* {plugin}workflow-cps[Pipeline: Groovy Plugin]
+* {plugin}pollscm[Poll SCM Plugin]
+* {plugin}role-strategy[Role-based Authorization Strategy Plugin]
+* {plugin}script-security[Script Security Plugin]
+* {plugin}sidebar-link[Sidebar Link Plugin]
+* {plugin}ssh[SSH Plugin]
+* {plugin}subversion[Subversion Plugin]
 
 == Description
 
@@ -28,7 +28,7 @@ This advisory announces vulnerabilities in these Jenkins plugins:
 Builds in Jenkins are associated with an authentication that controls the permissions that the build has to interact with other elements in Jenkins.
 By default, builds run as SYSTEM and are unconstrained unless plugins implement specific additional permission checks.
 
-Plugins like plugin:authorize-project[Authorize Project Plugin] allow changing the authentication associated with a build.
+Plugins like {plugin}authorize-project[Authorize Project Plugin] allow changing the authentication associated with a build.
 
 The Parameterized Trigger Plugin did not check the build authentication it was running as and allowed triggering any other project in Jenkins.
 
@@ -90,7 +90,7 @@ To add or remove from this list of schemes, provide the Java system property `hu
 Builds in Jenkins are associated with an authentication that controls the permissions that the build has to interact with other elements in Jenkins.
 By default, builds run as SYSTEM and are unconstrained unless plugins implement specific additional permission checks.
 
-Plugins like plugin:authorize-project[Authorize Project Plugin] allow changing the authentication associated with a build.
+Plugins like {plugin}authorize-project[Authorize Project Plugin] allow changing the authentication associated with a build.
 
 The Pipeline: Build Step Plugin did not check the build authentication it was running as and allowed triggering any other project in Jenkins.
 
@@ -198,7 +198,7 @@ NOTE: The fix for this introduced a regression that results in constructors and 
 The SSH Plugin stores credentials which allow jobs to access remote servers via the SSH protocol.
 User passwords and passphrases for encrypted SSH keys are stored in plaintext in a configuration file.
 
-SSH Plugin now integrates with the plugin:credentials[Credentials Plugin] and existing credentials are migrated.
+SSH Plugin now integrates with the {plugin}credentials[Credentials Plugin] and existing credentials are migrated.
 
 
 == Severity

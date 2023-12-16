@@ -1,14 +1,4 @@
----
-layout: section
-title: "Pluggable Storage"
-summary: Storage alternatives for artifacts, build logs, credentials, test results, and fingerprints
-tags:
-- pluggable-storage
-- cloud-native
-- cloud-native-sig
-- external-logging
-- external-artifacts
----
+= Pluggable Storage
 
 The current default approach of storing everything into the filesystem is the main reason why Jenkins does not fit the "Cloud Native" model, with features like high availability, zero downtime, or pay per use.
 While there are plenty of plugins that implement parts of this vision, this becomes cumbersome to configure and a usability nightmare for users, as jep:300[] has pointed out.
@@ -37,8 +27,8 @@ Below you can find a summary of ongoing activities and their current status:
 
   xref:dev-docs:extensions:jenkins-core.adoc#artifactmanagerfactory[Extension point]
 
-| plugin:artifact-manager-s3[Artifact Manager on S3],
-  plugin:azure-artifact-manager[Azure Artifact Manager],
+| {plugin}artifact-manager-s3[Artifact Manager on S3],
+  {plugin}azure-artifact-manager[Azure Artifact Manager],
   xref:dev-docs:extensions:jenkins-core.adoc#artifactmanagerfactory[<More implementations>]
 
 | **Credentials** +
@@ -46,8 +36,8 @@ Below you can find a summary of ongoing activities and their current status:
 | Completed before the JEP process was introduced.
 
 xref:dev-docs:extensions:credentials.adoc#credentialsprovider[Extension point]
-| plugin:kubernetes-credentials-provider[Kubernetes Credentials Provider],
-  plugin:aws-secrets-manager-credentials-provider[AWS Secrets Manager Credentials Provider],
+| {plugin}kubernetes-credentials-provider[Kubernetes Credentials Provider],
+  {plugin}aws-secrets-manager-credentials-provider[AWS Secrets Manager Credentials Provider],
   xref:dev-docs:extensions:credentials.adoc#credentialsprovider[<More implementations>]
 
 | Build logs +
@@ -72,7 +62,7 @@ Jenkins core:
   **(Available)**
 | Jenkins supports custom log appenders using standard `java.util.logging`
   link:https://jenkov.com/tutorials/java-logging/configuration.html[configuration options].
-| plugin:syslog-logger[Syslog logger],
+| {plugin}syslog-logger[Syslog logger],
   non-Jenkins implementation
 
 | Task logs +
@@ -82,7 +72,7 @@ Jenkins core:
 
 | Configurations +
   (Paused)
-| Largely replaced by the plugin:configuration-as-code[Configuration as Code] plugin
+| Largely replaced by the {plugin}configuration-as-code[Configuration as Code] plugin
   which allows storing Jenkins configurations in SCM or other locations without a database.
 
   Related JEPs: jep:213[]
@@ -90,12 +80,12 @@ Jenkins core:
 
 | **Test Results** +
   **(Available)**
-| API is available in plugin:junit[JUnit Plugin].
-| plugin:junit-sql-storage[Junit SQL Storage]
+| API is available in {plugin}junit[JUnit Plugin].
+| {plugin}junit-sql-storage[Junit SQL Storage]
 
 | Code Coverage results +
   (Not started)
-| Planned only for plugins based on plugin:code-coverage-api[Code Coverage API] which unifies the storage implementation.
+| Planned only for plugins based on {plugin}code-coverage-api[Code Coverage API] which unifies the storage implementation.
   See _Runs_ for other coverage report types.
 | N/A
 
@@ -118,7 +108,7 @@ Jenkins core:
   More info: link:/projects/gsoc/2020/projects/external-fingerprint-storage/[GSoC Project Page]
 
   Related JEPs: jep:226[]
-| plugin:redis-fingerprint-storage[Redis],
+| {plugin}redis-fingerprint-storage[Redis],
   link:https://github.com/jenkinsci/postgresql-fingerprint-storage-plugin[PostgreSQL (unreleased)]
 
 | Workspaces +
@@ -152,7 +142,7 @@ extension point.
 
 Implementation example(s):
 
-* plugin:artifact-manager-s3[Artifact Manager for S3]
+* {plugin}artifact-manager-s3[Artifact Manager for S3]
 
 Related JEPs:
 
@@ -163,7 +153,7 @@ Related JEPs:
 Logs disk usage causes the same issues previously mentioned for artifacts.
 Plus an external focused log storage such as https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html[AWS CloudWatch Logs] allows demanded features as centralized log management, log retention policies, advanced querying, etc.
 There are already options to externally ship the logs to a backend, or plugins that would do that like the  https://github.com/jenkinsci/aws-cloudwatch-logs-publisher-plugin[aws-cloudwatch-logs-publisher-plugin], but there is no integrated way to both send and display logs from external log storage.
-The External log storage work is tracked as jira:JENKINS-38313[].
+The External log storage work is tracked as {jira}JENKINS-38313[].
 
 Reference implementation(s):
 
@@ -195,14 +185,14 @@ Related JEPs:
 
 === Credentials
 
-In plugin:credentials[Credentials Plugin] 1.15+ there
+In {plugin}credentials[Credentials Plugin] 1.15+ there
 is a xref:dev-docs:extensions:credentials.adoc#credentialsprovider[CredentialsProvider]
 extension point which allows referencing and resolving external credentials.
 This engine allows implementing external credentials for plugins implementing Credentials API..
 
 Implementation example(s):
 
-* plugin:kubernetes-credentials-provider[Kubernetes Credentials Provider]
+* {plugin}kubernetes-credentials-provider[Kubernetes Credentials Provider]
 
 Other credentials API in Jenkins (like jenkinsdoc:hudson.util.Secret) are not supported.
 
@@ -216,7 +206,7 @@ In order to display trends, each report has to be loaded and then processed in-m
 The main purpose of externalising Test Results is to optimize Jenkins logic
 by querying the desired data from specialized external storages,
 e.g. from Document-based databases like Elasticsearch.
-According to the current plan, plugin:junit[JUnit Plugin] will be extended
+According to the current plan, {plugin}junit[JUnit Plugin] will be extended
 in order to support such external storage in its APIs being widely used by test reporting plugins.
 
 Status:

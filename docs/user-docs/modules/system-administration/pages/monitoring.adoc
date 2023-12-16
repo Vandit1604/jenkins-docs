@@ -1,12 +1,12 @@
 = Monitoring Jenkins
 
 NOTE: This page is under development, there will be more content added soon.
-See the jira:WEBSITE-738[] EPIC for tasks related to this page, contributions are welcome!
+See the {jira}WEBSITE-738[] EPIC for tasks related to this page, contributions are welcome!
 
 == Monitoring with Datadog
 
-- plugin:datadog[Datadog plugin for Jenkins]
-- plugin:metrics-datadog[Metrics-Datadog plugin for Jenkins]
+- {plugin}datadog[Datadog plugin for Jenkins]
+- {plugin}metrics-datadog[Metrics-Datadog plugin for Jenkins]
 - https://www.datadoghq.com/blog/monitor-jenkins-datadog[Jenkins on Datadog]
 
 == Monitoring with Newrelic
@@ -16,18 +16,18 @@ See the jira:WEBSITE-738[] EPIC for tasks related to this page, contributions ar
 
 == Monitoring with Prometheus and Grafana
 
-- plugin:prometheus[Prometheus plugin for Jenkins]
+- {plugin}prometheus[Prometheus plugin for Jenkins]
 - https://medium.com/@eng.mohamed.m.saeed/monitoring-jenkins-with-grafana-and-prometheus-a7e037cbb376[How-To blog on Medium]
 
 == Monitoring with JavaMelody
 
-- plugin:monitoring[Monitoring plugin for Jenkins]
+- {plugin}monitoring[Monitoring plugin for Jenkins]
 
 == Other Monitoring Plugins
 
-- plugin:versioncolumn[Versions Node Monitors]
-- plugin:systemloadaverage-monitor[Agents Monitoring for unix nodes]
-- plugin:jqs-monitoring[Job/Queue/Slaves Monitoring]
+- {plugin}versioncolumn[Versions Node Monitors]
+- {plugin}systemloadaverage-monitor[Agents Monitoring for unix nodes]
+- {plugin}jqs-monitoring[Job/Queue/Slaves Monitoring]
 
 
 == Ping Thread

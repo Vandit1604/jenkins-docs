@@ -62,9 +62,9 @@ issues:
 
     This allows attackers with Overall/Read permission to enumerate credentials IDs of AWS credentials stored in Jenkins if any of the following plugins are installed:
 
-    * plugin:amazon-ecs[Amazon Elastic Container Service (ECS) / Fargate]
-    * plugin:aws-parameter-store[AWS Parameter Store Build Wrapper]
-    * plugin:aws-sam[AWS SAM]
+    * {plugin}amazon-ecs[Amazon Elastic Container Service (ECS) / Fargate]
+    * {plugin}aws-parameter-store[AWS Parameter Store Build Wrapper]
+    * {plugin}aws-sam[AWS SAM]
 
     Further plugins may use this helper method as well without performing a permission check themselves.
 

@@ -60,7 +60,7 @@ In our case we use the `RUN` command to install different common Jenkins plugins
 You can install additional plugins just by adding similar commands inside your dockerfile
 like we did above.
 However, one of the plugins above is critical for installation.
-It is the plugin:kubernetes[Kubernetes plugin].
+It is the {plugin}kubernetes[Kubernetes plugin].
 This plugin is designed to implement Jenkins scaling on top of a Kubernetes cluster.
 
 Next, we need to build the image that can be used and run inside the Kubernetes cluster later on.
