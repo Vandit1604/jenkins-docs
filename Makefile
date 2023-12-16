@@ -4,6 +4,7 @@ ROOT_DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 all:	clean	ui	antora
 
 install:
+	npm i -g @antora/cli@3.1 @antora/site-generator@3.1
 	npm i -g gulp
 	npm i -g http-server
 
