@@ -3,8 +3,8 @@
 Jenkins, and a number of plugins, allow users to execute
 Groovy scripts _in_ Jenkins. These scripting capabilities are provided by:
 
-* xref:glossary:index.adoc#script-console[Script Console].
-* xref:glossary:index.adoc#pipeline[Jenkins Pipeline].
+* xref:user-docs:managing:script-console.adoc[Script Console].
+* xref:user-docs:pipeline:index.adoc[Jenkins Pipeline].
 * The {plugin}email-ext[Extended Email plugin].
 * The {plugin}groovy[Groovy plugin] - when using the "Execute system Groovy
   script" step.

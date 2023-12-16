@@ -53,6 +53,7 @@ Remoting-Minimum-Version: 3.14 <6>
 Inbound agents may instead be configured to use WebSocket transport to connect to Jenkins.
 In this case no extra TCP port need be enabled and no special security configuration is needed.
 
+[#ssh-server]
 == SSH Server
 
 The https://plugins.jenkins.io/sshd[SSH Server] Plugin can be configured to open an SSH port on the Jenkins controller.
