@@ -411,6 +411,7 @@ pipeline {
 <2> <<post-conditions, Post-condition>> blocks contain <<declarative-steps, steps>> the same as the <<steps>> section.
 =====
 
+[#stages]
 ==== stages
 
 Containing a sequence of one or more <<stage>> directives, the `stages` section is where the bulk of the "work" described by a Pipeline will be located.
@@ -1055,6 +1056,7 @@ pipeline {
 ----
 =====
 
+[#when]
 ==== when
 
 The `when` directive allows the Pipeline to determine whether the stage should be executed depending on the given condition.

@@ -8,13 +8,13 @@ This example Java application from a GitHub repository outputs the string "Hello
 The test results are saved to a JUnit XML report.
 
 *Duration:* This tutorial takes 20-40 minutes to complete, assuming you meet the below <<prerequisites,prerequisites>>.
-The exact duration will depend on the speed of your machine and whether or not you've already <<run-jenkins-in-docker,run Jenkins in Docker>> from xref:index.adoc[another tutorial].
+The exact duration will depend on the speed of your machine and whether or not you've already xref:user-docs:installing-jenkins:_partials/_run-jenkins-in-docker.adoc#run-jenkins-in-docker[run Jenkins in Docker] from xref:index.adoc[another tutorial].
 
 You can stop this tutorial at any time and continue from where you left off.
 
-If you've already run through xref:index.adoc[another tutorial], you can skip the <<prerequisites,Prerequisites>> and <<run-jenkins-in-docker,Run Jenkins in Docker>> sections below and proceed to <<fork-sample-repository,forking the sample repository>>.
+If you've already run through xref:index.adoc[another tutorial], you can skip the <<prerequisites,Prerequisites>> and xref:user-docs:installing-jenkins:_partials/_run-jenkins-in-docker.adoc#run-jenkins-in-docker[run Jenkins in Docker] sections below and proceed to <<fork-sample-repository,forking the sample repository>>.
 Make sure you have link:https://git-scm.com/downloads[Git] installed locally.
-If you need to restart Jenkins, simply follow the restart instructions in <<stopping-and-restarting-jenkins,Stopping and restarting Jenkins>>, and then proceed.
+If you need to restart Jenkins, simply follow the restart instructions in xref:user-docs:installing-jenkins:_partials/_run-jenkins-in-docker.adoc#stopping-and-restarting-jenkins[Stopping and restarting Jenkins], and then proceed.
 
 [#prerequisites]
 

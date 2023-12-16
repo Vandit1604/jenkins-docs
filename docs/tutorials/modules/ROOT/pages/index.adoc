@@ -1,5 +1,5 @@
+[#introductory-tutorials]
 = Tutorials overview
-
 
 This part of the Jenkins User Documentation contains a series of introductory
 tutorials to help you begin building your applications in an automated fashion
@@ -24,7 +24,7 @@ processes to build your applications:
 * xref:user-docs:pipeline:getting-started.adoc[Getting started with Jenkins Pipeline]
 * Publishing HTML Reports in Pipeline (link:/blog/2017/02/10/declarative-html-publisher/[Declarative Pipeline], link:/blog/2016/07/01/html-publisher-plugin/[Scripted Pipeline])
 * Sending Notifications in Pipeline (link:/blog/2017/02/15/declarative-notifications/[Declarative Pipeline], link:/blog/2016/07/18/pipeline-notifications/[Scripted Pipeline])
-* xref:build-a-multibranch-pipeline-project[End-to-End Multibranch Pipeline Project Creation]
+* xref:build-a-multibranch-pipeline-project.adoc[End-to-End Multibranch Pipeline Project Creation]
 * link:/blog/2017/02/15/declarative-notifications/#moving-notifications-to-shared-library[Creating a shared library]
 * link:/blog/2016/06/16/parallel-test-executor-plugin/[Faster Pipelines with the Parallel Test Executor Plugin]
 * link:/blog/2017/01/19/converting-conditional-to-pipeline/[Converting Conditional Build Steps to Jenkins Pipeline]
