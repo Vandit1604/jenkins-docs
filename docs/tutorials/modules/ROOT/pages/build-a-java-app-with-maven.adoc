@@ -21,7 +21,7 @@ If you need to restart Jenkins, simply follow the restart instructions in xref:u
 include::partial$prerequisites.adoc[]
 ** link:https://git-scm.com/downloads[Git], and optionally link:https://desktop.github.com/[GitHub Desktop].
 
-include::partial$_run-jenkins-in-docker.adoc[]
+include::user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[]
 
 
 [[fork-sample-repository]]
