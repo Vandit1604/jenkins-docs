@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins Security Advisory 2017-06-06 :: Jenkins Docs</title>
+    <link rel="canonical" href="https://docs.jenkins.com/security/advisories/2017-06-06.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+<link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="security" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Security Advisories</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Administrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-administrators.html">Overview for Jenkins Administrators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../fixing.html">How We Fix Security Issues</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Reporters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../reporting.html">"Reporting Security Vulnerabilities"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Maintainers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-maintainers.html">"Overview for Plugin Maintainers"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Managing Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jenkins Security Team</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../team.html">About the Jenkins Security Team</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../improvements.html">Improvements by the Security Team</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Security Advisories</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.426.1/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorials/2.426.1/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorials/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.426.1/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.426.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins Security Advisories</a></li>
+    <li><a href="2017-06-06.html">Jenkins Security Advisory 2017-06-06</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/advisories/2017-06-06.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins Security Advisory 2017-06-06</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This advisory announces multiple vulnerabilities in the plugin:favorite[Favorite Plugin].</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_description"><a class="anchor" href="#_description"></a>Description</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_missing_permission_check_in_favorite_plugin_allows_anyone_to_change_favorites_for_any_other_user"><a class="anchor" href="#_missing_permission_check_in_favorite_plugin_allows_anyone_to_change_favorites_for_any_other_user"></a>Missing permission check in Favorite Plugin allows anyone to change favorites for any other user</h3>
+<div class="paragraph">
+<p><strong>JENKINS-44643 / CVE-2017-1000243</strong></p>
+</div>
+<div class="paragraph">
+<p>A missing permission check allowed any user to add or remove favorites for any other user.</p>
+</div>
+<div class="paragraph">
+<p>The API was changed so users cannot change another user&#8217;s favorites, only their own.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_csrf_vulnerability_in_favorite_plugin_allows_changing_another_users_favorites"><a class="anchor" href="#_csrf_vulnerability_in_favorite_plugin_allows_changing_another_users_favorites"></a>CSRF vulnerability in Favorite Plugin allows changing another user&#8217;s favorites</h3>
+<div class="paragraph">
+<p><strong>SECURITY-532 / CVE-2017-1000244</strong></p>
+</div>
+<div class="paragraph">
+<p>An API used to add and remove a favorite was vulnerable to CSRF, allowing attackers to change the victim&#8217;s favorites.</p>
+</div>
+<div class="paragraph">
+<p>The API now requires requests to be sent via POST, which is subject to the CSRF protection configurable in Jenkins global security configuration.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_severity"><a class="anchor" href="#_severity"></a>Severity</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>JENKINS-44643: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N">medium</a></strong></p>
+</li>
+<li>
+<p>SECURITY-532: <strong><a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N">medium</a></strong></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_affected_versions"><a class="anchor" href="#_affected_versions"></a>Affected versions</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>JENKINS-44643: Favorite Plugin up to and including 2.1.0.</p>
+</li>
+<li>
+<p>SECURITY-532: Favorite Plugin up to and including 2.2.0.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fix"><a class="anchor" href="#_fix"></a>Fix</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Users of Favorite Plugin should update it to version 2.3.0 or newer.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_credit"><a class="anchor" href="#_credit"></a>Credit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Jenkins project would like to thank the reporter for discovering and <a href="../index.html#reporting-vulnerabilities" class="xref page">reporting</a> this vulnerability:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Andres Rodriguez, CloudBees, Inc.</strong> for SECURITY-532</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

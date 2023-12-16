@@ -1336,7 +1336,7 @@
 </div>
 <div class="paragraph">
 <p>The <code>Cause#getShortDescription</code> method was defined to return a "one line" short snippet of HTML in Jenkins 2.314 and earlier, LTS 2.303.1 and earlier.
-To prevent further security vulnerabilities like <a href="../../../security/advisory/2021-10-06.html#SECURITY-2499" class="xref page">SECURITY-2499</a> from having an impact on Jenkins users, the method has been redefined to return plain text in Jenkins 2.315 and LTS 2.303.2, and its output is no longer rendered as HTML on the UI.</p>
+To prevent further security vulnerabilities like <a href="../../../security/advisories/2021-10-06.html#SECURITY-2499" class="xref page">SECURITY-2499</a> from having an impact on Jenkins users, the method has been redefined to return plain text in Jenkins 2.315 and LTS 2.303.2, and its output is no longer rendered as HTML on the UI.</p>
 </div>
 <div class="paragraph">
 <p>If an implementation of <code>#getShortDescription</code> returns a string that includes user-specified content, plugin maintainers are advised to consider both the behavior of older and newer Jenkins releases if their plugin can be used on Jenkins 2.314 and earlier.

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Jenkins Docs</title>
+    <link rel="canonical" href="https://docs.jenkins.com/security/advisories/2019-06-11.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+<link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="security" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Security Advisories</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Administrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-administrators.html">Overview for Jenkins Administrators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../fixing.html">How We Fix Security Issues</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Reporters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../reporting.html">"Reporting Security Vulnerabilities"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Maintainers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-maintainers.html">"Overview for Plugin Maintainers"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Managing Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jenkins Security Team</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../team.html">About the Jenkins Security Team</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../improvements.html">Improvements by the Security Team</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Security Advisories</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.426.1/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorials/2.426.1/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorials/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.426.1/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.426.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/advisories/2019-06-11.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div class="paragraph">
+<p>layout: advisory
+title: Jenkins Security Advisory 2019-06-11
+section: security
+kind: plugins
+issues:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>id: SECURITY-1399
+reporter: Daniel Beck, CloudBees, Inc.
+title: XML External Entity processing vulnerability in PLUGIN_NAME
+cve: CVE-2019-10337
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:L
+description: |-
+  PLUGIN_NAME did not configure its XML parser in a way that would prevent XML External Entity (XXE) processing.</p>
+<div class="literalblock">
+<div class="content">
+<pre>This allowed attackers able to control the contents of files processed with the `${XML}` macro to have Jenkins parse a maliciously crafted XML file that uses external entities for extraction of secrets from the Jenkins agent, server-side request forgery, or denial-of-service attacks.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  PLUGIN_NAME no longer processes XML External Entities in XML documents.
+plugins:
+- name: token-macro
+  previous: 2.7
+  fixed: 2.8</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1379
+reporter: Jesse Glick, CloudBees, Inc.
+title: CSRF vulnerability and missing permission check in PLUGIN_NAME
+cve: CVE-2019-10338 (CSRF), CVE-2019-10339 (improper authorization)
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N
+description: |-
+  PLUGIN_NAME did not perform permission checks on a method implementing form validation.
+  This allowed users with Overall/Read access to Jenkins to connect to an attacker-specified Kubernetes server and obtain information about an attacker-specified namespace.
+  Doing so might also leak service account credentials used for the connection.
+  Additionally, it allowed attackers to obtain the value of any attacker-specified environment variable for the Jenkins controller process.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Additionally, this form validation method did not require POST requests, resulting in a cross-site request forgery vulnerability.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  This form validation method now requires POST requests and Overall/Administer permissions.
+plugins:
+- name: jx-resources
+  previous: 1.0.36
+  fixed: 1.0.37</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1410 (1)
+reporter: Daniel Beck, CloudBees, Inc.
+title: CSRF vulnerability and missing permission checks in PLUGIN_NAME allowed SSRF
+cve: CVE-2019-10331 (CSRF), CVE-2019-10332 (missing permission checks)
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+description: |-
+  A missing permission check in a form validation method in PLUGIN_NAME allowed users with Overall/Read permission to initiate a connection test to an attacker-specified server with attacker-specified username and password.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Additionally, the form validation method did not require POST requests, resulting in a CSRF vulnerability.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  This form validation method now requires POST requests and Overall/Administer permissions.
+plugins:
+- name: electricflow
+  previous: 1.1.6 # actually 1.1.5, working around rendering bug
+  fixed: 1.1.7 # actually 1.1.6, working around rendering bug</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1410 (2)
+reporter: Daniel Beck, CloudBees, Inc.
+title: Missing permission checks in PLUGIN_NAME
+cve: CVE-2019-10333
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+description: |-
+  Various form validation and form autocompletion methods in PLUGIN_NAME lacked permission checks.
+  This allowed attackers with Overall/Read access to obtain information about the configuration of PLUGIN_NAME, as well as the configuration and data of connected ElectricFlow servers.</p>
+<div class="literalblock">
+<div class="content">
+<pre>  These form validation and autocompletion methods now require Overall/Administer or Job/Configure permission, as appropriate for the given method.
+plugins:
+- name: electricflow
+  previous: 1.1.6 # actually 1.1.5, working around rendering bug
+  fixed: 1.1.7 # actually 1.1.6, working around rendering bug</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1411
+reporter: Daniel Beck, CloudBees, Inc.
+title: PLUGIN_NAME globally and unconditionally disabled SSL/TLS certificate validation
+cve: CVE-2019-10334
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N
+description: |-
+  PLUGIN_NAME unconditionally disabled SSL/TLS certificate validation for the entire Jenkins controller JVM during the deployment/publication of an application.</p>
+<div class="literalblock">
+<div class="content">
+<pre>PLUGIN_NAME no longer does that.
+Instead, the existing opt-in option to ignore SSL/TLS errors is used during deployment for the specific connection.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  This issue was caused by an incomplete fix for xref:2019-02-19.adoc#SECURITY-937[SECURITY-937].
+plugins:
+- name: electricflow
+  previous: 1.1.6 # actually 1.1.5, working around rendering bug
+  fixed: 1.1.7 # actually 1.1.6, working around rendering bug</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1412
+reporter: Daniel Beck, CloudBees, Inc.
+title: XSS vulnerability in build metadata contributed by PLUGIN_NAME
+cve: CVE-2019-10335
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
+description: |-
+  The plugin adds metadata displayed on build pages during its operations.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Any user content was not escaped, resulting in a cross-site scripting vulnerability allowing users with Job/Configure permission, or attackers controlling API responses received from ElectricFlow to render arbitrary HTML and JavaScript on Jenkins build pages.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  Build metadata is now filtered through a HTML formatter that only allows showing basic HTML, neutralizing any unsafe data.
+  Additionally, all builds executed after the security update is applied will now properly escape content received from ElectricFlow.
+plugins:
+- name: electricflow
+  previous: 1.1.6 # actually 1.1.5, working around rendering bug
+  fixed: 1.1.7 # actually 1.1.6, working around rendering bug</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1420
+# reporter: (Uncredited)
+title: XSS vulnerability in PLUGIN_NAME affecting job configuration forms
+cve: CVE-2019-10336
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N
+description: |-
+  The configuration forms of various post-build steps contributed by PLUGIN_NAME were vulnerable to cross-site scripting.</p>
+<div class="literalblock">
+<div class="content">
+<pre>This allowed attackers able to control the output of connected ElectricFlow servers' APIs to inject arbitrary HTML and JavaScript into the configuration form.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  PLUGIN_NAME no longer interprets HTML/JavaScript in responses from ElectricFlow server APIs on job configuration forms.
+plugins:
+- name: electricflow
+  previous: 1.1.6
+  fixed: 1.1.7</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

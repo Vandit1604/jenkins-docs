@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins Security Advisory 2017-07-10 :: Jenkins Docs</title>
+    <link rel="canonical" href="https://docs.jenkins.com/security/advisories/2017-07-10.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+<link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="security" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Security Advisories</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Administrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-administrators.html">Overview for Jenkins Administrators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../fixing.html">How We Fix Security Issues</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Reporters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../reporting.html">"Reporting Security Vulnerabilities"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Maintainers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-maintainers.html">"Overview for Plugin Maintainers"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Managing Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jenkins Security Team</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../team.html">About the Jenkins Security Team</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../improvements.html">Improvements by the Security Team</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Security Advisories</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.426.1/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorials/2.426.1/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorials/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.426.1/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.426.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins Security Advisories</a></li>
+    <li><a href="2017-07-10.html">Jenkins Security Advisory 2017-07-10</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/advisories/2017-07-10.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins Security Advisory 2017-07-10</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This advisory originally recommended upgrading Poll SCM plugin to version 1.4. This was incorrect. Version 1.3.1 contains the fix.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This advisory announces vulnerabilities in these Jenkins plugins:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>plugin:docker-commons[Docker Commons Plugin]</p>
+</li>
+<li>
+<p>plugin:git[Git Plugin]</p>
+</li>
+<li>
+<p>plugin:github-branch-source[GitHub Branch Source Plugin]</p>
+</li>
+<li>
+<p>plugin:parameterized-trigger[Parameterized Trigger Plugin]</p>
+</li>
+<li>
+<p>plugin:periodicbackup[Periodic Backup Plugin]</p>
+</li>
+<li>
+<p>plugin:pipeline-build-step[Pipeline: Build Step Plugin]</p>
+</li>
+<li>
+<p>plugin:workflow-cps[Pipeline: Groovy Plugin]</p>
+</li>
+<li>
+<p>plugin:pollscm[Poll SCM Plugin]</p>
+</li>
+<li>
+<p>plugin:role-strategy[Role-based Authorization Strategy Plugin]</p>
+</li>
+<li>
+<p>plugin:script-security[Script Security Plugin]</p>
+</li>
+<li>
+<p>plugin:sidebar-link[Sidebar Link Plugin]</p>
+</li>
+<li>
+<p>plugin:ssh[SSH Plugin]</p>
+</li>
+<li>
+<p>plugin:subversion[Subversion Plugin]</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_description"><a class="anchor" href="#_description"></a>Description</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_parameterized_trigger_plugin_fails_to_check_itembuild_permission"><a class="anchor" href="#_parameterized_trigger_plugin_fails_to_check_itembuild_permission"></a>Parameterized Trigger Plugin fails to check Item/Build permission</h3>
+<div class="paragraph">
+<p><strong>SECURITY-201 / CVE-2017-1000084</strong></p>
+</div>
+<div class="paragraph">
+<p>Builds in Jenkins are associated with an authentication that controls the permissions that the build has to interact with other elements in Jenkins.
+By default, builds run as SYSTEM and are unconstrained unless plugins implement specific additional permission checks.</p>
+</div>
+<div class="paragraph">
+<p>Plugins like plugin:authorize-project[Authorize Project Plugin] allow changing the authentication associated with a build.</p>
+</div>
+<div class="paragraph">
+<p>The Parameterized Trigger Plugin did not check the build authentication it was running as and allowed triggering any other project in Jenkins.</p>
+</div>
+<div class="paragraph">
+<p>The plugin has been adapted to now check for Item/Build permission before triggering a downstream build.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_csrf_vulnerability_and_insufficient_permission_checks_allow_capturing_credentials_in_subversion_plugin"><a class="anchor" href="#_csrf_vulnerability_and_insufficient_permission_checks_allow_capturing_credentials_in_subversion_plugin"></a>CSRF vulnerability and insufficient permission checks allow capturing credentials in Subversion Plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>SECURITY-303 / CVE-2017-1000085</strong></p>
+</div>
+<div class="paragraph">
+<p>Subversion Plugin connects to a user-specified Subversion repository as part of form validation (e.g. to retrieve a list of tags).</p>
+</div>
+<div class="paragraph">
+<p>This functionality improperly checked permissions, allowing any user with Item/Build permission (but not Item/Configure) to connect to any web server or Subversion server and send credentials with a known ID, thereby possibly capturing them.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, this functionality did not require POST requests be used, thereby allowing the above to be performed without direct access to Jenkins via Cross-Site Request Forgery attacks.</p>
+</div>
+<div class="paragraph">
+<p>This functionality now properly checks permissions and is only available via POST.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_missing_permission_checks_in_periodic_backup_plugin_allow_every_user_to_change_settings"><a class="anchor" href="#_missing_permission_checks_in_periodic_backup_plugin_allow_every_user_to_change_settings"></a>Missing permission checks in Periodic Backup Plugin allow every user to change settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>SECURITY-335 / CVE-2017-1000086</strong></p>
+</div>
+<div class="paragraph">
+<p>The Periodic Backup Plugin did not perform any permission checks, allowing any user with Overall/Read access to change its settings, trigger backups, restore backups, and also delete all previous backups via log rotation.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, the plugin was not requiring requests to its API be sent via POST, thereby opening itself to Cross-Site Request Forgery attacks.</p>
+</div>
+<div class="paragraph">
+<p>The plugin configuration now properly checks permissions and is only available via POST.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unprivileged_users_with_overallread_access_are_able_to_enumerate_credential_ids_in_github_branch_source_plugin"><a class="anchor" href="#_unprivileged_users_with_overallread_access_are_able_to_enumerate_credential_ids_in_github_branch_source_plugin"></a>Unprivileged users with Overall/Read access are able to enumerate credential IDs in GitHub Branch Source Plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>SECURITY-342 / CVE-2017-1000087</strong></p>
+</div>
+<div class="paragraph">
+<p>GitHub Branch Source provides a list of applicable credential IDs to allow users configuring a job to select the one they&#8217;d like to use.</p>
+</div>
+<div class="paragraph">
+<p>This functionality did not check permissions, allowing any user with Overall/Read permission to get a list of valid credentials IDs.
+Those could be used as part of an attack to capture the credentials using another vulnerability.</p>
+</div>
+<div class="paragraph">
+<p>An enumeration of credentials IDs in this plugin now requires the permission to have Extended Read permission (when that permission is enabled; otherwise Configure permission) to the job in whose context credentials are being accessed.
+If no job context exists, Overall/Administer permission is required.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_persisted_xss_vulnerability_in_sidebar_link_plugin"><a class="anchor" href="#_persisted_xss_vulnerability_in_sidebar_link_plugin"></a>Persisted XSS Vulnerability in Sidebar Link Plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>SECURITY-352 / CVE-2017-1000088</strong></p>
+</div>
+<div class="paragraph">
+<p>The Sidebar Link plugin allows users able to configure jobs, views, and agents to add entries to the sidebar of these objects.</p>
+</div>
+<div class="paragraph">
+<p>There was no input validation, which meant users were able to use <code>javascript:</code> schemes for these links, a persisted XSS vulnerability.</p>
+</div>
+<div class="paragraph">
+<p>Now, only a set of approved schemes are allowed by default: <code>http</code>, <code>https</code>, <code>ftp</code>, <code>ftps</code>, <code>mailto</code>, <code>news</code>, <code>irc, gopher</code>, <code>nntp</code>, <code>feed</code>, <code>telnet</code>, <code>mms</code>, <code>rtsp</code>, <code>svn</code>, <code>tel</code>, <code>fax</code>, <code>xmpp</code>, as well as relative links.
+Sidebar entries configured with prohibited schemes instead redirect to an error page in Jenkins explaining that it&#8217;s prohibited.</p>
+</div>
+<div class="paragraph">
+<p>To add or remove from this list of schemes, provide the Java system property <code>hudson.plugins.sidebar_link.LinkProtection.whitelistedSchemes</code> with the complete comma-separated list of schemes to allow.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pipeline_build_step_plugin_fails_to_check_itembuild_permission"><a class="anchor" href="#_pipeline_build_step_plugin_fails_to_check_itembuild_permission"></a>Pipeline: Build Step Plugin fails to check Item/Build permission</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>SECURITY-433 / CVE-2017-1000089</strong></p>
+</div>
+<div class="paragraph">
+<p>Builds in Jenkins are associated with an authentication that controls the permissions that the build has to interact with other elements in Jenkins.
+By default, builds run as SYSTEM and are unconstrained unless plugins implement specific additional permission checks.</p>
+</div>
+<div class="paragraph">
+<p>Plugins like plugin:authorize-project[Authorize Project Plugin] allow changing the authentication associated with a build.</p>
+</div>
+<div class="paragraph">
+<p>The Pipeline: Build Step Plugin did not check the build authentication it was running as and allowed triggering any other project in Jenkins.</p>
+</div>
+<div class="paragraph">
+<p>The plugin has been adapted to now check for Item/Build permission before triggering a downstream build.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_csrf_vulnerability_in_role_based_authorization_strategy_plugin_configuration"><a class="anchor" href="#_csrf_vulnerability_in_role_based_authorization_strategy_plugin_configuration"></a>CSRF vulnerability in Role-based Authorization Strategy Plugin configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>SECURITY-516 / CVE-2017-1000090</strong></p>
+</div>
+<div class="paragraph">
+<p>Role-based Authorization Strategy Plugin was not requiring requests to its API be sent via POST, thereby opening itself to Cross-Site Request Forgery attacks. This allowed attackers to add administrator role to any user, or to remove the authorization configuration, preventing legitimate access to Jenkins.</p>
+</div>
+<div class="paragraph">
+<p>This functionality is now only available via POST.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_csrf_vulnerability_and_insufficient_permission_checks_allow_capturing_credentials_in_github_branch_source_plugin"><a class="anchor" href="#_csrf_vulnerability_and_insufficient_permission_checks_allow_capturing_credentials_in_github_branch_source_plugin"></a>CSRF vulnerability and insufficient permission checks allow capturing credentials in GitHub Branch Source Plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>SECURITY-527 / CVE-2017-1000091</strong></p>
+</div>
+<div class="paragraph">
+<p>GitHub Branch Source Plugin connects to a user-specified GitHub API URL (e.g. GitHub Enterprise) as part of form validation and completion (e.g. to verify Scan Credentials are correct).</p>
+</div>
+<div class="paragraph">
+<p>This functionality improperly checked permissions, allowing any user with Overall/Read access to Jenkins to connect to any web server and send credentials with a known ID, thereby possibly capturing them.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, this functionality did not require POST requests be used, thereby allowing the above to be performed without direct access to Jenkins via Cross-Site Request Forgery.</p>
+</div>
+<div class="paragraph">
+<p>This functionality now properly checks permissions and is only available via POST.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_csrf_vulnerability_in_git_plugin_allows_capturing_credentials"><a class="anchor" href="#_csrf_vulnerability_in_git_plugin_allows_capturing_credentials"></a>CSRF vulnerability in Git plugin allows capturing credentials</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>SECURITY-528 / CVE-2017-1000092</strong></p>
+</div>
+<div class="paragraph">
+<p>Git Plugin connects to a user-specified Git repository as part of form validation.</p>
+</div>
+<div class="paragraph">
+<p>An attacker with no direct access to Jenkins but able to guess at a username/password credentials ID could trick a developer with job configuration permissions into following a link with a maliciously crafted Jenkins URL which would result in the Jenkins Git client sending the username and password to an attacker-controlled server.</p>
+</div>
+<div class="paragraph">
+<p>This functionality now is only available via POST.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_csrf_vulnerability_in_poll_scm_plugin_allowed_unauthorized_polling"><a class="anchor" href="#_csrf_vulnerability_in_poll_scm_plugin_allowed_unauthorized_polling"></a>CSRF vulnerability in Poll SCM Plugin allowed unauthorized polling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>SECURITY-529 / CVE-2017-1000093</strong></p>
+</div>
+<div class="paragraph">
+<p>Poll SCM Plugin was not requiring requests to its API be sent via POST, thereby opening itself to Cross-Site Request Forgery attacks. This allowed attackers to initiate polling of projects with a known name.</p>
+</div>
+<div class="paragraph">
+<p>While Jenkins in general does not consider polling to be a protection-worthy action as it&#8217;s similar to cache invalidation, the plugin specifically adds a permission to be able to use this functionality, and this issue undermines that permission.</p>
+</div>
+<div class="paragraph">
+<p>This functionality now is only available via POST.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unprivileged_users_with_overallread_access_are_able_to_enumerate_credential_ids_in_docker_commons_plugin"><a class="anchor" href="#_unprivileged_users_with_overallread_access_are_able_to_enumerate_credential_ids_in_docker_commons_plugin"></a>Unprivileged users with Overall/Read access are able to enumerate credential IDs in Docker Commons Plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>SECURITY-533 / CVE-2017-1000094</strong></p>
+</div>
+<div class="paragraph">
+<p>Docker Commons Plugin provides a list of applicable credential IDs to allow users configuring a job to select the one they&#8217;d like to use to authenticate with a Docker Registry.</p>
+</div>
+<div class="paragraph">
+<p>This functionality did not check permissions, allowing any user with Overall/Read permission to get a list of valid credentials IDs.
+Those could be used as part of an attack to capture the credentials using another vulnerability.</p>
+</div>
+<div class="paragraph">
+<p>An enumeration of credentials IDs in this plugin now requires the permission to have Extended Read permission (when that permission is enabled; otherwise Configure permission) to the job in whose context credentials are being accessed.
+If no job context exists, Overall/Administer permission is required.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unsafe_methods_in_the_default_list_of_approved_signatures_in_script_security_plugin"><a class="anchor" href="#_unsafe_methods_in_the_default_list_of_approved_signatures_in_script_security_plugin"></a>Unsafe methods in the default list of approved signatures in Script Security Plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>SECURITY-538 / CVE-2017-1000095</strong></p>
+</div>
+<div class="paragraph">
+<p>The default list of approved signatures included the entries:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>DefaultGroovyMethods.putAt(Object, String, Object)
+DefaultGroovyMethods.getAt(Object, String)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These allowed circumventing many of the access restrictions implemented in the script sandbox by using e.g. <code>currentBuild['rawBuild']</code> rather than <code>currentBuild.rawBuild</code>.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, the following entries allowed accessing private data that would not be accessible otherwise due to script security:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>groovy.json.JsonOutput.toJson(Closure)
+groovy.json.JsonOutput.toJson(Object)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These have now been removed from the list of approved signatures and added to the list of dangerous signatures.</p>
+</div>
+<div class="paragraph">
+<p>Scripts, such as Pipeline jobs, that integrate with Script Security and use these methods will now fail.
+Use of these methods will appear on the In-Process Script Approval page, and it warns administrators that they are unsafe to approve.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_arbitrary_code_execution_due_to_incomplete_sandbox_protection_in_pipeline_groovy_plugin"><a class="anchor" href="#_arbitrary_code_execution_due_to_incomplete_sandbox_protection_in_pipeline_groovy_plugin"></a>Arbitrary code execution due to incomplete sandbox protection in Pipeline: Groovy Plugin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>SECURITY-551 / CVE-2017-1000096</strong></p>
+</div>
+<div class="paragraph">
+<p>Pipelines are subject to <em>script security</em>: Either the entire Pipeline needs to be approved, or it runs in a sandbox, with only approved methods etc. allowed to be called.</p>
+</div>
+<div class="paragraph">
+<p>Constructors, instance variable initializers, and instance initializers in Pipeline scripts were not subject to sandbox protection, and could therefore execute arbitrary code.</p>
+</div>
+<div class="paragraph">
+<p>This could be exploited e.g. by regular Jenkins users with the permission to configure Pipelines in Jenkins, or by trusted committers to repositories containing Jenkinsfiles.</p>
+</div>
+<div class="paragraph">
+<p>These language elements are now subject to sandbox protection.</p>
+</div>
+<div class="paragraph">
+<p>This change may cause existing scripts relying on the incomplete sandbox protection to start failing, and requiring additional script approval.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The fix for this introduced a regression that results in constructors and instance initializers of classes defined in pipeline scripts no longer being able to set <code>final</code> fields. Static initializers are no longer able to set <code>static final</code> fields. The workaround is to make fields non-final.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ssh_plugin_stored_credentials_in_plain_text_configuration_files"><a class="anchor" href="#_ssh_plugin_stored_credentials_in_plain_text_configuration_files"></a>SSH Plugin stored credentials in plain text configuration files</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>JENKINS-21436 / CVE-2017-1000245</strong></p>
+</div>
+<div class="paragraph">
+<p>The SSH Plugin stores credentials which allow jobs to access remote servers via the SSH protocol.
+User passwords and passphrases for encrypted SSH keys are stored in plaintext in a configuration file.</p>
+</div>
+<div class="paragraph">
+<p>SSH Plugin now integrates with the plugin:credentials[Credentials Plugin] and existing credentials are migrated.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_severity"><a class="anchor" href="#_severity"></a>Severity</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>SECURITY-201: <a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N">medium</a></p>
+</li>
+<li>
+<p>SECURITY-303: <a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N">low</a></p>
+</li>
+<li>
+<p>SECURITY-335: <a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L">high</a></p>
+</li>
+<li>
+<p>SECURITY-342: <a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N">medium</a></p>
+</li>
+<li>
+<p>SECURITY-352: <a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N">medium</a></p>
+</li>
+<li>
+<p>SECURITY-433: <a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N">low</a></p>
+</li>
+<li>
+<p>SECURITY-516: <a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N">medium</a></p>
+</li>
+<li>
+<p>SECURITY-527: <a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N">low</a></p>
+</li>
+<li>
+<p>SECURITY-528: <a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N">low</a></p>
+</li>
+<li>
+<p>SECURITY-529: <a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N">low</a></p>
+</li>
+<li>
+<p>SECURITY-533: <a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N">medium</a></p>
+</li>
+<li>
+<p>SECURITY-538: <a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H">high</a></p>
+</li>
+<li>
+<p>SECURITY-551: <a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H">high</a></p>
+</li>
+<li>
+<p>JENKINS-21436: <a href="https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N">medium</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_affected_versions"><a class="anchor" href="#_affected_versions"></a>Affected versions</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Docker Commons Plugin up to and including version 1.7</p>
+</li>
+<li>
+<p>Git Plugin up to and including version 3.3.1 and 2.4.0-beta-1</p>
+</li>
+<li>
+<p>GitHub Branch Source Plugin up to and including version 2.0.7 and 2.2.0-beta-1</p>
+</li>
+<li>
+<p>Parameterized Trigger Plugin up to and including version 2.34</p>
+</li>
+<li>
+<p>Periodic Backup Plugin up to and including version 1.4</p>
+</li>
+<li>
+<p>Pipeline: Build Step Plugin up to and including version 2.5</p>
+</li>
+<li>
+<p>Pipeline: Groovy Plugin up to and including version 2.36</p>
+</li>
+<li>
+<p>Poll SCM Plugin up to and including version 1.3</p>
+</li>
+<li>
+<p>Role-based Authorization Strategy Plugin up to and including version 2.5.0</p>
+</li>
+<li>
+<p>Script Security Plugin up to and including version 1.29</p>
+</li>
+<li>
+<p>Sidebar Link Plugin up to and including version 1.8</p>
+</li>
+<li>
+<p>SSH Plugin up to and including version 2.4</p>
+</li>
+<li>
+<p>Subversion Plugin up to and including version 2.8</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fix"><a class="anchor" href="#_fix"></a>Fix</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Docker Commons Plugin should be updated to version 1.8</p>
+</li>
+<li>
+<p>Git Plugin should be updated to version 3.3.2 or 3.4.0-beta-2</p>
+</li>
+<li>
+<p>GitHub Branch Source Plugin should be updated to version 2.0.8 or 2.2.0-beta-2</p>
+</li>
+<li>
+<p>Parameterized Trigger Plugin should be updated to version 2.35</p>
+</li>
+<li>
+<p>Periodic Backup Plugin should be updated to version 1.5</p>
+</li>
+<li>
+<p>Pipeline: Build Step Plugin should be updated to version 2.5.1</p>
+</li>
+<li>
+<p>Pipeline: Groovy Plugin should be updated to version 2.36.1</p>
+</li>
+<li>
+<p>Poll SCM Plugin should be updated to version 1.3.1</p>
+</li>
+<li>
+<p>Role-based Authorization Strategy Plugin should be updated to version 2.5.1</p>
+</li>
+<li>
+<p>Script Security Plugin should be updated to version 1.29.1</p>
+</li>
+<li>
+<p>Sidebar Link Plugin should be updated to version 1.9</p>
+</li>
+<li>
+<p>SSH Plugin should be updated to version 2.5</p>
+</li>
+<li>
+<p>Subversion Plugin should be updated to version 2.9</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These versions include fixes to the vulnerabilities described above.
+All prior versions are affected by these vulnerabilities unless otherwise indicated.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_credit"><a class="anchor" href="#_credit"></a>Credit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Jenkins project would like to thank the reporters for discovering and <a href="../index.html#reporting-vulnerabilities" class="xref page">reporting</a> these vulnerabilities:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Daniel Beck, CloudBees, Inc.</strong> for SECURITY-529</p>
+</li>
+<li>
+<p><strong>Jesse Glick, CloudBees, Inc.</strong> for SECURITY-303, SECURITY-342, SECURITY-527, SECURITY-528</p>
+</li>
+<li>
+<p><strong>Karl Shultz, CloudBees, Inc.</strong> for SECURITY-533</p>
+</li>
+<li>
+<p><strong>Nathan Rennie-Waldock</strong> for SECURITY-335</p>
+</li>
+<li>
+<p><strong>Simon St John-Green</strong> for SECURITY-551</p>
+</li>
+<li>
+<p><strong>Steven Christou, CloudBees, Inc.</strong> for SECURITY-201</p>
+</li>
+<li>
+<p><strong>Suhas Sunil Gaikwad @IamSuhasGaikwad</strong> for SECURITY-352</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

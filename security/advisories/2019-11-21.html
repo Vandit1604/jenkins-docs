@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Jenkins Docs</title>
+    <link rel="canonical" href="https://docs.jenkins.com/security/advisories/2019-11-21.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+<link rel="icon" href="../../_/jenkins.svg" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="security" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Jenkins Security Advisories</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Administrators</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-administrators.html">Overview for Jenkins Administrators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scheduling.html">How We Schedule Security Advisories</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../fixing.html">How We Fix Security Issues</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Reporters</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../reporting.html">"Reporting Security Vulnerabilities"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cna.html">Jenkins CVE Numbers Authority</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">For Maintainers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../for-maintainers.html">"Overview for Plugin Maintainers"</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../plugins.html">Managing Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Jenkins Security Team</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../team.html">About the Jenkins Security Team</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../improvements.html">Improvements by the Security Team</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jenkins Security Advisories</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">All of Jenkins Images</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Jenkins Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Jenkins Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Jenkins Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Jenkins Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../project/index.html">Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Jenkins Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Jenkins Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../solutions/2.426.1/index.html">Jenkins Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../solutions/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Jenkins Special Interest Groups</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorials/2.426.1/index.html">Jenkins Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorials/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.426.1/index.html">Jenkins User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.426.1/index.html">2.426.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.426.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/security/modules/ROOT/pages/advisories/2019-11-21.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div class="paragraph">
+<p>layout: advisory
+title: Jenkins Security Advisory 2019-11-21
+section: security
+kind: plugins
+issues:</p>
+</div>
+<h1 id="_plugins_with_fixed_issues_coordinated" class="sect0"><a class="anchor" href="#_plugins_with_fixed_issues_coordinated"></a>Plugins with fixed issues (coordinated)</h1>
+<div class="ulist">
+<ul>
+<li>
+<p>id: SECURITY-1658
+reporter: Nils Emmerich of ERNW Research GmbH
+title: Sandbox bypass vulnerability in PLUGIN_NAME
+cve: CVE-2019-16538
+cvss:
+  severity: High
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+description: |-
+  Sandbox protection in PLUGIN_NAME could be circumvented through closure default parameter expressions.</p>
+<div class="literalblock">
+<div class="content">
+<pre>This allowed attackers able to specify and run sandboxed scripts to execute arbitrary code in the context of the Jenkins controller JVM.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  These expressions are now subject to sandbox protection.
+plugins:
+- name: script-security
+  previous: '1.67'
+  fixed: '1.68'</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1634
+reporter: Daniel Beck, CloudBees, Inc.
+title: PLUGIN_NAME allowed users with Overall/Read permission to delete arbitrary files
+cve: CVE-2019-16539 (permission check), CVE-2019-16540 (path traversal)
+cvss:
+  severity: High
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L
+description: |-
+  PLUGIN_NAME did not validate the paths submitted for the "Delete Support Bundles" feature.
+  This allowed users to delete arbitrary files on the Jenkins controller file system accessible to the OS user account running Jenkins.</p>
+<div class="literalblock">
+<div class="content">
+<pre>Additionally, this endpoint did not perform a permission check, allowing users with Overall/Read permission to delete support bundles, and any arbitrary other file, with a known name/path.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  PLUGIN_NAME now only allows the deletion of support bundles and related files listed on the UI through this feature.
+  It also ensures that only users with "Download Bundle" permission are able to delete support bundles.
+plugins:
+- name: support-core
+  previous: '2.63'
+  fixed: '2.64'</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1106
+reporter: Daniel Beck, CloudBees, Inc.
+title: Folder-scoped Jira sites in PLUGIN_NAME were able to access System-scoped credentials
+cve: CVE-2019-16541
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
+description: |-
+  PLUGIN_NAME allows the definition of per-folder Jira sites.</p>
+<div class="literalblock">
+<div class="content">
+<pre>The credentials lookup for this feature did not set the appropriate context, allowing the use of System-scoped credentials otherwise reserved for use in the global configuration.
+This allowed users with Item/Configure permission on the folder to access credentials they're not entitled to, and potentially capture them.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  PLUGIN_NAME now defines the appropriate folder context for credential lookup.
+  As a side effect, existing per-folder Jira sites may lose access to already configured System-scoped credentials, as if no credential was specified in the first place.
+plugins:
+- name: jira
+  previous: '3.0.10'
+  fixed: '3.0.11'</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h1 id="_other_plugins_with_fixed_issues" class="sect0"><a class="anchor" href="#_other_plugins_with_fixed_issues"></a>Other plugins with fixed issues</h1>
+<div class="ulist">
+<ul>
+<li>
+<p>id: SECURITY-1539
+reporter: James Holderness, IB Boost
+title: PLUGIN_NAME stored credentials in plain text
+cve: CVE-2019-16542
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+description: |-
+  PLUGIN_NAME stored an Anchore.io service password unencrypted in job <code>config.xml</code> files as part of its configuration.
+  This credential could be viewed by users with Extended Read permission or access to the Jenkins controller file system.</p>
+<div class="literalblock">
+<div class="content">
+<pre>  As the affected functionality has been deprecated, and the affected Anchore.io service has been shut down in late 2018, the affected feature has been removed.
+  The password will be removed from the job configuration once it is saved again.
+plugins:
+- name: anchore-container-scanner
+  previous: '1.0.19'
+  fixed: '1.0.20'</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1554
+reporter: James Holderness, IB Boost
+title: PLUGIN_NAME stored credentials in plain text
+cve: CVE-2019-16543
+cvss:
+  severity: Low
+  vector: CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+description: |-
+  PLUGIN_NAME stored a credential unencrypted in its global configuration file <code>com.inflectra.spiratest.plugins.SpiraBuilder.xml</code> on the Jenkins controller.
+  This credential could be viewed by users with access to the Jenkins controller file system.</p>
+<div class="literalblock">
+<div class="content">
+<pre>  PLUGIN_NAME now stores this credential encrypted once its configuration is saved again.
+plugins:
+- name: inflectra-spira-integration
+  previous: '3.2.2'
+  fixed: '3.2.3'</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1584
+reporter: Matt Sicker, CloudBees, Inc.
+title: PLUGIN_NAME did not verify SSH host keys
+cve: CVE-2019-16546
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N
+description: |-
+  PLUGIN_NAME did not use SSH host key verification when connecting to VMs launched by the plugin.
+  This lack of verification could be abused by a MitM attacker to intercept these connections to attacker-specified build agents without warning.</p>
+<div class="literalblock">
+<div class="content">
+<pre>  PLUGIN_NAME now verifies SSH host keys before executing any commands on agents.
+plugins:
+- name: google-compute-engine
+  previous: '4.1.1'
+  fixed: '4.2.0'</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1585
+reporter: Matt Sicker, CloudBees, Inc.
+title: PLUGIN_NAME disclosed environment information to users with Overall/Read permission
+cve: CVE-2019-16547
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+description: |-
+  PLUGIN_NAME did not verify permissions on multiple auto-complete API endpoints.
+  This allowed users with Overall/Read permissions to view various metadata about the running cloud environment.</p>
+<div class="literalblock">
+<div class="content">
+<pre>  PLUGIN_NAME now requires the appropriate Job/Configure permission to view these metadata.
+plugins:
+- name: google-compute-engine
+  previous: '4.1.1'
+  fixed: '4.2.0'</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-1586
+reporter: Matt Sicker, CloudBees, Inc.
+title: CSRF vulnerability in PLUGIN_NAME allowed provisioning agents
+cve: CVE-2019-16548
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L
+description: |-
+  PLUGIN_NAME did not require POST requests on an API endpoint.
+  This CSRF vulnerability allowed attackers to provision new agents.</p>
+<div class="literalblock">
+<div class="content">
+<pre>  PLUGIN_NAME now requires POST requests for this API endpoint.
+plugins:
+- name: google-compute-engine
+  previous: '4.1.1'
+  fixed: '4.2.0'</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<h1 id="_plugins_with_both_fixed_and_unfixed_issues" class="sect0"><a class="anchor" href="#_plugins_with_both_fixed_and_unfixed_issues"></a>Plugins with both fixed and unfixed issues</h1>
+<div class="ulist">
+<ul>
+<li>
+<p>id: SECURITY-727 (1)
+# reporter: Uncredited
+title: PLUGIN_NAME stored credentials in plain text
+cve: CVE-2019-16544
+cvss:
+  severity: Medium
+  vector: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+description: |-
+  PLUGIN_NAME stored credentials unencrypted in job <code>config.xml</code> files on the Jenkins controller as part of its post-build step configuration.
+  This credential could be viewed by users with Extended Read permission or access to the Jenkins controller file system.</p>
+<div class="literalblock">
+<div class="content">
+<pre>  PLUGIN_NAME now stores these credentials encrypted once the job configuration is saved again.
+plugins:
+- name: qmetry-for-jira-test-management
+  previous: '1.12'
+  fixed: '1.13'</pre>
+</div>
+</div>
+</li>
+<li>
+<p>id: SECURITY-727 (2)
+# reporter: Uncredited
+title: PLUGIN_NAME shows plain text password in configuration form
+cve: CVE-2019-16545
+cvss:
+  severity: Low
+  vector: CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N
+description: |-
+  PLUGIN_NAME stores a credential as part of its post-build step configuration.</p>
+<div class="literalblock">
+<div class="content">
+<pre>While the password is stored encrypted on disk since PLUGIN_NAME 1.13, it is transmitted in plain text as part of the configuration form.
+This can result in exposure of the password through browser extensions, cross-site scripting vulnerabilities, and similar situations.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  As of publication of this advisory, there is no fix.
+plugins:
+- name: qmetry-for-jira-test-management
+  previous: '1.13'</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

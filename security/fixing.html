@@ -28,10 +28,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">For Adminstrators</span>
+    <span class="nav-text">For Administrators</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="for-administrators.html">Overview for Jenkins Administrators</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="advisories/index.html">Security Advisories</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="scheduling.html">How We Schedule Security Advisories</a>
@@ -213,7 +216,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Jenkins Security Advisories</a></li>
-    <li>For Adminstrators</li>
+    <li>For Administrators</li>
     <li><a href="fixing.html">How We Fix Security Issues</a></li>
   </ul>
 </nav>
@@ -247,16 +250,19 @@ They will generally hold true for any security fixes developed by the Jenkins se
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_minimal"><a class="anchor" href="#_minimal"></a>Minimal</h3>
+<div class="sect1">
+<h2 id="_minimal"><a class="anchor" href="#_minimal"></a>Minimal</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Given the choice between a simple and obviously correct fix and a larger overhaul/redesign, we choose the former.
 Since security fixes undergo only limited manual testing before publishing, it&#8217;s safer to postpone larger changes until after the security issue has been addressed and to deliver them afterwards as a regular enhancement.
 While it&#8217;s annoying for administrators to have to downgrade a regular release because of a regression, having to choose between a secure and a functioning release is much worse.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_independently_released"><a class="anchor" href="#_independently_released"></a>Independently released</h3>
+</div>
+<div class="sect1">
+<h2 id="_independently_released"><a class="anchor" href="#_independently_released"></a>Independently released</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Security updates in plugins should not pick up whatever changes on the default branch are still unreleased.
 This would increase the risk of regressions that force administrators to choose between a functional and a secure configuration.
@@ -269,8 +275,10 @@ In the case of LTS releases, we deliver regular bug fixes and improvements and s
 This rarely results in problems, as bug fixes and improvements are well-tested before being backported into LTS.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_tested"><a class="anchor" href="#_tested"></a>Tested</h3>
+</div>
+<div class="sect1">
+<h2 id="_tested"><a class="anchor" href="#_tested"></a>Tested</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Security fixes by the Jenkins security team will have corresponding autotests confirming they work as expected.</p>
 </div>
@@ -286,6 +294,7 @@ We believe that the advantages of confirming that security fixes work, and remai
 </td>
 </tr>
 </table>
+</div>
 </div>
 </div>
 <nav class="pagination">
