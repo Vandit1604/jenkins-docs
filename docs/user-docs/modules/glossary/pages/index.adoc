@@ -134,7 +134,7 @@ A deprecated term, synonymous with xref:#job[job].
 A user-defined model of a continuous delivery pipeline, for more read the xref:user-docs:pipeline:index.adoc[Pipeline chapter] in this handbook.
 
 [#plugin]
-=== Plugin:
+=== Plugin
 
 An extension to Jenkins functionality provided separately from Jenkins xref:#core[Core].
 
@@ -192,22 +192,27 @@ have been put in place on the Jenkins xref:#controller[Controller].
 [#build-status]
 == Build Status
 
+[#aborted]
 === Aborted
 
 The xref:#build[Build] was interrupted before it reaches its expected end. For example, the user has stopped it manually or there was a time-out.
 
+[#failed]
 === Failed
 
 The xref:#build[Build] had a fatal error.
 
+[#stable]
 === Stable
 
 The xref:#build[Build] was xref:#successful[Successful] and no xref:#publisher[Publisher] reports it as xref:#unstable[Unstable].
 
+[#successful]
 === Successful
 
 The xref:#build[Build] has no compilation errors.
 
+[#unstable]
 === Unstable
 
 The xref:#build[Build] had some errors but they were not fatal. A xref:#build[Build] is unstable if it was built successfully and one or more publishers report it unstable. For example if the JUnit publisher is configured and a test fails then the xref:#build[Build] will be marked unstable.

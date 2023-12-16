@@ -86,14 +86,14 @@ project.
 
 [role=declarative-pipeline]
 The Declarative Pipeline example above contains the minimum necessary structure
-to implement a continuous delivery pipeline. The <<syntax#agent, agent
-directive>>, which is required, instructs Jenkins to allocate an executor and
+to implement a continuous delivery pipeline. The xref:user-docs:pipeline:syntax.adoc#agent[agent
+directive], which is required, instructs Jenkins to allocate an executor and
 workspace for the Pipeline. Without an `agent` directive, not only is the
 Declarative Pipeline not valid, it would not be capable of doing any work! By
 default the `agent` directive ensures that the source repository is checked out
 and made available for steps in the subsequent stages.
 
-The xref:#syntax#stages[ stages directive], and xref:#syntax#steps[ steps directives]
+The xref:user-docs:pipeline:syntax.adoc#stages[ stages directive], and xref:user-docs:pipeline:syntax.adoc#steps[ steps directives]
 are also required for a valid Declarative Pipeline as they instruct Jenkins
 what to execute and in which stage it should be executed.
 
@@ -343,7 +343,7 @@ node {
 Setting an environment variable within a Jenkins Pipeline is accomplished
 differently depending on whether Declarative or Scripted Pipeline is used.
 
-Declarative Pipeline supports an xref:#syntax#environment[ environment]
+Declarative Pipeline supports an xref:user-docs:pipeline:syntax.adoc#environment[ environment]
 directive, whereas users of Scripted Pipeline must use the `withEnv` step.
 
 [pipeline]
@@ -440,7 +440,7 @@ video::yfjtMIDgmfs[youtube,width=800,height=420]
 ==== For secret text, usernames and passwords, and secret files
 
 Jenkins' declarative Pipeline syntax has the `credentials()` helper method (used
-within the xref:#syntax#environment[`environment`] directive) which supports
+within the xref:user-docs:pipeline:syntax.adoc#environment[`environment`] directive) which supports
 xref:#secret-text[secret text], <<#usernames-and-passwords,username and
 password>>, as well as xref:#secret-files[secret file] credentials. If you want to
 handle other types of credentials, refer to the <<#for-other-credential-types,
@@ -486,7 +486,7 @@ pipeline {
 // Script //
 ----
 <1> You can reference the two credential environment variables (defined in this
-Pipeline's xref:#syntax#environment[`environment`] directive), within this stage's
+Pipeline's xref:user-docs:pipeline:syntax.adoc#environment[`environment`] directive), within this stage's
 steps using the syntax `$AWS_ACCESS_KEY_ID` and `$AWS_SECRET_ACCESS_KEY`. For
 example, here you can authenticate to AWS using the secret text credentials
 assigned to these credential variables. +
@@ -584,7 +584,7 @@ pipeline {
 // Script //
 ----
 <1> The following credential environment variables (defined in this Pipeline's
-xref:#syntax#environment[`environment`] directive) are available within this
+xref:user-docs:pipeline:syntax.adoc#environment[`environment`] directive) are available within this
 stage's steps and can be referenced using the syntax:
 * `$BITBUCKET_COMMON_CREDS`
 * `$BITBUCKET_COMMON_CREDS_USR`
@@ -1058,7 +1058,7 @@ pipeline {
 // Script //
 ----
 
-
+[#handling-parameters]
 === Handling parameters
 
 Declarative Pipeline supports parameters out-of-the-box, allowing the Pipeline
@@ -1101,9 +1101,9 @@ node {
 === Handling failure
 
 Declarative Pipeline supports robust failure handling by default via its
-xref:#syntax#post[ post section] which allows declaring a number of different
+xref:user-docs:pipeline:syntax.adoc#post[ post section] which allows declaring a number of different
 "post conditions" such as: `always`, `unstable`, `success`, `failure`, and
-`changed`. The xref:#syntax[ Pipeline Syntax] section provides more detail on
+`changed`. The xref:user-docs:pipeline:syntax.adoc[ Pipeline Syntax] section provides more detail on
 how to use the various post conditions.
 
 [pipeline]
@@ -1251,7 +1251,7 @@ stage('Test') {
 (`+**/target/*.jar+`) for reuse within the _same_ Pipeline. Once the Pipeline has
 completed its execution, stashed files are deleted from the Jenkins controller.
 <2> The parameter in `agent`/`node` allows for any valid Jenkins label
-expression. Consult the xref:#syntax#[ Pipeline Syntax] section for more details.
+expression. Consult the xref:user-docs:pipeline:syntax.adoc#[ Pipeline Syntax] section for more details.
 <3> `unstash` will retrieve the named "stash" from the Jenkins controller into the
 Pipeline's current workspace.
 <4> The `bat` script allows for executing batch scripts on Windows-based

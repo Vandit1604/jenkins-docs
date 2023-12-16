@@ -5,7 +5,7 @@ For more information on how to use Pipeline syntax in practical examples, refer 
 As of version 2.5 of the Pipeline plugin, Pipeline supports two discrete syntaxes which are detailed below.
 For the pros and cons of each, refer to the <<compare>>.
 
-As discussed at the xref:pipeline:syntax.adoc[start of this chapter], the most fundamental part of a Pipeline is the "step". Basically, steps tell Jenkins _what_ to do and serve as the basic building block for both Declarative and Scripted Pipeline syntax.
+As discussed at the xref:pipeline:getting-started.adoc[start of this chapter], the most fundamental part of a Pipeline is the "step". Basically, steps tell Jenkins _what_ to do and serve as the basic building block for both Declarative and Scripted Pipeline syntax.
 
 For an overview of available steps, please refer to the link:/doc/pipeline/steps[Pipeline Steps reference] which contains a comprehensive list of steps built into Pipeline as well as steps provided by plugins.
 
