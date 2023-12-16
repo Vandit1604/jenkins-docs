@@ -32,7 +32,7 @@ Even if you run Jenkins on a private network and trust everyone in your team, se
 ====
 
 
-[[reporting-vulnerabilities]]
+[#reporting-vulnerabilities]
 == How to Report a Security Vulnerability
 
 If you find a vulnerability in Jenkins, please report it in the issue tracker under the link:https://issues.jenkins.io/browse/SECURITY[SECURITY project].
@@ -52,7 +52,7 @@ If we consider it necessary to provide a statement in response to incidents such
 
 xref:plugins.adoc[How We Handle Vulnerabilities in Plugins]::
 We strive to fix all security vulnerabilities in Jenkins and plugins in a timely manner.
-However the number and diversity of plugins and maintainers' autonomy make this impossible to guarantee.
+However, the number and diversity of plugins and maintainers' autonomy make this impossible to guarantee.
 
 xref:scheduling.adoc[How We Schedule Security Advisories]::
 Information about how we schedule security advisories and security updates.
