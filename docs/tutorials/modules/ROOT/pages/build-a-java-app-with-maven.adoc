@@ -7,12 +7,12 @@ If you are a Java developer using Maven, but new to CI/CD concepts, or if you ar
 This example Java application from a GitHub repository outputs the string "Hello world!", and is accompanied by some unit tests, to check that the main application works as expected.
 The test results are saved to a JUnit XML report.
 
-*Duration:* This tutorial takes 20-40 minutes to complete, assuming you meet the below <<prerequisites,prerequisites>>.
+*Duration:* This tutorial takes 20-40 minutes to complete, assuming you meet the below xref:#prerequisites[prerequisites].
 The exact duration will depend on the speed of your machine and whether or not you've already xref:user-docs:installing-jenkins:_partials/_run-jenkins-in-docker.adoc#run-jenkins-in-docker[run Jenkins in Docker] from xref:index.adoc[another tutorial].
 
 You can stop this tutorial at any time and continue from where you left off.
 
-If you've already run through xref:index.adoc[another tutorial], you can skip the <<prerequisites,Prerequisites>> and xref:user-docs:installing-jenkins:_partials/_run-jenkins-in-docker.adoc#run-jenkins-in-docker[run Jenkins in Docker] sections below and proceed to <<fork-sample-repository,forking the sample repository>>.
+If you've already run through xref:index.adoc[another tutorial], you can skip the xref:#prerequisites[Prerequisites] and xref:user-docs:installing-jenkins:_partials/_run-jenkins-in-docker.adoc#run-jenkins-in-docker[run Jenkins in Docker] sections below and proceed to xref:#fork-sample-repository[forking the sample repository].
 Make sure you have link:https://git-scm.com/downloads[Git] installed locally.
 If you need to restart Jenkins, simply follow the restart instructions in xref:user-docs:installing-jenkins:_partials/_run-jenkins-in-docker.adoc#stopping-and-restarting-jenkins[Stopping and restarting Jenkins], and then proceed.
 
@@ -64,7 +64,7 @@ If your display is different, select *New Item* at the top left.
 . Select *Definition*, and then select the *Pipeline script from SCM* option.
 This option instructs Jenkins to obtain your Pipeline from source control management (SCM), which is your locally cloned Git repository.
 . Select *Git* from the options in *SCM*.
-. Enter the directory path of your locally cloned repository <<fork-sample-repository,above>> in *Script Path*.
+. Enter the directory path of your locally cloned repository xref:#fork-sample-repository[above] in *Script Path*.
 This directory path from your user account/home directory on your host machine is mapped to the `/home` directory of the Jenkins container, according to your operating system, below:
 * For macOS - `/home/Documents/GitHub/simple-java-maven-app`
 * For Linux - `/home/GitHub/simple-java-maven-app`
@@ -219,7 +219,7 @@ Alternatively, you can select the _top_ row on the Blue Ocean interface to displ
 +
 Note that Jenkins no longer needs to download the Maven Docker image.
 Instead, Jenkins runs a new container from the Maven image downloaded previously.
-If Docker has not restarted since you last ran the Pipeline <<create-your-initial-pipeline-as-a-jenkinsfile,above>>, then no Maven artifacts are downloaded during the "Build" stage.
+If Docker has not restarted since you last ran the Pipeline xref:#create-your-initial-pipeline-as-a-jenkinsfile[above], then no Maven artifacts are downloaded during the "Build" stage.
 Therefore, running your Pipeline this subsequent time should be much faster.
 
 The Blue Ocean interface displays as below if a Pipeline runs successfully.

@@ -187,7 +187,7 @@ node {
 === Using a Dockerfile
 
 For projects requiring a more customized execution environment, Pipeline also supports building and running a container from a `Dockerfile` in the source repository.
-In contrast to the <<execution-environment,previous approach>> of using an "off-the-shelf" container, using the `agent { dockerfile true }` syntax builds a new image from a `Dockerfile`, rather than pulling one from link:https://hub.docker.com[Docker Hub].
+In contrast to the xref:#execution-environment[previous approach] of using an "off-the-shelf" container, using the `agent { dockerfile true }` syntax builds a new image from a `Dockerfile`, rather than pulling one from link:https://hub.docker.com[Docker Hub].
 
 Reusing an example from above, with a more custom `Dockerfile`:
 
@@ -291,7 +291,7 @@ node {
 ----
 
 This example can be taken further, utilizing two containers simultaneously.
-One "sidecar" running MySQL, and another providing the <<execution-environment,execution environment>> by using the Docker link:https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/[container links].
+One "sidecar" running MySQL, and another providing the xref:#execution-environment[execution environment] by using the Docker link:https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/[container links].
 
 [source,groovy]
 ----
@@ -345,7 +345,7 @@ node {
 ----
 
 
-The return value can also be used to publish the Docker image to link:https://hub.docker.com[Docker Hub] or a <<custom-registry, custom Registry>>, via the `push()` method, for example:
+The return value can also be used to publish the Docker image to link:https://hub.docker.com[Docker Hub] or a xref:#custom-registry[ custom Registry], via the `push()` method, for example:
 
 [source,groovy]
 ----

@@ -17,11 +17,11 @@ Here, we see a step-by-step process for setting up Jenkins on a Kubernetes Clust
 For setting up a Jenkins Cluster on Kubernetes, we will do the following:
 
 [arabic]
-. <<create-a-namespace,Create a Namespace>>
-. <<create-a-service-account,Create a service account>> with Kubernetes admin permissions.
-. <<create-a-volume,Create local persistent volume>> for persistent Jenkins data on Pod restarts.
-. <<create-a-deployment,Create a deployment YAML>> and deploy it.
-. <<create-a-service,Create a service YAML>> and deploy it.
+. xref:#create-a-namespace[Create a Namespace]
+. xref:#create-a-service-account[Create a service account] with Kubernetes admin permissions.
+. xref:#create-a-volume[Create local persistent volume] for persistent Jenkins data on Pod restarts.
+. xref:#create-a-deployment[Create a deployment YAML] and deploy it.
+. xref:#create-a-service[Create a service YAML] and deploy it.
 
 NOTE: This guide doesn’t use local persistent volume as this is a generic guide. 
 For using persistent volume for your Jenkins data, you need to create volumes of relevant cloud or on-prem data center and configure it.

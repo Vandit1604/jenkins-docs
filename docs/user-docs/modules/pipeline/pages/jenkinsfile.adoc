@@ -76,7 +76,7 @@ creation and execution of a simple Pipeline in a test installation of Jenkins.
 ====
 It is assumed that there is already a source control repository set up for
 the project and a Pipeline has been defined in Jenkins following
-<<getting-started#defining-a-pipeline-in-scm, these instructions>>.
+xref:#getting-started#defining-a-pipeline-in-scm[ these instructions].
 ====
 
 Using a text editor, ideally one which supports
@@ -93,7 +93,7 @@ Declarative Pipeline not valid, it would not be capable of doing any work! By
 default the `agent` directive ensures that the source repository is checked out
 and made available for steps in the subsequent stages.
 
-The <<syntax#stages, stages directive>>, and <<syntax#steps, steps directives>>
+The xref:#syntax#stages[ stages directive], and xref:#syntax#steps[ steps directives]
 are also required for a valid Declarative Pipeline as they instruct Jenkins
 what to execute and in which stage it should be executed.
 
@@ -343,7 +343,7 @@ node {
 Setting an environment variable within a Jenkins Pipeline is accomplished
 differently depending on whether Declarative or Scripted Pipeline is used.
 
-Declarative Pipeline supports an <<syntax#environment, environment>>
+Declarative Pipeline supports an xref:#syntax#environment[ environment]
 directive, whereas users of Scripted Pipeline must use the `withEnv` step.
 
 [pipeline]
@@ -440,9 +440,9 @@ video::yfjtMIDgmfs[youtube,width=800,height=420]
 ==== For secret text, usernames and passwords, and secret files
 
 Jenkins' declarative Pipeline syntax has the `credentials()` helper method (used
-within the <<syntax#environment,`environment`>> directive) which supports
-<<#secret-text,secret text>>, <<#usernames-and-passwords,username and
-password>>, as well as <<#secret-files,secret file>> credentials. If you want to
+within the xref:#syntax#environment[`environment`] directive) which supports
+xref:#secret-text[secret text], <<#usernames-and-passwords,username and
+password>>, as well as xref:#secret-files[secret file] credentials. If you want to
 handle other types of credentials, refer to the <<#for-other-credential-types,
 For other credential types>> section (below).
 
@@ -486,7 +486,7 @@ pipeline {
 // Script //
 ----
 <1> You can reference the two credential environment variables (defined in this
-Pipeline's <<syntax#environment,`environment`>> directive), within this stage's
+Pipeline's xref:#syntax#environment[`environment`] directive), within this stage's
 steps using the syntax `$AWS_ACCESS_KEY_ID` and `$AWS_SECRET_ACCESS_KEY`. For
 example, here you can authenticate to AWS using the secret text credentials
 assigned to these credential variables. +
@@ -505,7 +505,7 @@ credentials.
 environment variables are scoped globally for the entire Pipeline, so these
 credential variables could also be used in this stage's steps. If, however, the
 `environment` directive in this Pipeline were moved to a specific stage (as is
-the case in the <<#usernames-and-passwords,Usernames and passwords>> Pipeline
+the case in the xref:#usernames-and-passwords[Usernames and passwords] Pipeline
 example below), then these `AWS_...` environment variables would only be scoped
 to the steps in that stage.
 
@@ -584,7 +584,7 @@ pipeline {
 // Script //
 ----
 <1> The following credential environment variables (defined in this Pipeline's
-<<syntax#environment,`environment`>> directive) are available within this
+xref:#syntax#environment[`environment`] directive) are available within this
 stage's steps and can be referenced using the syntax:
 * `$BITBUCKET_COMMON_CREDS`
 * `$BITBUCKET_COMMON_CREDS_USR`
@@ -595,7 +595,7 @@ For example, here you can authenticate to Bitbucket with the username and
 password assigned to these credential variables. +
 To maintain the security and anonymity of these credentials, if the job
 displays the value of these credential variables from within the Pipeline the
-same behavior described in the <<#secret-text,Secret text>> example above
+same behavior described in the xref:#secret-text[Secret text] example above
 applies to these username and password credential variable types too. +
 This only reduces the risk of **accidental exposure**.  It does
 not prevent a malicious user from capturing the credential value
@@ -607,7 +607,7 @@ credentials.
 stage 1`, so these credential variables are not available for use in this
 `Example stage 2` stage's steps. If, however, the `environment` directive in
 this Pipeline were moved immediately within the <<syntax#declarative-pipeline,
-`pipeline`>> block (as is the case in the <<#secret-text,Secret text>> Pipeline
+`pipeline`>> block (as is the case in the xref:#secret-text[Secret text] Pipeline
 example above), then these `BITBUCKET_COMMON_CREDS...` environment variables
 would be scoped globally and could be used in any stage's steps.
 
@@ -652,7 +652,7 @@ pipeline {
 
 If you need to set credentials in a Pipeline for anything other than secret
 text, usernames and passwords, or secret files
-(<<#for-secret-text-usernames-and-passwords-and-secret-files,above>>) - i.e SSH
+(xref:#for-secret-text-usernames-and-passwords-and-secret-files[above]) - i.e SSH
 keys or certificates, then use Jenkins' *Snippet Generator* feature, which you
 can access through Jenkins' classic UI.
 
@@ -789,7 +789,7 @@ are not available for use in this `Example stage 2` stage's steps.
 To maintain the security and anonymity of these credentials, if you attempt to
 retrieve the value of these credential variables from within these
 `withCredentials( ... ) { ... }` steps, the same behavior described in the
-<<#secret-text,Secret text>> example (above) applies to these SSH public/private
+xref:#secret-text[Secret text] example (above) applies to these SSH public/private
 key pair credential and certificate variable types too. +
 This only reduces the risk of **accidental exposure**.  It does
 not prevent a malicious user from capturing the credential value
@@ -804,14 +804,14 @@ variables* option in the *Snippet Generator*, only credentials which your
 current Pipeline project/item has access to can be selected from any
 *Credentials* field's list. While you can manually write a
 `withCredentials( ... ) { ... }` step for your Pipeline (like the examples
-<<#withcredentials-script-examples,above>>), using the *Snippet Generator* is
+xref:#withcredentials-script-examples[above]), using the *Snippet Generator* is
 recommended to avoid specifying credentials that are out of scope for this
 Pipeline project/item, which when run, will make the step fail.
 * You can also use the *Snippet Generator* to generate `withCredentials( ... )
 { ... }` steps to handle secret text, usernames and passwords and secret files.
 However, if you only need to handle these types of credentials, it is
 recommended you use the relevant procedure described in the section
-<<#for-secret-text-usernames-and-passwords-and-secret-files,above>> for improved
+xref:#for-secret-text-usernames-and-passwords-and-secret-files[above] for improved
 Pipeline code readability.
 * The use of **single-quotes** instead of  **double-quotes** to define the `script`
 (the implicit parameter to `sh`) in Groovy above.
@@ -850,7 +850,7 @@ within a single `withCredentials( ... ) { ... }` step by doing the following:
 . Choose the credential type to add to the `withCredentials( ... ) { ... }` step
   from the dropdown list.
 . Specify the credential *Bindings* details. Read more above these in the
-  procedure under <<#for-other-credential-types,For other credential types>>
+  procedure under xref:#for-other-credential-types[For other credential types]
   (above).
 . Repeat from "Click *Add* ..." (above) for each (set of) credential/s to add to
   the `withCredentials( ... ) { ... }` step.
@@ -1101,9 +1101,9 @@ node {
 === Handling failure
 
 Declarative Pipeline supports robust failure handling by default via its
-<<syntax#post, post section>> which allows declaring a number of different
+xref:#syntax#post[ post section] which allows declaring a number of different
 "post conditions" such as: `always`, `unstable`, `success`, `failure`, and
-`changed`. The <<syntax, Pipeline Syntax>> section provides more detail on
+`changed`. The xref:#syntax[ Pipeline Syntax] section provides more detail on
 how to use the various post conditions.
 
 [pipeline]
@@ -1251,7 +1251,7 @@ stage('Test') {
 (`+**/target/*.jar+`) for reuse within the _same_ Pipeline. Once the Pipeline has
 completed its execution, stashed files are deleted from the Jenkins controller.
 <2> The parameter in `agent`/`node` allows for any valid Jenkins label
-expression. Consult the <<syntax#, Pipeline Syntax>> section for more details.
+expression. Consult the xref:#syntax#[ Pipeline Syntax] section for more details.
 <3> `unstash` will retrieve the named "stash" from the Jenkins controller into the
 Pipeline's current workspace.
 <4> The `bat` script allows for executing batch scripts on Windows-based
@@ -1300,7 +1300,7 @@ cleaner parallel syntax is supported for Declarative Pipeline. Right now
 stuff.
 ////
 
-The example in the <<using-multiple-agents,section above>> runs tests across two
+The example in the xref:#using-multiple-agents[section above] runs tests across two
 different platforms in a linear series. In practice, if the `make check`
 execution takes 30 minutes to complete, the "Test" stage would now take 60
 minutes to complete!

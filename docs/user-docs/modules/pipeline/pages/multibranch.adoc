@@ -48,7 +48,7 @@ appropriate items for each branch in the repository which contains a
 `Jenkinsfile`.
 
 By default, Jenkins will not automatically re-index the repository for branch
-additions or deletions (unless using an <<organization-folders,Organization Folder>>),
+additions or deletions (unless using an xref:#organization-folders[Organization Folder]),
 so it is often useful to configure a Multibranch Pipeline to periodically
 re-index in the configuration:
 

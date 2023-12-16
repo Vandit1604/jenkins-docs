@@ -44,7 +44,7 @@ initial admin password",width=100%]
 
 ===== Customizing Jenkins with plugins
 
-After <<unlocking-jenkins,unlocking Jenkins>>, the *Customize Jenkins* page
+After xref:#unlocking-jenkins[unlocking Jenkins], the *Customize Jenkins* page
 appears.
 
 On this page, click *Install suggested plugins*.
@@ -81,7 +81,7 @@ docker stop jenkins-blueocean jenkins-docker
 
 To restart your Docker container:
 
-. Run the same `docker run ...` commands you ran for <<on-macos-and-linux,macOS, Linux>> or
-  <<on-windows,Windows>> above. +
+. Run the same `docker run ...` commands you ran for xref:#on-macos-and-linux[macOS, Linux] or
+  xref:#on-windows[Windows] above. +
 . Browse to `\http://localhost:8080`.
 . Wait until the log in page appears and log in.

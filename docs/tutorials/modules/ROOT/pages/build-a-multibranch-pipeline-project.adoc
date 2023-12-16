@@ -20,20 +20,20 @@ Git branch that Jenkins builds from. That is, the branch being built determines
 which delivery stage of your Pipeline is executed.
 
 *Duration:* This tutorial takes 30-50 minutes to complete (assuming you've
-already met the <<prerequisites,Prerequisites>> below). The exact duration will
+already met the xref:#prerequisites[Prerequisites] below). The exact duration will
 depend on the speed of your machine and whether or not you've already
-<<run-jenkins-in-docker,run Jenkins in Docker>> from xref:index.adoc[another tutorial].
+xref:#run-jenkins-in-docker[run Jenkins in Docker] from xref:index.adoc[another tutorial].
 
 You can stop this tutorial at any point in time and continue from where you left
 off.
 
 If you've already run though xref:index.adoc[another tutorial], you can skip the
-<<prerequisites,Prerequisites>> and <<run-jenkins-in-docker,Run Jenkins in
+xref:#prerequisites[Prerequisites] and <<run-jenkins-in-docker,Run Jenkins in
 Docker>> sections below and proceed on to <<fork-sample-repository,forking the
 sample repository>>. (Just ensure you have
 link:https://git-scm.com/downloads[Git] installed locally.) If you need to
 restart Jenkins, simply follow the restart instructions in
-<<stopping-and-restarting-jenkins,Stopping and restarting Jenkins>> and then
+xref:#stopping-and-restarting-jenkins[Stopping and restarting Jenkins] and then
 proceed on.
 
 [#prerequisites]
@@ -134,7 +134,7 @@ project as a "Multibranch Pipeline" project.
 . In *Where do you store your code?*, click *Git* (_not_ *GitHub*).
 . In the *Repository URL* field (within *Connect to a Git repository*), specify
   the directory path of your locally cloned repository
-  <<fork-sample-repository,above>>, which is from your
+  xref:#fork-sample-repository[above], which is from your
   user account/home directory on your host machine, mapped to the `/home`
   directory of the Jenkins container - i.e.
 * For macOS - `/home/Documents/GitHub/building-a-multibranch-pipeline-project`
@@ -508,7 +508,7 @@ Pipeline runs successfully on the 'production' branch",width=100%]
   content served by the npm `serve` module, your browser will still show the
   content you viewed at `\http://localhost:5000` long after Jenkins has killed
   off the `serve` process. Read more about how to clear the application and its
-  content from your browser <<clearing-the-app-from-your-browser,below>>.
+  content from your browser xref:#clearing-the-app-from-your-browser[below].
 
 
 === Follow up (optional)
@@ -567,7 +567,7 @@ export default App;
   then +
   `git commit -m "Update 'App.js'"`
 . Back in Blue Ocean, run your Pipeline on the `development` branch (as you did
-  <<run-your-pipeline-on-the-development-branch,above>>) and check the results
+  xref:#run-your-pipeline-on-the-development-branch[above]) and check the results
   through `\http://localhost:3000` to see your new line added.
 . Assuming you're happy with the change, then within your local repository's
   `building-a-multibranch-pipeline-project` directory, run the following set of
@@ -581,7 +581,7 @@ export default App;
   and
 * `git pull . master` +
 . Back in Blue Ocean, run your Pipeline on the `production` branch this time (as
-  you did <<run-your-pipeline-on-the-production-branch,above>>) and check the
+  you did xref:#run-your-pipeline-on-the-production-branch[above]) and check the
   results through `\http://localhost:5000` to see your new line added. +
   *Notes:*
 * Since your browser is likely to cache the contents of the npm `serve` module,

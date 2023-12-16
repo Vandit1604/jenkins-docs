@@ -564,8 +564,8 @@ def call(Map config) {
 ----
 
 Assuming the script has either been loaded as a
-<<global-shared-libraries,Global Shared Library>> or as a
-<<folder-level-shared-libraries, Folder-level Shared Library>>
+xref:#global-shared-libraries[Global Shared Library] or as a
+xref:#folder-level-shared-libraries[ Folder-level Shared Library]
 the resulting `Jenkinsfile` will be dramatically simpler:
 
 [pipeline]

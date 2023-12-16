@@ -13,8 +13,8 @@ The color of the navigation bar matches the status icon.
 . *Pipeline Name* - The name of this run's Pipeline.
 . *Run Number* - The id number for this Pipeline run.
 Id numbers are unique for each Branch and Pull Request of a Pipeline.
-. *View Tabs* - Access the *Pipeline*, *Changes*, *Tests*, and *Artifacts* views with one of the <<tabs, tabs>> for this run.
-The default view is "<<pipeline, Pipeline>>".
+. *View Tabs* - Access the *Pipeline*, *Changes*, *Tests*, and *Artifacts* views with one of the xref:#tabs[ tabs] for this run.
+The default view is "xref:#pipeline[ Pipeline]".
 . *Re-run Pipeline* - Execute this run's Pipeline again.
 . *Edit Pipeline* - Open this run's Pipeline in the xref:glossary:index.adoc#pipeline-editor[Pipeline Editor].
 . *Configure* - Open the Pipeline configuration page in Jenkins. 
@@ -40,7 +40,7 @@ Blue Ocean makes it easy to see the status of the current Pipeline Run, by chang
 == Special cases
 
 Blue Ocean is optimized for working with Pipelines in Source Control, but can display details for other kinds of projects.
-Blue Ocean offers the same <<tabs, tabs>> for all supported projects types, but those tabs display different information depending on the type.
+Blue Ocean offers the same xref:#tabs[ tabs] for all supported projects types, but those tabs display different information depending on the type.
 
 === Pipelines outside of Source Control
 
@@ -49,7 +49,7 @@ In this case, the top menu bar does not include the "Edit" option.
 
 === Freestyle Projects
 
-For Freestyle projects, Blue Ocean offers the same <<tabs, tabs>>, but the Pipeline tab only displays the console log output.
+For Freestyle projects, Blue Ocean offers the same xref:#tabs[ tabs], but the Pipeline tab only displays the console log output.
 The "Rerun" or "Edit" options are not available in the top menu bar.
 
 === Matrix projects

@@ -24,7 +24,7 @@ The Blue Ocean Pipeline Editor is a great alternative for Jenkins users, but the
 
 == Starting the editor
 
-To use the editor, a user must first <<creating-pipelines, create a Pipeline in Blue Ocean>> or have at least one existing Pipeline in Jenkins.
+To use the editor, a user must first xref:#creating-pipelines[ create a Pipeline in Blue Ocean] or have at least one existing Pipeline in Jenkins.
 If editing an existing Pipeline, the credentials for that Pipeline must allow pushing changes to the target repository.
 
 The editor can be launched through the:
@@ -40,7 +40,7 @@ The local navigation bar includes:
 
 * *Pipeline Name* - This also includes the branch name.
 * *Cancel* - Discards changes made to the pipeline.
-* *Save* - Opens the <<#save-pipeline-dialog, save Pipeline dialog>>.
+* *Save* - Opens the xref:#save-pipeline-dialog[ save Pipeline dialog].
 
 == Pipeline Settings
 
@@ -68,7 +68,7 @@ image::editor/stage-editor-basic.png[Stage editor view of new pipeline., role=ce
 
 * To add a stage to the Pipeline, select the icon:plus[] icon to the right of an existing stage.
 Selecting the icon:plus[] icon below an existing stage adds a parallel stage.
-* To delete unwanted stages, use the <<stage-configuration, more menu in the stage configuration pane>>.
+* To delete unwanted stages, use the xref:#stage-configuration[ more menu in the stage configuration pane].
 
 After setting the stage name and saving, the name displays above the stage.
 Stages that contain incomplete or invalid information display a icon:warning[].

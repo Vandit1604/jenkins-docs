@@ -180,7 +180,7 @@ The `Jenkins Editor` Eclipse plugin can be found on
 link:https://marketplace.eclipse.org/content/jenkins-editor[Eclipse Marketplace].
 This special text editor provides some features for defining pipelines e.g:
 
-- Validate pipeline scripts by <<#linter,Jenkins Linter Validation>>. Failures are shown as eclipse markers
+- Validate pipeline scripts by xref:#linter[Jenkins Linter Validation]. Failures are shown as eclipse markers
 - An Outline with dedicated icons (for declarative Jenkins pipelines )
 - Syntax / keyword highlighting
 - Groovy validation
