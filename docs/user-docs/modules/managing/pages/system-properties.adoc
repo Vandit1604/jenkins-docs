@@ -1,5 +1,12 @@
 = Jenkins Features Controlled with System Properties
 
+++++
+<style>
+.doc h5{
+  color: deeppink
+}
+</style>
+++++
 
 ////
 properties:
@@ -19,6 +26,35 @@ Tags:
 - tuning: Adjust thresholds, durations, and values of a similar nature that don't substantially alter behavior.
 - ui: User interface related.
 ////
+
+Jenkins has several "hidden" features that can be enabled with system properties. This page documents many of them and explain how to configure them on your instance.
+
+Some system properties related to the Remoting library used for communication between controller and agents are documented in link:https://github.com/jenkinsci/remoting/blob/master/docs/configuration.md[that component’s repository].
+
+== Usage
+System properties are defined by passing `-Dproperty=value` to the `java` command line to start Jenkins. Make sure to pass all of these arguments before the `-jar` argument, otherwise they will be ignored. Example:
+
+.bash
+[source]
+----
+java -Dhudson.footerURL=http://example.org -jar jenkins.war
+----
+
+The following lists the properties and the version of Jenkins they were introduced in.
+
+`Property` - Java property name
+
+*Default* - Default value if not explicitly set
+
+*Since* - The version of Jenkins the property was introduced in
+
+*Description* - Other notes
+
+== Compatibility
+We do *NOT* guarantee that system properties will remain unchanged and functional indefinitely. These switches are often experimental in nature, and subject to change without notice. If you find these useful, please file a ticket to promote it to an official feature.
+
+== Properties in Jenkins Core
+NOTE: Due to the very large number of system properties used, often just added as a "safety valve" or "escape hatch" in case a change causes problems, this list is not expected to be complete.
 
 ===== name: debug.YUI
 
