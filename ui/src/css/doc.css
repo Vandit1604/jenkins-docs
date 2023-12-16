@@ -5,7 +5,7 @@
   line-height: var(--doc-line-height);
   margin: var(--doc-margin);
   max-width: var(--doc-max-width);
-  padding: 1rem 0;
+  padding: 0 1rem 4rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -38,7 +38,7 @@
 
 @media screen and (min-width: 769px) {
   .doc > h1.page:first-child {
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
   }
 }
 
@@ -781,89 +781,89 @@
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
   border-right: 25px solid #889b73;
-  padding: 1rem;
-  width: 16rem;
+  padding: 2rem;
+  width: 20rem;
 }
 
 .doc .participate-meet {
-  width: 16rem;
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
   border-right: 25px solid #a4262c;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .doc .participate-code {
-  width: 16rem;
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
   border-right: 25px solid #40587c;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .doc .participate-help {
-  width: 16rem;
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
   border-right: 25px solid #407855;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .doc .participate-translate {
-  width: 16rem;
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
   border-right: 25px solid #8e6f33;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .doc .participate-test {
-  width: 16rem;
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
   border-right: 25px solid #867365;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .doc .participate-document {
-  width: 16rem;
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
   border-right: 25px solid #0078d4;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .doc .participate-design {
-  width: 16rem;
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
   border-right: 25px solid #038387;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .doc .participate-review {
-  width: 16rem;
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
   border-right: 25px solid #ca5010;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .doc .participate-donate {
-  width: 16rem;
+  width: 20rem;
   display: flex;
   background: var(--sidebar-background);
   border: 1px solid #c1c1c1;
   border-right: 25px solid #889b73;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .doc .sidebarblock > .content > .title {

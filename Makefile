@@ -14,7 +14,7 @@ ui:	install
 	cd $(ROOT_DIR)/ui && npm i && gulp bundle
 
 # Rule to build the Antora documentation
-antora:
+antora:	ui
 	@echo "Building documentation"
 	cd $(ROOT_DIR)/playbook && npx antora --fetch local-antora-playbook.yml
 	cd $(ROOT_DIR)/playbook && npx http-server build/site -c-1

@@ -3,13 +3,13 @@
 These guidelines explain the considerations the Jenkins security team applies during security fix development.
 They will generally hold true for any security fixes developed by the Jenkins security team, and plugin maintainers are encouraged to follow these guidelines as well.
 
-== Minimal
+### Minimal
 
 Given the choice between a simple and obviously correct fix and a larger overhaul/redesign, we choose the former.
 Since security fixes undergo only limited manual testing before publishing, it's safer to postpone larger changes until after the security issue has been addressed and to deliver them afterwards as a regular enhancement.
 While it's annoying for administrators to have to downgrade a regular release because of a regression, having to choose between a secure and a functioning release is much worse.
 
-== Independently released
+### Independently released
 
 Security updates in plugins should not pick up whatever changes on the default branch are still unreleased.
 This would increase the risk of regressions that force administrators to choose between a functional and a secure configuration.
@@ -20,7 +20,7 @@ For Jenkins (core), we apply the same rule to weekly releases: The only changes 
 In the case of LTS releases, we deliver regular bug fixes and improvements and security fixes in the same releases.
 This rarely results in problems, as bug fixes and improvements are well-tested before being backported into LTS.
 
-== Tested
+### Tested
 
 Security fixes by the Jenkins security team will have corresponding autotests confirming they work as expected.
 
