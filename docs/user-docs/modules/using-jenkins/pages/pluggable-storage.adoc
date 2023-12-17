@@ -1,3 +1,4 @@
+:page-aliases: sigs:cloud-native:pluggable-storage.adoc
 = Pluggable Storage
 
 The current default approach of storing everything into the filesystem is the main reason why Jenkins does not fit the "Cloud Native" model, with features like high availability, zero downtime, or pay per use.
