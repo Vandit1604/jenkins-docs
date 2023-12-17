@@ -5,7 +5,7 @@ For more information on how to use Pipeline syntax in practical examples, refer 
 As of version 2.5 of the Pipeline plugin, Pipeline supports two discrete syntaxes which are detailed below.
 For the pros and cons of each, refer to the <<compare>>.
 
-As discussed at the xref:pipeline:syntax.adoc[start of this chapter], the most fundamental part of a Pipeline is the "step". Basically, steps tell Jenkins _what_ to do and serve as the basic building block for both Declarative and Scripted Pipeline syntax.
+As discussed at the xref:pipeline:getting-started.adoc[start of this chapter], the most fundamental part of a Pipeline is the "step". Basically, steps tell Jenkins _what_ to do and serve as the basic building block for both Declarative and Scripted Pipeline syntax.
 
 For an overview of available steps, please refer to the link:/doc/pipeline/steps[Pipeline Steps reference] which contains a comprehensive list of steps built into Pipeline as well as steps provided by plugins.
 
@@ -29,7 +29,7 @@ The basic statements and expressions which are valid in Declarative Pipeline fol
 * The top-level of the Pipeline must be a _block_, specifically: `pipeline { }`.
 * No semicolons as statement separators.
 Each statement has to be on its own line.
-* Blocks must only consist of <<declarative-sections>>, <<declarative-directives>>, <<declarative-steps>>, or assignment statements.
+* Blocks must only consist of xref:#declarative-sections>>[ <<declarative-directives], <<declarative-steps>>, or assignment statements.
 * A property reference statement is treated as a no-argument method invocation.
 So, for example, `input` is treated as `input()`.
 
@@ -58,7 +58,7 @@ The section must be defined at the top-level inside the `pipeline` block, but st
 | Yes
 
 | Parameters
-| <<agent-parameters, Described below>>
+| xref:#agent-parameters[ Described below]
 
 | Allowed
 | In the top-level `pipeline` block and each `stage` block.
@@ -144,7 +144,7 @@ For example: `agent { label 'my-label1 && my-label2' }` or `agent { label 'my-la
 
 node:: `agent { node { label 'labelName' } }` behaves the same as `agent { label 'labelName' }`, but `node` allows for additional options (such as `customWorkspace`).
 
-docker:: Execute the Pipeline, or stage, with the given container which will be dynamically provisioned on a <<../glossary#node, node>> pre-configured to accept Docker-based Pipelines, or on a node matching the optionally defined `label` parameter. 
+docker:: Execute the Pipeline, or stage, with the given container which will be dynamically provisioned on a xref:#../glossary#node[ node] pre-configured to accept Docker-based Pipelines, or on a node matching the optionally defined `label` parameter. 
 `docker` also optionally accepts an `args` parameter which may contain arguments to pass directly to a `docker run` invocation, and an `alwaysPull` option, which will force a `docker pull` even if the image name is already present.
 For example: `agent { docker 'maven:3.9.3-eclipse-temurin-17' }` or
 +
@@ -345,7 +345,7 @@ pipeline {
     }
 }
 ----
-<1> Defining `agent none` at the top-level of the Pipeline ensures that <<../glossary#executor, an Executor>> will not be assigned unnecessarily.
+<1> Defining `agent none` at the top-level of the Pipeline ensures that xref:#../glossary#executor[ an Executor] will not be assigned unnecessarily.
 Using `agent none` also forces each `stage` section to contain its own `agent` section.
 <2> Execute the steps in this stage in a newly created container using this image.
 <3> Execute the steps in this stage in a newly created container using a different image from the previous stage.
@@ -353,7 +353,7 @@ Using `agent none` also forces each `stage` section to contain its own `agent` s
 [#post]
 ==== post
 
-The `post` section defines one or more additional <<declarative-steps,steps>> that are run upon the completion of a Pipeline's or stage's run (depending on the location of the `post` section within the Pipeline). `post` can support any of the following <<post-conditions, post-condition>> blocks: `always`, `changed`, `fixed`, `regression`, `aborted`, `failure`, `success`, `unstable`, `unsuccessful`, and `cleanup`.
+The `post` section defines one or more additional xref:#declarative-steps[steps] that are run upon the completion of a Pipeline's or stage's run (depending on the location of the `post` section within the Pipeline). `post` can support any of the following xref:#post-conditions[ post-condition] blocks: `always`, `changed`, `fixed`, `regression`, `aborted`, `failure`, `success`, `unstable`, `unsuccessful`, and `cleanup`.
 These condition blocks allow the execution of steps inside each condition depending on the completion status of the Pipeline or stage.
 The condition blocks are executed in the order shown below.
 
@@ -408,7 +408,7 @@ pipeline {
 }
 ----
 <1> Conventionally, the `post` section should be placed at the end of the Pipeline.
-<2> <<post-conditions, Post-condition>> blocks contain <<declarative-steps, steps>> the same as the <<steps>> section.
+<2> xref:#post-conditions[ Post-condition] blocks contain xref:#declarative-steps[ steps] the same as the <<steps>> section.
 =====
 
 [#stages]
@@ -450,7 +450,7 @@ pipeline {
 
 ==== steps
 
-The `steps` section defines a series of one or more <<declarative-steps, steps>> to be executed in a given `stage` directive.
+The `steps` section defines a series of one or more xref:#declarative-steps[ steps] to be executed in a given `stage` directive.
 
 [cols="^10h,>90a",role=syntax]
 |===
@@ -1062,7 +1062,7 @@ pipeline {
 The `when` directive allows the Pipeline to determine whether the stage should be executed depending on the given condition.
 The `when` directive must contain at least one condition.
 If the `when` directive contains more than one condition, all the child conditions must return true for the stage to execute.
-This is the same as if the child conditions were nested in an `allOf` condition (refer to the <<when-example, examples>> below).
+This is the same as if the child conditions were nested in an `allOf` condition (refer to the xref:#when-example[ examples] below).
 If an `anyOf` condition is used, note that the condition skips remaining tests as soon as the first "true" condition is found.
 
 More complex conditional structures can be built using the nesting conditions: `not`, `allOf`, or `anyOf`.
@@ -1723,7 +1723,7 @@ matrix {
 ==== stages   
 
 The `stages` section specifies one or more ``stage``s to be executed sequentially in each cell.
-This section is identical to any other <<#sequential-stages, `stages` section>>.  
+This section is identical to any other xref:#sequential-stages[ `stages` section].  
 
 [[matrix-stages-example]]
 
@@ -1990,7 +1990,7 @@ Declarative Pipelines may use all the available steps documented in the link:/do
 
 The `script` step takes a block of <<scripted-pipeline>> and executes that in the Declarative Pipeline.
 For most use-cases, the `script` step should be unnecessary in Declarative Pipelines, but it can provide a useful "escape hatch".
-`script` blocks of non-trivial size and/or complexity should be moved into <<shared-libraries#, Shared Libraries>> instead.
+`script` blocks of non-trivial size and/or complexity should be moved into xref:#shared-libraries#[ Shared Libraries] instead.
 
 [[script-example]]
 .Script Block in Declarative Pipeline
@@ -2087,7 +2087,7 @@ XXX: TODO https://issues.jenkins.io/browse/WEBSITE-267
 https://issues.jenkins.io/browse/WEBSITE-289
 ////
 
-In order to provide _durability_, which means that running Pipelines can survive a restart of the Jenkins <<../glossary#controller, controller>>, Scripted Pipeline must serialize data back to the controller.
+In order to provide _durability_, which means that running Pipelines can survive a restart of the Jenkins xref:#../glossary#controller[ controller], Scripted Pipeline must serialize data back to the controller.
 Due to this design requirement, some Groovy idioms such as `collection.each { item -> /* perform operation */ }` are not fully supported.
 Refer to https://issues.jenkins.io/browse/JENKINS-27421[JENKINS-27421] and https://issues.jenkins.io/browse/JENKINS-26481[JENKINS-26481] for more information.
 
@@ -2111,7 +2111,7 @@ The Groovy learning-curve isn't typically desirable for all members of a given t
 Both are fundamentally the same Pipeline sub-system underneath.
 They are both durable implementations of "Pipeline as code".
 They are both able to use steps built into Pipeline or provided by plugins.
-Both are able to utilize <<shared-libraries#, Shared Libraries>>
+Both are able to utilize xref:#shared-libraries#[ Shared Libraries]
 
 
 Where they differ however is in syntax and flexibility.

@@ -15,13 +15,13 @@ which can be installed on a Jenkins controller and to integrate various
 build tools, cloud providers, analysis tools, and much more.
 
 Plugins can be automatically downloaded, with their dependencies, from the
-<<../glossary#update-center,Update Center>>. The Update Center is a service
+xref:#../glossary#update-center[Update Center]. The Update Center is a service
 operated by the Jenkins project which provides an inventory of open source
 plugins which have been developed and maintained by various members of the
 Jenkins community.
 
 This section covers everything from the basics of managing plugins within
-the Jenkins web UI, to making changes on the <<../glossary#controller,controller's>>
+the Jenkins web UI, to making changes on the xref:#../glossary#controller[controller's]
 file system.
 
 == Installing a plugin
@@ -29,7 +29,7 @@ file system.
 Jenkins provides two methods for installing plugins on the controller:
 
 . Using the "Plugin Manager" in the web UI.
-. Using the <<install-with-cli,Jenkins CLI>> `install-plugin` command.
+. Using the xref:#install-with-cli[Jenkins CLI] `install-plugin` command.
 
 Each approach will result in the plugin being loaded by Jenkins but may require
 different levels of access and trade-offs in order to use.
@@ -73,7 +73,7 @@ configured Update Center.
 .Installing Jenkins plugins using Jenkins CLI
 video::bTFMvXIkNIg[youtube,width=800,height=420]
 
-Administrators may also use the <<cli#,Jenkins CLI>> which provides a command
+Administrators may also use the xref:#cli#[Jenkins CLI] which provides a command
 to install plugins. Scripts to manage Jenkins environments, or configuration
 management code, may need to install plugins without direct user interaction in
 the web UI. The Jenkins CLI allows a command line user or automation tool to
@@ -225,7 +225,7 @@ otherwise ignored.
 
 ==== Using the Jenkins CLI
 
-It is also possible to enable or disable plugins via the <<cli#,Jenkins CLI>>
+It is also possible to enable or disable plugins via the xref:#cli#[Jenkins CLI]
 using the `enable-plugin` or `disable-plugin` commands.
 
 [NOTE]

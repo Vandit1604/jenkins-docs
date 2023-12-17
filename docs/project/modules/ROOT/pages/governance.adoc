@@ -118,7 +118,7 @@ Open a link:https://github.com/jenkins-infra/helpdesk[help desk issue] for infra
 
 === Core committers
 
-Core committers are those who have push access to link:https://github.com/jenkinsci/jenkins[the main Jenkins repository] that produces `jenkins.war`. To become a core committer, one needs to sign the <<cla,contributor license agreement>>. One is not required to have a proven history of contributions before being granted commit access, but that doesn’t mean other core committers will never revert your changes.
+Core committers are those who have push access to link:https://github.com/jenkinsci/jenkins[the main Jenkins repository] that produces `jenkins.war`. To become a core committer, one needs to sign the xref:#cla[contributor license agreement]. One is not required to have a proven history of contributions before being granted commit access, but that doesn’t mean other core committers will never revert your changes.
 
 The list of CLA signers is be maintained here: https://github.com/jenkinsci/infra-cla
 
@@ -277,7 +277,7 @@ Jenkins plugins and other components may define their own code conventions.
 
 === Commit guidelines
 
-See <<pull-request,the pull request checklist>> for guidelines on submitting code to Jenkins.
+See xref:#pull-request[the pull request checklist] for guidelines on submitting code to Jenkins.
 
 === Copying code from elsewhere
 
@@ -304,7 +304,7 @@ If you develop a plugin, we encourage you to co-host that with the Jenkins proje
 
 === Making changes to existing plugins
 
-If you are interested in just making a small number of changes without an intent to stay. It’s the easiest to send in pull requests through GitHub. See <<pull-request,using pull requests>> for more details. If your pull requests are not getting timely attention, please ping us via the developers' mailing list, so that we can resolve that.
+If you are interested in just making a small number of changes without an intent to stay. It’s the easiest to send in pull requests through GitHub. See xref:#pull-request[using pull requests] for more details. If your pull requests are not getting timely attention, please ping us via the developers' mailing list, so that we can resolve that.
 
 If you’d like to be involved more seriously, in addition to the pull request, we encourage you to consider becoming a committer. Drop us a note in the IRC channel or the dev list, and we’ll set you up with commit access. Try to be courteous to existing developers by sending them heads-up and coordinating with them, but if they aren’t responding, don’t let that block your progress. The seniority of the developers are earned through on-going participation.
 
@@ -321,7 +321,7 @@ Many less active plugins do not really have any obvious owner, and they are coll
 
 If you are interested in just making small changes, the same process applies as plugins.
 Just submit a pull request!
-However, because core changes affect a larger number of people, we’d be grateful if you’d try to go the extra distance on the notes described in <<pull-request,using pull requests>>.
+However, because core changes affect a larger number of people, we’d be grateful if you’d try to go the extra distance on the notes described in xref:#pull-request[using pull requests].
 
 If you’d like to be involved more seriously in the Jenkins core, consider joining the Jenkins core maintainers team.
 See the onboarding guidelines link:https://github.com/jenkinsci/jenkins/blob/master/docs/MAINTAINERS.adoc#team[here].

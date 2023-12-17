@@ -9,7 +9,7 @@ This tutorial uses the same application that the xref:build-a-node-js-and-react-
 Therefore, you're building the same application, but this time, completely through Blue Ocean.
 Since Blue Ocean provides a simplified Git-handling experience, you'll be interacting directly with the repository on GitHub, as opposed to a local clone.
 
-*Duration:* This tutorial takes 20-40 minutes to complete if you've already met the <<prerequisites,prerequisites>> below.
+*Duration:* This tutorial takes 20-40 minutes to complete if you've already met the xref:#prerequisites[prerequisites] below.
 
 The exact duration depends on the speed of your machine and whether or not you've already xref:ROOT:create-a-pipeline-in-blue-ocean.adoc#run-jenkins-in-docker[run Jenkins in Docker] from xref:ROOT:index[another tutorial].
 
@@ -18,7 +18,7 @@ include::user-docs:blueocean:partial$_blue-ocean-status.adoc[]
 You can stop this tutorial at any point in time and continue from where you left
 off.
 
-If you've already run though xref:ROOT:index.adoc[another tutorial], you can skip the <<prerequisites,prerequisites>> and xref:ROOT:create-a-pipeline-in-blue-ocean.adoc#run-jenkins-in-docker[run Jenkins in Docker] sections below and proceed to <<fork-sample-repository,forking the sample repository>>.
+If you've already run though xref:ROOT:index.adoc[another tutorial], you can skip the xref:#prerequisites[prerequisites] and xref:ROOT:create-a-pipeline-in-blue-ocean.adoc#run-jenkins-in-docker[run Jenkins in Docker] sections below and proceed to xref:#fork-sample-repository[forking the sample repository].
 If you need to restart Jenkins, follow the restart instructions in xref:user-docs:installing-jenkins:partial$_setup-wizard-for-tutorials.adoc[run Jenkins in Docker] and then proceed.
 
 include::partial$prerequisites.adoc[prerequisites]
@@ -43,7 +43,7 @@ If you don't see this box, select *New Pipeline* in the upper right.
 . In *Connect to GitHub*, select *Create an access key here*.
 This opens GitHub in a new browser tab.
 +
-NOTE: If you previously configured Blue Ocean to connect to GitHub using a personal access token, Blue Ocean takes you directly to step 9 <<choose-github-account,below>>.
+NOTE: If you previously configured Blue Ocean to connect to GitHub using a personal access token, Blue Ocean takes you directly to step 9 xref:#choose-github-account[below].
 
 . In the new tab, sign in to your GitHub account if necessary. On the GitHub *New Personal Access Token* page, specify a brief *Token description* for your GitHub access token, for example `Blue Ocean`.
 +
@@ -58,7 +58,7 @@ This access token has the appropriate permissions pre-selected that Blue Ocean r
 image:pipeline-in-blueocean-01-connecting-to-github.png[alt="Connecting to GitHub",width=80%]
 +
 [[choose-github-account]]Jenkins now has access to your GitHub account, using your access token.
-. In *Which organization does the repository belong to?*, select your GitHub account where you forked the repository <<fork-sample-repository,above>>.
+. In *Which organization does the repository belong to?*, select your GitHub account where you forked the repository xref:#fork-sample-repository[above].
 . In *Choose a repository*, select your forked repository `creating-a-pipeline-in-blue-ocean`.
 . Select *Create Pipeline*.
 * Blue Ocean detects that there is no Jenkinsfile at the root level of the repository's `master` branch and helps you create one.
@@ -69,7 +69,7 @@ Therefore, Jenkins looks for the presence of at least one Jenkinsfile in any bra
 
 === Create your initial Pipeline
 
-. Following on from creating your Pipeline project <<create-your-pipeline-project-in-blue-ocean,above>>, in the Pipeline editor, select *Docker* from the *Agent* dropdown in the *Pipeline Settings* panel on the right side of the page.
+. Following on from creating your Pipeline project xref:#create-your-pipeline-project-in-blue-ocean[above], in the Pipeline editor, select *Docker* from the *Agent* dropdown in the *Pipeline Settings* panel on the right side of the page.
 +
 [.boxshadow]
 image:pipeline-in-blueocean-11-initial-pipeline-editor-page.png[alt="Initial to GitHub",width=100%]
@@ -147,7 +147,7 @@ WARNING: Before continuing on, verify that Jenkins has created a `Jenkinsfile` f
 [.boxshadow]
 image:pipeline-in-blueocean-21-repository-branches-page.png[alt="Repository branches page",width=100%]
 . Select the `master` branch's "Edit Pipeline" icon image:pipeline-in-blueocean-21a-edit-pipeline-on-branch.png[alt="Edit Pipeline on branch",width=3%] to open the Pipeline editor for this branch.
-. In the main Pipeline editor, select the *+* icon to the right of the *Build* stage you created <<create-your-initial-pipeline,above>> to open the new stage panel on the right.
+. In the main Pipeline editor, select the *+* icon to the right of the *Build* stage you created xref:#create-your-initial-pipeline[above] to open the new stage panel on the right.
 +
 [.boxshadow]
 image:pipeline-in-blueocean-22-add-test-stage.png[alt="Add 'Test' stage",width=45%]
@@ -185,7 +185,7 @@ Subsequent runs of your Pipeline should be much faster.
 
 . From the main Blue Ocean interface, select *Branches* in the upper right to access your repository's `master` branch.
 . Select the `master` branch's "Edit Pipeline" icon image:pipeline-in-blueocean-21a-edit-pipeline-on-branch.png[alt="Edit Pipeline on branch",width=3%] to open the Pipeline editor for this branch.
-. In the main Pipeline editor, select the *+* icon to the right of the *Test* stage you created <<add-a-test-stage-to-your-pipeline,above>> to open the new stage panel.
+. In the main Pipeline editor, select the *+* icon to the right of the *Test* stage you created xref:#add-a-test-stage-to-your-pipeline[above] to open the new stage panel.
 +
 [.boxshadow]
 image:pipeline-in-blueocean-31-add-deliver-stage.png[alt="Add 'Deliver' stage",width=60%]
@@ -254,7 +254,7 @@ To do this:
 
 . From the main Blue Ocean interface, select *Branches* in the upper right to access your repository's `master` branch.
 . Select the `master` branch's "Edit Pipeline" icon image:pipeline-in-blueocean-21a-edit-pipeline-on-branch.png[alt="Edit Pipeline on branch",width=3%] to open the Pipeline editor for this branch.
-. In the main Pipeline editor, select the *Test* stage you created <<add-a-test-stage-to-your-pipeline,above>> to begin editing it.
+. In the main Pipeline editor, select the *Test* stage you created xref:#add-a-test-stage-to-your-pipeline[above] to begin editing it.
 . In the stage panel, select *Settings* to reveal this section of the panel.
 . Select the minus (*-*) icon associated with the `CI` environment directive you created earlier to delete it.
 . Select the back arrow icon image:pipeline-in-blueocean-16a-return-from-step-icon.png[alt="Return from step icon",width=3%] to return to the main Pipeline editor.
@@ -266,7 +266,7 @@ Here, you'll configure a _global_ environment directive.
 . Leave all other options set to their default, and then select *Save & run*.
 Jenkins proceeds to build your amended Pipeline.
 . When the main Blue Ocean interface appears, select the _top_ row to see Jenkins build your Pipeline project.
-This starts the same build process as when you completed adding the final deliver stage <<add-a-final-deliver-stage-to-your-pipeline,above>>.
+This starts the same build process as when you completed adding the final deliver stage xref:#add-a-final-deliver-stage-to-your-pipeline[above].
 However, when you inspect the `Jenkinsfile` again, you'll notice that the `environment` directive is now a sibling of the `agent` section.
 
 == Wrapping up

@@ -155,7 +155,7 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
   --volume jenkins-docker-certs:/certs/client:ro \
   myjenkins-blueocean:{jenkins-stable}-1
 ----
-. Proceed to the <<setup-wizard,Post-installation setup wizard>>.
+. Proceed to the xref:#setup-wizard[Post-installation setup wizard].
 
 [#on-windows]
 === On Windows
@@ -165,7 +165,7 @@ Be sure that your Docker for Windows installation is configured to run `Linux Co
 Refer to the Docker documentation for instructions to link:https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers[switch to Linux containers].
 Once configured to run `Linux Containers`, the steps are:
 
-. Open up a command prompt window and similar to the <<on-macos-and-linux,macOS and Linux>> instructions above do the following:
+. Open up a command prompt window and similar to the xref:#on-macos-and-linux[macOS and Linux] instructions above do the following:
 . Create a bridge network in Docker
 +
 [source,bash]
@@ -221,7 +221,7 @@ docker run --name jenkins-blueocean --restart=on-failure --detach ^
   --volume jenkins-docker-certs:/certs/client:ro ^
   --publish 8080:8080 --publish 50000:50000 myjenkins-blueocean:{jenkins-stable}-1
 ----
-. Proceed to the <<setup-wizard,Setup wizard>>.
+. Proceed to the xref:#setup-wizard[Setup wizard].
 
 [[accessing-the-jenkins-blue-ocean-docker-container]]
 == Accessing the Docker container
@@ -236,7 +236,7 @@ You can access your docker container (through a separate terminal/command prompt
 [[accessing-the-jenkins-console-log-through-docker-logs]]
 == Accessing the Docker logs
 
-You may want to access the Jenkins console log, for instance, when <<unlocking-jenkins,Unlocking Jenkins>> as part of the <<setup-wizard,Post-installation setup wizard>>.
+You may want to access the Jenkins console log, for instance, when xref:#unlocking-jenkins[Unlocking Jenkins] as part of the xref:#setup-wizard[Post-installation setup wizard].
 
 Access the Jenkins console log through the terminal/command prompt window from which you executed the `docker run ...` command.
 Alternatively, you can also access the Jenkins console log through the link:https://docs.docker.com/engine/reference/commandline/logs/[Docker logs] of your container using the following command:
@@ -250,14 +250,14 @@ Your `<docker-container-name>` can be obtained using the `docker ps` command.
 
 You can access the Jenkins home directory, to check the details of a Jenkins build in the `workspace` subdirectory, for example.
 
-If you mapped the Jenkins home directory (`/var/jenkins_home`) to one on your machine's local file system, for example, in the `docker run ...` command <<downloading-and-running-jenkins-in-docker,above>>, access the directory contents through your machine's usual terminal/command prompt.
+If you mapped the Jenkins home directory (`/var/jenkins_home`) to one on your machine's local file system, for example, in the `docker run ...` command xref:#downloading-and-running-jenkins-in-docker[above], access the directory contents through your machine's usual terminal/command prompt.
 
 If you specified the `--volume jenkins-data:/var/jenkins_home` option in the `docker run ...` command, access the contents of the Jenkins home directory through your container's terminal/command prompt using the link:https://docs.docker.com/engine/reference/commandline/container_exec/[`docker container exec`] command:
 
 `docker container exec -it <docker-container-name> bash`
 
-As per <<accessing-the-jenkins-console-log-through-docker-logs,the previous section>>, get your `<docker-container-name>` using the link:https://docs.docker.com/engine/reference/commandline/container_ls/[`docker container ls`] command.
-If you specified the `--name jenkins-blueocean` option in the `docker container run ...`  command above (refer to <<accessing-the-jenkins-blue-ocean-docker-container,Accessing the Jenkins/Blue Ocean Docker container>> if needed), use the `docker container exec` command:
+As per xref:#accessing-the-jenkins-console-log-through-docker-logs[the previous section], get your `<docker-container-name>` using the link:https://docs.docker.com/engine/reference/commandline/container_ls/[`docker container ls`] command.
+If you specified the `--name jenkins-blueocean` option in the `docker container run ...`  command above (refer to xref:#accessing-the-jenkins-blue-ocean-docker-container[Accessing the Jenkins/Blue Ocean Docker container] if needed), use the `docker container exec` command:
 
 `docker container exec -it jenkins-blueocean bash`
 

@@ -3,8 +3,8 @@
 Jenkins, and a number of plugins, allow users to execute
 Groovy scripts _in_ Jenkins. These scripting capabilities are provided by:
 
-* xref:glossary:index.adoc#script-console[Script Console].
-* xref:glossary:index.adoc#pipeline[Jenkins Pipeline].
+* xref:user-docs:managing:script-console.adoc[Script Console].
+* xref:user-docs:pipeline:index.adoc[Jenkins Pipeline].
 * The {plugin}email-ext[Extended Email plugin].
 * The {plugin}groovy[Groovy plugin] - when using the "Execute system Groovy
   script" step.
@@ -68,13 +68,13 @@ a script is halted immediately, as shown below with Jenkins Pipeline
 image::script-sandbox-rejection.png["Sandbox method rejection", role=center]
 
 The Pipeline above will not execute until an Administrator
-<<approving-method-signature, approves the method signature>> via the
+xref:#approving-method-signature[ approves the method signature] via the
 *In-process Script Approval* page.
 
 In addition to adding approved method signatures, users may also disable the
 Groovy Sandbox entirely as shown below. Disabling the Groovy Sandbox requires
 that the **entire** script must be reviewed and
-<<approving-unsandboxed-pipeline, manually approved>> by an administrator.
+xref:#approving-unsandboxed-pipeline[ manually approved] by an administrator.
 
 .Disabling the Groovy Sandbox for a Pipeline
 image::unchecked-groovy-sandbox-on-pipeline.png["Creating a Scripted Pipeline and unchecking 'Use Groovy Sandbox'", role=center]

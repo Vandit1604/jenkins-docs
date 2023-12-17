@@ -25,12 +25,12 @@ Older versions of the CLI client are considered insecure and should not be used.
 WebSocket support is available when using both server and client 2.217 or newer.
 ====
 
-[[ssh]]
+[#ssh]
 == Using the CLI over SSH
 
 In a new Jenkins installation, the SSH service is disabled by default.
 Administrators may choose to set a specific port or ask Jenkins to pick a random port
-in the <<security#ssh-server, Security>> page.
+in the xref:user-docs:security:services.adoc#ssh-server[Security] page.
 In order to determine the randomly assigned SSH port,
 inspect the headers returned on a Jenkins URL, for example:
 
@@ -44,6 +44,7 @@ inspect the headers returned on a Jenkins URL, for example:
 With the random SSH port (`53801` in this example), and <<Authentication>>
 configured, any modern SSH client may securely execute CLI commands.
 
+[#authentication]
 === Authentication
 
 Whichever user used for authentication with the Jenkins controller must have the
@@ -58,6 +59,7 @@ into the appropriate text area.
 
 image::user-docs:managing:cli-adding-ssh-public-keys.png["Adding public SSH keys for a user", role=center]
 
+[#common-commands]
 === Common Commands
 
 Jenkins has a number of built-in CLI commands which can be found in every

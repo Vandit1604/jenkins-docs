@@ -12,12 +12,12 @@ need to be augmented on the instance.
 In this tutorial, you will perform the following steps:
 
 . <<Prerequisites>>.
-. <<Creating a key pair,Create a key pair>> using Amazon EC2.
+. xref:#Creating a key pair[Create a key pair] using Amazon EC2.
 If you already have one, you can skip to step 3.
-. <<Creating a security group,Create a security group>> for your Amazon EC2 instance. If you already have one, you can skip to step 4.
-. <<Launching an Amazon EC2 instance,Launch an Amazon EC2 instance>>.
-. <<Installing and configuring Jenkins,Install and configure Jenkins>>.
-. <<Cleaning up,Clean up tutorial resources>>.
+. xref:#Creating a security group[Create a security group] for your Amazon EC2 instance. If you already have one, you can skip to step 4.
+. xref:#Launching an Amazon EC2 instance[Launch an Amazon EC2 instance].
+. xref:#Installing and configuring Jenkins[Install and configure Jenkins].
+. xref:#Cleaning up[Clean up tutorial resources].
 
 == Prerequisites
 
@@ -101,7 +101,7 @@ image::tutorials:ROOT:AWS/create_security_group.png[Amazon security group creati
 . Select your VPC from the list. You can use the default VPC.
 . On the **Inbound tab**, add the rules as follows:
 .. Select *Add Rule*, and then select *SSH* from the Type list.
-.. Under *Source*, select *Custom*, and in the text box, enter <<step1-security-group,the IP address from step 1>>, followed by /32 indicating a single IP Address.
+.. Under *Source*, select *Custom*, and in the text box, enter xref:#step1-security-group[the IP address from step 1], followed by /32 indicating a single IP Address.
 For example, 104.34.241.123/32 is a single IP address, while 198.51.100.2/24 results in a range of 256 IP addresses.
 .. Select *Add Rule*, and then select *HTTP* from the Type list.
 .. Select *Add Rule*, and then select *Custom TCP Rule* from the
@@ -131,7 +131,7 @@ NOTE: This configuration is marked *Free tier eligible*.
 +
 image::tutorials:ROOT:AWS/ec2_choose_ami.png[Choosing an Amazon Machine Image]
 
-. Scroll down and select the key pair you created in the <<Creating a key pair, creating a key pair>> section above or any existing key pair you intend to use.
+. Scroll down and select the key pair you created in the xref:#Creating a key pair[ creating a key pair] section above or any existing key pair you intend to use.
 .. Select *Select an existing security group*.
 .. Select the *WebServerSG* security group that you created.
 .. Select *Launch Instance*.
@@ -369,7 +369,7 @@ image::tutorials:ROOT:AWS/ssh_username.png[Set Kind to SSH Username with private
 .. Scroll down and select *Enter Directly* under Private Key, then select *Add*.
 +
 image::tutorials:ROOT:AWS/private_key_enter_directly.png[Set Private Key to Enter Directly.]
-.. Open the private key pair you created in the <<Creating a key pair, creating a key pair>> step and paste in the contents from "-----BEGIN RSA PRIVATE KEY-----" to "-----END RSA PRIVATE KEY-----".
+.. Open the private key pair you created in the xref:#Creating a key pair[ creating a key pair] step and paste in the contents from "-----BEGIN RSA PRIVATE KEY-----" to "-----END RSA PRIVATE KEY-----".
 Select *Add* when completed.
 +
 image::tutorials:ROOT:AWS/enter_private_key.png[Enter Private Key.]

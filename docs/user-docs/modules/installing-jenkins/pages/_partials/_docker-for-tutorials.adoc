@@ -207,7 +207,7 @@ docker run --name jenkins-blueocean --detach \
   --env JAVA_OPTS="-Dhudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT=true" \
   myjenkins-blueocean:{jenkins-stable}-1
 ----
-. Proceed to the <<setup-wizard,Post-installation setup wizard>>.
+. Proceed to the xref:#setup-wizard[Post-installation setup wizard].
 
 
 ==== On Windows
@@ -217,7 +217,7 @@ Be sure that your Docker for Windows installation is configured to run `Linux Co
 See the Docker documentation for instructions to link:https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers[switch to Linux containers].
 Once configured to run `Linux Containers`, the steps are:
 
-. Open up a command prompt window and similar to the <<on-macos-and-linux,macOS and Linux>> instructions above do the following:
+. Open up a command prompt window and similar to the xref:#on-macos-and-linux[macOS and Linux] instructions above do the following:
 . Create a bridge network in Docker
 +
 [source,bash]
@@ -279,7 +279,7 @@ docker run --name jenkins-blueocean --detach ^
   --env JAVA_OPTS="-Dhudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT=true" ^
   --publish 8080:8080 --publish 50000:50000 myjenkins-blueocean:{jenkins-stable}-1
 ----
-. Proceed to the <<setup-wizard,Setup wizard>>.
+. Proceed to the xref:#setup-wizard[Setup wizard].
 
 [[accessing-the-jenkins-blue-ocean-docker-container]]
 ==== Accessing the Docker container
@@ -299,8 +299,8 @@ terminal/command prompt window) with a `docker exec` command like:
 ==== Accessing the Docker logs
 
 There is a possibility you may need to access the Jenkins console log, for
-instance, when <<unlocking-jenkins,Unlocking Jenkins>> as part of the
-<<setup-wizard,Post-installation setup wizard>>.
+instance, when xref:#unlocking-jenkins[Unlocking Jenkins] as part of the
+xref:#setup-wizard[Post-installation setup wizard].
 
 The Jenkins console log is easily accessible through the terminal/command
 prompt window from which you executed the `docker run ...` command.
@@ -321,7 +321,7 @@ subdirectory.
 
 If you mapped the Jenkins home directory (`/var/jenkins_home`) to one on your
 machine's local file system (i.e. in the `docker run ...` command
-<<downloading-and-running-jenkins-in-docker,above>>), then you can access the
+xref:#downloading-and-running-jenkins-in-docker[above]), then you can access the
 contents of this directory through your machine's usual terminal/command prompt.
 
 Otherwise, if you specified the `--volume jenkins-data:/var/jenkins_home` option in
@@ -332,7 +332,7 @@ command:
 
 `docker container exec -it <docker-container-name> bash`
 
-As mentioned <<accessing-the-jenkins-console-log-through-docker-logs,above>>,
+As mentioned xref:#accessing-the-jenkins-console-log-through-docker-logs[above],
 your `<docker-container-name>` can be obtained using the
 link:https://docs.docker.com/engine/reference/commandline/container_ls/[`docker container ls`]
 command. If you specified the +

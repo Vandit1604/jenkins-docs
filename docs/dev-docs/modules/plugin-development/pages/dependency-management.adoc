@@ -6,10 +6,11 @@ Moreover, the dependencies can change with each Jenkins release, so managing the
 
 Jenkins has tools that simplify dependency management:
 
-* <<jenkins-core-bom,Jenkins core Bill of Materials (BOM)>> centrally defines the **library versions** provided by Jenkins core
-* <<jenkins-plugin-bom,Plugin Bill of Materials (BOM)>> centrally defines a set of **plugin versions** that have been tested together
+* xref:#jenkins-core-bom[Jenkins core Bill of Materials (BOM)] centrally defines the **library versions** provided by Jenkins core
+* xref:#jenkins-plugin-bom[Plugin Bill of Materials (BOM)] centrally defines a set of **plugin versions** that have been tested together
 * <<Dependabot>> automatically proposes a pull request when a new version of a dependency is released
 
+[#jenkins-core-bom]
 == Jenkins core BOM
 
 Jenkins core provides a link:https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Importing_Dependencies[Maven Bill Of Materials (BOM)] that centrally defines versions of various libraries used by Jenkins.
@@ -59,6 +60,7 @@ See the video below for a step by step guide to updating the parent pom.
 .Update the parent pom
 video::Fev8KfFsPZE[youtube, width=852, height=480,start=807]
 
+[#jenkins-plugin-bom]
 == Jenkins plugin BOM
 
 The plugin bill of materials (BOM) defines the versions of various plugins used by specific Jenkins versions.
@@ -103,6 +105,7 @@ The video below demonstrates how to add the plugin BOM to a Jenkins plugin.
 .Simplify plugin dependency management with the plugin BOM
 video::pk1gweLvcEI[youtube, width=852, height=480, start=1771]
 
+[#dependabot]
 == Dependabot
 
 GitHub link:https://github.com/dependabot[Dependabot] can automate plugin dependency management.

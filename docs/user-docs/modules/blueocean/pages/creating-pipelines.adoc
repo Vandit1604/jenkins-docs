@@ -44,7 +44,7 @@ You now must specify a link:#local-repository[local] or link:#remote-repository[
 If your URL is a local directory path beginning with a forward slash `/`, such as `/home/cloned-git-repos/my-git-repo.git`, you can proceed to select the *Create Pipeline* option.
 
 Blue Ocean then scans your local repository's branches for a `Jenkinsfile`, and starts a Pipeline run for each branch containing a `Jenkinsfile`.
-If Blue Ocean cannot find a `Jenkinsfile`, you are prompted to create one through the <<pipeline-editor#,Pipeline editor>>.
+If Blue Ocean cannot find a `Jenkinsfile`, you are prompted to create one through the xref:#pipeline-editor#[Pipeline editor].
 
 Local repositories are typically limited to file system access and are normally only available from the controller node.
 Local repositories are also known to require more complicated path names on Windows than most users want to manage.
@@ -94,7 +94,7 @@ image::creating-pipelines/where-do-you-store-your-code.png['Where do you store y
 
 In the *Connect to GitHub* section, enter your GitHub access token into the *Your GitHub access token* field. +
 If you previously configured Blue Ocean to connect to GitHub using a personal access token, Blue Ocean takes you directly to the
-<<choose-your-github-account,GitHub account/organization and repository choice>> steps below:
+xref:#choose-your-github-account[GitHub account/organization and repository choice] steps below:
 
 [.boxshadow]
 image::creating-pipelines/connect-to-github.png['Connect to
@@ -115,7 +115,7 @@ The new access token process, initiated by selecting *Create an access key here*
 . On the resulting *Personal access tokens* page, copy your newly generated access token.
 . Back in Blue Ocean, paste the access token into the *Your GitHub access token* field, and then select *Connect*.
 
-Your current Jenkins user now has access to your GitHub account and you can now <<choose-your-github-account,choose your GitHub account/organization and repository>>.
+Your current Jenkins user now has access to your GitHub account and you can now xref:#choose-your-github-account[choose your GitHub account/organization and repository].
 Jenkins registers this credential with the following details for this Jenkins user:
 
 * *Domain*: `blueocean-github-domain`
@@ -175,7 +175,7 @@ image::creating-pipelines/connect-to-bitbucket.png['Connect to
 Bitbucket',width=70%]
 
 Select *Connect* and your current/logged in Jenkins user will now have access to your Bitbucket account.
-You can now <<choose-your-bitbucket-account,choose your Bitbucket account/team and repository>>.
+You can now xref:#choose-your-bitbucket-account[choose your Bitbucket account/team and repository].
 
 [[choose-your-bitbucket-account]]
 ==== Choose your Bitbucket account/team and repository

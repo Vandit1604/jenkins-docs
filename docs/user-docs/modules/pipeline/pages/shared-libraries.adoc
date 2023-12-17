@@ -11,6 +11,7 @@ external source control repositories and loaded into existing Pipelines.
 
 video::Wj-weFEsTb0[youtube,width=800,height=420]
 
+[#defining-shared-libraries]
 == Defining Shared Libraries
 
 A Shared Library is defined with a name, a source code retrieval method such
@@ -36,6 +37,7 @@ version.  For example, for Subversion, you can set the _Repository URL_ to
 `https://svnserver/project/${library.yourLibName.version}` and then use
 versions such as `trunk` or `branches/dev` or `tags/1.0`.
 
+[#directory-structure]
 === Directory structure
 
 The directory structure of a Shared Library repository is as follows:
@@ -73,6 +75,7 @@ Currently this feature is not supported for internal libraries.
 
 Other directories under the root are reserved for future enhancements.
 
+[#global-shared-libraries]
 === Global Shared Libraries
 
 There are several places where Shared Libraries can be defined, depending on
@@ -101,6 +104,7 @@ or subfolder.
 Folder-based libraries are not considered "trusted:" they run in the Groovy
 sandbox just like typical Pipelines.
 
+[#automatic-shared-libraries]
 ===  Automatic Shared Libraries
 
 Other plugins may add ways of defining libraries on the fly.  For example, the
@@ -110,6 +114,7 @@ named like `github.com/someorg/somerepo` without any additional configuration.  
 this case, the specified GitHub repository would be loaded, from the `master`
 branch, using an anonymous checkout.
 
+[#using-libraries]
 == Using libraries
 
 Shared Libraries marked _Load implicitly_ allows Pipelines to immediately use
@@ -178,6 +183,7 @@ A link to the example repository used is also provided in the link:https://youtu
 
 video::eV7roTXrEqg[youtube,width=800,height=420]
 
+[#loading-libraries-dynamically]
 === Loading libraries dynamically
 
 As of version 2.7 of the _Pipeline: Shared Groovy Libraries_ plugin,
@@ -222,6 +228,7 @@ def lib = library('my-shared-library').com.mycorp.pipeline // preselect the pack
 echo useSomeLib(lib.Helper.new(lib.Constants.SOME_TEXT))
 ----
 
+[#library-versions]
 === Library versions
 
 The "Default version" for a configured Shared Library is used when "Load
@@ -262,6 +269,7 @@ library "my-shared-library@${params.LIB_VERSION}"
 Note that the `library` step may not be used to override the version of an implicitly loaded library.
 It is already loaded by the time the script starts, and a library of a given name may not be loaded twice.
 
+[#retrieval-method]
 === Retrieval Method
 
 The best way to specify the SCM is using an SCM plugin which has been
@@ -271,6 +279,7 @@ Git and Subversion plugins support this mode.
 
 image::user-docs:pipeline:global-pipeline-library-modern-scm.png["Configuring a 'Modern SCM' for a Pipeline Library", role=center]
 
+[#legacy-scm]
 ==== Legacy SCM
 
 SCM plugins which have not yet been updated to support the newer features
@@ -282,6 +291,7 @@ this variable to checkout the appropriate version of the library.
 
 image::user-docs:pipeline:global-pipeline-library-legacy-scm.png["Configuring a 'Legacy SCM' for a Pipeline Library", role=center]
 
+[#dynamic-retrieval]
 ==== Dynamic retrieval
 
 If you only specify a library name (optionally with version after `@`) in the `library` step,
@@ -304,6 +314,7 @@ It is best to refer to *Pipeline Syntax* for the precise syntax for your SCM.
 
 Note that the library version _must_ be specified in these cases.
 
+[#writing-libraries]
 == Writing libraries
 
 At the base level, any valid
@@ -321,6 +332,7 @@ class Point {
 }
 ----
 
+[#accessing-steps]
 === Accessing steps
 
 Library classes cannot directly call steps such as `sh` or `git`.
@@ -407,7 +419,7 @@ node {
 }
 ----
 
-
+[#defining-global-variables]
 === Defining global variables
 
 Internally, scripts in the `vars` directory are instantiated on-demand  as
@@ -487,6 +499,7 @@ def yourField = "YourConstantValue"
 def yourFunction....
 ----
 
+[#defininf-custom-steps]
 === Defining custom steps
 
 Shared Libraries can also define global variables which behave similarly to
@@ -543,6 +556,7 @@ windows {
 }
 ----
 
+[#defining-a-more-structured-dsl]
 === Defining a more structured DSL
 
 If you have a lot of Pipelines that are mostly similar, the global
@@ -564,8 +578,8 @@ def call(Map config) {
 ----
 
 Assuming the script has either been loaded as a
-<<global-shared-libraries,Global Shared Library>> or as a
-<<folder-level-shared-libraries, Folder-level Shared Library>>
+xref:#global-shared-libraries[Global Shared Library] or as a
+xref:#folder-level-shared-libraries[ Folder-level Shared Library]
 the resulting `Jenkinsfile` will be dramatically simpler:
 
 [pipeline]
@@ -579,6 +593,7 @@ There is also a “builder pattern” trick using Groovy’s `Closure.DELEGATE_F
 which permits `Jenkinsfile` to look slightly more like a configuration file than a program,
 but this is more complex and error-prone and is not recommended.
 
+[#using-thirdparty-libraroes]
 === Using third-party libraries
 
 [IMPORTANT]
@@ -608,6 +623,7 @@ void parallelize(int count) {
 Third-party libraries are cached by default in `~/.groovy/grapes/` on the
 Jenkins controller.
 
+[#loading-resources]
 === Loading resources
 
 External libraries may load adjunct files from a `resources/` directory using
@@ -626,6 +642,7 @@ to a workspace using `writeFile`.
 It is advisable to use an unique package structure so you do not accidentally
 conflict with another library.
 
+[#pretesting-library-changes]
 === Pretesting library changes
 
 If you notice a mistake in a build using an untrusted library,
@@ -641,6 +658,7 @@ library sources will not be checked out again.)
 _Replay_ is not currently supported for trusted libraries.
 Modifying resource files is also not currently supported during _Replay_.
 
+[#defining-declarative-pipelines]
 === Defining Declarative Pipelines
 
 Starting with Declarative 1.2, released in late September, 2017, you can define
@@ -692,6 +710,7 @@ This can only be done in `vars/*.groovy`, and only in a `call` method. Only one
 Declarative Pipeline can be executed in a single build, and if you attempt to
 execute a second one, your build will fail as a result.
 
+[#testing-library-pull-request-changes]
 === Testing library pull request changes
 
 By adding `@Library('my-shared-library@pull/<your-pr-number>/head') _` at the top of a library consumer Jenkinsfile, you can test your pipeline library pull request changes __in situ__ if your pipeline library is hosted on GitHub and the SCM configuration for the pipeline library uses GitHub. +

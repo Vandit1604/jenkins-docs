@@ -23,7 +23,7 @@ To get started quickly with Pipeline:
 
 . Install the link:https://plugins.jenkins.io/docker-workflow/[*Docker Pipeline plugin*] through the *Manage Jenkins > Plugins* page
 . After installing the plugin, restart Jenkins so that the plugin is ready to use
-. Copy one of the <<examples, examples below>> into your repository and name it `Jenkinsfile`
+. Copy one of the xref:#examples[ examples below] into your repository and name it `Jenkinsfile`
 . Click the *New Item* menu within Jenkins
 image:user-docs:pipeline:classic-ui-left-column.png[alt="Classic UI left column",width=40%]
 . Provide a name for your new item (e.g. *My-Pipeline*) and select *Multibranch Pipeline*
