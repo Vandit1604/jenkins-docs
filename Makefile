@@ -22,5 +22,5 @@ antora:
 
 # Rule to clean cache
 clean:
-	rm ui/build/ui-bundle.zip
+	rm -rf ui/build
 	rm -rf playbook/build
