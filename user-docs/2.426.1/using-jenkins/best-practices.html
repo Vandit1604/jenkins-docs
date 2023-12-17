@@ -665,7 +665,7 @@ Static analysis tools are effective in reporting risky code or code with potenti
 Performance test results help identify delays or areas of concern.</p>
 </div>
 <div class="paragraph">
-<p>The plugin:warnings-ng[Warnings Next Generation] plugin provides convenient access to many reports including:</p>
+<p>The <a href="https://plugins.jenkins.io/warnings-ng">Warnings Next Generation</a> plugin provides convenient access to many reports including:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -739,7 +739,7 @@ However, Jenkins offers a solution called "file fingerprinting" to simplify this
 <div class="sect2">
 <h3 id="_dont_use_the_maven_job_type"><a class="anchor" href="#_dont_use_the_maven_job_type"></a>Don&#8217;t use the Maven job type</h3>
 <div class="paragraph">
-<p>Jenkins has been providing the plugin:maven-plugin[Maven integration plugin] for many years, allowing users to create Maven projects using the "Maven project" selection from the Jenkins "New item" menu.
+<p>Jenkins has been providing the <a href="https://plugins.jenkins.io/maven-plugin">Maven integration plugin</a> for many years, allowing users to create Maven projects using the "Maven project" selection from the Jenkins "New item" menu.
 While the Maven job type offers a higher level of integration with Maven builds, it can sometimes introduce unnecessary complexities due to this deep integration.</p>
 </div>
 <div class="paragraph">
@@ -807,9 +807,9 @@ These tokens can help create a more balanced schedule and reduce the likelihood 
 <p>When multiple jobs run simultaneously, there is a possibility of collisions occurring, especially if they require exclusive access to certain resources or set-up services.
 To prevent interference and ensure smooth execution, it is important to manage resource access effectively.
 For builds involving databases or networked services, it is crucial to implement measures that prevent conflicts.
-The plugin:lockable-resources[Lockable Resources plugin] offers fine-grained resource-locking capabilities for Jenkins jobs.
+The <a href="https://plugins.jenkins.io/lockable-resources">Lockable Resources plugin</a> offers fine-grained resource-locking capabilities for Jenkins jobs.
 By using this plugin, you can ensure that only one job has access to a specific resource at a time, avoiding conflicts and ensuring proper synchronization.
-In cases where resource locking with the lockable resources plugin is not sufficient, you can further control concurrent builds using the plugin:throttle-concurrent-builds[Throttle Concurrent Builds plugin].
+In cases where resource locking with the lockable resources plugin is not sufficient, you can further control concurrent builds using the <a href="https://plugins.jenkins.io/throttle-concurrent-builds">Throttle Concurrent Builds plugin</a>.
 This plugin allows you to limit the number of builds that can run simultaneously, providing additional control and preventing overload on shared resources.</p>
 </div>
 <div class="paragraph">

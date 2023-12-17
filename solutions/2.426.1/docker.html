@@ -554,7 +554,7 @@ Utilizing this sidecar approach, a Pipeline can have a "clean" container provisi
 </div>
 <div class="paragraph">
 <p>Consider a hypothetical integration test suite that relies on a local MySQL database to be running.
-Using the <code>withRun</code> method, implemented in the plugin:docker-workflow[Docker Pipeline] plugin&#8217;s support for Scripted Pipeline, a <code>Jenkinsfile</code> can run MySQL as a sidecar:</p>
+Using the <code>withRun</code> method, implemented in the <a href="https://plugins.jenkins.io/docker-workflow">Docker Pipeline</a> plugin&#8217;s support for Scripted Pipeline, a <code>Jenkinsfile</code> can run MySQL as a sidecar:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -614,7 +614,7 @@ Using the container&#8217;s ID, the Pipeline can create a link by passing custom
 <div class="sect2">
 <h3 id="_building_containers"><a class="anchor" href="#_building_containers"></a>Building containers</h3>
 <div class="paragraph">
-<p>In order to create a Docker image, the plugin:docker-workflow[Docker Pipeline] plugin also provides a <code>build()</code> method for creating a new image from a <code>Dockerfile</code> in the repository during a Pipeline run.</p>
+<p>In order to create a Docker image, the <a href="https://plugins.jenkins.io/docker-workflow">Docker Pipeline</a> plugin also provides a <code>build()</code> method for creating a new image from a <code>Dockerfile</code> in the repository during a Pipeline run.</p>
 </div>
 <div class="paragraph">
 <p>One major benefit of using the syntax <code>docker.build("my-image-name")</code> is that a Scripted Pipeline can use the return value for subsequent Docker Pipeline calls, for example:</p>
@@ -716,7 +716,7 @@ When passing arguments this way, the last value in the string must be the path t
 <div class="sect2">
 <h3 id="_using_a_remote_docker_server"><a class="anchor" href="#_using_a_remote_docker_server"></a>Using a remote Docker server</h3>
 <div class="paragraph">
-<p>By default, the plugin:docker-workflow[Docker Pipeline] plugin will communicate with a local Docker daemon, typically accessed through <code>/var/run/docker.sock</code>.</p>
+<p>By default, the <a href="https://plugins.jenkins.io/docker-workflow">Docker Pipeline</a> plugin will communicate with a local Docker daemon, typically accessed through <code>/var/run/docker.sock</code>.</p>
 </div>
 <div class="paragraph">
 <p>To select a non-default Docker server, such as with <a href="https://docs.docker.com/swarm/">Docker Swarm</a>, use the <code>withServer()</code> method.</p>
@@ -773,7 +773,7 @@ A typical symptom of this would be errors from nested <code>sh</code> commands s
 <div class="sect2">
 <h3 id="custom-registry"><a class="anchor" href="#custom-registry"></a>Using a custom registry</h3>
 <div class="paragraph">
-<p>By default, the plugin:docker-workflow[Docker Pipeline] plugin assumes the default Docker Registry of <a href="https://hub.docker.com">Docker Hub</a>.</p>
+<p>By default, the <a href="https://plugins.jenkins.io/docker-workflow">Docker Pipeline</a> plugin assumes the default Docker Registry of <a href="https://hub.docker.com">Docker Hub</a>.</p>
 </div>
 <div class="paragraph">
 <p>In order to use a custom Docker Registry, users of Scripted Pipeline can wrap steps with the <code>withRegistry()</code> method, passing in the custom Registry URL, for example:</p>

@@ -738,11 +738,11 @@ All secrets (credentials, etc.) stored on that instance should be rotated or rev
 <h3 id="_access_granted_with_overallsystemread"><a class="anchor" href="#_access_granted_with_overallsystemread"></a>Access granted with Overall/SystemRead</h3>
 <div class="paragraph">
 <p>This permission grants read-only access to the Jenkins global configuration.
-Its primarily intended to be used when the Jenkins configuration is managed externally, e.g. using the plugin:configuration-as-code/[Configuration as Code] plugin.
+Its primarily intended to be used when the Jenkins configuration is managed externally, e.g. using the <a href="https://plugins.jenkins.io/configuration-as-code/">Configuration as Code</a> plugin.
 It works best when combined with the <em>ExtendedRead</em> permission that allows read-only access to agents and items.</p>
 </div>
 <div class="paragraph">
-<p>This permission can be enabled by setting <a href="/doc/book/managing/system-properties/#jenkins-security-systemreadpermission">the system property <code>jenkins.security.SystemReadPermission</code> to <code>true</code></a> or installing the plugin:extended-read-permission[Extended Read Permission] plugin.</p>
+<p>This permission can be enabled by setting <a href="/doc/book/managing/system-properties/#jenkins-security-systemreadpermission">the system property <code>jenkins.security.SystemReadPermission</code> to <code>true</code></a> or installing the <a href="https://plugins.jenkins.io/extended-read-permission">Extended Read Permission</a> plugin.</p>
 </div>
 <div class="paragraph">
 <p>Learn more in jep:224[].</p>
@@ -773,7 +773,7 @@ Users with this permission are able to perform some administrative tasks.
 Options generally considered critical to the security of Jenkins are not available to these users.</p>
 </div>
 <div class="paragraph">
-<p>This permission can be enabled by setting <a href="/doc/book/managing/system-properties/#jenkins-security-managepermission">the system property <code>jenkins.security.ManagePermission</code> to <code>true</code></a> or installing the plugin:manage-permission[Overall/Manage permission enabler] plugin.</p>
+<p>This permission can be enabled by setting <a href="/doc/book/managing/system-properties/#jenkins-security-managepermission">the system property <code>jenkins.security.ManagePermission</code> to <code>true</code></a> or installing the <a href="https://plugins.jenkins.io/manage-permission">Overall/Manage permission enabler</a> plugin.</p>
 </div>
 <div class="paragraph">
 <p>Learn more in jep:223[].</p>

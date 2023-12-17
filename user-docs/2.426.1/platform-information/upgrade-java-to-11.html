@@ -667,7 +667,7 @@ If you discover a previously unreported issue, please let us know. Refer to <a h
 However, the <code>java.xml.bind</code> and <code>javax.activation</code> modules are no longer included in OpenJDK 11, and plugins might fail if no replacement is offered.</p>
 </div>
 <div class="paragraph">
-<p>To fix this problem, we&#8217;ve bundled those libraries into a new detached plugin: plugin:jaxb[JAXB plugin].
+<p>To fix this problem, we&#8217;ve bundled those libraries into a new detached <a href="https://plugins.jenkins.io/" class="bare">https://plugins.jenkins.io/</a> plugin:jaxb[JAXB plugin].
 When any Jenkins core more recent than <code>2.163</code> is running on Java 11, this plugin is automatically installed.
 However, if you manage your plugins outside Jenkins, for example using a <code>plugins.txt</code> in your Docker images, you might need to install the plugin explicitly.</p>
 </div>
@@ -681,7 +681,7 @@ However, if you manage your plugins outside Jenkins, for example using a <code>p
 If you&#8217;re upgrading your Jenkins controller to run on Java 11, you must upgrade the JVM on your agents.</p>
 </div>
 <div class="paragraph">
-<p>You can validate the version of each agent with the plugin:versioncolumn[Versions Node Monitors] plugin.
+<p>You can validate the version of each agent with the <a href="https://plugins.jenkins.io/versioncolumn">Versions Node Monitors</a> plugin.
 This plugin provides information about the JVM version of each agent on the node management screen of your Jenkins instance.
 You can also configure this plugin to automatically disconnect any agent with an incorrect JVM version.</p>
 </div>
@@ -697,7 +697,7 @@ You can&#8217;t launch agents for a Java 11 Jenkins controller from a <code>*.jn
 </div>
 <div class="paragraph">
 <p>There are no plans to replace this functionality.
-Connect agents to Jenkins on Java 11 with plugins like plugin:ssh-slaves[SSH Build Agents Plugin], with operating system command line calls to <code>java -jar agent.jar</code>, or using containers.</p>
+Connect agents to Jenkins on Java 11 with plugins like <a href="https://plugins.jenkins.io/ssh-slaves">SSH Build Agents Plugin</a>, with operating system command line calls to <code>java -jar agent.jar</code>, or using containers.</p>
 </div>
 </div>
 </div>

@@ -1462,7 +1462,7 @@ Ignoring SSL/TLS errors is only permitted if the following constraints are both 
 <p>Ignoring SSL/TLS errors is limited to the specific connections opened by the plugin.
 Plugins should never cause SSL/TLS errors to be ignored for the entire Jenkins instance.
 As a consequence, APIs like <code>HttpsURLConnection#setDefaultHostnameVerifier</code> or <code>HttpsURLConnection#setDefaultSSLSocketFactory</code> must not be called by plugins.
-The only exceptions to this rule are dedicated plugins with only this purpose, like plugin:skip-certificate-check[skip-certificate-check].</p>
+The only exceptions to this rule are dedicated plugins with only this purpose, like <a href="https://plugins.jenkins.io/skip-certificate-check">skip-certificate-check</a>.</p>
 </li>
 <li>
 <p>Ignoring SSL/TLS problems for specific connections (e.g. <code>HttpsURLConnection#setHostnameVerifier</code> or <code>HttpsURLConnection#setSSLSocketFactory</code>) is allowed, but users need to opt in to this behavior.
@@ -1524,7 +1524,7 @@ It needs to be configured to prevent the instantiation of arbitrary types.</p>
 <div class="paragraph">
 <p>When using SnakeYAML, make sure to never use the parameterless <code>new Yaml()</code> constructor, but to pass a <code>SafeConstructor</code> as argument (or otherwise restrict what can be deserialized).
 Additionally, use at least version 1.26 to get denial-of-service protection ("billion laughs").
-Consider depending on the plugin:snakeyaml-api[SnakeYAML API Plugin] instead of bundling SnakeYAML with your plugin.</p>
+Consider depending on the <a href="https://plugins.jenkins.io/snakeyaml-api">SnakeYAML API Plugin</a> instead of bundling SnakeYAML with your plugin.</p>
 </div>
 </div>
 </div>
@@ -1532,10 +1532,10 @@ Consider depending on the plugin:snakeyaml-api[SnakeYAML API Plugin] instead of 
 <h3 id="_groovy_scripting"><a class="anchor" href="#_groovy_scripting"></a>Groovy Scripting</h3>
 <div class="paragraph">
 <p>Many Jenkins plugins allow the use of Groovy to extend their capabilities.
-For example, the plugin:email-ext[Email Extension Plugin] allows executing a script to determine whether an email should be sent.</p>
+For example, the <a href="https://plugins.jenkins.io/email-ext">Email Extension Plugin</a> allows executing a script to determine whether an email should be sent.</p>
 </div>
 <div class="paragraph">
-<p>All such functionality, if available to users without Overall/Administer, must integrate with plugin:script-security[Script Security Plugin].</p>
+<p>All such functionality, if available to users without Overall/Administer, must integrate with <a href="https://plugins.jenkins.io/script-security">Script Security Plugin</a>.</p>
 </div>
 </div>
 <div class="sect2">

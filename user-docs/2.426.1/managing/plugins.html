@@ -1025,7 +1025,7 @@ on startup.</p>
 <p>Features are sometimes detached (or split off) from Jenkins core and moved into a plugin.</p>
 </div>
 <div class="paragraph">
-<p>Many plugins, like plugin:subversion[Subversion] and plugin:junit[JUnit], got their beginnings as Jenkins core functionalities.
+<p>Many plugins, like <a href="https://plugins.jenkins.io/subversion">Subversion</a> and plugin:junit[JUnit], got their beginnings as Jenkins core functionalities.
 When a plugin was attached to Jenkins core prior to being detached, it may or may not have used its full functionality with other plugins that relied on the same version of Jenkins.
 To ensure that plugins do not fail when a functionality on which they rely is separated from Jenkins core, it is necessary to have a dependency in the detached plugin, if it specifies a dependency on a version of Jenkins core prior to the split.
 It is assumed that there is a dependency on the detached plugin, even when it isn&#8217;t stated explicitly.</p>

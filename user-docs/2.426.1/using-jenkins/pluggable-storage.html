@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Jenkins Docs</title>
+    <title>Pluggable Storage :: Jenkins Docs</title>
     <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.426.1/using-jenkins/pluggable-storage.html">
     <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -510,6 +510,10 @@
 <button class="nav-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Jenkins User Documentation</a></li>
+    <li><a href="pluggable-storage.html">Pluggable Storage</a></li>
+  </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/user-docs/modules/using-jenkins/pages/pluggable-storage.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
   </div>
@@ -518,6 +522,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
+<h1 class="page">Pluggable Storage</h1>
 <div class="admonitionblock note">
     <table>
         <tbody>
@@ -532,19 +537,8 @@
         </tbody>
     </table>
 </div>
-<hr>
-<div class="paragraph">
-<p>layout: section
-title: "Pluggable Storage"
-summary: Storage alternatives for artifacts, build logs, credentials, test results, and fingerprints
-tags:
-- pluggable-storage
-- cloud-native
-- cloud-native-sig
-- external-logging
-- external-artifacts
----</p>
-</div>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>The current default approach of storing everything into the filesystem is the main reason why Jenkins does not fit the "Cloud Native" model, with features like high availability, zero downtime, or pay per use.
 While there are plenty of plugins that implement parts of this vision, this becomes cumbersome to configure and a usability nightmare for users, as jep:300[] has pointed out.
@@ -559,6 +553,8 @@ We believe that by using cloud provided services the overall usability, performa
 <div class="paragraph">
 <p>You can find more information about Pluggable Storage and priorities
 in <a href="/blog/2018/07/30/introducing-cloud-native-sig/">this blogpost</a>.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_status_summary"><a class="anchor" href="#_status_summary"></a>Status summary</h3>
@@ -585,8 +581,8 @@ in <a href="/blog/2018/07/30/introducing-cloud-native-sig/">this blogpost</a>.</
 <td class="tableblock halign-left valign-top"><p class="tableblock">Fully delivered, with support for uploading artifacts directly from agents.
   Related JEPs: jep:202[].</p>
 <p class="tableblock">  <a href="../../../dev-docs/extensions/jenkins-core.html#artifactmanagerfactory" class="xref page">Extension point</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">plugin:artifact-manager-s3[Artifact Manager on S3],
-  plugin:azure-artifact-manager[Azure Artifact Manager],
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://plugins.jenkins.io/artifact-manager-s3">Artifact Manager on S3</a>,
+  <a href="https://plugins.jenkins.io/azure-artifact-manager">Azure Artifact Manager</a>,
   <a href="../../../dev-docs/extensions/jenkins-core.html#artifactmanagerfactory" class="xref page">&lt;More implementations&gt;</a></p></td>
 </tr>
 <tr>
@@ -594,8 +590,8 @@ in <a href="/blog/2018/07/30/introducing-cloud-native-sig/">this blogpost</a>.</
   <strong>(Available)</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Completed before the JEP process was introduced.</p>
 <p class="tableblock"><a href="../../../dev-docs/extensions/credentials.html#credentialsprovider" class="xref page">Extension point</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">plugin:kubernetes-credentials-provider[Kubernetes Credentials Provider],
-  plugin:aws-secrets-manager-credentials-provider[AWS Secrets Manager Credentials Provider],
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://plugins.jenkins.io/kubernetes-credentials-provider">Kubernetes Credentials Provider</a>,
+  <a href="https://plugins.jenkins.io/aws-secrets-manager-credentials-provider">AWS Secrets Manager Credentials Provider</a>,
   <a href="../../../dev-docs/extensions/credentials.html#credentialsprovider" class="xref page">&lt;More implementations&gt;</a></p></td>
 </tr>
 <tr>
@@ -638,7 +634,7 @@ in <a href="/blog/2018/07/30/introducing-cloud-native-sig/">this blogpost</a>.</
   <strong>(Available)</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Jenkins supports custom log appenders using standard <code>java.util.logging</code>
   <a href="https://jenkov.com/tutorials/java-logging/configuration.html">configuration options</a>.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">plugin:syslog-logger[Syslog logger],
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://plugins.jenkins.io/syslog-logger">Syslog logger</a>,
   non-Jenkins implementation</p></td>
 </tr>
 <tr>
@@ -650,7 +646,7 @@ in <a href="/blog/2018/07/30/introducing-cloud-native-sig/">this blogpost</a>.</
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Configurations<br>
   (Paused)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Largely replaced by the plugin:configuration-as-code[Configuration as Code] plugin
+<td class="tableblock halign-left valign-top"><p class="tableblock">Largely replaced by the <a href="https://plugins.jenkins.io/configuration-as-code">Configuration as Code</a> plugin
   which allows storing Jenkins configurations in SCM or other locations without a database.</p>
 <p class="tableblock">  Related JEPs: jep:213[]</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
@@ -658,13 +654,13 @@ in <a href="/blog/2018/07/30/introducing-cloud-native-sig/">this blogpost</a>.</
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Test Results</strong><br>
   <strong>(Available)</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API is available in plugin:junit[JUnit Plugin].</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">plugin:junit-sql-storage[Junit SQL Storage]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API is available in <a href="https://plugins.jenkins.io/junit">JUnit Plugin</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://plugins.jenkins.io/junit-sql-storage">Junit SQL Storage</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Code Coverage results<br>
   (Not started)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Planned only for plugins based on plugin:code-coverage-api[Code Coverage API] which unifies the storage implementation.
+<td class="tableblock halign-left valign-top"><p class="tableblock">Planned only for plugins based on <a href="https://plugins.jenkins.io/code-coverage-api">Code Coverage API</a> which unifies the storage implementation.
   See <em>Runs</em> for other coverage report types.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
 </tr>
@@ -689,7 +685,7 @@ in <a href="/blog/2018/07/30/introducing-cloud-native-sig/">this blogpost</a>.</
 <td class="tableblock halign-left valign-top"><p class="tableblock">Jenkins 2.252+ include the external fingerprint storage API which can be consumed by plugins.
   More info: <a href="/projects/gsoc/2020/projects/external-fingerprint-storage/">GSoC Project Page</a></p>
 <p class="tableblock">  Related JEPs: jep:226[]</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">plugin:redis-fingerprint-storage[Redis],
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://plugins.jenkins.io/redis-fingerprint-storage">Redis</a>,
   <a href="https://github.com/jenkinsci/postgresql-fingerprint-storage-plugin">PostgreSQL (unreleased)</a></p></td>
 </tr>
 <tr>
@@ -732,7 +728,7 @@ extension point.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>plugin:artifact-manager-s3[Artifact Manager for S3]</p>
+<p><a href="https://plugins.jenkins.io/artifact-manager-s3">Artifact Manager for S3</a></p>
 </li>
 </ul>
 </div>
@@ -753,7 +749,7 @@ extension point.</p>
 <p>Logs disk usage causes the same issues previously mentioned for artifacts.
 Plus an external focused log storage such as <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html">AWS CloudWatch Logs</a> allows demanded features as centralized log management, log retention policies, advanced querying, etc.
 There are already options to externally ship the logs to a backend, or plugins that would do that like the  <a href="https://github.com/jenkinsci/aws-cloudwatch-logs-publisher-plugin">aws-cloudwatch-logs-publisher-plugin</a>, but there is no integrated way to both send and display logs from external log storage.
-The External log storage work is tracked as jira:JENKINS-38313[].</p>
+The External log storage work is tracked as <a href="https://issues.jenkins.io/browse/JENKINS-38313" class="bare">https://issues.jenkins.io/browse/JENKINS-38313</a>.</p>
 </div>
 <div class="paragraph">
 <p>Reference implementation(s):</p>
@@ -816,7 +812,7 @@ There are also other implementations which could be upstreamed to the Jenkins co
 <div class="sect2">
 <h3 id="_credentials"><a class="anchor" href="#_credentials"></a>Credentials</h3>
 <div class="paragraph">
-<p>In plugin:credentials[Credentials Plugin] 1.15+ there
+<p>In <a href="https://plugins.jenkins.io/credentials">Credentials Plugin</a> 1.15+ there
 is a <a href="../../../dev-docs/extensions/credentials.html#credentialsprovider" class="xref page">CredentialsProvider</a>
 extension point which allows referencing and resolving external credentials.
 This engine allows implementing external credentials for plugins implementing Credentials API..</p>
@@ -827,7 +823,7 @@ This engine allows implementing external credentials for plugins implementing Cr
 <div class="ulist">
 <ul>
 <li>
-<p>plugin:kubernetes-credentials-provider[Kubernetes Credentials Provider]</p>
+<p><a href="https://plugins.jenkins.io/kubernetes-credentials-provider">Kubernetes Credentials Provider</a></p>
 </li>
 </ul>
 </div>
@@ -847,7 +843,7 @@ In order to display trends, each report has to be loaded and then processed in-m
 <p>The main purpose of externalising Test Results is to optimize Jenkins logic
 by querying the desired data from specialized external storages,
 e.g. from Document-based databases like Elasticsearch.
-According to the current plan, plugin:junit[JUnit Plugin] will be extended
+According to the current plan, <a href="https://plugins.jenkins.io/junit">JUnit Plugin</a> will be extended
 in order to support such external storage in its APIs being widely used by test reporting plugins.</p>
 </div>
 <div class="paragraph">
