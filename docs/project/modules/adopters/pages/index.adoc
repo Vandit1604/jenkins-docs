@@ -1,16 +1,124 @@
-image::https://raw.githubusercontent.com/jenkins-infra/jenkins.io/d64ddebd0a7d02772c10a77f1f4890b93b6961e7/content/images/logos/jenkins/Jenkins-stop-the-war.svg["Stop the war",200px,float=left]
-= Jenkins
+:page-layout: artwork
+= Jenkins Adopters 
 
-== This is tutorial
+++++
+<style>
+.doc .image img{
+  padding-bottom: 2rem;
+}
+.doc .tableblock strong{
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
 
-Build great things at any scale
+.doc th.tableblock {
+    display: none;
+}
 
-The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
+.doc p.tableblock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
 
-Ukraine We stand with the people of Ukraine. Please assist humanitarian efforts for the Ukrainian people and those affected by the military invasion of Ukraine by supporting international aid organizations, including the 
-link:https://www.icrc.org/[International Committee of the Red Cross]
+table.tableblock.frame-all.grid-all.stretch {
+    border-collapse: collapse;
+}
 
-+++
-<button>Documentation</button> <button>Download</button>
-+++
+.doc table.grid-all>*>tr>* {
+    border-width: 0;
+}
 
+.doc table.frame-all {
+    border-width: 0;
+}
+
+.doc {
+    height: auto;
+    width: 240px;
+}
+.doc td .halign-left .valign-top {
+    border: solid black 2px;
+}
+</style>
+++++
+
+This page provides a list of Jenkins adopters.
+
+---
+
+|===
+|||
+|*Anchore*
+image:/home/vandit/gsoc-project/jenkins-docs/docs/images/modules/ROOT/assets/images/adopters/Anchore.jpg[height=256,link=https://anchore.com/]
+
+https://anchore.com/blog/jenkins-at-scale-with-anchore-vulnerability-scanning-compliance/[Blog post]
+
+|*Avoris Travel*
+image:/home/vandit/gsoc-project/jenkins-docs/docs/images/modules/ROOT/assets/images/adopters/Avoris-Travel.jpg[width=240,height=141,link=https://www.avoristravel.com/]
+
+https://stories.jenkins.io/user-story/to-do-things-quickly-simply-and-in-a-powerful-way/[User Story]
+
+|*CERN*
+image:/home/vandit/gsoc-project/jenkins-docs/docs/images/modules/ROOT/assets/images/adopters/CERN.jpg[height=256,link=https://home.cern/]
+
+https://stories.jenkins.io/user-story/to-facilitate-day-to-day-work/[User Story]
+
+|*CloudBees*
+image:/home/vandit/gsoc-project/jenkins-docs/docs/images/modules/ROOT/assets/images/adopters/CloudBees.jpg[height=256,link=https://www.cloudbees.com/]
+
+https://www.cloudbees.com/jenkins[Details]
+
+|*D4Science*
+image:/home/vandit/gsoc-project/jenkins-docs/docs/images/modules/ROOT/assets/images/adopters/D4Science.jpeg[height=256,link=https://www.d4science.org/]
+
+https://jenkinsistheway.io/case-studies/d4science-amps-up-their-scientific-research-platform-with-ci-cd-powered-by-jenkins/[User Story]
+
+|*JD.com*
+image:/home/vandit/gsoc-project/jenkins-docs/docs/images/modules/ROOT/assets/images/adopters/JDcom.jpg[height=256,link=http://jd.com/]
+
+https://stories.jenkins.io/user-story/to-cast-magic-of-continuous-delivery/[User Story]
+
+|*KP Labs*
+image:/home/vandit/gsoc-project/jenkins-docs/docs/images/modules/ROOT/assets/images/adopters/KP-Labs.png[height=256,link=https://www.kplabs.pl/en/]
+
+https://www.cloudbees.com/jenkins[Details]
+
+|*Preply*
+image:/home/vandit/gsoc-project/jenkins-docs/docs/images/modules/ROOT/assets/images/adopters/Preply.png[height=256,link=https://preply.com/en/home]
+
+https://jenkinsistheway.io/case-studies/d4science-amps-up-their-scientific-research-platform-with-ci-cd-powered-by-jenkins/[User Story]
+
+|*Topdanmark*
+image:/home/vandit/gsoc-project/jenkins-docs/docs/images/modules/ROOT/assets/images/adopters/Topdanmark.png[height=256,link=https://www.topdanmark.dk/]
+
+https://stories.jenkins.io/user-story/to-cast-magic-of-continuous-delivery/[User Story]
+
+|*Tymit*
+image:/home/vandit/gsoc-project/jenkins-docs/docs/images/modules/ROOT/assets/images/adopters/Tymit.png[height=256,link=https://tymit.com/]
+
+https://stories.jenkins.io/user-story/to-scale-from-the-ground-up/[User Story]
+
+|*Add your org!*
+image:/home/vandit/gsoc-project/jenkins-docs/docs/images/modules/ROOT/assets/images/adopters/ZZZ_add_your_company.png[height=256,link=contributing.html#add-your-org]
+
+xref:contributing.adoc#add-your-org[How to?]
+|
+|===
+
+== More adopters
+
+https://stackshare.io/jenkins[Stackshare] lists many more Jenkins adopters. According to the site, Jenkins has more than 3000 adopter companies which you can discover using its web interface and API. https://stackshare.io/jenkins[Jenkins on Stackshare]
+
+image::/home/vandit/gsoc-project/jenkins-docs/docs/images/modules/ROOT/assets/images/adopters/stackshare.png[link=https://stackshare.io/jenkins]
+
+.References
+****
+* https://stackshare.io/jenkins[Jenkins on Stackshare]
+* https://stories.jenkins.io/[Jenkins stories - more case studies]
+* xref:contributing.adoc#add-your-org[Add your company to the listing]
+****
