@@ -8,9 +8,9 @@ Jenkins offers several different types of projects, including:
 * xref:pipeline:multibranch.adoc[Multibranch Pipeline]
 * xref:pipeline:multibranch.adoc#organization-folders[Organization folders]
 * Freestyle
-* plugin:matrix-project[Multi-configuration (matrix)]
-* plugin:maven-plugin[Maven]
-* plugin:external-monitor-job[External job]
+* {plugin}matrix-project[Multi-configuration (matrix)]
+* {plugin}maven-plugin[Maven]
+* {plugin}external-monitor-job[External job]
 
 Darin Pope provides a summary of the differences between Pipeline projects and freestyle projects in this video.
 

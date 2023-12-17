@@ -362,7 +362,7 @@ issues:
 
     Additionally, the job configuration form does not mask these API keys, increasing the potential for attackers to observe and capture them.
 
-    PLUGIN_NAME 4.0.0 no longer stores the API keys directly, instead accessing them through its newly added plugin:credentials[Credentials Plugin] integration.
+    PLUGIN_NAME 4.0.0 no longer stores the API keys directly, instead accessing them through its newly added {plugin}credentials[Credentials Plugin] integration.
     Affected jobs need to be reconfigured.
   plugins:
   - name: codedx

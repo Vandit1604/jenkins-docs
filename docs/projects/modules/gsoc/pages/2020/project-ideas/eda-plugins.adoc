@@ -14,8 +14,8 @@ conditionally-free tools (like FPGA design EDAs).
 Examples of tool integration:
 
 * Tool launch and publishing steps for Free-style and/or Pipeline jobs
-* Integration with plugin:warnings-ng[Warnings Next Generation Plugin] for analysis report parsing.
-* Integration with plugin:xunit[xUnit Plugin] for test results parsing
+* Integration with {plugin}warnings-ng[Warnings Next Generation Plugin] for analysis report parsing.
+* Integration with {plugin}xunit[xUnit Plugin] for test results parsing
 * Reporting of FPGA resource utilization (per build + trends)
 * Timing report trend publishing
 * Integrating UVM reports into Jenkins build and project pages
