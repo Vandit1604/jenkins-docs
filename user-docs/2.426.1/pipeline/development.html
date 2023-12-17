@@ -34,9 +34,6 @@
     <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -46,19 +43,22 @@
     <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows</a>
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
   </li>
 </ul>
   </li>
@@ -172,7 +172,7 @@
     <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with the Guided Tour</a>
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
@@ -337,7 +337,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+    <a class="nav-link" href="#user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc">user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
@@ -564,8 +564,8 @@ This can be done using a Jenkins CLI command or by making an
 HTTP POST
 request with appropriate parameters.
 We recommended using the
-<a href="#./../managing/cli.adoc#ssh" class="xref unresolved">SSH interface</a>
-to run the linter. See the <a href="../glossary/index.html#../managing/cli" class="xref page">Jenkins CLI documentation</a> for details on how to properly configure
+<a href="../managing/cli.html#ssh" class="xref page">SSH interface</a>
+to run the linter. See the <a href="../managing/cli.html" class="xref page">Jenkins CLI documentation</a> for details on how to properly configure
 Jenkins for secure command-line access.</p>
 </div>
 <div class="listingblock">
@@ -764,7 +764,7 @@ it can be Replayed.</p>
 </li>
 <li>
 <p><strong>Referenced Shared Library code is also modifiable</strong> - If a Pipeline run references a
-<a href="../glossary/index.html#shared-libraries" class="xref page">Shared Library</a>, the code from the shared library will
+<a href="shared-libraries.html" class="xref page">Shared Library</a>, the code from the shared library will
 also be shown and modifiable as part of the Replay page.</p>
 </li>
 <li>
@@ -917,7 +917,7 @@ a secure channel (SSH).  You can install it directly from the Sublime Text packa
 <p>The <a href="https://github.com/jenkinsci/JenkinsPipelineUnit">Pipeline Unit Testing Framework</a>
 allows you to
 <a href="https://en.wikipedia.org/wiki/Unit_testing">unit test</a>
-Pipelines and <a href="../glossary/index.html#shared-libraries" class="xref page">Shared Libraries</a>
+Pipelines and <a href="shared-libraries.html" class="xref page">Shared Libraries</a>
 before running them in full. It provides a mock execution environment where real
 Pipeline steps are replaced with mock objects that you can use to check for expected
 behavior. New and rough around the edges, but promising.

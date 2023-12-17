@@ -34,9 +34,6 @@
     <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -46,19 +43,22 @@
     <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows</a>
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
   </li>
 </ul>
   </li>
@@ -172,7 +172,7 @@
     <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with the Guided Tour</a>
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
@@ -337,7 +337,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+    <a class="nav-link" href="#user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc">user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
@@ -551,14 +551,14 @@ build tools, cloud providers, analysis tools, and much more.</p>
 </div>
 <div class="paragraph">
 <p>Plugins can be automatically downloaded, with their dependencies, from the
-<a href="#../glossary.adoc#update-center" class="xref unresolved">Update Center</a>. The Update Center is a service
+<a href="#../glossary#update-center">Update Center</a>. The Update Center is a service
 operated by the Jenkins project which provides an inventory of open source
 plugins which have been developed and maintained by various members of the
 Jenkins community.</p>
 </div>
 <div class="paragraph">
 <p>This section covers everything from the basics of managing plugins within
-the Jenkins web UI, to making changes on the <a href="#../glossary.adoc#controller" class="xref unresolved">controller&#8217;s</a>
+the Jenkins web UI, to making changes on the <a href="#../glossary#controller">controller&#8217;s</a>
 file system.</p>
 </div>
 </div>
@@ -642,7 +642,7 @@ configured Update Center.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Administrators may also use the <a href="cli.html" class="xref page">Jenkins CLI</a> which provides a command
+<p>Administrators may also use the <a href="#cli#">Jenkins CLI</a> which provides a command
 to install plugins. Scripts to manage Jenkins environments, or configuration
 management code, may need to install plugins without direct user interaction in
 the web UI. The Jenkins CLI allows a command line user or automation tool to
@@ -872,7 +872,7 @@ otherwise ignored.</p>
 <div class="sect3">
 <h4 id="_using_the_jenkins_cli"><a class="anchor" href="#_using_the_jenkins_cli"></a>Using the Jenkins CLI</h4>
 <div class="paragraph">
-<p>It is also possible to enable or disable plugins via the <a href="cli.html" class="xref page">Jenkins CLI</a>
+<p>It is also possible to enable or disable plugins via the <a href="#cli#">Jenkins CLI</a>
 using the <code>enable-plugin</code> or <code>disable-plugin</code> commands.</p>
 </div>
 <div class="admonitionblock note">

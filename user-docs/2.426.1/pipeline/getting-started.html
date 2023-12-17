@@ -34,9 +34,6 @@
     <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -46,19 +43,22 @@
     <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows</a>
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
   </li>
 </ul>
   </li>
@@ -172,7 +172,7 @@
     <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with the Guided Tour</a>
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
@@ -337,7 +337,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+    <a class="nav-link" href="#user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc">user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
@@ -604,12 +604,12 @@ required to work with Pipeline.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#through-blue-ocean">[through-blue-ocean]</a> - after setting up a Pipeline project in Blue Ocean,
+<p><a href="#through-blue-ocean">Through Blue Ocean</a> - after setting up a Pipeline project in Blue Ocean,
 the Blue Ocean UI helps you write your Pipeline&#8217;s <code>Jenkinsfile</code> and commit it
 to source control.</p>
 </li>
 <li>
-<p><a href="#through-the-classic-ui">[through-the-classic-ui]</a> - you can enter a basic Pipeline directly in
+<p><a href="#through-the-classic-ui">Through the classic UI</a> - you can enter a basic Pipeline directly in
 Jenkins through the classic UI.</p>
 </li>
 <li>
@@ -658,7 +658,7 @@ control.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_through_the_classic_ui"><a class="anchor" href="#_through_the_classic_ui"></a>Through the classic UI</h3>
+<h3 id="through-the-classic-ui"><a class="anchor" href="#through-the-classic-ui"></a>Through the classic UI</h3>
 <div class="paragraph">
 <p>A <code>Jenkinsfile</code> created using the classic UI is stored by Jenkins itself (within
 the Jenkins home directory).</p>
@@ -879,7 +879,7 @@ which may rectify the issue.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_built_in_documentation"><a class="anchor" href="#_built_in_documentation"></a>Built-in Documentation</h2>
+<h2 id="built-in-documentation"><a class="anchor" href="#built-in-documentation"></a>Built-in Documentation</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Pipeline ships with built-in documentation features to make it
@@ -988,8 +988,8 @@ for a complete, and up to date, list of properties available on <code>currentBui
 <div class="paragraph">
 <p>While the Snippet Generator helps with generating steps for a Scripted
 Pipeline or for the <code>steps</code> block in a <code>stage</code> in a Declarative Pipeline, it
-does not cover the <a href="../syntax#declarative-sections">sections</a> and
-<a href="../syntax#declarative-directives">directives</a> used to define a Declarative Pipeline.
+does not cover the <a href="syntax.html#declarative-sections" class="xref page">sections</a> and
+<a href="syntax.html#declarative-directives" class="xref page">directives</a> used to define a Declarative Pipeline.
 The "Declarative Directive Generator" utility helps with that.
 Similar to the <a href="#snippet-generator">Snippet Generator</a>, the Directive Generator allows you
 to choose a Declarative directive, configure it in a form, and generate the
@@ -1048,7 +1048,7 @@ Pipeline, but should provide enough of a foundation for you to start
 experimenting with a test Jenkins instance.</p>
 </div>
 <div class="paragraph">
-<p>In the next section, <a href="jenkinsfile.html" class="xref page">The Jenkinsfile</a>, more Pipeline steps
+<p>In the next section, <a href="#jenkinsfile#"> The Jenkinsfile</a>, more Pipeline steps
 will be discussed along with patterns for implementing successful, real-world,
 Jenkins Pipelines.</p>
 </div>

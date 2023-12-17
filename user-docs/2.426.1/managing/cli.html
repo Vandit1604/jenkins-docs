@@ -34,9 +34,6 @@
     <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -46,19 +43,22 @@
     <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows</a>
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
   </li>
 </ul>
   </li>
@@ -172,7 +172,7 @@
     <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with the Guided Tour</a>
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
@@ -337,7 +337,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+    <a class="nav-link" href="#user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc">user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
@@ -578,7 +578,7 @@ Older versions of the CLI client are considered insecure and should not be used.
 <div class="paragraph">
 <p>In a new Jenkins installation, the SSH service is disabled by default.
 Administrators may choose to set a specific port or ask Jenkins to pick a random port
-in the <a href="security.html#ssh-server" class="xref page">Security</a> page.
+in the <a href="../security/services.html#ssh-server" class="xref page">Security</a> page.
 In order to determine the randomly assigned SSH port,
 inspect the headers returned on a Jenkins URL, for example:</p>
 </div>
@@ -590,11 +590,11 @@ inspect the headers returned on a Jenkins URL, for example:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>With the random SSH port (<code>53801</code> in this example), and <a href="#_authentication">Authentication</a>
+<p>With the random SSH port (<code>53801</code> in this example), and <a href="#authentication">Authentication</a>
 configured, any modern SSH client may securely execute CLI commands.</p>
 </div>
 <div class="sect2">
-<h3 id="_authentication"><a class="anchor" href="#_authentication"></a>Authentication</h3>
+<h3 id="authentication"><a class="anchor" href="#authentication"></a>Authentication</h3>
 <div class="paragraph">
 <p>Whichever user used for authentication with the Jenkins controller must have the
 <code>Overall/Read</code> permission in order to <em>access</em> the CLI. The user may require
@@ -614,7 +614,7 @@ into the appropriate text area.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_common_commands"><a class="anchor" href="#_common_commands"></a>Common Commands</h3>
+<h3 id="common-commands"><a class="anchor" href="#common-commands"></a>Common Commands</h3>
 <div class="paragraph">
 <p>Jenkins has a number of built-in CLI commands which can be found in every
 Jenkins environment, such as <code>build</code> or <code>list-jobs</code>. Plugins may also provide

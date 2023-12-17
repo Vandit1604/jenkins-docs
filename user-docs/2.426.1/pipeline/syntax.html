@@ -34,9 +34,6 @@
     <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -46,19 +43,22 @@
     <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows</a>
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
   </li>
 </ul>
   </li>
@@ -172,7 +172,7 @@
     <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with the Guided Tour</a>
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
@@ -337,7 +337,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+    <a class="nav-link" href="#user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc">user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
@@ -549,7 +549,7 @@ As of version 2.5 of the Pipeline plugin, Pipeline supports two discrete syntaxe
 For the pros and cons of each, refer to the <a href="#compare">Syntax Comparison</a>.</p>
 </div>
 <div class="paragraph">
-<p>As discussed at the <a href="syntax.html" class="xref page">start of this chapter</a>, the most fundamental part of a Pipeline is the "step". Basically, steps tell Jenkins <em>what</em> to do and serve as the basic building block for both Declarative and Scripted Pipeline syntax.</p>
+<p>As discussed at the <a href="getting-started.html" class="xref page">start of this chapter</a>, the most fundamental part of a Pipeline is the "step". Basically, steps tell Jenkins <em>what</em> to do and serve as the basic building block for both Declarative and Scripted Pipeline syntax.</p>
 </div>
 <div class="paragraph">
 <p>For an overview of available steps, please refer to the <a href="/doc/pipeline/steps">Pipeline Steps reference</a> which contains a comprehensive list of steps built into Pipeline as well as steps provided by plugins.</p>
@@ -585,7 +585,7 @@ For the pros and cons of each, refer to the <a href="#compare">Syntax Comparison
 Each statement has to be on its own line.</p>
 </li>
 <li>
-<p>Blocks must only consist of <a href="#declarative-sections">Sections</a>, <a href="#declarative-directives">Directives</a>, <a href="#declarative-steps">Steps</a>, or assignment statements.</p>
+<p>Blocks must only consist of <a href="#declarative-sections&gt;&gt;"> &lt;&lt;declarative-directives</a>, <a href="#declarative-steps">Steps</a>, or assignment statements.</p>
 </li>
 <li>
 <p>A property reference statement is treated as a no-argument method invocation.
@@ -629,7 +629,7 @@ The section must be defined at the top-level inside the <code>pipeline</code> bl
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock">Parameters</p></th>
 <td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
-<p><a href="#agent-parameters">Described below</a></p>
+<p><a href="#agent-parameters"> Described below</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -736,7 +736,7 @@ For example: <code>agent { label 'my-label1 &amp;&amp; my-label2' }</code> or <c
 </dd>
 <dt class="hdlist1">docker</dt>
 <dd>
-<p>Execute the Pipeline, or stage, with the given container which will be dynamically provisioned on a <a href="#../glossary.adoc#node" class="xref unresolved">node</a> pre-configured to accept Docker-based Pipelines, or on a node matching the optionally defined <code>label</code> parameter.
+<p>Execute the Pipeline, or stage, with the given container which will be dynamically provisioned on a <a href="#../glossary#node"> node</a> pre-configured to accept Docker-based Pipelines, or on a node matching the optionally defined <code>label</code> parameter.
 <code>docker</code> also optionally accepts an <code>args</code> parameter which may contain arguments to pass directly to a <code>docker run</code> invocation, and an <code>alwaysPull</code> option, which will force a <code>docker pull</code> even if the image name is already present.
 For example: <code>agent { docker 'maven:3.9.3-eclipse-temurin-17' }</code> or</p>
 <div class="listingblock">
@@ -979,7 +979,7 @@ Runtime arguments to pass to <code>docker run</code>.</p>
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Defining <code>agent none</code> at the top-level of the Pipeline ensures that <a href="#../glossary.adoc#executor" class="xref unresolved">an Executor</a> will not be assigned unnecessarily.
+<td>Defining <code>agent none</code> at the top-level of the Pipeline ensures that <a href="#../glossary#executor"> an Executor</a> will not be assigned unnecessarily.
 Using <code>agent none</code> also forces each <code>stage</code> section to contain its own <code>agent</code> section.</td>
 </tr>
 <tr>
@@ -999,7 +999,7 @@ Using <code>agent none</code> also forces each <code>stage</code> section to con
 <div class="sect3">
 <h4 id="post"><a class="anchor" href="#post"></a>post</h4>
 <div class="paragraph">
-<p>The <code>post</code> section defines one or more additional <a href="#declarative-steps">steps</a> that are run upon the completion of a Pipeline&#8217;s or stage&#8217;s run (depending on the location of the <code>post</code> section within the Pipeline). <code>post</code> can support any of the following <a href="#post-conditions">post-condition</a> blocks: <code>always</code>, <code>changed</code>, <code>fixed</code>, <code>regression</code>, <code>aborted</code>, <code>failure</code>, <code>success</code>, <code>unstable</code>, <code>unsuccessful</code>, and <code>cleanup</code>.
+<p>The <code>post</code> section defines one or more additional <a href="#declarative-steps">steps</a> that are run upon the completion of a Pipeline&#8217;s or stage&#8217;s run (depending on the location of the <code>post</code> section within the Pipeline). <code>post</code> can support any of the following <a href="#post-conditions"> post-condition</a> blocks: <code>always</code>, <code>changed</code>, <code>fixed</code>, <code>regression</code>, <code>aborted</code>, <code>failure</code>, <code>success</code>, <code>unstable</code>, <code>unsuccessful</code>, and <code>cleanup</code>.
 These condition blocks allow the execution of steps inside each condition depending on the completion status of the Pipeline or stage.
 The condition blocks are executed in the order shown below.</p>
 </div>
@@ -1108,7 +1108,7 @@ This is typically denoted in the web UI depending on the status previously menti
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td><a href="#post-conditions">Post-condition</a> blocks contain <a href="#declarative-steps">steps</a> the same as the <a href="#steps">[steps]</a> section.</td>
+<td><a href="#post-conditions"> Post-condition</a> blocks contain <a href="#declarative-steps"> steps</a> the same as the <a href="#steps">[steps]</a> section.</td>
 </tr>
 </table>
 </div>
@@ -1179,7 +1179,7 @@ At a minimum, it is recommended that <code>stages</code> contain at least one <a
 <div class="sect3">
 <h4 id="_steps"><a class="anchor" href="#_steps"></a>steps</h4>
 <div class="paragraph">
-<p>The <code>steps</code> section defines a series of one or more <a href="#declarative-steps">steps</a> to be executed in a given <code>stage</code> directive.</p>
+<p>The <code>steps</code> section defines a series of one or more <a href="#declarative-steps"> steps</a> to be executed in a given <code>stage</code> directive.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch syntax">
 <colgroup>
@@ -2158,7 +2158,7 @@ Refer to <a href="#parameters">[parameters]</a> for more information.</p>
 <p>The <code>when</code> directive allows the Pipeline to determine whether the stage should be executed depending on the given condition.
 The <code>when</code> directive must contain at least one condition.
 If the <code>when</code> directive contains more than one condition, all the child conditions must return true for the stage to execute.
-This is the same as if the child conditions were nested in an <code>allOf</code> condition (refer to the <a href="#when-example">examples</a> below).
+This is the same as if the child conditions were nested in an <code>allOf</code> condition (refer to the <a href="#when-example"> examples</a> below).
 If an <code>anyOf</code> condition is used, note that the condition skips remaining tests as soon as the first "true" condition is found.</p>
 </div>
 <div class="paragraph">
@@ -3024,7 +3024,7 @@ All the values from each axis are combined with the others to produce the cells.
 <h4 id="matrix-stages"><a class="anchor" href="#matrix-stages"></a>stages</h4>
 <div class="paragraph">
 <p>The <code>stages</code> section specifies one or more <code>stage</code>s to be executed sequentially in each cell.
-This section is identical to any other <a href="#sequential-stages"><code>stages</code> section</a>.</p>
+This section is identical to any other <a href="#sequential-stages"> <code>stages</code> section</a>.</p>
 </div>
 <div id="matrix-stages-example" class="exampleblock">
 <div class="title">Example 30. One-axis with 3 cells, each cell runs three stages - "build", "test", and "deploy"</div>
@@ -3324,7 +3324,7 @@ The "per-cell" directives, on the other hand, are evaluated at runtime.</p>
 <div class="paragraph">
 <p>The <code>script</code> step takes a block of <a href="#scripted-pipeline">[scripted-pipeline]</a> and executes that in the Declarative Pipeline.
 For most use-cases, the <code>script</code> step should be unnecessary in Declarative Pipelines, but it can provide a useful "escape hatch".
-<code>script</code> blocks of non-trivial size and/or complexity should be moved into <a href="shared-libraries.html" class="xref page">Shared Libraries</a> instead.</p>
+<code>script</code> blocks of non-trivial size and/or complexity should be moved into <a href="#shared-libraries#"> Shared Libraries</a> instead.</p>
 </div>
 <div id="script-example" class="exampleblock">
 <div class="title">Example 35. Script Block in Declarative Pipeline</div>
@@ -3430,7 +3430,7 @@ Fundamentally, steps tell Jenkins <em>what</em> to do and serve as the basic bui
 <div class="sect2">
 <h3 id="_differences_from_plain_groovy"><a class="anchor" href="#_differences_from_plain_groovy"></a>Differences from plain Groovy</h3>
 <div class="paragraph">
-<p>In order to provide <em>durability</em>, which means that running Pipelines can survive a restart of the Jenkins <a href="#../glossary.adoc#controller" class="xref unresolved">controller</a>, Scripted Pipeline must serialize data back to the controller.
+<p>In order to provide <em>durability</em>, which means that running Pipelines can survive a restart of the Jenkins <a href="#../glossary#controller"> controller</a>, Scripted Pipeline must serialize data back to the controller.
 Due to this design requirement, some Groovy idioms such as <code>collection.each { item &#8594; /* perform operation */ }</code> are not fully supported.
 Refer to <a href="https://issues.jenkins.io/browse/JENKINS-27421">JENKINS-27421</a> and <a href="https://issues.jenkins.io/browse/JENKINS-26481">JENKINS-26481</a> for more information.</p>
 </div>
@@ -3461,7 +3461,7 @@ The Groovy learning-curve isn&#8217;t typically desirable for all members of a g
 <p>Both are fundamentally the same Pipeline sub-system underneath.
 They are both durable implementations of "Pipeline as code".
 They are both able to use steps built into Pipeline or provided by plugins.
-Both are able to utilize <a href="shared-libraries.html" class="xref page">Shared Libraries</a></p>
+Both are able to utilize <a href="#shared-libraries#"> Shared Libraries</a></p>
 </div>
 <div class="paragraph">
 <p>Where they differ however is in syntax and flexibility.

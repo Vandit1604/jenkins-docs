@@ -34,9 +34,6 @@
     <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -46,19 +43,22 @@
     <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows</a>
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
   </li>
 </ul>
   </li>
@@ -172,7 +172,7 @@
     <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with the Guided Tour</a>
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
@@ -337,7 +337,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+    <a class="nav-link" href="#user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc">user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
@@ -640,7 +640,7 @@ creation and execution of a simple Pipeline in a test installation of Jenkins.</
 <div class="paragraph">
 <p>It is assumed that there is already a source control repository set up for
 the project and a Pipeline has been defined in Jenkins following
-<a href="getting-started.html#defining-a-pipeline-in-scm" class="xref page">these instructions</a>.</p>
+<a href="#getting-started#defining-a-pipeline-in-scm"> these instructions</a>.</p>
 </div>
 </td>
 </tr>
@@ -662,7 +662,7 @@ default the <code>agent</code> directive ensures that the source repository is c
 and made available for steps in the subsequent stages.</p>
 </div>
 <div class="paragraph">
-<p>The <a href="syntax.html#stages" class="xref page">stages directive</a>, and <a href="syntax.html#steps" class="xref page">steps directives</a>
+<p>The <a href="syntax.html#stages" class="xref page"> stages directive</a>, and <a href="syntax.html#steps" class="xref page"> steps directives</a>
 are also required for a valid Declarative Pipeline as they instruct Jenkins
 what to execute and in which stage it should be executed.</p>
 </div>
@@ -1007,7 +1007,7 @@ node {
 differently depending on whether Declarative or Scripted Pipeline is used.</p>
 </div>
 <div class="paragraph">
-<p>Declarative Pipeline supports an <a href="syntax.html#environment" class="xref page">environment</a>
+<p>Declarative Pipeline supports an <a href="syntax.html#environment" class="xref page"> environment</a>
 directive, whereas users of Scripted Pipeline must use the <code>withEnv</code> step.</p>
 </div>
 <div class="listingblock">
@@ -1973,7 +1973,7 @@ pipeline {
 </div>
 </div>
 <div class="sect2">
-<h3 id="_handling_parameters"><a class="anchor" href="#_handling_parameters"></a>Handling parameters</h3>
+<h3 id="handling-parameters"><a class="anchor" href="#handling-parameters"></a>Handling parameters</h3>
 <div class="paragraph">
 <p>Declarative Pipeline supports parameters out-of-the-box, allowing the Pipeline
 to accept user-specified parameters at runtime via the <a href="syntax.html#parameters" class="xref page">parameters directive</a>. Configuring parameters with Scripted Pipeline is done
@@ -2017,9 +2017,9 @@ node {
 <h3 id="_handling_failure"><a class="anchor" href="#_handling_failure"></a>Handling failure</h3>
 <div class="paragraph">
 <p>Declarative Pipeline supports robust failure handling by default via its
-<a href="syntax.html#post" class="xref page">post section</a> which allows declaring a number of different
+<a href="syntax.html#post" class="xref page"> post section</a> which allows declaring a number of different
 "post conditions" such as: <code>always</code>, <code>unstable</code>, <code>success</code>, <code>failure</code>, and
-<code>changed</code>. The <a href="#syntax">Pipeline Syntax</a> section provides more detail on
+<code>changed</code>. The <a href="syntax.html" class="xref page"> Pipeline Syntax</a> section provides more detail on
 how to use the various post conditions.</p>
 </div>
 <div class="listingblock">
@@ -2181,7 +2181,7 @@ completed its execution, stashed files are deleted from the Jenkins controller.<
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>The parameter in <code>agent</code>/<code>node</code> allows for any valid Jenkins label
-expression. Consult the <a href="syntax.html" class="xref page">Pipeline Syntax</a> section for more details.</td>
+expression. Consult the <a href="syntax.html" class="xref page"> Pipeline Syntax</a> section for more details.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>

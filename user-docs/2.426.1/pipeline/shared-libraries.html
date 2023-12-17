@@ -34,9 +34,6 @@
     <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -46,19 +43,22 @@
     <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows</a>
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
   </li>
 </ul>
   </li>
@@ -172,7 +172,7 @@
     <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with the Guided Tour</a>
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
@@ -337,7 +337,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+    <a class="nav-link" href="#user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc">user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
@@ -561,7 +561,7 @@ external source control repositories and loaded into existing Pipelines.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_defining_shared_libraries"><a class="anchor" href="#_defining_shared_libraries"></a>Defining Shared Libraries</h2>
+<h2 id="defining-shared-libraries"><a class="anchor" href="#defining-shared-libraries"></a>Defining Shared Libraries</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A Shared Library is defined with a name, a source code retrieval method such
@@ -591,7 +591,7 @@ version.  For example, for Subversion, you can set the <em>Repository URL</em> t
 versions such as <code>trunk</code> or <code>branches/dev</code> or <code>tags/1.0</code>.</p>
 </div>
 <div class="sect2">
-<h3 id="_directory_structure"><a class="anchor" href="#_directory_structure"></a>Directory structure</h3>
+<h3 id="directory-structure"><a class="anchor" href="#directory-structure"></a>Directory structure</h3>
 <div class="paragraph">
 <p>The directory structure of a Shared Library repository is as follows:</p>
 </div>
@@ -636,7 +636,7 @@ Currently this feature is not supported for internal libraries.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_global_shared_libraries"><a class="anchor" href="#_global_shared_libraries"></a>Global Shared Libraries</h3>
+<h3 id="global-shared-libraries"><a class="anchor" href="#global-shared-libraries"></a>Global Shared Libraries</h3>
 <div class="paragraph">
 <p>There are several places where Shared Libraries can be defined, depending on
 the use-case. <em>Manage Jenkins » System » Global Pipeline Libraries</em>
@@ -674,7 +674,7 @@ sandbox just like typical Pipelines.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_automatic_shared_libraries"><a class="anchor" href="#_automatic_shared_libraries"></a>Automatic Shared Libraries</h3>
+<h3 id="automatic-shared-libraries"><a class="anchor" href="#automatic-shared-libraries"></a>Automatic Shared Libraries</h3>
 <div class="paragraph">
 <p>Other plugins may add ways of defining libraries on the fly.  For example, the
 plugin:pipeline-github-lib[Pipeline: GitHub Groovy Libraries] plugin
@@ -687,7 +687,7 @@ branch, using an anonymous checkout.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_using_libraries"><a class="anchor" href="#_using_libraries"></a>Using libraries</h2>
+<h2 id="using-libraries"><a class="anchor" href="#using-libraries"></a>Using libraries</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Shared Libraries marked <em>Load implicitly</em> allows Pipelines to immediately use
@@ -777,7 +777,7 @@ A link to the example repository used is also provided in the <a href="https://y
 </div>
 </div>
 <div class="sect2">
-<h3 id="_loading_libraries_dynamically"><a class="anchor" href="#_loading_libraries_dynamically"></a>Loading libraries dynamically</h3>
+<h3 id="loading-libraries-dynamically"><a class="anchor" href="#loading-libraries-dynamically"></a>Loading libraries dynamically</h3>
 <div class="paragraph">
 <p>As of version 2.7 of the <em>Pipeline: Shared Groovy Libraries</em> plugin,
 there is a new option for loading (non-implicit) libraries in a script:
@@ -828,7 +828,7 @@ echo useSomeLib(lib.Helper.new(lib.Constants.SOME_TEXT))</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_library_versions"><a class="anchor" href="#_library_versions"></a>Library versions</h3>
+<h3 id="library-versions"><a class="anchor" href="#library-versions"></a>Library versions</h3>
 <div class="paragraph">
 <p>The "Default version" for a configured Shared Library is used when "Load
 implicitly" is checked, or if a Pipeline references the library only by name,
@@ -875,7 +875,7 @@ It is already loaded by the time the script starts, and a library of a given nam
 </div>
 </div>
 <div class="sect2">
-<h3 id="_retrieval_method"><a class="anchor" href="#_retrieval_method"></a>Retrieval Method</h3>
+<h3 id="retrieval-method"><a class="anchor" href="#retrieval-method"></a>Retrieval Method</h3>
 <div class="paragraph">
 <p>The best way to specify the SCM is using an SCM plugin which has been
 specifically updated to support a new API for checking out an arbitrary named
@@ -888,7 +888,7 @@ Git and Subversion plugins support this mode.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_legacy_scm"><a class="anchor" href="#_legacy_scm"></a>Legacy SCM</h4>
+<h4 id="legacy-scm"><a class="anchor" href="#legacy-scm"></a>Legacy SCM</h4>
 <div class="paragraph">
 <p>SCM plugins which have not yet been updated to support the newer features
 required by Shared Libraries, may still be used via the <strong>Legacy SCM</strong> option.
@@ -904,7 +904,7 @@ this variable to checkout the appropriate version of the library.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_dynamic_retrieval"><a class="anchor" href="#_dynamic_retrieval"></a>Dynamic retrieval</h4>
+<h4 id="dynamic-retrieval"><a class="anchor" href="#dynamic-retrieval"></a>Dynamic retrieval</h4>
 <div class="paragraph">
 <p>If you only specify a library name (optionally with version after <code>@</code>) in the <code>library</code> step,
 Jenkins will look for a preconfigured library of that name.
@@ -934,7 +934,7 @@ Here is an example:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_writing_libraries"><a class="anchor" href="#_writing_libraries"></a>Writing libraries</h2>
+<h2 id="writing-libraries"><a class="anchor" href="#writing-libraries"></a>Writing libraries</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>At the base level, any valid
@@ -953,7 +953,7 @@ class Point {
 </div>
 </div>
 <div class="sect2">
-<h3 id="_accessing_steps"><a class="anchor" href="#_accessing_steps"></a>Accessing steps</h3>
+<h3 id="accessing-steps"><a class="anchor" href="#accessing-steps"></a>Accessing steps</h3>
 <div class="paragraph">
 <p>Library classes cannot directly call steps such as <code>sh</code> or <code>git</code>.
 They can however implement methods, outside of the scope of an enclosing
@@ -1048,7 +1048,7 @@ node {
 </div>
 </div>
 <div class="sect2">
-<h3 id="_defining_global_variables"><a class="anchor" href="#_defining_global_variables"></a>Defining global variables</h3>
+<h3 id="defining-global-variables"><a class="anchor" href="#defining-global-variables"></a>Defining global variables</h3>
 <div class="paragraph">
 <p>Internally, scripts in the <code>vars</code> directory are instantiated on-demand  as
 singletons. This allows multiple methods to be defined in a
@@ -1160,7 +1160,7 @@ def yourFunction....</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_defining_custom_steps"><a class="anchor" href="#_defining_custom_steps"></a>Defining custom steps</h3>
+<h3 id="defininf-custom-steps"><a class="anchor" href="#defininf-custom-steps"></a>Defining custom steps</h3>
 <div class="paragraph">
 <p>Shared Libraries can also define global variables which behave similarly to
 built-in steps, such as <code>sh</code> or <code>git</code>. Global variables defined in Shared
@@ -1222,7 +1222,7 @@ accepts a block:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_defining_a_more_structured_dsl"><a class="anchor" href="#_defining_a_more_structured_dsl"></a>Defining a more structured DSL</h3>
+<h3 id="defining-a-more-structured-dsl"><a class="anchor" href="#defining-a-more-structured-dsl"></a>Defining a more structured DSL</h3>
 <div class="paragraph">
 <p>If you have a lot of Pipelines that are mostly similar, the global
 variable mechanism provides a handy tool to build a higher-level DSL
@@ -1245,7 +1245,7 @@ def call(Map config) {
 <div class="paragraph">
 <p>Assuming the script has either been loaded as a
 <a href="#global-shared-libraries">Global Shared Library</a> or as a
-<a href="#folder-level-shared-libraries">Folder-level Shared Library</a>
+<a href="#folder-level-shared-libraries"> Folder-level Shared Library</a>
 the resulting <code>Jenkinsfile</code> will be dramatically simpler:</p>
 </div>
 <div class="listingblock">
@@ -1262,7 +1262,7 @@ but this is more complex and error-prone and is not recommended.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_using_third_party_libraries"><a class="anchor" href="#_using_third_party_libraries"></a>Using third-party libraries</h3>
+<h3 id="using-thirdparty-libraroes"><a class="anchor" href="#using-thirdparty-libraroes"></a>Using third-party libraries</h3>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -1303,7 +1303,7 @@ Jenkins controller.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_loading_resources"><a class="anchor" href="#_loading_resources"></a>Loading resources</h3>
+<h3 id="loading-resources"><a class="anchor" href="#loading-resources"></a>Loading resources</h3>
 <div class="paragraph">
 <p>External libraries may load adjunct files from a <code>resources/</code> directory using
 the <code>libraryResource</code> step.  The argument is a relative pathname, akin to Java
@@ -1324,7 +1324,7 @@ conflict with another library.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_pretesting_library_changes"><a class="anchor" href="#_pretesting_library_changes"></a>Pretesting library changes</h3>
+<h3 id="pretesting-library-changes"><a class="anchor" href="#pretesting-library-changes"></a>Pretesting library changes</h3>
 <div class="paragraph">
 <p>If you notice a mistake in a build using an untrusted library,
 simply click the <em>Replay</em> link to try editing one or more of its source files,
@@ -1343,7 +1343,7 @@ Modifying resource files is also not currently supported during <em>Replay</em>.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_defining_declarative_pipelines"><a class="anchor" href="#_defining_declarative_pipelines"></a>Defining Declarative Pipelines</h3>
+<h3 id="defining-declarative-pipelines"><a class="anchor" href="#defining-declarative-pipelines"></a>Defining Declarative Pipelines</h3>
 <div class="paragraph">
 <p>Starting with Declarative 1.2, released in late September, 2017, you can define
 Declarative Pipelines in your shared libraries as well. Here&#8217;s an example,
@@ -1397,7 +1397,7 @@ execute a second one, your build will fail as a result.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_testing_library_pull_request_changes"><a class="anchor" href="#_testing_library_pull_request_changes"></a>Testing library pull request changes</h3>
+<h3 id="testing-library-pull-request-changes"><a class="anchor" href="#testing-library-pull-request-changes"></a>Testing library pull request changes</h3>
 <div class="paragraph">
 <p>By adding <code>@Library('my-shared-library@pull/&lt;your-pr-number&gt;/head') _</code> at the top of a library consumer Jenkinsfile, you can test your pipeline library pull request changes <em>in situ</em> if your pipeline library is hosted on GitHub and the SCM configuration for the pipeline library uses GitHub.<br>
 Refer to the pull request or merge request branch naming convention for other providers like Assembla, Bitbucket, Gitea, GitLab, and Tuleap.</p>

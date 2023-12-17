@@ -34,9 +34,6 @@
     <a class="nav-link" href="../../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../installing-jenkins/initial-settings.html">Initial Settings</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../installing-jenkins/kubernetes.html">Kubernetes</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -46,19 +43,22 @@
     <a class="nav-link" href="../../installing-jenkins/macos.html">macOS</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../installing-jenkins/offline.html">Offline Installations</a>
+    <a class="nav-link" href="../../installing-jenkins/windows.html">Windows</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../installing-jenkins/other.html">Other Systems</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../installing-jenkins/war-file.html">WAR file</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../platform-information/support-policy-windows.html">Windows</a>
+    <a class="nav-link" href="../../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../installing-jenkins/initial-settings.html">Initial Settings</a>
   </li>
 </ul>
   </li>
@@ -172,7 +172,7 @@
     <a class="nav-link" href="../../blueocean/index.html">Blue Ocean</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../blueocean/getting-started.html">Getting started with the Guided Tour</a>
+    <a class="nav-link" href="../../blueocean/getting-started.html">Getting started with Blue Ocean</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../blueocean/creating-pipelines.html">Creating a Pipeline</a>
@@ -337,7 +337,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+    <a class="nav-link" href="#user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc">user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../systemd-services.html">Managing systemd services</a>
@@ -586,8 +586,8 @@ The alternate provider may offload some work from Jenkins, like delivering stati
 <div class="sectionbody">
 <div class="paragraph">
 <p>Jenkins actively monitors reverse proxy configuration.
-Jenkins reports <a href="../reverse-proxy-configuration-troubleshooting/">&#8220;Your reverse proxy setup is broken&#8221;</a> when it detects a reverse proxy configuration problem.
-Refer to the <a href="../reverse-proxy-configuration-troubleshooting/">troubleshooting</a> section if Jenkins is reporting that your reverse proxy setup is broken.</p>
+Jenkins reports <a href="../reverse-proxy-configuration-troubleshooting.html" class="xref page">&#8220;Your reverse proxy setup is broken&#8221;</a> when it detects a reverse proxy configuration problem.
+Refer to the <a href="../reverse-proxy-configuration-troubleshooting.html" class="xref page">troubleshooting</a> section if Jenkins is reporting that your reverse proxy setup is broken.</p>
 </div>
 <div class="sect2">
 <h3 id="_background"><a class="anchor" href="#_background"></a>Background</h3>
@@ -603,7 +603,7 @@ Refer to <strong><a href="#configuration-examples">Configuration Examples by Ser
 <div class="paragraph">
 <p>A reverse proxy must handle the HTTP response by either rewriting the response or setting HTTP headers on the forwarded request.
 When HTTP response handling is misconfigured, Jenkins may fail to show updated information on a page or it may ignore changes submitted through web pages.
-Refer to the <a href="../reverse-proxy-configuration-troubleshooting/">troubleshooting</a> section if Jenkins is reporting that your reverse proxy setup is broken or pages are not behaving as expected.</p>
+Refer to the <a href="../reverse-proxy-configuration-troubleshooting.html" class="xref page">troubleshooting</a> section if Jenkins is reporting that your reverse proxy setup is broken or pages are not behaving as expected.</p>
 </div>
 </div>
 </div>
