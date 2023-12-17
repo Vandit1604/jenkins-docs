@@ -43,7 +43,7 @@ issues:
     NOTE: This fix may impact scripts that obtain a crumb from the crumb issuer API. They may need to be updated to retain the session ID for subsequent requests.
     For further information, see the link:/doc/upgrade-guide/2.176/#SECURITY-626[LTS upgrade guide].
 
-    We also publish the plugin:strict-crumb-issuer[Strict Crumb Issuer Plugin] which contains additional protection mechanisms that give administrators more fine-grained control over the validity of CSRF tokens.
+    We also publish the {plugin}strict-crumb-issuer[Strict Crumb Issuer Plugin] which contains additional protection mechanisms that give administrators more fine-grained control over the validity of CSRF tokens.
     We plan to improve the built-in default crumb issuer based on user feedback of this implementation.
 
 - id: SECURITY-534

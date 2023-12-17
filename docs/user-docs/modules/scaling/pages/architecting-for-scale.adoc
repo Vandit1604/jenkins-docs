@@ -245,15 +245,15 @@ In particular it is possible to offload the execution of the jobs to agents in
 the cloud thanks to ad-hoc plugins which will handle the creation of the cloud
 resources together with their destruction when they are not needed anymore:
 
-* The plugin:ec2[EC2 Plugin]
+* The {plugin}ec2[EC2 Plugin]
   lets Jenkins use AWS EC2 instances as cloud build resources when it runs out of on-premises agents.
   The EC2 agents will be dynamically created inside an AWS network and de-provisioned when they are not needed.
-* The plugin:azure-vm-agents[Azure VM Agents Plugin]
+* The {plugin}azure-vm-agents[Azure VM Agents Plugin]
   dynamically spins up Jenkins agents as Azure VMs per user provided
   configuration via templates, including support for virtual network integration
   and subnet placement. Idle agents can be configured for automatic shutdown
   to reduce costs.
-* The plugin:jclouds-jenkins[JCloud plugin]
+* The {plugin}jclouds-jenkins[JCloud plugin]
   creates the possibility of executing the jobs on any cloud provider supported
   by JCloud libraries
 
@@ -701,7 +701,7 @@ can have multiple backup controllers configured.
 Set up an authentication realm that Jenkins will use for its user database.
 
 TIP: If you are trying to set up a proof-of-concept, it is recommended to use
-the plugin:mock-security-realm[Mock Security Realm plugin] for authentication.
+the {plugin}mock-security-realm[Mock Security Realm plugin] for authentication.
 
 .Step 3: Add build nodes (agents) to controller
 

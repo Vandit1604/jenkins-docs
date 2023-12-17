@@ -272,7 +272,7 @@ Similar to the link:https://docs.microsoft.com/en-us/azure/architecture/patterns
 Utilizing this sidecar approach, a Pipeline can have a "clean" container provisioned for each Pipeline run.
 
 Consider a hypothetical integration test suite that relies on a local MySQL database to be running.
-Using the `withRun` method, implemented in the plugin:docker-workflow[Docker Pipeline] plugin's support for Scripted Pipeline, a `Jenkinsfile` can run MySQL as a sidecar:
+Using the `withRun` method, implemented in the {plugin}docker-workflow[Docker Pipeline] plugin's support for Scripted Pipeline, a `Jenkinsfile` can run MySQL as a sidecar:
 
 [source,groovy]
 ----
@@ -329,7 +329,7 @@ sh "docker logs ${c.id}"
 
 === Building containers
 
-In order to create a Docker image, the plugin:docker-workflow[Docker Pipeline] plugin also provides a `build()` method for creating a new image from a `Dockerfile` in the repository during a Pipeline run.
+In order to create a Docker image, the {plugin}docker-workflow[Docker Pipeline] plugin also provides a `build()` method for creating a new image from a `Dockerfile` in the repository during a Pipeline run.
 
 One major benefit of using the syntax `docker.build("my-image-name")` is that a Scripted Pipeline can use the return value for subsequent Docker Pipeline calls, for example:
 
@@ -410,7 +410,7 @@ node {
 
 === Using a remote Docker server
 
-By default, the plugin:docker-workflow[Docker Pipeline] plugin will communicate with a local Docker daemon, typically accessed through `/var/run/docker.sock`.
+By default, the {plugin}docker-workflow[Docker Pipeline] plugin will communicate with a local Docker daemon, typically accessed through `/var/run/docker.sock`.
 
 
 To select a non-default Docker server, such as with link:https://docs.docker.com/swarm/[Docker Swarm], use the `withServer()` method.
@@ -456,7 +456,7 @@ Additionally, some versions of Docker Swarm do not support custom Registries.
 [[custom-registry]]
 === Using a custom registry
 
-By default, the plugin:docker-workflow[Docker Pipeline] plugin assumes the default Docker Registry of link:https://hub.docker.com[Docker Hub].
+By default, the {plugin}docker-workflow[Docker Pipeline] plugin assumes the default Docker Registry of link:https://hub.docker.com[Docker Hub].
 
 In order to use a custom Docker Registry, users of Scripted Pipeline can wrap steps with the `withRegistry()` method, passing in the custom Registry URL, for example:
 

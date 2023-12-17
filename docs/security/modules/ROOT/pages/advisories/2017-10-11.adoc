@@ -3,8 +3,8 @@
 
 This advisory announces multiple vulnerabilities in Jenkins (weekly and LTS), and these plugins:
 
-* plugin:maven-plugin[Maven Plugin]
-* plugin:swarm[Swarm Plugin] Client
+* {plugin}maven-plugin[Maven Plugin]
+* {plugin}swarm[Swarm Plugin] Client
 * link:https://wiki.jenkins.io/display/JENKINS/Hudson+Speaks!+Plugin[Speaks! Plugin]
 
 == Description
@@ -42,7 +42,7 @@ The fix for that vulnerability has been backported to the version of the library
 *SECURITY-514 / CVE-2017-1000395*
 
 Information about Jenkins user accounts is generally available to anyone with Overall/Read permissions via the `/user/(username)/api` remote API.
-This included e.g. Jenkins users' email addresses if the plugin:mailer[Mailer Plugin] is installed.
+This included e.g. Jenkins users' email addresses if the {plugin}mailer[Mailer Plugin] is installed.
 
 The remote API now no longer includes information beyond the most basic (user ID and name) unless the user requesting it is a Jenkins administrator or the user themselves.
 

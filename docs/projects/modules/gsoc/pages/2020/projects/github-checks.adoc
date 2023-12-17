@@ -30,8 +30,8 @@ Thus, any information during the Jenkins process like warnings, summaries, and d
 
 * A new Jenkins plugin (link:https://github.com/jenkinsci/checks-api-plugin[Checks API Plugin]) that defines the general checks API
 * A new Jenkins plugin (link:https://github.com/jenkinsci/github-checks-plugin[GitHub Checks Plugin]) that implements the general checks API for GitHub
-* A new feature (link:https://github.com/jenkinsci/warnings-ng-plugin/pull/550[pull request #550]) for plugin:warnings-ng[Warnings Next Generation Plugin] to report warnings to GitHub by consuming the checks API
-* A new feature (link:https://github.com/jenkinsci/code-coverage-api-plugin/pull/169[pull request #169]) for plugin:code-coverage-api[Code Coverage API Plugin] to report code coverage to GitHub by consuming the checks API
+* A new feature (link:https://github.com/jenkinsci/warnings-ng-plugin/pull/550[pull request #550]) for {plugin}warnings-ng[Warnings Next Generation Plugin] to report warnings to GitHub by consuming the checks API
+* A new feature (link:https://github.com/jenkinsci/code-coverage-api-plugin/pull/169[pull request #169]) for {plugin}code-coverage-api[Code Coverage API Plugin] to report code coverage to GitHub by consuming the checks API
 * Pipeline support feature (link:https://github.com/jenkinsci/checks-api-plugin/pull/7[pull request #7]) to allow users to publish checks from their pipeline
 * Rerun support feature (link:https://github.com/jenkinsci/github-checks-plugin/pull/25[pull request #25]) on GitHub to allow users requesting a rebuild for failed builds
 
@@ -51,7 +51,7 @@ video::b67I6spBdTg[youtube,width=800,height=420]
 
 * Consume the API in Warnings Next Generation plugin as a new feature (link:https://github.com/jenkinsci/warnings-ng-plugin/pull/550[pull request #550])
 * Consume the API in Code Coverage API plugin as a new feature (link:https://github.com/jenkinsci/code-coverage-api-plugin/pull/169[pull request #169])
-* Deploy plugin:checks-api[Checks API Plugin] and plugin:github-checks[GitHub Checks Plugin] to link:https://ci.jenkins.io[ci.jenkins.io] and enable the warning checks features
+* Deploy {plugin}checks-api[Checks API Plugin] and plugin:github-checks[GitHub Checks Plugin] to link:https://ci.jenkins.io[ci.jenkins.io] and enable the warning checks features
 * link:/blog/2020/08/03/github-checks-api-plugin-coding-phase-2/[Blog post] and link:https://docs.google.com/presentation/d/1fMjXH0ANJ67x1R4sfQR5hkTXUmkhiZl-um71RTdXedA/edit?usp=sharing[slides]
 
 === Phase 3 Works

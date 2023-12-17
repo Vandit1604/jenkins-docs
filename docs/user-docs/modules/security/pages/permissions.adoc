@@ -109,10 +109,10 @@ These permissions are not enabled by default.
 === Access granted with Overall/SystemRead
 
 This permission grants read-only access to the Jenkins global configuration.
-Its primarily intended to be used when the Jenkins configuration is managed externally, e.g. using the plugin:configuration-as-code/[Configuration as Code] plugin.
+Its primarily intended to be used when the Jenkins configuration is managed externally, e.g. using the {plugin}configuration-as-code/[Configuration as Code] plugin.
 It works best when combined with the _ExtendedRead_ permission that allows read-only access to agents and items.
 
-This permission can be enabled by setting link:/doc/book/managing/system-properties/#jenkins-security-systemreadpermission[the system property `jenkins.security.SystemReadPermission` to `true`] or installing the plugin:extended-read-permission[Extended Read Permission] plugin.
+This permission can be enabled by setting link:/doc/book/managing/system-properties/#jenkins-security-systemreadpermission[the system property `jenkins.security.SystemReadPermission` to `true`] or installing the {plugin}extended-read-permission[Extended Read Permission] plugin.
 
 Learn more in jep:224[].
 
@@ -129,7 +129,7 @@ _Overall/Manage_ grants permission to access and modify a subset of administrati
 Users with this permission are able to perform some administrative tasks.
 Options generally considered critical to the security of Jenkins are not available to these users.
 
-This permission can be enabled by setting link:/doc/book/managing/system-properties/#jenkins-security-managepermission[the system property `jenkins.security.ManagePermission` to `true`] or installing the plugin:manage-permission[Overall/Manage permission enabler] plugin.
+This permission can be enabled by setting link:/doc/book/managing/system-properties/#jenkins-security-managepermission[the system property `jenkins.security.ManagePermission` to `true`] or installing the {plugin}manage-permission[Overall/Manage permission enabler] plugin.
 
 Learn more in jep:223[].
 

@@ -84,7 +84,7 @@ issues:
 
     As of publication of this advisory, there is no fix.
     The plugin has been removed from publication at the request of its former maintainers.
-    We recommend that users of Perforce Plugin use the plugin:p4[P4 Plugin] instead.
+    We recommend that users of Perforce Plugin use the {plugin}p4[P4 Plugin] instead.
 
 - id: SECURITY-504
   title: vSphere Plugin does not validate SSL/TLS certificates
@@ -160,7 +160,7 @@ issues:
 
     As of publication of this advisory, there is no fix.
     The plugin has been removed from publication at the request of its maintainers.
-    We recommend that users of Perforce Plugin use the plugin:p4[P4 Plugin] instead.
+    We recommend that users of Perforce Plugin use the {plugin}p4[P4 Plugin] instead.
 
 - id: SECURITY-545
   title: Copy To Slave Plugin allows access to arbitrary files on the Jenkins controller file system
