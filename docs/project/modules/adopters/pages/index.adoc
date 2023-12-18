@@ -3,10 +3,11 @@
 
 ++++
 <style>
-.doc .image img{
-  padding-bottom: 2rem;
+.doc .image img {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
-.doc .tableblock strong{
+.doc .tableblock strong {
     display: flex;
     justify-content: center;
     font-weight: bolder;
@@ -41,8 +42,17 @@ table.tableblock.frame-all.grid-all.stretch {
     height: auto;
     width: 240px;
 }
+
 .doc td .halign-left .valign-top {
     border: solid black 2px;
+}
+
+.doc table.tableblock td, .doc table.tableblock th {
+    padding: 1rem;
+}
+
+.doc .sidebarblock {
+    border: none;
 }
 </style>
 ++++
