@@ -281,7 +281,7 @@ docker run --name jenkins-blueocean --detach ^
 ----
 . Proceed to the xref:#setup-wizard[Setup wizard].
 
-[[accessing-the-jenkins-blue-ocean-docker-container]]
+[#accessing-the-jenkins-blue-ocean-docker-container]
 ==== Accessing the Docker container
 
 If you have some experience with Docker and you wish or need to access your
@@ -338,8 +338,8 @@ link:https://docs.docker.com/engine/reference/commandline/container_ls/[`docker 
 command. If you specified the +
 `--name jenkins-blueocean` option in the `docker container run ...`
 command above (see also
-<<accessing-the-jenkins-blue-ocean-docker-container,Accessing the Jenkins/Blue
-Ocean Docker container>>), you can simply use the `docker container exec` command:
+xref:#accessing-the-jenkins-blue-ocean-docker-container[Accessing the Jenkins/Blue
+Ocean Docker container]), you can simply use the `docker container exec` command:
 
 `docker container exec -it jenkins-blueocean bash`
 

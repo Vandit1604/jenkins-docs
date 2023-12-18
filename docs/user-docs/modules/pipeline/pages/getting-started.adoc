@@ -325,7 +325,7 @@ Pipeline or for the `steps` block in a `stage` in a Declarative Pipeline, it
 does not cover the xref:user-docs:pipeline:syntax.adoc#declarative-sections[sections] and
 xref:user-docs:pipeline:syntax.adoc#declarative-directives[directives] used to define a Declarative Pipeline.
 The "Declarative Directive Generator" utility helps with that.
-Similar to the <<snippet-generator>>, the Directive Generator allows you
+Similar to the xref:#snippet-generator[Snippter Generator], the Directive Generator allows you
 to choose a Declarative directive, configure it in a form, and generate the
 configuration for that directive, which you can then use in your Declarative Pipeline.
 

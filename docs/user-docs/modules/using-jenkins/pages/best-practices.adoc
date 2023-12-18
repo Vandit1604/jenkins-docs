@@ -11,10 +11,11 @@ Leverage this feature and optimize your job management by structuring your job d
 
 There are multiple alternatives for automatic job management, including:
 
-* <<Use organization folders>> - create, update, and delete multibranch Pipeline folders and Pipeline jobs automatically (preferred)
-* <<Use multibranch Pipelines>> - create, update and deleted Pipeline jobs automatically
-* <<Use Pipeline>> - Manually defined Pipeline jobs for more control over the job management process.
+* xref:#use-organization-folders[Use organization folders] - create, update, and delete multibranch Pipeline folders and Pipeline jobs automatically (preferred)
+* xref:#use-multibranch-pipelines[Use multibranch Pipelines] - create, update and deleted Pipeline jobs automatically
+* xref:#use-pipeline[Use Pipeline] - Manually defined Pipeline jobs for more control over the job management process.
 
+[#use-organization-folders]
 === Use organization folders
 
 Organization Folders provide a convenient way to automate the creation and deletion of jobs in Jenkins as repositories and branches are added or removed. 
@@ -34,6 +35,7 @@ video::85b6fiVolfk[youtube,width=800,height=420]
 .Gitea organization folders
 video::NO3sZWRxgQM[youtube,width=800,height=420]
 
+[#use-multibranch-pipelines]
 === Use multibranch Pipelines
 
 If you are unable to use organization folders, you can opt for multibranch Pipelines as an alternative.
@@ -50,6 +52,7 @@ video::LNfthmZuRDI[youtube,width=800,height=420]
 
 Refer to the xref:pipeline:pipeline-as-code.adoc#multibranch-pipeline-projects[multibranch Pipelines] documentation for more details.
 
+[#use-pipeline]
 === Use Pipeline
 
 If organization folders are not an option for you, consider using multibranch Pipelines as an alternative.

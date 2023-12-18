@@ -173,7 +173,7 @@ repositories such as Artifactory or Nexus and should be considered only for
 basic reporting and file archival.
 ====
 
-
+[#test]
 === Test
 
 Running automated tests is a crucial component of any successful continuous
@@ -223,7 +223,7 @@ node {
 <1> Using an inline shell conditional (`sh 'make check || true'`) ensures that the
 `sh` step always sees a zero exit code, giving the `junit` step the opportunity
 to capture and process the test reports. Alternative approaches to this are
-covered in more detail in the <<handling-failure>> section below.
+covered in more detail in the xref:handling-failure[Handling Failure] section below.
 <2> `junit` captures and associates the JUnit XML files matching the inclusion
 pattern (`+**/target/*.xml+`).
 
@@ -441,10 +441,9 @@ video::yfjtMIDgmfs[youtube,width=800,height=420]
 
 Jenkins' declarative Pipeline syntax has the `credentials()` helper method (used
 within the xref:user-docs:pipeline:syntax.adoc#environment[`environment`] directive) which supports
-xref:#secret-text[secret text], <<#usernames-and-passwords,username and
-password>>, as well as xref:#secret-files[secret file] credentials. If you want to
-handle other types of credentials, refer to the <<#for-other-credential-types,
-For other credential types>> section (below).
+xref:#secret-text[secret text], xref:#usernames-and-passwords[username and
+password], as well as xref:#secret-files[secret file] credentials. If you want to
+handle other types of credentials, refer to the xref:#for-other-credential-types[For other credential types] section (below).
 
 
 ===== Secret text
@@ -515,6 +514,7 @@ it is preferable to use IAM roles for a link:https://docs.aws.amazon.com/IAM/lat
 or link:https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html[EKS service account].
 It is also possible to use link:https://github.com/jenkinsci/oidc-provider-plugin#accessing-aws[web identity federation].
 
+[#usernames-and-passwords]
 ===== Usernames and passwords
 
 The following Pipeline code snippets show an example of how to create a Pipeline
@@ -525,8 +525,7 @@ variables to access a Bitbucket repository in a common account or team for your
 organization; these credentials would have been configured in Jenkins with the
 credential ID `jenkins-bitbucket-common-creds`.
 
-When setting the credential environment variable in the <<syntax#environment,
-`environment`>> directive:
+When setting the credential environment variable in the xref:user-docs:pipeline:syntax.adoc#environment[`environment`] directive:
 
 [source,groovy]
 ----
@@ -606,8 +605,7 @@ credentials.
 `BITBUCKET_COMMON_CREDS...` environment variables are scoped only to `Example
 stage 1`, so these credential variables are not available for use in this
 `Example stage 2` stage's steps. If, however, the `environment` directive in
-this Pipeline were moved immediately within the <<syntax#declarative-pipeline,
-`pipeline`>> block (as is the case in the xref:#secret-text[Secret text] Pipeline
+this Pipeline were moved immediately within the xref:user-docs:pipeline:syntax.adoc#declarative-pipeline[`pipeline`] block (as is the case in the xref:#secret-text[Secret text] Pipeline
 example above), then these `BITBUCKET_COMMON_CREDS...` environment variables
 would be scoped globally and could be used in any stage's steps.
 
@@ -648,6 +646,7 @@ pipeline {
 // Script //
 ----
 
+[#for-other-credential-types]
 ==== For other credential types
 
 If you need to set credentials in a Pipeline for anything other than secret
@@ -706,8 +705,8 @@ To access the *Snippet Generator* for your Pipeline project/item:
   configured in Jenkins. However, these values are converted to credential IDs
   after clicking *Generate Pipeline Script*. [[withcredentials-script-examples]]
   * To combine more than one credential in a single `withCredentials( ... )
-  { ... }` Pipeline step, see <<#combining-credentials-in-one-step,Combining
-  credentials in one step>> (below) for details.
+  { ... }` Pipeline step, see xref:#combining-credentials-in-one-step[Combining
+  credentials in one step] (below) for details.
 
 *SSH User Private Key example*
 
@@ -834,7 +833,7 @@ node {
 ```
 ====
 
-
+[#combining-credentials-in-one-step]
 ===== Combining credentials in one step
 
 Using the *Snippet Generator*, you can make multiple credentials available
@@ -902,7 +901,7 @@ Pipeline's more advanced features.
 Groovy string interpolation should [red]*never* be used with credentials.
 ======
 
-Groovy string interpolation can leak sensitive environment variables (i.e. credentials, see: <<Handling credentials>>).
+Groovy string interpolation can leak sensitive environment variables (i.e. credentials, see: xref:handling-credentials[Handling credentials]).
 This is because the sensitive environment variable will be interpolated during Groovy evaluation, and the environment variable's value could be made available earlier than intended, resulting in sensitive data leaking in various contexts.
 
 For example, consider a sensitive environment variable passed to the `sh` step.
@@ -1062,8 +1061,7 @@ pipeline {
 === Handling parameters
 
 Declarative Pipeline supports parameters out-of-the-box, allowing the Pipeline
-to accept user-specified parameters at runtime via the <<syntax#parameters,
-parameters directive>>. Configuring parameters with Scripted Pipeline is done
+to accept user-specified parameters at runtime via the xref:user-docs:pipeline:syntax.adoc#parameters[parameters directive]. Configuring parameters with Scripted Pipeline is done
 with the `properties` step, which can be found in the Snippet Generator.
 
 If you configured your pipeline to accept parameters using the *Build with
@@ -1097,7 +1095,7 @@ node {
 }
 ----
 
-
+[#handling-failure]
 === Handling failure
 
 Declarative Pipeline supports robust failure handling by default via its
@@ -1147,7 +1145,7 @@ node {
 Scripted Pipeline however relies on Groovy's built-in `try`/`catch`/`finally` semantics
 for handling failures during execution of the Pipeline.
 
-In the <<test>> example above, the `sh` step was modified to never return a
+In the xref:#test[Test] example above, the `sh` step was modified to never return a
 non-zero exit code (`sh 'make check || true'`). This approach, while valid,
 means the following stages need to check `currentBuild.result` to know if
 there has been a test failure or not.

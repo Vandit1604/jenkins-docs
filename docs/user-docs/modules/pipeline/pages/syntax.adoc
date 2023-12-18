@@ -3,7 +3,7 @@
 This section builds on the information introduced in xref:pipeline:getting-started.adoc[Getting started with Pipeline] and should be treated solely as a reference.
 For more information on how to use Pipeline syntax in practical examples, refer to the xref:jenkinsfile.adoc[Using a Jenkinsfile] section of this chapter.
 As of version 2.5 of the Pipeline plugin, Pipeline supports two discrete syntaxes which are detailed below.
-For the pros and cons of each, refer to the <<compare>>.
+For the pros and cons of each, refer to the xref:#compare[Compare].
 
 As discussed at the xref:pipeline:getting-started.adoc[start of this chapter], the most fundamental part of a Pipeline is the "step". Basically, steps tell Jenkins _what_ to do and serve as the basic building block for both Declarative and Scripted Pipeline syntax.
 
@@ -29,7 +29,7 @@ The basic statements and expressions which are valid in Declarative Pipeline fol
 * The top-level of the Pipeline must be a _block_, specifically: `pipeline { }`.
 * No semicolons as statement separators.
 Each statement has to be on its own line.
-* Blocks must only consist of xref:#declarative-sections>>[ <<declarative-directives], <<declarative-steps>>, or assignment statements.
+* Blocks must only consist of xref:#declarative-sections[declarative-directives], xref:#declarative-steps[Declarative Steps], or assignment statements.
 * A property reference statement is treated as a no-argument method invocation.
 So, for example, `input` is treated as `input()`.
 
@@ -40,10 +40,10 @@ You can use the xref:getting-started.adoc#directive-generator[Declarative Direct
 There is currently an link:https://issues.jenkins.io/browse/JENKINS-37984[open issue]  which limits the maximum size of the code within the `pipeline{}` block.
 This limitation does not apply to Scripted Pipelines.
 
-[[declarative-sections]]
+[#declarative-sections]
 === Sections
 
-Sections in Declarative Pipeline typically contain one or more <<declarative-directives>> or <<declarative-steps>>.
+Sections in Declarative Pipeline typically contain one or more xref:#declarative-directives[Declarative Directives] or xref:#declarative-steps[Declarative Steps].
 
 [#agent]
 ==== agent
@@ -64,7 +64,7 @@ The section must be defined at the top-level inside the `pipeline` block, but st
 | In the top-level `pipeline` block and each `stage` block.
 |===
 
-[[differences-between-top-and-stage-level]]
+[#differences-between-top-and-stage-level]
 ===== Differences between top level agents and stage level agents
 
 There are some nuances when adding an agent to the top level or a stage level when the `options` directive is applied.
@@ -144,7 +144,7 @@ For example: `agent { label 'my-label1 && my-label2' }` or `agent { label 'my-la
 
 node:: `agent { node { label 'labelName' } }` behaves the same as `agent { label 'labelName' }`, but `node` allows for additional options (such as `customWorkspace`).
 
-docker:: Execute the Pipeline, or stage, with the given container which will be dynamically provisioned on a xref:#../glossary#node[ node] pre-configured to accept Docker-based Pipelines, or on a node matching the optionally defined `label` parameter. 
+docker:: Execute the Pipeline, or stage, with the given container which will be dynamically provisioned on a xref:user-docs:glossary:index.adoc#node[ node] pre-configured to accept Docker-based Pipelines, or on a node matching the optionally defined `label` parameter. 
 `docker` also optionally accepts an `args` parameter which may contain arguments to pass directly to a `docker run` invocation, and an `alwaysPull` option, which will force a `docker pull` even if the image name is already present.
 For example: `agent { docker 'maven:3.9.3-eclipse-temurin-17' }` or
 +
@@ -345,7 +345,7 @@ pipeline {
     }
 }
 ----
-<1> Defining `agent none` at the top-level of the Pipeline ensures that xref:#../glossary#executor[ an Executor] will not be assigned unnecessarily.
+<1> Defining `agent none` at the top-level of the Pipeline ensures that xref:user-docs:glossary:index.adoc#executor[ an Executor] will not be assigned unnecessarily.
 Using `agent none` also forces each `stage` section to contain its own `agent` section.
 <2> Execute the steps in this stage in a newly created container using this image.
 <3> Execute the steps in this stage in a newly created container using a different image from the previous stage.
@@ -408,7 +408,7 @@ pipeline {
 }
 ----
 <1> Conventionally, the `post` section should be placed at the end of the Pipeline.
-<2> xref:#post-conditions[ Post-condition] blocks contain xref:#declarative-steps[ steps] the same as the <<steps>> section.
+<2> xref:#post-conditions[ Post-condition] blocks contain xref:#declarative-steps[ steps] the same as the xref:#steps[steps] section.
 =====
 
 [#stages]
@@ -448,6 +448,7 @@ pipeline {
 =====
 <1> The `stages` section will typically follow the directives such as `agent`, `options`, etc.
 
+[#steps]
 ==== steps
 
 The `steps` section defines a series of one or more xref:#declarative-steps[ steps] to be executed in a given `stage` directive.
@@ -483,7 +484,7 @@ pipeline {
 <1> The `steps` section must contain one or more steps.
 =====
 
-[[declarative-directives]]
+[#declarative-directives]
 === Directives
 
 ==== environment
@@ -725,7 +726,7 @@ For example: `options { timestamps() }`
 ==== parameters
 
 The `parameters` directive provides a list of parameters that a user should provide when triggering the Pipeline.
-The values for these user-specified parameters are made available to Pipeline steps via the `params` object, refer to the <<parameters-example>> for its specific usage.
+The values for these user-specified parameters are made available to Pipeline steps via the `params` object, refer to the xref:#parameters-example[Parameters Example] for its specific usage.
 
 Each parameter has a _Name_ and _Value_, depending on the parameter type.
 This information is exported as environment variables when the build starts, allowing subsequent parts of the build configuration to access those values.
@@ -756,7 +757,7 @@ The first value is the default.
 
 password:: A password parameter, for example: `parameters { password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'A secret password') }`.
 
-[[parameters-example]]
+[#parameters-example]
 .Parameters, Declarative Pipeline
 =====
 [source, groovy]
@@ -922,7 +923,7 @@ For example, `@hourly` is the same as `H * * * *` and could mean at any time dur
 [#stage]
 ==== stage
 
-The `stage` directive goes in the `stages` section and should contain a <<steps>> section, an optional `agent` section, or other stage-specific directives.
+The `stage` directive goes in the `stages` section and should contain a xref:#steps[steps] section, an optional `agent` section, or other stage-specific directives.
 Practically speaking, all of the real work done by a Pipeline will be wrapped in one or more `stage` directives.
 
 [cols="^10h,>90a",role=syntax]
@@ -1981,7 +1982,7 @@ pipeline {
 ----
 =====
 
-[[declarative-steps]]
+[#declarative-steps]
 === Steps
 
 Declarative Pipelines may use all the available steps documented in the link:/doc/pipeline/steps[Pipeline Steps reference], which contains a comprehensive list of steps, with the addition of the steps listed below which are *only supported* in Declarative Pipeline.
@@ -2087,11 +2088,11 @@ XXX: TODO https://issues.jenkins.io/browse/WEBSITE-267
 https://issues.jenkins.io/browse/WEBSITE-289
 ////
 
-In order to provide _durability_, which means that running Pipelines can survive a restart of the Jenkins xref:#../glossary#controller[ controller], Scripted Pipeline must serialize data back to the controller.
+In order to provide _durability_, which means that running Pipelines can survive a restart of the Jenkins xref:user-docs:glossary:index.adoc#controller[ controller], Scripted Pipeline must serialize data back to the controller.
 Due to this design requirement, some Groovy idioms such as `collection.each { item -> /* perform operation */ }` are not fully supported.
 Refer to https://issues.jenkins.io/browse/JENKINS-27421[JENKINS-27421] and https://issues.jenkins.io/browse/JENKINS-26481[JENKINS-26481] for more information.
 
-[[compare]]
+[#compare]
 == Syntax Comparison
 
 ////

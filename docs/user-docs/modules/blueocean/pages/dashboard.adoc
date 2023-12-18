@@ -37,7 +37,7 @@ The following information is displayed for each Pipeline listed:
 * The item's *NAME*
 * The item's link:#pipeline-health[*HEALTH*]
 * The number of *BRANCHES* and pull requests *(PRs)* that are passing or failing within the Pipeline's source control repository.
-* A &#9734;, indicating whether or not the item has been manually added to your current Jenkins <<favorites-list>>.
+* A &#9734;, indicating whether or not the item has been manually added to your current Jenkins xref:#favorites-list[favorites-list].
 
 Selecting an item's &#9734; will toggle between:
 
@@ -46,12 +46,12 @@ Selecting an item's &#9734; will toggle between:
 
 Selecting an item in the Pipelines list will display that item's xref:activity.adoc[Activity View].
 
-
+[#favorites-list]
 == Favorites list
 
-The Favorites list appears above the Dashboard's default <<pipelines-list>> when at least one Pipeline/item is present in your Favorites list.
+The Favorites list appears above the Dashboard's default xref:#pipelines-list[Pipelines list] when at least one Pipeline/item is present in your Favorites list.
 
-This list provides key information and actions for a core subset of your accessible items in the <<pipelines-list>>.
+This list provides key information and actions for a core subset of your accessible items in the xref:#pipelines-list[Pipelines list].
 This key information includes the current link:#run-status[run status] for an item and its repository's branch, the name of the branch, the initial part of the commit hash, and the last run time. 
 This list also includes options to run or re-run the item on the indicated branch.
 

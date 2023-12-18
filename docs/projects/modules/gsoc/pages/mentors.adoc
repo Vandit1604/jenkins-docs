@@ -3,7 +3,7 @@
 image:images:ROOT:gsoc/jenkins-gsoc-logo_small.png[Jenkins GSoC, role=center, float=right,role=float-gap]
 
 This page aggregates links to internal and external resources for Google Summer of Code **mentors**.
-GSoC Contributor resources can be found xref:ROOT:index.adoc/gsoc/students[here].
+GSoC Contributor resources can be found xref:projects:gsoc:students.adoc[here].
 
 
 == Links
@@ -22,7 +22,7 @@ Additional links:
 * The link:https://community.jenkins.io/c/contributing/gsoc-mentors/25[mentor's Discourse group] is used for notifications and coordination between mentors.  
 
 //TODO: this needs to be verified.
-* xref:ROOT:index.adoc/gsoc/#orgadmin[Mailing list for contacting Org Admins]
+* xref:projects:gsoc:index.adocorgadmin[Mailing list for contacting Org Admins]
 
 == What do mentors get?
 
@@ -35,7 +35,7 @@ Additional links:
 
 During GSoC you can join an existing project at any time, including community bonding and coding periods.
 Just send an email to our GSoC mailing list.
-You can also xref:ROOT:index.adoc/gsoc/proposing-project-ideas[propose your own project] for GSoC, see below.
+You can also xref:projects:gsoc:proposing-project-ideas.adoc[propose your own project] for GSoC, see below.
 
 == Expectations from mentors
 
@@ -80,7 +80,7 @@ Overall for mentors the time commitment is (for details of activities see below)
 * <<coding_periods>>: 5 to 8 hours per week until the end of the program. The number of hours tend to vary, more at the start, less at the end, not everyone is the same.
 * <<eval_periods>>: Same as coding.
 
-[[org_application_phase]]
+[#org_application_phase]
 === Call for mentors and organization application phase
 
 *Expectation:* it is the time you spend reading about the program (2 to 3 hours) and the time you wish to spend submitting project ideas (maybe 3 to 5 hours per project idea).
@@ -111,7 +111,7 @@ link:https://summerofcode.withgoogle.com/how-it-works/#timeline[Official GSoC ti
 
 Jenkins GSoC Org Admins are responsible for submitting the application form for the Jenkins organization.
 
-[[org_approval_waiting_phase]]
+[#org_approval_waiting_phase]
 === Organization approval waiting period
 
 *Expectation:* 2 to 3 hours per week until organizations are announced.
@@ -124,7 +124,7 @@ Google publishes the list of accepted organizations according to the
 link:https://summerofcode.withgoogle.com/how-it-works/#timeline[Official GSoC timeline].
 If we are accepted, we move on to the next phase.
 
-[[forming_mentor_teams]]
+[#forming_mentor_teams]
 === Mentors and mentor teams
 
 *Expectation:* a few hours before the <<ranking_and_slot_request_phase>>.
@@ -145,7 +145,7 @@ All mentors work with the GSoC Contributor during all phases on the program,
 answering the GSoC Contributor questions, coaching, advising, motivating, unblocking, reviewing code and pull-requests, ensuring the process is followed,
 ensuring communications are in public as this is an open source program, and report issues to the lead mentor, etc.
 
-[[student_application_phase]]
+[#student_application_phase]
 === GSoC Contributor exploration and application phase
 
 *Expectation:* about 2 to 5 hours per week (more if you submit your own project ideas which we encourage highly) until the GSoC Contributor application phase ends.
@@ -175,7 +175,7 @@ This is a very important phase, use it to get to know the GSoC Contributors who 
 For this deadline, please see the
 link:https://summerofcode.withgoogle.com/how-it-works/#timeline[Official GSoC timeline].
 
-[[ranking_and_slot_request_phase]]
+[#ranking_and_slot_request_phase]
 === Proposal ranking and slot request phase
 
 *Expectation:* about 5 hours total, plus continuous interaction with potential GSoC Contributors, until the community bonding starts.
@@ -193,7 +193,7 @@ GSoC Contributor proposals are ranked for slot requests, and a final selection i
 Note that *we are NOT allowed to communicate any information regarding the selection to GSoC Contributors during this phase until Google makes the official GSoC Contributor Project Announcements.*
 We do not make this announcement, Google does.
 
-[[slot_request_sub_phase]]
+[#slot_request_sub_phase]
 ==== Initial proposal ranking and slot request sub-phase
 
 The goal of this phase is to determine and request the minimum and the maximum number of projects we can take on as an organization.
@@ -234,7 +234,7 @@ Then our min and max would be 5 and 7.
 
 Then we send our slot request min and max numbers to Google.
 
-[[final_selection_phase]]
+[#final_selection_phase]
 ==== Final proposal selection sub-phase
 
 This phase is very short and starts immediately when Google sends us our final number of slots.
@@ -253,7 +253,7 @@ This only usually lasts a few days.
 
 We wait. We are NOT allowed to communicate any information regarding the selection to GSoC Contributors.
 
-[[community_bonding_phase]]
+[#community_bonding_phase]
 === Community Bonding
 
 *Expectation:* about 5 to 8 hours per week, until coding starts.
@@ -284,7 +284,7 @@ Let Jenkins Org Admins know as soon as possible if there is any need for knowled
 We often organize special public presentations to go over plugin and core development flows and code that
 GSoC Contributors and mentors alike benefit from attending.
 
-[[coding_periods]]
+[#coding_periods]
 === Coding Periods
 
 *Expectation:* about 5 to 8 hours per week until the end of the program.
@@ -298,7 +298,7 @@ meet your GSoC Contributor at least once or twice per week over a live one-on-on
 
 What if the GSoC Contributor is done early? GSoC Contributor and mentor must determine other work that can be done and let the Jenkins Org Admins know.
 
-[[eval_periods]]
+[#eval_periods]
 === Evaluation periods
 
 *Expectation:* same as during the coding periods.
@@ -324,7 +324,7 @@ Often GSoC Contributors are blocked on a technical problem and do not communicat
 As a rule of thumb, there should be code pushed to Github almost every day.
 If not, let the Org Admins know as soon as possible.
 
-[[after_the_program]]
+[#after_the_program]
 === After the program
 
 Many GSoC Contributors ask their mentors how they can continue to contribute after the program.

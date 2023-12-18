@@ -3,12 +3,13 @@
 
 Jenkins installers are available for several Linux distributions.
 
-* <<Debian/Ubuntu>>
-* <<Fedora>>
+* xref:#debian/ubuntu[Debian/Ubuntu]
+* xref:#fedora[Fedora]
 * xref:#red-hat-centos[Red Hat/Alma/Rocky]
 
 include::user-docs:installing-jenkins:partial$_installation_requirements.adoc[]
 
+[#debian/ubuntu]
 == Debian/Ubuntu
 
 On Debian and Debian-based distributions like Ubuntu you can install Jenkins through `apt`.
@@ -100,6 +101,7 @@ It has a command structure that is similar to `apt-get` but was created to be a 
 Simple software management tasks like install, search and remove are easier with `apt`.
 ====
 
+[#fedora]
 == Fedora
 
 You can install Jenkins through `dnf`. You need to add the Jenkins repository from the Jenkins website to the package manager first.

@@ -15,13 +15,13 @@ which can be installed on a Jenkins controller and to integrate various
 build tools, cloud providers, analysis tools, and much more.
 
 Plugins can be automatically downloaded, with their dependencies, from the
-xref:#../glossary#update-center[Update Center]. The Update Center is a service
+xref:user-docs:glossary:index.adoc#update-center[Update Center]. The Update Center is a service
 operated by the Jenkins project which provides an inventory of open source
 plugins which have been developed and maintained by various members of the
 Jenkins community.
 
 This section covers everything from the basics of managing plugins within
-the Jenkins web UI, to making changes on the xref:#../glossary#controller[controller's]
+the Jenkins web UI, to making changes on the xref:user-docs:glossary:index.adoc#controller[controller's]
 file system.
 
 == Installing a plugin
