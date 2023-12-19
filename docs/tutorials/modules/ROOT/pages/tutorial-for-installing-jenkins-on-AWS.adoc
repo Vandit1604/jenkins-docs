@@ -11,20 +11,22 @@ need to be augmented on the instance.
 
 In this tutorial, you will perform the following steps:
 
-. <<Prerequisites>>.
-. xref:#Creating a key pair[Create a key pair] using Amazon EC2.
+. xref:#prerequisites[Prerequisites].
+. xref:#creating-a-key-pair[Create a key pair] using Amazon EC2.
 If you already have one, you can skip to step 3.
-. xref:#Creating a security group[Create a security group] for your Amazon EC2 instance. If you already have one, you can skip to step 4.
-. xref:#Launching an Amazon EC2 instance[Launch an Amazon EC2 instance].
-. xref:#Installing and configuring Jenkins[Install and configure Jenkins].
-. xref:#Cleaning up[Clean up tutorial resources].
+. xref:#creating-a-security-group[Create a security group] for your Amazon EC2 instance. If you already have one, you can skip to step 4.
+. xref:#launching-an-amazon-ec2-instance[Launch an Amazon EC2 instance].
+. xref:#installing-and-configuring-jenkins[Install and configure Jenkins].
+. xref:#cleaning-up[Clean up tutorial resources].
 
+[#prerequisites]
 == Prerequisites
 
 . An *AWS account*. If you don't have one, you can register link:https://portal.aws.amazon.com/billing/signup#/start[here].
-. An Amazon EC2 key pair. If you don't have one, refer to <<Creating a key pair>>.
+. An Amazon EC2 key pair. If you don't have one, refer to xref:#creating-a-key-pair[Creating a key pair].
 . An AWS IAM User with programmatic key access and link:https://plugins.jenkins.io/ec2/#plugin-content-iam-setup[permissions to launch EC2 instances]
 
+[#creating-a-key-pair]
 == Creating a key pair
 
 Creating a key pair helps ensure that the correct form of authentication is used when you install Jenkins.
@@ -63,6 +65,7 @@ $ chmod 400 <key_pair_name>.pem
 
 NOTE: If you do not set these permissions, you cannot connect to your instance using this key pair. For more information, refer to link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html#troubleshoot-unprotected-key[Error: Unprotected private key file].
 
+[#creating-a-security-group]
 == Creating a security group
 
 A security group acts as a firewall that controls the traffic allowed to reach one or more EC2 instances.
@@ -112,6 +115,7 @@ Type list.
 For more information, refer to link:http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html[Security Groups] in the Amazon EC2 User Guide for
 Linux Instances.
 
+[#launching-an-amazon-ec2-instance]
 == Launching an Amazon EC2 instance
 
 Now that you have configured a key pair and security group, you can launch an EC2 instance.
@@ -131,7 +135,7 @@ NOTE: This configuration is marked *Free tier eligible*.
 +
 image::tutorials:ROOT:AWS/ec2_choose_ami.png[Choosing an Amazon Machine Image]
 
-. Scroll down and select the key pair you created in the xref:#Creating a key pair[ creating a key pair] section above or any existing key pair you intend to use.
+. Scroll down and select the key pair you created in the xref:#creating-a-key-pair[ creating a key pair] section above or any existing key pair you intend to use.
 .. Select *Select an existing security group*.
 .. Select the *WebServerSG* security group that you created.
 .. Select *Launch Instance*.
@@ -144,16 +148,18 @@ After the status changes to running, your instance is ready for use.
 +
 image::tutorials:ROOT:AWS/ec2_view_created_instance.png[Amazon view created instance]
 
+[#installing-and-configuring-jenkins]
 == Installing and configuring Jenkins
 
 Now that the Amazon EC2 instance has been launched, Jenkins can be installed properly.
 
 In this step you will deploy Jenkins on your EC2 instance by completing the following tasks:
 
-. <<Connecting to your Linux instance>>
-. <<Downloading and installing Jenkins>>
-. <<Configuring Jenkins>>
+. xref:#connecting-to-your-linux-instance[Connecting to your Linux instance]
+. xref:#downloading-and-installing-jenkins[Downloading and installing Jenkins]
+. xref:#configuring-jenkins[Configuring Jenkins]
 
+[#connecting-to-your-linux-instance]
 === Connecting to your Linux instance
 
 After you launch your instance, you can connect to it and use it the same way as your local machine.
@@ -175,8 +181,7 @@ The tool that you use to connect to your Linux instance depends on your operatin
 * If your computer runs Linux or Mac OS X, you will connect using the SSH client.
 
 These tools require the use of your key pair.
-Be sure that you have created your key pair as described in <<Creating a key pair>>.
-
+Be sure that you have created your key pair as described in xref:#creating-a-key-pair[Creating a key pair].
 
 ==== Using PuTTY to connect to your instance
 
@@ -190,7 +195,7 @@ image::tutorials:ROOT:AWS/ec2_putty.png[Amazon EC2 PuTTY selection]
 . In the *Category* pane, expand *Connection*, expand *SSH*, and then select *Auth*. Complete the following:
 .. Select *Browse*.
 .. Select the .ppk file that you generated for your key pair, as
-described in <<Creating a key pair>> and then select *Open*.
+described in xref:#creating-a-key-pair[Creating a key pair] and then select *Open*.
 . Select *Open* to start the PuTTY session.
 +
 image::tutorials:ROOT:AWS/putty_select_key_pair.png[Selecting and opening a new PuTTY session]
@@ -228,6 +233,7 @@ You will receive a response like the following:
 Warning: Permanently added 'ec2-198-51-100-1.compute1.amazonaws.com' (RSA) to the list of known hosts.
 ----
 
+[#downloading-and-installing-jenkins]
 === Downloading and installing Jenkins
 
 Completing the previous steps enables you to download and install Jenkins on AWS.
@@ -295,6 +301,7 @@ You can check the status of the Jenkins service using the command:
 [ec2-user ~]$ sudo systemctl status jenkins
 ----
 
+[#configuring-jenkins]
 === Configuring Jenkins
 
 Jenkins is now installed and running on your EC2 instance.
@@ -380,6 +387,7 @@ image::tutorials:ROOT:AWS/test_connection.png[Test Connection.]
 
 You are now ready to use EC2 instances as Jenkins agents.
 
+[#cleaning-up]
 == Cleaning up
 
 After completing this tutorial, be sure to delete the AWS resources that you

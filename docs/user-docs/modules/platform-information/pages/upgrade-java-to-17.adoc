@@ -9,7 +9,7 @@ video::ZabUz6sl-8I[youtube,width=800,height=420]
 
 As with any upgrade, we recommend:
 
-. link:https:/doc/book/system-administration/backing-up/#jenkins_home[Backing up `JENKINS_HOME`].
+. xref:user-docs:system-administration:backing-up.adoc#jenkins_home[Backing up `JENKINS_HOME`].
 . Testing the upgrade with your backup.
 . Only after all required tests pass, performing the upgrade on your production instance.
 
@@ -29,7 +29,7 @@ If you need to upgrade Jenkins, as well as the JVM, we recommend you:
 TIP: We recommend that you use the package manager of your system (such as `apt` or `yum`).
 . Validate the upgrade to confirm that all plugins and jobs are loaded.
 . Upgrade the required plugins.
-Refer to <<Upgrading Plugins>> for further information.
+Refer to xref:user-docs:platform-information:upgrade-java-to-11.adoc#upgrading-plugins[Upgrading Plugins] for further information.
 
 When upgrading the Java version for Jenkins and the JVM, it is important to upgrade all plugins that support Java 17.
 Plugin upgrades assure compatibility with the most recent Jenkins releases.

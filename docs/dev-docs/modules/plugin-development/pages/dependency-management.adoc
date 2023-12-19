@@ -8,7 +8,7 @@ Jenkins has tools that simplify dependency management:
 
 * xref:#jenkins-core-bom[Jenkins core Bill of Materials (BOM)] centrally defines the **library versions** provided by Jenkins core
 * xref:#jenkins-plugin-bom[Plugin Bill of Materials (BOM)] centrally defines a set of **plugin versions** that have been tested together
-* <<Dependabot>> automatically proposes a pull request when a new version of a dependency is released
+* xref:#dependabot[Dependabot] automatically proposes a pull request when a new version of a dependency is released
 
 [#jenkins-core-bom]
 == Jenkins core BOM

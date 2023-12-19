@@ -12,14 +12,15 @@ This means when a request arrives for certain URLs, Lighttpd becomes a proxy and
 There are two alternatives to configure Jenkins with Lighttpd.
 Select the technique that best meets your needs:
 
-* <<By host>>
-* <<By path>>
+* xref:#by-host[By host]
+* xref:#by-path[By path]
 
 By link:https://www.lighttpd.net/2018/11/28/1.4.52/[default], Lighttpd will force the URL normalization, thus mismatching the headers used by an internal Jenkins reverse
 proxy test.
 This results in showing the message *It appears that your reverse proxy setup is broken* on the manage page.
 To avoid this, explicit disable the option `url-path-2f-decode`.
 
+[#by-host]
 == By host
 
 In the configuration below there is no context path for Jenkins URL.
@@ -53,6 +54,7 @@ $HTTP["host"] == "jenkins.example.com" {
 
 This assumes that you run Jenkins on port 8080.
 
+[#by-path]
 == By path
 
 In the configuration below there is a specific path `/jenkins` for Jenkins.

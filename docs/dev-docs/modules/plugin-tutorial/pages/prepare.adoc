@@ -47,7 +47,7 @@ mvn -version
 ----
 This command prints some diagnostic output, including the versions of Java and Maven, and which Java installation was found by Maven.
 It should indicate a _17_ version of Java, and list the path to where Java is located.
-If you don't see this information, see <<Troubleshooting>>.
+If you don't see this information, see xref:#troubleshooting[Troubleshooting].
 
 == Setting up a productive environment with your IDE
 
@@ -82,6 +82,7 @@ Open the project as an existing Maven Project.
 
 xref:create.adoc[Create and build your first Jenkins plugin].
 
+[#troubleshooting]
 == Troubleshooting
 
 NOTE: Anything not working for you? Ask for help on our community forum link:https://community.jenkins.io[community.jenkins.io] or link:/mailing-lists[on the jenkinsci-dev mailing list].

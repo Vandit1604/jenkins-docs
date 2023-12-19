@@ -23,8 +23,8 @@ First, make sure the baseline Jenkins version in your `pom.xml` is sufficiently 
 
 Suggested versions for:
 
-- <<Basic update>>
-- <<Build wrappers>>
+- xref:#basic-update[Basic update]
+- xref:#build-wrappers[Build wrappers]
 
 This introduces some new API methods, and deprecates some old ones.
 
@@ -93,6 +93,7 @@ private String actualLocation(Run<?,?> build, TaskListener listener) {
 
 NOTE: {jira}JENKINS-35671[] would simplify this.
 
+[#constructor-vs-setters]
 ==== Constructor vs. setters
 
 It is a good idea to replace a lengthy `@DataBoundConstructor` with a short one taking just truly mandatory parameters
@@ -403,6 +404,7 @@ The `checkout` metastep uses an `SCM`.
 As the author of an SCM plugin, there are some changes you should make to ensure your plugin can be used from pipelines.
 You can use `mercurial-plugin` as a relatively straightforward code example.
 
+[#basic-update]
 ==== Basic update
 
 Make sure your Jenkins baseline is at least `1.568` (or `1.580.1`, the next LTS).
@@ -456,7 +458,7 @@ The metastep is `step`.
 
 To add support for use of a `Builder` or `Publisher` from a pipeline, depend on Jenkins `1.577+`, typically `1.580.1`.
 Then implement `SimpleBuildStep`, following the guidelines in https://javadoc.jenkins.io/jenkins/tasks/SimpleBuildStep.html[its Javadoc].
-Also prefer ``@DataBoundSetter``s to a sprawling `@DataBoundConstructor` (see <<Constructor vs. setters>>).
+Also prefer ``@DataBoundSetter``s to a sprawling `@DataBoundConstructor` (see xref:#constructor-vs-setters[Constructor vs. setters]).
 
 ==== Mandatory workspace context
 
@@ -511,6 +513,7 @@ There are two subtypes:
 NOTE: https://github.com/jenkinsci/workflow-basic-steps-plugin/blob/master/CORE-STEPS.md#interacting-with-build-status[This document]
 goes into depth.
 
+[#build-wrappers]
 === Build wrappers
 
 Here the metastep is `wrap`.

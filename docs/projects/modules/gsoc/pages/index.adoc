@@ -20,10 +20,10 @@ See our link:https://docs.google.com/document/d/1FYOBo12qz24Vxq0TxWuv9ElHH_rHP51
 
 The selected projects are
 
-* xref:ROOT:index.adoc/gsoc/2023/projects/gitlab-plugin-modernization[GitLab Plugin Modernization] with link:https://github.com/harsh-ps-2003[Harsh Pratap Singh] as GSoC contributor.
-* xref:ROOT:index.adoc/gsoc/2023/projects/add-probes-to-plugin-health-score[Add probes to "Plugin Health Score"] with link:https://github.com/Jagrutiti[Jagruti Tiwari] as GSoC contributor.
-* xref:ROOT:index.adoc/gsoc/2023/projects/alternative-jenkinsio-build-tool[Building Jenkins.io with alternative tools] with link:/blog/authors/vandit1604/[Vandit Singh] as GSoC contributor.
-* xref:ROOT:index.adoc/gsoc/2023/projects/docker-compose-build[Docker-based Jenkins quickstart examples] with link:/blog/authors/ash-sxn/[Ashutosh Saxena] as GSoC contributor.
+* xref:projects:gsoc:2023/projects/gitlab-plugin-modernization.adoc[GitLab Plugin Modernization] with link:https://github.com/harsh-ps-2003[Harsh Pratap Singh] as GSoC contributor.
+* xref:projects:gsoc:2023/projects/add-probes-to-plugin-health-score.adoc[Add probes to "Plugin Health Score"] with link:https://github.com/Jagrutiti[Jagruti Tiwari] as GSoC contributor.
+* xref:projects:gsoc:2023/projects/alternative-jenkinsio-build-tool.adoc[Building Jenkins.io with alternative tools] with link:/blog/authors/vandit1604/[Vandit Singh] as GSoC contributor.
+* xref:projects:gsoc:2023/projects/docker-compose-build.adoc[Docker-based Jenkins quickstart examples] with link:/blog/authors/ash-sxn/[Ashutosh Saxena] as GSoC contributor.
 
 They were proposed and selected from these xref:gsoc:2023/project-ideas.adoc[project ideas].
 
@@ -35,7 +35,7 @@ please report any issues you discover.
 
 == GSoC Contributors
 
-* xref:ROOT:index.adoc/gsoc/students[Information and application guidelines for GSoC contributors]
+* xref:projects:gsoc:students.adoc[Information and application guidelines for GSoC contributors]
 * Online Meetup: Introduction to Jenkins in GSoC
 (link:https://bit.ly/3pbJFuC[slides],
 link:https://youtu.be/GDRTgEvIVBc[video])
@@ -44,9 +44,9 @@ link:https://youtu.be/GDRTgEvIVBc[video])
 
 == Mentors
 
-* xref:ROOT:index.adoc/gsoc/mentors[Information for mentors]
-* xref:ROOT:index.adoc/gsoc/proposing-project-ideas[HOWTO: Propose a project idea]
-* xref:ROOT:index.adoc/gsoc/roles-and-responsibilities[Roles and Responsibilities]
+* xref:projects:gsoc:mentors.adoc[Information for mentors]
+* xref:projects:gsoc:proposing-project-ideas.adoc[HOWTO: Propose a project idea]
+* xref:projects:gsoc:roles-and-responsibilities.adoc[Roles and Responsibilities]
 * link:https://summerofcode.withgoogle.com/[Google Summer of Code portal]
 * link:https://community.jenkins.io/c/contributing/gsoc-mentors/25[Mentor's Dedicated Discourse group]
 
@@ -122,9 +122,9 @@ See the project pages for the schedule.
 * link:https://wiki.jenkins.io/display/JENKINS/Google+Summer+of+Code+2009[GSoC 2009] - as Hudson, not accepted
 
 .References
-****, 2023
+****
 * xref:gsoc:2023/project-ideas.adoc[GSoC 2023 project ideas]
-//* link:https://summerofcode.withgoogle.com/programs/2022/organizations/jenkins-wp/[Jenkins page on the GSoC website]
+// * link:https://summerofcode.withgoogle.com/programs/2022/organizations/jenkins-wp/[Jenkins page on the GSoC website]
 * link:/blog/2022/11/16/gsoc-2023/[Jenkins GSoC 2023 announcement]
 * link:https://opensource.googleblog.com/2022/11/get-ready-for-google-summer-of-code-2023.html[Google GSoC 2023 announcement blog]
 ****

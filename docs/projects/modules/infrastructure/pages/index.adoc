@@ -165,7 +165,7 @@ Pick up a task => Communicate => Implement => Deploy => Review
 
 To keep track of the work that needs to be done on the Jenkins infrastructure project, we use the link:https://github.com/jenkins-infra/helpdesk/issues[Github help desk repository].
 If you want to contribute, the first step is to find the issue in this project that you want to work on, assign it to you,
-then communicate about it (see <<Communicate>>).
+then communicate about it (see xref:#communicate[Communicate]).
 
 If you can't find an appropriate issue, please create a new one with a clear description:
 
@@ -184,6 +184,7 @@ on the following page:
 link:https://github.com/jenkins-infra/helpdesk/labels/good%20first%20issue[good first issues].
 ====
 
+[#communicate]
 === Communicate
 
 Before any implementation, it's important to verify that first, there is (still) a need for some implementation and then that no work has been done in the past.

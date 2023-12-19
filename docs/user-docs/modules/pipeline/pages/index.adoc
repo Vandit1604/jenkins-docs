@@ -81,8 +81,8 @@ Declarative Pipeline is a more recent feature of Jenkins Pipeline which:
 
 Many of the individual syntactical components (or "steps") written into a
 `Jenkinsfile`, however, are common to both Declarative and Scripted Pipeline.
-Read more about how these two types of syntax differ in <<pipeline-concepts>>
-and <<pipeline-syntax-overview>> below.
+Read more about how these two types of syntax differ in xref:#pipeline-concepts[Pipeline concepts]
+and xref:#pipeline-syntax-overview[pipeline syntax overview] below.
 
 
 [[why]]
@@ -126,11 +126,11 @@ Pipeline:
 
 image::realworld-pipeline-flow.png[alt="Pipeline Flow",width=100%]
 
-
+[#pipeline-concepts]
 == Pipeline concepts
 
 The following concepts are key aspects of Jenkins Pipeline, which tie in closely
-to Pipeline syntax (see the xref:pipeline:index.adoc#pipeline-syntax-overview[overview] below).
+to Pipeline syntax (see the xref:#pipeline-syntax-overview[overview] below).
 
 
 === Pipeline
@@ -170,7 +170,7 @@ the shell command `make` use the `sh` step: `sh 'make'`. When a plugin
 extends the Pipeline DSL, footnote:dsl[] that typically means the plugin has
 implemented a new _step_.
 
-
+[#pipeline-syntax-overview]
 == Pipeline syntax overview
 
 The following Pipeline code skeletons illustrate the fundamental differences

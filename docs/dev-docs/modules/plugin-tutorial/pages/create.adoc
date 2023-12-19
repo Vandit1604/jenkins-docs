@@ -116,10 +116,11 @@ Maven will download several more dependencies, and then go through the configure
 
 NOTE: To learn more about what's involved in a plugin build, see xref:plugin-development:build-process.adoc[Plugin Build Process].
 
-Not the output you're seeing? See the <<Troubleshooting>> section below.
+Not the output you're seeing? See the xref:#troubleshooting[Troubleshooting] section below.
 
 Let's xref:run.adoc[run the plugin] and see what it does.
 
+[#troubleshooting]
 == Troubleshooting
 
 NOTE: Anything not working for you? Ask for help in link:/chat[chat] or link:/mailing-lists[on the jenkinsci-dev mailing list].

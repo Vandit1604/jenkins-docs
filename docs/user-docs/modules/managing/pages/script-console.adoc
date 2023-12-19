@@ -271,7 +271,7 @@ useful for more than writing scripts for the Script Console.  Groovy is also
 relevant for other features of Jenkins like xref:pipeline:index.adoc[Pipelines
 and shared pipeline libraries], the https://plugins.jenkins.io/groovy[Groovy
 Plugin], the https://plugins.jenkins.io/job-dsl[Job DSL plugin], and many other
-plugins which utilize Groovy (see section <<Plugins-enabling-Groovy-usage>>).
+plugins which utilize Groovy (see section xref:#plugins-enabling-groovy-usage[Plugins-enabling-Groovy-usage]).
 
 * http://www.mdoninger.de/2011/11/07/write-groovy-scripts-for-jenkins-with-code-completion.html[Write
 Groovy scripts for Jenkins with Code completion] - The gist of this is to
@@ -450,6 +450,7 @@ on your Jenkins server
 workspaces for a set of jobs on all nodes] — The script wipes workspaces of
 certain jobs on all nodes.
 
+[#plugins-enabling-groovy-usage]
 == Plugins enabling Groovy usage
 
 - link:https://plugins.jenkins.io/config-file-provider[Config File Provider

@@ -9,12 +9,14 @@ Helm Charts provide “push button” deployment and deletion of apps, making ad
 === Prerequisites
 
 Helm command line interface::
-If you don't have Helm command line interface installed and configured locally, see the sections below to <<Install Helm>> and <<Configure Helm>>.
+If you don't have Helm command line interface installed and configured locally, see the sections below to xref:#install-helm[Install Helm] and xref:#configure-helm[Configure Helm].
 
+[#install-helm]
 === Install Helm
 
 To install Helm CLI, follow the instructions from the link:https://helm.sh/docs/intro/install/[Installing Helm] page.
 
+[#configure-helm]
 === Configure Helm
 
 Once Helm is installed and set up properly, add the Jenkins repo as follows:
