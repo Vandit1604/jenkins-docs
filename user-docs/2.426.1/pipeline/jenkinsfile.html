@@ -772,7 +772,7 @@ basic reporting and file archival.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_test"><a class="anchor" href="#_test"></a>Test</h3>
+<h3 id="test"><a class="anchor" href="#test"></a>Test</h3>
 <div class="paragraph">
 <p>Running automated tests is a crucial component of any successful continuous
 delivery process. As such, Jenkins has a number of test recording, reporting,
@@ -827,7 +827,7 @@ node {
 <td>Using an inline shell conditional (<code>sh 'make check || true'</code>) ensures that the
 <code>sh</code> step always sees a zero exit code, giving the <code>junit</code> step the opportunity
 to capture and process the test reports. Alternative approaches to this are
-covered in more detail in the <a href="#handling-failure">[handling-failure]</a> section below.</td>
+covered in more detail in the <a href="#handling-failure">Handling Failure</a> section below.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
@@ -1229,7 +1229,7 @@ It is also possible to use <a href="https://github.com/jenkinsci/oidc-provider-p
 </div>
 </div>
 <div class="sect4">
-<h5 id="_usernames_and_passwords"><a class="anchor" href="#_usernames_and_passwords"></a>Usernames and passwords</h5>
+<h5 id="usernames-and-passwords"><a class="anchor" href="#usernames-and-passwords"></a>Usernames and passwords</h5>
 <div class="paragraph">
 <p>The following Pipeline code snippets show an example of how to create a Pipeline
 using environment variables for username and password credentials.</p>
@@ -1414,7 +1414,7 @@ pipeline {
 </div>
 </div>
 <div class="sect3">
-<h4 id="_for_other_credential_types"><a class="anchor" href="#_for_other_credential_types"></a>For other credential types</h4>
+<h4 id="for-other-credential-types"><a class="anchor" href="#for-other-credential-types"></a>For other credential types</h4>
 <div class="paragraph">
 <p>If you need to set credentials in a Pipeline for anything other than secret
 text, usernames and passwords, or secret files
@@ -1697,7 +1697,7 @@ and so typical operating system process listings will accidentally disclose it :
 </table>
 </div>
 <div class="sect4">
-<h5 id="_combining_credentials_in_one_step"><a class="anchor" href="#_combining_credentials_in_one_step"></a>Combining credentials in one step</h5>
+<h5 id="combining-credentials-in-one-step"><a class="anchor" href="#combining-credentials-in-one-step"></a>Combining credentials in one step</h5>
 <div class="paragraph">
 <p>Using the <strong>Snippet Generator</strong>, you can make multiple credentials available
 within a single <code>withCredentials( &#8230;&#8203; ) { &#8230;&#8203; }</code> step by doing the following:</p>
@@ -1798,7 +1798,7 @@ Pipeline&#8217;s more advanced features.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Groovy string interpolation can leak sensitive environment variables (i.e. credentials, see: <a href="#_handling_credentials">Handling credentials</a>).
+<p>Groovy string interpolation can leak sensitive environment variables (i.e. credentials, see: <a href="#handling-credentials">Handling credentials</a>).
 This is because the sensitive environment variable will be interpolated during Groovy evaluation, and the environment variable&#8217;s value could be made available earlier than intended, resulting in sensitive data leaking in various contexts.</p>
 </div>
 <div class="paragraph">
@@ -2014,7 +2014,7 @@ node {
 </div>
 </div>
 <div class="sect2">
-<h3 id="_handling_failure"><a class="anchor" href="#_handling_failure"></a>Handling failure</h3>
+<h3 id="handling-failure"><a class="anchor" href="#handling-failure"></a>Handling failure</h3>
 <div class="paragraph">
 <p>Declarative Pipeline supports robust failure handling by default via its
 <a href="syntax.html#post" class="xref page"> post section</a> which allows declaring a number of different
@@ -2065,7 +2065,7 @@ node {
 for handling failures during execution of the Pipeline.</p>
 </div>
 <div class="paragraph">
-<p>In the <a href="#test">[test]</a> example above, the <code>sh</code> step was modified to never return a
+<p>In the <a href="#test">Test</a> example above, the <code>sh</code> step was modified to never return a
 non-zero exit code (<code>sh 'make check || true'</code>). This approach, while valid,
 means the following stages need to check <code>currentBuild.result</code> to know if
 there has been a test failure or not.</p>

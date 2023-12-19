@@ -546,7 +546,7 @@
 <p>This section builds on the information introduced in <a href="getting-started.html" class="xref page">Getting started with Pipeline</a> and should be treated solely as a reference.
 For more information on how to use Pipeline syntax in practical examples, refer to the <a href="jenkinsfile.html" class="xref page">Using a Jenkinsfile</a> section of this chapter.
 As of version 2.5 of the Pipeline plugin, Pipeline supports two discrete syntaxes which are detailed below.
-For the pros and cons of each, refer to the <a href="#compare">Syntax Comparison</a>.</p>
+For the pros and cons of each, refer to the <a href="#compare">Compare</a>.</p>
 </div>
 <div class="paragraph">
 <p>As discussed at the <a href="getting-started.html" class="xref page">start of this chapter</a>, the most fundamental part of a Pipeline is the "step". Basically, steps tell Jenkins <em>what</em> to do and serve as the basic building block for both Declarative and Scripted Pipeline syntax.</p>
@@ -585,7 +585,7 @@ For the pros and cons of each, refer to the <a href="#compare">Syntax Comparison
 Each statement has to be on its own line.</p>
 </li>
 <li>
-<p>Blocks must only consist of <a href="#declarative-sections&gt;&gt;"> &lt;&lt;declarative-directives</a>, <a href="#declarative-steps">Steps</a>, or assignment statements.</p>
+<p>Blocks must only consist of <a href="#declarative-sections">declarative-directives</a>, <a href="#declarative-steps">Declarative Steps</a>, or assignment statements.</p>
 </li>
 <li>
 <p>A property reference statement is treated as a no-argument method invocation.
@@ -606,7 +606,7 @@ This limitation does not apply to Scripted Pipelines.</p>
 <div class="sect2">
 <h3 id="declarative-sections"><a class="anchor" href="#declarative-sections"></a>Sections</h3>
 <div class="paragraph">
-<p>Sections in Declarative Pipeline typically contain one or more <a href="#declarative-directives">Directives</a> or <a href="#declarative-steps">Steps</a>.</p>
+<p>Sections in Declarative Pipeline typically contain one or more <a href="#declarative-directives">Declarative Directives</a> or <a href="#declarative-steps">Declarative Steps</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="agent"><a class="anchor" href="#agent"></a>agent</h4>
@@ -736,7 +736,7 @@ For example: <code>agent { label 'my-label1 &amp;&amp; my-label2' }</code> or <c
 </dd>
 <dt class="hdlist1">docker</dt>
 <dd>
-<p>Execute the Pipeline, or stage, with the given container which will be dynamically provisioned on a <a href="#../glossary#node"> node</a> pre-configured to accept Docker-based Pipelines, or on a node matching the optionally defined <code>label</code> parameter.
+<p>Execute the Pipeline, or stage, with the given container which will be dynamically provisioned on a <a href="../glossary/index.html#node" class="xref page"> node</a> pre-configured to accept Docker-based Pipelines, or on a node matching the optionally defined <code>label</code> parameter.
 <code>docker</code> also optionally accepts an <code>args</code> parameter which may contain arguments to pass directly to a <code>docker run</code> invocation, and an <code>alwaysPull</code> option, which will force a <code>docker pull</code> even if the image name is already present.
 For example: <code>agent { docker 'maven:3.9.3-eclipse-temurin-17' }</code> or</p>
 <div class="listingblock">
@@ -979,7 +979,7 @@ Runtime arguments to pass to <code>docker run</code>.</p>
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Defining <code>agent none</code> at the top-level of the Pipeline ensures that <a href="#../glossary#executor"> an Executor</a> will not be assigned unnecessarily.
+<td>Defining <code>agent none</code> at the top-level of the Pipeline ensures that <a href="../glossary/index.html#executor" class="xref page"> an Executor</a> will not be assigned unnecessarily.
 Using <code>agent none</code> also forces each <code>stage</code> section to contain its own <code>agent</code> section.</td>
 </tr>
 <tr>
@@ -1108,7 +1108,7 @@ This is typically denoted in the web UI depending on the status previously menti
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td><a href="#post-conditions"> Post-condition</a> blocks contain <a href="#declarative-steps"> steps</a> the same as the <a href="#steps">[steps]</a> section.</td>
+<td><a href="#post-conditions"> Post-condition</a> blocks contain <a href="#declarative-steps"> steps</a> the same as the <a href="#steps">steps</a> section.</td>
 </tr>
 </table>
 </div>
@@ -1177,7 +1177,7 @@ At a minimum, it is recommended that <code>stages</code> contain at least one <a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_steps"><a class="anchor" href="#_steps"></a>steps</h4>
+<h4 id="steps"><a class="anchor" href="#steps"></a>steps</h4>
 <div class="paragraph">
 <p>The <code>steps</code> section defines a series of one or more <a href="#declarative-steps"> steps</a> to be executed in a given <code>stage</code> directive.</p>
 </div>
@@ -1630,7 +1630,7 @@ For example: <code>options { timestamps() }</code></p>
 <h4 id="_parameters"><a class="anchor" href="#_parameters"></a>parameters</h4>
 <div class="paragraph">
 <p>The <code>parameters</code> directive provides a list of parameters that a user should provide when triggering the Pipeline.
-The values for these user-specified parameters are made available to Pipeline steps via the <code>params</code> object, refer to the <a href="#parameters-example">Parameters, Declarative Pipeline</a> for its specific usage.</p>
+The values for these user-specified parameters are made available to Pipeline steps via the <code>params</code> object, refer to the <a href="#parameters-example">Parameters Example</a> for its specific usage.</p>
 </div>
 <div class="paragraph">
 <p>Each parameter has a <em>Name</em> and <em>Value</em>, depending on the parameter type.
@@ -1958,7 +1958,7 @@ For example, <code>@hourly</code> is the same as <code>H * * * *</code> and coul
 <div class="sect3">
 <h4 id="stage"><a class="anchor" href="#stage"></a>stage</h4>
 <div class="paragraph">
-<p>The <code>stage</code> directive goes in the <code>stages</code> section and should contain a <a href="#steps">[steps]</a> section, an optional <code>agent</code> section, or other stage-specific directives.
+<p>The <code>stage</code> directive goes in the <code>stages</code> section and should contain a <a href="#steps">steps</a> section, an optional <code>agent</code> section, or other stage-specific directives.
 Practically speaking, all of the real work done by a Pipeline will be wrapped in one or more <code>stage</code> directives.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch syntax">
@@ -3430,7 +3430,7 @@ Fundamentally, steps tell Jenkins <em>what</em> to do and serve as the basic bui
 <div class="sect2">
 <h3 id="_differences_from_plain_groovy"><a class="anchor" href="#_differences_from_plain_groovy"></a>Differences from plain Groovy</h3>
 <div class="paragraph">
-<p>In order to provide <em>durability</em>, which means that running Pipelines can survive a restart of the Jenkins <a href="#../glossary#controller"> controller</a>, Scripted Pipeline must serialize data back to the controller.
+<p>In order to provide <em>durability</em>, which means that running Pipelines can survive a restart of the Jenkins <a href="../glossary/index.html#controller" class="xref page"> controller</a>, Scripted Pipeline must serialize data back to the controller.
 Due to this design requirement, some Groovy idioms such as <code>collection.each { item &#8594; /* perform operation */ }</code> are not fully supported.
 Refer to <a href="https://issues.jenkins.io/browse/JENKINS-27421">JENKINS-27421</a> and <a href="https://issues.jenkins.io/browse/JENKINS-26481">JENKINS-26481</a> for more information.</p>
 </div>
