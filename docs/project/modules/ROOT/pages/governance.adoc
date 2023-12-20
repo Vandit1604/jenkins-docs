@@ -112,8 +112,8 @@ Infrastructure administrators have root access to the various servers and build 
 
 Because of the sensitive nature of this work, infrastructure admins are by invitation only, and some of the activity happen behind closed doors. Infrastructure admins often appoint others to delegate some partial access to the system to complete some tasks.
 
-Infrastructure components are maintained by the link:/projects/infrastructure/[infrastructure project].
-See the link:/projects/infrastructure/#contributing[contributing guidelines] for more information.
+Infrastructure components are maintained by the xref:projects:infrastructure:index.adoc[infrastructure project].
+See the xref:projects:infrastructure:index.adoc#contributing[contributing guidelines] for more information.
 Open a link:https://github.com/jenkins-infra/helpdesk[help desk issue] for infrastructure problems.
 
 === Core committers
@@ -143,10 +143,10 @@ There is an link:/sigs/advocacy-and-outreach/[Advocacy and Outreach] special int
 Some of the communication channels are listed below.
 
 Mailing lists::
-We encourage mailing lists as the primary means of developer & user discussion, because of their asynchrony and ability to search the archive. The project website lists link:/mailing-lists[the active mailing lists and their purposes].
+We encourage mailing lists as the primary means of developer & user discussion, because of their asynchrony and ability to search the archive. The project website lists xref:community:mailing-lists:index.adoc[the active mailing lists and their purposes].
 
 Chats::
-Jenkins project uses link:/chat[IRC and Gitter channels] for real time interactive communications. This is also the place where active members bond with each other.
+Jenkins project uses xref:community:chat:index.adoc[IRC and Gitter channels] for real time interactive communications. This is also the place where active members bond with each other.
 
 Twitter::
 link:https://twitter.com/jenkinsci[@jenkinsci] is the official Twitter account of the Jenkins project, run by the team of contributors (jep:10[]).
@@ -160,7 +160,7 @@ These groups focus on particular topics and organize dedicated communication cha
 == Infrastructure
 
 This section summarizes the key infrastructure services we run in the project.
-See the link:/projects/infrastructure[Jenkins Infrastructure] page for the full list of services and more details.
+See the xref:projects:infrastructure:index.adoc[Jenkins Infrastructure] page for the full list of services and more details.
 
 Website::
 Jenkins website (jenkins.io) is self-hosted by the Jenkins project.
@@ -169,7 +169,7 @@ Its source codes can be found link:https://github.com/jenkins-infra/jenkins.io/[
 
 Source code::
 We host most of our code on GitHub. link:https://github.com/jenkinsci/[jenkinsci] and link:https://github.com/jenkins-infra/[jenkins-infra] are the organizations where we host most of our code.
-More information about the GitHub organization and repository structures can be found link:/participate/code/#where-to-contribute[here].
+More information about the GitHub organization and repository structures can be found xref:community:ROOT:code.adoc#where-to-contribute[here].
 
 User Accounts::
 The infrastructure admins run an LDAP server and link:https://accounts.jenkins.io/[a small frontend program] to let users create accounts on jenkins.io.
@@ -197,7 +197,7 @@ and we invite all interested parties to join us and to contribute towards the ro
 == Decision making
 
 The Jenkins project uses link:/project/governance-meeting[biweekly project meetings] as the primary forum of decision making for matters that need consensus.
-The meeting is conducted using a video call or link:/chat/#meeting[IRC].
+The meeting is conducted using a video call or xref:community:chat:index.adoc#meeting[IRC].
 These meetings are open to anyone, and everyone is welcome to provide their feedback and vote on decisions at the meeting.
 Agenda items can be added by anyone by simply adding your topic to link:/project/governance-meeting[the Governance Meeting Agenda].
 
@@ -233,10 +233,10 @@ They can be downloaded by users link:/download[here].
 Regular releases::
 Every week a new release is built from the master branch and released.
 This allows us to get new features and bug fixes into the hands of users relatively quickly.
-See the link:/download/weekly/[Regular (Weekly) Release Line] for more details.
+See the https://www.jenkins.io/download/weekly/[Regular (Weekly) Release Line] for more details.
 
 LTS Releases::
-Every three months or so we pick a prior release as the new long-term support (LTS) release and then create the ‘stable’ branch, from that release point. This branch gets important bug fixes backported from the master branch, and further patch releases are built roughly every two weeks until the next LTS baseline is chosen. See link:/download/lts/[LTS Release Line] for more details.
+Every three months or so we pick a prior release as the new long-term support (LTS) release and then create the ‘stable’ branch, from that release point. This branch gets important bug fixes backported from the master branch, and further patch releases are built roughly every two weeks until the next LTS baseline is chosen. See https://www.jenkins.io/download/lts[LTS Release Line] for more details.
 
 === Modules
 

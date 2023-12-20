@@ -131,7 +131,7 @@ Jenkins infrastructure also hosts some services for sub-projects and special int
 [%header]
 |===
 | Service | Owner Sub-project/SIG | Issue tracker component(s) | Repository
-| link:/download/verify/[Code and Repository Signing] | xref:project:ROOT:team-leads.adoc#release[Release Team] | https://github.com/jenkins-infra/helpdesk/labels/release[release] | https://www.digicert.com/[DigiCert]
+| verify/[Code and Repository Signing] | xref:project:ROOT:team-leads.adoc#release[Release Team] | https://github.com/jenkins-infra/helpdesk/labels/release[release] | https://www.digicert.com/[DigiCert]
 |===
 
 [#contributing]
@@ -146,7 +146,7 @@ If you have any idea that could help the infra or interest the community, feel f
 Before going further, we assume that:
 
 * You already created a Jenkins account on https://accounts.jenkins.io[accounts.jenkins.io]
-* You registered to the Jenkins Infra mailing list link:/mailing-lists/#jenkins-infra-googlegroups-com[jenkins-infra@googlegroups.com]
+* You registered to the Jenkins Infra mailing list xref:community:mailing-lists:index.adoc#jenkins-infra-googlegroups-com[jenkins-infra@googlegroups.com]
 * You have access to our ticket system https://issues.jenkins.io[issues.jenkins.io]
 * You already said "Hi" on IRC channel: xref:community:chat:index.adoc#jenkins-infra[#jenkins-infra]
 ****

@@ -9,7 +9,7 @@ video::L2Uomz8RWUM[youtube,width=800,height=420]
 
 As with any upgrade, we recommend:
  
-. link:https:/doc/book/system-administration/backing-up/#jenkins_home[Backing up `JENKINS_HOME`].
+. xref:user-docs:system-administration:backing-up.adoc#jenkins_home[Backing up `JENKINS_HOME`].
 . Testing the upgrade with your backup.
 . Only after all required tests pass, performing the upgrade on your production instance.
 
@@ -37,7 +37,7 @@ Starting with Jenkins releases 2.357 and LTS 2.361.1, Java 11 or Java 17 is requ
 When upgrading the Java version for Jenkins and the JVM, it is important to upgrade all plugins that support Java 11.
 Plugin upgrades assure compatibility with the most recent Jenkins releases.
 
-NOTE: If you discover a previously unreported issue, please let us know. Refer to link:/participate/report-issue/#issue-reporting[how to report an issue] for guidance.
+NOTE: If you discover a previously unreported issue, please let us know. Refer to xref:community:ROOT:report-issue.adoc#issue-reporting[how to report an issue] for guidance.
 
 // Commented because pipeline support plugin 3.0 is over 3 years old and has 8+ later releases
 //
@@ -50,7 +50,7 @@ NOTE: If you discover a previously unreported issue, please let us know. Refer t
 Some plugins use JAXB libraries provided by the JDK.
 However, the `java.xml.bind` and `javax.activation` modules are no longer included in OpenJDK 11, and plugins might fail if no replacement is offered.
 
-To fix this problem, we've bundled those libraries into a new detached {plugin} plugin:jaxb[JAXB plugin].
+To fix this problem, we've bundled those libraries into a new detached plugin: {plugin}jaxb[JAXB plugin].
 When any Jenkins core more recent than `2.163` is running on Java 11, this plugin is automatically installed.
 However, if you manage your plugins outside Jenkins, for example using a `plugins.txt` in your Docker images, you might need to install the plugin explicitly.
 

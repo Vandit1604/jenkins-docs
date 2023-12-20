@@ -85,4 +85,4 @@ Theoretically, Jenkins can also be run as a servlet in a traditional servlet con
 like link:https://tomcat.apache.org/[Apache Tomcat] or link:https://www.wildfly.org/[WildFly],
 but in practice this is largely untested and there are many caveats.
 In particular, support for WebSocket agents is only implemented for the Jetty servlet container.
-See the xref:administration:requirements/servlet-containers.adoc[Servlet Container Support Policy] page for details.
+See the xref:user-docs:installing-jenkins:servlet-containers.adoc[Servlet Container Support Policy] page for details.

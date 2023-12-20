@@ -88,6 +88,7 @@ It also impacts the complexity of restoring the system from the backup.
 Here we discuss why various files should be backed up
 and list some files that could safely be excluded from at least some backups.
 
+[#jenkins_home]
 === $JENKINS_HOME
 
 Backing up the entire `$JENKINS_HOME` directory

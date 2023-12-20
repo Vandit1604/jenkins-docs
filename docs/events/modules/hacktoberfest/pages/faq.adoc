@@ -58,7 +58,7 @@ Just make sure you create pull requests instead of direct pushes
 Jenkins project contains lots of materials about contributing to the project.
 Here are some links which may help:
 
-* link:/participate/[Participate] - landing page for newcomer contributors
+* xref:community:ROOT:index.adoc[Participate] - landing page for newcomer contributors
 * link:/blog/2017/08/07/intro-to-plugin-development/[Plugin Development Tutorials]
 * xref:dev-docs:ROOT:index.adoc[Developer Documentation]
 * link:https://app.gitter.im/#/room/#jenkinsci_hacktoberfest:gitter.im[Gitter channel] for Q&A
@@ -75,7 +75,7 @@ Unmerged pull-requests can also count in Hacktoberfest, as long as it has the `h
 === I am stuck. How do I get help?
 
 * For general questions (process and general direction) use our link:https://matrix.to/#/#jenkinsci_hacktoberfest:gitter.im[Hacktoberfest Gitter channel]
-* You can also use other link:/chat[chats] or
+* You can also use other xref:community:chat:index.adoc[chats] or
 xref:community:mailing-lists:index.adoc[mailing lists].
 Many subprojects also have their own chats, and we encourage using them if you want to reach out to the wider community.
 

@@ -15,8 +15,8 @@ turn is checked into a project's source control repository.
 footnote:scm[link:https://en.wikipedia.org/wiki/Source_control_management[Source Control Management]]
 
 For more information about Pipeline and what a `Jenkinsfile` is, refer to the
-respective link:/doc/book/pipeline[Pipeline] and
-link:/doc/book/pipeline/jenkinsfile[Using a Jenkinsfile] sections of the User
+respective xref:user-docs:pipeline:index.adoc[Pipeline] and
+xref:user-docs:pipeline:jenkinsfile.adoc[Using a Jenkinsfile] sections of the User
 Handbook.
 
 To get started quickly with Pipeline:
@@ -209,7 +209,7 @@ node {
 
 == Additional Resources
 
-* See more detailed instructions on link:/doc/book/pipeline/getting-started/[Getting Started with Pipeline]
+* See more detailed instructions on xref:user-docs:pipeline:getting-started.adoc[Getting Started with Pipeline]
 * Review other link:/doc/tutorials/#pipeline[Pipeline tutorials]
 
 .How to Write a Pipeline Script in Jenkins

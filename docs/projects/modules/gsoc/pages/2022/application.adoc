@@ -148,7 +148,7 @@ We have many strategic project ideas which are important to hundreds of thousand
 The project has over 600 active contributors working on Jenkins core, plugins, website, project infrastructure, localization activities, etc.
 In total we have more than 2,000 components including plugins, libraries, and various utilities.
 The main languages in the project are Java, Groovy and JavaScript, but we also have components written in other languages (Go, C/C++, C#, etc.).
-Jenkins project includes multiple sub-projects (including link:/projects/jcasc/[Configuration-as-Code], link:/projects/infrastructure/[Infrastructure] and link:/projects/remoting/[Remoting]) and link:/sigs/[special interest groups].
+Jenkins project includes multiple sub-projects (including xref:projects:jcasc:index.adoc[Configuration-as-Code], xref:projects:infrastructure:index.adoc[Infrastructure] and xref:projects:remoting:index.adoc[Remoting]) and link:/sigs/[special interest groups].
 These entities participate in GSoC as a part of the Jenkins project.
 
 The Jenkins project is a part of link:https://cd.foundation/[Continuous Delivery Foundation (CDF)].
@@ -164,7 +164,7 @@ _Provide your potential contributors with a page containing tips on how to write
 Welcome and thank you for your interest!
 To apply to the organization, please follow the link:https:/projects/gsoc/students/#student-application-process[guidelines on our website].
 
-Before submitting please go through the link:https://google.github.io/gsocguides/student/[GSoC contributor guide] and the link:/projects/gsoc/students/[Jenkins GSoC contributor guide] which documents Jenkins specific requirements. Participating in Google Summer of Code requires 15-20 hours commitment a week over several months. If it may overlap with your study, internship, work or other commitments, we recommend you plan accordingly.
+Before submitting please go through the link:https://google.github.io/gsocguides/student/[GSoC contributor guide] and the xref:projects:gsoc:students.adoc[Jenkins GSoC contributor guide] which documents Jenkins specific requirements. Participating in Google Summer of Code requires 15-20 hours commitment a week over several months. If it may overlap with your study, internship, work or other commitments, we recommend you plan accordingly.
 If you have any questions about the application process, please feel free to contact us via link:https://community.jenkins.io/tag/gsoc[Jenkins GSoC Discourse] or in the link:https://app.gitter.im/#/room/#jenkinsci_gsoc-sig:gitter.im[jenkinsci/gsoc-sig Gitter] chat. We also have weekly meetings which are open to everyone.
 
 
@@ -210,7 +210,7 @@ A successful Jenkins GSoC program consists of:
 
 === How will you keep mentors engaged with their GSoC contributors?
 
-* We have explicit expectations from mentors, they are documented in our link:/projects/gsoc/mentors[mentor guidelines].
+* We have explicit expectations from mentors, they are documented in our xref:projects:gsoc:mentors.adoc[mentor guidelines].
   All mentors commit to these expectations during the project selection.
 * Each GSoC contributor will have at least 2 mentors AND an org admin advisor assigned to the project.
 * Mentors are expected to be accomplished Jenkins contributors, who are passionate about community/mentorship work.
