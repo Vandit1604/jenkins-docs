@@ -20,7 +20,7 @@ Conditions for new releases of the _Weekly Release Line_:
    Jenkins security team sends notifications about upcoming security releases to xref:dev-docs:security:index.adoc#advisories[Jenkins Security Advisory Channels].
 ** Usually these releases happen on Wednesdays.
    If we release security updates on Wednesday, there will be no regular release the day before.
-   link:/security/scheduling/[Learn more about how we schedule security advisories].
+   xref:security:ROOT:scheduling.adoc[Learn more about how we schedule security advisories].
 * **Out-of-order releases** in the case of major regressions and/or other reasons.
 
 Weekly releases are managed by Jenkins core maintainers

@@ -1,7 +1,6 @@
 = External Fingerprint Storage for Jenkins
 
 *Goal:*  Extend Jenkins to support storing artifact usage history in external databases"
-category: Core
 
 *Status*: Completed
 
@@ -9,18 +8,13 @@ category: Core
 
 [.avatar]
 *Student*: 
-image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Sladyn Nunes
+image:images:ROOT:avatars/stellargo.jpeg[,width=30,height=30] Sumit Sarin
 
 [.avatar]
 *Mentor(s):*
-image:images:ROOT:avatars/linuxsuren.jpg[,width=30,height=30] 赵晓杰(Rick)
-image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Kristin Whetstone
-image:images:ROOT:avatars/baymac.jpg[,width=30,height=30] Parichay Barpanda
-image:images:ROOT:avatars/martinda.png[,width=30,height=30] Martin d'Anjou
-
-[.avatar]
-*Advisor(s):*: 
 image:images:ROOT:avatars/oleg_nenashev.png[,width=30,height=30] Oleg Nenashev
+image:images:ROOT:avatars/afalko.jpg[,width=30,height=30] Andrey Falko
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Michael Cirioli
 
 == Abstract
 
@@ -224,7 +218,7 @@ Once the plugin has been installed, you can configure the Redis server details b
 . Scroll to the section `Redis Fingerprint Storage Configuration` and fill in the required details:
 
 +
-image:images:ROOT:post-images/gsoc-external-fingerprint-storage-for-jenkins/config_page.png[Configure Redis]
+image::images:ROOT:post-images/gsoc-external-fingerprint-storage-for-jenkins/config_page.png[Configure Redis]
 +
 
 * `Host` - Enter hostname where Redis is running
@@ -310,7 +304,7 @@ components.
 * https://docs.google.com/document/d/13IJWd91uwZ3bGGSHfTx5ulue0rTD9XV8owvncIELkF0/edit#[Daily Progress Document] +
 * https://github.com/jenkinsci/redis-fingerprint-storage-plugin[Redis Fingerprint Storage Plugin Repository] +
 * https://github.com/jenkinsci/postgresql-fingerprint-storage-plugin[PostgreSQL Fingerprint Storage Plugin Repository] +
-* {jep}226/README.adoc[] +
+* {jep}226/README.adoc[JEP-226: External Fingerprint Storage] +
 * link:/blog/2020/06/27/external-fingerprint-storage/[Phase 1 Blog Post] +
 * link:/blog/2020/07/24/external-fingerprint-storage-phase-2/[Phase 2 Blog Post] +
 * link:/blog/2020/08/25/external-fingerprint-storage-phase-3/[Phase 3 Blog Post] +

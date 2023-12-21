@@ -60,7 +60,7 @@ Refer to the link:https://github.com/jenkinsci/infra-cla/blob/master/README.md[i
 More details are available from the Linux Foundation for link:https://docs.linuxfoundation.org/lfx/easycla/v2-current/contributors/individual-contributor[individual contributors] and link:https://docs.linuxfoundation.org/lfx/easycla/v2-current/contributors/corporate-contributor[corporate contributors].
 
 EasyCLA is self service and requires no manual intervention by the board or any other Jenkins project member.
-It is a one-time process, valid for all link:/project/conduct/#community-spaces[Jenkins community spaces].
+It is a one-time process, valid for all xref:project:ROOT:conduct.adoc#community-spaces[Jenkins community spaces].
 
 CLAs come in two flavors. Every core contributor needs to sign an Individual CLA (ICLA), and in cases where you as an individual do not own the work you are contributing (such as when your company assigns you to work on Jenkins and therefore your company owns the hard work you produced), the corporation also needs to sign a Corporate CLA (CCLA). See link:https://www.apache.org/licenses/#clas[the discussion in Apache for more details]. The CLA forms can be obtained by following the documentation in the link:https://github.com/jenkinsci/infra-cla[infra-cla] repository.
 
@@ -101,9 +101,9 @@ The governance board consists of five people who act as public representatives o
 
 The board also acts as the ultimate decision-making authority in case disputes cannot be resolved via the regular project community meeting. The decision-making ability of the board is more symbolic and honorific, and it “rules” like British royalty rather than a dictatorship.
 
-The link:/project/board[Governance Board] page provides further information, including a list of current board members, and how to contact the board.
+The xref:project:ROOT:board.adoc[Governance Board] page provides further information, including a list of current board members, and how to contact the board.
 
-The process by which the Governance Board is elected can be reviewed in the link:/project/board-election-process[Board Election Process]
+The process by which the Governance Board is elected can be reviewed in the xref:project:ROOT:board-election-process.adoc[Board Election Process]
 
 
 === Infrastructure admins
@@ -139,7 +139,7 @@ Users use Jenkins and its plugins. They contribute to the project by providing f
 
 The communication among people in the community is crucial to the oneness of the project.
 People in the Jenkins project communicate with each other in several different places.
-There is an link:/sigs/advocacy-and-outreach/[Advocacy and Outreach] special interest group which focuses on public communications.
+There is an xref:sigs:advocacy-and-outreach:index.adoc[Advocacy and Outreach] special interest group which focuses on public communications.
 Some of the communication channels are listed below.
 
 Mailing lists::
@@ -154,7 +154,7 @@ There are also a link:https://twitter.com/jenkins_release[@jenkins_release] acco
 and other accounts being run by sub-communities like meetup groups.
 
 Special interest group channels::
-There are multiple link:/sigs/[Special Interest Groups] in the community.
+There are multiple xref:sigs:ROOT:index.adoc[Special Interest Groups] in the community.
 These groups focus on particular topics and organize dedicated communication channels including chats, mailing lists and regular meetings.
 
 == Infrastructure
@@ -196,14 +196,14 @@ and we invite all interested parties to join us and to contribute towards the ro
 [[meeting]]
 == Decision making
 
-The Jenkins project uses link:/project/governance-meeting[biweekly project meetings] as the primary forum of decision making for matters that need consensus.
+The Jenkins project uses xref:project:governance-meeting:index.adoc[biweekly project meetings] as the primary forum of decision making for matters that need consensus.
 The meeting is conducted using a video call or xref:community:chat:index.adoc#meeting[IRC].
 These meetings are open to anyone, and everyone is welcome to provide their feedback and vote on decisions at the meeting.
-Agenda items can be added by anyone by simply adding your topic to link:/project/governance-meeting[the Governance Meeting Agenda].
+Agenda items can be added by anyone by simply adding your topic to xref:project:governance-meeting:index.adoc[the Governance Meeting Agenda].
 
 The meeting minutes are public:
 
-* link:/project/governance-meeting[Governance Meeting Agenda] for meetings held in as video calls
+* xref:project:governance-meeting:index.adoc[Governance Meeting Agenda] for meetings held in as video calls
 * link:http://meetings.jenkins-ci.org/jenkins-meeting/[September 2015 to today]
 * link:http://meetings.jenkins-ci.org/jenkins/[2011 to September 2015]
 
@@ -351,4 +351,4 @@ If you notice that your pull requests aren’t getting attended to within a week
 == This document
 
 This document is owned by the community and substantial changes are approved via the project meeting.
-Send your questions to the dev list, or add an item to the link:/project/governance-meeting/[next governance meeting's agenda].
+Send your questions to the dev list, or add an item to the xref:project:governance-meeting:index.adoc[next governance meeting's agenda].

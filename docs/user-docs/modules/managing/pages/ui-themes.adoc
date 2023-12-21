@@ -53,7 +53,7 @@ but minor changes may not be included there.
 
 There is an ongoing effort focused on improving Jenkins look-and-feel, accessibility, and user experience.
 This area is mission-critical to the project.
-There are multiple initiatives in the link:/project/roadmap/[Jenkins Roadmap] being coordinated by the link:/sigs/ux/[Jenkins User Experience SIG].
+There are multiple initiatives in the link:/project/roadmap/[Jenkins Roadmap] being coordinated by the xref:sigs:ux:index.adoc[Jenkins User Experience SIG].
 
 Major UI changes imply incompatible changes in layouts and the CSS structure which is critical for theme plugins.
 Historically Jenkins had no explicit support policy for themes,
@@ -87,4 +87,4 @@ please consider the following recommendations:
 ** This is also a prerequisite for hosting themes in Jenkins GitHub organizations and, in the future, theme marketplaces or other similar promotion engines.
 
 If you would like to share a story about Jenkins themes,
-please let the link:/sigs/advocacy-and-outreach/[Advocacy&Outreach SIG] know!
+please let the xref:sigs:advocacy-and-outreach:index.adoc[Advocacy&Outreach SIG] know!
