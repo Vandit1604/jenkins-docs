@@ -335,7 +335,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc">user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc</a>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
@@ -608,12 +608,12 @@ See <a href="https://github.com/jenkinsci/instance-identity-plugin">the componen
 </li>
 <li>
 <p><code>/static-files/</code> is used to implement the Resource Root URL feature serving user-provided contents from another domain.
-See <a href="/doc/book/security/configuring-content-security-policy">its documentation</a>.</p>
+See <a href="configuring-content-security-policy.html" class="xref page">its documentation</a>.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>A list of all these extensions is provided on the UI when selecting (but not saving) the <em>Delegate to Servlet container</em> security realm, or can be obtained via the <a href="/doc/book/managing/script-console/">Script Console</a> using:</p>
+<p>A list of all these extensions is provided on the UI when selecting (but not saving) the <em>Delegate to Servlet container</em> security realm, or can be obtained via the <a href="../managing/script-console.html" class="xref page">Script Console</a> using:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -670,7 +670,7 @@ Any path starting with <code>/static/&#8230;&#8203;/</code> can be treated for l
 <ul>
 <li>
 <p>Further path prefixes (in addition to <code>adjuncts/</code>, <code>assets/</code>, and core webapp resources) providing static assets, both by Jenkins core and by plugins.
-See <a href="/doc/developer/views/exposing-bundled-resources/">the developer documentation</a>.</p>
+See <a href="../../../dev-docs/views/exposing-bundled-resources.html" class="xref page">the developer documentation</a>.</p>
 </li>
 <li>
 <p>Path prefixes providing access to all URLs implemented in extension lists of all extension points implemented in Jenkins.
@@ -742,7 +742,7 @@ Its primarily intended to be used when the Jenkins configuration is managed exte
 It works best when combined with the <em>ExtendedRead</em> permission that allows read-only access to agents and items.</p>
 </div>
 <div class="paragraph">
-<p>This permission can be enabled by setting <a href="/doc/book/managing/system-properties/#jenkins-security-systemreadpermission">the system property <code>jenkins.security.SystemReadPermission</code> to <code>true</code></a> or installing the <a href="https://plugins.jenkins.io/extended-read-permission">Extended Read Permission</a> plugin.</p>
+<p>This permission can be enabled by setting <a href="../managing/system-properties.html#jenkins-security-systemreadpermission" class="xref page">the system property <code>jenkins.security.SystemReadPermission</code> to <code>true</code></a> or installing the <a href="https://plugins.jenkins.io/extended-read-permission">Extended Read Permission</a> plugin.</p>
 </div>
 <div class="paragraph">
 <p>Learn more in jep:224[].</p>
@@ -773,7 +773,7 @@ Users with this permission are able to perform some administrative tasks.
 Options generally considered critical to the security of Jenkins are not available to these users.</p>
 </div>
 <div class="paragraph">
-<p>This permission can be enabled by setting <a href="/doc/book/managing/system-properties/#jenkins-security-managepermission">the system property <code>jenkins.security.ManagePermission</code> to <code>true</code></a> or installing the <a href="https://plugins.jenkins.io/manage-permission">Overall/Manage permission enabler</a> plugin.</p>
+<p>This permission can be enabled by setting <a href="../managing/system-properties.html#jenkins-security-managepermission" class="xref page">the system property <code>jenkins.security.ManagePermission</code> to <code>true</code></a> or installing the <a href="https://plugins.jenkins.io/manage-permission">Overall/Manage permission enabler</a> plugin.</p>
 </div>
 <div class="paragraph">
 <p>Learn more in jep:223[].</p>

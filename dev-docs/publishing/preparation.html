@@ -1363,7 +1363,13 @@ This applies to the plugin source code as well as all its dependencies.
 Make sure to specify the license both in the <code>pom.xml</code> file, as well as a <code>LICENSE</code> file in your repository.</p>
 </div>
 <div class="paragraph">
-<p>We recommend use of the MIT license which is used for Jenkins core and most plugins and libraries, but any <a href="https://opensource.org/licenses/">OSI-approved</a> open source license will do.</p>
+<p>We recommend use of the MIT license which is used for Jenkins core and most plugins and libraries, but any <a href="https://opensource.org/licenses/">OSI-approved</a> or <a href="https://en.wikipedia.org/wiki/Public-domain-equivalent_license">public-domain-equivalent</a> license or public domain dedication will do.</p>
+</div>
+<div class="paragraph">
+<p>Library plugins, which exist only to wrap some third-party library to implement dynamic linking,
+may be licensed under either the MIT license or the license of the library being wrapped.
+When these library plugins deliver nontrivial Jenkins-specific production code, the MIT license is appropriate;
+however, when the only Jenkins-specific code is in build and test logic, we prefer the license of the library being wrapped for simplicity and consistency.</p>
 </div>
 </div>
 </div>

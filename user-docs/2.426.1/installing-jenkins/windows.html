@@ -337,7 +337,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc">user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc</a>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
@@ -547,8 +547,69 @@
 That program will install Jenkins as a service using a 64 bit JVM chosen by the user.
 Keep in mind that to run Jenkins as a service, the account that runs Jenkins must have permission to login as a service.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>include::partial$_installation_requirements.adoc</p>
+<p>Minimum hardware requirements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>256 MB of RAM</p>
+</li>
+<li>
+<p>1 GB of drive space (although 10 GB is a recommended minimum if running
+Jenkins as a Docker container)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Recommended hardware configuration for a small team:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>4 GB+ of RAM</p>
+</li>
+<li>
+<p>50 GB+ of drive space</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Comprehensive hardware recommendations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Hardware: see the <a href="../scaling/hardware-recommendations.html" class="xref page">Hardware Recommendations</a> page</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Software requirements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Java: see the <a href="../platform-information/support-policy-java.html" class="xref page">Java Requirements</a> page</p>
+</li>
+<li>
+<p>Web browser: see the <a href="../platform-information/support-policy-web-browsers.html" class="xref page">Web Browser Compatibility</a> page</p>
+</li>
+<li>
+<p>For Windows operating system: <a href="../platform-information/support-policy-windows.html" class="xref page">Windows Support Policy</a></p>
+</li>
+<li>
+<p>For Linux operating system: <a href="../platform-information/support-policy-linux.html" class="xref page">Linux Support Policy</a></p>
+</li>
+<li>
+<p>For servlet containers: <a href="../platform-information/support-policy-servlet-containers.html" class="xref page">Servlet Container Support Policy</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -916,8 +977,8 @@ If you are not sure what plugins you need, choose <strong>Install suggested
 plugins</strong>.
 You can install (or remove) additional Jenkins plugins at a later point in time
 via the
-<a href="/doc/book/managing"><strong>Manage Jenkins</strong></a> &gt;
-<a href="/doc/book/managing/plugins/"><strong>Plugins</strong></a> page in Jenkins.
+<a href="../managing/index.html" class="xref page"><strong>Manage Jenkins</strong></a> &gt;
+<a href="../managing/plugins.html" class="xref page"><strong>Plugins</strong></a> page in Jenkins.
 </td>
 </tr>
 </table>

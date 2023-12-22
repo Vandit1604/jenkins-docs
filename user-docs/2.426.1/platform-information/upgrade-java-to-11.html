@@ -337,7 +337,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc">user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc.adoc</a>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
@@ -561,7 +561,7 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><a href="https:/doc/book/system-administration/backing-up/#jenkins_home">Backing up <code>JENKINS_HOME</code></a>.</p>
+<p><a href="../system-administration/backing-up.html#jenkins_home" class="xref page">Backing up <code>JENKINS_HOME</code></a>.</p>
 </li>
 <li>
 <p>Testing the upgrade with your backup.</p>
@@ -652,7 +652,7 @@ Plugin upgrades assure compatibility with the most recent Jenkins releases.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If you discover a previously unreported issue, please let us know. Refer to <a href="/participate/report-issue/#issue-reporting">how to report an issue</a> for guidance.
+If you discover a previously unreported issue, please let us know. Refer to <a href="../../../community/report-issue.html#issue-reporting" class="xref page">how to report an issue</a> for guidance.
 </td>
 </tr>
 </table>
@@ -667,7 +667,7 @@ If you discover a previously unreported issue, please let us know. Refer to <a h
 However, the <code>java.xml.bind</code> and <code>javax.activation</code> modules are no longer included in OpenJDK 11, and plugins might fail if no replacement is offered.</p>
 </div>
 <div class="paragraph">
-<p>To fix this problem, we&#8217;ve bundled those libraries into a new detached <a href="https://plugins.jenkins.io/" class="bare">https://plugins.jenkins.io/</a> plugin:jaxb[JAXB plugin].
+<p>To fix this problem, we&#8217;ve bundled those libraries into a new detached plugin: <a href="https://plugins.jenkins.io/jaxb">JAXB plugin</a>.
 When any Jenkins core more recent than <code>2.163</code> is running on Java 11, this plugin is automatically installed.
 However, if you manage your plugins outside Jenkins, for example using a <code>plugins.txt</code> in your Docker images, you might need to install the plugin explicitly.</p>
 </div>
