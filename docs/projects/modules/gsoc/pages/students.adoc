@@ -3,7 +3,7 @@
 image:images:ROOT:gsoc/jenkins-gsoc-logo_small.png[Jenkins GSoC, role=center, float=right]
 
 This page provides information for contributors about participating in Jenkins GSoC program.
-See link:/projects/gsoc[the main GSoC project] page for other information and links.
+See xref:projects:gsoc:index.adoc[the main GSoC project] page for other information and links.
 
 == GSoC Contributor Application Process
 
@@ -24,7 +24,7 @@ We cannot make any exception. Please:
 
 === Application steps
 
-. Check out the link:/projects/gsoc/2024/project-ideas[GSoC 2024 Project ideas]
+. Check out the xref:projects:gsoc:index.adoc[GSoC 2024 Project ideas]
 . Select an interesting project idea or draft your own proposal.
 . Use the link:https://docs.google.com/document/d/1dIlPLXfLbFsvcaHFuwmH9_lSCVm9m6-SgNYTNAnSZpY/[project proposal template] to write your project proposal.
 . If you are not familiar with Jenkins, read the introductory info on the website and try using Jenkins with one of your previous projects.
@@ -35,7 +35,7 @@ We cannot make any exception. Please:
   .. Start a discussion about a Jenkins GSoC project.
   .. Be patient, there are time zones, and mentors have full time jobs outside of the Jenkins community.
 . Eventually, you may have to join both the Gitter chat and the Discourse channel, but initially you can reach us either way.
-. Add GSoC office hours to your calendar (to be announced on link:/projects/gsoc[the main GSoC project] page).
+. Add GSoC office hours to your calendar (to be announced on xref:projects:gsoc:index.adoc[the main GSoC project] page).
 . Recommended: Do some contributions in the area of your project idea
 
 You can find more details about application steps below.
@@ -170,8 +170,8 @@ and mentors will consider contributions and interactions with the community when
 Here are a list of links to help you get started on participating in Jenkins and in coding for the Jenkins project,
 in increasing level of difficulty.
 
-* link:/project/governance/[Project Governance]
-* link:/participate[Participate and Contribute]
+* xref:project:ROOT:governance.adoc[Project Governance]
+* xref:community:ROOT:index.adoc[Participate and Contribute]
 * link:https://wiki.jenkins.io/display/JENKINS/Plugin+tutorial[Plugin tutorial]
 * link:/blog/2017/08/07/intro-to-plugin-development/[Plugin Development Tutorials, Videos, and More]
 * link:https://github.com/jenkinsci/jenkins/blob/master/CONTRIBUTING.md[Contributing to the Jenkins core]
@@ -360,7 +360,7 @@ Contributors should join the following Jenkins mailing lists:
 
 Other mailing lists:
 
-* link:/projects/gsoc/#orgadmin[Org admins mailing list]- for **private** communications with org admins (escalations, issues with mentors)
+* xref:projects:gsoc:index.adoc#orgadmin[Org admins mailing list]- for **private** communications with org admins (escalations, issues with mentors)
 ** Please *DO NOT* use this mailing list for applications and intro emails
 
 === Chat
@@ -377,7 +377,7 @@ Once the projects are announced, mentors and students may switch to another comm
 In addition to chat, Discourse and mailing lists, we have regular office hours for sync-ups
 between students, org admins and mentors.
 
-See the link:/projects/gsoc/#office-hours[main GSoC page] for the schedule.
+See the xref:projects:gsoc:index.adoc#office-hours[main GSoC page] for the schedule.
 
 == Post-GSoC
 

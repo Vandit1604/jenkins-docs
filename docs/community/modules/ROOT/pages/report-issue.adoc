@@ -3,7 +3,7 @@
 == How-To Report an Issue
 
 Jenkins JIRA is an issue tracker, not a support site.
-If you need assistance or have general questions, visit us link:/chat/[in chat], email one of the link:/mailing-lists[mailing lists], or post on the https://community.jenkins.io/[community forum].
+If you need assistance or have general questions, visit us xref:community:chat:index.adoc[in chat], email one of the xref:community:mailing-lists:index.adoc[mailing lists], or post on the https://community.jenkins.io/[community forum].
 
 [[Howtoreportanissue-Beforecreatinganissue]]
 == Before creating an issue
@@ -89,8 +89,8 @@ However *if the issue you're reporting is in one of Jenkins' plugins*, you'll ha
 * Search for the Plugin and open its page.
 * Click the *Report an issue* link in the *Links* section on the right side of the
 plugin page.
-** After selecting the link, if you end up on JIRA follow the instructions on link:/participate/report-issue/#reporting-issue-on-jira[Reporting an Issue in JIRA].
-** After selecting the link, if you end up on Github follow the instructions on link:/participate/report-issue/#reporting-issue-on-github[Reporting an Issue on Github].
+** After selecting the link, if you end up on JIRA follow the instructions on xref:community:ROOT:report-issue.adoc#reporting-issue-on-jira[Reporting an Issue in JIRA].
+** After selecting the link, if you end up on Github follow the instructions on xref:community:ROOT:report-issue.adoc#reporting-issue-on-github[Reporting an Issue on Github].
 
 
 === Reporting an issue on JIRA
@@ -102,7 +102,7 @@ https://issues.jenkins.io/secure/Dashboard.jspa[the JIRA home page].
 * For *Project* select:
 ** _Jenkins_ for general issues with Jenkins,
 ** _Security Issues_ if you want to report a security issue privately
-* For _Infrastructure_, if you're reporting a bug with link:/projects/infrastructure/[a Jenkins service run by the Jenkins project], open an issue in the https://github.com/jenkins-infra/helpdesk/issues/new/choose[dedicated helpdesk on Github].
+* For _Infrastructure_, if you're reporting a bug with xref:projects:infrastructure:index.adoc[a Jenkins service run by the Jenkins project], open an issue in the https://github.com/jenkins-infra/helpdesk/issues/new/choose[dedicated helpdesk on Github].
 * Enter a short but meaningful description of your problem as *Summary*.
 * For *Priority*, see
 https://issues.jenkins.io/secure/ShowConstantsHelp.jspa?decorator=popup#PriorityLevels[here]

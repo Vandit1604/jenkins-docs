@@ -433,7 +433,7 @@ pipeline {
 <1> Defines a xref:user-docs:pipeline:syntax.adoc#stage[`stage`] (directive) called
 `Deliver` that appears on the Jenkins UI.
 <2> This
-link:/doc/pipeline/tour/environment/[`environment`]
+xref:user-docs:pipeline:tour/environment.adoc[`environment`]
 block defines two variables which will be used later in the 'Deliver' stage.
 <3> This
 link:/doc/pipeline/steps/workflow-basic-steps/#dir-change-current-directory[`dir`]

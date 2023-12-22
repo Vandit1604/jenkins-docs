@@ -4,7 +4,7 @@ The simplest way to install Jenkins on Windows is to use the Jenkins Windows ins
 That program will install Jenkins as a service using a 64 bit JVM chosen by the user.
 Keep in mind that to run Jenkins as a service, the account that runs Jenkins must have permission to login as a service.
 
-include::partial$_installation_requirements.adoc
+include::user-docs:installing-jenkins:partial$_installation_requirements.adoc[]
 
 [#windows-msi-installers]
 == Installation steps using Windows MSI installer
@@ -218,8 +218,8 @@ NOTE: If you are not sure what plugins you need, choose **Install suggested
 plugins**.
 You can install (or remove) additional Jenkins plugins at a later point in time
 via the
-link:/doc/book/managing[**Manage Jenkins**] >
-link:/doc/book/managing/plugins/[**Plugins**] page in Jenkins.
+xref:user-docs:managing:index.adoc[**Manage Jenkins**] >
+xref:user-docs:managing:plugins.adoc[**Plugins**] page in Jenkins.
 
 The setup wizard shows the progression of Jenkins being configured and your
 chosen set of Jenkins plugins being installed. This process may take a few

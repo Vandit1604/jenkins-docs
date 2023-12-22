@@ -1,39 +1,29 @@
 = CloudEvents plugin for Jenkins
 
 *Goal*: Build a plugin able to listen to and emit CloudEvents from Jenkins
-category: Plugins
-year: 2024
-status: draft
-sig: cloud-native
-skills:
-- Java
-- Go
-- CloudEvents SDK
-- Networking
-mentors:
-- "krisstern"
-links:
-  draft: https://docs.google.com/document/d/1xsI6nkEPzXId5npXLrjz3Ydj7jx9Rf8g7SWnTldpeQc/edit#heading=h.f09or9ek462l
-  meetings: /projects/gsoc/#office-hours
----
+
+*Status*: Completed
 
 == Team
 
 [.avatar]
 *Student*: 
-image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Sladyn Nunes
+image:images:ROOT:avatars/ShrutiC-git.png[,width=30,height=30] Shruti Chaturvedi
 
 [.avatar]
 *Mentor(s):*
-image:images:ROOT:avatars/linuxsuren.jpg[,width=30,height=30] 赵晓杰(Rick)
-image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Kristin Whetstone
-image:images:ROOT:avatars/baymac.jpg[,width=30,height=30] Parichay Barpanda
-image:images:ROOT:avatars/martinda.png[,width=30,height=30] Martin d'Anjou
 
-[.avatar]
-*Advisor(s):*: 
-image:images:ROOT:avatars/oleg_nenashev.png[,width=30,height=30] Oleg Nenashev
+image:images:ROOT:avatars/image.svg[,width=30,height=30] Vibhav Bobade
+image:images:ROOT:avatars/image.svg[,width=30,height=30] Mauricio Salatino
+image:images:ROOT:avatars/jeffpearce.png[,width=30,height=30] Jeff Pearce
+image:images:ROOT:avatars/marckk.jpg[,width=30,height=30] Kara de la Marck
 
+// mentors:
+// - "krisstern"
+// links:
+//   draft: https://docs.google.com/document/d/1xsI6nkEPzXId5npXLrjz3Ydj7jx9Rf8g7SWnTldpeQc/edit#heading=h.f09or9ek462l
+//   meetings: /projects/gsoc/#office-hours
+// ---
 
 === Background
 

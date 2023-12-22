@@ -6,7 +6,7 @@
 
 == Details
 
-The idea is to create a Jenkins plugin or a link:https:/doc/book/pipeline/shared-libraries/[Pipeline Shared library] for one of widely used EDA tools.
+The idea is to create a Jenkins plugin or a xref:user-docs:pipeline:shared-libraries.adoc[Pipeline Shared library] for one of widely used EDA tools.
 Both ASIC or FPGA design flow are acceptable, the tool should be proposed by the potential student.
 Open-source EDA tools would be preferable (e.g. Yosys, FuseSoC, ArachnePnR, icetools), but we also consider
 conditionally-free tools (like FPGA design EDAs).

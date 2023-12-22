@@ -1,4 +1,4 @@
-= "Jenkins Code of Conduct"
+= Jenkins Code of Conduct
 
 As community members, contributors and maintainers of this project,
 and in the interest of fostering an open and welcoming community,
@@ -7,7 +7,7 @@ posting feature requests, updating documentation, submitting pull requests or
 patches, and other activities.
 
 This document defines the Code of Conduct along with reporting and handling guidelines for the Jenkins community. 
-For more details about our cultural values, goals, philosophies, and structure, please consult our link:/project/governance[Governance Document]. 
+For more details about our cultural values, goals, philosophies, and structure, please consult our xref:project:ROOT:governance.adoc[Governance Document]. 
 
 == Our Pledge
 
@@ -97,18 +97,18 @@ Everything hosted under link:/[jenkins.io], link:https://jenkins-ci.org/[jenkins
 
 ==== Mailing lists
 
-All link:/mailing-lists[mailing lists] hosted on Google Groups and other platforms.
+All xref:community:mailing-lists:index.adoc[mailing lists] hosted on Google Groups and other platforms.
 
 ==== Chats
 
-* All chats documented on the link:/chat[this page], e.g. IRC channels: `#jenkins`, `#jenkins-meeting`, `#jenkins-infra`, etc.
+* All chats documented on the xref:community:chat:index.adoc[this page], e.g. IRC channels: `#jenkins`, `#jenkins-meeting`, `#jenkins-infra`, etc.
 * Gitter channels within the link:https://app.gitter.im/#/room/#jenkins-ci:matrix.org[jenkinsci] space
 * Jenkins chats hosted by Linux Foundation and its subsidiaries including Continuous Delivery Foundation 
 
 ==== Events
 
-* link:/projects/jam/[Jenkins Area Meetups]
-* link:/events/online-meetup[Jenkins Online Meetup]
+* xref:projects:jam:index.adoc[Jenkins Area Meetups]
+* xref:events:online-meetup:index.adoc[Jenkins Online Meetup]
 * Events where Jenkins is officially being represented (e.g.
   link:https://fosdem.org[FOSDEM], link:https://socallinuxexpo.org/[SCaLE])
 
@@ -120,10 +120,10 @@ Those groups must provide their own moderators and/or reporting system.
 == Reporting
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the link:/project/board[Jenkins board].
+reported by contacting the xref:project:ROOT:board.adoc[Jenkins board].
 If you feel somebody has breached this code, please send an email with the
 relevant information (links, etc) to `jenkinsci-board@googlegroups.com`.
-This email list is only readable by the link:/project/board[Governance Board] members.
+This email list is only readable by the xref:project:ROOT:board.adoc[Governance Board] members.
 The board may not have all of the necessary context and history,
 so it's better to describe the issue thoroughly.
 All complaints will be reviewed
@@ -217,7 +217,7 @@ After 12 months they may appeal to the board for the ban to be lifted.
 
 The ban will include but is not limited to:
 
-*  Bans from Jenkins community link:/chat[chats]
+*  Bans from Jenkins community xref:community:chat:index.adoc[chats]
 *  Deletion of their LDAP account
 *  Blocking their GitHub username from the Jenkins GitHub organizations
 *  Banning their email address from Jenkins mailing lists

@@ -39,10 +39,10 @@ As of Jenkins 2.290, the following extensions are provided as part of Jenkins (c
 * `/instance-identity/` provides a public key that allows identifying the Jenkins instance and setting up secure communication with it.
   See https://github.com/jenkinsci/instance-identity-plugin[the component documentation] for details.
 * `/static-files/` is used to implement the Resource Root URL feature serving user-provided contents from another domain.
-  See link:/doc/book/security/configuring-content-security-policy[its documentation].
+  See xref:user-docs:security:configuring-content-security-policy.adoc[its documentation].
 // TODO: This link isn't quite correct yet, because this feature is barely covered, will be fixed in the future.
 
-A list of all these extensions is provided on the UI when selecting (but not saving) the _Delegate to Servlet container_ security realm, or can be obtained via the link:/doc/book/managing/script-console/[Script Console] using:
+A list of all these extensions is provided on the UI when selecting (but not saving) the _Delegate to Servlet container_ security realm, or can be obtained via the xref:user-docs:managing:script-console.adoc[Script Console] using:
 
 [source,groovy]
 ----
@@ -73,7 +73,7 @@ In addition to the above, a user granted _Overall/Read_ can do all of the follow
 To support various features available to legitimate users of Jenkins, the following not as obvious URLs are accessible as well:
 
 * Further path prefixes (in addition to `adjuncts/`, `assets/`, and core webapp resources) providing static assets, both by Jenkins core and by plugins.
-  See link:/doc/developer/views/exposing-bundled-resources/[the developer documentation].
+  See xref:dev-docs:views:exposing-bundled-resources.adoc[the developer documentation].
 * Path prefixes providing access to all URLs implemented in extension lists of all extension points implemented in Jenkins.
   These URLs are typically used to support form validation and form autocompletion, and the way they're organized means that some basic access is granted to any user with _Overall/Read_ access.
 
@@ -112,7 +112,7 @@ This permission grants read-only access to the Jenkins global configuration.
 Its primarily intended to be used when the Jenkins configuration is managed externally, e.g. using the {plugin}configuration-as-code/[Configuration as Code] plugin.
 It works best when combined with the _ExtendedRead_ permission that allows read-only access to agents and items.
 
-This permission can be enabled by setting link:/doc/book/managing/system-properties/#jenkins-security-systemreadpermission[the system property `jenkins.security.SystemReadPermission` to `true`] or installing the {plugin}extended-read-permission[Extended Read Permission] plugin.
+This permission can be enabled by setting xref:user-docs:managing:system-properties.adoc#jenkins-security-systemreadpermission[the system property `jenkins.security.SystemReadPermission` to `true`] or installing the {plugin}extended-read-permission[Extended Read Permission] plugin.
 
 Learn more in jep:224[].
 
@@ -129,7 +129,7 @@ _Overall/Manage_ grants permission to access and modify a subset of administrati
 Users with this permission are able to perform some administrative tasks.
 Options generally considered critical to the security of Jenkins are not available to these users.
 
-This permission can be enabled by setting link:/doc/book/managing/system-properties/#jenkins-security-managepermission[the system property `jenkins.security.ManagePermission` to `true`] or installing the {plugin}manage-permission[Overall/Manage permission enabler] plugin.
+This permission can be enabled by setting xref:user-docs:managing:system-properties.adoc#jenkins-security-managepermission[the system property `jenkins.security.ManagePermission` to `true`] or installing the {plugin}manage-permission[Overall/Manage permission enabler] plugin.
 
 Learn more in jep:223[].
 

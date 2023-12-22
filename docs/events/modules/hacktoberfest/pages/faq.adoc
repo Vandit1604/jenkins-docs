@@ -26,7 +26,7 @@ to submit pull requests to the Jenkins project.
 
 If you are new to Jenkins,
 you could start by fixing some small and well described issues in the featured projects.
-There are lists of such newbie-friendly issues, see the links in our link:/events/hacktoberfest#featured-projects[featured project list].
+There are lists of such newbie-friendly issues, see the links in our xref:events:hacktoberfest:index.adoc#featured-projects[featured project list].
 You can also submit your own issue and propose a fix.
 
 === How do I mark my pull requests?
@@ -58,7 +58,7 @@ Just make sure you create pull requests instead of direct pushes
 Jenkins project contains lots of materials about contributing to the project.
 Here are some links which may help:
 
-* link:/participate/[Participate] - landing page for newcomer contributors
+* xref:community:ROOT:index.adoc[Participate] - landing page for newcomer contributors
 * link:/blog/2017/08/07/intro-to-plugin-development/[Plugin Development Tutorials]
 * xref:dev-docs:ROOT:index.adoc[Developer Documentation]
 * link:https://app.gitter.im/#/room/#jenkinsci_hacktoberfest:gitter.im[Gitter channel] for Q&A
@@ -75,7 +75,7 @@ Unmerged pull-requests can also count in Hacktoberfest, as long as it has the `h
 === I am stuck. How do I get help?
 
 * For general questions (process and general direction) use our link:https://matrix.to/#/#jenkinsci_hacktoberfest:gitter.im[Hacktoberfest Gitter channel]
-* You can also use other link:/chat[chats] or
+* You can also use other xref:community:chat:index.adoc[chats] or
 xref:community:mailing-lists:index.adoc[mailing lists].
 Many subprojects also have their own chats, and we encourage using them if you want to reach out to the wider community.
 
@@ -89,15 +89,15 @@ The Jenkins project may also distribute some swag to top contributors, depending
 === How do I organize a Hacktoberfest event?
 
 // Due to COVID-19, Hacktoberfest recommends that all events be online-only rather than in-person meetups.
-If you're hosting a Hacktoberfest online meetup related to Jenkins, share it with the rest of the world as a link:/events/online-meetup/[Jenkins Online Meetup].
-See our link:/events/hacktoberfest/event-kit[Event Kit] for more details.
+If you're hosting a Hacktoberfest online meetup related to Jenkins, share it with the rest of the world as a xref:events:online-meetup:index.adoc[Jenkins Online Meetup].
+See our xref:events:hacktoberfest:event-kit.adoc[Event Kit] for more details.
 
 == Maintainers
 
 === How do I mark my project as a featured one? 
 
 New featured projects are welcome!
-Please submit a pull request to update the link:/events/hacktoberfest[Hacktoberfest page] to get it added.
+Please submit a pull request to update the xref:events:hacktoberfest:index.adoc[Hacktoberfest page] to get it added.
 
 Conditions for being added as a featured project:
 

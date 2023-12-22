@@ -47,7 +47,7 @@ This approach to defining environment variables from within the `Jenkinsfile`
 can be very useful for instructing scripts, such as a `Makefile`, to configure
 the build or tests differently to run them inside of Jenkins.
 
-See *link:/doc/book/pipeline/jenkinsfile#using-environment-variables["Using Environment Variables"]* for more details on using environment variables in Pipelines.
+See *xref:user-docs:pipeline:jenkinsfile.adoc#using-environment-variables["Using Environment Variables"]* for more details on using environment variables in Pipelines.
 
 Environment variables may also be set by Jenkins plugins.
 Refer to the documentation of the specific plugins for environment variable names and descriptions for those plugins.
@@ -60,8 +60,8 @@ needing to know their values.
 
 === Credentials in the Environment
 
-See link:/doc/book/pipeline/jenkinsfile#handling-credentials[Handling
-credentials] in the link:/doc/book[User Handbook] for more information.
+See xref:user-docs:pipeline:jenkinsfile.adoc#handling-credentials[Handling
+credentials] in the xref:user-docs:ROOT:index.adoc[User Handbook] for more information.
 
 **link:../tests-and-artifacts[Continue to "Recording tests and artifacts"]**
 

@@ -13,7 +13,7 @@ There are many ways to
 xref:community:ROOT:index.adoc[contribute] to Jenkins during Hacktoberfest.
 You can work on code or documentation,
 contribute to link:https://wiki.jenkins.io/display/JENKINS/Internationalization[localization],
-create new link:/artwork[artwork], etc.
+create new xref:images:ROOT:index.adoc[artwork], etc.
 You can also share your experiences with Jenkins by link:https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc#adding-a-blog-post[creating a new blogpost].
 Generally, any pull requests in GitHub would qualify.
 See the xref:community:ROOT:index.adoc[Contribute and Participate] page for more information about how to contribute.
@@ -39,7 +39,7 @@ Note that not all pull requests will automatically count towards Hacktoberfest.
 * link:https://github.com/search?q=org%3Ajenkinsci+org%3Ajenkins-infra+org%3Ajenkins-zh+topic%3Ahacktoberfest[List of repositories marked for Hacktoberfest] -
   you can just submit pull requests, no extra steps needed.
 * for other repositories, we will need to get the repo marked for Hacktoberfest so that your pull request counts towards the goal.
-  Please follow link:/events/hacktoberfest/faq/#how-do-i-mark-my-pull-requests[FAQ: Marking Pull requests].
+  Please follow xref:events:hacktoberfest:faq.adoc#how-do-i-mark-my-pull-requests[FAQ: Marking Pull requests].
 
 === Issue queries
 
@@ -135,7 +135,7 @@ a| The plugin site is used to find information about 1800+ plugins available in 
   link:https://github.com/jenkinsci/tekton-client-plugin/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22[Good first issues],
   link:https://github.com/jenkinsci/tekton-client-plugin/issues[All open issues]
 
-| link:/artwork[Jenkins Artwork]
+| xref:images:ROOT:index.adoc[Jenkins Artwork]
 | Design
 | Create new images and logos for xref:projects:jam:index.adoc[Jenkins area meetups],
   xref:projects:ROOT:index.adoc[subprojects], and plugins.
@@ -238,7 +238,7 @@ See our xref:event-kit.adoc[Event Kit] for more information and guidelines.
 
 == FAQ
 
-See link:/events/hacktoberfest/faq[Hacktoberfest in Jenkins FAQ].
+See xref:events:hacktoberfest:faq.adoc[Hacktoberfest in Jenkins FAQ].
 
 == Resources
 

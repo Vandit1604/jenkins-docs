@@ -45,7 +45,7 @@ JRE/JDKs from other vendors are supported and may be used.
 Refer to link:https://issues.jenkins.io/issues/?jql=labels%3Djdk[our issue tracker] for known Java compatibility issues.
 Jenkins maintainers actively test link:https://en.wikipedia.org/wiki/HotSpot_(virtual_machine)[HotSpot based Java virtual machines] like those from OpenJDK, Eclipse Temurin, and Amazon Corretto.
 Jenkins maintainers do not test link:https://en.wikipedia.org/wiki/OpenJ9[Eclipse OpenJ9 based Java virtual machines].
-The link:/sigs/platform/[Platform Special Interest Group] does not actively work on OpenJ9 based Java virtual machines.
+The xref:sigs:platform:index.adoc[Platform Special Interest Group] does not actively work on OpenJ9 based Java virtual machines.
 
 ## Running Java-based tools and builds on Jenkins
 

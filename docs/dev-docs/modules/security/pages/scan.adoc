@@ -5,7 +5,7 @@
 Jenkins uses the https://github.com/jenkinsci/stapler[Stapler web framework], instead of a more common framework.
 As a result, generic static analysis tools are often unable to find common vulnerabilities in Jenkins core and plugins.
 
-The link:/security/team/[Jenkins security team] created a custom code scanner based on GitHub's https://github.com/github/codeql[CodeQL].
+The xref:security:ROOT:team.adoc[Jenkins security team] created a custom code scanner based on GitHub's https://github.com/github/codeql[CodeQL].
 It is capable of finding vulnerabilities common in Jenkins plugins.
 
 This page explains how to set up code scanning with this tool.

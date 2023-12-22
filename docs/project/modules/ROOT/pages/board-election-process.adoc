@@ -1,11 +1,11 @@
-= "Board and Officer election process"
+= Board and Officer election process
 
 :page-description: This page describes the election process for Jenkins Governance Board and Officer roles.
 
 The board positions and officer roles are an essential part of Jenkins' community governance and well-being. 
-This document outlines the link:/project/governance/#governance-board[Jenkins Governance Board] and link:/project/team-leads/[Jenkins officer] election process.
+This document outlines the xref:project:ROOT:governance.adoc#governance-board[Jenkins Governance Board] and xref:project:ROOT:team-leads.adoc[Jenkins officer] election process.
 The election process is driven by the Jenkins Governance board members who are not up for reelection (aka the _election committee_).
-More contributors might be added to the election committee if approved by the link:/project/governance-meeting/[regular governance meeting].
+More contributors might be added to the election committee if approved by the xref:project:governance-meeting:index.adoc[regular governance meeting].
 
 The charter of the Jenkins board is to ensure the health of not only the software project, but of the communities of plugin developers and users.
 To do this effectively, members of the board must bring various perspectives to the table: what are the needs of users; of committers; of organizations, both large and small; of commercial interests.
@@ -37,7 +37,7 @@ If link:/blog/authors/kohsuke[Kohsuke] decides to resign, all five members will 
 . There will be a period of at least three weeks designated for the board to encourage the community to submit nominations.
 The board will meet in private to select final candidates
 * The number of elected board members affiliated with one company must be 50% or less.
-* If a board member gets employed by a company and the limitation gets violated, somebody must step down and the board will follow the link:/project/board-election-process/#interim-procedures[#Interim Procedures]
+* If a board member gets employed by a company and the limitation gets violated, somebody must step down and the board will follow the xinterim-procedures[#Interim Procedures]
 . Use the link:https://civs.cs.cornell.edu/[Condorcet Internet Voting Service (CIVS)] as the method to elect multiple people in one vote.
 
 === Preparation
@@ -80,7 +80,7 @@ If you feel that a particular person is well suited to help guide Jenkins, pleas
 The election committee will review all submissions and compile a final list of candidates to be voted on by the community, for the board member seats and officer roles up for election.
 The board reserves the right to omit nominations from the final ballot if they feel that a particular viewpoint is already well represented on the board, or if there are other reasons preventing a nominee from being effective in the target role.
 In the case of rejection, a justification must be provided to the contributor who submitted the nomination.
-The decision may be escalated to the link:/project/governance-meeting/[Jenkins governance meeting] and overridden by voting there.
+The decision may be escalated to the xref:project:governance-meeting:index.adoc[Jenkins governance meeting] and overridden by voting there.
 
 After receiving and vetting the nominations, the election committee is responsible for contacting the nominees and confirming whether they want to run in the election.
 The candidates should also provide their statements, list of affiliations (see xref:#corporate-disclosure[Corporate Disclosure]), any account/social media links which may help voters to get more information about them, and plans if they are elected to the role.
@@ -89,17 +89,17 @@ This information is published by the election committee before the voting starts
 === Voter sign-up and eligibility
 
 Any Jenkins project and/or community contributor is eligible to vote in the election if there is a contribution made before September 01 of the election year.
-Contributing does not only mean a _code contribution_, as link:/participate[contributions] could be:
+Contributing does not only mean a _code contribution_, as xref:community:ROOT:index.adoc[contributions] could be:
 
-* link:/participate/connect/[Connecting with the community]
-* link:/participate/meet/[Joining or organizing a meetup]
-* link:/participate/code/[Contributing code to Jenkins]
-* link:/participate/help/[Helping Jenkins users]
+* xref:community:ROOT:connect.adoc[Connecting with the community]
+* xref:community:ROOT:meet.adoc[Joining or organizing a meetup]
+* xref:community:ROOT:code.adoc[Contributing code to Jenkins]
+* xref:community:ROOT:help.adoc[Helping Jenkins users]
 * xref:dev-docs:internationalization:index.adoc[Translating Jenkins resources]
-* link:/participate/test/[Testing Jenkins core and plugins]
-* link:/participate/document/[Contributing to Jenkins documentation]
-* link:/participate/design/[Creating art or updating the Jenkins UI]
-* link:/participate/review-changes/[Reviewing open pull requests]
+* xref:community:ROOT:test.adoc[Testing Jenkins core and plugins]
+* xref:community:ROOT:document.adoc[Contributing to Jenkins documentation]
+* xref:community:ROOT:design.adoc[Creating art or updating the Jenkins UI]
+* xref:community:ROOT:review-changes.adoc[Reviewing open pull requests]
 * link:/donate/[Donating to Jenkins]
 
 As long as you are contributing to the Jenkins project or community, you are eligible to register for voting. 
@@ -119,7 +119,7 @@ Voting happens through the link:https://civs.cs.cornell.edu/[Condorcet Internet 
 Once the voting period begins, all voters will receive a notification to the email used for your link:https://community.jenkins.io[Jenkins community account].
 There will be separate emails and polls for each role (board members and each officer) with more than 1 candidate.
 If you have not received an email within 24 hours from the voting start date, please contact the link:https://community.jenkins.io/g/election-committee[Jenkins Election Committee].
-Every contributor can vote only once, and multiple intentional votes will be considered a violation and serious misbehavior, subject to the link:/conduct[Jenkins Code of Conduct].
+Every contributor can vote only once, and multiple intentional votes will be considered a violation and serious misbehavior, subject to the xref:project:ROOT:conduct.adoc[Jenkins Code of Conduct].
 
 Voters will have at least two weeks to submit their votes.
 Voting is anonymous.
@@ -146,16 +146,17 @@ The LinkedIn and Twitter posts from the past years can be used as a template.
 
 Additionally, posts on the mailing lists (jenkinsci-dev, jenkinsci-users), link:https://community.jenkins.io/[community forums], and places seen by many people, such as link:https://github.com/jenkinsci/.github/tree/master/profile[GitHub organization profiles], are encouraged
 
+[#interim-procedures]
 == Interim Procedures
 
-If a board member resigns, the board is allowed to appoint an interim board member to fulfill the remainder of the term, subject to approval in a regular link:/project/governance-meeting/[governance meeting].
+If a board member resigns, the board is allowed to appoint an interim board member to fulfill the remainder of the term, subject to approval in a regular xref:project:governance-meeting:index.adoc[governance meeting].
 
 == Corporate Involvement
 
 As an independent community, it is important to us that the Jenkins board does not become overly influenced by any one single corporate entity.
 It is also important that the board members are actively involved in the project.
 No more than two of the four elected members of the governing board may be affiliated with a single corporate entity.
-You can find out more about our philosophy in the link:/project/governance[Governance Document].
+You can find out more about our philosophy in the xref:project:ROOT:governance.adoc[Governance Document].
 
 To handle this within the election cycle, we do not wish to limit the candidacy for employees of any given company.
 
@@ -219,8 +220,8 @@ With this change, the 2020 election will have only one board member elected unle
 
 Related decisions:
 
-* Introduce a new link:/project/team-leads/#documentation[Documentation officer position] (content officer from the 2015 Proposal).
-* All link:/project/team-leads/[officer positions] will be voted on in 2019 and then in 2020.
+* Introduce a new xref:project:ROOT:team-leads.adoc#documentation[Documentation officer position] (content officer from the 2015 Proposal).
+* All xref:project:ROOT:team-leads.adoc[officer positions] will be voted on in 2019 and then in 2020.
 
 === 2015-12-09
 
@@ -235,7 +236,7 @@ link:/blog/authors/kohsuke[Kohsuke] holding a permanent board seat until such a 
 
 Related decisions:
 
-* link:/conduct[Jenkins Code of Conduct] is accepted and published.
+* xref:project:ROOT:conduct.adoc[Jenkins Code of Conduct] is accepted and published.
 Jenkins Governance Board will be responsible for processing escalations and enforcing the Code of Conduct if needed.
 
 === 2015-11-11

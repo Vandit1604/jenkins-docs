@@ -18,7 +18,7 @@ Underneath the hood, there are a few things `agent` causes to happen:
 
 
 There are several
-link:/doc/book/pipeline/syntax#agent[ways to define agents]
+xref:user-docs:pipeline:syntax.adoc#agent[ways to define agents]
 for use in Pipeline, for this tour we will only focus on using an ephemeral
 Docker container.
 
@@ -33,7 +33,7 @@ link:https://hub.docker.com[packaged in a Docker container].
 
 
 For more agent specification options, consult the
-link:/doc/book/pipeline/syntax#agent[syntax reference].
+xref:user-docs:pipeline:syntax.adoc#agent[syntax reference].
 
 [pipeline]
 ----
