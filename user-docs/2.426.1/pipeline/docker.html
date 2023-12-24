@@ -31,7 +31,7 @@
     <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -564,7 +564,7 @@ Any tool that can be <a href="https://hub.docker.com">packaged in a Docker conta
 <pre>// Declarative //
 pipeline {
     agent {
-        docker { image 'node:20.9.0-alpine3.18' }
+        docker { image 'node:20.10.0-alpine3.19' }
     }
     stages {
         stage('Test') {
@@ -577,7 +577,7 @@ pipeline {
 // Script //
 node {
     /* Requires the Docker Pipeline plugin to be installed */
-    docker.image('node:20.9.0-alpine3.18').inside {
+    docker.image('node:20.10.0-alpine3.19').inside {
         stage('Test') {
             sh 'node --version'
         }
@@ -691,7 +691,7 @@ pipeline {
 // Script //
 node {
     /* Requires the Docker Pipeline plugin to be installed */
-    docker.image('maven:3.9.5-eclipse-temurin-17-alpine').inside('-v $HOME/.m2:/root/.m2') {
+    docker.image('maven:3.9.6-eclipse-temurin-17-alpine').inside('-v $HOME/.m2:/root/.m2') {
         stage('Build') {
             sh 'mvn -B'
         }
@@ -715,7 +715,7 @@ pipeline {
     stages {
         stage('Back-end') {
             agent {
-                docker { image 'maven:3.9.5-eclipse-temurin-17-alpine' }
+                docker { image 'maven:3.9.6-eclipse-temurin-17-alpine' }
             }
             steps {
                 sh 'mvn --version'
@@ -723,7 +723,7 @@ pipeline {
         }
         stage('Front-end') {
             agent {
-                docker { image 'node:20.9.0-alpine3.18' }
+                docker { image 'node:20.10.0-alpine3.19' }
             }
             steps {
                 sh 'node --version'
@@ -736,13 +736,13 @@ node {
     /* Requires the Docker Pipeline plugin to be installed */
 
     stage('Back-end') {
-        docker.image('maven:3.9.5-eclipse-temurin-17-alpine').inside {
+        docker.image('maven:3.9.6-eclipse-temurin-17-alpine').inside {
             sh 'mvn --version'
         }
     }
 
     stage('Front-end') {
-        docker.image('node:20.9.0-alpine3.18').inside {
+        docker.image('node:20.10.0-alpine3.19').inside {
             sh 'node --version'
         }
     }
@@ -762,7 +762,7 @@ In contrast to the <a href="#execution-environment">previous approach</a> of usi
 <div class="listingblock">
 <div class="title">Dockerfile</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">FROM node:20.9.0-alpine3.18
+<pre class="highlightjs highlight"><code class="language-none hljs">FROM node:20.10.0-alpine3.19
 
 RUN apk add -U subversion</code></pre>
 </div>
@@ -959,7 +959,6 @@ Using the container&#8217;s ID, the Pipeline can create a link by passing custom
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
     checkout scm
     def customImage = docker.build("my-image:${env.BUILD_ID}")
-
     customImage.push()
 }</code></pre>
 </div>
@@ -973,7 +972,6 @@ The <code>push()</code> method accepts an optional <code>tag</code> parameter, a
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
     checkout scm
     def customImage = docker.build("my-image:${env.BUILD_ID}")
-
     customImage.push()
 
     customImage.push('latest')
@@ -1016,9 +1014,7 @@ When passing arguments this way, the last value in the string must be the path t
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
     checkout scm
     def dockerfile = 'Dockerfile.test'
-
     def customImage = docker.build("my-image:${env.BUILD_ID}",
-
                                    "-f ${dockerfile} ./dockerfiles") <i class="conum" data-value="1"></i><b>(1)</b>
 }</code></pre>
 </div>

@@ -3,10 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Creating a new plugin :: Jenkins Docs</title>
-    <link rel="canonical" href="https://docs.jenkins.com/dev-docs/publishing/new-plugin.html">
-    <link rel="prev" href="preparation.html">
-    <link rel="next" href="requesting-hosting.html">
+    <title>Split plugin from core :: Jenkins Docs</title>
+    <link rel="canonical" href="https://docs.jenkins.com/dev-docs/plugin-development/split-plugin-from-core.html">
     <meta name="generator" content="Antora 3.1.6">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
@@ -273,40 +271,40 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../plugin-development/index.html">Plugin Development</a>
+    <a class="nav-link" href="index.html">Plugin Development</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plugin-development/build-process.html">Plugin Build Process</a>
+    <a class="nav-link" href="build-process.html">Plugin Build Process</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plugin-development/choosing-jenkins-baseline.html">Choosing a Jenkins version to build against</a>
+    <a class="nav-link" href="choosing-jenkins-baseline.html">Choosing a Jenkins version to build against</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plugin-development/dependency-management.html">Dependency Management</a>
+    <a class="nav-link" href="dependency-management.html">Dependency Management</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plugin-development/dependencies-and-class-loading.html">Dependencies and Class Loading</a>
+    <a class="nav-link" href="dependencies-and-class-loading.html">Dependencies and Class Loading</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plugin-development/optional-dependencies.html">Optional dependencies</a>
+    <a class="nav-link" href="optional-dependencies.html">Optional dependencies</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plugin-development/plugin-release-tips.html">Plugin Release Tips</a>
+    <a class="nav-link" href="plugin-release-tips.html">Plugin Release Tips</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plugin-development/incrementals.html">Incrementals: Developing Components in Parallel</a>
+    <a class="nav-link" href="incrementals.html">Incrementals: Developing Components in Parallel</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plugin-development/updating-parent.html">Updating Your Maven Parent POM</a>
+    <a class="nav-link" href="updating-parent.html">Updating Your Maven Parent POM</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plugin-development/mark-a-plugin-incompatible.html">Mark a new plugin version as incompatible with older versions</a>
+    <a class="nav-link" href="mark-a-plugin-incompatible.html">Mark a new plugin version as incompatible with older versions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plugin-development/writing-an-scm-plugin.html">Writing an SCM Plugin</a>
+    <a class="nav-link" href="writing-an-scm-plugin.html">Writing an SCM Plugin</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plugin-development/pipeline-integration.html">Writing Pipeline-Compatible Plugins</a>
+    <a class="nav-link" href="pipeline-integration.html">Writing Pipeline-Compatible Plugins</a>
   </li>
 </ul>
   </li>
@@ -327,55 +325,55 @@
   </li>
   <li class="nav-item" data-depth="0">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Publishing Plugins</a>
+    <a class="nav-link" href="../publishing/index.html">Publishing Plugins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="style-guides.html">Style Guides</a>
+    <a class="nav-link" href="../publishing/style-guides.html">Style Guides</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="source-code-hosting.html">Source Code Hosting</a>
+    <a class="nav-link" href="../publishing/source-code-hosting.html">Source Code Hosting</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="artifact-repository.html">Artifact Repository</a>
+    <a class="nav-link" href="../publishing/artifact-repository.html">Artifact Repository</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="documentation.html">Plugin Documentation</a>
+    <a class="nav-link" href="../publishing/documentation.html">Plugin Documentation</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="wiki-page.html">Plugin Wiki Pages</a>
+    <a class="nav-link" href="../publishing/wiki-page.html">Plugin Wiki Pages</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="plugin-site.html">Plugin Site</a>
+    <a class="nav-link" href="../publishing/plugin-site.html">Plugin Site</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="continuous-integration.html">Continuous Integration - buildPlugin</a>
+    <a class="nav-link" href="../publishing/continuous-integration.html">Continuous Integration - buildPlugin</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="usage-statistics.html">Usage Statistics</a>
+    <a class="nav-link" href="../publishing/usage-statistics.html">Usage Statistics</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="preparation.html">Before you start</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="new-plugin.html">Creating a new plugin</a>
+    <a class="nav-link" href="../publishing/preparation.html">Before you start</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="requesting-hosting.html">Guide to Plugin Hosting</a>
+    <a class="nav-link" href="../publishing/new-plugin.html">Creating a new plugin</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="releasing.html">Performing a Plugin Release</a>
+    <a class="nav-link" href="../publishing/requesting-hosting.html">Guide to Plugin Hosting</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="releasing-cd.html">Setting up automated plugin release</a>
+    <a class="nav-link" href="../publishing/releasing.html">Performing a Plugin Release</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="releasing-manually.html">Performing a Plugin Release manually</a>
+    <a class="nav-link" href="../publishing/releasing-cd.html">Setting up automated plugin release</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="removing-from-distribution.html">Removing plugins from distribution</a>
+    <a class="nav-link" href="../publishing/releasing-manually.html">Performing a Plugin Release manually</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="releasing-experimental-updates.html">Publishing Experimental Plugin Releases</a>
+    <a class="nav-link" href="../publishing/removing-from-distribution.html">Removing plugins from distribution</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../publishing/releasing-experimental-updates.html">Publishing Experimental Plugin Releases</a>
   </li>
 </ul>
   </li>
@@ -1311,18 +1309,17 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Jenkins Developer Documentation</a></li>
-    <li><a href="index.html">Publishing Plugins</a></li>
-    <li><a href="new-plugin.html">Creating a new plugin</a></li>
+    <li><a href="split-plugin-from-core.html">Split plugin from core</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/dev-docs/modules/publishing/pages/new-plugin.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/dev-docs/modules/plugin-development/pages/split-plugin-from-core.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Creating a new plugin</h1>
+<h1 class="page">Split plugin from core</h1>
 <div class="admonitionblock note">
     <table>
         <tbody>
@@ -1337,40 +1334,105 @@
         </tbody>
     </table>
 </div>
-<div id="preamble">
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
 <div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Please read <a href="preparation.html" class="xref page">this guide</a> before you start if you intend to release your plugin publicly using the Jenkins project infrastructure.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Jenkins has a plugin architecture.
+For historical reasons, some features were developed inside the Jenkins codebase itself (i.e., not as plugins).</p>
+</div>
+<div class="paragraph">
+<p>To keep that core codebase more manageable, there is an ongoing effort to extract some of the existing features into dedicated plugins.</p>
+</div>
+<div class="videoblock">
+<div class="title">Walkthrough video</div>
+<div class="content">
+<iframe width="852" height="480" src="https://www.youtube.com/embed/vGJtbgghYO8?rel=0&amp;start=480" frameborder="0" allowfullscreen></iframe>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_use_the_archetype"><a class="anchor" href="#_use_the_archetype"></a>Use the archetype</h2>
+<h2 id="_general_process_to_extract_classes"><a class="anchor" href="#_general_process_to_extract_classes"></a>General process to extract classes</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>We publish project archetypes, including an "empty plugin" one, that allow you to easily set up a minimal plugin project with recommended defaults.
-Just run the following command on the command line (with Maven and JDK installed, see <a href="../plugin-tutorial/index.html" class="xref page">the tutorial</a>), and follow the interactive instructions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Locate everything that should be moved.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Do not forget to look in <code>core/src/main/resources/</code> for associated resources.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>(<code>Messages.properties</code> shared with other classes in the same package can be a headache: you need to create a new <code>Messages</code> in a novel package.)</p>
+</li>
+</ul>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>mvn archetype:generate -Dfilter=io.jenkins.archetypes:empty-plugin</pre>
+</li>
+<li>
+<p>Look for relevant functional tests in <code>test/src/test/</code>.</p>
+</li>
+<li>
+<p>Check for icons.</p>
+</li>
+<li>
+<p>Double-check that you have really found everything relevant:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>git ls-files | grep -F SOMETHING</code> for filenames and</p>
+</li>
+<li>
+<p><code>git ls-files | xargs grep -l SOMETHING</code> for contents.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Try temporarily deleting all the classes you propose to split, and do a clean build to verify that there are not unwanted usages from elsewhere in core.
+If there are, you have some refactoring ahead of you, and this is where it gets hairy.</p>
+</li>
+<li>
+<p>Split the code into a new repository with history intact.
+<code>git-filter-branch</code> can work, though it is not easy to use.
+If possible, make sure translated commits mention the original commit hash.</p>
+</li>
+<li>
+<p>Do a 1.0 release of the new plugin, with the baseline set to the last weekly prior to your split.
+Ideally you would actually use the <code>-SNAPSHOT</code> version from the current core but Maven release rules will forbid this.</p>
+</li>
+<li>
+<p>Create a core patch to:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>delete the split files</p>
+</li>
+<li>
+<p>bundle in <code>war/pom.xml</code></p>
+</li>
+<li>
+<p>list in <code>ClassicPluginStrategy.DETACHED_LIST</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>After a new weekly is produced using the above changes, update the baseline in the new plugin to that and cut a 1.1 (or 1.0.1).
+This ensures it is only offered to users who do not still have that functionality in core, assuming the Update Center is configured properly.</p>
+</li>
+<li>
+<p>Pat yourself on the back: Jenkins sources are a little more manageable than they were yesterday.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
-</div>
-<nav class="pagination">
-  <span class="prev"><a href="preparation.html">Before you start</a></span>
-  <span class="next"><a href="requesting-hosting.html">Guide to Plugin Hosting</a></span>
-</nav>
 </article>
   </div>
 </main>

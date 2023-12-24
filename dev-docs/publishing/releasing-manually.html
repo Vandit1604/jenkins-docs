@@ -67,7 +67,7 @@
     <a class="nav-link" href="../initialization/index.html">Initialization and Startup</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../initialization/embedded-container.html">Embedded Winstone and <code>executable-war</code></a>
+    <a class="nav-link" href="../initialization/embedded-container.html">Embedded Winstone</a>
   </li>
 </ul>
   </li>
@@ -1433,9 +1433,19 @@ If you already have this file, merge the <code>server</code> block provided in t
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">ssh -T git@github.com
-# Attempts to ssh to GitHub</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">ssh -T git@github.com</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>If you have been authenticated correctly, you see a message similar to the following example in your terminal:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-txt hljs" data-lang="txt">Hi yourGitHubUsername! You've successfully authenticated, but GitHub does not provide shell access.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>yourGitHubUsername</code> is a placeholder representing your GitHub username.</p>
 </div>
 <div class="paragraph">
 <p>With GitHub and Maven credentials set up, performing a release should be as easy as running the following command:</p>

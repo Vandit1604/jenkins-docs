@@ -31,7 +31,7 @@
     <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -559,7 +559,7 @@ This controls whether a user (directly or through group memberships) has a permi
 </div>
 <div class="paragraph">
 <p>These can be independent, or work in combination.
-An independent configuration would be <a href="https://plugins.jenkins.io/active-directory">Active Directory</a> or plugin:ldap[LDAP] as security realm, and something like plugin:matrix-auth[Matrix Authorization Strategy] as authorization strategy.
+An independent configuration would be <a href="https://plugins.jenkins.io/active-directory">Active Directory</a> or <a href="https://plugins.jenkins.io/ldap">LDAP</a> as security realm, and something like <a href="https://plugins.jenkins.io/matrix-auth">Matrix Authorization Strategy</a> as authorization strategy.
 An example for related security realm and authorization strategy configuration is <a href="https://plugins.jenkins.io/github-oauth">GitHub Authentication</a>:
 While its security realm can be used with a generic authorization strategy, it also provides an authorization strategy that looks up a user&#8217;s repository permissions on GitHub, and grants or denies permissions to related jobs in Jenkins based on that.</p>
 </div>

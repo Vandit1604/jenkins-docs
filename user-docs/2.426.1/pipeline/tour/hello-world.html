@@ -29,7 +29,7 @@
     <a class="nav-link" href="../../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../installing-jenkins/docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="../../installing-jenkins/docker.html">docker.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -537,8 +537,9 @@
         </tbody>
     </table>
 </div>
-<div class="sect2">
-<h3 id="_what_is_a_jenkins_pipeline"><a class="anchor" href="#_what_is_a_jenkins_pipeline"></a>What is a Jenkins Pipeline?</h3>
+<div class="sect1">
+<h2 id="_what_is_a_jenkins_pipeline"><a class="anchor" href="#_what_is_a_jenkins_pipeline"></a>What is a Jenkins Pipeline?</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Jenkins Pipeline (or simply "Pipeline") is a suite of plugins which supports
 implementing and integrating <em>continuous delivery pipelines</em> into Jenkins.</p>
@@ -596,7 +597,8 @@ Handbook.</p>
 <p>After you have setup your Pipeline, Jenkins will automatically detect any new Branches or Pull Requests that are created in your repository and start running Pipelines for them.</p>
 </div>
 <div class="paragraph">
-<p><strong><a href="../running-multiple-steps">Continue to "Run multiple steps"</a></strong></p>
+<p><strong><a href="#running-multiple-steps.adoc" class="xref unresolved">Continue to "Run multiple steps"</a></strong></p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -613,7 +615,7 @@ various languages.</p>
 <pre>// Declarative //
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'maven:3.9.5-eclipse-temurin-17-alpine' } }
+    agent { docker { image 'maven:3.9.6-eclipse-temurin-17-alpine' } }
     stages {
         stage('build') {
             steps {
@@ -626,7 +628,7 @@ pipeline {
 /* Requires the Docker Pipeline plugin */
 node {
     stage('Build') {
-        docker.image('maven:3.9.5-eclipse-temurin-17-alpine').inside {
+        docker.image('maven:3.9.6-eclipse-temurin-17-alpine').inside {
             sh 'mvn --version'
         }
     }
@@ -641,7 +643,7 @@ node {
 <pre>// Declarative //
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'node:20.10.0-alpine3.18' } }
+    agent { docker { image 'node:20.10.0-alpine3.19' } }
     stages {
         stage('build') {
             steps {
@@ -654,7 +656,7 @@ pipeline {
 /* Requires the Docker Pipeline plugin */
 node {
     stage('Build') {
-        docker.image('node:20.10.0-alpine3.18').inside {
+        docker.image('node:20.10.0-alpine3.19').inside {
             sh 'node --version'
         }
     }
@@ -669,7 +671,7 @@ node {
 <pre>// Declarative //
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'ruby:3.2.2-alpine3.18' } }
+    agent { docker { image 'ruby:3.2.2-alpine3.19' } }
     stages {
         stage('build') {
             steps {
@@ -682,7 +684,7 @@ pipeline {
 /* Requires the Docker Pipeline plugin */
 node {
     stage('Build') {
-        docker.image('ruby:3.2.2-alpine3.18').inside {
+        docker.image('ruby:3.2.2-alpine3.19').inside {
             sh 'ruby --version'
         }
     }
@@ -697,7 +699,7 @@ node {
 <pre>// Declarative //
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'python:3.12.0-alpine3.18' } }
+    agent { docker { image 'python:3.12.1-alpine3.19' } }
     stages {
         stage('build') {
             steps {
@@ -710,7 +712,7 @@ pipeline {
 /* Requires the Docker Pipeline plugin */
 node {
     stage('Build') {
-        docker.image('python:3.12.0-alpine3.18').inside {
+        docker.image('python:3.12.1-alpine3.19').inside {
             sh 'python --version'
         }
     }
@@ -753,7 +755,7 @@ node {
 <pre>// Declarative //
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'golang:1.21.4-alpine3.18' } }
+    agent { docker { image 'golang:1.21.5-alpine3.19' } }
     stages {
         stage('build') {
             steps {
@@ -775,7 +777,7 @@ node {
 </div>
 <hr>
 <div class="paragraph">
-<p><strong><a href="../running-multiple-steps">Continue to "Running multiple steps"</a></strong></p>
+<p><strong><a href="#running-multiple-steps.adoc" class="xref unresolved">Continue to "Running multiple steps"</a></strong></p>
 </div>
 </div>
 </div>
@@ -789,7 +791,7 @@ node {
 <p>See more detailed instructions on <a href="../getting-started.html" class="xref page">Getting Started with Pipeline</a></p>
 </li>
 <li>
-<p>Review other <a href="/doc/tutorials/#pipeline">Pipeline tutorials</a></p>
+<p>Review other <a href="../../../../tutorials/2.426.1/index.html#pipeline" class="xref page">Pipeline tutorials</a></p>
 </li>
 </ul>
 </div>

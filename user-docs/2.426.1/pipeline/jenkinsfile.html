@@ -31,7 +31,7 @@
     <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -781,7 +781,7 @@ and visualization facilities provided by a
 At a fundamental level, when there are test failures, it is useful to have
 Jenkins record the failures for reporting and visualization in the web UI.  The
 example below uses the <code>junit</code> step, provided by the
-plugin:junit[JUnit plugin].</p>
+<a href="https://plugins.jenkins.io/junit">JUnit plugin</a>.</p>
 </div>
 <div class="paragraph">
 <p>In the example below, if tests fail, the Pipeline is marked "unstable", as
@@ -1519,7 +1519,7 @@ Pipeline code.<br>
 <li>
 <p>The <strong>Credentials</strong> fields (above) show the names of credentials
 configured in Jenkins. However, these values are converted to credential IDs
-after clicking <strong>Generate Pipeline Script</strong>. <a id="withcredentials-script-examples"></a></p>
+after clicking <strong>Generate Pipeline Script</strong>. [#withcredentials-script-examples]</p>
 </li>
 <li>
 <p>To combine more than one credential in a single <code>withCredentials( &#8230;&#8203; )

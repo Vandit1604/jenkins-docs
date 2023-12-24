@@ -31,7 +31,7 @@
     <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -1047,7 +1047,6 @@ the number of configured jobs is known is as follows:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">controllers = number of jobs/500
-
 executors = number of jobs * 0.03</code></pre>
 </div>
 </div>
@@ -1058,9 +1057,7 @@ needed</strong> for an organization based on the number of developers is as foll
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">number of jobs = number of developers * 3.333
-
 number of controllers = number of jobs/500
-
 number of executors = number of jobs * 0.03</code></pre>
 </div>
 </div>
@@ -1095,7 +1092,7 @@ spanned volume later.</p>
 <li>
 <p><strong>Logical Volume Manager for Linux</strong> - LVM manages disk drives and allows
 logical volumes to be resized on the fly. Many distributions of Linux use LVM
-when they are installed, but Jenkins should have its our LVM setup.</p>
+when they are installed, but Jenkins should have its own LVM setup.</p>
 </li>
 <li>
 <p><strong>ZFS for Solaris</strong> - ZFS is even more flexible than LVM and spanned volumes

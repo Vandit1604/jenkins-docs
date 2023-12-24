@@ -921,11 +921,9 @@ Docker container by running:</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>[[#fork-sample-repository]]
-[[#fork-and-clone-the-sample-repository-on-github]]
-=== Fork and clone the sample repository</p>
 </div>
+<div class="sect2">
+<h3 id="fork-and-clone-the-sample-repository-on-github"><a class="anchor" href="#fork-and-clone-the-sample-repository-on-github"></a>Fork and clone the sample repository</h3>
 <div class="paragraph">
 <p>Obtain the simple "Welcome to React" Node.js and React application from GitHub,
 by forking the sample repository of the application&#8217;s source code into your own
@@ -1112,7 +1110,7 @@ Git repository.</p>
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
     agent {
         docker {
-            image 'node:20.9.0-alpine3.18' <i class="conum" data-value="1"></i><b>(1)</b>
+            image 'node:20.10.0-alpine3.19' <i class="conum" data-value="1"></i><b>(1)</b>
             args '-p 3000:3000' <i class="conum" data-value="2"></i><b>(2)</b>
         }
     }
@@ -1132,7 +1130,7 @@ Git repository.</p>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 <td>This <code>image</code> parameter (of the <a href="../../user-docs/2.426.1/pipeline/syntax.html#agent" class="xref page"><code>agent</code></a>
 section&#8217;s <code>docker</code> parameter) downloads the
-<a href="https://hub.docker.com/_/node/"><code>node:20.9.0-alpine3.18</code> Docker image</a> (if it&#8217;s not
+<a href="https://hub.docker.com/_/node/"><code>node:20.10.0-alpine3.19</code> Docker image</a> (if it&#8217;s not
 already available on your machine) and runs this image as a separate container.
 This means that:
 <div class="ulist">
@@ -1259,7 +1257,7 @@ application successfully.</p>
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
     agent {
         docker {
-            image 'node:20.9.0-alpine3.18'
+            image 'node:20.10.0-alpine3.19'
             args '-p 3000:3000'
         }
     }
@@ -1365,7 +1363,7 @@ on the previous "Build" stage circle to access the output from that stage.</p>
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">pipeline {
     agent {
         docker {
-            image 'node:20.9.0-alpine3.18'
+            image 'node:20.10.0-alpine3.19'
             args '-p 3000:3000'
         }
     }

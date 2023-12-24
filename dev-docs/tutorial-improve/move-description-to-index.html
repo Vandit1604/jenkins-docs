@@ -67,7 +67,7 @@
     <a class="nav-link" href="../initialization/index.html">Initialization and Startup</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../initialization/embedded-container.html">Embedded Winstone and <code>executable-war</code></a>
+    <a class="nav-link" href="../initialization/embedded-container.html">Embedded Winstone</a>
   </li>
 </ul>
   </li>
@@ -1365,7 +1365,7 @@ Some plugins do not currently provide description at all or use description copi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">[ERROR] Failed to execute goal maven-hpi-plugin:hpi (default-hpi) on
+<pre class="highlightjs highlight"><code class="language-none hljs">[ERROR] Failed to execute goal maven-hpi-{plugin}hpi (default-hpi) on
 project your-plugin: Missing target/classes/index.jelly. Delete any
 &lt;description&gt; from pom.xml and create src/main/resources/index.jelly:</code></pre>
 </div>
@@ -1394,7 +1394,7 @@ project your-plugin: Missing target/classes/index.jelly. Delete any
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn -ntp clean verify
-[ERROR] Failed to execute goal maven-hpi-plugin:hpi (default-hpi) on
+[ERROR] Failed to execute goal maven-hpi-{plugin}hpi (default-hpi) on
 project your-plugin: Missing target/classes/index.jelly. Delete any
 &lt;description&gt; from pom.xml and create src/main/resources/index.jelly:</code></pre>
 </div>

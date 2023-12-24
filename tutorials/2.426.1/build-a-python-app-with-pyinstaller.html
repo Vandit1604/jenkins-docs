@@ -1125,7 +1125,7 @@ Git repository.</p>
         stage('Build') { <i class="conum" data-value="2"></i><b>(2)</b>
             agent {
                 docker {
-                    image 'python:3.12.0-alpine3.18' <i class="conum" data-value="3"></i><b>(3)</b>
+                    image 'python:3.12.1-alpine3.19' <i class="conum" data-value="3"></i><b>(3)</b>
                 }
             }
             steps {
@@ -1286,7 +1286,7 @@ successfully.</p>
         stage('Build') {
             agent {
                 docker {
-                    image 'python:3.12.0-alpine3.18'
+                    image 'python:3.12.1-alpine3.19'
                 }
             }
             steps {
@@ -1422,9 +1422,7 @@ on the previous "Build" stage circle to access the output from that stage.</p>
             agent any
             environment {
                 VOLUME = '$(pwd)/sources:/src'
-
                 IMAGE = 'cdrx/pyinstaller-linux:python2'
-
             }
             steps {
                 dir(path: env.BUILD_ID) {
@@ -1455,7 +1453,7 @@ on the previous "Build" stage circle to access the output from that stage.</p>
         stage('Build') {
             agent {
                 docker {
-                    image 'python:3.12.0-alpine3.18'
+                    image 'python:3.12.1-alpine3.19'
                 }
             }
             steps {
@@ -1482,9 +1480,7 @@ on the previous "Build" stage circle to access the output from that stage.</p>
             agent any
             environment { <i class="conum" data-value="2"></i><b>(2)</b>
                 VOLUME = '$(pwd)/sources:/src'
-
                 IMAGE = 'cdrx/pyinstaller-linux:python2'
-
             }
             steps {
                 dir(path: env.BUILD_ID) { <i class="conum" data-value="3"></i><b>(3)</b>
@@ -1513,7 +1509,7 @@ on the previous "Build" stage circle to access the output from that stage.</p>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>This
-<a href="../../user-docs/2.426.1/pipeline/tour/environment.html" class="xref page"><code>environment</code></a>
+<a href="/doc/pipeline/tour/environment/"><code>environment</code></a>
 block defines two variables which will be used later in the 'Deliver' stage.</td>
 </tr>
 <tr>

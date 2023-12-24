@@ -31,7 +31,7 @@
     <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -639,7 +639,7 @@ Due to the very large number of system properties used, often just added as a "s
 <dl>
 <dt class="hdlist1"><strong>Description</strong></dt>
 <dd>
-<p>This is the path to <code>jenkins.war</code> and set by the <code>executable-war</code> wrapper when invoked using <code>java -jar jenkins.war</code>.
+<p>This is the path to <code>jenkins.war</code> and set by <code>executable.Main</code> when invoked using <code>java -jar jenkins.war</code>.
 This allows Jenkins to find its own <code>.war</code> file and e.g. replace it to apply an update.
 If undefined, Jenkins will not e.g. offer to update itself.</p>
 </dd>

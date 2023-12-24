@@ -67,7 +67,7 @@
     <a class="nav-link" href="../initialization/index.html">Initialization and Startup</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../initialization/embedded-container.html">Embedded Winstone and <code>executable-war</code></a>
+    <a class="nav-link" href="../initialization/embedded-container.html">Embedded Winstone</a>
   </li>
 </ul>
   </li>
@@ -1363,7 +1363,7 @@ Moreover, the dependencies can change with each Jenkins release, so managing the
 </div>
 </div>
 <div class="sect1">
-<h2 id="jenkins-core-bom"><a class="anchor" href="#jenkins-core-bom"></a>Jenkins core BOM</h2>
+<h2 id="_jenkins_core_bom"><a class="anchor" href="#_jenkins_core_bom"></a>Jenkins core BOM</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Jenkins core provides a <a href="https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Importing_Dependencies">Maven Bill Of Materials (BOM)</a> that centrally defines versions of various libraries used by Jenkins.
@@ -1425,7 +1425,7 @@ mvn clean verify</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="jenkins-plugin-bom"><a class="anchor" href="#jenkins-plugin-bom"></a>Jenkins plugin BOM</h2>
+<h2 id="_jenkins_plugin_bom"><a class="anchor" href="#_jenkins_plugin_bom"></a>Jenkins plugin BOM</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The plugin bill of materials (BOM) defines the versions of various plugins used by specific Jenkins versions.
@@ -1461,7 +1461,7 @@ To use the Jenkins plugin BOM in your plugin:</p>
             &lt;groupId&gt;io.jenkins.tools.bom&lt;/groupId&gt;
             &lt;artifactId&gt;bom-2.401.x&lt;/artifactId&gt;
             &lt;!-- Latest version goes here --&gt;
-            &lt;version&gt;2582.v830625dd636c&lt;/version&gt;
+            &lt;version&gt;2643.vfa_93ff299d20&lt;/version&gt;
             &lt;scope&gt;import&lt;/scope&gt;
             &lt;type&gt;pom&lt;/type&gt;
         &lt;/dependency&gt;
@@ -1494,7 +1494,7 @@ The video below demonstrates how to add the plugin BOM to a Jenkins plugin.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="dependabot"><a class="anchor" href="#dependabot"></a>Dependabot</h2>
+<h2 id="_dependabot"><a class="anchor" href="#_dependabot"></a>Dependabot</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>GitHub <a href="https://github.com/dependabot">Dependabot</a> can automate plugin dependency management.

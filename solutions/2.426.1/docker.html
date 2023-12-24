@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Using Docker with Pipeline :: Jenkins Docs</title>
+    <title>Untitled :: Jenkins Docs</title>
     <link rel="canonical" href="https://docs.jenkins.com/solutions/2.426.1/docker.html">
     <link rel="prev" href="php.html">
     <link rel="next" href="python.html">
@@ -35,7 +35,7 @@
     <a class="nav-link" href="php.html">Jenkins and PHP</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="docker.html">docker.adoc</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="python.html">Jenkins and Python</a>
@@ -196,7 +196,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Jenkins Solutions Page</a></li>
-    <li><a href="docker.html">Using Docker with Pipeline</a></li>
+    <li><a href="docker.html">docker.adoc</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/solutions/modules/ROOT/pages/docker.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
@@ -206,7 +206,6 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Using Docker with Pipeline</h1>
 <div class="admonitionblock note">
     <table>
         <tbody>
@@ -221,16 +220,25 @@
         </tbody>
     </table>
 </div>
-<div id="preamble">
-<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p>layout: section
+title: Using Docker with Pipeline
+---
+:description:
+:author:
+:sectanchors:
+:toc:
+:imagesdir: ../../resources
+:hide-uri-scheme:</p>
+</div>
+<h1 id="_using_docker_with_pipeline" class="sect0"><a class="anchor" href="#_using_docker_with_pipeline"></a>Using Docker with Pipeline</h1>
 <div class="paragraph">
 <p>Many organizations use <a href="https://www.docker.com">Docker</a> to unify their build and test environments across machines, and to provide an efficient mechanism for deploying applications.
 Starting with Pipeline versions 2.5 and higher, Pipeline has built-in support for interacting with Docker from within a <code>Jenkinsfile</code>.</p>
 </div>
 <div class="paragraph">
 <p>While this page covers the basics of utilizing Docker from within a <code>Jenkinsfile</code>, it will not cover the fundamentals of Docker, which you can refer to in the <a href="https://docs.docker.com/get-started/">Docker Getting Started Guide</a>.</p>
-</div>
-</div>
 </div>
 <div class="sect1">
 <h2 id="execution-environment"><a class="anchor" href="#execution-environment"></a>Customizing the execution environment</h2>
@@ -245,7 +253,7 @@ Any tool that can be <a href="https://hub.docker.com">packaged in a Docker conta
 <pre>// Declarative //
 pipeline {
     agent {
-        docker { image 'node:20.9.0-alpine3.18' }
+        docker { image 'node:20.10.0-alpine3.19' }
     }
     stages {
         stage('Test') {
@@ -258,7 +266,7 @@ pipeline {
 // Script //
 node {
     /* Requires the Docker Pipeline plugin to be installed */
-    docker.image('node:20.9.0-alpine3.18').inside {
+    docker.image('node:20.10.0-alpine3.19').inside {
         stage('Test') {
             sh 'node --version'
         }
@@ -372,7 +380,7 @@ pipeline {
 // Script //
 node {
     /* Requires the Docker Pipeline plugin to be installed */
-    docker.image('maven:3.9.5-eclipse-temurin-17-alpine').inside('-v $HOME/.m2:/root/.m2') {
+    docker.image('maven:3.9.6-eclipse-temurin-17-alpine').inside('-v $HOME/.m2:/root/.m2') {
         stage('Build') {
             sh 'mvn -B'
         }
@@ -396,7 +404,7 @@ pipeline {
     stages {
         stage('Back-end') {
             agent {
-                docker { image 'maven:3.9.5-eclipse-temurin-17-alpine' }
+                docker { image 'maven:3.9.6-eclipse-temurin-17-alpine' }
             }
             steps {
                 sh 'mvn --version'
@@ -404,7 +412,7 @@ pipeline {
         }
         stage('Front-end') {
             agent {
-                docker { image 'node:20.9.0-alpine3.18' }
+                docker { image 'node:20.10.0-alpine3.19' }
             }
             steps {
                 sh 'node --version'
@@ -417,13 +425,13 @@ node {
     /* Requires the Docker Pipeline plugin to be installed */
 
     stage('Back-end') {
-        docker.image('maven:3.9.5-eclipse-temurin-17-alpine').inside {
+        docker.image('maven:3.9.6-eclipse-temurin-17-alpine').inside {
             sh 'mvn --version'
         }
     }
 
     stage('Front-end') {
-        docker.image('node:20.9.0-alpine3.18').inside {
+        docker.image('node:20.10.0-alpine3.19').inside {
             sh 'node --version'
         }
     }
@@ -443,7 +451,7 @@ In contrast to the <a href="#execution-environment">previous approach</a> of usi
 <div class="listingblock">
 <div class="title">Dockerfile</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">FROM node:20.9.0-alpine3.18
+<pre class="highlightjs highlight"><code class="language-none hljs">FROM node:20.10.0-alpine3.19
 
 RUN apk add -U subversion</code></pre>
 </div>
@@ -485,9 +493,9 @@ pipeline {
 For Jenkins environments that have macOS, Windows, or other agents that are unable to run the Docker daemon, this default setting may be problematic.
 Pipeline provides a global option on the <strong>Manage Jenkins</strong> page and on the <a href="../../user-docs/2.426.1/glossary/index.html#folder" class="xref page">Folder</a> level, for specifying which agents (by <a href="../../user-docs/2.426.1/glossary/index.html#label" class="xref page">Label</a>) to use for running Docker-based Pipelines.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="../../user-docs/2.426.1/pipeline/_images/configure-docker-label.png" alt="Configuring the Pipeline Docker Label">
+<img src="pipeline/configure-docker-label.png" alt="Configuring the Pipeline Docker Label">
 </div>
 </div>
 </div>
@@ -633,14 +641,13 @@ Using the container&#8217;s ID, the Pipeline can create a link by passing custom
 </div>
 </div>
 <div class="paragraph">
-<p>The return value can also be used to publish the Docker image to <a href="https://hub.docker.com">Docker Hub</a> or a <a href="#custom-registry"> custom Registry</a>, via the <code>push()</code> method, for example:</p>
+<p>The return value can also be used to publish the Docker image to <a href="https://hub.docker.com">Docker Hub</a> or a <a href="#custom-registry">custom Registry</a>, via the <code>push()</code> method, for example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
     checkout scm
     def customImage = docker.build("my-image:${env.BUILD_ID}")
-
     customImage.push()
 }</code></pre>
 </div>
@@ -654,7 +661,6 @@ The <code>push()</code> method accepts an optional <code>tag</code> parameter, a
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
     checkout scm
     def customImage = docker.build("my-image:${env.BUILD_ID}")
-
     customImage.push()
 
     customImage.push('latest')
@@ -697,9 +703,7 @@ When passing arguments this way, the last value in the string must be the path t
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
     checkout scm
     def dockerfile = 'Dockerfile.test'
-
     def customImage = docker.build("my-image:${env.BUILD_ID}",
-
                                    "-f ${dockerfile} ./dockerfiles") <i class="conum" data-value="1"></i><b>(1)</b>
 }</code></pre>
 </div>
