@@ -1,25 +1,40 @@
----
-layout: gsocprojectidea
-title: "Docker-based Jenkins quickstart examples"
-goal: "Provide examples, sample code, and documentation on how to start a local Jenkins instance."
-category: Tools
-year: 2023
-status: published
-sig: platform
-skills:
-- Java
-- YAML
-- Command line tools
-- Package management tool theory
-mentors:
-- "gounthar"
-- "berviantoleo"
-- "sbostandoust"
-links:
-    emailThread: https://community.jenkins.io/t/gsoc-2023-project-idea-building-jenkins-io-with-docker-compose/4866
-//   gitter: "jenkinsci_plugin-installation-manager-cli-tool:gitter.im"
-//   draft: https://docs.google.com/document/d/1s-dLUfU1OK-88bCj-GKaNuFfJQlQNLTWtacKkVMVmHc
----
+= Docker-based Jenkins quickstart examples
+// *Goal:* Provide examples, sample code, and documentation on how to start a local Jenkins instance."
+// category: Tools
+// year: 2023
+// status: published
+// sig: platform
+// skills:
+// - Java
+// - YAML
+// - Command line tools
+// - Package management tool theory
+// mentors:
+// - "gounthar"
+// - "berviantoleo"
+// - "sbostandoust"
+// links:
+//     emailThread: https://community.jenkins.io/t/gsoc-2023-project-idea-building-jenkins-io-with-docker-compose/4866
+// //   gitter: "jenkinsci_plugin-installation-manager-cli-tool:gitter.im"
+// //   draft: https://docs.google.com/document/d/1s-dLUfU1OK-88bCj-GKaNuFfJQlQNLTWtacKkVMVmHc
+// ---
+
+*Goal:* Provide examples, sample code, and documentation on how to start a local Jenkins instance.
+
+*Status:* Selected
+
+== Team
+
+[.avatar]
+*Students*:
+image:images:ROOT:avatars/ash-sxn.jpg[,width=30,height=30] Ashutosh Saxena
+
+[.avatar]
+*Mentor(s)*:
+image:images:ROOT:avatars/gounthar.png[,width=30,height=30] Bruno Verachten
+image:images:ROOT:avatars/berviantoleo.jpg[,width=30,height=30] Bervianto Leo Pratama
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Saeid Bostandoust
+
 === Background
 
 We already have a xref:user-docs:installing-jenkins:docker.adoc[section] dedicated to docker in the documentation, but it's too difficult to use for beginners, and even too complex to begin with. 

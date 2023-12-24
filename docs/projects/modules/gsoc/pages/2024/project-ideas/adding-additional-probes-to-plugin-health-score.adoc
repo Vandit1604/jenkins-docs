@@ -1,26 +1,32 @@
----
-layout: gsocprojectidea
-title: "Adding additional probes to \"Plugin Health Score\""
-goal: "To build on GSoC 2023 project and add additional probes to the \"Plugin Health Score\" feature."
-category: Tools
-year: 2024
-status: draft
-sig: infra
-skills:
-- Java
-- Data extraction from GitHub repositories
-- Data analysis applied to data representation
-mentors:
-- "alecharp"
-- "markewaite"
-- "krisstern"
-links:
-  idea: /projects/gsoc/2023/project-ideas/add-probes-to-plugin-health-score
-  gitter: jenkinsci_GSoC-Plugin_Health_Score:gitter.im
-  draft: https://drive.google.com/file/d/1VEd-RDpJglWMMZApkQ0cn3Xujfj4sXW6/view
-  meetings: /projects/gsoc/#office-hours
----
+= Adding additional probes to \"Plugin Health Score\"
+// *Goal:* To build on GSoC 2023 project and add additional probes to the \"Plugin Health Score\" feature."
+// category: Tools
+// year: 2024
+// status: draft
+// sig: infra
+// skills:
+// - Java
+// - Data extraction from GitHub repositories
+// - Data analysis applied to data representation
+// mentors:
+// - "alecharp"
+// - "markewaite"
+// - "krisstern"
+// - "jonesbusy"
+// links:
+//   idea: /projects/gsoc/2023/project-ideas/add-probes-to-plugin-health-score
+//   gitter: jenkinsci_GSoC-Plugin_Health_Score:gitter.im
+//   draft: https://drive.google.com/file/d/1VEd-RDpJglWMMZApkQ0cn3Xujfj4sXW6/view
+//   meetings: /projects/gsoc/#office-hours
+// ---
 
+*Project goal:* To build on GSoC 2023 project and add additional probes to the "Plugin Health Score" feature.
+
+*Skills to study/improve:* Java, Data extraction from GitHub repositories, Data analysis applied to data representation
+
+NOTE: This idea is published as a draft under active discussion, but it is confirmed in principle. It is FINE to apply to it. The scope and the suggested implementation may change significantly before the final version is published. Sections like quickstart guide and newbie-friendly issues may be also missing. As a contributor, you are welcome to request additional information and to join the discussions using channels linked on this page.
+
+== Details 
 === Background
 
 Keeping a plugin current with the ongoing development of Jenkins is key for a smooth operation.
@@ -88,3 +94,25 @@ Details to be clarified interactively, together with the mentors, during the Con
 === Newbie Friendly Issues
 
 For some newbie friendly issues, please refer to the link:https://github.com/jenkins-infra/plugin-health-scoring/issues[Plugin Health Scoring issue tracker on GitHub]. Look out for the link:https://github.com/jenkins-infra/plugin-health-scoring/issues?q=is%3Aissue+is%3Aopen+label%3Afriendly[`friendly` label] for some issues that can be served as an introduction to the project.
+
+
+== Potential Mentors
+
+[.avatar]
+image:images:ROOT:avatars/alecharp.jpg[,width=30,height=30] Adrien Lecharpentier
+image:images:ROOT:avatars/markewaite.jpg[,width=30,height=30] Mark Waite
+image:images:ROOT:avatars/krisstern.png[,width=30,height=30] Kris Stern
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Valentin Delaye
+
+== Project Links
+
+* image:https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_role-strategy-plugin%3Agitter.im[Static Badge,link=https://app.gitter.im/#/room/#jenkinsci_GSoC-Plugin_Health_Score:gitter.im]
+* xref:gsoc:index.adoc#office-hours[Meetings]
+* https://drive.google.com/file/d/1VEd-RDpJglWMMZApkQ0cn3Xujfj4sXW6/view[Project Idea Draft]
+
+== Organization Links 
+
+* xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
+* xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
+* https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
+> xref:2024/project-ideas.adoc[Go back to other GSoC 2024 project ideas]
