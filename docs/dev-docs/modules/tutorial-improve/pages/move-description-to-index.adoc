@@ -19,7 +19,7 @@ When such a conversion is needed, the Maven build process will frequently output
 
 [source]
 ----
-[ERROR] Failed to execute goal maven-hpi-plugin:hpi (default-hpi) on
+[ERROR] Failed to execute goal maven-hpi-{plugin}hpi (default-hpi) on
 project your-plugin: Missing target/classes/index.jelly. Delete any
 <description> from pom.xml and create src/main/resources/index.jelly:
 ----
@@ -34,7 +34,7 @@ Compile the plugin (with a recent parent pom) and confirm that the description t
 [source,bash]
 ----
 mvn -ntp clean verify
-[ERROR] Failed to execute goal maven-hpi-plugin:hpi (default-hpi) on
+[ERROR] Failed to execute goal maven-hpi-{plugin}hpi (default-hpi) on
 project your-plugin: Missing target/classes/index.jelly. Delete any
 <description> from pom.xml and create src/main/resources/index.jelly:
 ----

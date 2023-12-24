@@ -54,15 +54,13 @@ Choose io.jenkins.archetypes:hello-world-plugin version:
 19: 1.19
 20: 1.20
 21: 1.21
+22: 1.22
 
 Choose a number: 21: *21* // <2>
 …
 [INFO] Using property: groupId = unused // <3>
-
 [INFO] Using property: package = io.jenkins.plugins.sample
-
 [INFO] Using property: hostOnJenkinsGitHub = true
-
 Define value for property 'artifactId': *demo* // <4>
 Define value for property 'version' 1.0-SNAPSHOT: : // <5>
 Confirm properties configuration:
@@ -75,7 +73,7 @@ version: 1.0-SNAPSHOT
 
 ----
 <1> Enter the number for the `hello-world-plugin` archetype, *4* in this case.
-<2> This tutorial is based on version 1.21 of the *hello-world-plugin* archetype, so enter *21* to select it.
+<2> This tutorial is based on version 1.22 of the *hello-world-plugin* archetype, so enter *22* to select it.
 <3> `groupId` uniquely identifies your project across all projects.
     A group ID should follow Java's package name rules.
     This means it starts with a reversed domain name.
@@ -120,7 +118,6 @@ Not the output you're seeing? See the xref:#troubleshooting[Troubleshooting] sec
 
 Let's xref:run.adoc[run the plugin] and see what it does.
 
-[#troubleshooting]
 == Troubleshooting
 
 NOTE: Anything not working for you? Ask for help in xref:community:chat:index.adoc[chat] or xref:community:mailing-lists:index.adoc[on the jenkinsci-dev mailing list].

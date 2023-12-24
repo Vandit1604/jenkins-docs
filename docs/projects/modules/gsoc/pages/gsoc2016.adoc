@@ -1,10 +1,4 @@
-= "Jenkins in Google Summer of Code 2016"
-
-tags:
-- gsoc
-- gsoc2016
-project: gsoc
----
+= Jenkins in Google Summer of Code 2016
 
 WARNING: This is an archived page about Jenkins project participation in Google Summer of Code 2016.
 See xref:projects:gsoc:index.adoc[the main GSoC project] page of the information about current and previous years.
@@ -40,7 +34,7 @@ continuous deployment flow powered by Jenkins and Pipeline Plugin.
 
 === External Workspace Manager Plugin
 
-link:https://app.gitter.im/#/room/#jenkinsci_external-workspace-manager-plugin:gitter.im[image:https://badges.gitter.im/jenkinsci/external-workspace-manager-plugin.svg[title: "Gitter"]]
+link:https://app.gitter.im/#/room/#jenkinsci_external-workspace-manager-{plugin}gitter.im[image:https://badges.gitter.im/jenkinsci/external-workspace-manager-plugin.svg[title: "Gitter"]]
 
 Currently, Jenkins’ build workspace may become very large in size due to the
 fact that some compilers generate very large volumes of data. The existing

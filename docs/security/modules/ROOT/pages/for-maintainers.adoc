@@ -40,12 +40,12 @@ To support staging of security updates (see below), the Jenkins security team wi
 Due to the sensitive nature of security vulnerabilities, the following practices should be followed in resolving the issue and releasing the plugin:
 
 
-[[issue-handling]]
+[#issue-handling]
 === Practices for Issue Handling
 
 * *Be responsive.*
   Not responding to reports of security vulnerabilities will not make them go away.
-  Even if the reporter does not set a https://en.wikipedia.org/wiki/Full_disclosure_(computer_security)#Coordinated_vulnerability_disclosure[coordinated disclosure deadline], the Jenkins security team will link:/security/plugins[publish security vulnerabilities in security advisories even if no fix exists].
+  Even if the reporter does not set a https://en.wikipedia.org/wiki/Full_disclosure_(computer_security)#Coordinated_vulnerability_disclosure[coordinated disclosure deadline], the Jenkins security team will xref:security:ROOT:plugins.adoc[publish security vulnerabilities in security advisories even if no fix exists].
   If you're no longer maintaining the plugin, please let us know so we can proceed appropriately.
 * *Respect embargoes.*
   A few security issues are _embargoed_, which means information about them *must not be shared* with others, typically because a new class of issue was discovered and similar vulnerabilities exist in other components.
@@ -57,7 +57,7 @@ Due to the sensitive nature of security vulnerabilities, the following practices
   This will allow for assigning xref:ROOT:cna.adoc[a CVE ID] prior to release, and publishing a link:/security/advisories/[security advisory] informing users of the security vulnerability, and how to address it.
 
 
-[[fix-development]]
+[#fix-development]
 === Practices for Fix Development
 
 Security fixes should be developed on a branch that will be submitted as a pull request in a private repository in the `jenkinsci-cert` GitHub organization to facilitate fix review.
@@ -110,7 +110,7 @@ The following is a rough approximation of the typical recommended lifecycle of a
 
 // TODO == Deciding For or Against Staging
 
-[[staging]]
+[#staging]
 == Staging Procedure
 
 Staging includes all the steps described below and is typically done a few days before the scheduled advisory.
@@ -120,7 +120,7 @@ This strikes a balance between allowing the longest possible time for reviews an
 The Jenkins security team needs to prepare a Maven staging repository before security updates can be staged, so follow the instructions below only once you know the Maven repository to stage to.
 Make sure to follow instructions provided by the Jenkins security team if they deviate from the instructions below.
 
-[[backporting]]
+[#backporting]
 === Backporting
 
 At this point, consider the need for backports.
@@ -154,7 +154,7 @@ In this case, three separate releases are now needed to cover users of Jenkins 2
 * Only weekly releases like 2.387 will be able to update to the next regular plugin release (e.g., 2.2.1 or 2.3) with a Jenkins dependency of 2.380.
 
 
-[[merging]]
+[#merging]
 === Merge the Fix
 
 First, prepare the release branch:
@@ -253,7 +253,7 @@ In extreme cases, it can be useful to basically develop the fix multiple times, 
 It's a good practice to run `mvn clean verify` now, even when there are no merge conflicts, to ensure that all tests pass.
 
 
-[[upload]]
+[#upload]
 === Stage with Maven
 
 ==== Plugins with manual releases

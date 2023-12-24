@@ -67,7 +67,7 @@ Clicking the *Check now* button forces Jenkins to attempt to contact its
 configured Update Center.
 ====
 
-[[install-with-cli]]
+[#install-with-cli]
 === Using the Jenkins CLI
 
 .Installing Jenkins plugins using Jenkins CLI
@@ -300,7 +300,7 @@ useful plugins.
 
 The notion of *pinned plugins* applies to plugins that are bundled with
 Jenkins 1.x, such as the
-plugin:matrix-auth[*Matrix Authorization plugin*].
+{plugin}matrix-auth[*Matrix Authorization plugin*].
 
 By default, whenever Jenkins is upgraded, its bundled plugins overwrite the
 versions of the plugins that are currently installed in `JENKINS_HOME`.
@@ -329,7 +329,7 @@ on startup.
 
 Features are sometimes detached (or split off) from Jenkins core and moved into a plugin.
 
-Many plugins, like {plugin}subversion[Subversion] and plugin:junit[JUnit], got their beginnings as Jenkins core functionalities.
+Many plugins, like {plugin}subversion[Subversion] and {plugin}junit[JUnit], got their beginnings as Jenkins core functionalities.
 When a plugin was attached to Jenkins core prior to being detached, it may or may not have used its full functionality with other plugins that relied on the same version of Jenkins.
 To ensure that plugins do not fail when a functionality on which they rely is separated from Jenkins core, it is necessary to have a dependency in the detached plugin, if it specifies a dependency on a version of Jenkins core prior to the split.
 It is assumed that there is a dependency on the detached plugin, even when it isn't stated explicitly.

@@ -45,7 +45,6 @@ In this case, ensure that the agent process has no file system access (neither r
 
 
 //== Infrastructure 
-
 // TODO Don't run agents on the same Docker host as the controller etc.
 
 == Agent &rarr; Controller Access Control

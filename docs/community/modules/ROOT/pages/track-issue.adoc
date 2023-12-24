@@ -9,10 +9,10 @@ The Jenkins JIRA is not a support site. If you need assistance or have
 general questions, visit us xref:chat:index.adoc[in chat], or email
 one of the xref:mailing-lists:index.adoc[mailing lists].
 
-[[IssueTracking-Lifecycleofanissue]]
+[#IssueTracking-Lifecycleofanissue]
 == Lifecycle of an issue
 
-[[IssueTracking-IssueStates]]
+[#IssueTracking-IssueStates]
 === Issue States
 
 Developers don't use the various issue states consistently. The
@@ -30,7 +30,7 @@ others.
 * When an issue was resolved or closed before, but users still
 experience the same problem, they may set the issue to *Reopened*.
 
-[[IssueTracking-Issuesnotrequiringachange]]
+[#IssueTracking-Issuesnotrequiringachange]
 === Issues not requiring a change
 
 If an issue is considered to be a *Duplicate*, it will be marked as
@@ -54,7 +54,7 @@ with Jenkins.
 Issues resolved as *Incomplete* do not provide a sufficient description
 of the problem.
 
-[[IssueTracking-Issuesrequiringachange]]
+[#IssueTracking-Issuesrequiringachange]
 === Issues requiring a change
 
 When a developer decides to work on such an issue, the *Assignee* field
@@ -65,7 +65,7 @@ When a fix has been integrated, the issue is usually marked *Resolved*
 (using the resolution *Fixed*), and sometimes marked *Closed* after the
 fix has been verified.
 
-[[IssueTracking-QuickLinks]]
+[#IssueTracking-QuickLinks]
 == Quick Links
 
 If you want to link to a Jenkins bug with a short URL, use e.g.:

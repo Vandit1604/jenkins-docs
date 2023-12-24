@@ -24,8 +24,8 @@ include::partial$prerequisites.adoc[]
 include::user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[]
 
 
-[[fork-sample-repository]]
-[[fork-and-clone-the-sample-repository-on-github]]
+[#fork-sample-repository]
+[#fork-and-clone-the-sample-repository-on-github]
 === Fork and clone the sample repository
 
 Get the "Hello world!" Java application from GitHub, by forking the sample repository of the application's source code into your own GitHub account, and then cloning this fork locally.
@@ -72,7 +72,6 @@ This directory path from your user account/home directory on your host machine i
 . Select *Save* to save your new Pipeline project.
 You're now ready create a `Jenkinsfile` to check into your locally cloned Git repository.
 
-[#create-your-initial-pipeline-as-a-jenkinsfile]
 === Create your initial Pipeline as a Jenkinsfile
 
 You can now create a Pipeline that automates building your Java application with Maven in Jenkins.
@@ -93,7 +92,7 @@ Be sure to add a "Build" stage to the Pipeline that begins orchestrating this wh
 pipeline {
     agent {
         docker {
-            image 'maven:3.9.5-eclipse-temurin-17-alpine' // <1>
+            image 'maven:3.9.6-eclipse-temurin-17-alpine' // <1>
             args '-v /root/.m2:/root/.m2' // <2>
         }
     }
@@ -106,7 +105,7 @@ pipeline {
     }
 }
 ----
-<1> This `image` parameter of the xref:user-docs:pipeline:syntax.adoc#agent[`agent`] section's `docker` parameter downloads the link:https://hub.docker.com/_/maven/[`maven:3.9.5-eclipse-temurin-17-alpine` Docker image], if not already available on your machine, and runs this image as a separate container.
+<1> This `image` parameter of the xref:user-docs:pipeline:syntax.adoc#agent[`agent`] section's `docker` parameter downloads the link:https://hub.docker.com/_/maven/[`maven:3.9.6-eclipse-temurin-17-alpine` Docker image], if not already available on your machine, and runs this image as a separate container.
 This means that:
 * You'll have separate Jenkins and Maven containers running locally in Docker.
 * The Maven container becomes the xref:user-docs:glossary:index.adoc#agent[agent] that Jenkins uses to run your Pipeline project.
@@ -178,7 +177,7 @@ so that you end up with:
 pipeline {
     agent {
         docker {
-            image 'maven:3.9.5-eclipse-temurin-17-alpine'
+            image 'maven:3.9.6-eclipse-temurin-17-alpine'
             args '-v /root/.m2:/root/.m2'
         }
     }
@@ -251,7 +250,7 @@ Add a `skipStagesAfterUnstable` option, resulting in:
 pipeline {
     agent {
         docker {
-            image 'maven:3.9.5-eclipse-temurin-17-alpine'
+            image 'maven:3.9.6-eclipse-temurin-17-alpine'
             args '-v /root/.m2:/root/.m2'
         }
     }

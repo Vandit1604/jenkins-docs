@@ -8,7 +8,7 @@ to the currently installed version of Jenkins and related plugins.
 In this section, we'll discuss other tools and resources
 that may help with development of Jenkins Pipelines.
 
-[[linter]]
+[#linter]
 == Command-line Pipeline Linter
 
 Jenkins can validate, or
@@ -114,7 +114,7 @@ Behind the scenes it still generates Declarative Pipeline code.
 
 include::blueocean:partial$_blue-ocean-status.adoc[]
 
-[[replay]]
+[#replay]
 == "Replay" Pipeline Runs with Modifications
 
 Typically a Pipeline will be defined inside of the classic Jenkins web UI,
@@ -227,7 +227,7 @@ a secure channel (SSH).  You can install it directly from the Sublime Text packa
 * link:https://github.com/june07/sublime-Jenkinsfile[https://github.com/june07/sublime-Jenkinsfile]
 * link:https://packagecontrol.io/packages/Jenkinsfile[https://packagecontrol.io/packages/Jenkinsfile]
 
-[[unit-test]]
+[#unit-test]
 == Pipeline Unit Testing Framework
 
 The link:https://github.com/jenkinsci/JenkinsPipelineUnit[Pipeline Unit Testing Framework]

@@ -7,7 +7,7 @@ Thread dumps concisely capture what every thread in a VM is doing at a given poi
 They are useful to diagnose hang problems, deadlocks, and performance issues.
 This page explains how you can obtain a thread dump.
 
-[[Obtainingathreaddump-FromJenkinsWebUI]]
+[#Obtainingathreaddump-FromJenkinsWebUI]
 == From Jenkins Web UI
 
 This is the simplest way of obtaining thread dumps.
@@ -18,7 +18,7 @@ thread dump remotely by going to
 For an agent named 'xyz', go to `+http://your.jenkins.server/computer/xyz/systemInfo+`.
 You need to have the administrator permission on the system.
 
-[[Obtainingathreaddump-Byusingjstack]]
+[#Obtainingathreaddump-Byusingjstack]
 == By using `+jstack+`
 
 If Jenkins is not responding to web UI, try
@@ -30,7 +30,7 @@ If that was the case, please mention that in the report as well.
 Make sure to run jstack as the same user that's running Jenkins itself
 instead of using the root user.
 
-[[Obtainingathreaddump-Bysendingsignal]]
+[#Obtainingathreaddump-Bysendingsignal]
 == By sending signal
 
 If the above two approaches do not work, you can still have the JVM

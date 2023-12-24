@@ -122,7 +122,7 @@ Jenkins registers this credential with the following details for this Jenkins us
 * *ID*: `github`
 * *Name*: `+<jenkins-username>/****** (GitHub Access Token)+`
 
-[[choose-your-github-account]]
+[#choose-your-github-account]
 ==== Choose your GitHub account/organization and repository
 
 Blue Ocean prompts you to choose your GitHub account or an organization you are a member of.
@@ -177,7 +177,7 @@ Bitbucket',width=70%]
 Select *Connect* and your current/logged in Jenkins user will now have access to your Bitbucket account.
 You can now xref:#choose-your-bitbucket-account[choose your Bitbucket account/team and repository].
 
-[[choose-your-bitbucket-account]]
+[#choose-your-bitbucket-account]
 ==== Choose your Bitbucket account/team and repository
 
 Blue Ocean prompts you to choose your Bitbucket account or a team you are a member of, as well as the repository containing your project to be built.

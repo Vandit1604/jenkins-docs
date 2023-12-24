@@ -183,7 +183,7 @@ link:https://plugins.jenkins.io/?labels=report[number of plugins].
 At a fundamental level, when there are test failures, it is useful to have
 Jenkins record the failures for reporting and visualization in the web UI.  The
 example below uses the `junit` step, provided by the
-plugin:junit[JUnit plugin].
+{plugin}junit[JUnit plugin].
 
 In the example below, if tests fail, the Pipeline is marked "unstable", as
 denoted by a yellow ball in the web UI. Based on the recorded test reports,
@@ -294,7 +294,7 @@ The following sections provide details about handling:
   your application or Pipeline project.
 
 
-[[using-environment-variables]]
+[#using-environment-variables]
 === Using environment variables
 
 Jenkins Pipeline exposes environment variables via the global variable `env`,
@@ -703,7 +703,7 @@ To access the *Snippet Generator* for your Pipeline project/item:
   *Notes:*
   * The *Credentials* fields (above) show the names of credentials
   configured in Jenkins. However, these values are converted to credential IDs
-  after clicking *Generate Pipeline Script*. [[withcredentials-script-examples]]
+  after clicking *Generate Pipeline Script*. [#withcredentials-script-examples]
   * To combine more than one credential in a single `withCredentials( ... )
   { ... }` Pipeline step, see xref:#combining-credentials-in-one-step[Combining
   credentials in one step] (below) for details.

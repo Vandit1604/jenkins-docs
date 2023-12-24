@@ -44,8 +44,8 @@ include::partial$prerequisites.adoc[]
 include::user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[]
 
 
-[[fork-sample-repository]]
-[[fork-and-clone-the-sample-repository-on-github]]
+[#fork-sample-repository]
+[#fork-and-clone-the-sample-repository-on-github]
 === Fork and clone the sample repository
 
 Obtain the simple "Welcome to React" Node.js and React application from GitHub,
@@ -206,7 +206,6 @@ pipeline {
     }
     environment {
         CI = 'true'
-
     }
     stages {
         stage('Build') {
@@ -317,7 +316,6 @@ pipeline {
     }
     environment {
         CI = 'true'
-
     }
     stages {
         stage('Build') {
@@ -421,7 +419,6 @@ Your `development` and `production` branches should now have all your
 `Jenkinsfile` updates you made on the `master` branch.
 
 
-[#run-your-pipeline-on-the-development-branch]
 === Run your Pipeline on the development branch
 
 . Go back to Jenkins again, log in again if necessary and ensure you've accessed
@@ -467,7 +464,6 @@ Pipeline runs successfully on the 'development' branch",width=100%]
   Ocean interface.
 
 
-[#run-your-pipeline-on-the-production-branch]
 === Run your Pipeline on the production branch
 
 . Click *Branches* at the top right to access the list of your Pipeline
@@ -592,7 +588,6 @@ export default App;
   BitBucket).
 
 
-[#clearing-the-app-from-your-browser]
 === Clearing the app from your browser
 
 Your browser is likely to continue running your application's content served by

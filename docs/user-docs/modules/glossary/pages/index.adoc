@@ -21,7 +21,7 @@ directly from other documents we need to include an inline anchor.
 Additionally, because these inline anchors don't attach to section headings,
 cross referencing must include the appropriate display text, for example:
 
-  MyTerm [[myterm]] this is the definition of MyTerm
+  MyTerm [#myterm] this is the definition of MyTerm
 
 Should be cross-referenced with:
 
@@ -124,12 +124,12 @@ A deprecated term, synonymous with xref:#controller[Controller].
 A machine which is part of the Jenkins environment and capable of executing xref:#pipeline[Pipelines] or xref:#job[jobs]. Both the xref:#controller[Controller] and xref:#agent[Agents] are considered to be Nodes.
 
 [#project]
-=== Project [[project]]
+=== Project [#project]
 
 A deprecated term, synonymous with xref:#job[job].
 
 [#pipeline]
-=== Pipeline [[pipeline]]
+=== Pipeline [#pipeline]
 
 A user-defined model of a continuous delivery pipeline, for more read the xref:user-docs:pipeline:index.adoc[Pipeline chapter] in this handbook.
 

@@ -1,6 +1,5 @@
 =  Project Governance Document
 
-
 == Who we are
 
 The Jenkins project as a community revolves around Jenkins as a piece of software. We are a group of open-source developers and users who develop, use, promote Jenkins, software around Jenkins, and other related activities for our mutual benefit.
@@ -46,12 +45,11 @@ This not only frees our time to do more creative work, but it also helps reduce 
 
 The Jenkins project uses the link:https://opensource.org/licenses/MIT[MIT License] as the primary license of choice, for the code that we develop. Unless otherwise stated, all the code is under the MIT license.
 
-The link:https://github.com/jenkinsci/jenkins[core of Jenkins] is entirely under the MIT license, as is the majority of our link:https://github.com/jenkins-infra[infrastructure code] (that runs the project itself), as well as many plugins. We encourage hosted plugins to use the same MIT license, to simplify the story for users, but plugins are free to choose their own licenses, so long as it’s an link:https://opensource.org/licenses/[OSI-approved] open-source license.
+The link:https://github.com/jenkinsci/jenkins[core of Jenkins] is entirely under the MIT license, as is the majority of our link:https://github.com/jenkins-infra[infrastructure code] (that runs the project itself), as well as many plugins. We encourage hosted plugins to use the same MIT license, to simplify the story for users, but plugins are free to choose their own licenses, so long as it’s an link:https://opensource.org/licenses/[OSI-approved] or link:https://en.wikipedia.org/wiki/Public-domain-equivalent_license[public-domain-equivalent] license or dedicated to the public domain.
 
 This is not to be confused with proprietary plugins --- we recognize and encourage plugins that people write on their own for their internal use, without necessarily making the source code available. But no such plugins will be hosted by the Jenkins project.
 
-[[cla]]
-
+[#cla]
 === Contributor License Agreement (CLA)
 
 To further clarify the intellectual property rights around the project, we require that core committers sign a contributor agreement.
@@ -72,7 +70,7 @@ Details to submit CLAs are documented in link:https://github.com/jenkinsci/infra
 
 The Jenkins project depends heavily on 3rd party libraries. We believe it's better to reuse what we can than to reinvent, so that our precious resources can be spent elsewhere.
 
-Jenkins as a whole needs to be an open-source project, so we've been restricting ourselves to only use 3rd party libraries that are link:https://www.opensource.org/[OSI-approved open-source licenses] (such as Apache Software License, BSD license, MIT license, Eclipse Public License, and Lesser GNU Public License.) In addition, to keep the core reusable for the widest possible use cases, we refuse so-called link:https://en.wikipedia.org/wiki/Copyleft[copyleft licenses] that restrict the overall license to a specific license (such as GNU Public License.) To that end, we designated the following licenses as approved licenses that we can depend on. Additional licenses are subject to the approval by the board:
+Jenkins as a whole needs to be an open-source project, so we've been restricting ourselves to only use 3rd party libraries that are under link:https://www.opensource.org/[OSI-approved] (such as Apache Software License, BSD license, MIT license, Eclipse Public License, and Lesser GNU Public License) or https://en.wikipedia.org/wiki/Public-domain-equivalent_license[public-domain-equivalent] licenses or dedicated to the public domain. In addition, to keep the core reusable for the widest possible use cases, we refuse so-called link:https://en.wikipedia.org/wiki/Copyleft[copyleft licenses] that restrict the overall license to a specific license (such as GNU Public License.) To that end, we designated the following licenses as approved licenses that we can depend on. Additional licenses are subject to the approval by the board:
 
 * link:https://www.apache.org/licenses/[Apache Software License]
 * link:https://opensource.org/licenses/bsd-license.php[BSD license], link:https://opensource.org/licenses/mit-license.php[MIT license]
@@ -193,7 +191,7 @@ and we invite all interested parties to join us and to contribute towards the ro
 * link:/project/roadmap[Public Jenkins Roadmap]
 * jep:14[Public Jenkins Roadmap Process]
 
-[[meeting]]
+[#meeting]
 == Decision making
 
 The Jenkins project uses xref:project:governance-meeting:index.adoc[biweekly project meetings] as the primary forum of decision making for matters that need consensus.
@@ -332,8 +330,7 @@ When making changes, use your common sense. For example, if you are thinking abo
 
 We are always looking for people who can help localize Jenkins to different languages. If you are interested in helping, drop us a note in the dev list to get commit access, and see xref:dev-docs:internationalization:index.adoc[Internationalization] for the details of how to make changes.
 
-[[pull-request]]
-
+[#pull-request]
 === Using pull requests
 
 As discussed above, Jenkins project uses pull requests as one of the main workflow to get the changes in. When you prepare your pull request, consider the following checklist as the best practice.

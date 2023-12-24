@@ -5,7 +5,6 @@ image:images:ROOT:gsoc/jenkins-gsoc-logo_small.png[Jenkins GSoC, role=center, fl
 This page aggregates links to internal and external resources for Google Summer of Code **mentors**.
 GSoC Contributor resources can be found xref:projects:gsoc:students.adoc[here].
 
-
 == Links
 
 Mandatory reading:
@@ -22,7 +21,7 @@ Additional links:
 * The link:https://community.jenkins.io/c/contributing/gsoc-mentors/25[mentor's Discourse group] is used for notifications and coordination between mentors.  
 
 //TODO: this needs to be verified.
-* xref:projects:gsoc:index.adocorgadmin[Mailing list for contacting Org Admins]
+* xref:projects:gsoc:index.adoc#orgadmin[Mailing list for contacting Org Admins]
 
 == What do mentors get?
 
@@ -275,7 +274,7 @@ Mentors are expected to:
 * Make sure the GSoC Contributor has a detailed plan and a design document for the first coding phase before it starts
 * Get the GSoC Contributor to create issues in Jira for the work items of the coming coding phase
 
-We have written a guide for this phase, xref:gsoc:students.adoc#community-bonding[read it] and follow it.
+We have written a guide for this phase, xref:projects:gsoc:students.adoc#community-bonding[read it] and follow it.
 
 In rare cases, it is acceptable to re-work the project idea, even change it completely, as long as the GSoC Contributor and the mentors all agree.
 Written documentation about this is essential, if it happens, let the Org Admins know.
@@ -309,6 +308,7 @@ Mentors are expected to evaluate their GSoC Contributor, while they continue to 
 Coding seldom completely stops during this period.
 
 Mentors are expected to:
+
 * ensure that the GSoC Contributor creates a presentation and prepares a demo
 * ensure their GSoC Contributor presents their project (presentation and demo) at a public meeting in the style of an on-line meetup.
 ** We record these presentations and publish them on YouTube.

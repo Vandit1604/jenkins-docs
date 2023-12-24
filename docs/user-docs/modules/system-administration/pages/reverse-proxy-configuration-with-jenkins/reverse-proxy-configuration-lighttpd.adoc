@@ -1,4 +1,4 @@
-[[running-jenkins-behind-lighttpd]]
+[#running-jenkins-behind-lighttpd]
 = Reverse proxy - Lighttpd
 
 In situations where you have existing web sites on your server, you may find it useful to run Jenkins (or the servlet container that Jenkins runs in) behind https://www.lighttpd.net/[Lighttpd].
