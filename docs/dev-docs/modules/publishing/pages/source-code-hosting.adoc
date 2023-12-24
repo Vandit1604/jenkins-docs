@@ -1,6 +1,6 @@
 = Source Code Hosting
 
-The Jenkins project only publishes free and open source plugins distributed under an link:https://opensource.org/licenses/[OSI-approved] license.
+The Jenkins project only publishes free and open source plugins distributed under an link:https://opensource.org/licenses/[OSI-approved] or link:https://en.wikipedia.org/wiki/Public-domain-equivalent_license[public-domain-equivalent] license or dedicated to the public domain.
 
 The canonical source code repository is in the `jenkinsci` GitHub organization to ensure source code access and project continuity in case previous maintainers move on.
 Some plugins we distribute are currently maintained outside the `jenkinsci` GitHub organization for historical reasons, but this is discouraged.
@@ -15,58 +15,49 @@ Testing changes to the script below locally without major changes is difficult d
 Starting Chrome with the arguments --disable-web-security --user-data-dir=<some dir> seems to be the easiest option.
 ////
 ++++
-    <link href="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
-
-    <script
-        src="https://code.jquery.com/jquery-3.7.0.min.js"
-        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.js"></script>
-
-    <script>
-        $(function () {
-            $('#permissions').DataTable({
-                ajax: {
-                    method: 'GET',
-                    url: 'https://reports.jenkins.io/github-jenkinsci-permissions-report.json',
-                    dataSrc: '',
-                    dataType: 'json',
-                },
-                columns: [
-                    {
-                        title: "Repository",
-                        render: function (data, type, row, metadata) {
-                            return '<a href="https://github.com/jenkinsci/' + data + '" target="_blank" rel="noreferrer noopener">' + data + '</a>';
-                        }
-                    },
-                    {
-                        title: "User",
-                        render: function (data, type, row, metadata) {
-                            return '<a href="https://github.com/' + data + '" target="_blank" rel="noreferrer noopener">' + data + '</a>';
-                        }
-                    },
-                    {
-                        title: "Access"
-                    }
-                ]
-            });
-        });
+    <style type="text/css">
+    @import url(https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css);
+    </style>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+    $('#permissions').DataTable( {
+        ajax: {
+            url: 'https://reports.jenkins.io/github-jenkinsci-permissions-report.json',
+            dataSrc: ''
+        },
+        columns: [
+            { 
+                title: "Repository",
+                render: function(data, type, row, metadata) {
+                    return '<a href="https://github.com/jenkinsci/' + data + '" target="_blank" rel="noreferrer noopener">' + data + '</a>';
+                }
+            },
+            { 
+                title: "User",
+                render: function(data, type, row, metadata) {
+                    return '<a href="https://github.com/' + data + '" target="_blank" rel="noreferrer noopener">' + data + '</a>';
+                }
+            },
+            { title: "Access" }
+        ]
+    } );
+} );
     </script>
-
-    <table id="permissions" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th>Repository</th>
-                <th>User</th>
-                <th>Access</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>Repository</th>
-                <th>User</th>
-                <th>Access</th>
-            </tr>
-        </tfoot>
+    <table id="permissions" class="display" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th>Repository</th>
+          <th>User</th>
+          <th>Access</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Repository</th>
+          <th>User</th>
+          <th>Access</th>
+          </tr>
+      </tfoot>
     </table>
 ++++

@@ -23,7 +23,7 @@ https://ci.jenkins.io/job/Websites/job/jenkins.io/job/master/lastSuccessfulBuild
 https://ci.jenkins.io/job/Websites/job/jenkins.io/job/master/lastSuccessfulBuild/api/ and you'll
 see the list of functionalities for that build.
 
-[[RemoteaccessAPI-Whatcanyoudowithit]]
+[#RemoteaccessAPI-Whatcanyoudowithit]
 == What can you do with it?
 
 Remote API can be used to do things like these:
@@ -32,7 +32,7 @@ Remote API can be used to do things like these:
 . trigger a new build
 . create/copy jobs
 
-[[RemoteaccessAPI-Submittingjobs]]
+[#RemoteaccessAPI-Submittingjobs]
 == Submitting jobs
 
 *Jobs without parameters*
@@ -68,18 +68,18 @@ In order to make this command work,
 you need to configure your Jenkins job to take a file parameter
 and match the *File location* field in the Jenkins job configuration with the key in the `--form` option.
 
-[[RemoteaccessAPI-RemoteAPIandsecurity]]
+[#RemoteaccessAPI-RemoteAPIandsecurity]
 == Remote API and security
 
 When your Jenkins is secured, you can use HTTP BASIC authentication to authenticate remote API requests. 
 See xref:system-administration:authenticating-scripted-clients.adoc[Authenticating scripted clients] for more details.
 
-[[RemoteaccessAPI-CSRFProtection]]
+[#RemoteaccessAPI-CSRFProtection]
 == CSRF Protection
 
 *Note*: API tokens are preferred instead of crumbs for CSRF protection.
 
-[[RemoteaccessAPI-XPathselection]]
+[#RemoteaccessAPI-XPathselection]
 == XPath selection
 
 The XML API supports a selection by XPath by using the query parameter 'xpath'. 
@@ -89,7 +89,7 @@ See https://issues.jenkins.io/browse/JENKINS-626[issue #626] for an
 example of how to use this. +
 See `+.../api/+` on your Jenkins server for more up-to-date details.
 
-[[RemoteaccessAPI-XPathexclusion]]
+[#RemoteaccessAPI-XPathexclusion]
 === XPath exclusion
 
 Similar to the 'xpath' query parameter above, you can use (possibly
@@ -97,7 +97,7 @@ multiple) 'exclude' query patterns to exclude nodes from the resulting XML.
 All the nodes that match the specified XPath will be removed from the XML. +
 See `+.../api/+` on your Jenkins server for more up-to-date details.
 
-[[RemoteaccessAPI-Depthcontrol]]
+[#RemoteaccessAPI-Depthcontrol]
 == Depth control
 
 Sometimes the remote API doesn't give you enough information in one call. 
@@ -124,7 +124,7 @@ includes all the data returned by smaller depth value.
 
 See `+.../api/+` on your Jenkins server for more up-to-date details.
 
-[[RemoteaccessAPI-PythonAPIwrappers]]
+[#RemoteaccessAPI-PythonAPIwrappers]
 == Python API wrappers
 
 https://pypi.python.org/pypi/jenkinsapi[JenkinsAPI],
@@ -145,7 +145,7 @@ Services offered currently include:
 * Ability to search for builds by subversion revision
 * Ability to add/remove/query Jenkins agents
 
-[[RemoteaccessAPI-RubyAPIwrappers]]
+[#RemoteaccessAPI-RubyAPIwrappers]
 == Ruby API wrappers
 
 https://rubygems.org/gems/jenkins_api_client[Jenkins API Client] is an
@@ -182,7 +182,7 @@ plugins, install/uninstall plugins and much more with plugins.
 The project source code is at
 https://github.com/arangamani/jenkins_api_client[here].
 
-[[RemoteaccessAPI-JavaAPIwrappers]]
+[#RemoteaccessAPI-JavaAPIwrappers]
 == Java API wrappers
 
 The https://github.com/cdancy/jenkins-rest[jenkins-rest] library is an
@@ -212,7 +212,7 @@ lastBuildTimestamp and progressiveText)
 The project can evolve rapidly, this list is accurate only as of the
 date of writing.
 
-[[RemoteaccessAPI-DetectingJenkinsversion]]
+[#RemoteaccessAPI-DetectingJenkinsversion]
 == Detecting Jenkins version
 
 To check the version of Jenkins, load the top page or any

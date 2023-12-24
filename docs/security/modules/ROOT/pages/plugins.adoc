@@ -4,7 +4,7 @@
 We strive to fix all security vulnerabilities in Jenkins and plugins in a timely manner.
 However, the structure of the Jenkins project, which gives plugin maintainers a lot of autonomy, and the number and diversity of plugins make this impossible to guarantee.
 
-[[unresolved]]
+[#unresolved]
 == Announcing Unresolved Vulnerabilities
 
 In case of a plugin vulnerability, we try to contact the plugin maintainer(s) to inform them of it.
@@ -18,7 +18,7 @@ If there are workarounds, explain them.
 
 This allows Jenkins administrators to make an informed decision about their continued use of plugins with unresolved security vulnerabilities.
 
-[[followup]]
+[#followup]
 == Following Up Later
 
 Some maintainers end up fixing security vulnerabilities after we have announced it as unresolved in their plugin.
@@ -32,7 +32,7 @@ Maintainers can inform us through Jira or email about a fix or https://github.co
 Once we confirm the fix is correct and complete, we will update the published warnings metadata.
 This will remove the active security warning from the plugin entry on the plugins site and from the plugin manager directly in Jenkins.
 
-[[suspensions]]
+[#suspensions]
 == Suspended Plugins
 
 Distribution of the following plugins was suspended in conjunction with the publication of a security advisory announcing unresolved security issues.

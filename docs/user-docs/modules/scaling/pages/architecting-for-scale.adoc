@@ -139,7 +139,6 @@ properly
 [source, width="300"]
 ----
 sc.exe create "<serviceKey>" start= auto binPath= "<path to jenkins-slave.exe>" DisplayName= "<service display name>"
-
 ----
 
 _<serviceKey>_ is the name of the registry key to define this agent service and
@@ -162,7 +161,7 @@ up to date each time it connects to the controller.
    agent is executed as headless and the connection can be tunneled via HTTP(s).
    The exact command can be found on your Inbound agent's configuration page:
 
-[[inbound_agent]]
+[#inbound_agent]
 .Inbound agent launch command
 image::user-docs:scaling:inbound-agent.png[Inbound agent node screen, scaledwidth=90%]
 
@@ -257,14 +256,14 @@ resources together with their destruction when they are not needed anymore:
   creates the possibility of executing the jobs on any cloud provider supported
   by JCloud libraries
 
-[[right-sizing-jenkins-masters]]
+[#right-sizing-jenkins-masters]
 == Right-sizing Jenkins controllers
 
 Comprehensive hardware recommendations:
 
 * Hardware: see the user-docs:scaling:hardware-recommendations.adoc#hardware-recommendations[Hardware Recommendations] page
 
-[[master-division-strategies]]
+[#master-division-strategies]
 === Controller division strategies
 
 Designing the best Jenkins architecture for your organization is dependent on
@@ -310,7 +309,7 @@ vertical and horizontal scaling pitfalls discussed in the introduction.
 Another note is that a smaller number of jobs translates to faster recovery
 from failures and more importantly a higher mean time between failures.
 
-[[Calculating-how-many-jobs,-masters,-and-executors-are-needed]]
+[#Calculating-how-many-jobs,-masters,-and-executors-are-needed]
 === Calculating how many jobs, controllers, and executors are needed
 
 Having the best possible estimate of necessary configurations for a Jenkins
@@ -336,9 +335,7 @@ the number of configured jobs is known is as follows:
 [source, width="350"]
 ----
 controllers = number of jobs/500
-
 executors = number of jobs * 0.03
-
 ----
 
 The equation for *estimating the maximum number of jobs, controllers, and executors
@@ -347,18 +344,15 @@ needed* for an organization based on the number of developers is as follows:
 [source, width="350"]
 ----
 number of jobs = number of developers * 3.333
-
 number of controllers = number of jobs/500
-
 number of executors = number of jobs * 0.03
-
 ----
 
 These numbers will provide a good starting point for a Jenkins installation,
 but adjustments to actual installation size may be needed based on the types of
 builds and tests that an installation runs.
 
-[[scalable-storage-for-master]]
+[#scalable-storage-for-master]
 === Scalable storage for controllers
 
 It is also recommended to choose a controller with consideration for future growth
@@ -377,7 +371,7 @@ different approaches to expandable storage:
   spanned volume later.
 * *Logical Volume Manager for Linux* - LVM manages disk drives and allows
   logical volumes to be resized on the fly. Many distributions of Linux use LVM
-  when they are installed, but Jenkins should have its our LVM setup.
+  when they are installed, but Jenkins should have its own LVM setup.
 * *ZFS for Solaris* - ZFS is even more flexible than LVM and spanned volumes
   and just requires that the _$JENKINS_HOME_ be on its own filesystem. This
   makes it easier to create snapshots, backups, etc.
@@ -509,7 +503,7 @@ JENKINS_HOME
          +- jobs           (sub directory for all nested jobs)
 ----
 
-[[segrate-data]]
+[#segrate-data]
 ==== Segregating pure configuration from less durable data
 
 CAUTION: No data migration is handled by Jenkins when using those settings.

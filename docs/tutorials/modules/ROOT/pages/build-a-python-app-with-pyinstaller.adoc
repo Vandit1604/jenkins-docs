@@ -1,8 +1,6 @@
 
 = Build a Python app with PyInstaller
 
-
-
 This tutorial shows you how to use Jenkins to orchestrate building a simple
 Python application with https://www.pyinstaller.org/[PyInstaller].
 
@@ -50,8 +48,8 @@ include::partial$prerequisites.adoc[]
 include::user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[]
 
 
-[[fork-sample-repository]]
-[[fork-and-clone-the-sample-repository-on-github]]
+[#fork-sample-repository]
+[#fork-and-clone-the-sample-repository-on-github]
 === Fork and clone the sample repository
 
 Obtain the simple "add" Python application from GitHub, by forking the sample
@@ -151,7 +149,7 @@ pipeline {
         stage('Build') { // <2>
             agent {
                 docker {
-                    image 'python:3.12.0-alpine3.18' // <3>
+                    image 'python:3.12.1-alpine3.19' // <3>
                 }
             }
             steps {
@@ -261,7 +259,7 @@ pipeline {
         stage('Build') {
             agent {
                 docker {
-                    image 'python:3.12.0-alpine3.18'
+                    image 'python:3.12.1-alpine3.19'
                 }
             }
             steps {
@@ -352,9 +350,7 @@ stage runs successfully (with output)",width=100%]
             agent any
             environment {
                 VOLUME = '$(pwd)/sources:/src'
-
                 IMAGE = 'cdrx/pyinstaller-linux:python2'
-
             }
             steps {
                 dir(path: env.BUILD_ID) {
@@ -383,7 +379,7 @@ pipeline {
         stage('Build') {
             agent {
                 docker {
-                    image 'python:3.12.0-alpine3.18'
+                    image 'python:3.12.1-alpine3.19'
                 }
             }
             steps {
@@ -410,9 +406,7 @@ pipeline {
             agent any
             environment { // <2>
                 VOLUME = '$(pwd)/sources:/src'
-
                 IMAGE = 'cdrx/pyinstaller-linux:python2'
-
             }
             steps {
                 dir(path: env.BUILD_ID) { // <3>
@@ -433,7 +427,7 @@ pipeline {
 <1> Defines a xref:user-docs:pipeline:syntax.adoc#stage[`stage`] (directive) called
 `Deliver` that appears on the Jenkins UI.
 <2> This
-xref:user-docs:pipeline:tour/environment.adoc[`environment`]
+link:/doc/pipeline/tour/environment/[`environment`]
 block defines two variables which will be used later in the 'Deliver' stage.
 <3> This
 link:/doc/pipeline/steps/workflow-basic-steps/#dir-change-current-directory[`dir`]

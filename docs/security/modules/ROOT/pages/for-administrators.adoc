@@ -34,7 +34,7 @@ The Jenkins security team then evaluates the report to see whether it's a real s
 We work with maintainers of affected components to address these issues.
 In case of Jenkins (core), security team members usually develop the fixes.
 
-Once fixes are ready or link:/security/plugins[we've determined that a component is not maintained actively enough], we announce the issues and fixes, if applicable, in a security advisory.
+Once fixes are ready or xref:security:ROOT:plugins.adoc[we've determined that a component is not maintained actively enough], we announce the issues and fixes, if applicable, in a security advisory.
 
 
 == What is a Security Advisory?
@@ -76,7 +76,7 @@ The title of each issue gives a quick synopsis to readers familiar with most com
 The description that follows goes into more details.
 
 
-[[attacker]]
+[#attacker]
 === Who is Able to Exploit the Issue, and How?
 
 Descriptions usually mention the necessary permissions, for example Overall/Read or Job/Configure, except in cases where this cannot be determined with sufficient confidence.
@@ -85,7 +85,7 @@ For example, through common practices like Pipeline-as-Code, limited job configu
 NOTE: Cross-site request forgery (CSRF) vulnerabilities inherently do not require attackers to have any permissions, so that information is typically omitted.
 
 
-[[impact]]
+[#impact]
 === The Impact of Successful Exploitation
 
 In many cases, the impact of successful exploitation is directly tied to the kind of vulnerability:
@@ -95,7 +95,7 @@ In some cases, it is unclear what the _exact_ impact of an issue is.
 Depending on our level of confidence about expected impact, we'll provide the best estimation or state that some of the impact is unclear.
 
 
-[[fix-description]]
+[#fix-description]
 === How the Issue Was Addressed
 
 If the issue was fixed, the security advisory will include information about _how_ the issue was addressed.
@@ -106,7 +106,7 @@ Note that this section will only explain how an issue was addressed if a fix was
 Learn more: xref:ROOT:for-administrators.adoc#later[Are Security Advisories Updated Later?]
 
 
-[[workarounds]]
+[#workarounds]
 === Non-obvious Workarounds, if Applicable
 
 In some cases the affected feature can be disabled using a hidden option.
@@ -117,7 +117,7 @@ For example, if the description mentions that an attacker needs specific permiss
 This would not be explicitly mentioned in the advisory.
 
 
-[[escape-hatches]]
+[#escape-hatches]
 === How to Disable (Part of) a Security Fix
 
 Security fixes undergo limited testing, so we commonly add "escape hatches", mechanisms to disable all or part of a security fix in case of unexpected problems.
@@ -148,7 +148,7 @@ The extensibility of Jenkins makes it impossible to provide definitive answers a
 While the Jenkins security team works hard to understand security issues and provide the best available information in the security advisory, this does not guarantee that we are always correct.
 Even security issues that appear irrelevant for your environment may end up potentially impacting your setup, so security updates should always be installed at the earliest opportunity.
 
-[[pre-announcements]]
+[#pre-announcements]
 == Can I Plan Maintenance Windows?
 
 For most security advisories, we send a "pre-announcement" to the `jenkinsci-advisories` Google group.
@@ -171,7 +171,7 @@ Reasons include: The advisory wasn't planned more than a day or two in advance; 
 See xref:security:ROOT:scheduling.adoc[How We Schedule Security Advisories].
 
 
-[[later]]
+[#later]
 == Are Security Advisories Updated Later?
 
 Security advisories will be updated if any of the information is later found to be wrong _as of time of publication_.

@@ -181,7 +181,7 @@ image:user-docs:pipeline:hello-world-console-output.png[alt="*Console Output* fo
 // Despite :sectanchors:, explicitly defining an anchor because it will be
 // referenced from other documents
 
-[[defining-a-pipeline-in-scm]]
+[#defining-a-pipeline-in-scm]
 === In SCM
 
 Complex Pipelines are difficult to write and maintain within the
@@ -317,7 +317,7 @@ This video reviews using the `currentBuild` variable in Jenkins Pipeline.
 
 video::gcUORgHuna4[youtube,width=800,height=420]
 
-[[directive-generator]]
+[#directive-generator]
 === Declarative Directive Generator
 
 While the Snippet Generator helps with generating steps for a Scripted

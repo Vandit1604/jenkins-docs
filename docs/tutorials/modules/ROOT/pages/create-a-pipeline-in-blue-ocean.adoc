@@ -57,7 +57,7 @@ This access token has the appropriate permissions pre-selected that Blue Ocean r
 [.boxshadow]
 image:pipeline-in-blueocean-01-connecting-to-github.png[alt="Connecting to GitHub",width=80%]
 +
-[[choose-github-account]]Jenkins now has access to your GitHub account, using your access token.
+[#choose-github-account]Jenkins now has access to your GitHub account, using your access token.
 . In *Which organization does the repository belong to?*, select your GitHub account where you forked the repository xref:#fork-sample-repository[above].
 . In *Choose a repository*, select your forked repository `creating-a-pipeline-in-blue-ocean`.
 . Select *Create Pipeline*.

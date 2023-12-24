@@ -40,10 +40,8 @@ For more on the `adoc` format see link:https://asciidoctor.org/[asciidoctor.org]
 The format for the `.adoc` file is as follows:
 
 ```
----
-layout: gsocprojectidea
-title: "Specify the project idea title"
-goal: "One sentence summarizing the goal of your idea"
+= Specify the project idea title
+*Goal:* One sentence summarizing the goal of your idea"
 category: Plugins
 year: 2023
 status: discussion
@@ -62,7 +60,7 @@ TODO: DRAFT (this is a placeholder, it will not be shown)
 
 The last step is to submit this new file as a pull-request.
 
-[[submit_pr]]
+[#submit_pr]
 === When you submit a pull-request
 
 . add `CC @jenkins-infra/gsoc` so we get a notification, or request a review from `jenkins-infra/gsoc`
@@ -88,10 +86,8 @@ To use the `.adoc` file for the details, please modify your `.adoc` file accordi
 
 
 ```
----
-layout: gsocprojectidea
-title: "Specify the project idea title"
-goal: "One sentence summarizing the goal of your idea"
+= Specify the project idea title
+*Goal:* One sentence summarizing the goal of your idea"
 category: Plugins
 year: 2023
 status: draft
@@ -145,10 +141,8 @@ but such tasks may help to select GSoC contributors who are interested to work o
 To use a Google Doc for the details, please modify your `.adoc` file according to this template:
 
 ```
----
-layout: gsocprojectidea
-title: "Specify the project idea title"
-goal: "One sentence summarizing the goal of your idea"
+= Specify the project idea title
+*Goal:* One sentence summarizing the goal of your idea"
 category: Plugins
 year: 2023
 status: draft

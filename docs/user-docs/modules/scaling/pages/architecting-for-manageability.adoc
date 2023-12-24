@@ -32,7 +32,7 @@ the Folders plugin while running a version of the Jenkins core older than
 1.554.1 will cause the instance crash and be inaccessible until the plugin is
 manually uninstalled from the _plugin_ folder.
 
-[[setting-up-a-test-instance]]
+[#setting-up-a-test-instance]
 === Configuring a test instance
 
 There are many methods for setting up a test instance, but the commonality
@@ -226,7 +226,7 @@ docker run -d \
        --prefix=""
 ----
 
-[[test-master-agents]]
+[#test-master-agents]
 .Test agents
 
 Test controllers can be connected to test agents, but this will require further

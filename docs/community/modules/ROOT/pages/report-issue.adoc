@@ -5,7 +5,7 @@
 Jenkins JIRA is an issue tracker, not a support site.
 If you need assistance or have general questions, visit us xref:community:chat:index.adoc[in chat], email one of the xref:community:mailing-lists:index.adoc[mailing lists], or post on the https://community.jenkins.io/[community forum].
 
-[[Howtoreportanissue-Beforecreatinganissue]]
+[#Howtoreportanissue-Beforecreatinganissue]
 == Before creating an issue
 
 First, *identify the location of the issue*.
@@ -26,7 +26,7 @@ Neither will be explained here.
 If you want to propose a patch, create an issue using one of the 3 types above, and then create a pull request on GitHub link:https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request[as explained here].
 Report issues with infrastructure services hosted by the Jenkins project (jenkins.io, accounts.jenkins.io, etc.) at link:https://github.com/jenkins-infra/helpdesk/issues/[the dedicated help desk].
 
-[[Howtoreportanissue-Beforereportingabug]]
+[#Howtoreportanissue-Beforereportingabug]
 === Before reporting a bug
 
 * First, *search for the error message or general problem description*.
@@ -60,7 +60,7 @@ If you're still unable to resolve the problem and cannot find existing
 issue reports or related fixes in newer versions of Jenkins or the
 If you're still unable to resolve the problem, and cannot find existing issue reports or related fixes in newer versions of Jenkins or the plugins, file a *bug*.
 
-[[Howtoreportanissue-Beforerequestinganimprovementorfeature]]
+[#Howtoreportanissue-Beforerequestinganimprovementorfeature]
 === Before requesting an improvement or feature
 
 * *Check newer versions of Jenkins or the plugin* for this feature.
@@ -79,7 +79,7 @@ and watchers.  It increases the likelihood of related changes.
 It's not that obvious when an issue has been reported separately several
 times with only a few watchers each.
 
-[[Howtoreportanissue-Creatingtheissue]]
+[#Howtoreportanissue-Creatingtheissue]
 == Creating the issue
 
 If you are reporting an issue in Jenkins, then you'll have to report it on link:https://issues.jenkins.io/[JIRA].
@@ -129,7 +129,7 @@ image:images:ROOT:participate/get-started.png[alt="Get Started Button",width=40%
 
 * After that, fill in the details of the issue according to the Github issue template provided for each type of issue.
 * Don't forget to subscribe to the issue so you'll get notifications regarding any updates on the issue.
-[[Howtoreportanissue-WhatinformationtoprovideforEnvironmentandDescription]]
+[#Howtoreportanissue-WhatinformationtoprovideforEnvironmentandDescription]
 
 === What information to provide for Environment and Description
 
@@ -212,7 +212,7 @@ include their version and other relevant configuration.
 * If the Jenkins UI no longer responds, *get a thread dump* using e.g.
 (on Linux) `+kill -3 <Jenkins PID>+` or `+jstack -l <Jenkins PID>+`.
 
-[[Howtoreportanissue-Aftercreatingtheissue]]
+[#Howtoreportanissue-Aftercreatingtheissue]
 == After creating the issue
 
 Once you've created an issue, make sure to *respond to requests for

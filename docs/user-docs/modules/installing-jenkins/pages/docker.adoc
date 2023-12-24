@@ -1,3 +1,17 @@
+---
+layout: section
+title: Using Docker with Pipeline
+---
+ifdef::backend-html5[]
+:description:
+:author:
+:sectanchors:
+:toc:
+ifdef::env-github[:imagesdir: ../resources]
+ifndef::env-github[:imagesdir: ../../resources]
+:hide-uri-scheme:
+endif::[]
+
 = Using Docker with Pipeline
 
 Many organizations use link:https://www.docker.com[Docker] to unify their build and test environments across machines, and to provide an efficient mechanism for deploying applications.
@@ -6,10 +20,10 @@ Starting with Pipeline versions 2.5 and higher, Pipeline has built-in support fo
 While this page covers the basics of utilizing Docker from within a `Jenkinsfile`, it will not cover the fundamentals of Docker, which you can refer to in the link:https://docs.docker.com/get-started/[Docker Getting Started Guide].
 
 
-[[execution-environment]]
+[#execution-environment]
 == Customizing the execution environment
 
-Pipeline is designed to easily use link:https://docs.docker.com/[Docker] images as the execution environment for a single xref:glossary:index.adoc#stage[Stage] or the entire Pipeline.
+Pipeline is designed to easily use link:https://docs.docker.com/[Docker] images as the execution environment for a single xref:user-docs:glossary:index.adoc#stage[Stage] or the entire Pipeline.
 Meaning that a user can define the tools required for their Pipeline, without having to manually configure agents.
 Any tool that can be link:https://hub.docker.com[packaged in a Docker container] can be used with ease, by making only minor edits to a `Jenkinsfile`.
 
@@ -18,7 +32,7 @@ Any tool that can be link:https://hub.docker.com[packaged in a Docker container]
 // Declarative //
 pipeline {
     agent {
-        docker { image 'node:20.9.0-alpine3.18' }
+        docker { image 'node:20.10.0-alpine3.19' }
     }
     stages {
         stage('Test') {
@@ -31,7 +45,7 @@ pipeline {
 // Script //
 node {
     /* Requires the Docker Pipeline plugin to be installed */
-    docker.image('node:20.9.0-alpine3.18').inside {
+    docker.image('node:20.10.0-alpine3.19').inside {
         stage('Test') {
             sh 'node --version'
         }
@@ -103,7 +117,7 @@ pipeline {
 Many build tools will download external dependencies and cache them locally for future re-use.
 Since containers are initially created with "clean" file systems, this can result in slower Pipelines, as they may not take advantage of on-disk caches between subsequent Pipeline runs.
 
-Pipeline supports adding custom arguments that are passed to Docker, allowing users to specify custom link:https://docs.docker.com/engine/tutorials/dockervolumes/[Docker Volumes] to mount, which can be used for caching data on the xref:glossary:index.adoc#agent[agent] between Pipeline runs.
+Pipeline supports adding custom arguments that are passed to Docker, allowing users to specify custom link:https://docs.docker.com/engine/tutorials/dockervolumes/[Docker Volumes] to mount, which can be used for caching data on the xref:user-docs:glossary:index.adoc#agent[agent] between Pipeline runs.
 The following example will cache `~/.m2` between Pipeline runs utilizing the link:https://hub.docker.com/_/maven/[`maven` container], avoiding the need to re-download dependencies for subsequent Pipeline runs.
 
 [pipeline]
@@ -127,7 +141,7 @@ pipeline {
 // Script //
 node {
     /* Requires the Docker Pipeline plugin to be installed */
-    docker.image('maven:3.9.5-eclipse-temurin-17-alpine').inside('-v $HOME/.m2:/root/.m2') {
+    docker.image('maven:3.9.6-eclipse-temurin-17-alpine').inside('-v $HOME/.m2:/root/.m2') {
         stage('Build') {
             sh 'mvn -B'
         }
@@ -151,7 +165,7 @@ pipeline {
     stages {
         stage('Back-end') {
             agent {
-                docker { image 'maven:3.9.5-eclipse-temurin-17-alpine' }
+                docker { image 'maven:3.9.6-eclipse-temurin-17-alpine' }
             }
             steps {
                 sh 'mvn --version'
@@ -159,7 +173,7 @@ pipeline {
         }
         stage('Front-end') {
             agent {
-                docker { image 'node:20.9.0-alpine3.18' }
+                docker { image 'node:20.10.0-alpine3.19' }
             }
             steps {
                 sh 'node --version'
@@ -172,31 +186,31 @@ node {
     /* Requires the Docker Pipeline plugin to be installed */
 
     stage('Back-end') {
-        docker.image('maven:3.9.5-eclipse-temurin-17-alpine').inside {
+        docker.image('maven:3.9.6-eclipse-temurin-17-alpine').inside {
             sh 'mvn --version'
         }
     }
 
     stage('Front-end') {
-        docker.image('node:20.9.0-alpine3.18').inside {
+        docker.image('node:20.10.0-alpine3.19').inside {
             sh 'node --version'
         }
     }
 }
 ----
 
-[[dockerfile]]
+[#dockerfile]
 === Using a Dockerfile
 
 For projects requiring a more customized execution environment, Pipeline also supports building and running a container from a `Dockerfile` in the source repository.
-In contrast to the xref:#execution-environment[previous approach] of using an "off-the-shelf" container, using the `agent { dockerfile true }` syntax builds a new image from a `Dockerfile`, rather than pulling one from link:https://hub.docker.com[Docker Hub].
+In contrast to the <<execution-environment,previous approach>> of using an "off-the-shelf" container, using the `agent { dockerfile true }` syntax builds a new image from a `Dockerfile`, rather than pulling one from link:https://hub.docker.com[Docker Hub].
 
 Reusing an example from above, with a more custom `Dockerfile`:
 
 .Dockerfile
 [source]
 ----
-FROM node:20.9.0-alpine3.18
+FROM node:20.10.0-alpine3.19
 
 RUN apk add -U subversion
 ----
@@ -221,7 +235,7 @@ pipeline {
 ----
 
 
-The `agent { dockerfile true }` syntax supports a number of other options, which are described in more detail in the xref:pipeline:syntax.adoc#agent[Pipeline Syntax] section.
+The `agent { dockerfile true }` syntax supports a number of other options, which are described in more detail in the xref:user-docs:pipeline:syntax.adoc#agent[Pipeline Syntax] section.
 
 .Using a Dockerfile with Jenkins Pipeline
 video::Pi2kJ2RJS50[youtube, width=852, height=480]
@@ -229,11 +243,11 @@ video::Pi2kJ2RJS50[youtube, width=852, height=480]
 
 === Specifying a Docker Label
 
-By default, Pipeline assumes that _any_ configured xref:glossary:index.adoc#agent[agent] is capable of running Docker-based Pipelines.
+By default, Pipeline assumes that _any_ configured xref:user-docs:glossary:index.adoc#agent[agent] is capable of running Docker-based Pipelines.
 For Jenkins environments that have macOS, Windows, or other agents that are unable to run the Docker daemon, this default setting may be problematic.
-Pipeline provides a global option on the *Manage Jenkins* page and on the xref:glossary:index.adoc#folder[Folder] level, for specifying which agents (by xref:glossary:index.adoc#label[Label]) to use for running Docker-based Pipelines.
+Pipeline provides a global option on the *Manage Jenkins* page and on the xref:user-docs:glossary:index.adoc#folder[Folder] level, for specifying which agents (by xref:user-docs:glossary:index.adoc#label[Label]) to use for running Docker-based Pipelines.
 
-image::user-docs:pipeline:configure-docker-label.png[Configuring the Pipeline Docker Label]
+image::pipeline/configure-docker-label.png[Configuring the Pipeline Docker Label]
 
 === Path setup for mac OS users
 
@@ -293,7 +307,7 @@ node {
 ----
 
 This example can be taken further, utilizing two containers simultaneously.
-One "sidecar" running MySQL, and another providing the xref:#execution-environment[execution environment] by using the Docker link:https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/[container links].
+One "sidecar" running MySQL, and another providing the <<execution-environment,execution environment>> by using the Docker link:https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/[container links].
 
 [source,groovy]
 ----
@@ -347,14 +361,13 @@ node {
 ----
 
 
-The return value can also be used to publish the Docker image to link:https://hub.docker.com[Docker Hub] or a xref:#custom-registry[ custom Registry], via the `push()` method, for example:
+The return value can also be used to publish the Docker image to link:https://hub.docker.com[Docker Hub] or a <<custom-registry, custom Registry>>, via the `push()` method, for example:
 
 [source,groovy]
 ----
 node {
     checkout scm
     def customImage = docker.build("my-image:${env.BUILD_ID}")
-
     customImage.push()
 }
 ----
@@ -367,7 +380,6 @@ The `push()` method accepts an optional `tag` parameter, allowing the Pipeline t
 node {
     checkout scm
     def customImage = docker.build("my-image:${env.BUILD_ID}")
-
     customImage.push()
 
     customImage.push('latest')
@@ -400,9 +412,7 @@ This example overrides the default `Dockerfile` by passing the `-f` flag:
 node {
     checkout scm
     def dockerfile = 'Dockerfile.test'
-
     def customImage = docker.build("my-image:${env.BUILD_ID}",
-
                                    "-f ${dockerfile} ./dockerfiles") // <1>
 }
 ----
@@ -453,7 +463,7 @@ Additionally, some versions of Docker Swarm do not support custom Registries.
 
 
 
-[[custom-registry]]
+[#custom-registry]
 === Using a custom registry
 
 By default, the {plugin}docker-workflow[Docker Pipeline] plugin assumes the default Docker Registry of link:https://hub.docker.com[Docker Hub].

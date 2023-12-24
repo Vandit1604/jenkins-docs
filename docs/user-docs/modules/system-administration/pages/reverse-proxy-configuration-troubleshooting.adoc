@@ -1,6 +1,6 @@
 = Reverse proxy - Issues
 
-[[jenkins-says-my-reverse-proxy-setup-is-broken]]
+[#jenkins-says-my-reverse-proxy-setup-is-broken]
 == Symptoms
 
 An error message is displayed in the "Manage Jenkins" page
@@ -11,7 +11,7 @@ NOTE: This message can also appear if you don't access
 Jenkins through a reverse proxy: Make sure the Jenkins URL configured in
 the System Configuration matches the URL you're using to access Jenkins.
 
-[[troubleshooting]]
+[#troubleshooting]
 == Background
 
 For a reverse proxy to work correctly, it needs to rewrite both the

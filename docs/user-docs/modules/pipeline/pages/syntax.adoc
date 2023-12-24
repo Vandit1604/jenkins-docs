@@ -70,7 +70,7 @@ The section must be defined at the top-level inside the `pipeline` block, but st
 There are some nuances when adding an agent to the top level or a stage level when the `options` directive is applied.
 Check the section link:#options[options] for more information.
 
-[[top-level-agents]]
+[#top-level-agents]
 ====== Top Level Agents
 
 In `agents` declared at the top level of a Pipeline, an agent is allocated and then the `timeout` option is applied.
@@ -94,7 +94,7 @@ pipeline {
 }
 ----
 
-[[stage-level-agents]]
+[#stage-level-agents]
 ====== Stage Agents
 
 In `agents` declared within a stage, the options are invoked *before* allocating the `agent` and *before* checking any `when` conditions.
@@ -124,7 +124,7 @@ This timeout will include the agent provisioning time.
 Because the timeout includes the agent provisioning time, the Pipeline may fail in cases where agent allocation is delayed.
 
 
-[[agent-parameters]]
+[#agent-parameters]
 ===== Parameters
 
 In order to support the wide variety of use-cases Pipeline authors may have, the `agent` section supports a few different types of parameters.
@@ -302,7 +302,7 @@ Runtime arguments to pass to `docker run`.
 +
 This option is valid for `docker` and `dockerfile`.
 
-[[agent-example]]
+[#agent-example]
 .Docker Agent, Declarative Pipeline
 =====
 [source, groovy]
@@ -369,7 +369,7 @@ The condition blocks are executed in the order shown below.
 | In the top-level `pipeline` block and each `stage` block.
 |===
 
-[[post-conditions]]
+[#post-conditions]
 ===== Conditions
 
 `always`:: Run the steps in the `post` section regardless of the completion status of the Pipeline's or stage's run.
@@ -386,7 +386,7 @@ This is typically denoted by yellow in the web UI.
 This is typically denoted in the web UI depending on the status previously mentioned (for stages this may fire if the build itself is unstable).
 `cleanup`:: Run the steps in this `post` condition after every other `post` condition has been evaluated, regardless of the Pipeline or stage's status.
 
-[[post-example]]
+[#post-example]
 .Post Section, Declarative Pipeline
 =====
 [source, groovy]
@@ -429,7 +429,7 @@ At a minimum, it is recommended that `stages` contain at least one <<stage>> dir
 | Inside the `pipeline` block, or within a `stage`.
 |===
 
-[[stages-example]]
+[#stages-example]
 .Stages, Declarative Pipeline
 =====
 [source, groovy]
@@ -465,7 +465,7 @@ The `steps` section defines a series of one or more xref:#declarative-steps[ ste
 | Inside each `stage` block.
 |===
 
-[[steps-example]]
+[#steps-example]
 .Single Step, Declarative Pipeline
 =====
 [source, grovy]
@@ -521,7 +521,7 @@ The environment variable specified will be set to the location of the SSH key fi
 Unsupported credentials type causes the pipeline to fail with the message: `org.jenkinsci.plugins.credentialsbinding.impl.CredentialNotFoundException: No suitable binding handler could be found for type <unsupportedType>.`
 ====
 
-[[environment-example]]
+[#environment-example]
 .Secret Text Credentials, Declarative Pipeline
 =====
 
@@ -643,7 +643,7 @@ For example: `options { skipStagesAfterUnstable() }`
 timeout:: Set a timeout period for the Pipeline run, after which Jenkins should abort the Pipeline.
 For example: `options { timeout(time: 1, unit: 'HOURS') }`
 
-[[options-example]]
+[#options-example]
 .Global Timeout, Declarative Pipeline
 ===== 
 [source, groovy]
@@ -695,7 +695,7 @@ For example: `options { skipDefaultCheckout() }`
 timeout:: Set a timeout period for this stage, after which Jenkins should abort the stage.
 For example: `options { timeout(time: 1, unit: 'HOURS') }`
 
-[[stage-options-example]]
+[#stage-options-example]
 .Stage Timeout, Declarative Pipeline
 =====
 [source, groovy]
@@ -831,7 +831,7 @@ For example: `triggers { upstream(upstreamProjects: 'job1,job2', threshold: huds
 The `pollSCM` trigger is only available in Jenkins 2.22 or later.
 ====
 
-[[triggers-example]]
+[#triggers-example]
 .Triggers, Declarative Pipeline
 =====
 [source, groovy]
@@ -853,7 +853,7 @@ pipeline {
 ----
 =====
 
-[[cron-syntax]]
+[#cron-syntax]
 ==== Jenkins cron syntax
 
 The Jenkins cron syntax follows the syntax of the link:https://en.wikipedia.org/wiki/Cron[cron utility] (with minor differences).
@@ -904,7 +904,7 @@ These use the hash system for automatic balancing.
 For example, `@hourly` is the same as `H * * * *` and could mean at any time during the hour.
 `@midnight` actually means some time between 12:00 AM and 2:59 AM.
 
-[[cron-syntax-examples]]
+[#cron-syntax-examples]
 .Jenkins cron syntax examples
 [cols=1]
 |===
@@ -938,7 +938,7 @@ Practically speaking, all of the real work done by a Pipeline will be wrapped in
 | Inside the `stages` section.
 |===
 
-[[stage-example]]
+[#stage-example]
 .Stage, Declarative Pipeline
 =====
 [source, groovy]
@@ -984,7 +984,7 @@ maven::
 jdk::
 gradle::
 
-[[tools-example]]
+[#tools-example]
 .Tools, Declarative Pipeline
 =====
 [source, groovy]
@@ -1031,7 +1031,7 @@ submitterParameter:: An optional name of an environment variable to set with the
 parameters:: An optional list of parameters to prompt the submitter to provide.
 Refer to <<parameters>> for more information.
 
-[[input-example]]
+[#input-example]
 .Input Step, Declarative Pipeline
 =====
 [source, groovy]
@@ -1186,7 +1186,7 @@ If `beforeOptions` is set to `true`, the `when` condition will be evaluated firs
 
 `beforeOptions true` takes precedence over `beforeInput true` and `beforeAgent true`.
 
-[[when-example]]
+[#when-example]
 .Single Condition, Declarative Pipeline
 =====
 [source, groovy]
@@ -1445,7 +1445,7 @@ NOTE: A stage must have one and only one of `steps`, `stages`, `parallel`, or `m
 It is not possible to nest a `parallel` or `matrix` block within a `stage` directive if that `stage` directive is nested within a `parallel` or `matrix` block itself.
 However, a `stage` directive within a `parallel` or `matrix` block can use all other functionality of a `stage`, including `agent`, `tools`, `when`, etc.
 
-[[sequential-stages-example]]
+[#sequential-stages-example]
 .Sequential Stages, Declarative Pipeline
 =====
 [source, groovy]
@@ -1512,7 +1512,7 @@ However, a `stage` directive within a `parallel` or `matrix` block can use all o
 In addition, you can force your `parallel` stages to all be aborted when any one of them fails, by adding `failFast true` to the `stage` containing the `parallel`.
 Another option for adding `failfast` is adding an option to the pipeline definition: `parallelsAlwaysFailFast()`.
 
-[[parallel-stages-example]]
+[#parallel-stages-example]
 .Parallel Stages, Declarative Pipeline
 =====
 [source, groovy]
@@ -1631,7 +1631,7 @@ pipeline {
 }
 ----
 =====
-[[declarative-matrix]]
+[#declarative-matrix]
 === Matrix
 
 Stages in Declarative Pipeline may have a `matrix` section defining a multi-dimensional matrix of name-value combinations to be run in parallel. 
@@ -1651,14 +1651,14 @@ The `stages` section defines a list of ``stage``s to run sequentially in each ce
 A `matrix` may have an `excludes` section to remove invalid cells from the matrix.
 Many of the directives available on  `stage`, including `agent`, `tools`, `when`, etc., can also be added to `matrix` to control the behavior of each cell. 
 
-[[matrix-axes]]
+[#matrix-axes]
 ==== axes  
 
 The `axes` section specifies one or more `axis` directives. 
 Each `axis` consists of a `name` and a list of `values`.
 All the values from each axis are combined with the others to produce the cells. 
 
-[[matrix-axes-example]]
+[#matrix-axes-example]
 .One-axis with 3 cells
 ===== 
 [source,groovy]
@@ -1695,7 +1695,7 @@ matrix {
 ----
 =====
 
-[[three-axes]]
+[#three-axes]
 .Three-axis matrix with 24 cells (three by four by two)
 =====
 [source,groovy]
@@ -1720,13 +1720,13 @@ matrix {
 ----
 =====
 
-[[matrix-stages]]
+[#matrix-stages]
 ==== stages   
 
 The `stages` section specifies one or more ``stage``s to be executed sequentially in each cell.
 This section is identical to any other xref:#sequential-stages[ `stages` section].  
 
-[[matrix-stages-example]]
+[#matrix-stages-example]
 
 .One-axis with 3 cells, each cell runs three stages - "build", "test", and "deploy"
 =====
@@ -1778,7 +1778,7 @@ matrix {
 ----
 =====
 
-[[matrix-excludes]]
+[#matrix-excludes]
 ==== excludes (optional)
 
 The optional `excludes` section lets authors specify one or more `exclude` filter expressions that select cells to be excluded from the expanded set of matrix cells (aka, sparsening). 
@@ -1791,7 +1791,7 @@ If more than one `exclude` directive is supplied, each is evaluated separately t
 When dealing with a long list of values to exclude, exclude `axis` directives can use `notValues` instead of `values`.  
 These will exclude cells that *do not* match one of the values passed to `notValues`.
 
-[[matrix-excludes-example]]
+[#matrix-excludes-example]
 .Three-axis matrix with 24 cells, exclude '32-bit, mac' (4 cells excluded)
 =====
 [source,groovy]
@@ -1889,7 +1889,7 @@ matrix {
 ----
 =====
 
-[[matrix-cell-directives]]
+[#matrix-cell-directives]
 ==== Matrix cell-level directives (optional)
 
 Matrix lets users efficiently configure the overall environment for each cell, by adding stage-level directives under `matrix` itself.
@@ -1909,7 +1909,7 @@ These directives include:
 * <<tools>>
 * <<when>>
 
-[[matrix-cell-example]]
+[#matrix-cell-example]
 .Complete Matrix Example, Declarative Pipeline
 =====
 [source, groovy]
@@ -1993,7 +1993,7 @@ The `script` step takes a block of <<scripted-pipeline>> and executes that in th
 For most use-cases, the `script` step should be unnecessary in Declarative Pipelines, but it can provide a useful "escape hatch".
 `script` blocks of non-trivial size and/or complexity should be moved into xref:#shared-libraries#[ Shared Libraries] instead.
 
-[[script-example]]
+[#script-example]
 .Script Block in Declarative Pipeline
 =====
 [source, groovy]
@@ -2072,7 +2072,7 @@ node {
 ----
 =====
 
-[[scripted-steps]]
+[#scripted-steps]
 === Steps
 
 As discussed at the xref:pipeline:syntax.adoc[start of this chapter], the most fundamental part of a Pipeline is the "step".

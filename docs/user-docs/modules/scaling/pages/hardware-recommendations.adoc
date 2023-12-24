@@ -13,7 +13,7 @@ sizing your configuration. You are also provided sample configurations and the
 hardwares behind some of the largest Jenkins installations presented in a
 Jenkins Scalability Summit.
 
-[[choosing-the-right-hardware-for-masters]]
+[#choosing-the-right-hardware-for-masters]
 == Choosing the Right Hardware for Controllers
 
 One of the greatest challenges of properly setting up a Jenkins instance is that
@@ -28,7 +28,7 @@ important information for your Jenkins instance in its _$JENKINS_HOME_ folder
 More information on sizing controllers based on organizational needs can be found in
 the xref:scaling:architecting-for-scale.adoc[Architecting for Scale] section.
 
-[[memory-requirements-for-the-controller]]
+[#memory-requirements-for-the-controller]
 === Memory Requirements for the Controller
 
 The amount of memory Jenkins needs is largely dependent on many factors, which
@@ -59,7 +59,7 @@ xref:scaling:architecting-for-scale.adoc[Architecting for Scale] section.
 
 === Requirements for a Machine to be an agent
 
-[[fungibility]]
+[#fungibility]
 Agents are typically generic x86 machines with enough memory to run
 specific build types. The agent's configuration depends on the builds it
 will be used for and on the tools required by the same builds.

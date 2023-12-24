@@ -49,7 +49,7 @@ link:https://github.com/jenkinsci/script-security-plugin/tree/master/src/main/re
 of approved method signatures, will be sufficient. It is strongly recommended
 that Administrators only deviate from these defaults if absolutely necessary.
 
-[[groovy-sandbox]]
+[#groovy-sandbox]
 == Groovy Sandbox
 
 To reduce manual interventions by Administrators, most scripts will run in a
@@ -79,7 +79,7 @@ xref:#approving-unsandboxed-pipeline[ manually approved] by an administrator.
 .Disabling the Groovy Sandbox for a Pipeline
 image::unchecked-groovy-sandbox-on-pipeline.png["Creating a Scripted Pipeline and unchecking 'Use Groovy Sandbox'", role=center]
 
-[[script-approval]]
+[#script-approval]
 == Script Approval
 
 Manual approval of entire scripts, or method signatures, by an administrator
@@ -100,7 +100,7 @@ For scripts which wish to execute outside of the <<groovy-sandbox>>, the
 Administrator must approve the *entire* script in the *In-process Script
 Approval* page:
 
-[[approving-unsandboxed-pipeline]]
+[#approving-unsandboxed-pipeline]
 .Approving an unsandboxed Scripted Pipeline
 image::inprocess-script-approval-pipeline.png["Approving an unsandboxed Scripted Pipeline", role=center]
 
@@ -110,7 +110,7 @@ unapproved method signature will also be halted by Jenkins, and require an
 Administrator to approve the specific method signature before the script is
 allowed to execute:
 
-[[approving-method-signature]]
+[#approving-method-signature]
 .Approving a new method signature
 image::inprocess-script-approval-method.png["Approving a new method signature", role=center]
 

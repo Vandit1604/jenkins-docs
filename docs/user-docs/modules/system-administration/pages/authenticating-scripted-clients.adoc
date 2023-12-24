@@ -69,7 +69,7 @@ println(client.api().systemApi().systemInfo())
 For additional information, see the
 https://github.com/cdancy/jenkins-rest/wiki[cdancy/jenkins-rest wiki].
 
-[[Authenticatingscriptedclients-PerlLWPexampleforascriptedclient]]
+[#Authenticatingscriptedclients-PerlLWPexampleforascriptedclient]
 == Perl LWP example for a scripted client
 
 The following Perl example uses the LWP module to start a Job via a
@@ -116,7 +116,7 @@ else {
 ----
 
 
-[[Authenticatingscriptedclients-Javaexamplewithhttpclient4.3.x]]
+[#Authenticatingscriptedclients-Javaexamplewithhttpclient4.3.x]
 == Java example with httpclient 4.3.x
 
 This will cause httpclient 4.3 to issue authentication preemptively:

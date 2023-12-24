@@ -148,7 +148,7 @@ ____
 
 To fix this case, add the `+@NonCPS+` annotation to the overriding method, and remove any uses of CPS-transformed code such as Pipeline steps from the method.
 
-[[PipelineCPSmethodmismatches-ClosuresinsideGString]]
+[#PipelineCPSmethodmismatches-ClosuresinsideGString]
 === Closures inside `+GString+` 
 
 In Groovy, it is possible to use a closure in a `+GString+` so that the closure is evaluated every time the `+GString+` is used as a `+String+`.

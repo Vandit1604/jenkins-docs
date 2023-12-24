@@ -223,7 +223,7 @@ docker run --name jenkins-blueocean --restart=on-failure --detach ^
 ----
 . Proceed to the xref:#setup-wizard[Setup wizard].
 
-[[accessing-the-jenkins-blue-ocean-docker-container]]
+[#accessing-the-jenkins-blue-ocean-docker-container]
 == Accessing the Docker container
 
 If you want to access your Docker container through a terminal/command prompt using the link:https://docs.docker.com/engine/reference/commandline/exec/[`docker exec`] command, add an option like `--name jenkins-tutorial` to the `docker exec` command.
@@ -233,7 +233,7 @@ You can access your docker container (through a separate terminal/command prompt
 
 `docker exec -it jenkins-blueocean bash`
 
-[[accessing-the-jenkins-console-log-through-docker-logs]]
+[#accessing-the-jenkins-console-log-through-docker-logs]
 == Accessing the Docker logs
 
 You may want to access the Jenkins console log, for instance, when xref:#unlocking-jenkins[Unlocking Jenkins] as part of the xref:#setup-wizard[Post-installation setup wizard].

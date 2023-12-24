@@ -12,7 +12,7 @@ depend on the speed of your machine and whether or not you've already xref:user-
 
 You can stop this tutorial at any point in time and continue from where you left off.
 
-[[prerequisites]]
+[#prerequisites]
 == Prerequisites
 
 For this tutorial, you will require:
@@ -29,7 +29,7 @@ For this tutorial, you will require:
 
 *Note*: This tutorial uses Jenkins on a Windows machine. This means that file paths may be Windows-specific. Please modify any file paths and/or commands to your specific Operating System.
 
-[[labview-cli-setup]]
+[#labview-cli-setup]
 == LabVIEW CLI Setup
 
 The link:https://zone.ni.com/reference/en-XX/help/371361R-01/lvhowto/cli_running_operations/[LabVIEW Command Line Interface (LabVIEWCLI)] is installed alongside LabVIEW 2018+ and is used to run LabVIEW commands, such as unit testing, through the Command Line. To use the LabVIEWCLI, you must enable VI Server: *Tools >> Options >> VI Server*. Make sure the TCP/IP checkbox is enabled and leave the Port as 3363. 

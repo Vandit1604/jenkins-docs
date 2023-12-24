@@ -59,17 +59,17 @@ A reverse proxy must handle the HTTP response by either rewriting the response o
 When HTTP response handling is misconfigured, Jenkins may fail to show updated information on a page or it may ignore changes submitted through web pages.
 Refer to the xref:user-docs:system-administration:reverse-proxy-configuration-troubleshooting.adoc[troubleshooting] section if Jenkins is reporting that your reverse proxy setup is broken or pages are not behaving as expected.
 
-[[configuration-examples]]
+[#configuration-examples]
 == Configuration Examples by Server Type
 
 Jenkins works with many different reverse proxies.
 This section provides examples for specific reverse proxies, though much of the information also applies to other reverse proxies.
 
-* link:../reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-apache[Running Jenkins with Apache]
-* link:../reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-nginx[Running Jenkins with Nginx]
-* link:../reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-lighttpd[Running Jenkins with Lighttpd]
-* link:../reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-haproxy[Running Jenkins with HAProxy]
-* link:../reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-pomerium[Running Jenkins with Pomerium]
-* link:../reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-squid[Running Jenkins with Squid]
-* link:../reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iis[Running Jenkins with IIS]
-* link:../reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iptables[Running Jenkins with iptables]
+* xref:reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-apache.adoc[Running Jenkins with Apache]
+* xref:reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-nginx.adoc[Running Jenkins with Nginx]
+* xref:reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-lighttpd.adoc[Running Jenkins with Lighttpd]
+* xref:reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-haproxy.adoc[Running Jenkins with HAProxy]
+* xref:reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-pomerium.adoc[Running Jenkins with Pomerium]
+* xref:reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-squid.adoc[Running Jenkins with Squid]
+* xref:reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iis.adoc[Running Jenkins with IIS]
+* xref:reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iptables.adoc[Running Jenkins with iptables]

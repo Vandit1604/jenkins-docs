@@ -51,7 +51,7 @@ exception in the agent launch log. Note that some agent launchers, most notably 
 outputs from the agent JVM into this same log file, so you need to be careful. See
 https://issues.jenkins.io/browse/JENKINS-25695[JENKINS-25695].
 
-[[PingThread-Disablingpingthread]]
+[#PingThread-Disablingpingthread]
 == Disabling ping thread
 
 Sometimes, for example https://wiki.jenkins.io/display/JENKINS/Remoting+issue[to diagnose the agent connection loss
