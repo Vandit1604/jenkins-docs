@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Pipeline Step Documentation Generator improvements :: Jenkins Docs</title>
-    <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2022/project-ideas/pipeline-step-documentation-generator.html">
+    <title>Manage jenkinsci GitHub permissions as code :: Jenkins Docs</title>
+    <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2024/project-ideas/automating-rpu-for-jenkinsci-organization.html">
     <meta name="generator" content="Antora 3.1.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
     <script>var uiRootPath = '../../../../_'</script>
@@ -39,7 +39,7 @@
     <a class="nav-link" href="../../2023/index.html">Google Summer of Code in Jenkins 2023</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../index.html">Google Summer of Code in Jenkins 2022</a>
+    <a class="nav-link" href="../../2022/index.html">Google Summer of Code in Jenkins 2022</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../2021/index.html">Jenkins in Google Summer of Code 2021</a>
@@ -252,17 +252,17 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../../index.html">Jenkins Projects</a></li>
-    <li><a href="pipeline-step-documentation-generator.html">Pipeline Step Documentation Generator improvements</a></li>
+    <li><a href="automating-rpu-for-jenkinsci-organization.html">Manage jenkinsci GitHub permissions as code</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2022/project-ideas/pipeline-step-documentation-generator.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2024/project-ideas/automating-rpu-for-jenkinsci-organization.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Pipeline Step Documentation Generator improvements</h1>
+<h1 class="page">Manage jenkinsci GitHub permissions as code</h1>
 <div class="admonitionblock note">
     <table>
         <tbody>
@@ -280,165 +280,114 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Project goal:</strong> Enhance the Jenkins Pipeline documentation generator to produce better documentation for thousands of Pipeline developers</p>
+<p><strong>Project goal:</strong> Automating the management of GitHub permissions for the jenkinsci organization</p>
 </div>
 <div class="paragraph">
-<p><strong>Skills to study/improve:</strong> Java, Jenkins Pipeline, HTML, CSS, Asciidoc, JavaScript</p>
+<p><strong>Skills to study/improve:</strong> Java, Groovy, git, Maven, SnakeYAML, Data extraction from GitHub repositories, GitHub user and team management</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This idea is published as a draft under active discussion, but it is confirmed in principle. It is FINE to apply to it. The scope and the suggested implementation may change significantly before the final version is published. Sections like quickstart guide and newbie-friendly issues may be also missing. As a contributor, you are welcome to request additional information and to join the discussions using channels linked on this page.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_background"><a class="anchor" href="#_background"></a>Background</h2>
+<h2 id="_details"><a class="anchor" href="#_details"></a>Details</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_background"><a class="anchor" href="#_background"></a>Background</h3>
 <div class="paragraph">
-<p>The Jenkins Pipeline Step reference is difficult to read, even to the initiated, mostly due to its format.
-This project aims to improve the way the documentation is formatted.</p>
-</div>
-<div class="paragraph">
-<p>For example, when you read the <a href="/doc/pipeline/steps/workflow-basic-steps/#readfile-read-file-from-workspace">readFile step documentation</a>, the documentation format makes it difficult to see that the obvious usage is : <code>readFile('filename')</code>.
-When you read the <a href="/doc/pipeline/steps/workflow-scm-step/">checkout documentation</a>, you are shown a single web page with collapsible sections that when expanded and printed would be 62 pages long.
-That is too large a page for usable navigation.
-We should consider logical partitions of that page, possibly with a single page per SCM provider (like checkout-git, checkout-p4, checkout-svn, checkout-cvs).
-Redirects would be needed within the checkout page to link users to the correct page per SCM provider.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_quick_start_guide"><a class="anchor" href="#_quick_start_guide"></a>Quick Start Guide</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>For this project, the student is expected to study the <a href="https://github.com/jenkins-infra/pipeline-steps-doc-generator/">documentation generator code base</a>, the <a href="https://docs.google.com/spreadsheets/d/1nA8xVOkyKmZ8oTYSLdwjborT0w-BpBNNZT0nxR9deZ8/edit#gid=1087292709">documentation feedback from readers</a>, and to propose enhancements to the documentation generator code to improve the format, layout, and readability of the documentation published on-line.
-The student is not expected to contribute to the content of the documentation, however, technical additions that enhance the discoverability of the documentation via annotations or other special markup are considered valid for a coding project.</p>
+<p>To manage artifactory permission, diverge between Jira and GitHub issues, and activate automatic releases, the jenkinsci organization uses a tool called <a href="https://github.com/jenkins-infra/repository-permissions-updater/">repository permission updater (RPU)</a>.</p>
 </div>
 <div class="paragraph">
-<p>Many of the Pipeline step references include no documentation.
-Those pages could have a standard reference created that directs the reader to use the Pipeline Syntax snippet generator.
-See the <a href="https://plugins.jenkins.io/git/#pipelines">git plugin documentation</a> for one idea of a way to encourage use of the snippet generator.</p>
+<p>Despite the name containing "repository permission", the RPU can&#8217;t update or manage repository permission at all.
+Currently, all team modifications are done manually by the hosting team.</p>
 </div>
 <div class="paragraph">
-<p>The student is also expected to study Stapler and Jelly, as these technologies are used to capture documentation as well.
-Documentation can be extracted from Stapler and Jelly.</p>
+<p>The RPU is a critical component in the jenkinsci infrastructure and is used daily to onboard new plugins and update release permission.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quick_start"><a class="anchor" href="#_quick_start"></a>Quick Start</h3>
+<div class="paragraph">
+<p>The project aims to build on top of the existing RPU logic and manage GitHub teams and individual users (for legacy reasons, we strive to use teams only), defined as a list in the pre-existing YAML file, which every repository within the jenkinsci GitHub organization has.</p>
 </div>
 <div class="paragraph">
-<p>A potential stretch goal could be something like an embedded pipeline steps generator, though that might be outside the scope of the website.</p>
+<p>Every YAML file within the RPU is expected to have a team defined with a list of users, where the RPU updates the team membership to match the list of users defined in the YAML file in the jenkinsci organization.</p>
+</div>
+<div class="paragraph">
+<p>Initially, we need to copy all teams and users added to every repository of the jenkinsci GitHub organization and add them to the permission files in the RPU.</p>
+</div>
+<div class="paragraph">
+<p>Hosting new plugins adds an entry automatically to the new YAML file.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_links"><a class="anchor" href="#_links"></a>Links</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_skills_to_study_and_improve"><a class="anchor" href="#_skills_to_study_and_improve"></a>Skills to Study and Improve</h3>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="../../../../user-docs/2.426.1/pipeline/index.html" class="xref page">Pipeline documentation</a></p>
+<p>Java</p>
 </li>
 <li>
-<p>Documentation for <a href="/doc/pipeline/steps/workflow-basic-steps/#code-readfile-code-read-file-from-workspace">readFile step</a>, <a href="/doc/pipeline/steps/workflow-scm-step/#checkout-check-out-from-version-control">checkout step</a>, and <a href="/doc/pipeline/steps/workflow-multibranch/#properties-set-job-properties">properties step</a></p>
+<p>Groovy</p>
 </li>
 <li>
-<p><a href="https://github.com/jenkins-infra/pipeline-steps-doc-generator/">Pipeline steps doc generator source code</a></p>
+<p>git</p>
 </li>
 <li>
-<p><a href="https://github.com/jenkins-infra/pipeline-library">Jenkins pipeline library for ci.jenkins.io</a></p>
+<p>Maven</p>
+</li>
+<li>
+<p>SnakeYAML</p>
+</li>
+<li>
+<p><a href="https://github.com/hub4j/github-api">GitHub API</a></p>
+</li>
+<li>
+<p>Data extraction from GitHub repositories</p>
+</li>
+<li>
+<p>GitHub user and team management</p>
 </li>
 </ul>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_project_difficulty_level"><a class="anchor" href="#_project_difficulty_level"></a>Project Difficulty Level</h3>
 <div class="paragraph">
-<p>Examples of remote documentation:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Pipeline: AWS steps adds documentation to the README</p>
-</li>
-<li>
-<p>JIRA Pipeline steps keeps their documentation in their repo, and displays it as a weblink.</p>
-</li>
-</ul>
+<p>Beginner</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_project_difficulty_level"><a class="anchor" href="#_project_difficulty_level"></a>Project Difficulty Level</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Beginner to Intermediate</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_project_size"><a class="anchor" href="#_project_size"></a>Project Size</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_project_size"><a class="anchor" href="#_project_size"></a>Project Size</h3>
 <div class="paragraph">
 <p>175 hours</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_expected_outcomes"><a class="anchor" href="#_expected_outcomes"></a>Expected outcomes</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_expected_outcomes"><a class="anchor" href="#_expected_outcomes"></a>Expected outcomes</h3>
 <div class="paragraph">
-<p>Improvement of existing tool and documentation generated by the tool.</p>
+<p>A functional "as-code" version of the RPU to manage GitHub teams and users (for legacy reasons) within the jenkinsci organization.
+If a filed pull request has been merged, the corresponding team should be updated to match the list of users defined in the YAML file.
+If needed, an invitation should be sent to the user to join the team.</p>
 </div>
-<div class="paragraph">
-<p>Jenkins Pipeline step documentation will be presented in a more usable and readable format.
-Pipeline step documentation will be partitioned into smaller pages for better access by users.
-Pipeline step documentation will be better formatted so that users are more likely to find the information they are seeking.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_newbie_friendly_issues"><a class="anchor" href="#_newbie_friendly_issues"></a>Newbie Friendly issues</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>List of issues related to <a href="https://issues.jenkins.io/browse/JENKINS-41667?jql=text%20~%20%22pipeline%20steps%20document%20generator%22%20and%20status%20not%20in%20(Closed%2C%20resolved%2C%20done)%20and%20labels%20%3D%20gsoc-2019-project-idea">documentation generation</a>.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/jenkins-infra/helpdesk/issues/1434">Help desk 1434</a> - Javadoc landing page</p>
-</li>
-<li>
-<p><a href="https://github.com/jenkins-infra/pipeline-library/pull/22" class="bare">https://github.com/jenkins-infra/pipeline-library/pull/22</a>   Review and help merge the PR to generate Javadoc for Pipeline steps</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Component Java Doc: <a href="https://javadoc.jenkins.io/component/" class="bare">https://javadoc.jenkins.io/component/</a></p>
-</li>
-<li>
-<p>Core Java doc: <a href="https://javadoc.jenkins.io/component/" class="bare">https://javadoc.jenkins.io/component/</a></p>
-</li>
-<li>
-<p>Plugin java docs: <a href="https://javadoc.jenkins.io/plugin/" class="bare">https://javadoc.jenkins.io/plugin/</a></p>
-</li>
-<li>
-<p>The java docs cannot be searched easily (e.g. try to find org.jenkinsci.Symbol)</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_potential_mentors"><a class="anchor" href="#_potential_mentors"></a>Potential Mentors</h2>
 <div class="sectionbody">
-<div class="ulist avatar">
-<ul>
-<li>
-<p><span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Kristin Whitestone</p>
-</li>
-<li>
-<p><span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Harshit Chopra</p>
-</li>
-<li>
-<p><span class="image"><img src="../../../../images/_images/avatars/markewaite.jpg" alt="markewaite" width="30" height="30"></span> Mark Waite</p>
-</li>
-<li>
-<p><span class="image"><img src="../../../../images/_images/avatars/koushartasneem.jpg" alt="koushartasneem" width="30" height="30"></span> Tasneem Koushar</p>
-</li>
-</ul>
+<div class="paragraph avatar">
+<p><span class="image"><img src="../../../../images/_images/avatars/notmyfault.jpg" alt="notmyfault" width="30" height="30"></span> Alexander Brandes</p>
 </div>
 </div>
 </div>
@@ -448,13 +397,10 @@ Pipeline step documentation will be better formatted so that users are more like
 <div class="ulist">
 <ul>
 <li>
-<p><span class="image"><img src="https://img.shields.io/badge/gitter%20-%20join_chat%20-%20light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_gsoc-sig%3Agitter.im" alt="Static Badge"></span></p>
+<p><span class="image"><a class="image" href="https://app.gitter.im/#/room/#gsoc2024-rpu:matrix.org"><img src="https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_role-strategy-plugin%3Agitter.im" alt="Static Badge"></a></span></p>
 </li>
 <li>
-<p><a href="https://www.jenkins.io/projects/gsoc/#office-hours">Meetings</a></p>
-</li>
-<li>
-<p><a href="https://docs.google.com/document/d/19hf1FSs7Y4z7YjfqjareqaWURpZ3Elkvh4XgLKdX6Ho">Project idea draft</a></p>
+<p><a href="../../index.html#office-hours" class="xref page">Meetings</a></p>
 </li>
 </ul>
 </div>
@@ -473,7 +419,7 @@ Pipeline step documentation will be better formatted so that users are more like
 </li>
 <li>
 <p><a href="https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20">Newbie-friendly issues</a> - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
-&gt; <a href="../project-ideas.html" class="xref page">Go back to other GSoC 2022 project ideas</a></p>
+&gt; <a href="#2024/project-ideas.adoc" class="xref unresolved">Go back to other GSoC 2024 project ideas</a></p>
 </li>
 </ul>
 </div>

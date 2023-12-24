@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Jenkins Docs</title>
+    <title>GitHub Checks API for Jenkins Plugins :: Jenkins Docs</title>
     <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2020/projects/github-checks.html">
     <meta name="generator" content="Antora 3.1.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
@@ -36,10 +36,7 @@
     <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
+    <a class="nav-link" href="../../2023/index.html">Google Summer of Code in Jenkins 2023</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../2022/index.html">Google Summer of Code in Jenkins 2022</a>
@@ -253,6 +250,10 @@
 <button class="nav-toggle"></button>
   <a href="../../../../user-docs/2.426.1/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Jenkins Projects</a></li>
+    <li><a href="github-checks.html">GitHub Checks API for Jenkins Plugins</a></li>
+  </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2020/projects/github-checks.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
   </div>
@@ -261,6 +262,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
+<h1 class="page">GitHub Checks API for Jenkins Plugins</h1>
 <div class="admonitionblock note">
     <table>
         <tbody>
@@ -275,29 +277,31 @@
         </tbody>
     </table>
 </div>
-<hr>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>layout: gsocproject
-title: "GitHub Checks API for Jenkins Plugins"
-goal: "Create a new plugin API so that plugins can publish GitHub checks status messages"
-category: Plugins
-year: 2020
-status: "Completed"
-sig: platform
-student: XiongKezhi
-mentors:
-- "uhafner"
-- "timja"
-advisors:
-- "jeffpearce"
-tags:
-- gsoc2020
-- github
-links:
-  gitter: "jenkinsci_github-checks-api:gitter.im"
-  draft: <a href="https://docs.google.com/document/d/1gpG7jeQmb9zz46t0ewNNRUrYbl7iHGScp5vgkn7MCXs/edit?usp=sharing" class="bare">https://docs.google.com/document/d/1gpG7jeQmb9zz46t0ewNNRUrYbl7iHGScp5vgkn7MCXs/edit?usp=sharing</a>
-  idea: /projects/gsoc/2020/project-ideas/github-checks
----</p>
+<p><strong>Goal:</strong> Create a new plugin API so that plugins can publish GitHub checks status messages</p>
+</div>
+<div class="paragraph">
+<p><strong>Status:</strong> Completed</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_team"><a class="anchor" href="#_team"></a>Team</h2>
+<div class="sectionbody">
+<div class="paragraph avatar">
+<p><strong>Student</strong>:
+<span class="image"><img src="../../../../images/_images/avatars/XiongKezhi.jpeg" alt="XiongKezhi" width="30" height="30"></span> Kezhi Xiong</p>
+</div>
+<div class="paragraph avatar">
+<p><strong>Mentor(s):</strong>
+<span class="image"><img src="../../../../images/_images/avatars/uhafner.jpg" alt="uhafner" width="30" height="30"></span> Ullrich Hafner
+<span class="image"><img src="../../../../images/_images/avatars/timja.jpg" alt="timja" width="30" height="30"></span> Tim Jacomb</p>
+</div>
+<div class="paragraph avatar">
+<p><strong>Advisor(s):</strong>:
+<span class="image"><img src="../../../../images/_images/avatars/jeffpearce.png" alt="jeffpearce" width="30" height="30"></span> Jeff Pearce</p>
 </div>
 <div class="paragraph">
 <p>The <a href="https://developer.github.com/v3/checks/">GitHub Checks API</a> allows developers to report the CI integrations’ detail information rather than the binary pass/fail build status on GitHub pages.
@@ -316,10 +320,10 @@ Thus, any information during the Jenkins process like warnings, summaries, and d
 <p>A new Jenkins plugin (<a href="https://github.com/jenkinsci/github-checks-plugin">GitHub Checks Plugin</a>) that implements the general checks API for GitHub</p>
 </li>
 <li>
-<p>A new feature (<a href="https://github.com/jenkinsci/warnings-ng-plugin/pull/550">pull request #550</a>) for <a href="https://plugins.jenkins.io/warnings-ng">Warnings Next Generation Plugin</a> to report warnings to GitHub by consuming the checks API</p>
+<p>A new feature (<a href="https://github.com/jenkinsci/warnings-ng-plugin/pull/550">pull request #550</a>) for plugin:warnings-ng[Warnings Next Generation Plugin] to report warnings to GitHub by consuming the checks API</p>
 </li>
 <li>
-<p>A new feature (<a href="https://github.com/jenkinsci/code-coverage-api-plugin/pull/169">pull request #169</a>) for <a href="https://plugins.jenkins.io/code-coverage-api">Code Coverage API Plugin</a> to report code coverage to GitHub by consuming the checks API</p>
+<p>A new feature (<a href="https://github.com/jenkinsci/code-coverage-api-plugin/pull/169">pull request #169</a>) for plugin:code-coverage-api[Code Coverage API Plugin] to report code coverage to GitHub by consuming the checks API</p>
 </li>
 <li>
 <p>Pipeline support feature (<a href="https://github.com/jenkinsci/checks-api-plugin/pull/7">pull request #7</a>) to allow users to publish checks from their pipeline</p>
@@ -369,7 +373,7 @@ Thus, any information during the Jenkins process like warnings, summaries, and d
 <p>Consume the API in Code Coverage API plugin as a new feature (<a href="https://github.com/jenkinsci/code-coverage-api-plugin/pull/169">pull request #169</a>)</p>
 </li>
 <li>
-<p>Deploy <a href="https://plugins.jenkins.io/checks-api">Checks API Plugin</a> and plugin:github-checks[GitHub Checks Plugin] to <a href="https://ci.jenkins.io">ci.jenkins.io</a> and enable the warning checks features</p>
+<p>Deploy plugin:checks-api[Checks API Plugin] and plugin:github-checks[GitHub Checks Plugin] to <a href="https://ci.jenkins.io">ci.jenkins.io</a> and enable the warning checks features</p>
 </li>
 <li>
 <p><a href="/blog/2020/08/03/github-checks-api-plugin-coding-phase-2/">Blog post</a> and <a href="https://docs.google.com/presentation/d/1fMjXH0ANJ67x1R4sfQR5hkTXUmkhiZl-um71RTdXedA/edit?usp=sharing">slides</a></p>
@@ -412,6 +416,8 @@ Thus, any information during the Jenkins process like warnings, summaries, and d
 <p>We hosted 14 meetings during the whole GSoC 2020, you can find the details in the <a href="https://docs.google.com/document/d/1TZLmu3nBPbwUjzLVYGnV_YtYvmzxzw6A4eEVYpbmi3Y/edit?usp=sharing">meeting notes</a>.</p>
 </li>
 </ul>
+</div>
+</div>
 </div>
 </div>
 </article>

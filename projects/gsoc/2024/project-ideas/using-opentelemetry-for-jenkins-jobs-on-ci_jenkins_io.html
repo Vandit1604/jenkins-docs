@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Jenkins Docs</title>
+    <title>Using OpenTelemetry for Jenkins Jobs on ci.jenkins.io :: Jenkins Docs</title>
     <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2024/project-ideas/using-opentelemetry-for-jenkins-jobs-on-ci_jenkins_io.html">
     <meta name="generator" content="Antora 3.1.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
@@ -36,10 +36,7 @@
     <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
+    <a class="nav-link" href="../../2023/index.html">Google Summer of Code in Jenkins 2023</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../2022/index.html">Google Summer of Code in Jenkins 2022</a>
@@ -253,6 +250,10 @@
 <button class="nav-toggle"></button>
   <a href="../../../../user-docs/2.426.1/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Jenkins Projects</a></li>
+    <li><a href="using-opentelemetry-for-jenkins-jobs-on-ci_jenkins_io.html">Using OpenTelemetry for Jenkins Jobs on ci.jenkins.io</a></li>
+  </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2024/project-ideas/using-opentelemetry-for-jenkins-jobs-on-ci_jenkins_io.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
   </div>
@@ -261,6 +262,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
+<h1 class="page">Using OpenTelemetry for Jenkins Jobs on ci.jenkins.io</h1>
 <div class="admonitionblock note">
     <table>
         <tbody>
@@ -275,26 +277,32 @@
         </tbody>
     </table>
 </div>
-<hr>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>layout: gsocprojectidea
-title: "Using OpenTelemetry for Jenkins Jobs on ci.jenkins.io"
-goal: "To help enhance observability of Jenkins jobs on ci.jenkins.io via the introduction of the use of OpenTelemetry"
-category: Tools
-year: 2024
-status: draft
-sig: infra
-skills:
-- OpenTelemetry
-- Observability
-- DevOps
-mentors:
-- "markewaite"
-- "krisstern"
-links:
-  meetings: /projects/gsoc/#office-hours
----</p>
+<p><strong>Project goal:</strong> To help enhance observability of Jenkins jobs on ci.jenkins.io via the introduction of the use of OpenTelemetry</p>
 </div>
+<div class="paragraph">
+<p><strong>Skills to study/improve:</strong> OpenTelemetry, Observability, DevOps</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This idea is published as a draft under active discussion, but it is confirmed in principle. It is FINE to apply to it. The scope and the suggested implementation may change significantly before the final version is published. Sections like quickstart guide and newbie-friendly issues may be also missing. As a contributor, you are welcome to request additional information and to join the discussions using channels linked on this page.
+Details
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_details"><a class="anchor" href="#_details"></a>Details</h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="_motivation"><a class="anchor" href="#_motivation"></a>Motivation</h3>
 <div class="paragraph">
@@ -312,6 +320,54 @@ With proper design and orchestration of the different moving parts of OpenTeleme
 <p><a href="https://opentelemetry.io/">OpenTelemetry official website</a></p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_potential_mentors"><a class="anchor" href="#_potential_mentors"></a>Potential Mentors</h2>
+<div class="sectionbody">
+<div class="paragraph avatar">
+<p><span class="image"><img src="../../../../images/_images/avatars/markewaite.jpg" alt="markewaite" width="30" height="30"></span> Mark Waite
+<span class="image"><img src="../../../../images/_images/avatars/krisstern.png" alt="krisstern" width="30" height="30"></span> Kris Stern
+<span class="image"><img src="../../../../images/_images/avatars/berviantoleo.jpg" alt="berviantoleo" width="30" height="30"></span> Bervianto Leo Pratama
+<span class="image"><img src="../../../../images/_images/avatars/harsh-ps-2003.jpg" alt="harsh ps 2003" width="30" height="30"></span> Harsh Pratap Singh
+<span class="image"><img src="../../../../images/_images/avatars/vandit1604.jpeg" alt="vandit1604" width="30" height="30"></span> Vandit Singh</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_project_links"><a class="anchor" href="#_project_links"></a>Project Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><a class="image" href="https://app.gitter.im/#/room/#jenkinsci_gsoc-sig:gitter.im"><img src="https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_role-strategy-plugin%3Agitter.im" alt="Static Badge"></a></span></p>
+</li>
+<li>
+<p><a href="../../index.html#office-hours" class="xref page">Meetings</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_organization_links"><a class="anchor" href="#_organization_links"></a>Organization Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../../index.html" class="xref page">Jenkins GSoC page</a> - documentation, application guidelines</p>
+</li>
+<li>
+<p><a href="../../../../community/index.html" class="xref page">Participate and contribute to Jenkins</a> - landing page for newcomer contributors</p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20">Newbie-friendly issues</a> - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
+&gt; <a href="#2024/project-ideas.adoc" class="xref unresolved">Go back to other GSoC 2024 project ideas</a></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </article>

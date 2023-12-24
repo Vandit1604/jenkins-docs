@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Jenkins Docs</title>
+    <title>GitLab Plugin Modernization :: Jenkins Docs</title>
     <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2023/projects/gitlab-plugin-modernization.html">
     <meta name="generator" content="Antora 3.1.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
@@ -36,10 +36,7 @@
     <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
+    <a class="nav-link" href="../index.html">Google Summer of Code in Jenkins 2023</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../2022/index.html">Google Summer of Code in Jenkins 2022</a>
@@ -253,6 +250,10 @@
 <button class="nav-toggle"></button>
   <a href="../../../../user-docs/2.426.1/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Jenkins Projects</a></li>
+    <li><a href="gitlab-plugin-modernization.html">GitLab Plugin Modernization</a></li>
+  </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2023/projects/gitlab-plugin-modernization.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
   </div>
@@ -261,6 +262,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
+<h1 class="page">GitLab Plugin Modernization</h1>
 <div class="admonitionblock note">
     <table>
         <tbody>
@@ -275,128 +277,97 @@
         </tbody>
     </table>
 </div>
-<hr>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>layout: gsocprojectidea
-title: "GitLab Plugin Modernization"
-goal: "Cleaning and modernizing the extensively used GitLab plugin"
-category: Plugin improvement
-year: 2023
-status: published
-sig: platform
-skills:
-- Java
-- Docker
-- GitLab
-mentors:
-- "krisstern"
-- "markewaite"</p>
+<p><strong>Goal:</strong> Cleaning and modernizing the extensively used GitLab plugin</p>
 </div>
 <div class="paragraph">
-<p>links:
-    emailThread: <a href="https://community.jenkins.io/t/gsoc-2023-project-idea-active-modernization-of-gitlab-plugin/5039" class="bare">https://community.jenkins.io/t/gsoc-2023-project-idea-active-modernization-of-gitlab-plugin/5039</a>
-    gitter: "jenkinsci_gitlab-plugin:gitter.im"
----
-=== Background</p>
+<p><strong>Status:</strong> Selected</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_team"><a class="anchor" href="#_team"></a>Team</h2>
+<div class="sectionbody">
+<div class="paragraph avatar">
+<p><strong>Students</strong>:
+<span class="image"><img src="../../../../images/_images/avatars/harsh-ps-2003.jpg" alt="harsh ps 2003" width="30" height="30"></span> Harsh Pratap Singh</p>
+</div>
+<div class="paragraph avatar">
+<p><strong>Mentor(s)</strong>:
+<span class="image"><img src="../../../../images/_images/avatars/markewaite.jpg" alt="markewaite" width="30" height="30"></span> Mark Waite
+<span class="image"><img src="../../../../images/_images/avatars/krisstern.png" alt="krisstern" width="30" height="30"></span> Kris Stern
+<span class="image"><img src="../../../../images/_images/avatars/freyam.jpg" alt="freyam" width="30" height="30"></span> Freyam Mehta</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_details"><a class="anchor" href="#_details"></a>Details</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_abstract"><a class="anchor" href="#_abstract"></a>Abstract</h3>
 <div class="paragraph">
-<p>The <a href="https://plugins.jenkins.io/gitlab-plugin/">GitLab</a> Jenkins plugin is widely used (over 55,000 installations),
-but it has not had an active maintainer for a long time.
-Several CloudBees employees have volunteered to keep it afloat over the years, including Owen, Basil, Bruno, Jean-Marc, and Mark.
-However, it could use a sprint of active development.</p>
+<p>The GitLab plugin enables Jenkins to seamlessly interact with GitLab.
+It allows Jenkins to automatically trigger builds, deploy code, etc., on the basis of GitLab events like Push, Merge Requests and many more.
+This project will replace usages of the very old version of the <a href="https://resteasy.dev/">RESTEasy</a> library with usages of <a href="https://github.com/gitlab4j/gitlab4j-api"><code>gitlab4j-api</code></a> via the plugin:gitlab-api[GitLab API] Jenkins library plugin, normalizing the GitLab plugin&#8217;s use of the GitLab API with regard to the plugin:gitlab-oauth[GitLab Authentication], plugin:gitlab-branch-source[GitLab Branch Source], and plugin:gitlab-logo[GitLab Logo] plugins.</p>
 </div>
-<div class="paragraph">
-<p>The primary maintenance issue with the GitLab plugin is the use of a very old version of <a href="https://resteasy.dev/">RESTEasy</a>.
-The goal of this GSoC project would be to replace usages of this library
-with usages of <a href="https://github.com/gitlab4j/gitlab4j-api"><code>gitlab4j-api</code></a>
-via the <a href="https://plugins.jenkins.io/gitlab-api/">GitLab API</a> Jenkins library plugin,
-normalizing the GitLab plugin&#8217;s use of the GitLab API with regard to
-the <a href="https://plugins.jenkins.io/gitlab-oauth/">GitLab Authentication</a>,
-<a href="https://plugins.jenkins.io/gitlab-branch-source/">GitLab Branch Source</a>,
-and <a href="https://plugins.jenkins.io/gitlab-logo/">GitLab Logo</a> plugins.</p>
-</div>
-<div class="paragraph">
-<p>This project is on the easy side, but it requires a large amount of careful porting of existing code
-to call equivalent APIs with slightly different calling conventions.
-At each stage, care must be taken to ensure that errors remain propagated correctly.</p>
-</div>
-<div class="paragraph">
-<p>A particular challenge with this project is to ensure that there are no regressions for corner cases:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Unauthenticated proxy servers</p>
-</li>
-<li>
-<p>Authenticated proxy servers</p>
-</li>
-<li>
-<p>Proxy servers and TLS URLs</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Handling these corner cases should be feasible with the new library,
-but the existing logic will likely need some modifications.
-Testing proxy authentication is a bit laborious, but it can be done with various Docker images.</p>
-</div>
-<div class="paragraph">
-<p>There is no substitute for functional testing, so testing changes to the GitLab plugin
-would also require setting up a local instance of GitLab.
-This would be a good opportunity to gain experience with the setup and administration of GitLab.
-The idea would be to exercise existing code against a real GitLab installation,
-then to test that the ported version still works in the same manner.
-Unfortunately, unit and integration tests will be of little value for this project.</p>
-</div>
-<div class="paragraph">
-<p>If additional time is available, the GSoC contributor could look into reviving the Docker-based functional test suite.
-It has been broken for some time and is currently disabled.</p>
 </div>
 <div class="sect2">
-<h3 id="_skills_to_study_and_improve"><a class="anchor" href="#_skills_to_study_and_improve"></a>Skills to Study and Improve</h3>
+<h3 id="_rationale"><a class="anchor" href="#_rationale"></a>Rationale</h3>
+<div class="paragraph">
+<p>The plugin will be modernized to reduce future maintenance and to improve implementation consistency with the other GitLab plugins.
+Users will benefit from the actively supported GitLab4J-API and avoid the issues seen with the RESTEasy implementation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_implementation"><a class="anchor" href="#_implementation"></a>Implementation</h3>
+<div class="paragraph">
+<p>The RESTEasy implementation using GitLab v3 API calls will be incrementally replaced with GitLab4J-API calls.
+Tests will be adapted, updated, and implemented as needed.
+Care will be taken that errors propagate correctly and that there are no regressions in edge cases related to proxy servers.
+Documentation will also be improved and adapted.
+The implementation will be tested thoroughly before release.</p>
+</div>
+<div class="paragraph">
+<p>A local instance of GitLab will be configured for functional testing during development.
+Existing code will be exercised against a real GitLab installation, then the ported version be tested to confirm that it still works in the same manner.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_office_hours"><a class="anchor" href="#_office_hours"></a>Office hours</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Java</p>
+<p>(General) Official weekly Jenkins office hours: Thursdays 15:00 UTC</p>
 </li>
 <li>
-<p>GitLab</p>
-</li>
-<li>
-<p>Code cleanup</p>
-</li>
-<li>
-<p>Docker</p>
+<p>(Project-based) Details regarding the Weekly project-specific office hours can be found inside our Meeting Document along with important links via the Meetings link below.</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_project_difficulty_level"><a class="anchor" href="#_project_difficulty_level"></a>Project Difficulty Level</h3>
-<div class="paragraph">
-<p>Easy but long</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_project_size"><a class="anchor" href="#_project_size"></a>Project Size</h3>
-<div class="paragraph">
-<p>175 hours</p>
+<div class="sect1">
+<h2 id="_project_links"><a class="anchor" href="#_project_links"></a>Project Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><a class="image" href="https://app.gitter.im/#/room/#jenkinsci_gitlab-plugin:gitter.im"><img src="https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_role-strategy-plugin%3Agitter.im" alt="Static Badge"></a></span></p>
+</li>
+<li>
+<p><a href="../../index.html#office-hours" class="xref page">Meetings</a></p>
+</li>
+<li>
+<p><a href="../project-ideas/gitlab-plugin-modernization.html" class="xref page">Original GSoC project idea</a></p>
+</li>
+<li>
+<p><a href="../../index.html" class="xref page">Jenkins GSoC page</a> - documentation, application guidelines</p>
+</li>
+</ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_expected_outcomes"><a class="anchor" href="#_expected_outcomes"></a>Expected outcomes</h3>
-<div class="paragraph">
-<p>The success criteria of this project would be a release of the GitLab plugin
-without a RESTEasy dependency and with a <code>gitlab4j-api</code> dependency,
-all without regression to end users.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_newbie_friendly_issues"><a class="anchor" href="#_newbie_friendly_issues"></a>Newbie Friendly Issues</h3>
-<div class="paragraph">
-<p><a href="https://github.com/jenkinsci/gitlab-plugin/issues?q=is%3Aissue+is%3Aopen+label%3Agood-first-issue">Good first issues</a>
-will help a new contributor better understand the plugin and how to debug and diagnose it.</p>
 </div>
 </div>
 </article>

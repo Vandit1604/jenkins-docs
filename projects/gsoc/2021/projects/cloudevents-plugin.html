@@ -36,10 +36,7 @@
     <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
+    <a class="nav-link" href="../../2023/index.html">Google Summer of Code in Jenkins 2023</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../2022/index.html">Google Summer of Code in Jenkins 2022</a>
@@ -283,10 +280,10 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Goal</strong>: Build a plugin able to listen to and emit CloudEvents from Jenkins</p>
+<p><strong>Goal:</strong> Be able to listen to and emit cloudevents from Jenkins.</p>
 </div>
 <div class="paragraph">
-<p><strong>Status</strong>: Completed</p>
+<p><strong>Status:</strong> Completed</p>
 </div>
 </div>
 </div>
@@ -294,18 +291,21 @@
 <h2 id="_team"><a class="anchor" href="#_team"></a>Team</h2>
 <div class="sectionbody">
 <div class="paragraph avatar">
-<p><strong>Student</strong>:
+<p><strong>Students</strong>:
 <span class="image"><img src="../../../../images/_images/avatars/ShrutiC-git.png" alt="ShrutiC git" width="30" height="30"></span> Shruti Chaturvedi</p>
 </div>
 <div class="paragraph avatar">
-<p><strong>Mentor(s):</strong></p>
-</div>
-<div class="paragraph">
-<p><span class="image unresolved"><img src="images:ROOT:avatars/image.svg" alt="image" width="30" height="30"></span> Vibhav Bobade
-<span class="image unresolved"><img src="images:ROOT:avatars/image.svg" alt="image" width="30" height="30"></span> Mauricio Salatino
+<p><strong>Mentor(s)</strong>:
+<span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Vibhav Bobade
+<span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Mauricio Salatino
 <span class="image"><img src="../../../../images/_images/avatars/jeffpearce.png" alt="jeffpearce" width="30" height="30"></span> Jeff Pearce
 <span class="image"><img src="../../../../images/_images/avatars/marckk.jpg" alt="marckk" width="30" height="30"></span> Kara de la Marck</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_details"><a class="anchor" href="#_details"></a>Details</h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="_background"><a class="anchor" href="#_background"></a>Background</h3>
 <div class="paragraph">
@@ -380,6 +380,223 @@
 </li>
 <li>
 <p>Jenkins</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_background_2"><a class="anchor" href="#_background_2"></a>Background</h3>
+<div class="paragraph">
+<p>As the CI/CD world is moving more towards interoperability between multiple platforms, Jenkins should also be compatible with the same interoperability standards. Some of these standards with respect to communication between different CI/CD platforms are put forth by the cloudevents specification. This spec outlines the structure of cloudevents, which are produced or consumed by entities which support it, hence making those entities compatible with other CI/CD platforms which also support them allowing them to work together.</p>
+</div>
+<div class="paragraph">
+<p>Jenkins currently does not support cloudevents, making it hard for users to use it with other platforms which support them.</p>
+</div>
+<div class="sect3">
+<h4 id="_project_details_2"><a class="anchor" href="#_project_details_2"></a>Project Details</h4>
+<div class="paragraph">
+<p>This project idea proposes to implement a Jenkins plugin which extends Jenkins to make cloudevents both discoverable and subscribable. Users should be able to set a global configuration to allow users to subscribe and discover cloudevents.</p>
+</div>
+<div class="paragraph">
+<p>The project requires the student to start with plugin development from scratch and then work with understanding how to use the Cloudevents Java SDK to create and read events.</p>
+</div>
+<div class="paragraph">
+<p>In the beginning, the student can work on understanding the Jenkins plugin development by writing code for creating a simple Build Step which creates a CloudEvent, and from there we can move to the GlobalPluginConfiguration on how Jenkins should listen to the cloudevents.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_implementation"><a class="anchor" href="#_implementation"></a>Implementation</h3>
+<div class="sect3">
+<h4 id="_jenkins_as_a_source"><a class="anchor" href="#_jenkins_as_a_source"></a>Jenkins as a Source</h4>
+<div class="paragraph">
+<p>This plugin extends from Listener classes inside the Hudson-Model package (<a href="https://javadoc.jenkins.io/hudson/model/">Listeners in Jenkins</a>), which offers listener-implementation for various events inside the Jenkins server.</p>
+</div>
+<div class="paragraph">
+<p>The data received from the object-listeners is wrapped into CloudEvents spec using <a href="https://github.com/cloudevents/sdk-java">CloudEvents Java SDK</a> as the event payload. In order for this payload to become CloudEvent-compliant, some additional metadata, in the form of headers, need to be passed along in the HTTP request. Using the GlobalConfiguration information received from the user, the event payload along with custom HTTP headers will be sent over to the given HTTP Sink.</p>
+</div>
+<div class="paragraph">
+<p>An example of what event-payload can look like for a CloudEvent emitting from Jenkins upon a job-build-success</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> {
+	"result": "SUCCESS",
+	"endTime": 1469453903,
+	"ciUrl": "http://localhost:8080/jenkins/",
+	"fullJobName": "test_job",
+	"number": 252,
+	"jobName": "test_job",
+	"duration": 11252,
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is an example of additional headers which must be passed along to make the event data CloudEvent-compliant</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ce-specversion: 1.0
+ce-type: job.build.finished
+ce-source: &lt;Jenkins' Server&gt;
+ce-id: &lt;Custom UUID&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_jenkins_as_a_sink"><a class="anchor" href="#_jenkins_as_a_sink"></a>Jenkins as a Sink</h4>
+<div class="paragraph">
+<p>This stage will involve implementing RootAction associated to a Jenkins object which would listen to CloudEvents from external systems sent via HTTP. After extracting the CloudEvent payload, a new action will be taken inside the Jenkins server depending upon the source which triggered the event and the type of the event.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_deliverables"><a class="anchor" href="#_deliverables"></a>Deliverables</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Jenkins as a Source</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Extend GlobalPluginConfiguration within the CloudEvents Plugin to support listening and emitting Jenkins events for Jenkins objects (projects, runs, build, etc) across the Jenkins server.</p>
+</li>
+<li>
+<p>UI Changes to allow a user to configure Jenkins as a Source and Sink for emitting and consuming CloudEvents respectively.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Configuration of the external URL of an HTTP Sink where CloudEvents from Jenkins will be sent.</p>
+</li>
+<li>
+<p>Selection of events a user would like to send over to the Sink (build-started, build-building, build-finished).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Listen to Jenkins events across the Jenkins server, and wrap the event-data into CloudEvent-compliant spec to send via HTTP to a Sink.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Jenkins as a Sink</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Implement RootAction associated with Jenkins objects (Jobs, Projects, Queues). The URL of the Action will be receiving HTTP requests with CloudEvents payload.</p>
+</li>
+<li>
+<p>Traverse the request received, and extract data which will decide the next action to take within Jenkins.</p>
+</li>
+<li>
+<p>Trigger the next action inside Jenkins server. For example, <em>build project #5 upon data change event from Debezium</em>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Documentation and testing</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Rigorous testing and documentation along each stage.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_similar_jenkins_plugins_for_reference"><a class="anchor" href="#_similar_jenkins_plugins_for_reference"></a>Similar Jenkins plugins for reference:</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jenkinsci/statistics-gatherer-plugin">Statistics Gatherer Plugin</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/extreme-notification-plugin">Extreme Notification Plugin</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/jqs-monitoring-plugin">Monitoring Plugin</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jenkinsci/generic-webhook-trigger-plugin">Generic Webhook Trigger Plugin</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_chat"><a class="anchor" href="#_chat"></a>Chat</h3>
+<div class="paragraph">
+<p>We use the <code>#gsoc-2021-jenkins-cloudevents-plugin</code> channel in the CDF Slack workspace.
+<a href="/chat/#continuous-delivery-foundation">How to join CDF Slack</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_office_hours"><a class="anchor" href="#_office_hours"></a>Office hours</h3>
+<div class="paragraph">
+<p>The CloudEvents Plugin SIG Meeting happens every <strong>Monday at 13:00 UTC</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Zoom Link: <a href="https://cloudbees.zoom.us/j/94985456924">https://cloudbees.zoom.us/j/94985456924</a> (ID: 94985456924, passcode: 167462)</p>
+</div>
+<div class="paragraph">
+<p>Meeting Docs: <a href="https://docs.google.com/document/d/11uMgE29StGLZEeOTteRXWIOpohBFk9ztwj1JeiUv9-U/edit#heading=h.7z7g0d3k8x7g">https://docs.google.com/document/d/11uMgE29StGLZEeOTteRXWIOpohBFk9ztwj1JeiUv9-U/edit#heading=h.7z7g0d3k8x7g</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_references"><a class="anchor" href="#_references"></a>References</h3>
+<div class="paragraph">
+<p>There are many examples of such documentation on the web:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://cloudevents.io/">Cloudevents website</a></p>
+</li>
+<li>
+<p><a href="https://github.com/cloudevents/sdk-java">Cloudevents Java SDK</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Event-driven_architecture">Event driven architecture</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=STKCRSUsyP0&amp;t=944s">The many meanings of event driven architecture by Martin Fowler</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gsoc_documents"><a class="anchor" href="#_gsoc_documents"></a>GSoC Documents</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.google.com/document/d/1nzQ8cqnCR8vWX51kz_Wh9LPvmnMyrPvDXJvvy1qHpOY/edit?usp=sharing">Design Document</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/document/d/1K9P_GSyPY4Y1om0_6Hk2alvqWqX8Dxly5kfVODjGW4A/edit?usp=sharing">Progress Tracker</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_links_2"><a class="anchor" href="#_links_2"></a>Links</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="cloudevents-plugin.html" class="xref page">Chat</a></p>
+</li>
+<li>
+<p><a href="cloudevents-plugin.html" class="xref page">Meetings</a></p>
+</li>
+<li>
+<p><a href="cloudevents-plugin.html" class="xref page">Original GSoC project idea</a></p>
+</li>
+<li>
+<p><a href="../../index.html" class="xref page">Jenkins GSoC page</a></p>
 </li>
 </ul>
 </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Jenkins Docs</title>
+    <title>Building Jenkins.io with alternative tools :: Jenkins Docs</title>
     <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2023/projects/alternative-jenkinsio-build-tool.html">
     <meta name="generator" content="Antora 3.1.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
@@ -36,10 +36,7 @@
     <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
+    <a class="nav-link" href="../index.html">Google Summer of Code in Jenkins 2023</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../2022/index.html">Google Summer of Code in Jenkins 2022</a>
@@ -253,6 +250,10 @@
 <button class="nav-toggle"></button>
   <a href="../../../../user-docs/2.426.1/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Jenkins Projects</a></li>
+    <li><a href="alternative-jenkinsio-build-tool.html">Building Jenkins.io with alternative tools</a></li>
+  </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2023/projects/alternative-jenkinsio-build-tool.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
   </div>
@@ -261,6 +262,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
+<h1 class="page">Building Jenkins.io with alternative tools</h1>
 <div class="admonitionblock note">
     <table>
         <tbody>
@@ -275,30 +277,29 @@
         </tbody>
     </table>
 </div>
-<hr>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>layout: gsocproject2
-title: "Building Jenkins.io with alternative tools"
-goal: "Using alternative tooling (i.e., Antora) to build the Jenkins static site and provide documentation per Jenkins version"
-category: Tools
-year: 2023
-status: "Selected"
-sig: documentation
-tags:
-- gsoc2023
-- doc
-student: vandit1604
-mentors:
-- "krisstern"
-- "iamrajiv"
-- "YimingGong"
-- "markewaite"
-links:
-    idea: /projects/gsoc/2023/project-ideas/alternative-jenkinsio-build-tool
-    matrix: jenkinsci_gsoc-2023-building-jenkinsio:matrix.org
-    draft: <a href="https://docs.google.com/document/d/1RS7-NO9shIaF2xZzYnAXTbSvpRNxoZMI7cJ5q5bc-h8/edit?usp=sharing" class="bare">https://docs.google.com/document/d/1RS7-NO9shIaF2xZzYnAXTbSvpRNxoZMI7cJ5q5bc-h8/edit?usp=sharing</a>
-    meetings: <a href="https://docs.google.com/document/d/1ZLauV_lKQFB5SJn&#8212;&#8203;TJqVftKwhzeepB-dUfhS0ldfa8/edit?usp=sharing" class="bare">https://docs.google.com/document/d/1ZLauV_lKQFB5SJn&#8212;&#8203;TJqVftKwhzeepB-dUfhS0ldfa8/edit?usp=sharing</a>
----</p>
+<p><strong>Goal:</strong> Using alternative tooling (i.e., Antora) to build the Jenkins static site and provide documentation per Jenkins version</p>
+</div>
+<div class="paragraph">
+<p><strong>Status:</strong> Selected</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_team"><a class="anchor" href="#_team"></a>Team</h2>
+<div class="sectionbody">
+<div class="paragraph avatar">
+<p><strong>Students</strong>:
+<span class="image"><img src="../../../../images/_images/avatars/vandit1604.jpeg" alt="vandit1604" width="30" height="30"></span> Vandit Singh</p>
+</div>
+<div class="paragraph avatar">
+<p><strong>Mentor(s)</strong>:
+<span class="image"><img src="../../../../images/_images/avatars/krisstern.png" alt="krisstern" width="30" height="30"></span> Kris Stern
+<span class="image"><img src="../../../../images/_images/avatars/iamrajiv.jpg" alt="iamrajiv" width="30" height="30"></span> Rajiv Ranjan Singh
+<span class="image"><img src="../../../../images/_images/avatars/no_image.svg" alt="no image" width="30" height="30"></span> Yiming Gong
+<span class="image"><img src="../../../../images/_images/avatars/markewaite.jpg" alt="markewaite" width="30" height="30"></span> Mark Waite</p>
 </div>
 <div class="sect2">
 <h3 id="_abstract"><a class="anchor" href="#_abstract"></a>Abstract</h3>
@@ -359,6 +360,29 @@ At last Blogs using Gatsby will be set up.</p>
 </div>
 <div class="paragraph">
 <p>Details regarding the weekly project-specific office hours can be found via the "Meetings" link below.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links"><a class="anchor" href="#_links"></a>Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://matrix.to/#/#jenkinsci_gsoc-2023-building-jenkinsio:matrix.org">Matrix</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/document/d/1ZLauV_lKQFB5SJn&#8212;&#8203;TJqVftKwhzeepB-dUfhS0ldfa8/edit?usp=sharing">Meetings</a></p>
+</li>
+<li>
+<p><a href="../project-ideas/alternative-jenkinsio-build-tool.html" class="xref page">Original GSoC project idea</a></p>
+</li>
+<li>
+<p><a href="../../index.html" class="xref page">Jenkins GSoC page</a></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </article>

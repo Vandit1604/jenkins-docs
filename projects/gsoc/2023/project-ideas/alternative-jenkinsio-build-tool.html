@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Jenkins Docs</title>
+    <title>Building Jenkins.io with alternative tools :: Jenkins Docs</title>
     <link rel="canonical" href="https://docs.jenkins.com/projects/gsoc/2023/project-ideas/alternative-jenkinsio-build-tool.html">
     <meta name="generator" content="Antora 3.1.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
@@ -36,10 +36,7 @@
     <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../index.html">Google Summer of Code in Jenkins</a>
+    <a class="nav-link" href="../index.html">Google Summer of Code in Jenkins 2023</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../2022/index.html">Google Summer of Code in Jenkins 2022</a>
@@ -253,6 +250,10 @@
 <button class="nav-toggle"></button>
   <a href="../../../../user-docs/2.426.1/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Jenkins Projects</a></li>
+    <li><a href="alternative-jenkinsio-build-tool.html">Building Jenkins.io with alternative tools</a></li>
+  </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/projects/modules/gsoc/pages/2023/project-ideas/alternative-jenkinsio-build-tool.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
   </div>
@@ -261,6 +262,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
+<h1 class="page">Building Jenkins.io with alternative tools</h1>
 <div class="admonitionblock note">
     <table>
         <tbody>
@@ -275,90 +277,304 @@
         </tbody>
     </table>
 </div>
-<hr>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>layout: gsocproject2
-title: "Building Jenkins.io with alternative tools"
-goal: "Using alternative tooling (i.e., Antora) to build the Jenkins static site and provide documentation per Jenkins version"
-category: Tools
-year: 2023
-status: "Selected"
-sig: documentation
-tags:
-- gsoc2023
-- doc
-student: vandit1604
-mentors:
-- "krisstern"
-- "iamrajiv"
-- "YimingGong"
-- "markewaite"
-links:
-    idea: /projects/gsoc/2023/project-ideas/alternative-jenkinsio-build-tool
-    matrix: jenkinsci_gsoc-2023-building-jenkinsio:matrix.org
-    draft: <a href="https://docs.google.com/document/d/1RS7-NO9shIaF2xZzYnAXTbSvpRNxoZMI7cJ5q5bc-h8/edit?usp=sharing" class="bare">https://docs.google.com/document/d/1RS7-NO9shIaF2xZzYnAXTbSvpRNxoZMI7cJ5q5bc-h8/edit?usp=sharing</a>
-    meetings: <a href="https://docs.google.com/document/d/1ZLauV_lKQFB5SJn&#8212;&#8203;TJqVftKwhzeepB-dUfhS0ldfa8/edit?usp=sharing" class="bare">https://docs.google.com/document/d/1ZLauV_lKQFB5SJn&#8212;&#8203;TJqVftKwhzeepB-dUfhS0ldfa8/edit?usp=sharing</a>
----</p>
+<p><strong>Project goal:</strong> Using alternative tooling (i.e., Antora) to build the Jenkins static site and provide documentation per Jenkins version</p>
 </div>
+<div class="paragraph">
+<p><strong>Skills to study/improve:</strong> Web development, AsciiDoc, Static website tooling, Proof of concept, Documentation</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_details"><a class="anchor" href="#_details"></a>Details</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_abstract"><a class="anchor" href="#_abstract"></a>Abstract</h3>
+<h3 id="_background"><a class="anchor" href="#_background"></a>Background</h3>
 <div class="paragraph">
-<p>The goal of this project is to build the Jenkins.io static site with alternative tools such as Antora and Gatsby.
-We will divide the current site into the following broad sections:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Blogs</p>
-</li>
-<li>
-<p>Documentation (both user and developer)</p>
-</li>
-<li>
-<p>Changelogs and Roadmaps</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The preferred tools for the blogs, changelogs and roadmaps is Gatsby while Antora is preferred for the rest of the site.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_rationale"><a class="anchor" href="#_rationale"></a>Rationale</h3>
-<div class="paragraph">
-<p>One of the drawbacks of the current build method is that the technical documentation is not product version bound.
+<p><a href="/">Jenkins.io</a> is generated as a static website using Awestruct from AsciiDoc sources, YAML data files, and HAML templates stored in GitHub.
+One of the drawbacks of the current build method is that the technical documentation is not product version bound.
 It is thus not possible to view the documentation for a given Jenkins version.
-Only the latest version can be viewed.
-This can lead to unnecessary confusion and affects the overall user experience.
-Another reason is that Awestruct hasn&#8217;t released a newer version in more than two years.
-It doesn&#8217;t seem useful to rely on it continuously.</p>
+Only the latest can be viewed.
+This can lead to unnecessary confusion and is a worse experience than many other documentation sites like the git site, FreeBSD, and others..</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_implementation"><a class="anchor" href="#_implementation"></a>Implementation</h3>
 <div class="paragraph">
-<p>The content will be restructured according to the Antora way.
-Antora makes use of component descriptors to distinguish versions.
-User documentation will be versioned, however developer documentation will not be. Blogs will be distinct from the site and generated using Gatsy, making it simple to submit blog posts.
-The most urgent milestone would be Jenkins-style versioned documentation.
-Following that, developer documentation that does not need to be versioned would be set up.
-At last Blogs using Gatsby will be set up.</p>
+<p>The preferred tool to replace Awestruct is <a href="https://antora.org/">Antora</a>.</p>
+</div>
+<div class="paragraph">
+<p>The potential GSoC project would be to build a working site generator to demonstrate the existing site.
+Once the existing site is generated with Antora, the site should be extended to add version specific documentation.</p>
+</div>
+<div class="paragraph">
+<p>The project has been discussed extensively at <a href="https://github.com/jenkins-infra/jenkins.io/issues/5474">GitHub issue #5474</a>, where some existing proof-of-concept code can be found referenced there.</p>
+</div>
+<div class="paragraph">
+<p>There are multiple ways to approach the implementation, but from experimentation it has been found that the backend replacement requires minimal effort for the documentation, with the frontend implementation expected to require much effort to reproduce the look and feel of the current <a href="/">jenkins.io</a> website. However, the blog can be split from the documentation using something like <a href="https://www.gatsbyjs.com/">Gatsby</a>, which is expected to make it easier for users to submit posts in the future.</p>
+</div>
+<div class="paragraph">
+<p>While the tasks of the project are very clearly defined, the scope may vary depending on the plans of the contributor. If we split the project into milestones, we see three important ones that can be tackled in sequence: The most urgent milestone is (1) to set up the user documentation using Antora with versioning, while next would be (2) to set up the developer documentation with Antora without versioning, and finally (3) to set up the blog using Gatsby. The contributor can choose either 1, or a combination of 1 + 2, or a combination of 1 + 2 + 3, but not in any other way. The expected project outcome is at least a drop-in replacement website that is building locally.</p>
+</div>
+<div class="paragraph">
+<p>The outcome of this project is expected to produce visible impact they can showcase in their portfolio of the <a href="/">jenkins.io</a> website, as the GSoC contributor is also expected to contribute via UI/UX improvements beyond the basic tooling required.</p>
+</div>
+<div class="paragraph">
+<p>Please note that for the UI/UX improvement portion we may need to deal with the <a href="https://github.com/jenkins-infra/jenkins-io-components">jenkins-io-components repo</a>, where the code for components shared by various Jenkins websites (<a href="/">jenkins.io</a>, <a href="https://plugins.jenkins.io/">plugins.jenkins.io</a>, etc.) is currently hosted.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_office_hours"><a class="anchor" href="#_office_hours"></a>Office hours</h3>
+<h3 id="_quick_start"><a class="anchor" href="#_quick_start"></a>Quick Start</h3>
+<div class="paragraph">
+<p>Documentation quick start steps include:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>(General) Official weekly Jenkins office hours: Thursdays 15:00 UTC.</p>
+<p>Build the current documentation site locally</p>
 </li>
 <li>
-<p>(Project-based) Weekly project based office hours: Saturdays 14:30 UTC.</p>
+<p>Become familiar with the current site, including:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Page types and how they are generated</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Changelogs</p>
+</li>
+<li>
+<p>Roadmap</p>
+</li>
+<li>
+<p>User handbook</p>
+</li>
+<li>
+<p>Developer handbook</p>
+</li>
+<li>
+<p>Artwork</p>
+</li>
+<li>
+<p>Security advisories</p>
+</li>
+<li>
+<p>Version specific content in tutorials (like "Improve a plugin")</p>
 </li>
 </ul>
 </div>
+</li>
+<li>
+<p>Page content sources</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Asciidoc</p>
+</li>
+<li>
+<p>HAML / Ruby</p>
+</li>
+<li>
+<p>Web components</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Build process</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Makefile</p>
+</li>
+<li>
+<p>Docker containers</p>
+</li>
+<li>
+<p>Syntax and spelling checks</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Fix several <a href="https://github.com/jenkins-infra/jenkins.io/labels/good%20first%20issue/">"good first issues"</a></p>
+</li>
+<li>
+<p>Explore <a href="https://github.com/jenkins-infra/jenkins-io-components">jenkins-io-components repo</a></p>
+</li>
+<li>
+<p>Explore <a href="https://antora.org/">Antora</a></p>
+</li>
+<li>
+<p>Review version specific documentation techniques (some of them are Antora sites)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.cloudbees.com/docs/cloudbees-ci/latest/cloud-secure-guide/folders-plus">CloudBees documentation site</a></p>
+</li>
+<li>
+<p><a href="https://git-scm.com/docs/git-config">Git reference pages</a></p>
+</li>
+<li>
+<p><a href="https://docs.python.org/3/">Python</a> (sphinx is the generator)</p>
+</li>
+<li>
+<p><a href="https://pytorch.org/docs/stable/index.html">PyTorch</a></p>
+</li>
+<li>
+<p><a href="https://www.tensorflow.org/api_docs">TensorFlow</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_skills_to_study_and_improve"><a class="anchor" href="#_skills_to_study_and_improve"></a>Skills to Study and Improve</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Web development</p>
+</li>
+<li>
+<p>AsciiDoc</p>
+</li>
+<li>
+<p>Static website tooling</p>
+<div class="ulist">
+<ul>
+<li>
+<p>HAML templates</p>
+</li>
+<li>
+<p>YAML data files</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Proof of concept</p>
+</li>
+<li>
+<p>Documentation</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_project_difficulty_level"><a class="anchor" href="#_project_difficulty_level"></a>Project Difficulty Level</h3>
 <div class="paragraph">
-<p>Details regarding the weekly project-specific office hours can be found via the "Meetings" link below.</p>
+<p>Beginner to Intermediate</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_project_size"><a class="anchor" href="#_project_size"></a>Project Size</h3>
+<div class="paragraph">
+<p>175 to 350 hours</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_expected_outcomes"><a class="anchor" href="#_expected_outcomes"></a>Expected outcomes</h3>
+<div class="paragraph">
+<p>The deliverables of the project(s) would be:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Iterative and incremental improvements to the site throughout the project</p>
+</li>
+<li>
+<p>A fully automated (CI ready) build procedure, equivalent to the existing one, but using Antora</p>
+</li>
+<li>
+<p>Demonstration that all the existing pages are rendered in an equivalent way</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Suggestions of improved page design(s)</p>
+</li>
+<li>
+<p>A list of all automation that are difficult/impossible to port to the new tool</p>
+</li>
+<li>
+<p>Suggestions and demos of alternative ways to solve this</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Demonstration of the versioned documentation automated tooling</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Description of the publication process (how does one contribute to document a new or modified feature)</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_features"><a class="anchor" href="#_new_features"></a>New features</h3>
+<div class="paragraph">
+<p>Improved layout of the existing site and its pages.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_newbie_friendly_issues"><a class="anchor" href="#_newbie_friendly_issues"></a>Newbie Friendly Issues</h3>
+<div class="paragraph">
+<p>Basically any good-first-issue listed in the jenkins.io GitHub repo would do. These can be accessed at the <a href="https://github.com/jenkins-infra/jenkins.io/labels/good%20first%20issue/">GitHub repo issues tracker with the "good first issue" label</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_potential_mentors"><a class="anchor" href="#_potential_mentors"></a>Potential Mentors</h2>
+<div class="sectionbody">
+<div class="paragraph avatar">
+<p><span class="image"><img src="../../../../images/_images/avatars/krisstern.png" alt="krisstern" width="30" height="30"></span> Kris Stern
+<span class="image"><img src="../../../../images/_images/avatars/markewaite.jpg" alt="markewaite" width="30" height="30"></span> Mark Waite
+<span class="image"><img src="../../../../images/_images/avatars/iamrajiv.jpg" alt="iamrajiv" width="30" height="30"></span> Rajiv Ranjan Singh</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_project_links"><a class="anchor" href="#_project_links"></a>Project Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><a class="image" href="https://app.gitter.im/#/room/#jenkinsci_gsoc-sig:gitter.im"><img src="https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_role-strategy-plugin%3Agitter.im" alt="Static Badge"></a></span></p>
+</li>
+<li>
+<p><a href="../../index.html#office-hours" class="xref page">Meetings</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_organization_links"><a class="anchor" href="#_organization_links"></a>Organization Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../../index.html" class="xref page">Jenkins GSoC page</a> - documentation, application guidelines</p>
+</li>
+<li>
+<p><a href="../../../../community/index.html" class="xref page">Participate and contribute to Jenkins</a> - landing page for newcomer contributors</p>
+</li>
+<li>
+<p><a href="https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20">Newbie-friendly issues</a> - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
+&gt; <a href="../project-ideas.html" class="xref page">Go back to other GSoC 2023 project ideas</a></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </article>
