@@ -1,24 +1,10 @@
----
-layout: gsocprojectidea
-title: "Jenkins Pipeline as YAML: experimental plugin"
-goal: "Add out-of-the-box support of Jenkins Pipeline definitions in YAML"
-category: Plugins
-year: 2020
-status: published
-sig: platform
-mentors:
-- "oleg_nenashev"
-- "jeffpearce"
-- "aytuncbeken"
-skills:
-- Java
-- Jenkins Pipeline
-- Domain Specific Languages
-- YAML
-- Jenkins X
-links:
-  gitter: "jenkinsci_pipeline-authoring-plugin:gitter.im"
----
+= Jenkins Pipeline as YAML: experimental plugin
+
+*Project goal:* Add out-of-the-box support of Jenkins Pipeline definitions in YAML
+
+*Skills to study/improve:* Java, Jenkins Pipeline, Domain Specific Languages, YAML, Jenkins X
+
+== Details 
 
 Jenkins Pipeline is a widely used way to define jobs in Jenkins.
 There are two different syntaxes: Declarative and Scripted Pipeline.
@@ -76,7 +62,7 @@ Right now there are no specific newbie-friendly issues created for the project,
 but there is a lot of small improvements which could be done in the link:https://github.com/jenkinsci/simple-pull-request-job-plugin[Simple Pull Request Job Plugin] plugin.
 Also, you can submit patches to existing Pipeline libraries which introduce support of YAML definitions.
 
-=.References
+.References
 ****
 * link:https://github.com/jenkinsci/simple-pull-request-job-plugin[Simple Pull Request Job Plugin]
 * link:/blog/2018/07/17/simple-pull-request-plugin/[Pipeline as YAML blog post]
@@ -89,3 +75,25 @@ Also, you can submit patches to existing Pipeline libraries which introduce supp
 
 * link:https://github.com/jenkinsci/configuration-as-code-plugin/blob/master/.github/workflows/maven.yml[Jenkins Configuration-as-Code build on GitHub actions]
 * link:https://github.com/kohsuke/winsw/blob/master/appveyor.yml[Windows Service Wrapper build in AppVeyor]
+
+
+== Potential Mentors
+
+[.avatar]
+image:images:ROOT:avatars/oleg_nenashev.png[,width=30,height=30] Oleg Nenashev
+image:images:ROOT:avatars/jeffpearce.png[,width=30,height=30] Jeff Pearce
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Aytunc Beken
+
+== Project Links
+
+* image:https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_role-strategy-plugin%3Agitter.im[Static Badge]
+* xref:gsoc:index.adoc#office-hours[Meetings]
+* https://community.jenkins.io/c/contributing/gsoc[Forum]
+* [Project Idea Draft]
+
+== Organization Links 
+
+* xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
+* xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
+* https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
+> xref:2020/project-ideas.adoc[Go back to other GSoC 2020 project ideas]

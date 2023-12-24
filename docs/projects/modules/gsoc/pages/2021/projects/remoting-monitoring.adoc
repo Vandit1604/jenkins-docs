@@ -1,21 +1,35 @@
 = Jenkins Remoting Monitoring
+// links:
+//   github: https://github.com/jenkinsci/remoting-opentelemetry-plugin
+//   chat: /projects/gsoc/2021/projects/remoting-monitoring/#chat
+//   draft: TODO
+//   idea: /projects/gsoc/2021/project-ideas/remoting-monitoring
+//   meetings: "/projects/gsoc/2021/projects/remoting-monitoring/#office-hours"
+//   discourse: https://community.jenkins.io/t/gsoc21-remoting-monitoring-end-user-survey/118
+// ---
+
 
 *Goal*: Support monitoring and troubleshooting of Jenkins remoting system with OpenTelemetry
+
 *Status*: Completed
 
-student: aki-7
+== Team
 
-links:
-  github: https://github.com/jenkinsci/remoting-opentelemetry-plugin
-  chat: /projects/gsoc/2021/projects/remoting-monitoring/#chat
-  draft: TODO
-  idea: /projects/gsoc/2021/project-ideas/remoting-monitoring
-  meetings: "/projects/gsoc/2021/projects/remoting-monitoring/#office-hours"
-  discourse: https://community.jenkins.io/t/gsoc21-remoting-monitoring-end-user-survey/118
----
+[.avatar]
+*Students*:
+image:images:ROOT:avatars/aki-7.jpg[,width=30,height=30] Akihiro Kiuchi
 
-link:https://github.com/jenkinsci/remoting-opentelemetry-plugin[🔗 GitHub Repository]
-link:https://plugins.jenkins.io/remoting-opentelemetry/[🔗 Jenkins plugin page]
+[.avatar]
+*Mentor(s)*:
+image:images:ROOT:avatars/oleg_nenashev.png[,width=30,height=30] Oleg Nenashev
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Darshan Kansagara
+image:images:ROOT:avatars/stellargo.jpeg[,width=30,height=30] Sumit Sarin
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Cyrille Le Clerc
+
+== Details
+
+* https://github.com/jenkinsci/remoting-opentelemetry-plugin[🔗 GitHub Repository]
+* https://plugins.jenkins.io/remoting-opentelemetry/[🔗 Jenkins plugin page]
 
 == Purpose
 
@@ -106,7 +120,7 @@ link:https://github.com/jenkinsci/remoting-opentelemetry-plugin/pull/86[PR #86]
 Demo Examples::
 We prepared two demo examples so that users can quickly try out the features.
 +
-[[docker-compose-demo, Docker Compose Demo]]
+[#docker-compose-demo, Docker Compose Demo]
 Docker Compose Demo:::
 We prepared Docker Compose example, which sets up
 
@@ -155,6 +169,7 @@ I summarized what I tried and what I thought during this GSoC in the
 link:https://github.com/jenkinsci/remoting-opentelemetry-plugin/issues/70[issue].
 This is the feature work of this project.
 
+[#chat]
 == Chat
 
 We use the `#gsoc-jenkins-remoting-monitoring` channel in the CDF Slack workspace.
@@ -170,6 +185,14 @@ xref:community:chat:index.adoc#continuous-delivery-foundation[How to join].
 * Prometheus: https://prometheus.io/
 * Grafana: https://grafana.com/
 ****
+
+== Links 
+* https://groups.google.com/g/jenkinsci-dev[Mailing List]
+* xref:#chat[Chat]
+* https://github.com/https://github.com/jenkinsci/remoting-opentelemetry-plugin[Github]
+* xref:gsoc:index.adoc#office-hours[Meetings]
+* xref:projects:gsoc:2021/project-ideas/remoting-monitoring.adoc[Original GSoC project idea]
+* xref:gsoc:index.adoc[Jenkins GSoC page]
 
 ++++
 <iframe src="https://community.jenkins.io/t/gsoc21-remoting-monitoring-end-user-survey/118" title="Discourse Hacktoberfest"></iframe>

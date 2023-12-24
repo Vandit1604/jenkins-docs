@@ -4,21 +4,21 @@
 
 *Status:* Completed
 
-== Team
+== Team 
 
 [.avatar]
-*Student*: 
-image:images:ROOT:avatars/XiongKezhi.jpeg[,width=30,height=30] Kezhi Xiong
-
+*Contributor*: 
+image:images:ROOT:avatars/rishabhbudhouliya.jpg[,width=30,height=30] x  Rishabh Budhouliya
 [.avatar]
 *Mentor(s):*
-image:images:ROOT:avatars/uhafner.jpg[,width=30,height=30] Ullrich Hafner
-image:images:ROOT:avatars/timja.jpg[,width=30,height=30] Tim Jacomb
-
 [.avatar]
-*Advisor(s):*: 
-image:images:ROOT:avatars/jeffpearce.png[,width=30,height=30] Jeff Pearce
 
+image:images:ROOT:avatars/markewaite.jpg[,width=30,height=30] Mark Waite
+image:images:ROOT:avatars/no_image.svg[,width=30,height=30] Francisco Fernandez
+image:images:ROOT:avatars/justinharringa.jpeg[,width=30,height=30] Justin Harringa
+image:images:ROOT:avatars/omkar_dsd.jpg[,width=30,height=30] Omkar Deshpande
+
+== Details
 
 The aim of the project is to find and improve potential areas in the git plugin for performance enhancement. The process of doing that was to find differences in performance between the two co-existing implementations for git, `CLI git` and `JGit`.
 It is logical to leverage those differences by creating a feature which would automatically switch git implementations optimally adjusting to a certain scenario or a use-case.
