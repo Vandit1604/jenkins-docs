@@ -1,20 +1,19 @@
 = Jenkins and C/C++
 
-.Bitbucket Server plugins for Jenkins
+.C/C++ plugins for Jenkins
 ****
-* {plugin}warnings-ng[C/C++ plugins for Jenkins]
-Warnings Next Generation plugin
+{plugin}warnings-ng[Warnings Next Generation plugin]::
 collects compiler warnings and issues from static analysis tools such as CppCheck
 
-* {plugin}valgrind[Valgrind plugin]
+{plugin}valgrind[Valgrind plugin]::
 run and incorporate Valgrind (memcheck) reports into Jenkins
 
-* {plugin}cmakebuilder[CMake Builder plugin]
+{plugin}cmakebuilder[CMake Builder plugin]::
 provides a build step that generates the build scripts from a CMakeLists.txt file
 
-* {plugin}xunit[xUnit plugin]
+{plugin}xunit[xUnit plugin]::
 generate reports based on test tooling output from various unit test frameworks
 
-* {plugin}cppcheck[Cppcheck plugin]
+{plugin}cppcheck[Cppcheck plugin]::
 generate trend reports for CppCheck, a tool for static C/C++ code analysis.
 ****

@@ -1,11 +1,102 @@
 = Jenkins Use-cases
 
+[.card]
+[.android]
+== xref:android.adoc[Android]
+[.data]
+[.img]
+image:images:ROOT:solution-images/android.svg[link=android.html]
+
+[.card]
+[.bit-bucket]
+== xref:bitbucketserver.adoc[Bitbucket Server]
+[.data]
+[.img]
+[#invert]
+image:images:ROOT:solution-images/bitbucketserver.svg[link=bitbucketserver.html]
+
+[.card]
+[.c]
+== xref:c.adoc[C/C++]
+[.data]
+[.img]
+[#invert]
+image:images:ROOT:solution-images/c.svg[link=c.html]
+
+[.card]
+[.docker]
+== xref:docker.adoc[Docker]
+[.data]
+[.img]
+image:images:ROOT:solution-images/docker.svg[link=docker.html]
+
+[.card]
+[.embedded-card]
+// don't rename the above class or it will mess with table of content's embedded class on smaller screens.
+== xref:embedded.adoc[Embedded]
+[.data]
+[.img]
+image:images:ROOT:solution-images/embedded.svg[link=embedded.html]
+
+[.card]
+[.github]
+== xref:github.adoc[Github]
+[.data]
+[.img]
+[#invert]
+image:images:ROOT:solution-images/github.svg[link=github.html]
+
+[.card]
+[.java]
+== xref:java.adoc[Java]
+[.data]
+[.img]
+image:images:ROOT:solution-images/java.svg[link=java.html]
+
+[.card]
+[.php]
+== xref:php.adoc[PHP]
+[.data]
+[.img]
+image:images:ROOT:solution-images/php.svg[link=php.html]
+
+[.card]
+[.pipeline]
+== xref:pipeline.adoc[Continuous Delivery]
+[.data]
+[.img]
+image:images:ROOT:solution-images/pipeline.svg[link=pipeline.html]
+
+[.card]
+[.python]
+== xref:python.adoc[Python]
+[.data]
+[.img]
+image:images:ROOT:solution-images/python.svg[link=python.html]
+
+[.card]
+[.ruby]
+== xref:ruby.adoc[Ruby]
+[.data]
+[.img]
+[#invert]
+image:images:ROOT:solution-images/ruby.svg[link=ruby.html]
+
 ++++
 <style>
+.doc .img{
+  margin:0;
+}
+
+/** hiding the anchor to the cards as it's not needed on this page */
+.anchor{
+  display: none;
+}
+
 .card {
   background-color: #fff;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  min-width: 155px;
+  width: 155px;
   height:200px;
   display: inline-flex;
   align-items: center;
@@ -13,7 +104,37 @@
   flex-direction: column;
   border-radius: 0.66rem;
   padding: 1rem;
-  color: rgba(0, 0, 0, 0.9) !important;
+}
+.card a{
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.doc a:hover {
+    color: white;
+}
+
+/** Grouping them will not apply the css*/
+.github a{
+  color:white;
+}
+.ruby a{
+  color:white;
+}
+.c a{
+  color:white;
+}
+.bit-bucket a{
+  color:white;
+}
+
+.card h2{
+  border: none !important;
+  margin-top: 0;
+  padding-top: 0;
+  color: #1F2937;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .card .data img{
@@ -22,29 +143,13 @@
     margin: auto;
 }
 
-.github .data p {
-    filter: invert(1);
+#invert{
+  filter: invert(1);
 }
 
-.github-image {
-    filter: invert(1);
-    opacity: 50%;
+#white{
+  color: #fff;
 }
-
-.title {
-  display: flex;
-  align-items: center;
-}
-
-.title span {
-  position: relative;
-  padding: 0.5rem;
-  background-color: #10B981;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 9999px;
-}
-
 .title span svg {
   position: absolute;
   top: 50%;
@@ -77,15 +182,6 @@
   justify-content: center;
 }
 
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 1rem;
-}
-
 .android{
     background-color: #3DDC84;
 }
@@ -104,6 +200,7 @@
 
 .ruby{
     background-color: #C2322D;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .pipeline{
@@ -112,18 +209,21 @@
 
 .github{
     background-color: #181817;
+    color: rgba(255, 255, 255, 0.9);
 }
 
-.embedded{
+.embedded-card{
     background-color: #EE7272;
 }
 
 .bit-bucket{
-    background-color: #0052CC;
+  background-color: #0052CC;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .c{
     background-color: #00599C;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .java{
@@ -131,107 +231,5 @@
 }
 </style>
 
-<div class="flex-container">
-<div class="card android">
-<a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.2/android.html">
-    <div class="data">
-        <p>
-            Android 
-        </p>
-    </div>
-    <img src="https://raw.githubusercontent.com/Vandit1604/jenkins-docs/e3b52448ced92b6faf01920674e875f730306895/docs/solutions/modules/ROOT/assets/images/android.svg">
-</div>
-<div class="card php">
-<a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.2/php.html">
-    <div class="data ">
-        <p>
-            PHP 
-        </p>
-        <img src="https://raw.githubusercontent.com/Vandit1604/jenkins-docs/e3b52448ced92b6faf01920674e875f730306895/docs/solutions/modules/ROOT/assets/images/php.svg">
-    </div>
-</div>
-<div class="card docker">
-<a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.2/docker.html">
-    <div class="data ">
-        <p>
-            Docker 
-        </p>
-        <img src="https://raw.githubusercontent.com/Vandit1604/jenkins-docs/e3b52448ced92b6faf01920674e875f730306895/docs/solutions/modules/ROOT/assets/images/docker.svg">
-    </div>
-</div>
-<div class="card python">
-<a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.2/python.html">
-    <div class="data ">
-        <p>
-            Python 
-        </p>
-        <img src="https://raw.githubusercontent.com/Vandit1604/jenkins-docs/e3b52448ced92b6faf01920674e875f730306895/docs/solutions/modules/ROOT/assets/images/python.svg">
-    </div>
-</div>
-<div class="card ruby">
-<a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.2/ruby.html">
-    <div class="data ">
-        <p>
-            Ruby 
-        </p>
-        <img src="https://raw.githubusercontent.com/Vandit1604/jenkins-docs/e3b52448ced92b6faf01920674e875f730306895/docs/solutions/modules/ROOT/assets/images/ruby.svg">
-    </div>
-</div>
-<div class="card pipeline">
-<a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.2/pipeline.html">
-    <div class="data ">
-        <p>
-            Pipeline 
-        </p>
-        <img src="https://raw.githubusercontent.com/Vandit1604/jenkins-docs/e3b52448ced92b6faf01920674e875f730306895/docs/solutions/modules/ROOT/assets/images/pipeline.svg">
-    </div>
-</div>
-<div class="card github">
-<a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.2/github.html">
-    <div class="data">
-        <p>
-            Github 
-        </p>
-        <img class="github-image" src="https://raw.githubusercontent.com/Vandit1604/jenkins-docs/e3b52448ced92b6faf01920674e875f730306895/docs/solutions/modules/ROOT/assets/images/github.svg">
-    </div>
-</div>
-<div class="card embedded">
-<a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.2/embedded.html">
-    <div class="data ">
-        <p>
-            Embedded 
-        </p>
-        <img src="https://raw.githubusercontent.com/Vandit1604/jenkins-docs/e3b52448ced92b6faf01920674e875f730306895/docs/solutions/modules/ROOT/assets/images/embedded.svg">
-    </div>
-</div>
-<div class="card bit-bucket">
-<a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.2/bitbucketserver.html">
-    <div class="data ">
-        <p>
-            Bit Bucket 
-        </p>
-        <img src="https://raw.githubusercontent.com/Vandit1604/jenkins-docs/e3b52448ced92b6faf01920674e875f730306895/docs/solutions/modules/ROOT/assets/images/bitbucketserver.svg">
-    </div>
-</div>
-<div class="card c">
-<a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.2/c.html">
-    <div class="data ">
-        <p>
-            C/C++ 
-        </p>
-        <img src="https://raw.githubusercontent.com/Vandit1604/jenkins-docs/e3b52448ced92b6faf01920674e875f730306895/docs/solutions/modules/ROOT/assets/images/c.svg">
-    </div>
-</div>
-<div class="card java">
-<a href="https://vandit1604.github.io/jenkins-ui-project/solutions/2.2/Java.html">
-    <div class="data ">
-        <p>
-            Java
-        </p>
-        <img src="https://raw.githubusercontent.com/Vandit1604/jenkins-docs/e3b52448ced92b6faf01920674e875f730306895/docs/solutions/modules/ROOT/assets/images/java.svg">
-    </div>
-</div>
-</a>
-</div>
 
 ++++
