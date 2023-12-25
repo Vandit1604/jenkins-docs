@@ -1,16 +1,16 @@
----
-layout: section
-title: Using Docker with Pipeline
----
-ifdef::backend-html5[]
-:description:
-:author:
-:sectanchors:
-:toc:
-ifdef::env-github[:imagesdir: ../resources]
-ifndef::env-github[:imagesdir: ../../resources]
-:hide-uri-scheme:
-endif::[]
+// ---
+// layout: section
+// title: Using Docker with Pipeline
+// ---
+// ifdef::backend-html5[]
+// :description:
+// :author:
+// :sectanchors:
+// :toc:
+// ifdef::env-github[:imagesdir: ../resources]
+// ifndef::env-github[:imagesdir: ../../resources]
+// :hide-uri-scheme:
+// endif::[]
 
 = Using Docker with Pipeline
 
@@ -247,7 +247,7 @@ By default, Pipeline assumes that _any_ configured xref:user-docs:glossary:index
 For Jenkins environments that have macOS, Windows, or other agents that are unable to run the Docker daemon, this default setting may be problematic.
 Pipeline provides a global option on the *Manage Jenkins* page and on the xref:user-docs:glossary:index.adoc#folder[Folder] level, for specifying which agents (by xref:user-docs:glossary:index.adoc#label[Label]) to use for running Docker-based Pipelines.
 
-image::pipeline/configure-docker-label.png[Configuring the Pipeline Docker Label]
+image::configure-docker-label.png[Configuring the Pipeline Docker Label]
 
 === Path setup for mac OS users
 

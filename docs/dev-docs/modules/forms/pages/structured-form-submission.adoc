@@ -26,9 +26,10 @@ Structure is determined by several factors. First, the name of the form field be
   <input type="checkbox" name="my.option"/> Send me e-mails
 </form>
 ----
-[source, javascript]
+
+[source, json]
 ----
-{ name: "Kohsuke", option: true }
+{ "name": "Kohsuke", "option": true }
 ----
 
 Any intermediate tag can have the 'name' attribute, and that would group the descendants into an intermediate object. Consider the following example:
@@ -50,12 +51,13 @@ Any intermediate tag can have the 'name' attribute, and that would group the des
   </div>
 </form>
 ----
-[source, javascript]
+
+[source, json]
 ----
 {
-  first: { name: "Kohsuke", option: true },
-  second: { name: "Jesse", option: false },
-  password: "secret"
+  "first": { "name": "Kohsuke", "option": true },
+  "second": { "name": "Jesse", "option": false },
+  "password": "secret"
 }
 ----
 If there are multiple elements with the same name, their values are aggregated into an array. Consider the following example:
@@ -78,14 +80,14 @@ If there are multiple elements with the same name, their values are aggregated i
 </form>
 ----
 
-[source, javascript]
+[source, json]
 ----
 {
-  person: [
-    { name: "Kohsuke", option: true },
-    { name: "Jesse", option: false }
+  "person": [
+    { "name": "Kohsuke", "option": true },
+    { "name": "Jesse", "option": false }
   ],
-  password:"secret"
+  "password": "secret"
 }
 ----
 
@@ -108,12 +110,12 @@ File uploads in the structured form are renamed to unique names, and the JSON tr
   </div>
 </form>
 ----
-[source, javascript]
+[source, json]
 ----
 {
-  person: [
-    { name: "Kohsuke", key: "randomId1234567" },
-    { name: "Jesse", key: "randomIdabcdefg" }
+  "person": [
+    { "name": "Kohsuke", "key": "randomId1234567" },
+    { "name": "Jesse", "key": "randomIdabcdefg" }
   ]
 }
 ----
@@ -149,11 +151,11 @@ Consider the following example:
 </form>
 ----
 
-[source, javascript]
+[source, json]
 ----
 {
-  cvs: { CVSROOT:"...", module:"..." },
-  svn: { URL:"...", module:"..." }
+  "cvs": { "CVSROOT":"...", "module":"..." },
+  "svn": { "URL":"...", "module":"..." }
 }
 ----
 

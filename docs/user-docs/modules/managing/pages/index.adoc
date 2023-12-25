@@ -19,7 +19,7 @@ Inline help is available on most *Manage Jenkins* pages:
 * Click the `?` icon again to hide the help text.
 
 Other system administration topics are discussed in
-xref:#system-administration#[Jenkins System Administration].
+xref:user-docs:system-administration:index.adoc[Jenkins System Administration].
 
 == System Configuration group
 
@@ -35,10 +35,10 @@ xref:managing:plugins.adoc[Plugins]::
 Add, update, remove, disable/enable plugins
 that extend the functionality of Jenkins.
 
-xref:managing:nodes[Nodes and Clouds]::
+xref:managing:nodes.adoc[Nodes and Clouds]::
 Add, remove, control, and monitor the nodes used for the agents on which build jobs run.
 
-xref:managing:casc[Configuration as Code]::
+xref:managing:casc.adoc[Configuration as Code]::
 Configure your Jenkins instance using a human-readable YAML file rather than the UI.
 This is an optional feature that appears in this group
 only when the plugin is installed on your controller.
@@ -52,20 +52,20 @@ about managing Jenkins security.
 xref:managing:system-configuration.adoc[Security]::
 Set configuration parameters that secure your Jenkins instance.
 
-xref:using-jenkins:using-credentials.adoc#adding-new-global-credentials[Manage Credentials]::
+xref:user-docs:using-jenkins:using-credentials.adoc#adding-new-global-credentials[Manage Credentials]::
 Configure the credentials that provide secure access
 to third-party sites and applications that interact with Jenkins.
 
 *Credential Providers*::
 Configure credential providers and types
 
-xref:managing:users[Users]::
+xref:managing:users.adoc[Users]::
 Manage users defined in the Jenkins user database.
 This is not used if you use a different security realm such as LDAP or AD.
 
 == Status Information group
 
-xref:managing:system-info[System Information]::
+xref:managing:system-info.adoc[System Information]::
 Displays information about the Jenkins environment.
 
 xref:system-administration:viewing-logs.adoc[System Log]::
@@ -74,7 +74,7 @@ Jenkins log that contains all `java.util.logging` output related to Jenkins.
 *Load Statistics*::
 Displays information about resource utilization on you Jenkins instance.
 
-xref:managing:about-jenkins[About Jenkins]::
+xref:managing:about-jenkins.adoc[About Jenkins]::
 Provides version and license information for your Jenkins instance.
 
 == Troubleshooting group

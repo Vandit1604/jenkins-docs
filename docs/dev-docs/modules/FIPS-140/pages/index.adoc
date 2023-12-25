@@ -1,5 +1,5 @@
 :page-layout: wip
-= FIPS -140 for developers
+= FIPS-140 for developers
 
 In order for the code in Jenkins and plugins to be compliant with FIPS-140, sensitive information needs to be handled correctly.
 This document provides a non-exhaustive cheat sheet that can guide developers to write code that is FIPS-140 compliant.
@@ -41,5 +41,5 @@ A FIPS-140 compliant `KeyStore` provider would need to be provided by the JVM, a
 .References
 ****
 * https://github.com/jenkinsci/jep/blob/master/jep/237/README.adoc[JEP-237 FIPS-140 support for Jenkins]
-* hhttps://csrc.nist.gov/pubs/fips/140-2/upd2/final[FIPS-140-2 Security Requirements for Cryptographic Modules]
+* https://csrc.nist.gov/pubs/fips/140-2/upd2/final[FIPS-140-2 Security Requirements for Cryptographic Modules]
 ****

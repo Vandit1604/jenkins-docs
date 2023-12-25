@@ -7,7 +7,7 @@ infrastructure including services which help to keep the project running.
 The kind of things that fall into "infrastructure" can span from operating
 virtual machines, containers, configuring network or developing and maintaining project-specific applications to make the development of Jenkins core and plugins more efficient.
 
-Because we strongly believe in Open Source principles, we also apply them to our infrastructure. As such we consider ourself as an open infrastructure project where everybody is invited to learn, share, contribute.
+Because we strongly believe in Open Source principles, we also apply them to our infrastructure. As such we consider ourselves as an open infrastructure project where everybody is invited to learn, share, contribute.
 
 image:images:ROOT:projects/infrastructure/infra_overview.png[Overview, role=center, float=left]
 
@@ -173,7 +173,7 @@ If you can't find an appropriate issue, please create a new one with a clear des
 - What (what your proposal to solve the problem)?
 - How (what are the technical changes to do)?
 
-You may also specify components and finally you can communicate about it, using the suggestions from the next section.
+You may also specify components, and finally you can communicate about it, using the suggestions from the next section.
 
 [TIP]
 .Good First Issues
@@ -241,7 +241,7 @@ So it's easier for everybody to find/review/audit changes and suggest improvemen
 Rule #2: All changes are validated by at least one regular infra contributor via Pull Request.::
 So we always have different people who understand infrastructure changes.
 
-Rem: Non regular contributors are more than welcome to share their expertise or just ask question which also help to spot incoherences.
+Rem: Non-regular contributors are more than welcome to share their expertise or just ask question which also help to spot incoherences.
 
 Code Reviews Purpose:
 
@@ -266,14 +266,14 @@ Fork project -> Create Feature Branch -> Open Pull Request -> Ask Review -> Merg
 
 === Deployment
 
-The deployment step is the only moment where we need approval from someone with elevated permission. As already mentioned, even if we try to be as open as possible, we don't want to share privileged accesses with every contributors even if we trust them and that mainly for security reasons.
+The deployment step is the only moment where we need approval from someone with elevated permission. As already mentioned, even if we try to be as open as possible, we don't want to share privileged accesses with every contributor even if we trust them and that mainly for security reasons.
 
 
 == Link
 
 Various link which can helpful when looking at the Jenkins infra project
 
-* https://github.com/orgs/jenkins-infra[Github Organization]
+* https://github.com/orgs/jenkins-infra[GitHub Organization]
 * https://github.com/orgs/jenkins-infra/teams[Github Teams]
 * https://github.com/jenkins-infra/helpdesk/issues[Reported Issues]
 * https://github.com/jenkins-infra/helpdesk/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22[Good first issues]

@@ -37,14 +37,13 @@ A new company can be added via a pull request to the Jenkins website.
 
 **Template for** `COMPANY_ID.adoc`:
 
-```
----
+[source]
+----
 name: "TODO: company name"
 url: "TODO: company URL"
 detailsUrl: "TODO: URL with a page describing the adopter's relation to Jenkins (user story, project page, etc.)"
 detailsLinkText: "TODO: display name for the details link"
----
-```
+----
 
 
 

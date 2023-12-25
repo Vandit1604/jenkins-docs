@@ -1,20 +1,20 @@
-= Hacktoberfest. Jenkins Event Kit
+= Hacktoberfest - Jenkins Event Kit
 
 NOTE: This page is an extension of the standard link:https://hacktoberfest.com/events/#organizers[Hacktoberfest Event Kit].
 Please refer to this page for the base guidelines.
 
-## Introduction
+== Introduction
 
 Hacktoberfest is an online event,
 but there are many events being organized by open-source communities.
 You can join one of link:https://hacktoberfest.com/events/[these events].
-We encourage xref:projects:ROOT:index.adoc/jam/[Jenkins Area Meetup (JAM)] organizers and contributors to
+We encourage xref:projects:ROOT:index.adoc#jam[Jenkins Area Meetup (JAM)] organizers and contributors to
 run Jenkins-specific events in October (workshops, hackergartens, hackathons, etc.).
 
 
-## How to organize an event?
+== How to organize an event?
 
-If you are a meetup organizer, just use your existing xref:projects:ROOT:index.adoc/jam/[Jenkins Area Meetup] to run the event.
+If you are a meetup organizer, just use your existing xref:projects:ROOT:index.adoc#jam[Jenkins Area Meetup] to run the event.
 Evening events could follow the recommended JAM schedule,
 but it is also possible to organize a full-day event.
 
@@ -24,13 +24,13 @@ please ping us in link:https://app.gitter.im/#/room/#jenkinsci_hacktoberfest:git
 Steps:
 
 * Find a venue, set the date
-* Schedule a meetup and announce it, preferably as a xref:projects:ROOT:index.adoc/jam/[Jenkins Area Meetup]
+* Schedule a meetup and announce it, preferably as a xref:projects:ROOT:index.adoc#jam[Jenkins Area Meetup]
 * Register the meetup on the Hacktoberfest site (see the link:https://hacktoberfest.com/events/#organizers[Event Kit])
 * Add a meetup to xref:events:hacktoberfest:index.adoc[our Hacktoberfest page] and
   then add it to the list of events (link:https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc#adding-an-event[guide]). 
   It can be done in a single pull request.
 
-## Sample agenda and resources
+== Sample agenda and resources
 
 link:https://hacktoberfest.com/events/#organizers[Hacktoberfest Event Kit] offers a good sample agenda for events, 
 you can stick to it.
@@ -52,7 +52,7 @@ There are few name/topics we advertise:
   adopting modern Jenkins features in your projects,
   e.g. Jenkins Pipeline or Configuration as Code. 
 
-## Reusable slidedecks
+== Reusable slidedecks
 
 Here are some slidedecks which can be used for opening talks and introductions:
 
@@ -62,7 +62,7 @@ Here are some slidedecks which can be used for opening talks and introductions:
 * link:/blog/2017/08/23/pull-requests-and-more/[How to contribute to Jenkins if you have a day or just 5 minutes]
 * link:https://docs.google.com/presentation/d/1A-9znEoysyGujOgDwbiu-Rl1oQUqdxk1RfQJEsyHBfE/edit?usp=sharing[Adopt a Plugin slidedeck]
 
-## Swag
+== Swag
 
 If you organize a meetup,
 Hacktoberfest organizers will send you some swag if you register the event timely.
@@ -72,9 +72,9 @@ Jenkins project will not be able to send Hacktoberfest 2019 swag timely to meetu
 Sticker sources can be found on the xref:images:ROOT:index.adoc[artwork page] and printed locally.
 Please contact the meetup sponsors to cover the production costs.
 
-## Useful links
+== Useful links
 
 * link:https://hacktoberfest.com/events/#organizers[Hacktoberfest Event Kit]
-* xref:projects:ROOT:index.adoc/jam/[Jenkins Area Meetups sub-project]
+* xref:projects:ROOT:index.adoc#jam[Jenkins Area Meetups sub-project]
 * link:https://www.meetup.com/pro/cicd-cdf/[List of Jenkins Area Meetups]
 * xref:community:ROOT:index.adoc[Contributing to Jenkins]

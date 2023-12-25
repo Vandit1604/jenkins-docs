@@ -6,7 +6,7 @@ Cross-Site Scripting (XSS) is a web application vulnerability that allows users 
 
 Jenkins displays content written by users with different levels of access in many different areas, and the Jelly files typically contain placeholders like this:
 
-[source, xml]
+[source, html]
 ----
 <h1>Project ${it.name}</h1>
 ----
@@ -94,6 +94,7 @@ To pass arguments to localized expressions without escaping them in escaped-by-d
 [WARNING]
 If the source of the argument to `j:out` or `Functions#rawHtml` isn't completely trusted, these might result in an XSS vulnerability.
 
+[#passing-values-to-javascript]
 == Passing values to JavaScript
 
 === The bad way

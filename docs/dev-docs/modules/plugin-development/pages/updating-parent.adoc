@@ -3,7 +3,7 @@
 Most Jenkins plugins use Apache Maven as their build tool.
 Here are some tips on bringing your plugin up to current recommendations.
 
-## Using the 2.x (or newer) parent POM
+== Using the 2.x (or newer) parent POM
 
 Properly maintained Jenkins plugins are expected to use a 2.x-series (or newer) parent POM,
 the later the better, to define the basic structure of `pom.xml`.
@@ -40,7 +40,8 @@ with the new format:
 </properties>
 ----
 
-## Understanding `requireUpperBoundDeps` failures and fixes
+[#understanding-requireupperbounddeps-failures-and-fixes]
+== Understanding `requireUpperBoundDeps` failures and fixes
 
 Sometimes after changing dependency versions in a POM and building,
 you will encounter Maven Enforcer errors referring to a rule named `RequireUpperBoundDeps`.
@@ -51,7 +52,7 @@ then you may have a problem.
 The practical impact could vary depending on the situation,
 but in some cases it could mean ``LinkageError``s at runtime.
 
-### Transitive dependency plugin too old
+=== Transitive dependency plugin too old
 
 For example, changing only the `git` test dependency version from `3.9.1` to `4.0.0-rc` in the `kubernetes` plugin might print:
 
@@ -132,26 +133,26 @@ https://github.com/jenkinsci/bom#usage[Plugin BOM usage instructions]
 At least for commonly encountered dependencies,
 the BOM can eliminate the need to specify individual versions and check that they work together.
 
-### Improper attempt to use core component
+=== Improper attempt to use core component
 
 TODO unless using `pluginFirstClassLoader`, a dep on a dep of `jenkins-core` will be ignored at runtime
 
-### Test-scoped dependency mismatch
+=== Test-scoped dependency mismatch
 
 TODO if using a plugin and its `<classifier>tests</classifier>` JAR too, introduce a POM property to make sure both are at the same version
 
-### Picking up fixes to dependency plugins
+=== Picking up fixes to dependency plugins
 
 TODO if a problematic dep’s trail includes another plugin, check whether that plugin is built using a new POM and best practices
 
-### Suppressing violations
+=== Suppressing violations
 
 TODO similar to https://github.com/jenkinsci/plugin-pom/blob/439ab3d2fb3dd91717538bef4d38bb67e31d65d4/pom.xml#L572-L589 but for https://github.com/jenkinsci/plugin-pom/blob/439ab3d2fb3dd91717538bef4d38bb67e31d65d4/pom.xml#L604-L611
 
-### Shading libraries
+=== Shading libraries
 
 TODO can use a distinct version of a library if it is repackaged
 
-## Optional dependencies and extensions
+== Optional dependencies and extensions
 
 TODO

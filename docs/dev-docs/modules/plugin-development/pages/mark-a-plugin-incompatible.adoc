@@ -23,7 +23,7 @@ if your new version is not configuration-compatible with any previous versions, 
 
 You can use the same system with xref:publishing:releasing-cd.adoc#noting-incompatible-changes[CD-enabled plugins].
 
-## Modification to Display of Updatable Plugin List
+== Modification to Display of Updatable Plugin List
 
 When a new plugin version is available as an update, and that new plugin version has a `compatibleSinceVersion` defined, the Update Center will check to see whether the installed version of the plugin is compatible with the new plugin. 
 If the installed version is not configuration-compatible, the plugin will show up in the available updates list with a note, in red, that jobs may need to be reconfigured.

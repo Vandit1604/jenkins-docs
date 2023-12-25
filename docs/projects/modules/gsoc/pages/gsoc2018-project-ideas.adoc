@@ -1,6 +1,6 @@
 = GSoC 2018 Project Ideas
 
-WARNING: This is an archived page about Jenkins project participation in Google Summer of Code 2016.
+WARNING: This is an archived page about Jenkins project participation in Google Summer of Code 2018.
 
 See xref:gsoc:index.adoc[the main GSoC project] page of the information about the current and previous years.
 
@@ -14,7 +14,7 @@ Other ideas may be proposed by students (e.g. new features in the core, "write a
 Such project applications will be considered though applicants may need to work
 with the community and GSoC admins to find potential mentors.
 
-
+[#jenkins-configuration-as-code]
 == Jenkins Configuration as Code Plugin
 
 link:https://github.com/jenkinsci/configuration-as-code-plugin[Configuration-as-Code] plugin has been designed
@@ -246,7 +246,7 @@ extending it by adding new features like xref:user-docs:pipeline:index.adoc[Jenk
 powered by various "-as-Code" engines (e.g. Jenkins Pipeline, JobDSL, Docker, xref:projects:gsoc:gsoc2018-project-ideas.adoc#jenkins-configuration-as-code[Configuration-as-Code plugin], etc.)
 
 Once the project idea is proposed in the mailing list,
-xref:projects:gsoc:index.adocmentors-and-org-admins[GSoC org admins] will help to finalize the idea and to reach out to potential mentors/co-mentors.
+xref:projects:gsoc:index.adoc#org-admins[GSoC org admins] will help to finalize the idea and to reach out to potential mentors/co-mentors.
 
 [NOTE]
 ====

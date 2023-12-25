@@ -76,7 +76,7 @@ creation and execution of a simple Pipeline in a test installation of Jenkins.
 ====
 It is assumed that there is already a source control repository set up for
 the project and a Pipeline has been defined in Jenkins following
-xref:#getting-started#defining-a-pipeline-in-scm[ these instructions].
+xref:./getting-started.adoc#defining-a-pipeline-in-scm[these instructions].
 ====
 
 Using a text editor, ideally one which supports
@@ -425,6 +425,7 @@ pipeline {
 <1> An `agent` must be set at the top level of the pipeline. This will fail if agent is set as `agent none`.
 <2> When using `returnStdout` a trailing whitespace will be appended to the returned string. Use `.trim()` to remove this.
 
+[#handling-credentials]
 === Handling credentials
 
 Credentials
@@ -436,7 +437,7 @@ credentials] page.
 .The correct way to handle credentials in Jenkins
 video::yfjtMIDgmfs[youtube,width=800,height=420]
 
-
+[#for-secret-text-usernames-and-passwords-and-secret-files]
 ==== For secret text, usernames and passwords, and secret files
 
 Jenkins' declarative Pipeline syntax has the `credentials()` helper method (used
@@ -445,7 +446,7 @@ xref:#secret-text[secret text], xref:#usernames-and-passwords[username and
 password], as well as xref:#secret-files[secret file] credentials. If you want to
 handle other types of credentials, refer to the xref:#for-other-credential-types[For other credential types] section (below).
 
-
+[#secret-text]
 ===== Secret text
 
 The following Pipeline code shows an example of how to create a Pipeline using
@@ -609,7 +610,7 @@ this Pipeline were moved immediately within the xref:user-docs:pipeline:syntax.a
 example above), then these `BITBUCKET_COMMON_CREDS...` environment variables
 would be scoped globally and could be used in any stage's steps.
 
-
+[#secret-files]
 ===== Secret files
 
 A secret file is a credential which is stored in a file and uploaded to Jenkins.
@@ -703,7 +704,8 @@ To access the *Snippet Generator* for your Pipeline project/item:
   *Notes:*
   * The *Credentials* fields (above) show the names of credentials
   configured in Jenkins. However, these values are converted to credential IDs
-  after clicking *Generate Pipeline Script*. [#withcredentials-script-examples]
+  after clicking *Generate Pipeline Script*.
+[#withcredentials-script-examples]
   * To combine more than one credential in a single `withCredentials( ... )
   { ... }` Pipeline step, see xref:#combining-credentials-in-one-step[Combining
   credentials in one step] (below) for details.
@@ -1155,7 +1157,7 @@ failures in Pipeline, while still giving `junit` the chance to capture test
 reports, is to use a series of `try`/`finally` blocks:
 ====
 
-
+[#using-multiple-agents]
 === Using multiple agents
 
 In all the previous examples, only a single agent has been used. This means
@@ -1248,8 +1250,7 @@ stage('Test') {
 <1> The `stash` step allows capturing files matching an inclusion pattern
 (`+**/target/*.jar+`) for reuse within the _same_ Pipeline. Once the Pipeline has
 completed its execution, stashed files are deleted from the Jenkins controller.
-<2> The parameter in `agent`/`node` allows for any valid Jenkins label
-expression. Consult the xref:user-docs:pipeline:syntax.adoc#[ Pipeline Syntax] section for more details.
+<2> The parameter in `agent`/`node` allows for any valid Jenkins label expression. Consult the xref:user-docs:pipeline:syntax.adoc[Pipeline Syntax] section for more details.
 <3> `unstash` will retrieve the named "stash" from the Jenkins controller into the
 Pipeline's current workspace.
 <4> The `bat` script allows for executing batch scripts on Windows-based

@@ -3,13 +3,13 @@
 
 Jenkins installers are available for several Linux distributions.
 
-* xref:#debian/ubuntu[Debian/Ubuntu]
+* xref:#debian-or-ubuntu[Debian/Ubuntu]
 * xref:#fedora[Fedora]
 * xref:#red-hat-centos[Red Hat/Alma/Rocky]
 
 include::user-docs:installing-jenkins:partial$_installation_requirements.adoc[]
 
-[#debian/ubuntu]
+[#debian-or-ubuntu]
 == Debian/Ubuntu
 
 On Debian and Debian-based distributions like Ubuntu you can install Jenkins through `apt`.

@@ -17,7 +17,7 @@ Builds should not be executed on the built-in node, but that is just the beginni
 This section discusses what other steps can be taken to protect the controller from being impacted by running builds. +
 *This needs to be configured according to the needs of your environment.*
 
-xref:dev-docs:security:access-control[Access Control]::
+xref:user-docs:security:access-control.adoc[Access Control]::
 By default, Jenkins does not allow anonymous access, and a single admin user exists.
 This chapter discusses which level of access is provided by permissions and how to safely grant access to more users. +
 _This is set up securely by the setup wizard. If the setup wizard is disabled on first launch, this may not be configured securely by default._
@@ -47,12 +47,12 @@ This chapter explains how to work around any problems this may cause. +
 _This is set up securely by default._
 // TODO Confirm that skipping the setup wizard in 2.222 does no longer disable CSRF protection
 
-xref:dev-docs:security:markup-formatter[Markup Formatter]::
+xref:user-docs:security:markup-formatter.adoc[Markup Formatter]::
 The default markup formatter renders text as entered (i.e. escaping HTML metacharacters).
 This chapter explains how to switch to a different markup formatter and explains what admins need to be aware of. +
 _This is set up securely by default._
 
-xref:dev-docs:security:user-content[Rendering User Content]::
+xref:user-docs:security:user-content.adoc[Rendering User Content]::
 By default, Jenkins strictly limits the features useable in user content (files from workspaces, archived artifacts, etc.) it serves.
 This chapter discusses how to customize this and make HTML reports and similar content both functional and safe to view. +
 _This is set up securely by default._

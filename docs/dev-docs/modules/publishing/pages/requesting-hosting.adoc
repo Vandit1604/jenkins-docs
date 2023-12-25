@@ -16,7 +16,6 @@ Complete the following steps before requesting plugin hosting with the Jenkins p
 . Make sure your plugin follows the plugin naming convention outlined in the xref:style-guides.adoc[style guides].
 . Have a public repository containing the plugin source code on GitHub.
 
-
 == Open Hosting request
 
 [NOTE]
@@ -46,7 +45,7 @@ The Jenkins project hosts a Jenkins instance to perform continuous integration b
 We recommend you set up CI builds for your plugin in the `jenkinsci` GitHub organization by creating a `Jenkinsfile` in your plugin's GitHub repository.
 See xref:continuous-integration.adoc[the documentation for CI builds] for details how to do this.
 
-
+[#request-upload-permissions]
 == Request Upload Permissions
 
 After your plugin source code has been forked into the `jenkinsci` organization, a pull request will be created for you that adds release permissions, if this doesn't happen you may need to create the request yourself.
@@ -59,20 +58,24 @@ Alternately, you can configure your plugin to be released automatically whenever
 In this case you only need write permission to GitHub; you never need local credentials.
 Follow xref:dev-docs:publishing:releasing-cd.adoc[this guide] for details.
 
+[#categorize-the-plugin]
 == Categorize the Plugin
 
 Jenkins shows plugins in categories in the plugin manager and on the link:https://plugins.jenkins.io/[plugins site].
-The xref:dev-docs:publishing:documentation.adoc[plugin documentation guide] includes instructions for xref:dev-docs:publishing:documentation.adoc#documenting-plugins[documenting], categorizing, and xref:dev-docs:publishing:documentation.adoc#labeling-plugins[labeling] plugins.
+The xref:dev-docs:publishing:documentation.adoc[plugin documentation guide] includes instructions for xref:dev-docs:publishing:documentation.adoc#using-github-as-a-source-of-documentation[documenting], categorizing, and xref:dev-docs:publishing:documentation.adoc#labeling-plugins[labeling] plugins.
 
 == Integrate with Jira
 
 If your chosen issue tracker is Jira, you can setup autolink references, to link from commits directly to the Jenkins Jira issue.
 All you need to do is heading to the `Settings` tab of your GitHub repository and add the following configuration to the `Autolink references` section:
-```txt
+
+[source,txt]
+----
 Numeric
 Reference prefix: JENKINS-
 Target URL: https://issues.jenkins.io/browse/JENKINS-<num>
-```
+----
+
 Commits prefixed with `JENKINS-<num>` will now be linked to the corresponding Jira issue:
 image:dev-docs:plugin-development:hosting/jira-auto-reference.png[]
 

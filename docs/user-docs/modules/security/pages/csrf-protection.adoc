@@ -3,7 +3,7 @@
 https://en.wikipedia.org/wiki/Cross-site_request_forgery[Cross-Site Request Forgery] (CSRF or XSRF) is a type of security vulnerability in web applications.
 Without protection from CSRF, a Jenkins user or administrator visiting some other web site would allow the operator of that site to perform actions in Jenkins as the victim.
 
-## CSRF Protection in Jenkins
+== CSRF Protection in Jenkins
 
 CSRF protection uses a token (called _crumb_ in Jenkins) that is created by Jenkins and sent to the user.
 Any form submissions or similar action resulting in modifications, like triggering builds or changing configuration, requires that the crumb be provided.
@@ -13,7 +13,7 @@ All of this happens in the background and has no visible impact except in rare c
 NOTE: The documentation on this page applies to Jenkins 2.222 or newer.
 
 
-## Configuring CSRF Protection
+== Configuring CSRF Protection
 
 In _Manage Jenkins » Security » CSRF Protection_, administrators can configure CSRF Protection.
 
@@ -38,7 +38,7 @@ Plugins may provide other crumb issuers that use other criteria to determine whe
 The {plugin}strict-crumb-issuer[Strict Crumb Issuer] provides an alternative crumb issuer implementation that is more customizable.
 
 
-## Working with Scripted Clients
+== Working with Scripted Clients
 
 Requests sent using the `POST` method are subject to CSRF protection in Jenkins and generally need to provide a crumb.
 This also applies to scripted clients that **authenticate using username and password**.
@@ -50,7 +50,7 @@ Since the crumb includes the web session ID, clients need to do the following:
 Alternatively **authenticate using username and API token**.
 Requests authenticating with an xref:system-administration:authenticating-scripted-clients.adoc[API token] are exempt from CSRF protection in Jenkins.
 
-## Disabling CSRF Protection
+== Disabling CSRF Protection
 
 Outdated plugins that send HTTP requests to Jenkins may not work with CSRF protection enabled.
 In this case, it may be necessary to disable CSRF protection temporarily.

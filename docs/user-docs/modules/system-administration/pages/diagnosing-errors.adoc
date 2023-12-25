@@ -52,6 +52,7 @@ In the *Instances* tab you should now see all instances. Click on some at random
 
 Under *References*, right-click `this` and select *Show Nearest GC Root*. Right-click the selected item in the tree and select *Copy Path From Root*. Paste this text, for several examples, into a text file and attach it to a bug report—or continue your investigation into plugin source code.
 
+[#how-to-report-a-bug]
 == How to Report a Bug
 
 For easier bug reporting, you can get the full list of plugins with this Groovy script that you can run in **Jenkins > Manage Jenkins > Script Console**:

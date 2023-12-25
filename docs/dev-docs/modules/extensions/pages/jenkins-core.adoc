@@ -76,7 +76,7 @@ _(no known implementations)_
 * https://plugins.jenkins.io/spotinst[Spotinst Plugin]: hudson.+++<wbr/>+++plugins.+++<wbr/>+++spotinst.+++<wbr/>+++cloud.+++<wbr/>+++monitor.+++<wbr/>+++**SpotinstCloudsCommunicationMonitor** (link:https://github.com/jenkinsci/spotinst-plugin/search?q=SpotinstCloudsCommunicationMonitor&type=Code[view on GitHub])
 * https://plugins.jenkins.io/ssh-slaves[SSH Build Agents Plugin]: hudson.+++<wbr/>+++plugins.+++<wbr/>+++sshslaves.+++<wbr/>+++verifiers.+++<wbr/>+++**MissingVerificationStrategyAdministrativeMonitor** (link:https://github.com/jenkinsci/ssh-slaves-plugin/search?q=MissingVerificationStrategyAdministrativeMonitor&type=Code[view on GitHub])
 
-
+[#agentprotocol]
 == AgentProtocol
 
 `jenkinsdoc:jenkins.AgentProtocol`
@@ -125,7 +125,7 @@ _(no known implementations)_
 * https://plugins.jenkins.io/saml[SAML Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++saml.+++<wbr/>+++**UpdateMetadataFromURLPeriodicWork** (link:https://github.com/jenkinsci/saml-plugin/search?q=UpdateMetadataFromURLPeriodicWork&type=Code[view on GitHub])
 * https://plugins.jenkins.io/wavefront[Wavefront Plugin]: com.+++<wbr/>+++vmware.+++<wbr/>+++devops.+++<wbr/>+++plugins.+++<wbr/>+++wavefront.+++<wbr/>+++**WavefrontMonitor** (link:https://github.com/jenkinsci/wavefront-plugin/search?q=WavefrontMonitor&type=Code[view on GitHub])
 
-
+[#artifactmanagerfactory]
 == ArtifactManagerFactory
 
 `jenkinsdoc:jenkins.model.ArtifactManagerFactory`
@@ -2599,7 +2599,7 @@ _(no known implementations)_
 * https://plugins.jenkins.io/vertx[vertx Plugin]: org.+++<wbr/>+++bravo5.+++<wbr/>+++jenkins.+++<wbr/>+++vertx.+++<wbr/>+++**GlobalItemListener** (link:https://github.com/jenkinsci/vertx-plugin/search?q=GlobalItemListener&type=Code[view on GitHub])
 * https://plugins.jenkins.io/zohosprints[Zoho Sprints Plugin]: io.+++<wbr/>+++jenkins.+++<wbr/>+++plugins.+++<wbr/>+++sprintsdata.+++<wbr/>+++**ItemChangeListener** (link:https://github.com/jenkinsci/zohosprints-plugin/search?q=ItemChangeListener&type=Code[view on GitHub])
 
-
+[#jnlpagentreceiver]
 == JnlpAgentReceiver
 
 `jenkinsdoc:jenkins.slaves.JnlpAgentReceiver`
@@ -2845,7 +2845,7 @@ _(no known implementations)_
 * https://plugins.jenkins.io/docker-workflow[Docker Pipeline Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++docker.+++<wbr/>+++workflow.+++<wbr/>+++**WithContainerStep.+++<wbr/>+++Decorator** (link:https://github.com/jenkinsci/docker-workflow-plugin/search?q=WithContainerStep.Decorator&type=Code[view on GitHub])
 * https://plugins.jenkins.io/workflow-step-api[Pipeline: Step API Plugin]: org.+++<wbr/>+++jenkinsci.+++<wbr/>+++plugins.+++<wbr/>+++workflow.+++<wbr/>+++steps.+++<wbr/>+++**BodyInvoker.+++<wbr/>+++MergedLauncherDecorator** (link:https://github.com/jenkinsci/workflow-step-api-plugin/search?q=BodyInvoker.MergedLauncherDecorator&type=Code[view on GitHub])
 
-
+[#lifecycle
 == Lifecycle
 
 `jenkinsdoc:hudson.lifecycle.Lifecycle`

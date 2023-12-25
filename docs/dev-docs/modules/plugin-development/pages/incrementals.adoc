@@ -79,12 +79,10 @@ There are two changes you want to make to your plugin POM.
 First, update the Jenkins version to the version ID copied in the previous step:
 
 ```
-...
-    <properties>
-        <jenkins.version>2.238-rc29961.5c3c5871cca6</jenkins.version>
-        ...
-    </properties>
-...
+<properties>
+    <jenkins.version>2.238-rc29961.5c3c5871cca6</jenkins.version>
+    ...
+</properties>
 ```
 
 In case of upstream plugin, add its version in the `<version>` of your `<dependency>` inside the downstream plugin.

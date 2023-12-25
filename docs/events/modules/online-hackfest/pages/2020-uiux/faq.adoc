@@ -26,7 +26,7 @@ to submit pull requests to the Jenkins project.
 
 If you are new to Jenkins,
 you could start by fixing some small and well described issues in the featured projects.
-There are lists of such newbie-friendly issues, see the links in our xref:events:hacktoberfest:index.adocfeatured-projects[featured project list].
+There are lists of such newbie-friendly issues, see the links in our xref:events:hacktoberfest:index.adoc#featured-projects[featured project list].
 You can also submit your own issue and propose a fix.
 
 === How do I mark my pull requests?
@@ -67,7 +67,7 @@ Suggested project ideas also have their own documentation to help newcomers.
 
 === How do I get reviews?
 
-All featured projects are monitored by their maintainers and you will likely get a review within a few days.
+All featured projects are monitored by their maintainers, and you will likely get a review within a few days.
 Reviews in other repositories and plugins may take longer.
 In case of delays, ping us in the link:https://matrix.to/#/#jenkinsci_hacktoberfest:gitter.im[hacktoberfest] channel in Gitter.
 Unmerged pull-requests can also count in Hacktoberfest, as long as it has the `hacktoberfest-accepted` label and has an approving review, so merge delays won't block you from getting the digital reward.

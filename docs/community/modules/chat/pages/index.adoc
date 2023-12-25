@@ -22,6 +22,7 @@ Q&A channel for newcomer contributors to Jenkins.
 Use this channel if you are not sure where to ask, and other contributors will help you.
 xref:ROOT:index.adoc[More about contributing to Jenkins].
 
+[#irc]
 == Internet Relay Chat (IRC)
 
 The Jenkins community discusses various project-related topics in multiple channels on the https://libera.chat/[Libera Chat] IRC network.
@@ -38,6 +39,7 @@ It used to be the primary one until non-IRC communication options were introduce
 It's common to not receive an answer for quite a while if no active contributors are currently checking IRC.
 In that case, just stick around, and periodically (every few hours) ask your question again.
 
+[#jenkins-infra]
 === `#jenkins-infra`
 
 Discussions of the xref:projects:infrastructure:index.adoc[Jenkins project infrastructure], i.e. most services running on `jenkins.io`, `jenkins-ci.org`, and related domains.
@@ -71,6 +73,7 @@ That means you basically need to create a reserved nick for you, link:https://li
 Once done, you will be able to connect to `#jenkins` even if that channel is undergoing a spam attack.
 Note that even without this, this is a recommended practice so that people *know* this is you, and cannot be someone else, when a given nick is online.
 
+[#cloaks]
 === Cloaks
 
 #jenkins is not only a registered channel, but the Jenkins project has an official relationship with Libera Chat (see https://libera.chat/chanreg[the Libera Chat site] for more details).
@@ -93,6 +96,7 @@ To obtain a cloak:
 
 Some teams and working groups use Slack for communications.
 
+[#continuous-delivery-foundation]
 === Continuous Delivery Foundation 
 
 link:https://cd.foundation/[Continuous Delivery Foundation (CDF)] Slack is used for coordinating the Jenkins community activities with the CDF, other projects and special interest groups.

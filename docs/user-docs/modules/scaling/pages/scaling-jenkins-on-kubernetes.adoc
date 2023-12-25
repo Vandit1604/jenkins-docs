@@ -40,19 +40,18 @@ Kubernetes manages loads well, and it’ll make sure your Jenkins agents spin up
 
 === Jenkins Controller Installation
 
-To install a Jenkins controller, create your docker image based on the base Jenkins image, which can be found in the official docker repository (keep in mind that Docker should be installed on your local machine, see the installation steps xref:installing-jenkins:docker.adoc#installing-docker[here]).
+To install a Jenkins controller, create your docker image based on the base Jenkins image, which can be found in the official docker repository (keep in mind that Docker should be installed on your local machine, see the installation steps xref:installing-jenkins:docker.adoc[here]).
 For this, you need to create a dockerfile.
 Having your Jenkins setup as a dockerfile is highly recommended to make your continuous integration infrastructure replicable and have it ready for setup from scratch.
 So let’s create our first example dockerfile for the Jenkins controller:
 
 .Dockerfile
-[source,Dockerfile]
+[source]
 ----
-FROM jenkins/jenkins:lts-slim-jdk17 <1>
+FROM jenkins/jenkins:lts-slim-jdk17 // <1>
 # Pipelines with Blue Ocean UI and Kubernetes
-RUN jenkins-plugin-cli --plugins blueocean kubernetes <2>
+RUN jenkins-plugin-cli --plugins blueocean kubernetes // <2>
 ----
-
 <1> `FROM [image_name]:[tag]` - this line means that our dockerfile will be based on an existing image. It is obvious that for our dockerfile, we take the Jenkins base image, which you can find in the link:https://hub.docker.com/r/jenkins/jenkins[official Docker repository].
 <2> `RUN [command]` - this line means that we are going to run this command inside the image during the build process.
 In our case we use the `RUN` command to install different common Jenkins plugins, which can be required for your Jenkins controller.
@@ -95,7 +94,7 @@ Congratulations! Your Jenkins controller image is created and can be used inside
 
 === Deploy Jenkins Controller
 
-After successfully creating your Jenkins image, follow the steps explained in the xref:installing-jenkins:kubernetes.adoc#install-jenkins-with-yaml-files[Jenkins installation doc] to deploy your Jenkins controller.
+After successfully creating your Jenkins image, follow the steps explained in the xref:installing-jenkins:kubernetes.adoc[Jenkins installation doc] to deploy your Jenkins controller.
 
 [NOTE]
 ====

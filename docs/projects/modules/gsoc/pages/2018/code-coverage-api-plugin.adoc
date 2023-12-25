@@ -34,7 +34,7 @@ There are a lot of plugins which currently implement code coverage, however, the
 This API plugin will mainly do these things:
 
 . Find coverage reports according to the user’s config.
-. Use adapters to convert reports into the our standard format.
+. Use adapters to convert reports into our standard format.
 . Parse standard format reports, and aggregate them.
 . Show parsed result in a chart.
 
