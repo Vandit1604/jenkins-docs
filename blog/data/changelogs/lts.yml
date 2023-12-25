@@ -9733,7 +9733,7 @@
     message: |-
       Restore context menus of model links in build history views and administrative monitors (regression in 2.402).
 
-- version: "2.426.1"
+- version: "2.426.x"
   date: 2023-11-15
   banner: >
       Short container image tags (without "jdk" in them) such as <code>jenkins/jenkins:2.426.1</code> are now using Java 17.
