@@ -1,24 +1,28 @@
----
-layout: gsocprojectidea
-title: "GitLab Plugin Modernization"
-goal: "Cleaning and modernizing the extensively used GitLab plugin"
-category: Plugin improvement
-year: 2023
-status: published
-sig: platform
-skills:
-- Java
-- Docker
-- GitLab
-mentors:
-- "krisstern"
-- "markewaite"
+= GitLab Plugin Modernization
+// *Goal:* Cleaning and modernizing the extensively used GitLab plugin"
+// category: Plugin improvement
+// year: 2023
+// status: published
+// sig: platform
+// skills:
+// - Java
+// - Docker
+// - GitLab
+// mentors:
+// - "krisstern"
+// - "markewaite"
 
-links:
-    emailThread: https://community.jenkins.io/t/gsoc-2023-project-idea-active-modernization-of-gitlab-plugin/5039
-    gitter: "jenkinsci_gitlab-plugin:gitter.im"
-//   draft: https://docs.google.com/document/d/1s-dLUfU1OK-88bCj-GKaNuFfJQlQNLTWtacKkVMVmHc
----
+// links:
+//     emailThread: https://community.jenkins.io/t/gsoc-2023-project-idea-active-modernization-of-gitlab-plugin/5039
+//     gitter: "jenkinsci_gitlab-plugin:gitter.im"
+// //   draft: https://docs.google.com/document/d/1s-dLUfU1OK-88bCj-GKaNuFfJQlQNLTWtacKkVMVmHc
+// ---
+
+*Project goal:* Cleaning and modernizing the extensively used GitLab plugin
+
+*Skills to study/improve:* Java, Docker, GitLab
+
+== Details 
 === Background
 
 The https://plugins.jenkins.io/gitlab-plugin/[GitLab] Jenkins plugin is widely used (over 55,000 installations),
@@ -88,3 +92,21 @@ all without regression to end users.
 
 link:https://github.com/jenkinsci/gitlab-plugin/issues?q=is%3Aissue+is%3Aopen+label%3Agood-first-issue[Good first issues]
 will help a new contributor better understand the plugin and how to debug and diagnose it.
+
+== Potential Mentors
+
+[.avatar]
+image:images:ROOT:avatars/krisstern.png[,width=30,height=30] Kris Stern
+image:images:ROOT:avatars/markewaite.jpg[,width=30,height=30] Mark Waite
+
+== Project Links
+
+* image:https://img.shields.io/badge/gitter-join_chat-light_green?link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23jenkinsci_role-strategy-plugin%3Agitter.im[Static Badge,link=https://app.gitter.im/#/room/#jenkinsci_gitlab-plugin:gitter.im]
+* xref:gsoc:index.adoc#office-hours[Meetings]
+
+== Organization Links 
+
+* xref:gsoc:index.adoc[Jenkins GSoC page] - documentation, application guidelines
+* xref:community:ROOT:index.adoc[Participate and contribute to Jenkins] - landing page for newcomer contributors
+* https://issues.jenkins.io/issues/?jql=project%20%3D%20JENKINS%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20labels%20%3D%20newbie-friendly%20[Newbie-friendly issues] - list of organization-wide newbie-friendly issues (use them if there is no links in the project idea)
+> xref:2023/project-ideas.adoc[Go back to other GSoC 2023 project ideas]
