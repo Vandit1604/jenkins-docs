@@ -20,7 +20,7 @@ javap -classpath /…/plugins/stuff/WEB-INF/lib/stuff.jar -l 'org.jenkinsci.plug
 
 will give you an overview of the class, and `+LineNumberTable+` entries will show you which lines in `+YourClass.java+` contain the class declaration.
 
-## Usages in Remoting
+== Usages in Remoting
 
 The main problem with sending anonymous classes over Remoting is that can all too easily “capture” unexpected and unwanted fields in the callable, which may cause serious issues including those described in (link:https://wiki.jenkins.io/display/JENKINS/Plugins+affected+by+fix+for+JEP-200[Plugins affected by fix for JEP-200]). Also you will get unusable listings from metrics collected as link:https://issues.jenkins.io/browse/JENKINS-27035[Request/response statistics].
 
@@ -58,7 +58,7 @@ int stuff(FilePath workspace, String arg) throws IOException, InterruptedExcepti
 }
 ----
 
-## Usages in XStream
+== Usages in XStream
 
 If you have accidentally used an anonymous inner class as a field in some object serialized via XStream, your XML files are going to be a mess. This is a worse problem than for Remoting since not only can you suffer from link:/blog/2018/01/13/jep-200[JEP-200-related] security blocks, but the mistake has been persisted to disk so you need to take into account possible saved settings.
 

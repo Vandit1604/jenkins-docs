@@ -14,6 +14,7 @@ A major downside to this approach is that every Stapler-accessible method return
 Otherwise, a different getter or field could be used to access the object in question, bypassing the permission check.
 Various security issues have resulted from this strategy, so it is not generally considered sufficient to restrict access to objects on its own.
 
+[#using-staplerproxy]
 == Using `StaplerProxy`
 
 A more robust approach to prevent HTTP request handling by objects is to implement `StaplerProxy`.

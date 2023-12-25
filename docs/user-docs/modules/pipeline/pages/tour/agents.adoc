@@ -1,7 +1,7 @@
 = Defining execution environments
 
 In the
-xref:running-multiple-steps.adoc[previous section]
+xref:./running-multiple-steps.adoc[previous section]
 you may have noticed the `agent` directive in each of the examples. The
 `agent` directive tells Jenkins where and how to execute the Pipeline, or
 subset thereof. As you might expect, the `agent` is required for all Pipelines.
@@ -79,7 +79,7 @@ v14.15.0
 
 Mixing and matching different containers, or other agents, allows quite a lot
 of flexibility when executing a Pipeline, for more configuration options,
-**xref:environment.adoc[continue to "Using environment variables."]**
+**xref:./environment.adoc[continue to "Using environment variables."]**
 
 '''
 ////

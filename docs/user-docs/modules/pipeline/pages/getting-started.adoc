@@ -26,11 +26,11 @@ To use Jenkins Pipeline, you will need:
 Read more about how to install and manage plugins in
 xref:managing:plugins.adoc[Managing Plugins].
 
-
+[#defining-a-pipeline]
 == Defining a Pipeline
 
 Both
-xref:index.adoc#declarative-versus-scripted-pipeline-syntax[Declarative and Scripted Pipeline]
+xref:./index.adoc#declarative-versus-scripted-pipeline-syntax[Declarative and Scripted Pipeline]
 are DSLs footnote:dsl[] to describe portions of your software delivery
 pipeline. Scripted Pipeline is written in a limited form of
 link:http://groovy-lang.org/semantics.html[Groovy syntax].
@@ -60,7 +60,7 @@ This video provides basic instructions on how to write both Declarative and Scri
 .Writing a Pipeline script in Jenkins
 video::TiTrcFEsj7A[youtube,width=800,height=420]
 
-[#through blue ocean]
+[#through-blue-ocean]
 === Through Blue Ocean
 
 If you are new to Jenkins Pipeline, the Blue Ocean UI helps you
@@ -75,7 +75,7 @@ Blue Ocean's Pipeline editor are automatically saved and committed to source
 control.
 
 Read more about Blue Ocean in the xref:blueocean:index.adoc[Blue Ocean] chapter and
-xref:blueocean:index.adocgetting-started[Getting started with Blue Ocean] page.
+xref:blueocean:getting-started.adoc[Getting started with Blue Ocean] page.
 
 include::user-docs:blueocean:partial$_blue-ocean-status.adoc
 
@@ -280,6 +280,7 @@ image:user-docs:pipeline:snippet-generator.png[alt="Snippet Generator",width=100
 To access additional information and/or documentation about the step selected,
 click on the help icon (indicated by the red arrow in the image above).
 
+[#global-variable-reference]
 === Global Variable Reference
 
 In addition to the Snippet Generator, which only surfaces steps, Pipeline also
@@ -364,7 +365,7 @@ This section merely scratches the surface of what can be done with Jenkins
 Pipeline, but should provide enough of a foundation for you to start
 experimenting with a test Jenkins instance.
 
-In the next section, xref:#jenkinsfile#[ The Jenkinsfile], more Pipeline steps
+In the next section, xref:./jenkinsfile.adoc[The Jenkinsfile], more Pipeline steps
 will be discussed along with patterns for implementing successful, real-world,
 Jenkins Pipelines.
 

@@ -8,7 +8,7 @@ If a pull request is built, environment variables may contain the pull request I
 
 Jenkins users and administrators need to be aware of potential problems involving environment variables and their impact on the behavior of builds.
 
-## Setting special environment variables
+== Setting special environment variables
 
 Special environment variables can change the behavior of build scripts:
 `PATH` (or `Path` on Windows) is generally used to find the programs that are launched during a build, so overriding its value may have an unexpected effect, as other programs than usually expected may be launched.
@@ -19,7 +19,7 @@ Many other environment variables are read by different programs, and setting the
 Any user who can add environment variables with a name they choose may be able to modify the behavior of builds this way.
 While this is a useful feature for users with Job/Configure permission, administrators should review plugins' ability to add arbitrary environment variables into the build environment from sources that do not require permission to configure jobs.
 
-## Setting unsafe environment variable values
+== Setting unsafe environment variable values
 
 Not all scripts and script interpreters commonly invoked during builds are designed for this use case, and special care may need to be taken to filter or sanitize environment variable values.
 

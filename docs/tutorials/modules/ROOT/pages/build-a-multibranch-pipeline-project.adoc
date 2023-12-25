@@ -46,7 +46,7 @@ include::user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[]
 
 [#fork-sample-repository]
 [#fork-and-clone-the-sample-repository-on-github]
-=== Fork and clone the sample repository
+== Fork and clone the sample repository
 
 Obtain the simple "Welcome to React" Node.js and React application from GitHub,
 by forking the sample repository of the application's source code into your own
@@ -84,7 +84,7 @@ GitHub account and then cloning this fork locally.
    where `YOUR-GITHUB-ACCOUNT-NAME` is the name of your GitHub account.
 
 
-=== Create development and production branches in your repository
+== Create development and production branches in your repository
 
 Before creating your Pipeline project in Jenkins, create "development" and
 "production" branches of your locally cloned Git repository. You'll be creating
@@ -114,7 +114,7 @@ clone of the sample repository):
   current branch.
 
 
-=== Create your Pipeline project in Blue Ocean
+== Create your Pipeline project in Blue Ocean
 
 Whenever you create _any_ Pipeline project in Blue Ocean, Jenkins actually
 creates this as a multibranch Pipeline project behind the scenes. This becomes
@@ -175,7 +175,7 @@ either:
 ====
 
 
-=== Create your initial Pipeline as a Jenkinsfile with build and test stages
+== Create your initial Pipeline as a Jenkinsfile with build and test stages
 
 You're now ready to create the Pipeline that will automate building your Node.js
 and React application in Jenkins. Your Pipeline will be created as a
@@ -264,7 +264,7 @@ and test stages run successfully with output",width=100%]
   Ocean interface.
 
 
-=== Add deliver and deploy stages to your Pipeline
+== Add deliver and deploy stages to your Pipeline
 
 Next, add "Deliver for development" and "Deploy for production" stages to your
 Pipeline, which Jenkins will selectively execute based on the branch that Jenkins is building from.
@@ -395,7 +395,7 @@ Pipeline runs successfully on the 'master' branch",width=100%]
   Ocean interface.
 
 
-=== Pull your updated Jenkinsfile into the other repository branches
+== Pull your updated Jenkinsfile into the other repository branches
 
 Now that you have a completed `Jenkinsfile` to build your application in
 Jenkins, you can pull this file from the `master` branch of your local
@@ -419,7 +419,8 @@ Your `development` and `production` branches should now have all your
 `Jenkinsfile` updates you made on the `master` branch.
 
 
-=== Run your Pipeline on the development branch
+[#run-your-pipeline-on-the-development-branch]
+== Run your Pipeline on the development branch
 
 . Go back to Jenkins again, log in again if necessary and ensure you've accessed
   Jenkins's Blue Ocean interface.
@@ -464,7 +465,8 @@ Pipeline runs successfully on the 'development' branch",width=100%]
   Ocean interface.
 
 
-=== Run your Pipeline on the production branch
+[#run-your-pipeline-on-the-production-branch]
+== Run your Pipeline on the production branch
 
 . Click *Branches* at the top right to access the list of your Pipeline
   project's branches.
@@ -507,7 +509,7 @@ Pipeline runs successfully on the 'production' branch",width=100%]
   content from your browser xref:#clearing-the-app-from-your-browser[below].
 
 
-=== Follow up (optional)
+== Follow up (optional)
 
 This section takes you through a simulated development workflow using
 Jenkins, whereby changes made to your application (i.e. the `App.js` source
@@ -588,7 +590,8 @@ export default App;
   BitBucket).
 
 
-=== Clearing the app from your browser
+[#clearing-the-app-from-your-browser]
+== Clearing the app from your browser
 
 Your browser is likely to continue running your application's content served by
 the link:https://www.npmjs.com/package/serve[npm `serve` module], which means
@@ -597,7 +600,7 @@ that your browser will still show the content you viewed at
 To clear the application and its content from your browser:
 
 
-==== On Chrome
+=== On Chrome
 
 . Enter the following into your browser's URL field: +
   `chrome://serviceworker-internals/`
@@ -605,7 +608,7 @@ To clear the application and its content from your browser:
 . Click its *Unregister* button.
 
 
-==== On Firefox
+=== On Firefox
 
 . Enter the following into your browser's URL field: +
   `about:serviceworkers`
@@ -613,7 +616,7 @@ To clear the application and its content from your browser:
 . Click its *Unregister* button.
 
 
-=== Wrapping up
+== Wrapping up
 
 Well done! You've just used Jenkins to build a multibranch Pipeline project
 with selectively run stages!
@@ -638,8 +641,3 @@ To learn more about what Jenkins can do, check out:
 
 
 '''
-////
-++++
-include::_partials/_feedback-footer.html[]
-++++
-////

@@ -10,6 +10,7 @@ The Dashboard consists of a blue link:#navigation-bar[navigation bar] at the top
 [.boxshadow]
 image:user-docs:blueocean:dashboard/overview.png[Overview of the Blue Ocean Dashboard,role=center,width=100%]
 
+[#navigation-bar]
 == Navigation bar
 
 The Dashboard includes the blue xref:getting-started.adoc#navigation-bar[navigation bar] along the top of the interface.
@@ -25,6 +26,7 @@ When viewing the Dashboard, the navigation bar's contextual section includes:
 * *Search pipelines*: This field allows users to filter the link:#pipelines-list[Pipelines list] to match the text you enter into this field.
 * *New Pipeline*: This option begins the process of xref:creating-pipelines.adoc[creating a Pipeline].
 
+[#pipelines-list]
 == Pipelines list
 
 The *Pipelines* list is the Dashboard's default list. 
@@ -94,7 +96,7 @@ Health icons on the Dashboard represent overall Pipeline health, whereas the hea
 |*Storm*, less than 21% of Runs passing
 |===
 
-
+[#run-status]
 === Run status
 
 Blue Ocean represents the run status of a Pipeline/item or one of its branches using a consistent set of icons throughout.

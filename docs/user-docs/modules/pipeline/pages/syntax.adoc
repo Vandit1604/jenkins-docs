@@ -10,6 +10,7 @@ As discussed at the xref:pipeline:getting-started.adoc[start of this chapter], t
 For an overview of available steps, please refer to the link:/doc/pipeline/steps[Pipeline Steps reference] which contains a comprehensive list of steps built into Pipeline as well as steps provided by plugins.
 
 [role=syntax]
+[#declarative-pipeline]
 == Declarative Pipeline
 
 Declarative Pipeline presents a more simplified and opinionated syntax on top of the Pipeline sub-systems.
@@ -58,7 +59,7 @@ The section must be defined at the top-level inside the `pipeline` block, but st
 | Yes
 
 | Parameters
-| xref:#agent-parameters[ Described below]
+| xref:#parameters[Described below]
 
 | Allowed
 | In the top-level `pipeline` block and each `stage` block.
@@ -124,7 +125,7 @@ This timeout will include the agent provisioning time.
 Because the timeout includes the agent provisioning time, the Pipeline may fail in cases where agent allocation is delayed.
 
 
-[#agent-parameters]
+[#parameters]
 ===== Parameters
 
 In order to support the wide variety of use-cases Pipeline authors may have, the `agent` section supports a few different types of parameters.
@@ -265,6 +266,7 @@ For example:
 +
 Refer to the following example for reference: https://github.com/jenkinsci/kubernetes-plugin/blob/master/examples/kaniko.groovy
 
+[#options]
 ===== Common Options
 
 These are a few options that can be applied to two or more `agent` implementations.
@@ -350,6 +352,7 @@ Using `agent none` also forces each `stage` section to contain its own `agent` s
 <2> Execute the steps in this stage in a newly created container using this image.
 <3> Execute the steps in this stage in a newly created container using a different image from the previous stage.
 =====
+
 [#post]
 ==== post
 
@@ -487,6 +490,7 @@ pipeline {
 [#declarative-directives]
 === Directives
 
+[#environment]
 ==== environment
 
 The `environment` directive specifies a sequence of key-value pairs which will be defined as environment variables for all steps, or stage-specific steps, depending on where the `environment` directive is located within the Pipeline.
@@ -1029,7 +1033,7 @@ Defaults to allowing any user.
 submitterParameter:: An optional name of an environment variable to set with the `submitter` name, if present.
 
 parameters:: An optional list of parameters to prompt the submitter to provide.
-Refer to <<parameters>> for more information.
+Refer to xref:#parameters[] for more information.
 
 [#input-example]
 .Input Step, Declarative Pipeline
@@ -1437,6 +1441,7 @@ pipeline {
 ----
 =====
 
+[#sequential-stages]
 === Sequential Stages
 
 Stages in Declarative Pipeline may have a `stages` section containing a list of nested stages to be run in sequential order.
@@ -1901,13 +1906,13 @@ The "per-cell" directives, on the other hand, are evaluated at runtime.
 
 These directives include:
 
-* <<agent>>
-* <<environment>>
-* <<input>>
-* <<options>>
-* <<post>>
-* <<tools>>
-* <<when>>
+* xref:agent[]
+* xref:environment[]
+* xref:input-example[]
+* xref:options[]
+* xref:post[]
+* xref:tools-example[]
+* xref:when[]
 
 [#matrix-cell-example]
 .Complete Matrix Example, Declarative Pipeline
@@ -1989,9 +1994,9 @@ Declarative Pipelines may use all the available steps documented in the link:/do
 
 ==== script
 
-The `script` step takes a block of <<scripted-pipeline>> and executes that in the Declarative Pipeline.
+The `script` step takes a block of xref:scripted-pipeline[] and executes that in the Declarative Pipeline.
 For most use-cases, the `script` step should be unnecessary in Declarative Pipelines, but it can provide a useful "escape hatch".
-`script` blocks of non-trivial size and/or complexity should be moved into xref:#shared-libraries#[ Shared Libraries] instead.
+`script` blocks of non-trivial size and/or complexity should be moved into xref:./shared-libraries.adoc[Shared Libraries] instead.
 
 [#script-example]
 .Script Block in Declarative Pipeline
@@ -2021,6 +2026,7 @@ pipeline {
 =====
 
 [role=syntax]
+[#scripted-pipeline]
 == Scripted Pipeline
 
 Scripted Pipeline, like <<declarative-pipeline>>, is built on top of the underlying Pipeline sub-system.
@@ -2112,7 +2118,7 @@ The Groovy learning-curve isn't typically desirable for all members of a given t
 Both are fundamentally the same Pipeline sub-system underneath.
 They are both durable implementations of "Pipeline as code".
 They are both able to use steps built into Pipeline or provided by plugins.
-Both are able to utilize xref:#shared-libraries#[ Shared Libraries]
+Both are able to utilize xref:./shared-libraries.adoc[Shared Libraries]
 
 
 Where they differ however is in syntax and flexibility.

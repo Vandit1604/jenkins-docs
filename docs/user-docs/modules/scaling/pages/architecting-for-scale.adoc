@@ -42,6 +42,7 @@ organization's Jenkins instances:
   upgrade or a crash. The use of folders and views to organize jobs can limit
   the number of that need to be rendered on start up.
 
+[#distributed-builds-architecture]
 == Distributed Builds Architecture
 
 A Jenkins controller can operate by itself both managing the build environment and

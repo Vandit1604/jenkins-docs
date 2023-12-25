@@ -23,7 +23,7 @@ curl -u your_user_name:your_password https://repo.jenkins-ci.org/setup/settings.
 
 This will print the configuration you need to your terminal. You should see something similar to this:
 
-[source,xml]
+[source,bash]
 ----
 $ curl -u mr_jenkins:j3nkinsr0ck5 https://repo.jenkins-ci.org/setup/settings.xml
 <settings xmlns="https://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
@@ -59,9 +59,10 @@ ssh -T git@github.com
 
 If you have been authenticated correctly, you see a message similar to the following example in your terminal:
 
-```txt
+[source,txt]
+----
 Hi yourGitHubUsername! You've successfully authenticated, but GitHub does not provide shell access.
-```
+----
 
 `yourGitHubUsername` is a placeholder representing your GitHub username.
 
@@ -73,12 +74,12 @@ mvn release:prepare release:perform
 ----
 
 // Not sure about this:
-// NOTE: While it is be possible to specify the username and password on the command line, that would require your accounts on GitHub and the Jenkins community to match, and prevent you from using two factor authentication on GitHub.
+// NOTE: While it is the possible to specify the username and password on the command line, that would require your accounts on GitHub and the Jenkins community to match, and prevent you from using two-factor authentication on GitHub.
 // Neither is a recommend practice.
 
 == Troubleshooting
 
-First, make sure your plugin uses a reasonably up to date xref:plugin-development:updating-parent.adoc[parent POM].
+First, make sure your plugin uses a reasonably up-to-date xref:plugin-development:updating-parent.adoc[parent POM].
 This will prevent the vast majority of problems in releasing the plugin, such as outdated Maven plugins, or obsolete host names.
 
 === The upload to the Maven repository fails with "401 Unauthorized"
@@ -94,7 +95,7 @@ The two most common explanations for this error:
 * You don't have permission to upload to the specified path.
   xref:requesting-hosting.adoc#request-upload-permissions[Learn more about how to request upload permissions].
   Check that the path you're allowed to upload to matches the actual upload attempt (i.e. no typos).
-* The specified release already exists and you try to overwrite it.
+* The specified release already exists, and you try to overwrite it.
   We do not allow replacing existing releases.
   Specify a different, previously unused version number during the release process.
 

@@ -9,7 +9,8 @@ This tutorial uses the same application that the xref:build-a-node-js-and-react-
 Therefore, you're building the same application, but this time, completely through Blue Ocean.
 Since Blue Ocean provides a simplified Git-handling experience, you'll be interacting directly with the repository on GitHub, as opposed to a local clone.
 
-*Duration:* This tutorial takes 20-40 minutes to complete if you've already met the xref:#prerequisites[prerequisites] below.
+*Duration:* This tutorial takes 20-40 minutes to complete if you've already met the
+include::partial$prerequisites.adoc[prerequisites] below.
 
 The exact duration depends on the speed of your machine and whether or not you've already xref:ROOT:create-a-pipeline-in-blue-ocean.adoc#run-jenkins-in-docker[run Jenkins in Docker] from xref:ROOT:index[another tutorial].
 
@@ -18,7 +19,8 @@ include::user-docs:blueocean:partial$_blue-ocean-status.adoc[]
 You can stop this tutorial at any point in time and continue from where you left
 off.
 
-If you've already run though xref:ROOT:index.adoc[another tutorial], you can skip the xref:#prerequisites[prerequisites] and xref:ROOT:create-a-pipeline-in-blue-ocean.adoc#run-jenkins-in-docker[run Jenkins in Docker] sections below and proceed to xref:#fork-sample-repository[forking the sample repository].
+If you've already run though xref:ROOT:index.adoc[another tutorial], you can skip the include::partial$prerequisites.adoc[prerequisites] and xref:ROOT:create-a-pipeline-in-blue-ocean.adoc#run-jenkins-in-docker[run Jenkins in Docker] sections below and proceed to
+include::partial$fork-sample-repository.adoc[forking the sample repository].
 If you need to restart Jenkins, follow the restart instructions in xref:user-docs:installing-jenkins:partial$_setup-wizard-for-tutorials.adoc[run Jenkins in Docker] and then proceed.
 
 include::partial$prerequisites.adoc[prerequisites]
@@ -29,6 +31,7 @@ include::user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[]
 include::partial$fork-sample-repository.adoc[]
 
 
+[#create-your-pipeline-project-in-blue-ocean]
 == Create your Pipeline project in Blue Ocean
 
 . Go back to Jenkins and ensure you have accessed the Blue Ocean interface.
@@ -58,7 +61,7 @@ This access token has the appropriate permissions pre-selected that Blue Ocean r
 image:pipeline-in-blueocean-01-connecting-to-github.png[alt="Connecting to GitHub",width=80%]
 +
 [#choose-github-account]Jenkins now has access to your GitHub account, using your access token.
-. In *Which organization does the repository belong to?*, select your GitHub account where you forked the repository xref:#fork-sample-repository[above].
+. In *Which organization does the repository belong to?*, select your GitHub account where you forked the repository include::partial$fork-sample-repository.adoc[forking the sample repository].
 . In *Choose a repository*, select your forked repository `creating-a-pipeline-in-blue-ocean`.
 . Select *Create Pipeline*.
 * Blue Ocean detects that there is no Jenkinsfile at the root level of the repository's `master` branch and helps you create one.
@@ -67,6 +70,8 @@ You must select *Create Pipeline* again at the end of the page to proceed.
 TIP: Under the hood, a Pipeline project created through Blue Ocean is actually a "multibranch Pipeline".
 Therefore, Jenkins looks for the presence of at least one Jenkinsfile in any branch of your repository.
 
+
+[#create-your-initial-pipeline]
 === Create your initial Pipeline
 
 . Following on from creating your Pipeline project xref:#create-your-pipeline-project-in-blue-ocean[above], in the Pipeline editor, select *Docker* from the *Agent* dropdown in the *Pipeline Settings* panel on the right side of the page.
@@ -140,6 +145,7 @@ image:pipeline-in-blueocean-19b-main-blue-ocean-interface.png[alt="Main Blue Oce
 WARNING: Before continuing on, verify that Jenkins has created a `Jenkinsfile` for you at the root of your forked GitHub repository, in the repository's sole `master` branch.
 
 
+[#add-a-test-stage-to-your-pipeline]
 === Add a test stage to your Pipeline
 
 . From the main Blue Ocean interface, select *Branches* in the upper right to access your repository's branches page, where you can access the `master` branch.
@@ -181,6 +187,7 @@ Subsequent runs of your Pipeline should be much faster.
 . Select the *X* at the top-right corner to return to the main Blue Ocean interface.
 
 
+[#add-a-final-deliver-stage-to-your-pipeline]
 === Add a final deliver stage to your Pipeline
 
 . From the main Blue Ocean interface, select *Branches* in the upper right to access your repository's `master` branch.

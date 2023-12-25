@@ -1,4 +1,3 @@
-
 = Build a Python app with PyInstaller
 
 This tutorial shows you how to use Jenkins to orchestrate building a simple
@@ -50,7 +49,7 @@ include::user-docs:installing-jenkins:partial$_run-jenkins-in-docker.adoc[]
 
 [#fork-sample-repository]
 [#fork-and-clone-the-sample-repository-on-github]
-=== Fork and clone the sample repository
+== Fork and clone the sample repository
 
 Obtain the simple "add" Python application from GitHub, by forking the sample
 repository of the application's source code into your own GitHub account and
@@ -88,7 +87,7 @@ then cloning this fork locally.
    where `YOUR-GITHUB-ACCOUNT-NAME` is the name of your GitHub account.
 
 
-=== Create your Pipeline project in Jenkins
+== Create your Pipeline project in Jenkins
 
 . Go back to Jenkins, log in again if necessary and click *create new jobs*
   under *Welcome to Jenkins!* +
@@ -117,7 +116,7 @@ then cloning this fork locally.
   Git repository.
 
 
-=== Create your initial Pipeline as a Jenkinsfile
+== Create your initial Pipeline as a Jenkinsfile
 
 You're now ready to create your Pipeline that will automate building your Python
 application with PyInstaller in Jenkins. Your Pipeline will be created as a
@@ -225,7 +224,7 @@ image:tutorials:ROOT:python-pyinstaller-03-main-blue-ocean-interface.png[alt="Ma
 Blue Ocean interface",width=100%]
 
 
-=== Add a test stage to your Pipeline
+== Add a test stage to your Pipeline
 
 . Go back to your text editor/IDE and ensure your `Jenkinsfile` is open.
 . Copy and paste the following Declarative Pipeline syntax immediately under the
@@ -338,7 +337,8 @@ stage runs successfully (with output)",width=100%]
 . Click the *X* at the top-right to return to the main Blue Ocean interface.
 
 
-=== Add a final deliver stage to your Pipeline
+[#add-a-final-deliver-stage-to-your-pipeline]
+== Add a final deliver stage to your Pipeline
 
 . Go back to your text editor/IDE and ensure your `Jenkinsfile` is open.
 . Copy and paste the following Declarative Pipeline syntax immediately under the
@@ -505,7 +505,7 @@ image:tutorials:ROOT:python-pyinstaller-23-main-blue-ocean-interface-with-all-pr
 Blue Ocean interface with all previous runs displayed",width=100%]
 
 
-=== Follow up (optional)
+== Follow up (optional)
 
 If you use Linux, you can try running the standalone `add2vals` application you
 generated with PyInstaller locally on your machine. To do this:
@@ -534,7 +534,7 @@ stage Artifacts page",width=100%]
 . Run the command `./add2vals` and follow the instructions provided by your app.
 
 
-=== Wrapping up
+== Wrapping up
 
 Well done! You've just used Jenkins to build a simple Python application!
 
@@ -558,8 +558,4 @@ To learn more about what Jenkins can do, check out:
 
 
 '''
-////
-++++
-include::_partials/_feedback-footer.html[]
-++++
-////
+

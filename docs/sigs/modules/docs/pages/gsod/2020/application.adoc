@@ -1,18 +1,8 @@
----
-:layout: simplepage
-:title: "Jenkins GSoD application draft, 2020"
-:tags:
-- gsod
-- gsod2020
----
-
-<!-- This file uses Markdown intentionally.
-     The application is actually a plain text, but we use Markdown to follow the GSoC format which is likely to be adopted by GSoD later.
- -->
+= Jenkins GSoD application draft, 2020
 
 The data below represents the Google Season of Docs 2020 application draft.
 
-### Organization Profile
+== Organization Profile
 
 * Name: Jenkins project
 * Website: https://jenkins.io/
@@ -20,12 +10,12 @@ The data below represents the Google Season of Docs 2020 application draft.
 * Does your organization want to accept the mentor stipend? => Yes
 * Link to project ideas list: https://jenkins.io/sigs/docs/gsod#project-ideas 
 
-### Org admins
+== Org admins
 
 * Primary: Oleg Nenashev
 * Secondary: Marky Jackson
 
-### Org description
+== Org description
 
 Jenkins, originally founded in 2006 as "Hudson", is one of the leading automation servers.
 The project’s motto is "Build great things at any scale".
@@ -35,7 +25,7 @@ Jenkins is open-source, MIT License is used for most of the components.
 The project has thousands of active contributors working on Jenkins core, plugins, website, project infrastructure, localization activities, and, of course, documentation.
 We invite technical writers to join the community and contribute to the documentation being used by millions of Jenkins users worldwide.
 
-### What previous experience has your organization had in the documentation or collaborating with technical writers?
+== What previous experience has your organization had in the documentation or collaborating with technical writers?
 
 > If you or any of your mentors have worked with technical writers before, or have developed documentation, mention this in your answer.
 > Describe the documentation that you produced and the ways in which you worked with the technical writer.
@@ -76,7 +66,7 @@ These channels act as an additional contact point for technical writers in the c
 * Chat on Gitter: https://app.gitter.im/#/room/#jenkins/docs:matrix.org
 * Regular Documentation SIG meetings: https://www.jenkins.io/sigs/docs/#meetings
 
-### What previous experience has your organization had mentoring individuals?
+== What previous experience has your organization had mentoring individuals?
 
 > Comment: If you or any of your mentors have taken part in Google Summer of Code or a similar program that mentors individuals, mention this in your answer.
 > Describe your achievements in that program. Explain how this experience may influence the way you work in Season of Docs.
@@ -90,6 +80,6 @@ As an organization, we do not have particular experience in mentoring technical 
 but we do have experience in onboarding documentation contributors to the community.
 We also work on onboarding programs for documentation contributors, e.g. for website copy-editors: https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc#maintainer-guide.
 
-### How many technical writers does your organization want to mentor this year?
+== How many technical writers does your organization want to mentor this year?
 
 1

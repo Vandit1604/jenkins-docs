@@ -80,7 +80,8 @@ For this tutorial, you will create a security group and add the following rules:
 
 To create and configure your security group:
 
-. [#step1-security-group]Decide who may access your instance.
+[#step1-security-group]
+. Decide who may access your instance.
 For example, a single computer or all trusted computers on a network.
 For this tutorial, you can use the public IP address of your computer.
 * To find your IP address, use the
@@ -376,7 +377,7 @@ image::tutorials:ROOT:AWS/ssh_username.png[Set Kind to SSH Username with private
 .. Scroll down and select *Enter Directly* under Private Key, then select *Add*.
 +
 image::tutorials:ROOT:AWS/private_key_enter_directly.png[Set Private Key to Enter Directly.]
-.. Open the private key pair you created in the xref:#Creating a key pair[ creating a key pair] step and paste in the contents from "-----BEGIN RSA PRIVATE KEY-----" to "-----END RSA PRIVATE KEY-----".
+.. Open the private key pair you created in the xref:#creating-a-key-pair[creating a key pair] step and paste in the contents from "-----BEGIN RSA PRIVATE KEY-----" to "-----END RSA PRIVATE KEY-----".
 Select *Add* when completed.
 +
 image::tutorials:ROOT:AWS/enter_private_key.png[Enter Private Key.]

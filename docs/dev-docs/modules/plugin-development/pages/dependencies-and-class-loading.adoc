@@ -9,14 +9,14 @@ The de facto build tool for Jenkins plugins is Apache Maven.
 All examples here will use Maven.
 Building plugins using Gradle is also possible but particular capabilities may lag behind.
 
-## Jenkins class loading
+== Jenkins class loading
 
 Before diving into _how_ to refer to libraries and other plugins from your plugin,
 it is useful to understand the elements of Java class loading and how that applies to Jenkins.
 If you are not a Java developer, you can get away with ignoring all this for simple plugins,
 but will need to understand class loading to troubleshoot strange errors or perform advanced packaging.
 
-### The plugin class loader hierarchy
+=== The plugin class loader hierarchy
 
 [source]
 ----
@@ -65,7 +65,7 @@ It is possible for two distinct plugins to define a class of the same name, so l
 There is also a single special `UberClassLoader` which delegates to _all_ enabled plugins.
 This never loads any additional resources but it can be used to look up any plugin class or resource.
 
-### Initiating vs. defining loaders
+=== Initiating vs. defining loaders
 
 When you _initiate_ loading of a class
 
@@ -86,7 +86,7 @@ This means that C cannot provide some class A might need to link against.
 A needs to be able to “see” any such class on its own.
 Otherwise you will get a `NoClassDefFoundError` at runtime.
 
-### Context class loaders
+=== Context class loaders
 
 Java defines a `Thread.getContextClassLoader()`.
 Jenkins does not use this much; it will normally be set by the servlet container to the Jenkins core loader.
@@ -159,7 +159,7 @@ Consider patching the library or looking harder for appropriate APIs that alread
 As an example, `java.io.ObjectInputStream` (used for deserializing Java objects) by default uses a complicated algorithm to guess at a `ClassLoader`,
 but you can override `resolveClass` to remove the need for guessing (as `hudson.remoting.ObjectInputStreamEx` in fact does).
 
-### Views and other resources
+=== Views and other resources
 
 Jenkins plugins normally contain “Stapler views” like `config.jelly` as well as other resources in `src/main/resources/`.
 While you can explicitly load these from Java code:
@@ -194,7 +194,7 @@ public class Alpha {
 }
 ----
 
-## Depending on other plugins
+== Depending on other plugins
 
 Making your plugin depend on other plugins is easy: just declare dependencies in your POM, by hand or using your favorite IDE.
 
@@ -219,7 +219,7 @@ which will be understood by the Jenkins plugin manager, as well as the update ce
 
 The Maven compiler plugin similarly understands that `a-1.13.jar` and `b-1.6.jar` should be added to your classpath when building your plugin.
 
-### Extensions and inversion of control
+=== Extensions and inversion of control
 
 A “service locator” pattern is used throughout Jenkins for modularity and extensibility.
 For example, if a plugin (or core) defines an API
@@ -284,7 +284,7 @@ It is important to understand that while `MyChecker` needs to link against `Chec
 While the local variable `c`’s implementation class might be in the `somethingelse` plugin,
 it need only care about the _declared type_ `Checker`.
 
-## Bundling third-party libraries
+== Bundling third-party libraries
 
 Sometimes plugins need to use Java libraries beyond what is available in the Java Platform and Jenkins itself.
 For example, a plugin connecting to a particular service might use a Java SDK provided by the vendor.
@@ -315,7 +315,7 @@ just as it would from `WEB-INF/lib/yourplugin.jar` (your plugin’s own code, fr
 Thus your plugin’s classes can refer to classes in that library.
 Other plugins depending on your plugin can, too.
 
-### Checking `+WEB-INF/lib/*.jar+` for junk
+=== Checking `+WEB-INF/lib/*.jar+` for junk
 
 Beware that Maven dependencies include _all transitive_ dependencies.
 This can lead to unexpected results when bundling libraries.
@@ -323,7 +323,7 @@ For example, the POM for `com.yoyodyne.cloud:cloud-access-sdk` might declare tha
 Your plugin will thus wind up bundling `commons-net-3.5.jar` as well.
 If you are not careful, `WEB-INF/lib/` may fill up with megabytes of stuff which is not actually used.
 
-### Using library wrapper plugins
+=== Using library wrapper plugins
 
 In practice it is undesirable for Jenkins feature plugins to bundle assorted third-party libraries.
 Typically other plugins will need some of the same libraries, so multiple plugins will wind up bundling copies.
@@ -348,7 +348,7 @@ it is suggested to include the major version of the library in the wrapper plugi
 Thus there could be multiple major releases loaded simultaneously.
 Of course this means that critical fixes must be issued as updates to all release lines, so only do this for _supported_ versions of the library.
 
-### `pluginFirstClassLoader` and its discontents
+=== `pluginFirstClassLoader` and its discontents
 
 The default behavior of Java class loaders, and of Jenkins plugin class loaders as well,
 is to service `loadClass` requests first by asking the parent loader(s) for the class of that name,
@@ -377,7 +377,7 @@ There is a related flag `globalMaskClasses` which adjusts the behavior of _every
 
 If you did not understand any part of this section, do not use these options. Even if you did, think twice.
 
-### Shading
+=== Shading
 
 Another approach to taming the complexity of library dependencies and class loading is loosely referred to as _shading_,
 exemplified by the https://maven.apache.org/plugins/maven-shade-plugin/[Maven Shade plugin] (though multiple techniques are possible).
@@ -409,7 +409,7 @@ Plugins using the wrapped library therefore would refer to the repackaged name:
 import org.jenkinsci.commons_lang2.StringUtils;
 ----
 
-## `@Restricted` annotations
+== `@Restricted` annotations
 
 The `public` modifier in Java allows types, methods, constructors, and fields to be accessed from any other class in the system capable of linking against the defining type.
 Thus it forms part of the API, as do `protected` members.
@@ -438,7 +438,7 @@ Several kinds of restriction are available; consult Javadoc for details.
 
 This system has no effect on accesses using `java.lang.reflect`.
 
-## `JenkinsRule` vs. `acceptance-test-harness` class loading
+== `JenkinsRule` vs. `acceptance-test-harness` class loading
 
 There are three main categories of automated test used in Jenkins:
 
@@ -465,7 +465,7 @@ These get their own class loaders.)
 Whenever there is any doubt about whether class loading behavior could affect plugin or core code,
 use `RealJenkinsRule` which launches Jenkins in a separate JVM with the regular class loader hierarchy.
 
-## Jenkins modules
+== Jenkins modules
 
 Historical versions of `jenkins.war` included a few components called _modules_ which are built and packaged just like plugins, and can refer to types defined in Jenkins core,
 but which are bundled alongside core and cannot be managed by users in the plugin manager.

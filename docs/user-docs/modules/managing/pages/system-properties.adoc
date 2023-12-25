@@ -238,7 +238,7 @@ Obsolete since the feature was removed in Jenkins 2.223.
 *Since*: 2.205
 
 *Description*::
-Jenkins 2.205 and newer attempts to prevent browsers from offering to auto-fill password form fields by using a custom password control.
+Jenkins 2.205 and newer attempts to prevent browsers from offering to autofill password form fields by using a custom password control.
 Setting this to `false` reverts to the legacy behavior of using mostly standard password form fields.
 
 ===== name: hudson.lifecycle
@@ -250,7 +250,7 @@ Setting this to `false` reverts to the legacy behavior of using mostly standard 
 
 *Description*::
 Specify full class name for Lifecycle implementation to override default.
-See xref:dev-docs:extensions:jenkins-core.adoc//lifecycle[documentation] for class names.
+See xref:dev-docs:extensions:jenkins-core.adoc#lifecycle[documentation] for class names.
 
 ===== name: hudson.logging.LogRecorderManager.skipPermissionCheck
 
@@ -319,7 +319,7 @@ See link:/security/advisory/2021-01-13///SECURITY-2153[2021-01-13 security advis
 
 *Description*::
 Use shorter but cryptic names in matrix build workspace directories.
-Avoids problems with 256 character limit on paths in Cygwin, path depths problems on Windows, and shell metacharacter problems with label expressions on most platforms.
+Avoids problems with 256-character limit on paths in Cygwin, path depths problems on Windows, and shell metacharacter problems with label expressions on most platforms.
 See https://issues.jenkins.io/browse/JENKINS-25783[JENKINS-25783].
 
 ===== name: hudson.model.AbstractItem.skipPermissionCheck
@@ -924,7 +924,7 @@ Possibly unsafe, link:/security/advisory/2018-12-05///SECURITY-595[see 2018-12-0
 
 *Description*::
 Location of the base directory for all exploded .hpi/.jpi plugins.
-By default the plugins will be extracted under `$JENKINS_HOME/plugins/`.
+By default, the plugins will be extracted under `$JENKINS_HOME/plugins/`.
 
 ===== name: hudson.PluginStrategy
 
@@ -959,6 +959,7 @@ Set to `false` to skip the version check for plugin dependencies.
 *Description*::
 Connection timeout applied to connections e.g. to the update site.
 
+[#hudson-remoting-channelbuilder-allcallablescanignorerolechecker]
 ===== name: hudson.remoting.ChannelBuilder.allCallablesCanIgnoreRoleChecker
 
 `security` `scape hatch`
@@ -971,6 +972,7 @@ Connection timeout applied to connections e.g. to the update site.
 Disable requirement for remoting callables to perform a role check.
 See link:/doc/upgrade-guide/2.303///SECURITY-2458[the description in the upgrade guide].
 
+[#hudson-remoting-channelbuilder-specificcallablescanignoreroleche]
 ===== name: hudson.remoting.ChannelBuilder.specificCallablesCanIgnoreRoleChecker
 
 `security` `scape hatch`
@@ -1003,7 +1005,7 @@ See jep:200//backwards-compatibility[JEP-200] and https://issues.jenkins.io/brow
 *Since*: Up to 1.354
 
 *Description*::
-Control a agent based on a schedule
+Control an agent based on a schedule
 
 ===== name: hudson.scm.SCM.useAutoBrowserHolder
 
@@ -1134,7 +1136,7 @@ The ExtendedReadPermission allows read-only access to "Configure" pages; can als
 *Since*: 2.121 and 2.107.3
 
 *Description*::
-Regex for legal user names in Jenkins user database.
+Regex for legal usernames in Jenkins user database.
 See link:/security/advisory/2018-05-09///SECURITY-786[SECURITY-786].
 
 ===== name: hudson.security.HudsonPrivateSecurityRealm.maximumBCryptLogRound
@@ -1584,11 +1586,11 @@ True to disable creation of symbolic links in job/builds directories
 *Since*: 2.2
 
 *Description*::
-If this flag is set to `true` then we will request a garbage collection after a deletion failure before we next retry the delete.
+If this flag is set to `true` then we will request a garbage collection after a deletion failure before we next retry the deletion.
 It is ignored unless _hudson.Util.maxFileDeletionRetries_ is greater than 1.
 Setting this flag to `true` _may_ resolve some problems on Windows, and also for directory trees residing on an NFS share, but it can have a negative impact on performance and may have no effect at all (GC behavior is JVM-specific).
 **Warning**: This should only ever be used if you find that your builds are failing because Jenkins is unable to delete files, that this failure is because Jenkins itself has those files locked "open", and even then it should only be used on agents with relatively few executors (because the garbage collection can impact the performance of all job executors on that agent).
-_Setting this flag is a act of last resort - it is not recommended, and should not be used on your main Jenkins server unless you can tolerate the performance impact_.
+_Setting this flag is an act of last resort - it is not recommended, and should not be used on your main Jenkins server unless you can tolerate the performance impact_.
 
 ===== name: hudson.util.ProcessTree.disable
 
@@ -1819,7 +1821,7 @@ For example can be generated in following ways:
 * in a shell: `echo "11$(openssl rand -hex 16)"`
 * in JavaScript: `const genRanHex = size => [...Array(size)].map(() => Math.floor(Math.random() * 16).toString(16)).join(''); console.log('11' + genRanHex(32));`
 
-When the API Token is generated using this system property, it should be revoked during the installation script using the other ways at your disposal so that you have a fresh (random) token with less traces for your script.
+When the API Token is generated using this system property, it should be revoked during the installation script using the other ways at your disposal so that you have a fresh (random) token with fewer traces for your script.
 See https://javadoc.jenkins.io/jenkins/security/ApiTokenProperty.html//generateNewToken-java.lang.String-[ApiTokenProperty//generateNewToken(String)] and https://javadoc.jenkins.io/jenkins/security/ApiTokenProperty.html//revokeAllTokensExceptOne-java.lang.String-[ApiTokenProperty//revokeAllTokensExceptOne(String)] for scripting methods or using the web API calls:
 `/user/[user-login]/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken` and `/user/[user-login]/descriptorByName/jenkins.security.ApiTokenProperty/revokeAllExcept`
 
@@ -1834,6 +1836,7 @@ See https://javadoc.jenkins.io/jenkins/security/ApiTokenProperty.html//generateN
 A comma-separated list of additional top level path segments that should be accessible to users without Overall/Read permission.
 See link:/security/advisory/2021-01-13///SECURITY-2047[2021-01-13 security advisory].
 
+[#jenkins-model-jenkins-buildsdir]
 ===== name: jenkins.model.Jenkins.buildsDir
 
 `feature`
@@ -1864,7 +1867,7 @@ mkdir -p [TARGET_DIR]
 mv $JENKINS_HOME/jobs/[JOB_NAME]/builds [TARGET_DIR]/[JOB_NAME]
 ```
 
-For xref:pipeline:multibranch.adoc//creating-a-multibranch-pipeline[Multibranch Pipeline] jobs, run for each `BRANCH_NAME`:
+For xref:pipeline:multibranch.adoc#creating-a-multibranch-pipeline[Multibranch Pipeline] jobs, run for each `BRANCH_NAME`:
 
 ```sh
 mkdir -p [TARGET_DIR]/[JOB_NAME]/branches/
@@ -1872,7 +1875,7 @@ mv $JENKINS_HOME/jobs/[JOB_NAME]/branches/[BRANCH_NAME]/builds \
 [TARGET_DIR]/[JOB_NAME]/branches/[BRANCH_NAME]
 ```
 
-For xref:pipeline:multibranch.adoc//organization-folders[Organization Folders], run this for each `REPO_NAME` and `BRANCH_NAME`:
+For xref:pipeline:multibranch.adoc#organization-folders[Organization Folders], run this for each `REPO_NAME` and `BRANCH_NAME`:
 
 ```sh
 mkdir -p [TARGET_DIR]/[ORG_NAME]/jobs/[REPO_NAME]/branches/
@@ -2138,7 +2141,7 @@ See link:/redirect/class-filter/[documentation].
 If Jenkins and plugins systems should prefer link:https://csrc.nist.gov/pubs/fips/140-2/upd2/final[FIPS-140] compliant cryptography.
 Not all features/plugins have been adapted, and this only indicates a preference.
 If you set this flag to `true`, it does not make Jenkins and its plugins FIPS-140 compliant.
-Refer to xref:system-administration:FIPS-140.adoc[Jenkins and FIPS-140 Overview] for more information.
+Refer to xref:dev-docs:FIPS-140:index.adoc[Jenkins and FIPS-140 Overview] for more information.
 
 ===== name: jenkins.security.FrameOptionsPageDecorator.enabled
 
@@ -2163,6 +2166,7 @@ Whether to send `X-Frame-Options: sameorigin` header, set to `false` to disable 
 *Description*::
 When set to `true`, disable `Basic` authentication with username and password (rather than API token).
 
+[#jenkins-security-managepermission]
 ===== name: jenkins.security.ManagePermission
 
 `feature` `security`
@@ -2345,6 +2349,7 @@ Escape hatch for link:/security/advisory/2018-12-05///SECURITY-595[SECURITY-595]
 Escape hatch for link:/security/advisory/2020-03-25///SECURITY-1774[SECURITY-1774].
 Allows requests to URLs with semicolon characters (`;`) in the request path.
 
+[#jenkins-security-systemreadpermission]
 ===== name: jenkins.security.SystemReadPermission
 
 `feature` `security`
@@ -2387,7 +2392,7 @@ See https://issues.jenkins.io/browse/JENKINS-35493[JENKINS-35493].
 
 *Description*::
 `false` to disable the JNLP3 agent protocol, `true` to enable it.
-Otherwise it's randomly enabled/disabled to A/B test it.
+Otherwise, it's randomly enabled/disabled to A/B test it.
 Obsolete since the protocol was removed in 2.214.
 
 ===== name: jenkins.slaves.NioChannelSelector.disabled
@@ -2428,6 +2433,7 @@ This will swap output streams around to prevent stream corruption through unexpe
 Set to `false` to not redact error messages when the agent-to-controller file path filters reject a file access.
 This can give attackers information about files and directories on the Jenkins controller file system.
 
+[#jenkins-telemetry-telemetry-endpoint]
 ===== name: jenkins.telemetry.Telemetry.endpoint
 
 `development`
@@ -2639,9 +2645,10 @@ Used to set `org.apache.commons.fileupload.servlet.ServletFileUpload//setSizeMax
 
 
 *Description*::
-Controls both caching of various cacheable resources (Jelly scripts etc.) as well as the `Expires` HTTP response header for some static resources.
+Controls both caching of various cacheable resources (Jelly scripts etc.) and the `Expires` HTTP response header for some static resources.
 Useful during development to see the effect of changes after reload.
 
+[#stapler-jelly-trace]
 ===== name: stapler.jelly.trace
 
 `development`
@@ -2686,6 +2693,7 @@ Escape hatch for link:/security/advisory/2018-12-05///SECURITY-595[SECURITY-595]
 Additional debug resource paths.
 Set by the core development tooling so developers can see the effect of changes immediately after reloading the page.
 
+[#stapler-trace]
 ===== name: stapler.trace
 
 `development`
@@ -2695,8 +2703,9 @@ Set by the core development tooling so developers can see the effect of changes 
 
 *Description*::
 Trace request handling and report the result using `Stapler-Trace-...` response headers.
-Additionally renders a diagnostic HTTP 404 error page when the request could not be processed.
+Additionally, renders a diagnostic HTTP 404 error page when the request could not be processed.
 
+[#stapler-trace-per-request]
 ===== name: stapler.trace.per-request
 
 `development`
@@ -2733,14 +2742,14 @@ When Job DSL manages the items, this can avoid triggering many scans, which can 
 The downside is that the branch source might use this notification to register webhooks or do any other useful setup work.
 ---
 
-= Jenkins Features Controlled with System Properties
+== Jenkins Features Controlled with System Properties
 
 Jenkins has several "hidden" features that can be enabled with system properties.
 This page documents many of them and explain how to configure them on your instance.
 
 Some system properties related to the Remoting library used for communication between controller and agents are documented in https://github.com/jenkinsci/remoting/blob/master/docs/configuration.md[that component's repository].
 
-== Usage
+=== Usage
 
 System properties are defined by passing `-Dproperty=value` to the `java` command line to start Jenkins.
 Make sure to pass all of these arguments *before* the `-jar` argument, otherwise they will be ignored.
@@ -2757,14 +2766,14 @@ The following lists the properties and the version of Jenkins they were introduc
 * *Since* - The version of Jenkins the property was introduced in
 * *Description* - Other notes
 
-=== Compatibility
+==== Compatibility
 
 We do **NOT** guarantee that system properties will remain unchanged and functional indefinitely.
 These switches are often experimental in nature, and subject to change without notice.
 If you find these useful, please file a ticket to promote it to an official feature.
 
 
-== Properties in Jenkins Core
+=== Properties in Jenkins Core
 
 [NOTE]
 Due to the very large number of system properties used, often just added as a "safety valve" or "escape hatch" in case a change causes problems, this list is not expected to be complete.

@@ -21,7 +21,7 @@ There are multiple alternatives for automatic job management, including:
 Organization Folders provide a convenient way to automate the creation and deletion of jobs in Jenkins as repositories and branches are added or removed. 
 If you are using GitHub organizations, Bitbucket teams, GitLab groups, or Gitea organizations, Jenkins can automatically detect the creation of a new repository and generate a Multibranch Pipeline project for it.
 
-Refer to the xref:pipeline:pipeline-as-code.adoc#organization-folders[organization folders] documentation for more details.
+Refer to the xref:pipeline:multibranch.adoc#organization-folders[organization folders] documentation for more details.
 
 .GitHub organization folders
 video::LbXKUKQ24T8[youtube,width=800,height=420]
@@ -50,7 +50,7 @@ video::y4XGFluzPHY[youtube,width=800,height=420]
 .Bitbucket project folders
 video::LNfthmZuRDI[youtube,width=800,height=420]
 
-Refer to the xref:pipeline:pipeline-as-code.adoc#multibranch-pipeline-projects[multibranch Pipelines] documentation for more details.
+Refer to the xref:pipeline:multibranch.adoc#creating-a-multibranch-pipeline[creating multibranch Pipelines] documentation for more details.
 
 [#use-pipeline]
 === Use Pipeline

@@ -6,7 +6,7 @@
 
 == Components of Distributed Builds
 
-Builds in a xref:scaling:architecting-for-scale.adoc#distributed-builds-architecture[distributed builds architecture] use nodes, agents, and executors, which are distinct from the Jenkins controller itself.
+Builds in a xref:user-docs:scaling:architecting-for-scale.adoc#distributed-builds-architecture[distributed builds architecture] use nodes, agents, and executors, which are distinct from the Jenkins controller itself.
 Understanding what each of these components are is useful when managing nodes:
 
 ////
@@ -57,6 +57,7 @@ When determining how many executors to run on a node, consider CPU and memory re
 * One executor per CPU core can work well, if the tasks running are small.
 * Monitor I/O performance, CPU load, memory usage, and I/O throughput carefully when running multiple executors on a node.
 
+[#creating-agents]
 == Creating Agents
 
 Jenkins agents are the "workers" that perform operations requested by the Jenkins controller.

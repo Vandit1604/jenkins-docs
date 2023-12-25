@@ -27,6 +27,7 @@ Our striving to lower barrier of entry doesn’t mean everyone has the equal voi
 
 We believe in running the project transparently. This includes everything from decision-making to defects in the code.
 
+[#compatibility-matters]
 === Compatibility matters
 
 We recognize that users expect their existing data, accumulated under past versions (including Hudson up to 1.395) to continue working under future versions of Jenkins. This includes jobs configurations, build records, and plugin binaries that they are using. The Jenkins project places high value on maintaining this compatibility, and will be very careful in removing functionality.
@@ -87,12 +88,14 @@ Plugins do not necessarily follow the same formality when it comes to the 3rd pa
 
 We encourage plugins to follow the same 3rd party license policy as the core. You may vary from it at your own risk. For example, see link:https://www.gnu.org/licenses/gpl-faq.html#NFUseGPLPlugins[FSF's opinion about GPL plugins with a non-GPL core].
 
+[#trademark]
 == Trademark
 
 See the xref:project:trademark:index.adoc[Trademark and Attribution] page for details.
 
 == Project roles/stakeholders
 
+[#governance-board]
 === Governance board
 
 The governance board consists of five people who act as public representatives of the project, when such representation is necessary, for example to interface external entities such as SPI or CDF.
@@ -194,8 +197,8 @@ and we invite all interested parties to join us and to contribute towards the ro
 [#meeting]
 == Decision making
 
-The Jenkins project uses xref:project:governance-meeting:index.adoc[biweekly project meetings] as the primary forum of decision making for matters that need consensus.
-The meeting is conducted using a video call or xref:community:chat:index.adoc#meeting[IRC].
+The Jenkins project uses xref:project:governance-meeting:index.adoc[biweekly project meetings] as the primary forum of decision-making for matters that need consensus.
+The meeting is conducted using a video call or xref:community:chat:index.adoc#irc[IRC].
 These meetings are open to anyone, and everyone is welcome to provide their feedback and vote on decisions at the meeting.
 Agenda items can be added by anyone by simply adding your topic to xref:project:governance-meeting:index.adoc[the Governance Meeting Agenda].
 

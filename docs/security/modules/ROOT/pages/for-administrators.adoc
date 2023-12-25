@@ -25,7 +25,7 @@ Security Advisory::
 
 == How Does the Jenkins Team Learn About Security Issues?
 
-Security researchers, Jenkins contributors, Jenkins security team members, and regular Jenkins users and administrators xref:dev-docs:security:index.adoc#reporting-vulnerabilities[report potential security issues they discover to the Jenkins security team], via the SECURITY project in our issue tracker or via email.
+Security researchers, Jenkins contributors, Jenkins security team members, and regular Jenkins users and administrators xref:security:ROOT:index.adoc#reporting-vulnerabilities[report potential security issues they discover to the Jenkins security team], via the SECURITY project in our issue tracker or via email.
 The Jenkins security team then evaluates the report to see whether it's a real security issue or something else, and acts accordingly.
 
 
@@ -34,9 +34,10 @@ The Jenkins security team then evaluates the report to see whether it's a real s
 We work with maintainers of affected components to address these issues.
 In case of Jenkins (core), security team members usually develop the fixes.
 
-Once fixes are ready or xref:security:ROOT:plugins.adoc[we've determined that a component is not maintained actively enough], we announce the issues and fixes, if applicable, in a security advisory.
+Once fixes are ready, or xref:security:ROOT:plugins.adoc[we've determined that a component is not maintained actively enough], we announce the issues and fixes, if applicable, in a security advisory.
 
 
+[#what-is-a-security-advisory]
 == What is a Security Advisory?
 
 A security advisory is a public announcement with information about security issues, including workarounds and fixes.

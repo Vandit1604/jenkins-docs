@@ -24,6 +24,7 @@ You now have a choice of creating your new Pipeline project from a:
 * link:#for-a-repository-on-github[Repository on GitHub] or GitHub Enterprise
 * link:#for-a-repository-on-bitbucket-cloud[Repository on Bitbucket Cloud] or Bitbucket Server
 
+[#for-a-git-repository]
 === For a Git repository
 
 To create your Pipeline project for a Git repository, click the *Git* button
@@ -39,18 +40,20 @@ image::creating-pipelines/connect-to-a-git-repository.png['Connect to a Git repo
 
 You now must specify a link:#local-repository[local] or link:#remote-repository[remote] repository from which to build your Pipeline project.
 
+[#local-repository]
 ==== Local repository
 
 If your URL is a local directory path beginning with a forward slash `/`, such as `/home/cloned-git-repos/my-git-repo.git`, you can proceed to select the *Create Pipeline* option.
 
 Blue Ocean then scans your local repository's branches for a `Jenkinsfile`, and starts a Pipeline run for each branch containing a `Jenkinsfile`.
-If Blue Ocean cannot find a `Jenkinsfile`, you are prompted to create one through the xref:#pipeline-editor#[Pipeline editor].
+If Blue Ocean cannot find a `Jenkinsfile`, you are prompted to create one through the xref:blueocean:pipeline-editor.adoc[Blue Ocean Pipeline editor].
 
 Local repositories are typically limited to file system access and are normally only available from the controller node.
 Local repositories are also known to require more complicated path names on Windows than most users want to manage.
 Users are advised to run jobs on agents, rather than running them directly on the controller.
 Therefore, you should use a remote repository rather than a local repository for the best Blue Ocean experience.
 
+[#remote-repository]
 ==== Remote repository
 
 Since the Pipeline editor saves edited Pipelines to Git repositories as `Jenkinsfile`s, Blue Ocean only supports connections to remote Git repositories over the SSH protocol.
@@ -84,7 +87,7 @@ Select the *Create Pipeline* option.
 Blue Ocean scans your local repository's branches for a `Jenkinsfile` and starts a Pipeline run for each branch containing a `Jenkinsfile`.
 If Blue Ocean does not find a `Jenkinsfile` you are prompted to create one through the xref:blueocean:pipeline-editor.adoc[Pipeline editor].
 
-
+[#for-a-repository-on-github]
 === For a repository on GitHub
 
 To create your Pipeline project directly for a repository on GitHub, select the *GitHub* option under *Where do you store your code?*.
@@ -102,7 +105,7 @@ GitHub',width=70%]
 
 If you do not have a GitHub access token, select the *Create an access key here* option to open GitHub to the link:#create-your-access-token[New personal access token] page.
 
-
+[#create-your-access-token]
 ==== Create your access token
 
 . In the new tab, sign in to your GitHub account.
@@ -149,11 +152,7 @@ If Blue Ocean does not find a `Jenkinsfile`, you are prompted to create one thro
 NOTE: Under the hood, a Pipeline project created through Blue Ocean is actually a "multibranch Pipeline."
 Therefore, Jenkins looks for the presence of at least one Jenkinsfile in any branch of your repository.
 
-////
-=== For a repository on GitHub Enterprise
-
-////
-
+[#for-a-repository-on-bitbucket-cloud]
 === For a repository on Bitbucket Cloud
 
 To create your Pipeline project directly for a Git or Mercurial repository on Bitbucket Cloud, select the *Bitbucket Cloud* button under *Where do you store your code?*

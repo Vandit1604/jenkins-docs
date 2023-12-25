@@ -1,10 +1,11 @@
-= Google Summer of Code. Information for GSoC Contributors
+= Google Summer of Code - Information for GSoC Contributors
 
 image:images:ROOT:gsoc/jenkins-gsoc-logo_small.png[Jenkins GSoC, role=center, float=right]
 
 This page provides information for contributors about participating in Jenkins GSoC program.
 See xref:projects:gsoc:index.adoc[the main GSoC project] page for other information and links.
 
+[#contributor-application-process]
 == GSoC Contributor Application Process
 
 First of all, take the time to read the link:https://google.github.io/gsocguides/student/[Google Summer of Code Guide].
@@ -14,6 +15,7 @@ Print it and hang it where you can see it every day!
 
 The aforementioned documents are the reference and the inspiration for this document.
 
+[#eligibility-steps]
 === Eligibility steps
 
 You must verify that you are eligible to participate in the program.
@@ -201,6 +203,7 @@ Do not feel bad, we encourage you to stay with the community, and apply again ne
 
 If you have been selected, the community bonding period starts within two days after the announcement.
 
+[#community-bonding]
 == Community Bonding
 
 As soon as the GSoC contributors are accepted, the community bounding period starts.
@@ -240,6 +243,7 @@ Use the community bonding to:
   * Create an account using link:https://accounts.jenkins.io/login[this link].
   * Become familiar with navigating Jira.
 
+[#coding-periods]
 == Coding periods
 
 GSoC contributors are expected to...
@@ -284,6 +288,7 @@ GSoC contributors are **not** expected to...
 . Investigate and solve *every* issue on your own
  * We have mentors and experts, who can help you by answering questions and doing joint investigation if required
 
+[#evaluations]
 === Evaluations
 
 At the end of each coding period, GSoC contributors are expected to:
@@ -360,7 +365,7 @@ Contributors should join the following Jenkins mailing lists:
 
 Other mailing lists:
 
-* xref:projects:gsoc:index.adoc#orgadmin[Org admins mailing list]- for **private** communications with org admins (escalations, issues with mentors)
+* xref:projects:gsoc:index.adoc#org-admins[Org admins mailing list]- for **private** communications with org admins (escalations, issues with mentors)
 ** Please *DO NOT* use this mailing list for applications and intro emails
 
 === Chat

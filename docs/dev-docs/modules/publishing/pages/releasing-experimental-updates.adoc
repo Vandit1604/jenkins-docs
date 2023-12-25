@@ -43,7 +43,8 @@ The experimental update center only offers the latest version of each plugin, ev
 {plugin}configuration-as-code[Jenkins Configuration-as-Code plugin] allows configuring update centers in configuration YAMLs.
 Once configured, it will be possible to install experimenta plugins and versions from the _Plugin Manager_ Web UI.
 
-```yml
+[source,yaml]
+----
 jenkins:
   updateCenter:
     sites:
@@ -51,7 +52,7 @@ jenkins:
         url: "https://updates.jenkins.io/update-center.json"
       - id: "experimental"
         url: "https://updates.jenkins.io/experimental/update-center.json"
-```
+----
 
 === In official Docker images
 

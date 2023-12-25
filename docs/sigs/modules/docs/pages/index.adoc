@@ -67,7 +67,7 @@ The group focuses on documentation for Jenkins, including:
 ** xref:tutorials:ROOT:index.adoc[Tutorials]
 ** xref:user-docs:ROOT:index.adoc[User Handbook]
 ** References like xref:user-docs:pipeline:syntax.adoc[Pipeline Syntax] and link:/doc/pipeline/steps/[Pipeline Steps]
-** xref:ROOT:how-to-guides.adoc[How-to Guides]
+** xref:dev-docs:publishing:index.adoc#how-to-guides[How-to Guides]
 * xref:dev-docs:ROOT:index.adoc[Developer documentation] - Extending Jenkins
 ** xref:dev-docs:plugin-tutorial:index.adoc[Tutorials]
 ** xref:dev-docs:reference:index.adoc[Developer Reference]
@@ -107,9 +107,10 @@ The program raises awareness of open source, of documentation, and of technical 
 
 See our xref:docs:gsod/index.adoc[Google Season of Docs status page] for documentation project ideas, contact information, and more.
 
+[#plugin-documentation-on-github]
 === Plugin documentation on GitHub
 
-Currently the SIG is xref:dev-docs:publishing:wiki-page.adoc#migrating-from-wiki-to-github[migrating plugin documentation from Jenkins Wiki to GitHub].
+Currently, the SIG is xref:dev-docs:publishing:wiki-page.adoc#migrating-from-wiki-to-github[migrating plugin documentation from Jenkins Wiki to GitHub].
 Documentation in the plugin GitHub repository provides a good user experience for Jenkins users seeking documentation. 
 At the same time, plugin maintainers now can follow the documentation-as-code approach and make documentation changes a part of the pull requests. 
 It also gives an opportunity to review the documentation changes and to add documentation contributor recognition, 
@@ -165,7 +166,7 @@ This project is tracked in the {jira}WEBSITE-738[] EPIC.
 
 Jenkins xref:solutions:ROOT:index.adoc[solution pages] highlight specific use cases for Jenkins users.
 Those solutions include SCM provider solutions (xref:solutions:ROOT:github.adoc[GitHub], xref:solutions:ROOT:bitbucketserver.adoc[Bitbucket]),
-programming language solutions (xref:solutions:ROOT:python.adoc[Python], xref:solutions:ROOT:ruby[Ruby], xref:solutions:ROOT:c.adoc[C/C++], xref:solutions:ROOT:java.adoc[Java], and xref:solutions:ROOT:php.adoc[PHP]),
+programming language solutions (xref:solutions:ROOT:python.adoc[Python], xref:solutions:ROOT:ruby.adoc[Ruby], xref:solutions:ROOT:c.adoc[C/C++], xref:solutions:ROOT:java.adoc[Java], and xref:solutions:ROOT:php.adoc[PHP]),
 and execution environment solutions (xref:solutions:ROOT:python.adoc[Pipeline], xref:solutions:ROOT:docker.adoc[Docker], xref:solutions:ROOT:embedded.adoc[Embedded], and xref:solutions:ROOT:android.adoc[Android]).
 An excellent xref:solutions:ROOT:index.adoc[opening page] has been provided by link:https://github.com/zbynek[Zbynek Konecny].
 Additional use cases and user stories are being collected by link:https://github.com/alyssat[Alyssa Tong].
@@ -188,6 +189,7 @@ Documentation office hours are held each Thursday at *18:00 UTC* (Europe and US 
 Office hours are conducted and recorded using Zoom and archived to the link:https://www.youtube.com/user/jenkinsci[Jenkins YouTube channel] in the link:https://www.youtube.com/playlist?list=PLN7ajX_VdyaNp0lk5BmyAgqPS52u_4tC8[Jenkins Docs SIG YouTube playlist].
 Participant links are posted in the link:https://app.gitter.im/#/room/#jenkins/docs:matrix.org[SIG Gitter Chat] 10 minutes before the meeting starts.
 
+[#meetings]
 == Meetings
 
 The Documentation SIG meetings are part of the documentation office hours.

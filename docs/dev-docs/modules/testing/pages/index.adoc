@@ -33,6 +33,7 @@ Similarly, JUnit is included as a dependency by the parent POM, so you don't nee
 
 If you're using version 2.3 or newer of the plugin parent POM, you can change the test harness version used by overriding the `jenkins-test-harness.version` property, if you need newer features.
 For example:
+
 [source,xml]
 ----
 <project>
@@ -299,7 +300,7 @@ For example, if the test method is org.acme.FooTest.bar(), then you can have you
 * Under org/acme/FooTest directory (that is, you'll have org/acme/FooTest/config.xml), in the same layout as in the real JENKINS_HOME directory.
 * In org/acme/FooTest.zip as a zip file.
 
-Search is performed in this specific order. The fall back mechanism allows you to write one test class that interacts with different aspects of the same data set, by associating the dataset with a test class, or have a data set local to a specific test method.
+Search is performed in this specific order. The fallback mechanism allows you to write one test class that interacts with different aspects of the same data set, by associating the dataset with a test class, or have a data set local to a specific test method.
 The choice of zip and directory depends on the nature of the test data, as well as the size of it.
 
 === Configuring an SCM
@@ -395,7 +396,7 @@ computer.disconnect(new OfflineCause.IdleOfflineCause());
 
 === Enabling security
 
-If you need a security realm for testing you can use a `MockAuthorizationStrategy()` where you can grant rights as needed for your test. In the following example everyone gets `READ` on the Jenkins instance and users *alice* and *bob* get individual rights. Using `LocalData` presets can be used if you need to setup a lot for your test.
+If you need a security realm for testing you can use a `MockAuthorizationStrategy()` where you can grant rights as needed for your test. In the following example everyone gets `READ` on the Jenkins instance and users *alice* and *bob* get individual rights. Using `LocalData` presets can be used if you need to set up a lot for your test.
 
 [source,java]
 ----
@@ -481,6 +482,7 @@ The tests that require more resources may fail on a slower computer.
 To increase the timeout of the tests you can use the following commands: 
 `mvn -Djenkins.test.timeout=250 verify` 
 
+[#performance-testing]
 == Performance Testing
 
 Starting from link:https://github.com/jenkinsci/jenkins-test-harness/releases/tag/jenkins-test-harness-2.50[Jenkins Test Harness 2.50], the framework provides ways to run microbenchmarks using
@@ -490,7 +492,7 @@ To use them in your plugin, please find documentation here:
 
 * link:/blog/2019/06/21/performance-testing-jenkins/[Blog post on running benchmarks]
 * link:https://github.com/jenkinsci/jenkins-test-harness/blob/master/docs/jmh-benchmarks.adoc[Creating Benchmarks]
-* link:https://github.com/jenkinsci/configuration-as-code-plugin/blob/master/docs/benchmarks/jmh-benchmarks.md[Using Configuration As Code to setup benchmarks]
+* link:https://github.com/jenkinsci/configuration-as-code-plugin/blob/master/docs/benchmarks/jmh-benchmarks.md[Using Configuration As Code to set up benchmarks]
 * link:https://github.com/jenkinsci/plugin-pom#running-benchmarks[Maven profile that runs benchmarks]
 * link:https://github.com/jenkins-infra/pipeline-library#runbenchmarks[Running benchmark through Jenkinsfile]
 

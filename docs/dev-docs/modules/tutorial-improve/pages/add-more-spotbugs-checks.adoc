@@ -21,10 +21,10 @@ To increase the spotbugs analysis checks, add the spotbugs properties entries in
 
 [source,xml]
 ----
-   <properties>
-     <spotbugs.effort>Max</spotbugs.effort>
-     <spotbugs.threshold>Low</spotbugs.threshold>
-   </properties>
+<properties>
+    <spotbugs.effort>Max</spotbugs.effort>
+    <spotbugs.threshold>Low</spotbugs.threshold>
+</properties>
 ----
 
 == Review and fix spotbugs warnings
@@ -33,23 +33,24 @@ When the spotbugs analysis checks are increased, they often report new issues th
 Spotbugs checks are included in the Apache Maven `verify` step.
 Run the spotbugs analysis checks as part of the Apache Maven `verify` step with the command:
 
-```
+[source,bash]
+----
 mvn clean -DskipTests verify
-```
+----
 
 It is generally preferred to fix a spotbugs warning rather than suppress the warning message.
 However, in those cases where a spotbugs message is incorrect or is infeasible to fix, it can be suppressed with the `SuppressFBWarnings` annotation.
 A suppression might look like this:
 
-```java
+[source,java]
+----
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 /* ... preceding a method that returns a Boolean and may return null */
     @SuppressFBWarnings(
             value = "NP_BOOLEAN_RETURN_NULL",
 
             justification = "Null return indicates others should evaluate further")
-
-```
+----
 
 == Add a spotbugs exclusions file (if needed)
 

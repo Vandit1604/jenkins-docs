@@ -10,14 +10,14 @@ In both scenarios, low-privilege users, perhaps with the permission to configure
 They could inject JavaScript code into the report, that would be rendered directly in Jenkins.
 If an administrator then views the job or build, they are attacked and a malicious script would execute with that user's permissions.
 
-## Showing full reports via `DirectoryBrowserSupport`
+== Showing full reports via `DirectoryBrowserSupport`
 
 To circumvent this, Jenkins by default serves archived artifacts, including HTML reports, as well as workspace contents using Content-Security-Policy headers when using the `DirectoryBrowserSupport` class.
 This protection must not be circumvented by plugins.
 
 If reports look broken due to these restrictions, Jenkins administrators should set up a link:/doc/upgrade-guide/2.204/#resource-domain-support[Resource Root URL] from which Jenkins would service user content like archived artifacts without compromising security.
 
-## Rendering Reports Inline
+== Rendering Reports Inline
 
 Plugins that directly show report information on the Jenkins UI without going through `DirectoryBrowserSupport` need to be careful to not render potentially unsafe content unescaped.
 jenkinsdoc:hudson.Util#xmlEscape-java.lang.String-[Util#xmlEscape] is a good way to escape content.

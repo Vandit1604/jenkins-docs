@@ -1,12 +1,12 @@
 = Getting started with Blue Ocean
 
-
 This section describes how to get started with Blue Ocean in Jenkins.
 It includes instructions for link:#installing-blue-ocean[setting up Blue Ocean] on
 your Jenkins instance, how to link:#accessing-blue-ocean[access the Blue Ocean UI], and link:#switching-to-the-classic-ui[returning to the Jenkins classic UI].
 
 include::partial$_blue-ocean-status.adoc[]
 
+[#installing-blue-ocean]
 == Installing Blue Ocean
 
 You can install Blue Ocean using the following methods:
@@ -14,6 +14,7 @@ You can install Blue Ocean using the following methods:
 * As a suite of plugins on an xref:#on-an-existing-jenkins-instance[existing Jenkins instance]. 
 * As a part of xref:#as-part-of-jenkins-in-docker[Jenkins in Docker].
 
+[#on-an-existing-jenkins-instance]
 === On an existing Jenkins instance
 
 When Jenkins is installed on most platforms, the {plugin}blueocean[Blue Ocean] plugin and all necessary dependent plugins, which compile the Blue Ocean suite of plugins, are not installed by default.
@@ -49,12 +50,14 @@ Existing Pipelines and projects will continue to work as usual.
 NOTE: The first time you xref:creating-pipelines.adoc[create a Pipeline in Blue Ocean] for a specific Git server, Blue Ocean prompts you for your Git credentials to allow you to create Pipelines in the repositories.
 This is required since Blue Ocean can add a `Jenkinsfile` to your repositories.
 
+[#as-part-of-jenkins-in-docker]
 === As part of Jenkins in Docker
 
 The Blue Ocean suite of plugins is not bundled with the official Jenkins Docker image, link:https://hub.docker.com/r/jenkins/jenkins/[`jenkins/jenkins`], which is available from the link:https://hub.docker.com/[Docker Hub repository].
 
-Read more about running Jenkins and Blue Ocean inside Docker in the xref:user-docs:installing-jenkins:docker.adoc#docker[Docker] section of the installing Jenkins page.
+Read more about running Jenkins and Blue Ocean inside Docker in the xref:user-docs:installing-jenkins:docker.adoc[Docker] section of the installing Jenkins page.
 
+[#accessing-blue-ocean]
 == Accessing Blue Ocean
 
 Once a Jenkins environment has Blue Ocean installed and you log in to the
@@ -75,8 +78,9 @@ You can select this to begin creating a new Pipeline project.
 For more information, refer to the xref:creating-pipelines.adoc[Creating a Pipeline] page for more information on creating a Pipeline project in Blue Ocean.
 +
 [.boxshadow]
-image:blueocean/creating-pipelines/create-a-new-pipeline-box.png['Welcome to Jenkins - Create a New Pipeline message box',width=50%]
+image:creating-pipelines/create-a-new-pipeline-box.png['Welcome to Jenkins - Create a New Pipeline message box',width=50%]
 
+[#navigation-bar]
 == Navigation bar
 
 The Blue Ocean UI has a navigation bar along the top of its interface, allowing you to access the different views and features.

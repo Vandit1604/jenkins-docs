@@ -203,7 +203,7 @@ a| If you are interested to do UX testing, Jenkins installation guidelines could
   submit patches and discovered issues.
 * Renew the Windows installation guide for Jenkins weekly releases that use the new Windows installer.
   See link:/blog/2019/02/01/windows-installers/[this blogpost] for an overview of the new Windows Installer.
-* **Advanced:** Rewrite the xref:user-docs:installing-jenkins:index.adoc#docker[Docker installation guide] to use the `jenkins/jenkins` image instead of the Blue Ocean images.
+* **Advanced:** Rewrite the xref:user-docs:installing-jenkins:docker.adoc[Docker installation guide] to use the `jenkins/jenkins` image instead of the Blue Ocean images.
 
 | Document Jenkins use-cases
   (xref:sigs:docs:index.adoc#solution-pages[project page])

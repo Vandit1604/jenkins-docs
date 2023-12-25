@@ -1,6 +1,6 @@
 = Branches and Pull Requests
 
-In the xref:glossary:index.adoc#jenkinsfile[previous section] a `Jenkinsfile` which could be
+In the xref:./jenkinsfile.adoc[previous section] a `Jenkinsfile` which could be
 checked into source control was implemented. This section covers the concept of
 *Multibranch* Pipelines which build on the `Jenkinsfile` foundation to provide
 more dynamic and automatic functionality in Jenkins.
@@ -8,6 +8,7 @@ more dynamic and automatic functionality in Jenkins.
 .Creating a Multibranch Pipeline in Jenkins
 video::B_2FXWI6CWg[youtube,width=800,height=420]
 
+[#creating-a-multibranch-pipeline]
 == Creating a Multibranch Pipeline
 
 The *Multibranch Pipeline* project type enables you to implement different
@@ -66,7 +67,7 @@ example `master`.
 CHANGE_ID:: An identifier corresponding to some kind of change request, such as a pull request number
 
 Additional environment variables are listed in the
-xref:glossary:index.adoc#getting-started#global-variable-reference[Global Variable Reference].
+xref:pipeline:getting-started.adoc#global-variable-reference[Global Variable Reference].
 
 
 === Supporting Pull Requests

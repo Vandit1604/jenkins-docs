@@ -67,7 +67,7 @@ While the syntax for defining a Pipeline, either in the web UI or with a
 `Jenkinsfile` is the same, it is generally considered best practice to define
 the Pipeline in a `Jenkinsfile` and check that in to source control.
 
-
+[#declarative-versus-scripted-pipeline-syntax]
 === Declarative versus Scripted Pipeline syntax
 
 A `Jenkinsfile` can be written using two types of syntax - Declarative and
@@ -151,7 +151,7 @@ executing a Pipeline.
 Also, a `node` block is a
 xref:pipeline:index.adoc#scripted-pipeline-fundamentals[key part of Scripted Pipeline syntax].
 
-
+[#stage]
 === Stage
 
 A `stage` block defines a conceptually distinct subset of tasks performed
@@ -161,7 +161,7 @@ status/progress.
 footnote:blueocean[xref:blueocean:index.adoc[Blue Ocean],
 {plugin}pipeline-stage-view[Pipeline: Stage View plugin]]
 
-
+[#step]
 === Step
 
 A single task. Fundamentally, a step tells Jenkins _what_ to do at a
@@ -180,7 +180,7 @@ xref:pipeline:index.adoc#scripted-pipeline-fundamentals[Scripted Pipeline syntax
 Be aware that both xref:pipeline:index.adoc#stage[stages] and xref:pipeline:index.adoc#step[steps] (above) are common
 elements of both Declarative and Scripted Pipeline syntax.
 
-
+[#declarative-pipeline-fundamentals]
 === Declarative Pipeline fundamentals
 
 In Declarative Pipeline syntax, the `pipeline` block defines all the work done
@@ -219,7 +219,7 @@ pipeline {
 <6> Defines the "Deploy" stage.
 <7> Perform some steps related to the "Deploy" stage.
 
-
+[#scripted-pipeline-fundamentals]
 === Scripted Pipeline fundamentals
 
 In Scripted Pipeline syntax, one or more `node` blocks do the core work

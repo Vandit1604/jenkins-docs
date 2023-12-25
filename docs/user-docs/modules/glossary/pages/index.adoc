@@ -19,7 +19,7 @@ each of the terms below. Which means that if we want to cross-reference terms
 directly from other documents we need to include an inline anchor.
 
 Additionally, because these inline anchors don't attach to section headings,
-cross referencing must include the appropriate display text, for example:
+cross-referencing must include the appropriate display text, for example:
 
   MyTerm [#myterm] this is the definition of MyTerm
 
@@ -129,7 +129,7 @@ A machine which is part of the Jenkins environment and capable of executing xref
 A deprecated term, synonymous with xref:#job[job].
 
 [#pipeline]
-=== Pipeline [#pipeline]
+=== Pipeline
 
 A user-defined model of a continuous delivery pipeline, for more read the xref:user-docs:pipeline:index.adoc[Pipeline chapter] in this handbook.
 
@@ -156,7 +156,7 @@ An event, indicating availability of Jenkins distribution products or one of Jen
 [#stage]
 === Stage
 
-`stage` is part of Pipeline, and used for defining a conceptually distinct subset of the entire Pipeline, for example: "Build", "Test", and "Deploy", which is used by many plugins to isualize or present Jenkins Pipeline status/progress.
+`stage` is part of Pipeline, and used for defining a conceptually distinct subset of the entire Pipeline, for example: "Build", "Test", and "Deploy", which is used by many plugins to visualize or present Jenkins Pipeline status/progress.
 
 [#step]
 === Step
@@ -215,4 +215,4 @@ The xref:#build[Build] has no compilation errors.
 [#unstable]
 === Unstable
 
-The xref:#build[Build] had some errors but they were not fatal. A xref:#build[Build] is unstable if it was built successfully and one or more publishers report it unstable. For example if the JUnit publisher is configured and a test fails then the xref:#build[Build] will be marked unstable.
+The xref:#build[Build] had some errors, but they were not fatal. A xref:#build[Build] is unstable if it was built successfully and one or more publishers report it unstable. For example if the JUnit publisher is configured and a test fails then the xref:#build[Build] will be marked unstable.
