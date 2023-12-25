@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins in the Embedded World :: Jenkins Docs</title>
+    <link rel="canonical" href="https://docs.jenkins.com/solutions/2.426.x/embedded.html">
+    <link rel="prev" href="github.html">
+    <link rel="next" href="bitbucketserver.html">
+    <meta name="generator" content="Antora 3.1.6">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+<link rel="icon" href="../../favicon.png" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="solutions" data-version="2.426.x">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Solutions Page</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="android.html">Jenkins and Android</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="php.html">Jenkins and PHP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="docker.html">docker.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="python.html">Jenkins and Python</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ruby.html">Jenkins and Ruby</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipeline.html">Pipeline as Code with Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="github.html">Jenkins with GitHub</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="embedded.html">Jenkins in the Embedded World</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bitbucketserver.html">Bitbucket Server</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="c.html">Jenkins and C/C++</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../user-docs/2.426.x/platform-information/support-policy-java.html">Java Support Policy</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Solutions Page</span>
+    <span class="version">2.426.x</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">Artwork</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../security/index.html">Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Special Interest Groups (SIGs)</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../project/index.html">The Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorials/2.426.x/index.html">Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorials/2.426.x/index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.426.x/index.html">User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.426.x/index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.426.x/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Solutions Page</a></li>
+    <li><a href="embedded.html">Jenkins in the Embedded World</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/solutions/modules/ROOT/pages/embedded.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins in the Embedded World</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins is an extensible framework, which can be applied to many areas
+including embedded software and even hardware development.  With proper
+configuration, Jenkins can be operated with hardware peripherals attached to
+build agents to accelerate development of all kinds of embedded use-cases.</p>
+</div>
+<div class="paragraph">
+<p>This page provides a brief overview of using Jenkins for automation with
+embedded and hardware projects.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_cases"><a class="anchor" href="#_use_cases"></a>Use-cases</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_working_with_tools"><a class="anchor" href="#_working_with_tools"></a>Working with tools</h3>
+<div class="paragraph">
+<p>Jenkins has plugins for integration with common tools such as GCC, Microsoft
+Visual Studio, etc. Currently there are not domain-specific embedded
+development or electronic design automation tool integrations. Jenkins can
+however integrate with practically any tool which can provide a command-line
+interface via its shell/batch scripting integration.</p>
+</div>
+<div class="paragraph">
+<p>These command line tools can be invoked directly, assuming the build agent
+being used has the appropriate environment set up. To help configure the
+environments, a few of the following approaches can be considered:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Machine-specific variables (e.g. <code>LM_LICENSE_FILE</code> or port specifications for
+peripherals) can be configured in Agent configuration in the <em>Environment
+Variables</em> section. Once the variable is modified, the build agent should be
+reconnected.</p>
+</li>
+<li>
+<p>In order to integrate setup the tool environment, consider
+<a href="https://plugins.jenkins.io/custom-tools-plugin">Custom Tools Plugin</a>.</p>
+</li>
+<li>
+<p><a href="https://plugins.jenkins.io/envinject">EnvInject Plugin</a> allows to setup custom environments at the job level.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_working_with_fpga_boards_and_hardware_peripherals"><a class="anchor" href="#_working_with_fpga_boards_and_hardware_peripherals"></a>Working with FPGA boards and hardware peripherals</h3>
+<div class="paragraph">
+<p>Interaction with FPGA boards can be done via CLI tools as well. Care must be
+taken in configuring Jenkins to prevent conflicts between parallel builds
+attempting to access the same shared external peripherals at the same time.
+There are a few plugins which can help manage concurrent peripherals access
+such as the:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://plugins.jenkins.io/throttle-concurrents">Throttle Concurrent Builds Plugin</a> allows preventing hardware and license usage conflicts.</p>
+</li>
+<li>
+<p><a href="https://plugins.jenkins.io/build-timeout">Build Timeout Plugin</a> helps prevent tools (e.g. cable drives) which might hang for whatever reason, blocking a Jenkins build indefinitely.</p>
+</li>
+<li>
+<p><a href="https://plugins.jenkins.io/naginator">Naginator Plugin</a> enables conditional restarting of builds in case of flakey hardware issues.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_working_with_computing_grids"><a class="anchor" href="#_working_with_computing_grids"></a>Working with computing grids</h3>
+<div class="paragraph">
+<p>Jenkins has a limited support of computing grids, ideally for highly
+parallelized tests and builds it would be useful to provision Jenkins agents
+from computing grids</p>
+</div>
+<div class="paragraph">
+<p>There is a
+<a href="https://wiki.jenkins.io/display/JENKINS/lsf-cloud+Plugin">LSF Cloud
+Plugin</a> for <a href="https://en.wikipedia.org/wiki/Platform_LSF">LSF</a>, but for other
+grids there is no open source plugins currently available.</p>
+</div>
+<div class="paragraph">
+<p>As a workaround, Jenkins jobs can invoke CLI tools in order to utilize
+computing grid resources.  Builds from such jobs should be able submit task
+on computing grids, wait until their completion and then collect the
+execution results.</p>
+</div>
+<div class="paragraph">
+<p>Such jobs can be implemented, but due to double scheduling there are many
+potential issues with stability of the instances (e.g. runaway grid tasks if
+Jenkins server shuts down during the build).  Currently these issues must be
+handled by the job itself.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_publishing_reports_in_custom_formats"><a class="anchor" href="#_publishing_reports_in_custom_formats"></a>Publishing reports in custom formats</h3>
+<div class="paragraph">
+<p>Jenkins does not have specific plugins for parsing reports from many tools.
+In such case the general recommendation is to convert the reports to formats
+supported by existing Jenkins plugins.</p>
+</div>
+<div class="paragraph">
+<p>For tools which generate some form of XML-based reports, formatting of those
+reports can be implemented with an XSLT converter. Consider the following plugins for incorporating generated reports into Jenkins:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Unit testing results: <a href="https://plugins.jenkins.io/xunit">xUnit Plugin</a>, which
+provides a "Custom report" handler to convert any XML to JUnit formatted reports for Jenkins</p>
+</li>
+<li>
+<p>Timing analysis reports: <a href="https://plugins.jenkins.io/performance">Performance plugin</a>
+(support JMeter-alike reports)</p>
+</li>
+<li>
+<p>Code coverage: <a href="https://plugins.jenkins.io/cobertura">Cobertura Plugin</a> or <a href="https://plugins.jenkins.io/emma">Emma Plugin</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_presentations"><a class="anchor" href="#_presentations"></a>Presentations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Presentation by <a href="https://github.com/oleg-nenashev/">Oleg Nenashev</a> at Jenkins User Conference 2015 in London.</p>
+</div>
+<center>
+  <iframe width="560" height="315" frameborder="0"
+  src="https://speakerdeck.com/player/0e8b573ef5d84ec1abaf664ca6d791b8"></iframe>
+</center>
+<div class="paragraph">
+<p>Presentation by Robert Martin at Jenkins User Conference 2014 in Berlin.</p>
+</div>
+<center>
+  <iframe width="560" height="315" frameborder="0"
+    src="https://www.youtube-nocookie.com/embed/AB5RTabEtEI?rel=0"></iframe>
+</center>
+<div class="sect2">
+<h3 id="_more_presentations"><a class="anchor" href="#_more_presentations"></a>More presentations</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://fosdem.org/2016/schedule/event/kernelci/">"kernelci.org: The
+Upstream Linux Kernel Validation Project"</a> by Milo Casagrande at FOSDEM 2016.
+KernelCI uses Jenkins as a backend automation engine.</p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Jenkins ♥ Embedded Articles</div>
+<div class="paragraph">
+<p><a href="https://www.slideshare.net/cloudbees/juc-europe-2015-jenkinsbased-continuous-integration-for-heterogeneous-hardwaresoftware-projects">Jenkins-Based CI for Heterogeneous Hardware/Software Projects</a></p>
+</div>
+<div class="paragraph">
+<p>www.slideshare.net</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.cloudbees.com/blog/multi-stage-ci-jenkins-embedded-world">Multi-Stage-CI with Jenkins in an Embedded World</a></p>
+</div>
+<div class="paragraph">
+<p>www.cloudbees.com</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.testandverification.com/VerificationFutures/2015/Alan_Fitch.pdf">CI for FPGA D&amp;V</a></p>
+</div>
+<div class="paragraph">
+<p>www.testandverification.com</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.verilab.com/files/dvcon2012_ci_gray_mcgregor.pdf">A 30 Minute Project Makeover Using Continuous Integration</a></p>
+</div>
+<div class="paragraph">
+<p>www.verilab.com</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.slideshare.net/cloudbees/juc-europe-2015-the-famous-cows-of-cambridge-a-nonstandard-use-case-for-jenkins">The Famous Cows of Cambridge: A Non-Standard Use Case for Jenkins</a></p>
+</div>
+<div class="paragraph">
+<p>www.slideshare.net</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.synopsys.com/news/pubs/snug/2013/canada/a1_danjou_paper.pdf">FPGA CI with Jenkins (requires SNUG account)</a></p>
+</div>
+<div class="paragraph">
+<p>www.synopsys.com</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="github.html">Jenkins with GitHub</a></span>
+  <span class="next"><a href="bitbucketserver.html">Bitbucket Server</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

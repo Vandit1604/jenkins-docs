@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Architecting for Scale :: Jenkins Docs</title>
+    <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.426.x/scaling/architecting-for-scale.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="hardware-recommendations.html">
+    <meta name="generator" content="Antora 3.1.6">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+<link rel="icon" href="../../../favicon.png" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="user-docs" data-version="2.426.x">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">User Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../platform-information/index.html">Platform Information</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/upgrade-java-to-11.html">Upgrading to Java 11</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-linux.html">Linux Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-web-browsers.html">Browser compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-java.html">Java Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-servlet-containers.html">Servlet Container Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/upgrade-java-to-17.html">Upgrading to Java 17</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-credentials.html">Using credentials</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/searchbox.html">Using Search Box</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/referencing-another-project-by-name.html">Referencing another project by name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/aborting-a-build.html">Aborting a build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/fingerprints.html">Fingerprints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-local-language.html">Using local language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/change-time-zone.html">Change time zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/remote-access-api.html">Remote Access API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/executor-starvation.html">Executor Starvation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-agents.html">Using Jenkins agents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/running-pipelines.html">Running a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/development.html">Pipeline Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/syntax.html">Pipeline syntax</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/pipeline-best-practices.html">Pipeline Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/scaling-pipeline.html">Scaling Pipelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/cps-method-mismatches.html">Pipeline CPS Method Mismatches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/dashboard.html">Dashboard</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/activity.html">Activity View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-run-details.html">Pipeline Run Details View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-editor.html">Pipeline Editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../managing/index.html">Managing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-configuration.html">Configuring the System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/casc.html">Configuration as Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/tools.html">Managing Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/about-jenkins.html">About Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-info.html">System Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/cli.html">Jenkins CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-console.html">Script Console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/groovy-hook-scripts.html">Groovy Hook Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/nodes.html">Managing Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-approval.html">In-process Script Approval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/ui-themes.html">Themes for user interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/user-content.html">User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/spawning-processes.html">Spawning Processes From Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Securing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/access-control.html">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-jenkins.html">Securing Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/managing-security.html">Managing Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/controller-isolation.html">Controller Isolation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-builds.html">Securing Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/csrf-protection.html">CSRF Protection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/user-content.html">Rendering User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/build-authorization.html">Access Control for Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/environment-variables.html">Handling Environment Variables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/markup-formatter.html">Markup Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/services.html">Exposed Services and Ports</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/index.html">System Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/backing-up.html">Backing-up/Restoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/monitoring.html">Monitoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/administering-jenkins-on-kubernetes.html">Administering Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-chef.html">Managing Jenkins with Chef</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-puppet.html">Managing Jenkins with Puppet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/viewing-logs.html">Viewing logs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/authenticating-scripted-clients.html">Authenticating scripted clients</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/index.html">Reverse proxy configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-haproxy.html">Reverse proxy - HAProxy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-squid.html">Reverse proxy - Squid</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iis.html">Reverse proxy - IIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iptables.html">Reverse proxy - iptables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Scaling Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="architecting-for-scale.html">Architecting for Scale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="hardware-recommendations.html">Hardware Recommendations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="architecting-for-manageability.html">Architecting for Manageability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../troubleshooting/index.html">Troubleshooting Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/diagnosing-errors.html">Diagnosing Errors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/obtaining-a-thread-dump.html">Obtaining a thread dump</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary/index.html">Glossary</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Documentation</span>
+    <span class="version">2.426.x</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">Artwork</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.426.x/index.html">Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.426.x/index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Special Interest Groups (SIGs)</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../project/index.html">The Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorials/2.426.x/index.html">Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorials/2.426.x/index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">User Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">User Documentation</a></li>
+    <li><a href="index.html">Scaling Jenkins</a></li>
+    <li><a href="architecting-for-scale.html">Architecting for Scale</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/user-docs/modules/scaling/pages/architecting-for-scale.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Architecting for Scale</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As an organization matures from a continuous delivery standpoint, its Jenkins
+requirements will similarly grow. This growth is often reflected in the Jenkins
+architecture, whether that be "vertical" or "horizontal" growth.</p>
+</div>
+<div class="paragraph">
+<p><strong>Vertical growth</strong> is when the load on a Jenkins controller load is increased by having more
+configured jobs or orchestrating more frequent builds. This may also mean that
+more teams are depending on that one controller.</p>
+</div>
+<div class="paragraph">
+<p><strong>Horizontal</strong> growth is the creation of additional Jenkins controllers
+to accommodate new teams or projects, rather than adding new teams or projects
+to an existing controller.</p>
+</div>
+<div class="paragraph">
+<p>There are potential pitfalls associated with each approach to scaling Jenkins,
+but with careful planning, many of them can be avoided or managed. Here are
+some things to consider when choosing a strategy for scaling your
+organization&#8217;s Jenkins instances:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Do you have the resources to run a distributed build system?</strong> If possible,
+it is recommended set up dedicated build nodes that run separately from the
+Jenkins controller. This frees up resources for the controller to improve its
+scheduling performance and prevents builds from being able to modify any
+potentially sensitive data in the <em>$JENKINS_HOME</em>. This also allows
+for a single controller to scale far more vertically than if that controller were
+both the job builder and scheduler.</p>
+</li>
+<li>
+<p><strong>Do you have the resources to maintain multiple controllers?</strong> Jenkins controllers
+require regular plugin updates, semi-monthly core upgrades, and regular
+backups of configurations and build histories. Security settings and roles
+will have to be manually configured for each controller. Downed controllers will
+require manual restart of the Jenkins controller and any jobs that were killed by
+the outage.</p>
+</li>
+<li>
+<p><strong>How mission critical are each team&#8217;s projects?</strong> Consider segregating the
+most vital projects to separate controllers to minimize the impact of a single
+downed controller. Also consider converting any mission-critical project
+pipelines to Pipeline jobs, which continue executing even when the
+agent connection to the controller is lost.</p>
+</li>
+<li>
+<p><strong>How important is a fast start-up time for your Jenkins instance?</strong> The more
+jobs a controller has configured, the longer it takes to load Jenkins after an
+upgrade or a crash. The use of folders and views to organize jobs can limit
+the number of that need to be rendered on start up.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_distributed_builds_architecture"><a class="anchor" href="#_distributed_builds_architecture"></a>Distributed Builds Architecture</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A Jenkins controller can operate by itself both managing the build environment and
+executing the builds with its own executors and resources. If you stick with
+this "standalone" configuration you will most likely run out of resources when
+the number or the load of your projects increase.</p>
+</div>
+<div class="paragraph">
+<p>To come back up and running with your Jenkins infrastructure you will need to
+enhance the controller (increasing memory, number of CPUs, etc). The time it takes
+to maintain and upgrade the machine, the controller together with all the build
+environment will be down, the jobs will be stopped and the whole Jenkins
+infrastructure will be unusable.</p>
+</div>
+<div class="paragraph">
+<p>Scaling Jenkins in such a scenario would be extremely painful and would
+introduce many "idle" periods where all the resources assigned to your build
+environment are useless.</p>
+</div>
+<div class="paragraph">
+<p>Moreover, executing jobs on the controller introduces a "security"
+issue: the "jenkins" user that Jenkins uses to run the jobs would have full
+permissions on all Jenkins resources on the controller. This means that, with a
+simple script, a malicious user can have direct access to private information
+whose integrity and privacy could not be, thus,  guaranteed.
+See
+<a href="../security/controller-isolation.html" class="xref page">Distributed Builds</a>
+in the
+<a href="../../../dev-docs/security/index.html" class="xref page">Securing Jenkins</a>
+chapter for more information.</p>
+</div>
+<div class="paragraph">
+<p>For all these reasons Jenkins supports agents, where the
+workload of building projects are delegated to multiple agents.</p>
+</div>
+<div class="paragraph">
+<p>An agent is a machine set up to offload projects from the controller. The method
+with which builds are scheduled depends on the configuration given to each
+project. For example, some projects may be configured to "restrict where this
+project is run" which ties the project to a specific agent or set of labeled
+agents. Other projects which omit this configuration will select an agent from
+the available pool in Jenkins.
+Learn more about Agents in <a href="../managing/nodes.html#creating-agents" class="xref page">Managing Nodes</a></p>
+</div>
+<div class="paragraph">
+<p>In a distributed builds environment, the Jenkins controller will use its resources
+to only handle HTTP requests and manage the build environment. Actual execution
+of builds will be delegated to the agents. With this configuration it is
+possible to horizontally scale an architecture, which allows a single Jenkins
+installation to host a large number of projects and build environments.</p>
+</div>
+<div class="sect2">
+<h3 id="_agent_communications"><a class="anchor" href="#_agent_communications"></a>Agent communications</h3>
+<div class="paragraph">
+<p>In order for a machine to be recognized as an agent, it needs to run a specific
+agent program to establish bi-directional communication with the controller.</p>
+</div>
+<div class="paragraph">
+<p>There are different ways to establish a connection between controller and agent:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>The SSH connector</strong>: Configuring an agent to use the SSH connector is the
+preferred and the most stable way to establish controller-agent communication.
+Jenkins has a built-in SSH client implementation. This means that the
+Jenkins controller can easily communicate with any machine with an SSH server
+installed. The only requirement is that the public key of the controller is
+part of the set of the authorized keys on the agent. Once the host and SSH key
+is defined for a new agent, Jenkins will establish a connection to
+the machine and bootstrap the agent process.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>The inbound connector</strong>: In this case the communication is established
+starting the agent through a connection initiated by an agent program. With this connector
+the agent is launched in the machine in 2 different ways:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Manually: by navigating to the Jenkins controller URL in a browser on the agent.
+Once the Java Web Start icon is clicked, the agent will be launched on the
+machine. The downside of this approach is that the agents cannot be centrally
+managed by the Jenkins controller and each/stop/start/update of the agent needs to
+be executed manually on the agent&#8217;s machine in versions of Jenkins older than
+1.611. This approach is convenient when the controller cannot instantiate the
+connection with the client, for example: with agents running inside a
+firewalled network connecting to a controller located outside the firewall.</p>
+</li>
+<li>
+<p>As a service: First you&#8217;ll need to manually launch the agent using the above
+method. After manually launching it, <em>jenkins-slave.exe</em> and
+<em>jenkins-slave.xml</em> will be created in the agent&#8217;s work directory. Now go to
+the command line to execute the following command:</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">sc.exe create "&lt;serviceKey&gt;" start= auto binPath= "&lt;path to jenkins-slave.exe&gt;" DisplayName= "&lt;service display name&gt;"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>&lt;serviceKey&gt;</em> is the name of the registry key to define this agent service and
+&lt;service display name&gt; is the label that will identify the service in the
+Service Manager interface.</p>
+</div>
+<div class="paragraph">
+<p>To ensure that restarts are automated, you will need to download a recent agent jar and copy it to a permanent location on the machine.
+The_.jar_ file can be found at:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">http://&lt;your-jenkins-host&gt;/jnlpJars/agent.jar</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If running a version of Jenkins newer than 1.559, the <em>.jar</em> will be kept
+up to date each time it connects to the controller.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>The Inbound-HTTP connector</strong>: This approach is quite similar to the Inbound-TCP
+Java Web Start approach, with the difference in this case being that the
+agent is executed as headless and the connection can be tunneled via HTTP(s).
+The exact command can be found on your Inbound agent&#8217;s configuration page:</p>
+</li>
+</ul>
+</div>
+<div id="inbound_agent" class="imageblock">
+<div class="content">
+<img src="_images/inbound-agent.png" alt="Inbound agent node screen">
+</div>
+<div class="title">Figure 1. Inbound agent launch command</div>
+</div>
+<div class="paragraph">
+<p>This approach is convenient for an execution as a daemon on Unix.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Custom-script</strong>: It is also possible to create a custom script to initialize
+the communication between controller and agent if the other solutions do not
+provide enough flexibility for a specific use-case. The only requirement is
+that the script runs the java program as a <em>java -jar agent.jar</em> on the
+agent.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Windows agent set-up can follow the standard SSH and inbound agent approaches.
+Windows agents have the following options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>SSH-connector approach with Putty</strong></p>
+</li>
+<li>
+<p><strong>SSH-connector approach with Cygwin and OpenSSH</strong>:
+<a href="https://wiki.jenkins.io/display/JENKINS/SSH+slaves+and+Cygwin">This</a> is the
+easiest to setup and recommended approach.</p>
+</li>
+<li>
+<p><strong>SSH-connector approach with Microsoft OpenSSH</strong>:
+The <a href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse">Microsoft OpenSSH server</a> works well for Microsoft operating systems that support the server.
+Refer to installation instructions in the <a href="https://github.com/jenkinsci/ssh-slaves-plugin/blob/master/doc/CONFIGURE.md#launch-windows-agents-using-microsoft-openssh">ssh build agents configuration guide</a>.</p>
+</li>
+<li>
+<p><strong>Inbound agent approach</strong>: With
+<a href="https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+as+a+Windows+service">this approach</a>
+ it is possible to manually register the agent as Windows service,
+but it will not be possible to centrally manage it from the controller. Each
+stop/start/update of the agent needs to be executed manually on the
+agent machine, unless running Jenkins 1.611 or newer.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_fungible_agents"><a class="anchor" href="#_creating_fungible_agents"></a>Creating fungible agents</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_configuring_tools_location_on_agents"><a class="anchor" href="#_configuring_tools_location_on_agents"></a>Configuring tools location on agents</h3>
+<div class="paragraph">
+<p>The Jenkins Global configuration page lets you specify the tools needed during
+the builds (i.e. Ant, Maven, Java, etc).</p>
+</div>
+<div class="paragraph">
+<p>When defining a tool, it is possible to create a pointer to an existing
+installation by giving the directory where the program is expected to be on the
+agent. Another option is to let Jenkins take care of the installation of a
+specific version in the given location. It is also possible to specify more
+than one installation for the same tool since different jobs may need different
+versions of the same tool.</p>
+</div>
+<div class="paragraph">
+<p>The pre-compiled "Default" option calls whatever is already installed on the
+agent and exists in the machine PATH, but this returns a failure if the tool is not
+installed and its location was not added to the PATH system variable.</p>
+</div>
+<div class="paragraph">
+<p>One best practice to avoid this failure is to configure a job with the
+assumption that the target agent does not have the necessary tools installed,
+and to include the tools' installation as part of the build process.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_define_a_policy_to_share_agent_machines"><a class="anchor" href="#_define_a_policy_to_share_agent_machines"></a>Define a policy to share agent machines</h3>
+<div class="paragraph">
+<p>As mentioned previously, agents should be interchangeable and standardized in
+order to make them sharable and to optimize resource usage.  Agents should not
+be customized for a particular set of jobs, nor for a particular team.</p>
+</div>
+<div class="paragraph">
+<p>Lately Jenkins has become more and more popular not only in CI but also in CD,
+which means that it must orchestrate jobs and pipelines which involve different
+teams and technical profiles: developers, QA people and Dev-Ops people.</p>
+</div>
+<div class="paragraph">
+<p>In such a scenario, it might make sense to create customized and dedicated
+agents: different tools are usually required by different teams (i.e.
+Puppet/Chef for the Ops team) and teams' credentials are usually stored on the
+agent in order to ensure their protection and privacy.</p>
+</div>
+<div class="paragraph">
+<p>In order to ensure the execution of a job on a single/group of agents only
+(i.e. iOS builds on OSX agents only), it is possible to tie the job to the
+agent by specifying the agent&#8217;s label in the job configuration page. Note that
+the restriction has to be replicated in every single job to be tied and that
+the agent won&#8217;t be protected from being used by other teams.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_setting_up_cloud_agents"><a class="anchor" href="#_setting_up_cloud_agents"></a>Setting up cloud agents</h3>
+<div class="paragraph">
+<p>Cloud build resources can be a solution for a case when it is necessary to
+maintain a reasonably small cluster of agents on-premises while still providing
+new build resources when needed.</p>
+</div>
+<div class="paragraph">
+<p>In particular it is possible to offload the execution of the jobs to agents in
+the cloud thanks to ad-hoc plugins which will handle the creation of the cloud
+resources together with their destruction when they are not needed anymore:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="https://plugins.jenkins.io/ec2">EC2 Plugin</a>
+lets Jenkins use AWS EC2 instances as cloud build resources when it runs out of on-premises agents.
+The EC2 agents will be dynamically created inside an AWS network and de-provisioned when they are not needed.</p>
+</li>
+<li>
+<p>The <a href="https://plugins.jenkins.io/azure-vm-agents">Azure VM Agents Plugin</a>
+dynamically spins up Jenkins agents as Azure VMs per user provided
+configuration via templates, including support for virtual network integration
+and subnet placement. Idle agents can be configured for automatic shutdown
+to reduce costs.</p>
+</li>
+<li>
+<p>The <a href="https://plugins.jenkins.io/jclouds-jenkins">JCloud plugin</a>
+creates the possibility of executing the jobs on any cloud provider supported
+by JCloud libraries</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="right-sizing-jenkins-masters"><a class="anchor" href="#right-sizing-jenkins-masters"></a>Right-sizing Jenkins controllers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Comprehensive hardware recommendations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Hardware: see the user-docs:scaling:hardware-recommendations.adoc#hardware-recommendations[Hardware Recommendations] page</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="master-division-strategies"><a class="anchor" href="#master-division-strategies"></a>Controller division strategies</h3>
+<div class="paragraph">
+<p>Designing the best Jenkins architecture for your organization is dependent on
+how you stratify the development of your projects and can be constrained by
+limitations of the existing Jenkins plugins.</p>
+</div>
+<div class="paragraph">
+<p>The 3 most common forms of stratifying development by controllers is:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>By environment (QA, DEV, etc)</strong> - With this strategy, Jenkins controllers are populated by jobs based on what environment they are deploying to.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Pros</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Can tailor plugins on controllers to be specific to that environment&#8217;s needs</p>
+</li>
+<li>
+<p>Can easily restrict access to an environment to only users who will be using that environment</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Cons</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Reduces ability to create pipelines</p>
+</li>
+<li>
+<p>No way to visualize the complete flow across controllers</p>
+</li>
+<li>
+<p>Outage of a controller will block flow of all products</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>By org chart</strong> - This strategy is when controllers are assigned to divisions within an organization.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Pros</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Can tailor plugins on controllers to be specific to that team&#8217;s needs</p>
+</li>
+<li>
+<p>Can easily restrict access to a division&#8217;s projects to only users who are within that division</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Cons</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Reduces ability to create cross-division pipelines</p>
+</li>
+<li>
+<p>No way to visualize the complete flow across controllers</p>
+</li>
+<li>
+<p>Outage of a controller will block flow of all products</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Group controllers by product lines</strong> - When a group of products, with on only critical product in each group, gets its own Jenkins controllers.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Pros</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Entire flows can be visualized because all steps are on one controller</p>
+</li>
+<li>
+<p>Reduces the impact of one controller&#8217;s downtime on only affects a small subset of products</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Cons</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>A strategy for restricting permissions must be devised to keep all users from having access to all items on a controller.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>When evaluating these strategies, it is important to weigh them against the
+vertical and horizontal scaling pitfalls discussed in the introduction.</p>
+</div>
+<div class="paragraph">
+<p>Another note is that a smaller number of jobs translates to faster recovery
+from failures and more importantly a higher mean time between failures.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Calculating-how-many-jobs"><a class="anchor" href="#Calculating-how-many-jobs"></a>Calculating how many jobs, controllers, and executors are needed</h3>
+<div class="paragraph">
+<p>Having the best possible estimate of necessary configurations for a Jenkins
+installation allows an organization to get started on the right foot with
+Jenkins and reduces the number of configuration iterations needed to achieve an
+optimal installation. The challenge for Jenkins architects is that true limit
+of vertical scaling on a Jenkins controller is constrained by whatever hardware is
+in place for the controller, as well as harder to quantify pieces like the types of
+builds and tests that will be run on the build nodes.</p>
+</div>
+<div class="paragraph">
+<p>There is a way to estimate roughly how many controllers, jobs and executors will be
+needed based on build needs and number of developers served. These equations
+assume that the Jenkins controller will have 5 cores with one core per 100 jobs
+(500 total jobs/controller) and that teams will be divided into groups of 40.</p>
+</div>
+<div class="paragraph">
+<p>If you have information on the actual number of available cores on your planned
+controller, you can make adjustments to the
+"number of controllers" equations accordingly.</p>
+</div>
+<div class="paragraph">
+<p>The equation for <strong>estimating the number of controllers and executors needed</strong> when
+the number of configured jobs is known is as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">controllers = number of jobs/500
+executors = number of jobs * 0.03</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The equation for <strong>estimating the maximum number of jobs, controllers, and executors
+needed</strong> for an organization based on the number of developers is as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">number of jobs = number of developers * 3.333
+number of controllers = number of jobs/500
+number of executors = number of jobs * 0.03</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These numbers will provide a good starting point for a Jenkins installation,
+but adjustments to actual installation size may be needed based on the types of
+builds and tests that an installation runs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="scalable-storage-for-master"><a class="anchor" href="#scalable-storage-for-master"></a>Scalable storage for controllers</h3>
+<div class="paragraph">
+<p>It is also recommended to choose a controller with consideration for future growth
+in the number of plugins or jobs stored in your controller&#8217;s <em>$JENKINS_HOME</em>.
+Storage is cheap and Jenkins does not require fast disk access to run well, so
+it is more advantageous to invest in a larger machine for your controller over a
+faster one.</p>
+</div>
+<div class="paragraph">
+<p>Different operating systems for the Jenkins controller will also allow for
+different approaches to expandable storage:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Spanned Volumes on Windows</strong> - On NTFS devices like Windows, you can create a
+spanned volume that allows you to add new volumes to an existing one, but
+have them behave as a single volume. To do this, you will have to ensure that
+Jenkins is installed on a separate partition so that it can be converted to a
+spanned volume later.</p>
+</li>
+<li>
+<p><strong>Logical Volume Manager for Linux</strong> - LVM manages disk drives and allows
+logical volumes to be resized on the fly. Many distributions of Linux use LVM
+when they are installed, but Jenkins should have its own LVM setup.</p>
+</li>
+<li>
+<p><strong>ZFS for Solaris</strong> - ZFS is even more flexible than LVM and spanned volumes
+and just requires that the <em>$JENKINS_HOME</em> be on its own filesystem. This
+makes it easier to create snapshots, backups, etc.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For systems with an existing Jenkins installation, there are at least two options:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The System Property <a href="../managing/system-properties.html#jenkins-model-jenkins-buildsdir" class="xref page">jenkins.model.Jenkins.buildsDir</a></p>
+</li>
+<li>
+<p><strong>Symbolic Links</strong> (symlinks) may be used instead to store job
+folders on separate volumes with symlinks to those directories.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Additionally, to easily prevent a <em>$JENKINS_HOME</em> folder from becoming bloated,
+make it mandatory for jobs to discard build records after a specific time
+period has passed and/or after a specific number of builds have been run.
+This policy can be set on a job&#8217;s configuration page.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setting_up_a_backup_policy"><a class="anchor" href="#_setting_up_a_backup_policy"></a>Setting up a backup policy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is a best practice to take regular backups of your $JENKINS_HOME.
+A backup ensures that your Jenkins instance can be restored despite a misconfiguration,
+accidental job deletion, or data corruption.
+See the <a href="../system-administration/backing-up.html" class="xref page">Backup policies</a> for more details.</p>
+</div>
+<div class="sect2">
+<h3 id="_finding_your_jenkins_home"><a class="anchor" href="#_finding_your_jenkins_home"></a>Finding your $JENKINS_HOME</h3>
+<div class="paragraph">
+<p><strong>Windows</strong></p>
+</div>
+<div class="paragraph">
+<p>If you install Jenkins with the Windows installer, Jenkins is installed as
+a service and the default <em>$JENKINS_HOME</em> will be "C:\Program Files (x86)\jenkins".
+You can edit the location of your <em>$JENKINS_HOME</em> by opening the jenkins.xml
+file and editing the <em>$JENKINS_HOME</em> variable, or going to the "Manage Jenkins"
+screen, clicking on the "Install as Windows Service" option in the menu, and
+then editing the "Installation Directory" field to point to another existing
+directory.</p>
+</div>
+<div class="paragraph">
+<p><strong>Mac OSX</strong></p>
+</div>
+<div class="paragraph">
+<p>If you install Jenkins with the OS X installer, you can find and edit the
+location of your <em>$JENKINS_HOME</em> by editing the "Macintosh
+HD/Library/LaunchDaemons" file&#8217;s <em>$JENKINS_HOME</em> property.</p>
+</div>
+<div class="paragraph">
+<p>By default, the <em>$JENKINS_HOME</em> will be set to "Macintosh
+HD/Users/Shared/Jenkins".</p>
+</div>
+<div class="paragraph">
+<p><strong>Linux</strong></p>
+</div>
+<div class="paragraph">
+<p>By default, <code>$JENKINS_HOME</code> is set to <code>/var/lib/jenkins</code>
+and <code>$JENKINS_WAR</code> is set to <code>/usr/share/java/jenkins.war</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can edit the location of <code>$JENKINS_HOME</code>
+by running <code>systemctl edit jenkins</code> and adding the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">[Service]
+Environment="HOME=/var/lib/jenkins"
+Environment="JENKINS_HOME=/var/lib/jenkins"
+WorkingDirectory=/var/lib/jenkins</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can edit the location of <code>$JENKINS_WAR</code>
+by running <code>systemctl edit jenkins</code> and adding the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">[Service]
+Environment="JENKINS_WAR=/usr/share/java/jenkins.war"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>FreeBSD</strong></p>
+</div>
+<div class="paragraph">
+<p>If installing Jenkins using a port, the <em>$JENKINS_HOME</em> will be located in
+whichever directory you run the "make" command in. It is recommended to create
+a "/usr/ports/devel/jenkins" folder and compile Jenkins in that directory.</p>
+</div>
+<div class="paragraph">
+<p>You will be able to edit the <em>$JENKINS_HOME</em> by editing the
+"/usr/local/etc/jenkins".</p>
+</div>
+<div class="paragraph">
+<p><strong>OpenBSD</strong></p>
+</div>
+<div class="paragraph">
+<p>If installing Jenkins using a package,the <em>$JENKINS_HOME</em> is set by default to
+"/var/jenkins".</p>
+</div>
+<div class="paragraph">
+<p>If installing Jenkins using a port, the <em>$JENKINS_HOME</em> will be located in
+whichever directory you run the "make" command in. It is recommended to create
+a "/usr/ports/devel/jenkins" folder and compile Jenkins in that directory.</p>
+</div>
+<div class="paragraph">
+<p>You will be able to edit the <em>$JENKINS_HOME</em> by editing the
+"/usr/local/etc/jenkins" file.</p>
+</div>
+<div class="paragraph">
+<p><strong>Solaris/OpenIndiana</strong></p>
+</div>
+<div class="paragraph">
+<p>The Jenkins project voted on September 17, 2014 to discontinue Solaris
+packages.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_anatomy_of_a_jenkins_home"><a class="anchor" href="#_anatomy_of_a_jenkins_home"></a>Anatomy of a $JENKINS_HOME</h3>
+<div class="paragraph">
+<p>The folder structure for a <em>$JENKINS_HOME</em> directory is as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">JENKINS_HOME
+ +- config.xml     (Jenkins root configuration file)
+ +- *.xml          (other site-wide configuration files)
+ +- identity.key   (RSA key pair that identifies an instance)
+ +- secret.key     (deprecated key used for some plugins' secure operations)
+ +- secret.key.not-so-secret  (used for validating _$JENKINS_HOME_ creation date)
+ +- userContent    (files served under your https://server/userContent/)
+ +- secrets        (root directory for the secret+key for credential decryption)
+     +- hudson.util.Secret   (used for encrypting some Jenkins data)
+     +- master.key           (used for encrypting the hudson.util.Secret key)
+     +- InstanceIdentity.KEY (used to identity this instance)
+ +- fingerprints   (stores fingerprint records, if any)
+ +- plugins        (root directory for all Jenkins plugins)
+     +- [PLUGINNAME]   (sub directory for each plugin)
+         +- META-INF       (subdirectory for plugin manifest + pom.xml)
+         +- WEB-INF        (subdirectory for plugin jar(s) and licenses.xml)
+     +- [PLUGINNAME].jpi   (.jpi or .hpi file for the plugin)
+ +- jobs           (root directory for all Jenkins jobs)
+     +- [JOBNAME]      (sub directory for each job)
+         +- config.xml     (job configuration file)
+         +- workspace      (working directory for the version control system)
+         +- latest         (symbolic link to the last successful build)
+         +- builds         (stores past build records)
+             +- [BUILD_ID]     (subdirectory for each build)
+                 +- build.xml      (build result summary)
+                 +- log            (log file)
+                 +- changelog.xml  (change log)
+     +- [FOLDERNAME]   (sub directory for each folder)
+         +- config.xml     (folder configuration file)
+         +- jobs           (sub directory for all nested jobs)</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="segrate-data"><a class="anchor" href="#segrate-data"></a>Segregating pure configuration from less durable data</h4>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+No data migration is handled by Jenkins when using those settings.
+So you either want to use them from the beginning, or make sure you take into consideration which data you would like to be moved to the right place before using the following switches.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>It is possible to separate customize some of the layout to better separate pure job configurations from less durable data, like build data or logs.
+<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</div>
+<div class="sect4">
+<h5 id="_configure_a_different_jobs_build_data_layout"><a class="anchor" href="#_configure_a_different_jobs_build_data_layout"></a>Configure a different <em>jobs build data</em> layout</h5>
+<div class="paragraph">
+<p>Historically, the configuration of a given job is located under <code>$JENKINS_HOME/jobs/[JOB_NAME]/config.xml</code> and its builds are under <code>$JENKINS_HOME/jobs/[JOB_NAME]/builds</code>.</p>
+</div>
+<div class="paragraph">
+<p>This typically makes it more impractical to set up a different backup policy, or set up a quicker disk for making builds potentially faster.</p>
+</div>
+<div class="paragraph">
+<p>For instance, if you would like to move builds under a different root, you can use the following value: <code>$JENKINS_VAR/${ITEM_FULL_NAME}/builds</code>.</p>
+</div>
+<div class="paragraph">
+<p>Note that starting with Jenkins 2.119, the User Interface for this was replaced by the <code>jenkins.model.Jenkins.buildsDir</code> system property. See the <a href="../managing/system-properties.html" class="xref page">dedicated <em>Features Controlled with System Properties</em> wiki page</a> for more details.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_choosing_a_backup_strategy"><a class="anchor" href="#_choosing_a_backup_strategy"></a>Choosing a backup strategy</h3>
+<div class="paragraph">
+<p>All of your Jenkins-specific configurations that need to be backed up will live
+in the <em>$JENKINS_HOME</em>, but it is a best practice to back up only a subset of
+those files and folders.</p>
+</div>
+<div class="paragraph">
+<p>Below are a few guidelines to consider when planning your backup strategy.</p>
+</div>
+<div class="paragraph">
+<div class="title">Exclusions</div>
+<p>When it comes to creating a backup, it is recommended to exclude archiving the
+following folders to reduce the size of your backup:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>/war      (the exploded Jenkins war directory)
+/cache    (downloaded tools)
+/tools    (extracted tools)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These folders will automatically be recreated the next time a build runs or
+Jenkins is launched.</p>
+</div>
+<div class="paragraph">
+<div class="title">Jobs and Folders</div>
+<p>Your job or folder configurations, build histories, archived artifacts, and
+workspace will exist entirely within the <em>jobs</em> folder.</p>
+</div>
+<div class="paragraph">
+<p>The <em>jobs</em> directory, whether nested within a folder or at the root level is as
+follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs"> +- jobs           (root directory for all Jenkins jobs)
+     +- [JOBNAME]      (sub directory for each job)
+         +- config.xml     (job configuration file)
+         +- workspace      (working directory for the version control system)
+         +- latest         (symbolic link to the last successful build)
+         +- builds         (stores past build records)
+             +- [BUILD_ID]     (subdirectory for each build)
+                 +- build.xml      (build result summary)
+                 +- log            (log file)
+                 +- changelog.xml  (change log)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you only need to backup your job configurations, you can opt to only backup
+the <em>config.xml</em> for each job. Generally build records and workspaces do not
+need to be backed up, as workspaces will be re-created when a job is run and
+build records are only as important as your organizations deems them.</p>
+</div>
+<div class="paragraph">
+<div class="title">System configurations</div>
+<p>Your instance&#8217;s system configurations exist in the root level of the
+<em>$JENKINS_HOME</em> folder:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> +- config.xml     (Jenkins root configuration file)
+ +- *.xml          (other site-wide configuration files)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <em>config.xml</em> is the root configuration file for your Jenkins. It includes
+configurations for the paths of installed tools, workspace directory, and
+agent port.</p>
+</div>
+<div class="paragraph">
+<p>Any .xml other than that <em>config.xml</em> in the root Jenkins folder is a global
+configuration file for an installed tool or plugin (i.e. Maven, Git, Ant, etc).
+This includes the <em>credentials.xml</em> if the Credentials plugin is installed.</p>
+</div>
+<div class="paragraph">
+<p>If you only want to backup your core Jenkins configuration, you only need to
+back up the <em>config.xml</em>.</p>
+</div>
+<div class="paragraph">
+<div class="title">Plugins</div>
+<p>Your instance&#8217;s plugin files (.hpi and .jpi) and any of their dependent
+resources (help files, <em>pom.xml</em> files, etc) will exist in the <em>plugins</em> folder
+in $JENKINS_HOME.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> +- plugins        (root directory for all Jenkins plugins)
+     +- [PLUGINNAME]     (sub directory for each plugin)
+         +- META-INF       (subdirectory for plugin manifest + pom.xml)
+         +- WEB-INF        (subdirectory for plugin jar(s) and licenses.xml)
+     +- [PLUGINNAME].jpi (.jpi or .hpi file for the plugin)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is recommended to back up the entirety of the plugins folder (.hpi/.jpis + folders).</p>
+</div>
+<div class="paragraph">
+<div class="title">Other data</div>
+<p>Other data that you are recommended to back up include the contents of your
+<em>secrets</em> folder, your <em>identity.key</em>, your <em>secret.key</em>, and your
+<em>secret.key.not-so-secret</em> file.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>+- identity.key   (RSA key pair that identifies an instance)
+ +- secret.key     (used for various secure Jenkins operations)
+ +- secret.key.not-so-secret  (used for validating _$JENKINS_HOME_ creation date)
+ +- userContent    (files served in https://server/userContent/)
+ +- secrets        (directory for the secret+key decryption)
+     +- hudson.util.Secret   (used for encrypting some Jenkins data)
+     +- master.key           (used for encrypting the hudson.util.Secret key)
+     +- InstanceIdentity.KEY (used to identity this instance)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <em>identity.key</em> is an RSA key pair that identifies and authenticates the
+current Jenkins instance.</p>
+</div>
+<div class="paragraph">
+<p>The <em>secret.key</em> is used to encrypt plugin and other Jenkins data, and to
+establish a secure connection between a controller and agent.</p>
+</div>
+<div class="paragraph">
+<p>The <em>secret.key.not-so-secret</em> file is used to validate when the
+<em>$JENKINS_HOME</em> was created. It is also meant to be a flag that the secret.key
+file is a deprecated way of encrypting information.</p>
+</div>
+<div class="paragraph">
+<p>The files in the secrets folder are used by Jenkins to encrypt and decrypt your
+instance&#8217;s stored credentials, if any exist. Loss of these files will prevent
+recovery of any stored credentials. <em>hudson.util.Secret</em> is used for encrypting
+some Jenkins data like the credentials.xml, while the <em>master.key</em> is used for
+encrypting the hudson.util.Secret key. Finally, the <em>InstanceIdentity.KEY</em> is
+used to identity this instance and for producing digital signatures.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_define_a_jenkins_instance_to_rollback_to"><a class="anchor" href="#_define_a_jenkins_instance_to_rollback_to"></a>Define a Jenkins instance to rollback to</h3>
+<div class="paragraph">
+<p>In the case of a total machine failure, it is important to ensure that there is
+a plan in place to get Jenkins both back online and in its last good state.</p>
+</div>
+<div class="paragraph">
+<p>If a high availability set up has not been enabled and no back up of that
+controller&#8217;s filesystem has been taken, then an corruption of a machine running
+Jenkins means that all historical build data and artifacts, job and system
+configurations, etc. will be lost and the lost configurations will need to be
+recreated on a new instance.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Backup policy - In addition to creating backups using the previous section&#8217;s
+backup guide, it is important to establish a policy for selecting which backup
+should be used when restoring a downed controller.</p>
+</li>
+<li>
+<p>Restoring from a backup - A plan must be put in place on whether the backup
+should be restored manually or with scripts when the primary goes down.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resilient_jenkins_architecture"><a class="anchor" href="#_resilient_jenkins_architecture"></a>Resilient Jenkins Architecture</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Administrators are constantly adding more and more teams to the software
+factory, making administrators in the business of making their instances
+resilient to failures and scaling them in order to onboard more teams.</p>
+</div>
+<div class="paragraph">
+<p>Adding build nodes to a Jenkins instance while beefing up the machine that runs
+the Jenkins controller is the typical way to scale Jenkins. Said differently,
+administrators scale their Jenkins controller vertically. However, there is a limit
+to how much an instance can be scaled. These limitations are covered in the
+introduction to this chapter.</p>
+</div>
+<div class="paragraph">
+<p>Ideally, controllers will be set up to automatically recover from failures without
+human intervention. There are proxy servers monitoring active controllers and
+re-routing requests to backup controllers if the active controller goes down. There are
+additional factors that should be reviewed on the path to continuous delivery.
+These factors include componetizing the application under development,
+automating the entire pipeline (within reasonable limits) and freeing up
+contentious resources.</p>
+</div>
+<div class="paragraph">
+<div class="title">Step 1: Make each controller highly available</div>
+<p>Each Jenkins controller needs to be set up such that it is part of a Jenkins cluster.</p>
+</div>
+<div class="paragraph">
+<p>A proxy (typically HAProxy or F5) then fronts the primary controller. The proxy&#8217;s
+job is to continuously monitor the primary controller and route requests to the
+backup if the primary goes down. To make the infrastructure more resilient, you
+can have multiple backup controllers configured.</p>
+</div>
+<div class="paragraph">
+<div class="title">Step 2: Enable security</div>
+<p>Set up an authentication realm that Jenkins will use for its user database.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If you are trying to set up a proof-of-concept, it is recommended to use
+the <a href="https://plugins.jenkins.io/mock-security-realm">Mock Security Realm plugin</a> for authentication.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">Step 3: Add build nodes (agents) to controller</div>
+<p>Add build servers to your controller to ensure you are conducting actual build
+execution off of the controller, which is meant to be an orchestration hub, and
+onto a "dumb" machine with sufficient memory and I/O for a given job or test.</p>
+</div>
+<div class="paragraph">
+<div class="title">Step 4: Setup a test instance</div>
+<p>A test instance is typically used to test new plugin updates. When a plugin is
+ready to be used, it should be installed into the main production update
+center.</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. These switches are used to configure out of the box <a href="/blog/2018/04/06/jenkins-essentials/">Jenkins Essentials</a> instances.
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="index.html">Scaling Jenkins</a></span>
+  <span class="next"><a href="hardware-recommendations.html">Hardware Recommendations</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

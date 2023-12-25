@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Jenkins Docs</title>
+    <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.426.x/installing-jenkins/docker.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="kubernetes.html">
+    <meta name="generator" content="Antora 3.1.6">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+<link rel="icon" href="../../../favicon.png" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="user-docs" data-version="2.426.x">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">User Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Installing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="docker.html">docker.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="kubernetes.html">Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="macos.html">macOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="windows.html">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="other.html">Other Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="war-file.html">WAR file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="initial-settings.html">Initial Settings</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../platform-information/index.html">Platform Information</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/upgrade-java-to-11.html">Upgrading to Java 11</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-linux.html">Linux Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-web-browsers.html">Browser compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-java.html">Java Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-servlet-containers.html">Servlet Container Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/upgrade-java-to-17.html">Upgrading to Java 17</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-credentials.html">Using credentials</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/searchbox.html">Using Search Box</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/referencing-another-project-by-name.html">Referencing another project by name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/aborting-a-build.html">Aborting a build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/fingerprints.html">Fingerprints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-local-language.html">Using local language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/change-time-zone.html">Change time zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/remote-access-api.html">Remote Access API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/executor-starvation.html">Executor Starvation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-agents.html">Using Jenkins agents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../pipeline/index.html">Pipeline</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/getting-started.html">Getting started with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/jenkinsfile.html">Using a Jenkinsfile</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/running-pipelines.html">Running a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/multibranch.html">Branches and Pull Requests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/docker.html">Using Docker with pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/shared-libraries.html">Extending with Shared Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/development.html">Pipeline Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/syntax.html">Pipeline syntax</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/pipeline-best-practices.html">Pipeline Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/scaling-pipeline.html">Scaling Pipelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/cps-method-mismatches.html">Pipeline CPS Method Mismatches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/dashboard.html">Dashboard</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/activity.html">Activity View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-run-details.html">Pipeline Run Details View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-editor.html">Pipeline Editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../managing/index.html">Managing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-configuration.html">Configuring the System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/casc.html">Configuration as Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/tools.html">Managing Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/about-jenkins.html">About Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-info.html">System Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/cli.html">Jenkins CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-console.html">Script Console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/groovy-hook-scripts.html">Groovy Hook Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/nodes.html">Managing Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-approval.html">In-process Script Approval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/ui-themes.html">Themes for user interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/user-content.html">User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/spawning-processes.html">Spawning Processes From Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Securing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/access-control.html">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-jenkins.html">Securing Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/managing-security.html">Managing Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/controller-isolation.html">Controller Isolation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-builds.html">Securing Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/csrf-protection.html">CSRF Protection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/user-content.html">Rendering User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/build-authorization.html">Access Control for Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/environment-variables.html">Handling Environment Variables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/markup-formatter.html">Markup Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/services.html">Exposed Services and Ports</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/index.html">System Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/backing-up.html">Backing-up/Restoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/monitoring.html">Monitoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/administering-jenkins-on-kubernetes.html">Administering Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-chef.html">Managing Jenkins with Chef</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-puppet.html">Managing Jenkins with Puppet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/viewing-logs.html">Viewing logs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/authenticating-scripted-clients.html">Authenticating scripted clients</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/index.html">Reverse proxy configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-haproxy.html">Reverse proxy - HAProxy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-squid.html">Reverse proxy - Squid</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iis.html">Reverse proxy - IIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iptables.html">Reverse proxy - iptables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../scaling/index.html">Scaling Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-scale.html">Architecting for Scale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/hardware-recommendations.html">Hardware Recommendations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-manageability.html">Architecting for Manageability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../troubleshooting/index.html">Troubleshooting Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/diagnosing-errors.html">Diagnosing Errors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/obtaining-a-thread-dump.html">Obtaining a thread dump</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary/index.html">Glossary</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Documentation</span>
+    <span class="version">2.426.x</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">Artwork</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.426.x/index.html">Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.426.x/index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Special Interest Groups (SIGs)</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../project/index.html">The Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorials/2.426.x/index.html">Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorials/2.426.x/index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">User Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">User Documentation</a></li>
+    <li><a href="index.html">Installing Jenkins</a></li>
+    <li><a href="docker.html">docker.adoc</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/user-docs/modules/installing-jenkins/pages/docker.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div class="paragraph">
+<p>layout: section
+title: Using Docker with Pipeline
+---
+:description:
+:author:
+:sectanchors:
+:toc:
+:imagesdir: ../../resources
+:hide-uri-scheme:</p>
+</div>
+<h1 id="_using_docker_with_pipeline" class="sect0"><a class="anchor" href="#_using_docker_with_pipeline"></a>Using Docker with Pipeline</h1>
+<div class="paragraph">
+<p>Many organizations use <a href="https://www.docker.com">Docker</a> to unify their build and test environments across machines, and to provide an efficient mechanism for deploying applications.
+Starting with Pipeline versions 2.5 and higher, Pipeline has built-in support for interacting with Docker from within a <code>Jenkinsfile</code>.</p>
+</div>
+<div class="paragraph">
+<p>While this page covers the basics of utilizing Docker from within a <code>Jenkinsfile</code>, it will not cover the fundamentals of Docker, which you can refer to in the <a href="https://docs.docker.com/get-started/">Docker Getting Started Guide</a>.</p>
+</div>
+<div class="sect1">
+<h2 id="execution-environment"><a class="anchor" href="#execution-environment"></a>Customizing the execution environment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pipeline is designed to easily use <a href="https://docs.docker.com/">Docker</a> images as the execution environment for a single <a href="../glossary/index.html#stage" class="xref page">Stage</a> or the entire Pipeline.
+Meaning that a user can define the tools required for their Pipeline, without having to manually configure agents.
+Any tool that can be <a href="https://hub.docker.com">packaged in a Docker container</a> can be used with ease, by making only minor edits to a <code>Jenkinsfile</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>// Declarative //
+pipeline {
+    agent {
+        docker { image 'node:20.10.0-alpine3.19' }
+    }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
+}
+// Script //
+node {
+    /* Requires the Docker Pipeline plugin to be installed */
+    docker.image('node:20.10.0-alpine3.19').inside {
+        stage('Test') {
+            sh 'node --version'
+        }
+    }
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When the Pipeline executes, Jenkins will automatically start the specified container and execute the defined steps within:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] sh
+[guided-tour] Running shell script
++ node --version
+v16.13.1
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_workspace_synchronization"><a class="anchor" href="#_workspace_synchronization"></a>Workspace synchronization</h3>
+<div class="paragraph">
+<p>If it is important to keep the workspace synchronized with other stages, use <code>reuseNode true</code>.
+Otherwise, a dockerized stage can be run on the same agent or any other agent, but in a temporary workspace.</p>
+</div>
+<div class="paragraph">
+<p>By default, for a containerized stage, Jenkins:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Picks an agent.</p>
+</li>
+<li>
+<p>Creates a new empty workspace.</p>
+</li>
+<li>
+<p>Clones pipeline code into it.</p>
+</li>
+<li>
+<p>Mounts this new workspace into the container.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you have multiple Jenkins agents, your containerized stage can be started on any of them.</p>
+</div>
+<div class="paragraph">
+<p>When <code>reuseNode</code> is set to <code>true</code>, no new workspace will be created, and the current workspace from the current agent will be mounted into the container.
+After this, the container will be started on the same node, so all of the data will be synchronized.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>// Declarative //
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            agent {
+                docker {
+                    image 'gradle:8.2.0-jdk17-alpine'
+                    // Run the container on the node specified at the
+                    // top-level of the Pipeline, in the same workspace,
+                    // rather than on a new node entirely:
+                    reuseNode true
+                }
+            }
+            steps {
+                sh 'gradle --version'
+            }
+        }
+    }
+}
+// Script //
+// Option "reuseNode true" currently unsupported in scripted pipeline</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_caching_data_for_containers"><a class="anchor" href="#_caching_data_for_containers"></a>Caching data for containers</h3>
+<div class="paragraph">
+<p>Many build tools will download external dependencies and cache them locally for future re-use.
+Since containers are initially created with "clean" file systems, this can result in slower Pipelines, as they may not take advantage of on-disk caches between subsequent Pipeline runs.</p>
+</div>
+<div class="paragraph">
+<p>Pipeline supports adding custom arguments that are passed to Docker, allowing users to specify custom <a href="https://docs.docker.com/engine/tutorials/dockervolumes/">Docker Volumes</a> to mount, which can be used for caching data on the <a href="../glossary/index.html#agent" class="xref page">agent</a> between Pipeline runs.
+The following example will cache <code>~/.m2</code> between Pipeline runs utilizing the <a href="https://hub.docker.com/_/maven/"><code>maven</code> container</a>, avoiding the need to re-download dependencies for subsequent Pipeline runs.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>// Declarative //
+pipeline {
+    agent {
+        docker {
+            image 'maven:3.9.3-eclipse-temurin-17'
+            args '-v $HOME/.m2:/root/.m2'
+        }
+    }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn -B'
+            }
+        }
+    }
+}
+// Script //
+node {
+    /* Requires the Docker Pipeline plugin to be installed */
+    docker.image('maven:3.9.6-eclipse-temurin-17-alpine').inside('-v $HOME/.m2:/root/.m2') {
+        stage('Build') {
+            sh 'mvn -B'
+        }
+    }
+}</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_multiple_containers"><a class="anchor" href="#_using_multiple_containers"></a>Using multiple containers</h3>
+<div class="paragraph">
+<p>It has become increasingly common for code bases to rely on multiple different technologies.
+For example, a repository might have both a Java-based back-end API implementation <em>and</em> a JavaScript-based front-end implementation.
+Combining Docker and Pipeline allows a <code>Jenkinsfile</code> to use <strong>multiple</strong> types of technologies, by combining the <code>agent {}</code> directive with different stages.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>// Declarative //
+pipeline {
+    agent none
+    stages {
+        stage('Back-end') {
+            agent {
+                docker { image 'maven:3.9.6-eclipse-temurin-17-alpine' }
+            }
+            steps {
+                sh 'mvn --version'
+            }
+        }
+        stage('Front-end') {
+            agent {
+                docker { image 'node:20.10.0-alpine3.19' }
+            }
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
+}
+// Script //
+node {
+    /* Requires the Docker Pipeline plugin to be installed */
+
+    stage('Back-end') {
+        docker.image('maven:3.9.6-eclipse-temurin-17-alpine').inside {
+            sh 'mvn --version'
+        }
+    }
+
+    stage('Front-end') {
+        docker.image('node:20.10.0-alpine3.19').inside {
+            sh 'node --version'
+        }
+    }
+}</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="dockerfile"><a class="anchor" href="#dockerfile"></a>Using a Dockerfile</h3>
+<div class="paragraph">
+<p>For projects requiring a more customized execution environment, Pipeline also supports building and running a container from a <code>Dockerfile</code> in the source repository.
+In contrast to the <a href="#execution-environment">previous approach</a> of using an "off-the-shelf" container, using the <code>agent { dockerfile true }</code> syntax builds a new image from a <code>Dockerfile</code>, rather than pulling one from <a href="https://hub.docker.com">Docker Hub</a>.</p>
+</div>
+<div class="paragraph">
+<p>Reusing an example from above, with a more custom <code>Dockerfile</code>:</p>
+</div>
+<div class="listingblock">
+<div class="title">Dockerfile</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">FROM node:20.10.0-alpine3.19
+
+RUN apk add -U subversion</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By committing this to the root of the source repository, the <code>Jenkinsfile</code> can be changed to build a container based on this <code>Dockerfile</code>, and then run the defined steps using that container:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>// Declarative //
+pipeline {
+    agent { dockerfile true }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+                sh 'svn --version'
+            }
+        }
+    }
+}
+// Script //</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>agent { dockerfile true }</code> syntax supports a number of other options, which are described in more detail in the <a href="../pipeline/syntax.html#agent" class="xref page">Pipeline Syntax</a> section.</p>
+</div>
+<div class="videoblock">
+<div class="title">Using a Dockerfile with Jenkins Pipeline</div>
+<div class="content">
+<iframe width="852" height="480" src="https://www.youtube.com/embed/Pi2kJ2RJS50?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_specifying_a_docker_label"><a class="anchor" href="#_specifying_a_docker_label"></a>Specifying a Docker Label</h3>
+<div class="paragraph">
+<p>By default, Pipeline assumes that <em>any</em> configured <a href="../glossary/index.html#agent" class="xref page">agent</a> is capable of running Docker-based Pipelines.
+For Jenkins environments that have macOS, Windows, or other agents that are unable to run the Docker daemon, this default setting may be problematic.
+Pipeline provides a global option on the <strong>Manage Jenkins</strong> page and on the <a href="../glossary/index.html#folder" class="xref page">Folder</a> level, for specifying which agents (by <a href="../glossary/index.html#label" class="xref page">Label</a>) to use for running Docker-based Pipelines.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="pipeline/configure-docker-label.png" alt="Configuring the Pipeline Docker Label">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_path_setup_for_mac_os_users"><a class="anchor" href="#_path_setup_for_mac_os_users"></a>Path setup for mac OS users</h3>
+<div class="paragraph">
+<p>The <code>/usr/local/bin</code> directory is not included in the macOS <code>PATH</code> for Docker images by default.
+If executables from <code>/usr/local/bin</code> need to be called from within Jenkins, the <code>PATH</code> needs to be extended to include <code>/usr/local/bin</code>.
+Add a path node in the file "/usr/local/Cellar/jenkins-lts/XXX/homebrew.mxcl.jenkins-lts.plist" like this:</p>
+</div>
+<div class="listingblock">
+<div class="title">Contents of homebrew.mxcl.jenkins-lts.plist</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;key&gt;EnvironmentVariables&lt;/key&gt;
+&lt;dict&gt;
+&lt;key&gt;PATH&lt;/key&gt;
+&lt;string&gt;&lt;!-- insert revised path here --&gt;&lt;/string&gt;
+&lt;/dict&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The revised <code>PATH</code> <code>string</code> should be a colon separated list of directories in the same format as the <code>PATH</code> environment variable and should include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/usr/local/bin</code></p>
+</li>
+<li>
+<p><code>/usr/bin</code></p>
+</li>
+<li>
+<p><code>/bin</code></p>
+</li>
+<li>
+<p><code>/usr/sbin</code></p>
+</li>
+<li>
+<p><code>/sbin</code></p>
+</li>
+<li>
+<p><code>/Applications/Docker.app/Contents/Resources/bin/</code></p>
+</li>
+<li>
+<p><code>/Users/XXX/Library/Group\ Containers/group.com.docker/Applications/Docker.app/Contents/Resources/bin</code> (where <code>XXX</code> is replaced by your user name)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Now, restart jenkins using <code>brew services restart jenkins-lts</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_advanced_usage_with_scripted_pipeline"><a class="anchor" href="#_advanced_usage_with_scripted_pipeline"></a>Advanced Usage with Scripted Pipeline</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_running_sidecar_containers"><a class="anchor" href="#_running_sidecar_containers"></a>Running "sidecar" containers</h3>
+<div class="paragraph">
+<p>Using Docker in Pipeline is an effective way to run a service on which the build, or a set of tests, may rely.
+Similar to the <a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar">sidecar pattern</a>, Docker Pipeline can run one container "in the background", while performing work in another.
+Utilizing this sidecar approach, a Pipeline can have a "clean" container provisioned for each Pipeline run.</p>
+</div>
+<div class="paragraph">
+<p>Consider a hypothetical integration test suite that relies on a local MySQL database to be running.
+Using the <code>withRun</code> method, implemented in the <a href="https://plugins.jenkins.io/docker-workflow">Docker Pipeline</a> plugin&#8217;s support for Scripted Pipeline, a <code>Jenkinsfile</code> can run MySQL as a sidecar:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
+    checkout scm
+    /*
+     * In order to communicate with the MySQL server, this Pipeline explicitly
+     * maps the port (`3306`) to a known port on the host machine.
+     */
+    docker.image('mysql:8-oracle').withRun('-e "MYSQL_ROOT_PASSWORD=my-secret-pw"' +
+                                           ' -p 3306:3306') { c -&gt;
+        /* Wait until mysql service is up */
+        sh 'while ! mysqladmin ping -h0.0.0.0 --silent; do sleep 1; done'
+        /* Run some tests which require MySQL */
+        sh 'make check'
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This example can be taken further, utilizing two containers simultaneously.
+One "sidecar" running MySQL, and another providing the <a href="#execution-environment">execution environment</a> by using the Docker <a href="https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/">container links</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
+    checkout scm
+    docker.image('mysql:8-oracle').withRun('-e "MYSQL_ROOT_PASSWORD=my-secret-pw"') { c -&gt;
+        docker.image('mysql:8-oracle').inside("--link ${c.id}:db") {
+            /* Wait until mysql service is up */
+            sh 'while ! mysqladmin ping -hdb --silent; do sleep 1; done'
+        }
+        docker.image('oraclelinux:9').inside("--link ${c.id}:db") {
+            /*
+             * Run some tests that require MySQL, and assume that it is
+             * available on the host name `db`
+             */
+            sh 'make check'
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above example uses the object exposed by <code>withRun</code>, which has the running container&#8217;s ID available via the <code>id</code> property.
+Using the container&#8217;s ID, the Pipeline can create a link by passing custom Docker arguments to the <code>inside()</code> method.</p>
+</div>
+<div class="paragraph">
+<p>The <code>id</code> property can also be useful for inspecting logs from a running Docker container before the Pipeline exits:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">sh "docker logs ${c.id}"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_building_containers"><a class="anchor" href="#_building_containers"></a>Building containers</h3>
+<div class="paragraph">
+<p>In order to create a Docker image, the <a href="https://plugins.jenkins.io/docker-workflow">Docker Pipeline</a> plugin also provides a <code>build()</code> method for creating a new image from a <code>Dockerfile</code> in the repository during a Pipeline run.</p>
+</div>
+<div class="paragraph">
+<p>One major benefit of using the syntax <code>docker.build("my-image-name")</code> is that a Scripted Pipeline can use the return value for subsequent Docker Pipeline calls, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
+    checkout scm
+
+    def customImage = docker.build("my-image:${env.BUILD_ID}")
+
+    customImage.inside {
+        sh 'make test'
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The return value can also be used to publish the Docker image to <a href="https://hub.docker.com">Docker Hub</a> or a <a href="#custom-registry">custom Registry</a>, via the <code>push()</code> method, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
+    checkout scm
+    def customImage = docker.build("my-image:${env.BUILD_ID}")
+    customImage.push()
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>One common usage of image "tags" is to specify a <code>latest</code> tag for the most recently validated version of a Docker image.
+The <code>push()</code> method accepts an optional <code>tag</code> parameter, allowing the Pipeline to push the <code>customImage</code> with different tags, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
+    checkout scm
+    def customImage = docker.build("my-image:${env.BUILD_ID}")
+    customImage.push()
+
+    customImage.push('latest')
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>build()</code> method builds the <code>Dockerfile</code> in the current directory by default.
+This can be overridden by providing a directory path containing a <code>Dockerfile</code> as the second argument of the <code>build()</code> method, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
+    checkout scm
+    def testImage = docker.build("test-image", "./dockerfiles/test") <i class="conum" data-value="1"></i><b>(1)</b>
+
+    testImage.inside {
+        sh 'make test'
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Builds <code>test-image</code> from the Dockerfile found at <code>./dockerfiles/test/Dockerfile</code>.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>It is possible to pass other arguments to <a href="https://docs.docker.com/engine/reference/commandline/build/"><code>docker build</code></a> by adding them to the second argument of the <code>build()</code> method.
+When passing arguments this way, the last value in the string must be the path to the docker file, and should end with the folder to use as the build context.</p>
+</div>
+<div class="paragraph">
+<p>This example overrides the default <code>Dockerfile</code> by passing the <code>-f</code> flag:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
+    checkout scm
+    def dockerfile = 'Dockerfile.test'
+    def customImage = docker.build("my-image:${env.BUILD_ID}",
+                                   "-f ${dockerfile} ./dockerfiles") <i class="conum" data-value="1"></i><b>(1)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Builds <code>my-image:${env.BUILD_ID}</code> from the Dockerfile found at <code>./dockerfiles/Dockerfile.test</code>.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_a_remote_docker_server"><a class="anchor" href="#_using_a_remote_docker_server"></a>Using a remote Docker server</h3>
+<div class="paragraph">
+<p>By default, the <a href="https://plugins.jenkins.io/docker-workflow">Docker Pipeline</a> plugin will communicate with a local Docker daemon, typically accessed through <code>/var/run/docker.sock</code>.</p>
+</div>
+<div class="paragraph">
+<p>To select a non-default Docker server, such as with <a href="https://docs.docker.com/swarm/">Docker Swarm</a>, use the <code>withServer()</code> method.</p>
+</div>
+<div class="paragraph">
+<p>You can pass a URI, and optionally the Credentials ID of a <strong>Docker Server Certificate Authentication</strong> pre-configured in Jenkins, to the method with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
+    checkout scm
+
+    docker.withServer('tcp://swarm.example.com:2376', 'swarm-certs') {
+        docker.image('mysql:8-oracle').withRun('-p 3306:3306') {
+            /* do things */
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>inside()</code> and <code>build()</code> will not work properly with a Docker Swarm server out of the box.</p>
+</div>
+<div class="paragraph">
+<p>For <code>inside()</code> to work, the Docker server and the Jenkins agent must use the same filesystem, so that the workspace can be mounted.</p>
+</div>
+<div class="paragraph">
+<p>Currently, neither the Jenkins plugin nor the Docker CLI will automatically detect the case that the server is running remotely.
+A typical symptom of this would be errors from nested <code>sh</code> commands such as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">cannot create /…@tmp/durable-…/pid: Directory nonexistent</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When Jenkins detects that the agent is itself running inside a Docker container, it will automatically pass the <code>--volumes-from</code> argument to the <code>inside</code> container, ensuring that it can share a workspace with the agent.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, some versions of Docker Swarm do not support custom Registries.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-registry"><a class="anchor" href="#custom-registry"></a>Using a custom registry</h3>
+<div class="paragraph">
+<p>By default, the <a href="https://plugins.jenkins.io/docker-workflow">Docker Pipeline</a> plugin assumes the default Docker Registry of <a href="https://hub.docker.com">Docker Hub</a>.</p>
+</div>
+<div class="paragraph">
+<p>In order to use a custom Docker Registry, users of Scripted Pipeline can wrap steps with the <code>withRegistry()</code> method, passing in the custom Registry URL, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
+    checkout scm
+
+    docker.withRegistry('https://registry.example.com') {
+
+        docker.image('my-custom-image').inside {
+            sh 'make test'
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For a Docker Registry requiring authentication, add a "Username/Password" Credentials item from the Jenkins home page and use the Credentials ID as a second argument to <code>withRegistry()</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">node {
+    checkout scm
+
+    docker.withRegistry('https://registry.example.com', 'credentials-id') {
+
+        def customImage = docker.build("my-image:${env.BUILD_ID}")
+
+        /* Push the container to the custom Registry */
+        customImage.push()
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="index.html">Installing Jenkins</a></span>
+  <span class="next"><a href="kubernetes.html">Kubernetes</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

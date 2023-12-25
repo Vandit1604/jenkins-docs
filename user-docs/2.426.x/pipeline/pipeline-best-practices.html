@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pipeline Best Practices :: Jenkins Docs</title>
+    <link rel="canonical" href="https://docs.jenkins.com/user-docs/2.426.x/pipeline/pipeline-best-practices.html">
+    <link rel="prev" href="syntax.html">
+    <link rel="next" href="scaling-pipeline.html">
+    <meta name="generator" content="Antora 3.1.6">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+<link rel="icon" href="../../../favicon.png" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="user-docs" data-version="2.426.x">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">User Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/linux.html">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/macos.html">macOS</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/windows.html">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/other.html">Other Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/war-file.html">WAR file</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/servlet-containers.html">Other Servlet Containers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/offline.html">Offline Installations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../installing-jenkins/initial-settings.html">Initial Settings</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../platform-information/index.html">Platform Information</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/upgrade-java-to-11.html">Upgrading to Java 11</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-windows.html">Windows Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-linux.html">Linux Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-web-browsers.html">Browser compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-java.html">Java Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/support-policy-servlet-containers.html">Servlet Container Support Policy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-information/upgrade-java-to-17.html">Upgrading to Java 17</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../using-jenkins/index.html">Using Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-credentials.html">Using credentials</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/searchbox.html">Using Search Box</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/referencing-another-project-by-name.html">Referencing another project by name</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/aborting-a-build.html">Aborting a build</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/fingerprints.html">Fingerprints</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-local-language.html">Using local language</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/change-time-zone.html">Change time zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/remote-access-api.html">Remote Access API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/executor-starvation.html">Executor Starvation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-agents.html">Using Jenkins agents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../using-jenkins/using-jmeter-with-jenkins.html">Using JMeter with Jenkins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Pipeline</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started.html">Getting started with Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="jenkinsfile.html">Using a Jenkinsfile</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="running-pipelines.html">Running a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="multibranch.html">Branches and Pull Requests</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="docker.html">Using Docker with pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="shared-libraries.html">Extending with Shared Libraries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="development.html">Pipeline Development Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="syntax.html">Pipeline syntax</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="pipeline-best-practices.html">Pipeline Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="scaling-pipeline.html">Scaling Pipelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cps-method-mismatches.html">Pipeline CPS Method Mismatches</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../blueocean/index.html">Blue Ocean</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/getting-started.html">Getting started with Blue Ocean</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/creating-pipelines.html">Creating a Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/dashboard.html">Dashboard</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/activity.html">Activity View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-run-details.html">Pipeline Run Details View</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../blueocean/pipeline-editor.html">Pipeline Editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../managing/index.html">Managing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-configuration.html">Configuring the System</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/casc.html">Configuration as Code</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/tools.html">Managing Tools</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/plugins.html">Managing Plugins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/about-jenkins.html">About Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-info.html">System Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/system-properties.html">Jenkins Features Controlled with System Properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/change-system-timezone.html">Change System Time Zone</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/cli.html">Jenkins CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-console.html">Script Console</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/groovy-hook-scripts.html">Groovy Hook Scripts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/nodes.html">Managing Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/script-approval.html">In-process Script Approval</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/ui-themes.html">Themes for user interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/user-content.html">User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../managing/spawning-processes.html">Spawning Processes From Build</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Securing Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/access-control.html">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-jenkins.html">Securing Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/managing-security.html">Managing Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/controller-isolation.html">Controller Isolation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/securing-builds.html">Securing Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/csrf-protection.html">CSRF Protection</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/user-content.html">Rendering User Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/build-authorization.html">Access Control for Builds</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/environment-variables.html">Handling Environment Variables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/markup-formatter.html">Markup Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security/services.html">Exposed Services and Ports</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/index.html">System Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/backing-up.html">Backing-up/Restoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/monitoring.html">Monitoring Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/administering-jenkins-on-kubernetes.html">Administering Jenkins on Kubernetes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-chef.html">Managing Jenkins with Chef</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/with-puppet.html">Managing Jenkins with Puppet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/viewing-logs.html">Viewing logs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/authenticating-scripted-clients.html">Authenticating scripted clients</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/index.html">Reverse proxy configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-apache.html">Reverse proxy - Apache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-nginx.html">Reverse proxy - Nginx</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-haproxy.html">Reverse proxy - HAProxy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-squid.html">Reverse proxy - Squid</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iis.html">Reverse proxy - IIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-with-jenkins/reverse-proxy-configuration-iptables.html">Reverse proxy - iptables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/reverse-proxy-configuration-troubleshooting.html">Reverse proxy - Issues</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../system-administration/systemd-services.html">Managing systemd services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../scaling/index.html">Scaling Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-scale.html">Architecting for Scale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/hardware-recommendations.html">Hardware Recommendations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/architecting-for-manageability.html">Architecting for Manageability</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../scaling/scaling-jenkins-on-kubernetes.html">Scaling Jenkins on Kubernetes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../troubleshooting/index.html">Troubleshooting Jenkins</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/diagnosing-errors.html">Diagnosing Errors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../troubleshooting/obtaining-a-thread-dump.html">Obtaining a thread dump</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary/index.html">Glossary</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">User Documentation</span>
+    <span class="version">2.426.x</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../images/index.html">Artwork</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../books/index.html">Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../community/index.html">Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../dev-docs/index.html">Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../download/latest/index.html">Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../projects/index.html">Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/index.html">Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../solutions/2.426.x/index.html">Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../solutions/2.426.x/index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../sigs/index.html">Special Interest Groups (SIGs)</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../project/index.html">The Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../tutorials/2.426.x/index.html">Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../tutorials/2.426.x/index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">User Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">User Documentation</a></li>
+    <li><a href="index.html">Pipeline</a></li>
+    <li><a href="pipeline-best-practices.html">Pipeline Best Practices</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/user-docs/modules/pipeline/pages/pipeline-best-practices.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Pipeline Best Practices</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This guide provides a small selection of best practices for pipelines and points out the most common mistakes.</p>
+</div>
+<div class="paragraph">
+<p>The goal is to point pipeline authors and maintainers towards patterns that result in better Pipeline execution and away from pitfalls they might otherwise not be aware of.
+This guide is not meant to be an exhaustive list of all possible Pipeline best practices but instead to provide a number of specific examples useful in tracking down common practices.
+Use it as a "do this" generally and not as an incredibly detailed "how-to".</p>
+</div>
+<div class="paragraph">
+<p>This guide is arranged by area, guideline, then listing specific examples.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_general"><a class="anchor" href="#_general"></a>General</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_making_sure_to_use_groovy_code_in_pipelines_as_glue"><a class="anchor" href="#_making_sure_to_use_groovy_code_in_pipelines_as_glue"></a>Making sure to use Groovy code in Pipelines as glue</h3>
+<div class="paragraph">
+<p>Use Groovy code to connect a set of actions rather than as the main functionality of your Pipeline.
+In other words, instead of relying on Pipeline functionality (Groovy or Pipeline steps) to drive the build process forward, use single steps (such as <code>sh</code>) to accomplish multiple parts of the build.
+Pipelines, as their complexity increases (the amount of Groovy code, number of steps used, etc.), require more resources (CPU, memory, storage) on the controller.
+Think of Pipeline as a tool to accomplish a build rather than the core of a build.</p>
+</div>
+<div class="paragraph">
+<p>Example: Using a single Maven build step to drive the build through its build/test/deploy process.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_running_shell_scripts_in_jenkins_pipeline"><a class="anchor" href="#_running_shell_scripts_in_jenkins_pipeline"></a>Running shell scripts in Jenkins Pipeline</h3>
+<div class="paragraph">
+<p>Using a shell script within Jenkins Pipeline can help simplify builds by combining multiple steps into a single stage.
+The shell script also allows users to add or update commands without having to modify each step or stage separately.</p>
+</div>
+<div class="paragraph">
+<p>This video reviews using a shell script in Jenkins Pipeline and the benefits it provides.</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe width="800" height="420" src="https://www.youtube.com/embed/mbeQWBNaNKQ?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_avoiding_complex_groovy_code_in_pipelines"><a class="anchor" href="#_avoiding_complex_groovy_code_in_pipelines"></a>Avoiding complex Groovy code in Pipelines</h3>
+<div class="paragraph">
+<p>For a Pipeline, Groovy code <strong>always</strong> executes on controller which means using controller resources(memory and CPU).
+Therefore, it is critically important to reduce the amount of Groovy code executed by Pipelines (this includes any methods called on classes imported in Pipelines).
+The following are the most common example Groovy methods to avoid using:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>JsonSlurper:</strong> This function (and some other similar ones like XmlSlurper or readFile) can be used to read from a file on disk, parse the data from that file into a JSON object, and inject that object into a Pipeline using a command like JsonSlurper().parseText(readFile("$LOCAL_FILE")). This command loads the local file into memory on the controller twice and, if the file is very large or the command is executed frequently, will require a lot of memory.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Solution: Instead of using JsonSlurper, use a shell step and return the standard out. This shell would look something like this: <code>def JsonReturn = sh label: '', returnStdout: true, script: 'echo "$LOCAL_FILE"| jq "$PARSING_QUERY"'</code>. This will use agent resources to read the file and the $PARSING_QUERY will help parse down the file into a smaller size.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>HttpRequest:</strong> Frequently this command is used to grab data from an external source and store it in a variable. This practice is not ideal because not only is that request coming directly from the controller (which could give incorrect results for things like HTTPS requests if the controller does not have certificates loaded), but also the response to that request is stored twice.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Solution: Use a shell step to perform the HTTP request from the agent, for example using a tool like <code>curl</code> or <code>wget</code>, as appropriate. If the result must be later in the Pipeline, try to filter the result on the agent side as much as possible so that only the minimum required information must be transmitted back to the Jenkins controller.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reducing_repetition_of_similar_pipeline_steps"><a class="anchor" href="#_reducing_repetition_of_similar_pipeline_steps"></a>Reducing repetition of similar Pipeline steps</h3>
+<div class="paragraph">
+<p>Combine Pipeline steps into single steps as often as possible to reduce the amount of overhead caused by the Pipeline execution engine itself. For example, if you run three shell steps back-to-back, each of those steps has to be started and stopped, requiring connections and resources on the agent and controller to be created and cleaned up. However, if you put all of the commands into a single shell step, then only a single step needs to be started and stopped.</p>
+</div>
+<div class="paragraph">
+<p>Example:
+Instead of creating a series of  <code>echo</code> or <code>sh</code> steps, combine them into a single step or script.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_avoiding_calls_to_jenkins_getinstance"><a class="anchor" href="#_avoiding_calls_to_jenkins_getinstance"></a>Avoiding calls to <code>Jenkins.getInstance</code></h3>
+<div class="paragraph">
+<p>Using Jenkins.instance or its accessor methods in a Pipeline or shared library indicates a code misuse within that Pipeline/shared library. Using Jenkins APIs from an unsandboxed shared library means that the shared library is both a shared library and a kind of Jenkins plugin. You need to be very careful when interacting with Jenkins APIs from a Pipeline to avoid severe security and performance issues. If you must use Jenkins APIs in your build, the recommended approach is to create a minimal plugin in Java that implements a safe wrapper around the Jenkins API you want to access using Pipeline&#8217;s Step API. Using Jenkins APIs from a sandboxed Jenkinsfile directly means that you have probably had to whitelist methods that allow sandbox protections to be bypassed by anyone who can modify a Pipeline, which is a significant security risk. The whitelisted method is run as the System user, having overall admin permissions, which can lead to developers possessing higher permissions than intended.</p>
+</div>
+<div class="paragraph">
+<p>Solution: The best solution would be to work around the calls being made, but if they must be done then it would be better to implement a Jenkins plugin which is able to gather the data needed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cleaning_up_old_jenkins_builds"><a class="anchor" href="#_cleaning_up_old_jenkins_builds"></a>Cleaning up old Jenkins builds</h3>
+<div class="paragraph">
+<p>As a Jenkins administrator, removing old or unwanted builds keeps the Jenkins controller running efficiently.
+When you do not remove older builds, there are less resources for more current and relevant builds.
+This video reviews using the <a href="syntax.html#options" class="xref page"><code>buildDiscarder</code></a> directive in individual Pipeline jobs.
+The video also reviews the process to keep specific historical builds.</p>
+</div>
+<div class="videoblock">
+<div class="title">How to clean up old Jenkins builds</div>
+<div class="content">
+<iframe width="800" height="420" src="https://www.youtube.com/embed/_Z7BlaTTGlo?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_shared_libraries"><a class="anchor" href="#_using_shared_libraries"></a>Using shared libraries</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_do_not_override_built_in_pipeline_steps"><a class="anchor" href="#_do_not_override_built_in_pipeline_steps"></a>Do not override built-in Pipeline steps</h3>
+<div class="paragraph">
+<p>Wherever possible stay away from customized/overwritten Pipeline steps.
+Overriding built-in Pipeline Steps is the process of using shared libraries to overwrite the standard Pipeline APIs like <code>sh</code> or <code>timeout</code>.
+This process is dangerous because the Pipeline APIs can change at any time causing custom code to break or give different results than expected.
+When custom code breaks because of Pipeline API changes, troubleshooting is difficult because even if the custom code has not changed, it may not work the same after an API update.
+So even if custom code has not changed, that does not mean after an API update it will keep working the same.
+Lastly, because of the ubiquitous use of these steps throughout Pipelines, if something is coded incorrectly/inefficiently the results can be catastrophic to Jenkins.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_avoiding_large_global_variable_declaration_files"><a class="anchor" href="#_avoiding_large_global_variable_declaration_files"></a>Avoiding large global variable declaration files</h3>
+<div class="paragraph">
+<p>Having large variable declaration files can require large amounts of memory for little to no benefit, because the file is loaded for every Pipeline whether the variables are needed or not. Creating small variable files that contain only variables relevant to the current execution is recommended.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_avoiding_very_large_shared_libraries"><a class="anchor" href="#_avoiding_very_large_shared_libraries"></a>Avoiding very large shared libraries</h3>
+<div class="paragraph">
+<p>Using large shared libraries in Pipelines requires checking out a very large file before the Pipeline can start and loading the same shared library per job that is currently executing, which can lead to increased memory overhead and slower execution time.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_answering_additional_faqs"><a class="anchor" href="#_answering_additional_faqs"></a>Answering additional FAQs</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_dealing_with_concurrency_in_pipelines"><a class="anchor" href="#_dealing_with_concurrency_in_pipelines"></a>Dealing with Concurrency in Pipelines</h3>
+<div class="paragraph">
+<p>Try not to share workspaces across multiple Pipeline executions or multiple distinct Pipelines.
+This practice can lead to either unexpected file modification within each Pipeline or workspace renaming.</p>
+</div>
+<div class="paragraph">
+<p>Ideally, shared volumes/disks are mounted in a separate place and the files are copied from that place to the current workspace.
+Then when the build is done the files can be copied back if there were updates done.</p>
+</div>
+<div class="paragraph">
+<p>Build in distinct containers which create needed resources from scratch(cloud-type agents work great for this).
+Building these containers will ensure that the build process begins at the start every time and is easily repeatable.
+If building containers will not work, disable concurrency on the Pipeline or use the Lockable Resources Plugin to lock the workspace when it is running so that no other builds can use it while it is locked.
+<strong>WARNING</strong>: Disabling concurrency or locking the workspace when it is running can cause Pipelines to become blocked when waiting on resources if those resources are arbitrarily locked.</p>
+</div>
+<div class="paragraph">
+<p><strong>Also, be aware that both of these methods have slower time to results of builds than using unique resources for each job</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_avoiding_notserializableexception"><a class="anchor" href="#_avoiding_notserializableexception"></a>Avoiding <code>NotSerializableException</code></h3>
+<div class="paragraph">
+<p>Pipeline code is CPS-transformed so that Pipelines are able to resume after a Jenkins restart.
+That is, while the pipeline is running your script, you can shut down Jenkins or lose connectivity to an agent.
+When it comes back, Jenkins remembers what it was doing and your pipeline script resumes execution as if it were never interrupted.
+A technique known as "<a href="https://en.wikipedia.org/wiki/Continuation-passing_style">continuation-passing style (CPS)</a>" execution plays a key role in resuming Pipelines.
+However, some Groovy expressions do not work correctly as a result of CPS transformation.</p>
+</div>
+<div class="paragraph">
+<p>Under the hood, CPS relies on being able to serialize the pipeline&#8217;s current state along with the remainder of the pipeline to be executed.
+This means that using Objects in the pipeline that are not serializable will trigger a <code>NotSerializableException</code> to be thrown when the pipeline attempts to persist its state.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="cps-method-mismatches.html" class="xref page">Pipeline CPS method mismatches</a> for more details and some examples of things that may be problematic.</p>
+</div>
+<div class="paragraph">
+<p>Below will cover techniques to ensure the pipeline can function as expected.</p>
+</div>
+<div class="sect3">
+<h4 id="_ensure_persisted_variables_are_serializable"><a class="anchor" href="#_ensure_persisted_variables_are_serializable"></a>Ensure Persisted Variables Are Serializable</h4>
+<div class="paragraph">
+<p>Local variables are captured as part of the pipeline&#8217;s state during serialization.
+This means that storing non-serializable objects in variables during pipeline execution will result in a <code>NotSerializableException</code> to be thrown.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_do_not_assign_non_serializable_objects_to_variables"><a class="anchor" href="#_do_not_assign_non_serializable_objects_to_variables"></a>Do not assign non-serializable objects to variables</h4>
+<div class="paragraph">
+<p>One strategy to make use of non-serializable objects to always infer their value "just-in-time" instead of calculating their value and storing that value in a variable.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="using-noncps"><a class="anchor" href="#using-noncps"></a>Using <code>@NonCPS</code></h4>
+<div class="paragraph">
+<p>If necessary, you can use the <code>@NonCPS</code> annotation to disable the CPS transformation for a specific method whose body would not execute correctly if it were CPS-transformed.
+Just be aware that this also means the Groovy function will have to restart completely since it is not transformed.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Asynchronous Pipeline steps (such as <code>sh</code> and <code>sleep</code>) are always CPS-transformed, and may not be used inside of a method annotated with <code>@NonCPS</code>.
+In general, you should avoid using pipeline steps inside of methods annotated with <code>@NonCPS</code></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_pipeline_durability"><a class="anchor" href="#_pipeline_durability"></a>Pipeline Durability</h4>
+<div class="paragraph">
+<p>It is noteworthy that changing the pipeline&#8217;s durability can result in <code>NotSerializableException</code> not being thrown where they otherwise would have been.
+This is because decreasing the pipeline&#8217;s durability through PERFORMANCE_OPTIMIZED means that the pipeline&#8217;s current state is persisted significantly less frequently.
+Therefore, the pipeline never attempts to serialize the non-serializable values and as such, no exception is thrown.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This note exists to inform users as to the root cause of this behavior.
+It is not recommended that the Pipeline&#8217;s durability setting be set to Performance Optimized purely to avoid serializability issues.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="syntax.html">Pipeline syntax</a></span>
+  <span class="next"><a href="scaling-pipeline.html">Scaling Pipelines</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

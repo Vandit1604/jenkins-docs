@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins and Android :: Jenkins Docs</title>
+    <link rel="canonical" href="https://docs.jenkins.com/solutions/2.426.x/android.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="php.html">
+    <meta name="generator" content="Antora 3.1.6">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+<link rel="icon" href="../../favicon.png" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="solutions" data-version="2.426.x">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Solutions Page</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="android.html">Jenkins and Android</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="php.html">Jenkins and PHP</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="docker.html">docker.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="python.html">Jenkins and Python</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ruby.html">Jenkins and Ruby</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipeline.html">Pipeline as Code with Jenkins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="github.html">Jenkins with GitHub</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="embedded.html">Jenkins in the Embedded World</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="bitbucketserver.html">Bitbucket Server</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="c.html">Jenkins and C/C++</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../user-docs/2.426.x/platform-information/support-policy-java.html">Java Support Policy</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Solutions Page</span>
+    <span class="version">2.426.x</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../images/index.html">Artwork</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../books/index.html">Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../community/index.html">Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dev-docs/index.html">Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../download/latest/index.html">Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../projects/index.html">Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../security/index.html">Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../sigs/index.html">Special Interest Groups (SIGs)</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../sigs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../project/index.html">The Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../tutorials/2.426.x/index.html">Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../tutorials/2.426.x/index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../user-docs/2.426.x/index.html">User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-docs/2.426.x/index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../user-docs/2.426.x/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Solutions Page</a></li>
+    <li><a href="android.html">Jenkins and Android</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/solutions/modules/ROOT/pages/android.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins and Android</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="sidebarblock youtube-videos">
+<div class="content">
+<div class="title">Videos related to Android</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/AYoAEoOoYFE?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/zm6ntUt-vqY?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>As one of the predominant mobile platforms, Android is attractive to a number
+of developers, but it does bring it&#8217;s own set of challenges with it. With an
+extremely broad set of devices available on the market, building and testing
+for the matrix of device configurations can be very challenging. With the
+<a href="https://plugins.jenkins.io/android-emulator">Android emulator plugin</a>
+however, it is possible to build and test on a myriad of emulated devices.</p>
+</div>
+<div class="paragraph">
+<p>When combined with the
+<a href="https://plugins.jenkins.io/google-play-android-publisher">Google Play Publisher plugin</a>,
+Android developers can build true continuous delivery
+pipeline, sending builds to an alpha channel in Google Play for release or
+further testing.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Jenkins ♥ Android Articles</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://blog.zuehlke.com/en/configure-your-android-project-on-jenkins/">Configure your Android project on Jenkins</a></p>
+</li>
+<li>
+<p><a href="https://www.bignerdranch.com/blog/continuous-delivery-for-android/">Continuous Delivery for Android</a></p>
+</li>
+<li>
+<p><a href="https://dzone.com/articles/automating-continuous">Automating Android Projects With Gradle using Jenkins on Windows</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Android plugins for Jenkins</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://plugins.jenkins.io/android-emulator">Android Emulator plugin</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>automate many Android tasks during a build, such as launching/destroying emulators</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://plugins.jenkins.io/warnings-ng">Warning next generation plugin</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>parses output from the Android lint tool for display and analysis</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://plugins.jenkins.io/google-play-android-publisher">Google Play Android Publisher plugin</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>enables publishing Android APKs directly from Jenkins</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="index.html">Solutions Page</a></span>
+  <span class="next"><a href="php.html">Jenkins and PHP</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
