@@ -29,7 +29,7 @@
     <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
+    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -642,7 +642,7 @@ Most of the documentation below was written when <code>Content-Security-Policy</
 <p><strong>Are less trusted users allowed to create or modify files in Jenkins workspaces?</strong> Jenkins builds pull requests sent by untrusted users, or employ a security model that limits trust in users allowed to configure one or more jobs, this also affects in what way the CSP rule set should be relaxed: Anything allowed there could be abused by users with the ability to change files in workspaces or archived artifacts.</p>
 </li>
 <li>
-<p><strong>Are some agents not fully trusted?</strong> Even when <a href="controller-isolation.html#agent-controller-access-control" class="xref page">Agent To Controller Access</a> is used to limit what agents can do on the
+<p><strong>Are some agents not fully trusted?</strong> Even when Agent To Controller Access is used to limit what agents can do on the
 controller node, the entire build directory on the controller node is writable by agents, with the exception of the build.xml file itself.
 Therefore any file stored in a build directory and served by Jenkins should be considered potentially unsafe.</p>
 </li>
@@ -678,7 +678,7 @@ This is potentially very unsafe and should only be used after reviewing the over
 See <a href="http://content-security-policy.com/">content-security-policy.com</a> for a reference on this header and its possible values.</p>
 </div>
 <div class="paragraph">
-<p>Changes to the system property will be effective immediately, so it&#8217;s possible to set this system property temporarily via the <a href="#../managing/script-console#">Script Console</a>, allowing you to experiment with different values:</p>
+<p>Changes to the system property will be effective immediately, so it&#8217;s possible to set this system property temporarily via the <a href="../managing/script-console.html" class="xref page">Script Console</a>, allowing you to experiment with different values:</p>
 </div>
 <div class="paragraph">
 <p><strong>Set a custom value for the header:</strong></p>

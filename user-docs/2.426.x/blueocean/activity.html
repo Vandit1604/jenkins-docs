@@ -31,7 +31,7 @@
     <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
+    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -591,18 +591,18 @@ Refer to the <a href="/doc/pipeline/steps/">Pipeline steps reference</a> page fo
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Pipeline Name</strong> - Selecting this displays the <a href="../glossary/index.html#activity" class="xref page">default Activity tab</a>.</p>
+<p><strong>Pipeline Name</strong> - Selecting this displays the default Activity tab.</p>
 </li>
 <li>
-<p><strong>Favorites Toggle</strong> - Selecting the favorite icon &#9734; to the right of the Pipeline name, adds a branch to the favorites list shown on the <a href="dashboard.html#favorites" class="xref page">dashboard&#8217;s favorites list</a>.</p>
+<p><strong>Favorites Toggle</strong> - Selecting the favorite icon &#9734; to the right of the Pipeline name, adds a branch to the favorites list shown on the <a href="dashboard.html#favorites-list" class="xref page">dashboard&#8217;s favorites list</a>.</p>
 </li>
 <li>
-<p><strong>Tabs</strong> (<a href="#activity"> Activity</a>, <a href="#branches"> Branches</a> <a href="#pull-requests"> Pull Requests</a>) - Selecting one of these navigates to the corresponding information in the Activity view.</p>
+<p><strong>Tabs</strong> (<a href="#activity">Activity</a>, <a href="#branches"> Branches</a> <a href="#pull-requests"> Pull Requests</a>) - Selecting one of these navigates to the corresponding information in the Activity view.</p>
 </li>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_activity"><a class="anchor" href="#_activity"></a>Activity</h3>
+<h3 id="activity"><a class="anchor" href="#activity"></a>Activity</h3>
 <div class="paragraph">
 <p>The default tab of the Activity view shows a list of the latest completed or active runs.
 Each line represents the <a href="dashboard.html#run-status" class="xref page">status</a> of a run, run ID, commit information, and when the run completed.</p>
@@ -615,7 +615,7 @@ Each line represents the <a href="dashboard.html#run-status" class="xref page">s
 <div class="ulist">
 <ul>
 <li>
-<p>Selecting a run will bring up the <a href="../glossary/index.html#pipeline-run-details" class="xref page">Pipeline run details</a> to provide Pipeline visualization.</p>
+<p>Selecting a run will bring up the <a href="../glossary/index.html#pipeline" class="xref page">Pipeline run details</a> to provide Pipeline visualization.</p>
 </li>
 <li>
 <p>Active runs can be aborted from this list by selecting the <strong>stop</strong> icon, which is represented by a &#9726; within a circle.</p>
@@ -636,7 +636,7 @@ To perform these actions, select the <strong>Branches</strong> tab.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_branches"><a class="anchor" href="#_branches"></a>Branches</h3>
+<h3 id="branches"><a class="anchor" href="#branches"></a>Branches</h3>
 <div class="paragraph">
 <p>The <strong>Branches</strong> tab shows a list of all branches that have a completed or active run in the current Pipeline.
 Each line in the list corresponds to a branch in source control, displaying the <a href="dashboard.html#pipeline-health" class="xref page">overall health of the branch</a> based on the status of the most recent run, branch name, commit information, and when the run completed.</p>
@@ -647,7 +647,7 @@ Each line in the list corresponds to a branch in source control, displaying the 
 </div>
 </div>
 <div class="paragraph">
-<p>Selecting a branch brings up the <a href="../glossary/index.html#pipeline-run-details" class="xref page">Pipeline run details</a> for the latest completed or active run of that branch.</p>
+<p>Selecting a branch brings up the <a href="../glossary/index.html#pipeline" class="xref page">Pipeline run details</a> for the latest completed or active run of that branch.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -665,10 +665,10 @@ Each line in the list corresponds to a branch in source control, displaying the 
 <p>Selecting the <strong>history</strong> icon <span class="icon"><i class="fa fa-history"></i></span> allows you to view the run history for that branch.</p>
 </li>
 <li>
-<p>The <strong>edit</strong> icon, represented by a <span class="icon"><i class="fa fa-pencil"></i></span>, opens the <a href="../glossary/index.html#pipeline-editor" class="xref page">Pipeline editor</a> for that branch.</p>
+<p>The <strong>edit</strong> icon, represented by a <span class="icon"><i class="fa fa-pencil"></i></span>, opens the Pipeline editor for that branch.</p>
 </li>
 <li>
-<p>The <strong>favorite</strong> &#9734; icon adds a branch to your favorites list on the <a href="dashboard.html#favorites" class="xref page">dashboard</a>.
+<p>The <strong>favorite</strong> &#9734; icon adds a branch to your favorites list on the <a href="dashboard.html#favorites-list" class="xref page">dashboard</a>.
 On the dashboard a branch listed under favorites displays a solid star &#9733;.
 Deselecting the star removes the branch from the favorites list.</p>
 </li>
@@ -676,7 +676,7 @@ Deselecting the star removes the branch from the favorites list.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_pull_requests"><a class="anchor" href="#_pull_requests"></a>Pull Requests</h3>
+<h3 id="pull-requests"><a class="anchor" href="#pull-requests"></a>Pull Requests</h3>
 <div class="paragraph">
 <p>The Pull Requests tab displays a list of all pull requests for the current Pipeline, that have a completed or active run.
 Each line in the list corresponds to a pull request in source control, which displays the status of the most recent run, run ID, summary, author, and when the run completed.</p>
@@ -688,7 +688,7 @@ Each line in the list corresponds to a pull request in source control, which dis
 </div>
 <div class="paragraph">
 <p>Blue Ocean displays pull requests and branches separately, but the lists behave similarly.
-Selecting a pull request in this list will bring up the <a href="../glossary/index.html#pipeline-run-details" class="xref page">Pipeline run details</a> for the latest completed or active run of that pull request.</p>
+Selecting a pull request in this list will bring up the <a href="../glossary/index.html#pipeline" class="xref page">Pipeline run details</a> for the latest completed or active run of that pull request.</p>
 </div>
 <div class="ulist">
 <ul>

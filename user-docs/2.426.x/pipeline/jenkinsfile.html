@@ -31,7 +31,7 @@
     <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
+    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -640,7 +640,7 @@ creation and execution of a simple Pipeline in a test installation of Jenkins.</
 <div class="paragraph">
 <p>It is assumed that there is already a source control repository set up for
 the project and a Pipeline has been defined in Jenkins following
-<a href="#getting-started#defining-a-pipeline-in-scm"> these instructions</a>.</p>
+<a href="getting-started.html#defining-a-pipeline-in-scm" class="xref page">these instructions</a>.</p>
 </div>
 </td>
 </tr>
@@ -1114,7 +1114,7 @@ pipeline {
 </div>
 </div>
 <div class="sect2">
-<h3 id="_handling_credentials"><a class="anchor" href="#_handling_credentials"></a>Handling credentials</h3>
+<h3 id="handling-credentials"><a class="anchor" href="#handling-credentials"></a>Handling credentials</h3>
 <div class="paragraph">
 <p>Credentials
 <a href="../using-jenkins/using-credentials.html#configuring-credentials" class="xref page">configured in
@@ -1129,7 +1129,7 @@ credentials</a> page.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_for_secret_text_usernames_and_passwords_and_secret_files"><a class="anchor" href="#_for_secret_text_usernames_and_passwords_and_secret_files"></a>For secret text, usernames and passwords, and secret files</h4>
+<h4 id="for-secret-text-usernames-and-passwords-and-secret-files"><a class="anchor" href="#for-secret-text-usernames-and-passwords-and-secret-files"></a>For secret text, usernames and passwords, and secret files</h4>
 <div class="paragraph">
 <p>Jenkins' declarative Pipeline syntax has the <code>credentials()</code> helper method (used
 within the <a href="syntax.html#environment" class="xref page"><code>environment</code></a> directive) which supports
@@ -1138,7 +1138,7 @@ password</a>, as well as <a href="#secret-files">secret file</a> credentials. If
 handle other types of credentials, refer to the <a href="#for-other-credential-types">For other credential types</a> section (below).</p>
 </div>
 <div class="sect4">
-<h5 id="_secret_text"><a class="anchor" href="#_secret_text"></a>Secret text</h5>
+<h5 id="secret-text"><a class="anchor" href="#secret-text"></a>Secret text</h5>
 <div class="paragraph">
 <p>The following Pipeline code shows an example of how to create a Pipeline using
 environment variables for secret text credentials.</p>
@@ -1367,7 +1367,7 @@ would be scoped globally and could be used in any stage&#8217;s steps.</td>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_secret_files"><a class="anchor" href="#_secret_files"></a>Secret files</h5>
+<h5 id="secret-files"><a class="anchor" href="#secret-files"></a>Secret files</h5>
 <div class="paragraph">
 <p>A secret file is a credential which is stored in a file and uploaded to Jenkins.
 Secret files are used for credentials that are:</p>
@@ -1519,7 +1519,7 @@ Pipeline code.<br>
 <li>
 <p>The <strong>Credentials</strong> fields (above) show the names of credentials
 configured in Jenkins. However, these values are converted to credential IDs
-after clicking <strong>Generate Pipeline Script</strong>. [#withcredentials-script-examples]</p>
+after clicking <strong>Generate Pipeline Script</strong>.</p>
 </li>
 <li>
 <p>To combine more than one credential in a single <code>withCredentials( &#8230;&#8203; )
@@ -2079,7 +2079,7 @@ reports, is to use a series of <code>try</code>/<code>finally</code> blocks:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_using_multiple_agents"><a class="anchor" href="#_using_multiple_agents"></a>Using multiple agents</h3>
+<h3 id="using-multiple-agents"><a class="anchor" href="#using-multiple-agents"></a>Using multiple agents</h3>
 <div class="paragraph">
 <p>In all the previous examples, only a single agent has been used. This means
 Jenkins will allocate an executor wherever one is available, regardless of how
@@ -2180,8 +2180,7 @@ completed its execution, stashed files are deleted from the Jenkins controller.<
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>The parameter in <code>agent</code>/<code>node</code> allows for any valid Jenkins label
-expression. Consult the <a href="syntax.html" class="xref page"> Pipeline Syntax</a> section for more details.</td>
+<td>The parameter in <code>agent</code>/<code>node</code> allows for any valid Jenkins label expression. Consult the <a href="syntax.html" class="xref page">Pipeline Syntax</a> section for more details.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>

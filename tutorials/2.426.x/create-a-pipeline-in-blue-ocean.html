@@ -233,7 +233,8 @@ Therefore, you&#8217;re building the same application, but this time, completely
 Since Blue Ocean provides a simplified Git-handling experience, you&#8217;ll be interacting directly with the repository on GitHub, as opposed to a local clone.</p>
 </div>
 <div class="paragraph">
-<p><strong>Duration:</strong> This tutorial takes 20-40 minutes to complete if you&#8217;ve already met the <a href="#prerequisites">prerequisites</a> below.</p>
+<p><strong>Duration:</strong> This tutorial takes 20-40 minutes to complete if you&#8217;ve already met the
+include::partial$prerequisites.adoc[prerequisites] below.</p>
 </div>
 <div class="paragraph">
 <p>The exact duration depends on the speed of your machine and whether or not you&#8217;ve already <a href="#run-jenkins-in-docker">run Jenkins in Docker</a> from <a href="#ROOT:index">another tutorial</a>.</p>
@@ -270,7 +271,8 @@ Refer to the <a href="/doc/pipeline/steps/">Pipeline steps reference</a> page fo
 off.</p>
 </div>
 <div class="paragraph">
-<p>If you&#8217;ve already run though <a href="index.html" class="xref page">another tutorial</a>, you can skip the <a href="#prerequisites">prerequisites</a> and <a href="#run-jenkins-in-docker">run Jenkins in Docker</a> sections below and proceed to <a href="#fork-sample-repository">forking the sample repository</a>.
+<p>If you&#8217;ve already run though <a href="index.html" class="xref page">another tutorial</a>, you can skip the include::partial$prerequisites.adoc[prerequisites] and <a href="#run-jenkins-in-docker">run Jenkins in Docker</a> sections below and proceed to
+include::partial$fork-sample-repository.adoc[forking the sample repository].
 If you need to restart Jenkins, follow the restart instructions in <a href="#user-docs:installing-jenkins:partial$_setup-wizard-for-tutorials.adoc" class="xref unresolved">run Jenkins in Docker</a> and then proceed.</p>
 </div>
 </div>
@@ -973,7 +975,7 @@ Although these repositories contain the same application code, ensure you fork a
 </div>
 </div>
 <div class="sect1">
-<h2 id="_create_your_pipeline_project_in_blue_ocean"><a class="anchor" href="#_create_your_pipeline_project_in_blue_ocean"></a>Create your Pipeline project in Blue Ocean</h2>
+<h2 id="create-your-pipeline-project-in-blue-ocean"><a class="anchor" href="#create-your-pipeline-project-in-blue-ocean"></a>Create your Pipeline project in Blue Ocean</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -1046,7 +1048,7 @@ This access token has the appropriate permissions pre-selected that Blue Ocean r
 </div>
 </li>
 <li>
-<p>In <strong>Which organization does the repository belong to?</strong>, select your GitHub account where you forked the repository <a href="#fork-sample-repository">above</a>.</p>
+<p>In <strong>Which organization does the repository belong to?</strong>, select your GitHub account where you forked the repository include::partial$fork-sample-repository.adoc[forking the sample repository].</p>
 </li>
 <li>
 <p>In <strong>Choose a repository</strong>, select your forked repository <code>creating-a-pipeline-in-blue-ocean</code>.</p>
@@ -1078,7 +1080,7 @@ Therefore, Jenkins looks for the presence of at least one Jenkinsfile in any bra
 </table>
 </div>
 <div class="sect2">
-<h3 id="_create_your_initial_pipeline"><a class="anchor" href="#_create_your_initial_pipeline"></a>Create your initial Pipeline</h3>
+<h3 id="create-your-initial-pipeline"><a class="anchor" href="#create-your-initial-pipeline"></a>Create your initial Pipeline</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1235,7 +1237,7 @@ Before continuing on, verify that Jenkins has created a <code>Jenkinsfile</code>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_add_a_test_stage_to_your_pipeline"><a class="anchor" href="#_add_a_test_stage_to_your_pipeline"></a>Add a test stage to your Pipeline</h3>
+<h3 id="add-a-test-stage-to-your-pipeline"><a class="anchor" href="#add-a-test-stage-to-your-pipeline"></a>Add a test stage to your Pipeline</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1334,7 +1336,7 @@ Subsequent runs of your Pipeline should be much faster.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_add_a_final_deliver_stage_to_your_pipeline"><a class="anchor" href="#_add_a_final_deliver_stage_to_your_pipeline"></a>Add a final deliver stage to your Pipeline</h3>
+<h3 id="add-a-final-deliver-stage-to-your-pipeline"><a class="anchor" href="#add-a-final-deliver-stage-to-your-pipeline"></a>Add a final deliver stage to your Pipeline</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>

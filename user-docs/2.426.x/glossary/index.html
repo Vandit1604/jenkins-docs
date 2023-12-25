@@ -30,7 +30,7 @@
     <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
+    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -665,7 +665,7 @@ $(function () {
 </div>
 </div>
 <div class="sect2">
-<h3 id="pipeline"><a class="anchor" href="#pipeline"></a>Pipeline [#pipeline]</h3>
+<h3 id="pipeline"><a class="anchor" href="#pipeline"></a>Pipeline</h3>
 <div class="paragraph">
 <p>A user-defined model of a continuous delivery pipeline, for more read the <a href="../pipeline/index.html" class="xref page">Pipeline chapter</a> in this handbook.</p>
 </div>
@@ -697,7 +697,7 @@ $(function () {
 <div class="sect2">
 <h3 id="stage"><a class="anchor" href="#stage"></a>Stage</h3>
 <div class="paragraph">
-<p><code>stage</code> is part of Pipeline, and used for defining a conceptually distinct subset of the entire Pipeline, for example: "Build", "Test", and "Deploy", which is used by many plugins to isualize or present Jenkins Pipeline status/progress.</p>
+<p><code>stage</code> is part of Pipeline, and used for defining a conceptually distinct subset of the entire Pipeline, for example: "Build", "Test", and "Deploy", which is used by many plugins to visualize or present Jenkins Pipeline status/progress.</p>
 </div>
 </div>
 <div class="sect2">
@@ -769,7 +769,7 @@ have been put in place on the Jenkins <a href="#controller">Controller</a>.</p>
 <div class="sect2">
 <h3 id="unstable"><a class="anchor" href="#unstable"></a>Unstable</h3>
 <div class="paragraph">
-<p>The <a href="#build">Build</a> had some errors but they were not fatal. A <a href="#build">Build</a> is unstable if it was built successfully and one or more publishers report it unstable. For example if the JUnit publisher is configured and a test fails then the <a href="#build">Build</a> will be marked unstable.</p>
+<p>The <a href="#build">Build</a> had some errors, but they were not fatal. A <a href="#build">Build</a> is unstable if it was built successfully and one or more publishers report it unstable. For example if the JUnit publisher is configured and a test fails then the <a href="#build">Build</a> will be marked unstable.</p>
 </div>
 </div>
 </div>

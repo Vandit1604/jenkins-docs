@@ -1376,7 +1376,7 @@ If some are checked by some are not, the server can never figure out which ones 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">{ name: "Kohsuke", option: true }</code></pre>
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{ "name": "Kohsuke", "option": true }</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1402,10 +1402,10 @@ If some are checked by some are not, the server can never figure out which ones 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">{
-  first: { name: "Kohsuke", option: true },
-  second: { name: "Jesse", option: false },
-  password: "secret"
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "first": { "name": "Kohsuke", "option": true },
+  "second": { "name": "Jesse", "option": false },
+  "password": "secret"
 }</code></pre>
 </div>
 </div>
@@ -1432,12 +1432,12 @@ If some are checked by some are not, the server can never figure out which ones 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">{
-  person: [
-    { name: "Kohsuke", option: true },
-    { name: "Jesse", option: false }
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "person": [
+    { "name": "Kohsuke", "option": true },
+    { "name": "Jesse", "option": false }
   ],
-  password:"secret"
+  "password": "secret"
 }</code></pre>
 </div>
 </div>
@@ -1465,10 +1465,10 @@ If some are checked by some are not, the server can never figure out which ones 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">{
-  person: [
-    { name: "Kohsuke", key: "randomId1234567" },
-    { name: "Jesse", key: "randomIdabcdefg" }
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "person": [
+    { "name": "Kohsuke", "key": "randomId1234567" },
+    { "name": "Jesse", "key": "randomIdabcdefg" }
   ]
 }</code></pre>
 </div>
@@ -1508,9 +1508,9 @@ Consider the following example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">{
-  cvs: { CVSROOT:"...", module:"..." },
-  svn: { URL:"...", module:"..." }
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "cvs": { "CVSROOT":"...", "module":"..." },
+  "svn": { "URL":"...", "module":"..." }
 }</code></pre>
 </div>
 </div>

@@ -31,7 +31,7 @@
     <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
+    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -620,7 +620,7 @@ If the Pipeline requires further modification, Blue Ocean makes it easy to jump 
 <h2 id="_starting_the_editor"><a class="anchor" href="#_starting_the_editor"></a>Starting the editor</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use the editor, a user must first <a href="#creating-pipelines"> create a Pipeline in Blue Ocean</a> or have at least one existing Pipeline in Jenkins.
+<p>To use the editor, a user must first <a href="creating-pipelines.html" class="xref page">create a Pipeline in Blue Ocean</a> or have at least one existing Pipeline in Jenkins.
 If editing an existing Pipeline, the credentials for that Pipeline must allow pushing changes to the target repository.</p>
 </div>
 <div class="paragraph">
@@ -724,7 +724,7 @@ Pipelines can have validation errors during editing, but saving is blocked until
 </div>
 </div>
 <div class="sect1">
-<h2 id="_stage_configuration"><a class="anchor" href="#_stage_configuration"></a>Stage configuration</h2>
+<h2 id="stage-configuration"><a class="anchor" href="#stage-configuration"></a>Stage configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Selecting a stage in the editor displays the <strong>Stage Configuration</strong> pane on the right side of the screen.
@@ -774,7 +774,7 @@ Any validation errors must be addressed before saving.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_save_pipeline_dialog"><a class="anchor" href="#_save_pipeline_dialog"></a>Save Pipeline dialog</h2>
+<h2 id="save-pipeline-dialog"><a class="anchor" href="#save-pipeline-dialog"></a>Save Pipeline dialog</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Changes to a Pipeline must be saved in source control before running.
@@ -788,7 +788,7 @@ The <strong>Save Pipeline</strong> dialog controls the saving of changes to sour
 <div class="paragraph">
 <p>You can optionally enter a description of the changes before saving.
 The dialog also provides options for saving changes to the same branch or creating a new branch to save to.
-Selecting <strong>Save &amp; run</strong> saves any changes to the Pipeline as a new commit, starts a new Pipeline run based on those changes, and navigates to the <a href="../glossary/index.html#activity" class="xref page">Activity view</a> for this pipeline.</p>
+Selecting <strong>Save &amp; run</strong> saves any changes to the Pipeline as a new commit, starts a new Pipeline run based on those changes, and navigates to the Activity view for this pipeline.</p>
 </div>
 </div>
 </div>

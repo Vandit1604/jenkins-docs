@@ -1746,7 +1746,7 @@ For example, if the test method is org.acme.FooTest.bar(), then you can have you
 </ul>
 </div>
 <div class="paragraph">
-<p>Search is performed in this specific order. The fall back mechanism allows you to write one test class that interacts with different aspects of the same data set, by associating the dataset with a test class, or have a data set local to a specific test method.
+<p>Search is performed in this specific order. The fallback mechanism allows you to write one test class that interacts with different aspects of the same data set, by associating the dataset with a test class, or have a data set local to a specific test method.
 The choice of zip and directory depends on the nature of the test data, as well as the size of it.</p>
 </div>
 </div>
@@ -1852,7 +1852,7 @@ For the example above, the pipeline might be:</p>
 <div class="sect2">
 <h3 id="_enabling_security"><a class="anchor" href="#_enabling_security"></a>Enabling security</h3>
 <div class="paragraph">
-<p>If you need a security realm for testing you can use a <code>MockAuthorizationStrategy()</code> where you can grant rights as needed for your test. In the following example everyone gets <code>READ</code> on the Jenkins instance and users <strong>alice</strong> and <strong>bob</strong> get individual rights. Using <code>LocalData</code> presets can be used if you need to setup a lot for your test.</p>
+<p>If you need a security realm for testing you can use a <code>MockAuthorizationStrategy()</code> where you can grant rights as needed for your test. In the following example everyone gets <code>READ</code> on the Jenkins instance and users <strong>alice</strong> and <strong>bob</strong> get individual rights. Using <code>LocalData</code> presets can be used if you need to set up a lot for your test.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1950,7 +1950,7 @@ public class MyTest {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_performance_testing"><a class="anchor" href="#_performance_testing"></a>Performance Testing</h2>
+<h2 id="performance-testing"><a class="anchor" href="#performance-testing"></a>Performance Testing</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Starting from <a href="https://github.com/jenkinsci/jenkins-test-harness/releases/tag/jenkins-test-harness-2.50">Jenkins Test Harness 2.50</a>, the framework provides ways to run microbenchmarks using
@@ -1968,7 +1968,7 @@ public class MyTest {
 <p><a href="https://github.com/jenkinsci/jenkins-test-harness/blob/master/docs/jmh-benchmarks.adoc">Creating Benchmarks</a></p>
 </li>
 <li>
-<p><a href="https://github.com/jenkinsci/configuration-as-code-plugin/blob/master/docs/benchmarks/jmh-benchmarks.md">Using Configuration As Code to setup benchmarks</a></p>
+<p><a href="https://github.com/jenkinsci/configuration-as-code-plugin/blob/master/docs/benchmarks/jmh-benchmarks.md">Using Configuration As Code to set up benchmarks</a></p>
 </li>
 <li>
 <p><a href="https://github.com/jenkinsci/plugin-pom#running-benchmarks">Maven profile that runs benchmarks</a></p>

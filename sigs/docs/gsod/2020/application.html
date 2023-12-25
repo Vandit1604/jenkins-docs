@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jenkins GSoD application draft, 2020 :: Jenkins Docs</title>
+    <link rel="canonical" href="https://docs.jenkins.com/sigs/docs/gsod/2020/application.html">
+    <meta name="generator" content="Antora 3.1.6">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+<link rel="icon" href="../../../../favicon.png" type="image/x-icon">
+  </head>
+  <body class="article">
+<script type="module" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"></script>
+<jio-navbar style="  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;"></jio-navbar>
+  <div class="body">
+<div class="nav-container" data-component="sigs" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../index.html">Special Interest Groups (SIGs)</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../gsoc/index.html">Google Summer of Code</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../advocacy-and-outreach/index.html">Advocacy and Outreach</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../advocacy-and-outreach/outreach-programs/index.html">Outreach programs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../advocacy-and-outreach/outreach-programs/outreach-programs-history.html">Outreach Past Programs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../platform/index.html">Platform</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../ux/index.html">User Experience</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../index.html">Documentation</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Special Interest Groups (SIGs)</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../about/index.html">About Jenkins</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../about/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../images/index.html">Artwork</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../images/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../books/index.html">Books</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../books/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../community/index.html">Community</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../community/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../dev-docs/index.html">Developer Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../dev-docs/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../download/latest/index.html">Download and Deployment</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../download/latest/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../events/index.html">Jenkins Events</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../events/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../projects/index.html">Projects</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../projects/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../security/index.html">Security Advisories</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../security/index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../solutions/2.426.x/index.html">Solutions Page</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../solutions/2.426.x/index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Special Interest Groups (SIGs)</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../project/index.html">The Jenkins Project</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../project/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../tutorials/2.426.x/index.html">Tutorials</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../tutorials/2.426.x/index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../user-docs/2.426.x/index.html">User Documentation</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../user-docs/2.426.x/index.html">2.426.x</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../user-docs/2.426.x/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Special Interest Groups (SIGs)</a></li>
+    <li><a href="application.html">Jenkins GSoD application draft, 2020</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/Vandit1604/jenkins-docs/edit/main/docs/sigs/modules/docs/pages/gsod/2020/application.adoc"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>  Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Jenkins GSoD application draft, 2020</h1>
+<div class="admonitionblock note">
+    <table>
+        <tbody>
+            <tr>
+                <td class="icon"> <i class="fa icon-note" title="Note"></i> </td>
+                <td class="content">
+                    <div class="paragraph">
+                        <p>This site is the new docs site currently being tested. For the actual docs in use please go to <a href="https://www.jenkins.io/doc/">https://www.jenkins.io/doc</a>.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The data below represents the Google Season of Docs 2020 application draft.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_organization_profile"><a class="anchor" href="#_organization_profile"></a>Organization Profile</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Name: Jenkins project</p>
+</li>
+<li>
+<p>Website: <a href="https://jenkins.io/" class="bare">https://jenkins.io/</a></p>
+</li>
+<li>
+<p>GSoD page link: <a href="http://jenkins.io/sigs/docs/gsod" class="bare">http://jenkins.io/sigs/docs/gsod</a></p>
+</li>
+<li>
+<p>Does your organization want to accept the mentor stipend? &#8658; Yes</p>
+</li>
+<li>
+<p>Link to project ideas list: <a href="https://jenkins.io/sigs/docs/gsod#project-ideas" class="bare">https://jenkins.io/sigs/docs/gsod#project-ideas</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_org_admins"><a class="anchor" href="#_org_admins"></a>Org admins</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Primary: Oleg Nenashev</p>
+</li>
+<li>
+<p>Secondary: Marky Jackson</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_org_description"><a class="anchor" href="#_org_description"></a>Org description</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jenkins, originally founded in 2006 as "Hudson", is one of the leading automation servers.
+The project’s motto is "Build great things at any scale".
+Using extensible, plugin-based architecture developers have created hundreds of plugins to adapt Jenkins to a multitude of build, test, and deployment automation workloads.
+Jenkins is open-source, MIT License is used for most of the components.</p>
+</div>
+<div class="paragraph">
+<p>The project has thousands of active contributors working on Jenkins core, plugins, website, project infrastructure, localization activities, and, of course, documentation.
+We invite technical writers to join the community and contribute to the documentation being used by millions of Jenkins users worldwide.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_previous_experience_has_your_organization_had_in_the_documentation_or_collaborating_with_technical_writers"><a class="anchor" href="#_what_previous_experience_has_your_organization_had_in_the_documentation_or_collaborating_with_technical_writers"></a>What previous experience has your organization had in the documentation or collaborating with technical writers?</h2>
+<div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>If you or any of your mentors have worked with technical writers before, or have developed documentation, mention this in your answer.
+Describe the documentation that you produced and the ways in which you worked with the technical writer.
+For example, describe any review processes that you used, or how the technical writer&#8217;s skills were useful to your project.
+Explain how this previous experience may help you to work with a technical writer in Season of Docs.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>In the Jenkins project, we believe that documentation is as important as code.
+In 2019, we introduced an official Documentation Officer role and started a Documentation special interest group (<a href="https://jenkins.io/sigs/docs/" class="bare">https://jenkins.io/sigs/docs/</a>)
+which, among other things, coordinates the Google Season of Docs application in the project.
+We have several documentation initiatives listed on our project roadmap: <a href="https://jenkins.io/project/roadmap/" class="bare">https://jenkins.io/project/roadmap/</a>.
+The Documentation SIG facilitates documentation improvement across the organization.
+In the last quarter, we had 219 unique documentation committers in the organization.</p>
+</div>
+<div class="paragraph">
+<p>We have extensive documentation on the jenkins.io website (<a href="https://jenkins.io/doc/" class="bare">https://jenkins.io/doc/</a>) as well as the plugin site (<a href="http://plugins.jenkins.io/" class="bare">http://plugins.jenkins.io/</a>).
+This repository has a copy-editors team which assists submitters with reviews of their documentation.
+A large majority of Jenkins components and plugins also have documentation in GitHub and other resources, including user, administrator, developer, and contributor guidelines.
+The Jenkins project hosts a repository for technical specifications called the Jenkins Enhancement Proposals <a href="https://github.com/jenkinsci/jep" class="bare">https://github.com/jenkinsci/jep</a>.</p>
+</div>
+<div class="paragraph">
+<p>The Jenkins project follows the documentation-as-code approach for all new documentation,
+and we use industry-standard tools (Git/GitHub) and markup languages (AsciiDoc, GitHub Flavored Markdown) so that
+Jenkins contribution provides relevant and widely applicable experience to technical writers.</p>
+</div>
+<div class="paragraph">
+<p>The Jenkins project has a wealth of knowledge working with technical writers.
+A portion of the Jenkins documentation has been created by professional technical writers whose time was donated to the project by company contributors.
+We previously had several coordinated documentation initiatives, e.g. creation of new documentation for Jenkins Pipeline.
+We also facilitate documentation contributions and encourage newcomers to participate (<a href="https://jenkins.io/participate/#document" class="bare">https://jenkins.io/participate/#document</a>), regardless of their experience with Jenkins and our tools.
+We also invest time in contributing guidelines for documentation contributors,
+e.g. here are our contributing guidelines for the website: <a href="https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc" class="bare">https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc</a>.</p>
+</div>
+<div class="paragraph">
+<p>Reviews: jenkins.io and GitHub documentation are managed and reviewed via pull requests.
+For example, there are contribution guidelines for jenkins.io: <a href="https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc" class="bare">https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc</a>.
+In the project, we also have a team of copy-editors who review the content: <a href="https://github.com/orgs/jenkins-infra/teams/copy-editors" class="bare">https://github.com/orgs/jenkins-infra/teams/copy-editors</a>.
+Contributions to Jenkins component documentation (e.g. plugin docs) are usually reviewed by maintainers.</p>
+</div>
+<div class="paragraph">
+<p>We also have channels specifically dedicated to the documentation.
+These channels act as an additional contact point for technical writers in the community:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Chat on Gitter: <a href="https://app.gitter.im/#/room/#jenkins/docs:matrix.org" class="bare">https://app.gitter.im/#/room/#jenkins/docs:matrix.org</a></p>
+</li>
+<li>
+<p>Regular Documentation SIG meetings: <a href="https://www.jenkins.io/sigs/docs/#meetings" class="bare">https://www.jenkins.io/sigs/docs/#meetings</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_previous_experience_has_your_organization_had_mentoring_individuals"><a class="anchor" href="#_what_previous_experience_has_your_organization_had_mentoring_individuals"></a>What previous experience has your organization had mentoring individuals?</h2>
+<div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Comment: If you or any of your mentors have taken part in Google Summer of Code or a similar program that mentors individuals, mention this in your answer.
+Describe your achievements in that program. Explain how this experience may influence the way you work in Season of Docs.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Jenkins project has successfully participated in Google Summer of Code and Outreachy before, including both programs in 2019 (<a href="https://jenkins.io/projects/gsoc/" class="bare">https://jenkins.io/projects/gsoc/</a>).
+Last year we also ran our first mentorship on CommunityBridge: <a href="https://www.jenkins.io/projects/jcasc/dev-tools/" class="bare">https://www.jenkins.io/projects/jcasc/dev-tools/</a>.
+In 2019 we had 12 mentees in total.
+The Jenkins project has also been selected for Google Summer of Code 2020.
+The project also has many contributors whose roles at work include mentoring people (university professors and advisors, training leads, developer relations, senior engineers and tech writers).
+As an organization, we do not have particular experience in mentoring technical writers,
+but we do have experience in onboarding documentation contributors to the community.
+We also work on onboarding programs for documentation contributors, e.g. for website copy-editors: <a href="https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc#maintainer-guide" class="bare">https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc#maintainer-guide</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_many_technical_writers_does_your_organization_want_to_mentor_this_year"><a class="anchor" href="#_how_many_technical_writers_does_your_organization_want_to_mentor_this_year"></a>How many technical writers does your organization want to mentor this year?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>1</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<jio-footer></jio-footer>
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

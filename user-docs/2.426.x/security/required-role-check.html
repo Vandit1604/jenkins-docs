@@ -29,7 +29,7 @@
     <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
+    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -605,7 +605,7 @@ Instead, this aims to prevent the impact of simple programming mistakes.</p>
 <div class="paragraph">
 <p>Not all plugins that implement an empty role check are negatively impacted by this security hardening.
 They may not require these callables to be sent from an agent to the controller for execution as part of their regular functionality.
-In those cases, it is still recommended to update the plugin as described <a href="#security:remoting-callables.adoc" class="xref unresolved">in the developer documentation</a>.</p>
+In those cases, it is still recommended to update the plugin as described <a href="../../../dev-docs/security/remoting-callables.html" class="xref page">in the developer documentation</a>.</p>
 </div>
 </td>
 </tr>
@@ -629,7 +629,7 @@ In those cases, it is still recommended to update the plugin as described <a hre
 <div class="paragraph">
 <p>Doing either will potentially allow attackers able to control an agent process to execute unsafe code on the Jenkins controller.
 It is recommended that individual callables are only allowed after careful review of their code to ensure they&#8217;re not unsafe to execute.
-<a href="#security:remoting-callables.adoc" class="xref unresolved">See the developer documentation</a> for considerations what constitutes unsafe <code>Callable</code> behavior.</p>
+<a href="../../../dev-docs/security/remoting-callables.html" class="xref page">See the developer documentation</a> for considerations what constitutes unsafe <code>Callable</code> behavior.</p>
 </div>
 </td>
 </tr>
@@ -681,7 +681,7 @@ Run this script:</p>
 <h2 id="_fixing_plugins"><a class="anchor" href="#_fixing_plugins"></a>Fixing Plugins</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="#security:remoting-callables.adoc" class="xref unresolved">See the developer documentation</a> for advice how to change plugins to be compatible with this change while not creating a security vulnerability.</p>
+<p><a href="../../../dev-docs/security/remoting-callables.html" class="xref page">See the developer documentation</a> for advice how to change plugins to be compatible with this change while not creating a security vulnerability.</p>
 </div>
 </div>
 </div>

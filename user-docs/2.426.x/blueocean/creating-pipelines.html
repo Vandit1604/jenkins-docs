@@ -31,7 +31,7 @@
     <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
+    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -613,7 +613,7 @@ Refer to the <a href="/doc/pipeline/steps/">Pipeline steps reference</a> page fo
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_for_a_git_repository"><a class="anchor" href="#_for_a_git_repository"></a>For a Git repository</h3>
+<h3 id="for-a-git-repository"><a class="anchor" href="#for-a-git-repository"></a>For a Git repository</h3>
 <div class="paragraph">
 <p>To create your Pipeline project for a Git repository, click the <strong>Git</strong> button
 under <strong>Where do you store your code?</strong></p>
@@ -635,13 +635,13 @@ under <strong>Where do you store your code?</strong></p>
 <p>You now must specify a <a href="#local-repository">local</a> or <a href="#remote-repository">remote</a> repository from which to build your Pipeline project.</p>
 </div>
 <div class="sect3">
-<h4 id="_local_repository"><a class="anchor" href="#_local_repository"></a>Local repository</h4>
+<h4 id="local-repository"><a class="anchor" href="#local-repository"></a>Local repository</h4>
 <div class="paragraph">
 <p>If your URL is a local directory path beginning with a forward slash <code>/</code>, such as <code>/home/cloned-git-repos/my-git-repo.git</code>, you can proceed to select the <strong>Create Pipeline</strong> option.</p>
 </div>
 <div class="paragraph">
 <p>Blue Ocean then scans your local repository&#8217;s branches for a <code>Jenkinsfile</code>, and starts a Pipeline run for each branch containing a <code>Jenkinsfile</code>.
-If Blue Ocean cannot find a <code>Jenkinsfile</code>, you are prompted to create one through the <a href="#pipeline-editor#">Pipeline editor</a>.</p>
+If Blue Ocean cannot find a <code>Jenkinsfile</code>, you are prompted to create one through the <a href="pipeline-editor.html" class="xref page">Blue Ocean Pipeline editor</a>.</p>
 </div>
 <div class="paragraph">
 <p>Local repositories are typically limited to file system access and are normally only available from the controller node.
@@ -651,7 +651,7 @@ Therefore, you should use a remote repository rather than a local repository for
 </div>
 </div>
 <div class="sect3">
-<h4 id="_remote_repository"><a class="anchor" href="#_remote_repository"></a>Remote repository</h4>
+<h4 id="remote-repository"><a class="anchor" href="#remote-repository"></a>Remote repository</h4>
 <div class="paragraph">
 <p>Since the Pipeline editor saves edited Pipelines to Git repositories as `Jenkinsfile`s, Blue Ocean only supports connections to remote Git repositories over the SSH protocol.</p>
 </div>
@@ -725,7 +725,7 @@ If Blue Ocean does not find a <code>Jenkinsfile</code> you are prompted to creat
 </div>
 </div>
 <div class="sect2">
-<h3 id="_for_a_repository_on_github"><a class="anchor" href="#_for_a_repository_on_github"></a>For a repository on GitHub</h3>
+<h3 id="for-a-repository-on-github"><a class="anchor" href="#for-a-repository-on-github"></a>For a repository on GitHub</h3>
 <div class="paragraph">
 <p>To create your Pipeline project directly for a repository on GitHub, select the <strong>GitHub</strong> option under <strong>Where do you store your code?</strong>.</p>
 </div>
@@ -747,7 +747,7 @@ GitHub',width=70%]</p>
 <p>If you do not have a GitHub access token, select the <strong>Create an access key here</strong> option to open GitHub to the <a href="#create-your-access-token">New personal access token</a> page.</p>
 </div>
 <div class="sect3">
-<h4 id="_create_your_access_token"><a class="anchor" href="#_create_your_access_token"></a>Create your access token</h4>
+<h4 id="create-your-access-token"><a class="anchor" href="#create-your-access-token"></a>Create your access token</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -867,7 +867,7 @@ Therefore, Jenkins looks for the presence of at least one Jenkinsfile in any bra
 </div>
 </div>
 <div class="sect2">
-<h3 id="_for_a_repository_on_bitbucket_cloud"><a class="anchor" href="#_for_a_repository_on_bitbucket_cloud"></a>For a repository on Bitbucket Cloud</h3>
+<h3 id="for-a-repository-on-bitbucket-cloud"><a class="anchor" href="#for-a-repository-on-bitbucket-cloud"></a>For a repository on Bitbucket Cloud</h3>
 <div class="paragraph">
 <p>To create your Pipeline project directly for a Git or Mercurial repository on Bitbucket Cloud, select the <strong>Bitbucket Cloud</strong> button under <strong>Where do you store your code?</strong></p>
 </div>

@@ -1455,13 +1455,13 @@ Since Jenkins 2.138.4 and 2.154, Jenkins places restrictions not inherent to Sta
 <dd>
 <p>Stapler responses will include <code>X-Stapler-Trace-…</code> headers that explain how the corresponding request was routed.
 Additionally, the 404 error page will also include this information, as well as alternative routes for the last path component (which resulted in the 404 error).
-The corresponding Java system property is <a href="#managing:system-properties.adoc#stapler-trace" class="xref unresolved"><code>stapler.trace</code></a>.
+The corresponding Java system property is <a href="../../user-docs/2.426.x/managing/system-properties.html#stapler-trace" class="xref page"><code>stapler.trace</code></a>.
 This is enabled by default if Jenkins is run using <code>mvn -pl war jetty:run</code> (core) or <code>mvn hpi:run</code> (plugins).</p>
 </dd>
 <dt class="hdlist1"><code>org.kohsuke.stapler.Dispatcher.TRACE_PER_REQUEST</code></dt>
 <dd>
 <p>As above, but only for requests that have the <code>X-Stapler-Trace</code> header.
-The corresponding Java system property is <a href="#managing:system-properties.adoc#stapler-trace-per-request" class="xref unresolved"><code>stapler.trace.per-request</code></a>.</p>
+The corresponding Java system property is <a href="../../user-docs/2.426.x/managing/system-properties.html#stapler-trace-per-request" class="xref page"><code>stapler.trace.per-request</code></a>.</p>
 </dd>
 </dl>
 </div>

@@ -31,7 +31,7 @@
     <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
+    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -619,14 +619,14 @@ see the "Running Java-based tools and builds on Jenkins" section below.</p>
 <div class="title">Upgrading Java to a newer version</div>
 <div class="paragraph">
 <p>Upgrading an existing Jenkins setup to a newer version of Java?
-Refer to the <a href="#platform-information:upgrade-java-to-17">Java 11 to 17 upgrade guidelines</a> and the <a href="upgrade-java-to-11.html" class="xref page">Java 8 to 11 upgrade guidelines</a>.</p>
+Refer to the <a href="upgrade-java-to-17.html" class="xref page">Java 11 to 17 upgrade guidelines</a> and the <a href="upgrade-java-to-11.html" class="xref page">Java 8 to 11 upgrade guidelines</a>.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Docker installation instructions are included in <a href="../installing-jenkins/docker.html#downloading-and-running-jenkins-in-docker" class="xref page">"Downloading and running Jenkins in Docker"</a>.</p>
+<p>Docker installation instructions are included in <a href="../installing-jenkins/docker.html" class="xref page">"Downloading and running Jenkins in Docker"</a>.</p>
 </div>
 <div class="paragraph">
 <p>The Jenkins project performs a full test flow with the following JDK/JREs:</p>
@@ -657,7 +657,7 @@ The <a href="../../../sigs/platform/index.html" class="xref page">Platform Speci
 <h2 id="_running_java_based_tools_and_builds_on_jenkins"><a class="anchor" href="#_running_java_based_tools_and_builds_on_jenkins"></a>Running Java-based tools and builds on Jenkins</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The JDK versions used to build Java-based projects or run Java-based tools are independent from the version of Java used to run the Jenkins controller and agent processes.
+<p>The JDK versions used to build Java-based projects or run Java-based tools are independent of the version of Java used to run the Jenkins controller and agent processes.
 During builds, any JRE or JDK version compatible with the host system can be launched.
 This includes:</p>
 </div>

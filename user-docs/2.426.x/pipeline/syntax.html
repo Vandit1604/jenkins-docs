@@ -31,7 +31,7 @@
     <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
+    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -557,7 +557,7 @@ For the pros and cons of each, refer to the <a href="#compare">Compare</a>.</p>
 </div>
 </div>
 <div class="sect1 syntax">
-<h2 id="_declarative_pipeline"><a class="anchor" href="#_declarative_pipeline"></a>Declarative Pipeline</h2>
+<h2 id="declarative-pipeline"><a class="anchor" href="#declarative-pipeline"></a>Declarative Pipeline</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Declarative Pipeline presents a more simplified and opinionated syntax on top of the Pipeline sub-systems.</p>
@@ -629,7 +629,7 @@ The section must be defined at the top-level inside the <code>pipeline</code> bl
 <tr>
 <th class="tableblock halign-center valign-top"><p class="tableblock">Parameters</p></th>
 <td class="tableblock halign-right valign-top"><div class="content"><div class="paragraph">
-<p><a href="#agent-parameters"> Described below</a></p>
+<p><a href="#parameters">Described below</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -704,7 +704,7 @@ Because the timeout includes the agent provisioning time, the Pipeline may fail 
 </div>
 </div>
 <div class="sect4">
-<h5 id="agent-parameters"><a class="anchor" href="#agent-parameters"></a>Parameters</h5>
+<h5 id="parameters"><a class="anchor" href="#parameters"></a>Parameters</h5>
 <div class="paragraph">
 <p>In order to support the wide variety of use-cases Pipeline authors may have, the <code>agent</code> section supports a few different types of parameters.
 These parameters can be applied at the top-level of the <code>pipeline</code> block, or within each <code>stage</code> directive.</p>
@@ -869,7 +869,7 @@ For example:</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_common_options"><a class="anchor" href="#_common_options"></a>Common Options</h5>
+<h5 id="options"><a class="anchor" href="#options"></a>Common Options</h5>
 <div class="paragraph">
 <p>These are a few options that can be applied to two or more <code>agent</code> implementations.
 They are not required unless explicitly stated.</p>
@@ -1239,7 +1239,7 @@ At a minimum, it is recommended that <code>stages</code> contain at least one <a
 <div class="sect2">
 <h3 id="declarative-directives"><a class="anchor" href="#declarative-directives"></a>Directives</h3>
 <div class="sect3">
-<h4 id="_environment"><a class="anchor" href="#_environment"></a>environment</h4>
+<h4 id="environment"><a class="anchor" href="#environment"></a>environment</h4>
 <div class="paragraph">
 <p>The <code>environment</code> directive specifies a sequence of key-value pairs which will be defined as environment variables for all steps, or stage-specific steps, depending on where the <code>environment</code> directive is located within the Pipeline.</p>
 </div>
@@ -2119,7 +2119,7 @@ Defaults to allowing any user.</p>
 <dt class="hdlist1">parameters</dt>
 <dd>
 <p>An optional list of parameters to prompt the submitter to provide.
-Refer to <a href="#parameters">[parameters]</a> for more information.</p>
+Refer to <a href="#parameters">Parameters</a> for more information.</p>
 </dd>
 </dl>
 </div>
@@ -2692,7 +2692,7 @@ If <code>beforeOptions</code> is set to <code>true</code>, the <code>when</code>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_sequential_stages"><a class="anchor" href="#_sequential_stages"></a>Sequential Stages</h3>
+<h3 id="sequential-stages"><a class="anchor" href="#sequential-stages"></a>Sequential Stages</h3>
 <div class="paragraph">
 <p>Stages in Declarative Pipeline may have a <code>stages</code> section containing a list of nested stages to be run in sequential order.</p>
 </div>
@@ -3219,19 +3219,19 @@ The "per-cell" directives, on the other hand, are evaluated at runtime.</p>
 <p><a href="#agent">agent</a></p>
 </li>
 <li>
-<p><a href="#environment">[environment]</a></p>
+<p><a href="#environment">environment</a></p>
 </li>
 <li>
-<p><a href="#input">[input]</a></p>
+<p><a href="#input-example">Input Step, Declarative Pipeline</a></p>
 </li>
 <li>
-<p><a href="#options">[options]</a></p>
+<p><a href="#options">Common Options</a></p>
 </li>
 <li>
 <p><a href="#post">post</a></p>
 </li>
 <li>
-<p><a href="#tools">[tools]</a></p>
+<p><a href="#tools-example">Tools, Declarative Pipeline</a></p>
 </li>
 <li>
 <p><a href="#when">when</a></p>
@@ -3322,9 +3322,9 @@ The "per-cell" directives, on the other hand, are evaluated at runtime.</p>
 <div class="sect3">
 <h4 id="_script"><a class="anchor" href="#_script"></a>script</h4>
 <div class="paragraph">
-<p>The <code>script</code> step takes a block of <a href="#scripted-pipeline">[scripted-pipeline]</a> and executes that in the Declarative Pipeline.
+<p>The <code>script</code> step takes a block of <a href="#scripted-pipeline">Scripted Pipeline</a> and executes that in the Declarative Pipeline.
 For most use-cases, the <code>script</code> step should be unnecessary in Declarative Pipelines, but it can provide a useful "escape hatch".
-<code>script</code> blocks of non-trivial size and/or complexity should be moved into <a href="#shared-libraries#"> Shared Libraries</a> instead.</p>
+<code>script</code> blocks of non-trivial size and/or complexity should be moved into <a href="shared-libraries.html" class="xref page">Shared Libraries</a> instead.</p>
 </div>
 <div id="script-example" class="exampleblock">
 <div class="title">Example 35. Script Block in Declarative Pipeline</div>
@@ -3359,10 +3359,10 @@ For most use-cases, the <code>script</code> step should be unnecessary in Declar
 </div>
 </div>
 <div class="sect1 syntax">
-<h2 id="_scripted_pipeline"><a class="anchor" href="#_scripted_pipeline"></a>Scripted Pipeline</h2>
+<h2 id="scripted-pipeline"><a class="anchor" href="#scripted-pipeline"></a>Scripted Pipeline</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Scripted Pipeline, like <a href="#declarative-pipeline">[declarative-pipeline]</a>, is built on top of the underlying Pipeline sub-system.
+<p>Scripted Pipeline, like <a href="#declarative-pipeline">Declarative Pipeline</a>, is built on top of the underlying Pipeline sub-system.
 Unlike Declarative, Scripted Pipeline is effectively a general-purpose DSL <sup class="footnote" id="_footnote_dsl">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> built with <a href="http://groovy-lang.org/syntax.html">Groovy</a>.
 Most functionality provided by the Groovy language is made available to users of Scripted Pipeline, which means it can be a very expressive and flexible tool with which one can author continuous delivery pipelines.</p>
 </div>
@@ -3461,7 +3461,7 @@ The Groovy learning-curve isn&#8217;t typically desirable for all members of a g
 <p>Both are fundamentally the same Pipeline sub-system underneath.
 They are both durable implementations of "Pipeline as code".
 They are both able to use steps built into Pipeline or provided by plugins.
-Both are able to utilize <a href="#shared-libraries#"> Shared Libraries</a></p>
+Both are able to utilize <a href="shared-libraries.html" class="xref page">Shared Libraries</a></p>
 </div>
 <div class="paragraph">
 <p>Where they differ however is in syntax and flexibility.

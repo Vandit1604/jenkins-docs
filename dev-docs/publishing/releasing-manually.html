@@ -1388,7 +1388,7 @@ You can obtain your encrypted password from Artifactory using <code>curl</code>.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">$ curl -u mr_jenkins:j3nkinsr0ck5 https://repo.jenkins-ci.org/setup/settings.xml
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ curl -u mr_jenkins:j3nkinsr0ck5 https://repo.jenkins-ci.org/setup/settings.xml
 &lt;settings xmlns="https://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
   &lt;servers&gt;
     &lt;server&gt;
@@ -1461,7 +1461,7 @@ If you already have this file, merge the <code>server</code> block provided in t
 <h2 id="_troubleshooting"><a class="anchor" href="#_troubleshooting"></a>Troubleshooting</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>First, make sure your plugin uses a reasonably up to date <a href="../plugin-development/updating-parent.html" class="xref page">parent POM</a>.
+<p>First, make sure your plugin uses a reasonably up-to-date <a href="../plugin-development/updating-parent.html" class="xref page">parent POM</a>.
 This will prevent the vast majority of problems in releasing the plugin, such as outdated Maven plugins, or obsolete host names.</p>
 </div>
 <div class="sect2">
@@ -1486,7 +1486,7 @@ This will prevent the vast majority of problems in releasing the plugin, such as
 Check that the path you&#8217;re allowed to upload to matches the actual upload attempt (i.e. no typos).</p>
 </li>
 <li>
-<p>The specified release already exists and you try to overwrite it.
+<p>The specified release already exists, and you try to overwrite it.
 We do not allow replacing existing releases.
 Specify a different, previously unused version number during the release process.</p>
 </li>

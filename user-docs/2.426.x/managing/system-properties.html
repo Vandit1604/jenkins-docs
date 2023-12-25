@@ -31,7 +31,7 @@
     <a class="nav-link" href="../installing-jenkins/index.html">Installing Jenkins</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../installing-jenkins/docker.html">docker.adoc</a>
+    <a class="nav-link" href="../installing-jenkins/docker.html">Using Docker with Pipeline</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../installing-jenkins/kubernetes.html">Kubernetes</a>
@@ -904,7 +904,7 @@ Obsolete since the feature was removed in Jenkins 2.223.</p>
 <dl>
 <dt class="hdlist1"><strong>Description</strong></dt>
 <dd>
-<p>Jenkins 2.205 and newer attempts to prevent browsers from offering to auto-fill password form fields by using a custom password control.
+<p>Jenkins 2.205 and newer attempts to prevent browsers from offering to autofill password form fields by using a custom password control.
 Setting this to <code>false</code> reverts to the legacy behavior of using mostly standard password form fields.</p>
 </dd>
 </dl>
@@ -923,7 +923,7 @@ Setting this to <code>false</code> reverts to the legacy behavior of using mostl
 <dt class="hdlist1"><strong>Description</strong></dt>
 <dd>
 <p>Specify full class name for Lifecycle implementation to override default.
-See <a href="#dev-docs:extensions:jenkins-core.adoc//lifecycle">documentation</a> for class names.</p>
+See <a href="../../../dev-docs/extensions/jenkins-core.html#lifecycle" class="xref page">documentation</a> for class names.</p>
 </dd>
 </dl>
 </div>
@@ -1039,7 +1039,7 @@ See <a href="/security/advisory/2021-01-13///SECURITY-2153">2021-01-13 security 
 <dt class="hdlist1"><strong>Description</strong></dt>
 <dd>
 <p>Use shorter but cryptic names in matrix build workspace directories.
-Avoids problems with 256 character limit on paths in Cygwin, path depths problems on Windows, and shell metacharacter problems with label expressions on most platforms.
+Avoids problems with 256-character limit on paths in Cygwin, path depths problems on Windows, and shell metacharacter problems with label expressions on most platforms.
 See <a href="https://issues.jenkins.io/browse/JENKINS-25783">JENKINS-25783</a>.</p>
 </dd>
 </dl>
@@ -2103,7 +2103,7 @@ Possibly unsafe, <a href="/security/advisory/2018-12-05///SECURITY-595">see 2018
 <dt class="hdlist1"><strong>Description</strong></dt>
 <dd>
 <p>Location of the base directory for all exploded .hpi/.jpi plugins.
-By default the plugins will be extracted under <code>$JENKINS_HOME/plugins/</code>.</p>
+By default, the plugins will be extracted under <code>$JENKINS_HOME/plugins/</code>.</p>
 </dd>
 </dl>
 </div>
@@ -2167,7 +2167,7 @@ Specify the full class name of a <code>hudson.PluginStrategy</code> implementati
 </div>
 </div>
 <div class="sect4">
-<h5 id="_name_hudson_remoting_channelbuilder_allcallablescanignorerolechecker"><a class="anchor" href="#_name_hudson_remoting_channelbuilder_allcallablescanignorerolechecker"></a>name: hudson.remoting.ChannelBuilder.allCallablesCanIgnoreRoleChecker</h5>
+<h5 id="hudson-remoting-channelbuilder-allcallablescanignorerolechecker"><a class="anchor" href="#hudson-remoting-channelbuilder-allcallablescanignorerolechecker"></a>name: hudson.remoting.ChannelBuilder.allCallablesCanIgnoreRoleChecker</h5>
 <div class="paragraph">
 <p><code>security</code> <code>scape hatch</code></p>
 </div>
@@ -2188,7 +2188,7 @@ See <a href="/doc/upgrade-guide/2.303///SECURITY-2458">the description in the up
 </div>
 </div>
 <div class="sect4">
-<h5 id="_name_hudson_remoting_channelbuilder_specificcallablescanignorerolechecker"><a class="anchor" href="#_name_hudson_remoting_channelbuilder_specificcallablescanignorerolechecker"></a>name: hudson.remoting.ChannelBuilder.specificCallablesCanIgnoreRoleChecker</h5>
+<h5 id="hudson-remoting-channelbuilder-specificcallablescanignoreroleche"><a class="anchor" href="#hudson-remoting-channelbuilder-specificcallablescanignoreroleche"></a>name: hudson.remoting.ChannelBuilder.specificCallablesCanIgnoreRoleChecker</h5>
 <div class="paragraph">
 <p><code>security</code> <code>scape hatch</code></p>
 </div>
@@ -2238,7 +2238,7 @@ See jep:200//backwards-compatibility[JEP-200] and <a href="https://issues.jenkin
 <dl>
 <dt class="hdlist1"><strong>Description</strong></dt>
 <dd>
-<p>Control a agent based on a schedule</p>
+<p>Control an agent based on a schedule</p>
 </dd>
 </dl>
 </div>
@@ -2472,7 +2472,7 @@ Possibly unsafe, <a href="/security/advisory/2018-12-05///SECURITY-595">see 2018
 <dl>
 <dt class="hdlist1"><strong>Description</strong></dt>
 <dd>
-<p>Regex for legal user names in Jenkins user database.
+<p>Regex for legal usernames in Jenkins user database.
 See <a href="/security/advisory/2018-05-09///SECURITY-786">SECURITY-786</a>.</p>
 </dd>
 </dl>
@@ -3227,11 +3227,11 @@ Used to set <code>org.apache.commons.fileupload.servlet.ServletFileUpload//setSi
 <dl>
 <dt class="hdlist1"><strong>Description</strong></dt>
 <dd>
-<p>If this flag is set to <code>true</code> then we will request a garbage collection after a deletion failure before we next retry the delete.
+<p>If this flag is set to <code>true</code> then we will request a garbage collection after a deletion failure before we next retry the deletion.
 It is ignored unless <em>hudson.Util.maxFileDeletionRetries</em> is greater than 1.
 Setting this flag to <code>true</code> <em>may</em> resolve some problems on Windows, and also for directory trees residing on an NFS share, but it can have a negative impact on performance and may have no effect at all (GC behavior is JVM-specific).
 <strong>Warning</strong>: This should only ever be used if you find that your builds are failing because Jenkins is unable to delete files, that this failure is because Jenkins itself has those files locked "open", and even then it should only be used on agents with relatively few executors (because the garbage collection can impact the performance of all job executors on that agent).
-<em>Setting this flag is a act of last resort - it is not recommended, and should not be used on your main Jenkins server unless you can tolerate the performance impact</em>.</p>
+<em>Setting this flag is an act of last resort - it is not recommended, and should not be used on your main Jenkins server unless you can tolerate the performance impact</em>.</p>
 </dd>
 </dl>
 </div>
@@ -3641,7 +3641,7 @@ Ask for 32 hex digits or 16 bytes in hex, e.g. <a href="https://www.browserling.
 </ul>
 </div>
 <div class="paragraph">
-<p>When the API Token is generated using this system property, it should be revoked during the installation script using the other ways at your disposal so that you have a fresh (random) token with less traces for your script.
+<p>When the API Token is generated using this system property, it should be revoked during the installation script using the other ways at your disposal so that you have a fresh (random) token with fewer traces for your script.
 See <a href="https://javadoc.jenkins.io/jenkins/security/ApiTokenProperty.html//generateNewToken-java.lang.String-">ApiTokenProperty//generateNewToken(String)</a> and <a href="https://javadoc.jenkins.io/jenkins/security/ApiTokenProperty.html//revokeAllTokensExceptOne-java.lang.String-">ApiTokenProperty//revokeAllTokensExceptOne(String)</a> for scripting methods or using the web API calls:
 <code>/user/[user-login]/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken</code> and <code>/user/[user-login]/descriptorByName/jenkins.security.ApiTokenProperty/revokeAllExcept</code></p>
 </div>
@@ -3666,7 +3666,7 @@ See <a href="/security/advisory/2021-01-13///SECURITY-2047">2021-01-13 security 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_name_jenkins_model_jenkins_buildsdir"><a class="anchor" href="#_name_jenkins_model_jenkins_buildsdir"></a>name: jenkins.model.Jenkins.buildsDir</h5>
+<h5 id="jenkins-model-jenkins-buildsdir"><a class="anchor" href="#jenkins-model-jenkins-buildsdir"></a>name: jenkins.model.Jenkins.buildsDir</h5>
 <div class="paragraph">
 <p><code>feature</code></p>
 </div>
@@ -3719,7 +3719,7 @@ mv $JENKINS_HOME/jobs/[JOB_NAME]/builds [TARGET_DIR]/[JOB_NAME]</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>For <a href="#pipeline:multibranch.adoc//creating-a-multibranch-pipeline">Multibranch Pipeline</a> jobs, run for each <code>BRANCH_NAME</code>:</p>
+<p>For <a href="../pipeline/multibranch.html#creating-a-multibranch-pipeline" class="xref page">Multibranch Pipeline</a> jobs, run for each <code>BRANCH_NAME</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3729,7 +3729,7 @@ mv $JENKINS_HOME/jobs/[JOB_NAME]/branches/[BRANCH_NAME]/builds \
 </div>
 </div>
 <div class="paragraph">
-<p>For <a href="#pipeline:multibranch.adoc//organization-folders">Organization Folders</a>, run this for each <code>REPO_NAME</code> and <code>BRANCH_NAME</code>:</p>
+<p>For <a href="../pipeline/multibranch.html#organization-folders" class="xref page">Organization Folders</a>, run this for each <code>REPO_NAME</code> and <code>BRANCH_NAME</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4186,7 +4186,7 @@ See <a href="/redirect/class-filter/">documentation</a>.</p>
 <p>If Jenkins and plugins systems should prefer <a href="https://csrc.nist.gov/pubs/fips/140-2/upd2/final">FIPS-140</a> compliant cryptography.
 Not all features/plugins have been adapted, and this only indicates a preference.
 If you set this flag to <code>true</code>, it does not make Jenkins and its plugins FIPS-140 compliant.
-Refer to <a href="#system-administration:FIPS-140.adoc" class="xref unresolved">Jenkins and FIPS-140 Overview</a> for more information.</p>
+Refer to <a href="../../../dev-docs/FIPS-140/index.html" class="xref page">Jenkins and FIPS-140 Overview</a> for more information.</p>
 </dd>
 </dl>
 </div>
@@ -4232,7 +4232,7 @@ Refer to <a href="#system-administration:FIPS-140.adoc" class="xref unresolved">
 </div>
 </div>
 <div class="sect4">
-<h5 id="_name_jenkins_security_managepermission"><a class="anchor" href="#_name_jenkins_security_managepermission"></a>name: jenkins.security.ManagePermission</h5>
+<h5 id="jenkins-security-managepermission"><a class="anchor" href="#jenkins-security-managepermission"></a>name: jenkins.security.ManagePermission</h5>
 <div class="paragraph">
 <p><code>feature</code> <code>security</code></p>
 </div>
@@ -4549,7 +4549,7 @@ Allows requests to URLs with semicolon characters (<code>;</code>) in the reques
 </div>
 </div>
 <div class="sect4">
-<h5 id="_name_jenkins_security_systemreadpermission"><a class="anchor" href="#_name_jenkins_security_systemreadpermission"></a>name: jenkins.security.SystemReadPermission</h5>
+<h5 id="jenkins-security-systemreadpermission"><a class="anchor" href="#jenkins-security-systemreadpermission"></a>name: jenkins.security.SystemReadPermission</h5>
 <div class="paragraph">
 <p><code>feature</code> <code>security</code></p>
 </div>
@@ -4612,7 +4612,7 @@ See <a href="https://issues.jenkins.io/browse/JENKINS-35493">JENKINS-35493</a>.<
 <dt class="hdlist1"><strong>Description</strong></dt>
 <dd>
 <p><code>false</code> to disable the JNLP3 agent protocol, <code>true</code> to enable it.
-Otherwise it&#8217;s randomly enabled/disabled to A/B test it.
+Otherwise, it&#8217;s randomly enabled/disabled to A/B test it.
 Obsolete since the protocol was removed in 2.214.</p>
 </dd>
 </dl>
@@ -4680,7 +4680,7 @@ This can give attackers information about files and directories on the Jenkins c
 </div>
 </div>
 <div class="sect4">
-<h5 id="_name_jenkins_telemetry_telemetry_endpoint"><a class="anchor" href="#_name_jenkins_telemetry_telemetry_endpoint"></a>name: jenkins.telemetry.Telemetry.endpoint</h5>
+<h5 id="jenkins-telemetry-telemetry-endpoint"><a class="anchor" href="#jenkins-telemetry-telemetry-endpoint"></a>name: jenkins.telemetry.Telemetry.endpoint</h5>
 <div class="paragraph">
 <p><code>development</code>
 <strong>Default</strong>: <code>https://uplink.jenkins.io/events</code></p>
@@ -5034,14 +5034,14 @@ Used to set <code>org.apache.commons.fileupload.servlet.ServletFileUpload//setSi
 <dl>
 <dt class="hdlist1"><strong>Description</strong></dt>
 <dd>
-<p>Controls both caching of various cacheable resources (Jelly scripts etc.) as well as the <code>Expires</code> HTTP response header for some static resources.
+<p>Controls both caching of various cacheable resources (Jelly scripts etc.) and the <code>Expires</code> HTTP response header for some static resources.
 Useful during development to see the effect of changes after reload.</p>
 </dd>
 </dl>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_name_stapler_jelly_trace"><a class="anchor" href="#_name_stapler_jelly_trace"></a>name: stapler.jelly.trace</h5>
+<h5 id="stapler-jelly-trace"><a class="anchor" href="#stapler-jelly-trace"></a>name: stapler.jelly.trace</h5>
 <div class="paragraph">
 <p><code>development</code></p>
 </div>
@@ -5113,7 +5113,7 @@ Set by the core development tooling so developers can see the effect of changes 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_name_stapler_trace"><a class="anchor" href="#_name_stapler_trace"></a>name: stapler.trace</h5>
+<h5 id="stapler-trace"><a class="anchor" href="#stapler-trace"></a>name: stapler.trace</h5>
 <div class="paragraph">
 <p><code>development</code></p>
 </div>
@@ -5125,13 +5125,13 @@ Set by the core development tooling so developers can see the effect of changes 
 <dt class="hdlist1"><strong>Description</strong></dt>
 <dd>
 <p>Trace request handling and report the result using <code>Stapler-Trace-&#8230;&#8203;</code> response headers.
-Additionally renders a diagnostic HTTP 404 error page when the request could not be processed.</p>
+Additionally, renders a diagnostic HTTP 404 error page when the request could not be processed.</p>
 </dd>
 </dl>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_name_stapler_trace_per_request"><a class="anchor" href="#_name_stapler_trace_per_request"></a>name: stapler.trace.per-request</h5>
+<h5 id="stapler-trace-per-request"><a class="anchor" href="#stapler-trace-per-request"></a>name: stapler.trace.per-request</h5>
 <div class="paragraph">
 <p><code>development</code></p>
 </div>
@@ -5189,7 +5189,9 @@ The downside is that the branch source might use this notification to register w
 </div>
 </div>
 </div>
-<h1 id="_jenkins_features_controlled_with_system_properties" class="sect0"><a class="anchor" href="#_jenkins_features_controlled_with_system_properties"></a>Jenkins Features Controlled with System Properties</h1>
+<div class="sect1">
+<h2 id="_jenkins_features_controlled_with_system_properties"><a class="anchor" href="#_jenkins_features_controlled_with_system_properties"></a>Jenkins Features Controlled with System Properties</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Jenkins has several "hidden" features that can be enabled with system properties.
 This page documents many of them and explain how to configure them on your instance.</p>
@@ -5197,9 +5199,8 @@ This page documents many of them and explain how to configure them on your insta
 <div class="paragraph">
 <p>Some system properties related to the Remoting library used for communication between controller and agents are documented in <a href="https://github.com/jenkinsci/remoting/blob/master/docs/configuration.md">that component&#8217;s repository</a>.</p>
 </div>
-<div class="sect1">
-<h2 id="_usage_2"><a class="anchor" href="#_usage_2"></a>Usage</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_usage_2"><a class="anchor" href="#_usage_2"></a>Usage</h3>
 <div class="paragraph">
 <p>System properties are defined by passing <code>-Dproperty=value</code> to the <code>java</code> command line to start Jenkins.
 Make sure to pass all of these arguments <strong>before</strong> the <code>-jar</code> argument, otherwise they will be ignored.
@@ -5229,8 +5230,8 @@ Example:</p>
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="_compatibility_2"><a class="anchor" href="#_compatibility_2"></a>Compatibility</h3>
+<div class="sect3">
+<h4 id="_compatibility_2"><a class="anchor" href="#_compatibility_2"></a>Compatibility</h4>
 <div class="paragraph">
 <p>We do <strong>NOT</strong> guarantee that system properties will remain unchanged and functional indefinitely.
 These switches are often experimental in nature, and subject to change without notice.
@@ -5238,10 +5239,8 @@ If you find these useful, please file a ticket to promote it to an official feat
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_properties_in_jenkins_core_2"><a class="anchor" href="#_properties_in_jenkins_core_2"></a>Properties in Jenkins Core</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_properties_in_jenkins_core_2"><a class="anchor" href="#_properties_in_jenkins_core_2"></a>Properties in Jenkins Core</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5307,6 +5306,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 anchors.add('dt');
 });
 </script>
+</div>
 </div>
 </div>
 <nav class="pagination">
