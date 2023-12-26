@@ -33,7 +33,7 @@
     <a class="nav-link" href="php.html">Jenkins and PHP</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="docker.html">Using Docker with Pipeline</a>
+    <a class="nav-link" href="docker.html">Jenkins and Docker</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="python.html">Jenkins and Python</a>
@@ -240,9 +240,9 @@ The most typical ones nowadays are generally Apache Maven, or Gradle.</p>
 dedicated step. One advantage is, as for all Jenkins tools, that you can select a specific
 Maven version and have Jenkins automatically install it on the build node it&#8217;s going to run on.</p>
 </div>
-<div class="imageblock unresolved center">
+<div class="imageblock center">
 <div class="content">
-<img src="/images/solution-images/jenkins-maven-step.png" alt="Jenkins Maven step">
+<img src="_images/jenkins-maven-step.png" alt="Jenkins Maven step">
 </div>
 </div>
 </div>
@@ -255,9 +255,42 @@ Maven version and have Jenkins automatically install it on the build node it&#82
 plugin:gradle[Gradle plugin].
 Once done, you should be able to add a Gradle step.</p>
 </div>
-<div class="imageblock unresolved center">
+<div class="imageblock center">
 <div class="content">
-<img src="/images/solution-images/jenkins-gradle-step.png" alt="Jenkins Gradle step">
+<img src="_images/jenkins-gradle-step.png" alt="Jenkins Gradle step">
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Java plugins for Jenkins</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://plugins.jenkins.io/junit">JUnit plugin</a></dt>
+<dd>
+<p>publishes JUnit XML formatted test reports for trending and analysis</p>
+</dd>
+<dt class="hdlist1"><a href="https://plugins.jenkins.io/gradle">Gradle plugin</a></dt>
+<dd>
+<p>support invoking Gradle as a build step and listing executing tasks per build</p>
+</dd>
+<dt class="hdlist1"><a href="https://plugins.jenkins.io/warnings-ng">Warnings Next Generation plugin</a></dt>
+<dd>
+<p>collects compiler warnings and issues from static analysis tools such as SpotBugs and PMD</p>
+</dd>
+<dt class="hdlist1"><a href="https://plugins.jenkins.io/cobertura">Cobertura plugin</a></dt>
+<dd>
+<p>publish and trend code coverage reports from Cobertura</p>
+</dd>
+<dt class="hdlist1"><a href="https://plugins.jenkins.io/sonar">SonarQube plugin</a></dt>
+<dd>
+<p>integrate reporting from the SonarQube code quality/inspection platform</p>
+</dd>
+<dt class="hdlist1"><a href="https://plugins.jenkins.io/repository-connector">Repository Connector plugin</a></dt>
+<dd>
+<p>adds features for resolving artifacts from a Maven repository such as Nexus or Artifactory.</p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 </div>
