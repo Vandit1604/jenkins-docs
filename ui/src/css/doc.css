@@ -761,10 +761,11 @@
   background: var(--sidebar-background);
 }
 
-.doc .youtube-videos .content {
+.youtube-videos .content {
   display: flex;
   justify-content: space-evenly;
   gap: 12px;
+  align-items: baseline;
 }
 
 .doc .button {
