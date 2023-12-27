@@ -1,0 +1,46 @@
+= How to Version Documentation
+
+== 1. Create Versioned Branch:
+
+- Begin by creating a dedicated branch for a new release, following semantic versioning, for example, _2.426.1_.
+
+== 2. Update `antora.yml` in Versioned Branches:
+
+- Ensure that all `antora.yml` files within this branch contain a consistent value for the `version` key. This value will be displayed to the users accessing the documentation.
+
+== 3. Add Branch to `antora-playbook.yml`:
+
+- Add the newly created branch, such as _**2.426.1**_, into the `antora-playbook.yml` file located in the playbook directory. This inclusion instructs Antora to fetch this branch and generate documentation for it, aligned with the version specified in the `antora.yml` file.
+
+[source,yaml]
+----
+content:
+  sources:
+    - url: https://github.com/PATH/jenkins-docs.git
+      branches: [main,2.426.1]
+      start_paths: [docs/tutorials, docs/user-docs, docs/solutions]
+      # developer docs are un-versioned that's why they are to be fetched individually
+    - url: https://github.com/Vandit1604/jenkins-docs.git
+      branches: [main,2.426.1]
+      start_paths: [docs/dev-docs, docs/events, docs/security, docs/sigs, docs/projects, docs/images, docs/books, docs/community, docs/project, docs/about, docs/download]
+----
+
+
+- The `content.sources.branches` key should be updated with the name of the newly created _**2.426.1**_ branch
+
+NOTE: The `antora.yml` file at the root of each component contains a `version:` key, denoting the version displayed on the site, not the branch's name.
+
+For non-versioned components, `antora.yml` contains `version: ~`, while `display_version: 'latest'` is set to showcase the latest content.
+
+== Why Use Branches for Versioning?
+
+Antora offers several methods for versioning content, including branches, folders, and tags. Branches are recommended due to their flexibility:
+
+- Continuous Documentation Updates: Branches enable ongoing updates to documentation even after software releases, allowing for seamless management and maintenance.
+- Efficient Version Control: Compared to storing versions in folders, using branches avoids the need to manually copy files for each new version, leveraging Git's functionalities for version comparison, management, and merging.
+- Documentation Flexibility: Unlike tagging, which freezes documentation once created, branches facilitate ongoing modifications and updates to the documentation.
+
+=== References
+
+* link:https://docs.antora.org/antora/latest/content-source-versioning-methods/#version-content-using-branches[Versioning with Branches in Antora]
+* link:https://docs.antora.org/antora/latest/content-source-versioning-methods/#documentation-versions-and-software-releases[Documentation Versions and Release Management]
