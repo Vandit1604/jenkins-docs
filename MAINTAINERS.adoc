@@ -10,7 +10,7 @@
 
 == 3. Add Branch to `antora-playbook.yml`:
 
-- Add the newly created branch, such as _**2.426.1**_, into the `antora-playbook.yml` file located in the playbook directory. This inclusion instructs Antora to fetch this branch and generate documentation for it, aligned with the version specified in the `antora.yml` file.
+- Add the newly created branch, such as _**2.426.x**_, into the `antora-playbook.yml` file located in the playbook directory. This inclusion instructs Antora to fetch this branch and generate documentation for it, aligned with the version specified in the `antora.yml` file.
 
 [source,yaml]
 ----
