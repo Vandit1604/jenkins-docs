@@ -2,7 +2,7 @@
 
 == 1. Create Versioned Branch:
 
-- Begin by creating a dedicated branch for a new release, following semantic versioning, for example, _2.426.1_.
+- Begin by creating a dedicated branch for a new release, following semantic versioning, for example, _2.426.x_.
 
 == 2. Update `antora.yml` in Versioned Branches:
 
@@ -26,7 +26,7 @@ content:
 ----
 
 
-- The `content.sources.branches` key should be updated with the name of the newly created _**2.426.1**_ branch
+- The `content.sources.branches` key should be updated with the name of the newly created _**2.426.x**_ branch
 
 NOTE: The `antora.yml` file at the root of each component contains a `version:` key, denoting the version displayed on the site, not the branch's name.
 
