@@ -37,7 +37,9 @@ html {
 
 body {
   margin: 0;
-  font-family: system-ui, "Segoe UI", roboto, "Noto Sans", oxygen, ubuntu, cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: system-ui, "Segoe UI", roboto, "Noto Sans", oxygen, ubuntu, cantarell, "Fira Sans",
+    "Droid Sans", "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }
 
 /**
@@ -140,26 +142,38 @@ strong {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 
-.highlight>code {
+.highlight > code {
   display: block;
   overflow-x: auto;
   padding: 0.875em;
   background-color: #e7f3ff;
-  font-family: Source Code Pro, monospace;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0, rgba(27, 31, 35, 0.15) 0 0 0 1px;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0, rgba(27, 31, 35, 0.15) 0 0 0 1px;
+  font-family:
+    Source Code Pro,
+    monospace;
+  -webkit-box-shadow:
+    rgba(0, 0, 0, 0.02) 0 1px 3px 0,
+    rgba(27, 31, 35, 0.15) 0 0 0 1px;
+  box-shadow:
+    rgba(0, 0, 0, 0.02) 0 1px 3px 0,
+    rgba(27, 31, 35, 0.15) 0 0 0 1px;
   padding: 1rem;
 }
 
-p>code {
+p > code {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
   background-color: #e7f3ff;
-  font-family: Source Code Pro, monospace;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0, rgba(27, 31, 35, 0.15) 0 0 0 1px;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0, rgba(27, 31, 35, 0.15) 0 0 0 1px;
+  font-family:
+    Source Code Pro,
+    monospace;
+  -webkit-box-shadow:
+    rgba(0, 0, 0, 0.02) 0 1px 3px 0,
+    rgba(27, 31, 35, 0.15) 0 0 0 1px;
+  box-shadow:
+    rgba(0, 0, 0, 0.02) 0 1px 3px 0,
+    rgba(27, 31, 35, 0.15) 0 0 0 1px;
 }
 
 kbd,
@@ -206,9 +220,19 @@ sup {
 /* Admoniton Blocks
    ========================================================================== */
 
-
 .admonitionblock {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
   margin: 1.4rem 0 0;
 }
 
@@ -218,8 +242,8 @@ sup {
   box-sizing: inherit;
 }
 
-.admonitionblock td.content> :not(.title):first-child,
-.admonitionblock td.content>.title+* {
+.admonitionblock td.content > :not(.title):first-child,
+.admonitionblock td.content > .title + * {
   margin-top: 0;
 }
 
@@ -231,7 +255,7 @@ sup {
   color: white;
 }
 
-.admonitionblock>table {
+.admonitionblock > table {
   table-layout: fixed;
   position: relative;
   width: 100%;
@@ -286,7 +310,7 @@ sup {
 }
 
 .admonitionblock.caution {
-    color: black;
+  color: black;
   border-left: 4px solid var(--caution-color);
 }
 
@@ -543,7 +567,6 @@ summary {
 .right {
   float: right;
   padding: 15px;
-  
 }
 .right p {
   text-align: justify;

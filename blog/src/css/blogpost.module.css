@@ -30,13 +30,26 @@ li {
   border-radius: 5px;
   list-style: none;
   cursor: pointer;
-  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
-    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
-    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
-    "Noto Sans", sans-serif;
+  font-family:
+    Inter,
+    Helvetica,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    NotoColorEmoji,
+    "Noto Color Emoji",
+    "Segoe UI Symbol",
+    "Android Emoji",
+    EmojiSymbols,
+    -apple-system,
+    system-ui,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    "Noto Sans",
+    sans-serif;
 }
 
-.blogpost:hover span{
+.blogpost:hover span {
   text-decoration: underline;
 }
 
@@ -63,14 +76,14 @@ li {
   -moz-transform: scale(1.06);
   -ms-transform: scale(1.06);
   -o-transform: scale(1.06);
-    box-shadow: 0 30px 70px -50px rgba(0, 0, 40, 5);
+  box-shadow: 0 30px 70px -50px rgba(0, 0, 40, 5);
 }
 .blogarticle {
   width: 900vh;
   background-color: red;
 }
 
-.blogtitle{
+.blogtitle {
   color: black;
   font-size: 1.3rem;
   font-weight: 650;
@@ -80,16 +93,18 @@ li {
   margin: 0;
 }
 
-.blogauthor{
-  font-family: system-ui, "Segoe UI", roboto, "Noto Sans", oxygen, ubuntu, cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+.blogauthor {
+  font-family: system-ui, "Segoe UI", roboto, "Noto Sans", oxygen, ubuntu, cantarell, "Fira Sans",
+    "Droid Sans", "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   font-size: 1rem;
-  color:#0064D6;
-  margin-left: .5rem;
- }
+  color: #0064d6;
+  margin-left: 0.5rem;
+}
 
-.blogteaser{
+.blogteaser {
   position: relative;
-  color:  hsl(212, 30%, 40%);
+  color: hsl(212, 30%, 40%);
   margin: 0;
   text-decoration: none !important;
   line-height: 1.66;
@@ -104,16 +119,16 @@ li {
   line-height: 1.66;
 }
 
-.blogauthorinfo{
-  display:flex;
+.blogauthorinfo {
+  display: flex;
 }
 
-.blogauthorimage{
+.blogauthorimage {
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 50%;
   display: inline;
   position: relative;
-  top: .3rem;
-  margin-inline:.2rem;
+  top: 0.3rem;
+  margin-inline: 0.2rem;
 }

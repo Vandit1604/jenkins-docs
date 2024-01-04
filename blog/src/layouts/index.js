@@ -1,8 +1,8 @@
-import React from "react"
-import typography from "../utils/typography"
-const { rhythm } = typography
+import React from "react";
+import typography from "../utils/typography";
+const { rhythm } = typography;
 
-const IndexPageLayout = ({children}) => {
+const IndexPageLayout = ({ children }) => {
   return (
     <>
       <div
@@ -19,6 +19,6 @@ const IndexPageLayout = ({children}) => {
       </div>
     </>
   );
-}
+};
 
-export default IndexPageLayout
+export default IndexPageLayout;

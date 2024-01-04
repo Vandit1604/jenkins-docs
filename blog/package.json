@@ -47,7 +47,9 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "start": "npm run develop",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lint": "npx eslint .",
+    "format": "npx prettier . --write"
   },
   "devDependencies": {
     "webpack-cli": "^5.1.4"

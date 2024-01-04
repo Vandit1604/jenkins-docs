@@ -20,6 +20,7 @@ export function formatDate(inputString) {
     "November",
     "December",
   ];
-  return `${monthNames[formattedDate.getMonth()]
+  return `${
+    monthNames[formattedDate.getMonth()]
   } ${formattedDate.getDate()}, ${formattedDate.getFullYear()}`;
 }

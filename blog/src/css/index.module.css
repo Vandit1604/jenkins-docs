@@ -6,26 +6,26 @@ html {
   box-sizing: border-box;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .box {
-    margin: 0 4rem;
+  margin: 0 4rem;
 }
 
-.featureInfo{
-    display: flex;
-    margin-bottom:1rem;
-    justify-content: flex-start;
+.featureInfo {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: flex-start;
 }
 
-.featureInfo h4{
+.featureInfo h4 {
   margin: 0;
 }
 
-.sponsorsJumbotron{
+.sponsorsJumbotron {
   display: flex;
   justify-content: space-evenly;
   list-style: none;

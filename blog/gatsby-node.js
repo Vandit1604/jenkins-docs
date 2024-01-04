@@ -1,57 +1,56 @@
-const _ = require(`lodash`)
-const path = require(`path`)
-const { slash } = require(`gatsby-core-utils`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const _ = require(`lodash`);
+const path = require(`path`);
+const { slash } = require(`gatsby-core-utils`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
 // Implement the Gatsby API “createPages”. This is
 // called after the Gatsby bootstrap is finished so you have
 // access to any information necessary to programmatically
 // create pages.
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
-  return graphql(
-    `
-      {
-  allAsciidoc {
-    edges {
-      node {
-        id
-        html
-        document {
-          title
-        }
-        fields {
-          slug
-        }
-        pageAttributes {
-          author
-          tags
-          author_name
-          blog
-          description
-          github
-          irc
-          linkedin
-          medium
-          opengraph
-          twitter
-          authoravatar
+  const { createPage } = actions;
+  return graphql(`
+    {
+      allAsciidoc {
+        edges {
+          node {
+            id
+            html
+            document {
+              title
+            }
+            fields {
+              slug
+            }
+            pageAttributes {
+              author
+              tags
+              author_name
+              blog
+              description
+              github
+              irc
+              linkedin
+              medium
+              opengraph
+              twitter
+              authoravatar
+            }
+          }
         }
       }
     }
-  }
-}
-    `
-  ).then(result => {
+  `).then((result) => {
     if (result.errors) {
-      throw result.errors
+      throw result.errors;
     }
 
-
     // authors page | passing the authors info the pages via pageContext
-    const authorPostTemplate = path.resolve(`src/templates/author-pages.js`)
-    const authors = result.data.allAsciidoc.edges
-    const filteredAuthors = authors.filter(author => author.node.document.title == 'About the Author');
+    const authorPostTemplate = path.resolve(`src/templates/author-pages.js`);
+    const authors = result.data.allAsciidoc.edges;
+    const filteredAuthors = authors.filter(
+      (author) => author.node.document.title == "About the Author",
+    );
     filteredAuthors.forEach(({ node }) => {
       createPage({
         path: `author/${node.pageAttributes.github}`,
@@ -61,14 +60,13 @@ exports.createPages = ({ graphql, actions }) => {
           authorName: `*${node.pageAttributes.github}*`,
           filteredAuthors,
         },
-      })
-    })
-
+      });
+    });
 
     // Create blog-list pages
-    const posts = result.data.allAsciidoc.edges
-    const filteredPosts = posts.filter(post => post.node.document.title !== 'Author');
-    const postsPerPage = 9
+    const posts = result.data.allAsciidoc.edges;
+    const filteredPosts = posts.filter((post) => post.node.document.title !== "Author");
+    const postsPerPage = 9;
     const numPages = Math.ceil(filteredPosts.length / postsPerPage);
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
@@ -81,13 +79,12 @@ exports.createPages = ({ graphql, actions }) => {
           currentPage: i + 1,
           filteredAuthors,
         },
-      })
-    })
-
+      });
+    });
 
     // Create Asciidoc pages.
-    const articleTemplate = path.resolve(`./src/templates/article.js`)
-    _.each(result.data.allAsciidoc.edges, edge => {
+    const articleTemplate = path.resolve(`./src/templates/article.js`);
+    _.each(result.data.allAsciidoc.edges, (edge) => {
       // Gatsby uses Redux to manage its internal state.
       // Plugins and sites can use functions like "createPage"
       // to interact with Gatsby.
@@ -104,20 +101,20 @@ exports.createPages = ({ graphql, actions }) => {
           author: edge.node.pageAttributes.author,
           filteredAuthors,
         },
-      })
-    })
-  })
-}
+      });
+    });
+  });
+};
 
 exports.onCreateNode = async ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
 
   if (node.internal.type === `Asciidoc`) {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({ node, getNode });
     createNodeField({
       name: `slug`,
       node,
       value,
-    })
+    });
   }
-}
+};

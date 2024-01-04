@@ -1,1 +1,1 @@
-import "./src/css-asciidoc/doc.css"
+import "./src/css-asciidoc/doc.css";

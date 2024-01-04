@@ -1,8 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
-import Button from '@mui/material/Button';
-import typography from "../utils/typography"
-const { rhythm } = typography
+import React from "react";
+import { Link } from "gatsby";
+import Button from "@mui/material/Button";
+import typography from "../utils/typography";
+const { rhythm } = typography;
 
 const BlogPost = ({ children }) => (
   <div
@@ -20,7 +20,6 @@ const BlogPost = ({ children }) => (
     </Link>
     {children}
   </div>
-)
+);
 
-export default BlogPost
-
+export default BlogPost;

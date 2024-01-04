@@ -24,10 +24,11 @@ const PageName = ({ title }) => (
         alt="Jenkins Logo"
         style={{
           height: "80px",
-        }} />{" "}
+        }}
+      />{" "}
       {title}
     </h3>
   </Link>
-)
+);
 
 export default PageName;

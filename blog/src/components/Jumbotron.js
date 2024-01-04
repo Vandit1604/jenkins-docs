@@ -1,27 +1,42 @@
-import React from 'react';
-import { sponsorsJumbotron } from "../css/index.module.css"
-
+import React from "react";
+import { sponsorsJumbotron } from "../css/index.module.css";
 
 const Jumbotron = () => (
   <ul className={sponsorsJumbotron}>
     <li>
       <a href="https://cloudbees.com" rel="noopener noreferrer" target="_blank">
-        <img alt="CloudBees, Inc." src="../../images/images/sponsors/cloudbees.png" title="CloudBees, Inc." />
+        <img
+          alt="CloudBees, Inc."
+          src="../../images/images/sponsors/cloudbees.png"
+          title="CloudBees, Inc."
+        />
       </a>
     </li>
     <li>
       <a href="https://osuosl.org" rel="noopener noreferrer" target="_blank">
-        <img alt="Oregon State University Open Source Lab" src="../../images/images/sponsors/osuosl.png" title="Oregon State University Open Source Lab" />
+        <img
+          alt="Oregon State University Open Source Lab"
+          src="../../images/images/sponsors/osuosl.png"
+          title="Oregon State University Open Source Lab"
+        />
       </a>
     </li>
     <li>
       <a href="https://cd.foundation/" rel="noopener noreferrer" target="_blank">
-        <img alt="Continuous Delivery Foundation" src="../../images/images/sponsors/cdf.png" title="Continuous Delivery Foundation" />
+        <img
+          alt="Continuous Delivery Foundation"
+          src="../../images/images/sponsors/cdf.png"
+          title="Continuous Delivery Foundation"
+        />
       </a>
     </li>
     <li>
       <a href="https://redhat.com" rel="noopener noreferrer" target="_blank">
-        <img alt="Red Hat, Inc." src="../../images/images/sponsors/redhat.png" title="Red Hat, Inc." />
+        <img
+          alt="Red Hat, Inc."
+          src="../../images/images/sponsors/redhat.png"
+          title="Red Hat, Inc."
+        />
       </a>
     </li>
     <li>
@@ -31,7 +46,11 @@ const Jumbotron = () => (
     </li>
     <li>
       <a href="https://github.com" rel="noopener noreferrer" target="_blank">
-        <img alt="GitHub, Inc." src="../../images/images/sponsors/github.png" title="GitHub, Inc." />
+        <img
+          alt="GitHub, Inc."
+          src="../../images/images/sponsors/github.png"
+          title="GitHub, Inc."
+        />
       </a>
     </li>
     <li>
@@ -40,6 +59,6 @@ const Jumbotron = () => (
       </a>
     </li>
   </ul>
-)
+);
 
 export default Jumbotron;
