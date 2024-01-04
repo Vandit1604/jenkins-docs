@@ -5,30 +5,30 @@ import typography from "../utils/typography";
 const { rhythm } = typography;
 
 const PageName = ({ title }) => (
-  <Link style={{ textDecoration: `none` }} to="/">
-    <h3
-      style={{
-        color: `black`,
-        marginBottom: rhythm(1.5),
-        fontFamily: "Georgia,serif",
-        fontSize: "40px",
-        display: "flex",
-        flexDirection: "row",
-        flexWrap: "nowrap",
-        justifyContent: "center",
-        gap: "15px",
-      }}
-    >
-      <img
-        src={jenkinsLogo}
-        alt="Jenkins Logo"
-        style={{
-          height: "80px",
-        }}
-      />{" "}
-      {title}
-    </h3>
-  </Link>
+    <Link style={{ textDecoration: `none` }} to="/">
+        <h3
+            style={{
+                color: `black`,
+                marginBottom: rhythm(1.5),
+                fontFamily: "Georgia,serif",
+                fontSize: "40px",
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "nowrap",
+                justifyContent: "center",
+                gap: "15px",
+            }}
+        >
+            <img
+                src={jenkinsLogo}
+                alt="Jenkins Logo"
+                style={{
+                    height: "80px",
+                }}
+            />{" "}
+            {title}
+        </h3>
+    </Link>
 );
 
 export default PageName;

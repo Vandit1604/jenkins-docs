@@ -52,6 +52,9 @@
     "format": "npx prettier . --write"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "3.1.1",
     "webpack-cli": "^5.1.4"
   },
   "overrides": {
