@@ -36,7 +36,7 @@ const Carousel = () => (
     >
       <SwiperSlide>
         <div>
-          <a href={"#"}>
+          <a href={"/"}>
             <div style={{ display: "flex", gap: "32px", alignItems: 'center', justifyContent: 'center', padding: "16px" }}>
               <div style={{ color: "#FFFFFF" }}>
                 <h2 className="legend">Welcome to GSoC 2023!</h2>
@@ -54,7 +54,7 @@ const Carousel = () => (
       </SwiperSlide>
       <SwiperSlide>
         <div>
-          <a href="#">
+          <a href="/">
             <div style={{ display: "flex", gap: "32px", alignItems: 'center', justifyContent: 'center', padding: "16px" }}>
               <div style={{ color: "#FFFFFF" }}>
                 <h2 className="legend">Welcome to GSoC 2023!</h2>
@@ -72,7 +72,7 @@ const Carousel = () => (
       </SwiperSlide>
       <SwiperSlide>
         <div>
-          <a href="#">
+          <a href="/">
             <div style={{ display: "flex", gap: "32px", alignItems: 'center', justifyContent: 'center', padding: "16px" }}>
               <div style={{ color: "#FFFFFF" }}>
                 <h2 className="legend">Welcome to GSoC 2023!</h2>

@@ -36,10 +36,10 @@ const AuthorPage = ({ data }) => (
                 alt={childrenAsciidoc[0].document.title} />
             </div>
             <div className={authorinfo}>
-              {childrenAsciidoc[0].pageAttributes.github ? <a href={"https://github.com/" + childrenAsciidoc[0].pageAttributes.github}><Avatar sx={{ bgcolor: "rgb(60, 60, 60)" }}> <GitHubIcon className={github} /></Avatar></a> : null}
-              {childrenAsciidoc[0].pageAttributes.linkedin ? <a href={"https://linkedin.com/in/" + childrenAsciidoc[0].pageAttributes.linkedin}><Avatar sx={{ bgcolor: blue[700] }}><LinkedInIcon className={linkedin} /></Avatar></a> : null}
-              {childrenAsciidoc[0].pageAttributes.twitter ? <a href={"https://twitter.com/" + childrenAsciidoc[0].pageAttributes.twitter}><Avatar sx={{ bgcolor: cyan[50] }}> <TwitterIcon className={twitter} /></Avatar></a> : null}
-              {childrenAsciidoc[0].pageAttributes.blog ? <a href={childrenAsciidoc[0].pageAttributes.blog}><Avatar sx={{ bgcolor: indigo[50] }}><ImportContactsIcon className={blog} /></Avatar></a> : null}
+              {childrenAsciidoc[0].pageAttributes.github ?? <a aria-label="Author GitHub" href={"https://github.com/" + childrenAsciidoc[0].pageAttributes.github}><Avatar sx={{ bgcolor: "rgb(60, 60, 60)" }}> <GitHubIcon className={github} /></Avatar></a>}
+              {childrenAsciidoc[0].pageAttributes.linkedin ?? <a aria-label="Author LinkedIn" href={"https://linkedin.com/in/" + childrenAsciidoc[0].pageAttributes.linkedin}><Avatar sx={{ bgcolor: blue[700] }}><LinkedInIcon className={linkedin} /></Avatar></a>}
+              {childrenAsciidoc[0].pageAttributes.twitter ?? <a aria-label="Author Twitter" href={"https://twitter.com/" + childrenAsciidoc[0].pageAttributes.twitter}><Avatar sx={{ bgcolor: cyan[50] }}> <TwitterIcon className={twitter} /></Avatar></a>}
+              {childrenAsciidoc[0].pageAttributes.blog ?? <a aria-label="Author blog" href={childrenAsciidoc[0].pageAttributes.blog}><Avatar sx={{ bgcolor: indigo[50] }}><ImportContactsIcon className={blog} /></Avatar></a>}
             </div>
           </Link>
         </li>

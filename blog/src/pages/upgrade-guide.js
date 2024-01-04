@@ -24,7 +24,6 @@ query{
         version
         date
         lts_predecessor
-        lts_baseline
         lts_changes {
           type
           category

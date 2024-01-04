@@ -4,7 +4,6 @@ import Seo from "../components/Seo"
 import PageName from "../components/PageName"
 import IndexPageLayout from "../layouts"
 import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm, rateoffset, banner } from "../css/changelog.module.css";
-import { map } from "lodash"
 
 const ChangelogLTS = ({ data }) => (
   <IndexPageLayout>
