@@ -8,7 +8,7 @@ import { iconlegend, image, security, bug, rfe, feedback, sunny, cloudy, storm, 
 
 const ChangelogWeekly = ({ data }) => (
   <IndexPageLayout>
-    <PageName title={'Weekly Changelog'} />
+   <PageName title={'Weekly Changelog'} />
     <div style={{ textAlign: "end" }}>
       <div className={iconlegend}>
         Legend:
@@ -47,17 +47,77 @@ const ChangelogWeekly = ({ data }) => (
         <img className={rateoffset} src="../../images/images/changelog/cloudy.svg" alt="Cloudy" title="I experienced notable issues" />
         <img className={rateoffset} src="../../images/images/changelog/storm.svg" alt="Storm" title="I had to roll back" />
         <p>Community reported issues : </p>
-        <ul>
-          {node.changes?.map((change) => {
-            return (
-              <li>
-                <span dangerouslySetInnerHTML={{ __html: change.message }} />
-                {change.issue ? <span><a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>{" issue " + change.issue + ","}</a></span> : null}
-                {change.pull ? <span><a href={"https://github.com/jenkinsci/jenkins/pull/" + change.pull}>{" pull " + change.pull + ","}</a></span> : null}
-              </li>
-            )
-          })}
-        </ul>
+        {node.changes?.map((change) => (
+        <li key={change.key}>
+          <span dangerouslySetInnerHTML={{ __html: change.message }} />
+          {(change.references && change.references.length > 0) ?
+            change.references.map((ref) => (
+              <span key={ref.key}>
+                {ref.issue && (
+                  <span>
+                    <a href={"https://issues.jenkins.io/browse/JENKINS-" + ref.issue}>
+                      {" issue " + ref.issue + ", "}
+                    </a>
+                  </span>
+                )}
+                {ref.url && (
+                  <span>
+                    <a href={ref.url}>{ref.title},</a>
+                  </span>
+                )}
+                {ref.pull && (
+                  <span>
+                    <a href={"https://github.com/jenkinsci/jenkins/pull/" + ref.pull}>
+                      {" pull " + ref.pull + ", "}
+                    </a>
+                  </span>
+                )}
+              </span>
+            ))
+            :
+            <>
+              {change.issue && (
+                <span>
+                  <a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>
+                    {" issue " + change.issue + ", "}
+                  </a>
+                </span>
+              )}
+              {change.url && (
+                <span>
+                  <a href={change.url}>{change.title}, </a>
+                </span>
+              )}
+              {change.pull && (
+                <span>
+                  <a href={"https://github.com/jenkinsci/jenkins/pull/" + change.pull}>
+                    {" pull " + change.pull + ", "}
+                  </a>
+                </span>
+              )}
+            </>
+          }
+          {change.issue && (
+            <span>
+              <a href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}>
+                {" issue " + change.issue + ","}
+              </a>
+            </span>
+          )}
+          {change.url && (
+            <span>
+              <a href={change.url}>{change.title},</a>
+            </span>
+          )}
+          {change.pull && (
+            <span>
+              <a href={"https://github.com/jenkinsci/jenkins/pull/" + change.pull}>
+                {" pull " + change.pull + ","}
+              </a>
+            </span>
+          )}
+        </li>
+      ))}
       </section>
     </>
     )}
@@ -73,7 +133,7 @@ query {
   allWeeklyYaml(sort: {date: DESC}, limit: 30) {
     edges {
       node {
-        date(formatString: "YYYY-DD-MM")
+        date(formatString: "YYYY-MM-DD")
         version
         banner
         changes {
