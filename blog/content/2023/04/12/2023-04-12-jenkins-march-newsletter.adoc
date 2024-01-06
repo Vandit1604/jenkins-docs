@@ -18,7 +18,7 @@ image:/images/images/post-images/2023/02/07/2023-02-07-jenkins-newsletter/center
 [[Governance]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/governance.png[Governance Update]
 
-Contributed by: author:markewaite[Mark Waite]
+Contributed by: link:/author/markewaite/[Mark Waite]
 
 Jenkins' installers for Debian and Red Hat have all been signed with new PGP private keys.
 Refer to the Jenkins link:/blog/2023/03/27/repository-signing-keys-changing/[blog post] for more details.
@@ -40,7 +40,7 @@ Thanks to all involved for resolving the issue.
 [[security-fixes]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/security.png[Security Update]
 
-Contributed by: author:kguerroudj[Kevin Guerroudj]
+Contributed by: link:/author/kguerroudj/[Kevin Guerroudj]
 
 Two security advisories have been published during the month of March:
 
@@ -53,7 +53,7 @@ Two security advisories have been published during the month of March:
 
 [[infrastructure]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/infrastructure.png[Infrastructure Update]
-Contributed by: author:dduportal[Damien Duportal]
+Contributed by: link:/author/dduportal/[Damien Duportal]
 
 Over the course of March, the Jenkins infrastructure team has worked to provide several enhancements and updates including:
 
@@ -68,7 +68,7 @@ Over the course of March, the Jenkins infrastructure team has worked to provide 
 [[modern-ui]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/ui_ux.png[User Experience Update]
 
-Contributed by: author:markewaite[Mark Waite]
+Contributed by: link:/author/markewaite/[Mark Waite]
 
 The Jenkins user experience continues to improve thanks to the efforts of many contributors, with special thanks to link:https://github.com/janfaracik[Jan Faracik] and the many reviewers involved in the improvements.
 
@@ -91,10 +91,10 @@ Thanks to Wadeck Follonier for the implementation and thanks to all those who re
 
 [[documentation]]
 image:/images/images/post-images/2023/02/07/2023-02-07-jenkins-newsletter/documentation.png[Documentation Update]
-Contributed by: author:kmartens27[Kevin Martens]
+Contributed by: link:/author/kmartens27/[Kevin Martens]
 
 Over the course of March, there were 7 blog posts published, featuring several different authors.
-link:/blog/authors/gounthar/[Bruno Verachten] has shared his experiences using Jenkins in intriguing ways, as well as starting a new series of posts regarding Android and Jenkins.
+link:/author/gounthar/[Bruno Verachten] has shared his experiences using Jenkins in intriguing ways, as well as starting a new series of posts regarding Android and Jenkins.
 We also crossed into triple digits (101) for the number of pull requests merged this month for jenkins.io alone.
 Along with recent UI updates, the Jenkins documentation is being updated to reflect the simplified Manage Jenkins settings names.
 Thanks to all of the continuing and new contributors, all of your work helps support both the Jenkins project and the Open-Source community.
@@ -102,13 +102,13 @@ Thanks to all of the continuing and new contributors, all of your work helps sup
 [[platform]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/platform-modernization.png[Platform Modernization Update]
 
-Contributed by: author:gounthar[Bruno Verachten]
+Contributed by: link:/author/gounthar/[Bruno Verachten]
 
 Over the course of March, the Jenkins platform team provided several updates and improvements.
 These improvements include:
 
 * Jenkins 2.397 and 2.387.2 both using new Linux repository signing keys.
-** There is a link:/blog/2023/03/27/repository-signing-keys-changing/[great article] by author:markewaite[Mark Waite] to explain why the keys have changed and how to update accordingly.
+** There is a link:/blog/2023/03/27/repository-signing-keys-changing/[great article] by link:/author/markewaite/[Mark Waite] to explain why the keys have changed and how to update accordingly.
 ** Nothing has to be done for Jenkins Docker installation, because the key is not required for container installations, as we manage the service ourselves in the container.
 * Docker end of open source software images (link:https://github.com/jenkins-infra/helpdesk/issues/3457[Docker announcement] with later changes)
 ** The old jenkinsci handle could have gone away, as it was not protected by OSS organization, before Docker changed their mind.
@@ -142,7 +142,7 @@ Fortunately, Mark Waite and other members of the community managed to get a new 
 [[outreach]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/outreach-and-advocacy.png[Outreach and advocacy Update]
 
-Contributed by: author:alyssat[Alyssa Tong]
+Contributed by: link:/author/alyssat/[Alyssa Tong]
 
 link:https://www.socallinuxexpo.org/scale/20x[*SCALE 20X#*]
 

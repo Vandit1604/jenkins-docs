@@ -18,7 +18,7 @@ image:/images/images/post-images/2023/02/07/2023-02-07-jenkins-newsletter/center
 [[outreach]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/outreach-and-advocacy.png[Outreach and advocacy Update]
 
-Contributed by: author:alyssat[Alyssa Tong]
+Contributed by: link:/author/alyssat/[Alyssa Tong]
 
 == FOSDEM 2023
 
@@ -56,7 +56,7 @@ image:/images/images/post-images/2023/03/10/2023-03-10-jenkins-newsletter/image4
 
 [[infrastructure]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/infrastructure.png[Infrastructure Update]
-Contributed by: author:dduportal[Damien Duportal]
+Contributed by: link:/author/dduportal/[Damien Duportal]
 
 Following FOSDEM, where most of the infrastructure team was present physically, February was a busy month for the Jenkins Infrastructure team:
 
@@ -70,16 +70,16 @@ The artifact caching proxy is implemented on our three cloud providers, so that 
 
 [[documentation]]
 image:/images/images/post-images/2023/02/07/2023-02-07-jenkins-newsletter/documentation.png[Documentation Update]
-Contributed by: author:kmartens27[Kevin Martens]
+Contributed by: link:/author/kmartens27/[Kevin Martens]
 
 February was a busy month for the Jenkins project.
 We want to highlight several blog posts from various authors such as:
 
 * Our link:/blog/2023/02/21/thoughts-on-FOSDEM-2023/[FOSDEM recap], including insights from the Jenkins participants at the event
-* The link:/blog/2023/02/23/cdf-awards/[Jenkins contributor awards] by author:alyssat[Alyssa Tong]
-* Multiple posts regarding link:/blog/2023/02/01/gsoc-update/[Google Summer of Code] and link:/blog/2023/02/23/gsoc2023-announcement/[our participation] from author:jmmeessen[Jean-Marc Meessen]
+* The link:/blog/2023/02/23/cdf-awards/[Jenkins contributor awards] by link:/author/alyssat/[Alyssa Tong]
+* Multiple posts regarding link:/blog/2023/02/01/gsoc-update/[Google Summer of Code] and link:/blog/2023/02/23/gsoc2023-announcement/[our participation] from link:/author/jmmeessen/[Jean-Marc Meessen]
 * Our link:/blog/2023/02/07/jenkins-newsletter/[January newsletter] from the Jenkins SIG leaders
-* A link:/blog/2023/02/28/build-msi-locally/[tutorial on building a Jenkins MSI] on a Windows machine by author:gounthar[Bruno Verachten]
+* A link:/blog/2023/02/28/build-msi-locally/[tutorial on building a Jenkins MSI] on a Windows machine by link:/author/gounthar/[Bruno Verachten]
 
 We've also received numerous pull requests from contributors that are getting started with Jenkins, as well as several excited participants of the Google Summer of Code.
 For all of the work and energy you're putting into the Jenkins project, we extend our deepest gratitude.
@@ -87,7 +87,7 @@ For all of the work and energy you're putting into the Jenkins project, we exten
 [[Governance]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/governance.png[Governance Update]
 
-Contributed by: author:markewaite[Mark Waite]
+Contributed by: link:/author/markewaite/[Mark Waite]
 
 The Jenkins governance board met once in February, resolved several action items, and noted the progress on projects with sponsors like JFrog and Atlassian.
 We're sincerely grateful for the sponsorships provided by those generous companies and many other companies.
@@ -95,7 +95,7 @@ We're sincerely grateful for the sponsorships provided by those generous compani
 [[platform]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/platform-modernization.png[Platform Modernization Update]
 
-Contributed by: author:gounthar[Bruno Verachten]
+Contributed by: link:/author/gounthar/[Bruno Verachten]
 
 As part of our ongoing work, we are considering CentOS 7 and its eventual end of life.
 There is a proposal to deprecate the Centos `7` Jenkins controller Docker images.
@@ -125,9 +125,9 @@ New platforms:
 [[modern-ui]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/ui_ux.png[User Experience Update]
 
-Contributed by: author:markewaite[Mark Waite]
+Contributed by: link:/author/markewaite/[Mark Waite]
 
-User experience improvements continued to arrive in February, thanks to contributions from author:janfaracik[Jan Faracik], author:NotMyFault[Alexander Brandes], author:timja[Tim Jacomb], https://github.com/mawinter69[Markus Winter], and others.
+User experience improvements continued to arrive in February, thanks to contributions from link:/author/janfaracik[Jan Faracik], link:/author/NotMyFault[Alexander Brandes], link:/author/timja[Tim Jacomb], https://github.com/mawinter69/[Markus Winter], and others.
 Look for the improvements in recent weekly releases and in the new Jenkins `2.387.1` LTS release.
 
 The plugin:pipeline-graph-view[pipeline graph viewer plugin] continues to improve its user interface.
@@ -137,7 +137,7 @@ Additionally, build logs are now viewed from the main panel with easier navigati
 [[security-fixes]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/security.png[Security Update]
 
-Contributed by: author:kguerroudj[Kevin Guerroudj]
+Contributed by: link:/author/kguerroudj/[Kevin Guerroudj]
 
 Two security advisories have been published during the month of February:
 

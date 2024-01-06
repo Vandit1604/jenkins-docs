@@ -22,7 +22,6 @@ export const Head = () => <Seo title="Jenkins Upgrade Guide" />;
 export default UpgradeGuide;
 
 export const pageQuery = graphql`
-<<<<<<< HEAD
 query{
   allLtsYaml {
     edges {
@@ -45,34 +44,8 @@ query{
           message
           pull
           pr_title
-=======
-  query {
-    allLtsYaml {
-      edges {
-        node {
-          version
-          date
-          lts_predecessor
-          lts_baseline
-          lts_changes {
-            type
-            category
-            pull
-            issue
-            message
-            pr_title
-          }
-          changes {
-            type
-            category
-            issue
-            message
-            pull
-            pr_title
-          }
->>>>>>> 659951e29 (add prettier and eslint)
         }
       }
     }
   }
-`;
+}`;
