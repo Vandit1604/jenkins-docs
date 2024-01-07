@@ -39,8 +39,8 @@ and became worse with the introduction of WebSocket support in Jenkins 2.217 (je
 Docker agent images support WebSockets, so we decided to change the image name to link:https://hub.docker.com/r/jenkins/inbound-agent[jenkins/inbound-agent] so that it prevents further confusion.
 _Inbound agent_ term refers to agent protocols in which the agent initiates the connection to the Jenkins controller through different protocols.
 
-Thanks a lot to link:/blog/authors/slide_o_mix/[Alex Earl] and link:https://github.com/krufab[krufab] for the repository restructuring groundwork which made the renaming possible!
-Also thanks to link:/blog/authors/timja/[Tim Jacomb], link:/blog/authors/markyjackson-taulia/[Marky Jackson], link:/blog/authors/markewaite[Mark Waite], link:https://github.com/kuisathaverat[Ivan Fernandez Calvo] and other contributors for their reviews and testing.
+Thanks a lot to link:/author/slide_o_mix/[Alex Earl] and link:https://github.com/krufab[krufab] for the repository restructuring groundwork which made the renaming possible!
+Also thanks to link:/author/timja/[Tim Jacomb], link:/author/markyjackson-taulia/[Marky Jackson], link:/author/markewaite[Mark Waite], link:https://github.com/kuisathaverat[Ivan Fernandez Calvo] and other contributors for their reviews and testing.
 
 == Upgrading and Compatibility Notes
 

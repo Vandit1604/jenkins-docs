@@ -36,7 +36,7 @@ Let’s explore how JDK21, Jenkins, and RISC-V might be connected, at least in t
 == Java Version Planning for Jenkins
 
 The ink's barely dry on the plans for which versions of the JDK the Jenkins project will support this year and the next.
-What I'm about to spill is just a snippet from a proposal whipped up by author:markewaite[Mark Waite].
+What I'm about to spill is just a snippet from a proposal whipped up by link:/author/markewaite/[Mark Waite].
 For now, it's about as definitive as a weather forecast.
 
 There'll be more detailed blog posts down the line when the final decision is made and the roadmap is as clear as a bell.
@@ -78,7 +78,7 @@ configurations: [
 ]
 ----
 
-Furthermore, thanks to the work of the community (and particularly author:basil[Basil Crow]), Jenkins `2.419` and `2.420` no longer require the `--enable-future-java` flag for JDK 21 beta.
+Furthermore, thanks to the work of the community (and particularly link:/author/basil/[Basil Crow]), Jenkins `2.419` and `2.420` no longer require the `--enable-future-java` flag for JDK 21 beta.
 Jenkins `2.418` and prior require the flag for Java 21 beta.
 
 [source,shell]

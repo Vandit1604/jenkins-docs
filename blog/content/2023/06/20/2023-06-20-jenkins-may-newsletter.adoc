@@ -17,7 +17,7 @@ image:/images/images/post-images/2023/02/07/2023-02-07-jenkins-newsletter/center
 [[security-fixes]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/security.png[Security Update]
 
-Contributed by: author:wadeck[Wadeck Follonier]
+Contributed by: link:/author/wadeck/[Wadeck Follonier]
 
 * A link:https://github.com/jenkinsci/docker/blob/master/SECURITY.md[Security Policy] was added for the Docker images of the project.
 ** Due to multiple reports about CVEs present in the Docker images the project was publishing, we wanted to clarify the situation.
@@ -29,7 +29,7 @@ Contributed by: author:wadeck[Wadeck Follonier]
 [[Governance]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/governance.png[Governance Update]
 
-Contributed by: author:markewaite[Mark Waite]
+Contributed by: link:/author/markewaite/[Mark Waite]
 
 Several significant initiatives are already in progress within the Jenkins project.
 
@@ -49,7 +49,7 @@ We're also excited to have additional efforts in:
 
 [[infrastructure]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/infrastructure.png[Infrastructure Update]
-Contributed by: author:dduportal[Damien Duportal]
+Contributed by: link:/author/dduportal/[Damien Duportal]
 
 * The Cloud Cost Controls effort has continued by optimizing resource usage, resulting in:
 ** Decreased the AWS bill of $ 3,000 (14,000 -> 11,000).
@@ -62,7 +62,7 @@ Contributed by: author:dduportal[Damien Duportal]
 [[modern-ui]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/ui_ux.png[User Experience Update]
 
-Contributed by: author:markewaite[Mark Waite]
+Contributed by: link:/author/markewaite/[Mark Waite]
 
 The user experience SIG continues to improve the look and feel and the accessibility of the Jenkins user interface.
 
@@ -75,7 +75,7 @@ We particularly thank the usability and accessibility team at Deutsche Telekom I
 [[platform]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/platform-modernization.png[Platform Modernization Update]
 
-Contributed by: author:gounthar[Bruno Verachten]
+Contributed by: link:/author/gounthar/[Bruno Verachten]
 
 * Deprecation
 ** Red Hat Enterprise Linux 7 (and derivatives) early end of life
@@ -87,7 +87,7 @@ These changes will be visible in upcoming releases and container images.
 **** May 30 - First weekly release containing the warning - `2.407`
 **** Nov 16 - RHEL 7 support ends in Jenkins
 * Ongoing work
-** author:dduportal[Damien Duportal] is actively working on code factorization, specifically targeting a single repository for all agent images.
+** link:/author/dduportal/[Damien Duportal] is actively working on code factorization, specifically targeting a single repository for all agent images.
 *** This will streamline maintenance tasks, such as fixing CVEs.
 *** The first phase for JDK versions has already been completed, resulting in significantly reduced code size.
 *** Additionally, efforts are underway to merge two agents, aiming for synchronized release cycles.
@@ -104,7 +104,7 @@ Thank you, link:https://github.com/ksalerno99[Kenneth], for your valuable contri
 
 [[documentation]]
 image:/images/images/post-images/2023/02/07/2023-02-07-jenkins-newsletter/documentation.png[Documentation Update]
-Contributed by: author:markewaite[Mark Waite]
+Contributed by: link:/author/markewaite/[Mark Waite]
 
 We're pleased to welcome several new documentation contributions, including our Google Summer of Code contributors:
 
@@ -121,16 +121,16 @@ Thanks so much to our documentation contributors.
 [[outreach]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/outreach-and-advocacy.png[Outreach and advocacy Update]
 
-Contributed by: author:alyssat[Alyssa Tong]
+Contributed by: link:/author/alyssat/[Alyssa Tong]
 
 image:/images/images/post-images/2023/06/20/2023-06-20-jenkins-may-newsletter/image2.png[image,width=839,Jenkins Contributor Awards 2023]
 
 Every year, the community nominates and votes for three outstanding difference makers in the Jenkins community: Most Valuable Advocate, Security MVP, and Most Valuable Contributor.
 Congratulations go to:
 
-* author:daniel-beck[Daniel Beck] - Security MVP.
-* author:janfaracik[Jan Faracik] - Most Valuable Contributor.
-* author:markewaite[Mark Waite] - Most Valuable Advocate.
+* link:/author/daniel-beck/[Daniel Beck] - Security MVP.
+* link:/author/janfaracik/[Jan Faracik] - Most Valuable Contributor.
+* link:/author/markewaite/[Mark Waite] - Most Valuable Advocate.
 
 Read what makes them link:/blog/2023/05/16/jenkins-2023-award-winners/[outstanding contributors].
 

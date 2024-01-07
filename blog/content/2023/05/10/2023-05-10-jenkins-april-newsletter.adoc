@@ -19,7 +19,7 @@ image:/images/images/post-images/2023/02/07/2023-02-07-jenkins-newsletter/center
 [[security-fixes]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/security.png[Security Update]
 
-Contributed by: author:wadeck[Wadeck Follonier]
+Contributed by: link:/author/wadeck/[Wadeck Follonier]
 
 In April, there was one advisory regarding plugins published on link:/security/advisory/2023-04-12/[April 12]:
 
@@ -30,7 +30,7 @@ In April, there was one advisory regarding plugins published on link:/security/a
 [[Governance]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/governance.png[Governance Update]
 
-Contributed by: author:markewaite[Mark Waite]
+Contributed by: link:/author/markewaite/[Mark Waite]
 
 The Chinese language Jenkins website is being retired.
 Translation updates have not been made in two years and users are perplexed when the installation instructions and other instructions are no longer correct.
@@ -38,7 +38,7 @@ The Chinese localization of Jenkins continues to be available, but the links to 
 
 [[infrastructure]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/infrastructure.png[Infrastructure Update]
-Contributed by: author:dduportal[Damien Duportal]
+Contributed by: link:/author/dduportal/[Damien Duportal]
 
 * Cloud Cost Controls with improved resource cleanups and VM usage optimization to face the increased rate of builds on ci.jenkins.io:
 ** Decreased the AWS bill from $19,000 to $14,000, resulting in savings of $5,000.
@@ -54,22 +54,22 @@ Thanks to DigitalOcean for their continued support!
 [[modern-ui]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/ui_ux.png[User Experience Update]
 
-Contributed by: author:markewaite[Mark Waite]
+Contributed by: link:/author/markewaite/[Mark Waite]
 
 An accessibility assessment of Jenkins has been provided by Deutsche Telekom.
 The assessment is being used by Cristina Pizzagalli and others to improve the Jenkins user experience for users with disabilities.
 Contributors that are interested in helping with the accessibility improvements should include their comments on link:https://issues.jenkins.io/browse/JENKINS-71153[JENKINS-71153].
 
-Mobile users of Jenkins will now see a card layout of the Jenkins user interface, thanks to work done by author:janfaracik[Jan Faracik].
+Mobile users of Jenkins will now see a card layout of the Jenkins user interface, thanks to work done by link:/author/janfaracik/[Jan Faracik].
 
 The Prototype.js JavaScript library that is widely used in Jenkins core and Jenkins plugins is being replaced.
-Special thanks to author:timja[Tim Jacomb], author:basil[Basil Crow], author:NotMyFault[Alexander Brandes], and several others for their work replacing that library.
+Special thanks to link:/author/timja[Tim Jacomb], link:/author/basil[Basil Crow], link:/author/NotMyFault/[Alexander Brandes], and several others for their work replacing that library.
 Contributors that would like to help with the JavaScript work are invited to assign themselves one of the issues listed in link:https://issues.jenkins.io/browse/JENKINS-70906[JENKINS-70906].
 
 [[platform]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/platform-modernization.png[Platform Modernization Update]
 
-Contributed by: author:gounthar[Bruno Verachten]
+Contributed by: link:/author/gounthar/[Bruno Verachten]
 
 Over the course of April, the Jenkins platform saw several updates and improvements.
 These improvements include:
@@ -92,14 +92,14 @@ Thank you so much for your contributions link:https://github.com/ksalerno99[Kenn
 *** Upgrade of Debian from `bullseye-20230320` to `bullseye-20230411` in `11/17/bullseye`. (link:https://github.com/jenkinsci/docker-agent/pull/403[#403])
 *** Added `ppc64le` support back into the Jenkins CI agent Docker build. (link:https://github.com/jenkinsci/docker-agent/pull/391[#391]) link:https://github.com/ksalerno99[@ksalerno99]
 *** Exposing the default image user to the environment variable user. (link:https://github.com/jenkinsci/docker-agent/pull/400[#400]) link:https://github.com/dduportal[@dduportal]
-* author:markewaite[Mark Waite] is working on a link:https://github.com/jenkinsci/jenkins/pull/7913[system] that would warn when operating system end-of-life is approaching.
+* link:/author/markewaite[Mark Waite] is working on a link:https://github.com/jenkinsci/jenkins/pull/7913/[system] that would warn when operating system end-of-life is approaching.
 
 [[documentation]]
 image:/images/images/post-images/2023/02/07/2023-02-07-jenkins-newsletter/documentation.png[Documentation Update]
-Contributed by: author:kmartens27[Kevin Martens]
+Contributed by: link:/author/kmartens27/[Kevin Martens]
 
 Over the course of April, there were 4 blog posts published, featuring seven different authors.
-author:gounthar[Bruno Verachten] continues his series on building android apps in Jenkins.
+link:/author/gounthar/[Bruno Verachten] continues his series on building android apps in Jenkins.
 As Google Summer of Code begins, we want to acknowledge and thank all of the applicants for their efforts.
 Thanks to all of the continuing and new contributors, all of your work helps support both the Jenkins project and the Open-Source community.
 
@@ -109,7 +109,7 @@ They have provided us with an additional $8,400 credit as the Infrastructure tea
 [[outreach]]
 image:/images/images/post-images/2023/01/12/jenkins-newsletter/outreach-and-advocacy.png[Outreach and advocacy Update]
 
-Contributed by: author:alyssat[Alyssa Tong]
+Contributed by: link:/author/alyssat/[Alyssa Tong]
 
 *Jenkins in Google Summer of Code (GSoC)*
 
@@ -123,7 +123,7 @@ Best of luck to all GSoC participants!
 *Jenkins at cdCon + GitOpsCon*
 
 April was all about preparations for cdCon, which took place on May 8–9, 2023 in Vancouver, Canada as link:https://events.linuxfoundation.org/cdcon-gitopscon/[cdCon + GitOpsCon], co-organized with the link:https://cncf.io/[Cloud Native Computing Foundation (CNCF)].
-Members of the Jenkins Governance Board, long-time Jenkins users and contributors author:MarkEWaite[Mark Waite] and author:NotMyFault[Alexander Brandes] were in attendance.
+Members of the Jenkins Governance Board, long-time Jenkins users and contributors link:/author/MarkEWaite[Mark Waite] and link:/author/NotMyFault/[Alexander Brandes] were in attendance.
 Mark took part in the link:https://sched.co/1Js9F[Graduated Projects Keynote Panel], discussing Jenkins Community’s experiences with graduation and sharing his thoughts on why graduation matters for the community and users of Jenkins.
 Recordings for the conference will be available in approximately two weeks, on the link:https://www.youtube.com/channel/UC7HcWhSetq6nTlpMXPHKz_A[CDF YouTube channel].
 
