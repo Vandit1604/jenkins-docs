@@ -9,7 +9,7 @@ const { rhythm } = typography;
 
 const EventPage = ({ data }) => {
   const event = data.allFile.nodes[0].childrenAsciidoc
-  console.log(event[0].pageAttributes)
+  
   const [selectedTimeZone, setSelectedTimeZone] = useState(""); // State to store the selected time zone
 
   useEffect(() => {
@@ -24,6 +24,10 @@ const EventPage = ({ data }) => {
 
   // Generate the calendar iframe URL
   const calendarSrc = `https://calendar.google.com/calendar/b/1/embed?showCalendars=0&height=600&wkst=1&bgcolor=%23FFFFFF&mode=WEEK&src=4ss12f0mqr3tbp1t2fe369slf4%40group.calendar.google.com&color=%2329527A&ctz=${encodeURIComponent(selectedTimeZone || "auto")}`;
+
+  // To hide events after their ending date
+  let currentDate = new Date();
+  let eventDate = new Date(event[0].pageAttributes.eventstartdate);
 
   return (
     <IndexPageLayout>
@@ -82,15 +86,21 @@ const EventPage = ({ data }) => {
       <section>
         <h2>Major Events</h2>
         <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
-          <MajorEventCard
-            title={event[0].pageAttributes.eventtitle}
-            location={event[0].pageAttributes.eventlocation}
-            date={event[0].pageAttributes.eventstartdate}
-            link={event[0].pageAttributes.eventlink}
-            description={<span dangerouslySetInnerHTML={{ __html: event[0].html }} />}
-          />
+          {
+            
+            (currentDate < eventDate) ?
+              <MajorEventCard
+                title={event[0].pageAttributes.eventtitle}
+                location={event[0].pageAttributes.eventlocation}
+                date={event[0].pageAttributes.eventstartdate}
+                link={event[0].pageAttributes.eventlink}
+                description={<span dangerouslySetInnerHTML={{ __html: event[0].html }} />}
+              /> : <p>There are no upcoming major events registered in the database.
+                If you see that your event is missing, please submit a change to our website.
+                <br /><a href="https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc#adding-an-event">&gt; How to add an event to the Jenkins website?</a>
+              </p>
+          }
         </div>
-
       </section>
       <section>
         <h2>Event Calendar</h2>
