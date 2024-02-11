@@ -1,11 +1,10 @@
 import CollectionsBookmarkOutlinedIcon from "@mui/icons-material/CollectionsBookmarkOutlined";
-import ContentCopyOutlinedIcon from '@mui/icons-material/ContentCopyOutlined';
-import Button from '@mui/material/Button';
 import { Link, graphql } from "gatsby";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import jenkinsLogo from "../../../docs/images/modules/ROOT/assets/images/logos/jenkins/jenkins.png";
-import Seo from "../components/Seo";
 import CopyToClipboard from "../components/CopyToClipboard";
+import Seo from "../components/Seo";
+import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import {
     downloadTable,
     listGroup,
@@ -18,36 +17,33 @@ import typography from "../utils/typography";
 const { rhythm } = typography;
 
 const DownloadPage = ({ data }) => {
-    const [stableSha256, setStableSha256] = useState('');
-    const [latestSha256, setLatestSha256] = useState('');
+    const [sha256Values, setSha256Values] = useState({
+        stable: '',
+        latest: ''
+    });
 
     useEffect(() => {
-        const stableSha256Url = `https://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/${data.site.siteMetadata.stable}/jenkins-war-${data.site.siteMetadata.stable}.war.sha256`;
-        fetchSha256Value(stableSha256Url, setStableSha256);
+        const fetchSha256Values = async () => {
+            try {
+                const stableSha256Url = `https://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/${data.site.siteMetadata.stable}/jenkins-war-${data.site.siteMetadata.stable}.war.sha256`;
+                const latestSha256Url = `https://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/${data.site.siteMetadata.latest}/jenkins-war-${data.site.siteMetadata.latest}.war.sha256`;
 
-        const latestSha256Url = `https://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/${data.site.siteMetadata.latest}/jenkins-war-${data.site.siteMetadata.latest}.war.sha256`;
-        fetchSha256Value(latestSha256Url, setLatestSha256);
-    }, [data.site.siteMetadata.stable, data.site.siteMetadata.latest]);
+                const [stableResponse, latestResponse] = await Promise.all([
+                    fetch( stableSha256Url ).then(response => response.text()),
+                    fetch( latestSha256Url ).then(response => response.text())
+                ]);
 
-    const fetchSha256Value = async (url, setSha256) => {
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
+                setSha256Values({
+                    stable: stableResponse.trim(),
+                    latest: latestResponse.trim()
+                });
+            } catch (error) {
+                console.error('Error fetching SHA256 values:', error);
             }
-            const sha256Value = await response.text();
-            setSha256(sha256Value.trim()); // Trim any leading or trailing whitespaces
-        } catch (error) {
-            console.error('Error fetching SHA256 value:', error);
-            setSha256('Error fetching SHA256 value');
-        }
-    };
+        };
 
-    function copyToClipboard(text) {
-        navigator.clipboard.writeText(text)
-            .then(() => alert('Copied to clipboard'))
-            .catch((error) => console.error('Failed to copy:', error));
-    }
+        fetchSha256Values();
+    }, [data.site.siteMetadata.stable, data.site.siteMetadata.latest]);
 
     return (
         <IndexPageLayout>
@@ -147,7 +143,7 @@ const DownloadPage = ({ data }) => {
                 </ol>
                 <div className={downloadTable}>
                     <div style={{ width: "45%" }}>
-                        <strong>Download Jenkins {data.site.siteMetadata.stable} LTS for:</strong>
+                        <strong><FileDownloadOutlinedIcon style={{ fontSize: 'large'}}/>{' '}Download Jenkins {data.site.siteMetadata.stable} LTS for:</strong>
                         <ul className={listGroup}>
                             <li>
                                 <a href={'https://get.jenkins.io/war-stable/' + data.site.siteMetadata.stable + '/jenkins.war'} target="_blank">
@@ -157,9 +153,9 @@ const DownloadPage = ({ data }) => {
                                 <div style={{ fontSize: 'x-small', overflowWrap: 'break-word', wordWrap: 'break-word', zIndex: "10" }}>
                                     <p style={{ display: 'flex', alignItems: 'center' }}>
                                         <span>
-                                            SHA-256: {stableSha256}
+                                            SHA-256: {sha256Values.stable}
                                         </span>
-                                        <CopyToClipboard text={stableSha256} />
+                                        <CopyToClipboard text={sha256Values.stable} />
                                     </p>
                                 </div>
                             </li>
@@ -285,7 +281,7 @@ const DownloadPage = ({ data }) => {
                         </ul>
                     </div>
                     <div style={{ width: "45%" }}>
-                        <strong>Download Jenkins {data.site.siteMetadata.latest} LTS for:</strong>
+                        <strong><FileDownloadOutlinedIcon style={{ fontSize: 'large'}}/>{' '}Download Jenkins {data.site.siteMetadata.latest} LTS for:</strong>
                         <ul className={listGroup}>
                             <li>
                                 <a href={'https://get.jenkins.io/war/' + data.site.siteMetadata.latest + '/jenkins.war'} target="_blank">
@@ -295,9 +291,9 @@ const DownloadPage = ({ data }) => {
                                 <div style={{ fontSize: 'x-small', overflowWrap: 'break-word', wordWrap: 'break-word' }}>
                                     <p style={{ display: 'flex', alignItems: 'center' }}>
                                         <span>
-                                            SHA-256: {latestSha256}
+                                            SHA-256: {sha256Values.latest}
                                         </span>
-                                        <CopyToClipboard text={latestSha256} />
+                                        <CopyToClipboard text={sha256Values.latest} />
                                     </p>
                                 </div>
                             </li>
