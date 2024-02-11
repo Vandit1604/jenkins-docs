@@ -76,8 +76,8 @@ const ChangelogLTS = ({ data }) => (
                 ) : null}
                 <h4>Changes since {node.lts_baseline ?? ""}:</h4>
                 {node.changes?.map((change) => (
-                    <ul>
-                        <li>
+                    <ul className={image}>
+                        <li className={change.type}>
                         <span dangerouslySetInnerHTML={{ __html: change.message }} />
                         {"("}
                         {change.references && change.references.length > 0 && (
