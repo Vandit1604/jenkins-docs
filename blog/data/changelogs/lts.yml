@@ -2267,8 +2267,8 @@
 
 - version: 2.164.1
   date: 2019-03-13
-  lts_predecessor: 2.150.3
-  lts_baseline: 2.164
+  lts_predecessor: "2.150.3"
+  lts_baseline: "2.164"
   changes: []
   lts_changes:
 # Java 11
@@ -2419,8 +2419,8 @@
 
 - version: 2.176.1
   date: 2019-06-10
-  lts_predecessor: 2.164.3
-  lts_baseline: 2.176
+  lts_predecessor: "2.164.3"
+  lts_baseline: "2.176"
   lts_changes:
 # Major changes
   - type: major rfe
@@ -2659,7 +2659,7 @@
 
 - version: 2.190.1
   date: 2019-09-25
-  lts_predecessor: 2.176.4
+  lts_predecessor: "2.176.4"
   lts_baseline: '2.190'
   changes: # compared to lts_baseline
     - type: security
@@ -2843,7 +2843,7 @@
     <b>Configuration as code plugin</b> users upgrading to Jenkins 2.204.1 should review the
     <a href="/doc/upgrade-guide/2.204/#global-configuration-save-and-configuration-as-code-plugin">LTS upgrade guide global configuration save</a> topic and the
     <a href="/doc/upgrade-guide/2.204/#remove-browser-based-metadata-download-settings">LTS upgrade guide download settings</a> topic
-  lts_predecessor: 2.190.3
+  lts_predecessor: "2.190.3"
   lts_baseline: '2.204'
   changes: # compared to lts_baseline
     - type: rfe
@@ -3170,7 +3170,7 @@
 
 - version: "2.222.1"
   date: 2020-03-25
-  lts_predecessor: 2.204.6
+  lts_predecessor: "2.204.6"
   lts_baseline: '2.222'
   banner: >
     Global build discarder configuration is not loaded from disk when Jenkins starts (<a href="https://issues.jenkins.io/browse/JENKINS-61688">JENKINS-61688</a>).

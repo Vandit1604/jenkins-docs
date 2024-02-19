@@ -132,7 +132,7 @@ const ChangelogLTS = ({ data }) => {
                                     onClick={() => rate(node.version, -2)} />
                                 <br />
                                 {ratingData[node.version].slice(3).some((_, index) => index % 2 === 0) && (
-                                    <React.Fragment>
+                                    <div style={{ marginBottom: "1rem" }}>
                                         <span style={{ display: "inline" }}>Community reported issues: </span>
                                         {ratingData[node.version].slice(3).reduce((acc, value, index, array) => {
                                             if (index % 2 === 0) {
@@ -148,12 +148,11 @@ const ChangelogLTS = ({ data }) => {
                                             }
                                             return acc;
                                         }, [])}
-                                    </React.Fragment>
+                                    </div>
                                 )}
                             </div>
                         )}
                     </div>
-
                     {
                         node.banner ? (
                             <div className={banner}>
@@ -161,10 +160,12 @@ const ChangelogLTS = ({ data }) => {
                             </div>
                         ) : null
                     }
-                    < h4 > Changes since {node.version ?? ""}:</h4>
-                    {
-                        node.changes?.map((change) => (
-                            <ul>
+                    {node.lts_baseline &&
+                        <h4> Changes since {node.lts_baseline}:</h4>
+                    }
+                    <ul>
+                        {
+                            node.changes?.map((change) => (
                                 <li className={change.type}>
                                     <span dangerouslySetInnerHTML={{ __html: change.message }} />
                                     {"("}
@@ -240,9 +241,9 @@ const ChangelogLTS = ({ data }) => {
                                     )}
                                     {") "}
                                 </li>
-                            </ul>
-                        ))
-                    }
+                            ))
+                        }
+                    </ul>
 
                     {
                         node.lts_changes && node.lts_changes.length > 0 && (
@@ -329,31 +330,32 @@ export const Head = () => <Seo title="Jenkins LTS Changelogs" />;
 export default ChangelogLTS;
 
 export const pageQuery = graphql`
-            {
-                allLtsYaml(sort: {date: DESC}) {
-                edges {
-                node {
-                version
+{
+    allLtsYaml(sort: {date: DESC}) {
+      edges {
+        node {
+          version
           date(formatString: "YYYY-MM-DD")
-            lts_predecessor
-            banner
-            lts_changes {
-                type
+          lts_predecessor
+          lts_baseline
+          banner
+          lts_changes {
+            type
             category
             pull
             issue
             message
             pr_title
             references {
-                issue
+              issue
               pull
-            url
-            title
+              url
+              title
             }
             authors
           }
-            changes {
-                type
+          changes {
+            type
             category
             issue
             message
@@ -361,13 +363,14 @@ export const pageQuery = graphql`
             pr_title
             authors
             references {
-                url
+              url
               title
-            issue
-            pull
+              issue
+              pull
             }
           }
         }
       }
     }
-  }`;
+  }
+`;
