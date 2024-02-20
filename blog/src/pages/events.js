@@ -86,12 +86,12 @@ const EventPage = ({ data }) => {
       <section>
         <h2>Major Events</h2>
         {console.log()}
-        <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+        <div style={{ marginLeft: "2rem" }}>
           {
             // show events 30 days before the event date
             (currentDate < eventDate && Math.round((eventDate.getTime() - currentDate.getTime()) / (1000 * 3600 * 24)) < 30) ?
               <MajorEventCard
-                title={event[0].pageAttributes.eventtitle}
+                title={event[0].document.title}
                 location={event[0].pageAttributes.eventlocation}
                 date={event[0].pageAttributes.eventstartdate}
                 link={event[0].pageAttributes.eventlink}
