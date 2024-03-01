@@ -26,6 +26,14 @@ module.exports = {
                 path: `${__dirname}/authors`,
             },
         },
+        `gatsby-transformer-asciidoc`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `events`,
+                path: `${__dirname}/data/events`,
+            },
+        },
         `gatsby-transformer-yaml`,
         {
             resolve: `gatsby-source-filesystem`,

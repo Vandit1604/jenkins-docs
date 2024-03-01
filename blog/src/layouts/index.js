@@ -1,18 +1,19 @@
 import React from "react";
-import typography from "../utils/typography";
-const { rhythm } = typography;
+import { useTheme } from "@mui/material";
 
 const IndexPageLayout = ({ children }) => {
+    const theme = useTheme();
+
     return (
         <>
             <div
                 style={{
                     margin: `0 auto`,
-                    marginTop: rhythm(1.5),
-                    marginBottom: rhythm(1.5),
+                    marginTop: theme.spacing(10),
+                    marginBottom: theme.spacing(5),
                     maxWidth: 1500,
-                    paddingLeft: rhythm(3 / 4),
-                    paddingRight: rhythm(3 / 4),
+                    paddingLeft: theme.spacing(10),
+                    paddingRight: theme.spacing(10),
                 }}
             >
                 {children}
