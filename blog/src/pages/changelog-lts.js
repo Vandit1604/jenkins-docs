@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Link, graphql } from 'gatsby';
-import PageName from '../components/PageName';
-import Seo from '../components/Seo';
+import React, { useCallback, useEffect, useState } from "react";
+import { graphql, Link } from "gatsby";
+import PageName from "../components/PageName";
+import Seo from "../components/Seo";
 import {
     banner,
     bug,
@@ -14,9 +14,8 @@ import {
     security,
     storm,
     sunny,
-} from '../css/changelog.module.css';
-import IndexPageLayout from '../layouts';
-
+} from "../css/changelog.module.css";
+import IndexPageLayout from "../layouts";
 
 const ChangelogLTS = ({ data }) => {
     const [ratingData, setRatingData] = useState({});
@@ -24,50 +23,56 @@ const ChangelogLTS = ({ data }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://rating.jenkins.io/rate/result.php');
+                const response = await fetch("https://rating.jenkins.io/rate/result.php");
                 if (!response.ok) {
-                    throw new Error('Failed to fetch data');
+                    throw new Error("Failed to fetch data");
                 }
                 const scriptText = await response.text();
                 const jsonData = parseDataFromScript(scriptText);
                 setRatingData(jsonData);
             } catch (error) {
-                console.error('Error fetching data:', error);
+                console.error("Error fetching data:", error);
             }
         };
         fetchData();
     }, []);
 
-    useEffect(() => {
-        const rate = (version, rating) => {
-            let issue = '';
-            if (rating <= 0) {
-                issue = prompt('Please provide issue number from our JIRA causing trouble:', '');
+    const rate = useCallback((version, rating) => {
+        let issue = "";
+        if (rating <= 0) {
+            issue = prompt("Please provide issue number from our JIRA causing trouble:", "");
+            if (issue === null) return; // Cancelled
+            if (issue === "") {
+                issue = prompt(
+                    "Are you sure you do not want to provide an issue reference? It really helps us improve Jenkins.\nEnter issue number, or leave empty to skip:",
+                    "",
+                );
                 if (issue === null) return; // Cancelled
-                if (issue === '') {
-                    issue = prompt('Are you sure you do not want to provide an issue reference? It really helps us improve Jenkins.\nEnter issue number, or leave empty to skip:', '');
-                    if (issue === null) return; // Cancelled
-                }
             }
+        }
 
-            const script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = `https://rating.jenkins.io/rate/submit.php?version=${encodeURIComponent(version)}&rating=${rating}&issue=${encodeURIComponent(issue)}`;
-            script.onload = () => { alert('Thanks!'); window.location.reload(); };
-            script.onreadystatechange = () => { // For IE
-                if (script.readyState === 'loaded' || script.readyState === 'complete') {
-                    alert('Thanks!'); window.location.reload();
-                }
-            };
-            document.head.appendChild(script);
+        const script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = `https://rating.jenkins.io/rate/submit.php?version=${encodeURIComponent(
+            version,
+        )}&rating=${rating}&issue=${encodeURIComponent(issue)}`;
+        script.onload = () => {
+            alert("Thanks!");
+            window.location.reload();
         };
-        window.rate = rate; // Expose rate function globally
+        script.onreadystatechange = () => {
+            // For IE
+            if (script.readyState === "loaded" || script.readyState === "complete") {
+                alert("Thanks!");
+                window.location.reload();
+            }
+        };
+        document.head.appendChild(script);
     }, []);
 
     const parseDataFromScript = (scriptText) => {
         const jsonString = scriptText.match(/\{.*\}/s)[0];
-        const jsonData = JSON.parse(jsonString);
-        return jsonData;
+        return JSON.parse(jsonString);
     };
 
     return (
@@ -96,12 +101,13 @@ const ChangelogLTS = ({ data }) => {
                 </div>
             </div>
             <div style={{ margin: "10px", padding: "10px", backgroundColor: "#FFFFCE" }}>
-                See the <Link to="/upgrade-guide">LTS upgrade guide</Link> advice on upgrading Jenkins.
+                See the <Link to="/upgrade-guide">LTS upgrade guide</Link> advice on upgrading
+                Jenkins.
             </div>
             {data.allLtsYaml.edges.map(({ node }) => (
                 <>
                     <h3>
-                        What's new in {node.version} ({node.date}){' '}
+                        What's new in {node.version} ({node.date}){" "}
                     </h3>
                     <div>
                         {ratingData[node.version] && (
@@ -113,7 +119,8 @@ const ChangelogLTS = ({ data }) => {
                                     alt="Sunny"
                                     title="No major issue with this release"
                                     style={{ display: "inline" }}
-                                    onClick={() => rate(node.version, 1)} />
+                                    onClick={() => rate(node.version, 1)}
+                                />
                                 <p style={{ display: "inline" }}>{ratingData[node.version][1]}</p>
                                 <img
                                     className={rateoffset}
@@ -121,7 +128,8 @@ const ChangelogLTS = ({ data }) => {
                                     alt="Cloudy"
                                     title="I experienced notable issues"
                                     style={{ display: "inline" }}
-                                    onClick={() => rate(node.version, -1)} />
+                                    onClick={() => rate(node.version, -1)}
+                                />
                                 <p style={{ display: "inline" }}>{ratingData[node.version][2]}</p>
                                 <img
                                     className={rateoffset}
@@ -129,140 +137,151 @@ const ChangelogLTS = ({ data }) => {
                                     alt="Storm"
                                     title="I had to roll back"
                                     style={{ display: "inline" }}
-                                    onClick={() => rate(node.version, -2)} />
+                                    onClick={() => rate(node.version, -2)}
+                                />
                                 <br />
-                                {ratingData[node.version].slice(3).some((_, index) => index % 2 === 0) && (
+                                {ratingData[node.version]
+                                    .slice(3)
+                                    .some((_, index) => index % 2 === 0) && (
                                     <div style={{ marginBottom: "1rem" }}>
-                                        <span style={{ display: "inline" }}>Community reported issues: </span>
-                                        {ratingData[node.version].slice(3).reduce((acc, value, index, array) => {
-                                            if (index % 2 === 0) {
-                                                acc.push(
-                                                    <React.Fragment key={value}>
-                                                        {array[index + 1]} x
-                                                        <a href={'https://issues.jenkins.io/browse/JENKINS-' + value}>
-                                                            JENKINS-{value}
-                                                        </a>
-                                                        {" "}
-                                                    </React.Fragment>
-                                                );
-                                            }
-                                            return acc;
-                                        }, [])}
+                                        <span style={{ display: "inline" }}>
+                                            Community reported issues:{" "}
+                                        </span>
+                                        {ratingData[node.version]
+                                            .slice(3)
+                                            .reduce((acc, value, index, array) => {
+                                                if (index % 2 === 0) {
+                                                    acc.push(
+                                                        <React.Fragment key={value}>
+                                                            {array[index + 1]} x
+                                                            <a
+                                                                href={
+                                                                    "https://issues.jenkins.io/browse/JENKINS-" +
+                                                                    value
+                                                                }
+                                                            >
+                                                                JENKINS-{value}
+                                                            </a>{" "}
+                                                        </React.Fragment>,
+                                                    );
+                                                }
+                                                return acc;
+                                            }, [])}
                                     </div>
                                 )}
                             </div>
                         )}
                     </div>
-                    {
-                        node.banner ? (
-                            <div className={banner}>
-                                <span dangerouslySetInnerHTML={{ __html: node.banner }} />
-                            </div>
-                        ) : null
-                    }
-                    {node.lts_baseline &&
-                        <h4> Changes since {node.lts_baseline}:</h4>
-                    }
+                    {node.banner ? (
+                        <div className={banner}>
+                            <span dangerouslySetInnerHTML={{ __html: node.banner }} />
+                        </div>
+                    ) : null}
+                    {node.lts_baseline && <h4> Changes since {node.lts_baseline}:</h4>}
                     <ul>
-                        {
-                            node.changes?.map((change) => (
-                                <li className={change.type}>
-                                    <span dangerouslySetInnerHTML={{ __html: change.message }} />
-                                    {"("}
-                                    {change.references && change.references.length > 0 && (
-                                        <>
-                                            {change.references.map((ref) => (
-                                                <span>
-                                                    {ref.issue && (
-                                                        <span>
-
-                                                            <a
-                                                                href={"https://issues.jenkins.io/browse/JENKINS-" + ref.issue}
-                                                            >
-                                                                {" issue " + ref.issue}
-                                                            </a>
-                                                            {", "}
-                                                        </span>
-                                                    )}
-                                                    {ref.url && (
-                                                        <span>
-                                                            <a href={ref.url}>{ref.title}</a>
-                                                            {", "}
-                                                        </span>
-
-                                                    )}
-                                                    {ref.pull && (
-                                                        <span>
-                                                            {", "}
-                                                            <a
-                                                                href={"https://github.com/jenkinsci/jenkins/pull/" +
-                                                                    ref.pull}
-                                                            >
-                                                                {" pull " + ref.pull}
-                                                            </a>
-                                                        </span>
-                                                    )}
-                                                </span>
-                                            ))}
-                                        </>
-                                    )}
-                                    {(!change.references || change.references.length === 0) && (
-                                        <>
-                                            {change.issue && (
-                                                <span>
-                                                    <a
-                                                        href={"https://issues.jenkins.io/browse/JENKINS-" + change.issue}
-                                                    >
-                                                        {" issue " + change.issue}
-                                                    </a>
-                                                    {", "}
-                                                </span>
-                                            )}
-                                            {change.url && (
-                                                <span>
-
-                                                    <a href={change.url}>{change.title}</a>
-                                                    {", "}
-                                                </span>
-                                            )}
-                                            {change.pull && (
-                                                <span>
-
-                                                    <a
-                                                        href={"https://github.com/jenkinsci/jenkins/pull/" +
-                                                            change.pull}
-                                                    >
-                                                        {" pull " + change.pull}
-                                                    </a>
-                                                    {", "}
-                                                </span>
-                                            )}
-                                        </>
-                                    )}
-                                    {") "}
-                                </li>
-                            ))
-                        }
+                        {node.changes?.map((change, i) => (
+                            <li key={`${change}-${i}`} className={change.type}>
+                                <span dangerouslySetInnerHTML={{ __html: change.message }} />
+                                {"("}
+                                {change.references && change.references.length > 0 && (
+                                    <>
+                                        {change.references.map((ref, j) => (
+                                            <span key={`${ref}-${j}`}>
+                                                {ref.issue && (
+                                                    <span>
+                                                        <a
+                                                            href={
+                                                                "https://issues.jenkins.io/browse/JENKINS-" +
+                                                                ref.issue
+                                                            }
+                                                        >
+                                                            {" issue " + ref.issue}
+                                                        </a>
+                                                        {", "}
+                                                    </span>
+                                                )}
+                                                {ref.url && (
+                                                    <span>
+                                                        <a href={ref.url}>{ref.title}</a>
+                                                        {", "}
+                                                    </span>
+                                                )}
+                                                {ref.pull && (
+                                                    <span>
+                                                        {", "}
+                                                        <a
+                                                            href={
+                                                                "https://github.com/jenkinsci/jenkins/pull/" +
+                                                                ref.pull
+                                                            }
+                                                        >
+                                                            {" pull " + ref.pull}
+                                                        </a>
+                                                    </span>
+                                                )}
+                                            </span>
+                                        ))}
+                                    </>
+                                )}
+                                {(!change.references || change.references.length === 0) && (
+                                    <>
+                                        {change.issue && (
+                                            <span>
+                                                <a
+                                                    href={
+                                                        "https://issues.jenkins.io/browse/JENKINS-" +
+                                                        change.issue
+                                                    }
+                                                >
+                                                    {" issue " + change.issue}
+                                                </a>
+                                                {", "}
+                                            </span>
+                                        )}
+                                        {change.url && (
+                                            <span>
+                                                <a href={change.url}>{change.title}</a>
+                                                {", "}
+                                            </span>
+                                        )}
+                                        {change.pull && (
+                                            <span>
+                                                <a
+                                                    href={
+                                                        "https://github.com/jenkinsci/jenkins/pull/" +
+                                                        change.pull
+                                                    }
+                                                >
+                                                    {" pull " + change.pull}
+                                                </a>
+                                                {", "}
+                                            </span>
+                                        )}
+                                    </>
+                                )}
+                                {") "}
+                            </li>
+                        ))}
                     </ul>
 
-                    {
-                        node.lts_changes && node.lts_changes.length > 0 && (
-                            <h4>Notable changes since {node.lts_predecessor ?? ""}:</h4>
-                        )
-                    }
+                    {node.lts_changes && node.lts_changes.length > 0 && (
+                        <h4>Notable changes since {node.lts_predecessor ?? ""}:</h4>
+                    )}
                     <ul>
-                        {node.lts_changes?.map((references) => (
-                            <li>
+                        {node.lts_changes?.map((references, i) => (
+                            <li key={`${references}-${i}`}>
                                 <span dangerouslySetInnerHTML={{ __html: references.message }} />
                                 {"( "}
                                 {references.references && references.references.length > 0 ? (
-                                    references.references.map((ref) => (
-                                        <span>
+                                    references.references.map((ref, j) => (
+                                        <span key={`${ref}-${j}`}>
                                             {ref.issue && (
                                                 <span>
                                                     <a
-                                                        href={"https://issues.jenkins.io/browse/JENKINS-" +
-                                                            ref.issue}
+                                                        href={
+                                                            "https://issues.jenkins.io/browse/JENKINS-" +
+                                                            ref.issue
+                                                        }
                                                     >
                                                         {" issue " + ref.issue + ", "}
                                                     </a>
@@ -276,8 +295,10 @@ const ChangelogLTS = ({ data }) => {
                                             {ref.pull && (
                                                 <span>
                                                     <a
-                                                        href={"https://github.com/jenkinsci/jenkins/pull/" +
-                                                            ref.pull}
+                                                        href={
+                                                            "https://github.com/jenkinsci/jenkins/pull/" +
+                                                            ref.pull
+                                                        }
                                                     >
                                                         {" pull " + ref.pull + ", "}
                                                     </a>
@@ -290,8 +311,10 @@ const ChangelogLTS = ({ data }) => {
                                         {references.issue && (
                                             <span>
                                                 <a
-                                                    href={"https://issues.jenkins.io/browse/JENKINS-" +
-                                                        references.issue}
+                                                    href={
+                                                        "https://issues.jenkins.io/browse/JENKINS-" +
+                                                        references.issue
+                                                    }
                                                 >
                                                     {" issue " + references.issue + ", "}
                                                 </a>
@@ -305,8 +328,10 @@ const ChangelogLTS = ({ data }) => {
                                         {references.pull && (
                                             <span>
                                                 <a
-                                                    href={"https://github.com/jenkinsci/jenkins/pull/" +
-                                                        references.pull}
+                                                    href={
+                                                        "https://github.com/jenkinsci/jenkins/pull/" +
+                                                        references.pull
+                                                    }
                                                 >
                                                     {" pull " + references.pull + ", "}
                                                 </a>
@@ -318,10 +343,9 @@ const ChangelogLTS = ({ data }) => {
                             </li>
                         ))}
                     </ul>
-
                 </>
             ))}
-        </IndexPageLayout >
+        </IndexPageLayout>
     );
 };
 
@@ -330,47 +354,47 @@ export const Head = () => <Seo title="Jenkins LTS Changelogs" />;
 export default ChangelogLTS;
 
 export const pageQuery = graphql`
-{
-    allLtsYaml(sort: {date: DESC}) {
-      edges {
-        node {
-          version
-          date(formatString: "YYYY-MM-DD")
-          lts_predecessor
-          lts_baseline
-          banner
-          lts_changes {
-            type
-            category
-            pull
-            issue
-            message
-            pr_title
-            references {
-              issue
-              pull
-              url
-              title
+    {
+        allLtsYaml(sort: { date: DESC }) {
+            edges {
+                node {
+                    version
+                    date(formatString: "YYYY-MM-DD")
+                    lts_predecessor
+                    lts_baseline
+                    banner
+                    lts_changes {
+                        type
+                        category
+                        pull
+                        issue
+                        message
+                        pr_title
+                        references {
+                            issue
+                            pull
+                            url
+                            title
+                        }
+                        authors
+                    }
+                    changes {
+                        type
+                        category
+                        issue
+                        message
+                        pull
+                        pr_title
+                        authors
+                        references {
+                            url
+                            title
+                            issue
+                            pull
+                        }
+                    }
+                }
             }
-            authors
-          }
-          changes {
-            type
-            category
-            issue
-            message
-            pull
-            pr_title
-            authors
-            references {
-              url
-              title
-              issue
-              pull
-            }
-          }
         }
-      }
     }
-  }
 `;

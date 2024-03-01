@@ -27,10 +27,12 @@ const PostBodyComponents = [
     </React.Fragment>,
 ];
 
-exports.onRenderBody = (
-    { setHeadComponents, setHtmlAttributes, setBodyAttributes, setPostBodyComponents },
-    pluginOptions,
-) => {
+exports.onRenderBody = ({
+    setHeadComponents,
+    setHtmlAttributes,
+    setBodyAttributes,
+    setPostBodyComponents,
+}) => {
     setHtmlAttributes(HtmlAttributes);
     setHeadComponents(HeadComponents);
     setBodyAttributes(BodyAttributes);

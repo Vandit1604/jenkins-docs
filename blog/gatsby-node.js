@@ -49,7 +49,7 @@ exports.createPages = ({ graphql, actions }) => {
         const authorPostTemplate = path.resolve(`src/templates/author-pages.js`);
         const authors = result.data.allAsciidoc.edges;
         const filteredAuthors = authors.filter(
-            (author) => author.node.document.title == "About the Author",
+            (author) => author.node.document.title === "About the Author",
         );
         filteredAuthors.forEach(({ node }) => {
             createPage({
