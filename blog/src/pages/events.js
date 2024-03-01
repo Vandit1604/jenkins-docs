@@ -9,7 +9,7 @@ const { rhythm } = typography;
 
 const EventPage = ({ data }) => {
   const event = data.allFile.nodes[0].childrenAsciidoc
-  
+
   const [selectedTimeZone, setSelectedTimeZone] = useState(""); // State to store the selected time zone
 
   useEffect(() => {
@@ -85,12 +85,13 @@ const EventPage = ({ data }) => {
       </ul>
       <section>
         <h2>Major Events</h2>
-        <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+        {console.log()}
+        <div style={{ marginLeft: "2rem" }}>
           {
-            
-            (currentDate < eventDate) ?
+            // show events 30 days before the event date
+            (currentDate < eventDate && Math.round((eventDate.getTime() - currentDate.getTime()) / (1000 * 3600 * 24)) < 30) ?
               <MajorEventCard
-                title={event[0].pageAttributes.eventtitle}
+                title={event[0].document.title}
                 location={event[0].pageAttributes.eventlocation}
                 date={event[0].pageAttributes.eventstartdate}
                 link={event[0].pageAttributes.eventlink}
@@ -147,19 +148,18 @@ export const pageQuery = graphql`
 {
   allFile(
     filter: {sourceInstanceName: {eq: "events"}, extension: {eq: "adoc"}}
-    limit: 1
     sort: {childrenAsciidoc: {pageAttributes: {eventstartdate: DESC}}}
   ) {
     nodes {
-      name
       childrenAsciidoc {
+        document {
+          title
+        }
         html
         pageAttributes {
-          eventtitle
           eventlocation
           eventstartdate
           eventlink
-          eventenddate
         }
       }
     }
