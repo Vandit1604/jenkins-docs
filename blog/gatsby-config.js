@@ -6,6 +6,8 @@ module.exports = {
         author: "@jenkinsci",
         twitterUsername: "@JenkinsCI",
         buildDate: new Date(),
+        stable:"2.426.3",
+        latest:"2.444",
     },
     plugins: [
         `gatsby-transformer-asciidoc`,
@@ -22,6 +24,14 @@ module.exports = {
             options: {
                 name: `authors`,
                 path: `${__dirname}/authors`,
+            },
+        },
+        `gatsby-transformer-asciidoc`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `events`,
+                path: `${__dirname}/data/events`,
             },
         },
         `gatsby-transformer-yaml`,

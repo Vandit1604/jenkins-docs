@@ -3,6 +3,7 @@ import { useTheme } from "@mui/material";
 
 const IndexPageLayout = ({ children }) => {
     const theme = useTheme();
+
     return (
         <>
             <div
