@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { graphql } from "gatsby";
 import PageName from "../components/PageName";
 import Seo from "../components/Seo";
@@ -37,40 +37,37 @@ const ChangelogWeekly = ({ data }) => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    const rate = (version, rating) => {
-      let issue = "";
-      if (rating <= 0) {
-        issue = prompt("Please provide issue number from our JIRA causing trouble:", "");
+  const rate = useCallback((version, rating) => {
+    let issue = "";
+    if (rating <= 0) {
+      issue = prompt("Please provide issue number from our JIRA causing trouble:", "");
+      if (issue === null) return; // Cancelled
+      if (issue === "") {
+        issue = prompt(
+          "Are you sure you do not want to provide an issue reference? It really helps us improve Jenkins.\nEnter issue number, or leave empty to skip:",
+          "",
+        );
         if (issue === null) return; // Cancelled
-        if (issue === "") {
-          issue = prompt(
-            "Are you sure you do not want to provide an issue reference? It really helps us improve Jenkins.\nEnter issue number, or leave empty to skip:",
-            "",
-          );
-          if (issue === null) return; // Cancelled
-        }
       }
+    }
 
-      const script = document.createElement("script");
-      script.type = "text/javascript";
-      script.src = `https://rating.jenkins.io/rate/submit.php?version=${encodeURIComponent(
-        version,
-      )}&rating=${rating}&issue=${encodeURIComponent(issue)}`;
-      script.onload = () => {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = `https://rating.jenkins.io/rate/submit.php?version=${encodeURIComponent(
+      version,
+    )}&rating=${rating}&issue=${encodeURIComponent(issue)}`;
+    script.onload = () => {
+      alert("Thanks!");
+      window.location.reload();
+    };
+    script.onreadystatechange = () => {
+      // For IE
+      if (script.readyState === "loaded" || script.readyState === "complete") {
         alert("Thanks!");
         window.location.reload();
-      };
-      script.onreadystatechange = () => {
-        // For IE
-        if (script.readyState === "loaded" || script.readyState === "complete") {
-          alert("Thanks!");
-          window.location.reload();
-        }
-      };
-      document.head.appendChild(script);
+      }
     };
-    window.rate = rate; // Expose rate function globally
+    document.head.appendChild(script);
   }, []);
 
   const parseDataFromScript = (scriptText) => {
@@ -182,14 +179,14 @@ const ChangelogWeekly = ({ data }) => {
           ) : null}
           {node.lts_baseline && <h4> Changes since {node.lts_baseline}:</h4>}
           <ul>
-            {node.changes?.map((change) => (
-              <li className={change.type} style={{ marginBottom: "5px" }}>
+            {node.changes?.map((change, i) => (
+              <li key={`${change}-${i}`} className={change.type} style={{ marginBottom: "5px" }}>
                 <span dangerouslySetInnerHTML={{ __html: change.message }} />
                 {"("}
                 {change.references && change.references.length > 0 && (
                   <>
-                    {change.references.map((ref) => (
-                      <span>
+                    {change.references.map((ref, j) => (
+                      <span key={`${ref}-${j}`}>
                         {ref.issue && (
                           <span>
                             <a
@@ -270,13 +267,13 @@ const ChangelogWeekly = ({ data }) => {
             <h4>Notable changes since {node.lts_predecessor ?? ""}:</h4>
           )}
           <ul>
-            {node.lts_changes?.map((references) => (
-              <li style={{ marginBottom: "5px" }}>
+            {node.lts_changes?.map((references, i) => (
+              <li key={`${references}-${i}`} style={{ marginBottom: "5px" }}>
                 <span dangerouslySetInnerHTML={{ __html: references.message }} />
                 {"( "}
                 {references.references && references.references.length > 0 ? (
-                  references.references.map((ref) => (
-                    <span>
+                  references.references.map((ref, j) => (
+                    <span key={`${ref}-${j}`}>
                       {ref.issue && (
                         <span>
                           <a
