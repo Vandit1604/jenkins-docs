@@ -20,20 +20,21 @@ import IndexPageLayout from "../layouts";
 const ChangelogLTS = ({ data }) => {
   const [ratingData, setRatingData] = useState({});
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("https://rating.jenkins.io/rate/result.php");
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        const scriptText = await response.text();
-        const jsonData = parseDataFromScript(scriptText);
-        setRatingData(jsonData);
-      } catch (error) {
-        console.error("Error fetching data:", error);
+  const fetchData = useCallback(async () => {
+    try {
+      const response = await fetch("https://rating.jenkins.io/rate/result.php");
+      if (!response.ok) {
+        throw new Error("Failed to fetch data");
       }
-    };
+      const scriptText = await response.text();
+      const jsonData = parseDataFromScript(scriptText);
+      setRatingData(jsonData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }, []);
+
+  useEffect(() => {
     fetchData();
   }, []);
 
