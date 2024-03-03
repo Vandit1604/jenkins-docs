@@ -92,8 +92,8 @@ const DownloadPage = ({ data }) => {
                                 <a href="/changelog-lts"> Learn more…</a>
                             </p>
                             <p>
-                                <Link to="/changelog-lts">Changelog</Link> |
-                                <Link to="/upgrade-guide">Upgrade Guide</Link> |
+                                <Link to="/changelog-lts">Changelog</Link> |{" "}
+                                <Link to="/upgrade-guide">Upgrade Guide</Link> |{" "}
                                 <a href="https://get.jenkins.io/war-stable/"> Past Releases</a>
                             </p>
                         </div>
@@ -105,7 +105,7 @@ const DownloadPage = ({ data }) => {
                                 weekly cadence. <a href="/changelog-weekly"> Learn more…</a>
                             </p>
                             <p>
-                                <Link href="/changelog-weekly">Changelog</Link> |
+                                <Link href="/changelog-weekly">Changelog</Link> |{" "}
                                 <a href="https://get.jenkins.io/war/">Past Releases</a>
                             </p>
                         </div>
