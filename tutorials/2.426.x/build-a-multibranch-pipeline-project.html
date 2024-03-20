@@ -434,10 +434,7 @@ by using the command: <code>docker image pull docker:dind</code>.</td>
 <td><i class="conum" data-value="13"></i><b>13</b></td>
 <td>The storage driver for the Docker volume. See
 <a href="https://docs.docker.com/storage/storagedriver/select-storage-driver">"Docker storage drivers"</a> for supported
-options.</td>
-</tr>
-</table>
-</div>
+options.
 <div class="paragraph">
 <p><strong>Note:</strong> If copying and pasting the command snippet above does not work, try
 copying and pasting this annotation-free version here:</p>
@@ -452,6 +449,9 @@ copying and pasting this annotation-free version here:</p>
   --publish 3000:3000 --publish 5000:5000 --publish 2376:2376 \
   docker:dind --storage-driver overlay2</code></pre>
 </div>
+</div></td>
+</tr>
+</table>
 </div>
 </li>
 <li>
@@ -605,10 +605,7 @@ See <a href="/security/advisory/2022-05-17/#SECURITY-2478">SECURITY-2478</a> for
 </tr>
 <tr>
 <td><i class="conum" data-value="12"></i><b>12</b></td>
-<td>The name of the Docker image, which you built in the previous step.</td>
-</tr>
-</table>
-</div>
+<td>The name of the Docker image, which you built in the previous step.
 <div class="paragraph">
 <p><strong>Note:</strong> If copying and pasting the command snippet above does not work, try
 copying and pasting this annotation-free version here:</p>
@@ -626,6 +623,9 @@ copying and pasting this annotation-free version here:</p>
   --env JAVA_OPTS="-Dhudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT=true" \
   myjenkins-blueocean:{jenkins-stable}-1</code></pre>
 </div>
+</div></td>
+</tr>
+</table>
 </div>
 </li>
 <li>
@@ -1250,10 +1250,7 @@ repository.</p>
 through ports 3000 and 5000. The significance of this is explained in the
 <code>jenkins/scripts/deliver-for-deployment.sh</code> and
 <code>jenkins/scripts/deploy-for-production.sh</code> files of your cloned repository, and
-are covered in subsequent sections of this tutorial.</td>
-</tr>
-</table>
-</div>
+are covered in subsequent sections of this tutorial.
 <div class="paragraph">
 <p><strong>Note:</strong> For an explanation of the other components of this <code>Jenkinsfile</code>, refer
 to the annotations of the Declarative Pipeline in the
@@ -1263,6 +1260,9 @@ your initial Pipeline&#8230;&#8203;''</a> and
 a test stage&#8230;&#8203;''</a> sections of the
 <a href="build-a-node-js-and-react-app-with-npm.html" class="xref page">Build a Node.js and React app
 with npm</a> tutorial.</p>
+</div></td>
+</tr>
+</table>
 </div>
 </li>
 <li>
@@ -1412,29 +1412,21 @@ their <code>branch</code> conditions) determine whether or not the
 <a href="../../user-docs/2.426.x/pipeline/syntax.html#stage" class="xref page"><code>stages</code></a> (containing these <code>when</code>
 directives) should be executed. If a <code>branch</code> condition&#8217;s value (i.e. pattern)
 matches the name of the branch that Jenkins is running the build from, then the
-<code>stage</code> that contains this <code>when</code> and <code>branch</code> construct will be executed.</td>
+<code>stage</code> that contains this <code>when</code> and <code>branch</code> construct will be executed.
+<div class="paragraph">
+<p><strong>Notes:</strong>
+* For an explanation of the <code>input message</code> steps, refer to annotation <strong>4</strong> of
+  the Declarative Pipeline at the
+  <a href="build-a-node-js-and-react-app-with-npm.html#add-a-final-deliver-stage-to-your-pipeline" class="xref page"><code>`Add
+  a final deliver stage&#8230;&#8203;'' section of the Build a Node.js and React app</a>
+  tutorial.
+* For an explanation of the `deliver-for-development.sh</code>,
+  <code>deploy-for-production.sh</code> and <code>kill.sh</code> script steps, refer to the contents
+  of these files located in the <code>jenkins/scripts</code> directory from the root of the
+  <code>building-a-multibranch-pipeline-project</code> repository.</p>
+</div></td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p><strong>Notes:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>For an explanation of the <code>input message</code> steps, refer to annotation <strong>4</strong> of
-the Declarative Pipeline at the
-<a href="build-a-node-js-and-react-app-with-npm.html#add-a-final-deliver-stage-to-your-pipeline" class="xref page">``Add
-a final deliver stage&#8230;&#8203;'' section of the Build a Node.js and React app</a>
-tutorial.</p>
-</li>
-<li>
-<p>For an explanation of the <code>deliver-for-development.sh</code>,
-<code>deploy-for-production.sh</code> and <code>kill.sh</code> script steps, refer to the contents
-of these files located in the <code>jenkins/scripts</code> directory from the root of the
-<code>building-a-multibranch-pipeline-project</code> repository.</p>
-</li>
-</ul>
 </div>
 </li>
 <li>
