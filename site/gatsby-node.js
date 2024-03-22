@@ -9,13 +9,13 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 // create pages.
 exports.createPages = ({ graphql, actions }) => {
 
-  const { createPage,createRedirect} = actions;
-  
+  const { createPage, createRedirect } = actions;
   createRedirect({
-    fromPath: '/node/*',
-    toPath: '/blog/*',
+    fromPath: `/node/`,
+    toPath: `/blog/`,
     isPermanent: true,
     redirectInBrowser: true,
+    force: true,
   });
 
   return graphql(`
