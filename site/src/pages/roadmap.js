@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Tooltip from '@mui/material/Tooltip';
 import Seo from "../components/Seo";
 import PageName from "../components/PageName";
@@ -7,8 +7,17 @@ import "../css/roadmap.css"
 import { graphql } from "gatsby";
 
 const Roadmap = ({ data }) => {
+  const [filters, setFilters] = useState([]);
+
+  const toggleFilter = useCallback((filterId) => {
+    if (filters.includes(filterId)) {
+      setFilters(filters.filter(id => id !== filterId));
+    } else {
+      setFilters([...filters, filterId]);
+    }
+  }, [filters]);
+
   const filterRoadmap = useCallback(() => {
-    // Your filterRoadmap function implementation here
     var selectors = document.getElementsByClassName("initiative-selector");
     var filters = [];
     var filterInitiatives = false;
@@ -52,23 +61,20 @@ const Roadmap = ({ data }) => {
         categoryHeaders[categoryId].style.display = "none";
       }
     }
-  }, []);
+  }, [filters]);
 
   useEffect(() => {
-    // Initialize MUI tooltips for elements with the data-mui-toggle="tooltip" attribute
+    // Initialize tooltips for MUI 
     const tooltipTriggerList = document.querySelectorAll('[data-mui-toggle="tooltip"]');
     tooltipTriggerList.forEach((tooltipTriggerEl) => {
       new Tooltip(tooltipTriggerEl, {
         placement: "top",
-        // Fetch the tooltip title from the element's title attribute
         title: tooltipTriggerEl.getAttribute("title")
       });
     });
 
-    // Call filterRoadmap function after the document is loaded
-    filterRoadmap();
-  }, [filterRoadmap]); // Only run this effect when filterRoadmap function changes
-
+    filterRoadmap();  
+  }, [filterRoadmap]);
 
   return (
     <IndexPageLayout>
@@ -93,7 +99,8 @@ const Roadmap = ({ data }) => {
                 type="checkbox"
                 className="initiative-selector"
                 id={`initiative-label-${label.name}`}
-                onClick={filterRoadmap}
+                // onClick={filterRoadmap}
+                onClick={() => toggleFilter(label.name)}
               />
               {"  " + label.displayName}
             </label>
@@ -110,7 +117,6 @@ const Roadmap = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {/* Table body */}
           {data.allRoadmapsYaml.edges[1].node.categories.map((category) => (
             <React.Fragment key={category.name}>
               <tr className="status-category">
@@ -121,28 +127,22 @@ const Roadmap = ({ data }) => {
               <tr className="category-initiatives">
                 {data.allRoadmapsYaml.edges[1].node.statuses.map((status) => (
                   <td
-                    // key={`${category.name}-${status.id}`}
                     className={`status ${status.id}`}
                     data-header={status.displayName}
                   >
 
                     {category.initiatives.map((initiative) => {
-                      // Initialize labelClasses variable
                       let labelClasses = "";
 
-                      // Check if initiative.labels exists and iterate over each label
                       if (initiative.labels) {
                         initiative.labels.forEach((label) => {
-                          // Concatenate label with initiative-label- prefix
                           labelClasses += ` initiative-label-${label}`;
                         });
                       }
-
-                      // Return the JSX for each initiative
                       return (
                         initiative.status === status.id && (
                           <div
-                            key={initiative.name} // Make sure to assign a unique key for each element in the array
+                            key={initiative.name}
                             className={`status initiative ${status.id} ${labelClasses}`}
                           >
                             {console.log("initiative labels", initiative.labels)}
