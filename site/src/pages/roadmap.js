@@ -3,7 +3,7 @@ import Tooltip from '@mui/material/Tooltip';
 import Seo from "../components/Seo";
 import PageName from "../components/PageName";
 import IndexPageLayout from "../layouts";
-import  "../css/roadmap.css"
+import "../css/roadmap.css"
 import { graphql } from "gatsby";
 
 const Roadmap = ({ data }) => {
@@ -28,9 +28,11 @@ const Roadmap = ({ data }) => {
       var hasInitiativesToDisplay = false;
 
       for (var j = 0; j < initiatives.length; j++) {
+        // stores all the tasks in every category
         var initiative = initiatives[j];
         var display = !filterInitiatives;
         for (var k = 0; k < filters.length; k++) {
+          console.log("classlist", initiative.classList, "filters", filters[k])
           if (initiative.classList.contains(filters[k])) {
             display = true;
             break;
@@ -53,17 +55,20 @@ const Roadmap = ({ data }) => {
   }, []);
 
   useEffect(() => {
-    document.addEventListener("DOMContentLoaded", function() {
-      var tooltipTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="tooltip"]'),
-      );
-      var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
+    // Initialize MUI tooltips for elements with the data-mui-toggle="tooltip" attribute
+    const tooltipTriggerList = document.querySelectorAll('[data-mui-toggle="tooltip"]');
+    tooltipTriggerList.forEach((tooltipTriggerEl) => {
+      new Tooltip(tooltipTriggerEl, {
+        placement: "top",
+        // Fetch the tooltip title from the element's title attribute
+        title: tooltipTriggerEl.getAttribute("title")
       });
     });
 
+    // Call filterRoadmap function after the document is loaded
     filterRoadmap();
-  }, [filterRoadmap]);
+  }, [filterRoadmap]); // Only run this effect when filterRoadmap function changes
+
 
   return (
     <IndexPageLayout>
@@ -120,14 +125,27 @@ const Roadmap = ({ data }) => {
                     className={`status ${status.id}`}
                     data-header={status.displayName}
                   >
-                    {console.log(status.id)}
-                    {category.initiatives.map(
-                      (initiative) =>
+
+                    {category.initiatives.map((initiative) => {
+                      // Initialize labelClasses variable
+                      let labelClasses = "";
+
+                      // Check if initiative.labels exists and iterate over each label
+                      if (initiative.labels) {
+                        initiative.labels.forEach((label) => {
+                          // Concatenate label with initiative-label- prefix
+                          labelClasses += ` initiative-label-${label}`;
+                        });
+                      }
+
+                      // Return the JSX for each initiative
+                      return (
                         initiative.status === status.id && (
                           <div
-                            // key={status.id}
-                            className={`status initiative ${status.id}`}
+                            key={initiative.name} // Make sure to assign a unique key for each element in the array
+                            className={`status initiative ${status.id} ${labelClasses}`}
                           >
+                            {console.log("initiative labels", initiative.labels)}
                             <Tooltip title={initiative.description ? initiative.description : status.description} placement="top" arrow>
                               <a
                                 href={initiative.link ? initiative.link : category.link}
@@ -135,10 +153,10 @@ const Roadmap = ({ data }) => {
                                 {initiative.name}
                               </a>
                             </Tooltip>
-
                           </div>
-                        ),
-                    )}
+                        )
+                      );
+                    })}
                   </td>
                 ))}
               </tr>
@@ -178,35 +196,36 @@ export const Head = () => <Seo title="Jenkins Roadmap" />;
 export default Roadmap;
 
 export const query = graphql`
-    {
-        allRoadmapsYaml {
-            edges {
-                node {
-                    statuses {
-                        id
-                        description
-                        displayName
-                        hide
-                    }
-                    labels {
-                        name
-                        displayName
-                        description
-                        link
-                    }
-                    categories {
-                        name
-                        description
-                        link
-                        initiatives {
-                            name
-                            description
-                            status
-                            link
-                        }
-                    }
-                }
-            }
+{
+  allRoadmapsYaml {
+    edges {
+      node {
+        statuses {
+          id
+          description
+          displayName
+          hide
         }
+        labels {
+          name
+          displayName
+          description
+          link
+        }
+        categories {
+          name
+          description
+          link
+          initiatives {
+            name
+            description
+            status
+            link
+            labels
+          }
+        }
+      }
     }
+  }
+}
 `;
