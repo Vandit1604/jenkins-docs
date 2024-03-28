@@ -54,7 +54,7 @@ const BlogIndex = ({ pageContext, data }) => {
               className={blogpost}
             >
               <Link
-                to={childrenAsciidoc[0].fields.slug}
+                to={"/blog"+childrenAsciidoc[0].fields.slug}
                 style={{
                   textDecoration: "none",
                   display: "flex",
