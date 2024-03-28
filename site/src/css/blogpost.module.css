@@ -47,6 +47,8 @@ li {
         "Helvetica Neue",
         "Noto Sans",
         sans-serif;
+    overflow: none;
+  height: 33rem;
 }
 
 .blogpost:hover span {
@@ -104,19 +106,19 @@ li {
 
 .blogteaser {
     position: relative;
-    color: hsl(212, 30%, 40%);
+    color: hsl(212, 30%, 40%);;
     margin: 0;
     text-decoration: none !important;
     line-height: 1.66;
     font-weight: 450;
     font-size: 1rem;
     text-overflow: clip;
+    height: 80px;
     height: 3lh;
     overflow: hidden;
     flex-shrink: 1;
     flex-grow: 1;
     overflow-wrap: anywhere;
-    line-height: 1.66;
 }
 
 .blogauthorinfo {
