@@ -32,13 +32,29 @@ const BlogIndex = ({ pageContext, data }) => {
             childrenAsciidoc[0].pageAttributes.opengraph ||
             "../../images/gsoc/opengraph.png";
 
+          const htmlContent = childrenAsciidoc[0].html;
+          const parser = new DOMParser();
+          const parsedHtml = parser.parseFromString(htmlContent, 'text/html');
+          function extractTextNodes(element, textNodes) {
+            if (element.nodeType === Node.TEXT_NODE) {
+              textNodes.push(element.textContent.trim());
+            } else {
+              for (let childNode of element.childNodes) {
+                extractTextNodes(childNode, textNodes);
+              }
+            }
+          }
+          const textNodes = [];
+          extractTextNodes(parsedHtml.body, textNodes);
+          const blogTeaser = textNodes.join(' ');
+
           return (
             <li
               key={`${childrenAsciidoc[0].fields.slug}-${childrenAsciidoc[0].document.title}`}
               className={blogpost}
             >
               <Link
-                to={"/blog" + childrenAsciidoc[0].fields.slug}
+                to={`blog${childrenAsciidoc[0].fields.slug}`}
                 style={{
                   textDecoration: "none",
                   display: "flex",
@@ -57,18 +73,9 @@ const BlogIndex = ({ pageContext, data }) => {
                 </div>
                 <h5 className={blogtitle}>{childrenAsciidoc[0].document.title}</h5>
                 <div className={blogteaser}>
-                  Will include the blog teaser Lorem ipsum dolor sit amet, officia
-                  excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi
-                  Lorem pariatur mollit ex esse exercitation amet. Nisi anim
-                  cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
-                  Lorem est aliquip amet voluptate voluptate dolor minim nulla est
-                  proident. Nostrud officia pariatur ut officia. Sit irure elit
-                  esse ea nulla sunt ex occaecat reprehenderit commodo officia
-                  dolor Lorem duis laboris cupidatat officia voluptate. Culpa
-                  proident adipisicing id nulla nisi laboris ex in Lorem sunt duis
-                  officia eiusmod. Aliqua reprehenderit commodo ex non excepteur
-                  duis sunt velit enim. Voluptate laboris sint cupidatat ullamco
-                  ut ea consectetur et est culpa et culpa duis.
+                  <p>
+                    {blogTeaser}
+                  </p>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <div className={blogauthorinfo}>
@@ -135,12 +142,12 @@ const BlogIndex = ({ pageContext, data }) => {
         }}
       >
         {!isFirst && (
-          <Link to={"/blog/" + prevPage} rel="prev">
+          <Link to={`/blog/${prevPage}`} rel="prev">
             ← Previous Page
           </Link>
         )}
         {!isLast && (
-          <Link to={"/blog/" + nextPage} rel="next">
+          <Link to={`/blog/${nextPage}`} rel="next">
             Next Page →
           </Link>
         )}
@@ -152,39 +159,36 @@ const BlogIndex = ({ pageContext, data }) => {
 export default BlogIndex;
 
 export const pageQuery = graphql`
-    query BlogIndex($skip: Int!, $limit: Int!) {
-        allFile(
-            filter: {
-                sourceInstanceName: { eq: "pages" }
-                childrenAsciidoc: { elemMatch: { document: { title: { ne: "About the Author" } } } }
-            }
-            sort: { childrenAsciidoc: { fields: { slug: DESC } } }
-            limit: $limit
-            skip: $skip
-        ) {
-            nodes {
-                childrenAsciidoc {
-                    fields {
-                        slug
-                    }
-                    document {
-                        title
-                    }
-                    pageAttributes {
-                        author
-                        author_name
-                        github
-                        opengraph
-                        linkedin
-                        blog
-                        twitter
-                        medium
-                        irc
-                        description
-                        authoravatar
-                    }
-                }
-            }
+query BlogIndex($skip: Int!, $limit: Int!) {
+  allFile(
+    filter: {sourceInstanceName: {eq: "pages"}, childrenAsciidoc: {elemMatch: {document: {title: {ne: "About the Author"}}}}}
+    sort: {childrenAsciidoc: {fields: {slug: DESC}}}
+    limit: $limit
+    skip: $skip
+  ) {
+    nodes {
+      childrenAsciidoc {
+        html
+        fields {
+          slug
         }
+        document {
+          title
+        }
+        pageAttributes {
+          author
+          author_name
+          github
+          opengraph
+          linkedin
+          blog
+          twitter
+          medium
+          irc
+          description
+          authoravatar
+        }
+      }
     }
-`;
+  }
+}`;
