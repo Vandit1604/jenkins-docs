@@ -2,19 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { graphql } from "gatsby";
 import PageName from "../components/PageName";
 import Seo from "../components/Seo";
-import {
-  banner,
-  bug,
-  cloudy,
-  feedback,
-  iconlegend,
-  image,
-  rateoffset,
-  rfe,
-  security,
-  storm,
-  sunny,
-} from "../css/changelog.module.css";
+import "../css/changelog.css";
 import IndexPageLayout from "../layouts";
 
 const ChangelogWeekly = ({ data }) => {
@@ -32,7 +20,7 @@ const ChangelogWeekly = ({ data }) => {
     } catch (error) {
       console.error("Error fetching data:", error);
     }
-  },[]);
+  }, []);
 
   useEffect(() => {
     fetchData();
@@ -81,23 +69,23 @@ const ChangelogWeekly = ({ data }) => {
     <IndexPageLayout>
       <PageName title={"Weekly Changelog"} />
       <div style={{ textAlign: "end" }}>
-        <div className={iconlegend}>
+        <div className="iconlegend">
           Legend:
-          <ul className={image}>
-            <li className={security}>security fix</li>
-            <li className={bug}>major bug fix</li>
-            <li className={bug}>bug fix</li>
-            <li className={rfe}>major enhancement</li>
-            <li className={rfe}>enhancement</li>
+          <ul className="image">
+            <li className="security">security fix</li>
+            <li className="bug">major bug fix</li>
+            <li className="bug">bug fix</li>
+            <li className="rfe">major enhancement</li>
+            <li className="rfe">enhancement</li>
           </ul>
         </div>
         <div style={{ margin: "10px 0", width: "100%" }}>
-          <div className={iconlegend}>
+          <div className="iconlegend">
             Community feedback:
-            <ul className={feedback}>
-              <li className={sunny}>no major issues</li>
-              <li className={cloudy}>notable issues</li>
-              <li className={storm}>required rollback</li>
+            <ul className="feedback">
+              <li className="sunny">no major issues</li>
+              <li className="cloudy">notable issues</li>
+              <li className="storm">required rollback</li>
             </ul>
           </div>
         </div>
@@ -114,7 +102,7 @@ const ChangelogWeekly = ({ data }) => {
                 <div style={{ display: "flex", flexDirection: "row", gap: "2px", marginLeft: "2rem" }}>
                   <p style={{ display: "inline" }}>{ratingData[node.version][0]}</p>
                   <img
-                    className={rateoffset}
+                    className="rateoffset"
                     src="../../images/images/changelog/sunny.svg"
                     alt="Sunny"
                     title="No major issue with this release"
@@ -123,7 +111,7 @@ const ChangelogWeekly = ({ data }) => {
                   />
                   <p style={{ display: "inline" }}>{ratingData[node.version][1]}</p>
                   <img
-                    className={rateoffset}
+                    className="rateoffset"
                     src="../../images/images/changelog/cloudy.svg"
                     alt="Cloudy"
                     title="I experienced notable issues"
@@ -132,7 +120,7 @@ const ChangelogWeekly = ({ data }) => {
                   />
                   <p style={{ display: "inline" }}>{ratingData[node.version][2]}</p>
                   <img
-                    className={rateoffset}
+                    className="rateoffset"
                     src="../../images/images/changelog/storm.svg"
                     alt="Storm"
                     title="I had to roll back"
@@ -174,56 +162,58 @@ const ChangelogWeekly = ({ data }) => {
             )}
           </div>
           {node.banner ? (
-            <div className={banner}>
+            <div className="banner">
               <span dangerouslySetInnerHTML={{ __html: node.banner }} />
             </div>
           ) : null}
           {node.lts_baseline && <h4> Changes since {node.lts_baseline}:</h4>}
-          <ul>
+          <ul className="image">
             {node.changes?.map((change, i) => (
-              <li key={`${change}-${i}`} className={change.type} style={{ marginBottom: "5px" }}>
+              <li key={`${change}-${i}`} className={`${change.type}`} style={{ marginBottom: "5px" }}>
                 <span dangerouslySetInnerHTML={{ __html: change.message }} />
                 {"("}
-                {change.references && change.references.length > 0 && (
-                  <>
-                    {change.references.map((ref, j) => (
-                      <span key={`${ref}-${j}`}>
-                        {ref.issue && (
-                          <span>
-                            <a
-                              href={
-                                "https://issues.jenkins.io/browse/JENKINS-" +
-                                ref.issue
-                              }
-                            >
-                              {" issue " + ref.issue}
-                            </a>
-                            {", "}
-                          </span>
-                        )}
-                        {ref.url && (
-                          <span>
-                            <a href={ref.url}>{ref.title}</a>
-                            {", "}
-                          </span>
-                        )}
-                        {ref.pull && (
-                          <span>
-                            {", "}
-                            <a
-                              href={
-                                "https://github.com/jenkinsci/jenkins/pull/" +
-                                ref.pull
-                              }
-                            >
-                              {" pull " + ref.pull}
-                            </a>
-                          </span>
-                        )}
-                      </span>
-                    ))}
-                  </>
-                )}
+                {
+                  change.references && change.references.length > 0 && (
+                    <>
+                      {change.references.map((ref, j) => (
+                        <span key={`${ref}-${j}`}>
+                          {ref.issue && (
+                            <span>
+                              <a
+                                href={
+                                  "https://issues.jenkins.io/browse/JENKINS-" +
+                                  ref.issue
+                                }
+                              >
+                                {" issue " + ref.issue}
+                              </a>
+                              {", "}
+                            </span>
+                          )}
+                          {ref.url && (
+                            <span>
+                              <a href={ref.url}>{ref.title}</a>
+                              {", "}
+                            </span>
+                          )}
+                          {ref.pull && (
+                            <span>
+                              {", "}
+                              <a
+                                href={
+                                  "https://github.com/jenkinsci/jenkins/pull/" +
+                                  ref.pull
+                                }
+                              >
+                                {" pull " + ref.pull}
+                              </a>
+                            </span>
+                          )}
+                        </span>
+                      ))}
+                    </>
+                  )
+                }
                 {(!change.references || change.references.length === 0) && (
                   <>
                     {change.issue && (
@@ -263,89 +253,93 @@ const ChangelogWeekly = ({ data }) => {
                 {") "}
               </li>
             ))}
-          </ul>
-          {node.lts_changes && node.lts_changes.length > 0 && (
-            <h4>Notable changes since {node.lts_predecessor ?? ""}:</h4>
-          )}
-          <ul>
-            {node.lts_changes?.map((references, i) => (
-              <li key={`${references}-${i}`} style={{ marginBottom: "5px" }}>
-                <span dangerouslySetInnerHTML={{ __html: references.message }} />
-                {"( "}
-                {references.references && references.references.length > 0 ? (
-                  references.references.map((ref, j) => (
-                    <span key={`${ref}-${j}`}>
-                      {ref.issue && (
+          </ul >
+          {
+            node.lts_changes && node.lts_changes.length > 0 && (
+              <h4>Notable changes since {node.lts_predecessor ?? ""}:</h4>
+            )
+          }
+          < ul >
+            {
+              node.lts_changes?.map((references, i) => (
+                <li key={`${references}-${i}`} style={{ marginBottom: "5px" }}>
+                  <span dangerouslySetInnerHTML={{ __html: references.message }} />
+                  {"( "}
+                  {references.references && references.references.length > 0 ? (
+                    references.references.map((ref, j) => (
+                      <span key={`${ref}-${j}`}>
+                        {ref.issue && (
+                          <span>
+                            <a
+                              href={
+                                "https://issues.jenkins.io/browse/JENKINS-" +
+                                ref.issue
+                              }
+                            >
+                              {" issue " + ref.issue + ", "}
+                            </a>
+                          </span>
+                        )}
+                        {ref.url && (
+                          <span>
+                            <a href={ref.url}>{ref.title},</a>
+                          </span>
+                        )}
+                        {ref.pull && (
+                          <span>
+                            <a
+                              href={
+                                "https://github.com/jenkinsci/jenkins/pull/" +
+                                ref.pull
+                              }
+                            >
+                              {" pull " + ref.pull + ", "}
+                            </a>
+                          </span>
+                        )}
+                      </span>
+                    ))
+                  ) : (
+                    <>
+                      {references.issue && (
                         <span>
                           <a
                             href={
                               "https://issues.jenkins.io/browse/JENKINS-" +
-                              ref.issue
+                              references.issue
                             }
                           >
-                            {" issue " + ref.issue + ", "}
+                            {" issue " + references.issue + ", "}
                           </a>
                         </span>
                       )}
-                      {ref.url && (
+                      {references.url && (
                         <span>
-                          <a href={ref.url}>{ref.title},</a>
+                          <a href={references.url}>{references.title}, </a>
                         </span>
                       )}
-                      {ref.pull && (
+                      {references.pull && (
                         <span>
                           <a
                             href={
                               "https://github.com/jenkinsci/jenkins/pull/" +
-                              ref.pull
+                              references.pull
                             }
                           >
-                            {" pull " + ref.pull + ", "}
+                            {" pull " + references.pull + ", "}
                           </a>
                         </span>
                       )}
-                    </span>
-                  ))
-                ) : (
-                  <>
-                    {references.issue && (
-                      <span>
-                        <a
-                          href={
-                            "https://issues.jenkins.io/browse/JENKINS-" +
-                            references.issue
-                          }
-                        >
-                          {" issue " + references.issue + ", "}
-                        </a>
-                      </span>
-                    )}
-                    {references.url && (
-                      <span>
-                        <a href={references.url}>{references.title}, </a>
-                      </span>
-                    )}
-                    {references.pull && (
-                      <span>
-                        <a
-                          href={
-                            "https://github.com/jenkinsci/jenkins/pull/" +
-                            references.pull
-                          }
-                        >
-                          {" pull " + references.pull + ", "}
-                        </a>
-                      </span>
-                    )}
-                  </>
-                )}
-                {" )"}
-              </li>
-            ))}
+                    </>
+                  )}
+                  {" )"}
+                </li>
+              ))
+            }
           </ul>
         </>
       ))}
-    </IndexPageLayout>
+    </IndexPageLayout >
   );
 };
 

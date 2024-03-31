@@ -42,6 +42,15 @@ module.exports = {
                 path: `${__dirname}/data/changelogs`,
             },
         },
+        `gatsby-transformer-yaml`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `roadmap`,
+                path: `${__dirname}/data/roadmaps`,
+            },
+        },
+
         `gatsby-transformer-asciidoc`,
         {
             resolve: `gatsby-source-filesystem`,
