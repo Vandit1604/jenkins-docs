@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Tooltip from '@mui/material/Tooltip';
-import Seo from "../components/Seo";
-import PageName from "../components/PageName";
-import IndexPageLayout from "../layouts";
-import "../css/roadmap.css"
+import Seo from "../../components/Seo";
+import PageName from "../../components/PageName";
+import IndexPageLayout from "../../layouts";
+import "../../css/roadmap.css"
 import { graphql } from "gatsby";
 
 const Roadmap = ({ data }) => {
