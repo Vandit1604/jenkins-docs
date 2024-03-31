@@ -8,7 +8,25 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 // access to any information necessary to programmatically
 // create pages.
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+
+  const { createPage, createRedirect } = actions;
+
+  createRedirect({
+    fromPath: `/node/`,
+    toPath: `/blog/`,
+    isPermanent: true,
+    redirectInBrowser: true,
+    force: true,
+  });
+
+  createRedirect({
+    fromPath: `/node`,
+    toPath: `/node/`,
+    isPermanent: true,
+    redirectInBrowser: true,
+    force: true,
+  });
+
   return graphql(`
         {
             allAsciidoc {
