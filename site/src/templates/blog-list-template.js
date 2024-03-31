@@ -54,7 +54,7 @@ const BlogIndex = ({ pageContext, data }) => {
               className={blogpost}
             >
               <Link
-                to={"/blog"+childrenAsciidoc[0].fields.slug}
+                to={`blog${childrenAsciidoc[0].fields.slug}`}
                 style={{
                   textDecoration: "none",
                   display: "flex",
@@ -142,12 +142,12 @@ const BlogIndex = ({ pageContext, data }) => {
         }}
       >
         {!isFirst && (
-          <Link to={"/blog/" + prevPage} rel="prev">
+          <Link to={`/blog/${prevPage}`} rel="prev">
             ← Previous Page
           </Link>
         )}
         {!isLast && (
-          <Link to={"/blog/" + nextPage} rel="next">
+          <Link to={`/blog/${nextPage}`} rel="next">
             Next Page →
           </Link>
         )}
