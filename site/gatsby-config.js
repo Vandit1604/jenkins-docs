@@ -6,8 +6,8 @@ module.exports = {
         author: "@jenkinsci",
         twitterUsername: "@JenkinsCI",
         buildDate: new Date(),
-        stable:"2.426.3",
-        latest:"2.444",
+        stable: "2.426.3",
+        latest: "2.444",
     },
     plugins: [
         `gatsby-transformer-asciidoc`,
@@ -16,6 +16,22 @@ module.exports = {
             options: {
                 name: `pages`,
                 path: `${__dirname}/content`,
+            },
+        },
+        `gatsby-transformer-asciidoc`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `steps`,
+                path: `${__dirname}/steps`,
+            },
+        },
+        `gatsby-transformer-asciidoc`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `upgrades`,
+                path: `${__dirname}/upgrades`,
             },
         },
         `gatsby-transformer-asciidoc`,

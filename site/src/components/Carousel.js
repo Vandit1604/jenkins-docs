@@ -18,8 +18,6 @@ const Carousel = () => (
         <Swiper
             spaceBetween={36}
             slidesPerView={1}
-            onSlideChange={() => console.log("Slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
             pagination={true}
             modules={[Autoplay, Navigation, Pagination]}
             loop={true}

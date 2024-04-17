@@ -18,8 +18,7 @@ import {
 import { blogAuthorImage } from "../utils/index.js";
 
 const Article = ({ data, pageContext }) => {
-    console.log(pageContext);
-    const { filteredAuthors } = pageContext;
+    const { authors } = pageContext;
     const authorList = blogAuthorImage(data.asciidoc.pageAttributes.author);
     return (
         <BlogPost>
@@ -36,7 +35,7 @@ const Article = ({ data, pageContext }) => {
             )}
             <div dangerouslySetInnerHTML={{ __html: data.asciidoc.html }} />
             <div>
-                {filteredAuthors.map((node, idx) => {
+                {authors.map((node, idx) => {
                     return (
                         <section key={idx} style={{ marginBottom: "1rem" }}>
                             {authorList.map((auth, idx) => (
