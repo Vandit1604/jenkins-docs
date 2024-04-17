@@ -142,11 +142,15 @@ strong {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 
-.highlight > code {
+code {
+    color: palevioletred;
+}
+
+.highlight>code {
     display: block;
     overflow-x: auto;
     padding: 0.875em;
-    background-color: #e7f3ff;
+    background-color: #ffffff;
     font-family:
         Source Code Pro,
         monospace;
@@ -159,21 +163,15 @@ strong {
     padding: 1rem;
 }
 
-p > code {
+p>code {
     font-family: monospace, monospace;
     /* 1 */
     font-size: 1em;
     /* 2 */
-    background-color: #e7f3ff;
+    background-color: #ffffff;
     font-family:
         Source Code Pro,
         monospace;
-    -webkit-box-shadow:
-        rgba(0, 0, 0, 0.02) 0 1px 3px 0,
-        rgba(27, 31, 35, 0.15) 0 0 0 1px;
-    box-shadow:
-        rgba(0, 0, 0, 0.02) 0 1px 3px 0,
-        rgba(27, 31, 35, 0.15) 0 0 0 1px;
 }
 
 kbd,
@@ -242,8 +240,8 @@ sup {
     box-sizing: inherit;
 }
 
-.admonitionblock td.content > :not(.title):first-child,
-.admonitionblock td.content > .title + * {
+.admonitionblock td.content> :not(.title):first-child,
+.admonitionblock td.content>.title+* {
     margin-top: 0;
 }
 
@@ -255,7 +253,7 @@ sup {
     color: white;
 }
 
-.admonitionblock > table {
+.admonitionblock>table {
     table-layout: fixed;
     position: relative;
     width: 100%;
@@ -568,6 +566,7 @@ summary {
     float: right;
     padding: 15px;
 }
+
 .right p {
     text-align: justify;
 }
