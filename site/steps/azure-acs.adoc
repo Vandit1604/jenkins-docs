@@ -1,0 +1,32 @@
+---
+layout: pipelinesteps
+title: "Azure Container Service Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Azure Container Service Plugin
+
+plugin:azure-acs[View this plugin on the Plugins site]
+
+=== `acsDeploy`: Deploy to Azure Container Service (AKS)
+++++
+null
+
+
+++++
+=== `step([$class: 'ACSDeploymentBuilder'])`: Deploy to Azure Container Service (AKS)
+++++
+<ul><li><code>context</code>
+<ul><code>java.lang.TypeNotPresentException: Type org.jenkinsci.plugins.docker.commons.credentials.DockerRegistryEndpoint not present</code>
+</ul></li>
+</ul>
+
+
+++++

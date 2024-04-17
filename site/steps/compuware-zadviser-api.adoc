@@ -1,0 +1,47 @@
+---
+layout: pipelinesteps
+title: "Compuware zAdviser API"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Compuware zAdviser API
+
+plugin:compuware-zadviser-api[View this plugin on the Plugins site]
+
+=== `zAdviserDownload`: zAdviser download data and optionally upload to Compuware
+++++
+<ul><li><code>connectionId : String</code>
+</li>
+<li><code>credentialsId : String</code>
+</li>
+<li><code>jcl : String</code>
+</li>
+<li><code>encryptedDataFile : String</code>
+</li>
+<li><code>unencryptedDataFile : String</code>
+</li>
+<li><code>encryptData : boolean</code> (optional)
+</li>
+<li><code>uploadData : boolean</code> (optional)
+</li>
+</ul>
+
+
+++++
+=== `zAdviserUpload`: zAdviser upload data to Compuware
+++++
+<ul><li><code>connectionId : String</code>
+</li>
+<li><code>uploadDataFile : String</code>
+</li>
+</ul>
+
+
+++++

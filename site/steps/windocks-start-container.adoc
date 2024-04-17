@@ -1,0 +1,31 @@
+---
+layout: pipelinesteps
+title: "Start Windocks Containers"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Start Windocks Containers
+
+plugin:windocks-start-container[View this plugin on the Plugins site]
+
+=== `step([$class: 'WinDocksBuilder'])`: Setup Docker Container
+++++
+<ul><li><code>ipaddress : String</code>
+<div><div>
+ Specify the IP Address of the Docker server you wish to create a container in.
+</div></div>
+
+</li>
+<li><code>image : String</code>
+</li>
+</ul>
+
+
+++++

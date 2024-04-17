@@ -1,0 +1,57 @@
+---
+layout: pipelinesteps
+title: "MergeBase SCA Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== MergeBase SCA Plugin
+
+plugin:mergebase-sca[View this plugin on the Plugins site]
+
+=== `mergebaseScan`: Run MergeBase SCA Scan
+++++
+<ul><li><code>debugMode : boolean</code> (optional)
+</li>
+<li><code>jsonOutput : boolean</code> (optional)
+</li>
+<li><code>killBuild : boolean</code> (optional)
+</li>
+<li><code>mbScanPath : String</code> (optional)
+</li>
+<li><code>projectName : String</code> (optional)
+</li>
+<li><code>scanAll : boolean</code> (optional)
+</li>
+<li><code>severityThreshold : String</code> (optional)
+</li>
+</ul>
+
+
+++++
+=== `step([$class: 'MergebaseStepBuilder'])`: MergeBase Build Step
+++++
+<ul><li><code>projectName : String</code> (optional)
+</li>
+<li><code>severityThreshold : String</code> (optional)
+</li>
+<li><code>mbScanPath : String</code> (optional)
+</li>
+<li><code>scanAll : boolean</code> (optional)
+</li>
+<li><code>debugMode : boolean</code> (optional)
+</li>
+<li><code>jsonOutput : boolean</code> (optional)
+</li>
+<li><code>killBuild : boolean</code> (optional)
+</li>
+</ul>
+
+
+++++

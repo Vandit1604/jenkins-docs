@@ -1,0 +1,25 @@
+---
+layout: pipelinesteps
+title: "OpenEdge (Progress ABL)"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== OpenEdge (Progress ABL)
+
+plugin:openedge[View this plugin on the Plugins site]
+
+=== `wrap([$class: 'OpenEdgeBuildWrapper'])`: OpenEdge
+++++
+<ul><li><code>openEdgeInstall : String</code>
+</li>
+</ul>
+
+
+++++

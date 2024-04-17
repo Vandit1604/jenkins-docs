@@ -1,0 +1,42 @@
+---
+layout: pipelinesteps
+title: "LeanIX Value Stream Management"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== LeanIX Value Stream Management
+
+plugin:leanix-microservice-intelligence[View this plugin on the Plugins site]
+
+=== `leanIXMicroserviceIntelligence`: LeanIX Value Stream Management
+++++
+<ul><li><code>apitoken</code> (optional)
+<ul><li><b>Type:</b> <code>class hudson.util.Secret</code></li>
+</ul></li>
+<li><code>dependencymanager : String</code> (optional)
+</li>
+<li><code>deploymentstage : String</code> (optional)
+</li>
+<li><code>deploymentversion : String</code> (optional)
+</li>
+<li><code>hostname : String</code> (optional)
+</li>
+<li><code>jobresultchoice : String</code> (optional)
+</li>
+<li><code>lxmanifestpath : String</code> (optional)
+</li>
+<li><code>mavensettingspath : String</code> (optional)
+</li>
+<li><code>useleanixconnector : boolean</code> (optional)
+</li>
+</ul>
+
+
+++++

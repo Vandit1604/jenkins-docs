@@ -1,0 +1,42 @@
+---
+layout: pipelinesteps
+title: "WinRM Client Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== WinRM Client Plugin
+
+plugin:winrm-client[View this plugin on the Plugins site]
+
+=== `winRMClient`: WinRM Client
+++++
+<ul><li><code>hostName : String</code>
+</li>
+<li><code>credentialsId : String</code>
+</li>
+<li><code>winRMOperations</code>
+<ul><b>Array / List of Nested Choice of Objects</b>
+<li><code>invokeCommand</code><div>
+<ul><li><code>command : String</code>
+</li>
+</ul></div></li>
+<li><code>sendFile</code><div>
+<ul><li><code>source : String</code>
+</li>
+<li><code>destination : String</code>
+</li>
+<li><code>configurationName : String</code>
+</li>
+</ul></div></li>
+</ul></li>
+</ul>
+
+
+++++

@@ -1,0 +1,31 @@
+---
+layout: pipelinesteps
+title: "XLRelease Variables Setter"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== XLRelease Variables Setter
+
+plugin:xlrelease-var-setter[View this plugin on the Plugins site]
+
+=== `step([$class: 'XLRVarSetterBuilder'])`: XL-Release Var Setter
+++++
+<ul><li><code>XLR_releaseId : String</code>
+</li>
+<li><code>XLR_varName : String</code>
+</li>
+<li><code>JKS_varName : String</code>
+</li>
+<li><code>debug : boolean</code>
+</li>
+</ul>
+
+
+++++

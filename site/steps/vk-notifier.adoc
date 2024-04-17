@@ -1,0 +1,43 @@
+---
+layout: pipelinesteps
+title: "VK Notifier"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== VK Notifier
+
+plugin:vk-notifier[View this plugin on the Plugins site]
+
+=== `vkSend`: VkNotifierCustomSendStep
+++++
+<ul><li><code>message : String</code>
+</li>
+<li><code>peer : String</code> (optional)
+</li>
+</ul>
+
+
+++++
+=== `vkSendEnd`: VkNotifierEndSendStep
+++++
+<ul><li><code>peer : String</code> (optional)
+</li>
+</ul>
+
+
+++++
+=== `vkSendStart`: VkNotifierStartSendStep
+++++
+<ul><li><code>peer : String</code> (optional)
+</li>
+</ul>
+
+
+++++

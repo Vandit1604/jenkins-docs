@@ -1,0 +1,33 @@
+---
+layout: pipelinesteps
+title: "Gitee Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Gitee Plugin
+
+plugin:gitee[View this plugin on the Plugins site]
+
+=== `acceptGiteeMR`: Accept Gitee Pull Request
+++++
+<ul><li><code>mergeCommitMessage : String</code> (optional)
+</li>
+</ul>
+
+
+++++
+=== `addGiteeMRComment`: Add comment on Gitee Pull Request
+++++
+<ul><li><code>comment : String</code> (optional)
+</li>
+</ul>
+
+
+++++

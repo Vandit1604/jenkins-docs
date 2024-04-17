@@ -1,0 +1,49 @@
+---
+layout: pipelinesteps
+title: "OSF Builder Suite For Salesforce Commerce Cloud :: Deploy"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== OSF Builder Suite For Salesforce Commerce Cloud :: Deploy
+
+plugin:osf-builder-suite-for-sfcc-deploy[View this plugin on the Plugins site]
+
+=== `osfBuilderSuiteForSFCCDeploy`: OSF Builder Suite For Salesforce Commerce Cloud :: Deploy
+++++
+<ul><li><code>hostname : String</code> (optional)
+</li>
+<li><code>tfCredentialsId : String</code> (optional)
+</li>
+<li><code>ocCredentialsId : String</code> (optional)
+</li>
+<li><code>ocVersion : String</code> (optional)
+</li>
+<li><code>buildVersion : String</code> (optional)
+</li>
+<li><code>createBuildInfoCartridge : boolean</code> (optional)
+</li>
+<li><code>activateBuild : boolean</code> (optional)
+</li>
+<li><code>sourcePaths</code> (optional)
+<ul><b>Array / List of Nested Object</b>
+<li><code>sourcePath : String</code>
+</li>
+<li><code>excludePatterns</code>
+<ul><b>Array / List of Nested Object</b>
+<li><code>excludePattern : String</code>
+</li>
+</ul></li>
+</ul></li>
+<li><code>tempDirectory : String</code> (optional)
+</li>
+</ul>
+
+
+++++

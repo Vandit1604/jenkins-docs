@@ -1,0 +1,27 @@
+---
+layout: pipelinesteps
+title: "Selenium HTML report"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Selenium HTML report
+
+plugin:seleniumhtmlreport[View this plugin on the Plugins site]
+
+=== `step([$class: 'SeleniumHtmlReportPublisher'])`: Publish Selenium Html Report
+++++
+<ul><li><code>failureIfExceptionOnParsingResultFiles : boolean</code> (optional)
+</li>
+<li><code>testResultsDir : String</code> (optional)
+</li>
+</ul>
+
+
+++++

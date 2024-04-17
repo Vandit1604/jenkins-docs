@@ -1,0 +1,33 @@
+---
+layout: pipelinesteps
+title: "Uleska Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Uleska Plugin
+
+plugin:uleska[View this plugin on the Plugins site]
+
+=== `uleskaScanner`: UleskaScanner
+++++
+<ul><li><code>uleskaInstanceName : String</code>
+</li>
+<li><code>applicationId : String</code>
+</li>
+<li><code>versionId : String</code>
+</li>
+<li><code>toolkitName : String</code>
+</li>
+<li><code>propagateFailure : boolean</code>
+</li>
+</ul>
+
+
+++++

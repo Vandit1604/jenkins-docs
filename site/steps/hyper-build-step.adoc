@@ -1,0 +1,27 @@
+---
+layout: pipelinesteps
+title: "Hyper.sh Build Step Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Hyper.sh Build Step Plugin
+
+plugin:hyper-build-step[View this plugin on the Plugins site]
+
+=== `step([$class: 'HyperBuilder'])`: Execute shell in Hyper.sh
+++++
+<ul><li><code>image : String</code>
+</li>
+<li><code>commands : String</code>
+</li>
+</ul>
+
+
+++++

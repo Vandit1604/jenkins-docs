@@ -1,0 +1,40 @@
+---
+layout: pipelinesteps
+title: "Jira Service Management Integration Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Jira Service Management Integration Plugin
+
+plugin:jsm-alert[View this plugin on the Plugins site]
+
+=== `JSM`: Jira Service Management step
+++++
+<ul><li><code>apiKey</code> (optional)
+<ul><li><b>Type:</b> <code>class hudson.util.Secret</code></li>
+</ul></li>
+<li><code>apiUrl : String</code> (optional)
+</li>
+<li><code>buildStartPriority : String</code> (optional)
+</li>
+<li><code>enable : boolean</code> (optional)
+</li>
+<li><code>notifyBuildStart : boolean</code> (optional)
+</li>
+<li><code>priority : String</code> (optional)
+</li>
+<li><code>tags : String</code> (optional)
+</li>
+<li><code>teams : String</code> (optional)
+</li>
+</ul>
+
+
+++++

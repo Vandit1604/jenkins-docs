@@ -1,0 +1,45 @@
+---
+layout: pipelinesteps
+title: "IBM z/OS Connector"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== IBM z/OS Connector
+
+plugin:zos-connector[View this plugin on the Plugins site]
+
+=== `step([$class: 'ZOSJobSubmitter'])`: Submit z/OS job
+++++
+<ul><li><code>server : String</code>
+</li>
+<li><code>port : int</code>
+</li>
+<li><code>credentialsId : String</code>
+</li>
+<li><code>wait : boolean</code>
+</li>
+<li><code>waitTime : int</code>
+</li>
+<li><code>deleteJobFromSpool : boolean</code>
+</li>
+<li><code>jobLogToConsole : boolean</code>
+</li>
+<li><code>jobFile : String</code>
+</li>
+<li><code>MaxCC : String</code>
+</li>
+<li><code>JESINTERFACELEVEL1 : boolean</code>
+</li>
+<li><code>FTPActiveMode : boolean</code>
+</li>
+</ul>
+
+
+++++

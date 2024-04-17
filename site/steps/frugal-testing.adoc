@@ -1,0 +1,33 @@
+---
+layout: pipelinesteps
+title: "Frugal Testing"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Frugal Testing
+
+plugin:frugal-testing[View this plugin on the Plugins site]
+
+=== `frugalTesting`: Frugal Testing
+++++
+<ul><li><code>userId : String</code>
+</li>
+<li><code>testId : String</code>
+</li>
+<li><code>runTag : String</code>
+</li>
+<li><code>getJtl : boolean</code>
+</li>
+<li><code>serverUrl : String</code> (optional)
+</li>
+</ul>
+
+
+++++

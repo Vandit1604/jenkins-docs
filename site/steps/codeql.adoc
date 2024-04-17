@@ -1,0 +1,29 @@
+---
+layout: pipelinesteps
+title: "CodeQL Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== CodeQL Plugin
+
+plugin:codeql[View this plugin on the Plugins site]
+
+=== `withCodeQL`: Provide codeql environment
+++++
+<ul><li><code>codeql : String</code> (optional)
+<div><div>
+ Select the CodeQL installation.
+</div></div>
+
+</li>
+</ul>
+
+
+++++

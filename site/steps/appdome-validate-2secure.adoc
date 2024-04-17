@@ -1,0 +1,30 @@
+---
+layout: pipelinesteps
+title: "Appdome Validate-2secure"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Appdome Validate-2secure
+
+plugin:appdome-validate-2secure[View this plugin on the Plugins site]
+
+=== `AppdomeValidator`: Appdome Validate-2secure
+++++
+<ul><li><code>token</code>
+<ul><li><b>Type:</b> <code>class hudson.util.Secret</code></li>
+</ul></li>
+<li><code>appPath : String</code>
+</li>
+<li><code>outputLocation : String</code> (optional)
+</li>
+</ul>
+
+
+++++

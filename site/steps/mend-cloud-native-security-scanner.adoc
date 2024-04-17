@@ -1,0 +1,36 @@
+---
+layout: pipelinesteps
+title: "Mend Cloud Native Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Mend Cloud Native Plugin
+
+plugin:mend-cloud-native-security-scanner[View this plugin on the Plugins site]
+
+=== `step([$class: 'MendCnScannerBuilder'])`: Mend Cloud Native Security Scanner
+++++
+<ul><li><code>userEmail : String</code>
+</li>
+<li><code>userKey</code>
+<ul><li><b>Type:</b> <code>class hudson.util.Secret</code></li>
+</ul></li>
+<li><code>mendUrl : String</code>
+</li>
+<li><code>repoNames : String</code>
+<div><div>
+ List of repositories to scan from, separate by comma
+</div></div>
+
+</li>
+</ul>
+
+
+++++

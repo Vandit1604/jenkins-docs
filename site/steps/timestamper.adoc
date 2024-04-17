@@ -1,0 +1,29 @@
+---
+layout: pipelinesteps
+title: "Timestamper"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Timestamper
+
+plugin:timestamper[View this plugin on the Plugins site]
+
+=== `timestamps`: Timestamps
+++++
+<ul></ul>
+
+
+++++
+=== `wrap([$class: 'TimestamperBuildWrapper'])`: Add timestamps to the Console Output
+++++
+<ul></ul>
+
+
+++++

@@ -1,0 +1,26 @@
+---
+layout: pipelinesteps
+title: "IBM Continuous Release"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== IBM Continuous Release
+
+plugin:ibm-continuous-release[View this plugin on the Plugins site]
+
+=== `step([$class: 'ContinuousReleaseProperties'])`: Pass Properties to Continuous Release Version
+++++
+<ul><li><code>properties</code>
+<ul><li><b>Type:</b> <code>java.util.Map&lt;java.lang.String, java.lang.String&gt;</code></li>
+</ul></li>
+</ul>
+
+
+++++

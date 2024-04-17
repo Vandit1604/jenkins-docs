@@ -1,0 +1,25 @@
+---
+layout: pipelinesteps
+title: "Wavefront Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Wavefront Plugin
+
+plugin:wavefront[View this plugin on the Plugins site]
+
+=== `wavefrontTimedCall`: Sets up wavefront closure
+++++
+<ul><li><code>metricName : String</code> (optional)
+</li>
+</ul>
+
+
+++++

@@ -1,0 +1,25 @@
+---
+layout: pipelinesteps
+title: "GCR Vulnerability Scanner Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== GCR Vulnerability Scanner Plugin
+
+plugin:gcr-scanner[View this plugin on the Plugins site]
+
+=== `gcrImageVulnerabilityScanner`: GCR Image Vulnerability Scanner
+++++
+<ul><li><code>imageName : String</code> (optional)
+</li>
+</ul>
+
+
+++++

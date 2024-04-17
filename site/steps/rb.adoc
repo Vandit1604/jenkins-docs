@@ -1,0 +1,33 @@
+---
+layout: pipelinesteps
+title: "Review Board Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Review Board Plugin
+
+plugin:rb[View this plugin on the Plugins site]
+
+=== `notifyReviewBoard`: Publish build status to Review Board
+++++
+<ul></ul>
+
+
+++++
+=== `publishReview`: Apply patch from Review Board
+++++
+<ul><li><code>downloadOnly : boolean</code>
+</li>
+<li><code>installRBTools : boolean</code>
+</li>
+</ul>
+
+
+++++

@@ -1,0 +1,33 @@
+---
+layout: pipelinesteps
+title: "CA-APM Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== CA-APM Plugin
+
+plugin:ca-apm[View this plugin on the Plugins site]
+
+=== `caapmplugin`: Jenkins Plugin for CA APM
+++++
+<ul><li><code>performanceComparatorProperties : String</code>
+</li>
+<li><code>loadGeneratorStartTime : String</code>
+</li>
+<li><code>loadGeneratorEndTime : String</code>
+</li>
+<li><code>loadGeneratorName : String</code>
+</li>
+<li><code>attribsStr : String</code>
+</li>
+</ul>
+
+
+++++

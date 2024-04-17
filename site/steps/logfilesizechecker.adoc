@@ -1,0 +1,37 @@
+---
+layout: pipelinesteps
+title: "build log file size checker plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== build log file size checker plugin
+
+plugin:logfilesizechecker[View this plugin on the Plugins site]
+
+=== `wrap([$class: 'LogfilesizecheckerWrapper'])`: Abort the build if its log file size is too big
+++++
+<ul><li><code>maxLogSize : int</code>
+<div><div>
+ If the log file of a build gets larger than the specified file size (in MB), the build will be terminated automatically.
+</div></div>
+
+</li>
+<li><code>failBuild : boolean</code>
+<div><div>
+ If checked, the build will be marked as failed rather than marked as aborted. (In any case, the build does not continue when the maximum file size is reached).
+</div></div>
+
+</li>
+<li><code>setOwn : boolean</code>
+</li>
+</ul>
+
+
+++++

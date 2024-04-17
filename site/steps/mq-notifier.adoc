@@ -1,0 +1,27 @@
+---
+layout: pipelinesteps
+title: "MQ Notifier"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== MQ Notifier
+
+plugin:mq-notifier[View this plugin on the Plugins site]
+
+=== `publishMQMessage`: Publish MQ Message
+++++
+<ul><li><code>json : String</code>
+</li>
+<li><code>routingKey : String</code> (optional)
+</li>
+</ul>
+
+
+++++

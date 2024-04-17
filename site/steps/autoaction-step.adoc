@@ -1,0 +1,33 @@
+---
+layout: pipelinesteps
+title: "AutoAction Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== AutoAction Plugin
+
+plugin:autoaction-step[View this plugin on the Plugins site]
+
+=== `chlAtuoAction`: Run AutoAction
+++++
+<ul><li><code>content : String</code>
+</li>
+<li><code>browserString : String</code>
+</li>
+<li><code>runScriptOnly : boolean</code>
+</li>
+<li><code>rootPath : String</code>
+</li>
+<li><code>libPath : String</code>
+</li>
+</ul>
+
+
+++++

@@ -1,0 +1,31 @@
+---
+layout: pipelinesteps
+title: "FortiCNP CICD Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== FortiCNP CICD Plugin
+
+plugin:forticwp-cicd[View this plugin on the Plugins site]
+
+=== `fortiCWPScanner`: Scan container images
+++++
+<ul><li><code>imageName : String</code>
+<div><div>
+ Name of the image to scan
+</div></div>
+
+</li>
+<li><code>block : boolean</code> (optional)
+</li>
+</ul>
+
+
+++++

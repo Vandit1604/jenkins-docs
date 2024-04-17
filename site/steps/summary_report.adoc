@@ -1,0 +1,27 @@
+---
+layout: pipelinesteps
+title: "Summary Display Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Summary Display Plugin
+
+plugin:summary_report[View this plugin on the Plugins site]
+
+=== `step([$class: 'ACIPluginPublisher'])`: Publish XML Summary Reports
+++++
+<ul><li><code>name : String</code>
+</li>
+<li><code>shownOnProjectPage : boolean</code>
+</li>
+</ul>
+
+
+++++

@@ -1,0 +1,45 @@
+---
+layout: pipelinesteps
+title: "LoadNinja Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== LoadNinja Plugin
+
+plugin:loadninja[View this plugin on the Plugins site]
+
+=== `step([$class: 'LoadNinjaBuilder'])`: LoadNinja
+++++
+<ul><li><code>apiKey : String</code>
+<div><div>
+ Your LoadNinja API KEY.
+</div></div>
+
+</li>
+<li><code>scenarioId : String</code>
+<div><div>
+ The Scenario Id of the Load Ninja load test you want to run.
+</div></div>
+
+</li>
+<li><code>oeb</code>
+<ul><b>Nested Object</b>
+<li><code>errorPassCriteria : String</code>
+</li>
+</ul></li>
+<li><code>odb</code>
+<ul><b>Nested Object</b>
+<li><code>durationPassCriteria : String</code>
+</li>
+</ul></li>
+</ul>
+
+
+++++

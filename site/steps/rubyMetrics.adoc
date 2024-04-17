@@ -1,0 +1,36 @@
+---
+layout: pipelinesteps
+title: "RubyMetrics plugin for Jenkins"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== RubyMetrics plugin for Jenkins
+
+plugin:rubyMetrics[View this plugin on the Plugins site]
+
+=== `step([$class: 'RcovPublisher'])`: Publish Rcov report
+++++
+<ul><li><code>reportDir : String</code>
+</li>
+<li><code>targets</code> (optional)
+<ul><b>Array / List of Nested Object</b>
+<li><code>metric</code>
+<ul><li><b>Values:</b> <code>TOTAL_COVERAGE</code>, <code>CODE_COVERAGE</code></li></ul></li>
+<li><code>healthy : int</code>
+</li>
+<li><code>unhealthy : int</code>
+</li>
+<li><code>unstable : int</code>
+</li>
+</ul></li>
+</ul>
+
+
+++++

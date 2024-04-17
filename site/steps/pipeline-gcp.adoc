@@ -1,0 +1,28 @@
+---
+layout: pipelinesteps
+title: "Pipeline: GCP Steps"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Pipeline: GCP Steps
+
+plugin:pipeline-gcp[View this plugin on the Plugins site]
+
+=== `withGCP`: Sets GCP credentials for nested block
+++++
+<div><div>
+ The id of credentials, presumably stored as Secret file
+</div></div>
+<ul><li><code>credentialsId : String</code>
+</li>
+</ul>
+
+
+++++

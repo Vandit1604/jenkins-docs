@@ -1,0 +1,41 @@
+---
+layout: pipelinesteps
+title: "WAPT Pro plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== WAPT Pro plugin
+
+plugin:waptpro[View this plugin on the Plugins site]
+
+=== `step([$class: 'WaptPro'])`: Publish WAPT Pro reports
+++++
+<ul><li><code>reportsFolder : String</code>
+</li>
+<li><code>reportFiles : String</code>
+</li>
+<li><code>checkTestResult : boolean</code>
+</li>
+</ul>
+
+
+++++
+=== `waptProReport`: Publish WAPT Pro reports
+++++
+<ul><li><code>reportsFolder : String</code>
+</li>
+<li><code>reportFiles : String</code>
+</li>
+<li><code>checkTestResult : boolean</code>
+</li>
+</ul>
+
+
+++++

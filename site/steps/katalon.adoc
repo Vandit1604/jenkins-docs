@@ -1,0 +1,47 @@
+---
+layout: pipelinesteps
+title: "Katalon Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Katalon Plugin
+
+plugin:katalon[View this plugin on the Plugins site]
+
+=== `executeKatalon`: Execute Katalon Studio Tests
+++++
+<ul><li><code>version : String</code>
+</li>
+<li><code>location : String</code>
+</li>
+<li><code>executeArgs : String</code>
+</li>
+<li><code>x11Display : String</code>
+</li>
+<li><code>xvfbConfiguration : String</code>
+</li>
+</ul>
+
+
+++++
+=== `executeKatalonTestOps`: Execute Katalon TestOps Plan
+++++
+<ul><li><code>credentialsId : String</code>
+</li>
+<li><code>serverUrl : String</code>
+</li>
+<li><code>projectId : String</code>
+</li>
+<li><code>planId : String</code>
+</li>
+</ul>
+
+
+++++

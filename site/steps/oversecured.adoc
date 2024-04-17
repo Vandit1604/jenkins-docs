@@ -1,0 +1,29 @@
+---
+layout: pipelinesteps
+title: "Oversecured"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Oversecured
+
+plugin:oversecured[View this plugin on the Plugins site]
+
+=== `oversecuredUpload`: Oversecured
+++++
+<ul><li><code>integrationId : String</code>
+</li>
+<li><code>branchName : String</code>
+</li>
+<li><code>appPath : String</code>
+</li>
+</ul>
+
+
+++++

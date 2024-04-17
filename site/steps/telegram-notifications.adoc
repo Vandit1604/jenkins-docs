@@ -1,0 +1,51 @@
+---
+layout: pipelinesteps
+title: "Telegram Bot Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Telegram Bot Plugin
+
+plugin:telegram-notifications[View this plugin on the Plugins site]
+
+=== `step([$class: 'TelegramBotBuilder'])`: TelegramBot
+++++
+<ul><li><code>message : String</code>
+</li>
+</ul>
+
+
+++++
+=== `telegramSend`: TelegramBot
+++++
+<ul><li><code>message : String</code>
+</li>
+<li><code>chatId : long</code> (optional)
+</li>
+</ul>
+
+
+++++
+=== `step([$class: 'TelegramBotPublisher'])`: TelegramBot
+++++
+<ul><li><code>message : String</code>
+</li>
+<li><code>whenSuccess : boolean</code>
+</li>
+<li><code>whenUnstable : boolean</code>
+</li>
+<li><code>whenFailed : boolean</code>
+</li>
+<li><code>whenAborted : boolean</code>
+</li>
+</ul>
+
+
+++++

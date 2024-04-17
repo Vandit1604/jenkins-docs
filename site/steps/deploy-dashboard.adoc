@@ -1,0 +1,37 @@
+---
+layout: pipelinesteps
+title: "Deploy Dashboard Plugin by Namecheap"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Deploy Dashboard Plugin by Namecheap
+
+plugin:deploy-dashboard[View this plugin on the Plugins site]
+
+=== `buildAddUrl`: Build Add Url
+++++
+<ul><li><code>title : String</code>
+</li>
+<li><code>url : String</code>
+</li>
+</ul>
+
+
+++++
+=== `addDeployToDashboard`: Deployment
+++++
+<ul><li><code>env : String</code>
+</li>
+<li><code>buildNumber : String</code>
+</li>
+</ul>
+
+
+++++

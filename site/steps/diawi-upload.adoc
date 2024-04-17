@@ -1,0 +1,33 @@
+---
+layout: pipelinesteps
+title: "Diawi Upload Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Diawi Upload Plugin
+
+plugin:diawi-upload[View this plugin on the Plugins site]
+
+=== `step([$class: 'DiawiUploader'])`: Diawi Upload Step
+++++
+<ul><li><code>token : String</code>
+</li>
+<li><code>fileName : String</code>
+</li>
+<li><code>proxyHost : String</code>
+</li>
+<li><code>proxyPort : int</code>
+</li>
+<li><code>proxyProtocol : String</code>
+</li>
+</ul>
+
+
+++++

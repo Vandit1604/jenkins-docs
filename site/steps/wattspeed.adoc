@@ -1,0 +1,28 @@
+---
+layout: pipelinesteps
+title: "Wattspeed"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Wattspeed
+
+plugin:wattspeed[View this plugin on the Plugins site]
+
+=== `wattspeed`: Wattspeed
+++++
+<ul><li><code>token</code>
+<ul><li><b>Type:</b> <code>class hudson.util.Secret</code></li>
+</ul></li>
+<li><code>projects : int</code>
+</li>
+</ul>
+
+
+++++

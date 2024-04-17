@@ -1,0 +1,25 @@
+---
+layout: pipelinesteps
+title: "Chef Identity Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Chef Identity Plugin
+
+plugin:chef-identity[View this plugin on the Plugins site]
+
+=== `wrap([$class: 'ChefIdentityBuildWrapper'])`: Chef Identity Plugin
+++++
+<ul><li><code>jobIdentity : String</code>
+</li>
+</ul>
+
+
+++++

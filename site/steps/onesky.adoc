@@ -1,0 +1,31 @@
+---
+layout: pipelinesteps
+title: "OneSky Jenkins plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== OneSky Jenkins plugin
+
+plugin:onesky[View this plugin on the Plugins site]
+
+=== `OneSky`: Download translation resources from One Sky
+++++
+<ul><li><code>projectId : String</code> (optional)
+<div><div>
+ Try to look for this on the URL after selecting the project from the menu
+</div></div>
+
+</li>
+<li><code>resourcesPath : String</code> (optional)
+</li>
+</ul>
+
+
+++++

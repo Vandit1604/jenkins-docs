@@ -1,0 +1,37 @@
+---
+layout: pipelinesteps
+title: "nvm-wrapper"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== nvm-wrapper
+
+plugin:nvm-wrapper[View this plugin on the Plugins site]
+
+=== `nvm`: Setup the environment for an NVM installation.
+++++
+<ul><li><code>version : String</code>
+<div><div>
+ For example 'v0.10.25'.
+</div></div>
+
+</li>
+<li><code>nvmInstallDir : String</code> (optional)
+</li>
+<li><code>nvmInstallURL : String</code> (optional)
+</li>
+<li><code>nvmIoJsOrgMirror : String</code> (optional)
+</li>
+<li><code>nvmNodeJsOrgMirror : String</code> (optional)
+</li>
+</ul>
+
+
+++++

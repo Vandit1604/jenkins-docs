@@ -1,0 +1,35 @@
+---
+layout: pipelinesteps
+title: "Spring Config Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Spring Config Plugin
+
+plugin:spring-config[View this plugin on the Plugins site]
+
+=== `springConfig`: A step to read spring style profile configs
+++++
+<ul><li><code>hideInBuildPage : boolean</code> (optional)
+</li>
+<li><code>location : String</code> (optional)
+</li>
+<li><code>profiles : Array / List of String</code> (optional)
+<ul></ul></li>
+</ul>
+
+
+++++
+=== `springProfiles`: A step to retrieve spring profiles defined in Job
+++++
+<ul></ul>
+
+
+++++

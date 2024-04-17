@@ -1,0 +1,41 @@
+---
+layout: pipelinesteps
+title: "LambdaTest Automation Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== LambdaTest Automation Plugin
+
+plugin:lambdatest-automation[View this plugin on the Plugins site]
+
+=== `lambdaTestReportPublisher`: LambdaTest Pipeline Report
+++++
+<ul><li><code>product : String</code>
+<div><div>
+ Specify the product for which the report should be generated, i.e. automation or app-automation
+</div></div>
+
+</li>
+</ul>
+
+
+++++
+=== `step([$class: 'LambdaTestAppAutomationReportPublisher'])`: LambdaTest App Automation Report
+++++
+<ul></ul>
+
+
+++++
+=== `step([$class: 'LambdaTestReportPublisher'])`: LambdaTest Report
+++++
+<ul></ul>
+
+
+++++

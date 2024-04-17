@@ -1,0 +1,29 @@
+---
+layout: pipelinesteps
+title: "aRESTocats Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== aRESTocats Plugin
+
+plugin:arestocats[View this plugin on the Plugins site]
+
+=== `arestocats`: aRESTocats
+++++
+<ul><li><code>metricsDatafilesPattern : String</code>
+</li>
+<li><code>resultsDatafilesPattern : String</code>
+</li>
+<li><code>numBuilds : int</code>
+</li>
+</ul>
+
+
+++++

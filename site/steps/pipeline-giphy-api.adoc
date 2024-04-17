@@ -1,0 +1,73 @@
+---
+layout: pipelinesteps
+title: "Giphy API Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Giphy API Plugin
+
+plugin:pipeline-giphy-api[View this plugin on the Plugins site]
+
+=== `giphyRandom`: GiphyRandomStepImpl
+++++
+<ul><li><code>credentialsId : String</code> (optional)
+</li>
+<li><code>imageSize : String</code> (optional)
+</li>
+<li><code>rating : String</code> (optional)
+</li>
+<li><code>tag : String</code> (optional)
+</li>
+</ul>
+
+
+++++
+=== `giphySearch`: GiphySearchStepImpl
+++++
+<ul><li><code>credentialsId : String</code> (optional)
+</li>
+<li><code>imageSize : String</code> (optional)
+</li>
+<li><code>keyword : String</code> (optional)
+</li>
+<li><code>rating : String</code> (optional)
+</li>
+</ul>
+
+
+++++
+=== `giphySearchRandomByKeyword`: GiphySearchRandomByKeywordStep
+++++
+<ul><li><code>credentialsId : String</code> (optional)
+</li>
+<li><code>imageSize : String</code> (optional)
+</li>
+<li><code>keyword : String</code> (optional)
+</li>
+<li><code>rating : String</code> (optional)
+</li>
+</ul>
+
+
+++++
+=== `giphyTranslate`: GiphyTranslateStepImpl
+++++
+<ul><li><code>credentialsId : String</code> (optional)
+</li>
+<li><code>imageSize : String</code> (optional)
+</li>
+<li><code>keyword : String</code> (optional)
+</li>
+<li><code>rating : String</code> (optional)
+</li>
+</ul>
+
+
+++++

@@ -1,0 +1,39 @@
+---
+layout: pipelinesteps
+title: "cucumber-slack-notifier"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== cucumber-slack-notifier
+
+plugin:cucumber-slack-notifier[View this plugin on the Plugins site]
+
+=== `cucumberSlackSend`: Send cucumber notifications to slack
+++++
+<div><div>
+ Simple step for sending a cucumber report to a slack channel.
+ <br>
+  Usage Example:
+ <br><code> cucumberSlackSend channel:'testchannel', json:'target/cucumber-results.json' </code>
+</div></div>
+<ul><li><code>channel : String</code>
+</li>
+<li><code>extra : String</code> (optional)
+</li>
+<li><code>failOnError : boolean</code> (optional)
+</li>
+<li><code>hideSuccessfulResults : String</code> (optional)
+</li>
+<li><code>json : String</code> (optional)
+</li>
+</ul>
+
+
+++++

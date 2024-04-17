@@ -1,0 +1,55 @@
+---
+layout: pipelinesteps
+title: "ICQ and MyTeam Notification Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== ICQ and MyTeam Notification Plugin
+
+plugin:icq-notification[View this plugin on the Plugins site]
+
+=== `step([$class: 'SendMessageBuildStep'])`: Send message to ICQ or MyTeam
+++++
+<ul><li><code>message : String</code>
+</li>
+<li><code>filepath : String</code>
+</li>
+<li><code>recipients</code>
+<ul><b>Array / List of Nested Object</b>
+<li><code>id : String</code>
+</li>
+</ul></li>
+</ul>
+
+
+++++
+=== `icqMessage`: Send message to ICQ or MyTeam
+++++
+<ul><li><code>message : String</code>
+</li>
+<li><code>filepath : String</code>
+</li>
+<li><code>recipients</code>
+<ul><b>Array / List of Nested Object</b>
+<li><code>id : String</code>
+</li>
+</ul></li>
+<li><code>succeeded : boolean</code>
+</li>
+<li><code>unstable : boolean</code>
+</li>
+<li><code>failed : boolean</code>
+</li>
+<li><code>aborted : boolean</code>
+</li>
+</ul>
+
+
+++++

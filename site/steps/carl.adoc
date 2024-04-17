@@ -1,0 +1,39 @@
+---
+layout: pipelinesteps
+title: "Carl plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Carl plugin
+
+plugin:carl[View this plugin on the Plugins site]
+
+=== `carl`: Carl
+++++
+<ul><li><code>installationName : String</code>
+</li>
+<li><code>sourcePath : String</code>
+</li>
+<li><code>applicationName : String</code>
+</li>
+<li><code>archivePdf : boolean</code> (optional)
+</li>
+<li><code>displayLog : boolean</code> (optional)
+</li>
+<li><code>logPath : String</code> (optional)
+</li>
+<li><code>outputPath : String</code> (optional)
+</li>
+<li><code>qualityGate : String</code> (optional)
+</li>
+</ul>
+
+
+++++

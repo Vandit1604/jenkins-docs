@@ -1,0 +1,28 @@
+---
+layout: pipelinesteps
+title: "SimplifyQA Connector"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== SimplifyQA Connector
+
+plugin:simplify-qa-connector[View this plugin on the Plugins site]
+
+=== `SimplifyQA`: Simplify Suite Automation
+++++
+<ul><li><code>api : String</code>
+</li>
+<li><code>token</code>
+<ul><li><b>Type:</b> <code>class hudson.util.Secret</code></li>
+</ul></li>
+</ul>
+
+
+++++

@@ -1,0 +1,33 @@
+---
+layout: pipelinesteps
+title: "Fluentd Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Fluentd Plugin
+
+plugin:fluentd[View this plugin on the Plugins site]
+
+=== `step([$class: 'Fluentd'])`: Send to Fluentd
+++++
+<ul><li><code>tag : String</code>
+</li>
+<li><code>failBuild : boolean</code>
+</li>
+<li><code>fileName : String</code>
+</li>
+<li><code>json : String</code>
+</li>
+<li><code>pushFromAgent : boolean</code>
+</li>
+</ul>
+
+
+++++

@@ -1,0 +1,31 @@
+---
+layout: pipelinesteps
+title: "Aqua Security Serverless Scanner"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Aqua Security Serverless Scanner
+
+plugin:aqua-serverless[View this plugin on the Plugins site]
+
+=== `aquaServerlessScanner`: Aqua Serverless Security
+++++
+<ul><li><code>onDisallowed : String</code>
+</li>
+<li><code>notCompliesCmd : String</code>
+</li>
+<li><code>codeScanPath : String</code>
+</li>
+<li><code>customFlags : String</code>
+</li>
+</ul>
+
+
+++++

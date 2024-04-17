@@ -1,0 +1,41 @@
+---
+layout: pipelinesteps
+title: "LoadComplete support plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== LoadComplete support plugin
+
+plugin:loadcomplete[View this plugin on the Plugins site]
+
+=== `loadcompletetest`: LoadComplete Test
+++++
+<ul><li><code>project : String</code> (optional)
+</li>
+<li><code>test : String</code> (optional)
+</li>
+<li><code>actionOnErrors : String</code> (optional)
+</li>
+<li><code>actionOnWarnings : String</code> (optional)
+</li>
+<li><code>executorVersion : String</code> (optional)
+</li>
+<li><code>generateMHT : boolean</code> (optional)
+</li>
+<li><code>generatePDF : boolean</code> (optional)
+</li>
+<li><code>timeout : String</code> (optional)
+</li>
+<li><code>useTimeout : boolean</code> (optional)
+</li>
+</ul>
+
+
+++++

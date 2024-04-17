@@ -1,0 +1,27 @@
+---
+layout: pipelinesteps
+title: "GCloud SDK Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== GCloud SDK Plugin
+
+plugin:gcloud-sdk[View this plugin on the Plugins site]
+
+=== `wrap([$class: 'GCloudBuildWrapper'])`: GCloud SDK authentication
+++++
+<ul><li><code>installation : String</code>
+</li>
+<li><code>credentialsId : String</code>
+</li>
+</ul>
+
+
+++++

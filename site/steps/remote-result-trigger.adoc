@@ -1,0 +1,25 @@
+---
+layout: pipelinesteps
+title: "Remote Result Trigger Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Remote Result Trigger Plugin
+
+plugin:remote-result-trigger[View this plugin on the Plugins site]
+
+=== `pubResult`: Publish Build Result
+++++
+<ul><li><code>result : String</code> (optional)
+</li>
+</ul>
+
+
+++++

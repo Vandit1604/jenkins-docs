@@ -1,0 +1,35 @@
+---
+layout: pipelinesteps
+title: "Qy Wechat Notification Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Qy Wechat Notification Plugin
+
+plugin:qy-wechat-notification[View this plugin on the Plugins site]
+
+=== `qyWechatNotification`: 企业微信通知
+++++
+<ul><li><code>failNotify : boolean</code> (optional)
+</li>
+<li><code>mentionedId : String</code> (optional)
+</li>
+<li><code>mentionedMobile : String</code> (optional)
+</li>
+<li><code>moreInfo : String</code> (optional)
+</li>
+<li><code>onlyFailSendQyWechatNotify : boolean</code> (optional)
+</li>
+<li><code>webhookUrl : String</code> (optional)
+</li>
+</ul>
+
+
+++++

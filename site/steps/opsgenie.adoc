@@ -1,0 +1,40 @@
+---
+layout: pipelinesteps
+title: "OpsGenie Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== OpsGenie Plugin
+
+plugin:opsgenie[View this plugin on the Plugins site]
+
+=== `opsgenie`: OpsGenie step
+++++
+<ul><li><code>apiKey</code> (optional)
+<ul><li><b>Type:</b> <code>class hudson.util.Secret</code></li>
+</ul></li>
+<li><code>apiUrl : String</code> (optional)
+</li>
+<li><code>buildStartPriority : String</code> (optional)
+</li>
+<li><code>enable : boolean</code> (optional)
+</li>
+<li><code>notifyBuildStart : boolean</code> (optional)
+</li>
+<li><code>priority : String</code> (optional)
+</li>
+<li><code>tags : String</code> (optional)
+</li>
+<li><code>teams : String</code> (optional)
+</li>
+</ul>
+
+
+++++

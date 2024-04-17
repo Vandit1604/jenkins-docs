@@ -1,0 +1,31 @@
+---
+layout: pipelinesteps
+title: "Minio Storage"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Minio Storage
+
+plugin:minio-storage[View this plugin on the Plugins site]
+
+=== `step([$class: 'MinioUploader'])`: Upload build artifacts to Minio server
+++++
+<ul><li><code>sourceFile : String</code>
+</li>
+<li><code>excludedFile : String</code>
+</li>
+<li><code>bucketName : String</code>
+</li>
+<li><code>objectNamePrefix : String</code>
+</li>
+</ul>
+
+
+++++

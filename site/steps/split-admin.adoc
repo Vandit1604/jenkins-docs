@@ -1,0 +1,41 @@
+---
+layout: pipelinesteps
+title: "Split Admin plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Split Admin plugin
+
+plugin:split-admin[View this plugin on the Plugins site]
+
+=== `split`: Split Admin Task
+++++
+<ul><li><code>splitTask : String</code>
+</li>
+<li><code>featureFlagName : Array / List of String</code>
+<ul></ul></li>
+<li><code>environmentName : Array / List of String</code>
+<ul></ul></li>
+<li><code>workspaceName : Array / List of String</code>
+<ul></ul></li>
+<li><code>trafficTypeName : Array / List of String</code>
+<ul></ul></li>
+<li><code>featureFlagDefinitions : String</code>
+</li>
+<li><code>targetlistKey : String</code>
+</li>
+<li><code>treatmentName : String</code>
+</li>
+<li><code>featureFlagYAMLFile : String</code>
+</li>
+</ul>
+
+
+++++

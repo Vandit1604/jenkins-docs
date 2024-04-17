@@ -1,0 +1,32 @@
+---
+layout: pipelinesteps
+title: "Deepcrawl Automation Hub"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Deepcrawl Automation Hub
+
+plugin:deepcrawl-test[View this plugin on the Plugins site]
+
+=== `runAutomationHubBuild`: Run Deepcrawl Automation Hub Build
+++++
+<ul><li><code>testSuiteId : String</code>
+</li>
+<li><code>startOnly : boolean</code> (optional)
+</li>
+<li><code>userKeyId : String</code> (optional)
+</li>
+<li><code>userKeySecret</code> (optional)
+<ul><li><b>Type:</b> <code>class hudson.util.Secret</code></li>
+</ul></li>
+</ul>
+
+
+++++

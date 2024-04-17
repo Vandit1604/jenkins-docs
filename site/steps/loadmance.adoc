@@ -1,0 +1,29 @@
+---
+layout: pipelinesteps
+title: "Loadmance Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Loadmance Plugin
+
+plugin:loadmance[View this plugin on the Plugins site]
+
+=== `loadmance`: Loadmance Test Builder
+++++
+<ul><li><code>credentialsId : String</code>
+</li>
+<li><code>projectId : String</code>
+</li>
+<li><code>testId : String</code>
+</li>
+</ul>
+
+
+++++

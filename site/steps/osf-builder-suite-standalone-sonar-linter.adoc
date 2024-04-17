@@ -1,0 +1,35 @@
+---
+layout: pipelinesteps
+title: "OSF Builder Suite :: Standalone Sonar Linter"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== OSF Builder Suite :: Standalone Sonar Linter
+
+plugin:osf-builder-suite-standalone-sonar-linter[View this plugin on the Plugins site]
+
+=== `osfBuilderSuiteStandaloneSonarLinter`: OSF Builder Suite :: Standalone Sonar Linter
+++++
+<ul><li><code>sourcePatterns</code> (optional)
+<ul><b>Array / List of Nested Object</b>
+<li><code>sourcePattern : String</code>
+</li>
+<li><code>excludePatterns</code>
+<ul><b>Array / List of Nested Object</b>
+<li><code>excludePattern : String</code>
+</li>
+</ul></li>
+</ul></li>
+<li><code>reportPath : String</code> (optional)
+</li>
+</ul>
+
+
+++++

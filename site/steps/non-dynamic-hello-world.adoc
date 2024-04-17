@@ -1,0 +1,35 @@
+---
+layout: pipelinesteps
+title: "Non Dynamic Hello World: TESTING PLUGIN"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Non Dynamic Hello World: TESTING PLUGIN
+
+plugin:non-dynamic-hello-world[View this plugin on the Plugins site]
+
+=== `greet`: Say hello world
+++++
+<ul><li><code>name : String</code>
+<div><div>
+ Your name.
+</div></div>
+
+</li>
+<li><code>useFrench : boolean</code> (optional)
+<div><div>
+ Use French?
+</div></div>
+
+</li>
+</ul>
+
+
+++++

@@ -1,0 +1,46 @@
+---
+layout: pipelinesteps
+title: "Synopsys Detect plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Synopsys Detect plugin
+
+plugin:blackduck-detect[View this plugin on the Plugins site]
+
+=== `synopsys_detect`: Synopsys Detect
+++++
+<ul><li><code>detectProperties : String</code>
+<div><div>
+ <p>The command line options to pass to Synopsys Detect</p>
+</div></div>
+
+</li>
+<li><code>downloadStrategyOverride</code> (optional)
+<ul><b>Nested Choice of Objects</b>
+<li><code>$class: 'AirGapDownloadStrategy'</code><div>
+<ul><li><code>airGapInstallationName : String</code> (optional)
+</li>
+</ul></div></li>
+<li><code>$class: 'InheritFromGlobalDownloadStrategy'</code><div>
+<ul></ul></div></li>
+<li><code>$class: 'ScriptOrJarDownloadStrategy'</code><div>
+<ul></ul></div></li>
+</ul></li>
+<li><code>returnStatus : boolean</code> (optional)
+<div><div>
+ <p>If true (checked), returns the status code of the Detect run instead of throwing an exception</p>
+</div></div>
+
+</li>
+</ul>
+
+
+++++

@@ -1,0 +1,35 @@
+---
+layout: pipelinesteps
+title: "Aqua MicroScanner"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Aqua MicroScanner
+
+plugin:aqua-microscanner[View this plugin on the Plugins site]
+
+=== `aquaMicroscanner`: Aqua MicroScanner
+++++
+<ul><li><code>imageName : String</code>
+</li>
+<li><code>onDisallowed : String</code>
+</li>
+<li><code>notCompliesCmd : String</code>
+<div><div>
+ A shell command to execute when image does not comply with Aqua security policy
+</div></div>
+
+</li>
+<li><code>outputFormat : String</code>
+</li>
+</ul>
+
+
+++++

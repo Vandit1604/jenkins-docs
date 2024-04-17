@@ -1,0 +1,41 @@
+---
+layout: pipelinesteps
+title: "Dogu Integration"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Dogu Integration
+
+plugin:dogu-integration[View this plugin on the Plugins site]
+
+=== `doguRunRoutine`: Dogu pipeline step
+++++
+<ul><li><code>projectId : String</code>
+</li>
+<li><code>routineId : String</code>
+</li>
+<li><code>credentialsId : String</code>
+</li>
+</ul>
+
+
+++++
+=== `doguUploadApplication`: Dogu application step
+++++
+<ul><li><code>applicationPath : String</code>
+</li>
+<li><code>projectId : String</code>
+</li>
+<li><code>credentialsId : String</code>
+</li>
+</ul>
+
+
+++++

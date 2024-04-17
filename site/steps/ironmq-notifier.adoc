@@ -1,0 +1,41 @@
+---
+layout: pipelinesteps
+title: "IronMQ-notifier"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== IronMQ-notifier
+
+plugin:ironmq-notifier[View this plugin on the Plugins site]
+
+=== `step([$class: 'IronMQNotifier'])`: Send Message to IronMQ Service
+++++
+<ul><li><code>projectId</code>
+<ul><li><b>Type:</b> <code>class hudson.util.Secret</code></li>
+</ul></li>
+<li><code>tokenId</code>
+<ul><li><b>Type:</b> <code>class hudson.util.Secret</code></li>
+</ul></li>
+<li><code>queueName : String</code>
+</li>
+<li><code>preferredServerName : String</code>
+</li>
+<li><code>send_success : boolean</code>
+</li>
+<li><code>send_failure : boolean</code>
+</li>
+<li><code>send_unstable : boolean</code>
+</li>
+<li><code>expirySeconds : long</code>
+</li>
+</ul>
+
+
+++++

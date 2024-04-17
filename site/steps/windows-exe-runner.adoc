@@ -1,0 +1,29 @@
+---
+layout: pipelinesteps
+title: "Windows Exe Runner Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Windows Exe Runner Plugin
+
+plugin:windows-exe-runner[View this plugin on the Plugins site]
+
+=== `runexe`: Windows Exe
+++++
+<ul><li><code>exeName : String</code>
+</li>
+<li><code>cmdLineArgs : String</code> (optional)
+</li>
+<li><code>failBuild : boolean</code> (optional)
+</li>
+</ul>
+
+
+++++

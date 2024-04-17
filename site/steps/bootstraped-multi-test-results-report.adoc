@@ -1,0 +1,83 @@
+---
+layout: pipelinesteps
+title: "bootstraped-multi-test-results-report"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== bootstraped-multi-test-results-report
+
+plugin:bootstraped-multi-test-results-report[View this plugin on the Plugins site]
+
+=== `step([$class: 'CucumberTestReportPublisher'])`: Publish Cucumber reports generated with handlebars
+++++
+<ul><li><code>reportsDirectory : String</code>
+</li>
+<li><code>fileIncludePattern : String</code>
+</li>
+<li><code>fileExcludePattern : String</code>
+</li>
+<li><code>markAsUnstable : boolean</code>
+</li>
+<li><code>copyHTMLInWorkspace : boolean</code>
+</li>
+<li><code>ignoreUndefinedSteps : boolean</code>
+</li>
+</ul>
+
+
+++++
+=== `step([$class: 'JUnitTestReportPublisher'])`: Publish JUnit reports generated with handlebars
+++++
+<ul><li><code>reportsDirectory : String</code>
+</li>
+<li><code>fileIncludePattern : String</code>
+</li>
+<li><code>fileExcludePattern : String</code>
+</li>
+<li><code>markAsUnstable : boolean</code>
+</li>
+<li><code>copyHTMLInWorkspace : boolean</code>
+</li>
+</ul>
+
+
+++++
+=== `step([$class: 'RSpecTestReportPublisher'])`: Publish RSpec reports generated with handlebars
+++++
+<ul><li><code>reportsDirectory : String</code>
+</li>
+<li><code>fileIncludePattern : String</code>
+</li>
+<li><code>fileExcludePattern : String</code>
+</li>
+<li><code>markAsUnstable : boolean</code>
+</li>
+<li><code>copyHTMLInWorkspace : boolean</code>
+</li>
+</ul>
+
+
+++++
+=== `step([$class: 'TestNGTestReportPublisher'])`: Publish TestNG reports generated with handlebars
+++++
+<ul><li><code>reportsDirectory : String</code>
+</li>
+<li><code>fileIncludePattern : String</code>
+</li>
+<li><code>fileExcludePattern : String</code>
+</li>
+<li><code>markAsUnstable : boolean</code>
+</li>
+<li><code>copyHTMLInWorkspace : boolean</code>
+</li>
+</ul>
+
+
+++++

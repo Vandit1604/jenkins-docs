@@ -1,0 +1,56 @@
+---
+layout: pipelinesteps
+title: "Azure Cosmos DB Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Azure Cosmos DB Plugin
+
+plugin:azure-cosmosdb[View this plugin on the Plugins site]
+
+=== `azureCosmosDBCreateDocument`: Create document in Azure Cosmos DB
+++++
+<div>The <code>azureCosmosDBCreateDocument</code> creates documents in Azure Cosmos DB. 
+<p>The credential must be of type <code>Azure Cosmos DB</code>.</p>
+<p>Example:</p>
+<pre><code>azureCosmosDBCreateDocument credentialsId: 'cosmos-connection',
+    database: 'jenkins',
+    container: 'your-container',
+    document: [
+            id                      : "${UUID.randomUUID().toString()}",
+            current_build_duration  : currentBuild.duration
+    ]</code>
+</pre></div>
+<ul><li><code>credentialsId : String</code>
+<div><p>A credential of type <code>Azure Cosmos DB</code>.</p></div>
+
+</li>
+<li><code>database : String</code>
+<div><p>The database you want to store documents in, must be already created.</p></div>
+
+</li>
+<li><code>container : String</code>
+<div><p>The container you want to store documents in, must be already created.</p></div>
+
+</li>
+<li><code>document : <code>Object</code></code>
+<div><p>A groovy object that contains the document you want to send</p>
+<p>Example:</p>
+<pre><code>document: [
+    id                      : "${UUID.randomUUID().toString()}",
+    current_build_duration  : currentBuild.duration
+]</code>
+</pre></div>
+
+</li>
+</ul>
+
+
+++++

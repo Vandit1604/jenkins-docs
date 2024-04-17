@@ -1,0 +1,25 @@
+---
+layout: pipelinesteps
+title: "Gating Core"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Gating Core
+
+plugin:gating-core[View this plugin on the Plugins site]
+
+=== `requireResources`: GatingStep
+++++
+<ul><li><code>resources : Array / List of String</code>
+<ul></ul></li>
+</ul>
+
+
+++++

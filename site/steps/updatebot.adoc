@@ -1,0 +1,27 @@
+---
+layout: pipelinesteps
+title: "Updatebot Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Updatebot Plugin
+
+plugin:updatebot[View this plugin on the Plugins site]
+
+=== `updateBotPush`: UpdateBot Push
+++++
+<ul><li><code>file : String</code> (optional)
+</li>
+<li><code>pollPeriodMS : long</code> (optional)
+</li>
+</ul>
+
+
+++++

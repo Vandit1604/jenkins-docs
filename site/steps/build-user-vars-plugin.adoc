@@ -1,0 +1,33 @@
+---
+layout: pipelinesteps
+title: "build user vars plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== build user vars plugin
+
+plugin:build-user-vars-plugin[View this plugin on the Plugins site]
+
+=== `wrap([$class: 'BuildUser'])`: Set jenkins user build variables
+++++
+<div><div>
+ This plugin is used to set user build variables: 
+ <ul>
+  <li><b>BUILD_USER</b> -- full name of user started build,</li>
+  <li><b>BUILD_USER_FIRST_NAME</b> -- first name of user started build,</li>
+  <li><b>BUILD_USER_LAST_NAME</b> -- last name of user started build,</li>
+  <li><b>BUILD_USER_ID</b> -- id of user started build.</li>
+  <li><b>BUILD_USER_EMAIL</b> -- email of user started build.</li>
+ </ul>
+</div></div>
+<ul></ul>
+
+
+++++

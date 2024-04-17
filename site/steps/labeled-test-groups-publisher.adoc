@@ -1,0 +1,32 @@
+---
+layout: pipelinesteps
+title: "Labeled Test Groups Publisher"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Labeled Test Groups Publisher
+
+plugin:labeled-test-groups-publisher[View this plugin on the Plugins site]
+
+=== `step([$class: 'LabeledTestResultGroupPublisher'])`: Publish Test Results in Labeled Groups
+++++
+<ul><li><code>configs</code>
+<ul><b>Array / List of Nested Object</b>
+<li><code>parserClassName : String</code>
+</li>
+<li><code>testResultFileMask : String</code>
+</li>
+<li><code>label : String</code>
+</li>
+</ul></li>
+</ul>
+
+
+++++

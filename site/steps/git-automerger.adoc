@@ -1,0 +1,44 @@
+---
+layout: pipelinesteps
+title: "Git Automerger Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Git Automerger Plugin
+
+plugin:git-automerger[View this plugin on the Plugins site]
+
+=== `gitAutomerger`: Git automerge
+++++
+<ul><li><code>checkoutFromRemote : boolean</code> (optional)
+</li>
+<li><code>detailConflictReport : boolean</code> (optional)
+</li>
+<li><code>limitAuthorsInDetailReport : int</code> (optional)
+</li>
+<li><code>limitCommitsInDetailReport : int</code> (optional)
+</li>
+<li><code>logLevel</code> (optional)
+<ul><li><b>Values:</b> <code>TRACE</code>, <code>DEBUG</code>, <code>INFO</code>, <code>WARN</code>, <code>ERROR</code></li></ul></li>
+<li><code>mergeRules</code> (optional)
+<ul><b>Array / List of Nested Object</b>
+<li><code>path : String</code>
+</li>
+<li><code>resolution</code>
+<ul><li><b>Values:</b> <code>KEEP_OLDER</code>, <code>KEEP_NEWER</code>, <code>MERGE_OLDER_TOP</code>, <code>MERGE_NEWER_TOP</code></li></ul></li>
+</ul></li>
+<li><code>releaseBranchPattern : String</code> (optional)
+</li>
+<li><code>remoteName : String</code> (optional)
+</li>
+</ul>
+
+
+++++

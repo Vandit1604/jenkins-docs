@@ -1,0 +1,77 @@
+---
+layout: pipelinesteps
+title: "Qualys IaC Security"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Qualys IaC Security
+
+plugin:qualys-iac-security[View this plugin on the Plugins site]
+
+=== `qualysIaCScan`: Qualys IaC Scan
+++++
+<ul><li><code>IaCServiceEndpoint : String</code>
+</li>
+<li><code>scanName : String</code>
+</li>
+<li><code>scanDirectories : String</code>
+</li>
+<li><code>isFailedResultsOnly : boolean</code>
+</li>
+<li><code>buildFailureSettings : boolean</code>
+</li>
+<li><code>high : String</code>
+</li>
+<li><code>medium : String</code>
+</li>
+<li><code>low : String</code>
+</li>
+<li><code>timeoutSettings : boolean</code>
+</li>
+<li><code>scanResultInterval : String</code>
+</li>
+<li><code>totalJobCompletionTime : String</code>
+</li>
+<li><code>jobName : String</code>
+</li>
+</ul>
+
+
+++++
+=== `step([$class: 'TemplateScanBuilder'])`: Qualys IaC Scan
+++++
+<ul><li><code>IaCServiceEndpoint : String</code>
+</li>
+<li><code>scanName : String</code>
+</li>
+<li><code>scanDirectories : String</code>
+</li>
+<li><code>high : String</code>
+</li>
+<li><code>medium : String</code>
+</li>
+<li><code>low : String</code>
+</li>
+<li><code>scanResultInterval : String</code>
+</li>
+<li><code>totalJobCompletionTime : String</code>
+</li>
+<li><code>jobName : String</code>
+</li>
+<li><code>isFailedResultsOnly : boolean</code> (optional)
+</li>
+<li><code>buildFailureSettings : boolean</code> (optional)
+</li>
+<li><code>timeoutSettings : boolean</code> (optional)
+</li>
+</ul>
+
+
+++++

@@ -1,0 +1,35 @@
+---
+layout: pipelinesteps
+title: "Propelo's Job Reporter"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Propelo's Job Reporter
+
+plugin:propelo-job-reporter[View this plugin on the Plugins site]
+
+=== `step([$class: 'LevelOpsPostBuildPublisher'])`: Propelo Job Reporter Plugin
+++++
+<ul><li><code>coverageReportPath : String</code>
+<div><div>
+ Specify the coverage report path to be used. For example, you can specify as "**/Bullseye*.xml,**/Cov*.xml"
+</div></div>
+
+</li>
+<li><code>projectName : String</code>
+<div><div>
+ Specify the project name to be used. For example, you can specify as "test"
+</div></div>
+
+</li>
+</ul>
+
+
+++++

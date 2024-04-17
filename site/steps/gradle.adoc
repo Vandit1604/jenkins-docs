@@ -1,0 +1,38 @@
+---
+layout: pipelinesteps
+title: "Gradle Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Gradle Plugin
+
+plugin:gradle[View this plugin on the Plugins site]
+
+=== `findBuildScans`: Find published build scans
+++++
+<div><div>
+ Inspect build log for published build scans. The build scans will be shown on the pipeline build page.
+</div></div>
+<ul></ul>
+
+
+++++
+=== `withGradle`: WithGradle
+++++
+<ul></ul>
+
+
+++++
+=== `wrap([$class: 'BuildScanBuildWrapper'])`: Inspect build log for published build scans
+++++
+<ul></ul>
+
+
+++++

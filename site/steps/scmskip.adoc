@@ -1,0 +1,27 @@
+---
+layout: pipelinesteps
+title: "SCM Skip Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== SCM Skip Plugin
+
+plugin:scmskip[View this plugin on the Plugins site]
+
+=== `scmSkip`: SCM Skip Step
+++++
+<ul><li><code>deleteBuild : boolean</code> (optional)
+</li>
+<li><code>skipPattern : String</code> (optional)
+</li>
+</ul>
+
+
+++++

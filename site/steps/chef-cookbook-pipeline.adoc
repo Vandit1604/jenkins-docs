@@ -1,0 +1,49 @@
+---
+layout: pipelinesteps
+title: "Chef Cookbook Pipeline Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Chef Cookbook Pipeline Plugin
+
+plugin:chef-cookbook-pipeline[View this plugin on the Plugins site]
+
+=== `chef_cookbook_cookstyle`: Chef Cookbook Lint (Cookstyle)
+++++
+<ul><li><code>installation : String</code> (optional)
+</li>
+</ul>
+
+
+++++
+=== `chef_cookbook_foodcritic`: Chef Cookbook Lint (Foodcritic)
+++++
+<ul><li><code>installation : String</code> (optional)
+</li>
+</ul>
+
+
+++++
+=== `chef_cookbook_functional`: Chef Cookbook Functional
+++++
+<ul><li><code>installation : String</code> (optional)
+</li>
+</ul>
+
+
+++++
+=== `chef_cookbook_unit`: Chef Cookbook Unit
+++++
+<ul><li><code>installation : String</code> (optional)
+</li>
+</ul>
+
+
+++++

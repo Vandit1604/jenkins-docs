@@ -1,0 +1,39 @@
+---
+layout: pipelinesteps
+title: "StackRox Container Image Scanner"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== StackRox Container Image Scanner
+
+plugin:stackrox-container-image-scanner[View this plugin on the Plugins site]
+
+=== `stackrox`: StackRox Container Image Scanner
+++++
+<ul><li><code>apiToken : String</code> (optional)
+</li>
+<li><code>caCertPEM : String</code> (optional)
+</li>
+<li><code>cluster : String</code> (optional)
+</li>
+<li><code>enableTLSVerification : boolean</code> (optional)
+</li>
+<li><code>failOnCriticalPluginError : boolean</code> (optional)
+</li>
+<li><code>failOnPolicyEvalFailure : boolean</code> (optional)
+</li>
+<li><code>imageNames : String</code> (optional)
+</li>
+<li><code>portalAddress : String</code> (optional)
+</li>
+</ul>
+
+
+++++

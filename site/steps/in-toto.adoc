@@ -1,0 +1,31 @@
+---
+layout: pipelinesteps
+title: "in-toto provenance agent"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== in-toto provenance agent
+
+plugin:in-toto[View this plugin on the Plugins site]
+
+=== `in_toto_wrap`: in-toto record wrapper
+++++
+<ul><li><code>credentialId : String</code> (optional)
+</li>
+<li><code>keyPath : String</code> (optional)
+</li>
+<li><code>stepName : String</code> (optional)
+</li>
+<li><code>transport : String</code> (optional)
+</li>
+</ul>
+
+
+++++

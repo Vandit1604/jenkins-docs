@@ -1,0 +1,41 @@
+---
+layout: pipelinesteps
+title: "Tuleap API Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Tuleap API Plugin
+
+plugin:tuleap-api[View this plugin on the Plugins site]
+
+=== `tuleapNotifyCommitStatus`: Update the build status of the commit in Tuleap
+++++
+<ul><li><code>status</code>
+<ul><li><b>Values:</b> <code>failure</code>, <code>success</code>, <code>pending</code></li></ul></li>
+<li><code>repositoryId : String</code>
+</li>
+<li><code>credentialId : String</code>
+</li>
+</ul>
+
+
+++++
+=== `tuleapSendTTMResults`: Send Tuleap Test Management Results
+++++
+<ul><li><code>filesPath : String</code>
+</li>
+<li><code>campaignId : String</code>
+</li>
+<li><code>credentialId : String</code>
+</li>
+</ul>
+
+
+++++

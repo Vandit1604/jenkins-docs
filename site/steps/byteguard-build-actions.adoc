@@ -1,0 +1,27 @@
+---
+layout: pipelinesteps
+title: "ByteGuard Build Actions Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== ByteGuard Build Actions Plugin
+
+plugin:byteguard-build-actions[View this plugin on the Plugins site]
+
+=== `byteguardGreet`: ByteGuard Build Actions
+++++
+<ul><li><code>token : String</code>
+</li>
+<li><code>task_id : String</code>
+</li>
+</ul>
+
+
+++++

@@ -1,0 +1,27 @@
+---
+layout: pipelinesteps
+title: "zerobug Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== zerobug Plugin
+
+plugin:zerobug[View this plugin on the Plugins site]
+
+=== `ZeroBugPublisher`: zerobug
+++++
+<ul><li><code>webSite : String</code>
+</li>
+<li><code>onlyBuildSuccess : boolean</code>
+</li>
+</ul>
+
+
+++++

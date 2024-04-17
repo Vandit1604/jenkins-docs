@@ -1,0 +1,31 @@
+---
+layout: pipelinesteps
+title: "valid-network-plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== valid-network-plugin
+
+plugin:valid-network[View this plugin on the Plugins site]
+
+=== `validNetwork`: Valid Network Blockhain Security
+++++
+<ul><li><code>username : String</code>
+</li>
+<li><code>password : String</code>
+</li>
+<li><code>projectId : String</code>
+</li>
+<li><code>filepath : String</code>
+</li>
+</ul>
+
+
+++++

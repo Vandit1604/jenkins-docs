@@ -1,0 +1,35 @@
+---
+layout: pipelinesteps
+title: "Flyway Runner"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Flyway Runner
+
+plugin:flyway-runner[View this plugin on the Plugins site]
+
+=== `flywayrunner`: Invoke Flyway
+++++
+<ul><li><code>installationName : String</code>
+</li>
+<li><code>flywayCommand : String</code>
+</li>
+<li><code>url : String</code>
+</li>
+<li><code>locations : String</code>
+</li>
+<li><code>commandLineArgs : String</code>
+</li>
+<li><code>credentialsId : String</code>
+</li>
+</ul>
+
+
+++++

@@ -1,0 +1,30 @@
+---
+layout: pipelinesteps
+title: "Pipeline: Stage Step"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Pipeline: Stage Step
+
+plugin:pipeline-stage-step[View this plugin on the Plugins site]
+
+=== `stage`: Stage
+++++
+<div><div>
+ Creates a labeled block.
+</div></div>
+<ul><li><code>name : String</code>
+</li>
+<li><code>concurrency : int</code> (optional)
+</li>
+</ul>
+
+
+++++

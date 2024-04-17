@@ -1,0 +1,40 @@
+---
+layout: pipelinesteps
+title: "OSF Builder Suite For Salesforce Commerce Cloud :: Run Job"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== OSF Builder Suite For Salesforce Commerce Cloud :: Run Job
+
+plugin:osf-builder-suite-for-sfcc-run-job[View this plugin on the Plugins site]
+
+=== `osfBuilderSuiteForSFCCRunJob`: OSF Builder Suite For Salesforce Commerce Cloud :: Run Job
+++++
+<ul><li><code>hostname : String</code> (optional)
+</li>
+<li><code>ocCredentialsId : String</code> (optional)
+</li>
+<li><code>ocVersion : String</code> (optional)
+</li>
+<li><code>jobName : String</code> (optional)
+</li>
+<li><code>jobArguments</code> (optional)
+<ul><b>Array / List of Nested Object</b>
+<li><code>name : String</code>
+</li>
+<li><code>value : String</code>
+</li>
+</ul></li>
+<li><code>waitForJobToFinish : boolean</code> (optional)
+</li>
+</ul>
+
+
+++++

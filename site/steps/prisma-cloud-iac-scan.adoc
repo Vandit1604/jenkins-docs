@@ -1,0 +1,39 @@
+---
+layout: pipelinesteps
+title: "Prisma Cloud IaC Scan Plugin"
+---
+
+:notitle:
+:description:
+:author:
+:email: jenkinsci-users@googlegroups.com
+:sectanchors:
+:toc: left
+:compat-mode!:
+
+== Prisma Cloud IaC Scan Plugin
+
+plugin:prisma-cloud-iac-scan[View this plugin on the Plugins site]
+
+=== `prismaIaC`: Prisma Cloud IaC Scan
+++++
+<ul><li><code>assetName : String</code>
+</li>
+<li><code>templateType : String</code>
+</li>
+<li><code>templateVersion : String</code>
+</li>
+<li><code>tags : String</code>
+</li>
+<li><code>failureCriteriaHigh : String</code>
+</li>
+<li><code>failureCriteriaLow : String</code>
+</li>
+<li><code>failureCriteriaMedium : String</code>
+</li>
+<li><code>failureCriteriaOperator : String</code>
+</li>
+</ul>
+
+
+++++
