@@ -31,6 +31,7 @@ import { formatDate, blogAuthorImage } from "../utils/index.js";
 const AuthorPage = ({ data, pageContext, path }) => {
     const { filteredAuthors } = pageContext;
     const author = path.slice(8, -1);
+
     return (
         <IndexPageLayout>
             <PageName title={"Jenkins Community Blog Contributors"} />
@@ -109,13 +110,30 @@ const AuthorPage = ({ data, pageContext, path }) => {
                     const opengraphImageSource =
                         childrenAsciidoc[0].pageAttributes.opengraph ||
                         "../../images/gsoc/opengraph.png";
+
+                    const htmlContent = childrenAsciidoc[0].html;
+                    const parser = new DOMParser();
+                    const parsedHtml = parser.parseFromString(htmlContent, "text/html");
+                    function extractTextNodes(element, textNodes) {
+                        if (element.nodeType === Node.TEXT_NODE) {
+                            textNodes.push(element.textContent.trim());
+                        } else {
+                            for (let childNode of element.childNodes) {
+                                extractTextNodes(childNode, textNodes);
+                            }
+                        }
+                    }
+                    const textNodes = [];
+                    extractTextNodes(parsedHtml.body, textNodes);
+                    const blogTeaser = textNodes.join(" ");
+
                     return (
                         <li
                             key={`${childrenAsciidoc[0].fields.slug}-${childrenAsciidoc[0].document.title}`}
                             className={blogpost}
                         >
                             <Link
-                                to={childrenAsciidoc[0].fields.slug}
+                                to={`/blog` + childrenAsciidoc[0].fields.slug}
                                 style={{
                                     textDecoration: "none",
                                     display: "flex",
@@ -133,18 +151,7 @@ const AuthorPage = ({ data, pageContext, path }) => {
                                 </div>
                                 <h5 className={blogtitle}>{childrenAsciidoc[0].document.title}</h5>
                                 <div className={blogteaser}>
-                                    Will include the blog teaser Lorem ipsum dolor sit amet, officia
-                                    excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi
-                                    Lorem pariatur mollit ex esse exercitation amet. Nisi anim
-                                    cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
-                                    Lorem est aliquip amet voluptate voluptate dolor minim nulla est
-                                    proident. Nostrud officia pariatur ut officia. Sit irure elit
-                                    esse ea nulla sunt ex occaecat reprehenderit commodo officia
-                                    dolor Lorem duis laboris cupidatat officia voluptate. Culpa
-                                    proident adipisicing id nulla nisi laboris ex in Lorem sunt duis
-                                    officia eiusmod. Aliqua reprehenderit commodo ex non excepteur
-                                    duis sunt velit enim. Voluptate laboris sint cupidatat ullamco
-                                    ut ea consectetur et est culpa et culpa duis.
+                                    <p>{blogTeaser}</p>
                                 </div>
                                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                                     <div className={blogauthorinfo}>
@@ -209,6 +216,7 @@ export const pageQuery = graphql`
     query AuthorPage($authorName: String!) {
         allFile(
             filter: {
+                sourceInstanceName: { eq: "pages" }
                 childrenAsciidoc: {
                     elemMatch: {
                         document: { title: { ne: "Jenkins Changelog Styleguide" } }
