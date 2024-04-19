@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Flyway Runner"
----
+= Flyway Runner
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Flyway Runner"
 :toc: left
 :compat-mode!:
 
-== Flyway Runner
 
-plugin:flyway-runner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/flyway-runner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `flywayrunner`: Invoke Flyway
 ++++

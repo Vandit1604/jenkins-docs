@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Token Macro Plugin"
----
+= Token Macro Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Token Macro Plugin"
 :toc: left
 :compat-mode!:
 
-== Token Macro Plugin
 
-plugin:token-macro[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/token-macro">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `tm`: Expand a string containing macros
 ++++

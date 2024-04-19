@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "InsightVM Container Image Scanner"
----
+= InsightVM Container Image Scanner
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "InsightVM Container Image Scanner"
 :toc: left
 :compat-mode!:
 
-== InsightVM Container Image Scanner
 
-plugin:rapid7-insightvm-container-assessment[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/rapid7-insightvm-container-assessment">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `assessContainerImage`: Assess Container Image with Rapid7 InsightVM
 ++++

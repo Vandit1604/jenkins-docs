@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Chef Cookbook Pipeline Plugin"
----
+= Chef Cookbook Pipeline Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Chef Cookbook Pipeline Plugin"
 :toc: left
 :compat-mode!:
 
-== Chef Cookbook Pipeline Plugin
 
-plugin:chef-cookbook-pipeline[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/chef-cookbook-pipeline">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `chef_cookbook_cookstyle`: Chef Cookbook Lint (Cookstyle)
 ++++

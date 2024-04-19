@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Kafka Logs Plugin"
----
+= Kafka Logs Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Kafka Logs Plugin"
 :toc: left
 :compat-mode!:
 
-== Kafka Logs Plugin
 
-plugin:kafkalogs[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/kafkalogs">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `withKafkaLog`: Kafka Log Build Wrapper
 ++++

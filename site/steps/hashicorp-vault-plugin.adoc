@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "HashiCorp Vault Plugin"
----
+= HashiCorp Vault Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "HashiCorp Vault Plugin"
 :toc: left
 :compat-mode!:
 
-== HashiCorp Vault Plugin
 
-plugin:hashicorp-vault-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/hashicorp-vault-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `withVault`: Vault Plugin
 ++++

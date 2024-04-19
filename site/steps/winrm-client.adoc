@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "WinRM Client Plugin"
----
+= WinRM Client Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "WinRM Client Plugin"
 :toc: left
 :compat-mode!:
 
-== WinRM Client Plugin
 
-plugin:winrm-client[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/winrm-client">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `winRMClient`: WinRM Client
 ++++

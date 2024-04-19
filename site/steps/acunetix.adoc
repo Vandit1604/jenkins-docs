@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Acunetix"
----
+= Acunetix
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Acunetix"
 :toc: left
 :compat-mode!:
 
-== Acunetix
 
-plugin:acunetix[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/acunetix">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'BuildScanner'])`: Acunetix
 ++++

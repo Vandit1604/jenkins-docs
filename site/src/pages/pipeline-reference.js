@@ -1,4 +1,4 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby"; // Import Link component from Gatsby
 import React, { useState, useEffect } from "react";
 import PageName from "../components/PageName";
 import Seo from "../components/Seo";
@@ -40,8 +40,15 @@ const PipelineReference = ({ data }) => {
             />
             <div>
                 <ul>
-                    {filteredSteps.map(({ node }, index) => (
-                        <li key={index}>{node.childrenAsciidoc[0].document.title}</li>
+                    {filteredSteps.map(({ node }) => (
+                        <li key={node.childrenAsciidoc[0].document.title}>
+                            <Link
+                                to={`/steps/${node.childrenAsciidoc[0].node.fields.id}`}
+                                style={{ textDecoration: "none" }}
+                            >
+                                {node.childrenAsciidoc[0].document.title}
+                            </Link>
+                        </li>
                     ))}
                 </ul>
             </div>

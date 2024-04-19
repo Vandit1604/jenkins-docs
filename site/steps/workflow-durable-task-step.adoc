@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline: Nodes and Processes"
----
+= Pipeline: Nodes and Processes
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline: Nodes and Processes"
 :toc: left
 :compat-mode!:
 
-== Pipeline: Nodes and Processes
 
-plugin:workflow-durable-task-step[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/workflow-durable-task-step">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `bat`: Windows Batch Script
 ++++

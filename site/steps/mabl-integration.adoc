@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "mabl"
----
+= mabl
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "mabl"
 :toc: left
 :compat-mode!:
 
-== mabl
 
-plugin:mabl-integration[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/mabl-integration">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `mabl`: Run mabl tests
 ++++

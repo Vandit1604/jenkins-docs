@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "NowSecure Auto Plugin"
----
+= NowSecure Auto Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "NowSecure Auto Plugin"
 :toc: left
 :compat-mode!:
 
-== NowSecure Auto Plugin
 
-plugin:nowsecure-auto-security-test[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/nowsecure-auto-security-test">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `apiKey`: NowSecure Auto Security Test
 ++++

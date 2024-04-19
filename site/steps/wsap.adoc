@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Web Security Application Project (WSAP)"
----
+= Web Security Application Project (WSAP)
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Web Security Application Project (WSAP)"
 :toc: left
 :compat-mode!:
 
-== Web Security Application Project (WSAP)
 
-plugin:wsap[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/wsap">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'WsapBuilder'])`: Web Security Application Project (WSAP)
 ++++

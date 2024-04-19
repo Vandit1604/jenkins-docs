@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Review Board Plugin"
----
+= Review Board Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Review Board Plugin"
 :toc: left
 :compat-mode!:
 
-== Review Board Plugin
 
-plugin:rb[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/rb">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `notifyReviewBoard`: Publish build status to Review Board
 ++++

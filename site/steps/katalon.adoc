@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Katalon Plugin"
----
+= Katalon Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Katalon Plugin"
 :toc: left
 :compat-mode!:
 
-== Katalon Plugin
 
-plugin:katalon[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/katalon">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `executeKatalon`: Execute Katalon Studio Tests
 ++++

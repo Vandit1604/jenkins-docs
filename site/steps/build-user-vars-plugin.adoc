@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "build user vars plugin"
----
+= build user vars plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "build user vars plugin"
 :toc: left
 :compat-mode!:
 
-== build user vars plugin
 
-plugin:build-user-vars-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/build-user-vars-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `wrap([$class: 'BuildUser'])`: Set jenkins user build variables
 ++++

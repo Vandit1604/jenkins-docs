@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "HCL AppScan"
----
+= HCL AppScan
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "HCL AppScan"
 :toc: left
 :compat-mode!:
 
-== HCL AppScan
 
-plugin:appscan[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/appscan">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `appscan`: Run AppScan on Cloud/AppScan 360° Security Test
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "CRX Content Package Deployer Plugin"
----
+= CRX Content Package Deployer Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "CRX Content Package Deployer Plugin"
 :toc: left
 :compat-mode!:
 
-== CRX Content Package Deployer Plugin
 
-plugin:crx-content-package-deployer[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/crx-content-package-deployer">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `crxBuild`: Build a Content Package on CRX
 ++++

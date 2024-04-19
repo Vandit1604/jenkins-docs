@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Deploy Dashboard Plugin by Namecheap"
----
+= Deploy Dashboard Plugin by Namecheap
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Deploy Dashboard Plugin by Namecheap"
 :toc: left
 :compat-mode!:
 
-== Deploy Dashboard Plugin by Namecheap
 
-plugin:deploy-dashboard[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/deploy-dashboard">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `buildAddUrl`: Build Add Url
 ++++

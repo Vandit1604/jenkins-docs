@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Redeploy Rancher2.x Workload Plugin"
----
+= Redeploy Rancher2.x Workload Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Redeploy Rancher2.x Workload Plugin"
 :toc: left
 :compat-mode!:
 
-== Redeploy Rancher2.x Workload Plugin
 
-plugin:redeploy-rancher2-workload[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/redeploy-rancher2-workload">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `rancherRedeploy`: Redeploy Rancher2.x Workload
 ++++

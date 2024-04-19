@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Azure Service Fabric Plugin"
----
+= Azure Service Fabric Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Azure Service Fabric Plugin"
 :toc: left
 :compat-mode!:
 
-== Azure Service Fabric Plugin
 
-plugin:service-fabric[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/service-fabric">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `azureServiceFabricPublish`: Deploy Service Fabric Project
 ++++

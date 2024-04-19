@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "ecu.test execution plugin"
----
+= ecu.test execution plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "ecu.test execution plugin"
 :toc: left
 :compat-mode!:
 
-== ecu.test execution plugin
 
-plugin:ecu-test-execution[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ecu-test-execution">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ttCheckPackage`: [TT] Check an ecu.test package
 ++++

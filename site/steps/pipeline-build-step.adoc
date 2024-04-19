@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline: Build Step"
----
+= Pipeline: Build Step
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline: Build Step"
 :toc: left
 :compat-mode!:
 
-== Pipeline: Build Step
 
-plugin:pipeline-build-step[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-build-step">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `waitForBuild`: Wait for build to complete
 ++++

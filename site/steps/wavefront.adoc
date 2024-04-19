@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Wavefront Plugin"
----
+= Wavefront Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Wavefront Plugin"
 :toc: left
 :compat-mode!:
 
-== Wavefront Plugin
 
-plugin:wavefront[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/wavefront">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `wavefrontTimedCall`: Sets up wavefront closure
 ++++

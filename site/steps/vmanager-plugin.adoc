@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Cadence vManager Plugin for Jenkins"
----
+= Cadence vManager Plugin for Jenkins
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Cadence vManager Plugin for Jenkins"
 :toc: left
 :compat-mode!:
 
-== Cadence vManager Plugin for Jenkins
 
-plugin:vmanager-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/vmanager-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'DSLPublisher'])`: vManager Post Build Actions
 ++++

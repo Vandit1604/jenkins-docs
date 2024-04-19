@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Thycotic DevOps Secrets Vault Plugin"
----
+= Thycotic DevOps Secrets Vault Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Thycotic DevOps Secrets Vault Plugin"
 :toc: left
 :compat-mode!:
 
-== Thycotic DevOps Secrets Vault Plugin
 
-plugin:thycotic-vault[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/thycotic-vault">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `wrap([$class: 'ThycoticVaultBuildWrapper'])`: Thycotic DevOps Secrets Vault Plugin
 ++++

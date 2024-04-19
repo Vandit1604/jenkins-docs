@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "IronMQ-notifier"
----
+= IronMQ-notifier
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "IronMQ-notifier"
 :toc: left
 :compat-mode!:
 
-== IronMQ-notifier
 
-plugin:ironmq-notifier[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ironmq-notifier">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'IronMQNotifier'])`: Send Message to IronMQ Service
 ++++

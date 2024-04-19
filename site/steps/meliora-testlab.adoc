@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "meliora-testlab"
----
+= meliora-testlab
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "meliora-testlab"
 :toc: left
 :compat-mode!:
 
-== meliora-testlab
 
-plugin:meliora-testlab[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/meliora-testlab">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `melioraTestlab`: Publish test results to Testlab
 ++++

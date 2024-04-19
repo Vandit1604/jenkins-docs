@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Venafi Machine Identity Management"
----
+= Venafi Machine Identity Management
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Venafi Machine Identity Management"
 :toc: left
 :compat-mode!:
 
-== Venafi Machine Identity Management
 
-plugin:venafi-vcert[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/venafi-vcert">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `venafiVcertRequestCertificate`: Venafi Machine Identity Management: request certificate
 ++++

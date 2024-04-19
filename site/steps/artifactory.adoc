@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Artifactory Plugin"
----
+= Artifactory Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Artifactory Plugin"
 :toc: left
 :compat-mode!:
 
-== Artifactory Plugin
 
-plugin:artifactory[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/artifactory">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ArtifactoryGradleBuild`: run Artifactory gradle
 ++++

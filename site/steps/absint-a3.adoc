@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "AbsInt a³ Jenkins Plugin"
----
+= AbsInt a³ Jenkins Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "AbsInt a³ Jenkins Plugin"
 :toc: left
 :compat-mode!:
 
-== AbsInt a³ Jenkins Plugin
 
-plugin:absint-a3[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/absint-a3">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'A3Builder'])`: a³ Analysis Run
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Sumologic Publisher"
----
+= Sumologic Publisher
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Sumologic Publisher"
 :toc: left
 :compat-mode!:
 
-== Sumologic Publisher
 
-plugin:sumologic-publisher[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/sumologic-publisher">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `SumoPipelineLogCollection`: SumoPipelineLogCollection
 ++++

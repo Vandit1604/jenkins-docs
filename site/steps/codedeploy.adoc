@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "AWS CodeDeploy Plugin for Jenkins"
----
+= AWS CodeDeploy Plugin for Jenkins
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "AWS CodeDeploy Plugin for Jenkins"
 :toc: left
 :compat-mode!:
 
-== AWS CodeDeploy Plugin for Jenkins
 
-plugin:codedeploy[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/codedeploy">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'AWSCodeDeployPublisher'])`: Deploy an application to AWS CodeDeploy
 ++++

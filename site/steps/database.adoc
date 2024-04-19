@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Database"
----
+= Database
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Database"
 :toc: left
 :compat-mode!:
 
-== Database
 
-plugin:database[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/database">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `getDatabaseConnection`: Get Database Connection
 ++++

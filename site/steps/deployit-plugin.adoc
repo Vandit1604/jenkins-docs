@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "XebiaLabs XL Deploy Plugin"
----
+= XebiaLabs XL Deploy Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "XebiaLabs XL Deploy Plugin"
 :toc: left
 :compat-mode!:
 
-== XebiaLabs XL Deploy Plugin
 
-plugin:deployit-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/deployit-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `xldCreatePackage`: Create a deployment package
 ++++

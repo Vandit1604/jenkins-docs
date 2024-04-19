@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Compuware zAdviser API"
----
+= Compuware zAdviser API
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Compuware zAdviser API"
 :toc: left
 :compat-mode!:
 
-== Compuware zAdviser API
 
-plugin:compuware-zadviser-api[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/compuware-zadviser-api">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `zAdviserDownload`: zAdviser download data and optionally upload to Compuware
 ++++

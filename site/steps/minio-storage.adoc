@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Minio Storage"
----
+= Minio Storage
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Minio Storage"
 :toc: left
 :compat-mode!:
 
-== Minio Storage
 
-plugin:minio-storage[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/minio-storage">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'MinioUploader'])`: Upload build artifacts to Minio server
 ++++

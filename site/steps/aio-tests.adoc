@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "AIO Tests"
----
+= AIO Tests
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "AIO Tests"
 :toc: left
 :compat-mode!:
 
-== AIO Tests
 
-plugin:aio-tests[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/aio-tests">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `aioImport`: Publish results to AIO Tests - Jira
 ++++

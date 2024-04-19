@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "StepCounter Plugin"
----
+= StepCounter Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "StepCounter Plugin"
 :toc: left
 :compat-mode!:
 
-== StepCounter Plugin
 
-plugin:stepcounter[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/stepcounter">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `stepcounter`: Count steps
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "OpenTelemetry Plugin"
----
+= OpenTelemetry Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "OpenTelemetry Plugin"
 :toc: left
 :compat-mode!:
 
-== OpenTelemetry Plugin
 
-plugin:opentelemetry[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/opentelemetry">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `withSpanAttribute`: Set Span Attribute
 ++++

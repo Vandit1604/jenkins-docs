@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "MAT Performance Benchmarking by Broadcom"
----
+= MAT Performance Benchmarking by Broadcom
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "MAT Performance Benchmarking by Broadcom"
 :toc: left
 :compat-mode!:
 
-== MAT Performance Benchmarking by Broadcom
 
-plugin:ca-mat-performance-benchmarking-by-broadcom[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ca-mat-performance-benchmarking-by-broadcom">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'Autogen'])`: Autogen
 ++++

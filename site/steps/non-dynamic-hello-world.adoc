@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Non Dynamic Hello World: TESTING PLUGIN"
----
+= Non Dynamic Hello World: TESTING PLUGIN
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Non Dynamic Hello World: TESTING PLUGIN"
 :toc: left
 :compat-mode!:
 
-== Non Dynamic Hello World: TESTING PLUGIN
 
-plugin:non-dynamic-hello-world[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/non-dynamic-hello-world">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `greet`: Say hello world
 ++++

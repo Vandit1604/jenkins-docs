@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Performance Signature: Dynatrace"
----
+= Performance Signature: Dynatrace
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Performance Signature: Dynatrace"
 :toc: left
 :compat-mode!:
 
-== Performance Signature: Dynatrace
 
-plugin:performance-signature-dynatracesaas[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/performance-signature-dynatracesaas">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `createDynatraceDeploymentEvent`: create Dynatrace Deployment event
 ++++

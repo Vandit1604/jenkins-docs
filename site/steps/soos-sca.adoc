@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "SOOS SCA"
----
+= SOOS SCA
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "SOOS SCA"
 :toc: left
 :compat-mode!:
 
-== SOOS SCA
 
-plugin:soos-sca[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/soos-sca">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'SoosSCA'])`: SOOS SCA
 ++++

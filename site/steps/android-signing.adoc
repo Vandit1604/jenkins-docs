@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Android Signing Plugin"
----
+= Android Signing Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Android Signing Plugin"
 :toc: left
 :compat-mode!:
 
-== Android Signing Plugin
 
-plugin:android-signing[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/android-signing">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `signAndroidApks`: Sign Android APKs
 ++++

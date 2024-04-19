@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "GCR Vulnerability Scanner Plugin"
----
+= GCR Vulnerability Scanner Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "GCR Vulnerability Scanner Plugin"
 :toc: left
 :compat-mode!:
 
-== GCR Vulnerability Scanner Plugin
 
-plugin:gcr-scanner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/gcr-scanner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `gcrImageVulnerabilityScanner`: GCR Image Vulnerability Scanner
 ++++

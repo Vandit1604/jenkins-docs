@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Remote Result Trigger Plugin"
----
+= Remote Result Trigger Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Remote Result Trigger Plugin"
 :toc: left
 :compat-mode!:
 
-== Remote Result Trigger Plugin
 
-plugin:remote-result-trigger[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/remote-result-trigger">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `pubResult`: Publish Build Result
 ++++

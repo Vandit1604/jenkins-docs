@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Yet Another Docker Plugin"
----
+= Yet Another Docker Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Yet Another Docker Plugin"
 :toc: left
 :compat-mode!:
 
-== Yet Another Docker Plugin
 
-plugin:yet-another-docker-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/yet-another-docker-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `dockerShell`: [Experimental] Docker Shell Step
 ++++

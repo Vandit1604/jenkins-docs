@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "OctoPerf Load Testing Plugin."
----
+= OctoPerf Load Testing Plugin.
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "OctoPerf Load Testing Plugin."
 :toc: left
 :compat-mode!:
 
-== OctoPerf Load Testing Plugin.
 
-plugin:octoperf[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/octoperf">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `octoPerfTest`: Runs test in OctoPerf Cloud
 ++++

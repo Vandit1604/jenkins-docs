@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "LambdaTest Automation Plugin"
----
+= LambdaTest Automation Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "LambdaTest Automation Plugin"
 :toc: left
 :compat-mode!:
 
-== LambdaTest Automation Plugin
 
-plugin:lambdatest-automation[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/lambdatest-automation">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `lambdaTestReportPublisher`: LambdaTest Pipeline Report
 ++++

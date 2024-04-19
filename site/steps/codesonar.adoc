@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "CodeSonar Plugin"
----
+= CodeSonar Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "CodeSonar Plugin"
 :toc: left
 :compat-mode!:
 
-== CodeSonar Plugin
 
-plugin:codesonar[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/codesonar">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `codesonar`: CodeSonar
 ++++

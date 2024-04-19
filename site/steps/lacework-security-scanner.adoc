@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Lacework Security Scanner"
----
+= Lacework Security Scanner
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Lacework Security Scanner"
 :toc: left
 :compat-mode!:
 
-== Lacework Security Scanner
 
-plugin:lacework-security-scanner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/lacework-security-scanner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `lacework`: Lacework Security
 ++++

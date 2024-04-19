@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Ansible plugin"
----
+= Ansible plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Ansible plugin"
 :toc: left
 :compat-mode!:
 
-== Ansible plugin
 
-plugin:ansible[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ansible">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ansibleAdhoc`: Invoke an ansible adhoc command
 ++++

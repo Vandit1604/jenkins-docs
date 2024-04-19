@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Oracle Cloud Infrastructure DevOps Plugin"
----
+= Oracle Cloud Infrastructure DevOps Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Oracle Cloud Infrastructure DevOps Plugin"
 :toc: left
 :compat-mode!:
 
-== Oracle Cloud Infrastructure DevOps Plugin
 
-plugin:oracle-cloud-infrastructure-devops[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/oracle-cloud-infrastructure-devops">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `OCIUploadArtifact`: OCI Artifact Upload
 ++++

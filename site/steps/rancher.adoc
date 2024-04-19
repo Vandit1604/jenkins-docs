@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Rancher Plugin"
----
+= Rancher Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Rancher Plugin"
 :toc: left
 :compat-mode!:
 
-== Rancher Plugin
 
-plugin:rancher[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/rancher">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `rancher`: Deploy/Upgrade Rancher Service
 ++++

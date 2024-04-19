@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Klocwork Analysis Plug-in"
----
+= Klocwork Analysis Plug-in
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Klocwork Analysis Plug-in"
 :toc: left
 :compat-mode!:
 
-== Klocwork Analysis Plug-in
 
-plugin:klocwork[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/klocwork">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `klocworkBuildSpecGeneration`: Klocwork - Step 1 (CI/Full) - Capture Build Information
 ++++

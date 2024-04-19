@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "BMC AMI DevX Total Test"
----
+= BMC AMI DevX Total Test
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "BMC AMI DevX Total Test"
 :toc: left
 :compat-mode!:
 
-== BMC AMI DevX Total Test
 
-plugin:compuware-topaz-for-total-test[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/compuware-topaz-for-total-test">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `totaltestUT`: Total Test - Execute unit tests
 ++++

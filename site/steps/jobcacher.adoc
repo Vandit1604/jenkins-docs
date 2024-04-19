@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Job Cacher plugin"
----
+= Job Cacher plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Job Cacher plugin"
 :toc: left
 :compat-mode!:
 
-== Job Cacher plugin
 
-plugin:jobcacher[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/jobcacher">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `cache`: Caches files from previous build to current build
 ++++

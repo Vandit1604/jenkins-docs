@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Propelo's Job Reporter"
----
+= Propelo's Job Reporter
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Propelo's Job Reporter"
 :toc: left
 :compat-mode!:
 
-== Propelo's Job Reporter
 
-plugin:propelo-job-reporter[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/propelo-job-reporter">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'LevelOpsPostBuildPublisher'])`: Propelo Job Reporter Plugin
 ++++

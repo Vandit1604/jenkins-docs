@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Amazon Inspector Scanner"
----
+= Amazon Inspector Scanner
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Amazon Inspector Scanner"
 :toc: left
 :compat-mode!:
 
-== Amazon Inspector Scanner
 
-plugin:amazon-inspector-image-scanner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/amazon-inspector-image-scanner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `Amazon Inspector`: Amazon Inspector Scan
 ++++

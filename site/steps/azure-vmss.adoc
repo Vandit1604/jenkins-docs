@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Azure Virtual Machine Scale Set Plugin"
----
+= Azure Virtual Machine Scale Set Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Azure Virtual Machine Scale Set Plugin"
 :toc: left
 :compat-mode!:
 
-== Azure Virtual Machine Scale Set Plugin
 
-plugin:azure-vmss[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/azure-vmss">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `azureVMSSUpdateInstances`: Update Azure Virtual Machine Scale Set Instances
 ++++

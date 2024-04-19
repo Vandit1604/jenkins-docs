@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Ghost Inspector Plugin"
----
+= Ghost Inspector Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Ghost Inspector Plugin"
 :toc: left
 :compat-mode!:
 
-== Ghost Inspector Plugin
 
-plugin:ghost-inspector[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ghost-inspector">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ghostInspector`: Run Ghost Inspector Test Suite
 ++++

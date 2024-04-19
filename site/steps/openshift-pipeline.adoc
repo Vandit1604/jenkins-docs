@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "OpenShift Pipeline Jenkins Plugin"
----
+= OpenShift Pipeline Jenkins Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "OpenShift Pipeline Jenkins Plugin"
 :toc: left
 :compat-mode!:
 
-== OpenShift Pipeline Jenkins Plugin
 
-plugin:openshift-pipeline[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/openshift-pipeline">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `openshiftBuild`: Trigger OpenShift Build
 ++++

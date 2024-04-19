@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "OWASP Dependency-Track Plugin"
----
+= OWASP Dependency-Track Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "OWASP Dependency-Track Plugin"
 :toc: left
 :compat-mode!:
 
-== OWASP Dependency-Track Plugin
 
-plugin:dependency-track[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/dependency-track">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `dependencyTrackPublisher`: Publish BOM to Dependency-Track
 ++++

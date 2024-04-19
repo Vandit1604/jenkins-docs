@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "42Crunch REST API Static Security Testing"
----
+= 42Crunch REST API Static Security Testing
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "42Crunch REST API Static Security Testing"
 :toc: left
 :compat-mode!:
 
-== 42Crunch REST API Static Security Testing
 
-plugin:42crunch-security-audit[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/42crunch-security-audit">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `audit`: 42Crunch API Security Audit
 ++++

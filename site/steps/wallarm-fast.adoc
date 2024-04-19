@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Wallarm Fast"
----
+= Wallarm Fast
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Wallarm Fast"
 :toc: left
 :compat-mode!:
 
-== Wallarm Fast
 
-plugin:wallarm-fast[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/wallarm-fast">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'WallarmFastBuilder'])`: WallarmFastBuilder
 ++++

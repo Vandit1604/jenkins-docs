@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Qualys Container Scanning Connector"
----
+= Qualys Container Scanning Connector
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Qualys Container Scanning Connector"
 :toc: left
 :compat-mode!:
 
-== Qualys Container Scanning Connector
 
-plugin:qualys-cs[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/qualys-cs">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `getImageVulnsFromQualys`: Scan container images with Qualys CS
 ++++

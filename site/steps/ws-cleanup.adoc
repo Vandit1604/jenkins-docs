@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Workspace Cleanup Plugin"
----
+= Workspace Cleanup Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Workspace Cleanup Plugin"
 :toc: left
 :compat-mode!:
 
-== Workspace Cleanup Plugin
 
-plugin:ws-cleanup[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ws-cleanup">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `cleanWs`: Delete workspace when build is done
 ++++

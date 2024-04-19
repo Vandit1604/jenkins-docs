@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "CodeQL Plugin"
----
+= CodeQL Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "CodeQL Plugin"
 :toc: left
 :compat-mode!:
 
-== CodeQL Plugin
 
-plugin:codeql[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/codeql">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `withCodeQL`: Provide codeql environment
 ++++

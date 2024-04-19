@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Mend Cloud Native Plugin"
----
+= Mend Cloud Native Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Mend Cloud Native Plugin"
 :toc: left
 :compat-mode!:
 
-== Mend Cloud Native Plugin
 
-plugin:mend-cloud-native-security-scanner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/mend-cloud-native-security-scanner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'MendCnScannerBuilder'])`: Mend Cloud Native Security Scanner
 ++++

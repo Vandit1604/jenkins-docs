@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Sonar Gerrit Plugin"
----
+= Sonar Gerrit Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Sonar Gerrit Plugin"
 :toc: left
 :compat-mode!:
 
-== Sonar Gerrit Plugin
 
-plugin:sonar-gerrit[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/sonar-gerrit">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `sonarToGerrit`: Post SonarQube issues as Gerrit comments
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "EDAS Plugin"
----
+= EDAS Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "EDAS Plugin"
 :toc: left
 :compat-mode!:
 
-== EDAS Plugin
 
-plugin:alibabacloud-edas[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/alibabacloud-edas">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `edasClient`: Deploy to EDAS
 ++++

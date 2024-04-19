@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline: AWS Steps"
----
+= Pipeline: AWS Steps
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline: AWS Steps"
 :toc: left
 :compat-mode!:
 
-== Pipeline: AWS Steps
 
-plugin:pipeline-aws[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-aws">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `awaitDeploymentCompletion`: Wait for AWS CodeDeploy deployment completion
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline: Keep Environment Step Plugin"
----
+= Pipeline: Keep Environment Step Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline: Keep Environment Step Plugin"
 :toc: left
 :compat-mode!:
 
-== Pipeline: Keep Environment Step Plugin
 
-plugin:pipeline-keepenv-step[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-keepenv-step">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `keepEnv`: Keep only specified environment variables
 ++++

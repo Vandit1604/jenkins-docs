@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "MISRA Compliance Report Plugin"
----
+= MISRA Compliance Report Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "MISRA Compliance Report Plugin"
 :toc: left
 :compat-mode!:
 
-== MISRA Compliance Report Plugin
 
-plugin:misra-compliance-report-generator[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/misra-compliance-report-generator">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `misraReport`: Build MISRA Guideline Compliance Summary (GCS)
 ++++

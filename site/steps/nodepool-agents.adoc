@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "NodePool Agents Plugin"
----
+= NodePool Agents Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "NodePool Agents Plugin"
 :toc: left
 :compat-mode!:
 
-== NodePool Agents Plugin
 
-plugin:nodepool-agents[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/nodepool-agents">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `nodePoolHold`: Set NodePool hold from within a job
 ++++

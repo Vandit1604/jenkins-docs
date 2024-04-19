@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Venafi CodeSign Protect"
----
+= Venafi CodeSign Protect
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Venafi CodeSign Protect"
 :toc: left
 :compat-mode!:
 
-== Venafi CodeSign Protect
 
-plugin:venafi-codesigning[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/venafi-codesigning">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `venafiCodeSignWithJarSigner`: Venafi CodeSign Protect: sign with jarsigner
 ++++

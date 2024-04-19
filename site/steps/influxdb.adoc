@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "InfluxDB Plugin"
----
+= InfluxDB Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "InfluxDB Plugin"
 :toc: left
 :compat-mode!:
 
-== InfluxDB Plugin
 
-plugin:influxdb[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/influxdb">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `influxDbPublisher`: Publish build data to InfluxDB
 ++++

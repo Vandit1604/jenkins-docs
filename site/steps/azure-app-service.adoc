@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Azure App Service Plugin"
----
+= Azure App Service Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Azure App Service Plugin"
 :toc: left
 :compat-mode!:
 
-== Azure App Service Plugin
 
-plugin:azure-app-service[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/azure-app-service">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `azureWebAppPublish`: Publish an Azure Web App
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Zscaler IaC Scanner"
----
+= Zscaler IaC Scanner
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Zscaler IaC Scanner"
 :toc: left
 :compat-mode!:
 
-== Zscaler IaC Scanner
 
-plugin:zscaler-iac-scan[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/zscaler-iac-scan">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `wrap([$class: 'ZscalerScan'])`: Zscaler IaC scan
 ++++

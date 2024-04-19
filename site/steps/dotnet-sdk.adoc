@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: ".NET SDK Support"
----
+= .NET SDK Support
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: ".NET SDK Support"
 :toc: left
 :compat-mode!:
 
-== .NET SDK Support
 
-plugin:dotnet-sdk[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/dotnet-sdk">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `dotnetBuild`: .NET: Build project (build)
 ++++

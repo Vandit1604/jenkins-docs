@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Gating Core"
----
+= Gating Core
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Gating Core"
 :toc: left
 :compat-mode!:
 
-== Gating Core
 
-plugin:gating-core[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/gating-core">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `requireResources`: GatingStep
 ++++

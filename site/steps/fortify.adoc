@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Fortify"
----
+= Fortify
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Fortify"
 :toc: left
 :compat-mode!:
 
-== Fortify
 
-plugin:fortify[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/fortify">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `fortifyClean`: Run Fortify SCA clean
 ++++

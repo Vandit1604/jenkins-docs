@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline: HuaweiCloud Steps"
----
+= Pipeline: HuaweiCloud Steps
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline: HuaweiCloud Steps"
 :toc: left
 :compat-mode!:
 
-== Pipeline: HuaweiCloud Steps
 
-plugin:pipeline-huaweicloud-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-huaweicloud-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `invokeFunction`: Invoke a given function
 ++++

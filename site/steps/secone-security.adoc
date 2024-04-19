@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Sec1 Security"
----
+= Sec1 Security
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Sec1 Security"
 :toc: left
 :compat-mode!:
 
-== Sec1 Security
 
-plugin:secone-security[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/secone-security">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `sec1Security`: Execute Sec1 Security Scan
 ++++

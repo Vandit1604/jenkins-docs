@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "NodeJS Plugin"
----
+= NodeJS Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "NodeJS Plugin"
 :toc: left
 :compat-mode!:
 
-== NodeJS Plugin
 
-plugin:nodejs[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/nodejs">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `nodejs`: Provide Node & npm bin/ folder to PATH
 ++++

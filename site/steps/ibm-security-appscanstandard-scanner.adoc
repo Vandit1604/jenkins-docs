@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "IBM Security AppScan Standard Scanner"
----
+= IBM Security AppScan Standard Scanner
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "IBM Security AppScan Standard Scanner"
 :toc: left
 :compat-mode!:
 
-== IBM Security AppScan Standard Scanner
 
-plugin:ibm-security-appscanstandard-scanner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ibm-security-appscanstandard-scanner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'AppScanStandardBuilder'])`: Run AppScan Standard
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Code signing with Software Trust Manager"
----
+= Code signing with Software Trust Manager
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Code signing with Software Trust Manager"
 :toc: left
 :compat-mode!:
 
-== Code signing with Software Trust Manager
 
-plugin:digicert-software-trust-code-sign[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/digicert-software-trust-code-sign">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `SoftwareTrustManagerSetup`: SoftwareTrustManagerSetup
 ++++

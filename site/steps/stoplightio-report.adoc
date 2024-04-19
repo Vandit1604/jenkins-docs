@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Stoplight Report Plugin"
----
+= Stoplight Report Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Stoplight Report Plugin"
 :toc: left
 :compat-mode!:
 
-== Stoplight Report Plugin
 
-plugin:stoplightio-report[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/stoplightio-report">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `publishStoplight`: Publish Stoplight Report
 ++++

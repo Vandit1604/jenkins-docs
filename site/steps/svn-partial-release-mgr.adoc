@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Subversion Partial Release Manager plugin"
----
+= Subversion Partial Release Manager plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Subversion Partial Release Manager plugin"
 :toc: left
 :compat-mode!:
 
-== Subversion Partial Release Manager plugin
 
-plugin:svn-partial-release-mgr[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/svn-partial-release-mgr">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'PartialReleaseMgrSuccessfulBuilder'])`: Svn-Partial Release Manager (After build)
 ++++

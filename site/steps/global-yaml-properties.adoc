@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Global YAML Properties"
----
+= Global YAML Properties
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Global YAML Properties"
 :toc: left
 :compat-mode!:
 
-== Global YAML Properties
 
-plugin:global-yaml-properties[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/global-yaml-properties">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `getGlobalYAMLCategories`: Get all categories defined in Global YAML Properties
 ++++

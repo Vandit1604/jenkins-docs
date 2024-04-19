@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "VK Notifier"
----
+= VK Notifier
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "VK Notifier"
 :toc: left
 :compat-mode!:
 
-== VK Notifier
 
-plugin:vk-notifier[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/vk-notifier">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `vkSend`: VkNotifierCustomSendStep
 ++++

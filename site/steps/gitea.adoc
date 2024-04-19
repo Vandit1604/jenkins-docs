@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Gitea Plugin"
----
+= Gitea Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Gitea Plugin"
 :toc: left
 :compat-mode!:
 
-== Gitea Plugin
 
-plugin:gitea[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/gitea">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `publishGiteaAssets`: Publishes an asset to the gitea release, if the build was triggered by an release
 ++++

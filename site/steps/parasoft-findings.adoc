@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Parasoft Findings"
----
+= Parasoft Findings
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Parasoft Findings"
 :toc: left
 :compat-mode!:
 
-== Parasoft Findings
 
-plugin:parasoft-findings[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/parasoft-findings">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `recordParasoftCoverage`: Record Parasoft code coverage results
 ++++

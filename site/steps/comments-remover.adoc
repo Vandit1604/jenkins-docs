@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Comments Remover plugin"
----
+= Comments Remover plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Comments Remover plugin"
 :toc: left
 :compat-mode!:
 
-== Comments Remover plugin
 
-plugin:comments-remover[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/comments-remover">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'CommentsRemoverBuilder'])`: Invoke Comments Remover
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Log File Filter Plugin"
----
+= Log File Filter Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Log File Filter Plugin"
 :toc: left
 :compat-mode!:
 
-== Log File Filter Plugin
 
-plugin:log-file-filter[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/log-file-filter">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `logFileFilter`: LogFileFilterStep
 ++++

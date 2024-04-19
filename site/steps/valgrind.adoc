@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Valgrind Plug-in"
----
+= Valgrind Plug-in
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Valgrind Plug-in"
 :toc: left
 :compat-mode!:
 
-== Valgrind Plug-in
 
-plugin:valgrind[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/valgrind">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `publishValgrind`: Publish valgrind reports
 ++++

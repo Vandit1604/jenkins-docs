@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "nvm-wrapper"
----
+= nvm-wrapper
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "nvm-wrapper"
 :toc: left
 :compat-mode!:
 
-== nvm-wrapper
 
-plugin:nvm-wrapper[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/nvm-wrapper">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `nvm`: Setup the environment for an NVM installation.
 ++++

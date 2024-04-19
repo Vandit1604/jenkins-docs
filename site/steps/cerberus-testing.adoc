@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Cerberus Testing Plugin"
----
+= Cerberus Testing Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Cerberus Testing Plugin"
 :toc: left
 :compat-mode!:
 
-== Cerberus Testing Plugin
 
-plugin:cerberus-testing[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/cerberus-testing">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `executeCerberusCampaign`: Execute Cerberus Campaign
 ++++

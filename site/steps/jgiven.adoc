@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "JGiven Jenkins Plugin"
----
+= JGiven Jenkins Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "JGiven Jenkins Plugin"
 :toc: left
 :compat-mode!:
 
-== JGiven Jenkins Plugin
 
-plugin:jgiven[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/jgiven">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'JgivenReportGenerator'])`: Generate JGiven Reports
 ++++

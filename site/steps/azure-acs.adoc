@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Azure Container Service Plugin"
----
+= Azure Container Service Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Azure Container Service Plugin"
 :toc: left
 :compat-mode!:
 
-== Azure Container Service Plugin
 
-plugin:azure-acs[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/azure-acs">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `acsDeploy`: Deploy to Azure Container Service (AKS)
 ++++

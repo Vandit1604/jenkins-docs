@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "JUnit Plugin"
----
+= JUnit Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "JUnit Plugin"
 :toc: left
 :compat-mode!:
 
-== JUnit Plugin
 
-plugin:junit[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/junit">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `junit`: Archive JUnit-formatted test results
 ++++

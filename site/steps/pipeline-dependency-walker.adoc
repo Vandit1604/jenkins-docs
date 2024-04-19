@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline Dependency Walker Plugin"
----
+= Pipeline Dependency Walker Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline Dependency Walker Plugin"
 :toc: left
 :compat-mode!:
 
-== Pipeline Dependency Walker Plugin
 
-plugin:pipeline-dependency-walker[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-dependency-walker">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `walk`: Execute a pipeline task for the job and all its downstream jobs.
 ++++

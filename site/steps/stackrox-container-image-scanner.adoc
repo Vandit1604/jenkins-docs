@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "StackRox Container Image Scanner"
----
+= StackRox Container Image Scanner
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "StackRox Container Image Scanner"
 :toc: left
 :compat-mode!:
 
-== StackRox Container Image Scanner
 
-plugin:stackrox-container-image-scanner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/stackrox-container-image-scanner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `stackrox`: StackRox Container Image Scanner
 ++++

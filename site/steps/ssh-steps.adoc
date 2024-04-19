@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "SSH Pipeline Steps"
----
+= SSH Pipeline Steps
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "SSH Pipeline Steps"
 :toc: left
 :compat-mode!:
 
-== SSH Pipeline Steps
 
-plugin:ssh-steps[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ssh-steps">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `sshCommand`: SSH Steps: sshCommand - Execute command on remote node.
 ++++

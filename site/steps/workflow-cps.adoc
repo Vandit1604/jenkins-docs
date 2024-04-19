@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline: Groovy"
----
+= Pipeline: Groovy
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline: Groovy"
 :toc: left
 :compat-mode!:
 
-== Pipeline: Groovy
 
-plugin:workflow-cps[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/workflow-cps">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `load`: Evaluate a Groovy source file into the Pipeline script
 ++++

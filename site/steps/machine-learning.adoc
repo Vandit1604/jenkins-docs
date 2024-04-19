@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Machine Learning Plugin"
----
+= Machine Learning Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Machine Learning Plugin"
 :toc: left
 :compat-mode!:
 
-== Machine Learning Plugin
 
-plugin:machine-learning[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/machine-learning">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ipythonBuilder`: IPython Builder
 ++++

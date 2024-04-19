@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Chatter Notifier Plugin"
----
+= Chatter Notifier Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Chatter Notifier Plugin"
 :toc: left
 :compat-mode!:
 
-== Chatter Notifier Plugin
 
-plugin:chatter-notifier[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/chatter-notifier">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `chatterPost`: Post to Chatter
 ++++

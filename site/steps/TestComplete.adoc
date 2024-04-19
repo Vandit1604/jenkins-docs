@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "TestComplete support plug-in"
----
+= TestComplete support plug-in
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "TestComplete support plug-in"
 :toc: left
 :compat-mode!:
 
-== TestComplete support plug-in
 
-plugin:TestComplete[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/TestComplete">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `testcompletetest`: TestComplete Test
 ++++

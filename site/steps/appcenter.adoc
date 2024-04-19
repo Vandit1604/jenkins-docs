@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "App Center"
----
+= App Center
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "App Center"
 :toc: left
 :compat-mode!:
 
-== App Center
 
-plugin:appcenter[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/appcenter">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `appCenter`: Upload app to AppCenter
 ++++

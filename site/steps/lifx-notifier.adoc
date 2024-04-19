@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "LIFX notifier - smart lightbulbs build indicator"
----
+= LIFX notifier - smart lightbulbs build indicator
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "LIFX notifier - smart lightbulbs build indicator"
 :toc: left
 :compat-mode!:
 
-== LIFX notifier - smart lightbulbs build indicator
 
-plugin:lifx-notifier[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/lifx-notifier">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'LifxNotifier'])`: Lifx notifier
 ++++

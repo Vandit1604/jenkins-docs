@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Redmine Metrics Report"
----
+= Redmine Metrics Report
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Redmine Metrics Report"
 :toc: left
 :compat-mode!:
 
-== Redmine Metrics Report
 
-plugin:redmine-metrics-report[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/redmine-metrics-report">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `redmineMetricsReport`: Generate Redmine Metrics Report
 ++++

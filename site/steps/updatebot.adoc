@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Updatebot Plugin"
----
+= Updatebot Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Updatebot Plugin"
 :toc: left
 :compat-mode!:
 
-== Updatebot Plugin
 
-plugin:updatebot[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/updatebot">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `updateBotPush`: UpdateBot Push
 ++++

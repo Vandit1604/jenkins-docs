@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Warnings Plugin"
----
+= Warnings Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Warnings Plugin"
 :toc: left
 :compat-mode!:
 
-== Warnings Plugin
 
-plugin:warnings-ng[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/warnings-ng">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `publishIssues`: Publish issues created by a static analysis scan
 ++++

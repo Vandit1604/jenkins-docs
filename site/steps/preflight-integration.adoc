@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "PreFlight"
----
+= PreFlight
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "PreFlight"
 :toc: left
 :compat-mode!:
 
-== PreFlight
 
-plugin:preflight-integration[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/preflight-integration">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'PreflightBuilder'])`: Run PreFlight Test
 ++++

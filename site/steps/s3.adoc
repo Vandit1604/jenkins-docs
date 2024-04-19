@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "S3 publisher plugin"
----
+= S3 publisher plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "S3 publisher plugin"
 :toc: left
 :compat-mode!:
 
-== S3 publisher plugin
 
-plugin:s3[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/s3">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `s3Upload`: Publish artifacts to S3 Bucket
 ++++

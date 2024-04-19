@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "z/OS DevOps"
----
+= z/OS DevOps
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "z/OS DevOps"
 :toc: left
 :compat-mode!:
 
-== z/OS DevOps
 
-plugin:zdevops[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/zdevops">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `allocateDS`: Allocate Dataset Declarative
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Amazon EC2 plugin"
----
+= Amazon EC2 plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Amazon EC2 plugin"
 :toc: left
 :compat-mode!:
 
-== Amazon EC2 plugin
 
-plugin:ec2[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ec2">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ec2`: Cloud template provisioning
 ++++

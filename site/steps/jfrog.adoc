@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "JFrog Plugin"
----
+= JFrog Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "JFrog Plugin"
 :toc: left
 :compat-mode!:
 
-== JFrog Plugin
 
-plugin:jfrog[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/jfrog">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `jf`: jf command
 ++++

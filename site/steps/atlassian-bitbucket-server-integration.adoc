@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Bitbucket Server Integration"
----
+= Bitbucket Server Integration
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Bitbucket Server Integration"
 :toc: left
 :compat-mode!:
 
-== Bitbucket Server Integration
 
-plugin:atlassian-bitbucket-server-integration[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/atlassian-bitbucket-server-integration">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `bbs_checkout`: BitbucketSCMStep
 ++++

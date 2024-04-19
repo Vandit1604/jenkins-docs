@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Service Now Plugin"
----
+= Service Now Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Service Now Plugin"
 :toc: left
 :compat-mode!:
 
-== Service Now Plugin
 
-plugin:service-now[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/service-now">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `serviceNow_attachFile`: AttachFileStep
 ++++

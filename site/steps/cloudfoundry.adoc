@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Cloud Foundry Plugin"
----
+= Cloud Foundry Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Cloud Foundry Plugin"
 :toc: left
 :compat-mode!:
 
-== Cloud Foundry Plugin
 
-plugin:cloudfoundry[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/cloudfoundry">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `pushToCloudFoundry`: Push to Cloud Foundry
 ++++

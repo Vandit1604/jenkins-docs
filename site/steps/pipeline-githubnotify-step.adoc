@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline GitHub Notify Step Plugin"
----
+= Pipeline GitHub Notify Step Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline GitHub Notify Step Plugin"
 :toc: left
 :compat-mode!:
 
-== Pipeline GitHub Notify Step Plugin
 
-plugin:pipeline-githubnotify-step[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-githubnotify-step">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `githubNotify`: Notifies GitHub of the status of a Pull Request
 ++++

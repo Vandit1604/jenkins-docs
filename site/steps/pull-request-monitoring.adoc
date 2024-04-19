@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pull Request Monitoring"
----
+= Pull Request Monitoring
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pull Request Monitoring"
 :toc: left
 :compat-mode!:
 
-== Pull Request Monitoring
 
-plugin:pull-request-monitoring[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pull-request-monitoring">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `monitoring`: Configure Monitoring Dashboard
 ++++

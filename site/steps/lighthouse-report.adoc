@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Lighthouse Report Plugin"
----
+= Lighthouse Report Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Lighthouse Report Plugin"
 :toc: left
 :compat-mode!:
 
-== Lighthouse Report Plugin
 
-plugin:lighthouse-report[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/lighthouse-report">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `lighthouseReport`: Lighthouse Report
 ++++

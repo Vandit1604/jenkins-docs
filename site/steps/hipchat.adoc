@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "HipChat Plugin"
----
+= HipChat Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "HipChat Plugin"
 :toc: left
 :compat-mode!:
 
-== HipChat Plugin
 
-plugin:hipchat[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/hipchat">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `hipchatSend`: Send HipChat Message
 ++++

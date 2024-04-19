@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Run Selector Plugin"
----
+= Run Selector Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Run Selector Plugin"
 :toc: left
 :compat-mode!:
 
-== Run Selector Plugin
 
-plugin:run-selector[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/run-selector">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `selectRun`: Select Run
 ++++

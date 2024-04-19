@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Lockable Resources plugin"
----
+= Lockable Resources plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Lockable Resources plugin"
 :toc: left
 :compat-mode!:
 
-== Lockable Resources plugin
 
-plugin:lockable-resources[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/lockable-resources">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `lock`: Lock shared resource
 ++++

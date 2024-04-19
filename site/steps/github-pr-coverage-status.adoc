@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "GitHub Pull Request Coverage Status"
----
+= GitHub Pull Request Coverage Status
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "GitHub Pull Request Coverage Status"
 :toc: left
 :compat-mode!:
 
-== GitHub Pull Request Coverage Status
 
-plugin:github-pr-coverage-status[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/github-pr-coverage-status">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'CompareCoverageAction'])`: Publish coverage to GitHub
 ++++

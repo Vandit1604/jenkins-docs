@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Kubernetes plugin"
----
+= Kubernetes plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Kubernetes plugin"
 :toc: left
 :compat-mode!:
 
-== Kubernetes plugin
 
-plugin:kubernetes[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/kubernetes">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `container`: Run build steps in a container
 ++++

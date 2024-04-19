@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Synopsys Coverity plugin"
----
+= Synopsys Coverity plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Synopsys Coverity plugin"
 :toc: left
 :compat-mode!:
 
-== Synopsys Coverity plugin
 
-plugin:synopsys-coverity[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/synopsys-coverity">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `coverityIssueCheck`: Check for Issues in Coverity View
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "CodeScene Plugin"
----
+= CodeScene Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "CodeScene Plugin"
 :toc: left
 :compat-mode!:
 
-== CodeScene Plugin
 
-plugin:codescene[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/codescene">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `codescene`: Run CodeScene Delta Analysis
 ++++

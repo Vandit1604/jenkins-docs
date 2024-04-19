@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "SnowGlobe Plugin"
----
+= SnowGlobe Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "SnowGlobe Plugin"
 :toc: left
 :compat-mode!:
 
-== SnowGlobe Plugin
 
-plugin:snowglobe[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/snowglobe">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `snowglobe_apply`: ApplyStep
 ++++

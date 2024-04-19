@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "AWS Parameter Store Build Wrapper"
----
+= AWS Parameter Store Build Wrapper
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "AWS Parameter Store Build Wrapper"
 :toc: left
 :compat-mode!:
 
-== AWS Parameter Store Build Wrapper
 
-plugin:aws-parameter-store[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/aws-parameter-store">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `withAWSParameterStore`: With AWS Parameter Store
 ++++

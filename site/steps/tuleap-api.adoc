@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Tuleap API Plugin"
----
+= Tuleap API Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Tuleap API Plugin"
 :toc: left
 :compat-mode!:
 
-== Tuleap API Plugin
 
-plugin:tuleap-api[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/tuleap-api">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `tuleapNotifyCommitStatus`: Update the build status of the commit in Tuleap
 ++++

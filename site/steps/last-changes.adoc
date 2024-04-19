@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Last Changes Plugin"
----
+= Last Changes Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Last Changes Plugin"
 :toc: left
 :compat-mode!:
 
-== Last Changes Plugin
 
-plugin:last-changes[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/last-changes">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `getLastChangesPublisher`: Get Last Changes Publisher
 ++++

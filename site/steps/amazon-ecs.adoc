@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Amazon Elastic Container Service (ECS) / Fargate plugin"
----
+= Amazon Elastic Container Service (ECS) / Fargate plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Amazon Elastic Container Service (ECS) / Fargate plugin"
 :toc: left
 :compat-mode!:
 
-== Amazon Elastic Container Service (ECS) / Fargate plugin
 
-plugin:amazon-ecs[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/amazon-ecs">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ecsTaskTemplate`: Define a task template to use in the AWS ECS plugin
 ++++

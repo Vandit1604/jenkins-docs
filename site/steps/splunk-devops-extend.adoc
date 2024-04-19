@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Splunk Plugin Extension"
----
+= Splunk Plugin Extension
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Splunk Plugin Extension"
 :toc: left
 :compat-mode!:
 
-== Splunk Plugin Extension
 
-plugin:splunk-devops-extend[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/splunk-devops-extend">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `sendSplunkConsoleLog`: Send console log Splunk
 ++++

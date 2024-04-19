@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Atlassian Jira Software Cloud"
----
+= Atlassian Jira Software Cloud
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Atlassian Jira Software Cloud"
 :toc: left
 :compat-mode!:
 
-== Atlassian Jira Software Cloud
 
-plugin:atlassian-jira-software-cloud[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/atlassian-jira-software-cloud">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `checkGatingStatus`: Atlassian Jira Service Desk Software Cloud Jenkins Integration (Deployment Gating)
 ++++

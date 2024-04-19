@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "PureLoad Plugin"
----
+= PureLoad Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "PureLoad Plugin"
 :toc: left
 :compat-mode!:
 
-== PureLoad Plugin
 
-plugin:pureload[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pureload">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `publishPureLoad`: Publish PureLoad Results
 ++++

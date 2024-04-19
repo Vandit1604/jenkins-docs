@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "GPRbuild Plugin"
----
+= GPRbuild Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "GPRbuild Plugin"
 :toc: left
 :compat-mode!:
 
-== GPRbuild Plugin
 
-plugin:gprbuild[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/gprbuild">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `gprbuild`: Execute GPRbuild build tool
 ++++

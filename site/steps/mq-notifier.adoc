@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "MQ Notifier"
----
+= MQ Notifier
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "MQ Notifier"
 :toc: left
 :compat-mode!:
 
-== MQ Notifier
 
-plugin:mq-notifier[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/mq-notifier">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `publishMQMessage`: Publish MQ Message
 ++++

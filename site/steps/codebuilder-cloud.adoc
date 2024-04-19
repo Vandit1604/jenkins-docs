@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "CodeBuilder: AWS CodeBuild Cloud Agents"
----
+= CodeBuilder: AWS CodeBuild Cloud Agents
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "CodeBuilder: AWS CodeBuild Cloud Agents"
 :toc: left
 :compat-mode!:
 
-== CodeBuilder: AWS CodeBuild Cloud Agents
 
-plugin:codebuilder-cloud[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/codebuilder-cloud">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `wrap([$class: 'CodeBuilderLogger'])`: Add Build ID Link to CodeBuilder Jobs
 ++++

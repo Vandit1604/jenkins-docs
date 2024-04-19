@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "artifact-promotion"
----
+= artifact-promotion
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "artifact-promotion"
 :toc: left
 :compat-mode!:
 
-== artifact-promotion
 
-plugin:artifact-promotion[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/artifact-promotion">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `artifactPromotion`: ArtifactPromotionStep
 ++++

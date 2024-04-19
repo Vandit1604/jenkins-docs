@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Google Play Android Publisher Plugin"
----
+= Google Play Android Publisher Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Google Play Android Publisher Plugin"
 :toc: left
 :compat-mode!:
 
-== Google Play Android Publisher Plugin
 
-plugin:google-play-android-publisher[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/google-play-android-publisher">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `androidApkUpload`: Upload Android AAB/APKs to Google Play
 ++++

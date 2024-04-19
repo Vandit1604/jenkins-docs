@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "FortiCNP CICD Plugin"
----
+= FortiCNP CICD Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "FortiCNP CICD Plugin"
 :toc: left
 :compat-mode!:
 
-== FortiCNP CICD Plugin
 
-plugin:forticwp-cicd[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/forticwp-cicd">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `fortiCWPScanner`: Scan container images
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Deploy to container Plugin"
----
+= Deploy to container Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Deploy to container Plugin"
 :toc: left
 :compat-mode!:
 
-== Deploy to container Plugin
 
-plugin:deploy[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/deploy">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `deploy`: Deploy war/ear to a container
 ++++

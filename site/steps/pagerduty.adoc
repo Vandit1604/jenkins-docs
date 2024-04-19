@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "PagerDuty Plugin"
----
+= PagerDuty Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "PagerDuty Plugin"
 :toc: left
 :compat-mode!:
 
-== PagerDuty Plugin
 
-plugin:pagerduty[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pagerduty">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `pagerduty`: PagerDuty trigger/resolve step
 ++++

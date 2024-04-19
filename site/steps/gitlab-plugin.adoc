@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "GitLab Plugin"
----
+= GitLab Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "GitLab Plugin"
 :toc: left
 :compat-mode!:
 
-== GitLab Plugin
 
-plugin:gitlab-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/gitlab-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `acceptGitLabMR`: Accept GitLab Merge Request
 ++++

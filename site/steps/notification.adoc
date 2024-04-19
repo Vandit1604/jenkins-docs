@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Notification plugin"
----
+= Notification plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Notification plugin"
 :toc: left
 :compat-mode!:
 
-== Notification plugin
 
-plugin:notification[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/notification">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `notifyEndpoints`: Notify configured endpoints
 ++++

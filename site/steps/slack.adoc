@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Slack Notification Plugin"
----
+= Slack Notification Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Slack Notification Plugin"
 :toc: left
 :compat-mode!:
 
-== Slack Notification Plugin
 
-plugin:slack[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/slack">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `slackSend`: Send Slack Message
 ++++

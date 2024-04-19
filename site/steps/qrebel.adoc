@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "QRebel Plugin"
----
+= QRebel Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "QRebel Plugin"
 :toc: left
 :compat-mode!:
 
-== QRebel Plugin
 
-plugin:qrebel[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/qrebel">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `qrebel`: Monitor performance regressions with QRebel
 ++++

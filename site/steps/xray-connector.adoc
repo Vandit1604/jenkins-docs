@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Xray - Test Management for Jira Plugin"
----
+= Xray - Test Management for Jira Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Xray - Test Management for Jira Plugin"
 :toc: left
 :compat-mode!:
 
-== Xray - Test Management for Jira Plugin
 
-plugin:xray-connector[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/xray-connector">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'XrayExportBuilder'])`: Xray: Cucumber Features Export Task
 ++++

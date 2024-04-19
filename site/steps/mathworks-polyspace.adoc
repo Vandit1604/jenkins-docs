@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "MathWorks Polyspace Plugin"
----
+= MathWorks Polyspace Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "MathWorks Polyspace Plugin"
 :toc: left
 :compat-mode!:
 
-== MathWorks Polyspace Plugin
 
-plugin:mathworks-polyspace[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/mathworks-polyspace">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'PolyspacePostBuildActions'])`: Polyspace Notification
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pretested Integration Plugin"
----
+= Pretested Integration Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pretested Integration Plugin"
 :toc: left
 :compat-mode!:
 
-== Pretested Integration Plugin
 
-plugin:pretested-integration[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pretested-integration">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `pretestedIntegrationPublisher`: Pretested Integration publisher to push to integration branch
 ++++

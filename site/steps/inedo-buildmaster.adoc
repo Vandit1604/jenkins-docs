@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Inedo BuildMaster Plugin."
----
+= Inedo BuildMaster Plugin.
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Inedo BuildMaster Plugin."
 :toc: left
 :compat-mode!:
 
-== Inedo BuildMaster Plugin.
 
-plugin:inedo-buildmaster[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/inedo-buildmaster">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `buildMasterCreateBuild`: Create BuildMaster Build
 ++++

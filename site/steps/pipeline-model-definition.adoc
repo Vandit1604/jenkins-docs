@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline: Declarative"
----
+= Pipeline: Declarative
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline: Declarative"
 :toc: left
 :compat-mode!:
 
-== Pipeline: Declarative
 
-plugin:pipeline-model-definition[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-model-definition">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `script`: Run arbitrary Pipeline script
 ++++

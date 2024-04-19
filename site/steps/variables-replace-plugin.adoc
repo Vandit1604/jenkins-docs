@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Variables Replace"
----
+= Variables Replace
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Variables Replace"
 :toc: left
 :compat-mode!:
 
-== Variables Replace
 
-plugin:variables-replace-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/variables-replace-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `contentReplace`: Variables Replace
 ++++

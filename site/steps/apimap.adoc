@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Apimap.io"
----
+= Apimap.io
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Apimap.io"
 :toc: left
 :compat-mode!:
 
-== Apimap.io
 
-plugin:apimap[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/apimap">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `publishAPI`: File content publishing
 ++++

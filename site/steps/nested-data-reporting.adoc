@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Nested Data Reporting"
----
+= Nested Data Reporting
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Nested Data Reporting"
 :toc: left
 :compat-mode!:
 
-== Nested Data Reporting
 
-plugin:nested-data-reporting[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/nested-data-reporting">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `publishReport`: Publish report files like json, yaml, csv or xml
 ++++

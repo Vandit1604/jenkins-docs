@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "BrowserStack"
----
+= BrowserStack
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "BrowserStack"
 :toc: left
 :compat-mode!:
 
-== BrowserStack
 
-plugin:browserstack-integration[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/browserstack-integration">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `browserStackReportPublisher`: BrowserStack Test Report
 ++++

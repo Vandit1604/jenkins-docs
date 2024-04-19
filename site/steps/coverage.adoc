@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Coverage Plugin"
----
+= Coverage Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Coverage Plugin"
 :toc: left
 :compat-mode!:
 
-== Coverage Plugin
 
-plugin:coverage[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/coverage">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `recordCoverage`: Record code coverage results
 ++++

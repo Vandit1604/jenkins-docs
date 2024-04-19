@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Rapid7 InsightAppSec"
----
+= Rapid7 InsightAppSec
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Rapid7 InsightAppSec"
 :toc: left
 :compat-mode!:
 
-== Rapid7 InsightAppSec
 
-plugin:insightappsec[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/insightappsec">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `insightAppSec`: Scan using InsightAppSec
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Cppcheck Plug-in"
----
+= Cppcheck Plug-in
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Cppcheck Plug-in"
 :toc: left
 :compat-mode!:
 
-== Cppcheck Plug-in
 
-plugin:cppcheck[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/cppcheck">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `publishCppcheck`: Publish Cppcheck results
 ++++

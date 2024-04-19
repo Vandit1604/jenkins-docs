@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Mattermost Notification Plugin"
----
+= Mattermost Notification Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Mattermost Notification Plugin"
 :toc: left
 :compat-mode!:
 
-== Mattermost Notification Plugin
 
-plugin:mattermost[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/mattermost">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `mattermostSend`: Send Mattermost message
 ++++

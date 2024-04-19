@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline: Milestone Step"
----
+= Pipeline: Milestone Step
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline: Milestone Step"
 :toc: left
 :compat-mode!:
 
-== Pipeline: Milestone Step
 
-plugin:pipeline-milestone-step[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-milestone-step">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `milestone`: The milestone step forces all builds to go through in order
 ++++

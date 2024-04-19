@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "SmileHub Notifier"
----
+= SmileHub Notifier
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "SmileHub Notifier"
 :toc: left
 :compat-mode!:
 
-== SmileHub Notifier
 
-plugin:smilehubnotifier[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/smilehubnotifier">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `smilehubSend`: Send SmileHub Message
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "TestFLO - Test Management for Jira"
----
+= TestFLO - Test Management for Jira
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "TestFLO - Test Management for Jira"
 :toc: left
 :compat-mode!:
 
-== TestFLO - Test Management for Jira
 
-plugin:testflo-for-jira-test-management-automation[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/testflo-for-jira-test-management-automation">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'TestResultSenderBuildStep'])`: TestFLO Automation test results publisher
 ++++

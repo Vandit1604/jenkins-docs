@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Marathon Deployment"
----
+= Marathon Deployment
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Marathon Deployment"
 :toc: left
 :compat-mode!:
 
-== Marathon Deployment
 
-plugin:marathon[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/marathon">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `marathon`: Marathon Deployment
 ++++

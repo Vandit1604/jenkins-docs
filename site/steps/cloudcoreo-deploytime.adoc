@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "CloudCoreo DeployTime Plugin"
----
+= CloudCoreo DeployTime Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "CloudCoreo DeployTime Plugin"
 :toc: left
 :compat-mode!:
 
-== CloudCoreo DeployTime Plugin
 
-plugin:cloudcoreo-deploytime[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/cloudcoreo-deploytime">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'CloudCoreoPublisher'])`: Analyze CloudCoreo Results
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "XLRelease Variables Setter"
----
+= XLRelease Variables Setter
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "XLRelease Variables Setter"
 :toc: left
 :compat-mode!:
 
-== XLRelease Variables Setter
 
-plugin:xlrelease-var-setter[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/xlrelease-var-setter">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'XLRVarSetterBuilder'])`: XL-Release Var Setter
 ++++

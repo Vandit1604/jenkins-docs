@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "ICQ and MyTeam Notification Plugin"
----
+= ICQ and MyTeam Notification Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "ICQ and MyTeam Notification Plugin"
 :toc: left
 :compat-mode!:
 
-== ICQ and MyTeam Notification Plugin
 
-plugin:icq-notification[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/icq-notification">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'SendMessageBuildStep'])`: Send message to ICQ or MyTeam
 ++++

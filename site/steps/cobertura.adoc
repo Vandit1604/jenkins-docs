@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Cobertura Plugin"
----
+= Cobertura Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Cobertura Plugin"
 :toc: left
 :compat-mode!:
 
-== Cobertura Plugin
 
-plugin:cobertura[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/cobertura">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `cobertura`: Publish Cobertura Coverage Report
 ++++

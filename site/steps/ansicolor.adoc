@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "AnsiColor"
----
+= AnsiColor
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "AnsiColor"
 :toc: left
 :compat-mode!:
 
-== AnsiColor
 
-plugin:ansicolor[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ansicolor">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ansiColor`: Color ANSI Console Output
 ++++

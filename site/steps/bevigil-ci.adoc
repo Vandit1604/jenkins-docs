@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "BeVigil CI Plugin"
----
+= BeVigil CI Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "BeVigil CI Plugin"
 :toc: left
 :compat-mode!:
 
-== BeVigil CI Plugin
 
-plugin:bevigil-ci[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/bevigil-ci">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `greet`: Scan your app with BeVigil CI
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Sonic CI Helper"
----
+= Sonic CI Helper
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Sonic CI Helper"
 :toc: left
 :compat-mode!:
 
-== Sonic CI Helper
 
-plugin:sonic-ci-helper[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/sonic-ci-helper">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `upload-sonic`: Upload package to Sonic Testing Platform.
 ++++

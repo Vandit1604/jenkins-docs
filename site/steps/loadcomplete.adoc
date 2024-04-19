@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "LoadComplete support plugin"
----
+= LoadComplete support plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "LoadComplete support plugin"
 :toc: left
 :compat-mode!:
 
-== LoadComplete support plugin
 
-plugin:loadcomplete[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/loadcomplete">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `loadcompletetest`: LoadComplete Test
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "JetBrains Space Plugin"
----
+= JetBrains Space Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "JetBrains Space Plugin"
 :toc: left
 :compat-mode!:
 
-== JetBrains Space Plugin
 
-plugin:jetbrains-space[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/jetbrains-space">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `callSpaceApi`: Make a call to JetBrains Space HTTP API
 ++++

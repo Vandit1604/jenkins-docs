@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "MQTT Notification Plugin"
----
+= MQTT Notification Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "MQTT Notification Plugin"
 :toc: left
 :compat-mode!:
 
-== MQTT Notification Plugin
 
-plugin:mqtt-notification-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/mqtt-notification-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `mqttNotification`: MQTT Notification
 ++++

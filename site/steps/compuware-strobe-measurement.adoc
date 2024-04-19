@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "BMC AMI Strobe Measurement Task"
----
+= BMC AMI Strobe Measurement Task
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "BMC AMI Strobe Measurement Task"
 :toc: left
 :compat-mode!:
 
-== BMC AMI Strobe Measurement Task
 
-plugin:compuware-strobe-measurement[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/compuware-strobe-measurement">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `strobeMeasurement`: BMC AMI Strobe Measurement Task
 ++++

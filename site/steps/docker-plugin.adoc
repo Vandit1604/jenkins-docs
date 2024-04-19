@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Docker plugin"
----
+= Docker plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Docker plugin"
 :toc: left
 :compat-mode!:
 
-== Docker plugin
 
-plugin:docker-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/docker-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `dockerNode`: Docker Node (⚠️ Experimental)
 ++++

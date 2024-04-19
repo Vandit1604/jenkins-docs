@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Autify Plugin"
----
+= Autify Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Autify Plugin"
 :toc: left
 :compat-mode!:
 
-== Autify Plugin
 
-plugin:autify[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/autify">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `autifyMobile`: Run test on Autify for Mobile
 ++++

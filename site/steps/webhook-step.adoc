@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Webhook Step Plugin"
----
+= Webhook Step Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Webhook Step Plugin"
 :toc: left
 :compat-mode!:
 
-== Webhook Step Plugin
 
-plugin:webhook-step[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/webhook-step">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `registerWebhook`: Creates and returns a webhook that can be used by an external system to notify a pipeline
 ++++

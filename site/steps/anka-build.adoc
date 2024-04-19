@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Anka Plugin"
----
+= Anka Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Anka Plugin"
 :toc: left
 :compat-mode!:
 
-== Anka Plugin
 
-plugin:anka-build[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/anka-build">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ankaGetSaveImageResult`: Wait for previous save image requests results
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Debian Pbuilder"
----
+= Debian Pbuilder
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Debian Pbuilder"
 :toc: left
 :compat-mode!:
 
-== Debian Pbuilder
 
-plugin:debian-pbuilder[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/debian-pbuilder">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `debianPbuilder`: Build Debian packages in a pbuilder environment
 ++++

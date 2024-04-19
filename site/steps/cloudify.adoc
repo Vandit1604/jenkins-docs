@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Cloudify"
----
+= Cloudify
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Cloudify"
 :toc: left
 :compat-mode!:
 
-== Cloudify
 
-plugin:cloudify[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/cloudify">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `cfyAzureArm`: Create Azure ARM Deployment
 ++++

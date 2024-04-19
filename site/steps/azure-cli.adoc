@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Azure CLI Plugin"
----
+= Azure CLI Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Azure CLI Plugin"
 :toc: left
 :compat-mode!:
 
-== Azure CLI Plugin
 
-plugin:azure-cli[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/azure-cli">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `azureCLI`: azure-cli                         2.59.0
 ++++

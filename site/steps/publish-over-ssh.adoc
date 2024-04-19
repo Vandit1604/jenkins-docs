@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Publish Over SSH"
----
+= Publish Over SSH
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Publish Over SSH"
 :toc: left
 :compat-mode!:
 
-== Publish Over SSH
 
-plugin:publish-over-ssh[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/publish-over-ssh">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'BapSshPromotionPublisherPlugin'])`: Send build artifacts over SSH
 ++++

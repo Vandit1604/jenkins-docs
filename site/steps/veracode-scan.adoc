@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Veracode Scan"
----
+= Veracode Scan
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Veracode Scan"
 :toc: left
 :compat-mode!:
 
-== Veracode Scan
 
-plugin:veracode-scan[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/veracode-scan">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `veracodeDynamicAnalysisReview`: Review Veracode Dynamic Analysis Results
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Spring Config Plugin"
----
+= Spring Config Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Spring Config Plugin"
 :toc: left
 :compat-mode!:
 
-== Spring Config Plugin
 
-plugin:spring-config[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/spring-config">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `springConfig`: A step to read spring style profile configs
 ++++

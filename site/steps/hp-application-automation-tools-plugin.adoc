@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "OpenText Application Automation Tools"
----
+= OpenText Application Automation Tools
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "OpenText Application Automation Tools"
 :toc: left
 :compat-mode!:
 
-== OpenText Application Automation Tools
 
-plugin:hp-application-automation-tools-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/hp-application-automation-tools-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `loadRunnerTest`: Run LoadRunner performance scenario tests
 ++++

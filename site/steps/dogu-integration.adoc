@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Dogu Integration"
----
+= Dogu Integration
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Dogu Integration"
 :toc: left
 :compat-mode!:
 
-== Dogu Integration
 
-plugin:dogu-integration[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/dogu-integration">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `doguRunRoutine`: Dogu pipeline step
 ++++

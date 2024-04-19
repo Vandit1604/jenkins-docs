@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Embeddable Build Status Plugin"
----
+= Embeddable Build Status Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Embeddable Build Status Plugin"
 :toc: left
 :compat-mode!:
 
-== Embeddable Build Status Plugin
 
-plugin:embeddable-build-status[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/embeddable-build-status">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `addEmbeddableBadgeConfiguration`: Add an Embeddable Badge Configuration
 ++++

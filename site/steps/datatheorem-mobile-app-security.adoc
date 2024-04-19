@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Data Theorem Mobile Security: CI/CD Plugin"
----
+= Data Theorem Mobile Security: CI/CD Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Data Theorem Mobile Security: CI/CD Plugin"
 :toc: left
 :compat-mode!:
 
-== Data Theorem Mobile Security: CI/CD Plugin
 
-plugin:datatheorem-mobile-app-security[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/datatheorem-mobile-app-security">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `sendBuildToDataTheorem`: Upload build to Data Theorem
 ++++

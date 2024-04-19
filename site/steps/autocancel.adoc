@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Autocancel Plugin"
----
+= Autocancel Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Autocancel Plugin"
 :toc: left
 :compat-mode!:
 
-== Autocancel Plugin
 
-plugin:autocancel[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/autocancel">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `autocancelBranchBuildsOnPullRequestBuilds`: Autocancel branch builds on pull request builds
 ++++

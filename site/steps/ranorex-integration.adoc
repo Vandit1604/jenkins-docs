@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Ranorex Test Execution Plugin"
----
+= Ranorex Test Execution Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Ranorex Test Execution Plugin"
 :toc: left
 :compat-mode!:
 
-== Ranorex Test Execution Plugin
 
-plugin:ranorex-integration[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ranorex-integration">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ranorex`: Run a Ranorex test suite
 ++++

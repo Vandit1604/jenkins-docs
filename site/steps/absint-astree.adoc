@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "AbsInt Astrée Plugin for Jenkins"
----
+= AbsInt Astrée Plugin for Jenkins
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "AbsInt Astrée Plugin for Jenkins"
 :toc: left
 :compat-mode!:
 
-== AbsInt Astrée Plugin for Jenkins
 
-plugin:absint-astree[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/absint-astree">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'AstreeBuilder'])`: Astrée Analysis Run
 ++++

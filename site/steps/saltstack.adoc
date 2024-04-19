@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "SaltStack plugin"
----
+= SaltStack plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "SaltStack plugin"
 :toc: left
 :compat-mode!:
 
-== SaltStack plugin
 
-plugin:saltstack[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/saltstack">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `salt`: Send a message to Salt API
 ++++

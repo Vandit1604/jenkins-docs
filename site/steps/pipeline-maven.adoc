@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline Maven Integration Plugin"
----
+= Pipeline Maven Integration Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline Maven Integration Plugin"
 :toc: left
 :compat-mode!:
 
-== Pipeline Maven Integration Plugin
 
-plugin:pipeline-maven[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-maven">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `withMaven`: Provide Maven environment
 ++++

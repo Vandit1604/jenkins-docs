@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Fortify on Demand"
----
+= Fortify on Demand
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Fortify on Demand"
 :toc: left
 :compat-mode!:
 
-== Fortify on Demand
 
-plugin:fortify-on-demand-uploader[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/fortify-on-demand-uploader">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `fodDynamicAssessment`: Run Fortify on Demand Upload
 ++++

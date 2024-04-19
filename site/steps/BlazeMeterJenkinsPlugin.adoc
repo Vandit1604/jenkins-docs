@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "BlazeMeter plugin"
----
+= BlazeMeter plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "BlazeMeter plugin"
 :toc: left
 :compat-mode!:
 
-== BlazeMeter plugin
 
-plugin:BlazeMeterJenkinsPlugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/BlazeMeterJenkinsPlugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `blazeMeterTest`: BlazeMeter
 ++++

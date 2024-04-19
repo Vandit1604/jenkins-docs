@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Role-based Authorization Strategy"
----
+= Role-based Authorization Strategy
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Role-based Authorization Strategy"
 :toc: left
 :compat-mode!:
 
-== Role-based Authorization Strategy
 
-plugin:role-strategy[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/role-strategy">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `currentUserGlobalRoles`: Current Users Global Roles
 ++++

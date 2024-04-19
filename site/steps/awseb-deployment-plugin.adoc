@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "AWSEB Deployment Plugin"
----
+= AWSEB Deployment Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "AWSEB Deployment Plugin"
 :toc: left
 :compat-mode!:
 
-== AWSEB Deployment Plugin
 
-plugin:awseb-deployment-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/awseb-deployment-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'AWSEBDeploymentBuilder'])`: AWS Elastic Beanstalk
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Build Steps from Json Plugin"
----
+= Build Steps from Json Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Build Steps from Json Plugin"
 :toc: left
 :compat-mode!:
 
-== Build Steps from Json Plugin
 
-plugin:build-steps-from-json[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/build-steps-from-json">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'BuildStepsFromJsonBuilder'])`: Build Steps from Json
 ++++

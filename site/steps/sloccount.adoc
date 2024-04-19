@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "SLOCCount Plug-in"
----
+= SLOCCount Plug-in
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "SLOCCount Plug-in"
 :toc: left
 :compat-mode!:
 
-== SLOCCount Plug-in
 
-plugin:sloccount[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/sloccount">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `sloccountPublish`: Publish Sloccount reports
 ++++

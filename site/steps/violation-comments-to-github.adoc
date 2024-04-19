@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Violation Comments to GitHub Plugin"
----
+= Violation Comments to GitHub Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Violation Comments to GitHub Plugin"
 :toc: left
 :compat-mode!:
 
-== Violation Comments to GitHub Plugin
 
-plugin:violation-comments-to-github[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/violation-comments-to-github">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ViolationsToGitHub`: Report Violations to GitHub
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Inedo ProGet Plugin."
----
+= Inedo ProGet Plugin.
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Inedo ProGet Plugin."
 :toc: left
 :compat-mode!:
 
-== Inedo ProGet Plugin.
 
-plugin:inedo-proget[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/inedo-proget">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `downloadProgetPackage`: ProGet Package Download
 ++++

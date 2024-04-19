@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Violation Comments to Bitbucket Server Plugin"
----
+= Violation Comments to Bitbucket Server Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Violation Comments to Bitbucket Server Plugin"
 :toc: left
 :compat-mode!:
 
-== Violation Comments to Bitbucket Server Plugin
 
-plugin:violation-comments-to-stash[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/violation-comments-to-stash">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ViolationsToBitbucketServer`: Report Violations to Bitbucket Server
 ++++

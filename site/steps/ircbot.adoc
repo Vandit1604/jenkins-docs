@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "IRC Plugin"
----
+= IRC Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "IRC Plugin"
 :toc: left
 :compat-mode!:
 
-== IRC Plugin
 
-plugin:ircbot[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ircbot">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ircNotify`: IRC Notification
 ++++

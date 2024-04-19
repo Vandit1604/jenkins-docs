@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Cucumber json test reporting."
----
+= Cucumber json test reporting.
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Cucumber json test reporting."
 :toc: left
 :compat-mode!:
 
-== Cucumber json test reporting.
 
-plugin:cucumber-testresult-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/cucumber-testresult-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `cucumber`: Publish Cucumber test result report
 ++++

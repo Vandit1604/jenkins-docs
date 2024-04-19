@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Minio Plugin"
----
+= Minio Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Minio Plugin"
 :toc: left
 :compat-mode!:
 
-== Minio Plugin
 
-plugin:minio[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/minio">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `minio`: Upload build artifacts to Minio
 ++++

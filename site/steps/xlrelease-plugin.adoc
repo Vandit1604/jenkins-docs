@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "XebiaLabs XL Release Plugin"
----
+= XebiaLabs XL Release Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "XebiaLabs XL Release Plugin"
 :toc: left
 :compat-mode!:
 
-== XebiaLabs XL Release Plugin
 
-plugin:xlrelease-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/xlrelease-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `xlrCreateRelease`: Create and invoke a XLR release
 ++++

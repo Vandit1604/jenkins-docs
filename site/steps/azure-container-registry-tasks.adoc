@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Azure Container Registry Tasks Plugin"
----
+= Azure Container Registry Tasks Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Azure Container Registry Tasks Plugin"
 :toc: left
 :compat-mode!:
 
-== Azure Container Registry Tasks Plugin
 
-plugin:azure-container-registry-tasks[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/azure-container-registry-tasks">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `acrQuickTask`: Queue an ACR Quick Task
 ++++

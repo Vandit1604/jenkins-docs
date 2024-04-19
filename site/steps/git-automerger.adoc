@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Git Automerger Plugin"
----
+= Git Automerger Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Git Automerger Plugin"
 :toc: left
 :compat-mode!:
 
-== Git Automerger Plugin
 
-plugin:git-automerger[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/git-automerger">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `gitAutomerger`: Git automerge
 ++++

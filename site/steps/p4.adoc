@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "P4 Plugin"
----
+= P4 Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "P4 Plugin"
 :toc: left
 :compat-mode!:
 
-== P4 Plugin
 
-plugin:p4[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/p4">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `p4`: P4 Groovy
 ++++

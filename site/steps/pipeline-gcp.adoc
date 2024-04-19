@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline: GCP Steps"
----
+= Pipeline: GCP Steps
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline: GCP Steps"
 :toc: left
 :compat-mode!:
 
-== Pipeline: GCP Steps
 
-plugin:pipeline-gcp[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-gcp">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `withGCP`: Sets GCP credentials for nested block
 ++++

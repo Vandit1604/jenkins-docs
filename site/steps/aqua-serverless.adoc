@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Aqua Security Serverless Scanner"
----
+= Aqua Security Serverless Scanner
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Aqua Security Serverless Scanner"
 :toc: left
 :compat-mode!:
 
-== Aqua Security Serverless Scanner
 
-plugin:aqua-serverless[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/aqua-serverless">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `aquaServerlessScanner`: Aqua Serverless Security
 ++++

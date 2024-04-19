@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "GrypeScanner Plugin"
----
+= GrypeScanner Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "GrypeScanner Plugin"
 :toc: left
 :compat-mode!:
 
-== GrypeScanner Plugin
 
-plugin:grypescanner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/grypescanner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `grypeScan`: Vulnerability scan with grype
 ++++

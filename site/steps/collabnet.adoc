@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "CollabNet Plugins"
----
+= CollabNet Plugins
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "CollabNet Plugins"
 :toc: left
 :compat-mode!:
 
-== CollabNet Plugins
 
-plugin:collabnet[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/collabnet">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `publishTeamForge`: Notify TeamForge
 ++++

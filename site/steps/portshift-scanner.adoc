@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Panoptica Vulnerability Scanner Plugin"
----
+= Panoptica Vulnerability Scanner Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Panoptica Vulnerability Scanner Plugin"
 :toc: left
 :compat-mode!:
 
-== Panoptica Vulnerability Scanner Plugin
 
-plugin:portshift-scanner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/portshift-scanner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `secureCNVulnerabilityScanner`: SecureCN Vulnerability Scanner
 ++++

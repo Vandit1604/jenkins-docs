@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "DevOps Portal"
----
+= DevOps Portal
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "DevOps Portal"
 :toc: left
 :compat-mode!:
 
-== DevOps Portal
 
-plugin:devops-portal[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/devops-portal">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `reportArtifactRelease`: Record an artifact release
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "JUnit Realtime Test Reporter Plugin"
----
+= JUnit Realtime Test Reporter Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "JUnit Realtime Test Reporter Plugin"
 :toc: left
 :compat-mode!:
 
-== JUnit Realtime Test Reporter Plugin
 
-plugin:junit-realtime-test-reporter[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/junit-realtime-test-reporter">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `realtimeJUnit`: Display JUnit test results as they appear
 ++++

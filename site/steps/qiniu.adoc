@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Qiniu"
----
+= Qiniu
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Qiniu"
 :toc: left
 :compat-mode!:
 
-== Qiniu
 
-plugin:qiniu[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/qiniu">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `archiveArtifactsToQiniu`: Archive the artifacts to Qiniu
 ++++

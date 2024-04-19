@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Spring Initalzr plugin"
----
+= Spring Initalzr plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Spring Initalzr plugin"
 :toc: left
 :compat-mode!:
 
-== Spring Initalzr plugin
 
-plugin:spring-initalzr[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/spring-initalzr">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `springBoot`: Generate spring boot application
 ++++

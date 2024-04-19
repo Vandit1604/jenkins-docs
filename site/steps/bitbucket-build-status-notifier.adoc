@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Bitbucket Build Status Notifier Plugin"
----
+= Bitbucket Build Status Notifier Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Bitbucket Build Status Notifier Plugin"
 :toc: left
 :compat-mode!:
 
-== Bitbucket Build Status Notifier Plugin
 
-plugin:bitbucket-build-status-notifier[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/bitbucket-build-status-notifier">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `bitbucketStatusNotify`: Notify a build status to BitBucket.
 ++++

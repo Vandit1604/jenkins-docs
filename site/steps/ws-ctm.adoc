@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Worksoft Continuous Test Manager Plugin"
----
+= Worksoft Continuous Test Manager Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Worksoft Continuous Test Manager Plugin"
 :toc: left
 :compat-mode!:
 
-== Worksoft Continuous Test Manager Plugin
 
-plugin:ws-ctm[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ws-ctm">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `execMan`: Run Continuous Testing Manager Suite
 ++++

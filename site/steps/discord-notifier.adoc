@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Discord Notifier"
----
+= Discord Notifier
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Discord Notifier"
 :toc: left
 :compat-mode!:
 
-== Discord Notifier
 
-plugin:discord-notifier[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/discord-notifier">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `discordSend`: Send an embed message to Webhook URL
 ++++

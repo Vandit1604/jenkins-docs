@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Octopus Deploy"
----
+= Octopus Deploy
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Octopus Deploy"
 :toc: left
 :compat-mode!:
 
-== Octopus Deploy
 
-plugin:octopusdeploy[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/octopusdeploy">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `octopusDeployRelease`: Octopus Deploy: Deploy Release
 ++++

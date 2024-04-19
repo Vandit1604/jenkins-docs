@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Performance Publisher plugin"
----
+= Performance Publisher plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Performance Publisher plugin"
 :toc: left
 :compat-mode!:
 
-== Performance Publisher plugin
 
-plugin:perfpublisher[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/perfpublisher">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `perfpublisher`: Activate PerfPublisher for this project
 ++++

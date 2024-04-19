@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Alibabacloud Package Deployment"
----
+= Alibabacloud Package Deployment
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Alibabacloud Package Deployment"
 :toc: left
 :compat-mode!:
 
-== Alibabacloud Package Deployment
 
-plugin:alibabacloud-pkg-deployment[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/alibabacloud-pkg-deployment">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `oosExecuteNotify`: notify oos Execute
 ++++

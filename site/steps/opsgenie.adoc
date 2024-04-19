@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "OpsGenie Plugin"
----
+= OpsGenie Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "OpsGenie Plugin"
 :toc: left
 :compat-mode!:
 
-== OpsGenie Plugin
 
-plugin:opsgenie[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/opsgenie">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `opsgenie`: OpsGenie step
 ++++

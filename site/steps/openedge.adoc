@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "OpenEdge (Progress ABL)"
----
+= OpenEdge (Progress ABL)
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "OpenEdge (Progress ABL)"
 :toc: left
 :compat-mode!:
 
-== OpenEdge (Progress ABL)
 
-plugin:openedge[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/openedge">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `wrap([$class: 'OpenEdgeBuildWrapper'])`: OpenEdge
 ++++

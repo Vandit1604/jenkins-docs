@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Deepcrawl Automation Hub"
----
+= Deepcrawl Automation Hub
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Deepcrawl Automation Hub"
 :toc: left
 :compat-mode!:
 
-== Deepcrawl Automation Hub
 
-plugin:deepcrawl-test[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/deepcrawl-test">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `runAutomationHubBuild`: Run Deepcrawl Automation Hub Build
 ++++

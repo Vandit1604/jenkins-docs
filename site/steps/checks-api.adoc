@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Checks API plugin"
----
+= Checks API plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Checks API plugin"
 :toc: left
 :compat-mode!:
 
-== Checks API plugin
 
-plugin:checks-api[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/checks-api">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `publishChecks`: Publish customized checks to SCM platforms
 ++++

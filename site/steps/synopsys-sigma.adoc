@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Synopsys Rapid Scan Static Plugin"
----
+= Synopsys Rapid Scan Static Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Synopsys Rapid Scan Static Plugin"
 :toc: left
 :compat-mode!:
 
-== Synopsys Rapid Scan Static Plugin
 
-plugin:synopsys-sigma[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/synopsys-sigma">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `sigma`: Execute Synopsys Rapid Scan Static
 ++++

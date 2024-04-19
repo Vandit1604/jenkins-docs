@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Text Finder"
----
+= Text Finder
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Text Finder"
 :toc: left
 :compat-mode!:
 
-== Text Finder
 
-plugin:text-finder[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/text-finder">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `findText`: Search files or the console log for regular expression(s)
 ++++

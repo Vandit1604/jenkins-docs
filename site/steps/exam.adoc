@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "MicroNova EXAM Plugin"
----
+= MicroNova EXAM Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "MicroNova EXAM Plugin"
 :toc: left
 :compat-mode!:
 
-== MicroNova EXAM Plugin
 
-plugin:exam[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/exam">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `examCleanTarget`: EXAM Clear target
 ++++

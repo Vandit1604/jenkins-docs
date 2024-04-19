@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "OpenShift Client Jenkins Plugin"
----
+= OpenShift Client Jenkins Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "OpenShift Client Jenkins Plugin"
 :toc: left
 :compat-mode!:
 
-== OpenShift Client Jenkins Plugin
 
-plugin:openshift-client[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/openshift-client">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `_OcAction`: Internal utility function for OpenShift DSL
 ++++

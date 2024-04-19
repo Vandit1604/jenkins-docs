@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Gerrit Code Review plugin"
----
+= Gerrit Code Review plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Gerrit Code Review plugin"
 :toc: left
 :compat-mode!:
 
-== Gerrit Code Review plugin
 
-plugin:gerrit-code-review[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/gerrit-code-review">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `gerritCheck`: Gerrit Review Check
 ++++

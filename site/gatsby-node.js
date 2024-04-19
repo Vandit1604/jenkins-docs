@@ -40,6 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
                             slug
                         }
                         pageAttributes {
+                            layout
                             author
                             tags
                             author_name
@@ -62,49 +63,43 @@ exports.createPages = ({ graphql, actions }) => {
             throw result.errors;
         }
 
+        const data = result.data.allAsciidoc.edges;
+
         // authors page | passing the authors info the pages via pageContext
         const authorPostTemplate = path.resolve(`src/templates/author-pages.js`);
-        const authors = result.data.allAsciidoc.edges;
-        const filteredAuthors = authors.filter(
-            (author) => author.node.document.title === "About the Author",
-        );
-        filteredAuthors.forEach(({ node }) => {
+        const authors = data.filter((author) => author.node.pageAttributes.layout === "author");
+        authors.forEach(({ node }) => {
             createPage({
                 path: `author/${node.pageAttributes.github}`,
                 component: authorPostTemplate,
                 context: {
                     // asterisk's as we're using inbuilt glob in gatsby
                     authorName: `*${node.pageAttributes.github}*`,
-                    filteredAuthors,
+                    authors,
                 },
             });
         });
 
-        const filteredNodes = result.data.allAsciidoc.edges.filter(({ node }) => {
-            return node.fields.sourceInstanceName === "steps";
-        });
-
-        // Template for individual step pages
-        const stepTemplate = path.resolve("src/templates/step-page.js");
-
-        // Create pages for each filtered Asciidoc file
-        filteredNodes.forEach(({ node }) => {
+        const steps = data.filter((step) => step.node.pageAttributes.layout === "pipelinesteps");
+        const stepTemplate = path.resolve("src/templates/step-template.js");
+        steps.forEach(({ node }) => {
             createPage({
-                path: `/steps/${node.id}`, // You can customize the URL structure as needed
+                path: `steps${node.fields.slug}`,
                 component: stepTemplate,
                 context: {
-                    // Pass any data you need to the template
-                    // For example, the Asciidoc node itself
-                    asciidocNode: node,
+                    id: node.id,
                 },
             });
         });
 
         // Create blog-list pages
-        const posts = result.data.allAsciidoc.edges;
-        const filteredPosts = posts.filter((post) => post.node.document.title !== "Author");
+        const blogs = data.filter(
+            (blog) =>
+                blog.node.pageAttributes.layout !== "author" &&
+                blog.node.pageAttributes.layout !== "blog",
+        );
         const postsPerPage = 9;
-        const numPages = Math.ceil(filteredPosts.length / postsPerPage);
+        const numPages = Math.ceil(blogs.length / postsPerPage);
         Array.from({ length: numPages }).forEach((_, i) => {
             createPage({
                 path: i === 0 ? `/blog` : `/blog/${i + 1}`,
@@ -114,14 +109,19 @@ exports.createPages = ({ graphql, actions }) => {
                     skip: i * postsPerPage,
                     numPages,
                     currentPage: i + 1,
-                    filteredAuthors,
+                    authors,
                 },
             });
         });
 
-        // Create Asciidoc pages.
+        // Create blog article pages.
         const articleTemplate = path.resolve(`./src/templates/article.js`);
-        _.each(result.data.allAsciidoc.edges, (edge) => {
+        const posts = data.filter(
+            (post) =>
+                post.node.pageAttributes.layout !== "author" &&
+                post.node.pageAttributes.layout === "blog",
+        );
+        _.each(posts, (edge) => {
             // Gatsby uses Redux to manage its internal state.
             // Plugins and sites can use functions like "createPage"
             // to interact with Gatsby.
@@ -136,7 +136,7 @@ exports.createPages = ({ graphql, actions }) => {
                     id: edge.node.id,
                     authorname: edge.node.pageAttributes.author_name,
                     author: edge.node.pageAttributes.author,
-                    filteredAuthors,
+                    authors,
                 },
             });
         });
@@ -152,15 +152,6 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
             name: `slug`,
             node,
             value,
-        });
-    }
-
-    if (node.internal.type === `Asciidoc`) {
-        // Set the sourceInstanceName field to the name of the source plugin
-        createNodeField({
-            name: "sourceInstanceName",
-            node,
-            value: node.sourceInstanceName,
         });
     }
 };

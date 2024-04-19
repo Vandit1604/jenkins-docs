@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "SLSA Provenance Attestation Plugin"
----
+= SLSA Provenance Attestation Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "SLSA Provenance Attestation Plugin"
 :toc: left
 :compat-mode!:
 
-== SLSA Provenance Attestation Plugin
 
-plugin:slsa[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/slsa">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `provenanceRecorder`: Generate SLSA provenance attestations
 ++++

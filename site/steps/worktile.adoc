@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "PingCode Plugin"
----
+= PingCode Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "PingCode Plugin"
 :toc: left
 :compat-mode!:
 
-== PingCode Plugin
 
-plugin:worktile[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/worktile">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `pingcodeBuildRecord`: Send build result to pingcode
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Ansible Tower Plugin"
----
+= Ansible Tower Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Ansible Tower Plugin"
 :toc: left
 :compat-mode!:
 
-== Ansible Tower Plugin
 
-plugin:ansible-tower[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ansible-tower">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ansibleTower`: Have Ansible Tower run a job template
 ++++

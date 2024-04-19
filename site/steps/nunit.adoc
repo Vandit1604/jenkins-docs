@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "NUnit plugin"
----
+= NUnit plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "NUnit plugin"
 :toc: left
 :compat-mode!:
 
-== NUnit plugin
 
-plugin:nunit[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/nunit">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `nunit`: Publish NUnit test result report
 ++++

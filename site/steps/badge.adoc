@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Badge"
----
+= Badge
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Badge"
 :toc: left
 :compat-mode!:
 
-== Badge
 
-plugin:badge[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/badge">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `addBadge`: Add Badge
 ++++

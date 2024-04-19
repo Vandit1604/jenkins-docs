@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Plot plugin"
----
+= Plot plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Plot plugin"
 :toc: left
 :compat-mode!:
 
-== Plot plugin
 
-plugin:plot[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/plot">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `plot`: Plot build data
 ++++

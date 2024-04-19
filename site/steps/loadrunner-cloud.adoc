@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "LoadRunner Cloud"
----
+= LoadRunner Cloud
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "LoadRunner Cloud"
 :toc: left
 :compat-mode!:
 
-== LoadRunner Cloud
 
-plugin:loadrunner-cloud[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/loadrunner-cloud">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `lrcRunTest`: Run test in LoadRunner Cloud
 ++++

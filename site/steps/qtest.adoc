@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "qTest Plugin"
----
+= qTest Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "qTest Plugin"
 :toc: left
 :compat-mode!:
 
-== qTest Plugin
 
-plugin:qtest[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/qtest">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `submitJUnitTestResultsToqTest`: Submit jUnit test result to qTest
 ++++

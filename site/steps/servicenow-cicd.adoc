@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "ServiceNow CI/CD Plugin"
----
+= ServiceNow CI/CD Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "ServiceNow CI/CD Plugin"
 :toc: left
 :compat-mode!:
 
-== ServiceNow CI/CD Plugin
 
-plugin:servicenow-cicd[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/servicenow-cicd">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `snActivatePlugin`: SN: Activate plugin
 ++++

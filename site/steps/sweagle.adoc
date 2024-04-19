@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "SWEAGLE Plugin"
----
+= SWEAGLE Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "SWEAGLE Plugin"
 :toc: left
 :compat-mode!:
 
-== SWEAGLE Plugin
 
-plugin:sweagle[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/sweagle">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `SWEAGLEExport`: SWEAGLE Get Config
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Coverity plugin"
----
+= Coverity plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Coverity plugin"
 :toc: left
 :compat-mode!:
 
-== Coverity plugin
 
-plugin:coverity[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/coverity">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `coverityResults`: Publish Coverity View Results
 ++++

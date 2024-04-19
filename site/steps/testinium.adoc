@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Testinium Plugin"
----
+= Testinium Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Testinium Plugin"
 :toc: left
 :compat-mode!:
 
-== Testinium Plugin
 
-plugin:testinium[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/testinium">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `testiniumExecution`: Start Testinium Execution
 ++++

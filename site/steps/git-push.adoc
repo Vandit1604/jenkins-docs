@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Git Push Plugin"
----
+= Git Push Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Git Push Plugin"
 :toc: left
 :compat-mode!:
 
-== Git Push Plugin
 
-plugin:git-push[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/git-push">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `gitPush`: Git Push
 ++++

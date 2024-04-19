@@ -1,26 +1,35 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 
-const StepTemplate = () => {
-    const data = useStaticQuery(graphql`
-        query {
-            asciidoc {
-                document {
-                    title
-                }
-                html
-            }
-        }
-    `);
-
-    const { document, html } = data.asciidoc;
-
+const StepPage = ({ data }) => {
     return (
         <div>
-            <h1>{document.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+            {console.log(data)}
+            <h1>{data.asciidoc.document.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: data.asciidoc.html }} />
         </div>
     );
 };
 
-export default StepTemplate;
+export default StepPage;
+
+export const pageQuery = graphql`
+    query ($id: String!) {
+        asciidoc(id: { eq: $id }) {
+            html
+            document {
+                title
+                main
+            }
+            author {
+                fullName
+            }
+            pageAttributes {
+                author_name
+                author
+                tags
+                opengraph
+            }
+        }
+    }
+`;

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "in-toto provenance agent"
----
+= in-toto provenance agent
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "in-toto provenance agent"
 :toc: left
 :compat-mode!:
 
-== in-toto provenance agent
 
-plugin:in-toto[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/in-toto">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `in_toto_wrap`: in-toto record wrapper
 ++++

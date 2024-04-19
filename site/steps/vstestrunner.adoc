@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "VSTest Runner plugin"
----
+= VSTest Runner plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "VSTest Runner plugin"
 :toc: left
 :compat-mode!:
 
-== VSTest Runner plugin
 
-plugin:vstestrunner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/vstestrunner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `vsTest`: Run unit tests with VSTest.console
 ++++

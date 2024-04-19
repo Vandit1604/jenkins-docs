@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Robot Framework plugin"
----
+= Robot Framework plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Robot Framework plugin"
 :toc: left
 :compat-mode!:
 
-== Robot Framework plugin
 
-plugin:robot[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/robot">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `robot`: Configure robot framework report collection
 ++++

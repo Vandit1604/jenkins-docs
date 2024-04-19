@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline: Deploymon.io Steps"
----
+= Pipeline: Deploymon.io Steps
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline: Deploymon.io Steps"
 :toc: left
 :compat-mode!:
 
-== Pipeline: Deploymon.io Steps
 
-plugin:pipeline-deploymon[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-deploymon">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `notifyDeploymon`: Notify deploymon.io about a new deployment
 ++++

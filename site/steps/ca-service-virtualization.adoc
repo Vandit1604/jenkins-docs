@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "CA Service Virtualization Plugin"
----
+= CA Service Virtualization Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "CA Service Virtualization Plugin"
 :toc: left
 :compat-mode!:
 
-== CA Service Virtualization Plugin
 
-plugin:ca-service-virtualization[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ca-service-virtualization">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `svCreateAndDeployVirtualService`: CA Service Virtualization - Create And Deploy Virtual Service
 ++++

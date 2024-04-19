@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline Utility Steps"
----
+= Pipeline Utility Steps
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline Utility Steps"
 :toc: left
 :compat-mode!:
 
-== Pipeline Utility Steps
 
-plugin:pipeline-utility-steps[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-utility-steps">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `compareVersions`: Compare two version number strings
 ++++

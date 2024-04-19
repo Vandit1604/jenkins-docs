@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "GCloud SDK Plugin"
----
+= GCloud SDK Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "GCloud SDK Plugin"
 :toc: left
 :compat-mode!:
 
-== GCloud SDK Plugin
 
-plugin:gcloud-sdk[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/gcloud-sdk">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `wrap([$class: 'GCloudBuildWrapper'])`: GCloud SDK authentication
 ++++

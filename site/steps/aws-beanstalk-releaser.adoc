@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "AWS Beanstalk Releaser"
----
+= AWS Beanstalk Releaser
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "AWS Beanstalk Releaser"
 :toc: left
 :compat-mode!:
 
-== AWS Beanstalk Releaser
 
-plugin:aws-beanstalk-releaser[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/aws-beanstalk-releaser">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `awsebReleaser`: AWS Elastic Beanstalk Releaser
 ++++

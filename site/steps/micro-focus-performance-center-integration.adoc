@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "OpenText LoadRunner Enterprise integration With Git"
----
+= OpenText LoadRunner Enterprise integration With Git
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "OpenText LoadRunner Enterprise integration With Git"
 :toc: left
 :compat-mode!:
 
-== OpenText LoadRunner Enterprise integration With Git
 
-plugin:micro-focus-performance-center-integration[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/micro-focus-performance-center-integration">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `pcGitBuild`: Synchronize LoadRunner Enterprise With Git
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Mock Load Builder Plugin"
----
+= Mock Load Builder Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Mock Load Builder Plugin"
 :toc: left
 :compat-mode!:
 
-== Mock Load Builder Plugin
 
-plugin:mock-load-builder[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/mock-load-builder">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'MockLoadBuilder'])`: Mock Load
 ++++

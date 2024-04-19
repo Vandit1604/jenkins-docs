@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "DingTalk"
----
+= DingTalk
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "DingTalk"
 :toc: left
 :compat-mode!:
 
-== DingTalk
 
-plugin:dingding-notifications[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/dingding-notifications">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `dingtalk`: Send DingTalk message
 ++++

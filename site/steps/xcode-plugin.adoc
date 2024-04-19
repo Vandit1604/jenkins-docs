@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Xcode integration"
----
+= Xcode integration
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Xcode integration"
 :toc: left
 :compat-mode!:
 
-== Xcode integration
 
-plugin:xcode-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/xcode-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `importDeveloperProfile`: Import developer profile
 ++++

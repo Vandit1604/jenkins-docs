@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline: Input Step"
----
+= Pipeline: Input Step
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline: Input Step"
 :toc: left
 :compat-mode!:
 
-== Pipeline: Input Step
 
-plugin:pipeline-input-step[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-input-step">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `input`: Wait for interactive input
 ++++

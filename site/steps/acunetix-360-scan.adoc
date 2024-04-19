@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Acunetix 360 Scan Plugin"
----
+= Acunetix 360 Scan Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Acunetix 360 Scan Plugin"
 :toc: left
 :compat-mode!:
 
-== Acunetix 360 Scan Plugin
 
-plugin:acunetix-360-scan[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/acunetix-360-scan">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ACXScanBuilder`: Acunetix 360 Scan
 ++++

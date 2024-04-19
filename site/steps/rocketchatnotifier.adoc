@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "RocketChat Notifier"
----
+= RocketChat Notifier
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "RocketChat Notifier"
 :toc: left
 :compat-mode!:
 
-== RocketChat Notifier
 
-plugin:rocketchatnotifier[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/rocketchatnotifier">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `rocketSend`: Send RocketChat Message
 ++++

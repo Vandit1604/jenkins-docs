@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Maven Invoker plugin"
----
+= Maven Invoker plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Maven Invoker plugin"
 :toc: left
 :compat-mode!:
 
-== Maven Invoker plugin
 
-plugin:maven-invoker-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/maven-invoker-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `maven_invoker`: Archive Maven Invoker test results
 ++++

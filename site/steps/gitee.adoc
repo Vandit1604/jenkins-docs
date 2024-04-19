@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Gitee Plugin"
----
+= Gitee Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Gitee Plugin"
 :toc: left
 :compat-mode!:
 
-== Gitee Plugin
 
-plugin:gitee[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/gitee">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `acceptGiteeMR`: Accept Gitee Pull Request
 ++++

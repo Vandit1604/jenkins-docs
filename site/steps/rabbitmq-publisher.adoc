@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Rabbit-MQ Publisher Plugin"
----
+= Rabbit-MQ Publisher Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Rabbit-MQ Publisher Plugin"
 :toc: left
 :compat-mode!:
 
-== Rabbit-MQ Publisher Plugin
 
-plugin:rabbitmq-publisher[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/rabbitmq-publisher">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `rabbitMQPublisher`: Publish to Rabbit-MQ
 ++++

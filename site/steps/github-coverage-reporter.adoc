@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "GitHub Coverage Reporter"
----
+= GitHub Coverage Reporter
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "GitHub Coverage Reporter"
 :toc: left
 :compat-mode!:
 
-== GitHub Coverage Reporter
 
-plugin:github-coverage-reporter[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/github-coverage-reporter">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `publishCoverageGithub`: Publish Coverage reports to Github
 ++++

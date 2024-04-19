@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Folder Properties Plugin"
----
+= Folder Properties Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Folder Properties Plugin"
 :toc: left
 :compat-mode!:
 
-== Folder Properties Plugin
 
-plugin:folder-properties[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/folder-properties">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `withFolderProperties`: A step to retrieve folder properties
 ++++

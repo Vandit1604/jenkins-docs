@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Hubot Pipeline Steps"
----
+= Hubot Pipeline Steps
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Hubot Pipeline Steps"
 :toc: left
 :compat-mode!:
 
-== Hubot Pipeline Steps
 
-plugin:hubot-steps[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/hubot-steps">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `hubotApprove`: Hubot: Send approval message
 ++++

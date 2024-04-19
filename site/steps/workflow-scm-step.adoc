@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline: SCM Step"
----
+= Pipeline: SCM Step
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline: SCM Step"
 :toc: left
 :compat-mode!:
 
-== Pipeline: SCM Step
 
-plugin:workflow-scm-step[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/workflow-scm-step">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `checkout`: Check out from version control
 ++++

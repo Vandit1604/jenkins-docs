@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "ImmuniWeb Neuron"
----
+= ImmuniWeb Neuron
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "ImmuniWeb Neuron"
 :toc: left
 :compat-mode!:
 
-== ImmuniWeb Neuron
 
-plugin:immuniweb[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/immuniweb">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'ScannerBuilder'])`: Run ImmuniWeb Neuron scan
 ++++

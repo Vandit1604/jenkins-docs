@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline: Multibranch"
----
+= Pipeline: Multibranch
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline: Multibranch"
 :toc: left
 :compat-mode!:
 
-== Pipeline: Multibranch
 
-plugin:workflow-multibranch[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/workflow-multibranch">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `properties`: Set job properties
 ++++

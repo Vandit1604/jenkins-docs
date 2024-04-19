@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Azure Storage plugin"
----
+= Azure Storage plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Azure Storage plugin"
 :toc: left
 :compat-mode!:
 
-== Azure Storage plugin
 
-plugin:windows-azure-storage[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/windows-azure-storage">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `azureDownload`: Download from Azure storage
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "MergeBase SCA Plugin"
----
+= MergeBase SCA Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "MergeBase SCA Plugin"
 :toc: left
 :compat-mode!:
 
-== MergeBase SCA Plugin
 
-plugin:mergebase-sca[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/mergebase-sca">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `mergebaseScan`: Run MergeBase SCA Scan
 ++++

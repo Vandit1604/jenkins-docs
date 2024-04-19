@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Peass-CI"
----
+= Peass-CI
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Peass-CI"
 :toc: left
 :compat-mode!:
 
-== Peass-CI
 
-plugin:peass-ci[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/peass-ci">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `cleanPerformanceMeasurement`: Clean Peass-CI Cache
 ++++

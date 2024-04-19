@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Kiuwan plugin"
----
+= Kiuwan plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Kiuwan plugin"
 :toc: left
 :compat-mode!:
 
-== Kiuwan plugin
 
-plugin:kiuwanJenkinsPlugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/kiuwanJenkinsPlugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `kiuwan`: Analyze your source code with Kiuwan!
 ++++

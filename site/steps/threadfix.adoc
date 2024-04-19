@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "ThreadFix Plugin"
----
+= ThreadFix Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "ThreadFix Plugin"
 :toc: left
 :compat-mode!:
 
-== ThreadFix Plugin
 
-plugin:threadfix[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/threadfix">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'ThreadFixPublisher'])`: Publish ThreadFix Scan
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "BMC AMI DevX Code Pipeline Operations Plugin"
----
+= BMC AMI DevX Code Pipeline Operations Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "BMC AMI DevX Code Pipeline Operations Plugin"
 :toc: left
 :compat-mode!:
 
-== BMC AMI DevX Code Pipeline Operations Plugin
 
-plugin:compuware-ispw-operations[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/compuware-ispw-operations">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `gitToIspwIntegration`: Git to ISPW Integration
 ++++

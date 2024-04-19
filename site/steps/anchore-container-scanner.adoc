@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Anchore Container Image Scanner Plugin"
----
+= Anchore Container Image Scanner Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Anchore Container Image Scanner Plugin"
 :toc: left
 :compat-mode!:
 
-== Anchore Container Image Scanner Plugin
 
-plugin:anchore-container-scanner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/anchore-container-scanner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `anchore`: Anchore Container Image Scanner
 ++++

@@ -29,13 +29,13 @@ import IndexPageLayout from "../layouts";
 import { formatDate, blogAuthorImage } from "../utils/index.js";
 
 const AuthorPage = ({ data, pageContext, path }) => {
-    const { filteredAuthors } = pageContext;
+    const { authors } = pageContext;
     const author = path.slice(8, -1);
 
     return (
         <IndexPageLayout>
             <PageName title={"Jenkins Community Blog Contributors"} />
-            {filteredAuthors.map((node) => (
+            {authors.map((node) => (
                 <>
                     {node.node.pageAttributes.github === author ? (
                         <>
@@ -156,7 +156,7 @@ const AuthorPage = ({ data, pageContext, path }) => {
                                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                                     <div className={blogauthorinfo}>
                                         {authorList.map((auth) => {
-                                            return filteredAuthors.map((node) => {
+                                            return authors.map((node) => {
                                                 return node.node.pageAttributes.github === auth ? (
                                                     <Link
                                                         className={blogauthorinfo}
@@ -216,7 +216,7 @@ export const pageQuery = graphql`
     query AuthorPage($authorName: String!) {
         allFile(
             filter: {
-                sourceInstanceName: { eq: "pages" }
+                sourceInstanceName: { eq: "authors" }
                 childrenAsciidoc: {
                     elemMatch: {
                         document: { title: { ne: "Jenkins Changelog Styleguide" } }

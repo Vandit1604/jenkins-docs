@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "IBM z/OS Connector"
----
+= IBM z/OS Connector
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "IBM z/OS Connector"
 :toc: left
 :compat-mode!:
 
-== IBM z/OS Connector
 
-plugin:zos-connector[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/zos-connector">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'ZOSJobSubmitter'])`: Submit z/OS job
 ++++

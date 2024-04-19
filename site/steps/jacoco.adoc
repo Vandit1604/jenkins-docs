@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "JaCoCo plugin"
----
+= JaCoCo plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "JaCoCo plugin"
 :toc: left
 :compat-mode!:
 
-== JaCoCo plugin
 
-plugin:jacoco[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/jacoco">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `jacoco`: Record JaCoCo coverage report
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Xygeni Sensor"
----
+= Xygeni Sensor
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Xygeni Sensor"
 :toc: left
 :compat-mode!:
 
-== Xygeni Sensor
 
-plugin:xygeni-sensor[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/xygeni-sensor">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `xygeniSaltAtAdd`: Xygeni Salt Attestation 'Add' command
 ++++

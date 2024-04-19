@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "QF-Test Plugin"
----
+= QF-Test Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "QF-Test Plugin"
 :toc: left
 :compat-mode!:
 
-== QF-Test Plugin
 
-plugin:qftest[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/qftest">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `QFTest`: Run the configured QF-Test suites.
 ++++

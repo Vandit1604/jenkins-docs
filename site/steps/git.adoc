@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Git plugin"
----
+= Git plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Git plugin"
 :toc: left
 :compat-mode!:
 
-== Git plugin
 
-plugin:git[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/git">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `git`: Git
 ++++

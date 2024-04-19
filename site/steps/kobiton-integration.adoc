@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Kobiton"
----
+= Kobiton
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Kobiton"
 :toc: left
 :compat-mode!:
 
-== Kobiton
 
-plugin:kobiton-integration[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/kobiton-integration">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `appUploaderBuilder`: Upload application to Kobiton Apps Repository
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "ChuckNorris Plugin"
----
+= ChuckNorris Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "ChuckNorris Plugin"
 :toc: left
 :compat-mode!:
 
-== ChuckNorris Plugin
 
-plugin:chucknorris[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/chucknorris">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `chuckNorris`: Submit to Chuck Norris' will
 ++++

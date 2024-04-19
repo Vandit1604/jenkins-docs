@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "GitHub Status Wrapper Plugin"
----
+= GitHub Status Wrapper Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "GitHub Status Wrapper Plugin"
 :toc: left
 :compat-mode!:
 
-== GitHub Status Wrapper Plugin
 
-plugin:pipeline-gitstatuswrapper[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-gitstatuswrapper">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `gitStatusWrapper`: gitStatusWrapper
 ++++

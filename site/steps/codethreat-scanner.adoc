@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "CodeThreat"
----
+= CodeThreat
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "CodeThreat"
 :toc: left
 :compat-mode!:
 
-== CodeThreat
 
-plugin:codethreat-scanner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/codethreat-scanner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `CodeThreatScan`: CodeThreat
 ++++

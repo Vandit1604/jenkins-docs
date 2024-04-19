@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Kubernetes :: Pipeline :: DevOps Steps"
----
+= Kubernetes :: Pipeline :: DevOps Steps
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Kubernetes :: Pipeline :: DevOps Steps"
 :toc: left
 :compat-mode!:
 
-== Kubernetes :: Pipeline :: DevOps Steps
 
-plugin:kubernetes-pipeline-devops-steps[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/kubernetes-pipeline-devops-steps">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `approveReceivedEvent`: Updates an Approve event in Elasticsearch
 ++++

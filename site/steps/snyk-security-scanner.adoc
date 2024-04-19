@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Snyk Security Plugin"
----
+= Snyk Security Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Snyk Security Plugin"
 :toc: left
 :compat-mode!:
 
-== Snyk Security Plugin
 
-plugin:snyk-security-scanner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/snyk-security-scanner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `snykSecurity`: Invoke Snyk Security task
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "CMake plugin"
----
+= CMake plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "CMake plugin"
 :toc: left
 :compat-mode!:
 
-== CMake plugin
 
-plugin:cmakebuilder[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/cmakebuilder">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `cmake`: Run cmake with arbitrary arguments
 ++++

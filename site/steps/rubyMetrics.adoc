@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "RubyMetrics plugin for Jenkins"
----
+= RubyMetrics plugin for Jenkins
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "RubyMetrics plugin for Jenkins"
 :toc: left
 :compat-mode!:
 
-== RubyMetrics plugin for Jenkins
 
-plugin:rubyMetrics[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/rubyMetrics">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'RcovPublisher'])`: Publish Rcov report
 ++++

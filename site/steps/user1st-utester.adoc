@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "User1st uTester Plugin"
----
+= User1st uTester Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "User1st uTester Plugin"
 :toc: left
 :compat-mode!:
 
-== User1st uTester Plugin
 
-plugin:user1st-utester[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/user1st-utester">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `uTesterPageCountTask`: Execute uTester Page Count Task
 ++++

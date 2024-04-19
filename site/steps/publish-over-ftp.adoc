@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Publish Over FTP"
----
+= Publish Over FTP
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Publish Over FTP"
 :toc: left
 :compat-mode!:
 
-== Publish Over FTP
 
-plugin:publish-over-ftp[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/publish-over-ftp">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'BapFtpPromotionPublisherPlugin'])`: Send build artifacts over FTP
 ++++

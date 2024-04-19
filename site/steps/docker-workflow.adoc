@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Docker Pipeline"
----
+= Docker Pipeline
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Docker Pipeline"
 :toc: left
 :compat-mode!:
 
-== Docker Pipeline
 
-plugin:docker-workflow[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/docker-workflow">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `dockerFingerprintFrom`: Record trace of a Docker image used in FROM
 ++++

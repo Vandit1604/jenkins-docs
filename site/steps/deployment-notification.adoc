@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "deployment-notification"
----
+= deployment-notification
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "deployment-notification"
 :toc: left
 :compat-mode!:
 
-== deployment-notification
 
-plugin:deployment-notification[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/deployment-notification">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `awaitDeployment`: Awaiting for deployment
 ++++

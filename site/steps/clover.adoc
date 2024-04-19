@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Clover plugin"
----
+= Clover plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Clover plugin"
 :toc: left
 :compat-mode!:
 
-== Clover plugin
 
-plugin:clover[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/clover">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `clover`: Publish OpenClover coverage report
 ++++

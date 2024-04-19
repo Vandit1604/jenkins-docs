@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "aws-device-farm"
----
+= aws-device-farm
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "aws-device-farm"
 :toc: left
 :compat-mode!:
 
-== aws-device-farm
 
-plugin:aws-device-farm[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/aws-device-farm">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `devicefarm`: Run Tests on AWS Device Farm
 ++++

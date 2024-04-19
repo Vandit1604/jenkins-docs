@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Deploy to webMethods Integration Server Plugin"
----
+= Deploy to webMethods Integration Server Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Deploy to webMethods Integration Server Plugin"
 :toc: left
 :compat-mode!:
 
-== Deploy to webMethods Integration Server Plugin
 
-plugin:deploy-integrationserver[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/deploy-integrationserver">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `deployintegrationserver`: Deploy to webMethods Integration Server
 ++++

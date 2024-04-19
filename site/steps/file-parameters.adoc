@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "File Parameter Plugin"
----
+= File Parameter Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "File Parameter Plugin"
 :toc: left
 :compat-mode!:
 
-== File Parameter Plugin
 
-plugin:file-parameters[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/file-parameters">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `withFileParameter`: Bind file parameter
 ++++

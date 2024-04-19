@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Cortex Metrics Plugin"
----
+= Cortex Metrics Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Cortex Metrics Plugin"
 :toc: left
 :compat-mode!:
 
-== Cortex Metrics Plugin
 
-plugin:cortex-metrics[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/cortex-metrics">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `publishCortexMetrics`: Publish metrics to Cortex
 ++++

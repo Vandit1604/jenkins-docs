@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Fedora Module Build System Plugin"
----
+= Fedora Module Build System Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Fedora Module Build System Plugin"
 :toc: left
 :compat-mode!:
 
-== Fedora Module Build System Plugin
 
-plugin:fedora-module-build-system[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/fedora-module-build-system">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `queryModuleBuildRequest`: Query Module Build Request
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Instana integration"
----
+= Instana integration
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Instana integration"
 :toc: left
 :compat-mode!:
 
-== Instana integration
 
-plugin:instana[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/instana">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `releaseMarker`: Perform an HTTP Request and return a response object
 ++++

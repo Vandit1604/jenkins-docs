@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "VectorCAST Coverage"
----
+= VectorCAST Coverage
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "VectorCAST Coverage"
 :toc: left
 :compat-mode!:
 
-== VectorCAST Coverage
 
-plugin:vectorcast-coverage[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/vectorcast-coverage">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'VectorCASTPublisher'])`: Record VectorCAST Coverage Information
 ++++

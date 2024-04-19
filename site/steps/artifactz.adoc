@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Artifactz.io Plugin"
----
+= Artifactz.io Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Artifactz.io Plugin"
 :toc: left
 :compat-mode!:
 
-== Artifactz.io Plugin
 
-plugin:artifactz[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/artifactz">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `publishArtifact`: Publish Artifact Version
 ++++

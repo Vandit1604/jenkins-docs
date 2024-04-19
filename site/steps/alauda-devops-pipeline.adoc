@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Alauda DevOps Pipeline Plugin"
----
+= Alauda DevOps Pipeline Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Alauda DevOps Pipeline Plugin"
 :toc: left
 :compat-mode!:
 
-== Alauda DevOps Pipeline Plugin
 
-plugin:alauda-devops-pipeline[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/alauda-devops-pipeline">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `base64Decode`: Decode Base64 string
 ++++

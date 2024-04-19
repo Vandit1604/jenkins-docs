@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Downstream Build Cache Plugin"
----
+= Downstream Build Cache Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Downstream Build Cache Plugin"
 :toc: left
 :compat-mode!:
 
-== Downstream Build Cache Plugin
 
-plugin:downstream-build-cache[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/downstream-build-cache">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `downstreamBuilds`: Provide list of downstream builds
 ++++

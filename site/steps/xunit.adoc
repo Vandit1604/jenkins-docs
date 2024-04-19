@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "xUnit plugin"
----
+= xUnit plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "xUnit plugin"
 :toc: left
 :compat-mode!:
 
-== xUnit plugin
 
-plugin:xunit[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/xunit">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'XUnitPublisher'])`: Publish xUnit test result report
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "oak9"
----
+= oak9
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "oak9"
 :toc: left
 :compat-mode!:
 
-== oak9
 
-plugin:oak9[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/oak9">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'Oak9Builder'])`: oak9 Runner
 ++++

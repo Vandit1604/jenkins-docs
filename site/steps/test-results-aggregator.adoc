@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Test Results Aggregator Plugin"
----
+= Test Results Aggregator Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Test Results Aggregator Plugin"
 :toc: left
 :compat-mode!:
 
-== Test Results Aggregator Plugin
 
-plugin:test-results-aggregator[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/test-results-aggregator">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `testResultsAggregator`: Aggregate Test Results
 ++++

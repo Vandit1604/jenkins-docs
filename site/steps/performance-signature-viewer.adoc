@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Performance Signature: Viewer"
----
+= Performance Signature: Viewer
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Performance Signature: Viewer"
 :toc: left
 :compat-mode!:
 
-== Performance Signature: Viewer
 
-plugin:performance-signature-viewer[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/performance-signature-viewer">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `pullPerfSigReports`: Pull Performance Signature reports
 ++++

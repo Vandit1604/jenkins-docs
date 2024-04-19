@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Backlog plugin"
----
+= Backlog plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Backlog plugin"
 :toc: left
 :compat-mode!:
 
-== Backlog plugin
 
-plugin:backlog[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/backlog">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `backlogPullRequest`: Notify Pull Request on Backlog
 ++++

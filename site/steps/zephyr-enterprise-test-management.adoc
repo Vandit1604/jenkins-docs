@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Zephyr Enterprise Test Management plugin"
----
+= Zephyr Enterprise Test Management plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Zephyr Enterprise Test Management plugin"
 :toc: left
 :compat-mode!:
 
-== Zephyr Enterprise Test Management plugin
 
-plugin:zephyr-enterprise-test-management[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/zephyr-enterprise-test-management">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `zeeReporter`: Publish test result to Zephyr Enterprise
 ++++

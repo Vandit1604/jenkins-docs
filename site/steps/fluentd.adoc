@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Fluentd Plugin"
----
+= Fluentd Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Fluentd Plugin"
 :toc: left
 :compat-mode!:
 
-== Fluentd Plugin
 
-plugin:fluentd[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/fluentd">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'Fluentd'])`: Send to Fluentd
 ++++

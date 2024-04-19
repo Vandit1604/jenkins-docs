@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline NPM Integration Plugin"
----
+= Pipeline NPM Integration Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline NPM Integration Plugin"
 :toc: left
 :compat-mode!:
 
-== Pipeline NPM Integration Plugin
 
-plugin:pipeline-npm[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-npm">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `withNPM`: Provide NPM environment
 ++++

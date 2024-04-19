@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Synopsys Coverity on Polaris"
----
+= Synopsys Coverity on Polaris
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Synopsys Coverity on Polaris"
 :toc: left
 :compat-mode!:
 
-== Synopsys Coverity on Polaris
 
-plugin:synopsys-polaris[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/synopsys-polaris">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `polaris`: Execute Coverity on Polaris CLI
 ++++

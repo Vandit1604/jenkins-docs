@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Performance Signature: Dynatrace AppMon"
----
+= Performance Signature: Dynatrace AppMon
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Performance Signature: Dynatrace AppMon"
 :toc: left
 :compat-mode!:
 
-== Performance Signature: Dynatrace AppMon (deprecated)
 
-plugin:performance-signature-dynatrace[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/performance-signature-dynatrace">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `createDeploymentEvent`: create Dynatrace Deployment event
 ++++

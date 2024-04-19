@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Git Changelog"
----
+= Git Changelog
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Git Changelog"
 :toc: left
 :compat-mode!:
 
-== Git Changelog
 
-plugin:git-changelog[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/git-changelog">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `getHighestSemanticVersion`: Get the highest version, determined by tags in repo. Also tag available as '.findTag().orElse("")'.
 ++++

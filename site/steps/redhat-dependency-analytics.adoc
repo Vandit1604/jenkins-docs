@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Red Hat Dependency Analytics Plugin"
----
+= Red Hat Dependency Analytics Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Red Hat Dependency Analytics Plugin"
 :toc: left
 :compat-mode!:
 
-== Red Hat Dependency Analytics Plugin
 
-plugin:redhat-dependency-analytics[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/redhat-dependency-analytics">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `rhdaAnalysis`: Invoke Red Hat Dependency Analytics (RHDA)
 ++++

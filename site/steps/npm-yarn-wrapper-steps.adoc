@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "NPM and Yarn Wrapper and Steps"
----
+= NPM and Yarn Wrapper and Steps
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "NPM and Yarn Wrapper and Steps"
 :toc: left
 :compat-mode!:
 
-== NPM and Yarn Wrapper and Steps
 
-plugin:npm-yarn-wrapper-steps[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/npm-yarn-wrapper-steps">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `npm`: Run an npm command
 ++++

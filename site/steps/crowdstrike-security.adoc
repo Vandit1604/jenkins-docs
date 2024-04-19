@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "CrowdStrike Security"
----
+= CrowdStrike Security
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "CrowdStrike Security"
 :toc: left
 :compat-mode!:
 
-== CrowdStrike Security
 
-plugin:crowdstrike-security[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/crowdstrike-security">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `crowdStrikeSecurity`: CrowdStrike Security Plugin
 ++++

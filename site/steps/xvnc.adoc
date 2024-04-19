@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Xvnc plugin"
----
+= Xvnc plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Xvnc plugin"
 :toc: left
 :compat-mode!:
 
-== Xvnc plugin
 
-plugin:xvnc[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/xvnc">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `xvnc`: Run Xvnc during build
 ++++

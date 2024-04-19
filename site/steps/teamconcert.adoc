@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Team Concert Plugin"
----
+= Team Concert Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Team Concert Plugin"
 :toc: left
 :compat-mode!:
 
-== Team Concert Plugin
 
-plugin:teamconcert[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/teamconcert">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `rtcBuild`: Step for interacting with EWM (RTC) Build
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Android Emulator Plugin"
----
+= Android Emulator Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Android Emulator Plugin"
 :toc: left
 :compat-mode!:
 
-== Android Emulator Plugin
 
-plugin:android-emulator[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/android-emulator">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `adb`: ADB Executable
 ++++

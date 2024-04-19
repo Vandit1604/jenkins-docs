@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Jenkins Core"
----
+= Jenkins Core
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,7 +9,6 @@ title: "Jenkins Core"
 :toc: left
 :compat-mode!:
 
-== Jenkins Core
 
 === `archiveArtifacts`: Archive the artifacts
 ++++

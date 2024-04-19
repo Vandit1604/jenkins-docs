@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "PIT Mutation Plugin"
----
+= PIT Mutation Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "PIT Mutation Plugin"
 :toc: left
 :compat-mode!:
 
-== PIT Mutation Plugin
 
-plugin:pitmutation[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pitmutation">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `pitmutation`: Record Pit mutation testing report
 ++++

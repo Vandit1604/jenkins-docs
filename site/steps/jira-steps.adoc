@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "JIRA Pipeline Steps"
----
+= JIRA Pipeline Steps
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "JIRA Pipeline Steps"
 :toc: left
 :compat-mode!:
 
-== JIRA Pipeline Steps
 
-plugin:jira-steps[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/jira-steps">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `jiraAddComment`: JIRA Steps: Add Comment
 ++++

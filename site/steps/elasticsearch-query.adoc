@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Elasticsearch Query"
----
+= Elasticsearch Query
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Elasticsearch Query"
 :toc: left
 :compat-mode!:
 
-== Elasticsearch Query
 
-plugin:elasticsearch-query[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/elasticsearch-query">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'ElasticsearchQueryBuilder'])`: Elasticsearch Query
 ++++

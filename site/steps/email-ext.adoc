@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Email Extension Plugin"
----
+= Email Extension Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Email Extension Plugin"
 :toc: left
 :compat-mode!:
 
-== Email Extension Plugin
 
-plugin:email-ext[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/email-ext">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `emailext`: Extended Email
 ++++

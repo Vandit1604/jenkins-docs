@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "ontrack Jenkins plug-in"
----
+= ontrack Jenkins plug-in
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "ontrack Jenkins plug-in"
 :toc: left
 :compat-mode!:
 
-== ontrack Jenkins plug-in
 
-plugin:ontrack[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ontrack">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ontrackBranchName`: Transforms a branch name, as provided by the pipeline for example, into a name suitable for a branch in Ontrack.
 ++++

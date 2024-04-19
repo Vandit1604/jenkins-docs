@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "SonarQube Scanner for Jenkins"
----
+= SonarQube Scanner for Jenkins
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "SonarQube Scanner for Jenkins"
 :toc: left
 :compat-mode!:
 
-== SonarQube Scanner for Jenkins
 
-plugin:sonar[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/sonar">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `waitForQualityGate`: Wait for SonarQube analysis to be completed and return quality gate status
 ++++

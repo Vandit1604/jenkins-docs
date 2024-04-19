@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Google Kubernetes Engine Plugin"
----
+= Google Kubernetes Engine Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Google Kubernetes Engine Plugin"
 :toc: left
 :compat-mode!:
 
-== Google Kubernetes Engine Plugin
 
-plugin:google-kubernetes-engine[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/google-kubernetes-engine">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `kubernetesEngineDeploy`: Deploy to Google Kubernetes Engine
 ++++

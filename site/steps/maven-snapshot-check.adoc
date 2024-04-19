@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Maven SNAPSHOT Check Plugin"
----
+= Maven SNAPSHOT Check Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Maven SNAPSHOT Check Plugin"
 :toc: left
 :compat-mode!:
 
-== Maven SNAPSHOT Check Plugin
 
-plugin:maven-snapshot-check[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/maven-snapshot-check">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `mavenSnapshotCheck`: Maven SNAPSHOT Check
 ++++

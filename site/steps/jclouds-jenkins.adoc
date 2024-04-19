@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "JClouds plugin"
----
+= JClouds plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "JClouds plugin"
 :toc: left
 :compat-mode!:
 
-== JClouds plugin
 
-plugin:jclouds-jenkins[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/jclouds-jenkins">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `jcloudsTakeOffline`: Take current JClouds agent offline conditionally
 ++++

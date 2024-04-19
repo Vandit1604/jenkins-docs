@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "SSH Agent Plugin"
----
+= SSH Agent Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "SSH Agent Plugin"
 :toc: left
 :compat-mode!:
 
-== SSH Agent Plugin
 
-plugin:ssh-agent[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ssh-agent">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `sshagent`: SSH Agent
 ++++

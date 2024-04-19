@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Ostorlab Security And Privacy Scanner"
----
+= Ostorlab Security And Privacy Scanner
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Ostorlab Security And Privacy Scanner"
 :toc: left
 :compat-mode!:
 
-== Ostorlab Security And Privacy Scanner
 
-plugin:ostorlab[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ostorlab">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ostorlabScan`: Run Ostorlab Security Scanner
 ++++

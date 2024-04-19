@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "vRealize Automation 8.x Plugin"
----
+= vRealize Automation 8.x Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "vRealize Automation 8.x Plugin"
 :toc: left
 :compat-mode!:
 
-== vRealize Automation 8.x Plugin
 
-plugin:vrealize-automation-8[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/vrealize-automation-8">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `vraDeleteDeployment`: vRA - Delete Deployment
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "tracetronic ecu.test Plugin"
----
+= tracetronic ecu.test Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "tracetronic ecu.test Plugin"
 :toc: left
 :compat-mode!:
 
-== tracetronic ecu.test Plugin
 
-plugin:ecutest[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/ecutest">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `publishATX`: [TT] Publish ATX Reports
 ++++

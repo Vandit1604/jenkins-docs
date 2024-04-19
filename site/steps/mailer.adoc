@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Mailer Plugin"
----
+= Mailer Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Mailer Plugin"
 :toc: left
 :compat-mode!:
 
-== Mailer Plugin
 
-plugin:mailer[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/mailer">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'Mailer'])`: E-mail Notification
 ++++

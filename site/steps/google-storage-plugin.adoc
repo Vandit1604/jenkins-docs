@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Google Cloud Storage plugin"
----
+= Google Cloud Storage plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Google Cloud Storage plugin"
 :toc: left
 :compat-mode!:
 
-== Google Cloud Storage plugin
 
-plugin:google-storage-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/google-storage-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `googleStorageUpload`: Google Storage Classic Upload
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Repository Connector"
----
+= Repository Connector
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Repository Connector"
 :toc: left
 :compat-mode!:
 
-== Repository Connector
 
-plugin:repository-connector[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/repository-connector">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `artifactDeployer`: Maven Artifact Deployer
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Release Plugin"
----
+= Release Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Release Plugin"
 :toc: left
 :compat-mode!:
 
-== Release Plugin
 
-plugin:release[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/release">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `release`: Trigger release for the job
 ++++

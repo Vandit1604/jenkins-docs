@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Qualys Web App Scanning Connector"
----
+= Qualys Web App Scanning Connector
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Qualys Web App Scanning Connector"
 :toc: left
 :compat-mode!:
 
-== Qualys Web App Scanning Connector
 
-plugin:qualys-was[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/qualys-was">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `qualysWASScan`: Scan web applications with Qualys WAS
 ++++

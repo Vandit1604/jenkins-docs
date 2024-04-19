@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "DotCover"
----
+= DotCover
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "DotCover"
 :toc: left
 :compat-mode!:
 
-== DotCover
 
-plugin:dotcoverrunner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/dotcoverrunner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `dotcover`: Generate code coverage data and report(s)
 ++++

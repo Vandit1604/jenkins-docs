@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Giphy API Plugin"
----
+= Giphy API Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Giphy API Plugin"
 :toc: left
 :compat-mode!:
 
-== Giphy API Plugin
 
-plugin:pipeline-giphy-api[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-giphy-api">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `giphyRandom`: GiphyRandomStepImpl
 ++++

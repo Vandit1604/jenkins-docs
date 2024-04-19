@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Checkmarx AST Scanner Plugin"
----
+= Checkmarx AST Scanner Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Checkmarx AST Scanner Plugin"
 :toc: left
 :compat-mode!:
 
-== Checkmarx AST Scanner Plugin
 
-plugin:checkmarx-ast-scanner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/checkmarx-ast-scanner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `checkmarxASTScanner`: Execute Checkmarx AST Scan
 ++++

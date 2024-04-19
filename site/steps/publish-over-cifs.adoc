@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Publish Over CIFS"
----
+= Publish Over CIFS
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Publish Over CIFS"
 :toc: left
 :compat-mode!:
 
-== Publish Over CIFS
 
-plugin:publish-over-cifs[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/publish-over-cifs">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'CifsPromotionPublisherPlugin'])`: Send build artifacts to a windows share
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Compuware Xpediter Code Coverage"
----
+= Compuware Xpediter Code Coverage
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Compuware Xpediter Code Coverage"
 :toc: left
 :compat-mode!:
 
-== Compuware Xpediter Code Coverage
 
-plugin:compuware-xpediter-code-coverage[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/compuware-xpediter-code-coverage">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'CodeCoverageBuilder'])`: Retrieve Xpediter Code Coverage Statistics
 ++++

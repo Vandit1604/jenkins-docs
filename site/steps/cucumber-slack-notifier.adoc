@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "cucumber-slack-notifier"
----
+= cucumber-slack-notifier
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "cucumber-slack-notifier"
 :toc: left
 :compat-mode!:
 
-== cucumber-slack-notifier
 
-plugin:cucumber-slack-notifier[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/cucumber-slack-notifier">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `cucumberSlackSend`: Send cucumber notifications to slack
 ++++

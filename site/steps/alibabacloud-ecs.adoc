@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Alibaba Cloud ECS Plugin"
----
+= Alibaba Cloud ECS Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Alibaba Cloud ECS Plugin"
 :toc: left
 :compat-mode!:
 
-== Alibaba Cloud ECS Plugin
 
-plugin:alibabacloud-ecs[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/alibabacloud-ecs">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `EcsTemplate`: EcsTemplateStep
 ++++

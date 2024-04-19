@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Typetalk Plugin"
----
+= Typetalk Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Typetalk Plugin"
 :toc: left
 :compat-mode!:
 
-== Typetalk Plugin
 
-plugin:typetalk[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/typetalk">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `typetalkSend`: Notify Typetalk when the build fails
 ++++

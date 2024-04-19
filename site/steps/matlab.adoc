@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "MATLAB Plugin"
----
+= MATLAB Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "MATLAB Plugin"
 :toc: left
 :compat-mode!:
 
-== MATLAB Plugin
 
-plugin:matlab[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/matlab">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `runMATLABBuild`: Run a MATLAB build using the MATLAB build tool
 ++++

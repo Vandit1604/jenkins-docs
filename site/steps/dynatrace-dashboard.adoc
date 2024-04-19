@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Dynatrace Application Monitoring Plugin"
----
+= Dynatrace Application Monitoring Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Dynatrace Application Monitoring Plugin"
 :toc: left
 :compat-mode!:
 
-== Dynatrace Application Monitoring Plugin (deprecated)
 
-plugin:dynatrace-dashboard[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/dynatrace-dashboard">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `appMonPublishTestResults`: Dynatrace AppMon - Finish Registered Tests Runs and Publish Results
 ++++

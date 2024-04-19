@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "AWS SAM"
----
+= AWS SAM
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "AWS SAM"
 :toc: left
 :compat-mode!:
 
-== AWS SAM
 
-plugin:aws-sam[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/aws-sam">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `samDeploy`: AWS SAM deploy application
 ++++

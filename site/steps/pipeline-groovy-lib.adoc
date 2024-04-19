@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pipeline: Groovy Libraries"
----
+= Pipeline: Groovy Libraries
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pipeline: Groovy Libraries"
 :toc: left
 :compat-mode!:
 
-== Pipeline: Groovy Libraries
 
-plugin:pipeline-groovy-lib[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pipeline-groovy-lib">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `library`: Load a library on the fly
 ++++

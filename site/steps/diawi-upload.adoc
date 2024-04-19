@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Diawi Upload Plugin"
----
+= Diawi Upload Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Diawi Upload Plugin"
 :toc: left
 :compat-mode!:
 
-== Diawi Upload Plugin
 
-plugin:diawi-upload[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/diawi-upload">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'DiawiUploader'])`: Diawi Upload Step
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Tekton Client Plugin"
----
+= Tekton Client Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Tekton Client Plugin"
 :toc: left
 :compat-mode!:
 
-== Tekton Client Plugin
 
-plugin:tekton-client[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/tekton-client">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'CreateCustomTaskrun'])`: Tekton : Create TaskRun
 ++++

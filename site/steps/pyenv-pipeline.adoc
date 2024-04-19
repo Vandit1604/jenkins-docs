@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Pyenv Pipeline Plugin"
----
+= Pyenv Pipeline Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Pyenv Pipeline Plugin"
 :toc: left
 :compat-mode!:
 
-== Pyenv Pipeline Plugin
 
-plugin:pyenv-pipeline[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/pyenv-pipeline">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `pybat`: PyEnvVar Batch Script
 ++++

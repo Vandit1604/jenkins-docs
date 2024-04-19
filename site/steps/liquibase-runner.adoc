@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Liquibase Runner"
----
+= Liquibase Runner
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Liquibase Runner"
 :toc: left
 :compat-mode!:
 
-== Liquibase Runner
 
-plugin:liquibase-runner[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/liquibase-runner">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'DropAllBuilder'])`: Liquibase: Drop everything in database
 ++++

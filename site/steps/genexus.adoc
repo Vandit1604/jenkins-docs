@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "GeneXus Plugin"
----
+= GeneXus Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "GeneXus Plugin"
 :toc: left
 :compat-mode!:
 
-== GeneXus Plugin
 
-plugin:genexus[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/genexus">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `gxserver`: Checks out (or updates) a GeneXus Knowledge Base from a GeneXus Server
 ++++

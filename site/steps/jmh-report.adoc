@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "JMH Report"
----
+= JMH Report
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "JMH Report"
 :toc: left
 :compat-mode!:
 
-== JMH Report
 
-plugin:jmh-report[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/jmh-report">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `jmhReport`: JMH Report
 ++++

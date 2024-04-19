@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Build Name and Description Setter"
----
+= Build Name and Description Setter
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Build Name and Description Setter"
 :toc: left
 :compat-mode!:
 
-== Build Name and Description Setter
 
-plugin:build-name-setter[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/build-name-setter">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `buildDescription`: Changes build description
 ++++

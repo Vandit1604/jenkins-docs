@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "CrossBrowserTesting.com Plugin"
----
+= CrossBrowserTesting.com Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "CrossBrowserTesting.com Plugin"
 :toc: left
 :compat-mode!:
 
-== CrossBrowserTesting.com Plugin
 
-plugin:crossbrowsertesting[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/crossbrowsertesting">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `cbt`: CrossBrowserTesting.com
 ++++

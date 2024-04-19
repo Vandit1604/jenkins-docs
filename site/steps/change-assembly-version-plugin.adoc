@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "change-assembly-version-plugin"
----
+= change-assembly-version-plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "change-assembly-version-plugin"
 :toc: left
 :compat-mode!:
 
-== change-assembly-version-plugin
 
-plugin:change-assembly-version-plugin[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/change-assembly-version-plugin">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `changeAsmVer`: Change Assembly Version
 ++++

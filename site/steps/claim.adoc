@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Claim Plugin"
----
+= Claim Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Claim Plugin"
 :toc: left
 :compat-mode!:
 
-== Claim Plugin
 
-plugin:claim[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/claim">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `step([$class: 'ClaimPublisher'])`: Allow broken build claiming
 ++++

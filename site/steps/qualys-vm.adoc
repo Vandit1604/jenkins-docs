@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Qualys Host Scanning Connector"
----
+= Qualys Host Scanning Connector
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Qualys Host Scanning Connector"
 :toc: left
 :compat-mode!:
 
-== Qualys Host Scanning Connector
 
-plugin:qualys-vm[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/qualys-vm">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `qualysVulnerabilityAnalyzer`: Scan host/instances with Qualys VM
 ++++

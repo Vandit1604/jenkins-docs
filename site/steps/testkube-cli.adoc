@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Testkube CLI"
----
+= Testkube CLI
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Testkube CLI"
 :toc: left
 :compat-mode!:
 
-== Testkube CLI
 
-plugin:testkube-cli[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/testkube-cli">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `setupTestkube`: Testkube Setup Step
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "build log file size checker plugin"
----
+= build log file size checker plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "build log file size checker plugin"
 :toc: left
 :compat-mode!:
 
-== build log file size checker plugin
 
-plugin:logfilesizechecker[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/logfilesizechecker">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `wrap([$class: 'LogfilesizecheckerWrapper'])`: Abort the build if its log file size is too big
 ++++

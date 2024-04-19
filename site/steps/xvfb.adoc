@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Xvfb plugin"
----
+= Xvfb plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Xvfb plugin"
 :toc: left
 :compat-mode!:
 
-== Xvfb plugin
 
-plugin:xvfb[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/xvfb">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `wrap([$class: 'Xvfb'])`: Start Xvfb before the build, and shut it down after.
 ++++

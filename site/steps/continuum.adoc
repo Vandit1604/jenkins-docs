@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Continuum Plugin"
----
+= Continuum Plugin
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Continuum Plugin"
 :toc: left
 :compat-mode!:
 
-== Continuum Plugin
 
-plugin:continuum[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/continuum">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `ctmInitiatePipeline`: Initiate a Continuum Pipeline Definition with matching 'key' information.
 ++++

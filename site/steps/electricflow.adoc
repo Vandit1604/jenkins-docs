@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "CloudBees CD"
----
+= CloudBees CD
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "CloudBees CD"
 :toc: left
 :compat-mode!:
 
-== CloudBees CD
 
-plugin:electricflow[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/electricflow">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `cloudBeesFlowCallRestApi`: CloudBees CD - Call REST API
 ++++

@@ -1,7 +1,5 @@
----
-layout: pipelinesteps
-title: "Otel agent host metrics monitoring"
----
+= Otel agent host metrics monitoring
+:page-layout: pipelinesteps
 
 :notitle:
 :description:
@@ -11,9 +9,11 @@ title: "Otel agent host metrics monitoring"
 :toc: left
 :compat-mode!:
 
-== Otel agent host metrics monitoring
 
-plugin:opentelemetry-agent-metrics[View this plugin on the Plugins site]
+++++
+<a href="https://plugins.jenkins.io/opentelemetry-agent-metrics">Visit the Jenkins Plugins site</a>
+++++
+
 
 === `onMonit`: Start node_exporter + otel-contrib before the build, and shut them down after.
 ++++
