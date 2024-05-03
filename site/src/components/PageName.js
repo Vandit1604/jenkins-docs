@@ -11,7 +11,7 @@ const PageName = ({ title }) => (
                 color: `black`,
                 marginBottom: rhythm(1.5),
                 fontFamily: "Georgia,serif",
-                fontSize: "40px",
+                fontSize: "2rem",
                 display: "flex",
                 flexDirection: "row",
                 flexWrap: "nowrap",
